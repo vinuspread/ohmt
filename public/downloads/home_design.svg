@@ -1,0 +1,62 @@
+<svg width="1440" height="4200" viewBox="0 0 1440 4200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="4200" fill="#FBF9F6"/>
+  
+  <!-- Hero Section -->
+  <rect width="1440" height="900" fill="#F3EEE7"/>
+  <rect width="1440" height="900" fill="black" fill-opacity="0.3"/>
+  <text x="720" y="450" text-anchor="middle" font-family="Serif" font-size="144" font-weight="500" fill="white">Luxury Brand</text>
+  <text x="720" y="580" text-anchor="middle" font-family="Serif" font-size="144" font-style="italic" fill="white">never fades</text>
+  <text x="720" y="320" text-anchor="middle" font-family="Sans-serif" font-size="12" font-weight="bold" letter-spacing="0.5em" fill="white" fill-opacity="0.8">NANO BANANA EDITION — PREMIUM</text>
+
+  <!-- Header -->
+  <text x="720" y="55" text-anchor="middle" font-family="Serif" font-size="32" font-weight="bold" fill="white">GENIE</text>
+  <text x="60" y="52" font-family="Sans-serif" font-size="10" font-weight="bold" letter-spacing="0.3em" fill="white">SHOP / COLLECTIONS / STORY</text>
+  
+  <!-- New Arrivals -->
+  <text x="60" y="1050" font-family="Serif" font-size="80" fill="#1A1A1A">New Arrivals</text>
+  <text x="60" y="1120" font-family="Sans-serif" font-size="12" font-weight="bold" letter-spacing="0.3em" fill="#717171">NANO BANANA PICKS</text>
+  
+  <!-- Product Grid -->
+  <rect x="60" y="1200" width="420" height="560" fill="#F3EEE7"/>
+  <text x="60" y="1800" font-family="Serif" font-size="24" fill="#1A1A1A">Unicorn Limited Edition</text>
+  <text x="480" y="1800" text-anchor="end" font-family="Serif" font-size="20" fill="#1A1A1A">$4,200</text>
+  
+  <rect x="510" y="1200" width="420" height="560" fill="#F3EEE7"/>
+  <text x="510" y="1800" font-family="Serif" font-size="24" fill="#1A1A1A">Sazabi Executive Piece</text>
+  <text x="930" y="1800" text-anchor="end" font-family="Serif" font-size="20" fill="#1A1A1A">$5,850</text>
+  
+  <rect x="960" y="1200" width="420" height="560" fill="#F3EEE7"/>
+  <text x="960" y="1800" font-family="Serif" font-size="24" fill="#1A1A1A">Nu-Gundam Classic</text>
+  <text x="1380" y="1800" text-anchor="end" font-family="Serif" font-size="20" fill="#1A1A1A">$3,400</text>
+
+  <!-- Editorial Section: Our Story -->
+  <rect x="0" y="2000" width="1440" height="1200" fill="#F3EEE7"/>
+  <rect x="120" y="2150" width="600" height="750" fill="#FBF9F6" stroke="#000" stroke-opacity="0.05"/>
+  <text x="840" y="2250" font-family="Sans-serif" font-size="10" font-weight="bold" letter-spacing="0.5em" fill="#717171">NANO BANANA STORY</text>
+  <text x="840" y="2350" font-family="Serif" font-size="96" leading="0.8" fill="#1A1A1A">The Icons of</text>
+  <text x="840" y="2440" font-family="Serif" font-size="96" font-style="italic" fill="#1A1A1A">The Season</text>
+  <text x="840" y="2550" font-family="Sans-serif" font-size="18" font-weight="light" fill="#717171" width="450">
+    <tspan x="840" dy="1.6em">We use premium, ethically sourced materials</tspan>
+    <tspan x="840" dy="1.6em">including full-grain Italian leather, organic</tspan>
+    <tspan x="840" dy="1.6em">cotton, and sustainable fabrics. Each piece</tspan>
+    <tspan x="840" dy="1.6em">is crafted with durability and elegance.</tspan>
+  </text>
+  
+  <!-- Footer -->
+  <rect x="0" y="3400" width="1440" height="800" fill="#1A1A1A"/>
+  <text x="120" y="3550" font-family="Serif" font-size="48" font-style="italic" fill="white" letter-spacing="0.2em">GENIE</text>
+  <text x="120" y="3620" font-family="Sans-serif" font-size="14" font-weight="light" fill="white" fill-opacity="0.4">
+    <tspan x="120" dy="1.6em">Experience the epitome of elegance.</tspan>
+    <tspan x="120" dy="1.6em">Nano Banana Edition for the refined few.</tspan>
+  </text>
+  
+  <text x="840" y="3550" font-family="Sans-serif" font-size="10" font-weight="bold" letter-spacing="0.3em" fill="white" fill-opacity="0.6">NAVIGATION</text>
+  <text x="840" y="3600" font-family="Sans-serif" font-size="14" fill="white" fill-opacity="0.4">
+    <tspan x="840" dy="2em">Shop All</tspan>
+    <tspan x="840" dy="2em">Our Story</tspan>
+    <tspan x="840" dy="2em">Editorial</tspan>
+  </text>
+  
+  <line x1="120" y1="4000" x2="1320" y2="4000" stroke="white" stroke-opacity="0.05"/>
+  <text x="120" y="4050" font-family="Sans-serif" font-size="9" font-weight="bold" letter-spacing="0.5em" fill="white" fill-opacity="0.2">© 2026 BINUS SPREAD. ALL RIGHTS RESERVED.</text>
+</svg>

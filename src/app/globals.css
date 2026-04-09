@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --color-bg: #FAFAFA;           /* main background */
+  --color-primary: #0D6EFD;      /* accent (blue) */
+  --color-gold: #D4AF6A;         /* keep existing gold */
+  --color-muted: #E5E5E5;        /* neutral gray */
+  --font-sans: 'Inter', sans-serif;
+}
+

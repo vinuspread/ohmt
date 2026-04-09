@@ -1,0 +1,13 @@
+<svg width="1440" height="1500" viewBox="0 0 1440 1500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1440" height="1500" fill="white"/>
+  <rect x="60" y="120" width="640" height="800" fill="#FBF9F6"/>
+  
+  <text x="760" y="180" font-family="Sans-serif" font-size="10" font-weight="bold" letter-spacing="0.4em" fill="#717171">NANO BANANA EXCLUSIVE</text>
+  <text x="760" y="250" font-family="Serif" font-size="64" font-weight="500" font-style="italic" fill="#1A1A1A">Unicorn Limited</text>
+  <text x="760" y="320" font-family="Serif" font-size="64" font-weight="500" font-style="italic" fill="#1A1A1A">Edition Piece</text>
+  
+  <text x="760" y="400" font-family="Serif" font-size="24" fill="#1A1A1A">$4,200.00</text>
+  
+  <rect x="760" y="480" width="620" height="60" fill="#1A1A1A"/>
+  <text x="1070" y="515" text-anchor="middle" font-family="Sans-serif" font-size="12" font-weight="bold" letter-spacing="0.3em" fill="white">ADD TO BAG</text>
+</svg>

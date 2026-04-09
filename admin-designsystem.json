@@ -1,0 +1,1350 @@
+{
+  "$meta": {
+    "name": "vinuspread Design System",
+    "version": "1.0.0",
+    "generatedAt": "2026-04-08T09:23:03.264Z",
+    "format": "CSS Custom Properties → JSON"
+  },
+  "color": {
+    "palette": {
+      "gray-50": {
+        "value": "0 0% 98%",
+        "cssVar": "--gray-50"
+      },
+      "gray-100": {
+        "value": "0 0% 96.1%",
+        "cssVar": "--gray-100"
+      },
+      "gray-200": {
+        "value": "0 0% 89.8%",
+        "cssVar": "--gray-200"
+      },
+      "gray-300": {
+        "value": "0 0% 83.1%",
+        "cssVar": "--gray-300"
+      },
+      "gray-400": {
+        "value": "0 0% 63.9%",
+        "cssVar": "--gray-400"
+      },
+      "gray-500": {
+        "value": "0 0% 45.1%",
+        "cssVar": "--gray-500"
+      },
+      "gray-600": {
+        "value": "0 0% 32.2%",
+        "cssVar": "--gray-600"
+      },
+      "gray-700": {
+        "value": "0 0% 25.1%",
+        "cssVar": "--gray-700"
+      },
+      "gray-800": {
+        "value": "0 0% 14.9%",
+        "cssVar": "--gray-800"
+      },
+      "gray-900": {
+        "value": "0 0% 9%",
+        "cssVar": "--gray-900"
+      },
+      "gray-950": {
+        "value": "0 0% 3.9%",
+        "cssVar": "--gray-950"
+      },
+      "zinc-50": {
+        "value": "0 0% 98%",
+        "cssVar": "--zinc-50"
+      },
+      "zinc-100": {
+        "value": "0 0% 96.1%",
+        "cssVar": "--zinc-100"
+      },
+      "zinc-200": {
+        "value": "0 0% 89.8%",
+        "cssVar": "--zinc-200"
+      },
+      "zinc-300": {
+        "value": "0 0% 83.1%",
+        "cssVar": "--zinc-300"
+      },
+      "zinc-400": {
+        "value": "0 0% 63.9%",
+        "cssVar": "--zinc-400"
+      },
+      "zinc-500": {
+        "value": "0 0% 45.1%",
+        "cssVar": "--zinc-500"
+      },
+      "zinc-600": {
+        "value": "0 0% 32.2%",
+        "cssVar": "--zinc-600"
+      },
+      "zinc-700": {
+        "value": "0 0% 25.1%",
+        "cssVar": "--zinc-700"
+      },
+      "zinc-800": {
+        "value": "0 0% 14.9%",
+        "cssVar": "--zinc-800"
+      },
+      "zinc-900": {
+        "value": "0 0% 9%",
+        "cssVar": "--zinc-900"
+      },
+      "zinc-950": {
+        "value": "0 0% 3.9%",
+        "cssVar": "--zinc-950"
+      },
+      "neutral-50": {
+        "value": "0 0% 98%",
+        "cssVar": "--neutral-50"
+      },
+      "neutral-100": {
+        "value": "0 0% 96.1%",
+        "cssVar": "--neutral-100"
+      },
+      "neutral-200": {
+        "value": "0 0% 90.2%",
+        "cssVar": "--neutral-200"
+      },
+      "neutral-300": {
+        "value": "0 0% 83.1%",
+        "cssVar": "--neutral-300"
+      },
+      "neutral-400": {
+        "value": "0 0% 64.7%",
+        "cssVar": "--neutral-400"
+      },
+      "neutral-500": {
+        "value": "0 0% 45.1%",
+        "cssVar": "--neutral-500"
+      },
+      "neutral-600": {
+        "value": "0 0% 32.2%",
+        "cssVar": "--neutral-600"
+      },
+      "neutral-700": {
+        "value": "0 0% 25.1%",
+        "cssVar": "--neutral-700"
+      },
+      "neutral-800": {
+        "value": "0 0% 14.9%",
+        "cssVar": "--neutral-800"
+      },
+      "neutral-900": {
+        "value": "0 0% 9%",
+        "cssVar": "--neutral-900"
+      },
+      "neutral-950": {
+        "value": "0 0% 3.9%",
+        "cssVar": "--neutral-950"
+      },
+      "stone-50": {
+        "value": "60 9.1% 97.8%",
+        "cssVar": "--stone-50"
+      },
+      "stone-100": {
+        "value": "60 4.8% 95.9%",
+        "cssVar": "--stone-100"
+      },
+      "stone-200": {
+        "value": "20 14.3% 4.1%",
+        "cssVar": "--stone-200"
+      },
+      "stone-300": {
+        "value": "24 5.4% 63.9%",
+        "cssVar": "--stone-300"
+      },
+      "stone-400": {
+        "value": "24 5.4% 63.9%",
+        "cssVar": "--stone-400"
+      },
+      "stone-500": {
+        "value": "24 5.4% 45.1%",
+        "cssVar": "--stone-500"
+      },
+      "stone-600": {
+        "value": "24 5.4% 32.2%",
+        "cssVar": "--stone-600"
+      },
+      "stone-700": {
+        "value": "24 5.4% 25.1%",
+        "cssVar": "--stone-700"
+      },
+      "stone-800": {
+        "value": "24 5.4% 14.9%",
+        "cssVar": "--stone-800"
+      },
+      "stone-900": {
+        "value": "24 5.4% 9%",
+        "cssVar": "--stone-900"
+      },
+      "stone-950": {
+        "value": "24 5.4% 3.9%",
+        "cssVar": "--stone-950"
+      },
+      "red-50": {
+        "value": "0 85.7% 97.3%",
+        "cssVar": "--red-50"
+      },
+      "red-100": {
+        "value": "0 93.3% 94.1%",
+        "cssVar": "--red-100"
+      },
+      "red-200": {
+        "value": "0 96.3% 89.4%",
+        "cssVar": "--red-200"
+      },
+      "red-300": {
+        "value": "0 93.5% 81.8%",
+        "cssVar": "--red-300"
+      },
+      "red-400": {
+        "value": "0 83.8% 71%",
+        "cssVar": "--red-400"
+      },
+      "red-500": {
+        "value": "0 84.2% 60.2%",
+        "cssVar": "--red-500"
+      },
+      "red-600": {
+        "value": "0 72.2% 50.6%",
+        "cssVar": "--red-600"
+      },
+      "red-700": {
+        "value": "0 73.7% 41.8%",
+        "cssVar": "--red-700"
+      },
+      "red-800": {
+        "value": "0 70% 35.3%",
+        "cssVar": "--red-800"
+      },
+      "red-900": {
+        "value": "0 62.8% 30.6%",
+        "cssVar": "--red-900"
+      },
+      "red-950": {
+        "value": "0 75% 14.1%",
+        "cssVar": "--red-950"
+      },
+      "orange-50": {
+        "value": "33.3 100% 96.5%",
+        "cssVar": "--orange-50"
+      },
+      "orange-100": {
+        "value": "34.3 100% 91.8%",
+        "cssVar": "--orange-100"
+      },
+      "orange-200": {
+        "value": "32.1 97.7% 83.1%",
+        "cssVar": "--orange-200"
+      },
+      "orange-300": {
+        "value": "30.6 93.9% 74.3%",
+        "cssVar": "--orange-300"
+      },
+      "orange-400": {
+        "value": "27 95.6% 64.1%",
+        "cssVar": "--orange-400"
+      },
+      "orange-500": {
+        "value": "24.6 95% 53.1%",
+        "cssVar": "--orange-500"
+      },
+      "orange-600": {
+        "value": "20.5 90.2% 48.2%",
+        "cssVar": "--orange-600"
+      },
+      "orange-700": {
+        "value": "17.5 88.3% 40.4%",
+        "cssVar": "--orange-700"
+      },
+      "orange-800": {
+        "value": "15.3 86.4% 33.1%",
+        "cssVar": "--orange-800"
+      },
+      "orange-900": {
+        "value": "13.5 73.1% 27.6%",
+        "cssVar": "--orange-900"
+      },
+      "orange-950": {
+        "value": "13.5 86.5% 14.5%",
+        "cssVar": "--orange-950"
+      },
+      "amber-50": {
+        "value": "48 100% 96.1%",
+        "cssVar": "--amber-50"
+      },
+      "amber-100": {
+        "value": "48 100% 88.6%",
+        "cssVar": "--amber-100"
+      },
+      "amber-200": {
+        "value": "48 95.8% 76.1%",
+        "cssVar": "--amber-200"
+      },
+      "amber-300": {
+        "value": "45.9 96.7% 64.5%",
+        "cssVar": "--amber-300"
+      },
+      "amber-400": {
+        "value": "43.3 96.4% 56.3%",
+        "cssVar": "--amber-400"
+      },
+      "amber-500": {
+        "value": "37.7 92.1% 50.2%",
+        "cssVar": "--amber-500"
+      },
+      "amber-600": {
+        "value": "32.1 97.7% 42.4%",
+        "cssVar": "--amber-600"
+      },
+      "amber-700": {
+        "value": "27.4 90.7% 33.5%",
+        "cssVar": "--amber-700"
+      },
+      "amber-800": {
+        "value": "24.1 84.6% 28%",
+        "cssVar": "--amber-800"
+      },
+      "amber-900": {
+        "value": "21.4 77.4% 22.5%",
+        "cssVar": "--amber-900"
+      },
+      "amber-950": {
+        "value": "22.5 84.4% 12.5%",
+        "cssVar": "--amber-950"
+      },
+      "yellow-50": {
+        "value": "54.5 100% 96.1%",
+        "cssVar": "--yellow-50"
+      },
+      "yellow-100": {
+        "value": "54.5 100% 88.6%",
+        "cssVar": "--yellow-100"
+      },
+      "yellow-200": {
+        "value": "53.1 98.3% 76.9%",
+        "cssVar": "--yellow-200"
+      },
+      "yellow-300": {
+        "value": "50.5 97.5% 63.5%",
+        "cssVar": "--yellow-300"
+      },
+      "yellow-400": {
+        "value": "47.9 95.8% 53.1%",
+        "cssVar": "--yellow-400"
+      },
+      "yellow-500": {
+        "value": "45.4 93.4% 47.5%",
+        "cssVar": "--yellow-500"
+      },
+      "yellow-600": {
+        "value": "42.4 90.8% 38.4%",
+        "cssVar": "--yellow-600"
+      },
+      "yellow-700": {
+        "value": "38.9 83.1% 30.2%",
+        "cssVar": "--yellow-700"
+      },
+      "yellow-800": {
+        "value": "36 76.5% 25.1%",
+        "cssVar": "--yellow-800"
+      },
+      "yellow-900": {
+        "value": "32.7 69% 21%",
+        "cssVar": "--yellow-900"
+      },
+      "yellow-950": {
+        "value": "33.3 81.8% 10.8%",
+        "cssVar": "--yellow-950"
+      },
+      "lime-50": {
+        "value": "78.8 100% 96.1%",
+        "cssVar": "--lime-50"
+      },
+      "lime-100": {
+        "value": "77.1 100% 89.8%",
+        "cssVar": "--lime-100"
+      },
+      "lime-200": {
+        "value": "75 94% 78.4%",
+        "cssVar": "--lime-200"
+      },
+      "lime-300": {
+        "value": "76.4 90.1% 64.1%",
+        "cssVar": "--lime-300"
+      },
+      "lime-400": {
+        "value": "77.7 85.9% 51.6%",
+        "cssVar": "--lime-400"
+      },
+      "lime-500": {
+        "value": "80 84.3% 40%",
+        "cssVar": "--lime-500"
+      },
+      "lime-600": {
+        "value": "82.4 90.1% 31.8%",
+        "cssVar": "--lime-600"
+      },
+      "lime-700": {
+        "value": "84.8 84.3% 25.1%",
+        "cssVar": "--lime-700"
+      },
+      "lime-800": {
+        "value": "85.7 78.8% 20.4%",
+        "cssVar": "--lime-800"
+      },
+      "lime-900": {
+        "value": "88 71.4% 16.5%",
+        "cssVar": "--lime-900"
+      },
+      "lime-950": {
+        "value": "84 81% 8.2%",
+        "cssVar": "--lime-950"
+      },
+      "green-50": {
+        "value": "138 76.5% 96.7%",
+        "cssVar": "--green-50"
+      },
+      "green-100": {
+        "value": "140 76.9% 89.8%",
+        "cssVar": "--green-100"
+      },
+      "green-200": {
+        "value": "141 78.9% 75.9%",
+        "cssVar": "--green-200"
+      },
+      "green-300": {
+        "value": "142 76.2% 58.8%",
+        "cssVar": "--green-300"
+      },
+      "green-400": {
+        "value": "142 70.6% 45.3%",
+        "cssVar": "--green-400"
+      },
+      "green-500": {
+        "value": "142 71.8% 29.2%",
+        "cssVar": "--green-500"
+      },
+      "green-600": {
+        "value": "143 64% 24.1%",
+        "cssVar": "--green-600"
+      },
+      "green-700": {
+        "value": "145.5 61.1% 18.2%",
+        "cssVar": "--green-700"
+      },
+      "green-800": {
+        "value": "146 56.5% 15.3%",
+        "cssVar": "--green-800"
+      },
+      "green-900": {
+        "value": "146.5 50% 12.9%",
+        "cssVar": "--green-900"
+      },
+      "green-950": {
+        "value": "144 61.1% 7.1%",
+        "cssVar": "--green-950"
+      },
+      "emerald-50": {
+        "value": "149.3 80% 96.1%",
+        "cssVar": "--emerald-50"
+      },
+      "emerald-100": {
+        "value": "152 76.5% 89.8%",
+        "cssVar": "--emerald-100"
+      },
+      "emerald-200": {
+        "value": "156.2 71.6% 77.8%",
+        "cssVar": "--emerald-200"
+      },
+      "emerald-300": {
+        "value": "158.4 69.8% 63.5%",
+        "cssVar": "--emerald-300"
+      },
+      "emerald-400": {
+        "value": "159.6 74.8% 46.7%",
+        "cssVar": "--emerald-400"
+      },
+      "emerald-500": {
+        "value": "160 84.1% 39.4%",
+        "cssVar": "--emerald-500"
+      },
+      "emerald-600": {
+        "value": "161.4 93.5% 30.4%",
+        "cssVar": "--emerald-600"
+      },
+      "emerald-700": {
+        "value": "162.9 92.5% 24.1%",
+        "cssVar": "--emerald-700"
+      },
+      "emerald-800": {
+        "value": "163.6 88.3% 19.6%",
+        "cssVar": "--emerald-800"
+      },
+      "emerald-900": {
+        "value": "164.2 85.7% 16.5%",
+        "cssVar": "--emerald-900"
+      },
+      "emerald-950": {
+        "value": "163.6 89.5% 7.5%",
+        "cssVar": "--emerald-950"
+      },
+      "teal-50": {
+        "value": "174 76% 95.1%",
+        "cssVar": "--teal-50"
+      },
+      "teal-100": {
+        "value": "174 83.3% 88.2%",
+        "cssVar": "--teal-100"
+      },
+      "teal-200": {
+        "value": "174.6 78.5% 74.5%",
+        "cssVar": "--teal-200"
+      },
+      "teal-300": {
+        "value": "173.2 71.6% 60%",
+        "cssVar": "--teal-300"
+      },
+      "teal-400": {
+        "value": "171.6 75.3% 46.1%",
+        "cssVar": "--teal-400"
+      },
+      "teal-500": {
+        "value": "171.6 82.5% 37.1%",
+        "cssVar": "--teal-500"
+      },
+      "teal-600": {
+        "value": "173.6 92% 29.4%",
+        "cssVar": "--teal-600"
+      },
+      "teal-700": {
+        "value": "174.8 91.2% 23.5%",
+        "cssVar": "--teal-700"
+      },
+      "teal-800": {
+        "value": "175.7 87% 19.2%",
+        "cssVar": "--teal-800"
+      },
+      "teal-900": {
+        "value": "176.3 83.5% 16.5%",
+        "cssVar": "--teal-900"
+      },
+      "teal-950": {
+        "value": "175 90% 7.8%",
+        "cssVar": "--teal-950"
+      },
+      "cyan-50": {
+        "value": "183.3 75% 95.3%",
+        "cssVar": "--cyan-50"
+      },
+      "cyan-100": {
+        "value": "183.3 78.3% 89.2%",
+        "cssVar": "--cyan-100"
+      },
+      "cyan-200": {
+        "value": "183.6 79.5% 75.1%",
+        "cssVar": "--cyan-200"
+      },
+      "cyan-300": {
+        "value": "184.2 78.2% 60.4%",
+        "cssVar": "--cyan-300"
+      },
+      "cyan-400": {
+        "value": "186.2 86% 46.9%",
+        "cssVar": "--cyan-400"
+      },
+      "cyan-500": {
+        "value": "188.7 94.5% 42.7%",
+        "cssVar": "--cyan-500"
+      },
+      "cyan-600": {
+        "value": "191.6 91.4% 36.5%",
+        "cssVar": "--cyan-600"
+      },
+      "cyan-700": {
+        "value": "194.2 86.8% 31%",
+        "cssVar": "--cyan-700"
+      },
+      "cyan-800": {
+        "value": "196.4 82% 26.5%",
+        "cssVar": "--cyan-800"
+      },
+      "cyan-900": {
+        "value": "198.6 78% 22.7%",
+        "cssVar": "--cyan-900"
+      },
+      "cyan-950": {
+        "value": "198.5 86.8% 11.8%",
+        "cssVar": "--cyan-950"
+      },
+      "sky-50": {
+        "value": "204 100% 97.1%",
+        "cssVar": "--sky-50"
+      },
+      "sky-100": {
+        "value": "204 93.8% 93.7%",
+        "cssVar": "--sky-100"
+      },
+      "sky-200": {
+        "value": "200.6 94.4% 86.1%",
+        "cssVar": "--sky-200"
+      },
+      "sky-300": {
+        "value": "198.4 93.2% 76.9%",
+        "cssVar": "--sky-300"
+      },
+      "sky-400": {
+        "value": "196.8 93.6% 63.3%",
+        "cssVar": "--sky-400"
+      },
+      "sky-500": {
+        "value": "198.6 88.7% 48.4%",
+        "cssVar": "--sky-500"
+      },
+      "sky-600": {
+        "value": "199.4 95% 39.4%",
+        "cssVar": "--sky-600"
+      },
+      "sky-700": {
+        "value": "200.4 98% 30.4%",
+        "cssVar": "--sky-700"
+      },
+      "sky-800": {
+        "value": "201 96.3% 25.5%",
+        "cssVar": "--sky-800"
+      },
+      "sky-900": {
+        "value": "202 83.3% 22.4%",
+        "cssVar": "--sky-900"
+      },
+      "sky-950": {
+        "value": "203.4 92% 12%",
+        "cssVar": "--sky-950"
+      },
+      "blue-50": {
+        "value": "214.3 100% 97.3%",
+        "cssVar": "--blue-50"
+      },
+      "blue-100": {
+        "value": "214.3 100% 93.9%",
+        "cssVar": "--blue-100"
+      },
+      "blue-200": {
+        "value": "213.3 96.9% 87.3%",
+        "cssVar": "--blue-200"
+      },
+      "blue-300": {
+        "value": "211.7 96.4% 78.4%",
+        "cssVar": "--blue-300"
+      },
+      "blue-400": {
+        "value": "213.1 93.9% 67.8%",
+        "cssVar": "--blue-400"
+      },
+      "blue-500": {
+        "value": "217.2 91.2% 59.8%",
+        "cssVar": "--blue-500"
+      },
+      "blue-600": {
+        "value": "221.2 83.2% 53.3%",
+        "cssVar": "--blue-600"
+      },
+      "blue-700": {
+        "value": "224.3 76.3% 48%",
+        "cssVar": "--blue-700"
+      },
+      "blue-800": {
+        "value": "225.9 70.7% 40.2%",
+        "cssVar": "--blue-800"
+      },
+      "blue-900": {
+        "value": "227.6 57.1% 33.7%",
+        "cssVar": "--blue-900"
+      },
+      "blue-950": {
+        "value": "228.6 68.3% 16.1%",
+        "cssVar": "--blue-950"
+      },
+      "indigo-50": {
+        "value": "225.9 100% 96.7%",
+        "cssVar": "--indigo-50"
+      },
+      "indigo-100": {
+        "value": "226.5 100% 93.1%",
+        "cssVar": "--indigo-100"
+      },
+      "indigo-200": {
+        "value": "227.8 96% 85.3%",
+        "cssVar": "--indigo-200"
+      },
+      "indigo-300": {
+        "value": "228.9 95.8% 76.5%",
+        "cssVar": "--indigo-300"
+      },
+      "indigo-400": {
+        "value": "233.1 92.5% 68.6%",
+        "cssVar": "--indigo-400"
+      },
+      "indigo-500": {
+        "value": "238.7 83.5% 66.7%",
+        "cssVar": "--indigo-500"
+      },
+      "indigo-600": {
+        "value": "243.4 75.4% 61.8%",
+        "cssVar": "--indigo-600"
+      },
+      "indigo-700": {
+        "value": "244.6 62.4% 51%",
+        "cssVar": "--indigo-700"
+      },
+      "indigo-800": {
+        "value": "244.3 54.4% 41.4%",
+        "cssVar": "--indigo-800"
+      },
+      "indigo-900": {
+        "value": "244.2 46.5% 33.7%",
+        "cssVar": "--indigo-900"
+      },
+      "indigo-950": {
+        "value": "244 60.5% 15%",
+        "cssVar": "--indigo-950"
+      },
+      "violet-50": {
+        "value": "250 100% 97.6%",
+        "cssVar": "--violet-50"
+      },
+      "violet-100": {
+        "value": "252 100% 95.1%",
+        "cssVar": "--violet-100"
+      },
+      "violet-200": {
+        "value": "253 96% 88.2%",
+        "cssVar": "--violet-200"
+      },
+      "violet-300": {
+        "value": "255 92.2% 80.2%",
+        "cssVar": "--violet-300"
+      },
+      "violet-400": {
+        "value": "258 89.5% 73.9%",
+        "cssVar": "--violet-400"
+      },
+      "violet-500": {
+        "value": "262 83.3% 67.1%",
+        "cssVar": "--violet-500"
+      },
+      "violet-600": {
+        "value": "265 73.1% 56.1%",
+        "cssVar": "--violet-600"
+      },
+      "violet-700": {
+        "value": "267 60.1% 47.1%",
+        "cssVar": "--violet-700"
+      },
+      "violet-800": {
+        "value": "268 53.5% 38%",
+        "cssVar": "--violet-800"
+      },
+      "violet-900": {
+        "value": "268 46.5% 30.6%",
+        "cssVar": "--violet-900"
+      },
+      "violet-950": {
+        "value": "268 62% 14.1%",
+        "cssVar": "--violet-950"
+      },
+      "purple-50": {
+        "value": "270 100% 98%",
+        "cssVar": "--purple-50"
+      },
+      "purple-100": {
+        "value": "272.7 100% 95.7%",
+        "cssVar": "--purple-100"
+      },
+      "purple-200": {
+        "value": "273.8 96% 88.2%",
+        "cssVar": "--purple-200"
+      },
+      "purple-300": {
+        "value": "272 87.8% 77.5%",
+        "cssVar": "--purple-300"
+      },
+      "purple-400": {
+        "value": "269.8 84.8% 66.5%",
+        "cssVar": "--purple-400"
+      },
+      "purple-500": {
+        "value": "270.7 81% 56.7%",
+        "cssVar": "--purple-500"
+      },
+      "purple-600": {
+        "value": "271.5 70.8% 48.4%",
+        "cssVar": "--purple-600"
+      },
+      "purple-700": {
+        "value": "273.5 59.8% 40%",
+        "cssVar": "--purple-700"
+      },
+      "purple-800": {
+        "value": "273.5 52.8% 32%",
+        "cssVar": "--purple-800"
+      },
+      "purple-900": {
+        "value": "272 45.6% 25.3%",
+        "cssVar": "--purple-900"
+      },
+      "purple-950": {
+        "value": "274.3 58.3% 13.1%",
+        "cssVar": "--purple-950"
+      },
+      "fuchsia-50": {
+        "value": "289.1 100% 97.8%",
+        "cssVar": "--fuchsia-50"
+      },
+      "fuchsia-100": {
+        "value": "288 100% 95.3%",
+        "cssVar": "--fuchsia-100"
+      },
+      "fuchsia-200": {
+        "value": "289.4 94.7% 85.1%",
+        "cssVar": "--fuchsia-200"
+      },
+      "fuchsia-300": {
+        "value": "291.1 84.4% 72.4%",
+        "cssVar": "--fuchsia-300"
+      },
+      "fuchsia-400": {
+        "value": "292 84.1% 58%",
+        "cssVar": "--fuchsia-400"
+      },
+      "fuchsia-500": {
+        "value": "290.5 73.5% 45.9%",
+        "cssVar": "--fuchsia-500"
+      },
+      "fuchsia-600": {
+        "value": "289 67.2% 38.2%",
+        "cssVar": "--fuchsia-600"
+      },
+      "fuchsia-700": {
+        "value": "286.9 61.2% 31.4%",
+        "cssVar": "--fuchsia-700"
+      },
+      "fuchsia-800": {
+        "value": "286.6 54.4% 25.9%",
+        "cssVar": "--fuchsia-800"
+      },
+      "fuchsia-900": {
+        "value": "285 49% 20%",
+        "cssVar": "--fuchsia-900"
+      },
+      "fuchsia-950": {
+        "value": "285.7 60% 10.6%",
+        "cssVar": "--fuchsia-950"
+      },
+      "pink-50": {
+        "value": "327.3 73.3% 97.1%",
+        "cssVar": "--pink-50"
+      },
+      "pink-100": {
+        "value": "325.7 77.8% 94.7%",
+        "cssVar": "--pink-100"
+      },
+      "pink-200": {
+        "value": "326.5 81.6% 87.3%",
+        "cssVar": "--pink-200"
+      },
+      "pink-300": {
+        "value": "328.6 81.4% 76.9%",
+        "cssVar": "--pink-300"
+      },
+      "pink-400": {
+        "value": "330.4 81.2% 64.5%",
+        "cssVar": "--pink-400"
+      },
+      "pink-500": {
+        "value": "330.4 71.3% 50.8%",
+        "cssVar": "--pink-500"
+      },
+      "pink-600": {
+        "value": "332.9 70.9% 43.1%",
+        "cssVar": "--pink-600"
+      },
+      "pink-700": {
+        "value": "334.8 70.1% 35.5%",
+        "cssVar": "--pink-700"
+      },
+      "pink-800": {
+        "value": "336.5 64.3% 29.6%",
+        "cssVar": "--pink-800"
+      },
+      "pink-900": {
+        "value": "337.8 57.6% 23.1%",
+        "cssVar": "--pink-900"
+      },
+      "pink-950": {
+        "value": "336 62.5% 12.5%",
+        "cssVar": "--pink-950"
+      },
+      "rose-50": {
+        "value": "355.6 100% 97.3%",
+        "cssVar": "--rose-50"
+      },
+      "rose-100": {
+        "value": "354.5 100% 94.3%",
+        "cssVar": "--rose-100"
+      },
+      "rose-200": {
+        "value": "352.7 96.1% 89.8%",
+        "cssVar": "--rose-200"
+      },
+      "rose-300": {
+        "value": "351.3 94.5% 82%",
+        "cssVar": "--rose-300"
+      },
+      "rose-400": {
+        "value": "350.5 89% 68.2%",
+        "cssVar": "--rose-400"
+      },
+      "rose-500": {
+        "value": "349.7 89.2% 56.5%",
+        "cssVar": "--rose-500"
+      },
+      "rose-600": {
+        "value": "349.3 82% 47.8%",
+        "cssVar": "--rose-600"
+      },
+      "rose-700": {
+        "value": "348.8 78% 38.8%",
+        "cssVar": "--rose-700"
+      },
+      "rose-800": {
+        "value": "348.6 72.4% 31.2%",
+        "cssVar": "--rose-800"
+      },
+      "rose-900": {
+        "value": "347.1 63.8% 25.1%",
+        "cssVar": "--rose-900"
+      },
+      "rose-950": {
+        "value": "347.4 76% 13.9%",
+        "cssVar": "--rose-950"
+      },
+      "slate-50": {
+        "value": "210 40% 98%",
+        "cssVar": "--slate-50"
+      },
+      "slate-100": {
+        "value": "210 40% 96.1%",
+        "cssVar": "--slate-100"
+      },
+      "slate-200": {
+        "value": "214 32% 91%",
+        "cssVar": "--slate-200"
+      },
+      "slate-300": {
+        "value": "213 27% 84.3%",
+        "cssVar": "--slate-300"
+      },
+      "slate-400": {
+        "value": "215 16% 47.1%",
+        "cssVar": "--slate-400"
+      },
+      "slate-500": {
+        "value": "215 16% 47.1%",
+        "cssVar": "--slate-500"
+      },
+      "slate-600": {
+        "value": "215 19% 35.1%",
+        "cssVar": "--slate-600"
+      },
+      "slate-700": {
+        "value": "215 25% 26.7%",
+        "cssVar": "--slate-700"
+      },
+      "slate-800": {
+        "value": "215 28% 16.9%",
+        "cssVar": "--slate-800"
+      },
+      "slate-900": {
+        "value": "222 47% 11.2%",
+        "cssVar": "--slate-900"
+      },
+      "slate-950": {
+        "value": "222 47% 6%",
+        "cssVar": "--slate-950"
+      }
+    },
+    "semantic": {
+      "primary": {
+        "value": "0 0% 9%",
+        "cssVar": "--primary"
+      },
+      "primary-foreground": {
+        "value": "0 0% 98%",
+        "cssVar": "--primary-foreground"
+      },
+      "background": {
+        "value": "0 0% 98.8%",
+        "cssVar": "--background"
+      },
+      "foreground": {
+        "value": "0 0% 3.9%",
+        "cssVar": "--foreground"
+      },
+      "muted": {
+        "value": "0 0% 96.1%",
+        "cssVar": "--muted"
+      },
+      "muted-foreground": {
+        "value": "0 0% 45.1%",
+        "cssVar": "--muted-foreground"
+      },
+      "popover": {
+        "value": "0 0% 100%",
+        "cssVar": "--popover"
+      },
+      "popover-foreground": {
+        "value": "0 0% 3.9%",
+        "cssVar": "--popover-foreground"
+      },
+      "card": {
+        "value": "0 0% 100%",
+        "cssVar": "--card"
+      },
+      "card-foreground": {
+        "value": "0 0% 3.9%",
+        "cssVar": "--card-foreground"
+      },
+      "secondary": {
+        "value": "0 0% 96.1%",
+        "cssVar": "--secondary"
+      },
+      "secondary-foreground": {
+        "value": "0 0% 9%",
+        "cssVar": "--secondary-foreground"
+      },
+      "accent": {
+        "value": "0 0% 96.1%",
+        "cssVar": "--accent"
+      },
+      "accent-foreground": {
+        "value": "0 0% 9%",
+        "cssVar": "--accent-foreground"
+      },
+      "info": {
+        "value": "210 40% 96.1%",
+        "cssVar": "--info"
+      },
+      "info-foreground": {
+        "value": "222 47% 11.2%",
+        "cssVar": "--info-foreground"
+      },
+      "success": {
+        "value": "0 0% 14.9%",
+        "cssVar": "--success"
+      },
+      "success-foreground": {
+        "value": "0 0% 98%",
+        "cssVar": "--success-foreground"
+      },
+      "warning": {
+        "value": "0 0% 90.2%",
+        "cssVar": "--warning"
+      },
+      "warning-foreground": {
+        "value": "0 0% 9%",
+        "cssVar": "--warning-foreground"
+      },
+      "destructive": {
+        "value": "0 84.2% 60.2%",
+        "cssVar": "--destructive"
+      },
+      "destructive-foreground": {
+        "value": "0 0% 98%",
+        "cssVar": "--destructive-foreground"
+      },
+      "border": {
+        "value": "0 0% 89.8%",
+        "cssVar": "--border"
+      },
+      "input": {
+        "value": "0 0% 89.8%",
+        "cssVar": "--input"
+      },
+      "ring": {
+        "value": "0 0% 9%",
+        "cssVar": "--ring"
+      },
+      "glass-bg": {
+        "value": "rgba(255, 255, 255, 0.7)",
+        "cssVar": "--glass-bg"
+      },
+      "glass-border": {
+        "value": "rgba(255, 255, 255, 0.3)",
+        "cssVar": "--glass-border"
+      }
+    }
+  },
+  "typography": {
+    "font-sans": {
+      "value": "'Inter', system-ui, -apple-system, sans-serif",
+      "cssVar": "--font-sans"
+    },
+    "text-xs": {
+      "value": "0.75rem",
+      "cssVar": "--text-xs"
+    },
+    "text-sm": {
+      "value": "0.875rem",
+      "cssVar": "--text-sm"
+    },
+    "text-base": {
+      "value": "1rem",
+      "cssVar": "--text-base"
+    },
+    "text-lg": {
+      "value": "1.125rem",
+      "cssVar": "--text-lg"
+    },
+    "text-xl": {
+      "value": "1.25rem",
+      "cssVar": "--text-xl"
+    },
+    "text-2xl": {
+      "value": "1.5rem",
+      "cssVar": "--text-2xl"
+    },
+    "text-3xl": {
+      "value": "1.875rem",
+      "cssVar": "--text-3xl"
+    },
+    "text-4xl": {
+      "value": "2.25rem",
+      "cssVar": "--text-4xl"
+    },
+    "text-5xl": {
+      "value": "3rem",
+      "cssVar": "--text-5xl"
+    },
+    "text-6xl": {
+      "value": "3.75rem",
+      "cssVar": "--text-6xl"
+    },
+    "text-7xl": {
+      "value": "4.5rem",
+      "cssVar": "--text-7xl"
+    },
+    "text-8xl": {
+      "value": "6rem",
+      "cssVar": "--text-8xl"
+    },
+    "text-9xl": {
+      "value": "8rem",
+      "cssVar": "--text-9xl"
+    },
+    "font-normal": {
+      "value": "400",
+      "cssVar": "--font-normal"
+    },
+    "font-medium": {
+      "value": "500",
+      "cssVar": "--font-medium"
+    },
+    "font-semibold": {
+      "value": "600",
+      "cssVar": "--font-semibold"
+    },
+    "font-bold": {
+      "value": "700",
+      "cssVar": "--font-bold"
+    },
+    "lh-h1": {
+      "value": "1",
+      "cssVar": "--lh-h1"
+    },
+    "lh-h2": {
+      "value": "1",
+      "cssVar": "--lh-h2"
+    },
+    "lh-h3": {
+      "value": "1.2",
+      "cssVar": "--lh-h3"
+    },
+    "lh-h4": {
+      "value": "1.2",
+      "cssVar": "--lh-h4"
+    },
+    "lh-body": {
+      "value": "1.5",
+      "cssVar": "--lh-body"
+    },
+    "lh-small": {
+      "value": "1.43",
+      "cssVar": "--lh-small"
+    },
+    "ls-tight": {
+      "value": "-0.02em",
+      "cssVar": "--ls-tight"
+    },
+    "ls-normal": {
+      "value": "0",
+      "cssVar": "--ls-normal"
+    }
+  },
+  "spacing": {
+    "space-1": {
+      "value": "0.25rem",
+      "cssVar": "--space-1"
+    },
+    "space-2": {
+      "value": "0.5rem",
+      "cssVar": "--space-2"
+    },
+    "space-3": {
+      "value": "0.75rem",
+      "cssVar": "--space-3"
+    },
+    "space-4": {
+      "value": "1rem",
+      "cssVar": "--space-4"
+    },
+    "space-6": {
+      "value": "1.5rem",
+      "cssVar": "--space-6"
+    },
+    "space-8": {
+      "value": "2rem",
+      "cssVar": "--space-8"
+    },
+    "space-12": {
+      "value": "3rem",
+      "cssVar": "--space-12"
+    },
+    "space-16": {
+      "value": "4rem",
+      "cssVar": "--space-16"
+    }
+  },
+  "radius": {
+    "radius": {
+      "value": "0.75rem",
+      "cssVar": "--radius"
+    },
+    "radius-sm": {
+      "value": "0.25rem",
+      "cssVar": "--radius-sm"
+    },
+    "radius-md": {
+      "value": "0.5rem",
+      "cssVar": "--radius-md"
+    },
+    "radius-lg": {
+      "value": "0.75rem",
+      "cssVar": "--radius-lg"
+    },
+    "radius-xl": {
+      "value": "1rem",
+      "cssVar": "--radius-xl"
+    },
+    "radius-full": {
+      "value": "9999px",
+      "cssVar": "--radius-full"
+    }
+  },
+  "shadow": {
+    "shadow-sm": {
+      "value": "0 1px 3px rgba(0, 0, 0, 0.06), \n    0 1px 2px rgba(0, 0, 0, 0.04)",
+      "cssVar": "--shadow-sm"
+    },
+    "shadow-md": {
+      "value": "0 4px 6px -1px rgba(0, 0, 0, 0.07), \n    0 2px 4px -2px rgba(0, 0, 0, 0.05)",
+      "cssVar": "--shadow-md"
+    },
+    "shadow-lg": {
+      "value": "0 10px 15px -3px rgba(0, 0, 0, 0.08), \n    0 4px 6px -4px rgba(0, 0, 0, 0.05)",
+      "cssVar": "--shadow-lg"
+    },
+    "shadow-xs": {
+      "value": "0 1px 2px rgba(0, 0, 0, 0.05)",
+      "cssVar": "--shadow-xs"
+    },
+    "shadow-xl": {
+      "value": "0 20px 25px -5px rgba(0, 0, 0, 0.1), \n    0 8px 10px -6px rgba(0, 0, 0, 0.05)",
+      "cssVar": "--shadow-xl"
+    },
+    "shadow-2xl": {
+      "value": "0 25px 50px -12px rgba(0, 0, 0, 0.15)",
+      "cssVar": "--shadow-2xl"
+    },
+    "shadow-inner": {
+      "value": "inset 0 2px 4px 0 rgba(0, 0, 0, 0.04)",
+      "cssVar": "--shadow-inner"
+    }
+  },
+  "layout": {
+    "grid-columns": {
+      "value": "12",
+      "cssVar": "--grid-columns"
+    },
+    "grid-gutter": {
+      "value": "2rem",
+      "cssVar": "--grid-gutter"
+    },
+    "grid-margin": {
+      "value": "auto",
+      "cssVar": "--grid-margin"
+    },
+    "container-max-width": {
+      "value": "1200px",
+      "cssVar": "--container-max-width"
+    },
+    "screen-padding": {
+      "value": "6rem",
+      "cssVar": "--screen-padding"
+    },
+    "section-gap": {
+      "value": "4rem",
+      "cssVar": "--section-gap"
+    }
+  },
+  "other": {
+    "shadow": {
+      "value": "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+      "cssVar": "--shadow"
+    },
+    "figma-bg-muted": {
+      "value": "0 0% 96.1%",
+      "cssVar": "--figma-bg-muted"
+    },
+    "figma-border": {
+      "value": "0 0% 89.8%",
+      "cssVar": "--figma-border"
+    },
+    "base-radius": {
+      "value": "0.5rem",
+      "cssVar": "--base-radius"
+    },
+    "icon-sm": {
+      "value": "16px",
+      "cssVar": "--icon-sm"
+    },
+    "icon-md": {
+      "value": "20px",
+      "cssVar": "--icon-md"
+    },
+    "icon-lg": {
+      "value": "24px",
+      "cssVar": "--icon-lg"
+    },
+    "icon-xl": {
+      "value": "32px",
+      "cssVar": "--icon-xl"
+    },
+    "sidebar-width": {
+      "value": "240px",
+      "cssVar": "--sidebar-width"
+    }
+  }
+}
