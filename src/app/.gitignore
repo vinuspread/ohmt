@@ -1,12 +1,10 @@
-# Template folders are managed in /templates/ and synced at build time
-*
-!.gitignore
-!_actions
-!\[templateSlug\]
-!admin
-!api
-!auth
-!not-authorized
-!globals.css
-!layout.tsx
-!page.tsx
+# Template folders are managed in /templates/ and synced at build time.
+# List each template folder here when added to /templates/.
+airline
+exhibition
+fashion
+furniture
+jewelry
+portfolio
+sneaker
+studio
