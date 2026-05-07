@@ -117,7 +117,7 @@ export function TemplateForm({ action, templateTypes, runtimeOptions, initial }:
 
       <label className="block space-y-2 text-sm">
         <span className="text-zinc-300">기본 썸네일 3장 이상 (드래그앤드롭 가능)</span>
-        <ThumbnailDropzone name="thumbnailFiles" required={!initial} minimumCount={3} />
+        <ThumbnailDropzone name="thumbnailFiles" minimumCount={3} />
         {initial ? <input type="hidden" name="existingThumbnailRaw" value={textAreaJoin(initial.thumbnailUrls)} /> : null}
         {initial?.thumbnailUrls.length ? (
           <div className="grid grid-cols-3 gap-2">

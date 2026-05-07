@@ -4,11 +4,10 @@ import { useMemo, useRef, useState } from "react";
 
 interface ThumbnailDropzoneProps {
   name: string;
-  required?: boolean;
   minimumCount?: number;
 }
 
-export function ThumbnailDropzone({ name, required = false, minimumCount = 3 }: ThumbnailDropzoneProps) {
+export function ThumbnailDropzone({ name, minimumCount = 3 }: ThumbnailDropzoneProps) {
   const inputRef = useRef<HTMLInputElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [files, setFiles] = useState<File[]>([]);
@@ -39,7 +38,6 @@ export function ThumbnailDropzone({ name, required = false, minimumCount = 3 }: 
         type="file"
         accept="image/*"
         multiple
-        required={required}
         className="hidden"
         onChange={(event) => assignFiles(Array.from(event.target.files ?? []))}
       />
