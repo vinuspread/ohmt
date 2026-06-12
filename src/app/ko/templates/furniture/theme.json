@@ -1,0 +1,56 @@
+{
+  "name": "Furniture Modern",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#FFFFFF",
+      "secondary": "#1A1A1A",
+      "accent": "#0071E3",
+      "text": {
+        "main": "#1D1D1F",
+        "muted": "#6E6E73",
+        "contrast": "#FFFFFF"
+      },
+      "ui": {
+        "border": "rgba(0,0,0,0.01)",
+        "hover": "#F5F5F7",
+        "shadow": "0 20px 50px rgba(0,0,0,0.05)"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Outfit, Pretendard, sans-serif",
+        "weight": "700",
+        "tracking": "-0.03em",
+        "style": "uppercase font-bold tracking-tighter"
+      },
+      "body": {
+        "font": "Inter, Pretendard, sans-serif",
+        "weight": "400",
+        "leading": "1.6",
+        "style": "leading-relaxed"
+      },
+      "mono": {
+        "font": "JetBrains Mono",
+        "weight": "400"
+      }
+    },
+    "spacing": {
+      "page_pt": "128px",
+      "container": "1440px",
+      "gutter": "48px",
+      "card_p": "24px",
+      "gap": "4px"
+    },
+    "motion": {
+      "transition_fast": "200ms",
+      "transition_normal": "300ms",
+      "transition_slow": "500ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+    },
+    "interaction": {
+      "card_hover": "scale(1.02) transition-transform duration-300",
+      "button": "bg-[#1A1A1A] text-white hover:bg-black"
+    }
+  }
+}

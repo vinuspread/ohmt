@@ -1,0 +1,48 @@
+/* studio Design Tokens */
+:root {
+  --color-primary: #1A1A1A;
+  --color-accent: #1A1A1A;
+  --color-accent-light: #3A3A3A;
+  --color-bg: #FFFFFF;
+  --color-bg-secondary: #F5F5F5;
+  --color-bg-dark: #18181B;
+  --color-text: #1A1A1A;
+  --color-text-muted: #6E7488;
+  --color-border: rgba(0,0,0,0.05);
+  --color-border-light: rgba(0,0,0,0.08);
+
+  --font-heading: var(--font-outfit);
+  --font-body: var(--font-inter);
+
+  --font-size-h1: clamp(2.4rem, 5vw, 4rem);
+  --font-size-h2: clamp(1.8rem, 3.5vw, 3rem);
+  --font-size-body: 0.95rem;
+  --line-height-heading: 1.2;
+  --line-height-body: 1.6;
+  --letter-spacing-heading: -0.03em;
+
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+
+  --transition-base: 300ms ease-out;
+  --transition-slow: 500ms ease-out;
+
+  /* Interactive States */
+  --focus-outline: 2px solid var(--color-primary);
+  --focus-outline-offset: 2px;
+}
+
+/* Accessibility: Respect motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

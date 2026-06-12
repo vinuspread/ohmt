@@ -42,6 +42,51 @@ next-env.d.ts
 
 **/.next/
 
-**/node_modules/
+# vercel
 .vercel
 .env*.local
+
+
+server.log
+
+.mcp.json
+
+# local dev logs & temp files
+*.log
+*.pid
+*.png.tmp
+studio_scrolled.png
+
+# skills & agents (local tools)
+.agents/
+.claude/skills/
+skills-lock.json
+
+# playwright
+.playwright-mcp/
+test-results/
+
+# opencode
+opencode.json
+
+# visual QA tool
+.impeccable/live/
+
+# local claude settings
+.claude/settings.local.json
+
+# dev screenshots / temp files in root
+cosmetic-now.png
+cosmetic-story-mobile.png
+furniture-ko-desktop.png
+furniture-ko-mobile.png
+nav-en.png
+nav-ko.png
+sneaker-fix.png
+sneaker-fix2.png
+sneaker-hero-fix.png
+sneaker-hero-full.png
+sneaker-ko-h.png
+sneaker-ko-mobile.png
+test-cosmetic-desktop.png
+test-cosmetic-mobile.png

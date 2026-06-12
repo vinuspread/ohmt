@@ -1,0 +1,41 @@
+{
+  "name": "Vinuspread Hub (KO)",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#FCFCFD",
+      "secondary": "#09090B",
+      "accent": "#F97316",
+      "text": {
+        "main": "#09090B",
+        "muted": "#71717A",
+        "contrast": "#FFFFFF"
+      },
+      "ui": {
+        "border": "#E4E4E7",
+        "hover": "#F4F4F5",
+        "shadow": "none"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Inter, Pretendard, sans-serif",
+        "style": "font-bold tracking-tight"
+      },
+      "body": {
+        "font": "Inter, Pretendard, sans-serif",
+        "style": "font-normal leading-relaxed text-zinc-500"
+      }
+    },
+    "spacing": {
+      "page_pt": "0px",
+      "container": "1440px",
+      "gutter": "24px",
+      "card_gap": "24px"
+    },
+    "interaction": {
+      "button": "duration-200 ease-in-out",
+      "card_hover": "duration-300 ease-out"
+    }
+  }
+}

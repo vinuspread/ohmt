@@ -2,22 +2,5 @@
   "buildCommand": "next build",
   "outputDirectory": ".next",
   "framework": "nextjs",
-  "crons": [
-    {
-      "path": "/api/admin/backups/scheduled",
-      "schedule": "0 1 * * *"
-    },
-    {
-      "path": "/api/admin/backups/scheduled",
-      "schedule": "0 7 * * *"
-    },
-    {
-      "path": "/api/admin/backups/scheduled",
-      "schedule": "0 13 * * *"
-    },
-    {
-      "path": "/api/admin/backups/scheduled",
-      "schedule": "0 19 * * *"
-    }
-  ]
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . ':(exclude)sneaker-shop' ':(exclude)furniture-shop' ':(exclude)design studio' ':(exclude)design portfolio' ':(exclude)airline-template' ':(exclude)fashion-mall' ':(exclude)jewelry-mall' ':(exclude)exhibition-website'"
 }

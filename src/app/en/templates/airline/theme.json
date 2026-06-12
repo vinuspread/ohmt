@@ -1,0 +1,52 @@
+{
+  "name": "Travel Airline",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#05152E",
+      "secondary": "#FFFFFF",
+      "accent": "#C9A84C",
+      "text": {
+        "main": "#0D0D0D",
+        "muted": "#5A5A5A",
+        "contrast": "#FFFFFF"
+      },
+      "ui": {
+        "border": "#E8E6E0",
+        "hover": "#F7F6F2",
+        "shadow": "0 12px 60px rgba(5,21,46,0.2)"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Playfair Display, Noto Serif KR, serif",
+        "weight": "700",
+        "tracking": "-0.03em",
+        "style": "700"
+      },
+      "body": {
+        "font": "Inter, Pretendard, sans-serif",
+        "weight": "400",
+        "leading": "1.6",
+        "style": "400"
+      },
+      "mono": {
+        "font": "JetBrains Mono",
+        "weight": "400"
+      }
+    },
+    "spacing": {
+      "page_pt": "0px",
+      "container": "1320px",
+      "gutter": "60px",
+      "card_p": "24px",
+      "gap": "0px"
+    },
+    "motion": {
+      "transition_fast": "200ms",
+      "transition_normal": "300ms",
+      "transition_slow": "500ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+    }
+  }
+}

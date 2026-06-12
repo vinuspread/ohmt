@@ -1,0 +1,48 @@
+{
+  "name": "Multi-Shop",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#FCDF00",
+      "secondary": "#F2F2F2",
+      "accent": "#C9A97A",
+      "text": {
+        "main": "#0A0A0A",
+        "muted": "#6B6B6B",
+        "contrast": "#FFFFFF"
+      },
+      "ui": {
+        "border": "#E5E5E5",
+        "hover": "#F2F2F2",
+        "shadow": "none"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Jost, sans-serif",
+        "weight": "700",
+        "tracking": "-0.02em",
+        "style": "font-bold tracking-tight"
+      },
+      "body": {
+        "font": "Jost, sans-serif",
+        "weight": "400",
+        "leading": "1.6",
+        "style": "font-normal leading-relaxed"
+      }
+    },
+    "spacing": {
+      "page_pt": "120px",
+      "container": "1440px",
+      "gutter": "48px",
+      "card_p": "24px",
+      "gap": "48px"
+    },
+    "motion": {
+      "transition_fast": "200ms",
+      "transition_normal": "300ms",
+      "transition_slow": "500ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+    }
+  }
+}

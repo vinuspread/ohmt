@@ -1,0 +1,45 @@
+/* portfolio-ko Design Tokens */
+:root {
+  --color-primary: #000000;
+  --color-accent: #ED008C;
+  --color-accent-light: #F5559D;
+  --color-bg: #FFFFFF;
+  --color-bg-secondary: #F5F5F5;
+  --color-text: #000000;
+  --color-text-muted: #707070;
+  --color-border: rgba(0,0,0,0.1);
+
+  --font-heading: 'Inter', 'Pretendard', sans-serif;
+  --font-body: 'Inter', 'Pretendard', sans-serif;
+
+  --font-size-h1: clamp(2.4rem, 5vw, 4rem);
+  --font-size-h2: clamp(1.8rem, 3.5vw, 3rem);
+  --font-size-h3: clamp(1.2rem, 2.5vw, 1.8rem);
+  --font-size-body: 0.95rem;
+  --line-height-heading: 1.2;
+  --line-height-body: 1.6;
+
+  --transition-base: 300ms ease-out;
+
+  /* Interactive States */
+  --focus-outline: 2px solid var(--color-primary);
+  --focus-outline-offset: 2px;
+}
+
+body[lang="ko"], [lang="ko"] {
+  word-break: keep-all;
+}
+
+/* Accessibility: Respect motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Header nav letter-spacing */
+header a, header button, header span, header nav { letter-spacing: -0.03em; }

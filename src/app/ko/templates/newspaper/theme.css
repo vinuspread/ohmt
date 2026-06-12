@@ -1,0 +1,64 @@
+/* newspaper-ko Design Tokens */
+:root {
+  /* Colors */
+  --color-primary: #C41E3A;
+  --color-secondary: #111111;
+  --color-bg: #FFFFFF;
+  --color-text: #111111;
+  --color-accent: #C41E3A;
+  --color-muted: #555555;
+  --color-border: #DDDDDD;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', 'Noto Serif KR', Georgia, serif;
+  --font-body: Georgia, 'Noto Serif KR', serif;
+  --font-size-heading-lg: 3.5vw;
+  --font-size-heading-md: 2rem;
+  --font-size-heading-sm: 1.5rem;
+  --font-size-body: 1rem;
+  --font-size-caption: 0.75rem;
+  --line-height-heading: 1.2;
+  --line-height-body: 1.6;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+
+  /* Border Radius */
+  --radius-none: 0;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+
+  /* Duration & Transitions */
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-slow: 700ms;
+
+  /* Interactive States */
+  --focus-outline: 2px solid var(--color-primary);
+  --focus-outline-offset: 2px;
+}
+
+body[lang="ko"], [lang="ko"] {
+  word-break: keep-all;
+}
+
+/* Accessibility: Respect motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Header nav letter-spacing */
+header a, header button, header span, header nav { letter-spacing: -0.03em; }

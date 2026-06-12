@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xargs sed -i 's/ font-mono//g')",
+      "WebFetch(domain:www.behance.net)"
+    ]
+  }
+}

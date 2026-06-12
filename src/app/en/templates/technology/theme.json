@@ -1,0 +1,52 @@
+{
+  "name": "Robotflow Technology",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#ffffff",
+      "secondary": "#f8f9fc",
+      "accent": "#3b82f6",
+      "text": {
+        "main": "#0f172a",
+        "muted": "#64748b",
+        "contrast": "#ffffff"
+      },
+      "ui": {
+        "border": "#e2e8f0",
+        "hover": "#f1f5f9",
+        "shadow": "none"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Inter Tight, Inter, system-ui, sans-serif",
+        "weight": "700",
+        "tracking": "-0.03em",
+        "style": "normal"
+      },
+      "body": {
+        "font": "Inter, system-ui, sans-serif",
+        "weight": "400",
+        "leading": "1.6",
+        "style": "normal"
+      },
+      "mono": {
+        "font": "JetBrains Mono, monospace",
+        "weight": "400"
+      }
+    },
+    "spacing": {
+      "page_pt": "80px",
+      "container": "1280px",
+      "gutter": "32px",
+      "card_p": "32px",
+      "gap": "24px"
+    },
+    "motion": {
+      "transition_fast": "200ms",
+      "transition_normal": "300ms",
+      "transition_slow": "500ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+    }
+  }
+}

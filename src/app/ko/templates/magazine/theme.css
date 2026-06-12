@@ -1,0 +1,64 @@
+/* magazine-ko Design Tokens */
+:root {
+  /* Colors */
+  --color-primary: #8C6D3F;
+  --color-secondary: #0D0D0D;
+  --color-bg: #FAFAF8;
+  --color-text: #0D0D0D;
+  --color-accent: #8C6D3F;
+  --color-muted: #6B6B6B;
+  --color-border: #E2DDD8;
+
+  /* Typography */
+  --font-heading: 'DM Serif Display', 'Noto Serif KR', Georgia, serif;
+  --font-body: 'Inter', 'Noto Sans KR', sans-serif;
+  --font-size-heading-lg: 3.5vw;
+  --font-size-heading-md: 2rem;
+  --font-size-heading-sm: 1.5rem;
+  --font-size-body: 1rem;
+  --font-size-caption: 0.75rem;
+  --line-height-heading: 1.2;
+  --line-height-body: 1.6;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+
+  /* Border Radius */
+  --radius-none: 0;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+
+  /* Duration & Transitions */
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-slow: 700ms;
+
+  /* Interactive States */
+  --focus-outline: 2px solid var(--color-primary);
+  --focus-outline-offset: 2px;
+}
+
+/* Accessibility: Respect motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body[lang="ko"], [lang="ko"] {
+  word-break: keep-all;
+}
+
+/* Header nav letter-spacing */
+header a, header button, header span, header nav { letter-spacing: -0.03em; }

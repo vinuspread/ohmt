@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap');
+
+/* Technology Design Tokens */
+:root {
+  /* Color System */
+  --color-bg: #ffffff;
+  --color-bg-secondary: #f8f9fc;
+  --color-accent: #3b82f6;
+  --color-primary: #3b82f6;
+  --color-success: #10b981;
+  --color-text: #0f172a;
+  --color-text-muted: #64748b;
+  --color-border: #e2e8f0;
+
+  /* Typography */
+  --font-heading: 'Inter Tight', 'Noto Sans KR', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', 'Noto Sans KR', system-ui, -apple-system, sans-serif;
+
+  /* Transitions */
+  --transition-fast: 200ms;
+  --transition-normal: 300ms;
+  --transition-slow: 500ms;
+  --transition-easing: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Korean typography */
+body, * { word-break: keep-all; }
+header a, header button, header nav { letter-spacing: -0.03em; }
+
+/* Accessibility: Respect motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

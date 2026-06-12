@@ -1,0 +1,52 @@
+{
+  "name": "Exhibition Musei Vaticani",
+  "mode": "dark",
+  "theme": {
+    "palette": {
+      "primary": "#0F0F0F",
+      "secondary": "#F9F6F0",
+      "accent": "#F9F6F0",
+      "text": {
+        "main": "#F9F6F0",
+        "muted": "rgba(249, 246, 240, 0.4)",
+        "contrast": "#0F0F0F"
+      },
+      "ui": {
+        "border": "rgba(249, 246, 240, 0.1)",
+        "hover": "#F9F6F0",
+        "shadow": "0 30px 60px rgba(0,0,0,0.5)"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Playfair Display, Noto Serif KR, serif",
+        "weight": "500",
+        "tracking": "-0.03em",
+        "style": "font-medium tracking-tighter uppercase"
+      },
+      "body": {
+        "font": "Inter, Pretendard, sans-serif",
+        "weight": "300",
+        "leading": "1.6",
+        "style": "font-light tracking-widest leading-relaxed"
+      },
+      "mono": {
+        "font": "JetBrains Mono",
+        "weight": "400"
+      }
+    },
+    "spacing": {
+      "page_pt": "80px",
+      "container": "1280px",
+      "gutter": "24px",
+      "card_p": "24px",
+      "gap": "96px"
+    },
+    "motion": {
+      "transition_fast": "200ms",
+      "transition_normal": "300ms",
+      "transition_slow": "500ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+    }
+  }
+}

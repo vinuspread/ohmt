@@ -1,0 +1,52 @@
+{
+  "name": "Jewelry Luxury",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#FFFFFF",
+      "secondary": "#171717",
+      "accent": "#70C5BB",
+      "text": {
+        "main": "#171717",
+        "muted": "#4B5563",
+        "contrast": "#FFFFFF"
+      },
+      "ui": {
+        "border": "rgba(0,0,0,0.1)",
+        "hover": "#FFFFFF",
+        "shadow": "0 10px 30px rgba(0,0,0,0.02)"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Playfair Display, Noto Serif KR, serif",
+        "weight": "400",
+        "tracking": "0.2em",
+        "style": "font-normal tracking-[0.2em] uppercase"
+      },
+      "body": {
+        "font": "Inter, Pretendard, sans-serif",
+        "weight": "300",
+        "leading": "1.6",
+        "style": "font-light leading-relaxed"
+      },
+      "mono": {
+        "font": "JetBrains Mono",
+        "weight": "400"
+      }
+    },
+    "spacing": {
+      "page_pt": "192px",
+      "container": "1440px",
+      "gutter": "48px",
+      "card_p": "24px",
+      "gap": "48px"
+    },
+    "motion": {
+      "transition_fast": "200ms",
+      "transition_normal": "300ms",
+      "transition_slow": "500ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+    }
+  }
+}

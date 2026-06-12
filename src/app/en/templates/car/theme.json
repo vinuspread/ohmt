@@ -1,0 +1,52 @@
+{
+  "name": "Automotive Car",
+  "mode": "dark",
+  "theme": {
+    "palette": {
+      "primary": "#0A0A0A",
+      "secondary": "#FFFFFF",
+      "accent": "#C9A84C",
+      "text": {
+        "main": "#FFFFFF",
+        "muted": "rgba(255, 255, 255, 0.4)",
+        "contrast": "#0A0A0A"
+      },
+      "ui": {
+        "border": "rgba(255, 255, 255, 0.08)",
+        "hover": "rgba(255, 255, 255, 0.1)",
+        "shadow": "none"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Bebas Neue",
+        "weight": "700",
+        "tracking": "-0.03em",
+        "style": "400"
+      },
+      "body": {
+        "font": "Inter",
+        "weight": "400",
+        "leading": "1.6",
+        "style": "300"
+      },
+      "mono": {
+        "font": "JetBrains Mono",
+        "weight": "400"
+      }
+    },
+    "spacing": {
+      "page_pt": "0px",
+      "container": "1440px",
+      "gutter": "60px",
+      "card_p": "24px",
+      "gap": "1px"
+    },
+    "motion": {
+      "transition_fast": "200ms",
+      "transition_normal": "300ms",
+      "transition_slow": "500ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+    }
+  }
+}

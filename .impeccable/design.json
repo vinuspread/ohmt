@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-06-03T02:21:00Z",
+  "title": "Design System: ohmytemplate",
+  "extensions": {
+    "colorMeta": {
+      "primary": { "role": "primary", "displayName": "Primary Ink", "canonical": "oklch(0% 0 0)", "tonalRamp": ["#000000", "#1c1c1c", "#383838", "#555555", "#717171", "#8e8e8e", "#aaaaaa", "#c6c6c6"] },
+      "accent": { "role": "accent", "displayName": "Accent Highlight", "canonical": "oklch(60% 0.25 20)", "tonalRamp": ["#800f08", "#aa1910", "#d42519", "#ff3b30", "#ff6259", "#ff8982", "#ffb0ab", "#ffd7d4"] },
+      "neutral-bg": { "role": "neutral", "displayName": "Canvas Base", "canonical": "oklch(100% 0 0)", "tonalRamp": ["#ffffff", "#f8f9fa", "#e9ecef", "#dee2e6", "#ced4da", "#adb5bd", "#6c757d", "#495057"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headlines only." },
+      "body": { "displayName": "Body", "purpose": "Prose content." }
+    },
+    "shadows": [
+      { "name": "overlay", "value": "0 4px 20px rgba(0,0,0,0.08)", "purpose": "Subtle elevation for dropdown menus or modals." }
+    ],
+    "motion": [
+      { "name": "ease-out-standard", "value": "cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "Decelerating curve for responsive micro-interactions." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Call-to-action button adhering to the flat visual theme.",
+      "html": "<button class=\"ds-btn-primary\">GET STARTED</button>",
+      "css": ".ds-btn-primary { background: var(--color-primary, #000000); color: var(--color-bg, #ffffff); padding: 12px 24px; font-family: var(--font-body), sans-serif; font-size: 0.95rem; font-weight: 500; border: 1px solid var(--color-border, #000000); border-radius: var(--radius-sm, 4px); transition: background-color 200ms ease-out, border-color 200ms ease-out; } .ds-btn-primary:hover { background-color: var(--color-accent, #ff3b30); border-color: var(--color-accent, #ff3b30); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Premium Editorial Canvas",
+    "overview": "본 디자인 시스템은 비주얼 중심의 프리미엄 쇼케이스 및 독립형 템플릿 환경을 위해 구축되었습니다. 각 템플릿이 독자적인 브랜드 미감과 고유의 비주얼 정체성을 지니면서도, 코드 규칙과 품질 면에서는 완벽한 통일성을 유지할 수 있도록 돕는 캔버스 역할을 수행합니다.",
+    "keyCharacteristics": [
+      "장르적 독립성: 공통 라이브러리 의존성 없이, 각 템플릿 폴더가 theme.css를 통해 자체 토큰을 오버라이딩함.",
+      "구조적 평면 미학: 과도한 드롭 섀도우나 둥근 모서리를 피하고, 1px 테두리와 서체 대비만을 활용하여 프리미엄한 깊이감을 형성.",
+      "한국어 타이포그래피 자간 최적화: 국문 템플릿의 가독성을 높이기 위해 엄격한 음수 자간 규칙과 행간 설정을 적용."
+    ],
+    "rules": [
+      { "name": "The Overwrite Rule", "body": "템플릿별로 독자적인 컬러 정체성을 부여하기 위해 컴포넌트 내부에서 하드코딩된 #HEX 색상은 완전히 배제하며, 반드시 theme.css에 정의된 CSS Custom Properties 변수만을 사용해야 합니다.", "section": "colors" },
+      { "name": "The Korean Kerning Rule", "body": "국문 템플릿(-ko)의 경우, 한글 가독성 향상을 위해 전체 기본 자간을 -0.025em, 헤더 GNB 자간을 -0.03em, 대형 헤딩 자간을 -0.04em으로 고정하며, 단어가 어색하게 쪼개지지 않도록 word-break: keep-all과 [overflow-wrap:normal]을 적절히 결합해 사용합니다.", "section": "typography" },
+      { "name": "The Border-First Rule", "body": "입체감을 주기 위해 섀도우를 주는 행위는 금지됩니다. 카드나 컨테이너의 경계는 var(--color-border) 1px 선 또는 보조 배경색(var(--color-bg-secondary))을 활용하여 구분합니다.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do 한글 대형 헤딩에는 반드시 leading-[1.25] 이상의 넉넉한 행간을 적용하십시오.",
+      "Do 모든 상호작용 요소(버튼, 링크, 인풋)에 명확한 :focus-visible 커스텀 스타일을 부여하십시오.",
+      "Do 템플릿 루트에 위치한 theme.css 파일에서 모든 컬러와 타이포그래피 변수를 제어하십시오."
+    ],
+    "donts": [
+      "Don't 디자인 일관성을 해치는 italic 스타일이나 font-light (Thin) 가중치를 임의로 사용하지 마십시오.",
+      "Don't 본문에 3가지 이상의 서로 다른 폰트 패밀리를 혼용하지 마십시오.",
+      "Don't 카드의 테두리(1px border)와 큰 그림자(16px 이상)를 동시에 한 요소에 중첩하여 적용하지 마십시오. (고스트 카드 패턴 금지)",
+      "Don't 임의의 사이드 스트라이프 테두리(border-left: 4px solid ...)를 정보 강조용으로 남발하지 마십시오."
+    ]
+  }
+}

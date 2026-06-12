@@ -1,0 +1,52 @@
+{
+  "name": "Editorial Magazine",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#FAFAF8",
+      "secondary": "#0D0D0D",
+      "accent": "#8C6D3F",
+      "text": {
+        "main": "#0D0D0D",
+        "muted": "#6B6B6B",
+        "contrast": "#FFFFFF"
+      },
+      "ui": {
+        "border": "#E2DDD8",
+        "hover": "#F0EDE8",
+        "shadow": "0 1px 0 #E2DDD8"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "DM Serif Display, Noto Serif KR, serif",
+        "weight": "400",
+        "tracking": "-0.03em",
+        "style": "400"
+      },
+      "body": {
+        "font": "Inter, Pretendard, sans-serif",
+        "weight": "400",
+        "leading": "1.6",
+        "style": "400"
+      },
+      "mono": {
+        "font": "JetBrains Mono",
+        "weight": "400"
+      }
+    },
+    "spacing": {
+      "page_pt": "64px",
+      "container": "1320px",
+      "gutter": "40px",
+      "card_p": "24px",
+      "gap": "0px"
+    },
+    "motion": {
+      "transition_fast": "200ms",
+      "transition_normal": "300ms",
+      "transition_slow": "500ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+    }
+  }
+}

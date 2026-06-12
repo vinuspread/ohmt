@@ -1,0 +1,52 @@
+{
+  "name": "Fashion Laboratory",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#FFFFFF",
+      "secondary": "#050505",
+      "accent": "#000000",
+      "text": {
+        "main": "#000000",
+        "muted": "#4A4A4A",
+        "contrast": "#FFFFFF"
+      },
+      "ui": {
+        "border": "#EEEEEE",
+        "hover": "#F9F9F9",
+        "shadow": "none"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Bodoni Moda, Bodoni MT, Didot, Noto Serif KR, serif",
+        "weight": "700",
+        "tracking": "-0.03em",
+        "style": "font-bold tracking-tighter uppercase"
+      },
+      "body": {
+        "font": "Inter, Pretendard, sans-serif",
+        "weight": "400",
+        "leading": "1.6",
+        "style": "font-normal leading-relaxed"
+      },
+      "mono": {
+        "font": "JetBrains Mono",
+        "weight": "400"
+      }
+    },
+    "spacing": {
+      "page_pt": "192px",
+      "container": "1440px",
+      "gutter": "48px",
+      "card_p": "24px",
+      "gap": "48px"
+    },
+    "motion": {
+      "transition_fast": "200ms",
+      "transition_normal": "300ms",
+      "transition_slow": "500ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+    }
+  }
+}

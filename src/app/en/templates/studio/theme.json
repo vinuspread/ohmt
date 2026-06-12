@@ -1,0 +1,52 @@
+{
+  "name": "Studio Corporate",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#FFFFFF",
+      "secondary": "#090B19",
+      "accent": "#1A1A1A",
+      "text": {
+        "main": "#1A1A1A",
+        "muted": "#4A4A4A",
+        "contrast": "#FFFFFF"
+      },
+      "ui": {
+        "border": "rgba(0,0,0,0.05)",
+        "hover": "#F4F4F7",
+        "shadow": "0 20px 80px rgba(0,0,0,0.05)"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Outfit",
+        "weight": "700",
+        "tracking": "-0.03em",
+        "style": "font-semibold tracking-[-0.03em] uppercase"
+      },
+      "body": {
+        "font": "Inter",
+        "weight": "400",
+        "leading": "1.6",
+        "style": "font-normal leading-relaxed"
+      },
+      "mono": {
+        "font": "JetBrains Mono",
+        "weight": "400"
+      }
+    },
+    "spacing": {
+      "page_pt": "192px",
+      "container": "100%",
+      "gutter": "64px",
+      "card_p": "24px",
+      "gap": "48px"
+    },
+    "motion": {
+      "transition_fast": "200ms",
+      "transition_normal": "300ms",
+      "transition_slow": "500ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+    }
+  }
+}

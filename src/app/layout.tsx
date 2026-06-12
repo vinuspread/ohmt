@@ -1,13 +1,10 @@
 import type { Metadata } from 'next';
-import { Cormorant_Garamond, Inter, Playfair_Display, Outfit } from "next/font/google";
-import localFont from "next/font/local";
+import { Geist, Cormorant_Garamond, Inter, Playfair_Display, Outfit, Bebas_Neue } from "next/font/google";
 import "./globals.css";
 
-const pretendard = localFont({
-  src: "../../node_modules/pretendard/dist/web/variable/woff2/PretendardVariable.woff2",
-  variable: "--font-pretendard",
-  display: "swap",
-  weight: "100 900",
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
 });
 
 const cormorant = Cormorant_Garamond({
@@ -34,8 +31,14 @@ const outfit = Outfit({
   weight: ["100", "300", "400", "700", "900"],
 });
 
+const bebasNeue = Bebas_Neue({
+  variable: "--font-bebas",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
 export const metadata: Metadata = {
-  title: "vinuspread HUB",
+  title: "OH! My templates!",
   description: "Premium Template Ecosystem",
 };
 
@@ -45,7 +48,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${pretendard.variable} ${cormorant.variable} ${inter.variable} ${playfair.variable} ${outfit.variable}`} suppressHydrationWarning>
+    <html lang="en" className={`${geistSans.variable} ${cormorant.variable} ${inter.variable} ${playfair.variable} ${outfit.variable} ${bebasNeue.variable}`} suppressHydrationWarning>
       <body className="antialiased">{children}</body>
     </html>
   );

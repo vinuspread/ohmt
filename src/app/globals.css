@@ -1,24 +1,219 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700&display=swap');
 @import "tailwindcss";
 
-@theme {
-  --font-sans: var(--font-pretendard), -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-
-@keyframes tsl-enter-right {
-  from { transform: translateX(105%); }
-  to   { transform: translateX(0); }
-}
-@keyframes tsl-enter-left {
-  from { transform: translateX(-105%); }
-  to   { transform: translateX(0); }
-}
-
 :root {
+  --font-serif: var(--font-playfair) !important;
   --background: #ffffff;
   --foreground: #171717;
-  --color-bg: #FAFAFA;
-  --color-primary: #0D6EFD;
-  --color-gold: #D4AF6A;
-  --color-muted: #E5E5E5;
+  --color-bg: #FAFAFA;           /* main background */
+  --color-primary: #0D6EFD;      /* accent (blue) */
+  --color-gold: #D4AF6A;         /* keep existing gold */
+  --color-muted: #E5E5E5;        /* neutral gray */
+  --font-sans: 'Pretendard', 'Inter', sans-serif;
+
+  /* Vinus Airlines Design Tokens */
+  --airline-dark: #05152E;
+  --airline-gold: #C9A84C;
+  --airline-text: #0D0D0D;
+  --airline-muted: #7A7A7A;
+  --airline-light-bg: #FAF9F6;
+  --airline-border: #E8E6E0;
 }
+
+/* Vinus Airlines Custom Utilities */
+.airline-text-sm {
+  font-size: 14px !important;
+}
+
+.airline-text-xs {
+  font-size: 11px !important;
+}
+
+.airline-text-base {
+  font-size: 16px !important;
+}
+
+.airline-bg-dark {
+  background-color: var(--airline-dark) !important;
+}
+
+.airline-bg-gold {
+  background-color: var(--airline-gold) !important;
+}
+
+.airline-text-gold {
+  color: var(--airline-gold) !important;
+}
+
+.airline-text-dark {
+  color: var(--airline-dark) !important;
+}
+
+.airline-text-muted {
+  color: var(--airline-muted) !important;
+}
+
+.airline-border-gold {
+  border-color: var(--airline-gold) !important;
+}
+
+.airline-border-normal {
+  border-color: var(--airline-border) !important;
+}
+
+.airline-bg-light {
+  background-color: var(--airline-light-bg) !important;
+}
+
+.airline-rounded-card {
+  border-radius: 20px !important;
+}
+
+.airline-rounded-btn {
+  border-radius: 9999px !important;
+}
+
+.font-playfair {
+  font-family: var(--font-playfair), serif !important;
+}
+
+/* Korean text letter-spacing optimization */
+.korean-text {
+  letter-spacing: -0.02em;
+}
+
+/* Scoped styles for Korean templates to avoid breaking English equivalents */
+[lang="ko"],
+[class*="-ko"] {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* Exclusive premium utility classes for Korean typography */
+.ko-display-lg {
+  font-family: 'Pretendard', sans-serif !important;
+  letter-spacing: -0.04em !important;
+  line-height: 1.25 !important;
+  font-weight: 800 !important;
+}
+
+.ko-serif-display {
+  font-family: 'Noto Serif KR', serif !important;
+  letter-spacing: -0.035em !important;
+  line-height: 1.3 !important;
+  font-weight: 700 !important;
+}
+
+.ko-heading-md {
+  font-family: 'Pretendard', sans-serif !important;
+  letter-spacing: -0.025em !important;
+  line-height: 1.35 !important;
+  font-weight: 700 !important;
+}
+
+.ko-body-base {
+  font-family: 'Pretendard', sans-serif !important;
+  letter-spacing: -0.015em !important;
+  line-height: 1.7 !important;
+  font-weight: 400 !important;
+}
+
+.ko-body-serif {
+  font-family: 'Noto Serif KR', serif !important;
+  letter-spacing: -0.01em !important;
+  line-height: 1.75 !important;
+  font-weight: 400 !important;
+}
+
+/* Preserving selective micro-spacings if intentionally declared */
+[lang="ko"] .tracking-tighter, [class*="-ko"] .tracking-tighter {
+  letter-spacing: -0.05em !important;
+}
+[lang="ko"] .tracking-tight, [class*="-ko"] .tracking-tight {
+  letter-spacing: -0.025em !important;
+}
+[lang="ko"] .tracking-normal, [class*="-ko"] .tracking-normal {
+  letter-spacing: 0em !important;
+}
+
+/* ─── WCAG AA Contrast & Accessibility ─── */
+/* Ensure all focus states are visible */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid;
+  outline-offset: 2px;
+}
+
+/* Anti-aliasing — applied globally, not just inherited from html */
+html, body, * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Ensure body text is always readable */
+body {
+  min-height: 100vh;
+}
+
+/* Button base states for consistency */
+button:not(:disabled) {
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Link states */
+a {
+  transition: color 200ms ease-out;
+}
+
+a:focus-visible {
+  border-radius: 2px;
+}
+
+/* Form elements */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  border-radius: 4px;
+}
+
+/* Selection color for better readability */
+::selection {
+  background-color: rgba(201, 168, 76, 0.2);
+  color: inherit;
+}
+
+/* Infinite scroll marquee animation */
+@keyframes marquee {
+  0%   { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee img {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+

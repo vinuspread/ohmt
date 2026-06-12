@@ -1,0 +1,52 @@
+{
+  "name": "Press Newspaper",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#FFFFFF",
+      "secondary": "#111111",
+      "accent": "#C41E3A",
+      "text": {
+        "main": "#111111",
+        "muted": "#555555",
+        "contrast": "#FFFFFF"
+      },
+      "ui": {
+        "border": "#DDDDDD",
+        "hover": "#F7F7F5",
+        "shadow": "none"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Playfair Display, Noto Serif KR, serif",
+        "weight": "700",
+        "tracking": "-0.03em",
+        "style": "700"
+      },
+      "body": {
+        "font": "Georgia, Noto Serif KR, serif",
+        "weight": "400",
+        "leading": "1.6",
+        "style": "400"
+      },
+      "mono": {
+        "font": "JetBrains Mono",
+        "weight": "400"
+      }
+    },
+    "spacing": {
+      "page_pt": "0px",
+      "container": "1280px",
+      "gutter": "32px",
+      "card_p": "24px",
+      "gap": "0px"
+    },
+    "motion": {
+      "transition_fast": "200ms",
+      "transition_normal": "300ms",
+      "transition_slow": "500ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+    }
+  }
+}

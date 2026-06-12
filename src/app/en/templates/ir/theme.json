@@ -1,0 +1,52 @@
+{
+  "name": "Corporate IR",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#FFFFFF",
+      "secondary": "#111111",
+      "accent": "#B8962E",
+      "text": {
+        "main": "#111111",
+        "muted": "#4A4A4A",
+        "contrast": "#FFFFFF"
+      },
+      "ui": {
+        "border": "#E2E2E0",
+        "hover": "#F5F5F3",
+        "shadow": "none"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Inter, Noto Sans KR, sans-serif",
+        "weight": "700",
+        "tracking": "-0.03em",
+        "style": "700"
+      },
+      "body": {
+        "font": "Inter, Noto Sans KR, sans-serif",
+        "weight": "400",
+        "leading": "1.6",
+        "style": "400"
+      },
+      "mono": {
+        "font": "JetBrains Mono",
+        "weight": "400"
+      }
+    },
+    "spacing": {
+      "page_pt": "0px",
+      "container": "1280px",
+      "gutter": "60px",
+      "card_p": "24px",
+      "gap": "1px"
+    },
+    "motion": {
+      "transition_fast": "200ms",
+      "transition_normal": "300ms",
+      "transition_slow": "500ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+    }
+  }
+}

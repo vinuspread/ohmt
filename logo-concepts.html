@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OH! my template — Logo Concepts</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,700;9..40,900&family=Syne:wght@400;500;700;800&family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: #141414;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  padding: 72px 56px;
+  min-height: 100vh;
+}
+
+.page-header {
+  max-width: 960px;
+  margin: 0 auto 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.page-header-title {
+  color: #3a3a3a;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.page-header-date {
+  color: #2e2e2e;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  font-weight: 400;
+}
+
+/* ===== CONCEPT WRAPPER ===== */
+.concept {
+  max-width: 960px;
+  margin: 0 auto 80px;
+}
+
+.concept-label {
+  color: #3a3a3a;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  font-weight: 400;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 360px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.panel-tag {
+  position: absolute;
+  bottom: 22px;
+  left: 28px;
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 400;
+}
+
+.concept-meta {
+  margin-top: 18px;
+  display: flex;
+  gap: 48px;
+  padding-left: 2px;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.meta-key {
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #333;
+  font-weight: 400;
+}
+
+.meta-val {
+  font-size: 11px;
+  color: #5a5a5a;
+  font-weight: 400;
+}
+
+
+/* ========================================
+   CONCEPT 01 — MINIMAL MODERN AGENCY
+   ======================================== */
+
+.c1-dark  { background: #0A0A0A; }
+.c1-light { background: #F3F2EF; }
+
+.logo-c1 {
+  display: flex;
+  align-items: stretch;
+  gap: 14px;
+}
+
+.c1-bracket {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 4px 0;
+}
+
+.c1-bracket svg { display: block; }
+
+.c1-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.c1-oh {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 44px;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+.c1-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9.5px;
+  font-weight: 400;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+}
+
+.c1-dark  .c1-oh  { color: #FFFFFF; }
+.c1-dark  .c1-sub { color: #444; }
+.c1-light .c1-oh  { color: #0A0A0A; }
+.c1-light .c1-sub { color: #ABABAB; }
+
+.c1-dark  .panel-tag { color: #222; }
+.c1-light .panel-tag { color: #CCC; }
+
+
+/* ========================================
+   CONCEPT 02 — CREATIVE STUDIO
+   ======================================== */
+
+.c2-dark  { background: #0D0D0D; }
+.c2-light { background: #F9F9F7; }
+
+.logo-c2 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.c2-oh {
+  font-family: 'Syne', sans-serif;
+  font-size: 54px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  display: flex;
+  align-items: flex-start;
+}
+
+.c2-oh-text { display: inline-block; }
+
+.c2-excl {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-left: 1px;
+  padding-top: 3px;
+}
+
+.c2-excl-line {
+  width: 6px;
+  height: 30px;
+  border-radius: 3px;
+  background: #FFB800;
+}
+
+.c2-excl-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 1.5px;
+  background: #FFB800;
+}
+
+.c2-sub {
+  font-family: 'Syne', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.c2-dark  .c2-oh   { color: #FFFFFF; }
+.c2-dark  .c2-sub  { color: #3a3a3a; }
+.c2-light .c2-oh   { color: #0D0D0D; }
+.c2-light .c2-sub  { color: #BBBBBB; }
+
+.c2-dark  .panel-tag { color: #222; }
+.c2-light .panel-tag { color: #CCC; }
+
+
+/* ========================================
+   CONCEPT 03 — FRIENDLY & APPROACHABLE
+   ======================================== */
+
+.c3-dark  { background: #100E0B; }
+.c3-light { background: #FEF9F5; }
+
+.logo-c3 {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.c3-oh {
+  font-family: 'Nunito', sans-serif;
+  font-size: 50px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: #FF6848;
+}
+
+.c3-sub {
+  font-family: 'Nunito', sans-serif;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.c3-dark  .c3-sub { color: #3e3b38; }
+.c3-light .c3-sub { color: #C5B9B0; }
+
+.c3-dark  .panel-tag { color: #222; }
+.c3-light .panel-tag { color: #DDD; }
+
+/* ========================================
+   CONCEPT 04 — MINIMAL BRACKET
+   ======================================== */
+.c4-dark  { background: #0F1012; }
+.c4-light { background: #F4F5F6; }
+
+.logo-c4 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.c4-bracket {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.c4-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.c4-oh {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.c4-sub {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.c4-dark  .c4-oh  { color: #FFFFFF; }
+.c4-dark  .c4-sub { color: #5E5F6B; }
+.c4-light .c4-oh  { color: #1A1B1E; }
+.c4-light .c4-sub { color: #5E5F6B; }
+.c4-dark  .panel-tag { color: #222; }
+.c4-light .panel-tag { color: #DDD; }
+
+/* ========================================
+   CONCEPT 05 — GEOMETRIC PORTAL
+   ======================================== */
+.c5-dark  { background: #0E0F12; }
+.c5-light { background: #F6F8FA; }
+
+.logo-c5 {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.c5-symbol {
+  width: 32px;
+  height: 32px;
+  border-radius: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.c5-dark  .c5-symbol { background: #1C1D24; }
+.c5-light .c5-symbol { background: #1A1B1E; }
+
+.c5-portal-outer {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #FFB800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.c5-portal-inner {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.c5-dark  .c5-portal-inner { background: #1C1D24; }
+.c5-light .c5-portal-inner { background: #1A1B1E; }
+
+.c5-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #FFFFFF;
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+
+.c5-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.c5-oh {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+.c5-sub {
+  font-family: 'Syne', sans-serif;
+  font-weight: 500;
+  font-size: 9px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+.c5-dark  .c5-oh  { color: #FFFFFF; }
+.c5-dark  .c5-sub { color: #5E5F6B; }
+.c5-light .c5-oh  { color: #1A1B1E; }
+.c5-light .c5-sub { color: #5E5F6B; }
+.c5-dark  .panel-tag { color: #222; }
+.c5-light .panel-tag { color: #DDD; }
+
+</style>
+</head>
+<body>
+
+<div class="page-header">
+  <span class="page-header-title">OH! my template &mdash; Logo Concepts</span>
+  <span class="page-header-date">2026 &nbsp;&middot;&nbsp; 3 Concepts</span>
+</div>
+
+
+<!-- ========== CONCEPT 01 ========== -->
+<div class="concept">
+  <p class="concept-label">01 &nbsp;&mdash;&nbsp; Minimal Modern Agency</p>
+  <div class="board">
+
+    <div class="panel c1-dark">
+      <div class="logo-c1">
+        <div class="c1-bracket">
+          <svg width="12" height="72" viewBox="0 0 12 72" fill="none">
+            <rect x="0" y="0"  width="2.5" height="72" fill="#2a2a2a"/>
+            <rect x="0" y="0"  width="12"  height="2.5" fill="#2a2a2a"/>
+            <rect x="0" y="69.5" width="12" height="2.5" fill="#2a2a2a"/>
+          </svg>
+        </div>
+        <div class="c1-text">
+          <div class="c1-oh">OH!</div>
+          <div class="c1-sub">my template</div>
+        </div>
+      </div>
+      <span class="panel-tag">Dark</span>
+    </div>
+
+    <div class="panel c1-light">
+      <div class="logo-c1">
+        <div class="c1-bracket">
+          <svg width="12" height="72" viewBox="0 0 12 72" fill="none">
+            <rect x="0" y="0"  width="2.5" height="72" fill="#D8D6D2"/>
+            <rect x="0" y="0"  width="12"  height="2.5" fill="#D8D6D2"/>
+            <rect x="0" y="69.5" width="12" height="2.5" fill="#D8D6D2"/>
+          </svg>
+        </div>
+        <div class="c1-text">
+          <div class="c1-oh">OH!</div>
+          <div class="c1-sub">my template</div>
+        </div>
+      </div>
+      <span class="panel-tag">Light</span>
+    </div>
+
+  </div>
+  <div class="concept-meta">
+    <div class="meta-item">
+      <span class="meta-key">Typeface</span>
+      <span class="meta-val">DM Sans 900 + 400</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-key">Palette</span>
+      <span class="meta-val">#0A0A0A &nbsp;·&nbsp; #FFFFFF &nbsp;·&nbsp; #AAAAAA</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-key">Symbol</span>
+      <span class="meta-val">Left bracket &mdash; code / template framing</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-key">Tone</span>
+      <span class="meta-val">Agency, precision, structure</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ========== CONCEPT 02 ========== -->
+<div class="concept">
+  <p class="concept-label">02 &nbsp;&mdash;&nbsp; Creative Studio</p>
+  <div class="board">
+
+    <div class="panel c2-dark">
+      <div class="logo-c2">
+        <div class="c2-oh">
+          <span class="c2-oh-text">OH</span>
+          <span class="c2-excl">
+            <span class="c2-excl-line"></span>
+            <span class="c2-excl-dot"></span>
+          </span>
+        </div>
+        <div class="c2-sub">my template</div>
+      </div>
+      <span class="panel-tag">Dark</span>
+    </div>
+
+    <div class="panel c2-light">
+      <div class="logo-c2">
+        <div class="c2-oh">
+          <span class="c2-oh-text">OH</span>
+          <span class="c2-excl">
+            <span class="c2-excl-line"></span>
+            <span class="c2-excl-dot"></span>
+          </span>
+        </div>
+        <div class="c2-sub">my template</div>
+      </div>
+      <span class="panel-tag">Light</span>
+    </div>
+
+  </div>
+  <div class="concept-meta">
+    <div class="meta-item">
+      <span class="meta-key">Typeface</span>
+      <span class="meta-val">Syne 800 + 500</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-key">Palette</span>
+      <span class="meta-val">#0D0D0D &nbsp;·&nbsp; #FFB800 &nbsp;·&nbsp; #FFFFFF</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-key">Symbol</span>
+      <span class="meta-val">"!" custom-drawn &mdash; exclamation as brand signature</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-key">Tone</span>
+      <span class="meta-val">Bold, expressive, creative energy</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ========== CONCEPT 03 ========== -->
+<div class="concept">
+  <p class="concept-label">03 &nbsp;&mdash;&nbsp; Friendly &amp; Approachable</p>
+  <div class="board">
+
+    <div class="panel c3-dark">
+      <div class="logo-c3">
+        <div class="c3-oh">OH!</div>
+        <div class="c3-sub">my template</div>
+      </div>
+      <span class="panel-tag">Dark</span>
+    </div>
+
+    <div class="panel c3-light">
+      <div class="logo-c3">
+        <div class="c3-oh">OH!</div>
+        <div class="c3-sub">my template</div>
+      </div>
+      <span class="panel-tag">Light</span>
+    </div>
+
+  </div>
+  <div class="concept-meta">
+    <div class="meta-item">
+      <span class="meta-key">Typeface</span>
+      <span class="meta-val">Nunito 900 + 700</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-key">Palette</span>
+      <span class="meta-val">#FF6848 &nbsp;·&nbsp; #0A0A0A &nbsp;·&nbsp; #FEF9F5</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-key">Symbol</span>
+      <span class="meta-val">Warm coral wordmark &mdash; color carries the personality</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-key">Tone</span>
+      <span class="meta-val">Human, warm, inviting, design-friendly</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ========== CONCEPT 04 (PROPOSED A) ========== -->
+<div class="concept">
+  <p class="concept-label">04 &nbsp;&mdash;&nbsp; Minimal Bracket (Proposed A)</p>
+  <div class="board">
+
+    <div class="panel c4-dark">
+      <div class="logo-c4">
+        <div class="c4-bracket">
+          <svg width="10" height="42" viewBox="0 0 10 42" fill="none">
+            <rect x="0" y="0"  width="2" height="42" fill="#FFB800"/>
+            <rect x="0" y="0"  width="10" height="2" fill="#FFB800"/>
+            <rect x="0" y="40" width="10" height="2" fill="#FFB800"/>
+          </svg>
+        </div>
+        <div class="c4-text">
+          <div class="c4-oh">OH!</div>
+          <div class="c4-sub">my template</div>
+        </div>
+      </div>
+      <span class="panel-tag">Dark</span>
+    </div>
+
+    <div class="panel c4-light">
+      <div class="logo-c4">
+        <div class="c4-bracket">
+          <svg width="10" height="42" viewBox="0 0 10 42" fill="none">
+            <rect x="0" y="0"  width="2" height="42" fill="#FFB800"/>
+            <rect x="0" y="0"  width="10" height="2" fill="#FFB800"/>
+            <rect x="0" y="40" width="10" height="2" fill="#FFB800"/>
+          </svg>
+        </div>
+        <div class="c4-text">
+          <div class="c4-oh">OH!</div>
+          <div class="c4-sub">my template</div>
+        </div>
+      </div>
+      <span class="panel-tag">Light</span>
+    </div>
+
+  </div>
+  <div class="concept-meta">
+    <div class="meta-item">
+      <span class="meta-key">Typeface</span>
+      <span class="meta-val">DM Sans 900 + 500</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-key">Palette</span>
+      <span class="meta-val">#FFB800 &nbsp;·&nbsp; #1A1B1E &nbsp;·&nbsp; #FFFFFF</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-key">Symbol</span>
+      <span class="meta-val">Minimal Bracket &mdash; template and layout framework</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-key">Tone</span>
+      <span class="meta-val">Precision, structural, agency style</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ========== CONCEPT 05 (PROPOSED B) ========== -->
+<div class="concept">
+  <p class="concept-label">05 &nbsp;&mdash;&nbsp; Geometric Portal (Proposed B)</p>
+  <div class="board">
+
+    <div class="panel c5-dark">
+      <div class="logo-c5">
+        <div class="c5-symbol">
+          <div class="c5-portal-outer">
+            <div class="c5-portal-inner"></div>
+          </div>
+          <div class="c5-dot"></div>
+        </div>
+        <div class="c5-text">
+          <div class="c5-oh">OH! MY</div>
+          <div class="c5-sub">TEMPLATE</div>
+        </div>
+      </div>
+      <span class="panel-tag">Dark</span>
+    </div>
+
+    <div class="panel c5-light">
+      <div class="logo-c5">
+        <div class="c5-symbol">
+          <div class="c5-portal-outer">
+            <div class="c5-portal-inner"></div>
+          </div>
+          <div class="c5-dot"></div>
+        </div>
+        <div class="c5-text">
+          <div class="c5-oh">OH! MY</div>
+          <div class="c5-sub">TEMPLATE</div>
+        </div>
+      </div>
+      <span class="panel-tag">Light</span>
+    </div>
+
+  </div>
+  <div class="concept-meta">
+    <div class="meta-item">
+      <span class="meta-key">Typeface</span>
+      <span class="meta-val">Syne 800 + 500</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-key">Palette</span>
+      <span class="meta-val">#FFB800 &nbsp;·&nbsp; #1A1B1E &nbsp;·&nbsp; #FFFFFF</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-key">Symbol</span>
+      <span class="meta-val">Geometric Portal &mdash; overlapping portal of creation</span>
+    </div>
+    <div class="meta-item">
+      <span class="meta-key">Tone</span>
+      <span class="meta-val">Modern tech, geometric, trendy, app-native</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

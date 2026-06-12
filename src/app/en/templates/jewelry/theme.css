@@ -1,0 +1,58 @@
+/* jewelry Design Tokens */
+:root {
+  /* Colors */
+  --color-primary: #70C5BB;
+  --color-secondary: #171717;
+  --color-bg: #FFFFFF;
+  --color-text: #171717;
+  --color-accent: #70C5BB;
+  --color-muted: #4B5563;
+  --color-border: rgba(0,0,0,0.1);
+
+  /* Typography */
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-size-heading-lg: 3.5vw;
+  --font-size-heading-md: 2rem;
+  --font-size-heading-sm: 1.5rem;
+  --font-size-body: 1rem;
+  --font-size-caption: 0.75rem;
+  --line-height-heading: 1.2;
+  --line-height-body: 1.6;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+
+  /* Border Radius */
+  --radius-none: 0;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-full: 9999px;
+
+  /* Duration & Transitions */
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-slow: 700ms;
+  --easing-out: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Interactive States */
+  --focus-outline: 2px solid var(--color-primary);
+  --focus-outline-offset: 2px;
+}
+
+/* Accessibility: Respect motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

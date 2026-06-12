@@ -1,0 +1,52 @@
+{
+  "name": "Cosmetic Wellness",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#F9F6F2",
+      "secondary": "#000000",
+      "accent": "#EBE4DE",
+      "text": {
+        "main": "#000000",
+        "muted": "#4A4A4A",
+        "contrast": "#FFFFFF"
+      },
+      "ui": {
+        "border": "rgba(0, 0, 0, 0.08)",
+        "hover": "#FFFFFF",
+        "shadow": "0 10px 40px rgba(0, 0, 0, 0.04)"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Inter, Pretendard, sans-serif",
+        "weight": "300",
+        "tracking": "-0.03em",
+        "style": "300"
+      },
+      "body": {
+        "font": "Inter, Pretendard, sans-serif",
+        "weight": "400",
+        "leading": "1.6",
+        "style": "400"
+      },
+      "mono": {
+        "font": "JetBrains Mono",
+        "weight": "400"
+      }
+    },
+    "spacing": {
+      "page_pt": "118px",
+      "container": "1440px",
+      "gutter": "40px",
+      "card_p": "24px",
+      "gap": "0px"
+    },
+    "motion": {
+      "transition_fast": "200ms",
+      "transition_normal": "300ms",
+      "transition_slow": "500ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+    }
+  }
+}

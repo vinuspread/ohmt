@@ -1,0 +1,52 @@
+{
+  "name": "Portfolio Brutalist",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#FFFFFF",
+      "secondary": "#000000",
+      "accent": "#000000",
+      "text": {
+        "main": "#000000",
+        "muted": "#707070",
+        "contrast": "#FFFFFF"
+      },
+      "ui": {
+        "border": "rgba(0,0,0,0.1)",
+        "hover": "#F5F5F5",
+        "shadow": "0 10px 30px rgba(0,0,0,0.05)"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Inter, Pretendard, sans-serif",
+        "weight": "900",
+        "tracking": "-0.03em",
+        "style": "font-black tracking-tighter uppercase italic"
+      },
+      "body": {
+        "font": "Inter, Pretendard, sans-serif",
+        "weight": "500",
+        "leading": "1.6",
+        "style": "font-medium"
+      },
+      "mono": {
+        "font": "JetBrains Mono",
+        "weight": "400"
+      }
+    },
+    "spacing": {
+      "page_pt": "192px",
+      "container": "1440px",
+      "gutter": "24px",
+      "card_p": "24px",
+      "gap": "96px"
+    },
+    "motion": {
+      "transition_fast": "200ms",
+      "transition_normal": "300ms",
+      "transition_slow": "500ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+    }
+  }
+}
