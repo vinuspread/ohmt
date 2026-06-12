@@ -1,4 +1,4 @@
-// VINUSPREAD Motors — Internal Operations Dashboard Data
+// VINUSPREAD Motors - Internal Operations Dashboard Data
 
 export const monthlyRevenue = [
   { month: 'Jan', netProfit: 1840000, revenue: 5120000, cashflow: 980000 },
@@ -25,7 +25,7 @@ export type Todo = {
 export const todos: Todo[] = [
   { id: 1, text: 'Finalize EV9 Q3 delivery allocation', done: false, priority: 'urgent' },
   { id: 2, text: 'Send GT7 press kit to media partners', done: true, priority: 'normal' },
-  { id: 3, text: 'Review dealer margin report — June', done: false, priority: 'important' },
+  { id: 3, text: 'Review dealer margin report - June', done: false, priority: 'important' },
   { id: 4, text: 'Approve X5 configurator update', done: false, priority: 'urgent' },
   { id: 5, text: 'Schedule S3 test drive events', done: true, priority: 'normal' },
 ]
