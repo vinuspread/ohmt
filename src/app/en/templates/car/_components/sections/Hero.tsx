@@ -54,7 +54,7 @@ return (
         loop
         playsInline
       >
-        <source src="/templates/car/hero-bg.mp4" type="video/mp4" />
+        <source src="https://pub-10d6d534a06c495c8b45f39cfed47497.r2.dev/car-hero-bg.mp4" type="video/mp4" />
         <img
           className="w-full h-full object-cover object-[center_40%]"
           src="/templates/car/hero-main.jpg"

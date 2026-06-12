@@ -269,7 +269,7 @@ const fields = t.hero.fields.map((f: any, i: number) => ({
                             playsInline
                             className="w-full h-full object-cover brightness-[0.78] transition-opacity duration-1000"
                         >
-                            <source src="/templates/studio/hero-bg.mp4" type="video/mp4" />
+                            <source src="https://pub-10d6d534a06c495c8b45f39cfed47497.r2.dev/studio-hero-bg.mp4" type="video/mp4" />
                         </video>
                         <div className="absolute inset-0 bg-black/20 pointer-events-none z-10" />
                     </div>

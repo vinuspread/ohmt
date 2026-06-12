@@ -14,7 +14,7 @@ export const Hero = () => {
     >
       <video
         className="absolute inset-0 w-full h-full object-cover opacity-25"
-        src="/templates/ir/hero-bg.mp4"
+        src="https://pub-10d6d534a06c495c8b45f39cfed47497.r2.dev/ir-hero-bg.mp4"
         autoPlay
         loop
         muted
