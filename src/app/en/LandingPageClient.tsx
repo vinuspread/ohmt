@@ -145,6 +145,8 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
 
   const closePackage = () => {
     setSelectedPackage(null);
+    setFormErrors({});
+    setSubmitted(false);
     setSubmitted(false);
   };
 
