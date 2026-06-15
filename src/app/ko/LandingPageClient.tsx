@@ -38,6 +38,7 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
   const [submitted, setSubmitted] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [activeCategory, setActiveCategory] = useState("전체");
+  const [formErrors, setFormErrors] = useState<Record<string, string>>({});
 
   const packages = [
     {
@@ -150,10 +151,22 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
   const handleSubmit = (e: { preventDefault(): void; currentTarget: HTMLFormElement }) => {
     e.preventDefault();
     const form = e.currentTarget;
-    const companyName = (form.elements.namedItem('companyName') as HTMLInputElement).value;
-    const email = (form.elements.namedItem('email') as HTMLInputElement).value;
-    const phone = (form.elements.namedItem('phone') as HTMLInputElement).value;
-    const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value;
+    const companyName = (form.elements.namedItem('companyName') as HTMLInputElement).value.trim();
+    const email = (form.elements.namedItem('email') as HTMLInputElement).value.trim();
+    const phone = (form.elements.namedItem('phone') as HTMLInputElement).value.trim();
+    const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value.trim();
+
+    const errors: Record<string, string> = {};
+    if (!companyName) errors.companyName = "회사 / 단체명을 입력해주세요.";
+    if (!email) errors.email = "이메일 주소를 입력해주세요.";
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.email = "올바른 이메일 주소를 입력해주세요.";
+    if (!phone) errors.phone = "연락처를 입력해주세요.";
+
+    if (Object.keys(errors).length > 0) {
+      setFormErrors(errors);
+      return;
+    }
+    setFormErrors({});
 
     const selectedPkg = packages.find(p => p.id === selectedPackage);
     const subject = `웹사이트 개발 프로젝트 문의: ${selectedPkg?.name || '일반 상담'}`;
@@ -644,7 +657,7 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
                       </button>
                     </motion.div>
                   ) : (
-                    <form onSubmit={handleSubmit} className="space-y-5">
+                    <form onSubmit={handleSubmit} noValidate className="space-y-5">
                       <div>
                         <label className="text-[0.62rem] uppercase tracking-widest text-zinc-500 font-bold mb-2 block dark:text-zinc-400">
                           회사 / 단체명
@@ -652,10 +665,10 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
                         <input
                           type="text"
                           name="companyName"
-                          required
-                          className="bg-zinc-50 border border-zinc-200 focus:bg-white focus:border-zinc-900 outline-none text-zinc-900 placeholder:text-zinc-400 px-4 py-3 text-xs w-full transition-all rounded-lg dark:bg-zinc-800 dark:border-zinc-700 dark:focus:bg-zinc-800 dark:focus:border-zinc-500 dark:text-zinc-100 dark:placeholder:text-zinc-500"
+                          className={`bg-zinc-50 border focus:bg-white outline-none text-zinc-900 placeholder:text-zinc-400 px-4 py-3 text-xs w-full transition-all rounded-lg dark:bg-zinc-800 dark:focus:bg-zinc-800 dark:text-zinc-100 dark:placeholder:text-zinc-500 ${formErrors.companyName ? "border-red-400 focus:border-red-400 dark:border-red-500" : "border-zinc-200 focus:border-zinc-900 dark:border-zinc-700 dark:focus:border-zinc-500"}`}
                           placeholder="회사 또는 단체명 입력"
                         />
+                        {formErrors.companyName && <p className="mt-1.5 text-xs text-red-500">{formErrors.companyName}</p>}
                       </div>
 
                       <div>
@@ -665,10 +678,10 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
                         <input
                           type="email"
                           name="email"
-                          required
-                          className="bg-zinc-50 border border-zinc-200 focus:bg-white focus:border-zinc-900 outline-none text-zinc-900 placeholder:text-zinc-400 px-4 py-3 text-xs w-full transition-all rounded-lg dark:bg-zinc-800 dark:border-zinc-700 dark:focus:bg-zinc-800 dark:focus:border-zinc-500 dark:text-zinc-100 dark:placeholder:text-zinc-500"
+                          className={`bg-zinc-50 border focus:bg-white outline-none text-zinc-900 placeholder:text-zinc-400 px-4 py-3 text-xs w-full transition-all rounded-lg dark:bg-zinc-800 dark:focus:bg-zinc-800 dark:text-zinc-100 dark:placeholder:text-zinc-500 ${formErrors.email ? "border-red-400 focus:border-red-400 dark:border-red-500" : "border-zinc-200 focus:border-zinc-900 dark:border-zinc-700 dark:focus:border-zinc-500"}`}
                           placeholder="your-email@example.com"
                         />
+                        {formErrors.email && <p className="mt-1.5 text-xs text-red-500">{formErrors.email}</p>}
                       </div>
 
                       <div>
@@ -678,10 +691,10 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
                         <input
                           type="tel"
                           name="phone"
-                          required
-                          className="bg-zinc-50 border border-zinc-200 focus:bg-white focus:border-zinc-900 outline-none text-zinc-900 placeholder:text-zinc-400 px-4 py-3 text-xs w-full transition-all rounded-lg dark:bg-zinc-800 dark:border-zinc-700 dark:focus:bg-zinc-800 dark:focus:border-zinc-500 dark:text-zinc-100 dark:placeholder:text-zinc-500"
+                          className={`bg-zinc-50 border focus:bg-white outline-none text-zinc-900 placeholder:text-zinc-400 px-4 py-3 text-xs w-full transition-all rounded-lg dark:bg-zinc-800 dark:focus:bg-zinc-800 dark:text-zinc-100 dark:placeholder:text-zinc-500 ${formErrors.phone ? "border-red-400 focus:border-red-400 dark:border-red-500" : "border-zinc-200 focus:border-zinc-900 dark:border-zinc-700 dark:focus:border-zinc-500"}`}
                           placeholder="010-0000-0000"
                         />
+                        {formErrors.phone && <p className="mt-1.5 text-xs text-red-500">{formErrors.phone}</p>}
                       </div>
 
                       <div>
