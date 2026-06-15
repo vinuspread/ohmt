@@ -1,19 +1,48 @@
 # 템플릿 개발 가이드
 
-> AI 템플릿 제작자(Codex, Claude 등)에게 전달하는 개발 표준 문서.
-> 이 문서의 규칙을 벗어난 템플릿은 시스템에 등록되지 않는다.
+> AI 템플릿 제작자(Codex, Claude 등)에게 전달하는 공식 규약 문서.
+> 이 문서의 모든 규칙을 충족해야 시스템에 등록할 수 있다.
+> 규약을 벗어난 템플릿은 등록 반려된다.
 
 ---
 
-## 1. 개요
+## 1. 시스템 개요
 
-각 템플릿은 **완전 독립 구조**로 동작한다. 공유 컴포넌트 없이 하나의 폴더 안에 해당 템플릿의 모든 파일이 존재한다.
+**Oh My Template**는 Next.js 기반 프리미엄 웹 템플릿 서비스다. 각 템플릿은 실제 동작하는 Next.js 앱으로 제공되며, 관리자 시스템에 zip 파일로 업로드되어 서비스에 통합된다.
+
+### 기술 스택
+
+| 항목 | 스펙 |
+|------|------|
+| 프레임워크 | Next.js 14+ (App Router) |
+| 언어 | TypeScript |
+| 스타일 | Tailwind CSS |
+| 애니메이션 | framer-motion |
+| 이미지 | next/image |
+
+### 핵심 원칙
+
+**1. 완전 독립 구조**: 각 템플릿은 독립 폴더 안에서 완결된다. 다른 템플릿과 파일을 공유하지 않는다.
+
+**2. en / ko 분리**: 영문과 국문은 별도 폴더로 분리한다. 이미지 파일만 공유한다.
+
+**3. 정적 데이터**: 모든 콘텐츠는 컴포넌트에 직접 하드코딩한다. DB, CMS, 외부 API를 사용하지 않는다.
+
+### 경로 구조
 
 - **영문 경로**: `src/app/en/templates/[slug]/`
 - **국문 경로**: `src/app/ko/templates/[slug]/`
 - **이미지 경로**: `public/templates/[slug]/` (en/ko 공유)
 
-`[slug]`는 영문 소문자와 하이픈만 사용한다. 예: `furniture`, `multi-shop`, `real-estate`
+### slug 명명 규칙
+
+| 규칙 | 예시 |
+|------|------|
+| 영문 소문자만 사용 | `furniture` ✅ |
+| 단어 구분은 하이픈(`-`) | `multi-shop` ✅ |
+| 언더스코어 금지 | `multi_shop` ❌ |
+| 대문자 금지 | `Furniture` ❌ |
+| 공백 금지 | `multi shop` ❌ |
 
 ---
 
@@ -41,6 +70,21 @@
 ❌ [slug]/src/components/         # src/ 중첩 폴더 금지
 ❌ [slug]/translations/           # translation 시스템 금지
 ❌ [slug]/_components/shared/     # 다른 템플릿과 공유 불가
+```
+
+### _components 내부 구조 (권장)
+
+컴포넌트가 많을 경우 아래와 같이 분류한다:
+
+```
+_components/
+├── TemplateWrapper.tsx   # 루트에 위치 (필수)
+├── layout/               # 헤더, 푸터, 내비게이션
+│   ├── Header.tsx
+│   └── Footer.tsx
+└── sections/             # 페이지 섹션 컴포넌트
+    ├── Hero.tsx
+    └── Features.tsx
 ```
 
 ---
@@ -248,6 +292,19 @@ export function TemplateWrapper({ theme, children }: { theme: any; children: Rea
 }
 ```
 
+### 애니메이션 커스터마이징 (필수)
+
+페이지 진입 애니메이션은 템플릿 브랜드 성격에 맞게 **반드시 교체**한다. 모든 템플릿이 동일한 애니메이션을 사용하는 것은 규약 위반이다.
+
+| 템플릿 성격 | 권장 애니메이션 |
+|------------|----------------|
+| 럭셔리/하이엔드 | `opacity: 0 → 1` (fade only, duration 0.8s+) |
+| 테크/모던 | `scale: 0.98 → 1` + `opacity` |
+| 다이나믹/스포츠 | `x: -40 → 0` + `opacity` (슬라이드) |
+| 미니멀 | `opacity: 0 → 1` (duration 0.3s, 빠르게) |
+| 에디토리얼/매거진 | `y: 24 → 0` + `opacity` |
+| 갤러리/전시 | `scale: 1.02 → 1` + `opacity` (줌아웃) |
+
 ### import 경로 규칙
 
 | 위치 | import 경로 |
@@ -296,7 +353,7 @@ export default function TemplatePage() {
 
 | 금지 항목 | 대체 방법 |
 |-----------|----------|
-| `font-light` Tailwind 클래스 | `font-normal` 이상 사용 |
+| `font-light`, `font-thin`, `font-extralight` | `font-normal` 이상 사용 |
 | `italic` Tailwind 클래스 | 금지 (`not-italic`은 허용) |
 | em-dash `—` | 하이픈 `-` 또는 중간점 `·` 으로 대체 |
 | 8자리 헥스 `#RRGGBBAA` | `rgba()` 또는 CSS 변수 + `/opacity` |
@@ -304,16 +361,78 @@ export default function TemplatePage() {
 | `useTranslations`, `getTranslation` | 텍스트 직접 하드코딩 |
 | `const lang = ...` 패턴 | ko/en 폴더 분리로 해결 |
 | `?lang=` URL 파라미터 | 라우팅 분리로 해결 |
+| 외부 이미지 URL (unsplash 등) | `public/templates/[slug]/`에 로컬 저장 |
+| `.mp4` 로컬 저장 | Cloudflare R2 업로드 후 URL 사용 |
+| `@/components/TemplateWrapper` import | 각 템플릿 `_components/` 내 자체 파일 사용 |
+| 다른 템플릿 폴더 파일 import | 완전 독립 구조 위반 |
+| `public/templates/[slug]-ko/` 폴더 생성 | 이미지는 en 폴더 공유 |
 
 ---
 
-## 10. SEO / GEO 최적화 규칙 (필수)
+## 10. 한글 타이포그래피 (ko 템플릿 전용)
+
+### 자간 (letter-spacing)
+
+| 적용 위치 | 값 |
+|----------|----|
+| 헤딩 | `-0.025em` ~ `-0.03em` |
+| 내비게이션 | `-0.03em` |
+| 본문 | `-0.01em` ~ `-0.02em` |
+| 영문 대문자 레이블만 | `0.1em` ~ `0.3em` 허용 |
+
+**금지**: 한글 텍스트에 `tracking-[0.3em]` 등 영문 대문자용 넓은 자간 적용
+**금지**: 한글 텍스트에 `uppercase` 클래스
+
+### 행간 (line-height)
+
+한글 대형 헤딩은 반드시 아래 기준 이상을 적용한다:
+
+| 폰트 크기 | 최소 leading |
+|----------|-------------|
+| 30px ~ 48px | `leading-[1.25]` 이상 |
+| 48px ~ 72px | `leading-[1.2]` 이상 |
+| 72px 이상 | `leading-[1.1]` 이상 |
+
+```tsx
+// ❌ 한글 대형 헤딩에 좁은 행간
+className="text-5xl font-bold leading-[0.95]"
+
+// ✅
+className="text-5xl font-bold leading-[1.25]"
+```
+
+### 줄바꿈
+
+```tsx
+// ❌ 강제 br 줄바꿈 — 모바일에서 어색하게 깨짐
+<p>고대 대리석의 속삭임부터<br />천장화의 불꽃까지.</p>
+
+// ✅ text-wrap: pretty + max-width 조정
+<p
+  className="max-w-[320px]"
+  style={{ textWrap: "pretty" } as React.CSSProperties}
+>
+  고대 대리석의 속삭임부터 천장화의 불꽃까지.
+</p>
+```
+
+### word-break 주의
+
+한글 단어가 중간에 쪼개지면 아래를 추가한다:
+
+```tsx
+className="text-4xl font-bold break-keep [overflow-wrap:normal]"
+```
+
+---
+
+## 11. SEO / GEO 최적화 규칙 (필수)
 
 SEO는 검색엔진 노출을 위한 최적화, GEO(Generative Engine Optimization)는 ChatGPT, Perplexity, Google AI Overview 등 AI 검색엔진에서 콘텐츠가 올바르게 인식되도록 하는 최적화다. 두 가지 모두 **모든 페이지에 반드시 적용**한다.
 
 ---
 
-### 10-1. Metadata (모든 page.tsx 필수)
+### 11-1. Metadata (모든 page.tsx 필수)
 
 정적 페이지는 `metadata` 객체, 동적 라우트는 `generateMetadata()`를 사용한다.
 
@@ -372,7 +491,7 @@ openGraph: {
 
 ---
 
-### 10-2. layout.tsx lang 속성
+### 11-2. layout.tsx lang 속성
 
 `layout.tsx`에서 `<html lang="">` 속성을 반드시 지정한다.
 
@@ -392,7 +511,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
 ---
 
-### 10-3. 시맨틱 HTML 구조 (필수)
+### 11-3. 시맨틱 HTML 구조 (필수)
 
 모든 페이지는 아래 시맨틱 구조를 따른다. `div` 남발 금지.
 
@@ -423,7 +542,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
 ---
 
-### 10-4. 제목 계층 구조 (필수)
+### 11-4. 제목 계층 구조 (필수)
 
 - 페이지당 `<h1>` 은 **정확히 1개**
 - `h1` → `h2` → `h3` 순서를 건너뛰지 않는다
@@ -446,7 +565,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
 ---
 
-### 10-5. 이미지 alt 텍스트 (필수)
+### 11-5. 이미지 alt 텍스트 (필수)
 
 모든 `<img>` 및 Next.js `<Image>` 컴포넌트에 `alt` 속성을 반드시 작성한다.
 
@@ -469,7 +588,7 @@ ko 템플릿은 alt 텍스트도 한국어로 작성한다:
 
 ---
 
-### 10-6. JSON-LD 구조화 데이터 (필수)
+### 11-6. JSON-LD 구조화 데이터 (필수)
 
 GEO 최적화의 핵심. AI 검색엔진이 페이지 콘텐츠를 정확히 파악하기 위한 구조화 데이터를 각 페이지에 삽입한다.
 
@@ -531,7 +650,7 @@ const jsonLd = {
 
 ---
 
-### 10-7. GEO 최적화 콘텐츠 원칙
+### 11-7. GEO 최적화 콘텐츠 원칙
 
 AI 검색엔진(ChatGPT, Perplexity, Google AI Overview)에서 인용되려면 콘텐츠가 명확하고 구조적이어야 한다.
 
@@ -564,7 +683,7 @@ const faqJsonLd = {
 
 ---
 
-### 10-8. OG 이미지 규격
+### 11-8. OG 이미지 규격
 
 각 템플릿 폴더에 OG 이미지를 반드시 포함한다.
 
@@ -577,7 +696,7 @@ const faqJsonLd = {
 
 ---
 
-## 11. 검수 체크리스트
+## 12. 검수 체크리스트
 
 ### 구조
 - [ ] `theme.json`, `theme.css`, `layout.tsx`, `page.tsx`, `_components/TemplateWrapper.tsx` 존재
