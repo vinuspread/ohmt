@@ -259,6 +259,8 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
                 <Link
                   href={template.url}
                   key={`${template.id}-${idx}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group flex-shrink-0 w-[240px] md:w-[320px] bg-white border border-zinc-200/60 rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-zinc-300 transition-all duration-300 pointer-events-auto dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600 dark:hover:shadow-zinc-900/50"
                 >
                   <div className="relative aspect-[16/10] overflow-hidden bg-zinc-50 dark:bg-zinc-700">
@@ -348,7 +350,7 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
                       className="group bg-white border border-zinc-200/60 rounded-xl overflow-hidden hover:border-zinc-300 transition-all duration-300 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600"
                     >
                       <div className="grid grid-cols-1 lg:grid-cols-[1.6fr_1fr] gap-0">
-                        <Link href={featuredItem.url} className="relative h-[280px] md:h-[420px] block overflow-hidden bg-zinc-50 dark:bg-zinc-700">
+                        <Link href={featuredItem.url} target="_blank" rel="noopener noreferrer" className="relative h-[280px] md:h-[420px] block overflow-hidden bg-zinc-50 dark:bg-zinc-700">
                           <img
                             src={featuredItem.image}
                             alt={featuredItem.name}
@@ -399,7 +401,7 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
                         transition={{ duration: 0.3 }}
                         className="group bg-white border border-zinc-200/60 hover:border-zinc-300 transition-all duration-300 rounded-xl overflow-hidden dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600"
                       >
-                        <Link href={template.url} className="relative h-56 block overflow-hidden bg-zinc-50 dark:bg-zinc-700">
+                        <Link href={template.url} target="_blank" rel="noopener noreferrer" className="relative h-56 block overflow-hidden bg-zinc-50 dark:bg-zinc-700">
                           <img
                             src={template.image}
                             alt={template.name}
