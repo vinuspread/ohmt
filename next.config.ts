@@ -2,6 +2,13 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   turbopack: {},
+  serverExternalPackages: ["adm-zip"],
+  experimental: {
+    proxyClientMaxBodySize: "52mb",
+    serverActions: {
+      bodySizeLimit: "52mb",
+    },
+  },
   images: {
     remotePatterns: [
       {

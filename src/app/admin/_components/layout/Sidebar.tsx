@@ -2,14 +2,23 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { LayoutTemplate, LogOut, ShoppingBag } from "lucide-react";
+import { LayoutTemplate, LogOut, ShoppingBag, Upload } from "lucide-react";
 import { clsx } from "clsx";
 import { createClient } from "@/lib/supabase/client";
 
 const navItems = [
   { href: "/admin/templates", label: "Templates", icon: LayoutTemplate },
+  { href: "/admin/templates/upload", label: "업로드", icon: Upload },
   { href: "/admin/orders", label: "Orders", icon: ShoppingBag },
 ];
+
+function isNavItemActive(pathname: string, href: string) {
+  if (href === "/admin/templates") {
+    return pathname === href || (pathname.startsWith(`${href}/`) && !pathname.startsWith("/admin/templates/upload"));
+  }
+
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
 
 export function Sidebar() {
   const pathname = usePathname();
@@ -31,7 +40,7 @@ export function Sidebar() {
       <nav className="flex-1 px-3 py-4 space-y-1" aria-label="Admin navigation">
         {navItems.map((item) => {
           const Icon = item.icon;
-          const active = pathname === item.href || pathname.startsWith(`${item.href}/`);
+          const active = isNavItemActive(pathname, item.href);
 
           return (
             <Link

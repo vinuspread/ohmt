@@ -1,10 +1,13 @@
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
+import { getAllowedAdminEmails, isAllowedAdminEmail } from "@/lib/admin-auth";
 
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
+  const isAdminPage = pathname.startsWith("/admin");
+  const isAdminApi = pathname.startsWith("/api/admin");
 
-  if (!pathname.startsWith("/admin")) return NextResponse.next();
+  if (!isAdminPage && !isAdminApi) return NextResponse.next();
   if (pathname === "/admin/login") return NextResponse.next();
 
   const response = NextResponse.next({
@@ -32,19 +35,32 @@ export async function proxy(request: NextRequest) {
   } = await supabase.auth.getUser();
 
   if (!user) {
+    if (isAdminApi) {
+      return NextResponse.json({ error: "로그인이 필요합니다." }, { status: 401 });
+    }
+
     return NextResponse.redirect(new URL("/admin/login", request.url));
   }
 
-  const allowedEmails = (process.env.ADMIN_EMAILS ?? "")
-    .split(",")
-    .map((e) => e.trim())
-    .filter(Boolean);
+  const allowedEmails = getAllowedAdminEmails();
 
-  if (allowedEmails.length > 0 && !allowedEmails.includes(user.email ?? "")) {
+  if (allowedEmails.length === 0) {
+    if (isAdminApi) {
+      return NextResponse.json({ error: "관리자 접근 설정이 필요합니다." }, { status: 403 });
+    }
+
+    return NextResponse.redirect(new URL("/admin/login?error=admin_not_configured", request.url));
+  }
+
+  if (!isAllowedAdminEmail(user.email, allowedEmails)) {
+    if (isAdminApi) {
+      return NextResponse.json({ error: "권한이 없습니다." }, { status: 403 });
+    }
+
     return NextResponse.redirect(new URL("/admin/login?error=unauthorized", request.url));
   }
 
   return response;
 }
 
-export const config = { matcher: ["/admin/:path*"] };
+export const config = { matcher: ["/admin/:path*", "/api/admin/:path*"] };
