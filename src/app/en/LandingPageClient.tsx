@@ -191,11 +191,18 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
     });
   }, [activeCategory, searchTerm, templates]);
 
+  // Randomly pick one among all templates marked as featured (stable for this page load)
+  const randomFeaturedItem = useMemo(() => {
+    const featuredList = templates.filter((t) => t.isFeatured);
+    if (featuredList.length === 0) return null;
+    return featuredList[Math.floor(Math.random() * featuredList.length)];
+  }, [templates]);
+
   // Featured Item: If activeCategory is "All" and search is empty, show the designated featured item on top
   const featuredItem = useMemo(() => {
     if (activeCategory !== "All" || searchTerm !== "") return null;
-    return templates.find(t => t.isFeatured) || null;
-  }, [activeCategory, searchTerm, templates]);
+    return randomFeaturedItem;
+  }, [activeCategory, searchTerm, randomFeaturedItem]);
 
   // Grid Items: Exclude the featured item if it is shown on top
   const gridItems = useMemo(() => {

@@ -191,11 +191,18 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
     });
   }, [activeCategory, searchTerm, templates]);
 
+  // 대표로 지정된 템플릿이 여러 개면 페이지 진입 시 랜덤으로 하나 선택 (재진입 시까지 고정)
+  const randomFeaturedItem = useMemo(() => {
+    const featuredList = templates.filter((t) => t.isFeatured);
+    if (featuredList.length === 0) return null;
+    return featuredList[Math.floor(Math.random() * featuredList.length)];
+  }, [templates]);
+
   // Featured Item: 첫 진입 시(카테고리 전체, 검색어 없음) 대표 템플릿 강조
   const featuredItem = useMemo(() => {
     if (activeCategory !== "전체" || searchTerm !== "") return null;
-    return templates.find(t => t.isFeatured) || null;
-  }, [activeCategory, searchTerm, templates]);
+    return randomFeaturedItem;
+  }, [activeCategory, searchTerm, randomFeaturedItem]);
 
   // Grid Items: Featured 아이템 제외 리스트업
   const gridItems = useMemo(() => {

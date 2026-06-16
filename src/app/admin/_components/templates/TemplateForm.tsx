@@ -137,7 +137,7 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
             />
             대표 템플릿으로 지정
           </label>
-          <p className="text-xs text-zinc-400">검색/필터가 없을 때 목록 맨 위에 크게 강조해서 보여줍니다. 언어별로 1개만 지정하세요.</p>
+          <p className="text-xs text-zinc-400">목록 상단에 강조해서 보여집니다. 다중 선택 가능.</p>
         </div>
         <Input label="태그" placeholder="responsive, dark-mode" value={tags} onChange={(event) => setTags(event.target.value)} />
         <ThumbnailField value={thumbnailUrl} onChange={setThumbnailUrl} />
