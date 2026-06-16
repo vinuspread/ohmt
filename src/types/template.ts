@@ -1,4 +1,4 @@
-export type TemplateStatus = "draft" | "published" | "archived";
+export type TemplateStatus = "uploaded" | "draft" | "published" | "archived";
 
 export interface Template {
   id: string;

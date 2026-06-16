@@ -74,7 +74,7 @@ export async function POST(request: Request) {
       description_ko: themeJson.description_ko ?? null,
       thumbnail_url: `/templates/${slug}/thumbnail.jpg`,
       price: 0,
-      status: "draft",
+      status: "uploaded",
       sort_order: 999,
       is_featured: false,
       tags: themeJson.tags ?? [],

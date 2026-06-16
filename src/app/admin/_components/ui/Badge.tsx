@@ -1,6 +1,6 @@
 import { clsx } from "clsx";
 
-export type BadgeStatus = "published" | "draft" | "archived" | "paid" | "pending" | "cancelled";
+export type BadgeStatus = "uploaded" | "published" | "draft" | "archived" | "paid" | "pending" | "cancelled";
 
 export interface BadgeProps {
   status: BadgeStatus;
@@ -8,6 +8,7 @@ export interface BadgeProps {
 }
 
 const statusClasses: Record<BadgeStatus, { badge: string; dot: string }> = {
+  uploaded: { badge: "bg-violet-50 text-violet-700", dot: "bg-violet-500" },
   published: { badge: "bg-emerald-50 text-emerald-700", dot: "bg-emerald-500" },
   draft: { badge: "bg-zinc-100 text-zinc-600", dot: "bg-zinc-400" },
   archived: { badge: "bg-red-50 text-red-600", dot: "bg-red-400" },

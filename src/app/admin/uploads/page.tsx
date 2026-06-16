@@ -1,21 +1,22 @@
 import { AdminShell } from "@/app/admin/_components/layout/AdminShell";
-import { TemplateTable } from "@/app/admin/_components/templates/TemplateTable";
+import { UploadedTable } from "@/app/admin/_components/uploads/UploadedTable";
 import { createClient } from "@/lib/supabase/server";
 import type { Template } from "@/types/template";
 
-export default async function TemplatesPage() {
+export default async function UploadsPage() {
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("templates")
     .select("*")
-    .neq("status", "uploaded")
-    .order("sort_order", { ascending: true });
+    .eq("status", "uploaded")
+    .order("created_at", { ascending: false });
+
   const templates: Template[] = error ? [] : data ?? [];
 
   return (
-    <AdminShell title="Templates">
+    <AdminShell title="업로드 목록">
       <div className="bg-white rounded-xl border border-zinc-200 overflow-hidden">
-        <TemplateTable data={templates} />
+        <UploadedTable data={templates} />
       </div>
     </AdminShell>
   );
