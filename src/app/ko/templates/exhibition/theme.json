@@ -1,5 +1,11 @@
 {
-  "name": "Exhibition Musei Vaticani",
+  "slug": "exhibition",
+  "name": "Exhibition",
+  "name_ko": "전시관",
+  "category": "portfolio",
+  "description": "Museum and art exhibition showcase template",
+  "description_ko": "미술관 및 전시 쇼케이스 템플릿",
+  "tags": [],
   "mode": "dark",
   "theme": {
     "palette": {

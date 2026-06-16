@@ -1,5 +1,11 @@
 {
-  "name": "Jewelry Luxury",
+  "slug": "jewelry",
+  "name": "Jewelry",
+  "name_ko": "주얼리",
+  "category": "lifestyle",
+  "description": "Luxury jewelry brand store template",
+  "description_ko": "럭셔리 주얼리 브랜드 스토어 템플릿",
+  "tags": [],
   "mode": "light",
   "theme": {
     "palette": {

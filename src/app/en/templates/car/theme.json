@@ -1,5 +1,11 @@
 {
-  "name": "Automotive Car",
+  "slug": "car",
+  "name": "Car Showroom",
+  "name_ko": "자동차 쇼룸",
+  "category": "retail",
+  "description": "Luxury car showroom and model showcase template",
+  "description_ko": "럭셔리 자동차 쇼룸 및 모델 소개 템플릿",
+  "tags": [],
   "mode": "dark",
   "theme": {
     "palette": {

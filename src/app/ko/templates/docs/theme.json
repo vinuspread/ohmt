@@ -1,0 +1,57 @@
+{
+  "slug": "docs",
+  "name": "Documentation",
+  "name_ko": "문서 시스템",
+  "category": "service",
+  "description": "Documentation workspace and knowledge base template",
+  "description_ko": "문서 협업 워크스페이스 및 지식 베이스 템플릿",
+  "tags": [],
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#E8E9EB",
+      "secondary": "#E4E5E8",
+      "accent": "#E8E9EB",
+      "text": {
+        "main": "#E4E5E8",
+        "muted": "#6B6C77",
+        "contrast": "#FFFFFF"
+      },
+      "ui": {
+        "border": "#2A2B2E",
+        "hover": "#232426",
+        "shadow": "0 20px 50px rgba(0,0,0,0.05)"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "'Pretendard Variable', 'Pretendard', system-ui, -apple-system, sans-serif",
+        "weight": "700",
+        "tracking": "-0.02em",
+        "style": "font-bold tracking-tight"
+      },
+      "body": {
+        "font": "'Pretendard Variable', 'Pretendard', system-ui, -apple-system, sans-serif",
+        "weight": "400",
+        "leading": "1.6",
+        "style": "leading-relaxed"
+      }
+    },
+    "spacing": {
+      "page_pt": "96px",
+      "container": "1280px",
+      "gutter": "32px",
+      "card_gap": "24px"
+    },
+    "motion": {
+      "transition_fast": "200ms",
+      "transition_normal": "300ms",
+      "transition_slow": "500ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+    },
+    "interaction": {
+      "button": "bg-[var(--color-primary)] text-[var(--color-text-contrast)]",
+      "card_hover": "hover:translate-y-[-2px] transition-transform duration-300"
+    }
+  }
+}

@@ -1,5 +1,11 @@
 {
-  "name": "Multi-Shop",
+  "slug": "multi-shop",
+  "name": "Multi Shop",
+  "name_ko": "멀티샵",
+  "category": "retail",
+  "description": "Multi-category shopping mall template",
+  "description_ko": "멀티 카테고리 쇼핑몰 템플릿",
+  "tags": [],
   "mode": "light",
   "theme": {
     "palette": {

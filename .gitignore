@@ -91,3 +91,6 @@ sneaker-ko-mobile.png
 test-cosmetic-desktop.png
 test-cosmetic-mobile.png
 *.mp4
+
+# template zip packaging output (codex task)
+/dist/template-zips/

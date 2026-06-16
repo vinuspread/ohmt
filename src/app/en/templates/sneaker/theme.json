@@ -1,5 +1,11 @@
 {
-  "name": "Sneaker Brutalist",
+  "slug": "sneaker",
+  "name": "Sneaker Store",
+  "name_ko": "스니커 스토어",
+  "category": "retail",
+  "description": "Sneaker and streetwear culture store template",
+  "description_ko": "스니커 및 스트리트웨어 문화 스토어 템플릿",
+  "tags": [],
   "mode": "light",
   "theme": {
     "palette": {

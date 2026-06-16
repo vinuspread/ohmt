@@ -1,5 +1,11 @@
 {
-  "name": "Corporate IR",
+  "slug": "ir",
+  "name": "IR",
+  "name_ko": "IR",
+  "category": "corporate",
+  "description": "Investor relations and financial reporting template",
+  "description_ko": "투자자 관계 및 재무 보고 템플릿",
+  "tags": [],
   "mode": "light",
   "theme": {
     "palette": {

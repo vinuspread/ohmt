@@ -1,5 +1,11 @@
 {
-  "name": "Cosmetic Wellness",
+  "slug": "cosmetic",
+  "name": "Cosmetic Store",
+  "name_ko": "코스메틱 스토어",
+  "category": "lifestyle",
+  "description": "Beauty and cosmetic brand store template",
+  "description_ko": "뷰티 코스메틱 브랜드 스토어 템플릿",
+  "tags": [],
   "mode": "light",
   "theme": {
     "palette": {

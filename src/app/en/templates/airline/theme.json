@@ -1,5 +1,11 @@
 {
-  "name": "Travel Airline",
+  "slug": "airline",
+  "name": "Airline",
+  "name_ko": "에어라인",
+  "category": "hospitality",
+  "description": "Premium airline booking and travel experience template",
+  "description_ko": "프리미엄 항공 예약 및 여행 경험 템플릿",
+  "tags": [],
   "mode": "light",
   "theme": {
     "palette": {

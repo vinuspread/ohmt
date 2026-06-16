@@ -1,5 +1,11 @@
 {
-  "name": "Robotflow Technology",
+  "slug": "technology",
+  "name": "Technology - Robotflow",
+  "name_ko": "테크놀로지 - 로봇플로우",
+  "category": "corporate",
+  "description": "AI robotics company and technology showcase template",
+  "description_ko": "AI 로봇 기업 및 기술 쇼케이스 템플릿",
+  "tags": [],
   "mode": "light",
   "theme": {
     "palette": {
