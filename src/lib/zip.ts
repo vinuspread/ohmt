@@ -3,6 +3,8 @@ import type { GitHubFileEntry } from "./github";
 
 export interface ExtractedTemplate {
   slug: string;
+  name: string;
+  description: string | null;
   themeJson: TemplateThemeJson;
   files: GitHubFileEntry[];
 }
@@ -103,6 +105,9 @@ export function extractAndValidateZip(buffer: Buffer, lang: "en" | "ko" = "en"):
     throw new Error(`theme.json slug(${themeJson.slug})와 폴더명(${slug})이 다릅니다.`);
   }
 
+  const name = lang === "ko" ? themeJson.name_ko ?? themeJson.name : themeJson.name;
+  const description = lang === "ko" ? themeJson.description_ko ?? themeJson.description : themeJson.description;
+
   if (themeJson.category && !allowedCategories.includes(themeJson.category)) {
     throw new Error(`theme.json category 값이 허용되지 않습니다: ${themeJson.category} (허용값: ${allowedCategories.join(", ")})`);
   }
@@ -124,7 +129,7 @@ export function extractAndValidateZip(buffer: Buffer, lang: "en" | "ko" = "en"):
     }
   }
 
-  return { slug, themeJson, files };
+  return { slug, name: name ?? slug, description: description ?? null, themeJson, files };
 }
 
 function normalizeEntryPath(path: string): string {

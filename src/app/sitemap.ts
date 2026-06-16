@@ -7,23 +7,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const supabase = await createClient();
   const { data: templates } = await supabase
     .from("templates")
-    .select("slug, updated_at")
+    .select("slug, lang, updated_at")
     .eq("status", "published");
 
-  const templateUrls: MetadataRoute.Sitemap = (templates ?? []).flatMap((template) => [
-    {
-      url: `${siteUrl}/en/templates/${template.slug}`,
-      lastModified: template.updated_at ? new Date(template.updated_at) : new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    },
-    {
-      url: `${siteUrl}/ko/templates/${template.slug}`,
-      lastModified: template.updated_at ? new Date(template.updated_at) : new Date(),
-      changeFrequency: "monthly" as const,
-      priority: 0.8,
-    },
-  ]);
+  const templateUrls: MetadataRoute.Sitemap = (templates ?? []).map((template) => ({
+    url: `${siteUrl}/${template.lang}/templates/${template.slug}`,
+    lastModified: template.updated_at ? new Date(template.updated_at) : new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.8,
+  }));
 
   return [
     {

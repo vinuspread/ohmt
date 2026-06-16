@@ -6,12 +6,17 @@ import { Button } from "../ui/Button";
 import { Input } from "../ui/Input";
 import { Select } from "../ui/Select";
 import { Toast } from "../ui/Toast";
-import type { Template, TemplateStatus } from "@/types/template";
+import type { Template, TemplateLang, TemplateStatus } from "@/types/template";
 
 type TemplateFormMode = "create" | "edit";
 type ToastState = { message: string; type: "success" | "error" };
 
 const inputClassName = "w-full px-3 py-2 text-sm border rounded-lg outline-none transition-colors border-zinc-200 focus:border-zinc-900 placeholder:text-zinc-400 disabled:bg-zinc-50 disabled:text-zinc-400 focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2";
+
+const langOptions = [
+  { value: "en", label: "EN" },
+  { value: "ko", label: "KO" },
+];
 
 const categoryOptions = [
   { value: "retail", label: "retail" },
@@ -32,8 +37,8 @@ const statusOptions = [
 export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; initialData?: Template }) {
   const router = useRouter();
   const [slug, setSlug] = useState(initialData?.slug ?? "");
-  const [nameEn, setNameEn] = useState(initialData?.name_en ?? "");
-  const [nameKo, setNameKo] = useState(initialData?.name_ko ?? "");
+  const [lang, setLang] = useState<TemplateLang>(initialData?.lang ?? "en");
+  const [name, setName] = useState(initialData?.name ?? "");
   const [category, setCategory] = useState(initialData?.category ?? "retail");
   const [status, setStatus] = useState<TemplateStatus>(initialData?.status ?? "draft");
   const [price, setPrice] = useState(String(initialData?.price ?? 0));
@@ -41,8 +46,7 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
   const [isFeatured, setIsFeatured] = useState(initialData?.is_featured ?? false);
   const [thumbnailUrl, setThumbnailUrl] = useState(initialData?.thumbnail_url ?? "");
   const [tags, setTags] = useState(initialData?.tags.join(", ") ?? "");
-  const [descriptionEn, setDescriptionEn] = useState(initialData?.description_en ?? "");
-  const [descriptionKo, setDescriptionKo] = useState(initialData?.description_ko ?? "");
+  const [description, setDescription] = useState(initialData?.description ?? "");
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState<ToastState | null>(null);
   const [slugError, setSlugError] = useState("");
@@ -50,20 +54,19 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
   const checkSlug = async () => {
     if (mode !== "create" || !slug) return;
 
-    const response = await fetch(`/api/admin/templates?slug=${encodeURIComponent(slug)}`);
+    const response = await fetch(`/api/admin/templates?slug=${encodeURIComponent(slug)}&lang=${lang}`);
     if (!response.ok) return;
 
     const result = (await response.json()) as { exists: boolean };
-    setSlugError(result.exists ? "이미 사용 중인 슬러그입니다." : "");
+    setSlugError(result.exists ? "이미 사용 중인 슬러그+언어 조합입니다." : "");
   };
 
   const buildPayload = () => ({
     slug,
-    name_en: nameEn,
-    name_ko: nameKo || null,
+    lang,
+    name,
     category,
-    description_en: descriptionEn || null,
-    description_ko: descriptionKo || null,
+    description: description || null,
     thumbnail_url: thumbnailUrl || null,
     price: Number(price),
     status,
@@ -101,8 +104,8 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <Input label="slug" value={slug} onChange={(event) => setSlug(event.target.value)} onBlur={checkSlug} disabled={mode === "edit"} error={slugError} required />
-        <Input label="name_en" value={nameEn} onChange={(event) => setNameEn(event.target.value)} required />
-        <Input label="name_ko" value={nameKo} onChange={(event) => setNameKo(event.target.value)} />
+        <Select label="lang" value={lang} onChange={(event) => setLang(event.target.value as TemplateLang)} options={langOptions} disabled={mode === "edit"} />
+        <Input label="name" value={name} onChange={(event) => setName(event.target.value)} required />
         <Select label="category" value={category} onChange={(event) => setCategory(event.target.value)} options={categoryOptions} />
         <Select label="status" value={status} onChange={(event) => setStatus(event.target.value as TemplateStatus)} options={statusOptions} />
         <Input label="price" type="number" min={0} value={price} onChange={(event) => setPrice(event.target.value)} />
@@ -119,12 +122,8 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
         <Input label="thumbnail_url" value={thumbnailUrl} onChange={(event) => setThumbnailUrl(event.target.value)} />
         <Input label="tags" placeholder="responsive, dark-mode" value={tags} onChange={(event) => setTags(event.target.value)} />
         <label className="md:col-span-2 flex flex-col gap-1">
-          <span className="text-sm font-medium text-zinc-700">description_en</span>
-          <textarea value={descriptionEn} onChange={(event) => setDescriptionEn(event.target.value)} className={`${inputClassName} min-h-28 resize-y`} />
-        </label>
-        <label className="md:col-span-2 flex flex-col gap-1">
-          <span className="text-sm font-medium text-zinc-700">description_ko</span>
-          <textarea value={descriptionKo} onChange={(event) => setDescriptionKo(event.target.value)} className={`${inputClassName} min-h-28 resize-y`} />
+          <span className="text-sm font-medium text-zinc-700">description</span>
+          <textarea value={description} onChange={(event) => setDescription(event.target.value)} className={`${inputClassName} min-h-28 resize-y`} />
         </label>
       </div>
 

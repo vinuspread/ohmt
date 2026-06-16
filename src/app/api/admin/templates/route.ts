@@ -1,16 +1,16 @@
 import { NextResponse } from "next/server";
 import { createAdminClient } from "@/lib/supabase/admin";
-import type { TemplateStatus } from "@/types/template";
+import type { TemplateLang, TemplateStatus } from "@/types/template";
 
 const templateStatuses: TemplateStatus[] = ["draft", "published", "archived"];
+const templateLangs: TemplateLang[] = ["en", "ko"];
 
 interface TemplateRequestBody {
   slug?: string;
-  name_en?: string;
-  name_ko?: string | null;
+  lang?: TemplateLang;
+  name?: string;
   category?: string;
-  description_en?: string | null;
-  description_ko?: string | null;
+  description?: string | null;
   thumbnail_url?: string | null;
   price?: number;
   status?: TemplateStatus;
@@ -23,8 +23,12 @@ function isTemplateStatus(value: unknown): value is TemplateStatus {
   return typeof value === "string" && templateStatuses.includes(value as TemplateStatus);
 }
 
+function isTemplateLang(value: unknown): value is TemplateLang {
+  return typeof value === "string" && templateLangs.includes(value as TemplateLang);
+}
+
 function validateTemplateBody(body: TemplateRequestBody) {
-  if (!body.slug || !body.name_en || !body.category || !isTemplateStatus(body.status)) return false;
+  if (!body.slug || !isTemplateLang(body.lang) || !body.name || !body.category || !isTemplateStatus(body.status)) return false;
   if (typeof body.price !== "number" || typeof body.sort_order !== "number" || typeof body.is_featured !== "boolean") return false;
   if (!Array.isArray(body.tags)) return false;
   return true;
@@ -33,10 +37,11 @@ function validateTemplateBody(body: TemplateRequestBody) {
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   const slug = searchParams.get("slug");
+  const lang = searchParams.get("lang");
   const supabase = createAdminClient();
 
-  if (slug) {
-    const { data, error } = await supabase.from("templates").select("id").eq("slug", slug).maybeSingle();
+  if (slug && lang) {
+    const { data, error } = await supabase.from("templates").select("id").eq("slug", slug).eq("lang", lang).maybeSingle();
     if (error) return NextResponse.json({ error: "템플릿 확인에 실패했습니다." }, { status: 500 });
     return NextResponse.json({ exists: Boolean(data) });
   }
@@ -55,10 +60,15 @@ export async function POST(request: Request) {
   }
 
   const supabase = createAdminClient();
-  const { data: existing, error: lookupError } = await supabase.from("templates").select("id").eq("slug", body.slug).maybeSingle();
+  const { data: existing, error: lookupError } = await supabase
+    .from("templates")
+    .select("id")
+    .eq("slug", body.slug)
+    .eq("lang", body.lang)
+    .maybeSingle();
 
   if (lookupError) return NextResponse.json({ error: "템플릿 확인에 실패했습니다." }, { status: 500 });
-  if (existing) return NextResponse.json({ error: "이미 사용 중인 슬러그입니다." }, { status: 409 });
+  if (existing) return NextResponse.json({ error: "이미 사용 중인 슬러그+언어 조합입니다." }, { status: 409 });
 
   const { data, error } = await supabase.from("templates").insert(body).select("*").single();
   if (error) return NextResponse.json({ error: "템플릿 생성에 실패했습니다." }, { status: 500 });

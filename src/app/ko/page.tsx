@@ -30,14 +30,15 @@ export default async function Page() {
     .from("templates")
     .select("*")
     .eq("status", "published")
+    .eq("lang", "ko")
     .order("sort_order", { ascending: true });
 
   const templateRows: Template[] = error ? [] : data ?? [];
   const templates: TemplateItem[] = templateRows.map((template) => ({
     id: template.slug,
-    name: template.name_ko ?? template.name_en,
+    name: template.name,
     url: `/ko/templates/${template.slug}`,
-    desc: template.description_ko ?? template.description_en ?? "",
+    desc: template.description ?? "",
     category: template.category,
     image: template.thumbnail_url ?? "",
     isFeatured: template.is_featured,

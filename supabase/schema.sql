@@ -2,22 +2,23 @@
 -- Supabase SQL Editor에서 실행
 
 -- templates 테이블
+-- 슬러그당 1행이 아니라 (slug, lang)당 1행. en/ko 정보는 완전히 독립적으로 관리된다.
 create table if not exists templates (
   id uuid primary key default gen_random_uuid(),
-  slug text unique not null,
-  name_en text not null,
-  name_ko text,
+  slug text not null,
+  lang text not null check (lang in ('en', 'ko')),
+  name text not null,
   category text not null,
-  description_en text,
-  description_ko text,
+  description text,
   thumbnail_url text,
   price integer default 0,
-  status text default 'draft' check (status in ('draft', 'published', 'archived')),
+  status text default 'draft' check (status in ('uploaded', 'draft', 'published', 'archived')),
   sort_order integer default 0,
   is_featured boolean default false,
   tags text[] default '{}',
   created_at timestamptz default now(),
-  updated_at timestamptz default now()
+  updated_at timestamptz default now(),
+  unique (slug, lang)
 );
 
 -- orders 테이블

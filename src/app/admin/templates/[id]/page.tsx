@@ -14,7 +14,7 @@ export default async function EditTemplatePage({ params }: { params: Promise<{ i
   const template = data as Template;
 
   return (
-    <AdminShell title={`수정: ${template.name_en}`}>
+    <AdminShell title={`수정: ${template.name} (${template.lang})`}>
       <div className="bg-white rounded-xl border border-zinc-200 p-8 max-w-4xl">
         <TemplateForm mode="edit" initialData={template} />
       </div>

@@ -1,13 +1,13 @@
 export type TemplateStatus = "uploaded" | "draft" | "published" | "archived";
+export type TemplateLang = "en" | "ko";
 
 export interface Template {
   id: string;
   slug: string;
-  name_en: string;
-  name_ko: string | null;
+  lang: TemplateLang;
+  name: string;
   category: string;
-  description_en: string | null;
-  description_ko: string | null;
+  description: string | null;
   thumbnail_url: string | null;
   price: number;
   status: TemplateStatus;

@@ -46,13 +46,9 @@ export function UploadedTable({ data }: { data: Template[] }) {
     {
       key: "name",
       header: "이름",
-      render: (template) => (
-        <div>
-          <p className="font-medium text-zinc-900">{template.name_en}</p>
-          <p className="text-xs text-zinc-400">{template.name_ko}</p>
-        </div>
-      ),
+      render: (template) => <p className="font-medium text-zinc-900">{template.name}</p>,
     },
+    { key: "lang", header: "언어", render: (template) => <span className="font-mono text-xs uppercase text-zinc-500">{template.lang}</span> },
     { key: "category", header: "카테고리", render: (template) => template.category },
     { key: "created_at", header: "업로드일", render: (template) => dateFormatter.format(new Date(template.created_at)) },
     { key: "status", header: "상태", render: (template) => <Badge status={template.status} /> },
@@ -88,7 +84,7 @@ export function UploadedTable({ data }: { data: Template[] }) {
         }
       >
         <p className="text-sm text-zinc-500">
-          {deleteTarget?.name_en} 업로드 항목을 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.
+          {deleteTarget?.name} ({deleteTarget?.lang}) 업로드 항목을 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.
         </p>
       </Modal>
 

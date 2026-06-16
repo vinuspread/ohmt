@@ -54,13 +54,9 @@ export function TemplateTable({ data }: { data: Template[] }) {
     {
       key: "name",
       header: "이름",
-      render: (template) => (
-        <div>
-          <p className="font-medium text-zinc-900">{template.name_en}</p>
-          <p className="text-xs text-zinc-400">{template.name_ko}</p>
-        </div>
-      ),
+      render: (template) => <p className="font-medium text-zinc-900">{template.name}</p>,
     },
+    { key: "lang", header: "언어", render: (template) => <span className="font-mono text-xs uppercase text-zinc-500">{template.lang}</span> },
     { key: "category", header: "카테고리", render: (template) => template.category },
     { key: "status", header: "상태", render: (template) => <Badge status={template.status} /> },
     {
@@ -125,7 +121,7 @@ export function TemplateTable({ data }: { data: Template[] }) {
         }
       >
         <p className="text-sm text-zinc-500">
-          {deleteTarget?.name_en} 템플릿을 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.
+          {deleteTarget?.name} ({deleteTarget?.lang}) 템플릿을 삭제하시겠습니까? 이 작업은 되돌릴 수 없습니다.
         </p>
       </Modal>
 

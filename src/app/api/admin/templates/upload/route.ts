@@ -44,20 +44,21 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: error instanceof Error ? error.message : "zip 검증 실패" }, { status: 400 });
   }
 
-  const { slug, themeJson, files } = extracted;
+  const { slug, name, description, themeJson, files } = extracted;
   const supabase = createAdminClient();
-  const { data: existing, error: lookupError } = await supabase.from("templates").select("id").eq("slug", slug).maybeSingle();
+  const { data: existing, error: lookupError } = await supabase
+    .from("templates")
+    .select("id")
+    .eq("slug", slug)
+    .eq("lang", lang)
+    .maybeSingle();
 
   if (lookupError) {
     return NextResponse.json({ error: "템플릿 확인에 실패했습니다." }, { status: 500 });
   }
 
-  if (lang === "en" && existing) {
-    return NextResponse.json({ error: `이미 존재하는 slug입니다: ${slug}` }, { status: 409 });
-  }
-
-  if (lang === "ko" && !existing) {
-    return NextResponse.json({ error: `영문 템플릿을 먼저 등록해주세요: ${slug}` }, { status: 404 });
+  if (existing) {
+    return NextResponse.json({ error: `이미 존재하는 템플릿입니다: ${slug} (${lang})` }, { status: 409 });
   }
 
   let commitSha: string;
@@ -70,32 +71,29 @@ export async function POST(request: Request) {
 
   await deleteFromR2(r2Key).catch(() => {});
 
-  if (lang === "en") {
-    const { error: insertError } = await supabase.from("templates").insert({
-      slug,
-      name_en: themeJson.name ?? slug,
-      name_ko: themeJson.name_ko ?? null,
-      category: themeJson.category ?? "uncategorized",
-      description_en: themeJson.description ?? null,
-      description_ko: themeJson.description_ko ?? null,
-      thumbnail_url: `/templates/${slug}/thumbnail.jpg`,
-      price: 0,
-      status: "uploaded",
-      sort_order: 999,
-      is_featured: false,
-      tags: themeJson.tags ?? [],
-    });
+  const { error: insertError } = await supabase.from("templates").insert({
+    slug,
+    lang,
+    name,
+    category: themeJson.category ?? "uncategorized",
+    description,
+    thumbnail_url: `/templates/${slug}/thumbnail.jpg`,
+    price: 0,
+    status: "uploaded",
+    sort_order: 999,
+    is_featured: false,
+    tags: themeJson.tags ?? [],
+  });
 
-    if (insertError) {
-      console.error("Supabase insert 실패:", insertError);
-      return NextResponse.json({ error: "메타데이터 등록에 실패했습니다. GitHub push는 성공했습니다." }, { status: 500 });
-    }
+  if (insertError) {
+    console.error("Supabase insert 실패:", insertError);
+    return NextResponse.json({ error: "메타데이터 등록에 실패했습니다. GitHub push는 성공했습니다." }, { status: 500 });
   }
 
   return NextResponse.json(
     {
       slug,
-      name: themeJson.name ?? slug,
+      name,
       githubCommitSha: commitSha,
       templateUrl: `/${lang}/templates/${slug}`,
     },

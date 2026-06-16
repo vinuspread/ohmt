@@ -31,16 +31,14 @@ const statusOptions = [
 
 export function RegisterForm({ template }: { template: Template }) {
   const router = useRouter();
-  const [nameEn, setNameEn] = useState(template.name_en);
-  const [nameKo, setNameKo] = useState(template.name_ko ?? "");
+  const [name, setName] = useState(template.name);
   const [category, setCategory] = useState(template.category);
-  const [descriptionEn, setDescriptionEn] = useState(template.description_en ?? "");
-  const [descriptionKo, setDescriptionKo] = useState(template.description_ko ?? "");
+  const [description, setDescription] = useState(template.description ?? "");
   const [thumbnailUrl, setThumbnailUrl] = useState(template.thumbnail_url ?? "");
   const [status, setStatus] = useState<RegistrationStatus>("draft");
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState<ToastState | null>(null);
-  const [nameEnError, setNameEnError] = useState("");
+  const [nameError, setNameError] = useState("");
 
   useEffect(() => {
     if (!toast || toast.type !== "success") return;
@@ -56,23 +54,21 @@ export function RegisterForm({ template }: { template: Template }) {
   const handleSubmit = async (event: { preventDefault(): void }) => {
     event.preventDefault();
 
-    if (!nameEn.trim()) {
-      setNameEnError("템플릿명 EN은 필수입니다.");
+    if (!name.trim()) {
+      setNameError("템플릿명은 필수입니다.");
       return;
     }
 
-    setNameEnError("");
+    setNameError("");
     setLoading(true);
 
     const response = await fetch(`/api/admin/templates/${template.id}`, {
       method: "PATCH",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        name_en: nameEn.trim(),
-        name_ko: nameKo.trim() || null,
+        name: name.trim(),
         category,
-        description_en: descriptionEn.trim() || null,
-        description_ko: descriptionKo.trim() || null,
+        description: description.trim() || null,
         thumbnail_url: thumbnailUrl.trim() || null,
         status,
       }),
@@ -91,18 +87,14 @@ export function RegisterForm({ template }: { template: Template }) {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 gap-6">
-        <Input label="템플릿명 (EN)" value={nameEn} onChange={(event) => setNameEn(event.target.value)} error={nameEnError} required />
-        <Input label="템플릿명 (KO)" value={nameKo} onChange={(event) => setNameKo(event.target.value)} />
+        <div className="text-xs font-mono uppercase text-zinc-500">언어: {template.lang}</div>
+        <Input label="템플릿명" value={name} onChange={(event) => setName(event.target.value)} error={nameError} required />
         <Select label="카테고리" value={category} onChange={(event) => setCategory(event.target.value)} options={categoryOptions} required />
         <Input label="썸네일 URL" value={thumbnailUrl} onChange={(event) => setThumbnailUrl(event.target.value)} />
         <Select label="공개 여부" value={status} onChange={(event) => setStatus(event.target.value as RegistrationStatus)} options={statusOptions} required />
         <label className="flex flex-col gap-1">
-          <span className="text-sm font-medium text-zinc-700">설명 (EN)</span>
-          <textarea value={descriptionEn} onChange={(event) => setDescriptionEn(event.target.value)} className={`${inputClassName} min-h-28 resize-y`} />
-        </label>
-        <label className="flex flex-col gap-1">
-          <span className="text-sm font-medium text-zinc-700">설명 (KO)</span>
-          <textarea value={descriptionKo} onChange={(event) => setDescriptionKo(event.target.value)} className={`${inputClassName} min-h-28 resize-y`} />
+          <span className="text-sm font-medium text-zinc-700">설명</span>
+          <textarea value={description} onChange={(event) => setDescription(event.target.value)} className={`${inputClassName} min-h-28 resize-y`} />
         </label>
       </div>
 
