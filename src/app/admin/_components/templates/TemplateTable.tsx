@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
-import { Reorder } from "framer-motion";
+import { Reorder, useDragControls } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { CheckIcon, GripVertical, Search } from "lucide-react";
 import { clsx } from "clsx";
@@ -19,6 +19,8 @@ const filters: { value: TemplateFilter; label: string }[] = [
   { value: "published", label: "공개" },
   { value: "private", label: "비공개" },
 ];
+
+const templateGridClass = "grid-cols-[28px_72px_minmax(150px,1.4fr)_64px_minmax(110px,0.9fr)_88px_48px_132px]";
 
 export function TemplateTable({ data }: { data: Template[] }) {
   const router = useRouter();
@@ -152,7 +154,7 @@ export function TemplateTable({ data }: { data: Template[] }) {
           </div>
         </div>
 
-        <div className="flex flex-col gap-3 md:flex-row md:items-center">
+        <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-end">
           <label className="relative block md:w-64">
             <Search aria-hidden="true" className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-zinc-400" />
             <span className="sr-only">템플릿 검색</span>
@@ -164,21 +166,18 @@ export function TemplateTable({ data }: { data: Template[] }) {
               className="w-full rounded-lg border border-zinc-200 py-2 pl-9 pr-3 text-sm outline-none transition-colors placeholder:text-zinc-400 focus:border-zinc-900 focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2"
             />
           </label>
-          <Link href="/admin/templates/new">
-            <Button variant="primary" size="sm">+ 새 템플릿</Button>
-          </Link>
         </div>
       </div>
 
       <div className="overflow-hidden rounded-xl border border-zinc-200 bg-white">
-        <div className="grid grid-cols-[28px_72px_minmax(150px,1.4fr)_64px_minmax(110px,0.9fr)_88px_96px_132px] gap-3 border-b border-zinc-200 bg-zinc-50 px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-zinc-500">
+        <div className={clsx("grid gap-3 border-b border-zinc-200 bg-zinc-50 px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-zinc-500", templateGridClass)}>
           <div aria-hidden="true" />
           <div>썸네일</div>
           <div>이름</div>
           <div>언어</div>
           <div>카테고리</div>
           <div>상태</div>
-          <div>대표템플릿</div>
+          <div>대표</div>
           <div>옵션</div>
         </div>
 
@@ -187,33 +186,13 @@ export function TemplateTable({ data }: { data: Template[] }) {
         ) : (
           <Reorder.Group axis="y" values={filteredData} onReorder={handleReorder} className="divide-y divide-zinc-100" as="div">
             {filteredData.map((template) => (
-              <Reorder.Item
+              <TemplateRow
                 key={template.id}
-                value={template}
+                template={template}
+                onPreview={setPreviewUrl}
+                onDelete={setDeleteTarget}
                 onDragEnd={persistOrder}
-                whileDrag={{ scale: 1.01, boxShadow: "0 12px 30px rgba(15, 23, 42, 0.14)", zIndex: 20 }}
-                transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
-                className="grid cursor-grab grid-cols-[28px_72px_minmax(150px,1.4fr)_64px_minmax(110px,0.9fr)_88px_96px_132px] items-center gap-3 bg-white px-4 py-3 text-sm text-zinc-700 transition-colors hover:bg-zinc-50 active:cursor-grabbing"
-              >
-                <GripVertical aria-label="순서 변경" className="h-4 w-4 text-zinc-300" />
-                <TemplateThumbnail template={template} onPreview={setPreviewUrl} />
-                <div className="min-w-0">
-                  <p className="truncate font-medium text-zinc-900">{template.name}</p>
-                  <p className="truncate font-mono text-xs text-zinc-400">{template.slug}</p>
-                </div>
-                <span className="font-mono text-xs uppercase text-zinc-500">{template.lang}</span>
-                <span className="truncate">{template.category}</span>
-                <StatusPill published={template.status === "published"} />
-                <div>{template.is_featured ? <CheckIcon aria-label="대표 템플릿" className="w-4 h-4 text-emerald-500" /> : <span className="text-zinc-300">-</span>}</div>
-                <div className="flex items-center gap-1">
-                  <Link href={`/admin/templates/${template.id}`}>
-                    <Button variant="ghost" size="sm">수정</Button>
-                  </Link>
-                  <Button variant="ghost" size="sm" className="text-red-500 hover:text-red-700" onClick={() => setDeleteTarget(template)}>
-                    삭제
-                  </Button>
-                </div>
-              </Reorder.Item>
+              />
             ))}
           </Reorder.Group>
         )}
@@ -249,6 +228,61 @@ export function TemplateTable({ data }: { data: Template[] }) {
 
       {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
     </div>
+  );
+}
+
+function TemplateRow({
+  template,
+  onPreview,
+  onDelete,
+  onDragEnd,
+}: {
+  template: Template;
+  onPreview: (url: string) => void;
+  onDelete: (template: Template) => void;
+  onDragEnd: () => void;
+}) {
+  const dragControls = useDragControls();
+  const templateUrl = `/${template.lang}/templates/${template.slug}`;
+
+  return (
+    <Reorder.Item
+      value={template}
+      dragListener={false}
+      dragControls={dragControls}
+      onDragEnd={onDragEnd}
+      whileDrag={{ scale: 1.01, boxShadow: "0 12px 30px rgba(15, 23, 42, 0.14)", zIndex: 20 }}
+      transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
+      className={clsx("grid items-center gap-3 bg-white px-4 py-3 text-sm text-zinc-700 transition-colors hover:bg-zinc-50", templateGridClass)}
+    >
+      <button
+        type="button"
+        aria-label="순서 변경"
+        onPointerDown={(event) => dragControls.start(event)}
+        className="flex h-7 w-7 cursor-grab items-center justify-center rounded-md text-zinc-300 transition-colors hover:bg-zinc-100 hover:text-zinc-500 active:cursor-grabbing focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2"
+      >
+        <GripVertical aria-hidden="true" className="h-4 w-4" />
+      </button>
+      <TemplateThumbnail template={template} onPreview={onPreview} />
+      <div className="min-w-0">
+        <Link href={templateUrl} target="_blank" rel="noopener noreferrer" className="block truncate font-medium text-zinc-900 transition-colors hover:text-zinc-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2">
+          {template.name}
+        </Link>
+        <p className="truncate font-mono text-xs text-zinc-400">{template.slug}</p>
+      </div>
+      <span className="font-mono text-xs uppercase text-zinc-500">{template.lang}</span>
+      <span className="truncate">{template.category}</span>
+      <StatusPill published={template.status === "published"} />
+      <div>{template.is_featured ? <CheckIcon aria-label="대표 템플릿" className="w-4 h-4 text-emerald-500" /> : <span className="text-zinc-300">-</span>}</div>
+      <div className="flex items-center gap-1">
+        <Link href={`/admin/templates/${template.id}`}>
+          <Button variant="ghost" size="sm">수정</Button>
+        </Link>
+        <Button variant="ghost" size="sm" className="text-red-500 hover:text-red-700" onClick={() => onDelete(template)}>
+          삭제
+        </Button>
+      </div>
+    </Reorder.Item>
   );
 }
 
