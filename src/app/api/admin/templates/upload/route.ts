@@ -4,6 +4,7 @@ import { pushFilesToGitHub } from "@/lib/github";
 import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { extractAndValidateZip } from "@/lib/zip";
+import { downloadFromR2, deleteFromR2 } from "@/lib/r2";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -14,29 +15,32 @@ export async function POST(request: Request) {
   const authError = await validateAdminUser();
   if (authError) return authError;
 
-  let formData: FormData;
+  let body: { r2Key: string; lang?: string };
   try {
-    formData = await request.formData();
+    body = await request.json();
   } catch {
-    return NextResponse.json({ error: "업로드 요청 형식이 올바르지 않습니다." }, { status: 400 });
+    return NextResponse.json({ error: "요청 형식이 올바르지 않습니다." }, { status: 400 });
   }
 
-  const file = formData.get("file");
-  const lang = parseUploadLanguage(formData.get("lang"));
+  const { r2Key, lang: langParam } = body;
+  const lang: UploadLanguage = langParam === "ko" ? "ko" : "en";
 
-  if (!(file instanceof File) || !isZipFile(file)) {
-    return NextResponse.json({ error: "zip 파일만 업로드 가능합니다." }, { status: 400 });
+  if (!r2Key || !r2Key.startsWith("uploads/tmp/")) {
+    return NextResponse.json({ error: "유효하지 않은 파일 키입니다." }, { status: 400 });
   }
 
-  if (file.size > 50 * 1024 * 1024) {
-    return NextResponse.json({ error: "파일 크기는 50MB 이하여야 합니다." }, { status: 400 });
+  let buffer: Buffer;
+  try {
+    buffer = await downloadFromR2(r2Key);
+  } catch {
+    return NextResponse.json({ error: "파일 다운로드에 실패했습니다." }, { status: 502 });
   }
 
   let extracted: ReturnType<typeof extractAndValidateZip>;
   try {
-    const buffer = Buffer.from(await file.arrayBuffer());
     extracted = extractAndValidateZip(buffer, lang);
   } catch (error) {
+    await deleteFromR2(r2Key).catch(() => {});
     return NextResponse.json({ error: error instanceof Error ? error.message : "zip 검증 실패" }, { status: 400 });
   }
 
@@ -63,6 +67,8 @@ export async function POST(request: Request) {
     console.error("GitHub push 실패:", error);
     return NextResponse.json({ error: "GitHub push에 실패했습니다." }, { status: 502 });
   }
+
+  await deleteFromR2(r2Key).catch(() => {});
 
   if (lang === "en") {
     const { error: insertError } = await supabase.from("templates").insert({
@@ -97,33 +103,15 @@ export async function POST(request: Request) {
   );
 }
 
-function parseUploadLanguage(value: FormDataEntryValue | null): UploadLanguage {
-  return value === "ko" ? "ko" : "en";
-}
-
-function isZipFile(file: File): boolean {
-  return file.name.toLowerCase().endsWith(".zip") || file.type === "application/zip" || file.type === "application/x-zip-compressed";
-}
-
 async function validateAdminUser() {
   const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const { data: { user } } = await supabase.auth.getUser();
 
-  if (!user) {
-    return NextResponse.json({ error: "로그인이 필요합니다." }, { status: 401 });
-  }
+  if (!user) return NextResponse.json({ error: "로그인이 필요합니다." }, { status: 401 });
 
   const allowedEmails = getAllowedAdminEmails();
-
-  if (allowedEmails.length === 0) {
-    return NextResponse.json({ error: "관리자 접근 설정이 필요합니다." }, { status: 403 });
-  }
-
-  if (!isAllowedAdminEmail(user.email, allowedEmails)) {
-    return NextResponse.json({ error: "권한이 없습니다." }, { status: 403 });
-  }
+  if (allowedEmails.length === 0) return NextResponse.json({ error: "관리자 접근 설정이 필요합니다." }, { status: 403 });
+  if (!isAllowedAdminEmail(user.email, allowedEmails)) return NextResponse.json({ error: "권한이 없습니다." }, { status: 403 });
 
   return null;
 }

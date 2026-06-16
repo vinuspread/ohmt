@@ -69,15 +69,39 @@ export function UploadForm() {
     setError("");
     setResult(null);
 
-    const formData = new FormData();
-    formData.append("file", file);
-    formData.append("lang", lang);
+    // Step 1: presigned URL 발급
+    let r2Key: string;
+    try {
+      const presignRes = await fetch("/api/admin/templates/presign", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ filename: file.name }),
+      });
+      if (!presignRes.ok) throw new Error("presign 실패");
+      const { uploadUrl, key } = await presignRes.json();
+      r2Key = key;
 
+      // Step 2: R2에 직접 업로드
+      const r2Res = await fetch(uploadUrl, {
+        method: "PUT",
+        body: file,
+        headers: { "Content-Type": "application/zip" },
+      });
+      if (!r2Res.ok) throw new Error("R2 업로드 실패");
+    } catch {
+      setError("파일 업로드에 실패했습니다.");
+      setStatus("error");
+      setToast({ message: "파일 업로드에 실패했습니다.", type: "error" });
+      return;
+    }
+
+    // Step 3: 서버에서 처리
     let response: Response;
     try {
       response = await fetch("/api/admin/templates/upload", {
         method: "POST",
-        body: formData,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ r2Key, lang }),
       });
     } catch {
       setError("네트워크 오류로 업로드에 실패했습니다.");
