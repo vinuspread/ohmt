@@ -127,7 +127,6 @@ export function UploadForm() {
     setResult(uploadResult);
     setStatus("success");
     setToast({ message: `${uploadResult.slug} 업로드가 완료됐습니다.`, type: "success" });
-    router.push("/admin/templates");
     router.refresh();
   };
 
@@ -209,11 +208,6 @@ export function UploadForm() {
             </div>
           </dl>
           <div className="mt-4 flex gap-2">
-            <Link href="/admin/templates">
-              <Button variant="secondary" size="sm">
-                목록으로 이동
-              </Button>
-            </Link>
             <Link href={result.templateUrl} target="_blank">
               <Button variant="ghost" size="sm">
                 템플릿 보기
