@@ -22,6 +22,18 @@ const filters: { value: TemplateFilter; label: string }[] = [
 
 const templateGridClass = "grid-cols-[28px_72px_minmax(150px,1.4fr)_64px_minmax(110px,0.9fr)_88px_48px_132px]";
 
+function matchesFilters(template: Template, filter: TemplateFilter, query: string) {
+  const published = template.status === "published";
+  const statusLabel = published ? "공개" : "비공개";
+  const matchesFilter = filter === "all" || (filter === "published" ? published : !published);
+  const matchesSearch =
+    query.length === 0 ||
+    template.name.toLowerCase().includes(query) ||
+    (query === "공개" ? published : query === "비공개" ? !published : statusLabel.includes(query));
+
+  return matchesFilter && matchesSearch;
+}
+
 export function TemplateTable({ data }: { data: Template[] }) {
   const router = useRouter();
   const [templates, setTemplates] = useState(data);
@@ -47,18 +59,7 @@ export function TemplateTable({ data }: { data: Template[] }) {
 
   const filteredData = useMemo(() => {
     const query = searchTerm.trim().toLowerCase();
-
-    return templates.filter((template) => {
-      const published = template.status === "published";
-      const statusLabel = published ? "공개" : "비공개";
-      const matchesFilter = filter === "all" || (filter === "published" ? published : !published);
-      const matchesSearch =
-        query.length === 0 ||
-        template.name.toLowerCase().includes(query) ||
-        (query === "공개" ? published : query === "비공개" ? !published : statusLabel.includes(query));
-
-      return matchesFilter && matchesSearch;
-    });
+    return templates.filter((template) => matchesFilters(template, filter, query));
   }, [filter, searchTerm, templates]);
 
   const handleDelete = async () => {
@@ -79,20 +80,22 @@ export function TemplateTable({ data }: { data: Template[] }) {
     setDeleteTarget(null);
   };
 
-  const mergeVisibleOrder = (nextVisible: Template[]) => {
-    const visibleIds = new Set(filteredData.map((template) => template.id));
-    let visibleIndex = 0;
-
-    return templates.map((template) => (visibleIds.has(template.id) ? nextVisible[visibleIndex++] : template)).map((template, index) => ({
-      ...template,
-      sort_order: index,
-    }));
-  };
-
   const handleReorder = (nextVisible: Template[]) => {
-    const nextTemplates = mergeVisibleOrder(nextVisible);
-    pendingOrderRef.current = nextTemplates;
-    setTemplates(nextTemplates);
+    const query = searchTerm.trim().toLowerCase();
+
+    setTemplates((prevTemplates) => {
+      const visibleIds = new Set(
+        prevTemplates.filter((template) => matchesFilters(template, filter, query)).map((template) => template.id)
+      );
+      let visibleIndex = 0;
+
+      const nextTemplates = prevTemplates
+        .map((template) => (visibleIds.has(template.id) ? nextVisible[visibleIndex++] : template))
+        .map((template, index) => ({ ...template, sort_order: index }));
+
+      pendingOrderRef.current = nextTemplates;
+      return nextTemplates;
+    });
   };
 
   const persistOrder = async () => {
