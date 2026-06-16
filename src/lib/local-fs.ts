@@ -1,27 +1,14 @@
-import { existsSync } from "fs";
-import { mkdir, writeFile } from "fs/promises";
-import path from "path";
-import type { GitHubFileEntry } from "./github";
-import { fetchFileFromGitHub } from "./github";
+import { execFile } from "child_process";
+import { promisify } from "util";
 
-export async function writeFilesLocally(files: GitHubFileEntry[]): Promise<void> {
-  for (const file of files) {
-    const fullPath = path.join(process.cwd(), file.path);
-    await mkdir(path.dirname(fullPath), { recursive: true });
-    await writeFile(fullPath, file.content);
+const execFileAsync = promisify(execFile);
+
+export async function pullLocalRepoIfDev(): Promise<void> {
+  if (process.env.VERCEL) return;
+
+  try {
+    await execFileAsync("git", ["pull", "--ff-only", "origin", "main"], { cwd: process.cwd() });
+  } catch (error) {
+    console.error("로컬 git pull 동기화 실패:", error);
   }
-}
-
-export async function ensureLocalPublicFile(publicRelativePath: string): Promise<boolean> {
-  if (process.env.VERCEL) return true;
-
-  const fullPath = path.join(process.cwd(), "public", publicRelativePath);
-  if (existsSync(fullPath)) return true;
-
-  const content = await fetchFileFromGitHub(path.posix.join("public", publicRelativePath));
-  if (!content) return false;
-
-  await mkdir(path.dirname(fullPath), { recursive: true });
-  await writeFile(fullPath, content);
-  return true;
 }

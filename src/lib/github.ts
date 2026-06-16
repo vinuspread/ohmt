@@ -71,28 +71,3 @@ export async function pushFilesToGitHub(files: GitHubFileEntry[], commitMessage:
 function isTextFile(path: string): boolean {
   return textExtensions.some((extension) => path.endsWith(extension));
 }
-
-export async function fetchFileFromGitHub(filePath: string): Promise<Buffer | null> {
-  const token = process.env.GITHUB_TOKEN;
-  const owner = process.env.GITHUB_OWNER;
-  const repo = process.env.GITHUB_REPO;
-
-  if (!token || !owner || !repo) {
-    throw new Error("GitHub 환경변수가 설정되지 않았습니다.");
-  }
-
-  const octokit = new Octokit({ auth: token });
-
-  try {
-    const { data } = await octokit.repos.getContent({ owner, repo, path: filePath, ref: "heads/main" });
-    if (Array.isArray(data) || data.type !== "file" || !data.content) return null;
-    return Buffer.from(data.content, "base64");
-  } catch (error) {
-    if (isNotFoundError(error)) return null;
-    throw error;
-  }
-}
-
-function isNotFoundError(error: unknown): boolean {
-  return typeof error === "object" && error !== null && "status" in error && (error as { status: number }).status === 404;
-}

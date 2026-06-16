@@ -1,9 +1,12 @@
 import { AdminShell } from "@/app/admin/_components/layout/AdminShell";
 import { TemplateTable } from "@/app/admin/_components/templates/TemplateTable";
 import { createClient } from "@/lib/supabase/server";
+import { pullLocalRepoIfDev } from "@/lib/local-fs";
 import type { Template } from "@/types/template";
 
 export default async function TemplatesPage() {
+  await pullLocalRepoIfDev();
+
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("templates")

@@ -2,9 +2,12 @@ import { AdminShell } from "@/app/admin/_components/layout/AdminShell";
 import { UploadForm } from "@/app/admin/_components/templates/UploadForm";
 import { UploadedTable } from "@/app/admin/_components/uploads/UploadedTable";
 import { createClient } from "@/lib/supabase/server";
+import { pullLocalRepoIfDev } from "@/lib/local-fs";
 import type { Template } from "@/types/template";
 
 export default async function UploadsPage() {
+  await pullLocalRepoIfDev();
+
   const supabase = await createClient();
   const { data, error } = await supabase
     .from("templates")
