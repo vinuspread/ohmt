@@ -40,6 +40,16 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
   const [activeCategory, setActiveCategory] = useState("All");
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
   const [isAdmin, setIsAdmin] = useState(false);
+  const [expandedDescIds, setExpandedDescIds] = useState<Set<string>>(new Set());
+
+  const toggleDescExpanded = (id: string) => {
+    setExpandedDescIds((current) => {
+      const next = new Set(current);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  };
 
   useEffect(() => {
     import("@/lib/supabase/client").then(({ createClient }) => {
@@ -520,7 +530,24 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
                             </div>
                             <p className="text-[0.65rem] text-zinc-400 font-bold uppercase tracking-wider dark:text-zinc-500">{template.category}</p>
                           </div>
-                          <p className="text-sm text-zinc-500 leading-relaxed font-normal whitespace-pre-line dark:text-zinc-400">{template.desc}</p>
+                          <div>
+                            <p
+                              className={`text-sm text-zinc-500 leading-relaxed font-normal whitespace-pre-line dark:text-zinc-400 ${
+                                expandedDescIds.has(template.id) ? "" : "line-clamp-2"
+                              }`}
+                            >
+                              {template.desc}
+                            </p>
+                            {template.desc.length > 40 && (
+                              <button
+                                type="button"
+                                onClick={() => toggleDescExpanded(template.id)}
+                                className="mt-1 text-xs font-bold text-zinc-400 hover:text-zinc-600 transition-colors dark:text-zinc-500 dark:hover:text-zinc-300"
+                              >
+                                {expandedDescIds.has(template.id) ? "Show less" : "Read more"}
+                              </button>
+                            )}
+                          </div>
                           <div className="flex justify-between items-center pt-4 border-t border-zinc-100 dark:border-zinc-700">
                             <Link
                               href={template.url}
