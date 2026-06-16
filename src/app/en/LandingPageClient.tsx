@@ -40,16 +40,7 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
   const [activeCategory, setActiveCategory] = useState("All");
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
   const [isAdmin, setIsAdmin] = useState(false);
-  const [expandedDescIds, setExpandedDescIds] = useState<Set<string>>(new Set());
-
-  const toggleDescExpanded = (id: string) => {
-    setExpandedDescIds((current) => {
-      const next = new Set(current);
-      if (next.has(id)) next.delete(id);
-      else next.add(id);
-      return next;
-    });
-  };
+  const [descModalTemplate, setDescModalTemplate] = useState<TemplateItem | null>(null);
 
   useEffect(() => {
     import("@/lib/supabase/client").then(({ createClient }) => {
@@ -531,20 +522,16 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
                             <p className="text-[0.65rem] text-zinc-400 font-bold uppercase tracking-wider dark:text-zinc-500">{template.category}</p>
                           </div>
                           <div>
-                            <p
-                              className={`text-sm text-zinc-500 leading-relaxed font-normal whitespace-pre-line dark:text-zinc-400 ${
-                                expandedDescIds.has(template.id) ? "" : "line-clamp-2"
-                              }`}
-                            >
+                            <p className="text-sm text-zinc-500 leading-relaxed font-normal whitespace-pre-line line-clamp-2 dark:text-zinc-400">
                               {template.desc}
                             </p>
                             {template.desc.length > 40 && (
                               <button
                                 type="button"
-                                onClick={() => toggleDescExpanded(template.id)}
+                                onClick={() => setDescModalTemplate(template)}
                                 className="mt-1 text-xs font-bold text-zinc-400 hover:text-zinc-600 transition-colors dark:text-zinc-500 dark:hover:text-zinc-300"
                               >
-                                {expandedDescIds.has(template.id) ? "Show less" : "Read more"}
+                                Read more
                               </button>
                             )}
                           </div>
@@ -845,6 +832,58 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
                   )}
                 </div>
               </motion.aside>
+            </>
+          )}
+        </AnimatePresence>
+
+        {/* Template Description Modal */}
+        <AnimatePresence>
+          {descModalTemplate && (
+            <>
+              <motion.div
+                className="fixed inset-0 bg-black/40 backdrop-blur-sm z-50"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                onClick={() => setDescModalTemplate(null)}
+              />
+              <motion.div className="fixed inset-0 z-50 flex items-center justify-center p-6 pointer-events-none">
+                <motion.div
+                  className="pointer-events-auto bg-white dark:bg-zinc-900 border border-zinc-200/60 dark:border-zinc-700 rounded-xl max-w-lg w-full max-h-[80vh] overflow-y-auto shadow-2xl"
+                  initial={{ opacity: 0, y: 12, scale: 0.98 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: 12, scale: 0.98 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="p-6 space-y-4">
+                    <div className="flex items-start justify-between gap-4">
+                      <div className="space-y-1">
+                        <span className="text-[0.65rem] text-zinc-400 font-bold uppercase tracking-wider dark:text-zinc-500">{descModalTemplate.category}</span>
+                        <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">{descModalTemplate.name}</h3>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => setDescModalTemplate(null)}
+                        className="text-zinc-400 hover:text-zinc-900 transition-colors dark:text-zinc-500 dark:hover:text-zinc-100"
+                        aria-label="Close"
+                      >
+                        <X size={20} />
+                      </button>
+                    </div>
+                    <p className="text-sm text-zinc-500 leading-relaxed font-normal whitespace-pre-line dark:text-zinc-400">
+                      {descModalTemplate.desc}
+                    </p>
+                    <Link
+                      href={descModalTemplate.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-900 hover:text-zinc-600 transition-colors dark:text-zinc-100 dark:hover:text-zinc-400"
+                    >
+                      Live Preview <ArrowUpRight size={12} />
+                    </Link>
+                  </div>
+                </motion.div>
+              </motion.div>
             </>
           )}
         </AnimatePresence>
