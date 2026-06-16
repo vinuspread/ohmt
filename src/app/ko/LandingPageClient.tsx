@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, ChevronDown, X, Search, Sparkles } from "lucide-react";
@@ -39,6 +39,15 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
   const [searchTerm, setSearchTerm] = useState("");
   const [activeCategory, setActiveCategory] = useState("전체");
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  useEffect(() => {
+    import("@/lib/supabase/client").then(({ createClient }) => {
+      createClient().auth.getUser().then(({ data }) => {
+        if (data.user) setIsAdmin(true);
+      });
+    });
+  }, []);
 
   const packages = [
     {
@@ -114,6 +123,64 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
     }
   ];
 
+  const websiteOrganizationSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.ohmt.site/#website",
+        url: "https://www.ohmt.site",
+        name: "Oh My Template",
+        description: "브랜드, 에이전시, 크리에이터를 위한 프리미엄 Next.js 웹 템플릿 서비스.",
+        inLanguage: ["en", "ko"],
+        potentialAction: {
+          "@type": "SearchAction",
+          target: "https://www.ohmt.site/ko?q={search_term_string}",
+          "query-input": "required name=search_term_string",
+        },
+      },
+      {
+        "@type": "Organization",
+        "@id": "https://www.ohmt.site/#organization",
+        name: "Oh My Template",
+        url: "https://www.ohmt.site",
+        email: "contact@ohmytemplate.com",
+        description: "브랜드, 에이전시, 크리에이터를 위한 프리미엄 Next.js 웹 템플릿 서비스.",
+        sameAs: [],
+      },
+    ],
+  };
+
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Oh My Template — 템플릿 컬렉션",
+    description: "프리미엄 Next.js 웹 템플릿",
+    url: "https://www.ohmt.site/ko",
+    numberOfItems: templates.length,
+    itemListElement: templates.map((template, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: template.name,
+      description: template.desc,
+      url: `https://www.ohmt.site${template.url}`,
+      image: template.image ? `https://www.ohmt.site${template.image}` : undefined,
+    })),
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.a,
+      },
+    })),
+  };
+
   const filteredTemplates = useMemo(() => {
     return templates.filter(t => {
       const matchCategory = activeCategory === "전체" || t.category === activeCategory;
@@ -180,6 +247,18 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
 
   return (
       <main className="min-h-screen bg-[#FCFCFD] text-zinc-900 font-sans selection:bg-zinc-900 selection:text-white overflow-x-hidden antialiased break-keep dark:bg-zinc-950 dark:text-zinc-100">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteOrganizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
         
         {/* Header */}
         <header className="bg-white border-b border-zinc-200/60 px-6 md:px-12 py-4 flex justify-between items-center sticky top-0 z-40 dark:bg-zinc-900 dark:border-zinc-800">
@@ -597,6 +676,9 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
             <div className="flex gap-8 text-xs font-bold text-zinc-400 uppercase tracking-widest dark:text-zinc-500">
               <Link href="/en" className="hover:text-zinc-950 transition-colors dark:hover:text-zinc-100">English</Link>
               <a href="mailto:contact@ohmytemplate.com" className="hover:text-zinc-950 transition-colors dark:hover:text-zinc-100">이메일 문의</a>
+              {isAdmin && (
+                <Link href="/admin/templates" className="hover:text-zinc-950 transition-colors dark:hover:text-zinc-100">관리자</Link>
+              )}
             </div>
           </div>
           <div className="max-w-6xl mx-auto text-[0.62rem] font-bold text-zinc-400 uppercase tracking-widest mt-8 border-t border-zinc-100 pt-6 dark:text-zinc-500 dark:border-zinc-800">
