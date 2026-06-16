@@ -62,10 +62,12 @@ begin
 end;
 $$ language plpgsql;
 
+drop trigger if exists templates_updated_at on templates;
 create trigger templates_updated_at
   before update on templates
   for each row execute function update_updated_at();
 
+drop trigger if exists categories_updated_at on categories;
 create trigger categories_updated_at
   before update on categories
   for each row execute function update_updated_at();
