@@ -14,25 +14,25 @@ export default function BlogNews() {
         <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="max-w-xl">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
-              Knowledge Hub
+              지식 허브
             </span>
-            <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.2] text-[var(--color-text)] font-heading">
-              Our latest news
+            <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.2] text-[var(--color-text)] font-heading break-keep">
+              최신 소식
             </h2>
           </div>
           <Link
             href="#news"
             className="inline-flex items-center justify-center px-6 py-2.5 bg-[var(--color-accent)] text-white font-bold text-xs uppercase tracking-widest hover:opacity-90 active:scale-95 transition-all duration-300 rounded-md"
           >
-            Browse All Articles
+            모든 아티클 보기
           </Link>
         </div>
 
-        {/* Layout - responsive height constraints */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 h-auto lg:h-[406px]">
+        {/* Layout - fixed height so both columns match exactly */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:h-[406px]">
           {/* Left: Featured image with text overlay */}
           {featuredPost && (
-            <Link href="#news" className="lg:col-span-7 group relative block h-[300px] sm:h-[360px] lg:h-full overflow-hidden rounded-2xl">
+            <Link href="#news" className="lg:col-span-7 group relative block h-full overflow-hidden rounded-2xl">
               <img
                 src={featuredPost.image}
                 alt={featuredPost.title}
@@ -50,7 +50,7 @@ export default function BlogNews() {
                     {featuredPost.date}
                   </span>
                 </div>
-                <h3 className="text-xl font-semibold text-white font-heading leading-[1.2] tracking-tight">
+                <h3 className="text-xl font-extrabold text-white font-heading leading-[1.2] tracking-tight">
                   {featuredPost.title}
                 </h3>
               </div>
@@ -58,7 +58,7 @@ export default function BlogNews() {
           )}
 
           {/* Right: Vertical List of 3 posts */}
-          <div className="lg:col-span-5 flex flex-col justify-between h-auto lg:h-full gap-6 lg:gap-0 divide-y divide-[var(--color-border)]/50">
+          <div className="lg:col-span-5 flex flex-col justify-between h-full divide-y divide-[var(--color-border)]/50">
             {listPosts.map((post) => (
               <Link
                 key={post.id}
@@ -82,11 +82,11 @@ export default function BlogNews() {
                       {post.date}
                     </span>
                   </div>
-                  <h3 className="text-base font-semibold text-[var(--color-text)] font-heading transition-colors group-hover:text-[var(--color-accent)] leading-snug tracking-tight">
+                  <h3 className="text-base font-bold text-[var(--color-text)] font-heading transition-colors group-hover:text-[var(--color-accent)] leading-snug tracking-tight">
                     {post.title}
                   </h3>
                   <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[var(--color-text-muted)] group-hover:text-[var(--color-text)] transition-colors duration-200 mt-1">
-                    <span>Read article</span>
+                    <span>기사 읽기</span>
                     <svg width="12" height="12" viewBox="0 0 14 14" fill="none" className="transform group-hover:translate-x-1 transition-transform text-[var(--color-accent)]">
                       <path d="M5 3L9 7L5 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>

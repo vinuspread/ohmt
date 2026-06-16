@@ -35,50 +35,50 @@ export interface BlogItem {
 export const featuresData: FeatureItem[] = [
   {
     id: 'mobility',
-    title: 'Enhanced mobility',
-    description: 'High-performance motion control with advanced autonomous navigation and multi-terrain adaptation algorithms.',
+    title: '향상된 이동성',
+    description: '고성능 모션 컨트롤과 고급 자율 주행, 다양한 지형 적응 알고리즘을 갖춘 이동 시스템.',
     image: '/templates/technology/feature-mobility-nuki.png',
-    icon: '', // Custom code representing movement icon
+    icon: '\ue911',
   },
   {
     id: 'ai',
-    title: 'Advanced AI',
-    description: 'On-device deep learning engine designed to maximize real-time environmental analysis, object detection, and response.',
+    title: '고급 AI',
+    description: '실시간 환경 분석, 객체 감지 및 응답을 극대화하도록 설계된 온디바이스 딥러닝 엔진.',
     image: '/templates/technology/feature-ai-nuki.png',
-    icon: '', // Custom code representing chip/neural icon
+    icon: '\ue90a',
   },
   {
     id: 'dexterity',
-    title: 'Human-like dexterity',
-    description: 'Robotic manipulation engineered to perform tasks with a human level of precision, speed, and tactile feedback.',
+    title: '인간형 손재주',
+    description: '인간 수준의 정밀도, 속도 및 촉각 피드백으로 작업을 수행하도록 설계된 로봇 조작 기술.',
     image: '/templates/technology/feature-dexterity.jpg',
-    icon: '', // Custom code representing hand/dexterity icon
+    icon: '\ue915',
   },
 ]
 
 export const specData: SpecItem[] = [
   {
     id: 'battery',
-    title: 'Long life battery',
-    description: '24-hour continuous uptime supported by a fast wireless self-charging base.',
+    title: '장시간 배터리',
+    description: '고속 무선 자체 충전 베이스로 지원되는 24시간 연속 작동.',
     side: 'left',
   },
   {
     id: 'voice',
-    title: 'Voice assistant',
-    description: 'Built-in semantic natural language processing supporting multi-lingual smart control.',
+    title: '음성 어시스턴트',
+    description: '다국어 스마트 제어를 지원하는 내장형 의미론적 자연어 처리 기능.',
     side: 'left',
   },
   {
     id: 'modular',
-    title: 'Modular design',
-    description: 'Quick-attach mounting hardware allows flexible task swapping for various applications.',
+    title: '모듈형 디자인',
+    description: '빠른 장착 하드웨어로 다양한 작업에 유연하게 대응할 수 있습니다.',
     side: 'right',
   },
   {
     id: 'gesture',
-    title: 'Gesture recognition',
-    description: 'Equipped with multi-point optical gesture trackers and infrared user tracking.',
+    title: '제스처 인식',
+    description: '멀티포인트 광학 제스처 트래커와 적외선 사용자 추적 기능 탑재.',
     side: 'right',
   },
 ]
@@ -87,21 +87,21 @@ export const modelData: ModelItem[] = [
   {
     id: 'gen2',
     name: 'OmniBot Gen 2',
-    description: '4K resolution cameras, 120° FOV, on-device neural processing, and night vision. Our flagship modular indoor system.',
+    description: '4K 해상도 카메라, 120° 화각, 온디바이스 신경망 처리 및 야간 투시 기능을 갖춘 플래그십 모듈형 실내 시스템.',
     price: '$20,000 USD',
     slashedPrice: '$25,000 USD',
-    financing: '$833.33/month with 24-month financing',
-    saveAmount: 'Save $5,000',
+    financing: '$833.33/월 (24개월 할부)',
+    saveAmount: '$5,000 절약',
     image: '/templates/technology/product-gen2.png',
   },
   {
     id: 'prime',
     name: 'OmniBot Prime',
-    description: 'Heavy duty high-torque driving motors, external ruggedized armor plating, and secondary laser rangefinders for industrial uses.',
+    description: '고토크 구동 모터, 견고한 외부 장갑판, 산업용 2차 레이저 거리 측정기를 갖춘 중장비 모델.',
     price: '$25,000 USD',
     slashedPrice: '$30,000 USD',
-    financing: '$1,041.66/month with 24-month financing',
-    saveAmount: 'Save $5,000',
+    financing: '$1,041.66/월 (24개월 할부)',
+    saveAmount: '$5,000 절약',
     image: '/templates/technology/product-prime.png',
   }
 ]
@@ -109,30 +109,30 @@ export const modelData: ModelItem[] = [
 export const blogData: BlogItem[] = [
   {
     id: 'featured',
-    title: 'How OmiBot’s robot could transform your daily life and streamline operations',
-    category: 'Articles',
-    date: 'Jan 28, 2026',
+    title: 'OmiBot 로봇이 일상 생활을 변화시키고 운영을 간소화하는 방법',
+    category: '아티클',
+    date: '2026. 1. 28.',
     image: '/templates/technology/blog-featured.png',
   },
   {
     id: 'news1',
-    title: 'New update v1.3 for OmniBot now enables new features in your app',
-    category: 'News',
-    date: 'Jan 28, 2026',
+    title: 'OmniBot v1.3 업데이트로 앱에서 새로운 기능을 사용할 수 있습니다',
+    category: '뉴스',
+    date: '2026. 1. 28.',
     image: '/templates/technology/news-ai.png',
   },
   {
     id: 'news2',
-    title: 'How AI enhances learning and behavior in humanoid robots',
-    category: 'Resources',
-    date: 'Jan 28, 2026',
+    title: 'AI가 인간형 로봇의 학습과 행동을 향상시키는 방법',
+    category: '리소스',
+    date: '2026. 1. 28.',
     image: '/templates/technology/news-dexterity.png',
   },
   {
     id: 'news3',
-    title: 'Safety protocols and compliance guidelines for human-robot workspaces',
-    category: 'Compliance',
-    date: 'Jan 28, 2026',
+    title: '인간-로봇 협업 공간을 위한 안전 프로토콜 및 규정 준수 가이드라인',
+    category: '컴플라이언스',
+    date: '2026. 1. 28.',
     image: '/templates/technology/news-mobility.png',
   },
 ]
