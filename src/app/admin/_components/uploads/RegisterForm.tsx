@@ -8,7 +8,6 @@ import { Select } from "../ui/Select";
 import { Toast } from "../ui/Toast";
 import type { Template } from "@/types/template";
 
-type RegistrationStatus = "draft" | "published";
 type ToastState = { message: string; type: "success" | "error" };
 
 const inputClassName = "w-full px-3 py-2 text-sm border rounded-lg outline-none transition-colors border-zinc-200 focus:border-zinc-900 placeholder:text-zinc-400 disabled:bg-zinc-50 disabled:text-zinc-400 focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2";
@@ -24,18 +23,13 @@ const categoryOptions = [
   { value: "uncategorized", label: "uncategorized" },
 ];
 
-const statusOptions = [
-  { value: "draft", label: "draft" },
-  { value: "published", label: "published" },
-];
-
 export function RegisterForm({ template }: { template: Template }) {
   const router = useRouter();
   const [name, setName] = useState(template.name);
   const [category, setCategory] = useState(template.category);
   const [description, setDescription] = useState(template.description ?? "");
   const [thumbnailUrl, setThumbnailUrl] = useState(template.thumbnail_url ?? "");
-  const [status, setStatus] = useState<RegistrationStatus>("draft");
+  const [published, setPublished] = useState(template.status === "published");
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState<ToastState | null>(null);
   const [nameError, setNameError] = useState("");
@@ -70,7 +64,7 @@ export function RegisterForm({ template }: { template: Template }) {
         category,
         description: description.trim() || null,
         thumbnail_url: thumbnailUrl.trim() || null,
-        status,
+        status: published ? "published" : "draft",
       }),
     });
 
@@ -90,8 +84,32 @@ export function RegisterForm({ template }: { template: Template }) {
         <div className="text-xs font-mono uppercase text-zinc-500">언어: {template.lang}</div>
         <Input label="템플릿명" value={name} onChange={(event) => setName(event.target.value)} error={nameError} required />
         <Select label="카테고리" value={category} onChange={(event) => setCategory(event.target.value)} options={categoryOptions} required />
-        <Input label="썸네일 URL" value={thumbnailUrl} onChange={(event) => setThumbnailUrl(event.target.value)} />
-        <Select label="공개 여부" value={status} onChange={(event) => setStatus(event.target.value as RegistrationStatus)} options={statusOptions} required />
+        <div className="flex flex-col gap-2">
+          <Input label="썸네일 URL" value={thumbnailUrl} onChange={(event) => setThumbnailUrl(event.target.value)} />
+          {thumbnailUrl.trim() && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={thumbnailUrl.trim()}
+              alt="썸네일 미리보기"
+              className="h-40 w-auto max-w-full rounded-lg border border-zinc-200 object-cover"
+              onError={(event) => {
+                event.currentTarget.style.display = "none";
+              }}
+              onLoad={(event) => {
+                event.currentTarget.style.display = "block";
+              }}
+            />
+          )}
+        </div>
+        <label className="flex items-center gap-2 text-sm font-medium text-zinc-700">
+          <input
+            type="checkbox"
+            checked={published}
+            onChange={(event) => setPublished(event.target.checked)}
+            className="h-4 w-4 rounded border-zinc-300 text-zinc-900 focus:ring-zinc-900"
+          />
+          공개
+        </label>
         <label className="flex flex-col gap-1">
           <span className="text-sm font-medium text-zinc-700">설명</span>
           <textarea value={description} onChange={(event) => setDescription(event.target.value)} className={`${inputClassName} min-h-28 resize-y`} />
