@@ -354,8 +354,8 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
             <div className="absolute left-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none dark:from-zinc-900" />
             <div className="absolute right-0 top-0 bottom-0 w-24 md:w-48 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none dark:from-zinc-900" />
             
-            <div className="flex gap-6 py-8 overflow-x-auto">
-              {templates.map((template, idx) => (
+            <div className="flex gap-6 py-8 animate-marquee">
+              {[...templates, ...templates].map((template, idx) => (
                 <Link
                   href={template.url}
                   key={`${template.id}-${idx}`}
