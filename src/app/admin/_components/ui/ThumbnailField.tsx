@@ -8,7 +8,7 @@ function formatBytes(bytes: number) {
   return `${(bytes / (1024 * 1024)).toFixed(1)}MB`;
 }
 
-export function ThumbnailField({ value, onChange }: { value: string; onChange: (url: string) => void }) {
+export function ThumbnailField({ value, onChange, className = "" }: { value: string; onChange: (url: string) => void; className?: string }) {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState("");
@@ -102,7 +102,7 @@ export function ThumbnailField({ value, onChange }: { value: string; onChange: (
       : "등록된 썸네일이 없습니다.";
 
   return (
-    <div className="flex flex-col gap-1 md:col-span-2">
+    <div className={`flex flex-col gap-1 ${className}`}>
       <span className="text-sm font-medium text-zinc-700">썸네일 이미지</span>
       <p className="text-xs text-zinc-400">현재 등록된 썸네일의 실제 사이즈/용량을 보여줍니다. 새 이미지를 만들 때 이 값을 기준으로 맞추면 됩니다.</p>
       <div className="flex items-start gap-3">

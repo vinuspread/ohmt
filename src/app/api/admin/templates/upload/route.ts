@@ -5,6 +5,7 @@ import { createClient } from "@/lib/supabase/server";
 import { createAdminClient } from "@/lib/supabase/admin";
 import { extractAndValidateZip } from "@/lib/zip";
 import { downloadFromR2, deleteFromR2 } from "@/lib/r2";
+import { writeFilesLocally } from "@/lib/local-fs";
 
 export const runtime = "nodejs";
 export const maxDuration = 60;
@@ -70,6 +71,12 @@ export async function POST(request: Request) {
   }
 
   await deleteFromR2(r2Key).catch(() => {});
+
+  if (!process.env.VERCEL) {
+    await writeFilesLocally(files).catch((error) => {
+      console.error("로컬 파일 동기화 실패:", error);
+    });
+  }
 
   const { error: insertError } = await supabase.from("templates").insert({
     slug,

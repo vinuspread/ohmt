@@ -124,7 +124,7 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
           <p className="text-xs text-zinc-400">목록 상단에 강조해서 보여집니다. 다중 선택 가능.</p>
         </div>
         <Input label="태그" placeholder="responsive, dark-mode" value={tags} onChange={(event) => setTags(event.target.value)} />
-        <ThumbnailField value={thumbnailUrl} onChange={setThumbnailUrl} />
+        <ThumbnailField value={thumbnailUrl} onChange={setThumbnailUrl} className="md:col-span-2" />
         <label className="md:col-span-2 flex flex-col gap-1">
           <span className="text-sm font-medium text-zinc-700">설명</span>
           <textarea value={description} onChange={(event) => setDescription(event.target.value)} className={`${inputClassName} min-h-28 resize-y`} />
