@@ -98,9 +98,12 @@ export function TemplateTable({ data }: { data: Template[] }) {
       );
       let visibleIndex = 0;
 
-      const nextTemplates = prevTemplates
-        .map((template) => (visibleIds.has(template.id) ? nextVisible[visibleIndex++] : template))
-        .map((template, index) => ({ ...template, sort_order: index }));
+      // 드래그 중에는 배열 순서만 바꾸고, 움직이지 않은 항목의 객체 참조는 유지한다.
+      // 매번 모든 항목을 새 객체로 복제하면 Reorder.Group이 value 참조로 추적하는
+      // 내부 드래그 위치 상태가 매 이벤트마다 리셋되어 다른 행들이 같이 흔들린다.
+      const nextTemplates = prevTemplates.map((template) =>
+        visibleIds.has(template.id) ? nextVisible[visibleIndex++] : template
+      );
 
       pendingOrderRef.current = nextTemplates;
       return nextTemplates;
@@ -108,9 +111,10 @@ export function TemplateTable({ data }: { data: Template[] }) {
   };
 
   const persistOrder = async () => {
-    const nextTemplates = pendingOrderRef.current;
-    if (!nextTemplates || savingOrder) return;
+    const pending = pendingOrderRef.current;
+    if (!pending || savingOrder) return;
 
+    const nextTemplates = pending.map((template, index) => ({ ...template, sort_order: index }));
     const changedTemplates = nextTemplates.filter((template, index) => persistedOrderRef.current.get(template.id) !== index);
     pendingOrderRef.current = null;
 
@@ -131,6 +135,7 @@ export function TemplateTable({ data }: { data: Template[] }) {
     setSavingOrder(false);
 
     if (responses.every((response) => response.ok)) {
+      setTemplates(nextTemplates);
       persistedOrderRef.current = new Map(nextTemplates.map((template, index) => [template.id, index]));
       setToast({ message: "노출 순서가 저장됐습니다.", type: "success" });
       router.refresh();
