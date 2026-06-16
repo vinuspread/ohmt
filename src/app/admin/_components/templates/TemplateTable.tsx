@@ -29,6 +29,13 @@ const langFilters: { value: LangFilter; label: string }[] = [
 
 const templateGridClass = "grid-cols-[28px_72px_minmax(150px,1.4fr)_64px_minmax(110px,0.9fr)_88px_48px_132px]";
 
+const SCROLL_STORAGE_KEY = "admin-templates-scroll-y";
+
+function saveScrollPosition() {
+  if (typeof window === "undefined") return;
+  sessionStorage.setItem(SCROLL_STORAGE_KEY, String(window.scrollY));
+}
+
 function matchesFilters(template: Template, filter: TemplateFilter, langFilter: LangFilter, query: string) {
   const published = template.status === "published";
   const statusLabel = published ? "공개" : "비공개";
@@ -60,6 +67,14 @@ export function TemplateTable({ data }: { data: Template[] }) {
     setTemplates(data);
     persistedOrderRef.current = new Map(data.map((template, index) => [template.id, index]));
   }, [data]);
+
+  useEffect(() => {
+    const saved = sessionStorage.getItem(SCROLL_STORAGE_KEY);
+    if (!saved) return;
+
+    sessionStorage.removeItem(SCROLL_STORAGE_KEY);
+    window.scrollTo({ top: Number(saved) });
+  }, []);
 
   const counts = useMemo(() => {
     const published = templates.filter((template) => template.status === "published").length;
@@ -308,7 +323,7 @@ function TemplateRow({
       <StatusPill published={template.status === "published"} />
       <div>{template.is_featured ? <CheckIcon aria-label="대표 템플릿" className="w-4 h-4 text-emerald-500" /> : <span className="text-zinc-300">-</span>}</div>
       <div className="flex items-center gap-1">
-        <Link href={`/admin/templates/${template.id}`}>
+        <Link href={`/admin/templates/${template.id}`} onClick={saveScrollPosition}>
           <Button variant="ghost" size="sm">수정</Button>
         </Link>
         <Button variant="ghost" size="sm" className="text-red-500 hover:text-red-700" onClick={() => onDelete(template)}>

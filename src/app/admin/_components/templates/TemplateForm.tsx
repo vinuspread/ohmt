@@ -48,10 +48,6 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
   }, [initialData?.category]);
 
   const goToList = () => {
-    if (typeof window !== "undefined" && window.history.length > 1) {
-      router.back();
-      return;
-    }
     router.push("/admin/templates");
   };
 
