@@ -12,6 +12,7 @@ import { Toast } from "../ui/Toast";
 import type { Template } from "@/types/template";
 
 type TemplateFilter = "all" | "published" | "private";
+type LangFilter = "all" | "en" | "ko";
 type ToastState = { message: string; type: "success" | "error" };
 
 const filters: { value: TemplateFilter; label: string }[] = [
@@ -20,24 +21,32 @@ const filters: { value: TemplateFilter; label: string }[] = [
   { value: "private", label: "비공개" },
 ];
 
+const langFilters: { value: LangFilter; label: string }[] = [
+  { value: "all", label: "ALL" },
+  { value: "en", label: "EN" },
+  { value: "ko", label: "KR" },
+];
+
 const templateGridClass = "grid-cols-[28px_72px_minmax(150px,1.4fr)_64px_minmax(110px,0.9fr)_88px_48px_132px]";
 
-function matchesFilters(template: Template, filter: TemplateFilter, query: string) {
+function matchesFilters(template: Template, filter: TemplateFilter, langFilter: LangFilter, query: string) {
   const published = template.status === "published";
   const statusLabel = published ? "공개" : "비공개";
   const matchesFilter = filter === "all" || (filter === "published" ? published : !published);
+  const matchesLang = langFilter === "all" || template.lang === langFilter;
   const matchesSearch =
     query.length === 0 ||
     template.name.toLowerCase().includes(query) ||
     (query === "공개" ? published : query === "비공개" ? !published : statusLabel.includes(query));
 
-  return matchesFilter && matchesSearch;
+  return matchesFilter && matchesLang && matchesSearch;
 }
 
 export function TemplateTable({ data }: { data: Template[] }) {
   const router = useRouter();
   const [templates, setTemplates] = useState(data);
   const [filter, setFilter] = useState<TemplateFilter>("all");
+  const [langFilter, setLangFilter] = useState<LangFilter>("all");
   const [searchTerm, setSearchTerm] = useState("");
   const [deleteTarget, setDeleteTarget] = useState<Template | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
@@ -59,8 +68,8 @@ export function TemplateTable({ data }: { data: Template[] }) {
 
   const filteredData = useMemo(() => {
     const query = searchTerm.trim().toLowerCase();
-    return templates.filter((template) => matchesFilters(template, filter, query));
-  }, [filter, searchTerm, templates]);
+    return templates.filter((template) => matchesFilters(template, filter, langFilter, query));
+  }, [filter, langFilter, searchTerm, templates]);
 
   const handleDelete = async () => {
     if (!deleteTarget) return;
@@ -85,7 +94,7 @@ export function TemplateTable({ data }: { data: Template[] }) {
 
     setTemplates((prevTemplates) => {
       const visibleIds = new Set(
-        prevTemplates.filter((template) => matchesFilters(template, filter, query)).map((template) => template.id)
+        prevTemplates.filter((template) => matchesFilters(template, filter, langFilter, query)).map((template) => template.id)
       );
       let visibleIndex = 0;
 
@@ -145,6 +154,22 @@ export function TemplateTable({ data }: { data: Template[] }) {
                 className={clsx(
                   "px-3 py-1.5 text-sm rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2",
                   filter === item.value ? "bg-white shadow-sm text-zinc-900" : "text-zinc-500 hover:text-zinc-700"
+                )}
+              >
+                {item.label}
+              </button>
+            ))}
+          </div>
+
+          <div className="flex gap-1 bg-zinc-100 p-1 rounded-lg">
+            {langFilters.map((item) => (
+              <button
+                key={item.value}
+                type="button"
+                onClick={() => setLangFilter(item.value)}
+                className={clsx(
+                  "px-3 py-1.5 text-sm rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2",
+                  langFilter === item.value ? "bg-white shadow-sm text-zinc-900" : "text-zinc-500 hover:text-zinc-700"
                 )}
               >
                 {item.label}
