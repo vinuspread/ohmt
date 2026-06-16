@@ -18,10 +18,13 @@ export interface TemplateThemeJson {
 }
 
 const requiredFiles = ["_components/TemplateWrapper.tsx", "layout.tsx", "page.tsx", "theme.css", "theme.json"];
+const requiredPublicFiles = ["thumbnail.jpg"];
 const forbiddenPathPrefixes = ["src/", "translations/"];
+const forbiddenPublicExtensions = [".mp4", ".mov", ".webm"];
 const slugPattern = /^[a-z][a-z0-9-]*$/;
 const maxExtractedSize = 100 * 1024 * 1024;
 const maxFileCount = 500;
+const allowedCategories = ["retail", "corporate", "portfolio", "media", "service", "hospitality", "lifestyle", "uncategorized"];
 
 export function extractAndValidateZip(buffer: Buffer, lang: "en" | "ko" = "en"): ExtractedTemplate {
   const zip = new AdmZip(buffer);
@@ -69,11 +72,26 @@ export function extractAndValidateZip(buffer: Buffer, lang: "en" | "ko" = "en"):
     if (forbiddenPathPrefixes.some((pattern) => relativePath.startsWith(pattern))) {
       throw new Error(`금지된 경로가 포함되어 있습니다: ${relativePath}`);
     }
+
+    if (path.startsWith(`public/templates/${slug}/`)) {
+      const lowerPath = path.toLowerCase();
+      if (forbiddenPublicExtensions.some((ext) => lowerPath.endsWith(ext))) {
+        throw new Error(`동영상 파일은 zip에 포함할 수 없습니다 (R2에 별도 업로드): ${path}`);
+      }
+    }
   }
 
   for (const required of requiredFiles) {
     if (!normalizedFiles.some(({ path }) => path === `${slug}/${required}`)) {
       throw new Error(`필수 파일이 없습니다: ${required}`);
+    }
+  }
+
+  if (lang === "en") {
+    for (const required of requiredPublicFiles) {
+      if (!normalizedFiles.some(({ path }) => path === `public/templates/${slug}/${required}`)) {
+        throw new Error(`필수 이미지 파일이 없습니다: public/templates/${slug}/${required}`);
+      }
     }
   }
 
@@ -83,6 +101,10 @@ export function extractAndValidateZip(buffer: Buffer, lang: "en" | "ko" = "en"):
   const themeJson = parseThemeJson(themeEntry.getData().toString("utf-8"));
   if (themeJson.slug !== slug) {
     throw new Error(`theme.json slug(${themeJson.slug})와 폴더명(${slug})이 다릅니다.`);
+  }
+
+  if (themeJson.category && !allowedCategories.includes(themeJson.category)) {
+    throw new Error(`theme.json category 값이 허용되지 않습니다: ${themeJson.category} (허용값: ${allowedCategories.join(", ")})`);
   }
 
   const templateBasePath = `src/app/${lang}/templates/${slug}`;

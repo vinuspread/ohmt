@@ -15,7 +15,7 @@
 
 | 항목 | 스펙 |
 |------|------|
-| 프레임워크 | Next.js 14+ (App Router) |
+| 프레임워크 | Next.js 16+ (App Router) — `params`/`searchParams`는 **Promise**이므로 반드시 `await` 사용 |
 | 언어 | TypeScript |
 | 스타일 | Tailwind CSS |
 | 애니메이션 | framer-motion |
@@ -63,6 +63,9 @@
 ├── page.tsx                  # 필수
 ├── theme.css                 # 필수 - CSS 변수 정의
 └── theme.json                # 필수 - 메타데이터 + 테마 값
+
+public/templates/[slug]/
+└── thumbnail.jpg              # 필수 (800×600) - 누락 시 업로드 거부됨
 ```
 
 ### 허용하지 않는 구조
@@ -87,6 +90,43 @@ _components/
     ├── Hero.tsx
     └── Features.tsx
 ```
+
+---
+
+## 2-1. zip 압축 방법 (필수)
+
+**zip 압축 시 `src/app/[lang]/templates/` 경로를 포함하지 않는다.**
+위 "경로 구조"에 적힌 경로는 시스템에 배포된 **이후의 최종 위치**이며, zip 안에 그대로 재현하는 경로가 아니다.
+
+zip 압축 파일을 풀었을 때, 최상위(zip 루트)에는 **`[slug]/` 폴더와 `public/templates/[slug]/` 폴더만** 존재해야 한다.
+
+### 올바른 예시 — `car-ko.zip`
+
+```
+car/                          ← zip 루트에 슬러그 폴더가 바로 위치
+├── _components/
+│   └── TemplateWrapper.tsx
+├── layout.tsx
+├── page.tsx
+├── theme.css
+└── theme.json
+public/
+└── templates/
+    └── car/
+        ├── car-1.jpg
+        └── hero-bg.mp4
+```
+
+### 잘못된 예시 (반려됨)
+
+```
+❌ src/app/ko/templates/car/...     # src/app/[lang]/templates 경로를 zip에 포함
+❌ docs/templates/car/plan.md       # 시스템과 무관한 폴더 포함
+```
+
+- zip 루트에는 슬러그 폴더(`public` 제외) **정확히 1개**만 있어야 한다. 그 외 폴더(`docs/`, `src/` 등)가 섞이면 업로드가 거부된다.
+- 영문/국문은 **각각 별도 zip**으로 만든다 (`car.zip`, `car-ko.zip`). 하나의 zip에 합치지 않는다.
+- 이미지/영상(`public/templates/[slug]/`)은 **en 업로드 zip에만 포함**한다. ko 업로드 zip에는 이미지를 포함하지 않는다 (en/ko가 같은 이미지를 공유하므로 중복 업로드 불필요).
 
 ---
 
@@ -335,12 +375,12 @@ export default function TemplatePage() {
 | 저장 위치 | `public/templates/[slug]/` |
 | 참조 경로 | `/templates/[slug]/filename.ext` |
 | hero 이미지 | 1600px 기준, jpg |
-| 썸네일 | 800px 기준, jpg |
+| 썸네일 | 800px 기준, jpg, **파일명은 정확히 `thumbnail.jpg`** (관리자 시스템이 이 경로를 자동으로 등록하므로 다른 파일명 사용 시 랜딩페이지 썸네일이 깨짐) |
 | 아이콘/투명 | png 또는 svg |
 | 외부 URL | **금지** (unsplash, picsum 등 CDN 참조 불가) |
 | ko 템플릿 | en 폴더 공유, 별도 `/templates/[slug]-ko/` 폴더 생성 **금지** |
 
-동영상(`.mp4`)은 Cloudflare R2에 업로드 후 URL만 코드에 삽입. 로컬 `public/`에 저장 금지.
+동영상(`.mp4`, `.mov`, `.webm`)은 zip에 포함할 수 없다 (업로드 시스템이 자동 거부). Cloudflare R2에 별도 업로드 후 URL만 코드에 삽입한다.
 
 ---
 
@@ -465,14 +505,22 @@ export const metadata: Metadata = {
 ```
 
 **동적 라우트 예시** (`[slug]/page.tsx`):
+
+Next.js 16에서 `params`는 **Promise**다. 동기 객체로 타입을 선언하면 빌드 타입 오류가 발생한다.
+
 ```tsx
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  // params를 기반으로 제목/설명 동적 생성
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
   return {
-    title: `${params.slug} - Furniture Modern`,
-    description: `Explore ${params.slug} collection at Furniture Modern.`,
+    title: `${slug} - Furniture Modern`,
+    description: `Explore ${slug} collection at Furniture Modern.`,
     openGraph: { ... },
   };
+}
+
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  // ...
 }
 ```
 
@@ -488,21 +536,20 @@ openGraph: {
 
 ### 11-2. layout.tsx lang 속성
 
-`layout.tsx`에서 `<html lang="">` 속성을 반드시 지정한다.
+**템플릿 layout.tsx에는 `<html>` 태그를 절대 사용하지 않는다.** `<html>`은 시스템 루트(`src/app/layout.tsx`)에만 존재하며, 템플릿은 그 하위에 중첩되는 layout이라 자체 `<html>`을 가질 수 없다 (Next.js App Router 제약).
+
+대신 `lang` 속성이 필요한 wrapper를 div로 감싼다. 실제 시스템 예시 (`src/app/en/layout.tsx`):
 
 ```tsx
-// en 템플릿
-export default function Layout({ children }: { children: React.ReactNode }) {
-  return <html lang="en"><body>{children}</body></html>;
-}
+// en 템플릿: src/app/en/templates/[slug]/layout.tsx (필요 시)
+import "./theme.css";
 
-// ko 템플릿
-export default function Layout({ children }: { children: React.ReactNode }) {
-  return <html lang="ko"><body>{children}</body></html>;
+export default function TemplateLayout({ children }: { children: React.ReactNode }) {
+  return <>{children}</>;
 }
 ```
 
-단, Next.js App Router에서 중첩 layout은 `<html>` 태그를 쓰지 않는다. 루트 layout에서만 지정하며, 템플릿 layout은 `<>...</>` 또는 div wrapper만 사용한다. 루트 `src/app/layout.tsx`가 이미 처리하고 있다면 템플릿 layout에서는 생략한다.
+`lang` 속성 자체는 `src/app/en/layout.tsx` / `src/app/ko/layout.tsx`(시스템이 이미 보유)에서 `<div lang="en">` / `<div lang="ko">`로 처리하고 있으므로, 템플릿 layout.tsx에서는 별도로 신경 쓰지 않아도 된다.
 
 ---
 
