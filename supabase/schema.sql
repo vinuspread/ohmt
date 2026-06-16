@@ -21,6 +21,25 @@ create table if not exists templates (
   unique (slug, lang)
 );
 
+-- categories 테이블
+create table if not exists categories (
+  id uuid primary key default gen_random_uuid(),
+  name text not null unique,
+  sort_order integer default 0,
+  created_at timestamptz default now(),
+  updated_at timestamptz default now()
+);
+
+insert into categories (name, sort_order) values
+  ('retail', 0),
+  ('corporate', 1),
+  ('portfolio', 2),
+  ('media', 3),
+  ('service', 4),
+  ('hospitality', 5),
+  ('lifestyle', 6)
+on conflict (name) do nothing;
+
 -- orders 테이블
 create table if not exists orders (
   id uuid primary key default gen_random_uuid(),
@@ -47,6 +66,11 @@ create trigger templates_updated_at
   before update on templates
   for each row execute function update_updated_at();
 
+create trigger categories_updated_at
+  before update on categories
+  for each row execute function update_updated_at();
+
 -- RLS 비활성화 (service_role_key로 서버에서만 접근)
 alter table templates disable row level security;
 alter table orders disable row level security;
+alter table categories disable row level security;

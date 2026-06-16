@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "../ui/Button";
 import { Input } from "../ui/Input";
 import { Select } from "../ui/Select";
 import { Toast } from "../ui/Toast";
 import { ThumbnailField } from "../ui/ThumbnailField";
-import type { Template, TemplateLang } from "@/types/template";
+import type { Category, Template, TemplateLang } from "@/types/template";
 
 type TemplateFormMode = "create" | "edit";
 type ToastState = { message: string; type: "success" | "error" };
@@ -19,22 +19,13 @@ const langOptions = [
   { value: "ko", label: "KO" },
 ];
 
-const categoryOptions = [
-  { value: "retail", label: "retail" },
-  { value: "corporate", label: "corporate" },
-  { value: "portfolio", label: "portfolio" },
-  { value: "media", label: "media" },
-  { value: "service", label: "service" },
-  { value: "hospitality", label: "hospitality" },
-  { value: "lifestyle", label: "lifestyle" },
-];
-
 export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; initialData?: Template }) {
   const router = useRouter();
   const [slug, setSlug] = useState(initialData?.slug ?? "");
   const [lang, setLang] = useState<TemplateLang>(initialData?.lang ?? "en");
   const [name, setName] = useState(initialData?.name ?? "");
-  const [category, setCategory] = useState(initialData?.category ?? "retail");
+  const [category, setCategory] = useState(initialData?.category ?? "");
+  const [categories, setCategories] = useState<Category[]>([]);
   const [published, setPublished] = useState(initialData?.status === "published");
   const price = initialData?.price ?? 0;
   const sortOrder = initialData?.sort_order ?? 0;
@@ -45,6 +36,16 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState<ToastState | null>(null);
   const [slugError, setSlugError] = useState("");
+
+  useEffect(() => {
+    fetch("/api/admin/categories")
+      .then((response) => (response.ok ? response.json() : []))
+      .then((result: Category[]) => {
+        setCategories(result);
+        if (!initialData?.category && result.length > 0) setCategory(result[0].name);
+      })
+      .catch(() => {});
+  }, [initialData?.category]);
 
   const checkSlug = async () => {
     if (mode !== "create" || !slug) return;
@@ -101,7 +102,12 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
         <Input label="슬러그" value={slug} onChange={(event) => setSlug(event.target.value)} onBlur={checkSlug} disabled={mode === "edit"} error={slugError} required />
         <Select label="언어" value={lang} onChange={(event) => setLang(event.target.value as TemplateLang)} options={langOptions} disabled={mode === "edit"} />
         <Input label="이름" value={name} onChange={(event) => setName(event.target.value)} required />
-        <Select label="카테고리" value={category} onChange={(event) => setCategory(event.target.value)} options={categoryOptions} />
+        <Select
+          label="카테고리"
+          value={category}
+          onChange={(event) => setCategory(event.target.value)}
+          options={categories.map((item) => ({ value: item.name, label: item.name }))}
+        />
         <label className="flex items-center gap-2 text-sm font-medium text-zinc-700">
           <input
             type="checkbox"

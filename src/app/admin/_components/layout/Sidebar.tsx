@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { Inbox, LayoutTemplate, LogOut, ShoppingBag } from "lucide-react";
+import { Inbox, LayoutTemplate, LogOut, ShoppingBag, Tags } from "lucide-react";
 import { clsx } from "clsx";
 import { createClient } from "@/lib/supabase/client";
 
 const navItems = [
   { href: "/admin/templates", label: "Templates", icon: LayoutTemplate },
+  { href: "/admin/categories", label: "카테고리", icon: Tags },
   { href: "/admin/uploads", label: "업로드", icon: Inbox },
   { href: "/admin/orders", label: "Orders", icon: ShoppingBag },
 ];
