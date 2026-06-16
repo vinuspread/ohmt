@@ -522,7 +522,14 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
                             <p className="text-[0.65rem] text-zinc-400 font-bold uppercase tracking-wider dark:text-zinc-500">{template.category}</p>
                           </div>
                           <div>
-                            <p className="text-sm text-zinc-500 leading-relaxed font-normal whitespace-pre-line line-clamp-2 dark:text-zinc-400">
+                            <p
+                              className={`text-sm text-zinc-500 leading-relaxed font-normal whitespace-pre-line line-clamp-2 dark:text-zinc-400 ${
+                                template.desc.length > 40 ? "cursor-pointer hover:text-zinc-700 dark:hover:text-zinc-300" : ""
+                              }`}
+                              onClick={() => {
+                                if (template.desc.length > 40) setDescModalTemplate(template);
+                              }}
+                            >
                               {template.desc}
                             </p>
                             {template.desc.length > 40 && (
