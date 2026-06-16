@@ -7,7 +7,7 @@ import { Input } from "../ui/Input";
 import { Select } from "../ui/Select";
 import { Toast } from "../ui/Toast";
 import { ThumbnailField } from "../ui/ThumbnailField";
-import type { Template, TemplateLang, TemplateStatus } from "@/types/template";
+import type { Template, TemplateLang } from "@/types/template";
 
 type TemplateFormMode = "create" | "edit";
 type ToastState = { message: string; type: "success" | "error" };
@@ -29,20 +29,13 @@ const categoryOptions = [
   { value: "lifestyle", label: "lifestyle" },
 ];
 
-const statusOptions = [
-  { value: "uploaded", label: "업로드됨" },
-  { value: "draft", label: "초안" },
-  { value: "published", label: "공개" },
-  { value: "archived", label: "보관" },
-];
-
 export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; initialData?: Template }) {
   const router = useRouter();
   const [slug, setSlug] = useState(initialData?.slug ?? "");
   const [lang, setLang] = useState<TemplateLang>(initialData?.lang ?? "en");
   const [name, setName] = useState(initialData?.name ?? "");
   const [category, setCategory] = useState(initialData?.category ?? "retail");
-  const [status, setStatus] = useState<TemplateStatus>(initialData?.status ?? "draft");
+  const [published, setPublished] = useState(initialData?.status === "published");
   const price = initialData?.price ?? 0;
   const sortOrder = initialData?.sort_order ?? 0;
   const [isFeatured, setIsFeatured] = useState(initialData?.is_featured ?? false);
@@ -71,7 +64,7 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
     description: description || null,
     thumbnail_url: thumbnailUrl || null,
     price,
-    status,
+    status: published ? "published" : "draft",
     sort_order: sortOrder,
     is_featured: isFeatured,
     tags: tags.split(",").map((tag) => tag.trim()).filter(Boolean),
@@ -109,24 +102,15 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
         <Select label="언어" value={lang} onChange={(event) => setLang(event.target.value as TemplateLang)} options={langOptions} disabled={mode === "edit"} />
         <Input label="이름" value={name} onChange={(event) => setName(event.target.value)} required />
         <Select label="카테고리" value={category} onChange={(event) => setCategory(event.target.value)} options={categoryOptions} />
-        <div className="flex flex-col gap-1 md:col-span-2">
-          <span className="text-sm font-medium text-zinc-700">공개 상태</span>
-          <div className="flex flex-wrap gap-4">
-            {statusOptions.map((option) => (
-              <label key={option.value} className="flex items-center gap-2 text-sm text-zinc-700">
-                <input
-                  type="radio"
-                  name="status"
-                  value={option.value}
-                  checked={status === option.value}
-                  onChange={() => setStatus(option.value as TemplateStatus)}
-                  className="h-4 w-4 border-zinc-300 text-zinc-900 focus:ring-zinc-900"
-                />
-                {option.label}
-              </label>
-            ))}
-          </div>
-        </div>
+        <label className="flex items-center gap-2 text-sm font-medium text-zinc-700">
+          <input
+            type="checkbox"
+            checked={published}
+            onChange={(event) => setPublished(event.target.checked)}
+            className="h-4 w-4 rounded border-zinc-300 text-zinc-900 focus:ring-zinc-900"
+          />
+          공개
+        </label>
         <div className="flex flex-col gap-1">
           <label className="flex items-center gap-2 text-sm font-medium text-zinc-700">
             <input
