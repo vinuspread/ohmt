@@ -1,0 +1,53 @@
+import { TemplateWrapper } from "./_components/TemplateWrapper";
+import themeData from "./theme.json";
+
+import Navbar from "./_components/layout/Navbar";
+import Hero from "./_components/sections/Hero";
+import About from "./_components/sections/About";
+import BrandStory from "./_components/sections/BrandStory";
+import Featured from "./_components/sections/Featured";
+import Pricing from "./_components/sections/Pricing";
+import HowItWorks from "./_components/sections/HowItWorks";
+import BookingForm from "./_components/sections/BookingForm";
+import Footer from "./_components/layout/Footer";
+
+export default function TemplatePage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Oh My Template - Wedding Photography",
+    "description": "Elegant dark portfolio template for wedding photography and cinematic capture",
+    "url": "https://ohmytemplate.com/en/templates/wedding",
+    "telephone": "+1-512-555-0199",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "100 Congress Ave",
+      "addressLocality": "Austin",
+      "addressRegion": "TX",
+      "postalCode": "78701",
+      "addressCountry": "US"
+    }
+  };
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <TemplateWrapper theme={themeData}>
+        <Navbar />
+        <main>
+          <Hero />
+          <About />
+          <BrandStory />
+          <Featured />
+          <Pricing />
+          <HowItWorks />
+          <BookingForm />
+        </main>
+        <Footer />
+      </TemplateWrapper>
+    </>
+  );
+}
