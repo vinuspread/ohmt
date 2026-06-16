@@ -47,6 +47,14 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
       .catch(() => {});
   }, [initialData?.category]);
 
+  const goToList = () => {
+    if (typeof window !== "undefined" && window.history.length > 1) {
+      router.back();
+      return;
+    }
+    router.push("/admin/templates");
+  };
+
   const checkSlug = async () => {
     if (mode !== "create" || !slug) return;
 
@@ -88,7 +96,7 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
     setLoading(false);
 
     if (response.ok) {
-      router.push("/admin/templates");
+      goToList();
       router.refresh();
       return;
     }
@@ -138,7 +146,7 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
       </div>
 
       <div className="flex justify-end gap-3 mt-8 pt-6 border-t border-zinc-200">
-        <Button variant="ghost" onClick={() => router.push("/admin/templates")}>취소</Button>
+        <Button variant="ghost" onClick={goToList}>취소</Button>
         <Button variant="primary" type="submit" loading={loading}>
           {mode === "create" ? "등록" : "저장"}
         </Button>
