@@ -4,6 +4,7 @@ import { AdminShell } from "@/app/admin/_components/layout/AdminShell";
 import { RegisterForm } from "@/app/admin/_components/uploads/RegisterForm";
 import { Button } from "@/app/admin/_components/ui/Button";
 import { createClient } from "@/lib/supabase/server";
+import { ensureLocalPublicFile } from "@/lib/local-fs";
 import type { Template } from "@/types/template";
 
 export default async function RegisterTemplatePage({ params }: { params: Promise<{ id: string }> }) {
@@ -14,6 +15,10 @@ export default async function RegisterTemplatePage({ params }: { params: Promise
   if (error || !data || data.status !== "uploaded") notFound();
 
   const template = data as Template;
+
+  if (template.thumbnail_url?.startsWith("/templates/")) {
+    await ensureLocalPublicFile(template.thumbnail_url.replace(/^\//, "")).catch(() => {});
+  }
 
   return (
     <AdminShell
