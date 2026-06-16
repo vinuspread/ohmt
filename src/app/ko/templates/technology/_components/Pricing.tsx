@@ -10,13 +10,13 @@ export default function Pricing() {
         {/* Header */}
         <div className="mb-16 text-center">
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
-            제품 라인업
+            Product Lineup
           </span>
-          <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.2] text-[var(--color-text)] font-heading break-keep">
-            사용 가능한 모델
+          <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.2] text-[var(--color-text)] font-heading">
+            Models available
           </h2>
           <p className="mt-4 mx-auto max-w-xl text-sm md:text-base text-[var(--color-text-muted)] leading-[1.2]">
-            운영 및 확장성 기준에 가장 적합한 자율 시스템을 선택하세요.
+            Select the autonomous system that aligns best with your operations and scalability criteria.
           </p>
         </div>
 
@@ -25,10 +25,10 @@ export default function Pricing() {
           {modelData.map((model) => (
             <div
               key={model.id}
-              className="group transition-all duration-300 flex flex-col md:flex-row md:items-center"
+              className="group transition-all duration-300 flex flex-col md:flex-row md:items-center border-b border-[var(--color-border)]/50 pb-8 last:border-0 md:pb-0"
             >
               {/* Info Column */}
-              <div className="py-8 pr-8 flex flex-col justify-between flex-1">
+              <div className="py-6 md:py-8 pl-0 md:pl-8 flex flex-col justify-between flex-1 order-last md:order-last">
                 <div>
                   <h3 className="text-xl font-bold text-[var(--color-text)] mb-2 font-heading transition-colors group-hover:text-[var(--color-accent)]">
                     {model.name}
@@ -59,7 +59,7 @@ export default function Pricing() {
                     href="#models"
                     className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors duration-200"
                   >
-                    <span>자세히 알아보기</span>
+                    <span>Learn more details</span>
                     <svg width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" className="transform group-hover:translate-x-1 transition-transform">
                       <path d="M5 3L9 7L5 11" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                     </svg>
@@ -68,7 +68,7 @@ export default function Pricing() {
               </div>
 
               {/* Product Image Column */}
-              <div className="relative w-full md:w-[200px] flex-shrink-0 aspect-square overflow-hidden rounded-2xl">
+              <div className="relative w-full md:w-[200px] flex-shrink-0 aspect-square overflow-hidden rounded-[24px] order-first md:order-first mb-6 md:mb-0">
                 <img
                   src={model.image}
                   alt={model.name}

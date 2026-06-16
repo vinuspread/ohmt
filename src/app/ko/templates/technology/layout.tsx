@@ -15,7 +15,7 @@ const interTight = Inter_Tight({
 
 export const metadata = {
   title: 'Technology - Oh My Template',
-  description: '머신러닝 및 로보틱스 스타트업을 위한 전문적이고 역동적인 플랫폼.',
+  description: 'Empower machine learning and robotics startups with a professional, dynamic platform.',
 }
 
 export default function TechnologyLayout({
@@ -25,9 +25,7 @@ export default function TechnologyLayout({
 }) {
   return (
     <div className={`${inter.variable} ${interTight.variable} min-h-screen bg-[var(--color-bg)] text-[var(--color-text)] selection:bg-[var(--color-accent)] selection:text-[var(--color-bg)] antialiased`}>
-      <div className="-ko">
-        {children}
-      </div>
+      {children}
     </div>
   )
 }

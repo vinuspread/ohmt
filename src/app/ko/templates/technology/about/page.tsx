@@ -6,35 +6,35 @@ import { TemplateWrapper } from '../_components/TemplateWrapper'
 import theme from '../theme.json'
 
 const timeline = [
-  { year: '2024', event: '고급 로보틱스와 자율 하드웨어 시스템의 대중화를 비전으로 회사 설립.' },
-  { year: '2025', event: 'TechWorld Expo에서 OmniBot Gen 1 프로토타입 공개. R&D 확장을 위해 1200만 달러 시리즈 A 투자 유치.' },
-  { year: '2026', event: '온디바이스 AI, 모듈형 디자인, 음성/제스처 인식을 갖춘 OmniBot Gen 2 출시. 서울 R&D 센터 오픈.' },
+  { year: '2024', event: 'Company founded with a vision to democratize advanced robotics and autonomous hardware systems.' },
+  { year: '2025', event: 'OmniBot Gen 1 prototype revealed at TechWorld Expo. Raised $12M Series A for R&D expansion.' },
+  { year: '2026', event: 'OmniBot Gen 2 launch with on-device AI, modular design, and voice/gesture recognition. Seoul R&D center opens.' },
 ]
 
 const team = [
   {
     name: 'Dr. Aris Chen',
-    role: 'R&D 책임자',
-    bio: '전 JPL 로보틱스 아키텍트로서 자율 내비게이션 및 센서 융합 분야 전문가.',
-    image: '/templates/technology/team-aris.jpg',
+    role: 'R&D Lead',
+    bio: 'Former JPL robotics architect specializing in autonomous navigation and sensor fusion.',
+    image: '/templates/technology/team-aris.png',
   },
   {
     name: 'Maya Torres',
-    role: '로보틱스 엔지니어링 책임자',
-    bio: 'Boston Dynamics에서 액추에이터 설계를 주도. 고토크 모션 시스템 전문가.',
-    image: '/templates/technology/team-maya.jpg',
+    role: 'Robotics Engineering Lead',
+    bio: 'Led actuator design at Boston Dynamics. Expert in high-torque motion systems.',
+    image: '/templates/technology/team-maya.png',
   },
   {
     name: 'James Park',
-    role: 'AI 및 머신러닝 책임자',
-    bio: '컴퓨터 비전 및 엣지 AI 분야에서 20편 이상의 논문을 발표한 딥러닝 연구자.',
-    image: '/templates/technology/team-james.jpg',
+    role: 'AI & Machine Learning Lead',
+    bio: 'Deep learning researcher with 20+ publications in computer vision and edge AI.',
+    image: '/templates/technology/team-james.png',
   },
   {
     name: 'Sophia Kim',
-    role: '제품 총괄',
-    bio: '이전 직책에서 세 가지 하드웨어 제품을 컨셉부터 양산까지 성공적으로 이끌었습니다.',
-    image: '/templates/technology/team-sophia.jpg',
+    role: 'Head of Product',
+    bio: 'Brought three hardware products from concept to mass production in her previous roles.',
+    image: '/templates/technology/team-sophia.png',
   },
 ]
 
@@ -46,30 +46,51 @@ export default function TechnologyAboutPage() {
       <Header />
       <main>
 
-        {/* Hero */}
-        <section className="relative overflow-hidden bg-[var(--color-bg)] py-24 md:py-40 border-b border-[var(--color-border)]">
-          <div className="relative mx-auto max-w-4xl px-6 text-center">
-            <span className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] block">
-              Robotflow 소개
-            </span>
-            <h1 className="mb-6 text-[clamp(2.2rem,5vw,3.8rem)] font-bold tracking-[-0.03em] leading-[1.15] text-[var(--color-text)] font-heading break-keep">
-              물리적 미래를 설계하다
+        {/* Hero - text over full-bleed image */}
+        <section className="relative w-full h-[600px] overflow-hidden border-b border-[var(--color-border)]">
+          <img
+            src="/templates/technology/full_bg_img.jpeg"
+            alt="Robotflow Vision"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
+          <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
+            <h1 className="mb-4 text-[clamp(2.2rem,5vw,3.8rem)] font-bold tracking-[-0.03em] leading-[1.15] text-white font-heading">
+              Architecting the Physical Future
             </h1>
-            <p className="mx-auto max-w-2xl text-base md:text-lg text-[var(--color-text-muted)] leading-[1.2]">
-              우리는 인공지능과 물리적 세계 사이의 격차를 해소하는 지능형 하드웨어 시스템을 구축하여 규모에 맞는 자율 기능을 가능하게 합니다.
+            <p className="mx-auto max-w-2xl text-base md:text-lg text-white/70 leading-[1.2]">
+              We build intelligent hardware systems that bridge the gap between artificial intelligence and the physical world, enabling autonomous capabilities at scale.
             </p>
           </div>
         </section>
 
-        {/* Full-bleed Vision Image */}
-        <section className="w-full aspect-[21/9] overflow-hidden border-b border-[var(--color-border)]">
-          <img
-            src="/templates/technology/full_bg_img.jpeg"
-            alt="Robotflow 비전"
-            className="w-full h-full object-cover"
-          />
-        </section>
 
+        {/* Company Introduction */}
+        <section className="bg-[var(--color-bg)] py-20 md:py-32 border-b border-[var(--color-border)]">
+          <div className="mx-auto max-w-7xl px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+              <div>
+                <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
+                  Who We Are
+                </span>
+                <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.2] text-[var(--color-text)] font-heading">
+                  Built on the belief that machines should work for people
+                </h2>
+              </div>
+              <div className="flex flex-col gap-6 pt-2">
+                <p className="text-base text-[var(--color-text-muted)] leading-[1.8]">
+                  Robotflow was founded by a team of engineers and researchers who believed that the next leap in productivity would come not from software alone, but from machines that could understand and navigate the physical world with human-level intelligence.
+                </p>
+                <p className="text-base text-[var(--color-text-muted)] leading-[1.8]">
+                  Our systems are built from the ground up with autonomy in mind - combining on-device AI, advanced sensor fusion, and modular hardware to create robots that adapt to real environments, not just controlled demos.
+                </p>
+                <p className="text-base text-[var(--color-text-muted)] leading-[1.8]">
+                  Today, Robotflow operates across logistics, manufacturing, and research sectors, with offices in San Francisco and Seoul. We remain committed to one principle: that intelligent automation should be accessible, reliable, and built to last.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* Timeline */}
         <section className="bg-[var(--color-bg)] py-20 md:py-32 border-b border-[var(--color-border)]">
@@ -78,10 +99,10 @@ export default function TechnologyAboutPage() {
               {/* Left: heading */}
               <div>
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
-                  이정표
+                  Milestones
                 </span>
-                <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.2] text-[var(--color-text)] font-heading mb-6 break-keep">
-                  우리의 여정
+                <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.2] text-[var(--color-text)] font-heading mb-6">
+                  Our Journey
                 </h2>
               </div>
               {/* Right: timeline items */}
@@ -116,10 +137,10 @@ export default function TechnologyAboutPage() {
           <div className="mx-auto max-w-7xl px-6">
             <div className="mb-16 text-center">
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
-                리더십
+                Leadership
               </span>
-              <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.2] text-[var(--color-text)] font-heading break-keep">
-                팀 소개
+              <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.2] text-[var(--color-text)] font-heading">
+                Meet Our Team
               </h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

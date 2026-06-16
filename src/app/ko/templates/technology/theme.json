@@ -25,13 +25,13 @@
     },
     "typography": {
       "heading": {
-        "font": "Inter Tight, Noto Sans KR, Inter, system-ui, sans-serif",
+        "font": "Inter Tight, Inter, system-ui, sans-serif",
         "weight": "700",
         "tracking": "-0.03em",
         "style": "normal"
       },
       "body": {
-        "font": "Inter, Noto Sans KR, system-ui, sans-serif",
+        "font": "Inter, system-ui, sans-serif",
         "weight": "400",
         "leading": "1.6",
         "style": "normal"

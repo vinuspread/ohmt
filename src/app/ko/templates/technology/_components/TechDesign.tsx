@@ -10,24 +10,24 @@ export default function TechDesign() {
         <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="max-w-xl">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
-              미적 공학
+              Aesthetic Engineering
             </span>
-            <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.03em] leading-none text-[var(--color-text)] font-heading break-keep">
-              기술과 디자인의 만남
+            <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.03em] leading-[1.15] text-[var(--color-text)] font-heading">
+              Where technology meets design
             </h2>
           </div>
           <Link
             href="#models"
             className="inline-flex items-center justify-center px-6 py-3 border border-[var(--color-text)] text-[var(--color-text)] font-bold text-xs uppercase tracking-widest hover:bg-[var(--color-text)] hover:text-white active:scale-95 transition-all duration-300 rounded-none"
           >
-            모든 모델 보기
+            Browse All Models
           </Link>
         </div>
 
         {/* Video Mockup Section */}
         <div className="relative">
           <div 
-            className="relative aspect-[16/9] w-full overflow-hidden rounded-[48px] bg-cover bg-center group flex items-center justify-between px-8 md:px-20"
+            className="relative aspect-[4/5] md:aspect-[16/9] w-full overflow-hidden rounded-[48px] bg-cover bg-center group flex items-center justify-between px-6 md:px-20 py-12 md:py-0"
             style={{ backgroundImage: "url('/templates/technology/tech-design-bg.png')" }}
           >
             {/* Dark overlay for typography readability */}
@@ -47,8 +47,8 @@ export default function TechDesign() {
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
                 system presentation v2
               </span>
-              <h3 className="text-xl md:text-3xl font-extrabold text-white font-heading tracking-tight leading-snug break-keep">
-                OmniBot Gen 2: 자율 주행 데모 및 하드웨어 레이아웃 리뷰
+              <h3 className="text-xl md:text-3xl font-extrabold text-white font-heading tracking-tight leading-snug">
+                OmniBot Gen 2: Autonomous capability demo and hardware layout review.
               </h3>
               
               {/* Play Button */}
@@ -58,7 +58,7 @@ export default function TechDesign() {
                     <path d="M8 5v14l11-7z" />
                   </svg>
                 </button>
-                <span className="text-xs font-bold uppercase tracking-wider text-white">쇼케이스 보기 (2:45)</span>
+                <span className="text-xs font-bold uppercase tracking-wider text-white">Watch Showcase (2:45)</span>
               </div>
             </div>
           </div>

@@ -9,15 +9,15 @@ import theme from '../theme.json'
 const officeData = [
   {
     city: 'San Francisco',
-    role: '글로벌 본사',
+    role: 'Global Headquarters',
     address: '388 Market Street, Suite 1200, San Francisco, CA 94111',
     email: 'info@robotflow.net',
     phone: '+1 (415) 555-0192',
   },
   {
     city: 'Seoul',
-    role: 'R&D 센터',
-    address: '서울특별시 강남구 테헤란로 2길 45 06236',
+    role: 'R&D Center',
+    address: '45, Teheran-ro 2-gil, Gangnam-gu, Seoul 06236, South Korea',
     email: 'rd.seoul@robotflow.net',
     phone: '+82 (2) 555-0193',
   },
@@ -52,13 +52,13 @@ export default function TechnologyContactPage() {
           <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] rounded-full bg-[var(--color-accent)]/5 blur-[120px] pointer-events-none" />
           <div className="relative mx-auto max-w-4xl px-6 text-center">
             <span className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] block">
-              연락처
+              Get In Touch
             </span>
-            <h1 className="mb-6 text-[clamp(2.2rem,5vw,3.8rem)] font-bold tracking-[-0.03em] leading-[1.15] text-[var(--color-text)] font-heading break-keep">
-              함께 미래를 만들어갑시다
+            <h1 className="mb-6 text-[clamp(2.2rem,5vw,3.8rem)] font-bold tracking-[-0.03em] leading-[1.15] text-[var(--color-text)] font-heading">
+              Let&apos;s Build the Future Together
             </h1>
             <p className="mx-auto max-w-2xl text-base md:text-lg text-[var(--color-text-muted)] leading-[1.2]">
-              운영에 자율 로보틱스를 도입할 준비가 되셨나요? 컨설팅이나 데모를 위해 팀에 문의하세요.
+              Ready to deploy autonomous robotics in your operations? Reach out to our team for a consultation or demonstration.
             </p>
           </div>
         </section>
@@ -70,10 +70,10 @@ export default function TechnologyContactPage() {
               {/* Form */}
               <div className="lg:col-span-7">
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
-                  문의 양식
+                  Inquiry Form
                 </span>
                 <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-bold tracking-[-0.02em] text-[var(--color-text)] font-heading mb-8">
-                  컨설팅 요청
+                  Request a Consultation
                 </h2>
 
                 {submitted ? (
@@ -82,10 +82,10 @@ export default function TechnologyContactPage() {
                       ✓
                     </div>
                     <h3 className="text-lg font-bold text-[var(--color-text)] mb-2 font-heading">
-                      감사합니다
+                      Thank You
                     </h3>
                     <p className="text-sm text-[var(--color-text-muted)] leading-[1.2] max-w-md mx-auto">
-                      문의가 접수되었습니다. 24시간 이내에 담당 팀이 연락드릴 예정입니다.
+                      Your inquiry has been received. Our team will get back to you within 24 business hours.
                     </p>
                   </div>
                 ) : (
@@ -93,7 +93,7 @@ export default function TechnologyContactPage() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="company" className="block text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text)] mb-2">
-                          회사명
+                           Company Name
                         </label>
                         <input
                           type="text"
@@ -103,12 +103,12 @@ export default function TechnologyContactPage() {
                           onChange={handleChange}
                           required
                           className="w-full border border-[var(--color-border)] bg-[var(--color-bg-secondary)] px-4 py-3 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-muted)] outline-none focus:border-[var(--color-accent)] transition-colors duration-200 rounded-md"
-                          placeholder="(주) 로보틱스"
+                          placeholder="Acme Robotics Inc."
                         />
                       </div>
                       <div>
                         <label htmlFor="name" className="block text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text)] mb-2">
-                          담당자명
+                           Contact Name
                         </label>
                         <input
                           type="text"
@@ -118,14 +118,14 @@ export default function TechnologyContactPage() {
                           onChange={handleChange}
                           required
                           className="w-full border border-[var(--color-border)] bg-[var(--color-bg-secondary)] px-4 py-3 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-muted)] outline-none focus:border-[var(--color-accent)] transition-colors duration-200 rounded-md"
-                          placeholder="홍길동"
+                          placeholder="Jane Doe"
                         />
                       </div>
                     </div>
 
                     <div>
                       <label htmlFor="email" className="block text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text)] mb-2">
-                        이메일 주소
+                         Email Address
                       </label>
                       <input
                         type="email"
@@ -135,13 +135,13 @@ export default function TechnologyContactPage() {
                         onChange={handleChange}
                         required
                         className="w-full border border-[var(--color-border)] bg-[var(--color-bg-secondary)] px-4 py-3 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-muted)] outline-none focus:border-[var(--color-accent)] transition-colors duration-200 rounded-md"
-                        placeholder="hong@robotflow.kr"
+                        placeholder="jane@acmerobotics.com"
                       />
                     </div>
 
                     <div>
                       <label htmlFor="model" className="block text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text)] mb-2">
-                        관심 모델
+                         Interested Model
                       </label>
                       <select
                         id="model"
@@ -151,16 +151,16 @@ export default function TechnologyContactPage() {
                         required
                         className="w-full border border-[var(--color-border)] bg-[var(--color-bg-secondary)] px-4 py-3 text-sm text-[var(--color-text)] outline-none focus:border-[var(--color-accent)] transition-colors duration-200 rounded-md"
                       >
-                        <option value="">모델 선택</option>
+                        <option value="">Select a model</option>
                         <option value="gen2">OmniBot Gen 2</option>
                         <option value="prime">OmniBot Prime</option>
-                        <option value="both">둘 다 / 잘 모르겠음</option>
+                        <option value="both">Both / Not Sure</option>
                       </select>
                     </div>
 
                     <div>
                       <label htmlFor="message" className="block text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text)] mb-2">
-                        메시지
+                         Message
                       </label>
                       <textarea
                         id="message"
@@ -170,7 +170,7 @@ export default function TechnologyContactPage() {
                         onChange={handleChange}
                         required
                         className="w-full border border-[var(--color-border)] bg-[var(--color-bg-secondary)] px-4 py-3 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-muted)] outline-none focus:border-[var(--color-accent)] transition-colors duration-200 resize-none rounded-md"
-                        placeholder="프로젝트와 자동화 목표에 대해 알려주세요..."
+                        placeholder="Tell us about your project and what you're looking to automate..."
                       />
                     </div>
 
@@ -178,7 +178,7 @@ export default function TechnologyContactPage() {
                       type="submit"
                       className="inline-flex items-center justify-center px-8 py-4 bg-[var(--color-accent)] text-white font-bold text-sm uppercase tracking-widest hover:opacity-90 active:scale-95 transition-all duration-300 rounded-md"
                     >
-                      문의 제출
+                      Submit Inquiry
                     </button>
                   </form>
                 )}
@@ -187,10 +187,10 @@ export default function TechnologyContactPage() {
               {/* Offices */}
               <div className="lg:col-span-5">
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
-                  글로벌 오피스
+                  Global Offices
                 </span>
                 <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-bold tracking-[-0.02em] text-[var(--color-text)] font-heading mb-8">
-                  우리의 위치
+                  Our Locations
                 </h2>
                 <div className="space-y-8">
                   {officeData.map((office) => (
