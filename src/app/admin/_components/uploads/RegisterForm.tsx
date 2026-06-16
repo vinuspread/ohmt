@@ -6,6 +6,7 @@ import { Button } from "../ui/Button";
 import { Input } from "../ui/Input";
 import { Select } from "../ui/Select";
 import { Toast } from "../ui/Toast";
+import { ThumbnailField } from "../ui/ThumbnailField";
 import type { Template } from "@/types/template";
 
 type ToastState = { message: string; type: "success" | "error" };
@@ -84,23 +85,7 @@ export function RegisterForm({ template }: { template: Template }) {
         <div className="text-xs font-mono uppercase text-zinc-500">언어: {template.lang}</div>
         <Input label="템플릿명" value={name} onChange={(event) => setName(event.target.value)} error={nameError} required />
         <Select label="카테고리" value={category} onChange={(event) => setCategory(event.target.value)} options={categoryOptions} required />
-        <div className="flex flex-col gap-2">
-          <Input label="썸네일 URL" value={thumbnailUrl} onChange={(event) => setThumbnailUrl(event.target.value)} />
-          {thumbnailUrl.trim() && (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              src={thumbnailUrl.trim()}
-              alt="썸네일 미리보기"
-              className="h-40 w-auto max-w-full rounded-lg border border-zinc-200 object-cover"
-              onError={(event) => {
-                event.currentTarget.style.display = "none";
-              }}
-              onLoad={(event) => {
-                event.currentTarget.style.display = "block";
-              }}
-            />
-          )}
-        </div>
+        <ThumbnailField value={thumbnailUrl} onChange={setThumbnailUrl} />
         <label className="flex items-center gap-2 text-sm font-medium text-zinc-700">
           <input
             type="checkbox"

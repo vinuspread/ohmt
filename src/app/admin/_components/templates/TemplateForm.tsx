@@ -6,6 +6,7 @@ import { Button } from "../ui/Button";
 import { Input } from "../ui/Input";
 import { Select } from "../ui/Select";
 import { Toast } from "../ui/Toast";
+import { ThumbnailField } from "../ui/ThumbnailField";
 import type { Template, TemplateLang, TemplateStatus } from "@/types/template";
 
 type TemplateFormMode = "create" | "edit";
@@ -29,9 +30,10 @@ const categoryOptions = [
 ];
 
 const statusOptions = [
-  { value: "draft", label: "draft" },
-  { value: "published", label: "published" },
-  { value: "archived", label: "archived" },
+  { value: "uploaded", label: "업로드됨" },
+  { value: "draft", label: "초안" },
+  { value: "published", label: "공개" },
+  { value: "archived", label: "보관" },
 ];
 
 export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; initialData?: Template }) {
@@ -41,8 +43,8 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
   const [name, setName] = useState(initialData?.name ?? "");
   const [category, setCategory] = useState(initialData?.category ?? "retail");
   const [status, setStatus] = useState<TemplateStatus>(initialData?.status ?? "draft");
-  const [price, setPrice] = useState(String(initialData?.price ?? 0));
-  const [sortOrder, setSortOrder] = useState(String(initialData?.sort_order ?? 0));
+  const price = initialData?.price ?? 0;
+  const sortOrder = initialData?.sort_order ?? 0;
   const [isFeatured, setIsFeatured] = useState(initialData?.is_featured ?? false);
   const [thumbnailUrl, setThumbnailUrl] = useState(initialData?.thumbnail_url ?? "");
   const [tags, setTags] = useState(initialData?.tags.join(", ") ?? "");
@@ -68,9 +70,9 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
     category,
     description: description || null,
     thumbnail_url: thumbnailUrl || null,
-    price: Number(price),
+    price,
     status,
-    sort_order: Number(sortOrder),
+    sort_order: sortOrder,
     is_featured: isFeatured,
     tags: tags.split(",").map((tag) => tag.trim()).filter(Boolean),
   });
@@ -103,26 +105,44 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <Input label="slug" value={slug} onChange={(event) => setSlug(event.target.value)} onBlur={checkSlug} disabled={mode === "edit"} error={slugError} required />
-        <Select label="lang" value={lang} onChange={(event) => setLang(event.target.value as TemplateLang)} options={langOptions} disabled={mode === "edit"} />
-        <Input label="name" value={name} onChange={(event) => setName(event.target.value)} required />
-        <Select label="category" value={category} onChange={(event) => setCategory(event.target.value)} options={categoryOptions} />
-        <Select label="status" value={status} onChange={(event) => setStatus(event.target.value as TemplateStatus)} options={statusOptions} />
-        <Input label="price" type="number" min={0} value={price} onChange={(event) => setPrice(event.target.value)} />
-        <Input label="sort_order" type="number" value={sortOrder} onChange={(event) => setSortOrder(event.target.value)} />
-        <label className="flex items-center gap-2 text-sm font-medium text-zinc-700">
-          <input
-            type="checkbox"
-            checked={isFeatured}
-            onChange={(event) => setIsFeatured(event.target.checked)}
-            className="h-4 w-4 rounded border-zinc-300 text-zinc-900 focus:ring-zinc-900"
-          />
-          is_featured
-        </label>
-        <Input label="thumbnail_url" value={thumbnailUrl} onChange={(event) => setThumbnailUrl(event.target.value)} />
-        <Input label="tags" placeholder="responsive, dark-mode" value={tags} onChange={(event) => setTags(event.target.value)} />
+        <Input label="슬러그" value={slug} onChange={(event) => setSlug(event.target.value)} onBlur={checkSlug} disabled={mode === "edit"} error={slugError} required />
+        <Select label="언어" value={lang} onChange={(event) => setLang(event.target.value as TemplateLang)} options={langOptions} disabled={mode === "edit"} />
+        <Input label="이름" value={name} onChange={(event) => setName(event.target.value)} required />
+        <Select label="카테고리" value={category} onChange={(event) => setCategory(event.target.value)} options={categoryOptions} />
+        <div className="flex flex-col gap-1 md:col-span-2">
+          <span className="text-sm font-medium text-zinc-700">공개 상태</span>
+          <div className="flex flex-wrap gap-4">
+            {statusOptions.map((option) => (
+              <label key={option.value} className="flex items-center gap-2 text-sm text-zinc-700">
+                <input
+                  type="radio"
+                  name="status"
+                  value={option.value}
+                  checked={status === option.value}
+                  onChange={() => setStatus(option.value as TemplateStatus)}
+                  className="h-4 w-4 border-zinc-300 text-zinc-900 focus:ring-zinc-900"
+                />
+                {option.label}
+              </label>
+            ))}
+          </div>
+        </div>
+        <div className="flex flex-col gap-1">
+          <label className="flex items-center gap-2 text-sm font-medium text-zinc-700">
+            <input
+              type="checkbox"
+              checked={isFeatured}
+              onChange={(event) => setIsFeatured(event.target.checked)}
+              className="h-4 w-4 rounded border-zinc-300 text-zinc-900 focus:ring-zinc-900"
+            />
+            대표 템플릿으로 지정
+          </label>
+          <p className="text-xs text-zinc-400">검색/필터가 없을 때 목록 맨 위에 크게 강조해서 보여줍니다. 언어별로 1개만 지정하세요.</p>
+        </div>
+        <Input label="태그" placeholder="responsive, dark-mode" value={tags} onChange={(event) => setTags(event.target.value)} />
+        <ThumbnailField value={thumbnailUrl} onChange={setThumbnailUrl} />
         <label className="md:col-span-2 flex flex-col gap-1">
-          <span className="text-sm font-medium text-zinc-700">description</span>
+          <span className="text-sm font-medium text-zinc-700">설명</span>
           <textarea value={description} onChange={(event) => setDescription(event.target.value)} className={`${inputClassName} min-h-28 resize-y`} />
         </label>
       </div>

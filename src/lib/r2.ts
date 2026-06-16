@@ -13,6 +13,7 @@ export const r2 = new S3Client({
 });
 
 export const R2_BUCKET = process.env.R2_BUCKET_NAME!;
+export const R2_PUBLIC_DOMAIN = process.env.R2_PUBLIC_DOMAIN ?? "https://pub-10d6d534a06c495c8b45f39cfed47497.r2.dev";
 
 export async function getPresignedUploadUrl(key: string, contentType: string): Promise<string> {
   const command = new PutObjectCommand({
