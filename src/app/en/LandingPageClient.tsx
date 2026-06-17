@@ -455,7 +455,17 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
                           <div className="space-y-4">
                             <span className="text-[0.65rem] font-extrabold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">{featuredItem.category}</span>
                             <h3 className="text-2xl md:text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">{featuredItem.name}</h3>
-                            <p className="text-sm text-zinc-500 leading-relaxed font-normal whitespace-pre-line dark:text-zinc-400">{featuredItem.desc}</p>
+                            <div>
+                              <p className="text-sm text-zinc-500 leading-relaxed font-normal line-clamp-3 dark:text-zinc-400">{featuredItem.desc}</p>
+                              {featuredItem.desc.length > 80 && (
+                                <button
+                                  onClick={() => setDescModalTemplate(featuredItem)}
+                                  className="mt-2 text-xs text-zinc-400 hover:text-zinc-600 underline underline-offset-2 transition-colors dark:text-zinc-500 dark:hover:text-zinc-300"
+                                >
+                                  Read more
+                                </button>
+                              )}
+                            </div>
                           </div>
                           <div className="flex items-center justify-between pt-6 border-t border-zinc-100 dark:border-zinc-700">
                             <div className="flex items-center gap-3">
