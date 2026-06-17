@@ -19,16 +19,7 @@ export interface TemplateItem {
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 const EASE_IOS = [0.32, 0.72, 0, 1] as const;
 
-const CATEGORIES = [
-  "All",
-  "Fashion & Lifestyle",
-  "Luxury & Retail",
-  "Culture & Arts",
-  "Agency & Portfolio",
-  "Media & Editorial",
-  "Finance & Corporate",
-  "Productivity & Docs"
-];
+const ALL_LABEL = "All";
 
 const POPULAR_TAGS = ["Fashion", "Portfolio", "Agency", "Luxury", "Minimalist"];
 
@@ -37,7 +28,7 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [submitted, setSubmitted] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState(ALL_LABEL);
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
   const [isAdmin, setIsAdmin] = useState(false);
   const [descModalTemplate, setDescModalTemplate] = useState<TemplateItem | null>(null);
@@ -182,9 +173,21 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
     })),
   };
 
+  const categories = useMemo(() => {
+    const seen = new Set<string>();
+    const result: string[] = [ALL_LABEL];
+    for (const t of templates) {
+      if (!seen.has(t.category)) {
+        seen.add(t.category);
+        result.push(t.category);
+      }
+    }
+    return result;
+  }, [templates]);
+
   const filteredTemplates = useMemo(() => {
     return templates.filter(t => {
-      const matchCategory = activeCategory === "All" || t.category === activeCategory;
+      const matchCategory = activeCategory === ALL_LABEL || t.category === activeCategory;
       const matchSearch = t.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
                           t.desc.toLowerCase().includes(searchTerm.toLowerCase()) || 
                           t.category.toLowerCase().includes(searchTerm.toLowerCase());
@@ -201,7 +204,7 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
 
   // Featured Item: If activeCategory is "All" and search is empty, show the designated featured item on top
   const featuredItem = useMemo(() => {
-    if (activeCategory !== "All" || searchTerm !== "") return null;
+    if (activeCategory !== ALL_LABEL || searchTerm !== "") return null;
     return randomFeaturedItem;
   }, [activeCategory, searchTerm, randomFeaturedItem]);
 
@@ -391,7 +394,7 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
           
           {/* Category Tabs */}
           <div className="flex gap-2 overflow-x-auto pb-2 border-b border-zinc-200/60 no-scrollbar dark:border-zinc-800">
-            {CATEGORIES.map((cat) => (
+            {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => {
@@ -415,7 +418,7 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
           </div>
 
           {/* Results Summary */}
-          {(searchTerm || activeCategory !== "All") && (
+          {(searchTerm || activeCategory !== ALL_LABEL) && (
             <div className="text-xs text-zinc-500 font-bold uppercase tracking-wider dark:text-zinc-400">
               Found {filteredTemplates.length} templates
             </div>
@@ -435,7 +438,7 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
                   <button
                     onClick={() => {
                       setSearchTerm("");
-                      setActiveCategory("All");
+                      setActiveCategory(ALL_LABEL);
                     }}
                     className="text-xs font-bold uppercase tracking-widest text-zinc-900 border-b border-zinc-900 pb-0.5 dark:text-zinc-100 dark:border-zinc-100"
                   >

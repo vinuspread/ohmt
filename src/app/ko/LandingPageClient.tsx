@@ -19,16 +19,7 @@ export interface TemplateItem {
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 const EASE_IOS = [0.32, 0.72, 0, 1] as const;
 
-const CATEGORIES = [
-  "전체",
-  "패션 & 라이프스타일",
-  "럭셔리 & 리테일",
-  "문화 & 예술",
-  "에이전시 & 포트폴리오",
-  "미디어 & 에디토리얼",
-  "금융 & 기업",
-  "생산성 & 문서"
-];
+const ALL_LABEL = "전체";
 
 const POPULAR_TAGS = ["패션", "포트폴리오", "에이전시", "럭셔리", "미니멀"];
 
@@ -37,7 +28,7 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [submitted, setSubmitted] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
-  const [activeCategory, setActiveCategory] = useState("전체");
+  const [activeCategory, setActiveCategory] = useState(ALL_LABEL);
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
   const [isAdmin, setIsAdmin] = useState(false);
   const [descModalTemplate, setDescModalTemplate] = useState<TemplateItem | null>(null);
@@ -182,9 +173,21 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
     })),
   };
 
+  const categories = useMemo(() => {
+    const seen = new Set<string>();
+    const result: string[] = [ALL_LABEL];
+    for (const t of templates) {
+      if (!seen.has(t.category)) {
+        seen.add(t.category);
+        result.push(t.category);
+      }
+    }
+    return result;
+  }, [templates]);
+
   const filteredTemplates = useMemo(() => {
     return templates.filter(t => {
-      const matchCategory = activeCategory === "전체" || t.category === activeCategory;
+      const matchCategory = activeCategory === ALL_LABEL || t.category === activeCategory;
       const matchSearch = t.name.toLowerCase().includes(searchTerm.toLowerCase()) || 
                           t.desc.toLowerCase().includes(searchTerm.toLowerCase()) || 
                           t.category.toLowerCase().includes(searchTerm.toLowerCase());
@@ -201,7 +204,7 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
 
   // Featured Item: 첫 진입 시(카테고리 전체, 검색어 없음) 대표 템플릿 강조
   const featuredItem = useMemo(() => {
-    if (activeCategory !== "전체" || searchTerm !== "") return null;
+    if (activeCategory !== ALL_LABEL || searchTerm !== "") return null;
     return randomFeaturedItem;
   }, [activeCategory, searchTerm, randomFeaturedItem]);
 
@@ -389,7 +392,7 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
           
           {/* Category Tabs */}
           <div className="flex gap-2 overflow-x-auto pb-2 border-b border-zinc-200/60 no-scrollbar dark:border-zinc-800">
-            {CATEGORIES.map((cat) => (
+            {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => {
@@ -413,7 +416,7 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
           </div>
 
           {/* Results Summary */}
-          {(searchTerm || activeCategory !== "전체") && (
+          {(searchTerm || activeCategory !== ALL_LABEL) && (
             <div className="text-xs text-zinc-500 font-bold uppercase tracking-wider dark:text-zinc-400">
               총 {filteredTemplates.length}개의 템플릿 검색됨
             </div>
@@ -433,7 +436,7 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
                   <button
                     onClick={() => {
                       setSearchTerm("");
-                      setActiveCategory("전체");
+                      setActiveCategory(ALL_LABEL);
                     }}
                     className="text-xs font-bold uppercase tracking-widest text-zinc-900 border-b border-zinc-900 pb-0.5 dark:text-zinc-100 dark:border-zinc-100"
                   >
