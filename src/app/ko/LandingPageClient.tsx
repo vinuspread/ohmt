@@ -284,34 +284,30 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
                 <Sparkles size={12} className="text-orange-500" />
                 OH! MY TEMPLATES
               </span>
-              <div className="relative h-[120px] md:h-[110px] overflow-hidden">
-                <AnimatePresence mode="wait">
-                  <motion.h1
-                    key={`heading-${heroIndex}`}
-                    initial={{ opacity: 0, y: 14 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -14 }}
-                    transition={{ duration: 0.45, ease: EASE_OUT }}
-                    className="absolute inset-0 text-[3rem] md:text-[4.8rem] font-bold tracking-tight leading-[1.1] text-zinc-900 dark:text-zinc-100"
-                  >
-                    {HERO_SLIDES[heroIndex].heading}
-                  </motion.h1>
-                </AnimatePresence>
-              </div>
-              <div className="relative h-16 md:h-14 overflow-hidden max-w-2xl mx-auto">
-                <AnimatePresence mode="wait">
-                  <motion.p
-                    key={`desc-${heroIndex}`}
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -12 }}
-                    transition={{ duration: 0.45, ease: EASE_OUT, delay: 0.05 }}
-                    className="absolute inset-0 text-base md:text-lg text-zinc-500 font-normal leading-relaxed tracking-tight whitespace-pre-line dark:text-zinc-400"
-                  >
-                    {HERO_SLIDES[heroIndex].desc}
-                  </motion.p>
-                </AnimatePresence>
-              </div>
+              <AnimatePresence mode="wait">
+                <motion.h1
+                  key={`heading-${heroIndex}`}
+                  initial={{ opacity: 0, y: 14 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -14 }}
+                  transition={{ duration: 0.45, ease: EASE_OUT }}
+                  className="text-[3rem] md:text-[4.8rem] font-bold tracking-tight leading-[1.1] text-zinc-900 dark:text-zinc-100"
+                >
+                  {HERO_SLIDES[heroIndex].heading}
+                </motion.h1>
+              </AnimatePresence>
+              <AnimatePresence mode="wait">
+                <motion.p
+                  key={`desc-${heroIndex}`}
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -12 }}
+                  transition={{ duration: 0.45, ease: EASE_OUT, delay: 0.05 }}
+                  className="text-base md:text-lg text-zinc-500 font-normal leading-relaxed tracking-tight whitespace-pre-line max-w-2xl mx-auto dark:text-zinc-400"
+                >
+                  {HERO_SLIDES[heroIndex].desc}
+                </motion.p>
+              </AnimatePresence>
               <div className="flex justify-center gap-1.5 mt-2">
                 {HERO_SLIDES.map((_, i) => (
                   <button
