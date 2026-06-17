@@ -278,24 +278,26 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
           {/* Ambient Glows */}
           <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-gradient-to-b from-amber-500/5 via-orange-500/5 to-transparent blur-[120px] rounded-full pointer-events-none" />
           
-          <div className="max-w-4xl mx-auto text-center px-6 space-y-8 relative z-10">
-            <div className="space-y-4">
+          <div className="max-w-4xl mx-auto text-center px-6 relative z-10">
+            <div>
               <span className="inline-flex items-center gap-2 px-3 py-1 bg-zinc-100 text-zinc-700 text-xs font-bold uppercase tracking-wider rounded-full dark:bg-zinc-800 dark:text-zinc-300">
                 <Sparkles size={12} className="text-orange-500" />
                 OH! MY TEMPLATES
               </span>
-              <AnimatePresence mode="wait">
-                <motion.h1
-                  key={`heading-${heroIndex}`}
-                  initial={{ opacity: 0, y: 14 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -14 }}
-                  transition={{ duration: 0.45, ease: EASE_OUT }}
-                  className="text-[3rem] md:text-[4.8rem] font-bold tracking-tight leading-[1.1] text-zinc-900 dark:text-zinc-100"
-                >
-                  {HERO_SLIDES[heroIndex].heading}
-                </motion.h1>
-              </AnimatePresence>
+              <div className="mt-10">
+                <AnimatePresence mode="wait">
+                  <motion.h1
+                    key={`heading-${heroIndex}`}
+                    initial={{ opacity: 0, y: 14 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -14 }}
+                    transition={{ duration: 0.45, ease: EASE_OUT }}
+                    className="text-[3rem] md:text-[4.8rem] font-bold tracking-tight leading-[1.1] text-zinc-900 dark:text-zinc-100"
+                  >
+                    {HERO_SLIDES[heroIndex].heading}
+                  </motion.h1>
+                </AnimatePresence>
+              </div>
               <AnimatePresence mode="wait">
                 <motion.p
                   key={`desc-${heroIndex}`}
@@ -303,12 +305,12 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -12 }}
                   transition={{ duration: 0.45, ease: EASE_OUT, delay: 0.05 }}
-                  className="text-base md:text-lg text-zinc-500 font-normal leading-relaxed tracking-tight whitespace-pre-line max-w-2xl mx-auto dark:text-zinc-400"
+                  className="mt-6 text-lg md:text-xl text-zinc-500 font-normal leading-relaxed tracking-tight whitespace-pre-line max-w-2xl mx-auto dark:text-zinc-400"
                 >
                   {HERO_SLIDES[heroIndex].desc}
                 </motion.p>
               </AnimatePresence>
-              <div className="flex justify-center gap-1.5 mt-2">
+              <div className="flex justify-center gap-1.5 mt-10">
                 {HERO_SLIDES.map((_, i) => (
                   <button
                     key={i}
