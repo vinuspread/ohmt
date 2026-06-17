@@ -677,7 +677,7 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
                         transition={{ duration: 0.25, ease: EASE_OUT }}
                         className="overflow-hidden border-t border-zinc-200/60 bg-white dark:border-zinc-700 dark:bg-zinc-800"
                       >
-                        <div className="px-6 py-5 text-sm text-zinc-500 leading-relaxed font-normal dark:text-zinc-400">
+                        <div className="px-6 py-5 text-sm text-zinc-500 leading-relaxed font-normal whitespace-pre-line dark:text-zinc-400">
                           {faq.answer}
                         </div>
                       </motion.div>
