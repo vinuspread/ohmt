@@ -132,7 +132,7 @@ export function FaqManager({ data }: { data: Faq[] }) {
       render: (faq) => (
         <div className="max-w-2xl">
           <p className="font-medium text-zinc-900 line-clamp-1">{faq.question}</p>
-          <p className="mt-1 text-xs text-zinc-500 line-clamp-2">{faq.answer}</p>
+          <p className="mt-1 text-xs text-zinc-500 whitespace-pre-line">{faq.answer}</p>
         </div>
       ),
     },
