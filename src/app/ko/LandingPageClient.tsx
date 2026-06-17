@@ -4,6 +4,7 @@ import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, ChevronDown, X, Search, Sparkles } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { Logo } from "@/components/Logo";
 
 export interface TemplateItem {
@@ -23,19 +24,15 @@ export interface FaqItem {
 }
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
-const EASE_IOS = [0.32, 0.72, 0, 1] as const;
-
 const ALL_LABEL = "전체";
 
 const POPULAR_TAGS = ["패션", "포트폴리오", "에이전시", "럭셔리", "미니멀"];
 
 export default function LandingPageClient({ templates, faqs }: { templates: TemplateItem[]; faqs: FaqItem[] }) {
-  const [selectedPackage, setSelectedPackage] = useState<string | null>(null);
+  const router = useRouter();
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
-  const [submitted, setSubmitted] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [activeCategory, setActiveCategory] = useState(ALL_LABEL);
-  const [formErrors, setFormErrors] = useState<Record<string, string>>({});
   const [isAdmin, setIsAdmin] = useState(false);
   const [descModalTemplate, setDescModalTemplate] = useState<TemplateItem | null>(null);
   const [featuredTemplateId, setFeaturedTemplateId] = useState<string | null>(null);
@@ -203,44 +200,15 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
     return filteredTemplates;
   }, [filteredTemplates, featuredItem]);
 
-  const handlePackageSelect = (packageId: string) => {
-    setSelectedPackage(packageId);
-    setSubmitted(false);
-  };
-
-  const closePackage = () => {
-    setSelectedPackage(null);
-    setFormErrors({});
-    setSubmitted(false);
-    setSubmitted(false);
-  };
-
-  const handleSubmit = (e: { preventDefault(): void; currentTarget: HTMLFormElement }) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const companyName = (form.elements.namedItem('companyName') as HTMLInputElement).value.trim();
-    const email = (form.elements.namedItem('email') as HTMLInputElement).value.trim();
-    const phone = (form.elements.namedItem('phone') as HTMLInputElement).value.trim();
-    const message = (form.elements.namedItem('message') as HTMLTextAreaElement).value.trim();
-
-    const errors: Record<string, string> = {};
-    if (!companyName) errors.companyName = "회사 / 단체명을 입력해주세요.";
-    if (!email) errors.email = "이메일 주소를 입력해주세요.";
-    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) errors.email = "올바른 이메일 주소를 입력해주세요.";
-    if (!phone) errors.phone = "연락처를 입력해주세요.";
-
-    if (Object.keys(errors).length > 0) {
-      setFormErrors(errors);
-      return;
+  const goToContact = (packageId?: string, template?: TemplateItem) => {
+    const params = new URLSearchParams();
+    if (packageId) params.set("package", packageId);
+    if (template) {
+      params.set("template", template.name);
+      params.set("image", template.image);
+      params.set("category", template.category);
     }
-    setFormErrors({});
-
-    const selectedPkg = packages.find(p => p.id === selectedPackage);
-    const subject = `웹사이트 개발 프로젝트 문의: ${selectedPkg?.name || '일반 상담'}`;
-    const body = `회사/단체명: ${companyName}\n이메일 주소: ${email}\n연락처: ${phone}\n\n상세 요청사항:\n${message}`;
-
-    window.location.href = `mailto:contact@ohmytemplate.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    setSubmitted(true);
+    router.push(`/ko/contact?${params.toString()}`);
   };
 
   return (
@@ -275,10 +243,10 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
             <Link href="/en" className="text-xs uppercase tracking-widest text-zinc-400 hover:text-zinc-900 transition-colors font-bold dark:text-zinc-500 dark:hover:text-zinc-100">
               EN
             </Link>
-            <button 
-              onClick={() => document.getElementById('pricing')?.scrollIntoView({ behavior: 'smooth' })}
+            <Link
+              href="/ko/contact"
               className="hidden sm:inline-flex items-center justify-center bg-zinc-900 hover:bg-zinc-800 text-white text-xs uppercase tracking-widest font-bold px-5 py-2.5 transition-colors duration-200 rounded-md dark:bg-zinc-700 dark:hover:bg-zinc-600"
-            >상담 시작하기</button>
+            >상담 시작하기</Link>
           </div>
         </header>
 
@@ -476,7 +444,7 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
                                 데모 확인하기 <ArrowUpRight size={13} />
                               </Link>
                               <button
-                                onClick={() => handlePackageSelect('professional')}
+                                onClick={() => goToContact('professional', featuredItem)}
                                 className="inline-flex items-center gap-1.5 bg-zinc-900 hover:bg-zinc-700 text-white text-xs font-bold uppercase tracking-wider px-4 py-2.5 rounded transition-colors dark:bg-zinc-700 dark:hover:bg-zinc-600"
                               >
                                 상담 시작하기
@@ -548,7 +516,7 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
                               템플릿보기 <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                             </Link>
                             <button
-                              onClick={() => handlePackageSelect('professional')}
+                              onClick={() => goToContact('professional', template)}
                               className="inline-flex items-center gap-1.5 border border-zinc-300 hover:border-[#F1B100] hover:text-[#D9A000] text-zinc-500 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded transition-colors dark:border-zinc-600 dark:text-zinc-400"
                             >
                               상담하기
@@ -637,7 +605,7 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
                     </ul>
                   </div>
                   <button
-                    onClick={() => handlePackageSelect(pkg.id)}
+                    onClick={() => goToContact(pkg.id)}
                     className={`w-full mt-8 py-3 text-xs uppercase tracking-widest font-bold transition-all duration-150 rounded-md ${
                       pkg.recommended
                         ? 'bg-orange-500 hover:bg-orange-600 text-white'
@@ -717,127 +685,6 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
             (c) 2026 Oh My Template. All rights reserved.
           </div>
         </footer>
-
-        {/* Package Selection Modal */}
-        <AnimatePresence>
-          {selectedPackage && (
-            <>
-              <motion.div
-                className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                onClick={closePackage}
-              />
-              <motion.aside
-                className="fixed top-0 right-0 h-full w-full sm:w-[440px] bg-white border-l border-zinc-200 z-50 flex flex-col shadow-2xl overflow-y-auto dark:bg-zinc-900 dark:border-zinc-800"
-                initial={{ x: '100%' }}
-                animate={{ x: 0 }}
-                exit={{ x: '100%' }}
-                transition={{ duration: 0.5, ease: EASE_IOS }}
-              >
-                <div className="p-8 border-b border-zinc-200 flex items-start justify-between gap-4 flex-shrink-0 dark:border-zinc-800">
-                  <div className="space-y-2">
-                    <span className="text-[0.62rem] font-bold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">Package Inquiry</span>
-                    <h3 className="text-2xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">
-                      {packages.find(p => p.id === selectedPackage)?.name} 플랜 신청
-                    </h3>
-                  </div>
-                  <button
-                    onClick={closePackage}
-                    className="text-zinc-400 hover:text-zinc-900 transition-colors mt-1 flex-shrink-0 dark:text-zinc-500 dark:hover:text-zinc-100"
-                  >
-                    <X size={20} />
-                  </button>
-                </div>
-
-                <div className="flex-1 overflow-y-auto p-8">
-                  {submitted ? (
-                    <motion.div
-                      initial={{ opacity: 0, y: 10 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      className="flex flex-col items-center justify-center h-full text-center gap-6 py-16"
-                    >
-                      <div className="w-12 h-12 rounded-full border border-orange-500 flex items-center justify-center">
-                        <span className="text-orange-500 text-lg">v</span>
-                      </div>
-                      <div className="space-y-2">
-                      <p className="text-zinc-950 text-sm font-bold dark:text-zinc-100">이메일 클라이언트 연동 완료</p>
-                      <p className="text-xs text-zinc-400 font-light dark:text-zinc-500">작성해주신 메일 문의를 확인 후 24시간 내에 신속히 회신해 드리겠습니다.</p>
-                      </div>
-                      <button
-                        onClick={closePackage}
-                        className="text-xs uppercase tracking-widest font-bold text-zinc-400 hover:text-zinc-950 transition-colors pt-4 dark:text-zinc-500 dark:hover:text-zinc-100"
-                      >
-                        닫기
-                      </button>
-                    </motion.div>
-                  ) : (
-                    <form onSubmit={handleSubmit} noValidate className="space-y-5">
-                      <div>
-                        <label className="text-[0.62rem] uppercase tracking-widest text-zinc-500 font-bold mb-2 block dark:text-zinc-400">
-                          회사 / 단체명
-                        </label>
-                        <input
-                          type="text"
-                          name="companyName"
-                          className={`bg-zinc-50 border focus:bg-white outline-none text-zinc-900 placeholder:text-zinc-400 px-4 py-3 text-xs w-full transition-all rounded-lg dark:bg-zinc-800 dark:focus:bg-zinc-800 dark:text-zinc-100 dark:placeholder:text-zinc-500 ${formErrors.companyName ? "border-red-400 focus:border-red-400 dark:border-red-500" : "border-zinc-200 focus:border-zinc-900 dark:border-zinc-700 dark:focus:border-zinc-500"}`}
-                          placeholder="회사 또는 단체명 입력"
-                        />
-                        {formErrors.companyName && <p className="mt-1.5 text-xs text-red-500">{formErrors.companyName}</p>}
-                      </div>
-
-                      <div>
-                        <label className="text-[0.62rem] uppercase tracking-widest text-zinc-500 font-bold mb-2 block dark:text-zinc-400">
-                          이메일 주소
-                        </label>
-                        <input
-                          type="email"
-                          name="email"
-                          className={`bg-zinc-50 border focus:bg-white outline-none text-zinc-900 placeholder:text-zinc-400 px-4 py-3 text-xs w-full transition-all rounded-lg dark:bg-zinc-800 dark:focus:bg-zinc-800 dark:text-zinc-100 dark:placeholder:text-zinc-500 ${formErrors.email ? "border-red-400 focus:border-red-400 dark:border-red-500" : "border-zinc-200 focus:border-zinc-900 dark:border-zinc-700 dark:focus:border-zinc-500"}`}
-                          placeholder="your-email@example.com"
-                        />
-                        {formErrors.email && <p className="mt-1.5 text-xs text-red-500">{formErrors.email}</p>}
-                      </div>
-
-                      <div>
-                        <label className="text-[0.62rem] uppercase tracking-widest text-zinc-500 font-bold mb-2 block dark:text-zinc-400">
-                          연락처
-                        </label>
-                        <input
-                          type="tel"
-                          name="phone"
-                          className={`bg-zinc-50 border focus:bg-white outline-none text-zinc-900 placeholder:text-zinc-400 px-4 py-3 text-xs w-full transition-all rounded-lg dark:bg-zinc-800 dark:focus:bg-zinc-800 dark:text-zinc-100 dark:placeholder:text-zinc-500 ${formErrors.phone ? "border-red-400 focus:border-red-400 dark:border-red-500" : "border-zinc-200 focus:border-zinc-900 dark:border-zinc-700 dark:focus:border-zinc-500"}`}
-                          placeholder="010-0000-0000"
-                        />
-                        {formErrors.phone && <p className="mt-1.5 text-xs text-red-500">{formErrors.phone}</p>}
-                      </div>
-
-                      <div>
-                        <label className="text-[0.62rem] uppercase tracking-widest text-zinc-500 font-bold mb-2 block dark:text-zinc-400">
-                          상세 요청사항
-                        </label>
-                        <textarea
-                          name="message"
-                          rows={4}
-                          className="bg-zinc-50 border border-zinc-200 focus:bg-white focus:border-zinc-900 outline-none text-zinc-900 placeholder:text-zinc-400 px-4 py-3 text-xs w-full resize-none transition-all rounded-lg dark:bg-zinc-800 dark:border-zinc-700 dark:focus:bg-zinc-800 dark:focus:border-zinc-500 dark:text-zinc-100 dark:placeholder:text-zinc-500"
-                          placeholder="개발하고자 하는 브랜드 웹사이트의 특장점이나 필요 기능들을 자세히 공유해주세요..."
-                        />
-                      </div>
-
-                      <button
-                        type="submit"
-                        className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold uppercase tracking-widest text-xs py-3.5 transition-all rounded-lg"
-                      >
-                        신청 메일 발송하기
-                      </button>
-                    </form>
-                  )}
-                </div>
-              </motion.aside>
-            </>
-          )}
-        </AnimatePresence>
 
         {/* Template Description Modal */}
         <AnimatePresence>
