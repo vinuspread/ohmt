@@ -16,6 +16,12 @@ export interface TemplateItem {
   isFeatured?: boolean;
 }
 
+export interface FaqItem {
+  id: string;
+  question: string;
+  answer: string;
+}
+
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 const EASE_IOS = [0.32, 0.72, 0, 1] as const;
 
@@ -23,7 +29,7 @@ const ALL_LABEL = "All";
 
 const POPULAR_TAGS = ["Fashion", "Portfolio", "Agency", "Luxury", "Minimalist"];
 
-export default function LandingPageClient({ templates }: { templates: TemplateItem[] }) {
+export default function LandingPageClient({ templates, faqs }: { templates: TemplateItem[]; faqs: FaqItem[] }) {
   const [selectedPackage, setSelectedPackage] = useState<string | null>(null);
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [submitted, setSubmitted] = useState(false);
@@ -32,6 +38,7 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
   const [isAdmin, setIsAdmin] = useState(false);
   const [descModalTemplate, setDescModalTemplate] = useState<TemplateItem | null>(null);
+  const [featuredTemplateId, setFeaturedTemplateId] = useState<string | null>(null);
 
   useEffect(() => {
     import("@/lib/supabase/client").then(({ createClient }) => {
@@ -40,6 +47,11 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
       });
     });
   }, []);
+
+  useEffect(() => {
+    const featuredList = templates.filter((template) => template.isFeatured);
+    setFeaturedTemplateId(featuredList.length > 0 ? featuredList[Math.floor(Math.random() * featuredList.length)].id : null);
+  }, [templates]);
 
   const packages = [
     {
@@ -89,29 +101,6 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
         'Advanced SEO & Analytics'
       ],
       duration: '4 weeks'
-    }
-  ];
-
-  const faqs = [
-    {
-      q: 'What if I need additional revisions?',
-      a: 'Starter includes 2, Professional includes 3, and Premium includes unlimited revisions. Additional revisions beyond these can be scheduled as an extra service.'
-    },
-    {
-      q: 'Do you manage domain and hosting?',
-      a: 'Yes, we manage domain setup and cloud hosting setup during your package period. We send renewal notifications before expiration.'
-    },
-    {
-      q: 'What level of SEO support is included?',
-      a: 'Basic SEO (optimized meta tags, semantic HTML hierarchy, and Google Search Console registration) is included in all packages.'
-    },
-    {
-      q: 'Will my site look similar to others using the same template?',
-      a: 'No. Every template is uniquely customized with your specific typography, color palette, custom imagery, and content hierarchy. Each resulting site feels entirely bespoke.'
-    },
-    {
-      q: 'What happens if something breaks after launch?',
-      a: 'Dedicated technical support is fully active during your package support period. Afterward, you can extend support with a flexible maintenance plan.'
     }
   ];
 
@@ -165,10 +154,10 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
     "@type": "FAQPage",
     mainEntity: faqs.map((faq) => ({
       "@type": "Question",
-      name: faq.q,
+      name: faq.question,
       acceptedAnswer: {
         "@type": "Answer",
-        text: faq.a,
+        text: faq.answer,
       },
     })),
   };
@@ -195,12 +184,10 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
     });
   }, [activeCategory, searchTerm, templates]);
 
-  // Randomly pick one among all templates marked as featured (stable for this page load)
   const randomFeaturedItem = useMemo(() => {
-    const featuredList = templates.filter((t) => t.isFeatured);
-    if (featuredList.length === 0) return null;
-    return featuredList[Math.floor(Math.random() * featuredList.length)];
-  }, [templates]);
+    if (!featuredTemplateId) return null;
+    return templates.find((template) => template.id === featuredTemplateId) ?? null;
+  }, [featuredTemplateId, templates]);
 
   // Featured Item: If activeCategory is "All" and search is empty, show the designated featured item on top
   const featuredItem = useMemo(() => {
@@ -668,14 +655,14 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
                 <div
-                  key={idx}
+                  key={faq.id}
                   className="border border-zinc-200/60 rounded-xl overflow-hidden bg-[#FCFCFD] hover:border-zinc-300 transition-all duration-300 dark:border-zinc-700 dark:bg-zinc-800 dark:hover:border-zinc-600"
                 >
                   <button
                     onClick={() => setOpenFAQ(openFAQ === idx ? null : idx)}
                     className="w-full px-6 py-5 flex items-center justify-between hover:bg-zinc-50 transition-colors duration-300 dark:hover:bg-zinc-700"
                   >
-                    <span className="font-bold text-left text-sm text-zinc-800 dark:text-zinc-200">{faq.q}</span>
+                    <span className="font-bold text-left text-sm text-zinc-800 dark:text-zinc-200">{faq.question}</span>
                     <ChevronDown
                       size={16}
                       className={`flex-shrink-0 text-zinc-400 transition-transform duration-300 dark:text-zinc-500 ${
@@ -693,7 +680,7 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
                         className="overflow-hidden border-t border-zinc-200/60 bg-white dark:border-zinc-700 dark:bg-zinc-800"
                       >
                         <div className="px-6 py-5 text-sm text-zinc-500 leading-relaxed font-normal dark:text-zinc-400">
-                          {faq.a}
+                          {faq.answer}
                         </div>
                       </motion.div>
                     )}

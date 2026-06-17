@@ -38,6 +38,7 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
   const [formErrors, setFormErrors] = useState<Record<string, string>>({});
   const [isAdmin, setIsAdmin] = useState(false);
   const [descModalTemplate, setDescModalTemplate] = useState<TemplateItem | null>(null);
+  const [featuredTemplateId, setFeaturedTemplateId] = useState<string | null>(null);
 
   useEffect(() => {
     import("@/lib/supabase/client").then(({ createClient }) => {
@@ -46,6 +47,11 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
       });
     });
   }, []);
+
+  useEffect(() => {
+    const featuredList = templates.filter((template) => template.isFeatured);
+    setFeaturedTemplateId(featuredList.length > 0 ? featuredList[Math.floor(Math.random() * featuredList.length)].id : null);
+  }, [templates]);
 
   const packages = [
     {
@@ -178,12 +184,10 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
     });
   }, [activeCategory, searchTerm, templates]);
 
-  // 대표로 지정된 템플릿이 여러 개면 페이지 진입 시 랜덤으로 하나 선택 (재진입 시까지 고정)
   const randomFeaturedItem = useMemo(() => {
-    const featuredList = templates.filter((t) => t.isFeatured);
-    if (featuredList.length === 0) return null;
-    return featuredList[Math.floor(Math.random() * featuredList.length)];
-  }, [templates]);
+    if (!featuredTemplateId) return null;
+    return templates.find((template) => template.id === featuredTemplateId) ?? null;
+  }, [featuredTemplateId, templates]);
 
   // Featured Item: 첫 진입 시(카테고리 전체, 검색어 없음) 대표 템플릿 강조
   const featuredItem = useMemo(() => {

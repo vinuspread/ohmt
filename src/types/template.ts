@@ -26,6 +26,17 @@ export interface Category {
   updated_at: string;
 }
 
+export interface Faq {
+  id: string;
+  lang: TemplateLang;
+  question: string;
+  answer: string;
+  sort_order: number;
+  is_active: boolean;
+  created_at: string;
+  updated_at: string;
+}
+
 export type OrderStatus = "pending" | "paid" | "cancelled";
 
 export interface Order {
