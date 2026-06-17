@@ -28,10 +28,19 @@ const ALL_LABEL = "전체";
 
 const POPULAR_TAGS = ["패션", "포트폴리오", "에이전시", "럭셔리", "미니멀"];
 
-const HERO_MESSAGES = [
-  "디테일에 민감한 브랜드를 위한 고품격 웹 템플릿입니다.\n비즈니스 방향성에 맞추어 전담 팀이 2주 만에 맞춤 커스터마이징하고 배포까지 책임집니다.",
-  "패션, 럭셔리, 테크, 스튜디오 — 17개 업종별 프리미엄 템플릿 컬렉션.\n브랜드의 첫인상을 결정하는 웹사이트, 전문가와 함께 완성하세요.",
-  "템플릿 선택부터 런칭까지, 모든 과정을 전담 팀이 함께합니다.\n기술적인 부분은 저희가 맡겠습니다. 고객은 비즈니스에만 집중하세요.",
+const HERO_SLIDES = [
+  {
+    heading: <>비즈니스의 가치를 높여줄 <br className="hidden sm:block" />완벽한 <span className="text-[#FFB800]">프리미엄 템플릿</span>을 만나보세요.</>,
+    desc: "디테일에 민감한 브랜드를 위한 고품격 웹 템플릿입니다.\n비즈니스 방향성에 맞추어 전담 팀이 2주 만에 맞춤 커스터마이징하고 배포까지 책임집니다.",
+  },
+  {
+    heading: <>패션, 럭셔리, 테크, 스튜디오 — <br className="hidden sm:block" />업종별 <span className="text-[#FFB800]">17개 템플릿</span> 컬렉션.</>,
+    desc: "패션, 럭셔리, 테크, 스튜디오 — 17개 업종별 프리미엄 템플릿 컬렉션.\n브랜드의 첫인상을 결정하는 웹사이트, 전문가와 함께 완성하세요.",
+  },
+  {
+    heading: <>선택에서 런칭까지, <br className="hidden sm:block" />전담 팀과 함께하는 <span className="text-[#FFB800]">2주 완성.</span></>,
+    desc: "템플릿 선택부터 런칭까지, 모든 과정을 전담 팀이 함께합니다.\n기술적인 부분은 저희가 맡겠습니다. 고객은 비즈니스에만 집중하세요.",
+  },
 ];
 
 export default function LandingPageClient({ templates, faqs }: { templates: TemplateItem[]; faqs: FaqItem[] }) {
@@ -59,7 +68,7 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
 
   useEffect(() => {
     const id = setInterval(() => {
-      setHeroIndex((prev) => (prev + 1) % HERO_MESSAGES.length);
+      setHeroIndex((prev) => (prev + 1) % HERO_SLIDES.length);
     }, 4000);
     return () => clearInterval(id);
   }, []);
@@ -275,30 +284,40 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
                 <Sparkles size={12} className="text-orange-500" />
                 OH! MY TEMPLATES
               </span>
-              <h1 className="text-[3rem] md:text-[4.8rem] font-bold tracking-tight leading-[1.1] text-zinc-900 dark:text-zinc-100">
-                비즈니스의 가치를 높여줄 <br className="hidden sm:block" />
-                완벽한 <span className="text-[#FFB800]">프리미엄 템플릿</span>을 만나보세요.
-              </h1>
+              <div className="relative h-[120px] md:h-[110px] overflow-hidden">
+                <AnimatePresence mode="wait">
+                  <motion.h1
+                    key={`heading-${heroIndex}`}
+                    initial={{ opacity: 0, y: 14 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -14 }}
+                    transition={{ duration: 0.45, ease: EASE_OUT }}
+                    className="absolute inset-0 text-[3rem] md:text-[4.8rem] font-bold tracking-tight leading-[1.1] text-zinc-900 dark:text-zinc-100"
+                  >
+                    {HERO_SLIDES[heroIndex].heading}
+                  </motion.h1>
+                </AnimatePresence>
+              </div>
               <div className="relative h-16 md:h-14 overflow-hidden max-w-2xl mx-auto">
                 <AnimatePresence mode="wait">
                   <motion.p
-                    key={heroIndex}
+                    key={`desc-${heroIndex}`}
                     initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -12 }}
-                    transition={{ duration: 0.45, ease: EASE_OUT }}
+                    transition={{ duration: 0.45, ease: EASE_OUT, delay: 0.05 }}
                     className="absolute inset-0 text-base md:text-lg text-zinc-500 font-normal leading-relaxed tracking-tight whitespace-pre-line dark:text-zinc-400"
                   >
-                    {HERO_MESSAGES[heroIndex]}
+                    {HERO_SLIDES[heroIndex].desc}
                   </motion.p>
                 </AnimatePresence>
               </div>
               <div className="flex justify-center gap-1.5 mt-2">
-                {HERO_MESSAGES.map((_, i) => (
+                {HERO_SLIDES.map((_, i) => (
                   <button
                     key={i}
                     onClick={() => setHeroIndex(i)}
-                    className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${i === heroIndex ? "bg-zinc-500 w-4 dark:bg-zinc-400" : "bg-zinc-300 dark:bg-zinc-600"}`}
+                    className={`h-1.5 rounded-full transition-all duration-300 ${i === heroIndex ? "bg-zinc-500 w-4 dark:bg-zinc-400" : "w-1.5 bg-zinc-300 dark:bg-zinc-600"}`}
                     aria-label={`${i + 1}번 메시지`}
                   />
                 ))}
