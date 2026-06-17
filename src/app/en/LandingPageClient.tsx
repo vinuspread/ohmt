@@ -316,42 +316,6 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
                 Premium, hand-crafted web templates for brands that demand quality. Fully customized and deployed by our team in 2 weeks.
               </p>
             </div>
-
-            {/* Search Input Bar */}
-            <div className="max-w-xl mx-auto">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-400 dark:text-zinc-500" size={18} />
-                <input
-                  type="text"
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  placeholder="Search templates (e.g. fashion, agency, editorial...)"
-                  className="w-full pl-12 pr-10 py-3.5 bg-zinc-50 border border-zinc-200 focus:bg-white focus:border-zinc-900 outline-none text-zinc-900 placeholder:text-zinc-400 text-sm transition-all rounded-lg dark:bg-zinc-800 dark:border-zinc-700 dark:focus:bg-zinc-800 dark:focus:border-zinc-500 dark:text-zinc-100 dark:placeholder:text-zinc-500"
-                />
-                {searchTerm && (
-                  <button 
-                    onClick={() => setSearchTerm("")}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-900 transition-colors dark:text-zinc-500 dark:hover:text-zinc-100"
-                  >
-                    <X size={16} />
-                  </button>
-                )}
-              </div>
-
-              {/* Popular Tags */}
-              <div className="flex flex-wrap justify-center items-center gap-2 mt-4 text-xs">
-                <span className="text-zinc-400 font-medium dark:text-zinc-500">Popular:</span>
-                {POPULAR_TAGS.map((tag) => (
-                  <button
-                    key={tag}
-                    onClick={() => setSearchTerm(tag)}
-                    className="px-2.5 py-1 bg-zinc-100 hover:bg-zinc-200 text-zinc-600 transition-colors rounded dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:text-zinc-400"
-                  >
-                    #{tag}
-                  </button>
-                ))}
-              </div>
-            </div>
           </div>
 
           {/* Infinite Horizontal Scroll Marquee */}
@@ -391,7 +355,40 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
 
         {/* Templates Marketplace Section */}
         <section id="templates" className="px-6 md:px-12 lg:px-20 py-12 max-w-[1440px] mx-auto space-y-12">
-          
+
+          {/* Search Input Bar */}
+          <div className="flex flex-col sm:flex-row gap-3 items-start sm:items-center">
+            <div className="relative flex-1 max-w-md">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-400 dark:text-zinc-500" size={16} />
+              <input
+                type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                placeholder="Search templates..."
+                className="w-full pl-10 pr-10 py-2.5 bg-zinc-50 border border-zinc-200 focus:bg-white focus:border-zinc-900 outline-none text-zinc-900 placeholder:text-zinc-400 text-sm transition-all rounded-lg dark:bg-zinc-800 dark:border-zinc-700 dark:focus:bg-zinc-800 dark:focus:border-zinc-500 dark:text-zinc-100 dark:placeholder:text-zinc-500"
+              />
+              {searchTerm && (
+                <button
+                  onClick={() => setSearchTerm("")}
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-900 transition-colors dark:text-zinc-500 dark:hover:text-zinc-100"
+                >
+                  <X size={14} />
+                </button>
+              )}
+            </div>
+            <div className="flex flex-wrap gap-1.5 text-xs">
+              {POPULAR_TAGS.map((tag) => (
+                <button
+                  key={tag}
+                  onClick={() => setSearchTerm(tag)}
+                  className="px-2.5 py-1 bg-zinc-100 hover:bg-zinc-200 text-zinc-500 transition-colors rounded dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:text-zinc-400"
+                >
+                  #{tag}
+                </button>
+              ))}
+            </div>
+          </div>
+
           {/* Category Tabs */}
           <div className="flex gap-2 overflow-x-auto pb-2 border-b border-zinc-200/60 no-scrollbar dark:border-zinc-800">
             {categories.map((cat) => (
