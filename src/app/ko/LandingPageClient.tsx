@@ -16,6 +16,12 @@ export interface TemplateItem {
   isFeatured?: boolean;
 }
 
+export interface FaqItem {
+  id: string;
+  question: string;
+  answer: string;
+}
+
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 const EASE_IOS = [0.32, 0.72, 0, 1] as const;
 
@@ -23,7 +29,7 @@ const ALL_LABEL = "전체";
 
 const POPULAR_TAGS = ["패션", "포트폴리오", "에이전시", "럭셔리", "미니멀"];
 
-export default function LandingPageClient({ templates }: { templates: TemplateItem[] }) {
+export default function LandingPageClient({ templates, faqs }: { templates: TemplateItem[]; faqs: FaqItem[] }) {
   const [selectedPackage, setSelectedPackage] = useState<string | null>(null);
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [submitted, setSubmitted] = useState(false);
@@ -92,29 +98,6 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
     }
   ];
 
-  const faqs = [
-    {
-      q: '추가 수정이 필요한 경우는 어떻게 되나요?',
-      a: 'Starter 패키지는 2회, Professional은 3회, Premium은 무제한 수정이 포함되어 있습니다. 무상 범위를 초과하는 수정 요청은 별도의 협의를 거쳐 작업해 드립니다.'
-    },
-    {
-      q: '도메인과 호스팅도 관리해 주시나요?',
-      a: '네, 선택하신 패키지에 명시된 무상 기간 동안 도메인 연결 및 클라우드 호스팅 인프라 설정을 전적으로 지원하고 대행해 드립니다. 계약 만료 시점 전에 갱신 안내를 전달해 드립니다.'
-    },
-    {
-      q: '검색엔진 최적화(SEO) 지원 수준은 어떻게 되나요?',
-      a: '기본적인 SEO(검색 노출을 위한 메타 태그 최적화, 시맨틱 구조 마크업 설계, Google Search Console 등록 대행)는 모든 패키지에 기본 탑재되어 제공됩니다.'
-    },
-    {
-      q: '동일한 템플릿을 선택하면 다른 회사 사이트와 유사해 보이지 않나요?',
-      a: '그렇지 않습니다. 로고, 전용 서체, 브랜드 고유의 컬러 파레트, 맞춤형 이미지 리소스와 카피라이팅이 1대1로 적용되기 때문에, 결과물은 완전히 유니크하며 브랜드 전용으로 기획 및 개발된 느낌을 줍니다.'
-    },
-    {
-      q: '사이트 오픈 이후 오류가 생기거나 수정이 안 되면 어쩌죠?',
-      a: '패키지별 기술 지원 약정 기간 동안 전담 유지보수가 제공됩니다. 해당 기간이 지난 후에도 월 단위의 유연한 유지보수 플랜으로 편리하게 서비스를 연장할 수 있습니다.'
-    }
-  ];
-
   const websiteOrganizationSchema = {
     "@context": "https://schema.org",
     "@graph": [
@@ -165,10 +148,10 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
     "@type": "FAQPage",
     mainEntity: faqs.map((faq) => ({
       "@type": "Question",
-      name: faq.q,
+      name: faq.question,
       acceptedAnswer: {
         "@type": "Answer",
-        text: faq.a,
+        text: faq.answer,
       },
     })),
   };
@@ -542,13 +525,20 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
                             )}
                           </div>
                           <div className="flex justify-between items-center pt-4 border-t border-zinc-100 dark:border-zinc-700">
-                            <span className="text-xs text-zinc-400 font-medium dark:text-zinc-500">by Oh My Template</span>
                             <Link
                               href={template.url}
-                              className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-900 hover:text-zinc-600 transition-colors dark:text-zinc-100 dark:hover:text-zinc-400"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 text-sm font-medium text-zinc-400 hover:text-zinc-600 transition-colors outline-none focus:outline-none dark:text-zinc-500 dark:hover:text-zinc-400"
                             >
-                              데모 확인하기 <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                              템플릿보기 <ArrowUpRight size={12} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                             </Link>
+                            <button
+                              onClick={() => handlePackageSelect('professional')}
+                              className="inline-flex items-center gap-1.5 border border-zinc-300 hover:border-[#F1B100] hover:text-[#D9A000] text-zinc-500 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded transition-colors dark:border-zinc-600 dark:text-zinc-400"
+                            >
+                              상담하기
+                            </button>
                           </div>
                         </div>
                       </motion.div>
@@ -659,14 +649,14 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
                 <div
-                  key={idx}
+                  key={faq.id}
                   className="border border-zinc-200/60 rounded-xl overflow-hidden bg-[#FCFCFD] hover:border-zinc-300 transition-all duration-300 dark:border-zinc-700 dark:bg-zinc-800 dark:hover:border-zinc-600"
                 >
                   <button
                     onClick={() => setOpenFAQ(openFAQ === idx ? null : idx)}
                     className="w-full px-6 py-5 flex items-center justify-between hover:bg-zinc-50 transition-colors duration-300 dark:hover:bg-zinc-700"
                   >
-                    <span className="font-bold text-left text-sm text-zinc-800 dark:text-zinc-200">{faq.q}</span>
+                    <span className="font-bold text-left text-sm text-zinc-800 dark:text-zinc-200">{faq.question}</span>
                     <ChevronDown
                       size={16}
                       className={`flex-shrink-0 text-zinc-400 transition-transform duration-300 dark:text-zinc-500 ${
@@ -683,8 +673,8 @@ export default function LandingPageClient({ templates }: { templates: TemplateIt
                         transition={{ duration: 0.25, ease: EASE_OUT }}
                         className="overflow-hidden border-t border-zinc-200/60 bg-white dark:border-zinc-700 dark:bg-zinc-800"
                       >
-                        <div className="px-6 py-5 text-sm text-zinc-500 leading-relaxed font-light dark:text-zinc-400">
-                          {faq.a}
+                        <div className="px-6 py-5 text-sm text-zinc-500 leading-relaxed font-normal dark:text-zinc-400">
+                          {faq.answer}
                         </div>
                       </motion.div>
                     )}
