@@ -30,16 +30,16 @@ const POPULAR_TAGS = ["패션", "포트폴리오", "에이전시", "럭셔리", 
 
 const HERO_SLIDES = [
   {
-    heading: <>비즈니스의 가치를 높여줄 <br className="hidden sm:block" />완벽한 <span className="text-[#FFB800]">프리미엄 템플릿</span>을 만나보세요.</>,
-    desc: "디테일에 민감한 브랜드를 위한 고품격 웹 템플릿입니다.\n비즈니스 방향성에 맞추어 전담 팀이 2주 만에 맞춤 커스터마이징하고 배포까지 책임집니다.",
+    heading: <>완성된 시스템으로 <br className="hidden sm:block" /><span className="text-[#FFB800]">비즈니스를 시작하세요.</span></>,
+    desc: "수많은 프리미엄 템플릿과 전담 팀의 커스터마이징으로\n2주 안에 완성된 웹사이트를 제공합니다.",
   },
   {
-    heading: <>패션, 럭셔리, 테크, 스튜디오 — <br className="hidden sm:block" />업종별 <span className="text-[#FFB800]">17개 템플릿</span> 컬렉션.</>,
-    desc: "패션, 럭셔리, 테크, 스튜디오 — 17개 업종별 프리미엄 템플릿 컬렉션.\n브랜드의 첫인상을 결정하는 웹사이트, 전문가와 함께 완성하세요.",
+    heading: <>원하는 기능을 <br className="hidden sm:block" /><span className="text-[#FFB800]">그대로 담아드립니다.</span></>,
+    desc: "구현하고 싶은 기능이 있으신가요?\n회원 연동, 예약, 결제까지 비즈니스에 맞게 추가해 완성합니다.",
   },
   {
-    heading: <>선택에서 런칭까지, <br className="hidden sm:block" />전담 팀과 함께하는 <span className="text-[#FFB800]">2주 완성.</span></>,
-    desc: "템플릿 선택부터 런칭까지, 모든 과정을 전담 팀이 함께합니다.\n기술적인 부분은 저희가 맡겠습니다. 고객은 비즈니스에만 집중하세요.",
+    heading: <>관리와 유지보수도 <br className="hidden sm:block" /><span className="text-[#FFB800]">안심하세요.</span></>,
+    desc: "비즈니스는 런칭 후부터 시작됩니다.\n운영 중 발생하는 문제를 전담 팀이 신속하게 대응합니다.",
   },
 ];
 
