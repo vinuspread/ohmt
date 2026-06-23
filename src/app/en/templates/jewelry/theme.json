@@ -1,11 +1,10 @@
 {
   "slug": "jewelry",
-  "name": "Jewelry",
-  "name_ko": "주얼리",
-  "category": "lifestyle",
-  "description": "Luxury jewelry brand store template",
-  "description_ko": "럭셔리 주얼리 브랜드 스토어 템플릿",
-  "tags": [],
+  "name": "Jewelry Luxury",
+  "name_ko": "주얼리 럭셔리",
+  "category": "retail",
+  "description": "A luxury jewelry boutique template with elegant product showcases and brand storytelling.",
+  "description_ko": "우아한 제품 쇼케이스와 브랜드 스토리텔링을 갖춘 럭셔리 주얼리 부티크 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -70,10 +70,10 @@ const { scrollYProgress } = useScroll({
   const heroOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   const products = [
-    { name: t.products.items.item1, price: "$4,250", img: "/templates/jewelry/jewelry-ring.png", tag: t.products.tags.engagement },
-    { name: t.products.items.item2, price: "$1,850", img: "/templates/jewelry/jewelry-pendant.png", tag: t.products.tags.seasonal },
-    { name: t.products.items.item3, price: "$12,200", img: "/templates/jewelry/jewelry-hero-main.png", tag: t.products.tags.luxury },
-    { name: t.products.items.item4, price: "$3,400", img: "/templates/jewelry/jewelry-ring.png", tag: t.products.tags.essential },
+    { name: t.products.items.item1, price: "$4,250", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: t.products.tags.engagement },
+    { name: t.products.items.item2, price: "$1,850", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: t.products.tags.seasonal },
+    { name: t.products.items.item3, price: "$12,200", img: "/templates/OHMT002-jewelry/jewelry-hero-main.png", tag: t.products.tags.luxury },
+    { name: t.products.items.item4, price: "$3,400", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: t.products.tags.essential },
   ];
 
   const filteredProducts = products.filter((product) => {
@@ -96,7 +96,7 @@ const { scrollYProgress } = useScroll({
             className="absolute inset-0 z-0"
           >
             <img
-              src="/templates/jewelry/jewelry-hero-main.png"
+              src="/templates/OHMT002-jewelry/jewelry-hero-main.png"
               className="w-full h-full object-cover grayscale-[0.2]"
               alt="Oh My Template Fine Jewelry Hero"
             />
@@ -168,7 +168,7 @@ const { scrollYProgress } = useScroll({
                   transition={{ duration: 1, delay: i * 0.15 }}
                   className="group cursor-pointer"
                 >
-                  <div className="relative aspect-[3/4] mb-4 overflow-hidden bg-[#FDFBF9] border border-neutral-100">
+                  <div className="relative aspect-[3/4] mb-4 overflow-hidden bg-[var(--color-bg-secondary)] border border-neutral-100">
                     <img
                       src={item.img}
                       alt={item.name}
@@ -209,7 +209,7 @@ const { scrollYProgress } = useScroll({
                 transition={{ duration: 1.5 }}
                 className="aspect-[4/5] overflow-hidden"
               >
-                <img loading="lazy" src="/templates/jewelry/jewelry-craft.png" alt="Jewelry Craftsmanship" className="w-full h-full object-cover" />
+                <img loading="lazy" src="/templates/OHMT002-jewelry/jewelry-craft.png" alt="Jewelry Craftsmanship" className="w-full h-full object-cover" />
               </motion.div>
               <div className="absolute -bottom-10 -right-6 lg:-bottom-14 lg:-right-14 w-72 bg-white p-8 hidden md:block border border-neutral-100">
                 <span className="text-[var(--color-primary)] text-[13px] font-bold uppercase tracking-[0.3em] block mb-3">{t.craftsmanship.badge}</span>
