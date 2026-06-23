@@ -19,14 +19,23 @@ export function AssetManager() {
   const [lastUrl, setLastUrl] = useState("");
   const [assets, setAssets] = useState<Asset[]>([]);
   const [loadingAssets, setLoadingAssets] = useState(true);
+  const [listError, setListError] = useState("");
   const [toast, setToast] = useState<ToastState | null>(null);
   const [progress, setProgress] = useState(0);
 
   const fetchAssets = async () => {
     setLoadingAssets(true);
+    setListError("");
     try {
       const res = await fetch("/api/admin/assets");
-      if (res.ok) setAssets(await res.json());
+      const data = await res.json();
+      if (res.ok) {
+        setAssets(data);
+      } else {
+        setListError(data.error ?? "목록을 불러오지 못했습니다.");
+      }
+    } catch {
+      setListError("네트워크 오류로 목록을 불러오지 못했습니다.");
     } finally {
       setLoadingAssets(false);
     }
@@ -197,8 +206,10 @@ export function AssetManager() {
 
         {loadingAssets ? (
           <div className="px-5 py-10 text-center text-sm text-zinc-400">불러오는 중...</div>
+        ) : listError ? (
+          <div className="px-5 py-10 text-center text-sm text-red-500">{listError}</div>
         ) : assets.length === 0 ? (
-          <div className="px-5 py-10 text-center text-sm text-zinc-400">업로드된 동영상이 없습니다.</div>
+          <div className="px-5 py-10 text-center text-sm text-zinc-400">R2에 동영상 파일이 없습니다.</div>
         ) : (
           <div className="divide-y divide-zinc-100">
             {assets.map((asset) => (

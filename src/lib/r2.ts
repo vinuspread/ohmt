@@ -40,10 +40,25 @@ export async function deleteFromR2(key: string): Promise<void> {
   await r2.send(new DeleteObjectCommand({ Bucket: R2_BUCKET, Key: key }));
 }
 
-export async function listR2Objects(prefix: string): Promise<{ key: string; size: number; lastModified: Date }[]> {
-  const command = new ListObjectsV2Command({ Bucket: R2_BUCKET, Prefix: prefix, MaxKeys: 200 });
-  const response = await r2.send(command);
-  return (response.Contents ?? [])
-    .filter((item) => item.Key)
-    .map((item) => ({ key: item.Key!, size: item.Size ?? 0, lastModified: item.LastModified ?? new Date() }));
+export async function listR2Objects(prefix?: string): Promise<{ key: string; size: number; lastModified: Date }[]> {
+  const all: { key: string; size: number; lastModified: Date }[] = [];
+  let continuationToken: string | undefined;
+
+  do {
+    const command = new ListObjectsV2Command({
+      Bucket: R2_BUCKET,
+      ...(prefix ? { Prefix: prefix } : {}),
+      MaxKeys: 1000,
+      ...(continuationToken ? { ContinuationToken: continuationToken } : {}),
+    });
+    const response = await r2.send(command);
+    for (const item of response.Contents ?? []) {
+      if (item.Key) {
+        all.push({ key: item.Key, size: item.Size ?? 0, lastModified: item.LastModified ?? new Date() });
+      }
+    }
+    continuationToken = response.IsTruncated ? response.NextContinuationToken : undefined;
+  } while (continuationToken);
+
+  return all;
 }
