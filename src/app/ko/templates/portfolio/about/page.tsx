@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { Suspense } from "react";
 import React from "react";
 import Link from "next/link";
@@ -11,10 +11,10 @@ import { Footer } from "../_components/layout/Footer";
 import { stats, designerInfo } from "@/lib/portfolio-data";
 
 const team = [
-  { name: "Marco Vinus", role: "Founder & Creative Director", img: "/templates/portfolio/portfolio-1.jpg" },
-  { name: "Yuna Park", role: "Lead Designer", img: "/templates/portfolio/portfolio-2.jpg" },
-  { name: "Tobias Krenn", role: "Front-end Engineer", img: "/templates/portfolio/portfolio-3.png" },
-  { name: "Sofia Reyes", role: "Brand Strategist", img: "/templates/portfolio/portfolio-4.png" },
+  { name: "Marco Vinus", role: "Founder & Creative Director", img: "/templates/OHMT007-portfolio/portfolio-1.jpg" },
+  { name: "Yuna Park", role: "Lead Designer", img: "/templates/OHMT007-portfolio/portfolio-2.jpg" },
+  { name: "Tobias Krenn", role: "Front-end Engineer", img: "/templates/OHMT007-portfolio/portfolio-3.png" },
+  { name: "Sofia Reyes", role: "Brand Strategist", img: "/templates/OHMT007-portfolio/portfolio-4.png" },
 ];
 
 const process = [
@@ -27,34 +27,34 @@ const process = [
 function AboutPageContent() {
   return (
     <TemplateWrapper theme={theme}>
-      <div className="bg-white text-[#1e1e1e] font-[family-name:var(--font-inter)] selection:bg-[#1e1e1e] selection:text-black">
+      <div className="bg-white text-[var(--color-text)] font-[family-name:var(--font-inter)] selection:bg-[var(--color-primary)] selection:text-black">
         <Header />
 
         {/* Hero */}
-        <section className="pt-40 pb-14 md:pb-28 border-b border-[#eef0f6]">
+        <section className="pt-40 pb-14 md:pb-28 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto px-6 grid md:grid-cols-2 gap-20 items-end">
             <div>
-              <span className="text-[13px] font-bold tracking-[0.4em] uppercase text-[#8a919b] block mb-6">스튜디오 소개</span>
+              <span className="text-[13px] font-bold tracking-[0.4em] uppercase text-[var(--color-text-muted)] block mb-6">?�튜?�오 ?�개</span>
               <h1 className="text-[clamp(3rem,8vw,7rem)] font-medium uppercase tracking-tighter leading-[1.5]">
-                We make<br />the bold<br /><span className="text-[#1e1e1e]">visible.</span>
+                We make<br />the bold<br /><span className="text-[var(--color-text)]">visible.</span>
               </h1>
             </div>
             <div className="space-y-6">
-              <p className="text-[1rem] text-[#5a6271] leading-relaxed">
+              <p className="text-[1rem] text-[var(--color-text-muted)] leading-relaxed">
                 Founded in Seoul in 2019, Vinuspread is a creative studio that partners with brands and founders who have something real to say - and want the world to hear it.
               </p>
-              <p className="text-[1rem] text-[#5a6271] leading-relaxed">
-                좋은 디자인은 결코 장식이 아닙니다. 그것은 사람들이 제품을 사용하기 전에 그 제품에 대해 느끼는 방식을 바꾸는 전략적 행위입니다.
+              <p className="text-[1rem] text-[var(--color-text-muted)] leading-relaxed">
+                좋�? ?�자?��? 결코 ?�식???�닙?�다. 그것?� ?�람?�이 ?�품???�용?�기 ?�에 �??�품???�???�끼??방식??바꾸???�략???�위?�니??
               </p>
-              <Link href="/ko/templates/portfolio/contact" className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-widest text-[#1e1e1e] border-b border-[#D4FF00]/30 pb-0.5 hover:border-[#D4FF00] transition-colors">
-                함께하기 <ArrowUpRight size={12} />
+              <Link href="/ko/templates/OHMT014-portfolio-kr/contact" className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-widest text-[var(--color-text)] border-b border-[var(--color-accent)]/30 pb-0.5 hover:border-[var(--color-accent)] transition-colors">
+                ?�께?�기 <ArrowUpRight size={12} />
               </Link>
             </div>
           </div>
         </section>
 
         {/* Stats */}
-        <section className="border-b border-[#eef0f6]">
+        <section className="border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto px-6">
             <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
               {stats.map((s, i) => (
@@ -66,8 +66,8 @@ function AboutPageContent() {
                   transition={{ delay: i * 0.1 }}
                   className="py-14 px-8 text-center"
                 >
-                  <p className="text-[3rem] font-black tracking-tighter leading-none text-[#1e1e1e] mb-2">{s.num}</p>
-                  <p className="text-[0.72rem] uppercase tracking-widest text-[#8a919b]/60 font-medium">{s.label}</p>
+                  <p className="text-[3rem] font-black tracking-tighter leading-none text-[var(--color-text)] mb-2">{s.num}</p>
+                  <p className="text-[0.72rem] uppercase tracking-widest text-[var(--color-text-muted)]/60 font-medium">{s.label}</p>
                 </motion.div>
               ))}
             </div>
@@ -75,13 +75,13 @@ function AboutPageContent() {
         </section>
 
         {/* Process */}
-        <section className="py-14 md:py-28 border-b border-[#eef0f6]">
+        <section className="py-14 md:py-28 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto px-6">
             <div className="mb-16">
-              <span className="text-[13px] font-bold tracking-[0.3em] uppercase text-[#8a919b] block mb-4">작업 방식</span>
-              <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-medium uppercase tracking-tighter leading-none">프로세스</h2>
+              <span className="text-[13px] font-bold tracking-[0.3em] uppercase text-[var(--color-text-muted)] block mb-4">?�업 방식</span>
+              <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-medium uppercase tracking-tighter leading-none">?�로?�스</h2>
             </div>
-            <div className="grid md:grid-cols-4 gap-0 divide-x divide-white/10 border-x border-[#eef0f6]">
+            <div className="grid md:grid-cols-4 gap-0 divide-x divide-white/10 border-x border-[var(--color-border)]">
               {process.map((step, i) => (
                 <motion.div
                   key={i}
@@ -91,9 +91,9 @@ function AboutPageContent() {
                   transition={{ delay: i * 0.1 }}
                   className="p-10 group"
                 >
-                  <span className="text-[2.5rem] font-black text-[#1e1e1e]/15 group-hover:text-[#1e1e1e]/40 transition-colors block mb-6 leading-none">{step.num}</span>
-                  <h3 className="text-[1rem] font-medium uppercase tracking-tight mb-4 group-hover:text-[#1e1e1e] transition-colors">{step.title}</h3>
-                  <p className="text-[0.82rem] text-[#8a919b] leading-relaxed">{step.desc}</p>
+                  <span className="text-[2.5rem] font-black text-[var(--color-text)]/15 group-hover:text-[var(--color-text)]/40 transition-colors block mb-6 leading-none">{step.num}</span>
+                  <h3 className="text-[1rem] font-medium uppercase tracking-tight mb-4 group-hover:text-[var(--color-text)] transition-colors">{step.title}</h3>
+                  <p className="text-[0.82rem] text-[var(--color-text-muted)] leading-relaxed">{step.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -104,8 +104,8 @@ function AboutPageContent() {
         <section className="py-14 md:py-28">
           <div className="max-w-[1440px] mx-auto px-6">
             <div className="mb-16">
-              <span className="text-[13px] font-bold tracking-[0.3em] uppercase text-[#8a919b] block mb-4">더 피플</span>
-              <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-medium uppercase tracking-tighter leading-none">팀 소개</h2>
+              <span className="text-[13px] font-bold tracking-[0.3em] uppercase text-[var(--color-text-muted)] block mb-4">???�플</span>
+              <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-medium uppercase tracking-tighter leading-none">?� ?�개</h2>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {team.map((m, i) => (
@@ -117,11 +117,11 @@ function AboutPageContent() {
                   transition={{ delay: i * 0.1 }}
                   className="group"
                 >
-                  <div className="aspect-square overflow-hidden bg-[#f3f3f3] mb-4">
+                  <div className="aspect-square overflow-hidden bg-[var(--color-bg-secondary)] mb-4">
                     <img loading="lazy" src={m.img} alt={m.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105" />
                   </div>
                   <p className="text-[0.9rem] font-medium uppercase tracking-tight">{m.name}</p>
-                  <p className="text-[0.75rem] text-[#8a919b]/60 mt-1">{m.role}</p>
+                  <p className="text-[0.75rem] text-[var(--color-text-muted)]/60 mt-1">{m.role}</p>
                 </motion.div>
               ))}
             </div>
