@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -6,7 +6,6 @@ import { BookOpen, Rocket, FileText, Keyboard, Users, Database, LinkIcon, Clipbo
 import Sidebar from "./_components/Sidebar";
 import Header from "./_components/Header";
 import { docPages } from "./data/pages";
-import { TemplateWrapper } from './_components/TemplateWrapper'
 
 const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
   Rocket, FileText, Keyboard, Users, Database, LinkIcon, ClipboardCopy, Search, Zap, Package,
@@ -25,8 +24,7 @@ export default function DocsHomePage() {
   };
 
   return (
-    <TemplateWrapper>
-      <div className="flex h-screen overflow-hidden bg-[var(--color-bg)]" style={{ fontFamily: "var(--font-body)" }}>
+    <div className="flex h-screen overflow-hidden bg-[var(--color-bg)]" style={{ fontFamily: "var(--font-body)" }}>
       {sidebarOpen && (
         <>
           {mobileMenuOpen && (
@@ -58,7 +56,7 @@ export default function DocsHomePage() {
               {featured.map((page) => (
                 <Link
                   key={page.slug}
-                  href={`/en/templates/docs/${page.slug}`}
+                  href={`/en/templates/OHMT027-docs-en/${page.slug}`}
                   className="group p-4 rounded-xl border border-[var(--color-border)] hover:border-[var(--color-accent)] hover:bg-[var(--color-bg-secondary)] transition-all duration-200"
                 >
                   <div className="w-9 h-9 rounded-lg bg-[var(--color-accent-light)] flex items-center justify-center mb-2">
@@ -80,7 +78,7 @@ export default function DocsHomePage() {
                 {docPages.map((page) => (
                   <Link
                     key={page.slug}
-                    href={`/en/templates/docs/${page.slug}`}
+                    href={`/en/templates/OHMT027-docs-en/${page.slug}`}
                     className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-[var(--color-bg-secondary)] transition-colors group"
                   >
                     <span className="w-8 h-8 rounded-lg bg-[var(--color-accent-light)] flex items-center justify-center flex-shrink-0">
@@ -103,6 +101,5 @@ export default function DocsHomePage() {
         </main>
       </div>
     </div>
-    </TemplateWrapper>
   );
 }

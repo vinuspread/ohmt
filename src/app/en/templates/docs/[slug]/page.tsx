@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useParams } from "next/navigation";
 import { useState, useMemo } from "react";
@@ -7,7 +7,6 @@ import { Rocket, FileText, Keyboard, Users, Database, LinkIcon, ClipboardCopy, S
 import Sidebar from "../_components/Sidebar";
 import Header from "../_components/Header";
 import { docPages, DocPage } from "../data/pages";
-import { TemplateWrapper } from '../_components/TemplateWrapper'
 
 const iconMap: Record<string, React.ComponentType<{ size?: number; className?: string }>> = {
   Rocket, FileText, Keyboard, Users, Database, LinkIcon, ClipboardCopy, Search, Zap, Package,
@@ -147,8 +146,7 @@ export default function DocDetailPage() {
 
   if (!page) {
     return (
-      <TemplateWrapper>
-        <div className="flex h-screen overflow-hidden bg-[var(--color-bg)]" style={{ fontFamily: "var(--font-body)" }}>
+      <div className="flex h-screen overflow-hidden bg-[var(--color-bg)]" style={{ fontFamily: "var(--font-body)" }}>
         {mobileMenuOpen && (
           <div className="fixed inset-0 bg-black/30 z-40 lg:hidden" onClick={() => setMobileMenuOpen(false)} />
         )}
@@ -172,7 +170,7 @@ export default function DocDetailPage() {
                 </p>
               </div>
               <Link
-                href="/en/templates/docs"
+                href="/en/templates/OHMT027-docs-en"
                 className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-white bg-[var(--color-primary)] hover:opacity-90 rounded-lg transition-opacity"
               >
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -184,13 +182,11 @@ export default function DocDetailPage() {
           </main>
         </div>
       </div>
-      </TemplateWrapper>
     );
   }
 
   return (
-    <TemplateWrapper>
-      <div className="flex h-screen overflow-hidden bg-[var(--color-bg)]" style={{ fontFamily: "var(--font-body)" }}>
+    <div className="flex h-screen overflow-hidden bg-[var(--color-bg)]" style={{ fontFamily: "var(--font-body)" }}>
       {mobileMenuOpen && (
         <div className="fixed inset-0 bg-black/30 z-40 lg:hidden" onClick={() => setMobileMenuOpen(false)} />
       )}
@@ -213,7 +209,7 @@ export default function DocDetailPage() {
                   {siblings.map((sibling) => (
                     <Link
                       key={sibling.slug}
-                      href={`/en/templates/docs/${sibling.slug}`}
+                      href={`/en/templates/OHMT027-docs-en/${sibling.slug}`}
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm text-[var(--color-text)] bg-[var(--color-bg-secondary)] hover:bg-[var(--color-bg-hover)] rounded-md transition-colors"
                     >
                       {(() => {
@@ -229,7 +225,7 @@ export default function DocDetailPage() {
 
             <div className="mt-8 pt-4 border-t border-[var(--color-border)]">
               <Link
-                href="/en/templates/docs"
+                href="/en/templates/OHMT027-docs-en"
                 className="inline-flex items-center gap-1 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors"
               >
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -242,6 +238,5 @@ export default function DocDetailPage() {
         </main>
       </div>
     </div>
-    </TemplateWrapper>
   );
 }

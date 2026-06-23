@@ -61,7 +61,7 @@ export const docPages: DocPage[] = [
     content: [
       { type: "heading", value: "The Slash Command", variant: "h2" },
       { type: "text", value: "Type '/' anywhere in the editor to open the command menu. This is your fastest path to inserting any block type - headings, lists, code blocks, dividers, and more." },
-      { type: "code", value: "/heading 1 - Large section title\n/heading 2 - Subsection title\n/heading 3 - Group title\n/bullet - Bulleted list\n/number - Numbered list\n/todo - Checkbox list\n/code - Code block with syntax highlighting\n/quote - Blockquote\n/callout - Highlighted callout box\n/divider - Horizontal rule\n/image - Insert an image", language: "markdown" },
+      { type: "code", value: "/heading 1    - Large section title\n/heading 2    - Subsection title\n/heading 3    - Group title\n/bullet      - Bulleted list\n/number      - Numbered list\n/todo        - Checkbox list\n/code        - Code block with syntax highlighting\n/quote       - Blockquote\n/callout     - Highlighted callout box\n/divider     - Horizontal rule\n/image       - Insert an image", language: "markdown" },
       { type: "heading", value: "Keyboard Shortcuts", variant: "h3" },
       { type: "text", value: "Power users can navigate entirely by keyboard. Here are the essential shortcuts:" },
       { type: "list", value: "", items: ["Cmd+P - Quick open / search pages", "Cmd+Shift+N - New page", "Cmd+B - Bold", "Cmd+I - Italic", "Cmd+K - Insert link", "Cmd+E - Inline code", "Cmd+Z - Undo", "Cmd+Shift+Z - Redo"] },
@@ -83,7 +83,7 @@ export const docPages: DocPage[] = [
       { type: "text", value: "Select any text and click the comment icon to start a discussion. Comments are threaded and support rich text, mentions, and emoji reactions. Resolve threads when the discussion is complete." },
       { type: "list", value: "", items: ["Inline comments on specific text selections", "Page-level comments for general feedback", "Threaded replies for organized discussions", "Emoji reactions for quick feedback"] },
       { type: "heading", value: "Permission Levels", variant: "h3" },
-      { type: "code", value: "Admin - Full access, settings, billing\nEditor - Create, edit, delete pages\nCommenter - Read + comment only\nViewer - Read only", language: "plaintext" },
+      { type: "code", value: "Admin      - Full access, settings, billing\nEditor     - Create, edit, delete pages\nCommenter  - Read + comment only\nViewer     - Read only", language: "plaintext" },
     ],
   },
   {
@@ -99,7 +99,7 @@ export const docPages: DocPage[] = [
       { type: "text", value: "Each database can have multiple views showing the same data in different layouts. Changes made in one view are reflected in all others." },
       { type: "list", value: "", items: ["Table View - Classic spreadsheet layout with sortable columns", "Board View - Kanban-style grouped by status or assignee", "Gallery View - Card layout with cover images", "List View - Compact chronological list"] },
       { type: "heading", value: "Property Types", variant: "h3" },
-      { type: "code", value: "Text - Free-form text\nNumber - Numeric values with formatting\nSelect - Single choice from options\nMulti-Select - Multiple choices\nStatus - To Do / In Progress / Done\nDate - Date picker with range support\nPerson - Team member reference\nFile - Upload or link to file\nCheckbox - True / False\nURL - Hyperlink\nEmail - Email address\nPhone - Phone number", language: "plaintext" },
+      { type: "code", value: "Text       - Free-form text\nNumber     - Numeric values with formatting\nSelect     - Single choice from options\nMulti-Select - Multiple choices\nStatus     - To Do / In Progress / Done\nDate       - Date picker with range support\nPerson     - Team member reference\nFile       - Upload or link to file\nCheckbox   - True / False\nURL        - Hyperlink\nEmail      - Email address\nPhone      - Phone number", language: "plaintext" },
     ],
   },
   {
@@ -145,7 +145,7 @@ export const docPages: DocPage[] = [
       { type: "heading", value: "Search Filters", variant: "h3" },
       { type: "text", value: "Narrow down results with advanced filters. Combine filters to pinpoint exactly what you need." },
       { type: "list", value: "", items: ["By page title or content body", "By database property values", "By assignee or creator", "By date range (created or updated)", "By tags or status"] },
-      { type: "code", value: "Advanced search syntax:\n\"exact phrase\" - Match exact wording\n-title:outdated - Exclude pages with 'outdated'\nfrom:@john - Pages created by John\nhas:todo - Pages with unchecked todos", language: "plaintext" },
+      { type: "code", value: "Advanced search syntax:\n\"exact phrase\"   - Match exact wording\n-title:outdated  - Exclude pages with 'outdated'\nfrom:@john       - Pages created by John\nhas:todo         - Pages with unchecked todos", language: "plaintext" },
     ],
   },
   {
@@ -156,11 +156,11 @@ export const docPages: DocPage[] = [
     order: 9,
     content: [
       { type: "heading", value: "Navigation", variant: "h2" },
-      { type: "code", value: "Cmd+P - Quick open / search\nCmd+Shift+N - New page\nCmd+[ - Go back\nCmd+] - Go forward\nCmd+Shift+L - Toggle dark mode\nEscape - Close search / close menu", language: "plaintext" },
+      { type: "code", value: "Cmd+P        - Quick open / search\nCmd+Shift+N  - New page\nCmd+[        - Go back\nCmd+]        - Go forward\nCmd+Shift+L  - Toggle dark mode\nEscape       - Close search / close menu", language: "plaintext" },
       { type: "heading", value: "Formatting", variant: "h3" },
-      { type: "code", value: "Cmd+B - Bold\nCmd+I - Italic\nCmd+U - Underline\nCmd+Shift+S - Strikethrough\nCmd+K - Insert link\nCmd+E - Inline code\nCmd+Shift+M - Comment", language: "plaintext" },
+      { type: "code", value: "Cmd+B        - Bold\nCmd+I        - Italic\nCmd+U        - Underline\nCmd+Shift+S  - Strikethrough\nCmd+K        - Insert link\nCmd+E        - Inline code\nCmd+Shift+M  - Comment", language: "plaintext" },
       { type: "heading", value: "Blocks", variant: "h3" },
-      { type: "code", value: "Enter - New block\nShift+Enter - New line in block\nBackspace - Delete empty block\nDrag handle - Reorder block\nCmd+Shift+8 - Toggle bullet list\nCmd+Shift+7 - Toggle numbered list\nCmd+Shift+9 - Toggle todo list", language: "plaintext" },
+      { type: "code", value: "Enter        - New block\nShift+Enter  - New line in block\nBackspace    - Delete empty block\nDrag handle  - Reorder block\nCmd+Shift+8  - Toggle bullet list\nCmd+Shift+7  - Toggle numbered list\nCmd+Shift+9  - Toggle todo list", language: "plaintext" },
     ],
   },
   {
