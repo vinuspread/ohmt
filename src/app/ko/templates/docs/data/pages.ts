@@ -61,7 +61,7 @@ export const docPages: DocPage[] = [
     content: [
       { type: "heading", value: "슬래시 명령어", variant: "h2" },
       { type: "text", value: "에디터에서 '/'를 입력하면 명령어 메뉴가 열립니다. 제목, 목록, 코드 블록, 구분선 등 모든 블록 유형을 가장 빠르게 삽입할 수 있는 방법입니다." },
-      { type: "code", value: "/heading 1 - 큰 제목\n/heading 2 - 중간 제목\n/heading 3 - 소제목\n/bullet - 글머리 목록\n/number - 번호 목록\n/todo - 체크박스 목록\n/code - 코드 블록\n/quote - 인용문\n/callout - 강조 박스\n/divider - 구분선\n/image - 이미지 삽입", language: "markdown" },
+      { type: "code", value: "/heading 1    - 큰 제목\n/heading 2    - 중간 제목\n/heading 3    - 소제목\n/bullet      - 글머리 목록\n/number      - 번호 목록\n/todo        - 체크박스 목록\n/code        - 코드 블록\n/quote       - 인용문\n/callout     - 강조 박스\n/divider     - 구분선\n/image       - 이미지 삽입", language: "markdown" },
       { type: "heading", value: "키보드 단축키", variant: "h3" },
       { type: "text", value: "단축키를 익히면 키보드만으로 모든 작업을 수행할 수 있습니다." },
       { type: "list", value: "", items: ["Cmd+P - 페이지 검색", "Cmd+Shift+N - 새 페이지", "Cmd+B - 굵게", "Cmd+I - 기울임", "Cmd+K - 링크 삽입", "Cmd+E - 인라인 코드", "Cmd+Z - 실행 취소", "Cmd+Shift+Z - 다시 실행"] },
@@ -83,7 +83,7 @@ export const docPages: DocPage[] = [
       { type: "text", value: "텍스트를 선택하고 댓글 아이콘을 클릭하여 토론을 시작하세요. 댓글은 스레드 형식으로 관리되며, 서식 있는 텍스트, 멘션, 이모지 반응을 지원합니다." },
       { type: "list", value: "", items: ["특정 텍스트 선택 인라인 댓글", "페이지 수준 댓글", "스레드형 답글", "이모지 반응"] },
       { type: "heading", value: "권한 수준", variant: "h3" },
-      { type: "code", value: "관리자 - 전체 접근, 설정, 결제\n편집자 - 페이지 생성, 편집, 삭제\n댓글러 - 읽기 + 댓글만\n뷰어 - 읽기 전용", language: "plaintext" },
+      { type: "code", value: "관리자    - 전체 접근, 설정, 결제\n편집자    - 페이지 생성, 편집, 삭제\n댓글러   - 읽기 + 댓글만\n뷰어     - 읽기 전용", language: "plaintext" },
     ],
   },
   {
@@ -99,7 +99,7 @@ export const docPages: DocPage[] = [
       { type: "text", value: "각 데이터베이스는 동일한 데이터를 다른 레이아웃으로 보여주는 여러 뷰를 가질 수 있습니다. 한 뷰에서 변경한 내용은 모든 뷰에 반영됩니다." },
       { type: "list", value: "", items: ["테이블 뷰 - 정렬 가능한 컬럼이 있는 스프레드시트", "보드 뷰 - 상태 또는 담당자별 칸반 보드", "갤러리 뷰 - 커버 이미지가 있는 카드 레이아웃", "리스트 뷰 - 간결한 시간순 목록"] },
       { type: "heading", value: "속성 유형", variant: "h3" },
-      { type: "code", value: "텍스트 - 자유 형식 텍스트\n숫자 - 숫자 값\n선택 - 단일 선택\n다중 선택 - 다중 선택\n상태 - 할 일 / 진행 중 / 완료\n날짜 - 날짜 선택\n담당자 - 팀원 참조\n파일 - 파일 업로드\n체크박스 - 예 / 아니오\nURL - 하이퍼링크\n이메일 - 이메일 주소\n전화번호 - 전화번호", language: "plaintext" },
+      { type: "code", value: "텍스트      - 자유 형식 텍스트\n숫자       - 숫자 값\n선택       - 단일 선택\n다중 선택  - 다중 선택\n상태       - 할 일 / 진행 중 / 완료\n날짜       - 날짜 선택\n담당자     - 팀원 참조\n파일       - 파일 업로드\n체크박스   - 예 / 아니오\nURL        - 하이퍼링크\n이메일     - 이메일 주소\n전화번호   - 전화번호", language: "plaintext" },
     ],
   },
   {
@@ -145,7 +145,7 @@ export const docPages: DocPage[] = [
       { type: "heading", value: "검색 필터", variant: "h3" },
       { type: "text", value: "고급 필터로 결과를 좁힐 수 있습니다. 여러 필터를 조합하여 원하는 내용을 정확히 찾아보세요." },
       { type: "list", value: "", items: ["페이지 제목 또는 본문 내용으로 검색", "데이터베이스 속성 값으로 검색", "담당자 또는 작성자별 검색", "날짜 범위 지정 (생성일 또는 수정일)", "태그 또는 상태별 검색"] },
-      { type: "code", value: "고급 검색 문법:\n\"정확한 문구\" - 정확한 표현 일치\n-title:구식 - '구식'이 포함된 페이지 제외\nfrom:@john - John이 작성한 페이지\nhas:todo - 완료되지 않은 할 일이 있는 페이지", language: "plaintext" },
+      { type: "code", value: "고급 검색 문법:\n\"정확한 문구\"  - 정확한 표현 일치\n-title:구식  - '구식'이 포함된 페이지 제외\nfrom:@john   - John이 작성한 페이지\nhas:todo     - 완료되지 않은 할 일이 있는 페이지", language: "plaintext" },
     ],
   },
   {
@@ -156,11 +156,11 @@ export const docPages: DocPage[] = [
     order: 9,
     content: [
       { type: "heading", value: "탐색", variant: "h2" },
-      { type: "code", value: "Cmd+P - 빠른 열기 / 검색\nCmd+Shift+N - 새 페이지\nCmd+[ - 뒤로 가기\nCmd+] - 앞으로 가기\nEscape - 검색 닫기 / 메뉴 닫기", language: "plaintext" },
+      { type: "code", value: "Cmd+P        - 빠른 열기 / 검색\nCmd+Shift+N  - 새 페이지\nCmd+[        - 뒤로 가기\nCmd+]        - 앞으로 가기\nEscape       - 검색 닫기 / 메뉴 닫기", language: "plaintext" },
       { type: "heading", value: "서식", variant: "h3" },
-      { type: "code", value: "Cmd+B - 굵게\nCmd+I - 기울임\nCmd+U - 밑줄\nCmd+Shift+S - 취소선\nCmd+K - 링크 삽입\nCmd+E - 인라인 코드\nCmd+Shift+M - 댓글", language: "plaintext" },
+      { type: "code", value: "Cmd+B        - 굵게\nCmd+I        - 기울임\nCmd+U        - 밑줄\nCmd+Shift+S  - 취소선\nCmd+K        - 링크 삽입\nCmd+E        - 인라인 코드\nCmd+Shift+M  - 댓글", language: "plaintext" },
       { type: "heading", value: "블록", variant: "h3" },
-      { type: "code", value: "Enter - 새 블록\nShift+Enter - 블록 내 새 줄\nBackspace - 빈 블록 삭제\n드래그 핸들 - 블록 순서 변경", language: "plaintext" },
+      { type: "code", value: "Enter        - 새 블록\nShift+Enter  - 블록 내 새 줄\nBackspace    - 빈 블록 삭제\n드래그 핸들  - 블록 순서 변경", language: "plaintext" },
     ],
   },
   {
