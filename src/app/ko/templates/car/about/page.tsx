@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Suspense } from "react";
 import React from "react";
@@ -31,7 +31,7 @@ function CarAboutPageContent() {
         {/* Hero */}
         <section className="relative h-[85vh] min-h-[560px] overflow-hidden flex items-end">
           <img
-            src="/templates/car/hero-1.jpg"
+            src="/templates/OHMT009-car/hero-1.jpg"
             alt="VINUS Motors"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
@@ -72,7 +72,7 @@ function CarAboutPageContent() {
 
         {/* Full-bleed */}
         <div className="relative h-[55vh] overflow-hidden">
-          <img loading="lazy" src="/templates/car/car-1.jpg" alt="" className="w-full h-full object-cover object-center" />
+          <img loading="lazy" src="/templates/OHMT009-car/car-1.jpg" alt="" className="w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-black/40" />
           <div className="absolute inset-0 flex items-center justify-center">
             <p className="text-[clamp(1.2rem,3vw,2.2rem)] font-bold tracking-tight text-white text-center max-w-[560px] px-6 leading-tight">
@@ -89,7 +89,7 @@ function CarAboutPageContent() {
           </div>
           <div className="grid md:grid-cols-2 gap-[1px] bg-[var(--theme-border)]">
             {values.map((v) => (
-              <div key={v.num} className="bg-black p-6 md:p-12 group hover:bg-[#0d0d0d] transition-colors">
+              <div key={v.num} className="bg-black p-6 md:p-12 group hover:bg-[var(--color-primary)] transition-colors">
                 <span className="text-[0.7rem] text-[var(--theme-accent)]/50 block mb-6">{v.num}</span>
                 <h3 className="text-[1.2rem] font-bold tracking-[-0.03em] mb-4 group-hover:text-[var(--theme-accent)] transition-colors">{v.title}</h3>
                 <p className="text-[0.85rem] text-[var(--theme-text-muted)] leading-relaxed font-normal">{v.desc}</p>
@@ -100,12 +100,12 @@ function CarAboutPageContent() {
 
         {/* CTA */}
         <section className="relative overflow-hidden">
-          <img loading="lazy" src="/templates/car/hero-2.jpg" alt="" className="w-full h-[420px] object-cover object-center" />
+          <img loading="lazy" src="/templates/OHMT009-car/hero-2.jpg" alt="" className="w-full h-[420px] object-cover object-center" />
           <div className="absolute inset-0 bg-black/65 flex flex-col items-center justify-center text-center px-6">
             <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-4 block">Ready?</span>
             <h2 className="text-[clamp(2rem,5vw,4rem)] font-bold tracking-[-0.03em] mb-8">Experience it yourself.</h2>
             <Link
-              href="/ko/templates/car"
+              href="/ko/templates/OHMT018-car-kr"
               className="text-[0.72rem] font-bold uppercase tracking-[0.16em] px-8 py-3.5 bg-[var(--theme-accent)] text-black hover:opacity-85 transition-opacity"
             >
               Book a Test Drive
