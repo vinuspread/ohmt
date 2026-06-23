@@ -1,11 +1,10 @@
 {
   "slug": "sneaker",
-  "name": "Sneaker Store",
-  "name_ko": "스니커 스토어",
+  "name": "Sneaker Brutalist",
+  "name_ko": "스니커 브루탈리스트",
   "category": "retail",
-  "description": "Sneaker and streetwear culture store template",
-  "description_ko": "스니커 및 스트리트웨어 문화 스토어 템플릿",
-  "tags": [],
+  "description": "Premium footwear brand template with brutalist design language",
+  "description_ko": "브루탈리스트 디자인이 적용된 프리미엄 신발 브랜드 템플릿",
   "mode": "light",
   "theme": {
     "palette": {

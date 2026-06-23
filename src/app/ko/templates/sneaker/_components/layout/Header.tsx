@@ -1,4 +1,4 @@
-// src/app/ko/templates/sneaker/-components/layout/Header.tsx
+﻿// src/app/ko/templates/OHMT010-sneaker-kr/-components/layout/Header.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -10,11 +10,11 @@ export const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navLinks = [
-    { label: "카테고리", href: "/ko/templates/sneaker/shop-all" },
-    { label: "숍", href: "/ko/templates/sneaker/shop-all" },
-    { label: "어바웃", href: "/ko/templates/sneaker/about" },
-    { label: "블로그", href: "/ko/templates/sneaker/blog" },
-    { label: "문의", href: "/ko/templates/sneaker/contact" },
+    { label: "카테고리", href: "/ko/templates/OHMT010-sneaker-kr/shop-all" },
+    { label: "숍", href: "/ko/templates/OHMT010-sneaker-kr/shop-all" },
+    { label: "어바웃", href: "/ko/templates/OHMT010-sneaker-kr/about" },
+    { label: "블로그", href: "/ko/templates/OHMT010-sneaker-kr/blog" },
+    { label: "문의", href: "/ko/templates/OHMT010-sneaker-kr/contact" },
   ];
 
   useEffect(() => {
@@ -27,7 +27,7 @@ export const Header = () => {
     <>
       <header className={`fixed top-0 left-0 w-full h-14 md:h-20 z-50 transition-[background,border-color] duration-300 flex items-center bg-white ${scrolled ? "border-b border-black/10" : ""}`}>
         <div className="max-w-[1440px] mx-auto w-full px-6 flex items-center justify-between gap-8">
-          <Link href={`/ko/templates/sneaker`} className="text-[1.2rem] md:text-[1.4rem] font-black tracking-[-0.04em] text-black uppercase shrink-0">
+          <Link href={`/ko/templates/OHMT010-sneaker-kr`} className="text-[1.2rem] md:text-[1.4rem] font-black tracking-[-0.04em] text-black uppercase shrink-0">
             Vinuspread
           </Link>
 
@@ -46,7 +46,7 @@ export const Header = () => {
             <button className="hidden md:flex w-8 h-8 items-center justify-center text-black/70 hover:text-black transition-colors">
               <User size={18} />
             </button>
-            <Link href={`/ko/templates/sneaker/cart`} className="relative flex w-8 h-8 items-center justify-center text-black/70 hover:text-black transition-colors">
+            <Link href={`/ko/templates/OHMT010-sneaker-kr/cart`} className="relative flex w-8 h-8 items-center justify-center text-black/70 hover:text-black transition-colors">
               <ShoppingBag size={18} />
             </Link>
             <button className="md:hidden" onClick={() => setMobileOpen(!mobileOpen)}>

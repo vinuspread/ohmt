@@ -98,7 +98,7 @@ export const ReviewOverlay: React.FC = () => {
     >
       {/* ── Sidebar ── */}
       <div className={cn(
-        "review-sidebar fixed right-0 top-0 h-full w-[360px] bg-[#0e0e10]/95 backdrop-blur-3xl border-l border-white/10 shadow-[-20px_0_50px_rgba(0,0,0,0.5)] z-[100010] flex flex-col transition-transform duration-500 ease-out",
+        "review-sidebar fixed right-0 top-0 h-full w-[360px] bg-[var(--color-primary)]/95 backdrop-blur-3xl border-l border-white/10 shadow-[-20px_0_50px_rgba(0,0,0,0.5)] z-[100010] flex flex-col transition-transform duration-500 ease-out",
         showSidebar ? "translate-x-0" : "translate-x-full"
       )}>
         <div className="p-6 border-b border-white/5 flex justify-between items-center">
@@ -215,7 +215,7 @@ export const ReviewOverlay: React.FC = () => {
             )} />
           ) : (
             <div className={cn(
-              "w-10 h-10 rounded-full border-4 border-[#0e0e10] shadow-[0_10px_30px_rgba(0,0,0,0.5)] flex items-center justify-center transition-[transform,background-color]",
+              "w-10 h-10 rounded-full border-4 border-[var(--color-primary)] shadow-[0_10px_30px_rgba(0,0,0,0.5)] flex items-center justify-center transition-[transform,background-color]",
               selectedId === a.id 
                 ? "bg-pink-500 scale-125 shadow-[0_0_30px_#ec4899]" 
                 : "bg-pink-500/80 hover:bg-pink-500"
@@ -242,7 +242,7 @@ export const ReviewOverlay: React.FC = () => {
       {/* ── Input Modal ── */}
       {tempPin && (
         <div 
-          className="review-modal absolute bg-[#1a1a1e] p-8 rounded-[2.5rem] shadow-[0_50px_100px_rgba(0,0,0,0.7)] border border-white/10 backdrop-blur-3xl min-w-[380px] z-[100003] animate-in slide-in-from-bottom-5 duration-500"
+          className="review-modal absolute bg-[var(--color-text-contrast)] p-8 rounded-[2.5rem] shadow-[0_50px_100px_rgba(0,0,0,0.7)] border border-white/10 backdrop-blur-3xl min-w-[380px] z-[100003] animate-in slide-in-from-bottom-5 duration-500"
           style={{ 
             left: tempPin.w ? tempPin.x : tempPin.x + 20, 
             top: tempPin.h ? tempPin.y + tempPin.h + 20 : tempPin.y + 20 

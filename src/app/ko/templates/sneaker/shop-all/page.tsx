@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { useState } from "react";
 import Link from "next/link";
 import { Star, ChevronDown } from "lucide-react";
@@ -10,14 +10,14 @@ import { products } from "../_components/sections/ProductGrid";
 
 const categories = [
   { id: "all", label: "전체", img: null },
-  { id: "sneakers", label: "스니커즈", img: "/templates/sneaker/cat-sneakers.jpg" },
-  { id: "running", label: "러닝", img: "/templates/sneaker/category-running.jpg" },
-  { id: "formal", label: "포멀", img: "/templates/sneaker/category-formal.jpg" },
-  { id: "boots", label: "부츠", img: "/templates/sneaker/cat-boots.jpg" },
-  { id: "oxford", label: "옥스포드", img: "/templates/sneaker/cat-oxford.jpg" },
-  { id: "sports", label: "스포츠", img: "/templates/sneaker/cat-sports.jpg" },
-  { id: "highneck", label: "하이넥", img: "/templates/sneaker/cat-highneck.jpg" },
-  { id: "loafers", label: "로퍼", img: "/templates/sneaker/cat-loafers.jpg" },
+  { id: "sneakers", label: "스니커즈", img: "/templates/OHMT005-sneaker/cat-sneakers.jpg" },
+  { id: "running", label: "러닝", img: "/templates/OHMT005-sneaker/category-running.jpg" },
+  { id: "formal", label: "포멀", img: "/templates/OHMT005-sneaker/category-formal.jpg" },
+  { id: "boots", label: "부츠", img: "/templates/OHMT005-sneaker/cat-boots.jpg" },
+  { id: "oxford", label: "옥스포드", img: "/templates/OHMT005-sneaker/cat-oxford.jpg" },
+  { id: "sports", label: "스포츠", img: "/templates/OHMT005-sneaker/cat-sports.jpg" },
+  { id: "highneck", label: "하이넥", img: "/templates/OHMT005-sneaker/cat-highneck.jpg" },
+  { id: "loafers", label: "로퍼", img: "/templates/OHMT005-sneaker/cat-loafers.jpg" },
 ];
 
 // Map products to categories (mock assignment for demo)
@@ -131,7 +131,7 @@ function ShopAllPageContent() {
             ) : (
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {filtered.map(p => (
-                  <Link key={p.id} href={`/ko/templates/sneaker/product/${p.id}`} className="group block border border-black/10 hover:border-black transition-colors duration-200">
+                  <Link key={p.id} href={`/ko/templates/OHMT010-sneaker-kr/product/${p.id}`} className="group block border border-black/10 hover:border-black transition-colors duration-200">
                     <div className="relative overflow-hidden aspect-square bg-[var(--color-bg-secondary)]">
                       <img loading="lazy" src={p.img} alt={p.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                       {p.badge && (
