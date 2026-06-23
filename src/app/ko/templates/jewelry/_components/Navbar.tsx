@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/jewelry/-internal/components/Navbar.tsx
+﻿// src/app/ko/templates/OHMT004-jewelry-kr/-internal/components/Navbar.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -30,10 +30,10 @@ export default function Navbar() {
     : "";
 
   const menuItems = [
-    { name: "컬렉션", id: "collections", href: "/ko/templates/jewelry/category/collections" },
-    { name: "인게이지먼트 & 웨딩", id: "engagement", href: "/ko/templates/jewelry/category/engagement" },
-    { name: "하이 주얼리", id: "high-jewelry", href: "/ko/templates/jewelry/category/high-jewelry" },
-    { name: "브랜드 헤리티지", id: "about", href: "/ko/templates/jewelry/category/about" },
+    { name: "컬렉션", id: "collections", href: "/ko/templates/OHMT004-jewelry-kr/category/collections" },
+    { name: "인게이지먼트 & 웨딩", id: "engagement", href: "/ko/templates/OHMT004-jewelry-kr/category/engagement" },
+    { name: "하이 주얼리", id: "high-jewelry", href: "/ko/templates/OHMT004-jewelry-kr/category/high-jewelry" },
+    { name: "브랜드 헤리티지", id: "about", href: "/ko/templates/OHMT004-jewelry-kr/category/about" },
   ];
 
   return (
@@ -41,7 +41,7 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 h-14 md:h-20 transition-all duration-700 flex items-center ${
           !isTransparent
-            ? "bg-[#FBF9F6]/95 backdrop-blur-xl border-b border-neutral-100/50"
+            ? "bg-[var(--color-bg-secondary)]/95 backdrop-blur-xl border-b border-neutral-100/50"
             : "bg-transparent"
         }`}
       >
@@ -88,7 +88,7 @@ export default function Navbar() {
           {/* Center Logo */}
           <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center pointer-events-none max-w-[120px] sm:max-w-none">
             <Link
-              href="/ko/templates/jewelry"
+              href="/ko/templates/OHMT004-jewelry-kr"
               className={`text-[14px] sm:text-[18px] md:text-2xl font-serif tracking-[0.25em] -mr-[0.25em] font-normal uppercase transition-colors duration-700 pointer-events-auto text-center ${
                 !isTransparent ? "text-neutral-900" : "text-white"
               }`}
@@ -142,7 +142,7 @@ export default function Navbar() {
             <button className="hover:text-[var(--color-primary)] transition-colors hidden sm:block">
               <User size={18} strokeWidth={1.5} />
             </button>
-            <Link href="/ko/templates/jewelry/cart" className="group flex items-center gap-2 hover:opacity-85 transition-opacity">
+            <Link href="/ko/templates/OHMT004-jewelry-kr/cart" className="group flex items-center gap-2 hover:opacity-85 transition-opacity">
               <ShoppingBag size={18} strokeWidth={1.5} className="group-hover:text-[var(--color-primary)] transition-colors" />
             </Link>
           </div>
@@ -168,7 +168,7 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "-100%" }}
               transition={{ type: "spring", bounce: 0.1, duration: 0.6 }}
-              className="fixed top-0 left-0 bottom-0 w-[80%] max-w-[320px] bg-[#FBF9F6] z-[101] p-10 flex flex-col justify-between selection:bg-[var(--color-primary)]"
+              className="fixed top-0 left-0 bottom-0 w-[80%] max-w-[320px] bg-[var(--color-bg-secondary)] z-[101] p-10 flex flex-col justify-between selection:bg-[var(--color-primary)]"
             >
               <div className="space-y-16">
                 <div className="flex justify-between items-center">

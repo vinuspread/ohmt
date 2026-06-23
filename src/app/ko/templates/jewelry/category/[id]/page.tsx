@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/jewelry/category/[id]/page.tsx
+﻿// src/app/ko/templates/OHMT004-jewelry-kr/category/[id]/page.tsx
 "use client";
 
 import React, { use } from "react";
@@ -29,18 +29,18 @@ const CATEGORY_DATA: Record<string, {
     description: "수작업으로 엄선한 다이아몬드의 영원한 찬란함부터 천연 진주의 단아한 흐름까지,\nOh My Template 최고의 현대식 마스터피스를 큐레이션하여 선보입니다.",
     type: "collections",
     items: [
-      { id: "1", name: "다이아몬드 솔리테어 링", price: "$2,250.00", img: "/templates/jewelry/jewelry-ring.png", tag: "웨딩", detail: "플래티넘 밴드 위 세팅된 0.85캐럿 라운드 브릴리언트 컷 다이아몬드." },
-      { id: "2", name: "래디언트 펄 펜던트", price: "$1,850.00", img: "/templates/jewelry/jewelry-pendant.png", tag: "시즈널", detail: "18K 옐로우 골드 클립으로 장식된 희소성 높은 골든 남양 진주." },
-      { id: "3", name: "사파이어 뱅글 세트", price: "$1,200.00", img: "/templates/jewelry/jewelry-hero-main.png", tag: "럭셔리", detail: "마이크로 파베 다이아몬드가 둘러싸인 깊고 푸른 블루 사파이어 뱅글." },
-      { id: "4", name: "로즈 골드 인피니티 밴드", price: "$950.00", img: "/templates/jewelry/jewelry-ring.png", tag: "에센셜", detail: "장인의 정교한 핸드 피니시가 돋보이는 18K 로즈 골드 인피니티 밴드." },
-      { id: "301", name: "에메랄드 드롭 펜던트", price: "$2,800.00", img: "/templates/jewelry/jewelry-pendant.png", tag: "익스클루시브", detail: "빛나는 마퀴즈 다이아몬드 아래 찬란하게 빛나는 콜롬비아산 에메랄드 드롭." },
-      { id: "302", name: "마퀴즈 다이아몬드 밴드", price: "$1,650.00", img: "/templates/jewelry/jewelry-ring.png", tag: "부티크", detail: "최상급 마퀴즈 다이아몬드를 일렬로 촘촘히 세팅한 플래티넘 풀 이터니티 밴드." },
-      { id: "303", name: "골든 펄 이어링", price: "$1,420.00", img: "/templates/jewelry/jewelry-hero-main.png", tag: "시그니처", detail: "다이아몬드 스터드 아래 우아하게 흔들리는 남양 골든 진주." },
-      { id: "304", name: "루비 이터니티 링", price: "$3,100.00", img: "/templates/jewelry/jewelry-ring.png", tag: "브라이덜", detail: "라운드 루비와 바게트 다이아몬드가 클래식하게 조화를 이룬 18K 옐로우 골드 이터니티 링." },
-      { id: "305", name: "플래티넘 솔리테어 펜던트", price: "$1,950.00", img: "/templates/jewelry/jewelry-pendant.png", tag: "미니멀", detail: "심플하면서도 견고한 플래티넘 베이스에 올라간 0.70캐럿 아이디얼 컷 다이아몬드." },
-      { id: "306", name: "오발 컷 인게이지먼트", price: "$3,450.00", img: "/templates/jewelry/jewelry-ring.png", tag: "웨딩", detail: "마이크로 파베 세팅의 갈래 밴드 위에 세팅된 매혹적인 오발 컷 다이아몬드." },
-      { id: "307", name: "다이아몬드 훞 이어링", price: "$1,250.00", img: "/templates/jewelry/jewelry-hero-main.png", tag: "에센셜", detail: "일상의 격을 한층 높여줄 안팎 양면 다이아몬드 세팅의 하이엔드 훞 이어링." },
-      { id: "308", name: "펄 초커 세트", price: "$2,100.00", img: "/templates/jewelry/jewelry-pendant.png", tag: "시즈널", detail: "빈티지 화이트 골드 사파이어 버클로 고정되는 더블 스트랜드 아코야 진주 초커." }
+      { id: "1", name: "다이아몬드 솔리테어 링", price: "$2,250.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "웨딩", detail: "플래티넘 밴드 위 세팅된 0.85캐럿 라운드 브릴리언트 컷 다이아몬드." },
+      { id: "2", name: "래디언트 펄 펜던트", price: "$1,850.00", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "시즈널", detail: "18K 옐로우 골드 클립으로 장식된 희소성 높은 골든 남양 진주." },
+      { id: "3", name: "사파이어 뱅글 세트", price: "$1,200.00", img: "/templates/OHMT002-jewelry/jewelry-hero-main.png", tag: "럭셔리", detail: "마이크로 파베 다이아몬드가 둘러싸인 깊고 푸른 블루 사파이어 뱅글." },
+      { id: "4", name: "로즈 골드 인피니티 밴드", price: "$950.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "에센셜", detail: "장인의 정교한 핸드 피니시가 돋보이는 18K 로즈 골드 인피니티 밴드." },
+      { id: "301", name: "에메랄드 드롭 펜던트", price: "$2,800.00", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "익스클루시브", detail: "빛나는 마퀴즈 다이아몬드 아래 찬란하게 빛나는 콜롬비아산 에메랄드 드롭." },
+      { id: "302", name: "마퀴즈 다이아몬드 밴드", price: "$1,650.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "부티크", detail: "최상급 마퀴즈 다이아몬드를 일렬로 촘촘히 세팅한 플래티넘 풀 이터니티 밴드." },
+      { id: "303", name: "골든 펄 이어링", price: "$1,420.00", img: "/templates/OHMT002-jewelry/jewelry-hero-main.png", tag: "시그니처", detail: "다이아몬드 스터드 아래 우아하게 흔들리는 남양 골든 진주." },
+      { id: "304", name: "루비 이터니티 링", price: "$3,100.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "브라이덜", detail: "라운드 루비와 바게트 다이아몬드가 클래식하게 조화를 이룬 18K 옐로우 골드 이터니티 링." },
+      { id: "305", name: "플래티넘 솔리테어 펜던트", price: "$1,950.00", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "미니멀", detail: "심플하면서도 견고한 플래티넘 베이스에 올라간 0.70캐럿 아이디얼 컷 다이아몬드." },
+      { id: "306", name: "오발 컷 인게이지먼트", price: "$3,450.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "웨딩", detail: "마이크로 파베 세팅의 갈래 밴드 위에 세팅된 매혹적인 오발 컷 다이아몬드." },
+      { id: "307", name: "다이아몬드 훞 이어링", price: "$1,250.00", img: "/templates/OHMT002-jewelry/jewelry-hero-main.png", tag: "에센셜", detail: "일상의 격을 한층 높여줄 안팎 양면 다이아몬드 세팅의 하이엔드 훞 이어링." },
+      { id: "308", name: "펄 초커 세트", price: "$2,100.00", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "시즈널", detail: "빈티지 화이트 골드 사파이어 버클로 고정되는 더블 스트랜드 아코야 진주 초커." }
     ]
   },
   engagement: {
@@ -50,18 +50,18 @@ const CATEGORY_DATA: Record<string, {
     description: "생애 가장 성스러운 고백의 순간을 Oh My Template의 브라이덜 링으로 장식해보세요.\n기하학적 정교함과 고귀한 원석의 순수함을 결합하여 타협 없는 사랑의 약속을 기립니다.",
     type: "engagement",
     items: [
-      { id: "5", name: "클래식 라운드 브릴리언트", price: "$3,500.00", img: "/templates/jewelry/jewelry-ring.png", tag: "웨딩", detail: "쉐어드 프롱 기법으로 다이아몬드를 돋보이게 한 1.20캐럿 최상급 라운드 브릴리언트 컷 링." },
-      { id: "6", name: "쿠션 컷 다이아몬드 링", price: "$2,800.00", img: "/templates/jewelry/jewelry-pendant.png", tag: "럭셔리", detail: "화사한 헤일로 파베 다이아몬드가 감싸 안은 쿠션 모디파이드 브릴리언트 컷 다이아몬드." },
-      { id: "7", name: "에메랄드 컷 솔리테어", price: "$3,200.00", img: "/templates/jewelry/jewelry-hero-main.png", tag: "시그니처", detail: "본연의 기하학적이고 투명한 라인을 극대화한 슬림한 에메랄드 컷 다이아몬드." },
-      { id: "8", name: "쓰리 스톤 인게이지먼트", price: "$2,950.00", img: "/templates/jewelry/jewelry-ring.png", tag: "클래식", detail: "센터 다이아몬드 양옆에 테이퍼드 바게트 다이아몬드를 배치하여 조형미를 살린 링." },
-      { id: "401", name: "프린세스 컷 헤일로", price: "$3,800.00", img: "/templates/jewelry/jewelry-pendant.png", tag: "브라이덜", detail: "이중 파베 테두리가 찬란하게 둘러싸고 있는 현대적인 감각의 프린세스 컷 다이아몬드." },
-      { id: "402", name: "오발 다이아몬드 플래티넘", price: "$4,100.00", img: "/templates/jewelry/jewelry-ring.png", tag: "웨딩", detail: "극도로 슬림하고 화사한 플래티넘 밴드 위 독보적인 매력을 발산하는 1.50캐럿 오발 다이아몬드." },
-      { id: "403", name: "로즈 골드 트윈드 밴드", price: "$1,650.00", img: "/templates/jewelry/jewelry-hero-main.png", tag: "모던", detail: "따뜻한 광채의 18K 로즈 골드 밴드와 정교한 마이크로 파베 라인이 부드럽게 꼬인 링." },
-      { id: "404", name: "페어 컷 솔리테어", price: "$3,300.00", img: "/templates/jewelry/jewelry-ring.png", tag: "익스클루시브", detail: "물방울 모양의 페어 컷 다이아몬드를 플래티넘 V자 프롱으로 우아하게 고정한 싱글 링." },
-      { id: "405", name: "마퀴즈 트릴로지 링", price: "$3,650.00", img: "/templates/jewelry/jewelry-pendant.png", tag: "브라이덜", detail: "마퀴즈 컷 다이아몬드와 정교하게 매칭된 방패 모양 쉴드 컷 다이아몬드 두 석이 어우러진 클래식 링." },
-      { id: "406", name: "빈티지 다이아몬드 밴드", price: "$1,850.00", img: "/templates/jewelry/jewelry-ring.png", tag: "헤리티지", detail: "밀그레인 공법의 섬세한 핸드 인그레이빙 테두리가 클래식함을 배가하는 비드 세팅 다이아몬드 밴드." },
-      { id: "407", name: "핸드카브드 브라이덜 밴드", price: "$1,450.00", img: "/templates/jewelry/jewelry-hero-main.png", tag: "브라이덜", detail: "가공되지 않은 순수한 플래티넘 본연의 아키텍처와 비대칭적인 핸드 버니시가 결합된 밴드." },
-      { id: "408", name: "파베 쿠션 링", price: "$4,200.00", img: "/templates/jewelry/jewelry-ring.png", tag: "웨딩", detail: "삼면 파베 세팅 갤러리 위에 공중에 떠 있는 듯 우아하게 연출된 쿠션 컷 다이아몬드." }
+      { id: "5", name: "클래식 라운드 브릴리언트", price: "$3,500.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "웨딩", detail: "쉐어드 프롱 기법으로 다이아몬드를 돋보이게 한 1.20캐럿 최상급 라운드 브릴리언트 컷 링." },
+      { id: "6", name: "쿠션 컷 다이아몬드 링", price: "$2,800.00", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "럭셔리", detail: "화사한 헤일로 파베 다이아몬드가 감싸 안은 쿠션 모디파이드 브릴리언트 컷 다이아몬드." },
+      { id: "7", name: "에메랄드 컷 솔리테어", price: "$3,200.00", img: "/templates/OHMT002-jewelry/jewelry-hero-main.png", tag: "시그니처", detail: "본연의 기하학적이고 투명한 라인을 극대화한 슬림한 에메랄드 컷 다이아몬드." },
+      { id: "8", name: "쓰리 스톤 인게이지먼트", price: "$2,950.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "클래식", detail: "센터 다이아몬드 양옆에 테이퍼드 바게트 다이아몬드를 배치하여 조형미를 살린 링." },
+      { id: "401", name: "프린세스 컷 헤일로", price: "$3,800.00", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "브라이덜", detail: "이중 파베 테두리가 찬란하게 둘러싸고 있는 현대적인 감각의 프린세스 컷 다이아몬드." },
+      { id: "402", name: "오발 다이아몬드 플래티넘", price: "$4,100.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "웨딩", detail: "극도로 슬림하고 화사한 플래티넘 밴드 위 독보적인 매력을 발산하는 1.50캐럿 오발 다이아몬드." },
+      { id: "403", name: "로즈 골드 트윈드 밴드", price: "$1,650.00", img: "/templates/OHMT002-jewelry/jewelry-hero-main.png", tag: "모던", detail: "따뜻한 광채의 18K 로즈 골드 밴드와 정교한 마이크로 파베 라인이 부드럽게 꼬인 링." },
+      { id: "404", name: "페어 컷 솔리테어", price: "$3,300.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "익스클루시브", detail: "물방울 모양의 페어 컷 다이아몬드를 플래티넘 V자 프롱으로 우아하게 고정한 싱글 링." },
+      { id: "405", name: "마퀴즈 트릴로지 링", price: "$3,650.00", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "브라이덜", detail: "마퀴즈 컷 다이아몬드와 정교하게 매칭된 방패 모양 쉴드 컷 다이아몬드 두 석이 어우러진 클래식 링." },
+      { id: "406", name: "빈티지 다이아몬드 밴드", price: "$1,850.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "헤리티지", detail: "밀그레인 공법의 섬세한 핸드 인그레이빙 테두리가 클래식함을 배가하는 비드 세팅 다이아몬드 밴드." },
+      { id: "407", name: "핸드카브드 브라이덜 밴드", price: "$1,450.00", img: "/templates/OHMT002-jewelry/jewelry-hero-main.png", tag: "브라이덜", detail: "가공되지 않은 순수한 플래티넘 본연의 아키텍처와 비대칭적인 핸드 버니시가 결합된 밴드." },
+      { id: "408", name: "파베 쿠션 링", price: "$4,200.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "웨딩", detail: "삼면 파베 세팅 갤러리 위에 공중에 떠 있는 듯 우아하게 연출된 쿠션 컷 다이아몬드." }
     ]
   },
   "high-jewelry": {
@@ -71,18 +71,18 @@ const CATEGORY_DATA: Record<string, {
     description: "박물관 소장 등급의 극도로 희귀한 예술적 걸작들.\n입체적인 조형적 복잡성과 자연의 순수한 원석, 그리고 고전 아틀리에 헤리티지의 정수를 결합했습니다.",
     type: "high",
     items: [
-      { id: "9", name: "루비 & 다이아몬드 티아라", price: "$12,500.00", img: "/templates/jewelry/jewelry-pendant.png", tag: "익스클루시브", detail: "역사적인 왕실 헤리티지 루비와 정교하게 커스텀 커팅된 마퀴즈 다이아몬드 스크롤 티아라." },
-      { id: "10", name: "사파이어 리비에르 네클리스", price: "$18,900.00", img: "/templates/jewelry/jewelry-hero-main.png", tag: "오트", detail: "엄격하게 매칭된 48석의 최고급 에메랄드 컷 사파이어가 끊임없이 이어지는 황홀한 리비에르 네클리스." },
-      { id: "11", name: "에메랄드 스테이트먼트 이어링", price: "$15,600.00", img: "/templates/jewelry/jewelry-ring.png", tag: "익셉셔널", detail: "마이크로 파베 다이아몬드 클러스터 아래로 영롱하게 떨어지는 콜롬비아산 물방울 에메랄드." },
-      { id: "12", name: "다이아몬드 & 펄 브로치", price: "$22,000.00", img: "/templates/jewelry/jewelry-pendant.png", tag: "마스터피스", detail: "화이트 골드로 섬세하게 조각된 깃털 위에 올라간 매혹적이고 자연스러운 형태의 바로크 천연 진주 브로치." },
-      { id: "501", name: "엠프레스 루비 네클리스", price: "$26,500.00", img: "/templates/jewelry/jewelry-pendant.png", tag: "뮤지엄", detail: "두 줄로 폭포처럼 쏟아지는 다이아몬드 캐스케이드 위에 세팅된 15석의 엄선된 미얀마산 오발 루비." },
-      { id: "502", name: "임페리얼 에메랄드 링", price: "$19,500.00", img: "/templates/jewelry/jewelry-ring.png", tag: "오트", detail: "심연의 광채를 자랑하는 콜롬비아산 천연 에메랄드와 양옆을 장식한 대담한 바게트 다이아몬드 링." },
-      { id: "503", name: "사파이어 샹들리에 세트", price: "$17,800.00", img: "/templates/jewelry/jewelry-hero-main.png", tag: "오트", detail: "정교한 관절식 구조에 세팅된 24석의 아름다운 페어 컷 스리랑카 실론 사파이어 샹들리에 이어링." },
-      { id: "504", name: "블루 다이아몬드 브로치", price: "$34,000.00", img: "/templates/jewelry/jewelry-pendant.png", tag: "마스터피스", detail: "지각 변동으로 탄생한 블루 다이아몬드를 순수 화이트 골드에 담아낸 극도로 희귀한 예술품 브로치." },
-      { id: "505", name: "캐스케이드 펄 티아라", price: "$21,500.00", img: "/templates/jewelry/jewelry-ring.png", tag: "익스클루시브", detail: "완벽한 크기 그라데이션 아치 형태로 정교하게 배열된 천연 물방울 진주 티아라." },
-      { id: "506", name: "아트데코 다이아몬드 뱅글", price: "$16,900.00", img: "/templates/jewelry/jewelry-hero-main.png", tag: "오트", detail: "기하학적인 플래티넘 프레임에 바게트 다이아몬드와 오닉스가 결합된 정밀한 아트데코 뱅글." },
-      { id: "507", name: "레어 핑크 다이아몬드 링", price: "$42,000.00", img: "/templates/jewelry/jewelry-ring.png", tag: "뮤지엄", detail: "핑크 마이크로 파베 테두리가 우아하게 감싸고 있는 최고 등급 팬시 비비드 퍼플리쉬 핑크 다이아몬드 링." },
-      { id: "508", name: "바로크 펄 펜던트", price: "$15,400.00", img: "/templates/jewelry/jewelry-pendant.png", tag: "마스터피스", detail: "독특한 초대형 바로크 진주를 그러안은 황금 용의 조각적 형상이 어우러진 걸작 펜던트." }
+      { id: "9", name: "루비 & 다이아몬드 티아라", price: "$12,500.00", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "익스클루시브", detail: "역사적인 왕실 헤리티지 루비와 정교하게 커스텀 커팅된 마퀴즈 다이아몬드 스크롤 티아라." },
+      { id: "10", name: "사파이어 리비에르 네클리스", price: "$18,900.00", img: "/templates/OHMT002-jewelry/jewelry-hero-main.png", tag: "오트", detail: "엄격하게 매칭된 48석의 최고급 에메랄드 컷 사파이어가 끊임없이 이어지는 황홀한 리비에르 네클리스." },
+      { id: "11", name: "에메랄드 스테이트먼트 이어링", price: "$15,600.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "익셉셔널", detail: "마이크로 파베 다이아몬드 클러스터 아래로 영롱하게 떨어지는 콜롬비아산 물방울 에메랄드." },
+      { id: "12", name: "다이아몬드 & 펄 브로치", price: "$22,000.00", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "마스터피스", detail: "화이트 골드로 섬세하게 조각된 깃털 위에 올라간 매혹적이고 자연스러운 형태의 바로크 천연 진주 브로치." },
+      { id: "501", name: "엠프레스 루비 네클리스", price: "$26,500.00", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "뮤지엄", detail: "두 줄로 폭포처럼 쏟아지는 다이아몬드 캐스케이드 위에 세팅된 15석의 엄선된 미얀마산 오발 루비." },
+      { id: "502", name: "임페리얼 에메랄드 링", price: "$19,500.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "오트", detail: "심연의 광채를 자랑하는 콜롬비아산 천연 에메랄드와 양옆을 장식한 대담한 바게트 다이아몬드 링." },
+      { id: "503", name: "사파이어 샹들리에 세트", price: "$17,800.00", img: "/templates/OHMT002-jewelry/jewelry-hero-main.png", tag: "오트", detail: "정교한 관절식 구조에 세팅된 24석의 아름다운 페어 컷 스리랑카 실론 사파이어 샹들리에 이어링." },
+      { id: "504", name: "블루 다이아몬드 브로치", price: "$34,000.00", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "마스터피스", detail: "지각 변동으로 탄생한 블루 다이아몬드를 순수 화이트 골드에 담아낸 극도로 희귀한 예술품 브로치." },
+      { id: "505", name: "캐스케이드 펄 티아라", price: "$21,500.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "익스클루시브", detail: "완벽한 크기 그라데이션 아치 형태로 정교하게 배열된 천연 물방울 진주 티아라." },
+      { id: "506", name: "아트데코 다이아몬드 뱅글", price: "$16,900.00", img: "/templates/OHMT002-jewelry/jewelry-hero-main.png", tag: "오트", detail: "기하학적인 플래티넘 프레임에 바게트 다이아몬드와 오닉스가 결합된 정밀한 아트데코 뱅글." },
+      { id: "507", name: "레어 핑크 다이아몬드 링", price: "$42,000.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "뮤지엄", detail: "핑크 마이크로 파베 테두리가 우아하게 감싸고 있는 최고 등급 팬시 비비드 퍼플리쉬 핑크 다이아몬드 링." },
+      { id: "508", name: "바로크 펄 펜던트", price: "$15,400.00", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "마스터피스", detail: "독특한 초대형 바로크 진주를 그러안은 황금 용의 조각적 형상이 어우러진 걸작 펜던트." }
     ]
   },
   about: {
@@ -96,10 +96,10 @@ const CATEGORY_DATA: Record<string, {
 };
 
 const CATEGORY_IMAGES: Record<string, string> = {
-  collections: "/templates/jewelry/jewelry-hero-main.png",
-  engagement: "/templates/jewelry/jewelry-ring.png",
-  "high-jewelry": "/templates/jewelry/jewelry-craft.png",
-  about: "/templates/jewelry/jewelry-hero-main.png"
+  collections: "/templates/OHMT002-jewelry/jewelry-hero-main.png",
+  engagement: "/templates/OHMT002-jewelry/jewelry-ring.png",
+  "high-jewelry": "/templates/OHMT002-jewelry/jewelry-craft.png",
+  about: "/templates/OHMT002-jewelry/jewelry-hero-main.png"
 };
 
 function JewelryCategoryPageContent({ params }: { params: Promise<{ id: string }> }) {
@@ -113,7 +113,7 @@ function JewelryCategoryPageContent({ params }: { params: Promise<{ id: string }
 
     <TemplateWrapper theme={theme}>
 
-      <main className="antialiased bg-[#FBF9F6] selection:bg-[var(--color-primary)] selection:text-white font-sans text-neutral-900 min-h-screen transition-all">
+      <main className="antialiased bg-[var(--color-bg-secondary)] selection:bg-[var(--color-primary)] selection:text-white font-sans text-neutral-900 min-h-screen transition-all">
       {/* Shared Reusable Premium Navbar */}
       <Navbar />
 
@@ -179,7 +179,7 @@ function JewelryCategoryPageContent({ params }: { params: Promise<{ id: string }
             {/* Asymmetric Emerald Grid */}
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-6 sm:gap-x-10 gap-y-12 sm:gap-y-24">
               {displayedProducts.map((item, i) => (
-                <Link key={item.id} href={`/ko/templates/jewelry/product/${item.id}`} className="group block space-y-6">
+                <Link key={item.id} href={`/ko/templates/OHMT004-jewelry-kr/product/${item.id}`} className="group block space-y-6">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -231,7 +231,7 @@ function JewelryCategoryPageContent({ params }: { params: Promise<{ id: string }
         {category.type === "engagement" && (
           <div className="space-y-36">
             {/* Wedding banner manifesto */}
-            <div className="border-t border-b border-neutral-200/50 py-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-[#FCFAF6] px-8 md:px-14 rounded-full normal-case">
+            <div className="border-t border-b border-neutral-200/50 py-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-[var(--color-bg-secondary)] px-8 md:px-14 rounded-full normal-case">
               <div className="lg:col-span-8 space-y-4 text-left">
                 <span className="text-[14px] font-bold tracking-[0.4em] text-neutral-400 block text-left">SACRED STATEMENT</span>
                 <h3 className="text-2xl font-serif font-bold uppercase tracking-wide text-neutral-800 leading-snug text-left">우아함은 결코 퇴색되지 않는 유일한 아름다움입니다.</h3>
@@ -249,7 +249,7 @@ function JewelryCategoryPageContent({ params }: { params: Promise<{ id: string }
             {/* Engagement Grid with in-frame rotation zoom */}
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10 sm:gap-12">
               {displayedProducts.map((item, i) => (
-                <Link key={item.id} href={`/ko/templates/jewelry/product/${item.id}`} className="group block space-y-6">
+                <Link key={item.id} href={`/ko/templates/OHMT004-jewelry-kr/product/${item.id}`} className="group block space-y-6">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -307,7 +307,7 @@ function JewelryCategoryPageContent({ params }: { params: Promise<{ id: string }
               {/* Right Curated List - 9 Columns */}
               <div className="lg:col-span-9 grid grid-cols-2 md:grid-cols-2 gap-x-6 gap-y-10 sm:gap-12">
                 {displayedProducts.map((item, i) => (
-                  <Link key={item.id} href={`/ko/templates/jewelry/product/${item.id}`} className="group block space-y-6">
+                  <Link key={item.id} href={`/ko/templates/OHMT004-jewelry-kr/product/${item.id}`} className="group block space-y-6">
                     <motion.div
                       initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -404,7 +404,7 @@ function JewelryCategoryPageContent({ params }: { params: Promise<{ id: string }
               className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden"
             >
               <img 
-                src="/templates/jewelry/jewelry-craft.png" 
+                src="/templates/OHMT002-jewelry/jewelry-craft.png" 
                 className="absolute inset-0 w-full h-full object-cover brightness-50"
                 alt="Atelier Cinematic Film"
               />
@@ -466,7 +466,7 @@ function TestimonialSlider() {
   }, []);
 
   return (
-    <div className="bg-[#FCFAF6] border border-neutral-100 py-12 md:py-24 px-8 md:px-16 text-center max-w-4xl mx-auto space-y-10 relative overflow-hidden">
+    <div className="bg-[var(--color-bg-secondary)] border border-neutral-100 py-12 md:py-24 px-8 md:px-16 text-center max-w-4xl mx-auto space-y-10 relative overflow-hidden">
       <span className="text-[14px] font-bold tracking-[0.4em] text-neutral-400 block">CLIENT TESTIMONIALS</span>
       <div className="min-h-[120px] flex items-center justify-center">
         <motion.div

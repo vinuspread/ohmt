@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -22,10 +22,10 @@ function JewelryPageContent() {
   const heroOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   const products = [
-    { name: "다이아몬드 솔리테어 링", price: "$4,250", img: "/templates/jewelry/jewelry-ring.png", tag: "웨딩" },
-    { name: "래디언트 펄 펜던트", price: "$1,850", img: "/templates/jewelry/jewelry-pendant.png", tag: "시즈널" },
-    { name: "사파이어 뱅글", price: "$12,200", img: "/templates/jewelry/jewelry-hero-main.png", tag: "럭셔리" },
-    { name: "로즈 골드 인피니티 밴드", price: "$3,400", img: "/templates/jewelry/jewelry-ring.png", tag: "에센셜" },
+    { name: "다이아몬드 솔리테어 링", price: "$4,250", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "웨딩" },
+    { name: "래디언트 펄 펜던트", price: "$1,850", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "시즈널" },
+    { name: "사파이어 뱅글", price: "$12,200", img: "/templates/OHMT002-jewelry/jewelry-hero-main.png", tag: "럭셔리" },
+    { name: "로즈 골드 인피니티 밴드", price: "$3,400", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "에센셜" },
   ];
 
   const filteredProducts = products.filter((product) => {
@@ -48,7 +48,7 @@ function JewelryPageContent() {
             className="absolute inset-0 z-0"
           >
             <img
-              src="/templates/jewelry/jewelry-hero-main.png"
+              src="/templates/OHMT002-jewelry/jewelry-hero-main.png"
               className="w-full h-full object-cover grayscale-[0.2]"
               alt="Oh My Template Fine Jewelry Hero"
             />
@@ -122,7 +122,7 @@ function JewelryPageContent() {
                   transition={{ duration: 1, delay: i * 0.15 }}
                   className="group cursor-pointer"
                 >
-                  <div className="relative aspect-[3/4] mb-4 overflow-hidden bg-[#FDFBF9] border border-neutral-100">
+                  <div className="relative aspect-[3/4] mb-4 overflow-hidden bg-[var(--color-bg-secondary)] border border-neutral-100">
                     <img
                       src={item.img}
                       alt={item.name}
@@ -163,7 +163,7 @@ function JewelryPageContent() {
                 transition={{ duration: 1.5 }}
                 className="aspect-[4/5] overflow-hidden"
               >
-                <img loading="lazy" src="/templates/jewelry/jewelry-craft.png" alt="Jewelry Craftsmanship" className="w-full h-full object-cover" />
+                <img loading="lazy" src="/templates/OHMT002-jewelry/jewelry-craft.png" alt="Jewelry Craftsmanship" className="w-full h-full object-cover" />
               </motion.div>
               <div className="absolute -bottom-10 -right-6 lg:-bottom-14 lg:-right-14 w-72 bg-white p-8 hidden md:block shadow-[0_40px_80px_rgba(0,0,0,0.08)] border border-neutral-100">
                 <span className="text-[var(--color-primary)] text-[13px] font-bold uppercase tracking-[0.3em] block mb-3">아틀리에의 장인정신</span>

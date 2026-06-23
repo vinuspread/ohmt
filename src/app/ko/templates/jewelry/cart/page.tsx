@@ -16,7 +16,7 @@ function JewelryCartPageContent() {
       id: "1",
       name: "Tiffany-Blue Sapphire Bangle",
       price: "$1,200",
-      img: "/templates/jewelry/jewelry-hero-main.png",
+      img: "/templates/OHMT002-jewelry/jewelry-hero-main.png",
       material: "18k White Gold"
     }
   ];
@@ -29,9 +29,9 @@ function JewelryCartPageContent() {
       {/* Header */}
       <header className="fixed top-0 w-full z-50 border-b border-neutral-100 bg-white">
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
-          <Link href="/ko/templates/jewelry" className="text-xs uppercase tracking-[0.4em] font-bold text-neutral-400 hover:text-[var(--color-primary)]">Back to Boutique</Link>
+          <Link href="/ko/templates/OHMT004-jewelry-kr" className="text-xs uppercase tracking-[0.4em] font-bold text-neutral-400 hover:text-[var(--color-primary)]">Back to Boutique</Link>
           <div className="absolute left-1/2 -translate-x-1/2">
-            <Link href="/ko/templates/jewelry" className="text-3xl font-serif tracking-[0.25em] font-normal uppercase text-neutral-900">Oh My Template</Link>
+            <Link href="/ko/templates/OHMT004-jewelry-kr" className="text-3xl font-serif tracking-[0.25em] font-normal uppercase text-neutral-900">Oh My Template</Link>
           </div>
           <div className="flex items-center gap-6">
             <ShoppingBag size={20} strokeWidth={1.2} />
