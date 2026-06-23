@@ -1,80 +1,22 @@
-/* exhibition-ko Design Tokens */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;600;700&family=Inter:wght@500;600&display=swap');
+
 :root {
-  /* Color System - Primary Palette */
-  --color-primary: #0F0F0F;
-  --color-accent: #F9F6F0;
-  --color-accent-light: #FDFBF9;
-  --color-accent-pale: #FEFDFB;
-  --color-bg: #0F0F0F;
-  --color-bg-secondary: #1A1A1A;
-  --color-text: #F9F6F0;
-  --color-text-muted: rgba(249, 246, 240, 0.4);
-  --color-border: rgba(249, 246, 240, 0.1);
-  --color-border-light: rgba(249, 246, 240, 0.05);
-
-  /* Semantic Colors */
-  --color-success: #059669;
-  --color-warning: #D97706;
-  --color-error: #DC2626;
-  --color-info: #0284C7;
-
-  /* Typography */
-  --font-heading: var(--font-serif), 'Noto Serif KR', serif;
-  --font-body: var(--font-sans), 'Noto Sans KR', sans-serif;
-
-  /* Typography Scale */
-  --font-size-h1: clamp(2.1rem, 4vw, 3.8rem);
-  --font-size-h2: clamp(1.8rem, 3.5vw, 3rem);
-  --font-size-h3: clamp(1.2rem, 2.5vw, 1.8rem);
-  --font-size-body: 0.95rem;
-  --font-size-small: 0.85rem;
-  --line-height-body: 1.6;
-  --line-height-heading: 1.2;
-  --letter-spacing-heading: -0.03em;
-  --letter-spacing-label: 0.05em;
-
-  /* Spacing Scale */
-  --spacing-xs: 0.5rem;
-  --spacing-sm: 1rem;
-  --spacing-md: 1.5rem;
-  --spacing-lg: 2rem;
-  --spacing-xl: 3rem;
-  --spacing-2xl: 4rem;
-  --spacing-3xl: 6rem;
-
-  /* Border Radius */
-  --radius-none: 0;
-  --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-
-  /* Transitions */
-  --transition-fast: 200ms ease-out;
-  --transition-base: 300ms ease-out;
-  --transition-slow: 500ms ease-out;
-
-  /* Interactive States */
-  --focus-outline: 2px solid var(--color-accent);
-  --focus-outline-offset: 2px;
-
-  /* Shadows - Removed per design audit */
-  --shadow-none: none;
+  --color-bg: #FCFCFC;
+  --color-bg-secondary: #F0F0F0;
+  --color-bg-dark: #000000;
+  --color-primary: #000000;
+  --color-secondary: #000000;
+  --color-accent: #000000;
+  --color-text: #000000;
+  --color-text-dark: #FCFCFC;
+  --color-text-muted: rgba(0, 0, 0, 0.4);
+  --color-text-contrast: #FCFCFC;
+  --color-text-muted-dark: rgba(252, 252, 252, 0.5);
+  --color-card-bg: rgba(0, 0, 0, 0.03);
+  --color-border: rgba(0, 0, 0, 0.1);
+  --color-border-dark: rgba(252, 252, 252, 0.15);
+  --font-heading: 'Inter', Pretendard, sans-serif;
+  --font-body: Pretendard, sans-serif;
 }
 
-body[lang="ko"], [lang="ko"] {
-  word-break: keep-all;
-}
-
-/* Accessibility: Respect motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
-}
-
-/* Header nav letter-spacing */
-header a, header button, header span, header nav { letter-spacing: -0.03em; }
+* { word-break: keep-all; }

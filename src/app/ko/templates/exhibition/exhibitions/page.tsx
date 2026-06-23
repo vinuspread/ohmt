@@ -1,146 +1,97 @@
-"use client";
-import { Suspense } from "react";
-import React from "react";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowRight, Calendar, MapPin } from "lucide-react";
-import Header from "../_components/layout/Header";
-import Footer from "../_components/layout/Footer";
+﻿'use client';
 
-import theme from "../theme.json";
+import Link from 'next/link';
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'motion/react';
+import { exhibitions } from '../constants';
+import ExhibitionCard from '../_components/ExhibitionCard';
+import { Navbar } from '../_components/Navbar';
+import { Footer } from '../_components/Footer';
 import { TemplateWrapper } from "../_components/TemplateWrapper";
+import theme from "../theme.json";
 
-function SpecialExhibitionsContent() {
+type Tab = 'on-show' | 'opening-soon' | 'permanent';
 
-  const specialExhibitionsData = [
-  {
-    name: "레오나르도 다 빈치: 신성한 화가",
-    period: "2026.04.12 - 08.31",
-    venue: "라파엘로 회랑, 메인 갤러리",
-    desc: "거장의 가장 정교한 회화 작품들을 최첨단 인터랙티브 디지털 기술로 복원하여 독창적인 공간에서 선보입니다.",
-    tag: "성기 르네상스"
-  },
-  {
-    name: "그리스의 눈부심: 고전 조각전",
-    period: "2026.05.20 - 10.15",
-    venue: "클레멘스 회랑, 조각상 홀",
-    desc: "라오콘 군상부터 아폴로 벨베데레에 이르기까지 고대 그리스 거장들이 대리석에 불어넣은 촉각적 천재성을 압도적인 화질로 만나보세요.",
-    tag: "고전 고대 예술"
-  }
-];
-  const specialExhibitions = [
-    { ...specialExhibitionsData[0], img: "/templates/exhibition/exhibition-poster-vinci.png" },
-    { ...specialExhibitionsData[1], img: "/templates/exhibition/exhibition-poster-greek.png" }
-  ];
-
-  const permanentGalleriesData = [
-  { name: "시스티나 성당", desc: "미켈랑젤로 예술의 절정." },
-  { name: "지도 갤러리", desc: "이탈리아의 지형학적 유산." }
-];
-  const permanentGalleries = [
-    { ...permanentGalleriesData[0], img: "/templates/exhibition/hero-bg.png" },
-    { ...permanentGalleriesData[1], img: "/templates/exhibition/vatican-hallway.png" }
-  ];
+export default function ExhibitionsPage() {
+  const [activeTab, setActiveTab] = useState<Tab>('on-show');
+  const filtered = exhibitions.filter((ex) => ex.status === activeTab);
 
   return (
-
     <TemplateWrapper theme={theme}>
+      <Navbar />
+      <main>
+        <section className="bg-[var(--color-bg)] pt-40 pb-16 border-b border-[var(--color-border)]">
+          <div className="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+            <h1 className="font-heading font-semibold uppercase text-black leading-none" style={{ fontSize: 'clamp(4rem, 7vw, 7rem)', letterSpacing: '-0.04em' }}>
+              전시
+            </h1>
+            <p className="text-[14px] font-body text-black/50 leading-relaxed max-w-[32ch] md:text-right">
+              모든 작품은 이야기를 담고 있습니다. 현재 및 예정된 전시를 만나보세요.
+            </p>
+          </div>
+        </section>
 
-      <>
-      <Header />
-      <main className="antialiased bg-[var(--color-primary)] min-h-screen text-[var(--color-accent)] selection:bg-[var(--color-accent)] selection:text-[var(--color-primary)] pb-16 md:pb-32 pt-20 md:pt-40">
-
-      {/* Intro Section */}
-      <section className="px-6 md:px-12 mb-20 md:mb-32 lg:mb-40 text-center">
-        <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-          <span className="text-[13px] uppercase font-bold tracking-[0.5em] text-white/40 mb-8 block font-sans">{"현재 진행 중인 전시"}</span>
-          <h2 className="text-5xl md:text-[7vw] font-serif leading-none tracking-tighter mb-12 break-keep">{"특별 전시."}</h2>
-        </motion.div>
-      </section>
-
-      {/* Poster Style Special Exhibitions */}
-      <section className="max-w-[1440px] mx-auto px-6 space-y-20 md:space-y-32 lg:space-y-40 mb-32 md:mb-48 lg:mb-60">
-        {specialExhibitions.map((exhib: any, i: number) => (
-          <motion.div 
-            key={i}
-            initial={{ opacity: 0, scale: 0.98 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.5 }}
-            className="group grid grid-cols-1 lg:grid-cols-2 gap-20 items-center"
-          >
-            <motion.div 
-              initial={{ opacity: 0, scale: 0.94 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
-              className={`relative aspect-[3/4] md:aspect-[4/5] overflow-hidden ${i % 2 === 1 ? 'lg:order-2' : ''}`}
-            >
-              <img 
-                src={exhib.img} 
-                alt={exhib.name} 
-                className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-105 group-hover:grayscale-0 group-hover:brightness-100 transition-[filter,transform] duration-[3s] ease-out"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)] via-transparent to-transparent opacity-60" />
-            </motion.div>
-            
-            <div className={`space-y-6 ${i % 2 === 1 ? 'lg:order-1 lg:text-right' : ''}`}>
-              <span className="text-[12px] uppercase font-bold tracking-[0.6em] text-white/30 block mb-4 font-sans">{exhib.tag}</span>
-              <h3 className="text-4xl md:text-6xl font-serif tracking-tighter leading-none mb-6 break-keep">{exhib.name}</h3>
-              
-              <div className={`flex flex-col gap-3 text-xs font-medium uppercase tracking-normal text-white/40 font-sans ${i % 2 === 1 ? 'lg:items-end' : ''}`}>
-                 <div className="flex items-center gap-3"><Calendar size={14} strokeWidth={1.5} /> {exhib.period}</div>
-                 <div className="flex items-center gap-3"><MapPin size={14} strokeWidth={1.5} /> {exhib.venue}</div>
+        {/* Featured */}
+        <section className="border-b border-[var(--color-border)]">
+          <div className="grid md:grid-cols-[3fr_2fr] h-[75vh]">
+            <div className="relative overflow-hidden">
+              <img src={exhibitions[0].heroImage} alt={exhibitions[0].name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <span className="absolute top-8 left-8 text-[10px] font-body font-semibold uppercase tracking-[0.15em] text-white/70 bg-black/40 px-3 py-1.5">주목 전시</span>
+            </div>
+            <div className="flex flex-col justify-between p-12 md:p-16 border-l border-[var(--color-border)]">
+              <div>
+                <p className="text-[10px] font-body font-semibold uppercase tracking-[0.12em] text-black/35 mb-8">
+                  {exhibitions[0].tags.genre} <span className="mx-1">·</span> {exhibitions[0].tags.theme}
+                </p>
+                <h2 className="font-heading font-semibold uppercase text-black leading-[0.95]" style={{ fontSize: 'clamp(2rem, 3.5vw, 3.5rem)', letterSpacing: '-0.04em' }}>
+                  {exhibitions[0].name}
+                </h2>
+                <p className="mt-6 text-[14px] font-body text-black/55 leading-[1.7]">
+                  {exhibitions[0].description.slice(0, 120)}...
+                </p>
               </div>
-
-              <p className={`text-base md:text-lg text-white/60 font-normal leading-relaxed max-w-md font-serif break-keep ${i % 2 === 1 ? 'lg:ml-auto' : ''}`}>
-                "{exhib.desc}"
-              </p>
-
-              <div className={`pt-6 ${i % 2 === 1 ? 'lg:flex lg:justify-end' : ''}`}>
-                <Link href="/ko/templates/exhibition/collections" className="inline-flex items-center gap-3 text-xs font-medium uppercase tracking-normal group/btn px-8 py-3 border border-white/20 hover:bg-white hover:text-black transition-[color,background]">
-                   {"도록 보기"} <ArrowRight size={13} className="group-hover/btn:translate-x-2 transition-transform" />
+              <div>
+                <div className="flex flex-col gap-0 mb-10">
+                  {[
+                    { label: '작가', value: exhibitions[0].artist },
+                    { label: '기간', value: `${exhibitions[0].dateFrom} - ${exhibitions[0].dateTo}` },
+                    { label: '전시장', value: exhibitions[0].showroom },
+                  ].map((item) => (
+                    <div key={item.label} className="flex justify-between items-baseline py-4 border-b border-[var(--color-border)]">
+                      <p className="text-[10px] font-body font-semibold uppercase tracking-[0.1em] text-black/35">{item.label}</p>
+                      <p className="text-[13px] font-body font-semibold text-black">{item.value}</p>
+                    </div>
+                  ))}
+                </div>
+                <Link href={`/ko/templates/OHMT006-exhibition-kr/exhibitions/${exhibitions[0].slug}`} className="relative overflow-hidden group inline-flex px-8 py-4 border border-black">
+                  <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+                  <span className="relative text-black group-hover:text-white text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-300">전시 보기</span>
                 </Link>
               </div>
             </div>
-          </motion.div>
-        ))}
-      </section>
-
-      {/* Permanent Gallery Selection */}
-      <section className="py-10 md:py-20 md:py-32 lg:py-40 border-t border-white/5 px-6">
-        <div className="max-w-[1440px] mx-auto px-6">
-          <div className="mb-20">
-            <span className="text-[13px] uppercase font-bold tracking-[0.5em] text-white/40 block mb-6">{"미술관의 상설 유산"}</span>
-            <h3 className="text-4xl font-serif break-keep">{"상설 컬렉션"}</h3>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-             {permanentGalleries.map((item: any, i: number) => (
-                <div key={i} className="group cursor-pointer">
-                   <div className="aspect-[21/9] overflow-hidden mb-8 bg-white/5 relative">
-                      <img loading="lazy" src={item.img} alt={item.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-[filter] duration-700 brightness-50 group-hover:brightness-100" />
-                   </div>
-                   <h4 className="text-xl font-serif mb-2 tracking-wide break-keep">{item.name}</h4>
-                   <p className="text-xs text-white/40 uppercase tracking-widest break-keep">{item.desc}</p>
-                </div>
-             ))}
-          </div>
-        </div>
-      </section>
+        </section>
 
+        <section className="bg-[var(--color-bg)] pt-16 pb-32">
+          <div className="max-w-[1400px] mx-auto px-6">
+            <div className="flex gap-10 mb-12 border-b border-[var(--color-border)]">
+              {(['on-show', 'opening-soon', 'permanent'] as const).map((tab) => (
+                <button key={tab} onClick={() => setActiveTab(tab)} className="pb-3 text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-200"
+                  style={{ color: activeTab === tab ? '#000000' : 'rgba(0,0,0,0.4)', borderBottom: activeTab === tab ? '2px solid #000000' : '2px solid transparent' }}>
+                  {tab === 'on-show' ? '전시 중' : tab === 'opening-soon' ? '개막 예정' : '상설 전시'}
+                </button>
+              ))}
+            </div>
+            <AnimatePresence mode="wait">
+              <motion.div key={activeTab} initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.3 }}
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+                {filtered.map((ex) => <ExhibitionCard key={ex.slug} exhibition={ex} />)}
+              </motion.div>
+            </AnimatePresence>
+          </div>
+        </section>
       </main>
       <Footer />
-    </>
-
     </TemplateWrapper>
-);
-}
-
-
-export default function SpecialExhibitions(props: any) {
-  return (
-    <React.Suspense fallback={null}>
-      <SpecialExhibitionsContent {...props} />
-    </React.Suspense>
   );
 }

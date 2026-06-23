@@ -1,40 +1,39 @@
 {
   "slug": "exhibition",
-  "name": "Exhibition",
-  "name_ko": "전시관",
+  "name": "Exhibition Gallery",
+  "name_ko": "전시 갤러리",
   "category": "portfolio",
-  "description": "Museum and art exhibition showcase template",
-  "description_ko": "미술관 및 전시 쇼케이스 템플릿",
-  "tags": [],
-  "mode": "dark",
+  "description": "Modern art gallery and exhibition website template",
+  "description_ko": "현대 미술 갤러리 및 전시 웹사이트 템플릿",
+  "mode": "light",
   "theme": {
     "palette": {
-      "primary": "#0F0F0F",
-      "secondary": "#F9F6F0",
-      "accent": "#F9F6F0",
+      "primary": "#FCFCFC",
+      "secondary": "#000000",
+      "accent": "#000000",
       "text": {
-        "main": "#F9F6F0",
-        "muted": "rgba(249, 246, 240, 0.4)",
-        "contrast": "#0F0F0F"
+        "main": "#000000",
+        "muted": "rgba(0, 0, 0, 0.4)",
+        "contrast": "#FCFCFC"
       },
       "ui": {
-        "border": "rgba(249, 246, 240, 0.1)",
-        "hover": "#F9F6F0",
-        "shadow": "0 30px 60px rgba(0,0,0,0.5)"
+        "border": "rgba(0, 0, 0, 0.1)",
+        "hover": "rgba(0, 0, 0, 0.03)",
+        "shadow": "none"
       }
     },
     "typography": {
       "heading": {
-        "font": "Playfair Display, Noto Serif KR, serif",
-        "weight": "500",
-        "tracking": "-0.03em",
-        "style": "font-medium tracking-tighter uppercase"
+        "font": "Inter, sans-serif",
+        "weight": "600",
+        "tracking": "-0.04em",
+        "style": "font-semibold uppercase tracking-tighter"
       },
       "body": {
-        "font": "Inter, Pretendard, sans-serif",
-        "weight": "300",
+        "font": "Plus Jakarta Sans, sans-serif",
+        "weight": "500",
         "leading": "1.6",
-        "style": "font-light tracking-widest leading-relaxed"
+        "style": "font-medium"
       },
       "mono": {
         "font": "JetBrains Mono",
@@ -42,17 +41,17 @@
       }
     },
     "spacing": {
-      "page_pt": "80px",
-      "container": "1280px",
-      "gutter": "24px",
+      "page_pt": "160px",
+      "container": "1400px",
+      "gutter": "48px",
       "card_p": "24px",
-      "gap": "96px"
+      "gap": "32px"
     },
     "motion": {
       "transition_fast": "200ms",
       "transition_normal": "300ms",
-      "transition_slow": "500ms",
-      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+      "transition_slow": "700ms",
+      "easing": "cubic-bezier(0.23, 1, 0.32, 1)"
     }
   }
 }

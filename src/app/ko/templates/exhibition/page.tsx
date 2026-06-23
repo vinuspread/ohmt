@@ -1,239 +1,200 @@
-"use client";
+﻿'use client';
 
-import { motion, useScroll, useTransform } from "framer-motion";
-import { ArrowRight, MousePointerClick, Headphones } from "lucide-react";
-import React, { useRef } from "react";
-import Link from "next/link";
-import { collections } from "./data/collections";
-import Header from "./_components/layout/Header";
-import Footer from "./_components/layout/Footer";
-
-import theme from "./theme.json";
+import { useState, useRef } from 'react';
+import Link from 'next/link';
+import { motion } from 'motion/react';
+import { exhibitions } from './constants';
+import ExhibitionCard from './_components/ExhibitionCard';
+import { Navbar } from './_components/Navbar';
+import { Footer } from './_components/Footer';
 import { TemplateWrapper } from "./_components/TemplateWrapper";
+import theme from "./theme.json";
 
-const fadeIn = {
-  initial: { opacity: 0, y: 30 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 1, ease: [0.6, 0.01, -0.05, 0.95] }
-};
+const easeOut = [0.23, 1, 0.32, 1] as const;
+type Tab = 'on-show' | 'opening-soon' | 'permanent';
 
-const stagger = {
-  animate: {
-    transition: {
-      staggerChildren: 0.15
-    }
-  }
-};
+const mosaicImages = Array.from({ length: 9 }, (_, i) => `/templates/OHMT003-exhibition/mosaic-0${i + 1}.jpg`);
 
-function HomeContent() {
+const events = [
+  { title: '작가 토크: Sophie Laurent', date: '2026년 6월 14일', time: '15:00', type: '작가 토크', ageRating: '18+', image: '/templates/OHMT003-exhibition/event-01.jpg' },
+  { title: '드로잉 워크숍', date: '2026년 6월 21일', time: '10:00', type: '워크숍', ageRating: '12+', image: '/templates/OHMT003-exhibition/event-02.jpg' },
+  { title: '큐레이터 투어: Echoes of Form', date: '2026년 6월 28일', time: '14:00', type: '투어', ageRating: '전체', image: '/templates/OHMT003-exhibition/event-01.jpg' },
+  { title: '퍼포먼스: 공간 속의 몸', date: '2026년 7월 5일', time: '19:30', type: '퍼포먼스', ageRating: '16+', image: '/templates/OHMT003-exhibition/event-02.jpg' },
+];
 
-  // Hero Parallax
-  const heroRef = useRef(null);
-  const { scrollYProgress: heroProgress } = useScroll({
-    target: heroRef,
-    offset: ["start start", "end start"]
-  });
+export default function HomePage() {
+  const [activeTab, setActiveTab] = useState<Tab>('on-show');
+  const sliderRef = useRef<HTMLDivElement>(null);
 
-  const heroScale = useTransform(heroProgress, [0, 1], [1, 1.15]);
-  const heroOpacity = useTransform(heroProgress, [0, 0.8], [1, 0]);
+  const filtered = exhibitions.filter((ex) => ex.status === activeTab);
 
-  // Horizontal Scroll Setup
-  const horizontalRef = useRef(null);
-  const { scrollYProgress: horizontalProgress } = useScroll({
-    target: horizontalRef,
-    offset: ["start start", "end end"]
-  });
-  
-  const x = useTransform(horizontalProgress, [0, 1], ["0%", "-55%"]);
+  const scrollSlider = (dir: 'left' | 'right') => {
+    if (!sliderRef.current) return;
+    sliderRef.current.scrollBy({ left: dir === 'left' ? -340 : 340, behavior: 'smooth' });
+  };
 
   return (
-
     <TemplateWrapper theme={theme}>
+      <Navbar />
 
-      <>
-      <Header />
-      <main className="antialiased relative bg-[var(--color-primary)] text-[var(--color-accent)] selection:bg-[var(--color-accent)] selection:text-[var(--color-primary)]">
-      
-      {/* Hero Section */}
-      <section ref={heroRef} className="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden">
-        <motion.div 
-          style={{ scale: heroScale, opacity: heroOpacity }}
-          className="absolute inset-0 z-0 bg-[var(--color-primary)]"
-        >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-[var(--color-primary)] z-10" />
-          <img 
-            src="/templates/exhibition/hero-bg.png" 
-            alt="Vatican Ceiling"
-            className="w-full h-full object-cover opacity-80"
-          />
-        </motion.div>
-
-        <motion.div
-          initial="initial"
-          animate="animate"
-          variants={stagger}
-          className="relative z-20 pointer-events-none mt-16 md:mt-20"
-        >
-          <motion.span 
-            variants={fadeIn} 
-            className="inline-block text-[13px] md:text-xs uppercase tracking-tight font-medium mb-6 md:mb-8 text-[var(--color-accent)]/70"
-            style={{ fontFamily: "'Noto Serif KR', serif" }}
-          >
-            {"바티칸 미술관의 위대한 헤리티지"}
-          </motion.span>
-          <motion.h2
-            variants={fadeIn}
-            className="text-3xl md:text-4xl lg:text-[4vw] font-normal leading-[1.0] tracking-[-0.03em] mb-8 md:mb-12 text-[var(--color-accent)]"
-            style={{ fontFamily: "'Nanum Myeongjo', 'Noto Serif KR', serif" }}
-          >
-            {"수천 년의 침묵 속에서"} <br />
-            <span className="font-normal text-[var(--color-accent)]/80" style={{ fontFamily: "'Nanum Myeongjo', 'Noto Serif KR', serif" }}>{"인류는 아름다움을 새겼다"}</span>
-          </motion.h2>
-          <motion.p
-            variants={fadeIn}
-            className="text-[13px] md:text-[15px] text-[var(--color-accent)]/50 font-normal leading-[1.9] tracking-[-0.01em] max-w-[320px] mx-auto mb-10 md:mb-14"
-            style={{ fontFamily: "'Pretendard', 'Noto Sans KR', sans-serif", textWrap: "pretty" } as React.CSSProperties}
-          >
-            고대 대리석의 속삭임부터 시스티나 천장화의 불꽃까지, 5세기의 후원이 당신을 위해 준비해온 단 하나의 여정.
-          </motion.p>
-          <motion.div variants={fadeIn} className="pointer-events-auto flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
-            <Link href="/ko/templates/exhibition/collections" className="w-fit mx-auto px-8 md:px-10 py-3 md:py-4 border border-[var(--color-accent)]/30 text-xs uppercase tracking-[0.5em] hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors duration-500 backdrop-blur-sm">
-              {"여정 시작하기"}
-            </Link>
-          </motion.div>
-        </motion.div>
-      </section>
-
-      {/* Audio Guide Highlights Section */}
-      <section className="py-6 md:py-16 bg-[var(--color-accent)] text-[var(--color-primary)]">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-[1440px] mx-auto px-6 py-4 md:py-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10"
-        >
-          <div className="flex-1 text-center md:text-left">
-            <span className="text-[8px] md:text-[13px] uppercase font-bold tracking-[0.5em] text-black/40 block mb-2 md:mb-4">{"경험의 깊이를 더하다"}</span>
-            <h3 className="text-lg md:text-3xl font-serif font-bold mb-3 md:mb-4">{"공식 오디오 가이드"}</h3>
-            <p className="text-black/60 font-normal max-w-xs md:max-w-md text-xs md:text-sm leading-relaxed">
-              {"세계적인 미술 사학자들의 깊이 있는 해설과 함께 바티칸의 위대한 유산들을 더 깊이 있게 만나보세요. 다국어 오디오 가이드가 지원됩니다."}
-            </p>
-          </div>
-          <div className="flex items-center gap-3 md:gap-6 flex-shrink-0 justify-center md:justify-start">
-            <button className="w-12 h-12 md:w-16 md:h-16 rounded-full border border-black flex items-center justify-center hover:bg-black hover:text-[var(--color-accent)] transition-colors">
-              <Headphones size={20} className="md:w-6 md:h-6" />
-            </button>
-            <div className="flex flex-col items-center md:items-start">
-              <span className="text-[8px] md:text-[13px] uppercase tracking-widest font-bold">{"미리듣기"}</span>
-              <span className="text-[12px] md:text-xs text-black/40">0:00 / 1:45</span>
+      {/* Section 1 - Hero */}
+      <section className="min-h-screen bg-[var(--color-bg)] flex flex-col justify-between">
+        <div className="max-w-[1400px] mx-auto px-6 pt-32 flex-1 flex flex-col">
+          <h1 className="font-heading font-semibold uppercase leading-none text-black" style={{ fontSize: 'clamp(5rem, 10vw, 9rem)', letterSpacing: '-0.04em' }}>
+            Oh My Template
+          </h1>
+          <div className="flex-1 grid md:grid-cols-2 gap-12 mt-12">
+            <div className="aspect-[3/4] overflow-hidden">
+              <img src="/templates/OHMT003-exhibition/hero-left.jpg" alt="" className="w-full h-full object-cover" />
+            </div>
+            <div className="flex flex-col justify-between">
+              <div>
+                <h2 className="font-heading font-semibold uppercase text-black" style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', letterSpacing: '-0.03em', lineHeight: '0.96' }}>
+                  대담한 예술<br />새로운 시각
+                </h2>
+                <div className="mt-10 aspect-[3/4] overflow-hidden md:hidden">
+                  <img src="/templates/OHMT003-exhibition/hero-right.jpg" alt="" className="w-full h-full object-cover" />
+                </div>
+                <Link href="/ko/templates/OHMT006-exhibition-kr/contact" className="relative overflow-hidden group inline-flex px-8 py-4 border border-black mt-10">
+                  <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
+                  <span className="relative text-black group-hover:text-white text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-300">티켓 구매</span>
+                </Link>
+              </div>
+              <div className="hidden md:block w-[70%] aspect-[3/4] overflow-hidden self-end">
+                <img src="/templates/OHMT003-exhibition/hero-right.jpg" alt="" className="w-full h-full object-cover" />
+              </div>
             </div>
           </div>
-        </motion.div>
+        </div>
+
+        <div className="max-w-[1400px] mx-auto px-6 pb-12 mt-[200px]">
+          <div className="flex items-center justify-between mb-6">
+            <span className="text-[10px] font-body font-semibold uppercase tracking-[0.1em] text-black/60">지금 주목받는 전시</span>
+            <div className="flex gap-2">
+              <button onClick={() => scrollSlider('left')} className="w-8 h-8 border border-black flex items-center justify-center text-[12px] hover:bg-black hover:text-white transition-colors duration-200">&larr;</button>
+              <button onClick={() => scrollSlider('right')} className="w-8 h-8 border border-black flex items-center justify-center text-[12px] hover:bg-black hover:text-white transition-colors duration-200">&rarr;</button>
+            </div>
+          </div>
+          <div ref={sliderRef} className="flex gap-10 overflow-x-auto" style={{ scrollbarWidth: 'none' }}>
+            {exhibitions.slice(0, 3).map((ex) => (
+              <div key={ex.slug} className="flex-none w-[340px]">
+                <ExhibitionCard exhibition={ex} />
+              </div>
+            ))}
+          </div>
+        </div>
       </section>
 
-      {/* Horizontal Scroll Gallery Section */}
-      <section ref={horizontalRef} className="relative bg-[var(--color-primary)]" style={{ height: "auto" }}>
-        <div className="sticky top-0 min-h-screen flex flex-col justify-center overflow-hidden py-6 md:py-16 lg:pt-16">
+      {/* Section 2 - Mosaic */}
+      <section className="relative bg-[var(--color-bg)]" style={{ height: '280vh' }}>
+        <div className="sticky top-[12%] z-10 pointer-events-none max-w-[1400px] mx-auto px-6 pt-24" style={{ mixBlendMode: 'difference' }}>
+          <h2 className="font-heading font-semibold uppercase text-white" style={{ fontSize: 'clamp(3rem, 5vw, 4.5rem)', letterSpacing: '-0.04em', lineHeight: '0.96' }}>
+            마음을 움직이는<br />컬렉션
+          </h2>
+          <p className="mt-6 text-[18px] font-body text-white/70 leading-relaxed max-w-[36ch]">
+            모든 작품은 자극하고, 위로하고, 도전합니다. 때로는 동시에.
+          </p>
+        </div>
+        <div className="max-w-[1400px] mx-auto px-6 pt-[40vh]">
+          <div className="grid grid-cols-3 gap-6 mb-6">
+            <div className="col-span-2 aspect-[16/10] overflow-hidden"><img src={mosaicImages[0]} alt="" className="w-full h-full object-cover" /></div>
+            <div className="col-span-1 aspect-[16/10] overflow-hidden"><img src={mosaicImages[1]} alt="" className="w-full h-full object-cover" /></div>
+          </div>
+          <div className="grid grid-cols-3 gap-6 mb-6">
+            {mosaicImages.slice(2, 5).map((src) => (<div key={src} className="aspect-[4/3] overflow-hidden"><img src={src} alt="" className="w-full h-full object-cover" /></div>))}
+          </div>
+          <div className="grid grid-cols-3 gap-6">
+            <div className="col-span-1 aspect-[16/10] overflow-hidden"><img src={mosaicImages[5]} alt="" className="w-full h-full object-cover" /></div>
+            <div className="col-span-2 aspect-[16/10] overflow-hidden"><img src={mosaicImages[6]} alt="" className="w-full h-full object-cover" /></div>
+          </div>
+        </div>
+      </section>
 
-          <div className="px-4 md:px-12 lg:px-24 mb-3 md:mb-8 lg:mb-12">
-            <span className="text-[8px] md:text-[13px] uppercase font-bold tracking-[0.5em] text-white/40 block mb-2 md:mb-4">{"컬렉션 01"}</span>
-            <h3 className="text-xl md:text-4xl lg:text-6xl font-serif font-bold tracking-[-0.03em]">{"르네상스와 고대 예술"}</h3>
+      {/* Section 3 - Exhibition List */}
+      <section className="bg-[var(--color-bg)] py-32">
+        <div className="max-w-[1400px] mx-auto px-6">
+          <div className="grid md:grid-cols-2 gap-12 mb-16">
+            <div>
+              <p className="text-[10px] font-body font-semibold uppercase tracking-[0.1em] text-black/60 mb-2">현재 전시</p>
+              <h2 className="font-heading font-semibold uppercase text-black" style={{ fontSize: 'clamp(3.5rem, 5vw, 5rem)', letterSpacing: '-0.04em', lineHeight: '0.96' }}>
+                지금<br />전시 중
+              </h2>
+            </div>
+            <div className="flex flex-col items-start md:items-end justify-end">
+              <p className="text-[11px] font-body text-black/40 uppercase tracking-[0.08em] mb-2">{exhibitions.length}개 전시</p>
+              <Link href="/ko/templates/OHMT006-exhibition-kr/exhibitions" className="text-[11px] font-body font-semibold uppercase tracking-[0.12em] text-black border-b border-black pb-0.5 hover:opacity-60 transition-opacity">
+                전체 보기
+              </Link>
+            </div>
           </div>
 
-          <motion.div style={{ x }} className="flex gap-3 md:gap-6 lg:gap-16 lg:gap-24 px-4 md:px-12 lg:px-24 pb-6 md:pb-12 lg:pb-20 w-full md:w-[150vw] lg:w-[150vw] overflow-x-auto md:overflow-visible touch-pan-x">
-            {collections.map((item, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, x: 80 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: i * 0.08 }}
-                className="w-[85vw] sm:w-[80vw] md:w-[50vw] lg:w-[35vw] xl:w-[25vw] shrink-0"
-              >
-                <Link href={`/ko/templates/exhibition/collections/${item.slug}`} className="group relative cursor-pointer block">
-                  <div className="relative aspect-[3/4] bg-[var(--color-bg-secondary)] overflow-hidden mb-8">
-                    <img 
-                      src={item.img} 
-                      alt={item.title}
-                      className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-[1.5s] ease-out brightness-75 group-hover:brightness-100"
-                    />
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700" />
-                    
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
-                      <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/30 text-white">
-                        <MousePointerClick size={20} />
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex flex-col border-t border-white/10 pt-6 px-1">
-                    <div className="flex justify-between items-start mb-4 gap-4">
-                      <h4 className="text-xl md:text-2xl font-serif tracking-tight leading-snug break-words">{item.title}</h4>
-                      <span className="text-[12px] whitespace-nowrap uppercase tracking-widest text-white/50 bg-white/5 px-2 py-1 h-fit">{item.tag}</span>
-                    </div>
-                    <div className="flex justify-between text-xs font-normal tracking-widest text-white/60">
-                      <span className="truncate pr-4">{item.artist}</span>
-                      <span className="shrink-0">{item.year}</span>
-                    </div>
-                  </div>
-                </Link>
-              </motion.div>
+          <div className="flex gap-10 mb-12 border-b border-[var(--color-border)]">
+            {(['on-show', 'opening-soon', 'permanent'] as const).map((tab) => (
+              <button key={tab} onClick={() => setActiveTab(tab)} className="pb-3 text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-200"
+                style={{ color: activeTab === tab ? '#000000' : 'rgba(0,0,0,0.4)', borderBottom: activeTab === tab ? '2px solid #000000' : '2px solid transparent' }}>
+                {tab === 'on-show' ? '전시 중' : tab === 'opening-soon' ? '개막 예정' : '상설 전시'}
+              </button>
             ))}
-          </motion.div>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+            {filtered.map((ex) => <ExhibitionCard key={ex.slug} exhibition={ex} />)}
+          </div>
         </div>
       </section>
 
-      {/* Curator Note Segment */}
-      <section className="py-8 md:py-20 lg:py-28 bg-[var(--color-accent)] text-[var(--color-primary)]">
-        <div className="max-w-[1440px] mx-auto px-6 grid md:grid-cols-2 gap-6 md:gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1 }}
-            className="order-2 md:order-1 max-w-lg"
-          >
-            <span className="text-[12px] md:text-[13px] uppercase font-bold tracking-[0.5em] text-black/40 mb-4 md:mb-6 block">{"에디토리얼"}</span>
-            <h3 className="text-4xl md:text-7xl font-serif font-bold mb-4 md:mb-10 leading-[1.5] tracking-[-0.03em]">{"신성한 비례"}</h3>
-            <p className="text-base md:text-lg text-black/70 leading-relaxed mb-4 md:mb-10 font-normal">
-              {"바티칸 미술관은 단순히 역사적 유물의 저장소가 아닌, 완벽을 향한 인류의 끊임없는 열망이 담긴 거대한 기념비와 같습니다. 그 회랑을 거니는 것은 르네상스 시대의 지성과 영혼이 물리적으로 구현된 공간을 직접 마주하는 것과 다름없습니다."}
-              <br /><br />
-              {"우리의 큐레이션은 압도적인 장식성 너머에 존재하는 구조적인 눈부심을 포착하고자 합니다. 라오콘(Laocoön)이나 피에타(Pietà)와 같은 걸작들을 고요하고 정제된 디지털 공간에 홀로 세움으로써, 번잡한 미술관의 소음 없이 그 작품들이 지닌 순수한 신학적·감정적 무게감을 오롯이 전하고자 합니다."}
-            </p>
-            <Link href="/ko/templates/exhibition/curator-note" className="inline-flex items-center gap-4 text-xs font-bold uppercase tracking-[0.5em] group pb-2 border-b border-black">
-              {"에세이 읽기"} <ArrowRight size={14} className="group-hover:translate-x-3 transition-transform duration-300" />
+      {/* Section 4 - Plan Your Visit */}
+      <section className="bg-[var(--color-bg-dark)] py-32">
+        <div className="max-w-[1400px] mx-auto px-6">
+          <h2 className="font-heading font-semibold uppercase text-white mb-20" style={{ fontSize: 'clamp(3.5rem, 5vw, 5rem)', letterSpacing: '-0.04em', lineHeight: '0.96' }}>
+            방문<br />계획하기
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-14 border-t border-white/15 pt-16">
+            {[
+              { label: '주소', value: '123 West 25th Street\nNew York, NY 10001' },
+              { label: '운영 시간', value: '화-금 오전 10시-오후 6시\n토-일 오전 10시-오후 8시\n월요일 휴관' },
+              { label: '전화', value: '+1 (212) 555-0147' },
+              { label: '이메일', value: 'info@formagallery.com' },
+            ].map((info) => (
+              <div key={info.label}>
+                <p className="text-[10px] font-body font-semibold uppercase tracking-[0.12em] text-white/35 mb-4">{info.label}</p>
+                <p className="text-[1.25rem] font-heading font-semibold text-white whitespace-pre-line leading-[1.5]" style={{ letterSpacing: '-0.02em' }}>{info.value}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section 5 - Events */}
+      <section className="bg-[var(--color-bg)] py-32">
+        <div className="max-w-[1400px] mx-auto px-6">
+          <h2 className="font-heading font-semibold uppercase text-black mb-16" style={{ fontSize: 'clamp(3.5rem, 5vw, 5rem)', letterSpacing: '-0.04em', lineHeight: '0.96' }}>
+            다가오는<br />이벤트
+          </h2>
+          <div className="grid md:grid-cols-2 gap-10">
+            {events.map((evt) => (
+              <div key={evt.title} className="group cursor-pointer">
+                <div className="aspect-[16/9] overflow-hidden">
+                  <img src={evt.image} alt={evt.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                </div>
+                <div className="flex items-center justify-between mt-6">
+                  <p className="text-[11px] font-body text-black/50 tracking-[0.06em]">{evt.date} <span className="mx-1.5 opacity-40">·</span> {evt.time}</p>
+                  <span className="text-[10px] font-body font-semibold uppercase tracking-[0.1em] text-white bg-black px-2.5 py-1">{evt.ageRating}</span>
+                </div>
+                <h3 className="mt-3 text-[1.25rem] font-heading font-semibold tracking-[-0.02em] text-black leading-tight">{evt.title}</h3>
+                <p className="mt-2 text-[11px] font-body text-black/40 tracking-[0.08em]">{evt.type}</p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-16">
+            <Link href="/ko/templates/OHMT006-exhibition-kr/events" className="text-[11px] font-body font-semibold uppercase tracking-[0.12em] text-black border-b border-black pb-0.5 hover:opacity-60 transition-opacity">
+              전체 이벤트 보기
             </Link>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1.5 }}
-            className="order-1 md:order-2 relative aspect-[4/3] md:aspect-[3/4] overflow-hidden rounded-sm"
-          >
-             <img
-               src="/templates/exhibition/curator.png"
-               alt="Vatican Museum Interior"
-               className="w-full h-full object-cover grayscale"
-             />
-          </motion.div>
+          </div>
         </div>
       </section>
 
-      </main>
       <Footer />
-    </>
-
     </TemplateWrapper>
-);
-}
-
-
-export default function Home(props: any) {
-  return (
-    <React.Suspense fallback={null}>
-      <HomeContent {...props} />
-    </React.Suspense>
   );
 }
