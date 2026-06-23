@@ -1,4 +1,4 @@
-// src/app/templates/airline/-components/Header.tsx
+﻿// src/app/templates/OHMT008-airline/-components/Header.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -52,14 +52,8 @@ const navItems = [
           : "bg-transparent"
       )}>
         <div className="max-w-[1320px] mx-auto px-6 md:px-10 flex items-center justify-between w-full">
-          <Link href="/ko/templates/airline" className="flex items-center gap-3 shrink-0 group">
-            <div className="w-8 h-8 md:w-[34px] md:h-[34px] bg-[var(--color-accent)] flex items-center justify-center text-[0.72rem] md:text-[0.75rem] font-black text-[var(--color-primary)] tracking-tighter">
-              V
-            </div>
-            <div className="flex flex-col gap-0.5">
-              <span className="text-[0.78rem] md:text-[0.82rem] font-bold md:font-extrabold tracking-[0.25em] uppercase text-white leading-none">VINUS AIR</span>
-              <span className="text-[0.45rem] font-normal tracking-[0.22em] uppercase text-white/35 leading-none">Above & Beyond</span>
-            </div>
+            <Link href="/ko/templates/OHMT016-airline-kr" className="shrink-0 group">
+            <span className="text-[0.78rem] md:text-[0.82rem] font-bold tracking-[0.15em] uppercase text-white leading-none">Oh My Template</span>
           </Link>
 
           {/* Desktop GNB */}
@@ -67,7 +61,7 @@ const navItems = [
             {navItems.map((item) => (
               <Link
                 key={item.slug}
-                href={`/ko/templates/airline/${item.slug}`}
+                href={`/ko/templates/OHMT016-airline-kr/${item.slug}`}
                 className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-white/55 hover:text-white transition-colors duration-300 relative group pb-1"
               >
                 {item.name}
@@ -87,7 +81,7 @@ const navItems = [
             {/* Mobile hamburger */}
             <Button
               variant="ghost"
-              className="lg:hidden flex items-center justify-center w-10 h-10"
+              className="lg:hidden flex items-center justify-center w-10 h-10 text-white"
               onClick={() => setMobileOpen((v) => !v)}
               aria-label="Toggle menu"
             >
@@ -114,7 +108,7 @@ const navItems = [
           {navItems.map((item) => (
             <Link
               key={item.slug}
-              href={`/ko/templates/airline/${item.slug}`}
+              href={`/ko/templates/OHMT016-airline-kr/${item.slug}`}
               onClick={() => setMobileOpen(false)}
               className="text-[0.9rem] font-semibold uppercase tracking-[0.14em] text-white/60 hover:text-white py-4 border-b border-white/10 transition-colors"
             >
@@ -122,7 +116,7 @@ const navItems = [
             </Link>
           ))}
           <Link
-            href="/ko/templates/airline/book"
+            href="/ko/templates/OHMT016-airline-kr/book"
             onClick={() => setMobileOpen(false)}
             className="text-[0.9rem] font-semibold uppercase tracking-[0.14em] text-[var(--color-accent)] hover:text-[var(--color-accent-light)] py-4 border-b border-white/10 transition-colors"
           >

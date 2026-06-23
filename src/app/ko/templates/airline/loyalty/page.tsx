@@ -1,4 +1,4 @@
-// src/app/ko/templates/airline/loyalty/page.tsx
+﻿// src/app/ko/templates/OHMT016-airline-kr/loyalty/page.tsx
 "use client";
 
 import React, { useState } from "react";
@@ -50,7 +50,7 @@ function LoyaltyPageContent() {
 
         {/* Hero Section */}
         <PageHero
-          imageSrc="/templates/airline/airline-loyalty-hero.png"
+          imageSrc="/templates/OHMT008-airline/airline-loyalty-hero.png"
           imageAlt="VIP 공항 라운지"
           label="스카이라인 로열티 클럽"
           title={<>모든 마일을 <br /><span className="text-[var(--color-accent)] font-serif normal-case font-normal">더 높이.</span></>}

@@ -1,4 +1,4 @@
-// src/app/ko/templates/airline/destinations/page.tsx
+﻿// src/app/ko/templates/OHMT016-airline-kr/destinations/page.tsx
 "use client";
 
 import React, { useState } from "react";
@@ -20,7 +20,7 @@ function DestinationsPageContent() {
       name: "Paris", 
       country: "프랑스", 
       desc: "세계적 수준의 예술, 미식의 천재성, 역사적 우아함에 빠져보세요.",
-      img: "/templates/airline/paris.png",
+      img: "/templates/OHMT008-airline/paris.png",
       mood: "문화유산 & 예술"
     },
     {
@@ -28,7 +28,7 @@ function DestinationsPageContent() {
       name: "Tokyo", 
       country: "일본", 
       desc: "정교한 고대 신사 전통과 네온 마천루가 공존하는 곳을 발견하세요.",
-      img: "/templates/airline/tokyo.png",
+      img: "/templates/OHMT008-airline/tokyo.png",
       mood: "메트로폴리탄"
     },
     {
@@ -36,7 +36,7 @@ function DestinationsPageContent() {
       name: "New York", 
       country: "미국", 
       desc: "세계에서 가장 극적인 스카이라인의 숨막히는 에너지를 느껴보세요.",
-      img: "/templates/airline/new-york.png",
+      img: "/templates/OHMT008-airline/new-york.png",
       mood: "메트로폴리탄"
     },
     {
@@ -44,7 +44,7 @@ function DestinationsPageContent() {
       name: "Dubai", 
       country: "UAE", 
       desc: "비할 데 없는 사막 건축, 웅장한 항구, 최고의 럭셔리를 즐기세요.",
-      img: "/templates/airline/dubai.png",
+      img: "/templates/OHMT008-airline/dubai.png",
       mood: "메트로폴리탄"
     },
     {
@@ -52,7 +52,7 @@ function DestinationsPageContent() {
       name: "Sydney", 
       country: "호주", 
       desc: "해안가 항구의 우아함, 깨끗한 만, 고급스러운 라이프스타일을 만끽하세요.",
-      img: "/templates/airline/sydney.png",
+      img: "/templates/OHMT008-airline/sydney.png",
       mood: "자연 & 휴양"
     },
     {
@@ -60,7 +60,7 @@ function DestinationsPageContent() {
       name: "Bali", 
       country: "인도네시아", 
       desc: "에메랄드 빛 계곡, 절벽 위 사원, 고요한 해변으로의 완벽한 도피.",
-      img: "/templates/airline/bali.png",
+      img: "/templates/OHMT008-airline/bali.png",
       mood: "자연 & 휴양"
     },
   ];
@@ -76,7 +76,7 @@ function DestinationsPageContent() {
 
         {/* Hero Cover Banner */}
         <PageHero
-          imageSrc="/templates/airline/destination-main.jpg"
+          imageSrc="/templates/OHMT008-airline/destination-main.jpg"
           imageAlt="글로벌 여행지"
           label="큐레이티드 스카이 여행"
           title={<>우리의 <br /><span className="text-[var(--color-accent)] font-serif normal-case font-normal">정교한 세계를 탐험하세요.</span></>}
@@ -125,7 +125,7 @@ function DestinationsPageContent() {
                     transition={{ duration: 0.3 }}
                   >
                     <Link 
-                      href={`/ko/templates/airline/destinations/${dest.slug}`}
+                      href={`/ko/templates/OHMT016-airline-kr/destinations/${dest.slug}`}
                       className="group block space-y-6 text-left select-none"
                     >
                       {/* Image container (Color by default, Scale on hover) */}
