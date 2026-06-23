@@ -3,6 +3,27 @@ import './theme.css';
 
 export const metadata: Metadata = {
   title: "Fashion KO - Oh My Template",
+  description: "프리미엄 패션 브랜드 & 에디토리얼 쇼케이스",
+  openGraph: {
+    title: "Fashion KO - Oh My Template",
+    description: "프리미엄 패션 브랜드 & 에디토리얼 쇼케이스",
+    url: "https://ohmytemplate.com/ko/templates/OHMT002-fashion-kr",
+    siteName: "Oh My Template",
+    images: [{ url: "/templates/OHMT001-fashion/og-image.jpg", width: 1200, height: 630 }],
+    locale: "ko_KR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Fashion KO - Oh My Template",
+    description: "프리미엄 패션 브랜드 & 에디토리얼 쇼케이스",
+    images: ["/templates/OHMT001-fashion/og-image.jpg"],
+  },
+  robots: { index: true, follow: true },
+  alternates: {
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT002-fashion-kr",
+    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT001-fashion-en-en" },
+  },
 };
 
 export default function FashionLayout({

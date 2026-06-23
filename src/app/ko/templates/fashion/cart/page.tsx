@@ -13,7 +13,7 @@ import { Button } from "../_components/ui/Button";
 
 function FashionCartPageContent() {
     const items = [
-        { id: "1", name: "스컬프처럴 블레이저 V.01", price: "$890", size: "M", img: "/templates/fashion/product-blazer.jpg" }
+        { id: "1", name: "스컬프처럴 블레이저 V.01", price: "$890", size: "M", img: "/templates/OHMT001-fashion/product-blazer.jpg" }
     ];
 
     return (
@@ -32,7 +32,7 @@ function FashionCartPageContent() {
 
                         {items.map(item => (
                             <div key={item.id} className="flex flex-col md:flex-row gap-8 md:gap-12 border-b border-black/5 pb-16">
-                                <div className="w-full md:w-48 aspect-square bg-[#F5F5F7] overflow-hidden">
+                                <div className="w-full md:w-48 aspect-square bg-[var(--color-bg-secondary)] overflow-hidden">
                                     <img loading="lazy" src={item.img} className="w-full h-full object-cover" alt={item.name} />
                                 </div>
                                 <div className="flex-1 flex flex-col justify-between py-2">

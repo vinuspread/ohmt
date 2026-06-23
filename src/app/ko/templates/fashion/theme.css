@@ -2,10 +2,13 @@
 :root {
   /* Color System */
   --color-bg: #FFFFFF;
+  --color-bg-secondary: #F5F5F5;
   --color-text: #000000;
   --color-text-secondary: #888888;
   --color-accent: #000000;
+  --color-secondary: #C9A84C;
   --color-muted: #888888;
+  --color-text-muted: #888888;
   --color-border: #EEEEEE;
   --color-overlay: rgba(0, 0, 0, 0.05);
 
@@ -13,6 +16,7 @@
   --color-primary: #000000;
   --color-gold: #C9A84C;
   --color-white: #FFFFFF;
+  --color-text-contrast: #FFFFFF;
 
   /* Typography */
   --font-heading: 'Bodoni Moda', 'Nanum Myeongjo', 'Bodoni MT', 'Didot', serif;

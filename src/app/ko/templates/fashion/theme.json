@@ -1,11 +1,10 @@
 {
   "slug": "fashion",
-  "name": "Fashion Store",
-  "name_ko": "패션 스토어",
+  "name": "Fashion Laboratory",
+  "name_ko": "패션 연구소",
   "category": "lifestyle",
-  "description": "Elegant fashion brand store and lookbook template",
-  "description_ko": "엘레강트한 패션 브랜드 스토어 및 룩북 템플릿",
-  "tags": [],
+  "description": "A high-end fashion laboratory template with sculptural tailoring and minimalist aesthetics.",
+  "description_ko": "조형적 테일러링과 미니멀리스트 미학을 갖춘 하이엔드 패션 연구소 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {
