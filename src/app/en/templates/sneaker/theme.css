@@ -1,12 +1,14 @@
 /* sneaker Design Tokens */
 :root {
   --color-primary: #000000;
+  --color-secondary: #000000;
   --color-accent: #FF3B30;
   --color-accent-light: #FF6B5F;
   --color-bg: #FFFFFF;
   --color-bg-secondary: #F5F5F5;
   --color-text: #000000;
   --color-text-muted: #707070;
+  --color-text-contrast: #1C1C1A;
   --color-border: #000000;
 
   --font-heading: 'Inter', sans-serif;

@@ -1,4 +1,4 @@
-// src/app/templates/sneaker/-components/layout/Header.tsx
+﻿// src/app/templates/OHMT005-sneaker/-components/layout/Header.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -171,11 +171,11 @@ export const Header = () => {
   }
 };
 const navLinks = [
-    { label: t.nav.categories, href: "/en/templates/sneaker/shop-all" },
-    { label: t.nav.shop, href: "/en/templates/sneaker/shop-all" },
-    { label: t.nav.about, href: "/en/templates/sneaker/about" },
-    { label: t.nav.blog, href: "/en/templates/sneaker/blog" },
-    { label: t.nav.contact, href: "/en/templates/sneaker/contact" },
+    { label: t.nav.categories, href: "/en/templates/OHMT009-sneaker-en/shop-all" },
+    { label: t.nav.shop, href: "/en/templates/OHMT009-sneaker-en/shop-all" },
+    { label: t.nav.about, href: "/en/templates/OHMT009-sneaker-en/about" },
+    { label: t.nav.blog, href: "/en/templates/OHMT009-sneaker-en/blog" },
+    { label: t.nav.contact, href: "/en/templates/OHMT009-sneaker-en/contact" },
   ];
 
   useEffect(() => {
@@ -188,7 +188,7 @@ const navLinks = [
     <>
       <header className={`fixed top-0 left-0 w-full h-14 md:h-20 z-50 transition-all duration-300 flex items-center bg-white ${scrolled ? "border-b border-black/10 shadow-sm" : ""}`}>
         <div className="max-w-[1440px] mx-auto w-full px-6 flex items-center justify-between gap-8">
-          <Link href={`/en/templates/sneaker`} className="text-[1.2rem] md:text-[1.4rem] font-black tracking-[-0.04em] text-black uppercase shrink-0">
+          <Link href={`/en/templates/OHMT009-sneaker-en`} className="text-[1.2rem] md:text-[1.4rem] font-black tracking-[-0.04em] text-black uppercase shrink-0">
             VINUSPREAD
           </Link>
 
@@ -207,7 +207,7 @@ const navLinks = [
             <button className="hidden md:flex w-8 h-8 items-center justify-center text-black/70 hover:text-black transition-colors">
               <User size={18} />
             </button>
-            <Link href={`/en/templates/sneaker/cart`} className="relative flex w-8 h-8 items-center justify-center text-black/70 hover:text-black transition-colors">
+            <Link href={`/en/templates/OHMT009-sneaker-en/cart`} className="relative flex w-8 h-8 items-center justify-center text-black/70 hover:text-black transition-colors">
               <ShoppingBag size={18} />
             </Link>
             <button className="md:hidden" onClick={() => setMobileOpen(!mobileOpen)}>

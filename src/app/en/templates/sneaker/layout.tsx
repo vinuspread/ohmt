@@ -4,6 +4,26 @@ import './theme.css';
 export const metadata: Metadata = {
   title: "Sneaker - Oh My Template",
   description: "Urban streetwear and sneaker releases",
+  openGraph: {
+    title: "Sneaker - Oh My Template",
+    description: "Urban streetwear and sneaker releases",
+    url: "https://ohmytemplate.com/en/templates/OHMT009-sneaker-en",
+    siteName: "Oh My Template",
+    images: [{ url: "/templates/OHMT005-sneaker/og-image.jpg", width: 1200, height: 630 }],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sneaker - Oh My Template",
+    description: "Urban streetwear and sneaker releases",
+    images: ["/templates/OHMT005-sneaker/og-image.jpg"],
+  },
+  robots: { index: true, follow: true },
+  alternates: {
+    canonical: "https://ohmytemplate.com/en/templates/OHMT009-sneaker-en",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT010-sneaker-kr" },
+  },
 };
 
 export default function SneakerLayout({

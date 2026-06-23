@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -167,14 +167,14 @@ export function CategoryBanners() {
   }
 };
 const categories = [
-    { label: t.categoryBanners.items.sneakers, img: "/templates/sneaker/cat-sneakers-new.jpg" },
-    { label: t.categoryBanners.items.boots, img: "/templates/sneaker/cat-boots.jpg" },
-    { label: t.categoryBanners.items.formal, img: "/templates/sneaker/category-formal.jpg" },
-    { label: t.categoryBanners.items.running, img: "/templates/sneaker/category-running-new.jpg" },
-    { label: t.categoryBanners.items.oxford, img: "/templates/sneaker/cat-oxford-new.jpg" },
-    { label: t.categoryBanners.items.sports, img: "/templates/sneaker/cat-sports.jpg" },
-    { label: t.categoryBanners.items.highNeck, img: "/templates/sneaker/cat-highneck.jpg" },
-    { label: t.categoryBanners.items.loafers, img: "/templates/sneaker/cat-loafers-new.jpg" },
+    { label: t.categoryBanners.items.sneakers, img: "/templates/OHMT005-sneaker/cat-sneakers-new.jpg" },
+    { label: t.categoryBanners.items.boots, img: "/templates/OHMT005-sneaker/cat-boots.jpg" },
+    { label: t.categoryBanners.items.formal, img: "/templates/OHMT005-sneaker/category-formal.jpg" },
+    { label: t.categoryBanners.items.running, img: "/templates/OHMT005-sneaker/category-running-new.jpg" },
+    { label: t.categoryBanners.items.oxford, img: "/templates/OHMT005-sneaker/cat-oxford-new.jpg" },
+    { label: t.categoryBanners.items.sports, img: "/templates/OHMT005-sneaker/cat-sports.jpg" },
+    { label: t.categoryBanners.items.highNeck, img: "/templates/OHMT005-sneaker/cat-highneck.jpg" },
+    { label: t.categoryBanners.items.loafers, img: "/templates/OHMT005-sneaker/cat-loafers-new.jpg" },
   ];
 
   return (
@@ -182,14 +182,14 @@ const categories = [
       <div className="max-w-[1440px] mx-auto px-6">
         <div className="flex items-center justify-between mb-10">
           <h2 className="text-[1.5rem] md:text-[1.8rem] font-black tracking-[-0.03em] uppercase">{t.categoryBanners.title}</h2>
-          <Link href="/en/templates/sneaker/shop-all" className="text-[0.85rem] font-bold uppercase tracking-[0.15em] text-black/50 hover:text-black transition-colors border-b-2 border-black/20 pb-0.5">
+          <Link href="/en/templates/OHMT009-sneaker-en/shop-all" className="text-[0.85rem] font-bold uppercase tracking-[0.15em] text-black/50 hover:text-black transition-colors border-b-2 border-black/20 pb-0.5">
             {t.categoryBanners.viewAll}
           </Link>
         </div>
         <div className="flex overflow-x-auto gap-4 pb-4 md:grid md:grid-cols-8 md:gap-5 md:pb-0 scrollbar-none [scrollbar-width:none]">
           {categories.map((cat) => (
-            <Link key={cat.label} href="/en/templates/sneaker/shop-all" className="group flex flex-col items-center shrink-0 w-[95px] md:w-auto">
-              <div className="w-full aspect-square overflow-hidden bg-[#F5F5F3] group-hover:bg-[#EAEAEA] transition-all duration-300 mb-3 relative flex items-center justify-center p-0 rounded-none">
+            <Link key={cat.label} href="/en/templates/OHMT009-sneaker-en/shop-all" className="group flex flex-col items-center shrink-0 w-[95px] md:w-auto">
+              <div className="w-full aspect-square overflow-hidden bg-[var(--color-bg-secondary)] group-hover:bg-[var(--color-bg-secondary)] transition-all duration-300 mb-3 relative flex items-center justify-center p-0 rounded-none">
                 <img
                   src={cat.img}
                   alt={cat.label}

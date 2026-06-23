@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -181,10 +181,10 @@ return (
             <h4 className="text-[0.7rem] font-bold uppercase tracking-[0.15em] text-white/40 mb-5">{t.footer.sections.shop}</h4>
             <ul className="space-y-3">
               {[
-                { label: t.footer.links.allProducts, href: "/en/templates/sneaker/shop-all" },
-                { label: t.footer.links.newArrivals, href: "/en/templates/sneaker/shop-all" },
-                { label: t.footer.links.bestSellers, href: "/en/templates/sneaker/shop-all" },
-                { label: t.footer.links.sale, href: "/en/templates/sneaker/shop-all" },
+                { label: t.footer.links.allProducts, href: "/en/templates/OHMT009-sneaker-en/shop-all" },
+                { label: t.footer.links.newArrivals, href: "/en/templates/OHMT009-sneaker-en/shop-all" },
+                { label: t.footer.links.bestSellers, href: "/en/templates/OHMT009-sneaker-en/shop-all" },
+                { label: t.footer.links.sale, href: "/en/templates/OHMT009-sneaker-en/shop-all" },
               ].map(l => (
                 <li key={l.label}><Link href={l.href} className="text-[0.85rem] text-white/70 hover:text-white transition-colors">{l.label}</Link></li>
               ))}
@@ -195,11 +195,11 @@ return (
             <h4 className="text-[0.7rem] font-bold uppercase tracking-[0.15em] text-white/40 mb-5">{t.footer.sections.categories}</h4>
             <ul className="space-y-3">
               {[
-                { label: t.footer.links.sneakers, href: "/en/templates/sneaker/shop-all" },
-                { label: t.footer.links.running, href: "/en/templates/sneaker/shop-all" },
-                { label: t.footer.links.formal, href: "/en/templates/sneaker/shop-all" },
-                { label: t.footer.links.boots, href: "/en/templates/sneaker/shop-all" },
-                { label: t.footer.links.loafers, href: "/en/templates/sneaker/shop-all" },
+                { label: t.footer.links.sneakers, href: "/en/templates/OHMT009-sneaker-en/shop-all" },
+                { label: t.footer.links.running, href: "/en/templates/OHMT009-sneaker-en/shop-all" },
+                { label: t.footer.links.formal, href: "/en/templates/OHMT009-sneaker-en/shop-all" },
+                { label: t.footer.links.boots, href: "/en/templates/OHMT009-sneaker-en/shop-all" },
+                { label: t.footer.links.loafers, href: "/en/templates/OHMT009-sneaker-en/shop-all" },
               ].map(l => (
                 <li key={l.label}><Link href={l.href} className="text-[0.85rem] text-white/70 hover:text-white transition-colors">{l.label}</Link></li>
               ))}
@@ -210,10 +210,10 @@ return (
             <h4 className="text-[0.7rem] font-bold uppercase tracking-[0.15em] text-white/40 mb-5">{t.footer.sections.help}</h4>
             <ul className="space-y-3">
               {[
-                { label: t.footer.links.sizingGuide, href: "/en/templates/sneaker/shop-all" },
-                { label: t.footer.links.shipping, href: "/en/templates/sneaker/shop-all" },
-                { label: t.footer.links.returns, href: "/en/templates/sneaker/shop-all" },
-                { label: t.footer.links.contact, href: "/en/templates/sneaker/contact" },
+                { label: t.footer.links.sizingGuide, href: "/en/templates/OHMT009-sneaker-en/shop-all" },
+                { label: t.footer.links.shipping, href: "/en/templates/OHMT009-sneaker-en/shop-all" },
+                { label: t.footer.links.returns, href: "/en/templates/OHMT009-sneaker-en/shop-all" },
+                { label: t.footer.links.contact, href: "/en/templates/OHMT009-sneaker-en/contact" },
               ].map(l => (
                 <li key={l.label}><Link href={l.href} className="text-[0.85rem] text-white/70 hover:text-white transition-colors">{l.label}</Link></li>
               ))}

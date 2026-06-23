@@ -1,4 +1,4 @@
-// src/app/templates/sneaker/-components/sections/Hero.tsx
+﻿// src/app/templates/OHMT005-sneaker/-components/sections/Hero.tsx
 "use client";
 
 import React from "react";
@@ -180,7 +180,7 @@ export const Hero = () => {
           </span>
           
           <h1 className="text-[clamp(2.2rem,5.5vw,5rem)] tracking-[-0.03em] leading-[1.0] text-black uppercase mb-6">
-            <span className="font-normal block mb-1">{t.hero.title1}</span>
+            <span className="block mb-1">{t.hero.title1}</span>
             <span className="font-black block">{t.hero.title2}</span>
           </h1>
 
@@ -189,11 +189,11 @@ export const Hero = () => {
               {t.hero.desc}
             </p>
             <div className="flex items-center gap-4 shrink-0 flex-wrap">
-              <Link href={`/en/templates/sneaker/shop-all`}
+              <Link href={`/en/templates/OHMT009-sneaker-en/shop-all`}
                 className="group inline-flex items-center gap-3 bg-black text-white text-[0.9rem] font-bold uppercase tracking-[0.1em] px-9 py-4.5 hover:bg-black/80 transition-all duration-300">
                 {t.hero.cta} <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1.5" />
               </Link>
-              <Link href={`/en/templates/sneaker/shop-all`}
+              <Link href={`/en/templates/OHMT009-sneaker-en/shop-all`}
                 className="inline-flex items-center justify-center bg-white text-black border border-black text-[0.9rem] font-bold uppercase tracking-[0.1em] px-9 py-4.5 hover:bg-black hover:text-white transition-all duration-300">
                 {t.hero.cta2}
               </Link>
@@ -206,7 +206,7 @@ export const Hero = () => {
           {/* Left Big Image */}
           <div className="relative aspect-[16/10] md:aspect-auto md:h-[540px] overflow-hidden group">
             <img
-              src="/templates/sneaker/hero-main.jpg"
+              src="/templates/OHMT005-sneaker/hero-main.jpg"
               alt="Premium Sneaker Street"
               className="w-full h-full object-cover object-center transition-transform duration-[1.5s] ease-out group-hover:scale-105"
             />
@@ -224,7 +224,7 @@ export const Hero = () => {
           {/* Right Vertical Image */}
           <div className="hidden md:block relative h-[540px] overflow-hidden group">
             <img
-              src="/templates/sneaker/hero-detail.jpg"
+              src="/templates/OHMT005-sneaker/hero-detail.jpg"
               alt="Premium Sneaker Product Detail Zoom"
               className="w-full h-full object-cover object-center transition-transform duration-[1.5s] ease-out group-hover:scale-105"
             />
