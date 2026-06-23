@@ -1,0 +1,56 @@
+{
+  "slug": "wedding",
+  "name": "Lumen Wedding",
+  "name_ko": "루멘 웨딩",
+  "category": "portfolio",
+  "description": "Editorial light-mode portfolio template for fine art & documentary wedding photography",
+  "description_ko": "파인아트 & 다큐멘터리 웨딩 사진작가를 위한 에디토리얼 라이트 포트폴리오 템플릿",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#9B8670",
+      "secondary": "#F5F3EF",
+      "accent": "#6B7B5E",
+      "text": {
+        "main": "#1A1816",
+        "muted": "#7A786E",
+        "contrast": "#FFFFFF"
+      },
+      "ui": {
+        "border": "rgba(24, 23, 20, 0.10)",
+        "hover": "#F5F3EF",
+        "shadow": "0 20px 50px rgba(24, 23, 20, 0.08)"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "'Elms Sans', sans-serif",
+        "weight": "300",
+        "tracking": "0.05em",
+        "style": "font-light tracking-wide"
+      },
+      "body": {
+        "font": "Inter, sans-serif",
+        "weight": "400",
+        "leading": "1.6",
+        "style": "leading-relaxed"
+      }
+    },
+    "spacing": {
+      "page_pt": "96px",
+      "container": "1280px",
+      "gutter": "32px",
+      "card_gap": "24px"
+    },
+    "motion": {
+      "transition_fast": "200ms",
+      "transition_normal": "300ms",
+      "transition_slow": "500ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+    },
+    "interaction": {
+      "button": "bg-[var(--color-primary)] text-[var(--color-bg)] hover:opacity-95",
+      "card_hover": "hover:scale-[1.01] transition-all duration-300"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+:root {
+  --color-primary: var(--theme-primary, #9B8670);
+  --color-accent: var(--theme-accent, #6B7B5E);
+  --color-bg: var(--theme-secondary, #FFFFFF);
+  --color-bg-secondary: var(--theme-secondary, #F5F3EF);
+  --color-bg-tertiary: var(--theme-secondary, #ECEAE5);
+  --color-text: var(--theme-text, #1A1816);
+  --color-text-muted: var(--theme-text-muted, #7A786E);
+  --color-text-contrast: var(--theme-text-contrast, #FFFFFF);
+  --color-border: var(--theme-border, rgba(24, 23, 20, 0.10));
+
+  --font-heading: var(--theme-font-heading, 'Elms Sans'), sans-serif;
+  --font-body: var(--theme-font-body, 'Inter Tight'), sans-serif;
+}
+
+/* 한글 접근성 */
+* { word-break: keep-all; overflow-wrap: break-word; }
+header a, header button, nav a, nav button { letter-spacing: -0.03em; }
