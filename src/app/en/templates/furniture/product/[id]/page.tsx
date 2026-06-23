@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
@@ -19,12 +19,18 @@ function ProductDetailPageContent() {
   const router = useRouter();
   const [mounted, setMounted] = React.useState(false);
   const [quantity, setQuantity] = useState(1);
+  const [openTab, setOpenTab] = useState<string | null>(null);
+
+  const toggleTab = (tabName: string) => {
+    setOpenTab(openTab === tabName ? null : tabName);
+  };
 
   React.useEffect(() => {
     setMounted(true);
   }, []);
 
   const product = products.find((p) => String(p.id) === String(params.id));
+  const typedProduct = product as any;
 
   if (!mounted) return null;
   if (!product) return <div className="pt-40 text-center uppercase font-bold">Product not found</div>;
@@ -120,11 +126,102 @@ function ProductDetailPageContent() {
                   </div>
                   <Button
                     variant="primary"
-                    onClick={() => router.push('/templates/furniture/cart')}
+                    onClick={() => router.push('/templates/OHMT004-furniture/cart')}
                     className={`flex-1 py-6 rounded-full text-[14px] font-bold uppercase shadow-xl active:scale-95 ${theme.interaction.button}`}
                   >
                     Add to Bag
                   </Button>
+                </div>
+              </div>
+
+              {/* Accordion Tabs */}
+              <div className="mt-12 border-t border-black/10">
+                {/* Tab 1: Product Description */}
+                {typedProduct.longDesc && (
+                  <div className="border-b border-black/10">
+                    <button
+                      onClick={() => toggleTab('details')}
+                      className="w-full flex items-center justify-between py-4 text-left font-bold text-sm uppercase tracking-wider text-[var(--color-text)] hover:opacity-70 transition-opacity"
+                    >
+                      <span>Design Story & Details</span>
+                      <span className="text-lg">{openTab === 'details' ? '−' : '+'}</span>
+                    </button>
+                    {openTab === 'details' && (
+                      <div className="pb-6 text-sm leading-relaxed text-[var(--color-secondary)] normal-case font-normal whitespace-pre-line">
+                        {typedProduct.longDesc}
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* Tab 2: Specs Table */}
+                {product?.details && (
+                  <div className="border-b border-black/10">
+                    <button
+                      onClick={() => toggleTab('specs')}
+                      className="w-full flex items-center justify-between py-4 text-left font-bold text-sm uppercase tracking-wider text-[var(--color-text)] hover:opacity-70 transition-opacity"
+                    >
+                      <span>Dimensions & Material</span>
+                      <span className="text-lg">{openTab === 'specs' ? '−' : '+'}</span>
+                    </button>
+                    {openTab === 'specs' && (
+                      <div className="pb-6">
+                        <table className="w-full text-sm normal-case">
+                          <tbody>
+                            {Object.entries(product.details).map(([key, val]) => (
+                              <tr key={key} className="border-b border-black/5 last:border-0">
+                                <td className="py-2.5 font-bold text-[var(--color-text)] uppercase text-[12px] w-1/3">{key}</td>
+                                <td className="py-2.5 text-[var(--color-secondary)] w-2/3">{val}</td>
+                              </tr>
+                            ))}
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* Tab 3: Reviews */}
+                {typedProduct.reviewsList && typedProduct.reviewsList.length > 0 && (
+                  <div className="border-b border-black/10">
+                    <button
+                      onClick={() => toggleTab('reviews')}
+                      className="w-full flex items-center justify-between py-4 text-left font-bold text-sm uppercase tracking-wider text-[var(--color-text)] hover:opacity-70 transition-opacity"
+                    >
+                      <span>Reviews ({typedProduct.reviewsList.length})</span>
+                      <span className="text-lg">{openTab === 'reviews' ? '−' : '+'}</span>
+                    </button>
+                    {openTab === 'reviews' && (
+                      <div className="pb-6 space-y-6 normal-case">
+                        {typedProduct.reviewsList.map((review: any) => (
+                          <div key={review.id} className="border-b border-black/5 pb-4 last:border-0 last:pb-0">
+                            <div className="flex items-center justify-between mb-1.5">
+                              <span className="font-bold text-sm text-[var(--color-text)]">{review.reviewer}</span>
+                              <span className="text-xs text-[var(--color-secondary)]">{review.date}</span>
+                            </div>
+                            <p className="text-sm leading-relaxed text-[var(--color-secondary)]">{review.text}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* Tab 4: Delivery & Assembly */}
+                <div className="border-b border-black/10">
+                  <button
+                    onClick={() => toggleTab('delivery')}
+                    className="w-full flex items-center justify-between py-4 text-left font-bold text-sm uppercase tracking-wider text-[var(--color-text)] hover:opacity-70 transition-opacity"
+                  >
+                    <span>Delivery & Assembly</span>
+                    <span className="text-lg">{openTab === 'delivery' ? '−' : '+'}</span>
+                  </button>
+                  {openTab === 'delivery' && (
+                    <div className="pb-6 text-sm leading-relaxed text-[var(--color-secondary)] normal-case font-normal">
+                      <p className="mb-2">White glove delivery available for all premium furniture items. Our specialized delivery team will transport the item, unbox it, assemble it in your room of choice, and remove all packaging materials.</p>
+                      <p>Deliveries are typically scheduled within 1-2 weeks depending on location. We will coordinate directly with you to find a convenient delivery window.</p>
+                    </div>
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -147,7 +244,7 @@ function ProductDetailPageContent() {
             className="relative aspect-[21/9] w-full overflow-hidden mb-16 md:mb-24 bg-zinc-50 group rounded-2xl shadow-sm"
           >
             <img 
-              src="/templates/furniture/lifestyle-narrative.png" 
+              src="/templates/OHMT004-furniture/lifestyle-narrative.png" 
               className="w-full h-full object-cover transition-transform duration-[6s] group-hover:scale-105"
               alt="Brand Lifestyle"
             />
@@ -185,7 +282,7 @@ function ProductDetailPageContent() {
                 Each piece is a dialogue between material and space. We curate experiences through form, ensuring that every curve and line contributes to a sense of serenity. {product.desc}
               </p>
               <div className="pt-4">
-                <Link href="/en/templates/furniture" className="text-[13px] font-bold uppercase border-b border-black pb-1 hover:opacity-50 transition-opacity">
+                <Link href="/en/templates/OHMT007-furniture-en" className="text-[13px] font-bold uppercase border-b border-black pb-1 hover:opacity-50 transition-opacity">
                   Explore More
                 </Link>
               </div>

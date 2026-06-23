@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Play, ArrowLeft } from "lucide-react";
@@ -101,7 +101,7 @@ const [index, setIndex] = useState(0);
     {
       id: 1,
       name: "Sculptural Lounge Chair",
-      image: "/templates/furniture/chair.png",
+      image: "/templates/OHMT004-furniture/chair.png",
       subtitle: t.hero.items.item1.subtitle,
       titleLine1: t.hero.items.item1.title1,
       titleLine2: t.hero.items.item1.title2,
@@ -110,7 +110,7 @@ const [index, setIndex] = useState(0);
     {
       id: 2,
       name: "Architectural Table Lamp",
-      image: "/templates/furniture/lamp.png",
+      image: "/templates/OHMT004-furniture/lamp.png",
       subtitle: t.hero.items.item2.subtitle,
       titleLine1: t.hero.items.item2.title1,
       titleLine2: t.hero.items.item2.title2,
@@ -119,7 +119,7 @@ const [index, setIndex] = useState(0);
     {
       id: 3,
       name: "Minimalist Solid Oak Sofa",
-      image: "/templates/furniture/sofa.png",
+      image: "/templates/OHMT004-furniture/sofa.png",
       subtitle: t.hero.items.item3.subtitle,
       titleLine1: t.hero.items.item3.title1,
       titleLine2: t.hero.items.item3.title2,
@@ -140,7 +140,7 @@ const [index, setIndex] = useState(0);
   const current = HERO_PRODUCTS[index];
 
   return (
-    <section className="relative bg-white overflow-x-clip selection:bg-[var(--color-text)] selection:text-white min-h-[60vh] md:h-[68vh] md:min-h-[480px] flex flex-col py-10 md:py-24 lg:py-32">
+    <section className="relative bg-white overflow-x-clip selection:bg-[var(--color-text)] selection:text-white min-h-[70vh] md:h-[85vh] md:min-h-[600px] flex flex-col py-10 md:py-16 lg:py-20">
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex-1 grid grid-cols-2 lg:grid-cols-2 gap-4 md:gap-12 items-center">
         {/* Left: Content */}
         <div className="z-30 relative col-span-2 sm:col-span-1">
@@ -177,7 +177,7 @@ const [index, setIndex] = useState(0);
         </div>
 
         {/* Right: Large Single Product Slider */}
-        <div className="relative col-span-2 sm:col-span-1 h-[220px] sm:h-full sm:min-h-[320px] md:min-h-[400px] flex items-center justify-center overflow-visible order-first sm:order-last lg:order-2">
+        <div className="relative col-span-2 sm:col-span-1 h-[280px] sm:h-full sm:min-h-[420px] md:min-h-[520px] flex items-center justify-center overflow-visible order-first sm:order-last lg:order-2">
             <AnimatePresence mode="popLayout" initial={false} custom={direction}>
               <motion.div
                 key={index}
@@ -318,14 +318,14 @@ export const CategoryNav = () => {
   }
 };
 const categories = [
-    { name: "Sofas",           image: "/templates/furniture/sofa.png",       id: "sofas" },
-    { name: "Bedroom",         image: "/templates/furniture/bed.png",        id: "bedroom" },
-    { name: "Dining",          image: "/templates/furniture/table.png",      id: "dining" },
-    { name: "Home Office",     image: "/templates/furniture/desk.png",       id: "home-office" },
-    { name: "Chairs",          image: "/templates/furniture/chair.png",      id: "chairs" },
-    { name: "Lighting",        image: "/templates/furniture/lamp.png",       id: "lighting" },
-    { name: "Living",          image: "/templates/furniture/sidetable.png",  id: "living" },
-    { name: "Storage",         image: "/templates/furniture/wardrobe.png",   id: "storage" },
+    { name: "Sofas",           image: "/templates/OHMT004-furniture/sofa.png",       id: "sofas" },
+    { name: "Bedroom",         image: "/templates/OHMT004-furniture/bed.png",        id: "bedroom" },
+    { name: "Dining",          image: "/templates/OHMT004-furniture/table.png",      id: "dining" },
+    { name: "Home Office",     image: "/templates/OHMT004-furniture/desk.png",       id: "home-office" },
+    { name: "Chairs",          image: "/templates/OHMT004-furniture/chair.png",      id: "chairs" },
+    { name: "Lighting",        image: "/templates/OHMT004-furniture/lamp.png",       id: "lighting" },
+    { name: "Living",          image: "/templates/OHMT004-furniture/sidetable.png",  id: "living" },
+    { name: "Storage",         image: "/templates/OHMT004-furniture/wardrobe.png",   id: "storage" },
   ];
 
   return (
@@ -338,7 +338,7 @@ const categories = [
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 lg:grid-cols-8 gap-4 md:gap-6">
           {categories.map((cat, i) => (
-            <Link key={i} href={`/en/templates/furniture/category/${cat.id}`}>
+            <Link key={i} href={`/en/templates/OHMT007-furniture-en/category/${cat.id}`}>
               <motion.div
                 initial={{ opacity: 0, scale: 0.95, y: 8 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}

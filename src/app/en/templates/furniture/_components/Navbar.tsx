@@ -109,16 +109,16 @@ export const Navbar = () => {
       >
         <div className="max-w-[1440px] mx-auto w-full px-6 md:px-12 flex items-center justify-between">
           {/* Logo */}
-          <Link href={`/en/templates/furniture`} className="text-xl md:text-2xl font-black lowercase text-[var(--color-text)]">
+          <Link href={`/en/templates/OHMT007-furniture-en`} className="text-xl md:text-2xl font-black lowercase text-[var(--color-text)]">
             Oh My Template
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-10 text-[13px] font-medium text-[var(--color-secondary)]">
-            <Link href={`/en/templates/furniture/category/living`} className="hover:text-[var(--color-primary)] transition-colors uppercase">{t.nav.living}</Link>
-            <Link href={`/en/templates/furniture/category/bedroom`} className="hover:text-[var(--color-primary)] transition-colors uppercase">{t.nav.bedroom}</Link>
-            <Link href={`/en/templates/furniture/category/dining`} className="hover:text-[var(--color-primary)] transition-colors uppercase">{t.nav.dining}</Link>
-            <Link href={`/en/templates/furniture/category/workspace`} className="hover:text-[var(--color-primary)] transition-colors uppercase">{t.nav.workspace}</Link>
+            <Link href={`/en/templates/OHMT007-furniture-en/category/living`} className="hover:text-[var(--color-primary)] transition-colors uppercase">{t.nav.living}</Link>
+            <Link href={`/en/templates/OHMT007-furniture-en/category/bedroom`} className="hover:text-[var(--color-primary)] transition-colors uppercase">{t.nav.bedroom}</Link>
+            <Link href={`/en/templates/OHMT007-furniture-en/category/dining`} className="hover:text-[var(--color-primary)] transition-colors uppercase">{t.nav.dining}</Link>
+            <Link href={`/en/templates/OHMT007-furniture-en/category/workspace`} className="hover:text-[var(--color-primary)] transition-colors uppercase">{t.nav.workspace}</Link>
           </div>
 
           {/* Icons */}
@@ -126,7 +126,7 @@ export const Navbar = () => {
             <button className="hover:text-[var(--color-primary)] transition-all">
               <Search size={20} strokeWidth={1.5} />
             </button>
-            <Link href={`/en/templates/furniture/cart`} className="relative hover:text-[var(--color-primary)] transition-all">
+            <Link href={`/en/templates/OHMT007-furniture-en/cart`} className="relative hover:text-[var(--color-primary)] transition-all">
               <ShoppingBag size={20} strokeWidth={1.5} />
             </Link>
             <button 
@@ -151,28 +151,28 @@ export const Navbar = () => {
           <div className="flex flex-col gap-1 border-b border-black/5 pb-4 mb-4">
             <span className="text-[13px] font-bold tracking-[0.2em] text-[var(--color-text)]/40 mb-2 uppercase">{t.nav.categories}</span>
             <Link 
-              href={`/en/templates/furniture/category/living`} 
+              href={`/en/templates/OHMT007-furniture-en/category/living`} 
               onClick={() => setMobileOpen(false)}
               className="hover:text-[var(--color-primary)] py-2 transition-colors uppercase"
             >
               {t.nav.living}
             </Link>
             <Link 
-              href={`/en/templates/furniture/category/bedroom`} 
+              href={`/en/templates/OHMT007-furniture-en/category/bedroom`} 
               onClick={() => setMobileOpen(false)}
               className="hover:text-[var(--color-primary)] py-2 transition-colors uppercase"
             >
               {t.nav.bedroom}
             </Link>
             <Link 
-              href={`/en/templates/furniture/category/dining`} 
+              href={`/en/templates/OHMT007-furniture-en/category/dining`} 
               onClick={() => setMobileOpen(false)}
               className="hover:text-[var(--color-primary)] py-2 transition-colors uppercase"
             >
               {t.nav.dining}
             </Link>
             <Link 
-              href={`/en/templates/furniture/category/workspace`} 
+              href={`/en/templates/OHMT007-furniture-en/category/workspace`} 
               onClick={() => setMobileOpen(false)}
               className="hover:text-[var(--color-primary)] py-2 transition-colors uppercase"
             >
@@ -184,21 +184,21 @@ export const Navbar = () => {
           <div className="flex flex-col gap-1">
             <span className="text-[13px] font-bold tracking-[0.2em] text-[var(--color-text)]/40 mb-2 uppercase">{t.nav.menu}</span>
             <Link 
-              href={`/en/templates/furniture/cart`} 
+              href={`/en/templates/OHMT007-furniture-en/cart`} 
               onClick={() => setMobileOpen(false)}
               className="hover:text-[var(--color-primary)] py-2 transition-colors uppercase flex justify-between items-center"
             >
               <span>{t.nav.shoppingBag}</span>
             </Link>
             <Link 
-              href={`/en/templates/furniture`} 
+              href={`/en/templates/OHMT007-furniture-en`} 
               onClick={() => setMobileOpen(false)}
               className="hover:text-[var(--color-primary)] py-2 transition-colors uppercase"
             >
               {t.nav.account}
             </Link>
             <Link 
-              href={`/en/templates/furniture`} 
+              href={`/en/templates/OHMT007-furniture-en`} 
               onClick={() => setMobileOpen(false)}
               className="hover:text-[var(--color-primary)] py-2 transition-colors uppercase"
             >

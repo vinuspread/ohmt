@@ -1,11 +1,10 @@
 {
   "slug": "furniture",
   "name": "Furniture Modern",
-  "name_ko": "퍼니처 모던",
+  "name_ko": "모던 가구",
   "category": "retail",
-  "description": "Clean and modern furniture store template",
-  "description_ko": "깔끔하고 현대적인 가구 스토어 템플릿",
-  "tags": [],
+  "description": "A modern furniture store template with clean design and product-focused layouts.",
+  "description_ko": "깔끔한 디자인과 제품 중심 레이아웃의 모던 가구 쇼핑몰 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {

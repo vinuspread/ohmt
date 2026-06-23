@@ -2,10 +2,12 @@
 :root {
   /* Color System */
   --color-bg: #FFFFFF;
+  --color-bg-secondary: #F5F5F7;
   --color-text: #1D1D1F;
   --color-text-secondary: #424245;
   --color-accent: #0071E3;
   --color-muted: #424245;
+  --color-text-muted: #424245;
   --color-border: rgba(0, 0, 0, 0.01);
   --color-overlay: rgba(0, 0, 0, 0.05);
 
@@ -14,6 +16,7 @@
   --color-secondary: #6E6E73;
   --color-light-bg: #F5F5F7;
   --color-white: #FFFFFF;
+  --color-text-contrast: #FFFFFF;
 
   /* Typography */
   --font-heading: Outfit, sans-serif;
