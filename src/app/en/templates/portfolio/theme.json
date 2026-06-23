@@ -1,11 +1,10 @@
 {
   "slug": "portfolio",
-  "name": "Portfolio",
-  "name_ko": "포트폴리오",
+  "name": "Portfolio Brutalist",
+  "name_ko": "포트폴리오 브루탈리스트",
   "category": "portfolio",
-  "description": "Creative portfolio and personal branding template",
-  "description_ko": "크리에이티브 포트폴리오 및 퍼스널 브랜딩 템플릿",
-  "tags": [],
+  "description": "Personal branding and creative portfolio",
+  "description_ko": "개인 브랜딩 및 크리에이티브 포트폴리오",
   "mode": "light",
   "theme": {
     "palette": {

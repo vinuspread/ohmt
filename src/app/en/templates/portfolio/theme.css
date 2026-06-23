@@ -1,12 +1,14 @@
 /* portfolio Design Tokens */
 :root {
   --color-primary: #000000;
+  --color-secondary: #000000;
   --color-accent: #ED008C;
   --color-accent-light: #F5559D;
   --color-bg: #FFFFFF;
   --color-bg-secondary: #F5F5F5;
   --color-text: #000000;
   --color-text-muted: #707070;
+  --color-text-contrast: #1C1C1A;
   --color-border: rgba(0,0,0,0.1);
 
   --font-heading: 'Inter', sans-serif;

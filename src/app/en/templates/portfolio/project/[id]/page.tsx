@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { Suspense } from "react";
 import React from "react";
 import Link from "next/link";
@@ -20,7 +20,7 @@ function ProjectPageContent({ params }: { params: Promise<{ id: string }> }) {
 
   return (
     <TemplateWrapper theme={theme}>
-      <div className="bg-white text-[#1e1e1e] font-[family-name:var(--font-inter)] selection:bg-[#1e1e1e] selection:text-white">
+      <div className="bg-white text-[var(--color-text)] font-[family-name:var(--font-inter)] selection:bg-[var(--color-primary)] selection:text-white">
         <Header />
 
         {/* Main two-column layout */}
@@ -31,7 +31,7 @@ function ProjectPageContent({ params }: { params: Promise<{ id: string }> }) {
             <div className="md:w-[420px] lg:w-[480px] shrink-0 md:sticky md:top-16 md:h-[calc(100vh-4rem)] flex flex-col justify-between px-8 md:px-10 py-16">
               <div>
                 <Link href="/portfolio"
-                  className="inline-flex items-center gap-2 text-[13px] font-medium uppercase tracking-widest text-[#8a919b] hover:text-[#1e1e1e] transition-colors mb-16">
+                  className="inline-flex items-center gap-2 text-[13px] font-medium uppercase tracking-widest text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors mb-16">
                   <ArrowLeft size={13} /> Back
                 </Link>
 
@@ -40,9 +40,9 @@ function ProjectPageContent({ params }: { params: Promise<{ id: string }> }) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  <span className="text-[13px] font-medium tracking-[0.3em] uppercase text-[#8a919b] block mb-5">{project.category}</span>
+                  <span className="text-[13px] font-medium tracking-[0.3em] uppercase text-[var(--color-text-muted)] block mb-5">{project.category}</span>
                   <h1 className="text-[clamp(2.5rem,5vw,4rem)] font-black tracking-tighter leading-[1.1] mb-8">{project.title}</h1>
-                  <p className="text-[0.9rem] text-[#5a6271] leading-[1.4] mb-12">{project.description}</p>
+                  <p className="text-[0.9rem] text-[var(--color-text-muted)] leading-[1.4] mb-12">{project.description}</p>
                 </motion.div>
 
                 {/* Metadata table */}
@@ -50,21 +50,21 @@ function ProjectPageContent({ params }: { params: Promise<{ id: string }> }) {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.3, duration: 0.7 }}
-                  className="border-t border-[#eef0f6]"
+                  className="border-t border-[var(--color-border)]"
                 >
                   {[
                     { label: 'Year', value: project.year },
                     { label: 'Scope', value: project.tags.join(', ') },
                     { label: 'Timeline', value: '8 weeks' },
                   ].map((row) => (
-                    <div key={row.label} className="flex items-baseline justify-between py-4 border-b border-[#eef0f6]">
-                      <span className="text-[13px] font-medium uppercase tracking-widest text-[#8a919b]">{row.label}</span>
-                      <span className="text-[0.85rem] font-medium text-[#1e1e1e] text-right max-w-[60%]">{row.value}</span>
+                    <div key={row.label} className="flex items-baseline justify-between py-4 border-b border-[var(--color-border)]">
+                      <span className="text-[13px] font-medium uppercase tracking-widest text-[var(--color-text-muted)]">{row.label}</span>
+                      <span className="text-[0.85rem] font-medium text-[var(--color-text)] text-right max-w-[60%]">{row.value}</span>
                     </div>
                   ))}
-                  <div className="flex items-baseline justify-between py-4 border-b border-[#eef0f6]">
-                    <span className="text-[13px] font-medium uppercase tracking-widest text-[#8a919b]">Live Project</span>
-                    <a href="#" className="inline-flex items-center gap-1.5 text-[0.85rem] font-medium text-[#1e1e1e] hover:text-[#8a919b] transition-colors">
+                  <div className="flex items-baseline justify-between py-4 border-b border-[var(--color-border)]">
+                    <span className="text-[13px] font-medium uppercase tracking-widest text-[var(--color-text-muted)]">Live Project</span>
+                    <a href="#" className="inline-flex items-center gap-1.5 text-[0.85rem] font-medium text-[var(--color-text)] hover:text-[var(--color-text-muted)] transition-colors">
                       Preview + <ArrowUpRight size={12} />
                     </a>
                   </div>
@@ -72,8 +72,8 @@ function ProjectPageContent({ params }: { params: Promise<{ id: string }> }) {
               </div>
 
               <div className="mt-8">
-                <Link href="/en/templates/portfolio/contact"
-                  className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-widest text-[#1e1e1e] border-b border-[#1e1e1e] pb-0.5 hover:opacity-50 transition-opacity">
+                <Link href="/en/templates/OHMT013-portfolio-en/contact"
+                  className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-widest text-[var(--color-text)] border-b border-[var(--color-primary)] pb-0.5 hover:opacity-50 transition-opacity">
                   Start a Similar Project <ArrowUpRight size={11} />
                 </Link>
               </div>
@@ -88,7 +88,7 @@ function ProjectPageContent({ params }: { params: Promise<{ id: string }> }) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-80px' }}
                   transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                  className="overflow-hidden bg-[#f3f3f3]"
+                  className="overflow-hidden bg-[var(--color-bg-secondary)]"
                   style={{ aspectRatio: i % 3 === 1 ? '16/9' : '4/3' }}
                 >
                   <img loading="lazy" src={img} alt={project.title}
@@ -100,12 +100,12 @@ function ProjectPageContent({ params }: { params: Promise<{ id: string }> }) {
         </div>
 
         {/* Next projects */}
-        <section className="py-12 md:py-24 border-t border-[#eef0f6]">
+        <section className="py-12 md:py-24 border-t border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto px-8 md:px-10">
             <div className="flex items-end justify-between mb-14">
               <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-black uppercase tracking-tighter">More Work</h2>
               <Link href="/portfolio"
-                className="flex items-center gap-2 text-[13px] font-medium uppercase tracking-widest text-[#8a919b] hover:text-[#1e1e1e] transition-colors">
+                className="flex items-center gap-2 text-[13px] font-medium uppercase tracking-widest text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors">
                 All Projects <ArrowUpRight size={11} />
               </Link>
             </div>
@@ -118,17 +118,17 @@ function ProjectPageContent({ params }: { params: Promise<{ id: string }> }) {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08 }}
                 >
-                  <Link href={`/en/templates/portfolio/project/${p.id}`} className="group block">
-                    <div className="relative aspect-[4/3] overflow-hidden bg-[#f3f3f3] mb-4">
+                  <Link href={`/en/templates/OHMT013-portfolio-en/project/${p.id}`} className="group block">
+                    <div className="relative aspect-[4/3] overflow-hidden bg-[var(--color-bg-secondary)] mb-4">
                       <img loading="lazy" src={p.thumbnail} alt={p.title}
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                     </div>
                     <div className="flex items-start justify-between">
                       <div>
-                        <h3 className="text-[0.95rem] font-medium uppercase tracking-tight group-hover:text-[#8a919b] transition-colors">{p.title}</h3>
-                        <p className="text-[0.78rem] text-[#8a919b] mt-0.5">{p.category}</p>
+                        <h3 className="text-[0.95rem] font-medium uppercase tracking-tight group-hover:text-[var(--color-text-muted)] transition-colors">{p.title}</h3>
+                        <p className="text-[0.78rem] text-[var(--color-text-muted)] mt-0.5">{p.category}</p>
                       </div>
-                      <span className="text-[13px] font-medium text-[#d0d8e4]">{p.date}</span>
+                      <span className="text-[13px] font-medium text-[var(--color-text-muted)]">{p.date}</span>
                     </div>
                   </Link>
                 </motion.div>

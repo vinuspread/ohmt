@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -11,13 +11,13 @@ import { Footer } from "./_components/layout/Footer";
 import { projects, services, stats, testimonials, faqs, blogPosts } from "@/lib/portfolio-data";
 /* === Marquee === */
 const marqueeImages = [
-  "/templates/portfolio/portfolio-1.png",
-  "/templates/portfolio/portfolio-2.png",
-  "/templates/portfolio/portfolio-3.png",
-  "/templates/portfolio/portfolio-4.png",
-  "/templates/portfolio/portfolio-5.png",
-  "/templates/portfolio/portfolio-6.png",
-  "/templates/portfolio/portfolio-hero.png",
+  "/templates/OHMT007-portfolio/portfolio-1.png",
+  "/templates/OHMT007-portfolio/portfolio-2.png",
+  "/templates/OHMT007-portfolio/portfolio-3.png",
+  "/templates/OHMT007-portfolio/portfolio-4.png",
+  "/templates/OHMT007-portfolio/portfolio-5.png",
+  "/templates/OHMT007-portfolio/portfolio-6.png",
+  "/templates/OHMT007-portfolio/portfolio-hero.png",
 ];
 
 /* arch width / top-radius pattern - repeats for variety */
@@ -93,24 +93,24 @@ function ServiceCarousel() {
               className="shrink-0 p-8 flex flex-col justify-between"
               style={{ width: 'min(300px, 78vw)', height: '360px', backgroundColor: serviceColors[i % serviceColors.length] }}
             >
-              <div className="text-[13px] text-[#1e1e1e]/50">( {s.num} )</div>
+              <div className="text-[13px] text-[var(--color-text)]/50">( {s.num} )</div>
               <div className="flex justify-center items-center flex-1">
                 {s.name.toLowerCase().includes("brand") && (
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#1e1e1e]/70"><path d="M12 3v18M3 12h18"/></svg>
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-text)]/70"><path d="M12 3v18M3 12h18"/></svg>
                 )}
                 {s.name.toLowerCase().includes("dev") && (
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#1e1e1e]/70"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/></svg>
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-text)]/70"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/></svg>
                 )}
                 {s.name.toLowerCase().includes("seo") && (
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#1e1e1e]/70"><path d="m3 16 4-4 4 4 6-6 5 5"/></svg>
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-text)]/70"><path d="m3 16 4-4 4 4 6-6 5 5"/></svg>
                 )}
                 {s.name.toLowerCase().includes("social") && (
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#1e1e1e]/70"><path d="M18 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm12 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM8.5 13.5l7 4.5m-7-7 7-4.5"/></svg>
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-text)]/70"><path d="M18 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm12 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM8.5 13.5l7 4.5m-7-7 7-4.5"/></svg>
                 )}
               </div>
               <div>
-                <p className="text-[13px] font-medium uppercase tracking-widest text-[#1e1e1e] mb-2">{s.name}</p>
-                <p className="text-[0.85rem] text-[#1e1e1e]/70 leading-[1.4]">{s.desc}</p>
+                <p className="text-[13px] font-medium uppercase tracking-widest text-[var(--color-text)] mb-2">{s.name}</p>
+                <p className="text-[0.85rem] text-[var(--color-text)]/70 leading-[1.4]">{s.desc}</p>
               </div>
             </div>
           ))}
@@ -119,7 +119,7 @@ function ServiceCarousel() {
       {/* Arrow - Hidden on Mobile to prevent card overlap, visible on Desktop */}
       <button
         onClick={() => setActive((active + 1) % services.length)}
-        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-0 w-12 h-12 rounded-none bg-white border border-[#d0d8e4] hidden md:flex items-center justify-center hover:opacity-80 hover:border-[#1e1e1e] transition-all z-10 active:scale-95"
+        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-0 w-12 h-12 rounded-none bg-white border border-[var(--color-border)] hidden md:flex items-center justify-center hover:opacity-80 hover:border-[var(--color-primary)] transition-all z-10 active:scale-95"
       >
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
       </button>
@@ -131,10 +131,10 @@ function ServiceCarousel() {
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border-b border-[#d0d8e4]">
+    <div className="border-b border-[var(--color-border)]">
       <button onClick={() => setOpen(!open)} className="w-full flex items-center justify-between py-6 text-left group hover:bg-white/40 transition-colors duration-300 px-0">
-        <span className="text-[0.95rem] text-[#1e1e1e] group-hover:text-[#5a6271] transition-colors pr-8">{q}</span>
-        <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.2 }} className="text-[#8a919b] shrink-0">
+        <span className="text-[0.95rem] text-[var(--color-text)] group-hover:text-[var(--color-text-muted)] transition-colors pr-8">{q}</span>
+        <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.2 }} className="text-[var(--color-text-muted)] shrink-0">
           <ChevronDown size={18} />
         </motion.span>
       </button>
@@ -147,7 +147,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
             transition={{ duration: 0.25 }}
             className="overflow-hidden"
           >
-            <p className="pb-5 text-[0.88rem] text-[#5a6271] leading-[1.4]">{a}</p>
+            <p className="pb-5 text-[0.88rem] text-[var(--color-text-muted)] leading-[1.4]">{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -170,14 +170,14 @@ function TestimonialSlider() {
           transition={{ duration: 0.4 }}
           className="grid md:grid-cols-2 overflow-hidden min-h-[420px]"
         >
-          <div className="bg-[#8a919b] overflow-hidden">
+          <div className="bg-[var(--color-text-muted)] overflow-hidden">
             <img loading="lazy" src={t.img} alt={t.name} className="w-full h-full object-cover" style={{ minHeight: 380 }} />
           </div>
-          <div className="bg-[#eef0f6] p-10 md:p-14 flex flex-col justify-center">
-            <p className="text-[1.15rem] font-medium text-[#1e1e1e] leading-[1.4] mb-10">{t.text}</p>
+          <div className="bg-[var(--color-bg-secondary)] p-10 md:p-14 flex flex-col justify-center">
+            <p className="text-[1.15rem] font-medium text-[var(--color-text)] leading-[1.4] mb-10">{t.text}</p>
             <div>
-              <p className="text-[0.88rem] font-medium text-[#1e1e1e]">{t.name}</p>
-              <p className="text-[0.82rem] text-[#8a919b]">{t.role}</p>
+              <p className="text-[0.88rem] font-medium text-[var(--color-text)]">{t.name}</p>
+              <p className="text-[0.82rem] text-[var(--color-text-muted)]">{t.role}</p>
             </div>
           </div>
         </motion.div>
@@ -186,7 +186,7 @@ function TestimonialSlider() {
       <div className="flex gap-2 mt-6">
         {testimonials.map((_, i) => (
           <button key={i} onClick={() => setIdx(i)}
-            className={`h-1.5 rounded-full transition-all ${i === idx ? 'w-6 bg-[#1e1e1e]' : 'w-1.5 bg-[#d0d8e4]'}`} />
+            className={`h-1.5 rounded-full transition-all ${i === idx ? 'w-6 bg-[var(--color-primary)]' : 'w-1.5 bg-[var(--color-bg-secondary)]'}`} />
         ))}
       </div>
     </div>
@@ -228,7 +228,7 @@ function CustomCursor() {
   const size = label ? 80 : 12;
   return (
     <motion.div
-      className="fixed top-0 left-0 z-[9999] pointer-events-none flex items-center justify-center rounded-full mix-blend-difference bg-[#1e1e1e]"
+      className="fixed top-0 left-0 z-[9999] pointer-events-none flex items-center justify-center rounded-full mix-blend-difference bg-[var(--color-primary)]"
       style={{
         x: sx,
         y: sy,
@@ -288,7 +288,7 @@ const heroRef = useRef<HTMLElement>(null);
             initial={{ y: 0 }}
             exit={{ y: "-100%" }}
             transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-            className="fixed inset-0 z-[9999] bg-[#1e1e1e] flex flex-col items-center justify-center text-white cursor-none"
+            className="fixed inset-0 z-[9999] bg-[var(--color-primary)] flex flex-col items-center justify-center text-white cursor-none"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.96 }}
@@ -305,7 +305,7 @@ const heroRef = useRef<HTMLElement>(null);
         )}
       </AnimatePresence>
 
-      <div className="bg-white text-[#1e1e1e] font-[family-name:var(--font-inter)] selection:bg-[#1e1e1e] selection:text-white cursor-none">
+      <div className="bg-white text-[var(--color-text)] font-[family-name:var(--font-inter)] selection:bg-[var(--color-primary)] selection:text-white cursor-none">
         <CustomCursor />
         <Header />
 
@@ -313,13 +313,13 @@ const heroRef = useRef<HTMLElement>(null);
         <section ref={heroRef} className="relative overflow-hidden" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
           {/* Side labels */}
           <div className="absolute left-5 bottom-[45vh] hidden md:block">
-            <p className="text-[13px] text-[#8a919b] tracking-widest uppercase"
+            <p className="text-[13px] text-[var(--color-text-muted)] tracking-widest uppercase"
               style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
               ( {t.hero.badge} )
             </p>
           </div>
           <div className="absolute right-5 bottom-[45vh] hidden md:block">
-            <p className="text-[13px] text-[#8a919b] tracking-widest uppercase"
+            <p className="text-[13px] text-[var(--color-text-muted)] tracking-widest uppercase"
               style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
               BE / DR / X
             </p>
@@ -334,7 +334,7 @@ const heroRef = useRef<HTMLElement>(null);
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="text-[clamp(3.5rem,10vw,8rem)] tracking-tighter leading-[1.0] text-[#1e1e1e] mb-6"
+              className="text-[clamp(3.5rem,10vw,8rem)] tracking-tighter leading-[1.0] text-[var(--color-text)] mb-6"
             >
               <span className="font-bold">{t.hero.title1}</span><br />
               <span className="font-black">{t.hero.title2}</span>
@@ -343,7 +343,7 @@ const heroRef = useRef<HTMLElement>(null);
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.7 }}
-              className="text-[1rem] text-[#5a6271] max-w-[480px]"
+              className="text-[1rem] text-[var(--color-text-muted)] max-w-[480px]"
             >
               {t.hero.desc}
             </motion.p>
@@ -360,13 +360,13 @@ const heroRef = useRef<HTMLElement>(null);
         </section>
 
         {/*  TAGLINE + CLIENTS  */}
-        <section className="py-12 md:py-24 px-5 text-center border-b border-[#eef0f6]">
+        <section className="py-12 md:py-24 px-5 text-center border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-[clamp(1.5rem,3.5vw,2.5rem)] font-bold text-[#1e1e1e] leading-snug mb-12"
+              className="text-[clamp(1.5rem,3.5vw,2.5rem)] font-bold text-[var(--color-text)] leading-snug mb-12"
             >
               We're Vinuspread® - a creative studio cultivating bold brands, beautiful websites,
               and ideas that refuse to be ordinary.
@@ -374,20 +374,20 @@ const heroRef = useRef<HTMLElement>(null);
             {/* Client logos */}
             <div className="flex flex-wrap items-center justify-center gap-8 md:gap-14">
               {['Winkk', 'Coral', 'Clonify', 'Blob', 'Maiz'].map(c => (
-                <span key={c} className="text-[1rem] font-medium text-[#c8c8c8] hover:text-[#8a919b] transition-colors cursor-default">{c}</span>
+                <span key={c} className="text-[1rem] font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text-muted)] transition-colors cursor-default">{c}</span>
               ))}
             </div>
           </div>
         </section>
 
         {/*  LATEST PROJECTS  */}
-        <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[#eef0f6]">
+        <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto">
             <div className="flex items-end justify-between mb-12">
               <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none">
                 Latest<br />Projects.
               </h2>
-              <span className="text-[0.82rem] text-[#8a919b] hidden md:block">( _©26 )</span>
+              <span className="text-[0.82rem] text-[var(--color-text-muted)] hidden md:block">( _©26 )</span>
             </div>
 
             {/* Category Filter - Horizontal Scrollable on Mobile */}
@@ -398,8 +398,8 @@ const heroRef = useRef<HTMLElement>(null);
                   onClick={() => setActiveCategory(cat)}
                   className={`px-6 py-2 text-[13px] font-black uppercase tracking-wider transition-all duration-300 inline-block whitespace-nowrap ${
                     activeCategory === cat
-                      ? "bg-[#696969] border border-[#696969] text-white"
-                      : "border border-black/10 text-[#5a6271] hover:border-[#696969] hover:text-[#696969]"
+                      ? "bg-[var(--color-primary)] border border-[var(--color-primary)] text-white"
+                      : "border border-black/10 text-[var(--color-text-muted)] hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
                   }`}
                 >
                   {cat}
@@ -419,7 +419,7 @@ const heroRef = useRef<HTMLElement>(null);
                     exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.4 }}
                   >
-                    <Link href={`/en/templates/portfolio/project/${p.id}`} className="group block overflow-hidden bg-[#f3f3f3] relative border border-black/5 hover:border-black/15 transition-all">
+                    <Link href={`/en/templates/OHMT013-portfolio-en/project/${p.id}`} className="group block overflow-hidden bg-[var(--color-bg-secondary)] relative border border-black/5 hover:border-black/15 transition-all">
                       <div className="aspect-[4/5] overflow-hidden">
                         <img loading="lazy" src={p.thumbnail} alt={p.title}
                           className="w-full h-full object-cover grayscale brightness-90 contrast-105 group-hover:grayscale-0 group-hover:scale-105 duration-1000 transition-all ease-out" />
@@ -440,11 +440,11 @@ const heroRef = useRef<HTMLElement>(null);
         </section>
 
         {/*  SERVICES  */}
-        <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[#eef0f6]">
+        <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto">
             <div className="flex items-end justify-between mb-10">
               <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none">Services.</h2>
-              <Link href="/en/templates/portfolio/contact" className="text-[0.82rem] font-medium text-[#5a6271] hover:text-[#1e1e1e] transition-colors flex items-center gap-2">
+              <Link href="/en/templates/OHMT013-portfolio-en/contact" className="text-[0.82rem] font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors flex items-center gap-2">
                 Get in touch <span className="text-lg leading-none">+</span>
               </Link>
             </div>
@@ -460,13 +460,13 @@ const heroRef = useRef<HTMLElement>(null);
         </section>
 
         {/*  STATS + STATEMENT  */}
-        <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[#eef0f6]">
+        <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-[clamp(1.8rem,4vw,3.2rem)] font-bold text-[#1e1e1e] leading-snug mb-16 max-w-3xl"
+              className="text-[clamp(1.8rem,4vw,3.2rem)] font-bold text-[var(--color-text)] leading-snug mb-16 max-w-3xl"
             >
               Vinuspread® is a creative studio shaping bold brands and daring ideas.
             </motion.p>
@@ -480,8 +480,8 @@ const heroRef = useRef<HTMLElement>(null);
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
                 >
-                  <p className="text-[2.8rem] font-black tracking-tighter text-[#1e1e1e] leading-none mb-1">{s.num}</p>
-                  <p className="text-[0.78rem] text-[#8a919b] uppercase tracking-widest">{s.label}</p>
+                  <p className="text-[2.8rem] font-black tracking-tighter text-[var(--color-text)] leading-none mb-1">{s.num}</p>
+                  <p className="text-[0.78rem] text-[var(--color-text-muted)] uppercase tracking-widest">{s.label}</p>
                 </motion.div>
               ))}
             </div>
@@ -489,11 +489,11 @@ const heroRef = useRef<HTMLElement>(null);
         </section>
 
         {/*  TESTIMONIALS  */}
-        <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[#eef0f6]">
+        <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto">
             <div className="text-center mb-12">
               <p className="text-[13px] font-black uppercase tracking-tight text-[var(--color-accent)] mb-4">TESTIMONIALS</p>
-              <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none text-[#1e1e1e]">
+              <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none text-[var(--color-text)]">
                 Trusted by brands who<br />aren't afraid to stand out.
               </h2>
             </div>
@@ -502,7 +502,7 @@ const heroRef = useRef<HTMLElement>(null);
         </section>
 
         {/*  FAQ  */}
-        <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[#eef0f6]">
+        <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto grid md:grid-cols-2 gap-16">
             <div>
               <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none">FAQ.</h2>
@@ -522,7 +522,7 @@ const heroRef = useRef<HTMLElement>(null);
               <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none">
                 Creative<br />dispatch
               </h2>
-              <Link href="/en/templates/portfolio/journal" className="text-[0.82rem] font-medium text-[#5a6271] hover:text-[#1e1e1e] transition-colors flex items-center gap-2">
+              <Link href="/en/templates/OHMT013-portfolio-en/journal" className="text-[0.82rem] font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors flex items-center gap-2">
                 Let's Talk <span className="text-lg leading-none">+</span>
               </Link>
             </div>
@@ -536,13 +536,13 @@ const heroRef = useRef<HTMLElement>(null);
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
                 >
-                  <Link href="/en/templates/portfolio/journal" className="group block">
-                    <div className="overflow-hidden aspect-[4/3] bg-[#f3f3f3] mb-4">
+                  <Link href="/en/templates/OHMT013-portfolio-en/journal" className="group block">
+                    <div className="overflow-hidden aspect-[4/3] bg-[var(--color-bg-secondary)] mb-4">
                       <img loading="lazy" src={post.img} alt={post.title}
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                     </div>
-                    <p className="text-[0.75rem] text-[#8a919b] mb-2">{post.date}</p>
-                    <h3 className="text-[0.95rem] font-medium text-[#1e1e1e] leading-snug group-hover:text-[#5a6271] transition-colors">{post.title}</h3>
+                    <p className="text-[0.75rem] text-[var(--color-text-muted)] mb-2">{post.date}</p>
+                    <h3 className="text-[0.95rem] font-medium text-[var(--color-text)] leading-snug group-hover:text-[var(--color-text-muted)] transition-colors">{post.title}</h3>
                   </Link>
                 </motion.div>
               ))}
