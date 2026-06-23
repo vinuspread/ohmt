@@ -1,9 +1,9 @@
 "use client"
 
+import { TemplateWrapper } from "../_components/TemplateWrapper";
+import theme from "../theme.json";
 import Header from '../_components/Header'
 import Footer from '../_components/Footer'
-import { TemplateWrapper } from '../_components/TemplateWrapper'
-import theme from '../theme.json'
 
 const timeline = [
   { year: '2024', event: '고급 로보틱스와 자율 하드웨어 시스템의 대중화를 비전으로 회사 설립.' },
@@ -16,25 +16,25 @@ const team = [
     name: 'Dr. Aris Chen',
     role: 'R&D 책임자',
     bio: '전 JPL 로보틱스 아키텍트로서 자율 내비게이션 및 센서 융합 분야 전문가.',
-    image: '/templates/technology/team-aris.jpg',
+    image: '/templates/OHMT016-technology/team-aris.jpg',
   },
   {
     name: 'Maya Torres',
     role: '로보틱스 엔지니어링 책임자',
     bio: 'Boston Dynamics에서 액추에이터 설계를 주도. 고토크 모션 시스템 전문가.',
-    image: '/templates/technology/team-maya.jpg',
+    image: '/templates/OHMT016-technology/team-maya.jpg',
   },
   {
     name: 'James Park',
     role: 'AI 및 머신러닝 책임자',
     bio: '컴퓨터 비전 및 엣지 AI 분야에서 20편 이상의 논문을 발표한 딥러닝 연구자.',
-    image: '/templates/technology/team-james.jpg',
+    image: '/templates/OHMT016-technology/team-james.jpg',
   },
   {
     name: 'Sophia Kim',
     role: '제품 총괄',
     bio: '이전 직책에서 세 가지 하드웨어 제품을 컨셉부터 양산까지 성공적으로 이끌었습니다.',
-    image: '/templates/technology/team-sophia.jpg',
+    image: '/templates/OHMT016-technology/team-sophia.jpg',
   },
 ]
 
@@ -42,7 +42,6 @@ const team = [
 export default function TechnologyAboutPage() {
   return (
     <TemplateWrapper theme={theme}>
-      <>
       <Header />
       <main>
 
@@ -64,7 +63,7 @@ export default function TechnologyAboutPage() {
         {/* Full-bleed Vision Image */}
         <section className="w-full aspect-[21/9] overflow-hidden border-b border-[var(--color-border)]">
           <img
-            src="/templates/technology/full_bg_img.jpeg"
+            src="/templates/OHMT016-technology/full_bg_img.jpeg"
             alt="Robotflow 비전"
             className="w-full h-full object-cover"
           />
@@ -150,7 +149,6 @@ export default function TechnologyAboutPage() {
 
       </main>
       <Footer />
-    </>
     </TemplateWrapper>
   )
 }

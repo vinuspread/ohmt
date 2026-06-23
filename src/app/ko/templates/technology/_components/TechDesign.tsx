@@ -28,7 +28,7 @@ export default function TechDesign() {
         <div className="relative">
           <div 
             className="relative aspect-[16/9] w-full overflow-hidden rounded-[48px] bg-cover bg-center group flex items-center justify-between px-8 md:px-20"
-            style={{ backgroundImage: "url('/templates/technology/tech-design-bg.png')" }}
+            style={{ backgroundImage: "url('/templates/OHMT016-technology/tech-design-bg.png')" }}
           >
             {/* Dark overlay for typography readability */}
             <div className="absolute inset-0 bg-black/40 z-10 pointer-events-none" />

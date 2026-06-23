@@ -1,11 +1,10 @@
 {
   "slug": "technology",
-  "name": "Technology - Robotflow",
-  "name_ko": "테크놀로지 - 로봇플로우",
+  "name": "Robotflow Technology",
+  "name_ko": "로보플로우 테크놀로지",
   "category": "corporate",
-  "description": "AI robotics company and technology showcase template",
-  "description_ko": "AI 로봇 기업 및 기술 쇼케이스 템플릿",
-  "tags": [],
+  "description": "Technology and robotics company landing page template",
+  "description_ko": "테크놀로지 및 로보틱스 기업 랜딩 페이지 템플릿",
   "mode": "light",
   "theme": {
     "palette": {
