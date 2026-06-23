@@ -217,6 +217,7 @@ export function AssetManager() {
                 <FileVideo className="h-5 w-5 text-zinc-300 flex-shrink-0" />
                 <div className="min-w-0 flex-1">
                   <p className="truncate text-sm font-medium text-zinc-900">{asset.filename}</p>
+                  <p className="truncate font-mono text-xs text-zinc-400">{asset.key}</p>
                   <p className="text-xs text-zinc-400">{formatSize(asset.size)} · {formatDate(asset.lastModified)}</p>
                 </div>
                 <button
