@@ -9,12 +9,12 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 const products = [
-  { name: "Daily Radiance Serum", price: "$78", tag: "Best Seller", image: "/templates/cosmetic/cosmetic-1.jpg" },
-  { name: "Vitamin C Brightening Cream", price: "$64", tag: "New", image: "/templates/cosmetic/cosmetic-2.png" },
-  { name: "Hydra-Glow Moisturizer", price: "$52", tag: "", image: "/templates/cosmetic/cosmetic-3.jpg" },
-  { name: "Retinol Renewal Oil", price: "$89", tag: "Premium", image: "/templates/cosmetic/cosmetic-4.jpg" },
-  { name: "Gentle Cleansing Balm", price: "$38", tag: "", image: "/templates/cosmetic/cosmetic-5.jpg" },
-  { name: "Overnight Recovery Mask", price: "$72", tag: "Popular", image: "/templates/cosmetic/cosmetic-1.jpg" }
+  { name: "Daily Radiance Serum", price: "$78", tag: "Best Seller", image: "/templates/OHMT010-cosmetic/cosmetic-1.jpg" },
+  { name: "Vitamin C Brightening Cream", price: "$64", tag: "New", image: "/templates/OHMT010-cosmetic/cosmetic-2.png" },
+  { name: "Hydra-Glow Moisturizer", price: "$52", tag: "", image: "/templates/OHMT010-cosmetic/cosmetic-3.jpg" },
+  { name: "Retinol Renewal Oil", price: "$89", tag: "Premium", image: "/templates/OHMT010-cosmetic/cosmetic-4.jpg" },
+  { name: "Gentle Cleansing Balm", price: "$38", tag: "", image: "/templates/OHMT010-cosmetic/cosmetic-5.jpg" },
+  { name: "Overnight Recovery Mask", price: "$72", tag: "Popular", image: "/templates/OHMT010-cosmetic/cosmetic-1.jpg" }
 ];
 
 function CosmeticShopPageContent() {
@@ -35,7 +35,7 @@ function CosmeticShopPageContent() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {products.map((product) => (
                 <div key={product.name} className="group">
-                  <div className="aspect-[3/4] bg-[#EFECE6] mb-6 flex items-center justify-center overflow-hidden">
+                  <div className="aspect-[3/4] bg-[var(--color-bg-secondary)] mb-6 flex items-center justify-center overflow-hidden">
                     <img
                       src={product.image}
                       alt={product.name}

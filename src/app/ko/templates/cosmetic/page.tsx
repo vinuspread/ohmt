@@ -1,4 +1,4 @@
-// src/app/ko/templates/cosmetic/page.tsx
+﻿// src/app/ko/templates/OHMT020-cosmetic-kr/page.tsx
 "use client";
 
 import { Suspense } from "react";
@@ -25,7 +25,7 @@ function CosmeticTemplateContent() {
             <div className="grid md:grid-cols-2 gap-28 items-center">
               <div className="order-2 md:order-1">
                 <img 
-                  src="/templates/cosmetic/cosmetic-face-mask.png" 
+                  src="/templates/OHMT010-cosmetic/cosmetic-face-mask.png" 
                   className="w-full h-[380px] object-cover" 
                   alt="Brand story" 
                 />
@@ -34,7 +34,7 @@ function CosmeticTemplateContent() {
                 <h2 className="text-[1.6rem] md:text-[2.8rem] font-normal leading-[1.5] mb-8">
                   현대적이고 의식 있는 뷰티의 기준.
                 </h2>
-                <p className="text-[0.95rem] text-[#666] leading-[1.9] mb-12 max-w-[480px]">
+                <p className="text-[0.95rem] text-[var(--color-text-muted)] leading-[1.9] mb-12 max-w-[480px]">
                   우리는 심플한 질문에서 시작했습니다. 왜 효능과 순수함 중 하나를 포기해야 할까요? 피부 본연의 힘을 깨우는 고기능성 포뮬러와 지구를 배려한 순수한 원료를 연구하기 위해 지난 5년의 시간을 바쳤습니다.
                 </p>
                 <button className="px-10 py-4 bg-black text-white text-[0.85rem] font-bold uppercase tracking-wider hover:opacity-80 transition-opacity">

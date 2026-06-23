@@ -2,6 +2,7 @@
 :root {
   /* Color System - Primary Palette */
   --color-primary: #000000;
+  --color-secondary: #000000;
   --color-accent: #EBE4DE;
   --color-accent-light: #F5F1ED;
   --color-accent-pale: #FDFBF9;
@@ -9,6 +10,7 @@
   --color-bg-secondary: #F5F1ED;
   --color-text: #000000;
   --color-text-muted: #4A4A4A;
+  --color-text-contrast: #1C1C1A;
   --color-border: rgba(0, 0, 0, 0.08);
   --color-border-light: rgba(0, 0, 0, 0.04);
 
@@ -19,8 +21,8 @@
   --color-info: #0284C7;
 
   /* Typography */
-  --font-heading: 'Noto Sans KR', 'Inter', sans-serif;
-  --font-body: 'Noto Sans KR', 'Inter', sans-serif;
+  --font-heading: 'Pretendard', 'Inter', sans-serif;
+  --font-body: 'Pretendard', 'Inter', sans-serif;
 
   /* Typography Scale */
   --font-size-h1: clamp(2.1rem, 4vw, 3.8rem);

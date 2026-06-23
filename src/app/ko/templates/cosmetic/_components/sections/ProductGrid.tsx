@@ -1,13 +1,13 @@
-// src/app/ko/templates/cosmetic/-components/sections/ProductGrid.tsx
+﻿// src/app/ko/templates/OHMT020-cosmetic-kr/-components/sections/ProductGrid.tsx
 "use client";
 
 import React from "react";
 import { motion } from "framer-motion";
 
 const products = [
-  { id: 1, name: "보태니컬 젠틀 딥 클렌저", price: "$42.00", img: "/templates/cosmetic/cosmetic-2.png", tag: "essential", tagLabel: "기본" },
-  { id: 2, name: "인텐시브 하이드레이팅 미스트", price: "$38.00", img: "/templates/cosmetic/cosmetic-botanical-dropper.png", tag: "new", tagLabel: "신상품" },
-  { id: 3, name: "에센셜 나이트 리페어 크림", price: "$95.00", img: "/templates/cosmetic/cosmetic-collection-marble.png", tag: "bestseller", tagLabel: "베스트셀러" }
+  { id: 1, name: "보태니컬 젠틀 딥 클렌저", price: "$42.00", img: "/templates/OHMT010-cosmetic/cosmetic-2.png", tag: "essential", tagLabel: "기본" },
+  { id: 2, name: "인텐시브 하이드레이팅 미스트", price: "$38.00", img: "/templates/OHMT010-cosmetic/cosmetic-botanical-dropper.png", tag: "new", tagLabel: "신상품" },
+  { id: 3, name: "에센셜 나이트 리페어 크림", price: "$95.00", img: "/templates/OHMT010-cosmetic/cosmetic-collection-marble.png", tag: "bestseller", tagLabel: "베스트셀러" }
 ];
 
 const containerVariants = {
@@ -48,7 +48,7 @@ export const ProductGrid = () => {
     <section className="py-12 md:py-24 bg-[var(--color-bg)]">
       <div className="max-w-[1440px] mx-auto px-6 md:px-10">
         <div className="text-center mb-16">
-          <span className="text-[0.75rem] uppercase tracking-[0.15em] font-bold text-[#666] mb-4 block">에센셜 라인</span>
+          <span className="text-[0.75rem] uppercase tracking-[0.15em] font-bold text-[var(--color-text-muted)] mb-4 block">에센셜 라인</span>
           <h2 className="text-[1.7rem] md:text-[3rem] font-normal mt-2 leading-[1.5]">스킨케어 에디션</h2>
         </div>
         
