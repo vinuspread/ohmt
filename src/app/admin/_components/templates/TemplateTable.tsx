@@ -44,6 +44,7 @@ function matchesFilters(template: Template, filter: TemplateFilter, langFilter: 
   const matchesSearch =
     query.length === 0 ||
     template.name.toLowerCase().includes(query) ||
+    template.slug.toLowerCase().includes(query) ||
     (template.template_key?.toLowerCase().includes(query) ?? false) ||
     (query === "공개" ? published : query === "비공개" ? !published : statusLabel.includes(query));
 
