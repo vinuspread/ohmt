@@ -1,8 +1,8 @@
-// src/app/templates/airline/-components/SearchWidget.tsx
+// src/app/templates/OHMT008-airline/-components/SearchWidget.tsx
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
-import { ArrowRightLeft, Search, ChevronDown, Plus, Minus } from "lucide-react";
+import { ArrowRightLeft, ChevronDown, Plus, Minus } from "lucide-react";
 import { motion } from "framer-motion";
 import { Button } from "./ui/Button";
 
@@ -171,8 +171,7 @@ export const SearchWidget = () => {
           </div>
 
            {/* SEARCH Mobile */}
-           <Button variant="primary" className="w-full flex flex-row items-center justify-center gap-3 py-4 px-8 hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors duration-300 group">
-             <Search size={18} className="transition-transform duration-300 group-hover:scale-110" />
+           <Button variant="primary" className="col-span-2 w-full flex items-center justify-center gap-2.5 py-4 px-8 hover:opacity-90 transition-opacity duration-200 rounded-none">
              <span className="text-[0.72rem] font-bold uppercase tracking-[0.2em]">Search Flights</span>
            </Button>
         </div>
@@ -250,8 +249,7 @@ export const SearchWidget = () => {
           </div>
 
            {/* SEARCH */}
-           <Button variant="primary" className="w-[200px] flex-shrink-0 flex flex-col items-center justify-center gap-2 hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors duration-300 min-h-[100px] group">
-             <Search size={18} className="transition-transform duration-300 group-hover:scale-110" />
+           <Button variant="primary" className="w-[180px] flex-shrink-0 flex items-center justify-center gap-2.5 hover:opacity-90 transition-opacity duration-200 min-h-[100px] group rounded-none">
              <span className="text-[0.72rem] font-bold uppercase tracking-[0.2em]">Search Flights</span>
            </Button>
         </div>

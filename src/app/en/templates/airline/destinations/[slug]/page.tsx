@@ -1,4 +1,4 @@
-// src/app/templates/airline/destinations/[slug]/page.tsx
+﻿// src/app/templates/OHMT008-airline/destinations/[slug]/page.tsx
 "use client";
 
 import React, { useState, use } from "react";
@@ -13,12 +13,12 @@ import { ArrowLeft, Clock, DollarSign, Globe, Shield, Plane } from "lucide-react
 const ALL_MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 const RELATED_IMGS: Record<string, string> = {
-  paris: "/templates/airline/destination-main.jpg",
-  tokyo: "/templates/airline/destination-2.jpg",
-  "new-york": "/templates/airline/destination-3.jpg",
-  dubai: "/templates/airline/destination-3.jpg",
-  sydney: "/templates/airline/destination-2.jpg",
-  bali: "/templates/airline/destination-main.jpg",
+  paris: "/templates/OHMT008-airline/destination-main.jpg",
+  tokyo: "/templates/OHMT008-airline/destination-2.jpg",
+  "new-york": "/templates/OHMT008-airline/destination-3.jpg",
+  dubai: "/templates/OHMT008-airline/destination-3.jpg",
+  sydney: "/templates/OHMT008-airline/destination-2.jpg",
+  bali: "/templates/OHMT008-airline/destination-main.jpg",
 };
 
 const CLASS_COLORS: Record<string, string> = {
@@ -42,7 +42,7 @@ export default function DestinationDetailPage({
         <main className="antialiased bg-white min-h-screen flex items-center justify-center">
           <div className="text-center">
             <p className="text-[#7A7A7A] mb-4">Destination not found.</p>
-            <Link href="/en/templates/airline/destinations" className="text-[var(--color-accent)] font-bold uppercase tracking-widest text-sm">
+            <Link href="/en/templates/OHMT015-airline-en/destinations" className="text-[var(--color-accent)] font-bold uppercase tracking-widest text-sm">
               ??Back to Destinations
             </Link>
           </div>
@@ -52,11 +52,11 @@ export default function DestinationDetailPage({
   }
 
   // Robust local images replacements inside dest mappings
-  const localHeroImg = RELATED_IMGS[slug] || "/templates/airline/destination-main.jpg";
+  const localHeroImg = RELATED_IMGS[slug] || "/templates/OHMT008-airline/destination-main.jpg";
   const localHighlightsImgs = [
-    "/templates/airline/destination-main.jpg",
-    "/templates/airline/destination-2.jpg",
-    "/templates/airline/destination-3.jpg",
+    "/templates/OHMT008-airline/destination-main.jpg",
+    "/templates/OHMT008-airline/destination-2.jpg",
+    "/templates/OHMT008-airline/destination-3.jpg",
   ];
 
   return (
@@ -77,7 +77,7 @@ export default function DestinationDetailPage({
           <div className="absolute top-[88px] left-0 right-0 z-10">
             <div className="max-w-[1320px] mx-auto px-6 md:px-10">
               <Link
-                href="/en/templates/airline/destinations"
+                href="/en/templates/OHMT015-airline-en/destinations"
                 className="inline-flex items-center gap-2 text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-white/50 hover:text-white transition-colors"
               >
                 <ArrowLeft size={14} /> All Destinations
@@ -119,7 +119,7 @@ export default function DestinationDetailPage({
                 </div>
                 
                 <Link
-                  href="/en/templates/airline/book"
+                  href="/en/templates/OHMT015-airline-en/book"
                   className="ml-auto text-[0.72rem] font-bold uppercase tracking-[0.14em] px-8 py-3.5 bg-[var(--color-accent)] text-[var(--color-primary)] hover:opacity-85 transition-opacity duration-300"
                 >
                   Book Now
@@ -240,7 +240,7 @@ export default function DestinationDetailPage({
                   Available Flights
                 </h2>
               </div>
-              <Link href="/en/templates/airline/book" className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-white/50 hover:text-white transition-colors inline-flex items-center gap-2">
+              <Link href="/en/templates/OHMT015-airline-en/book" className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-white/50 hover:text-white transition-colors inline-flex items-center gap-2">
                 View all flights ??
               </Link>
             </div>
@@ -286,7 +286,7 @@ export default function DestinationDetailPage({
                   </div>
 
                   <Link 
-                    href="/en/templates/airline/book"
+                    href="/en/templates/OHMT015-airline-en/book"
                     className="shrink-0 text-center px-6 py-2.5 text-[0.68rem] font-bold uppercase tracking-[0.14em] bg-transparent border border-white/20 text-white hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] hover:border-[var(--color-accent)] transition-colors duration-300"
                   >
                     Select
@@ -310,7 +310,7 @@ export default function DestinationDetailPage({
                 if (!rel) return null;
                 return (
                   <Link
-                    href={`/en/templates/airline/destinations/${slug}`}
+                    href={`/en/templates/OHMT015-airline-en/destinations/${slug}`}
                     key={slug}
                     className="group relative h-[260px] overflow-hidden border border-[var(--color-border)]"
                   >

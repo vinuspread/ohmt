@@ -1,4 +1,4 @@
-// src/app/templates/airline/-components/Header.tsx
+﻿// src/app/templates/OHMT008-airline/-components/Header.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -52,14 +52,8 @@ const navItems = [
           : "bg-transparent"
       )}>
         <div className="max-w-[1320px] mx-auto px-6 md:px-10 flex items-center justify-between w-full">
-          <Link href="/en/templates/airline" className="flex items-center gap-3 shrink-0 group">
-            <div className="w-8 h-8 md:w-[34px] md:h-[34px] bg-[var(--color-accent)] flex items-center justify-center text-[0.72rem] md:text-[0.75rem] font-black text-[var(--color-primary)] tracking-tighter">
-              V
-            </div>
-            <div className="flex flex-col gap-0.5">
-              <span className="text-[0.78rem] md:text-[0.82rem] font-bold md:font-extrabold tracking-[0.25em] uppercase text-white leading-none">VINUS AIR</span>
-              <span className="text-[0.45rem] font-normal tracking-[0.22em] uppercase text-white/35 leading-none">Above & Beyond</span>
-            </div>
+            <Link href="/en/templates/OHMT015-airline-en" className="shrink-0 group">
+            <span className="text-[0.78rem] md:text-[0.82rem] font-bold tracking-[0.15em] uppercase text-white leading-none">Oh My Template</span>
           </Link>
 
           {/* Desktop GNB */}
@@ -67,7 +61,7 @@ const navItems = [
             {navItems.map((item) => (
               <Link
                 key={item.slug}
-                href={`/en/templates/airline/${item.slug}`}
+                href={`/en/templates/OHMT015-airline-en/${item.slug}`}
                 className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-white/55 hover:text-white transition-colors duration-300 relative group pb-1"
               >
                 {item.name}
@@ -77,7 +71,7 @@ const navItems = [
           </div>
 
           <div className="flex items-center gap-4">
-            <Button variant="ghost" href="#" className="hidden lg:block text-[0.7rem] font-medium uppercase tracking-[0.1em] hover:text-white transition-colors">
+            <Button variant="ghost" href="#" className="hidden lg:block text-[0.7rem] font-medium uppercase tracking-[0.1em] text-white/55 hover:text-white transition-colors">
               {t.nav.login}
             </Button>
             <Button variant="primary" className="hidden lg:block text-[0.75rem] font-bold uppercase tracking-[0.14em] px-6 py-2.5 hover:opacity-85 transition-opacity duration-300">
@@ -87,7 +81,7 @@ const navItems = [
             {/* Mobile hamburger */}
             <Button
               variant="ghost"
-              className="lg:hidden flex items-center justify-center w-10 h-10"
+              className="lg:hidden flex items-center justify-center w-10 h-10 text-white"
               onClick={() => setMobileOpen((v) => !v)}
               aria-label="Toggle menu"
             >
@@ -114,7 +108,7 @@ const navItems = [
           {navItems.map((item) => (
             <Button
               key={item.slug}
-              href={`/en/templates/airline/${item.slug}`}
+              href={`/en/templates/OHMT015-airline-en/${item.slug}`}
               onClick={() => setMobileOpen(false)}
               className="text-[0.9rem] font-semibold uppercase tracking-[0.14em] text-white/60 hover:text-white py-4 border-b border-white/10 transition-colors"
               asChild
@@ -124,7 +118,7 @@ const navItems = [
           ))}
             <Button
               variant="outline"
-              href="/en/templates/airline/book"
+              href="/en/templates/OHMT015-airline-en/book"
               onClick={() => setMobileOpen(false)}
               className="text-[0.9rem] font-semibold uppercase tracking-[0.14em] hover:text-[var(--color-accent-light)] py-4 border-b border-white/10 transition-colors"
             >

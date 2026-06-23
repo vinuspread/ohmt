@@ -1,11 +1,10 @@
 {
   "slug": "airline",
-  "name": "Airline",
-  "name_ko": "에어라인",
+  "name": "Travel Airline",
+  "name_ko": "트래블 항공",
   "category": "hospitality",
-  "description": "Premium airline booking and travel experience template",
-  "description_ko": "프리미엄 항공 예약 및 여행 경험 템플릿",
-  "tags": [],
+  "description": "Premium aviation experience template built with Next.js. Showcase destinations, book flights, and explore luxury travel experiences.",
+  "description_ko": "프리미엄 항공 경험 템플릿. 목적지를 소개하고 항공권을 예약하며 럭셔리한 여행 경험을 탐색하세요.",
   "mode": "light",
   "theme": {
     "palette": {

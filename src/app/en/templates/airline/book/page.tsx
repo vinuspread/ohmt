@@ -1,4 +1,4 @@
-// src/app/templates/airline/book/page.tsx
+// src/app/templates/OHMT008-airline/book/page.tsx
 "use client";
 
 import React, { useState } from "react";
@@ -74,7 +74,7 @@ function BookPageContent() {
 
         {/* Global Cover Header */}
         <PageHero
-          imageSrc="/templates/airline/airline-book-hero.png"
+          imageSrc="/templates/OHMT008-airline/airline-book-hero.png"
           imageAlt="Luxury flight silhouette"
           label="Book Premium Flight Suite"
           title={<>Configure Your <br /><span className="text-[var(--color-accent)] font-serif normal-case font-normal">A380 Sanctuary.</span></>}
@@ -211,7 +211,7 @@ function BookPageContent() {
 
                     <button 
                       onClick={() => setStep(2)}
-                      className="w-full sm:w-fit px-12 py-4 bg-[var(--color-primary)] text-[var(--color-accent)] text-[14px] font-bold uppercase tracking-[0.25em] flex items-center justify-center gap-3 hover:bg-[var(--color-primary)]/90 transition-colors duration-300 cursor-pointer rounded-full"
+                      className="w-full sm:w-fit px-12 py-4 bg-[var(--color-primary)] text-[var(--color-accent)] text-[14px] font-bold uppercase tracking-[0.25em] flex items-center justify-center gap-3 hover:bg-[var(--color-primary)]/90 transition-colors duration-300 cursor-pointer rounded-none"
                     >
                       SELECT CABIN SEAT <ChevronRight size={14} />
                     </button>
@@ -254,7 +254,7 @@ function BookPageContent() {
                               key={seat.id}
                               disabled={isOccupied}
                               onClick={() => handleSeatClick(seat)}
-                              className={`aspect-square flex flex-col items-center justify-center text-[14px] font-bold transition-colors duration-300 relative rounded-2xl cursor-pointer ${
+                              className={`aspect-square flex flex-col items-center justify-center text-[14px] font-bold transition-colors duration-300 relative rounded-none cursor-pointer ${
                                 isOccupied
                                   ? "bg-neutral-100 border border-neutral-200 text-neutral-400 cursor-not-allowed"
                                   : isSelected
@@ -306,14 +306,14 @@ function BookPageContent() {
                     <div className="flex gap-4">
                       <button 
                         onClick={() => setStep(1)}
-                        className="px-10 py-4 border border-[var(--color-border)] text-[var(--color-primary)] text-[14px] font-bold uppercase tracking-wider hover:border-[var(--color-primary)] transition-all cursor-pointer rounded-full"
+                        className="px-10 py-4 border border-[var(--color-border)] text-[var(--color-primary)] text-[14px] font-bold uppercase tracking-wider hover:border-[var(--color-primary)] transition-all cursor-pointer rounded-none"
                       >
                         BACK TO ROUTE
                       </button>
                       <button
                         onClick={() => setStep(3)}
                         disabled={!selectedSeat}
-                        className="px-12 py-4 bg-[var(--color-primary)] text-[var(--color-accent)] text-[14px] font-bold uppercase tracking-[0.2em] hover:bg-[var(--color-primary)]/90 transition-colors duration-300 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed rounded-full"
+                        className="px-12 py-4 bg-[var(--color-primary)] text-[var(--color-accent)] text-[14px] font-bold uppercase tracking-[0.2em] hover:bg-[var(--color-primary)]/90 transition-colors duration-300 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed rounded-none"
                       >
                         FINALIZE PASS
                       </button>
@@ -388,7 +388,7 @@ function BookPageContent() {
                           setStep(1);
                           setSelectedSeat(null);
                         }}
-                        className="px-12 py-4 bg-[var(--color-primary)] text-[var(--color-accent)] text-[14px] font-bold uppercase tracking-[0.2em] hover:bg-[var(--color-primary)]/90 transition-colors duration-300 cursor-pointer rounded-full"
+                        className="px-12 py-4 bg-[var(--color-primary)] text-[var(--color-accent)] text-[14px] font-bold uppercase tracking-[0.2em] hover:bg-[var(--color-primary)]/90 transition-colors duration-300 cursor-pointer rounded-none"
                       >
                         BOOK ANOTHER FLIGHT
                       </button>

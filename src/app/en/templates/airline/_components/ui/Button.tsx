@@ -38,7 +38,7 @@ export function Button({
   }[variant];
 
   // Base classes
-  const baseClasses = `inline-flex items-center justify-center rounded-md font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none`;
+  const baseClasses = `inline-flex items-center justify-center rounded-none font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none`;
 
   const finalClassName = twMerge(
     clsx(
