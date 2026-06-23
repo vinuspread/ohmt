@@ -1,14 +1,11 @@
-import { TemplateWrapper } from "./_components/TemplateWrapper";
+﻿import { TemplateWrapper } from "./_components/TemplateWrapper";
 import themeData from "./theme.json";
 
 import Navbar from "./_components/layout/Navbar";
 import Hero from "./_components/sections/Hero";
-import About from "./_components/sections/About";
 import BrandStory from "./_components/sections/BrandStory";
 import Featured from "./_components/sections/Featured";
-import Pricing from "./_components/sections/Pricing";
 import HowItWorks from "./_components/sections/HowItWorks";
-import BookingForm from "./_components/sections/BookingForm";
 import Footer from "./_components/layout/Footer";
 
 export default function TemplatePage() {
@@ -17,7 +14,7 @@ export default function TemplatePage() {
     "@type": "ProfessionalService",
     "name": "Oh My Template - Wedding Photography",
     "description": "Elegant dark portfolio template for wedding photography and cinematic capture",
-    "url": "https://ohmytemplate.com/en/templates/wedding",
+    "url": "https://ohmytemplate.com/en/templates/OHMT049-wedding-en",
     "telephone": "+1-512-555-0199",
     "address": {
       "@type": "PostalAddress",
@@ -39,12 +36,9 @@ export default function TemplatePage() {
         <Navbar />
         <main>
           <Hero />
-          <About />
           <BrandStory />
-          <Featured />
-          <Pricing />
           <HowItWorks />
-          <BookingForm />
+          <Featured />
         </main>
         <Footer />
       </TemplateWrapper>

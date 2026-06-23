@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
@@ -24,7 +24,7 @@ export default function Pricing() {
               Choose the collection that best fits the size and story of your day.
             </p>
             <a
-              href="#booking"
+              href="/en/templates/OHMT049-wedding-en/contact"
               className="inline-flex items-center gap-3 mt-10 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-[var(--color-text)] border-b border-[var(--color-text)] pb-1 hover:text-[var(--color-primary)] hover:border-[var(--color-primary)] transition-colors duration-200"
             >
               Request a Quote
@@ -99,7 +99,7 @@ export default function Pricing() {
                             ))}
                             <li className="pt-4">
                               <a
-                                href="#booking"
+                                href="/en/templates/OHMT049-wedding-en/contact"
                                 className="inline-flex items-center gap-2 text-[0.7rem] font-bold uppercase tracking-[0.18em] text-[var(--color-text)] border-b border-[var(--color-border)] pb-1 hover:border-[var(--color-text)] transition-colors"
                               >
                                 Book This Package

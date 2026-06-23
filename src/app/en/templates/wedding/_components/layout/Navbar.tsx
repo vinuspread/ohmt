@@ -1,21 +1,23 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 
 const navLinks = [
-  { href: "#about", label: "About" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#pricing", label: "Pricing" },
-  { href: "#booking", label: "Contact" },
+  { href: "/en/templates/OHMT049-wedding-en/about", label: "About" },
+  { href: "/en/templates/OHMT049-wedding-en/gallery", label: "Gallery" },
+  { href: "/en/templates/OHMT049-wedding-en/pricing", label: "Pricing" },
+  { href: "/en/templates/OHMT049-wedding-en/contact", label: "Contact" },
 ];
 
-export default function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
+export default function Navbar({ solid }: { solid?: boolean }) {
+  const [scrolled, setScrolled] = useState(solid ?? false);
   const [isOpen, setIsOpen] = useState(false);
   const { scrollY } = useScroll();
 
-  useMotionValueEvent(scrollY, "change", (v) => setScrolled(v > 60));
+  useMotionValueEvent(scrollY, "change", (v) => {
+    if (!solid) setScrolled(v > 60);
+  });
 
   return (
     <>
@@ -28,7 +30,7 @@ export default function Navbar() {
       >
         <div className="mx-auto flex max-w-[1440px] items-center justify-between px-8 lg:px-16">
           <a
-            href="#"
+            href="/en/templates/OHMT049-wedding-en"
             className={`font-[family-name:var(--font-heading)] text-xl font-light tracking-[0.15em] uppercase transition-colors duration-500 ${
               scrolled ? "text-[var(--color-text)]" : "text-white"
             }`}
@@ -54,7 +56,7 @@ export default function Navbar() {
 
           <div className="flex items-center gap-4">
             <a
-              href="#booking"
+              href="/en/templates/OHMT049-wedding-en/contact"
               className={`hidden sm:inline-flex items-center border px-6 py-2.5 text-[0.7rem] font-bold uppercase tracking-[0.18em] transition-all duration-300 ${
                 scrolled
                   ? "border-[var(--color-text)] text-[var(--color-text)] hover:bg-[var(--color-text)] hover:text-white"
@@ -103,7 +105,7 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: navLinks.length * 0.08 }}
-                href="#booking"
+                href="/en/templates/OHMT049-wedding-en/contact"
                 onClick={() => setIsOpen(false)}
                 className="mt-4 inline-block bg-[var(--color-text)] px-10 py-4 text-sm font-bold uppercase tracking-[0.2em] text-white"
               >

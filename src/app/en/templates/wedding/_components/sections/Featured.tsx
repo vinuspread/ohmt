@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring, useReducedMotion } from "framer-motion";
@@ -53,8 +53,11 @@ export default function Featured() {
           </p>
         </div>
 
-        {/* Asymmetric editorial grid */}
-        <div className="grid gap-4 lg:gap-6" style={{ gridTemplateColumns: "1fr 1fr 1fr", gridTemplateRows: "auto auto" }}>
+        {/* Asymmetric editorial grid - single column stack on mobile,
+            3-col/2-row asymmetric layout from lg up. The fixed 3-col inline
+            grid used to apply at every breakpoint while the row/col spans
+            only kicked in at lg, leaving stretched empty cells on mobile. */}
+        <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:grid-rows-2 lg:gap-6">
           {/* Large portrait - spans 2 rows */}
           {projects[0] && (
             <GalleryItem
@@ -85,7 +88,7 @@ export default function Featured() {
 
         <div className="mt-12 text-center">
           <a
-            href="#booking"
+            href="/en/templates/OHMT049-wedding-en/contact"
             className="inline-flex items-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-[var(--color-text)] border-b border-[var(--color-text)] pb-1 hover:text-[var(--color-primary)] hover:border-[var(--color-primary)] transition-colors duration-300"
           >
             Inquire About Your Date
@@ -123,7 +126,7 @@ function GalleryItem({ project, className = "", aspectClass = "aspect-[3/4]" }: 
         />
         {/* Hover overlay from bottom */}
         <motion.div
-          className="absolute inset-x-0 bottom-0 px-6 py-5 bg-gradient-to-t from-[#1A1816]/90 to-transparent"
+          className="absolute inset-x-0 bottom-0 px-6 py-5 bg-gradient-to-t from-[var(--color-primary)]/90 to-transparent"
           initial={{ y: "100%" }}
           animate={{ y: hovered ? "0%" : "100%" }}
           transition={{ duration: 0.5, ease: [0.22, 0.61, 0.36, 1] }}

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
@@ -17,12 +17,12 @@ export default function About() {
         {/* Image */}
         <div className="relative overflow-hidden aspect-[4/5] max-h-[80vh]">
           <motion.img
-            src="/templates/wedding/about-clara.jpg"
+            src="/templates/OHMT025-wedding/about-clara.jpg"
             alt="Clara, wedding photographer"
             className="h-full w-full object-cover object-center"
             style={{ y: imgY }}
           />
-          {/* Right edge vignette — removed: creates unnatural cut on clean layouts */}
+          {/* Right edge vignette - removed: creates unnatural cut on clean layouts */}
         </div>
 
         {/* Text column */}
@@ -69,7 +69,7 @@ export default function About() {
             </div>
 
             <a
-              href="#booking"
+              href="/en/templates/OHMT049-wedding-en/contact"
               className="inline-flex items-center gap-3 mt-10 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-[var(--color-text)] border-b border-[var(--color-text)] pb-1 hover:text-[var(--color-primary)] hover:border-[var(--color-primary)] transition-colors duration-200"
             >
               Plan Your Day
