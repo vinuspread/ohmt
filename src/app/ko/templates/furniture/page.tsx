@@ -1,4 +1,4 @@
-// src/app/(premium)/ko/templates/furniture/page.tsx
+﻿// src/app/(premium)/ko/templates/OHMT008-furniture-kr/page.tsx
 "use client";
 
 import { Suspense } from "react";

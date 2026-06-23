@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
@@ -19,12 +19,18 @@ function ProductDetailPageContent() {
   const router = useRouter();
   const [mounted, setMounted] = React.useState(false);
   const [quantity, setQuantity] = useState(1);
+  const [openTab, setOpenTab] = useState<string | null>(null);
+
+  const toggleTab = (tabName: string) => {
+    setOpenTab(openTab === tabName ? null : tabName);
+  };
 
   React.useEffect(() => {
     setMounted(true);
   }, []);
 
   const product = products.find((p) => String(p.id) === String(params.id));
+  const typedProduct = product as any;
 
   if (!mounted) return null;
   if (!product) return <div className="pt-40 text-center uppercase font-bold">상품을 찾을 수 없습니다</div>;
@@ -120,11 +126,111 @@ function ProductDetailPageContent() {
                   </div>
                   <Button
                     variant="primary"
-                    onClick={() => router.push('/ko/templates/furniture/cart')}
+                    onClick={() => router.push('/ko/templates/OHMT008-furniture-kr/cart')}
                     className={`flex-1 py-6 rounded-full text-[14px] font-bold uppercase active:scale-95 ${theme.interaction.button}`}
                   >
                     장바구니 담기
                   </Button>
+                </div>
+              </div>
+
+              {/* 아코디언 탭 */}
+              <div className="mt-12 border-t border-black/10">
+                {/* 탭 1: 상세 설명 */}
+                {typedProduct.longDesc && (
+                  <div className="border-b border-black/10">
+                    <button
+                      onClick={() => toggleTab('details')}
+                      className="w-full flex items-center justify-between py-4 text-left font-bold text-sm uppercase tracking-wider text-[var(--color-text)] hover:opacity-70 transition-opacity"
+                    >
+                      <span>디자인 스토리 & 세부 정보</span>
+                      <span className="text-lg">{openTab === 'details' ? '−' : '+'}</span>
+                    </button>
+                    {openTab === 'details' && (
+                      <div className="pb-6 text-sm leading-relaxed text-[var(--color-secondary)] normal-case font-normal whitespace-pre-line">
+                        {typedProduct.longDesc}
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* 탭 2: 스펙 정보 */}
+                {product?.details && (
+                  <div className="border-b border-black/10">
+                    <button
+                      onClick={() => toggleTab('specs')}
+                      className="w-full flex items-center justify-between py-4 text-left font-bold text-sm uppercase tracking-wider text-[var(--color-text)] hover:opacity-70 transition-opacity"
+                    >
+                      <span>규격 및 소재</span>
+                      <span className="text-lg">{openTab === 'specs' ? '−' : '+'}</span>
+                    </button>
+                    {openTab === 'specs' && (
+                      <div className="pb-6">
+                        <table className="w-full text-sm normal-case">
+                          <tbody>
+                            {Object.entries(product.details).map(([key, val]) => {
+                              // Translate keys for Korean UI if necessary
+                              let displayKey = key;
+                              if (key === 'material') displayKey = '소재';
+                              else if (key === 'dimensions') displayKey = '규격';
+                              else if (key === 'weight') displayKey = '중량';
+                              else if (key === 'origin') displayKey = '제조국';
+
+                              return (
+                                <tr key={key} className="border-b border-black/5 last:border-0">
+                                  <td className="py-2.5 font-bold text-[var(--color-text)] uppercase text-[12px] w-1/3">{displayKey}</td>
+                                  <td className="py-2.5 text-[var(--color-secondary)] w-2/3">{val}</td>
+                                </tr>
+                              );
+                            })}
+                          </tbody>
+                        </table>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* 탭 3: 리뷰 목록 */}
+                {typedProduct.reviewsList && typedProduct.reviewsList.length > 0 && (
+                  <div className="border-b border-black/10">
+                    <button
+                      onClick={() => toggleTab('reviews')}
+                      className="w-full flex items-center justify-between py-4 text-left font-bold text-sm uppercase tracking-wider text-[var(--color-text)] hover:opacity-70 transition-opacity"
+                    >
+                      <span>구매자 리뷰 ({typedProduct.reviewsList.length})</span>
+                      <span className="text-lg">{openTab === 'reviews' ? '−' : '+'}</span>
+                    </button>
+                    {openTab === 'reviews' && (
+                      <div className="pb-6 space-y-6 normal-case">
+                        {typedProduct.reviewsList.map((review: any) => (
+                          <div key={review.id} className="border-b border-black/5 pb-4 last:border-0 last:pb-0">
+                            <div className="flex items-center justify-between mb-1.5">
+                              <span className="font-bold text-sm text-[var(--color-text)]">{review.reviewer}</span>
+                              <span className="text-xs text-[var(--color-secondary)]">{review.date}</span>
+                            </div>
+                            <p className="text-sm leading-relaxed text-[var(--color-secondary)]">{review.text}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                )}
+
+                {/* 탭 4: 전문 배송 및 조립 */}
+                <div className="border-b border-black/10">
+                  <button
+                    onClick={() => toggleTab('delivery')}
+                    className="w-full flex items-center justify-between py-4 text-left font-bold text-sm uppercase tracking-wider text-[var(--color-text)] hover:opacity-70 transition-opacity"
+                  >
+                    <span>전문 배송 및 조립</span>
+                    <span className="text-lg">{openTab === 'delivery' ? '−' : '+'}</span>
+                  </button>
+                  {openTab === 'delivery' && (
+                    <div className="pb-6 text-sm leading-relaxed text-[var(--color-secondary)] normal-case font-normal">
+                      <p className="mb-2">모든 가구 제품은 전문 기사가 동승하는 프리미엄 배송 조립 서비스(White Glove Delivery)로 배송됩니다. 배송팀이 지정하신 공간까지 안전하게 운반하여 직접 개봉, 조립, 배치해 드리고 포장 자재는 전량 수거해 드립니다.</p>
+                      <p>일반적으로 배송지는 지역에 따라 1~2주 이내로 스케줄링되며, 사전에 해피콜로 일정을 조율하여 확정하게 됩니다.</p>
+                    </div>
+                  )}
                 </div>
               </div>
             </motion.div>
@@ -147,7 +253,7 @@ function ProductDetailPageContent() {
             className="relative aspect-[21/9] w-full overflow-hidden mb-16 md:mb-24 bg-zinc-50 group rounded-2xl"
           >
             <img 
-              src="/templates/furniture/lifestyle-narrative.png" 
+              src="/templates/OHMT004-furniture/lifestyle-narrative.png" 
               className="w-full h-full object-cover transition-transform duration-[6s] group-hover:scale-105"
               alt="브랜드 라이프스타일"
             />
@@ -185,7 +291,7 @@ function ProductDetailPageContent() {
                 모든 작품은 소재와 공간의 대화입니다. 형태를 통해 경험을 큐레이팅하여, 모든 곡선과 선이 평온함을 느끼게 합니다. {product.desc}
               </p>
               <div className="pt-4">
-                <Link href="/ko/templates/furniture" className="text-[13px] font-bold uppercase border-b border-black pb-1 hover:opacity-50 transition-opacity">
+                <Link href="/ko/templates/OHMT008-furniture-kr" className="text-[13px] font-bold uppercase border-b border-black pb-1 hover:opacity-50 transition-opacity">
                   더 알아보기
                 </Link>
               </div>

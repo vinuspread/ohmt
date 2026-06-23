@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRight, Play, ArrowLeft } from "lucide-react";
@@ -13,7 +13,7 @@ export const Hero = () => {
     {
       id: 1,
       name: "스컬프처럴 라운지 체어",
-      image: "/templates/furniture/chair.png",
+      image: "/templates/OHMT004-furniture/chair.png",
       subtitle: "신규 릴리즈 // 2026",
       titleLine1: "마음을 비우고",
       titleLine2: "편안함을 담다.",
@@ -22,7 +22,7 @@ export const Hero = () => {
     {
       id: 2,
       name: "아키텍처럴 테이블 램프",
-      image: "/templates/furniture/lamp.png",
+      image: "/templates/OHMT004-furniture/lamp.png",
       subtitle: "한정판 에디션",
       titleLine1: "공간을 채우는",
       titleLine2: "빛의 사유.",
@@ -31,7 +31,7 @@ export const Hero = () => {
     {
       id: 3,
       name: "미니멀리스트 솔리드 오크 소파",
-      image: "/templates/furniture/sofa.png",
+      image: "/templates/OHMT004-furniture/sofa.png",
       subtitle: "현대적인 클래식",
       titleLine1: "본질로 돌아간",
       titleLine2: "간결함.",
@@ -157,14 +157,14 @@ export const Hero = () => {
 
 export const CategoryNav = () => {
   const categories = [
-    { name: "소파",             image: "/templates/furniture/sofa.png",       id: "sofas" },
-    { name: "침실",             image: "/templates/furniture/bed.png",        id: "bedroom" },
-    { name: "다이닝",           image: "/templates/furniture/table.png",      id: "dining" },
-    { name: "홈 오피스",         image: "/templates/furniture/desk.png",       id: "home-office" },
-    { name: "의자",             image: "/templates/furniture/chair.png",      id: "chairs" },
-    { name: "조명",             image: "/templates/furniture/lamp.png",       id: "lighting" },
-    { name: "리빙",             image: "/templates/furniture/sidetable.png",  id: "living" },
-    { name: "수납",             image: "/templates/furniture/wardrobe.png",   id: "storage" },
+    { name: "소파",             image: "/templates/OHMT004-furniture/sofa.png",       id: "sofas" },
+    { name: "침실",             image: "/templates/OHMT004-furniture/bed.png",        id: "bedroom" },
+    { name: "다이닝",           image: "/templates/OHMT004-furniture/table.png",      id: "dining" },
+    { name: "홈 오피스",         image: "/templates/OHMT004-furniture/desk.png",       id: "home-office" },
+    { name: "의자",             image: "/templates/OHMT004-furniture/chair.png",      id: "chairs" },
+    { name: "조명",             image: "/templates/OHMT004-furniture/lamp.png",       id: "lighting" },
+    { name: "리빙",             image: "/templates/OHMT004-furniture/sidetable.png",  id: "living" },
+    { name: "수납",             image: "/templates/OHMT004-furniture/wardrobe.png",   id: "storage" },
   ];
 
   return (
@@ -177,7 +177,7 @@ export const CategoryNav = () => {
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 lg:grid-cols-8 gap-4 md:gap-6">
           {categories.map((cat, i) => (
-            <Link key={i} href={`/ko/templates/furniture/category/${cat.id}`}>
+            <Link key={i} href={`/ko/templates/OHMT008-furniture-kr/category/${cat.id}`}>
               <motion.div
                 initial={{ opacity: 0, scale: 0.95, y: 8 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}

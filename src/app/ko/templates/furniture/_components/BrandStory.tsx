@@ -20,7 +20,7 @@ export const BrandStory = () => {
           className="relative lg:w-1/2 overflow-hidden group"
         >
           <img
-            src="/templates/furniture/banner-lifestyle.png"
+            src="/templates/OHMT004-furniture/banner-lifestyle.png"
             alt="Lifestyle Craftsmanship"
             className="w-full h-auto object-cover transition-transform duration-[4s] group-hover:scale-105"
           />
