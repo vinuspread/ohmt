@@ -1,10 +1,10 @@
 "use client"
 
+import { TemplateWrapper } from "../_components/TemplateWrapper";
+import theme from "../theme.json";
 import Header from '../_components/Header'
 import Footer from '../_components/Footer'
 import { useState } from 'react'
-import { TemplateWrapper } from '../_components/TemplateWrapper'
-import theme from '../theme.json'
 
 const officeData = [
   {
@@ -44,7 +44,6 @@ export default function TechnologyContactPage() {
 
   return (
     <TemplateWrapper theme={theme}>
-      <>
       <Header />
       <main>
         {/* Hero */}
@@ -225,7 +224,6 @@ export default function TechnologyContactPage() {
         </section>
       </main>
       <Footer />
-    </>
     </TemplateWrapper>
   )
 }

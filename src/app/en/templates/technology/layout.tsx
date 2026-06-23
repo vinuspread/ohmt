@@ -1,4 +1,5 @@
-﻿import './theme.css'
+﻿import type { Metadata } from "next"
+import './theme.css'
 import { Inter, Inter_Tight } from 'next/font/google'
 
 const inter = Inter({
@@ -13,9 +14,29 @@ const interTight = Inter_Tight({
   display: 'swap',
 })
 
-export const metadata = {
+export const metadata: Metadata = {
   title: 'Technology - Oh My Template',
   description: 'Empower machine learning and robotics startups with a professional, dynamic platform.',
+  openGraph: {
+    title: 'Technology - Oh My Template',
+    description: 'Empower machine learning and robotics startups with a professional, dynamic platform.',
+    url: 'https://ohmytemplate.com/en/templates/OHMT031-technology-en',
+    siteName: 'Oh My Template',
+    images: [{ url: '/templates/OHMT016-technology/og-image.jpg', width: 1200, height: 630 }],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Technology - Oh My Template',
+    description: 'Empower machine learning and robotics startups with a professional, dynamic platform.',
+    images: ['/templates/OHMT016-technology/og-image.jpg'],
+  },
+  robots: { index: true, follow: true },
+  alternates: {
+    canonical: 'https://ohmytemplate.com/en/templates/OHMT031-technology-en',
+    languages: { 'ko': 'https://ohmytemplate.com/ko/templates/OHMT032-technology-kr' },
+  },
 }
 
 export default function TechnologyLayout({

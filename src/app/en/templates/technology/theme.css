@@ -4,9 +4,12 @@
   --color-bg: #ffffff;
   --color-bg-secondary: #f8f9fc;
   --color-accent: #3b82f6;
+  --color-primary: #3b82f6;
+  --color-secondary: #0f172a;
   --color-success: #10b981;
   --color-text: #0f172a;
   --color-text-muted: #64748b;
+  --color-text-contrast: #1C1C1A;
   --color-border: #e2e8f0;
 
   /* Typography */

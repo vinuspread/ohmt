@@ -1,11 +1,11 @@
 "use client"
 
+import { TemplateWrapper } from "../_components/TemplateWrapper";
+import theme from "../theme.json";
 import Header from '../_components/Header'
 import Footer from '../_components/Footer'
 import { modelData, featuresData } from '../data/data'
 import { useState } from 'react'
-import { TemplateWrapper } from '../_components/TemplateWrapper'
-import theme from '../theme.json'
 
 const comparisonRows = [
   { spec: 'Dimensions', gen2: '45 x 38 x 52 cm', prime: '58 x 48 x 68 cm' },
@@ -34,7 +34,6 @@ export default function TechnologyProductsPage() {
 
   return (
     <TemplateWrapper theme={theme}>
-      <>
       <Header />
       <main>
 
@@ -329,7 +328,6 @@ export default function TechnologyProductsPage() {
 
       </main>
       <Footer />
-    </>
     </TemplateWrapper>
   )
 }

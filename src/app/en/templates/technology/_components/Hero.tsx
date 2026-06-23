@@ -26,10 +26,10 @@ export default function Hero() {
         {/* Image fills remaining space */}
         <div className="flex-1 overflow-hidden">
           <img
-            src="/templates/technology/hero-clean-robot.png?v=3"
+            src="/templates/OHMT016-technology/hero-clean-robot.png?v=3"
             alt="OmniBot"
             className="w-full h-full object-cover"
-            style={{ objectPosition: 'center top', transform: 'scale(1.25) translate(80px, -40px)', transformOrigin: 'center top' }}
+            style={{ objectPosition: '60% top' }}
           />
         </div>
         {/* Button pinned to bottom */}
@@ -59,7 +59,7 @@ export default function Hero() {
         {/* Robot background */}
         <div
           className="absolute inset-0 z-0 bg-no-repeat pointer-events-none bg-[position:right_bottom] bg-[length:auto_100%] -translate-x-[400px]"
-          style={{ backgroundImage: "url('/templates/technology/hero-clean-robot.png?v=3')" }}
+          style={{ backgroundImage: "url('/templates/OHMT016-technology/hero-clean-robot.png?v=3')" }}
         />
         <div className="relative z-10 mx-auto max-w-7xl px-6 w-full">
           <div className="w-1/2 flex flex-col items-start pr-8">

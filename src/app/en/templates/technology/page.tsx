@@ -1,3 +1,5 @@
+import { TemplateWrapper } from "./_components/TemplateWrapper";
+import theme from "./theme.json";
 import Header from './_components/Header'
 import Hero from './_components/Hero'
 import Features from './_components/Features'
@@ -6,13 +8,10 @@ import SpecShowcase from './_components/SpecShowcase'
 import Pricing from './_components/Pricing'
 import BlogNews from './_components/BlogNews'
 import Footer from './_components/Footer'
-import { TemplateWrapper } from './_components/TemplateWrapper'
-import theme from './theme.json'
 
 export default function TechnologyTemplatePage() {
   return (
     <TemplateWrapper theme={theme}>
-      <>
       <Header />
       <main>
         <Hero />
@@ -23,7 +22,6 @@ export default function TechnologyTemplatePage() {
         <BlogNews />
       </main>
       <Footer />
-    </>
     </TemplateWrapper>
   )
 }

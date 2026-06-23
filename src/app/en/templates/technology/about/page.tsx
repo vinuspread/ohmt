@@ -1,9 +1,9 @@
 "use client"
 
+import { TemplateWrapper } from "../_components/TemplateWrapper";
+import theme from "../theme.json";
 import Header from '../_components/Header'
 import Footer from '../_components/Footer'
-import { TemplateWrapper } from '../_components/TemplateWrapper'
-import theme from '../theme.json'
 
 const timeline = [
   { year: '2024', event: 'Company founded with a vision to democratize advanced robotics and autonomous hardware systems.' },
@@ -16,25 +16,25 @@ const team = [
     name: 'Dr. Aris Chen',
     role: 'R&D Lead',
     bio: 'Former JPL robotics architect specializing in autonomous navigation and sensor fusion.',
-    image: '/templates/technology/team-aris.png',
+    image: '/templates/OHMT016-technology/team-aris.png',
   },
   {
     name: 'Maya Torres',
     role: 'Robotics Engineering Lead',
     bio: 'Led actuator design at Boston Dynamics. Expert in high-torque motion systems.',
-    image: '/templates/technology/team-maya.png',
+    image: '/templates/OHMT016-technology/team-maya.png',
   },
   {
     name: 'James Park',
     role: 'AI & Machine Learning Lead',
     bio: 'Deep learning researcher with 20+ publications in computer vision and edge AI.',
-    image: '/templates/technology/team-james.png',
+    image: '/templates/OHMT016-technology/team-james.png',
   },
   {
     name: 'Sophia Kim',
     role: 'Head of Product',
     bio: 'Brought three hardware products from concept to mass production in her previous roles.',
-    image: '/templates/technology/team-sophia.png',
+    image: '/templates/OHMT016-technology/team-sophia.png',
   },
 ]
 
@@ -42,14 +42,13 @@ const team = [
 export default function TechnologyAboutPage() {
   return (
     <TemplateWrapper theme={theme}>
-      <>
       <Header />
       <main>
 
         {/* Hero - text over full-bleed image */}
         <section className="relative w-full h-[600px] overflow-hidden border-b border-[var(--color-border)]">
           <img
-            src="/templates/technology/full_bg_img.jpeg"
+            src="/templates/OHMT016-technology/full_bg_img.jpeg"
             alt="Robotflow Vision"
             className="w-full h-full object-cover"
           />
@@ -171,7 +170,6 @@ export default function TechnologyAboutPage() {
 
       </main>
       <Footer />
-    </>
     </TemplateWrapper>
   )
 }
