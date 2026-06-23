@@ -1,7 +1,55 @@
 import type { Metadata } from "next";
 import { createClient } from "@/lib/supabase/server";
-import type { Faq, Template } from "@/types/template";
+import type { Faq, PricingPackage, Template } from "@/types/template";
 import LandingPageClient, { type FaqItem, type TemplateItem } from "./LandingPageClient";
+
+const fallbackPricingPackages: PricingPackage[] = [
+  {
+    id: "fallback-ko-pricing-0",
+    lang: "ko",
+    slug: "starter",
+    name: "Starter",
+    price: "4,200,000원",
+    description: "빠르게 시작하기 위한 핵심 기능 패키지",
+    features: ["템플릿 1개 선택", "기본 페이지 5개 포함", "기본 브랜드 커스터마이징", "기술 지원 6개월 제공", "모바일 반응형 레이아웃", "무상 수정 2회 제공"],
+    duration: "2주 소요",
+    is_recommended: false,
+    is_active: true,
+    sort_order: 0,
+    created_at: "",
+    updated_at: "",
+  },
+  {
+    id: "fallback-ko-pricing-1",
+    lang: "ko",
+    slug: "professional",
+    name: "Professional",
+    price: "6,200,000원",
+    description: "브랜드 맞춤형 프리미엄 디자인 패키지",
+    features: ["템플릿 1개 선택", "기본 페이지 8개 포함", "고급 비주얼 커스터마이징", "도메인 & 호스팅 1년 지원", "무상 수정 3회 제공", "1대1 전담 기술 지원 1년", "기본 검색엔진 최적화(SEO) 세팅"],
+    duration: "3주 소요",
+    is_recommended: true,
+    is_active: true,
+    sort_order: 1,
+    created_at: "",
+    updated_at: "",
+  },
+  {
+    id: "fallback-ko-pricing-2",
+    lang: "ko",
+    slug: "premium",
+    name: "Premium",
+    price: "9,200,000원",
+    description: "완전 맞춤화 및 기능 확장이 가능한 스케일 플랜",
+    features: ["무제한 맞춤형 요구사항 지원", "페이지 개수 무제한 제공", "커스텀 레이아웃 및 컴포넌트 설계", "도메인 & 호스팅 2년 지원", "무상 수정 무제한 제공", "우선순위 전담 기술 지원 2년", "고급 SEO 및 마케팅 분석 툴 연동"],
+    duration: "4주 소요",
+    is_recommended: false,
+    is_active: true,
+    sort_order: 2,
+    created_at: "",
+    updated_at: "",
+  },
+];
 
 const fallbackFaqs: FaqItem[] = [
   {
@@ -68,6 +116,13 @@ export default async function Page() {
     .eq("is_active", true)
     .order("sort_order", { ascending: true });
 
+  const { data: pricingData, error: pricingError } = await supabase
+    .from("pricing_packages")
+    .select("*")
+    .eq("lang", "ko")
+    .eq("is_active", true)
+    .order("sort_order", { ascending: true });
+
   const templateRows: Template[] = error ? [] : data ?? [];
   const templates: TemplateItem[] = templateRows.map((template) => ({
     id: template.slug,
@@ -77,6 +132,9 @@ export default async function Page() {
     category: template.category,
     image: template.thumbnail_url ?? "",
     isFeatured: template.is_featured,
+    slug: template.slug,
+    applicablePackages: template.applicable_packages ?? [],
+    requiresConsultation: template.requires_consultation ?? false,
   }));
 
   const faqRows: Pick<Faq, "id" | "question" | "answer">[] = faqData ?? [];
@@ -88,5 +146,7 @@ export default async function Page() {
         answer: faq.answer,
       }));
 
-  return <LandingPageClient templates={templates} faqs={faqs} />;
+  const packages: PricingPackage[] = pricingError ? fallbackPricingPackages : pricingData ?? [];
+
+  return <LandingPageClient templates={templates} faqs={faqs} packages={packages} />;
 }

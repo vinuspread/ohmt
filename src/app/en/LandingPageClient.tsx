@@ -1,11 +1,27 @@
 ﻿"use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, ChevronDown, X, Search, Sparkles } from "lucide-react";
+import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, X, Search, Sparkles } from "lucide-react";
+
+const HERO_SLIDES = [
+  {
+    heading: <>Launch your business<br className="hidden sm:block" /> <span className="text-[#F1B100]">with a complete system.</span></>,
+    desc: "Premium templates, fully customized by our team.\nYour website, ready to go in 2 weeks.",
+  },
+  {
+    heading: <>Every feature you need,<br className="hidden sm:block" /> <span className="text-[#F1B100]">built exactly as you want.</span></>,
+    desc: "Got a specific feature in mind?\nMembership, bookings, payments — we build it all to fit your business.",
+  },
+  {
+    heading: <>Ongoing support<br className="hidden sm:block" /> <span className="text-[#F1B100]">you can count on.</span></>,
+    desc: "Business starts after launch.\nOur dedicated team responds quickly to any issues that arise.",
+  },
+];
 import { useRouter } from "next/navigation";
 import { Logo } from "@/components/Logo";
+import type { PricingPackage } from "@/types/template";
 
 export interface TemplateItem {
   id: string;
@@ -15,6 +31,9 @@ export interface TemplateItem {
   category: string;
   image: string;
   isFeatured?: boolean;
+  slug: string;
+  applicablePackages: string[];
+  requiresConsultation: boolean;
 }
 
 export interface FaqItem {
@@ -28,14 +47,51 @@ const ALL_LABEL = "All";
 
 const POPULAR_TAGS = ["Fashion", "Portfolio", "Agency", "Luxury", "Minimalist"];
 
-export default function LandingPageClient({ templates, faqs }: { templates: TemplateItem[]; faqs: FaqItem[] }) {
+export default function LandingPageClient({ templates, faqs, packages }: { templates: TemplateItem[]; faqs: FaqItem[]; packages: PricingPackage[] }) {
   const router = useRouter();
+  const [heroIndex, setHeroIndex] = useState(0);
+  const [headerVisible, setHeaderVisible] = useState(true);
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [activeCategory, setActiveCategory] = useState(ALL_LABEL);
   const [isAdmin, setIsAdmin] = useState(false);
   const [descModalTemplate, setDescModalTemplate] = useState<TemplateItem | null>(null);
   const [featuredTemplateId, setFeaturedTemplateId] = useState<string | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+      if (currentY < 10) {
+        setHeaderVisible(true);
+      } else if (currentY < lastScrollY.current) {
+        setHeaderVisible(true);
+      } else {
+        setHeaderVisible(false);
+      }
+      lastScrollY.current = currentY;
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const restartInterval = useCallback(() => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      setHeroIndex((prev) => (prev + 1) % HERO_SLIDES.length);
+    }, 6000);
+  }, []);
+
+  const goPrev = useCallback(() => {
+    setHeroIndex((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
+    restartInterval();
+  }, [restartInterval]);
+
+  const goNext = useCallback(() => {
+    setHeroIndex((prev) => (prev + 1) % HERO_SLIDES.length);
+    restartInterval();
+  }, [restartInterval]);
 
   useEffect(() => {
     import("@/lib/supabase/client").then(({ createClient }) => {
@@ -50,56 +106,10 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
     setFeaturedTemplateId(featuredList.length > 0 ? featuredList[Math.floor(Math.random() * featuredList.length)].id : null);
   }, [templates]);
 
-  const packages = [
-    {
-      id: 'starter',
-      name: 'Starter',
-      price: '$4,200',
-      description: 'Essential package to get started fast',
-      features: [
-        '1 template selection',
-        '5 pages included',
-        'Basic brand customization',
-        '6 months tech support',
-        'Responsive mobile layout',
-        '2 revision rounds'
-      ],
-      duration: '2 weeks'
-    },
-    {
-      id: 'professional',
-      name: 'Professional',
-      price: '$6,200',
-      description: 'Tailored premium design package',
-      features: [
-        '1 template selection',
-        '8 pages included',
-        'Advanced visual customization',
-        '1 year hosting & domain',
-        '3 revision rounds',
-        '1 year dedicated support',
-        'Basic SEO setup'
-      ],
-      duration: '3 weeks',
-      recommended: true
-    },
-    {
-      id: 'premium',
-      name: 'Premium',
-      price: '$9,200',
-      description: 'Fully bespoke customization package',
-      features: [
-        'Unlimited custom features',
-        'Unlimited pages',
-        'Custom layout & structure',
-        '2 years hosting & domain',
-        'Unlimited revisions',
-        '2 years priority support',
-        'Advanced SEO & Analytics'
-      ],
-      duration: '4 weeks'
-    }
-  ];
+  useEffect(() => {
+    restartInterval();
+    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
+  }, [restartInterval]);
 
   const websiteOrganizationSchema = {
     "@context": "https://schema.org",
@@ -207,12 +217,13 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
       params.set("template", template.name);
       params.set("image", template.image);
       params.set("category", template.category);
+      params.set("template_slug", template.slug);
     }
     router.push(`/en/contact?${params.toString()}`);
   };
 
   return (
-      <main className="min-h-screen bg-[#FCFCFD] text-zinc-900 font-sans selection:bg-[#F1B100] selection:text-zinc-900 overflow-x-hidden antialiased dark:bg-zinc-950 dark:text-zinc-100">
+      <main className="min-h-screen bg-[#FCFCFD] text-zinc-900 font-sans selection:bg-[#F1B100] selection:text-zinc-900 overflow-x-hidden antialiased dark:bg-zinc-950 dark:text-zinc-100 pt-[64px]">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteOrganizationSchema) }}
@@ -227,7 +238,7 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
         />
         
         {/* Header */}
-        <header className="bg-white border-b border-zinc-200/60 px-6 md:px-12 py-4 flex justify-between items-center sticky top-0 z-40 dark:bg-zinc-900 dark:border-zinc-800">
+        <header className={`bg-white border-b border-zinc-200/60 px-6 md:px-12 py-4 flex justify-between items-center fixed top-0 left-0 right-0 z-40 transition-transform duration-300 dark:bg-zinc-900 dark:border-zinc-800 ${headerVisible ? "translate-y-0" : "-translate-y-full"}`}>
           <div className="flex items-center gap-8">
             <Link href="/en" className="flex items-center gap-3 h-6">
               <Logo className="h-6 w-auto block" />
@@ -253,23 +264,60 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
         </header>
 
         {/* Hero Section */}
-        <section className="pt-20 pb-16 bg-white border-b border-zinc-200/50 relative overflow-hidden dark:bg-zinc-900 dark:border-zinc-800">
+        <section className="pt-20 pb-9 bg-white border-b border-zinc-200/50 relative overflow-hidden dark:bg-zinc-900 dark:border-zinc-800">
           {/* Ambient Glows */}
           <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-gradient-to-b from-[#F1B100]/8 via-[#F1B100]/4 to-transparent blur-[120px] rounded-full pointer-events-none" />
-          
-          <div className="max-w-4xl mx-auto text-center px-6 space-y-8 relative z-10">
-            <div className="space-y-4">
+
+          {/* Arrow Buttons */}
+          <button onClick={goPrev} aria-label="Previous" className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-9 h-9 flex items-center justify-center rounded-full border border-zinc-200 bg-white/80 hover:bg-white text-zinc-400 hover:text-zinc-900 backdrop-blur-sm transition-all dark:border-zinc-700 dark:bg-zinc-800/80 dark:hover:bg-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-100">
+            <ChevronLeft size={18} />
+          </button>
+          <button onClick={goNext} aria-label="Next" className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-9 h-9 flex items-center justify-center rounded-full border border-zinc-200 bg-white/80 hover:bg-white text-zinc-400 hover:text-zinc-900 backdrop-blur-sm transition-all dark:border-zinc-700 dark:bg-zinc-800/80 dark:hover:bg-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-100">
+            <ChevronRight size={18} />
+          </button>
+
+          <div className="max-w-4xl mx-auto text-center px-6 relative z-10">
+            <div>
               <span className="inline-flex items-center gap-2 px-3 py-1 bg-zinc-100 text-zinc-700 text-xs font-bold uppercase tracking-wider rounded-full dark:bg-zinc-800 dark:text-zinc-300">
                 <Sparkles size={12} className="text-[#F1B100]" />
-                Vinuspread Templates
+                OH! MY TEMPLATES
               </span>
-              <h1 className="text-[3.2rem] md:text-[4.8rem] font-bold tracking-tight leading-[1.05] text-zinc-900 dark:text-zinc-100">
-                Find the perfect <span className="text-[#F1B100]">Template</span> <br className="hidden sm:block" />
-                for your next website.
-              </h1>
-              <p className="text-lg md:text-xl text-zinc-500 max-w-2xl mx-auto font-normal leading-relaxed dark:text-zinc-400">
-                Premium, hand-crafted web templates for brands that demand quality. Fully customized and deployed by our team in 2 weeks.
-              </p>
+              <div className="mt-10">
+                <AnimatePresence mode="wait">
+                  <motion.h1
+                    key={`heading-${heroIndex}`}
+                    initial={{ opacity: 0, y: 14 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: -14 }}
+                    transition={{ duration: 0.45, ease: EASE_OUT }}
+                    className="text-[3rem] md:text-[4.8rem] font-bold tracking-tight leading-[1.1] text-zinc-900 dark:text-zinc-100"
+                  >
+                    {HERO_SLIDES[heroIndex].heading}
+                  </motion.h1>
+                </AnimatePresence>
+              </div>
+              <AnimatePresence mode="wait">
+                <motion.p
+                  key={`desc-${heroIndex}`}
+                  initial={{ opacity: 0, y: 12 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -12 }}
+                  transition={{ duration: 0.45, ease: EASE_OUT, delay: 0.05 }}
+                  className="mt-6 text-lg md:text-xl text-zinc-500 font-normal leading-relaxed tracking-tight whitespace-pre-line max-w-2xl mx-auto dark:text-zinc-400"
+                >
+                  {HERO_SLIDES[heroIndex].desc}
+                </motion.p>
+              </AnimatePresence>
+              <div className="flex justify-center gap-1.5 mt-10">
+                {HERO_SLIDES.map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => setHeroIndex(i)}
+                    className={`h-1.5 rounded-full transition-all duration-300 ${i === heroIndex ? "bg-zinc-500 w-4 dark:bg-zinc-400" : "w-1.5 bg-zinc-300 dark:bg-zinc-600"}`}
+                    aria-label={`Slide ${i + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
 
@@ -578,12 +626,12 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
                 <div
                   key={pkg.id}
                   className={`bg-white rounded-xl p-8 border flex flex-col justify-between transition-all duration-300 dark:bg-zinc-800 dark:border-zinc-700 ${
-                    pkg.recommended
+                    pkg.is_recommended
                       ? 'border-[#F1B100] border-2 shadow-lg relative'
                       : 'border-zinc-200/60 hover:border-zinc-300 dark:hover:border-zinc-600'
                   }`}
                 >
-                  {pkg.recommended && (
+                  {pkg.is_recommended && (
                     <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-[#F1B100] text-zinc-900 text-[0.62rem] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
                       RECOMMENDED
                     </span>
@@ -607,9 +655,9 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
                     </ul>
                   </div>
                   <button
-                    onClick={() => goToContact(pkg.id)}
+                    onClick={() => goToContact(pkg.slug)}
                     className={`w-full mt-8 py-3 text-xs uppercase tracking-widest font-bold transition-all duration-150 rounded-md ${
-                      pkg.recommended
+                      pkg.is_recommended
                         ? 'bg-[#F1B100] hover:bg-[#D9A000] text-zinc-900'
                         : 'bg-zinc-900 hover:bg-zinc-800 text-white'
                     }`}

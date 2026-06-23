@@ -1,7 +1,55 @@
 import type { Metadata } from "next";
 import { createClient } from "@/lib/supabase/server";
-import type { Faq, Template } from "@/types/template";
+import type { Faq, PricingPackage, Template } from "@/types/template";
 import LandingPageClient, { type FaqItem, type TemplateItem } from "./LandingPageClient";
+
+const fallbackPricingPackages: PricingPackage[] = [
+  {
+    id: "fallback-en-pricing-0",
+    lang: "en",
+    slug: "starter",
+    name: "Starter",
+    price: "$4,200",
+    description: "Essential package to get started fast",
+    features: ["1 template selection", "5 pages included", "Basic brand customization", "6 months tech support", "Responsive mobile layout", "2 revision rounds"],
+    duration: "2 weeks",
+    is_recommended: false,
+    is_active: true,
+    sort_order: 0,
+    created_at: "",
+    updated_at: "",
+  },
+  {
+    id: "fallback-en-pricing-1",
+    lang: "en",
+    slug: "professional",
+    name: "Professional",
+    price: "$6,200",
+    description: "Tailored premium design package",
+    features: ["1 template selection", "8 pages included", "Advanced visual customization", "1 year hosting & domain", "3 revision rounds", "1 year dedicated support", "Basic SEO setup"],
+    duration: "3 weeks",
+    is_recommended: true,
+    is_active: true,
+    sort_order: 1,
+    created_at: "",
+    updated_at: "",
+  },
+  {
+    id: "fallback-en-pricing-2",
+    lang: "en",
+    slug: "premium",
+    name: "Premium",
+    price: "$9,200",
+    description: "Fully bespoke customization package",
+    features: ["Unlimited custom features", "Unlimited pages", "Custom layout & structure", "2 years hosting & domain", "Unlimited revisions", "2 years priority support", "Advanced SEO & Analytics"],
+    duration: "4 weeks",
+    is_recommended: false,
+    is_active: true,
+    sort_order: 2,
+    created_at: "",
+    updated_at: "",
+  },
+];
 
 const fallbackFaqs: FaqItem[] = [
   {
@@ -68,6 +116,13 @@ export default async function Page() {
     .eq("is_active", true)
     .order("sort_order", { ascending: true });
 
+  const { data: pricingData, error: pricingError } = await supabase
+    .from("pricing_packages")
+    .select("*")
+    .eq("lang", "en")
+    .eq("is_active", true)
+    .order("sort_order", { ascending: true });
+
   const templateRows: Template[] = error ? [] : data ?? [];
   const templates: TemplateItem[] = templateRows.map((template) => ({
     id: template.slug,
@@ -77,6 +132,9 @@ export default async function Page() {
     category: template.category,
     image: template.thumbnail_url ?? "",
     isFeatured: template.is_featured,
+    slug: template.slug,
+    applicablePackages: template.applicable_packages ?? [],
+    requiresConsultation: template.requires_consultation ?? false,
   }));
 
   const faqRows: Pick<Faq, "id" | "question" | "answer">[] = faqData ?? [];
@@ -88,5 +146,7 @@ export default async function Page() {
         answer: faq.answer,
       }));
 
-  return <LandingPageClient templates={templates} faqs={faqs} />;
+  const packages: PricingPackage[] = pricingError ? fallbackPricingPackages : pricingData ?? [];
+
+  return <LandingPageClient templates={templates} faqs={faqs} packages={packages} />;
 }

@@ -7,6 +7,59 @@
 
 ---
 
+## ⚡ 빠른 참조 — ZIP 필수 구성 (이것부터 확인)
+
+업로드 전 아래 파일이 **모두** zip 안에 있는지 먼저 확인한다. 하나라도 빠지면 등록 거부됨.
+
+### en 업로드 zip 필수 파일 목록
+
+```
+[slug]/
+├── _components/
+│   └── TemplateWrapper.tsx   ← 반드시 있어야 함 (공유 파일 사용 불가)
+├── layout.tsx                ← 반드시 있어야 함
+├── page.tsx                  ← 반드시 있어야 함
+├── theme.css                 ← 반드시 있어야 함
+└── theme.json                ← 반드시 있어야 함
+
+public/
+└── templates/
+    └── [slug]/
+        └── thumbnail.jpg     ← 반드시 있어야 함 (en zip에만 포함)
+```
+
+### ko 업로드 zip 필수 파일 목록
+
+```
+[slug]/
+├── _components/
+│   └── TemplateWrapper.tsx   ← 반드시 있어야 함
+├── layout.tsx                ← 반드시 있어야 함
+├── page.tsx                  ← 반드시 있어야 함
+├── theme.css                 ← 반드시 있어야 함
+└── theme.json                ← 반드시 있어야 함
+
+※ ko zip에는 public/ 폴더를 포함하지 않는다 (이미지는 en과 공유)
+```
+
+> **`thumbnail.jpg`는 파일명이 정확히 이 이름이어야 한다.** `thumb.jpg`, `preview.jpg` 등 다른 이름은 인식되지 않는다.
+
+---
+
+## ⚠️ 자주 발생하는 등록 오류
+
+| 오류 메시지 | 원인 | 해결 방법 |
+|------------|------|----------|
+| `필수 파일이 없습니다: _components/TemplateWrapper.tsx` | TemplateWrapper.tsx 누락 | `[slug]/_components/TemplateWrapper.tsx` 파일을 생성하고 zip에 포함 |
+| `필수 이미지 파일이 없습니다: public/templates/[slug]/thumbnail.jpg` | 썸네일 누락 또는 파일명 불일치 | 파일명을 정확히 `thumbnail.jpg`로 하여 `public/templates/[slug]/` 경로에 포함 |
+| `zip 루트에 템플릿 폴더가 정확히 1개 있어야 합니다` | zip 압축 방식 오류 | `[slug]/` 폴더와 `public/` 폴더만 zip 루트에 위치해야 함. `src/app/...` 경로 포함 불가 |
+| `theme.json slug와 폴더명이 다릅니다` | theme.json의 slug 값 불일치 | theme.json의 `"slug"` 값이 폴더명과 정확히 일치해야 함 |
+| `금지된 경로가 포함되어 있습니다: src/` | src/ 경로가 zip에 포함됨 | zip 루트에 `[slug]/` 폴더를 직접 위치시켜야 함 |
+
+> **등록 시스템은 모든 오류를 한 번에 리포트한다.** 오류 목록 전체를 확인하고 한 번에 수정하여 재업로드한다.
+
+---
+
 ## 1. 시스템 개요
 
 **Oh My Template**는 Next.js 기반 프리미엄 웹 템플릿 서비스다. 각 템플릿은 실제 동작하는 Next.js 앱으로 제공되며, 관리자 시스템에 zip 파일로 업로드되어 서비스에 통합된다.

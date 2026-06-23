@@ -1,11 +1,12 @@
 ﻿"use client";
 
-import { useState, useMemo, useEffect } from "react";
+import { useState, useMemo, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, ChevronDown, X, Search, Sparkles } from "lucide-react";
+import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, X, Search, Sparkles } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Logo } from "@/components/Logo";
+import type { PricingPackage } from "@/types/template";
 
 export interface TemplateItem {
   id: string;
@@ -15,6 +16,9 @@ export interface TemplateItem {
   category: string;
   image: string;
   isFeatured?: boolean;
+  slug: string;
+  applicablePackages: string[];
+  requiresConsultation: boolean;
 }
 
 export interface FaqItem {
@@ -43,15 +47,51 @@ const HERO_SLIDES = [
   },
 ];
 
-export default function LandingPageClient({ templates, faqs }: { templates: TemplateItem[]; faqs: FaqItem[] }) {
+export default function LandingPageClient({ templates, faqs, packages }: { templates: TemplateItem[]; faqs: FaqItem[]; packages: PricingPackage[] }) {
   const router = useRouter();
   const [heroIndex, setHeroIndex] = useState(0);
+  const [headerVisible, setHeaderVisible] = useState(true);
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [activeCategory, setActiveCategory] = useState(ALL_LABEL);
   const [isAdmin, setIsAdmin] = useState(false);
   const [descModalTemplate, setDescModalTemplate] = useState<TemplateItem | null>(null);
   const [featuredTemplateId, setFeaturedTemplateId] = useState<string | null>(null);
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+      if (currentY < 10) {
+        setHeaderVisible(true);
+      } else if (currentY < lastScrollY.current) {
+        setHeaderVisible(true);
+      } else {
+        setHeaderVisible(false);
+      }
+      lastScrollY.current = currentY;
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const restartInterval = useCallback(() => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      setHeroIndex((prev) => (prev + 1) % HERO_SLIDES.length);
+    }, 6000);
+  }, []);
+
+  const goPrev = useCallback(() => {
+    setHeroIndex((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
+    restartInterval();
+  }, [restartInterval]);
+
+  const goNext = useCallback(() => {
+    setHeroIndex((prev) => (prev + 1) % HERO_SLIDES.length);
+    restartInterval();
+  }, [restartInterval]);
 
   useEffect(() => {
     import("@/lib/supabase/client").then(({ createClient }) => {
@@ -67,62 +107,9 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
   }, [templates]);
 
   useEffect(() => {
-    const id = setInterval(() => {
-      setHeroIndex((prev) => (prev + 1) % HERO_SLIDES.length);
-    }, 4000);
-    return () => clearInterval(id);
-  }, []);
-
-  const packages = [
-    {
-      id: 'starter',
-      name: 'Starter',
-      price: '4,200,000원',
-      description: '빠르게 시작하기 위한 핵심 기능 패키지',
-      features: [
-        '템플릿 1개 선택',
-        '기본 페이지 5개 포함',
-        '기본 브랜드 커스터마이징',
-        '기술 지원 6개월 제공',
-        '모바일 반응형 레이아웃',
-        '무상 수정 2회 제공'
-      ],
-      duration: '2주 소요'
-    },
-    {
-      id: 'professional',
-      name: 'Professional',
-      price: '6,200,000원',
-      description: '브랜드 맞춤형 프리미엄 디자인 패키지',
-      features: [
-        '템플릿 1개 선택',
-        '기본 페이지 8개 포함',
-        '고급 비주얼 커스터마이징',
-        '도메인 & 호스팅 1년 지원',
-        '무상 수정 3회 제공',
-        '1대1 전담 기술 지원 1년',
-        '기본 검색엔진 최적화(SEO) 세팅'
-      ],
-      duration: '3주 소요',
-      recommended: true
-    },
-    {
-      id: 'premium',
-      name: 'Premium',
-      price: '9,200,000원',
-      description: '완전 맞춤화 및 기능 확장이 가능한 스케일 플랜',
-      features: [
-        '무제한 맞춤형 요구사항 지원',
-        '페이지 개수 무제한 제공',
-        '커스텀 레이아웃 및 컴포넌트 설계',
-        '도메인 & 호스팅 2년 지원',
-        '무상 수정 무제한 제공',
-        '우선순위 전담 기술 지원 2년',
-        '고급 SEO 및 마케팅 분석 툴 연동'
-      ],
-      duration: '4주 소요'
-    }
-  ];
+    restartInterval();
+    return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
+  }, [restartInterval]);
 
   const websiteOrganizationSchema = {
     "@context": "https://schema.org",
@@ -230,12 +217,13 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
       params.set("template", template.name);
       params.set("image", template.image);
       params.set("category", template.category);
+      params.set("template_slug", template.slug);
     }
     router.push(`/ko/contact?${params.toString()}`);
   };
 
   return (
-      <main className="min-h-screen bg-[#FCFCFD] text-zinc-900 font-sans selection:bg-zinc-900 selection:text-white overflow-x-hidden antialiased break-keep dark:bg-zinc-950 dark:text-zinc-100">
+      <main className="min-h-screen bg-[#FCFCFD] text-zinc-900 font-sans selection:bg-zinc-900 selection:text-white overflow-x-hidden antialiased break-keep dark:bg-zinc-950 dark:text-zinc-100 pt-[64px]">
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteOrganizationSchema) }}
@@ -250,7 +238,7 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
         />
         
         {/* Header */}
-        <header className="bg-white border-b border-zinc-200/60 px-6 md:px-12 py-4 flex justify-between items-center sticky top-0 z-40 dark:bg-zinc-900 dark:border-zinc-800">
+        <header className={`bg-white border-b border-zinc-200/60 px-6 md:px-12 py-4 flex justify-between items-center fixed top-0 left-0 right-0 z-40 transition-transform duration-300 dark:bg-zinc-900 dark:border-zinc-800 ${headerVisible ? "translate-y-0" : "-translate-y-full"}`}>
           <div className="flex items-center gap-8">
             <Link href="/ko" className="flex items-center gap-3 h-6">
               <Logo className="h-6 w-auto block" />
@@ -274,10 +262,18 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
         </header>
 
         {/* Hero Section */}
-        <section className="pt-20 pb-16 bg-white border-b border-zinc-200/50 relative overflow-hidden dark:bg-zinc-900 dark:border-zinc-800">
+        <section className="pt-20 pb-9 bg-white border-b border-zinc-200/50 relative overflow-hidden dark:bg-zinc-900 dark:border-zinc-800">
           {/* Ambient Glows */}
           <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-gradient-to-b from-amber-500/5 via-orange-500/5 to-transparent blur-[120px] rounded-full pointer-events-none" />
-          
+
+          {/* Arrow Buttons */}
+          <button onClick={goPrev} aria-label="이전" className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-9 h-9 flex items-center justify-center rounded-full border border-zinc-200 bg-white/80 hover:bg-white text-zinc-400 hover:text-zinc-900 backdrop-blur-sm transition-all dark:border-zinc-700 dark:bg-zinc-800/80 dark:hover:bg-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-100">
+            <ChevronLeft size={18} />
+          </button>
+          <button onClick={goNext} aria-label="다음" className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-9 h-9 flex items-center justify-center rounded-full border border-zinc-200 bg-white/80 hover:bg-white text-zinc-400 hover:text-zinc-900 backdrop-blur-sm transition-all dark:border-zinc-700 dark:bg-zinc-800/80 dark:hover:bg-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-100">
+            <ChevronRight size={18} />
+          </button>
+
           <div className="max-w-4xl mx-auto text-center px-6 relative z-10">
             <div>
               <span className="inline-flex items-center gap-2 px-3 py-1 bg-zinc-100 text-zinc-700 text-xs font-bold uppercase tracking-wider rounded-full dark:bg-zinc-800 dark:text-zinc-300">
@@ -336,9 +332,9 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
                   key={`${template.id}-${idx}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex-shrink-0 w-[240px] md:w-[320px] bg-white border border-zinc-200/60 rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-zinc-300 transition-all duration-300 pointer-events-auto dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600 dark:hover:shadow-zinc-900/50"
+                  className="group flex-shrink-0 w-[240px] md:w-[280px] bg-white border border-zinc-200/60 rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-zinc-300 transition-all duration-300 pointer-events-auto dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600 dark:hover:shadow-zinc-900/50"
                 >
-                  <div className="relative aspect-[16/10] overflow-hidden bg-zinc-50 dark:bg-zinc-700">
+                  <div className="relative aspect-[16/9] overflow-hidden bg-zinc-50 dark:bg-zinc-700">
                     <img
                       src={template.image}
                       alt={template.name}
@@ -628,12 +624,12 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
                 <div
                   key={pkg.id}
                   className={`bg-white rounded-xl p-8 border flex flex-col justify-between transition-all duration-300 dark:bg-zinc-800 dark:border-zinc-700 ${
-                    pkg.recommended
+                    pkg.is_recommended
                       ? 'border-orange-500 border-2 shadow-lg relative'
                       : 'border-zinc-200/60 hover:border-zinc-300 dark:hover:border-zinc-600'
                   }`}
                 >
-                  {pkg.recommended && (
+                  {pkg.is_recommended && (
                     <span className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-orange-500 text-white text-[0.62rem] font-bold px-3 py-1 rounded-full uppercase tracking-widest">
                       RECOMMENDED
                     </span>
@@ -645,7 +641,7 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
                     </div>
                     <div>
                       <span className="text-3xl font-extrabold text-zinc-900 dark:text-zinc-100">{pkg.price}</span>
-                      <span className="text-xs text-zinc-400 font-medium block mt-1 dark:text-zinc-500">평균 소요 기간: {pkg.duration}</span>
+                      <span className="text-xs text-zinc-400 font-medium block mt-1 dark:text-zinc-500">평균 소요 기간: {pkg.duration} / 부가세별도</span>
                     </div>
                     <ul className="space-y-3.5 pt-6 border-t border-zinc-100 dark:border-zinc-700">
                       {pkg.features.map((feature, fidx) => (
@@ -657,9 +653,9 @@ export default function LandingPageClient({ templates, faqs }: { templates: Temp
                     </ul>
                   </div>
                   <button
-                    onClick={() => goToContact(pkg.id)}
+                    onClick={() => goToContact(pkg.slug)}
                     className={`w-full mt-8 py-3 text-xs uppercase tracking-widest font-bold transition-all duration-150 rounded-md ${
-                      pkg.recommended
+                      pkg.is_recommended
                         ? 'bg-orange-500 hover:bg-orange-600 text-white'
                         : 'bg-zinc-900 hover:bg-zinc-800 text-white'
                     }`}
