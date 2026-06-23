@@ -3,6 +3,27 @@ import './theme.css';
 
 export const metadata: Metadata = {
   title: "Car Concept - Oh My Template",
+  description: "Premium automotive concept showcase",
+  openGraph: {
+    title: "Car Concept - Oh My Template",
+    description: "Premium automotive concept showcase",
+    url: "https://ohmytemplate.com/en/templates/OHMT017-car-en",
+    siteName: "Oh My Template",
+    images: [{ url: "/templates/OHMT009-car/og-image.jpg", width: 1200, height: 630 }],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Car Concept - Oh My Template",
+    description: "Premium automotive concept showcase",
+    images: ["/templates/OHMT009-car/og-image.jpg"],
+  },
+  robots: { index: true, follow: true },
+  alternates: {
+    canonical: "https://ohmytemplate.com/en/templates/OHMT017-car-en",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT018-car-kr" },
+  },
 };
 
 export default function CarLayout({
@@ -12,7 +33,6 @@ export default function CarLayout({
 }) {
   return (
     <>
-      <link rel="preconnect" href="https://pub-10d6d534a06c495c8b45f39cfed47497.r2.dev" crossOrigin="anonymous" />
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800;900&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');

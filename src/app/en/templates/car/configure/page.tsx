@@ -28,9 +28,9 @@ const interiors = [
 
 const views = ["Exterior", "Side", "Rear"];
 const viewImgs = [
-  "/templates/car/car-3.jpg",
-  "/templates/car/car-1.jpg",
-  "/templates/car/car-5.jpg",
+  "/templates/OHMT009-car/car-3.jpg",
+  "/templates/OHMT009-car/car-1.jpg",
+  "/templates/OHMT009-car/car-5.jpg",
 ];
 
 const BASE_PRICE = 89400;
@@ -59,7 +59,7 @@ function CarConfigurePageContent() {
         <div className="flex flex-col lg:flex-row" style={{ minHeight: "calc(100vh - 68px)" }}>
 
           {/* ── Left: interactive preview ── */}
-          <div className="lg:flex-1 lg:sticky lg:top-16 lg:h-[calc(100vh-4rem)] flex flex-col bg-[#090909] pt-16">
+          <div className="lg:flex-1 lg:sticky lg:top-16 lg:h-[calc(100vh-4rem)] flex flex-col bg-[var(--color-primary)] pt-16">
 
             {/* View tabs */}
             <div className="flex gap-1 px-8 pt-6 pb-4">
@@ -103,7 +103,7 @@ function CarConfigurePageContent() {
               />
 
               {/* Gradient mask bottom */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#090909] via-transparent to-[#090909]/30 pointer-events-none" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)] via-transparent to-[var(--color-primary)]/30 pointer-events-none" />
 
               {/* 360 hint */}
               <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2 text-[0.62rem] font-bold uppercase tracking-widest text-white/30">
@@ -134,7 +134,7 @@ function CarConfigurePageContent() {
           </div>
 
           {/* ── Right: config panel ── */}
-          <div className="lg:w-[420px] xl:w-[460px] shrink-0 flex flex-col bg-[#0d0d0d] overflow-y-auto pt-16">
+          <div className="lg:w-[420px] xl:w-[460px] shrink-0 flex flex-col bg-[var(--color-primary)] overflow-y-auto pt-16">
 
             <div className="px-8 py-8 border-b border-white/5">
               <p className="text-[0.6rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-2">Configure</p>

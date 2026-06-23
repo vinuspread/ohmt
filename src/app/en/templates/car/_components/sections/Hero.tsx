@@ -1,34 +1,10 @@
-// src/app/templates/car/-components/sections/Hero.tsx
+// src/app/templates/OHMT009-car/-components/sections/Hero.tsx
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import React from "react";
 import { useSearchParams } from "next/navigation";
-
-const HERO_VIDEO_SRC = "https://pub-10d6d534a06c495c8b45f39cfed47497.r2.dev/car-hero-bg.mp4";
-
 export const Hero = () => {
   const searchParams = useSearchParams();
-  const videoRef = useRef<HTMLVideoElement>(null);
-  const [videoReady, setVideoReady] = useState(false);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const handleReady = () => {
-      setVideoReady(true);
-      video.play().catch(() => {});
-    };
-
-    if (video.readyState >= 4) {
-      handleReady();
-      return;
-    }
-
-    video.addEventListener("canplaythrough", handleReady);
-    return () => video.removeEventListener("canplaythrough", handleReady);
-  }, []);
-
   const t = {
   "nav": {
     "models": `Models`,
@@ -71,21 +47,19 @@ export const Hero = () => {
 };
 return (
     <section className="relative h-screen min-h-[680px] overflow-hidden">
-      <img
-        className="absolute inset-0 w-full h-full object-cover object-[center_40%]"
-        src="/templates/car/hero-main.jpg"
-        alt="VINUS EV9"
-      />
       <video
-        ref={videoRef}
-        className={`absolute inset-0 w-full h-full object-cover object-[center_40%] transition-opacity duration-700 ${videoReady ? "opacity-100" : "opacity-0"}`}
+        className="w-full h-full object-cover object-[center_40%]"
+        autoPlay
         muted
         loop
         playsInline
-        preload="auto"
-        poster="/templates/car/hero-main.jpg"
       >
-        <source src={HERO_VIDEO_SRC} type="video/mp4" />
+        <source src="https://pub-10d6d534a06c495c8b45f39cfed47497.r2.dev/car-hero-bg.mp4" type="video/mp4" />
+        <img
+          className="w-full h-full object-cover object-[center_40%]"
+          src="/templates/OHMT009-car/hero-main.jpg"
+          alt="VINUS EV9"
+        />
       </video>
       <div className="absolute inset-0 bg-[linear-gradient(105deg,rgba(10,10,10,0.75)_0%,rgba(10,10,10,0.2)_60%,transparent_100%)]"></div>
       

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Suspense } from "react";
 import React from "react";
@@ -9,10 +9,10 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 const models = [
-  { slug: "ev9",  name: "EV9", type: "All-Electric SUV",    range: "530km", power: "402hp", img: "/templates/car/hero-1.jpg" },
-  { slug: "gt7",  name: "GT7", type: "Performance Sedan",   range: "480km", power: "615hp", img: "/templates/car/hero-2.jpg" },
-  { slug: "x5",   name: "X5",  type: "Luxury SUV",          range: "510km", power: "355hp", img: "/templates/car/hero-3.jpg" },
-  { slug: "s3",   name: "S3",  type: "Compact Executive",   range: "460km", power: "295hp", img: "/templates/car/car-1.jpg" }
+  { slug: "ev9",  name: "EV9", type: "All-Electric SUV",    range: "530km", power: "402hp", img: "/templates/OHMT009-car/hero-1.jpg" },
+  { slug: "gt7",  name: "GT7", type: "Performance Sedan",   range: "480km", power: "615hp", img: "/templates/OHMT009-car/hero-2.jpg" },
+  { slug: "x5",   name: "X5",  type: "Luxury SUV",          range: "510km", power: "355hp", img: "/templates/OHMT009-car/hero-3.jpg" },
+  { slug: "s3",   name: "S3",  type: "Compact Executive",   range: "460km", power: "295hp", img: "/templates/OHMT009-car/car-1.jpg" }
 ];
 
 function CarModelsPageContent() {
@@ -35,7 +35,7 @@ function CarModelsPageContent() {
 
             <div className="grid md:grid-cols-2 gap-6">
               {models.map((model) => (
-                <Link key={model.name} href={`/en/templates/car/models/${model.slug}`} className="group relative bg-[#111] overflow-hidden block">
+                <Link key={model.name} href={`/en/templates/OHMT017-car-en/models/${model.slug}`} className="group relative bg-[var(--color-primary)] overflow-hidden block">
                   <div className="aspect-[16/10] overflow-hidden">
                     <img loading="lazy" src={model.img} alt={model.name} className="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-300" />
                   </div>

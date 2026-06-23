@@ -2,6 +2,7 @@
 :root {
   /* Color System - Primary Palette */
   --color-primary: #0A0A0A;
+  --color-secondary: #FFFFFF;
   --color-accent: #C9A84C;
   --color-accent-light: #E8D49A;
   --color-accent-pale: #F5EDD5;
@@ -9,6 +10,7 @@
   --color-bg-secondary: #1A1A1A;
   --color-text: #FFFFFF;
   --color-text-muted: rgba(255, 255, 255, 0.4);
+  --color-text-contrast: #FFFFFF;
   --color-border: rgba(255, 255, 255, 0.08);
   --color-border-light: rgba(255, 255, 255, 0.15);
 
