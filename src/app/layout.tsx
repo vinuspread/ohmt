@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import { Geist, Cormorant_Garamond, Inter, Playfair_Display, Outfit, Bebas_Neue } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -85,6 +86,23 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${cormorant.variable} ${inter.variable} ${playfair.variable} ${outfit.variable} ${bebasNeue.variable}`} suppressHydrationWarning>
       <body className="antialiased">{children}</body>
+      <Script
+        defer
+        src="https://cloud.umami.is/script.js"
+        data-website-id="25403a14-7d25-4ca1-ba45-abbdad12cd10"
+        strategy="afterInteractive"
+      />
+      {/* GA4 */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-TN2XSY9H59"
+        strategy="afterInteractive"
+      />
+      <Script id="ga4-init" strategy="afterInteractive">{`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TN2XSY9H59');
+      `}</Script>
     </html>
   );
 }

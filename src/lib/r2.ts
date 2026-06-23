@@ -1,4 +1,4 @@
-import { S3Client, GetObjectCommand, DeleteObjectCommand } from "@aws-sdk/client-s3";
+import { S3Client, GetObjectCommand, DeleteObjectCommand, ListObjectsV2Command } from "@aws-sdk/client-s3";
 import { getSignedUrl } from "@aws-sdk/s3-request-presigner";
 import { PutObjectCommand } from "@aws-sdk/client-s3";
 
@@ -38,4 +38,12 @@ export async function downloadFromR2(key: string): Promise<Buffer> {
 
 export async function deleteFromR2(key: string): Promise<void> {
   await r2.send(new DeleteObjectCommand({ Bucket: R2_BUCKET, Key: key }));
+}
+
+export async function listR2Objects(prefix: string): Promise<{ key: string; size: number; lastModified: Date }[]> {
+  const command = new ListObjectsV2Command({ Bucket: R2_BUCKET, Prefix: prefix, MaxKeys: 200 });
+  const response = await r2.send(command);
+  return (response.Contents ?? [])
+    .filter((item) => item.Key)
+    .map((item) => ({ key: item.Key!, size: item.Size ?? 0, lastModified: item.LastModified ?? new Date() }));
 }

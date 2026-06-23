@@ -17,6 +17,8 @@ interface TemplateRequestBody {
   sort_order?: number;
   is_featured?: boolean;
   tags?: string[];
+  applicable_packages?: string[];
+  requires_consultation?: boolean;
 }
 
 function isTemplateStatus(value: unknown): value is TemplateStatus {
@@ -31,6 +33,8 @@ function validateTemplateBody(body: TemplateRequestBody) {
   if (!body.slug || !isTemplateLang(body.lang) || !body.name || !body.category || !isTemplateStatus(body.status)) return false;
   if (typeof body.price !== "number" || typeof body.sort_order !== "number" || typeof body.is_featured !== "boolean") return false;
   if (!Array.isArray(body.tags)) return false;
+  if (!Array.isArray(body.applicable_packages) || !body.applicable_packages.every((slug) => typeof slug === "string")) return false;
+  if (typeof body.requires_consultation !== "boolean") return false;
   return true;
 }
 

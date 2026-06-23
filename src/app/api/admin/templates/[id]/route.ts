@@ -9,11 +9,14 @@ interface TemplatePatchBody {
   category?: string;
   description?: string | null;
   thumbnail_url?: string | null;
+  template_key?: string | null;
   price?: number;
   status?: TemplateStatus;
   sort_order?: number;
   is_featured?: boolean;
   tags?: string[];
+  applicable_packages?: string[];
+  requires_consultation?: boolean;
 }
 
 function isTemplateStatus(value: unknown): value is TemplateStatus {
@@ -26,6 +29,9 @@ function hasInvalidPatch(body: TemplatePatchBody) {
   if (body.sort_order !== undefined && typeof body.sort_order !== "number") return true;
   if (body.is_featured !== undefined && typeof body.is_featured !== "boolean") return true;
   if (body.tags !== undefined && !Array.isArray(body.tags)) return true;
+  if (body.applicable_packages !== undefined && (!Array.isArray(body.applicable_packages) || !body.applicable_packages.every((slug) => typeof slug === "string"))) return true;
+  if (body.requires_consultation !== undefined && typeof body.requires_consultation !== "boolean") return true;
+  if (body.template_key !== undefined && body.template_key !== null && typeof body.template_key !== "string") return true;
   return false;
 }
 

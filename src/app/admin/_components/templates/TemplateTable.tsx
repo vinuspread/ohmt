@@ -27,7 +27,7 @@ const langFilters: { value: LangFilter; label: string }[] = [
   { value: "ko", label: "KR" },
 ];
 
-const templateGridClass = "grid-cols-[28px_72px_minmax(150px,1.4fr)_64px_minmax(110px,0.9fr)_88px_48px_132px]";
+const templateGridClass = "grid-cols-[28px_72px_80px_minmax(150px,1.4fr)_64px_minmax(110px,0.9fr)_88px_48px_132px]";
 
 const SCROLL_STORAGE_KEY = "admin-templates-scroll-y";
 
@@ -221,6 +221,7 @@ export function TemplateTable({ data }: { data: Template[] }) {
         <div className={clsx("grid gap-3 border-b border-zinc-200 bg-zinc-50 px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-zinc-500", templateGridClass)}>
           <div aria-hidden="true" />
           <div>썸네일</div>
+          <div>고유키</div>
           <div>이름</div>
           <div>언어</div>
           <div>카테고리</div>
@@ -312,6 +313,7 @@ function TemplateRow({
         <GripVertical aria-hidden="true" className="h-4 w-4" />
       </button>
       <TemplateThumbnail template={template} onPreview={onPreview} />
+      <span className="font-mono text-xs text-zinc-500">{template.template_key ?? <span className="text-zinc-300">-</span>}</span>
       <div className="min-w-0">
         <Link href={templateUrl} target="_blank" rel="noopener noreferrer" className="block truncate font-medium text-zinc-900 transition-colors hover:text-zinc-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2">
           {template.name}

@@ -7,10 +7,12 @@ import { Input } from "../ui/Input";
 import { Select } from "../ui/Select";
 import { Toast } from "../ui/Toast";
 import { ThumbnailField } from "../ui/ThumbnailField";
-import type { Category, Template, TemplateLang } from "@/types/template";
+import { ZipUpdateModal } from "./ZipUpdateModal";
+import type { Category, PricingPackage, Template, TemplateLang } from "@/types/template";
 
 type TemplateFormMode = "create" | "edit";
 type ToastState = { message: string; type: "success" | "error" };
+type PricingOption = Pick<PricingPackage, "slug" | "name" | "price" | "lang" | "is_active">;
 
 const inputClassName = "w-full px-3 py-2 text-sm border rounded-lg outline-none transition-colors border-zinc-200 focus:border-zinc-900 placeholder:text-zinc-400 disabled:bg-zinc-50 disabled:text-zinc-400 focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2";
 
@@ -30,12 +32,17 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
   const price = initialData?.price ?? 0;
   const sortOrder = initialData?.sort_order ?? 0;
   const [isFeatured, setIsFeatured] = useState(initialData?.is_featured ?? false);
+  const [applicablePackages, setApplicablePackages] = useState<string[]>(initialData?.applicable_packages ?? []);
+  const [requiresConsultation, setRequiresConsultation] = useState(initialData?.requires_consultation ?? false);
+  const [pricingOptions, setPricingOptions] = useState<PricingOption[]>([]);
   const [thumbnailUrl, setThumbnailUrl] = useState(initialData?.thumbnail_url ?? "");
   const [tags, setTags] = useState(initialData?.tags.join(", ") ?? "");
   const [description, setDescription] = useState(initialData?.description ?? "");
+  const [templateKey, setTemplateKey] = useState(initialData?.template_key ?? "");
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState<ToastState | null>(null);
   const [slugError, setSlugError] = useState("");
+  const [zipModalOpen, setZipModalOpen] = useState(false);
 
   useEffect(() => {
     fetch("/api/admin/categories")
@@ -46,6 +53,15 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
       })
       .catch(() => {});
   }, [initialData?.category]);
+
+  useEffect(() => {
+    fetch("/api/admin/pricing")
+      .then((response) => (response.ok ? response.json() : []))
+      .then((result: PricingOption[]) => {
+        setPricingOptions(result.filter((option) => option.lang === lang && option.is_active));
+      })
+      .catch(() => setPricingOptions([]));
+  }, [lang]);
 
   const goToList = () => {
     router.push("/admin/templates");
@@ -68,17 +84,25 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
     category,
     description: description || null,
     thumbnail_url: thumbnailUrl || null,
+    template_key: templateKey.trim() || null,
     price,
     status: published ? "published" : "draft",
     sort_order: sortOrder,
     is_featured: isFeatured,
     tags: tags.split(",").map((tag) => tag.trim()).filter(Boolean),
+    applicable_packages: applicablePackages,
+    requires_consultation: requiresConsultation,
   });
 
   const handleSubmit = async (event: { preventDefault(): void }) => {
     event.preventDefault();
 
     if (slugError) return;
+
+    if (published && applicablePackages.length === 0 && !requiresConsultation) {
+      setToast({ message: "공개 전환을 위해 적용 가격정책을 하나 이상 선택하거나 '협의필요'를 체크해주세요.", type: "error" });
+      return;
+    }
 
     setLoading(true);
 
@@ -134,19 +158,84 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
           <p className="text-xs text-zinc-400">목록 상단에 강조해서 보여집니다. 다중 선택 가능.</p>
         </div>
         <Input label="태그" placeholder="responsive, dark-mode" value={tags} onChange={(event) => setTags(event.target.value)} />
+        <div className="flex flex-col gap-1">
+          <Input
+            label="고유키"
+            value={templateKey}
+            onChange={(event) => setTemplateKey(event.target.value.toUpperCase())}
+            placeholder="OHMT001"
+          />
+          <p className="text-xs text-zinc-400">ZIP 업로드 시 자동 설정. 수동 입력 후 저장 가능.</p>
+        </div>
         <ThumbnailField value={thumbnailUrl} onChange={setThumbnailUrl} className="md:col-span-2" />
+        <div className="md:col-span-2 space-y-3 rounded-xl border border-zinc-200 bg-zinc-50/60 p-4">
+          <div className="space-y-1">
+            <p className="text-sm font-medium text-zinc-700">적용 가격정책 <span className="text-red-500">*</span></p>
+            <p className="text-xs text-zinc-400">공개 전환 시 하나 이상 선택하거나 협의필요를 체크해야 합니다.</p>
+          </div>
+          <div className="flex flex-wrap gap-4">
+            {pricingOptions.map((option) => (
+              <label key={option.slug} className="flex items-center gap-2 text-sm text-zinc-700">
+                <input
+                  type="checkbox"
+                  checked={applicablePackages.includes(option.slug)}
+                  onChange={(event) => {
+                    setApplicablePackages((current) =>
+                      event.target.checked ? [...current, option.slug] : current.filter((slug) => slug !== option.slug)
+                    );
+                  }}
+                  className="h-4 w-4 rounded border-zinc-300 text-zinc-900 focus:ring-zinc-900"
+                />
+                {option.name} ({option.price})
+              </label>
+            ))}
+            <label className="flex items-center gap-2 text-sm text-zinc-700">
+              <input
+                type="checkbox"
+                checked={requiresConsultation}
+                onChange={(event) => setRequiresConsultation(event.target.checked)}
+                className="h-4 w-4 rounded border-zinc-300 text-zinc-900 focus:ring-zinc-900"
+              />
+              협의필요
+            </label>
+          </div>
+          {pricingOptions.length === 0 && (
+            <p className="text-xs text-zinc-400">현재 언어에 등록된 활성 가격 패키지가 없습니다.</p>
+          )}
+        </div>
         <label className="md:col-span-2 flex flex-col gap-1">
           <span className="text-sm font-medium text-zinc-700">설명</span>
           <textarea value={description} onChange={(event) => setDescription(event.target.value)} className={`${inputClassName} min-h-28 resize-y`} />
         </label>
       </div>
 
-      <div className="flex justify-end gap-3 mt-8 pt-6 border-t border-zinc-200">
-        <Button variant="ghost" onClick={goToList}>취소</Button>
-        <Button variant="primary" type="submit" loading={loading}>
-          {mode === "create" ? "등록" : "저장"}
-        </Button>
+      <div className="flex items-center justify-between gap-3 mt-8 pt-6 border-t border-zinc-200">
+        {mode === "edit" ? (
+          <div className="flex items-center gap-3">
+            <Button variant="ghost" onClick={() => setZipModalOpen(true)}>ZIP 파일 업데이트</Button>
+            <span className="font-mono text-xs text-zinc-400">
+              {templateKey ? `${templateKey}-${slug}-${lang}.zip` : `${slug}-${lang}.zip`}
+            </span>
+          </div>
+        ) : (
+          <span />
+        )}
+        <div className="flex gap-3">
+          <Button variant="ghost" onClick={goToList}>취소</Button>
+          <Button variant="primary" type="submit" loading={loading}>
+            {mode === "create" ? "등록" : "저장"}
+          </Button>
+        </div>
       </div>
+
+      {zipModalOpen && (
+        <ZipUpdateModal
+          slug={slug}
+          lang={lang}
+          onClose={() => setZipModalOpen(false)}
+          onSuccess={(key) => { if (key) setTemplateKey(key); }}
+        />
+      )}
 
       {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
     </form>

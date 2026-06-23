@@ -2,14 +2,17 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { Inbox, LayoutTemplate, LogOut, MessageCircleQuestion, ShoppingBag, Tags } from "lucide-react";
+import { BarChart2, DollarSign, Inbox, LayoutTemplate, LogOut, MessageCircleQuestion, ShoppingBag, Tags, Video } from "lucide-react";
 import { clsx } from "clsx";
 import { createClient } from "@/lib/supabase/client";
 
 const navItems = [
+  { href: "/admin/analytics", label: "Analytics", icon: BarChart2 },
+  { href: "/admin/pricing", label: "가격 패키지", icon: DollarSign },
   { href: "/admin/templates", label: "Templates", icon: LayoutTemplate },
   { href: "/admin/categories", label: "카테고리", icon: Tags },
   { href: "/admin/uploads", label: "업로드", icon: Inbox },
+  { href: "/admin/assets", label: "미디어", icon: Video },
   { href: "/admin/faqs", label: "FAQ", icon: MessageCircleQuestion },
   { href: "/admin/orders", label: "Orders", icon: ShoppingBag },
 ];

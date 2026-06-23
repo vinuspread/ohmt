@@ -60,41 +60,48 @@ export function extractAndValidateZip(buffer: Buffer, lang: "en" | "ko" = "en"):
   }
 
   const normalizedFiles = fileEntries.map((entry) => ({ entry, path: normalizeEntryPath(entry.entryName) }));
+  const errors: string[] = [];
 
   for (const { path } of normalizedFiles) {
     if (isUnsafePath(path)) {
-      throw new Error(`허용되지 않는 경로가 포함되어 있습니다: ${path}`);
+      errors.push(`허용되지 않는 경로가 포함되어 있습니다: ${path}`);
+      continue;
     }
 
     if (!path.startsWith(`${slug}/`) && !path.startsWith("public/") && !path.startsWith("__MACOSX/")) {
-      throw new Error(`허용되지 않는 루트 경로가 포함되어 있습니다: ${path}`);
+      errors.push(`허용되지 않는 루트 경로가 포함되어 있습니다: ${path}`);
+      continue;
     }
 
     const relativePath = path.startsWith(`${slug}/`) ? path.slice(slug.length + 1) : path;
     if (forbiddenPathPrefixes.some((pattern) => relativePath.startsWith(pattern))) {
-      throw new Error(`금지된 경로가 포함되어 있습니다: ${relativePath}`);
+      errors.push(`금지된 경로가 포함되어 있습니다: ${relativePath}`);
     }
 
     if (path.startsWith(`public/templates/${slug}/`)) {
       const lowerPath = path.toLowerCase();
       if (forbiddenPublicExtensions.some((ext) => lowerPath.endsWith(ext))) {
-        throw new Error(`동영상 파일은 zip에 포함할 수 없습니다 (R2에 별도 업로드): ${path}`);
+        errors.push(`동영상 파일은 zip에 포함할 수 없습니다 (R2에 별도 업로드): ${path}`);
       }
     }
   }
 
   for (const required of requiredFiles) {
     if (!normalizedFiles.some(({ path }) => path === `${slug}/${required}`)) {
-      throw new Error(`필수 파일이 없습니다: ${required}`);
+      errors.push(`필수 파일이 없습니다: ${slug}/${required}`);
     }
   }
 
   if (lang === "en") {
     for (const required of requiredPublicFiles) {
       if (!normalizedFiles.some(({ path }) => path === `public/templates/${slug}/${required}`)) {
-        throw new Error(`필수 이미지 파일이 없습니다: public/templates/${slug}/${required}`);
+        errors.push(`필수 이미지 파일이 없습니다: public/templates/${slug}/${required}`);
       }
     }
+  }
+
+  if (errors.length > 0) {
+    throw new Error(`검증 오류 ${errors.length}개 발견:\n${errors.map((e, i) => `  ${i + 1}. ${e}`).join("\n")}`);
   }
 
   const themeEntry = normalizedFiles.find(({ path }) => path === `${slug}/theme.json`)?.entry;

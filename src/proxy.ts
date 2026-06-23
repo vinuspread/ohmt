@@ -4,6 +4,20 @@ import { getAllowedAdminEmails, isAllowedAdminEmail } from "@/lib/admin-auth";
 
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
+
+  // 루트 접근 시 언어 감지 후 리디렉션
+  if (pathname === "/") {
+    const country = request.headers.get("x-vercel-ip-country") ?? "";
+    if (country === "KR") {
+      return NextResponse.redirect(new URL("/ko", request.url));
+    }
+    const acceptLanguage = request.headers.get("accept-language") ?? "";
+    if (acceptLanguage.toLowerCase().startsWith("ko")) {
+      return NextResponse.redirect(new URL("/ko", request.url));
+    }
+    return NextResponse.redirect(new URL("/en", request.url));
+  }
+
   const isAdminPage = pathname.startsWith("/admin");
   const isAdminApi = pathname.startsWith("/api/admin");
 
@@ -63,4 +77,4 @@ export async function proxy(request: NextRequest) {
   return response;
 }
 
-export const config = { matcher: ["/admin/:path*", "/api/admin/:path*"] };
+export const config = { matcher: ["/", "/admin/:path*", "/api/admin/:path*"] };

@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { getAllowedAdminEmails, isAllowedAdminEmail } from "@/lib/admin-auth";
 import { pushFilesToGitHub } from "@/lib/github";
 import { createClient } from "@/lib/supabase/server";
@@ -12,18 +12,20 @@ export const maxDuration = 60;
 
 type UploadLanguage = "en" | "ko";
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
   const authError = await validateAdminUser();
   if (authError) return authError;
 
-  let body: { r2Key: string; lang?: string };
+  let body: { r2Key: string; lang?: string; overwrite?: boolean; originalFilename?: string };
   try {
     body = await request.json();
   } catch {
     return NextResponse.json({ error: "요청 형식이 올바르지 않습니다." }, { status: 400 });
   }
 
-  const { r2Key, lang: langParam } = body;
+  const { r2Key, lang: langParam, overwrite: bodyOverwrite = false, originalFilename = "" } = body;
+  const overwrite = bodyOverwrite === true || request.nextUrl.searchParams.get("overwrite") === "1";
+  const templateKey = extractTemplateKey(originalFilename);
   const lang: UploadLanguage = langParam === "ko" ? "ko" : "en";
 
   if (!r2Key || !r2Key.startsWith("uploads/tmp/")) {
@@ -58,8 +60,8 @@ export async function POST(request: Request) {
     return NextResponse.json({ error: "템플릿 확인에 실패했습니다." }, { status: 500 });
   }
 
-  if (existing) {
-    return NextResponse.json({ error: `이미 존재하는 템플릿입니다: ${slug} (${lang})` }, { status: 409 });
+  if (existing && !overwrite) {
+    return NextResponse.json({ error: `이미 존재하는 템플릿입니다: ${slug} (${lang}). 덮어쓰기 옵션을 활성화하세요.` }, { status: 409 });
   }
 
   let commitSha: string;
@@ -73,34 +75,63 @@ export async function POST(request: Request) {
   await deleteFromR2(r2Key).catch(() => {});
   await pullLocalRepoIfDev();
 
-  const { error: insertError } = await supabase.from("templates").insert({
-    slug,
-    lang,
-    name,
-    category: themeJson.category ?? "uncategorized",
-    description,
-    thumbnail_url: `/templates/${slug}/thumbnail.jpg`,
-    price: 0,
-    status: "uploaded",
-    sort_order: 999,
-    is_featured: false,
-    tags: themeJson.tags ?? [],
-  });
+  if (existing && overwrite) {
+    const { error: updateError } = await supabase
+      .from("templates")
+      .update({
+        name,
+        category: themeJson.category ?? "uncategorized",
+        description,
+        thumbnail_url: `/templates/${slug}/thumbnail.jpg`,
+        tags: themeJson.tags ?? [],
+        ...(templateKey && { template_key: templateKey }),
+      })
+      .eq("slug", slug)
+      .eq("lang", lang);
 
-  if (insertError) {
-    console.error("Supabase insert 실패:", insertError);
-    return NextResponse.json({ error: "메타데이터 등록에 실패했습니다. GitHub push는 성공했습니다." }, { status: 500 });
+    if (updateError) {
+      console.error("Supabase update 실패:", updateError);
+      return NextResponse.json({ error: "메타데이터 업데이트에 실패했습니다. GitHub push는 성공했습니다." }, { status: 500 });
+    }
+  } else {
+    const { error: insertError } = await supabase.from("templates").insert({
+      slug,
+      lang,
+      name,
+      category: themeJson.category ?? "uncategorized",
+      description,
+      thumbnail_url: `/templates/${slug}/thumbnail.jpg`,
+      template_key: templateKey ?? null,
+      price: 0,
+      status: "uploaded",
+      sort_order: 999,
+      is_featured: false,
+      tags: themeJson.tags ?? [],
+    });
+
+    if (insertError) {
+      console.error("Supabase insert 실패:", insertError);
+      return NextResponse.json({ error: "메타데이터 등록에 실패했습니다. GitHub push는 성공했습니다." }, { status: 500 });
+    }
   }
 
   return NextResponse.json(
     {
       slug,
       name,
+      templateKey,
       githubCommitSha: commitSha,
       templateUrl: `/${lang}/templates/${slug}`,
+      overwritten: existing && overwrite,
     },
-    { status: 201 }
+    { status: existing && overwrite ? 200 : 201 }
   );
+}
+
+function extractTemplateKey(filename: string): string | null {
+  const basename = filename.replace(/\.zip$/i, "");
+  const match = basename.match(/^([A-Z]+\d+)-/);
+  return match ? match[1] : null;
 }
 
 async function validateAdminUser() {

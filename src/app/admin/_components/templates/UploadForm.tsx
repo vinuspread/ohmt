@@ -12,7 +12,7 @@ import { Toast } from "../ui/Toast";
 type UploadStatus = "idle" | "uploading" | "success" | "error";
 type UploadLanguage = "en" | "ko";
 type ToastState = { message: string; type: "success" | "error" };
-type UploadResult = { slug: string; name: string; githubCommitSha: string; templateUrl: string };
+type UploadResult = { slug: string; name: string; githubCommitSha: string; templateUrl: string; overwritten?: boolean };
 
 const languageOptions = [
   { value: "en", label: "EN" },
@@ -48,7 +48,7 @@ export function UploadForm() {
 
     if (nextFile.size > 50 * 1024 * 1024) {
       setFile(null);
-      setError("파일 크기는 50MB 이하여야 합니다.");
+      setError("파일 크기는 200MB 이하여야 합니다.");
       setStatus("error");
       return;
     }
@@ -101,7 +101,7 @@ export function UploadForm() {
       response = await fetch("/api/admin/templates/upload", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ r2Key, lang }),
+        body: JSON.stringify({ r2Key, lang, originalFilename: file.name }),
       });
     } catch {
       setError("네트워크 오류로 업로드에 실패했습니다.");
@@ -180,7 +180,8 @@ export function UploadForm() {
 
       <Select label="언어" value={lang} onChange={(event) => setLang(event.target.value as UploadLanguage)} options={languageOptions} disabled={uploading} />
 
-      <div className="flex items-center justify-between gap-4 border-t border-zinc-200 pt-6">
+
+<div className="flex items-center justify-between gap-4 border-t border-zinc-200 pt-6">
         <StatusMessage status={status} error={error} result={result} />
         <Button variant="primary" onClick={handleUpload} loading={uploading} disabled={!file || uploading}>
           업로드
