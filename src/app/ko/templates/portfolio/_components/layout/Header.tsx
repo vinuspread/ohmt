@@ -20,7 +20,7 @@ export function Header() {
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md' : 'bg-transparent'}`}>
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
           {/* Logo mark */}
-          <Link href={`/ko/templates/OHMT014-portfolio-kr`} className="text-[1.2rem] font-black tracking-tighter text-[var(--color-text)] hover:opacity-60 transition-opacity">
+          <Link href={`/ko/templates/portfolio`} className="text-[1.2rem] font-black tracking-tighter text-[#1e1e1e] hover:opacity-60 transition-opacity">
             Oh My Template.
           </Link>
 
@@ -31,26 +31,26 @@ export function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-[0.82rem] font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+                  className="text-[0.82rem] font-medium text-[#5a6271] hover:text-[#1e1e1e] transition-colors"
                 >
                   {item.name}
                 </Link>
               ))}
             </nav>
             
-            <div className="hidden md:flex items-center gap-2 text-[13px] font-medium text-[var(--color-text-muted)]">
-              <a href="#" className="hover:text-[var(--color-text)] transition-colors">BE</a>
+            <div className="hidden md:flex items-center gap-2 text-[13px] font-medium text-[#8a919b]">
+              <a href="#" className="hover:text-[#1e1e1e] transition-colors">BE</a>
               <span>/</span>
-              <a href="#" className="hover:text-[var(--color-text)] transition-colors">DR</a>
+              <a href="#" className="hover:text-[#1e1e1e] transition-colors">DR</a>
               <span>/</span>
-              <a href="#" className="hover:text-[var(--color-text)] transition-colors">X</a>
+              <a href="#" className="hover:text-[#1e1e1e] transition-colors">X</a>
             </div>
             {/* Mobile only: hamburger */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="md:hidden w-8 h-8 flex items-center justify-center text-[var(--color-text)] hover:opacity-60 transition-opacity text-2xl font-normal leading-none"
+              className="md:hidden w-8 h-8 flex items-center justify-center text-[#1e1e1e] hover:opacity-60 transition-opacity text-2xl font-normal leading-none"
             >
-              {menuOpen ? '��' : '+'}
+              {menuOpen ? '×' : '+'}
             </button>
           </div>
         </div>
@@ -66,7 +66,7 @@ export function Header() {
             transition={{ duration: 0.25 }}
             className="fixed inset-0 z-40 bg-white flex flex-col justify-center px-10"
           >
-            <button onClick={() => setMenuOpen(false)} className="absolute top-5 right-6 text-3xl font-normal text-[var(--color-text)]">��</button>
+            <button onClick={() => setMenuOpen(false)} className="absolute top-5 right-6 text-3xl font-normal text-[#1e1e1e]">×</button>
             <nav className="space-y-2">
               {designerInfo.nav.map((item, i) => (
                 <motion.div
@@ -78,14 +78,14 @@ export function Header() {
                   <Link
                     href={item.href}
                     onClick={() => setMenuOpen(false)}
-                    className="block text-[clamp(2.5rem,8vw,6rem)] font-black tracking-tighter text-[var(--color-text)] leading-none hover:text-[var(--color-accent)] transition-colors"
+                    className="block text-[clamp(2.5rem,8vw,6rem)] font-black tracking-tighter text-[#1e1e1e] leading-none hover:text-[var(--color-accent)] transition-colors"
                   >
                     {item.name}
                   </Link>
                 </motion.div>
               ))}
             </nav>
-            <div className="absolute bottom-10 left-10 flex gap-6 text-[13px] text-[var(--color-text-muted)]">
+            <div className="absolute bottom-10 left-10 flex gap-6 text-[13px] text-[#8a919b]">
               <a href="#" className="hover:text-[var(--color-accent)] transition-colors font-bold">BE</a>
               <a href="#" className="hover:text-[var(--color-accent)] transition-colors font-bold">DR</a>
               <a href="#" className="hover:text-[var(--color-accent)] transition-colors font-bold">X</a>

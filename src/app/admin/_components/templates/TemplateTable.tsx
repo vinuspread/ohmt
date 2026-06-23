@@ -27,7 +27,7 @@ const langFilters: { value: LangFilter; label: string }[] = [
   { value: "ko", label: "KR" },
 ];
 
-const templateGridClass = "grid-cols-[28px_72px_80px_minmax(150px,1.4fr)_64px_minmax(110px,0.9fr)_88px_48px_132px]";
+const templateGridClass = "grid-cols-[28px_72px_80px_minmax(150px,1.4fr)_64px_minmax(110px,0.9fr)_minmax(90px,0.7fr)_88px_48px_132px]";
 
 const SCROLL_STORAGE_KEY = "admin-templates-scroll-y";
 
@@ -227,6 +227,7 @@ export function TemplateTable({ data }: { data: Template[] }) {
           <div>이름</div>
           <div>언어</div>
           <div>카테고리</div>
+          <div>가격정책</div>
           <div>상태</div>
           <div>대표</div>
           <div>옵션</div>
@@ -324,6 +325,7 @@ function TemplateRow({
       </div>
       <span className="font-mono text-xs uppercase text-zinc-500">{template.lang}</span>
       <span className="truncate">{template.category}</span>
+      <PricingBadges packages={template.applicable_packages ?? []} consultation={template.requires_consultation ?? false} />
       <StatusPill published={template.status === "published"} />
       <div>{template.is_featured ? <CheckIcon aria-label="대표 템플릿" className="w-4 h-4 text-emerald-500" /> : <span className="text-zinc-300">-</span>}</div>
       <div className="flex items-center gap-1">
@@ -352,6 +354,35 @@ function TemplateThumbnail({ template, onPreview }: { template: Template; onPrev
       />
       <span className="sr-only">{template.name} 썸네일 확대 보기</span>
     </button>
+  );
+}
+
+const PKG_LABEL: Record<string, string> = {
+  starter: "S",
+  professional: "P",
+  premium: "Pr",
+};
+
+function pkgLabel(slug: string): string {
+  const base = slug.split("-")[0].toLowerCase();
+  return PKG_LABEL[base] ?? slug.slice(0, 2).toUpperCase();
+}
+
+function PricingBadges({ packages, consultation }: { packages: string[]; consultation: boolean }) {
+  if (consultation) {
+    return <span className="inline-flex items-center rounded px-1.5 py-0.5 text-[10px] font-medium bg-amber-50 text-amber-700">협의</span>;
+  }
+  if (packages.length === 0) {
+    return <span className="text-zinc-300 text-xs">-</span>;
+  }
+  return (
+    <div className="flex flex-wrap gap-1">
+      {packages.map((pkg) => (
+        <span key={pkg} className="inline-flex items-center rounded px-1.5 py-0.5 text-[10px] font-medium bg-zinc-100 text-zinc-600">
+          {pkgLabel(pkg)}
+        </span>
+      ))}
+    </div>
   );
 }
 
