@@ -9,7 +9,7 @@ return (
       {/* Background Image with Zoom and Grayscale Hover */}
       <div className="absolute inset-0">
         <img
-          src="/templates/fashion/hero-custom.jpg"
+          src="/templates/OHMT001-fashion/hero-custom.jpg"
           alt="Luxury Branding Atmosphere" 
           className="w-full h-full object-cover grayscale brightness-[0.35] opacity-50 group-hover:scale-110 transition-transform duration-[6s] ease-out-quint"
         />

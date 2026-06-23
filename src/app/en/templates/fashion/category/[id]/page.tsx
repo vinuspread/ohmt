@@ -1,4 +1,4 @@
-// src/app/templates/fashion/category/[id]/page.tsx
+﻿// src/app/templates/OHMT001-fashion/category/[id]/page.tsx
 "use client";
 
 import React, { use } from "react";
@@ -28,18 +28,18 @@ const CATEGORY_DATA: Record<string, {
     description: "Structure meets fluidity. A detailed exploration of sculptural tailoring, high-density merino wool, and modern proportions designed for the progressive silhouette.",
     type: "products",
     items: [
-      { id: "1", name: "SCULPTURAL BLAZER V.01", price: "$890.00", img: "/templates/fashion/product-blazer.jpg", tag: "NEW ARRIVAL" },
-      { id: "2", name: "OVERSIZED TRENCH COAT", price: "$1,240.00", img: "/templates/fashion/trench-coat.png", tag: "LIMITED EDITION" },
-      { id: "3", name: "MONOLITHIC TROUSERS", price: "$420.00", img: "/templates/fashion/product-trousers.jpg", tag: "ESSENTIAL" },
-      { id: "4", name: "ARCHIVAL MERINO KNIT", price: "$380.00", img: "/templates/fashion/product-knit.jpg", tag: "NEW ARRIVAL" },
-      { id: "101", name: "MINIMAL WRAP COAT", price: "$1,450.00", img: "/templates/fashion/apollo-belvedere.png", tag: "EXCLUSIVE" },
-      { id: "102", name: "TEXTURED SILK BLOUSE", price: "$320.00", img: "/templates/fashion/silk-dress.png", tag: "NEW SEASON" },
-      { id: "103", name: "RAW SEAM TROUSERS", price: "$390.00", img: "/templates/fashion/product-trousers.jpg", tag: "ESSENTIAL" },
-      { id: "104", name: "CLASSIC OVERCOAT", price: "$1,890.00", img: "/templates/fashion/hero-custom.jpg", tag: "LIMITED" },
-      { id: "105", name: "DRAPED MAXI DRESS", price: "$650.00", img: "/templates/fashion/silk-dress.png", tag: "NEW ARRIVAL" },
-      { id: "106", name: "UTILITY CARGO JACKET", price: "$780.00", img: "/templates/fashion/exclusive-custom.jpg", tag: "NEW SEASON" },
-      { id: "107", name: "TAILORED SUIT VEST", price: "$310.00", img: "/templates/fashion/product-blazer.jpg", tag: "ESSENTIAL" },
-      { id: "108", name: "HIGH-COLLAR MERINO SWEATER", price: "$450.00", img: "/templates/fashion/product-knit.jpg", tag: "RESTOCKED" }
+      { id: "1", name: "SCULPTURAL BLAZER V.01", price: "$890.00", img: "/templates/OHMT001-fashion/product-blazer.jpg", tag: "NEW ARRIVAL" },
+      { id: "2", name: "OVERSIZED TRENCH COAT", price: "$1,240.00", img: "/templates/OHMT001-fashion/trench-coat.png", tag: "LIMITED EDITION" },
+      { id: "3", name: "MONOLITHIC TROUSERS", price: "$420.00", img: "/templates/OHMT001-fashion/product-trousers.jpg", tag: "ESSENTIAL" },
+      { id: "4", name: "ARCHIVAL MERINO KNIT", price: "$380.00", img: "/templates/OHMT001-fashion/product-knit.jpg", tag: "NEW ARRIVAL" },
+      { id: "101", name: "MINIMAL WRAP COAT", price: "$1,450.00", img: "/templates/OHMT001-fashion/apollo-belvedere.png", tag: "EXCLUSIVE" },
+      { id: "102", name: "TEXTURED SILK BLOUSE", price: "$320.00", img: "/templates/OHMT001-fashion/silk-dress.png", tag: "NEW SEASON" },
+      { id: "103", name: "RAW SEAM TROUSERS", price: "$390.00", img: "/templates/OHMT001-fashion/product-trousers.jpg", tag: "ESSENTIAL" },
+      { id: "104", name: "CLASSIC OVERCOAT", price: "$1,890.00", img: "/templates/OHMT001-fashion/hero-custom.jpg", tag: "LIMITED" },
+      { id: "105", name: "DRAPED MAXI DRESS", price: "$650.00", img: "/templates/OHMT001-fashion/silk-dress.png", tag: "NEW ARRIVAL" },
+      { id: "106", name: "UTILITY CARGO JACKET", price: "$780.00", img: "/templates/OHMT001-fashion/exclusive-custom.jpg", tag: "NEW SEASON" },
+      { id: "107", name: "TAILORED SUIT VEST", price: "$310.00", img: "/templates/OHMT001-fashion/product-blazer.jpg", tag: "ESSENTIAL" },
+      { id: "108", name: "HIGH-COLLAR MERINO SWEATER", price: "$450.00", img: "/templates/OHMT001-fashion/product-knit.jpg", tag: "RESTOCKED" }
     ]
   },
   archive: {
@@ -49,18 +49,18 @@ const CATEGORY_DATA: Record<string, {
     description: "Timeless silhouettes curated from our past catalogs. Re-engineered with modern craftsmanship and premium materials for contemporary longevity.",
     type: "products",
     items: [
-      { id: "5", name: "CLASSIC LEATHER JACKET", price: "$1,650.00", img: "/templates/fashion/trench-coat.png", tag: "ARCHIVE" },
-      { id: "6", name: "MILITARY WOOL PARKA", price: "$980.00", img: "/templates/fashion/product-blazer.jpg", tag: "RESTOCKED" },
-      { id: "7", name: "LUXURY CASHMERE KNIT", price: "$450.00", img: "/templates/fashion/product-knit.jpg", tag: "LIMITED" },
-      { id: "8", name: "PREMIUM LEATHER BOOTS", price: "$480.00", img: "/templates/fashion/boots.png", tag: "ARCHIVE" },
-      { id: "201", name: "ARCHIVE SUEDE BOMBER", price: "$1,280.00", img: "/templates/fashion/exclusive-custom.jpg", tag: "ARCHIVE" },
-      { id: "202", name: "WOOL OVERSIZED SCARF", price: "$220.00", img: "/templates/fashion/accessories-2.png", tag: "LIMITED" },
-      { id: "203", name: "DOUBLE-BREASTED PEACOAT", price: "$1,150.00", img: "/templates/fashion/exclusive-lifestyle.png", tag: "ARCHIVE" },
-      { id: "204", name: "RIGID SELVEDGE DENIM", price: "$290.00", img: "/templates/fashion/product-trousers.jpg", tag: "ESSENTIAL" },
-      { id: "205", name: "ATELIER CHELSEA BOOTS", price: "$590.00", img: "/templates/fashion/leather-jacket-2.png", tag: "RESTOCKED" },
-      { id: "206", name: "CORDUROY ATELIER JACKET", price: "$680.00", img: "/templates/fashion/silk-dress.png", tag: "ARCHIVE" },
-      { id: "207", name: "BELTED WAISTCOAT", price: "$340.00", img: "/templates/fashion/basic-tee.png", tag: "ESSENTIAL" },
-      { id: "208", name: "CLASSIC SILK SHIRT", price: "$380.00", img: "/templates/fashion/womenswear-banner.png", tag: "LIMITED" }
+      { id: "5", name: "CLASSIC LEATHER JACKET", price: "$1,650.00", img: "/templates/OHMT001-fashion/trench-coat.png", tag: "ARCHIVE" },
+      { id: "6", name: "MILITARY WOOL PARKA", price: "$980.00", img: "/templates/OHMT001-fashion/product-blazer.jpg", tag: "RESTOCKED" },
+      { id: "7", name: "LUXURY CASHMERE KNIT", price: "$450.00", img: "/templates/OHMT001-fashion/product-knit.jpg", tag: "LIMITED" },
+      { id: "8", name: "PREMIUM LEATHER BOOTS", price: "$480.00", img: "/templates/OHMT001-fashion/boots.png", tag: "ARCHIVE" },
+      { id: "201", name: "ARCHIVE SUEDE BOMBER", price: "$1,280.00", img: "/templates/OHMT001-fashion/exclusive-custom.jpg", tag: "ARCHIVE" },
+      { id: "202", name: "WOOL OVERSIZED SCARF", price: "$220.00", img: "/templates/OHMT001-fashion/accessories-2.png", tag: "LIMITED" },
+      { id: "203", name: "DOUBLE-BREASTED PEACOAT", price: "$1,150.00", img: "/templates/OHMT001-fashion/exclusive-lifestyle.png", tag: "ARCHIVE" },
+      { id: "204", name: "RIGID SELVEDGE DENIM", price: "$290.00", img: "/templates/OHMT001-fashion/product-trousers.jpg", tag: "ESSENTIAL" },
+      { id: "205", name: "ATELIER CHELSEA BOOTS", price: "$590.00", img: "/templates/OHMT001-fashion/leather-jacket-2.png", tag: "RESTOCKED" },
+      { id: "206", name: "CORDUROY ATELIER JACKET", price: "$680.00", img: "/templates/OHMT001-fashion/silk-dress.png", tag: "ARCHIVE" },
+      { id: "207", name: "BELTED WAISTCOAT", price: "$340.00", img: "/templates/OHMT001-fashion/basic-tee.png", tag: "ESSENTIAL" },
+      { id: "208", name: "CLASSIC SILK SHIRT", price: "$380.00", img: "/templates/OHMT001-fashion/womenswear-banner.png", tag: "LIMITED" }
     ]
   },
   journal: {
@@ -76,7 +76,7 @@ const CATEGORY_DATA: Record<string, {
         category: "DESIGN DIALOGUE",
         date: "MAY 2026",
         summary: "Exploring the dynamic interplay between active silhouettes, anatomical curves, and the void lines that carve out architectural comfort.",
-        img: "/templates/fashion/branding-custom.jpg"
+        img: "/templates/OHMT001-fashion/branding-custom.jpg"
       },
       {
         id: "j2",
@@ -84,7 +84,7 @@ const CATEGORY_DATA: Record<string, {
         category: "ATELIER DIARY",
         date: "APRIL 2026",
         summary: "A technical walkthrough detailing our latest zero-waste cutting algorithms and hand-finished seam architecture at our local studio.",
-        img: "/templates/fashion/exclusive-custom.jpg"
+        img: "/templates/OHMT001-fashion/exclusive-custom.jpg"
       },
       {
         id: "j3",
@@ -92,7 +92,7 @@ const CATEGORY_DATA: Record<string, {
         category: "MATERIAL FOCUS",
         date: "MARCH 2026",
         summary: "How double-twist worsted yarn and special dry finishes enable high crease-retention and permanent geometric rigidness in movement.",
-        img: "/templates/fashion/hero-custom.jpg"
+        img: "/templates/OHMT001-fashion/hero-custom.jpg"
       }
     ]
   },
@@ -106,10 +106,10 @@ const CATEGORY_DATA: Record<string, {
 };
 
 const CATEGORY_IMAGES: Record<string, string> = {
-  collection: "/templates/fashion/hero-custom.jpg",
-  archive: "/templates/fashion/exclusive-custom.jpg",
-  journal: "/templates/fashion/branding-custom.jpg",
-  about: "/templates/fashion/hero-custom.jpg"
+  collection: "/templates/OHMT001-fashion/hero-custom.jpg",
+  archive: "/templates/OHMT001-fashion/exclusive-custom.jpg",
+  journal: "/templates/OHMT001-fashion/branding-custom.jpg",
+  about: "/templates/OHMT001-fashion/hero-custom.jpg"
 };
 
 function FashionCategoryPageContent({ params }: { params: Promise<{ id: string }> }) {
@@ -195,9 +195,9 @@ function FashionCategoryPageContent({ params }: { params: Promise<{ id: string }
             {/* Curated Grid - 100% matched with Main Page aesthetics */}
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 sm:gap-x-12 gap-y-16 sm:gap-y-32">
               {displayedItems.map((product) => (
-                <Link key={product.id} href={`/en/templates/fashion/product/${product.id}`} className="group block">
+                <Link key={product.id} href={`/en/templates/OHMT001-fashion-en/product/${product.id}`} className="group block">
                   {/* Image Frame with in-frame zoom and minimal tag */}
-                  <div className="aspect-square bg-[#F5F5F7] overflow-hidden mb-4 sm:mb-8 relative">
+                  <div className="aspect-square bg-[var(--color-bg-secondary)] overflow-hidden mb-4 sm:mb-8 relative">
                     <span className="absolute top-3 left-3 z-20 text-[8px] font-bold tracking-[0.2em] bg-white text-black px-2.5 py-1 border border-black/5">
                       {product.tag}
                     </span>
@@ -262,7 +262,7 @@ function FashionCategoryPageContent({ params }: { params: Promise<{ id: string }
                   <span className="text-[14px] font-bold tracking-[0.3em] text-black/40">{article.category} - {article.date}</span>
                   <h2 className="text-xl md:text-2xl font-bold tracking-tight uppercase leading-snug">{article.title}</h2>
                   <p className="text-[14px] text-black/60 leading-[1.4] font-normal tracking-[0.01em]">{article.summary}</p>
-                  <Link href="/en/templates/fashion" className="inline-flex items-center gap-3 text-[14px] font-bold uppercase tracking-[0.3em] mr-[-0.3em] pt-4 group border-b border-black/10 w-fit pb-1 hover:border-black hover:tracking-[0.35em] hover:mr-[-0.35em] transition-all duration-700">
+                  <Link href="/en/templates/OHMT001-fashion-en" className="inline-flex items-center gap-3 text-[14px] font-bold uppercase tracking-[0.3em] mr-[-0.3em] pt-4 group border-b border-black/10 w-fit pb-1 hover:border-black hover:tracking-[0.35em] hover:mr-[-0.35em] transition-all duration-700">
                     READ ARTICLE <ArrowRight size={12} className="group-hover:translate-x-2 transition-transform duration-500" />
                   </Link>
                 </div>
@@ -313,7 +313,7 @@ function FashionCategoryPageContent({ params }: { params: Promise<{ id: string }
                   className="aspect-[4/5] bg-neutral-100 overflow-hidden relative group cursor-pointer"
                 >
                   <img 
-                    src="/templates/fashion/branding-custom.jpg" 
+                    src="/templates/OHMT001-fashion/branding-custom.jpg" 
                     alt="Atelier Philosophy" 
                     className="w-full h-full object-cover brightness-95"
                   />

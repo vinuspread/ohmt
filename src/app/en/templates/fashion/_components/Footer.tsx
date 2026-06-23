@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Mail, ArrowRight, Globe, Link as LinkIcon, ExternalLink } from "lucide-react";
 export const Newsletter = () => {
     return (
-        <section className="py-12 md:py-24 lg:py-32 bg-[#F5F5F7] text-black">
+        <section className="py-12 md:py-24 lg:py-32 bg-[var(--color-bg-secondary)] text-black">
             <div className="max-w-[1440px] mx-auto px-6 md:px-12 text-center">
                 <span className="text-[13px] uppercase tracking-[0.4em] sm:tracking-[0.6em] font-bold opacity-40 mb-6 md:mb-10 block">Stay Connected</span>
                 <h2 className="text-[28px] sm:text-[4vw] font-bold tracking-tighter uppercase mb-10 md:mb-16 leading-none">
@@ -30,7 +30,7 @@ return (
     <footer className="bg-white pt-12 md:pt-24 pb-12 border-t border-black/5 selection:bg-black selection:text-white">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-20 mb-12 md:mb-24">
         <div className="col-span-2 lg:col-span-1">
-          <Link href="/en/templates/fashion" className="text-xl md:text-2xl font-black tracking-tighter uppercase block">
+          <Link href="/en/templates/OHMT001-fashion-en-en" className="text-xl md:text-2xl font-black tracking-tighter uppercase block">
             Oh My Template
           </Link>
           <p className="text-[14px] text-black/60 font-medium leading-[1.4] max-w-xs mt-4 md:mt-6">
@@ -46,17 +46,17 @@ return (
         <div className="space-y-4 md:space-y-8">
             <h5 className="text-[13px] font-medium uppercase tracking-[0.4em] text-black/30">Catalogs</h5>
             <ul className="space-y-3 md:space-y-4 text-[12px] font-medium uppercase tracking-widest">
-                <li><Link href="/en/templates/fashion/category/ss26" className="hover:text-black/40 transition-colors">Spring/Summer 26</Link></li>
-                <li><Link href="/en/templates/fashion/category/aw25" className="hover:text-black/40 transition-colors">Autumn/Winter 25</Link></li>
-                <li><Link href="/en/templates/fashion/category/core" className="hover:text-black/40 transition-colors">Core Series</Link></li>
-                <li><Link href="/en/templates/fashion/category/limited" className="hover:text-black/40 transition-colors">Limited Drop</Link></li>
+                <li><Link href="/en/templates/OHMT001-fashion-en-en/category/ss26" className="hover:text-black/40 transition-colors">Spring/Summer 26</Link></li>
+                <li><Link href="/en/templates/OHMT001-fashion-en-en/category/aw25" className="hover:text-black/40 transition-colors">Autumn/Winter 25</Link></li>
+                <li><Link href="/en/templates/OHMT001-fashion-en-en/category/core" className="hover:text-black/40 transition-colors">Core Series</Link></li>
+                <li><Link href="/en/templates/OHMT001-fashion-en-en/category/limited" className="hover:text-black/40 transition-colors">Limited Drop</Link></li>
             </ul>
         </div>
 
         <div className="space-y-4 md:space-y-8">
             <h5 className="text-[13px] font-medium uppercase tracking-[0.4em] text-black/30">Assistance</h5>
             <ul className="space-y-3 md:space-y-4 text-[12px] font-medium uppercase tracking-widest">
-                <li><Link href="/en/templates/fashion/category/ss26" className="hover:text-black/40 transition-colors">Customer Care</Link></li>
+                <li><Link href="/en/templates/OHMT001-fashion-en-en/category/ss26" className="hover:text-black/40 transition-colors">Customer Care</Link></li>
             </ul>
         </div>
 
