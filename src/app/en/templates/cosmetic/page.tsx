@@ -1,4 +1,4 @@
-// src/app/templates/cosmetic/page.tsx
+// src/app/templates/OHMT010-cosmetic/page.tsx
 "use client";
 
 import React from "react";
@@ -84,7 +84,7 @@ return (
             <div className="grid md:grid-cols-2 gap-28 items-center">
               <div className="order-2 md:order-1">
                 <img 
-                  src="/templates/cosmetic/cosmetic-face-mask.png" 
+                  src="/templates/OHMT010-cosmetic/cosmetic-face-mask.png" 
                   className="w-full h-[380px] object-cover" 
                   alt="Brand story" 
                 />
@@ -93,7 +93,7 @@ return (
                 <h2 className="text-[1.6rem] md:text-[2.8rem] font-normal leading-[1.1] mb-8">
                   {t.story.title}
                 </h2>
-                <p className="text-[0.95rem] text-[#666] leading-[1.4] mb-12 max-w-[480px]">
+                <p className="text-[0.95rem] text-[var(--color-text-muted)] leading-[1.4] mb-12 max-w-[480px]">
                   {t.story.desc}
                 </p>
                 <button className="px-10 py-4 bg-black text-white text-[0.85rem] font-bold uppercase tracking-wider hover:opacity-80 transition-all">

@@ -1,11 +1,10 @@
 {
   "slug": "cosmetic",
-  "name": "Cosmetic Store",
-  "name_ko": "코스메틱 스토어",
-  "category": "lifestyle",
-  "description": "Beauty and cosmetic brand store template",
-  "description_ko": "뷰티 코스메틱 브랜드 스토어 템플릿",
-  "tags": [],
+  "name": "Cosmetic Wellness",
+  "name_ko": "코스메틱 웰니스",
+  "category": "retail",
+  "description": "Luxury cosmetic brand template built with Next.js. Showcase products, journal articles, and brand story.",
+  "description_ko": "럭셔리 코스메틱 브랜드 템플릿. 제품, 저널, 브랜드 스토리를 소개하세요.",
   "mode": "light",
   "theme": {
     "palette": {

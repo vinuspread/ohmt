@@ -1,13 +1,13 @@
-// src/app/templates/cosmetic/-components/sections/ProductGrid.tsx
+// src/app/templates/OHMT010-cosmetic/-components/sections/ProductGrid.tsx
 "use client";
 
 import React from "react";
 import { motion } from "framer-motion";
 import { useSearchParams } from "next/navigation";
 const products = [
-  { id: 1, name: "Gentle Cleanser", price: "$42.00", img: "/templates/cosmetic/cosmetic-2.png", tag: "essential" },
-  { id: 2, name: "Hydrating Mist", price: "$38.00", img: "/templates/cosmetic/cosmetic-botanical-dropper.png", tag: "new" },
-  { id: 3, name: "Night Cream", price: "$95.00", img: "/templates/cosmetic/cosmetic-collection-marble.png", tag: "bestseller" }
+  { id: 1, name: "Gentle Cleanser", price: "$42.00", img: "/templates/OHMT010-cosmetic/cosmetic-2.png", tag: "essential" },
+  { id: 2, name: "Hydrating Mist", price: "$38.00", img: "/templates/OHMT010-cosmetic/cosmetic-botanical-dropper.png", tag: "new" },
+  { id: 3, name: "Night Cream", price: "$95.00", img: "/templates/OHMT010-cosmetic/cosmetic-collection-marble.png", tag: "bestseller" }
 ];
 
 const containerVariants = {
@@ -107,7 +107,7 @@ const localProducts = products.map((p) => {
     <section className="py-12 md:py-24 bg-[var(--color-bg)]">
       <div className="max-w-[1440px] mx-auto px-6 md:px-10">
         <div className="text-center mb-16">
-          <span className="text-[0.75rem] uppercase tracking-[0.15em] font-bold text-[#666] mb-4 block">{t.grid.badge}</span>
+          <span className="text-[0.75rem] uppercase tracking-[0.15em] font-bold text-[var(--color-text-muted)] mb-4 block">{t.grid.badge}</span>
           <h2 className="text-[1.7rem] md:text-[3rem] font-normal mt-2 leading-[1.1]">{t.grid.title}</h2>
         </div>
         
