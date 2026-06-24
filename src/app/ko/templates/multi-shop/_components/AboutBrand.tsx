@@ -21,7 +21,7 @@ export const AboutBrand = () => {
             transition={{ duration: 0.5, ease: easeOut }}
           >
             <img
-              src="/templates/OHMT017-multi-shop/about-brand.jpg"
+              src="/templates/multi-shop/about-brand.jpg"
               alt="브랜드 이미지"
               className="w-full h-full object-cover"
             />

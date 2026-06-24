@@ -9,7 +9,7 @@ export const Hero = () => {
   return (
     <section className="relative w-full h-[75vh] min-h-[480px] md:h-[calc(100vh-96px)] md:min-h-[552px] flex items-center justify-center overflow-hidden">
       <motion.img
-        src="/templates/OHMT017-multi-shop/hero-model.jpeg"
+        src="/templates/multi-shop/hero-model.jpeg"
         alt="2026 뉴 시즌 컬렉션"
         className="absolute inset-0 w-full h-full object-cover"
         initial={{ scale: 1.05 }}
