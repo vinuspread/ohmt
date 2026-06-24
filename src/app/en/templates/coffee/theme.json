@@ -1,0 +1,32 @@
+{
+  "slug": "coffee",
+  "name": "Coffee",
+  "name_ko": "커피",
+  "category": "retail",
+  "description": "Elegant coffee shop template built with Next.js. Showcase your menu, locations, and coffee story.",
+  "description_ko": "우아한 커피숍 템플릿. 메뉴, 매장 위치, 커피 스토리를 소개하세요.",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#FDFAF6",
+      "secondary": "#1A1209",
+      "accent": "#3B2314",
+      "text": { "main": "#1A1209", "muted": "#8A7A6E", "contrast": "#FFFFFF" },
+      "ui": { "border": "#E4DDD5", "hover": "#F2EDE6", "shadow": "none" }
+    },
+    "typography": {
+      "heading": { "font": "Playfair Display, serif", "style": "font-bold" },
+      "body": { "font": "Inter, sans-serif", "style": "font-normal leading-relaxed" }
+    },
+    "spacing": {
+      "page_pt": "80px",
+      "container": "1440px",
+      "gutter": "48px",
+      "card_gap": "24px"
+    },
+    "interaction": {
+      "button": "rounded-full",
+      "card_hover": "hover:shadow-md transition-shadow"
+    }
+  }
+}
