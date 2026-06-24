@@ -157,7 +157,10 @@ export async function POST(request: Request) {
             <p style="font-size:12px;color:#6b7280;margin:0 0 8px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em">문의 내용</p>
             <div style="background:#f9fafb;border-radius:8px;padding:16px;font-size:14px;color:#111827;line-height:1.6;white-space:pre-wrap">${message.value}</div>
           </div>
-          <p style="margin-top:32px;font-size:12px;color:#9ca3af">Oh My Template · contact@ohmytemplate.com</p>
+          <div style="margin-top:32px;padding-top:24px;border-top:1px solid #e5e7eb;display:flex;align-items:center;justify-content:space-between">
+            <p style="font-size:12px;color:#9ca3af;margin:0">Oh My Template · contact@ohmytemplate.com</p>
+            <a href="https://ohmytemplate.com/admin/orders" style="font-size:12px;font-weight:600;color:#111827;text-decoration:none;background:#f3f4f6;padding:6px 14px;border-radius:6px">관리자 문의 보기 →</a>
+          </div>
         </div>
       `,
     }).catch(() => {});
