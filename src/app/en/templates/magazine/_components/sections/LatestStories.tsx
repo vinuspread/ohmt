@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT012-magazine/-components/sections/LatestStories.tsx
+﻿// src/app/templates/magazine/-components/sections/LatestStories.tsx
 "use client";
 
 import React from "react";
@@ -10,14 +10,14 @@ const stories = [
     tag: "Photography",
     title: "Light & Shadow: Capturing the brutalist heart of London.",
     desc: "A photographic journey through the city's most controversial concrete monuments.",
-    img: '/templates/OHMT012-magazine/mag-8.jpg'
+    img: '/templates/magazine/mag-8.jpg'
   },
   {
     slug: "hidden-teahouses-kyoto",
     tag: "Travel",
     title: "The hidden teahouses of Kyoto's outer districts.",
     desc: "Finding tradition and tranquility away from the tourist crowds.",
-    img: '/templates/OHMT012-magazine/mag-9.jpg'
+    img: '/templates/magazine/mag-9.jpg'
   }
 ];
 

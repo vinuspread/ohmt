@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT012-magazine/-components/layout/Footer.tsx
+﻿// src/app/templates/magazine/-components/layout/Footer.tsx
 "use client";
 
 import React from "react";

@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT012-magazine/-components/sections/EditorsPicks.tsx
+﻿// src/app/templates/magazine/-components/sections/EditorsPicks.tsx
 "use client";
 
 import React from "react";
@@ -9,19 +9,19 @@ const picks = [
     slug: "sensory-language-ceramics",
     title: "The sensory language of ceramics.",
     desc: "Why handcrafted objects are becoming the ultimate luxury in a digital era.",
-    img: "/templates/OHMT012-magazine/mag-5.jpg"
+    img: "/templates/magazine/mag-5.jpg"
   },
   {
     slug: "urban-gardening-vertical-revolution",
     title: "Urban gardening: A vertical revolution.",
     desc: "Reclaiming concrete spaces to build sustainable food ecosystems in the city.",
-    img: "/templates/OHMT012-magazine/mag-6.jpg"
+    img: "/templates/magazine/mag-6.jpg"
   },
   {
     slug: "acoustics-of-silence",
     title: "The acoustics of silence.",
     desc: "Designing spaces that offer psychological refuge from the noise of modern life.",
-    img: "/templates/OHMT012-magazine/mag-7.jpg"
+    img: "/templates/magazine/mag-7.jpg"
   }
 ];
 

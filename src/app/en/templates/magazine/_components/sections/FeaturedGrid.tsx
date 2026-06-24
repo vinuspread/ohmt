@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT012-magazine/-components/sections/FeaturedGrid.tsx
+﻿// src/app/templates/magazine/-components/sections/FeaturedGrid.tsx
 "use client";
 
 import React from "react";
@@ -17,7 +17,7 @@ export const FeaturedGrid = ({ t }: { t: any }) => {
           <div className="group">
             <div className="overflow-hidden h-[520px] mb-8">
               <img
-                src="/templates/OHMT012-magazine/mag-2.jpg"
+                src="/templates/magazine/mag-2.jpg"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 alt="Main story"
               />
@@ -43,13 +43,13 @@ export const FeaturedGrid = ({ t }: { t: any }) => {
              {[
                {
                  slug: "hidden-galleries-berlin-east-side",
-                 img: "/templates/OHMT012-magazine/mag-3.jpg",
+                 img: "/templates/magazine/mag-3.jpg",
                  author: "Marta Weber",
                  index: 1
                },
                {
                  slug: "regenerative-agriculture-future",
-                 img: "/templates/OHMT012-magazine/mag-4.jpg",
+                 img: "/templates/magazine/mag-4.jpg",
                  author: "Sarah Chen",
                  index: 2
                }
