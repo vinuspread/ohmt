@@ -1,4 +1,4 @@
-// src/app/templates/magazine/-components/layout/Header.tsx
+﻿// src/app/templates/OHMT012-magazine/-components/layout/Header.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -32,7 +32,7 @@ export const Header = ({ light, t }: { light?: boolean; t: any }) => {
       )}>
         <div className="max-w-[var(--theme-container)] mx-auto px-6 md:px-[var(--theme-gutter)] flex items-center justify-between w-full">
           <Link
-            href={`/en/templates/magazine`}
+            href={`/en/templates/OHMT012-magazine-EN`}
             className={clsx(
               "font-[family-name:var(--theme-font-heading)] text-[1.6rem] tracking-[0.12em] uppercase transition-all duration-300",
               scrolled ? "text-[var(--theme-text)]" : "text-white"

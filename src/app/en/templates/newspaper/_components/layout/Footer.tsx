@@ -1,4 +1,4 @@
-// src/app/templates/newspaper/-components/layout/Footer.tsx
+﻿// src/app/templates/OHMT013-newspaper/-components/layout/Footer.tsx
 "use client";
 
 import React from "react";
@@ -9,7 +9,7 @@ export const Footer = () => {
     <footer className="bg-black text-white py-16">
       <div className="max-w-[1280px] mx-auto px-8">
         <div className="text-center mb-10 border-b border-white/10 pb-10">
-          <Link href="/en/templates/newspaper" className="font-[family-name:var(--theme-font-heading)] text-4xl font-black tracking-tighter text-white">
+          <Link href="/en/templates/OHMT013-newspaper-EN" className="font-[family-name:var(--theme-font-heading)] text-4xl font-black tracking-tighter text-white">
             VINUS TIMES
           </Link>
           <p className="font-sans text-[0.78rem] opacity-50 mt-2 uppercase tracking-widest">Independent Journalism Since 2026</p>

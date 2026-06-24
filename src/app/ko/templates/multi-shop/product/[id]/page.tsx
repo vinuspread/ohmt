@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { useState } from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -25,6 +25,14 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
   const discount = product.originalPrice
     ? Math.round((1 - product.price / product.originalPrice) * 100)
     : null;
+
+  const [openTab, setOpenTab] = useState<string | null>(null);
+  const toggleTab = (tabName: string) => {
+    setOpenTab(openTab === tabName ? null : tabName);
+  };
+
+  // Safe type access
+  const typedProduct = product as any;
 
   return (
     <React.Suspense fallback={null}>
@@ -110,6 +118,108 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                   <button className="w-full bg-[var(--color-primary)] text-white py-4 mt-10 text-sm uppercase tracking-[0.2em] font-semibold hover:bg-black/80 transition-[transform,colors] duration-160 ease-out active:scale-[0.97]">
                     장바구니 담기
                   </button>
+
+                  {/* 아코디언 탭 */}
+                  <div className="mt-12 border-t border-[var(--color-border)]">
+                    {/* 탭 1: 상세 설명 */}
+                    {typedProduct.longDescription && (
+                      <div className="border-b border-[var(--color-border)]">
+                        <button
+                          onClick={() => toggleTab('details')}
+                          className="w-full flex items-center justify-between py-4 text-left font-semibold text-sm uppercase tracking-wider text-[var(--color-text)] hover:opacity-75 transition-opacity"
+                        >
+                          <span>제품 상세 정보</span>
+                          <span className="text-lg">{openTab === 'details' ? '−' : '+'}</span>
+                        </button>
+                        {openTab === 'details' && (
+                          <div className="pb-6 text-sm leading-relaxed text-[var(--color-text-muted)] whitespace-pre-line">
+                            {typedProduct.longDescription}
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {/* 탭 2: 제품 스펙 */}
+                    {typedProduct.specs && typedProduct.specs.length > 0 && (
+                      <div className="border-b border-[var(--color-border)]">
+                        <button
+                          onClick={() => toggleTab('specs')}
+                          className="w-full flex items-center justify-between py-4 text-left font-semibold text-sm uppercase tracking-wider text-[var(--color-text)] hover:opacity-75 transition-opacity"
+                        >
+                          <span>세부 스펙</span>
+                          <span className="text-lg">{openTab === 'specs' ? '−' : '+'}</span>
+                        </button>
+                        {openTab === 'specs' && (
+                          <div className="pb-6">
+                            <table className="w-full text-sm">
+                              <tbody>
+                                {typedProduct.specs.map((spec: any, idx: number) => (
+                                  <tr key={idx} className="border-b border-gray-100 last:border-0">
+                                    <td className="py-2.5 font-medium text-[var(--color-text)] w-1/3">{spec.label}</td>
+                                    <td className="py-2.5 text-[var(--color-text-muted)] w-2/3">{spec.value}</td>
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {/* 탭 3: 고객 리뷰 */}
+                    {typedProduct.reviewsList && typedProduct.reviewsList.length > 0 && (
+                      <div className="border-b border-[var(--color-border)]">
+                        <button
+                          onClick={() => toggleTab('reviews')}
+                          className="w-full flex items-center justify-between py-4 text-left font-semibold text-sm uppercase tracking-wider text-[var(--color-text)] hover:opacity-75 transition-opacity"
+                        >
+                          <span>구매자 리뷰 ({typedProduct.reviewsList.length})</span>
+                          <span className="text-lg">{openTab === 'reviews' ? '−' : '+'}</span>
+                        </button>
+                        {openTab === 'reviews' && (
+                          <div className="pb-6 space-y-6">
+                            {typedProduct.reviewsList.map((review: any) => (
+                              <div key={review.id} className="border-b border-gray-50 pb-4 last:border-0 last:pb-0">
+                                <div className="flex items-center justify-between mb-1.5">
+                                  <span className="font-semibold text-sm text-[var(--color-text)]">{review.reviewer}</span>
+                                  <span className="text-xs text-[var(--color-text-muted)]">{review.date}</span>
+                                </div>
+                                <div className="flex gap-0.5 mb-2">
+                                  {[1, 2, 3, 4, 5].map((starIdx) => (
+                                    <Star
+                                      key={starIdx}
+                                      size={12}
+                                      fill={starIdx <= review.rating ? "var(--color-star)" : "none"}
+                                      color={starIdx <= review.rating ? "var(--color-star)" : "#D1D5DB"}
+                                      strokeWidth={1.5}
+                                    />
+                                  ))}
+                                </div>
+                                <p className="text-sm leading-relaxed text-[var(--color-text-muted)]">{review.text}</p>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {/* 탭 4: 배송 및 반품 */}
+                    <div className="border-b border-[var(--color-border)]">
+                      <button
+                        onClick={() => toggleTab('shipping')}
+                        className="w-full flex items-center justify-between py-4 text-left font-semibold text-sm uppercase tracking-wider text-[var(--color-text)] hover:opacity-75 transition-opacity"
+                      >
+                        <span>배송 및 반품 안내</span>
+                        <span className="text-lg">{openTab === 'shipping' ? '−' : '+'}</span>
+                      </button>
+                      {openTab === 'shipping' && (
+                        <div className="pb-6 text-sm leading-relaxed text-[var(--color-text-muted)]">
+                          <p className="mb-2">15만 원 이상 구매 시 전국 무료 배송이 적용됩니다. 영업일 기준 3~5일 이내에 배송되며, 수령 후 30일 이내에 반품 포털을 통해 간편하게 반품 접수가 가능합니다.</p>
+                          <p>미사용 제품에 한해 원본 패키지와 택이 훼손되지 않은 상태에서 정상 반품 처리가 진행됩니다.</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -121,7 +231,7 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                 <h2 className="text-2xl font-bold tracking-tight mb-10">추천 상품</h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                   {related.map((item) => (
-                    <Link key={item.id} href={`/ko/templates/multi-shop/product/${item.id}`} className="group block">
+                    <Link key={item.id} href={`/ko/templates/OHMT017-multi-shop-KO/product/${item.id}`} className="group block">
                       <div className="aspect-[3/4] bg-[var(--color-bg-secondary)] overflow-hidden">
                         <img
                           src={item.image}
@@ -145,4 +255,3 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
     </React.Suspense>
   );
 }
-

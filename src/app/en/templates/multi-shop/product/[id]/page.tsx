@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { useState } from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -25,6 +25,14 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
   const discount = product.originalPrice
     ? Math.round((1 - product.price / product.originalPrice) * 100)
     : null;
+
+  const [openTab, setOpenTab] = useState<string | null>(null);
+  const toggleTab = (tabName: string) => {
+    setOpenTab(openTab === tabName ? null : tabName);
+  };
+
+  // Safe type access
+  const typedProduct = product as any;
 
   return (
     <React.Suspense fallback={null}>
@@ -110,6 +118,108 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                   <button className="w-full bg-[var(--color-primary)] text-white py-4 mt-10 text-sm uppercase tracking-[0.2em] font-semibold hover:bg-black/80 transition-[transform,colors] duration-160 ease-out active:scale-[0.97]">
                     Add to Cart
                   </button>
+
+                  {/* Accordion Tabs */}
+                  <div className="mt-12 border-t border-[var(--color-border)]">
+                    {/* Tab 1: Details */}
+                    {typedProduct.longDescription && (
+                      <div className="border-b border-[var(--color-border)]">
+                        <button
+                          onClick={() => toggleTab('details')}
+                          className="w-full flex items-center justify-between py-4 text-left font-semibold text-sm uppercase tracking-wider text-[var(--color-text)] hover:opacity-75 transition-opacity"
+                        >
+                          <span>Product Details</span>
+                          <span className="text-lg">{openTab === 'details' ? '−' : '+'}</span>
+                        </button>
+                        {openTab === 'details' && (
+                          <div className="pb-6 text-sm leading-relaxed text-[var(--color-text-muted)] whitespace-pre-line">
+                            {typedProduct.longDescription}
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Tab 2: Specifications */}
+                    {typedProduct.specs && typedProduct.specs.length > 0 && (
+                      <div className="border-b border-[var(--color-border)]">
+                        <button
+                          onClick={() => toggleTab('specs')}
+                          className="w-full flex items-center justify-between py-4 text-left font-semibold text-sm uppercase tracking-wider text-[var(--color-text)] hover:opacity-75 transition-opacity"
+                        >
+                          <span>Specifications</span>
+                          <span className="text-lg">{openTab === 'specs' ? '−' : '+'}</span>
+                        </button>
+                        {openTab === 'specs' && (
+                          <div className="pb-6">
+                            <table className="w-full text-sm">
+                              <tbody>
+                                {typedProduct.specs.map((spec: any, idx: number) => (
+                                  <tr key={idx} className="border-b border-gray-100 last:border-0">
+                                    <td className="py-2.5 font-medium text-[var(--color-text)] w-1/3">{spec.label}</td>
+                                    <td className="py-2.5 text-[var(--color-text-muted)] w-2/3">{spec.value}</td>
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Tab 3: Reviews */}
+                    {typedProduct.reviewsList && typedProduct.reviewsList.length > 0 && (
+                      <div className="border-b border-[var(--color-border)]">
+                        <button
+                          onClick={() => toggleTab('reviews')}
+                          className="w-full flex items-center justify-between py-4 text-left font-semibold text-sm uppercase tracking-wider text-[var(--color-text)] hover:opacity-75 transition-opacity"
+                        >
+                          <span>Customer Reviews ({typedProduct.reviewsList.length})</span>
+                          <span className="text-lg">{openTab === 'reviews' ? '−' : '+'}</span>
+                        </button>
+                        {openTab === 'reviews' && (
+                          <div className="pb-6 space-y-6">
+                            {typedProduct.reviewsList.map((review: any) => (
+                              <div key={review.id} className="border-b border-gray-50 pb-4 last:border-0 last:pb-0">
+                                <div className="flex items-center justify-between mb-1.5">
+                                  <span className="font-semibold text-sm text-[var(--color-text)]">{review.reviewer}</span>
+                                  <span className="text-xs text-[var(--color-text-muted)]">{review.date}</span>
+                                </div>
+                                <div className="flex gap-0.5 mb-2">
+                                  {[1, 2, 3, 4, 5].map((starIdx) => (
+                                    <Star
+                                      key={starIdx}
+                                      size={12}
+                                      fill={starIdx <= review.rating ? "var(--color-star)" : "none"}
+                                      color={starIdx <= review.rating ? "var(--color-star)" : "#D1D5DB"}
+                                      strokeWidth={1.5}
+                                    />
+                                  ))}
+                                </div>
+                                <p className="text-sm leading-relaxed text-[var(--color-text-muted)]">{review.text}</p>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Tab 4: Shipping & Returns */}
+                    <div className="border-b border-[var(--color-border)]">
+                      <button
+                        onClick={() => toggleTab('shipping')}
+                        className="w-full flex items-center justify-between py-4 text-left font-semibold text-sm uppercase tracking-wider text-[var(--color-text)] hover:opacity-75 transition-opacity"
+                      >
+                        <span>Shipping & Returns</span>
+                        <span className="text-lg">{openTab === 'shipping' ? '−' : '+'}</span>
+                      </button>
+                      {openTab === 'shipping' && (
+                        <div className="pb-6 text-sm leading-relaxed text-[var(--color-text-muted)]">
+                          <p className="mb-2">Free standard shipping on all orders over $150 USD. Orders are processed within 24-48 hours and typically delivered within 3-5 business days.</p>
+                          <p>We accept returns of unused items in original packaging within 30 days of delivery. Return labels can be easily generated through our online return portal.</p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -121,7 +231,7 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                 <h2 className="text-2xl font-bold tracking-tight mb-10">You May Also Like</h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                   {related.map((item) => (
-                    <Link key={item.id} href={`/en/templates/multi-shop/product/${item.id}`} className="group block">
+                    <Link key={item.id} href={`/en/templates/OHMT017-multi-shop-EN/product/${item.id}`} className="group block">
                       <div className="aspect-[3/4] bg-[var(--color-bg-secondary)] overflow-hidden">
                         <img
                           src={item.image}

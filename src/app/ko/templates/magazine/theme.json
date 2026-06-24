@@ -1,11 +1,10 @@
 {
   "slug": "magazine",
-  "name": "Magazine",
-  "name_ko": "매거진",
+  "name": "Editorial Magazine",
+  "name_ko": "에디토리얼 매거진",
   "category": "media",
-  "description": "Editorial magazine and content publishing template",
-  "description_ko": "에디토리얼 매거진 및 콘텐츠 퍼블리싱 템플릿",
-  "tags": [],
+  "description": "Editorial culture and lifestyle",
+  "description_ko": "에디토리얼 문화와 라이프스타일",
   "mode": "light",
   "theme": {
     "palette": {

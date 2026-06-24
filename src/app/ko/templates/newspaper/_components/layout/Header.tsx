@@ -1,4 +1,4 @@
-// src/app/ko/templates/newspaper/-components/layout/Header.tsx
+﻿// src/app/ko/templates/OHMT013-newspaper-KO/-components/layout/Header.tsx
 "use client";
 
 import React from "react";
@@ -6,12 +6,12 @@ import Link from "next/link";
 
 export const Header = () => {
   const navItems = [
-    { name: "국제", href: "/ko/templates/newspaper/world" },
-    { name: "정치", href: "/ko/templates/newspaper/politics" },
-    { name: "경제", href: "/ko/templates/newspaper/economy" },
-    { name: "IT/과학", href: "/ko/templates/newspaper/tech" },
-    { name: "문화", href: "/ko/templates/newspaper/culture" },
-    { name: "스포츠", href: "/ko/templates/newspaper/sports" }
+    { name: "국제", href: "/ko/templates/OHMT013-newspaper-KO/world" },
+    { name: "정치", href: "/ko/templates/OHMT013-newspaper-KO/politics" },
+    { name: "경제", href: "/ko/templates/OHMT013-newspaper-KO/economy" },
+    { name: "IT/과학", href: "/ko/templates/OHMT013-newspaper-KO/tech" },
+    { name: "문화", href: "/ko/templates/OHMT013-newspaper-KO/culture" },
+    { name: "스포츠", href: "/ko/templates/OHMT013-newspaper-KO/sports" }
   ];
 
   return (
@@ -34,7 +34,7 @@ export const Header = () => {
           <div className="text-[0.75rem] text-[#555] font-medium font-sans">
             2026년 5월 27일 목요일 · 오늘 자 신문
           </div>
-          <Link href="/ko/templates/newspaper" className="font-[family-name:var(--theme-font-heading)] text-[clamp(2.5rem,5.5vw,4.5rem)] font-black tracking-tighter leading-none text-center flex-1">
+          <Link href="/ko/templates/OHMT013-newspaper-KO" className="font-[family-name:var(--theme-font-heading)] text-[clamp(2.5rem,5.5vw,4.5rem)] font-black tracking-tighter leading-none text-center flex-1">
             VINUSPREAD TIMES
           </Link>
           <div className="text-[0.75rem] text-[#555] font-medium font-sans text-right">
@@ -43,14 +43,14 @@ export const Header = () => {
         </div>
       </div>
 
-      <nav className="sticky top-0 z-[100] bg-white border-y border-[#DDD]">
+      <nav className="sticky top-0 z-[100] bg-white border-y border-[var(--color-border)]">
         <div className="max-w-[1280px] mx-auto px-8 h-11 flex items-center justify-between">
           <div className="flex h-full">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="px-4 h-full flex items-center text-[0.78rem] font-bold uppercase tracking-wider text-black border-r border-[#DDD] hover:bg-black hover:text-white transition-colors"
+                className="px-4 h-full flex items-center text-[0.78rem] font-bold uppercase tracking-wider text-black border-r border-[var(--color-border)] hover:bg-black hover:text-white transition-colors"
               >
                 {item.name}
               </Link>

@@ -33,7 +33,7 @@ function ProductPageContent({ params }: { params: Promise<{ id: string }> }) {
         <main className="antialiased pt-20">
           {/* Breadcrumb */}
           <div className="max-w-[1440px] mx-auto px-6 py-4 border-b border-black/10">
-            <Link href="/ko/templates/OHMT010-sneaker-kr/shop-all" className="inline-flex items-center gap-2 text-[0.78rem] text-black/50 hover:text-black transition-colors">
+            <Link href="/ko/templates/OHMT005-sneaker-KO/shop-all" className="inline-flex items-center gap-2 text-[0.78rem] text-black/50 hover:text-black transition-colors">
               <ArrowLeft size={14} /> 쇼핑으로 돌아가기
             </Link>
           </div>
@@ -212,7 +212,7 @@ function ProductPageContent({ params }: { params: Promise<{ id: string }> }) {
               <h2 className="text-[1.3rem] font-black uppercase tracking-[-0.03em] mb-8">추천 상품</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {related.map(p => (
-                  <Link key={p.id} href={`/ko/templates/OHMT010-sneaker-kr/product/${p.id}`} className="group block border border-black/10 hover:border-black transition-colors">
+                  <Link key={p.id} href={`/ko/templates/OHMT005-sneaker-KO/product/${p.id}`} className="group block border border-black/10 hover:border-black transition-colors">
                     <div className="aspect-square overflow-hidden bg-[var(--color-bg-secondary)]">
                       <img loading="lazy" src={p.img} alt={p.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                     </div>

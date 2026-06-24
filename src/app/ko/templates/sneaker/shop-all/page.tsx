@@ -131,7 +131,7 @@ function ShopAllPageContent() {
             ) : (
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {filtered.map(p => (
-                  <Link key={p.id} href={`/ko/templates/OHMT010-sneaker-kr/product/${p.id}`} className="group block border border-black/10 hover:border-black transition-colors duration-200">
+                  <Link key={p.id} href={`/ko/templates/OHMT005-sneaker-KO/product/${p.id}`} className="group block border border-black/10 hover:border-black transition-colors duration-200">
                     <div className="relative overflow-hidden aspect-square bg-[var(--color-bg-secondary)]">
                       <img loading="lazy" src={p.img} alt={p.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                       {p.badge && (

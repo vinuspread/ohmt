@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import Link from "next/link";
@@ -534,7 +534,7 @@ export default function ArticleDetailPage({ params }: { params: Promise<{ catego
           <Header />
           <div className="max-w-[1280px] mx-auto px-8 py-16 md:py-32 text-center">
             <h1 className="text-2xl font-bold mb-4">Article not found</h1>
-            <Link href={`/ko/templates/newspaper/${category}`} className="text-[var(--color-primary)] hover:underline">Back to {category}</Link>
+            <Link href={`/ko/templates/OHMT013-newspaper-KO/${category}`} className="text-[var(--color-primary)] hover:underline">Back to {category}</Link>
           </div>
           <Footer />
         </main>
@@ -557,7 +557,7 @@ export default function ArticleDetailPage({ params }: { params: Promise<{ catego
         <div className="max-w-[1280px] mx-auto px-6 md:px-8">
           {/* Back */}
           <div className="py-6 border-b border-[#EEE]">
-            <Link href={`/ko/templates/newspaper/${category}`} className="inline-flex items-center gap-2 text-[0.72rem] font-bold uppercase tracking-wider text-[#555] hover:text-[var(--color-primary)] transition-colors">
+            <Link href={`/ko/templates/OHMT013-newspaper-KO/${category}`} className="inline-flex items-center gap-2 text-[0.72rem] font-bold uppercase tracking-wider text-[#555] hover:text-[var(--color-primary)] transition-colors">
               <ArrowLeft size={13} /> Back to {article.category}
             </Link>
           </div>
@@ -576,7 +576,7 @@ export default function ArticleDetailPage({ params }: { params: Promise<{ catego
                 <h1 className="font-[family-name:var(--theme-font-heading)] text-[clamp(2rem,3.5vw,3rem)] font-bold leading-[1.5] mb-6 border-t-4 border-black pt-5 tracking-[-0.03em]">
                   {article.title}
                 </h1>
-                <div className="flex items-center gap-3 pb-6 border-b border-[#DDD]">
+                <div className="flex items-center gap-3 pb-6 border-b border-[var(--color-border)]">
                   <div className="w-8 h-8 rounded-full bg-[#1e1e1e] flex items-center justify-center text-white text-[0.65rem] font-bold shrink-0">
                     {article.author.split(' ').map(n => n[0]).join('')}
                   </div>
@@ -594,7 +594,7 @@ export default function ArticleDetailPage({ params }: { params: Promise<{ catego
 
               {/* Hero image */}
               <motion.figure initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="mb-10">
-                <img loading="lazy" src={`/templates/newspaper/news-${article.image}.jpg`} className="w-full h-[420px] md:h-[500px] object-cover" alt={article.title} />
+                <img loading="lazy" src={`/templates/OHMT013-newspaper/news-${article.image}.jpg`} className="w-full h-[420px] md:h-[500px] object-cover" alt={article.title} />
                 <figcaption className="mt-3 text-[0.72rem] text-[#999] font-sans">{article.excerpt}</figcaption>
               </motion.figure>
 
@@ -629,9 +629,9 @@ export default function ArticleDetailPage({ params }: { params: Promise<{ catego
                   </h3>
                   <div className="space-y-0">
                     {related.map(([s, a]) => (
-                      <Link key={s} href={`/ko/templates/newspaper/${category}/${s}`}
+                      <Link key={s} href={`/ko/templates/OHMT013-newspaper-KO/${category}/${s}`}
                         className="group flex gap-3 py-4 border-b border-[#EEE] hover:border-[var(--color-primary)] transition-colors">
-                        <img loading="lazy" src={`/templates/newspaper/news-${a.image}.jpg`} alt={a.title}
+                        <img loading="lazy" src={`/templates/OHMT013-newspaper/news-${a.image}.jpg`} alt={a.title}
                           className="w-16 h-16 object-cover shrink-0 group-hover:opacity-80 transition-opacity" />
                         <div>
                           <p className="font-[family-name:var(--theme-font-heading)] text-[0.85rem] font-bold leading-snug group-hover:text-[var(--color-primary)] transition-colors line-clamp-3 tracking-[-0.03em]">{a.title}</p>
@@ -650,7 +650,7 @@ export default function ArticleDetailPage({ params }: { params: Promise<{ catego
                   Get unlimited access to VINUS TIMES
                 </h4>
                 <p className="text-[0.78rem] opacity-80 mb-5 leading-relaxed">Breaking news, in-depth reporting, and expert analysis - delivered daily.</p>
-                <button className="w-full py-3 bg-white text-[var(--color-primary)] text-[0.72rem] font-bold uppercase tracking-wider hover:bg-[#f5f5f5] transition-colors">
+                <button className="w-full py-3 bg-white text-[var(--color-primary)] text-[0.72rem] font-bold uppercase tracking-wider hover:bg-[var(--color-bg-secondary)] transition-colors">
                   Subscribe Now
                 </button>
                 <p className="text-[0.65rem] opacity-60 mt-2 text-center">From $3.50 / week</p>
@@ -663,7 +663,7 @@ export default function ArticleDetailPage({ params }: { params: Promise<{ catego
                 </h3>
                 <div className="space-y-2">
                   {otherCategories.map(cat => (
-                    <Link key={cat} href={`/ko/templates/newspaper/${cat.toLowerCase()}`}
+                    <Link key={cat} href={`/ko/templates/OHMT013-newspaper-KO/${cat.toLowerCase()}`}
                       className="flex items-center justify-between py-3 border-b border-[#EEE] group hover:border-[var(--color-primary)] transition-colors">
                       <span className="font-[family-name:var(--theme-font-heading)] font-bold text-[0.9rem] group-hover:text-[var(--color-primary)] transition-colors tracking-[-0.03em]">{cat}</span>
                       <span className="text-[#CCC] group-hover:text-[var(--color-primary)] transition-colors">→</span>
@@ -673,12 +673,12 @@ export default function ArticleDetailPage({ params }: { params: Promise<{ catego
               </div>
 
               {/* Newsletter */}
-              <div className="border border-[#DDD] p-6">
+              <div className="border border-[var(--color-border)] p-6">
                 <p className="text-[0.62rem] font-bold uppercase tracking-[0.2em] text-[#999] mb-2">Newsletter</p>
                 <h4 className="font-[family-name:var(--theme-font-heading)] font-bold text-[1.05rem] mb-3 tracking-[-0.03em]">The Daily Briefing</h4>
                 <p className="text-[0.78rem] text-[#555] mb-4 font-sans leading-relaxed">Top stories, curated every morning.</p>
                 <input type="email" placeholder="Your email address"
-                  className="w-full border border-[#DDD] px-3 py-2.5 text-[0.8rem] font-sans outline-none focus:border-black transition-colors mb-2" />
+                  className="w-full border border-[var(--color-border)] px-3 py-2.5 text-[0.8rem] font-sans outline-none focus:border-black transition-colors mb-2" />
                 <button className="w-full py-2.5 bg-black text-white text-[0.7rem] font-bold uppercase tracking-wider hover:bg-[var(--color-primary)] transition-colors">
                   Subscribe
                 </button>

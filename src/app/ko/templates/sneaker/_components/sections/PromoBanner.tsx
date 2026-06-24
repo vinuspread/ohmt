@@ -27,7 +27,7 @@ export const PromoBanner = () => {
             <div className="w-[1px] h-4 bg-white/20 hidden sm:block" />
             <p className="text-[0.85rem] opacity-75">전 제품 20% 할인 · 일요일 자정까지</p>
           </div>
-          <Link href="/ko/templates/OHMT010-sneaker-kr/shop-all"
+          <Link href="/ko/templates/OHMT005-sneaker-KO/shop-all"
             className="inline-flex items-center gap-3 bg-white text-black text-[0.82rem] font-bold uppercase tracking-[0.08em] px-8 py-4 hover:bg-white/90 transition-colors">
             할인 쇼핑하기 <ArrowRight size={16} />
           </Link>

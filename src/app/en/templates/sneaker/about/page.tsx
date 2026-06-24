@@ -52,7 +52,7 @@ function AboutPageContent() {
               <p className="text-[0.9rem] text-black/60 leading-[1.4] mb-8">
                 In 2019 he opened a small workshop in Lisbon, partnering directly with tanneries that share our commitment to responsible sourcing. Today Vinus ships to 40+ countries, but the same care goes into every pair.
               </p>
-              <Link href="/en/templates/OHMT009-sneaker-en/shop-all" className="inline-flex items-center gap-3 bg-black text-white text-[0.82rem] font-bold uppercase tracking-[0.08em] px-8 py-4 hover:bg-black/80 transition-colors">
+              <Link href="/en/templates/OHMT005-sneaker-EN/shop-all" className="inline-flex items-center gap-3 bg-black text-white text-[0.82rem] font-bold uppercase tracking-[0.08em] px-8 py-4 hover:bg-black/80 transition-colors">
                 Shop the Collection <ArrowRight size={16} />
               </Link>
             </div>

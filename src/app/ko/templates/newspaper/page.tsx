@@ -1,4 +1,4 @@
-// src/app/ko/templates/newspaper/page.tsx
+﻿// src/app/ko/templates/OHMT013-newspaper-KO/page.tsx
 "use client";
 
 import { Suspense } from "react";
@@ -33,8 +33,8 @@ function NewspaperTemplateContent() {
               </div>
               <div className="grid md:grid-cols-2 gap-8">
                 {[1, 2, 3, 4].map(n => (
-                  <div key={n} className="flex gap-4 pb-6 border-b border-[#DDD] last:border-0 md:[&:nth-last-child(-n+2)]:border-0">
-                    <img loading="lazy" src={`/templates/newspaper/news-${n}.jpg`} className="w-24 h-20 object-cover" alt="Latest" />
+                  <div key={n} className="flex gap-4 pb-6 border-b border-[var(--color-border)] last:border-0 md:[&:nth-last-child(-n+2)]:border-0">
+                    <img loading="lazy" src={`/templates/OHMT013-newspaper/news-${n}.jpg`} className="w-24 h-20 object-cover" alt="Latest" />
                     <div>
                       <h4 className="font-[family-name:var(--theme-font-heading)] text-[0.95rem] font-bold leading-tight mb-1 tracking-[-0.03em]">
                         <Link href="#" className="hover:text-[var(--color-primary)]">신규 무역 협정이 국내 제조업 생태계에 미치는 파장.</Link>
@@ -56,7 +56,7 @@ function NewspaperTemplateContent() {
                   { author: "마커스 손", title: "오픈소스 인공지능(AI)이 지닌 시대적 도덕적 책무." },
                   { author: "엘레나 밴스", title: "클래식 음악은 종말을 맞이하는 것이 아니라, 유튜브로 이동하고 있을 뿐이다." }
                 ].map((item, i) => (
-                  <div key={i} className="pb-6 border-b border-[#DDD] last:border-0">
+                  <div key={i} className="pb-6 border-b border-[var(--color-border)] last:border-0">
                     <div className="font-sans text-[0.72rem] font-bold uppercase tracking-wider text-[#555] mb-1">{item.author}</div>
                     <h4 className="font-[family-name:var(--theme-font-heading)] font-serif text-base leading-snug tracking-[-0.03em]">
                       <Link href="#" className="hover:text-[var(--color-primary)]">"{item.title}"</Link>

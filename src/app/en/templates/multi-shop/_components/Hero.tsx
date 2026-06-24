@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
@@ -9,7 +9,7 @@ export const Hero = () => {
   return (
     <section className="relative w-full h-[75vh] min-h-[480px] md:h-[calc(100vh-96px)] md:min-h-[552px] flex items-center justify-center overflow-hidden">
       <motion.img
-        src="/templates/multi-shop/hero-model.jpeg"
+        src="/templates/OHMT017-multi-shop/hero-model.jpeg"
         alt="New Season Collection"
         className="absolute inset-0 w-full h-full object-cover"
         initial={{ scale: 1.05 }}
@@ -52,13 +52,13 @@ export const Hero = () => {
           transition={{ duration: 0.4, delay: 0.6, ease: easeOut }}
         >
           <Link
-            href="/en/templates/multi-shop/shop"
+            href="/en/templates/OHMT017-multi-shop-EN/shop"
             className="inline-flex items-center justify-center w-[180px] bg-white text-[var(--color-primary)] py-3.5 border border-transparent text-xs uppercase tracking-[0.2em] font-semibold hover:bg-white/90 transition-[transform,colors] duration-160 ease-out active:scale-[0.97]"
           >
             Shop Now
           </Link>
           <Link
-            href="/en/templates/multi-shop/shop"
+            href="/en/templates/OHMT017-multi-shop-EN/shop"
             className="inline-flex items-center justify-center w-[180px] border border-white/50 text-white py-3.5 text-xs uppercase tracking-[0.2em] hover:border-white hover:bg-white/10 transition-[transform,colors] duration-160 ease-out active:scale-[0.97]"
           >
             New Arrivals

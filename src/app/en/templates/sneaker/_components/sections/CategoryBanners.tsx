@@ -182,13 +182,13 @@ const categories = [
       <div className="max-w-[1440px] mx-auto px-6">
         <div className="flex items-center justify-between mb-10">
           <h2 className="text-[1.5rem] md:text-[1.8rem] font-black tracking-[-0.03em] uppercase">{t.categoryBanners.title}</h2>
-          <Link href="/en/templates/OHMT009-sneaker-en/shop-all" className="text-[0.85rem] font-bold uppercase tracking-[0.15em] text-black/50 hover:text-black transition-colors border-b-2 border-black/20 pb-0.5">
+          <Link href="/en/templates/OHMT005-sneaker-EN/shop-all" className="text-[0.85rem] font-bold uppercase tracking-[0.15em] text-black/50 hover:text-black transition-colors border-b-2 border-black/20 pb-0.5">
             {t.categoryBanners.viewAll}
           </Link>
         </div>
         <div className="flex overflow-x-auto gap-4 pb-4 md:grid md:grid-cols-8 md:gap-5 md:pb-0 scrollbar-none [scrollbar-width:none]">
           {categories.map((cat) => (
-            <Link key={cat.label} href="/en/templates/OHMT009-sneaker-en/shop-all" className="group flex flex-col items-center shrink-0 w-[95px] md:w-auto">
+            <Link key={cat.label} href="/en/templates/OHMT005-sneaker-EN/shop-all" className="group flex flex-col items-center shrink-0 w-[95px] md:w-auto">
               <div className="w-full aspect-square overflow-hidden bg-[var(--color-bg-secondary)] group-hover:bg-[var(--color-bg-secondary)] transition-all duration-300 mb-3 relative flex items-center justify-center p-0 rounded-none">
                 <img
                   src={cat.img}

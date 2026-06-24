@@ -29,7 +29,7 @@ function CartPageContent() {
         <main className="antialiased pt-20 min-h-screen">
           <div className="max-w-[1440px] mx-auto px-6 py-10">
             <div className="flex items-center gap-4 mb-10">
-              <Link href="/ko/templates/OHMT010-sneaker-kr/shop-all" className="inline-flex items-center gap-2 text-[0.78rem] text-black/50 hover:text-black transition-colors">
+              <Link href="/ko/templates/OHMT005-sneaker-KO/shop-all" className="inline-flex items-center gap-2 text-[0.78rem] text-black/50 hover:text-black transition-colors">
                 <ArrowLeft size={14} /> 쇼핑 계속하기
               </Link>
             </div>
@@ -38,7 +38,7 @@ function CartPageContent() {
             {items.length === 0 ? (
               <div className="text-center py-12 md:py-24">
                 <p className="text-[1.1rem] text-black/40 mb-6">장바구니가 비어 있습니다</p>
-                <Link href="/ko/templates/OHMT010-sneaker-kr/shop-all" className="inline-flex items-center gap-2 bg-black text-white text-[0.82rem] font-bold uppercase tracking-[0.08em] px-8 py-4">
+                <Link href="/ko/templates/OHMT005-sneaker-KO/shop-all" className="inline-flex items-center gap-2 bg-black text-white text-[0.82rem] font-bold uppercase tracking-[0.08em] px-8 py-4">
                   쇼핑하기 <ArrowRight size={16} />
                 </Link>
               </div>

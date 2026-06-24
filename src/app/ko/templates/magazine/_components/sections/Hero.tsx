@@ -1,4 +1,4 @@
-// src/app/templates/magazine/-components/sections/Hero.tsx
+﻿// src/app/templates/OHMT012-magazine/-components/sections/Hero.tsx
 "use client";
 
 import React from "react";
@@ -17,7 +17,7 @@ export const Hero = () => {
     <section className="relative h-screen min-h-[700px] overflow-hidden">
       <img
         className="w-full h-full object-cover"
-        src="/templates/magazine/mag-hero.jpg"
+        src="/templates/OHMT012-magazine/mag-hero.jpg"
         alt="매거진 히어로"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-black/85" />
@@ -39,7 +39,7 @@ export const Hero = () => {
             글 · <strong className="text-white/85 antialiased">Julian Vance</strong> · 사진 · <strong className="text-white/85 antialiased">Elena Rossi</strong>
           </div>
           <Link
-            href="/ko/templates/magazine/article/slow-living-digital-world"
+            href="/ko/templates/OHMT012-magazine-KO/article/slow-living-digital-world"
             className="text-[0.75rem] font-bold uppercase tracking-tight text-white border-b border-white/50 pb-0.5 hover:border-white transition-colors duration-300 w-fit antialiased"
           >
                         최신 에디션 읽기
@@ -76,7 +76,7 @@ export const Hero = () => {
 
 
        {/* 하단 에디션 배너 */}
-       <div className="absolute bottom-0 left-0 right-0 bg-[#6B1F2D]">
+       <div className="absolute bottom-0 left-0 right-0 bg-[var(--color-banner-bg)]">
          <div className="max-w-[calc(var(--theme-container)+5rem)] mx-auto px-6 md:px-[4rem] py-6 md:py-0 h-[120px] flex flex-col md:flex-row md:items-center justify-between gap-4">
            <div className="flex items-center gap-6 md:gap-10">
              <div>
@@ -90,8 +90,8 @@ export const Hero = () => {
            </div>
 
           <Link
-            href="/ko/templates/magazine"
-            className="shrink-0 self-start md:self-auto text-[0.72rem] font-bold uppercase tracking-tight text-white border border-white/40 px-6 py-2.5 hover:bg-white hover:text-[#6B1F2D] transition-colors duration-300 antialiased"
+            href="/ko/templates/OHMT012-magazine-KO"
+            className="shrink-0 self-start md:self-auto text-[0.72rem] font-bold uppercase tracking-tight text-white border border-white/40 px-6 py-2.5 hover:bg-white hover:text-[var(--color-banner-bg)] transition-colors duration-300 antialiased"
           >
                         소장 판본 구매 →
           </Link>

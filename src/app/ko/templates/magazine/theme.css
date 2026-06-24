@@ -4,14 +4,18 @@
   --color-primary: #8C6D3F;
   --color-secondary: #0D0D0D;
   --color-bg: #FAFAF8;
+  --color-bg-secondary: #F2F2EE;
   --color-text: #0D0D0D;
   --color-accent: #8C6D3F;
   --color-muted: #6B6B6B;
+  --color-text-muted: #6B6B6B;
+  --color-text-contrast: #1C1C1A;
   --color-border: #E2DDD8;
+  --color-banner-bg: #6B1F2D;
 
   /* Typography */
   --font-heading: 'DM Serif Display', 'Noto Serif KR', Georgia, serif;
-  --font-body: 'Inter', 'Noto Sans KR', sans-serif;
+  --font-body: 'Inter', Pretendard, sans-serif;
   --font-size-heading-lg: 3.5vw;
   --font-size-heading-md: 2rem;
   --font-size-heading-sm: 1.5rem;

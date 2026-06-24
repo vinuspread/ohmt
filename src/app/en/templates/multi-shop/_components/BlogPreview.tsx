@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
@@ -16,7 +16,7 @@ export const BlogPreview = () => {
         <div className="mb-10 flex items-end justify-between">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Latest Insights</h2>
           <Link
-            href="/en/templates/multi-shop/blog"
+            href="/en/templates/OHMT017-multi-shop-EN/blog"
             className="hidden md:inline-block text-xs uppercase tracking-[0.2em] text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors duration-200 border-b border-[var(--color-text-muted)] pb-0.5"
           >
             View All
@@ -33,7 +33,7 @@ export const BlogPreview = () => {
               transition={{ duration: 0.35, delay: index * 0.05, ease: easeOut }}
             >
               <Link
-                href={`/en/templates/multi-shop/blog/${post.slug}`}
+                href={`/en/templates/OHMT017-multi-shop-EN/blog/${post.slug}`}
                 className="group block active:scale-[0.98] transition-transform duration-160 ease-out"
               >
                 <div className="aspect-[16/10] overflow-hidden bg-[var(--color-bg-secondary)]">

@@ -1,4 +1,4 @@
-// src/app/templates/magazine/-components/sections/LatestStories.tsx
+﻿// src/app/templates/OHMT012-magazine/-components/sections/LatestStories.tsx
 "use client";
 
 import React from "react";
@@ -10,14 +10,14 @@ const stories = [
     tag: "Photography",
     title: "Light & Shadow: Capturing the brutalist heart of London.",
     desc: "A photographic journey through the city's most controversial concrete monuments.",
-    img: '/templates/magazine/mag-8.jpg'
+    img: '/templates/OHMT012-magazine/mag-8.jpg'
   },
   {
     slug: "hidden-teahouses-kyoto",
     tag: "Travel",
     title: "The hidden teahouses of Kyoto's outer districts.",
     desc: "Finding tradition and tranquility away from the tourist crowds.",
-    img: '/templates/magazine/mag-9.jpg'
+    img: '/templates/OHMT012-magazine/mag-9.jpg'
   }
 ];
 
@@ -38,7 +38,7 @@ export const LatestStories = ({ t }: { t: any }) => {
                 <div>
                   <span className="text-[0.875rem] font-bold uppercase tracking-[0.18em] text-[var(--theme-accent)] mb-2 block">{t.latestStories.stories[i].tag}</span>
                   <h3 className="font-[family-name:var(--theme-font-heading)] text-[1.15rem] font-normal leading-snug mb-2">
-                    <Link href={`/en/templates/magazine/article/${story.slug}`} className="hover:text-[var(--theme-accent)] transition-colors">{t.latestStories.stories[i].title}</Link>
+                    <Link href={`/en/templates/OHMT012-magazine-EN/article/${story.slug}`} className="hover:text-[var(--theme-accent)] transition-colors">{t.latestStories.stories[i].title}</Link>
                   </h3>
                   <p className="text-[0.875rem] text-[var(--theme-text-muted)] leading-[1.4] font-normal">
                     {t.latestStories.stories[i].desc}
@@ -63,7 +63,7 @@ export const LatestStories = ({ t }: { t: any }) => {
                     0{n}
                   </span>
                   <h5 className="font-[family-name:var(--theme-font-heading)] text-[1rem] leading-snug self-center">
-                    <Link href={`/en/templates/magazine/article/${slug}`} className="hover:text-[var(--theme-accent)] transition-colors">
+                    <Link href={`/en/templates/OHMT012-magazine-EN/article/${slug}`} className="hover:text-[var(--theme-accent)] transition-colors">
                       {t.latestStories.mostReadItems[i]}
                     </Link>
                   </h5>

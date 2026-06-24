@@ -1,6 +1,7 @@
 /* multi-shop Design Tokens — Zinzira */
 :root {
   --color-primary: #0A0A0A;
+  --color-secondary: #0A0A0A;
   --color-accent: #C9A97A;
   --color-sale: #DC2626;
   --color-star: #F59E0B;
@@ -9,10 +10,12 @@
   --color-bg-dark: #0A0A0A;
   --color-text: #0A0A0A;
   --color-text-muted: #6B6B6B;
+  --color-text-contrast: #1C1C1A;
   --color-border: #E5E5E5;
+  --color-frame: #FCDF00;
 
-  --font-heading: 'Jost', 'Noto Sans KR', sans-serif;
-  --font-body: 'Inter', 'Noto Sans KR', sans-serif;
+  --font-heading: 'Jost', Pretendard, sans-serif;
+  --font-body: 'Inter', Pretendard, sans-serif;
 }
 
 body {
