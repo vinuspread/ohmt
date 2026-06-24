@@ -53,6 +53,18 @@ export function UploadForm() {
       return;
     }
 
+    // 파일명에서 언어 패턴 감지 (예: -ko.zip, _ko.zip, ko.zip -> KO / -en.zip, _en.zip, en.zip -> EN)
+    const fileNameLower = nextFile.name.toLowerCase();
+    if (fileNameLower.endsWith("-ko.zip") || fileNameLower.endsWith("_ko.zip") || fileNameLower.endsWith("ko.zip")) {
+      setLang("ko");
+    } else if (fileNameLower.endsWith("-en.zip") || fileNameLower.endsWith("_en.zip") || fileNameLower.endsWith("en.zip")) {
+      setLang("en");
+    } else if (fileNameLower.includes("-ko") || fileNameLower.includes("_ko")) {
+      setLang("ko");
+    } else if (fileNameLower.includes("-en") || fileNameLower.includes("_en")) {
+      setLang("en");
+    }
+
     setFile(nextFile);
   };
 

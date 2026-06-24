@@ -26,7 +26,21 @@ export async function POST(request: NextRequest) {
   const { r2Key, lang: langParam, overwrite: bodyOverwrite = false, originalFilename = "" } = body;
   const overwrite = bodyOverwrite === true || request.nextUrl.searchParams.get("overwrite") === "1";
   const templateKey = extractTemplateKey(originalFilename);
-  const lang: UploadLanguage = langParam === "ko" ? "ko" : "en";
+
+  // 파일명에서 언어 패턴 감지 (예: -ko.zip, _ko.zip, ko.zip -> KO / -en.zip, _en.zip, en.zip -> EN)
+  let detectedLang: UploadLanguage | undefined = undefined;
+  const fileNameLower = originalFilename.toLowerCase();
+  if (fileNameLower.endsWith("-ko.zip") || fileNameLower.endsWith("_ko.zip") || fileNameLower.endsWith("ko.zip")) {
+    detectedLang = "ko";
+  } else if (fileNameLower.endsWith("-en.zip") || fileNameLower.endsWith("_en.zip") || fileNameLower.endsWith("en.zip")) {
+    detectedLang = "en";
+  } else if (fileNameLower.includes("-ko") || fileNameLower.includes("_ko")) {
+    detectedLang = "ko";
+  } else if (fileNameLower.includes("-en") || fileNameLower.includes("_en")) {
+    detectedLang = "en";
+  }
+
+  const lang: UploadLanguage = detectedLang ?? (langParam === "ko" ? "ko" : "en");
 
   if (!r2Key || !r2Key.startsWith("uploads/tmp/")) {
     return NextResponse.json({ error: "유효하지 않은 파일 키입니다." }, { status: 400 });
