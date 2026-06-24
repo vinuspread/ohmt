@@ -9,7 +9,7 @@ export const Hero = () => {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
       <motion.img
-        src="/templates/OHMT018-burger/hero-burger.png"
+        src="/templates/burger/hero-burger.png"
         alt="수제 스매시 버거, 치즈가 녹아내린 브리오슈 번"
         className="absolute inset-0 w-full h-full object-cover"
         initial={{ scale: 1.05 }}

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React from "react";
 import { Header } from "../_components/Header";
 import { Footer } from "../_components/Footer";
@@ -13,7 +13,7 @@ function AboutPageContent() {
       <main className="antialiased min-h-screen bg-white text-[var(--color-text)]">
         <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
           <img
-            src="/templates/OHMT018-burger/story-kitchen.png"
+            src="/templates/burger/story-kitchen.png"
             alt="주방"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -47,7 +47,7 @@ function AboutPageContent() {
               </div>
               <div className="aspect-[4/3] overflow-hidden">
                 <img
-                  src="/templates/OHMT018-burger/story-ingredients.png"
+                  src="/templates/burger/story-ingredients.png"
                   alt="신선한 식재료"
                   className="w-full h-full object-cover"
                 />
