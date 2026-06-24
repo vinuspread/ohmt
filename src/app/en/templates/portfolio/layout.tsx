@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Portfolio - Oh My Template",
     description: "Personal branding and creative portfolio",
-    url: "https://ohmytemplate.com/en/templates/OHMT013-portfolio-en",
+    url: "https://ohmytemplate.com/en/templates/OHMT007-portfolio-EN",
     siteName: "Oh My Template",
     images: [{ url: "/templates/OHMT007-portfolio/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT013-portfolio-en",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT014-portfolio-kr" },
+    canonical: "https://ohmytemplate.com/en/templates/OHMT007-portfolio-EN",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT007-portfolio-KO" },
   },
 };
 

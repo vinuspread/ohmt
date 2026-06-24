@@ -72,7 +72,7 @@ function ProjectPageContent({ params }: { params: Promise<{ id: string }> }) {
               </div>
 
               <div className="mt-8">
-                <Link href="/en/templates/OHMT013-portfolio-en/contact"
+                <Link href="/en/templates/OHMT007-portfolio-EN/contact"
                   className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-widest text-[var(--color-text)] border-b border-[var(--color-primary)] pb-0.5 hover:opacity-50 transition-opacity">
                   Start a Similar Project <ArrowUpRight size={11} />
                 </Link>
@@ -118,7 +118,7 @@ function ProjectPageContent({ params }: { params: Promise<{ id: string }> }) {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08 }}
                 >
-                  <Link href={`/en/templates/OHMT013-portfolio-en/project/${p.id}`} className="group block">
+                  <Link href={`/en/templates/OHMT007-portfolio-EN/project/${p.id}`} className="group block">
                     <div className="relative aspect-[4/3] overflow-hidden bg-[var(--color-bg-secondary)] mb-4">
                       <img loading="lazy" src={p.thumbnail} alt={p.title}
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />

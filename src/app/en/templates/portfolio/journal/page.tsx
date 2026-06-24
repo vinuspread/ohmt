@@ -34,7 +34,7 @@ function JournalPageContent() {
         {/* Featured (first post) */}
         <section className="py-10 md:py-20 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto px-6">
-            <Link href="/en/templates/OHMT013-portfolio-en/journal" className="group grid md:grid-cols-2 gap-12 items-center">
+            <Link href="/en/templates/OHMT007-portfolio-EN/journal" className="group grid md:grid-cols-2 gap-12 items-center">
               <div className="aspect-[4/3] overflow-hidden bg-[var(--color-bg-secondary)]">
                 <img loading="lazy" src={allPosts[0].img} alt={allPosts[0].title}
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-105" />
@@ -66,7 +66,7 @@ function JournalPageContent() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.06 }}
               >
-                <Link href="/en/templates/OHMT013-portfolio-en/journal"
+                <Link href="/en/templates/OHMT007-portfolio-EN/journal"
                   className="group grid md:grid-cols-12 py-10 border-b border-[var(--color-border)] items-center hover:bg-[var(--color-bg-secondary)] transition-colors px-2 gap-6">
                   <div className="md:col-span-2 text-[13px] font-bold tracking-widest text-[var(--color-text-muted)] uppercase">{post.date}</div>
                   <div className="md:col-span-7">

@@ -46,7 +46,7 @@ function AboutPageContent() {
               <p className="text-[1rem] text-[var(--color-text-muted)] leading-[1.4]">
                 We believe great design is never decoration. It's a strategic act that changes how people feel about a product before they've used it.
               </p>
-              <Link href="/en/templates/OHMT013-portfolio-en/contact" className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-widest text-[var(--color-text)] border-b border-[var(--color-accent)]/30 pb-0.5 hover:border-[var(--color-accent)] transition-colors">
+              <Link href="/en/templates/OHMT007-portfolio-EN/contact" className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-widest text-[var(--color-text)] border-b border-[var(--color-accent)]/30 pb-0.5 hover:border-[var(--color-accent)] transition-colors">
                 Work With Us <ArrowUpRight size={12} />
               </Link>
             </div>

@@ -419,7 +419,7 @@ const heroRef = useRef<HTMLElement>(null);
                     exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.4 }}
                   >
-                    <Link href={`/en/templates/OHMT013-portfolio-en/project/${p.id}`} className="group block overflow-hidden bg-[var(--color-bg-secondary)] relative border border-black/5 hover:border-black/15 transition-all">
+                    <Link href={`/en/templates/OHMT007-portfolio-EN/project/${p.id}`} className="group block overflow-hidden bg-[var(--color-bg-secondary)] relative border border-black/5 hover:border-black/15 transition-all">
                       <div className="aspect-[4/5] overflow-hidden">
                         <img loading="lazy" src={p.thumbnail} alt={p.title}
                           className="w-full h-full object-cover grayscale brightness-90 contrast-105 group-hover:grayscale-0 group-hover:scale-105 duration-1000 transition-all ease-out" />
@@ -444,7 +444,7 @@ const heroRef = useRef<HTMLElement>(null);
           <div className="max-w-[1440px] mx-auto">
             <div className="flex items-end justify-between mb-10">
               <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none">Services.</h2>
-              <Link href="/en/templates/OHMT013-portfolio-en/contact" className="text-[0.82rem] font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors flex items-center gap-2">
+              <Link href="/en/templates/OHMT007-portfolio-EN/contact" className="text-[0.82rem] font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors flex items-center gap-2">
                 Get in touch <span className="text-lg leading-none">+</span>
               </Link>
             </div>
@@ -522,7 +522,7 @@ const heroRef = useRef<HTMLElement>(null);
               <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none">
                 Creative<br />dispatch
               </h2>
-              <Link href="/en/templates/OHMT013-portfolio-en/journal" className="text-[0.82rem] font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors flex items-center gap-2">
+              <Link href="/en/templates/OHMT007-portfolio-EN/journal" className="text-[0.82rem] font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors flex items-center gap-2">
                 Let's Talk <span className="text-lg leading-none">+</span>
               </Link>
             </div>
@@ -536,7 +536,7 @@ const heroRef = useRef<HTMLElement>(null);
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
                 >
-                  <Link href="/en/templates/OHMT013-portfolio-en/journal" className="group block">
+                  <Link href="/en/templates/OHMT007-portfolio-EN/journal" className="group block">
                     <div className="overflow-hidden aspect-[4/3] bg-[var(--color-bg-secondary)] mb-4">
                       <img loading="lazy" src={post.img} alt={post.title}
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
