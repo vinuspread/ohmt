@@ -325,7 +325,7 @@ function TemplateRow({
       </div>
       <span className="font-mono text-xs uppercase text-zinc-500">{template.lang}</span>
       <span className="truncate">{template.category}</span>
-      <PricingBadges packages={template.applicable_packages ?? []} consultation={template.requires_consultation ?? false} />
+      <PricingBadges consultation={template.requires_consultation ?? false} />
       <StatusPill published={template.status === "published"} />
       <div>{template.is_featured ? <CheckIcon aria-label="대표 템플릿" className="w-4 h-4 text-emerald-500" /> : <span className="text-zinc-300">-</span>}</div>
       <div className="flex items-center gap-1">
@@ -357,33 +357,11 @@ function TemplateThumbnail({ template, onPreview }: { template: Template; onPrev
   );
 }
 
-const PKG_LABEL: Record<string, string> = {
-  starter: "S",
-  professional: "P",
-  premium: "Pr",
-};
-
-function pkgLabel(slug: string): string {
-  const base = slug.split("-")[0].toLowerCase();
-  return PKG_LABEL[base] ?? slug.slice(0, 2).toUpperCase();
-}
-
-function PricingBadges({ packages, consultation }: { packages: string[]; consultation: boolean }) {
+function PricingBadges({ consultation }: { consultation: boolean }) {
   if (consultation) {
-    return <span className="inline-flex items-center rounded px-1.5 py-0.5 text-[10px] font-medium bg-amber-50 text-amber-700">협의</span>;
+    return <span className="inline-flex items-center rounded px-1.5 py-0.5 text-[10px] font-medium bg-amber-50 text-amber-700">협의필요</span>;
   }
-  if (packages.length === 0) {
-    return <span className="text-zinc-300 text-xs">-</span>;
-  }
-  return (
-    <div className="flex flex-wrap gap-1">
-      {packages.map((pkg) => (
-        <span key={pkg} className="inline-flex items-center rounded px-1.5 py-0.5 text-[10px] font-medium bg-zinc-100 text-zinc-600">
-          {pkgLabel(pkg)}
-        </span>
-      ))}
-    </div>
-  );
+  return <span className="inline-flex items-center rounded px-1.5 py-0.5 text-[10px] font-medium bg-zinc-100 text-zinc-500">전체 패키지</span>;
 }
 
 function StatusPill({ published }: { published: boolean }) {
