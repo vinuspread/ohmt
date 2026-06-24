@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import { careers } from "@/app/en/templates/OHMT023-game-EN/data/data";
+import { careers } from "@/app/en/templates/game/data/data";
 import Button from "./ui/Button";
 import { ArrowRight } from "lucide-react";
 
@@ -31,7 +31,7 @@ export default function CareersBanner() {
             across engineering, design, art, and production.
           </p>
           <div className="mt-10">
-            <Link href="/en/templates/OHMT023-game-EN/careers">
+            <Link href="/en/templates/game/careers">
               <Button className="text-base px-8 py-4">
                 View Open Positions
                 <ArrowRight size={18} />

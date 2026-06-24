@@ -62,12 +62,12 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1], delay: 0.45 }}
           className="mt-10 flex items-center justify-center gap-4"
         >
-          <Link href="/ko/templates/OHMT023-game-KO/games">
+          <Link href="/ko/templates/game/games">
             <Button variant="primary" className="text-base px-8 py-4">
               게임 둘러보기
             </Button>
           </Link>
-          <Link href="/ko/templates/OHMT023-game-KO/careers">
+          <Link href="/ko/templates/game/careers">
             <Button variant="outline" className="text-base px-8 py-4">
               팀 합류하기
             </Button>

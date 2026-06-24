@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import GameCard from "./ui/GameCard";
-import { games } from "@/app/ko/templates/OHMT023-game-KO/data/data";
+import { games } from "@/app/ko/templates/game/data/data";
 import { ArrowRight } from "lucide-react";
 
 export default function FeaturedGames() {
@@ -26,7 +26,7 @@ export default function FeaturedGames() {
             </h2>
           </div>
           <Link
-            href="/ko/templates/OHMT023-game-KO/games"
+            href="/ko/templates/game/games"
             className="group hidden items-center gap-2 text-sm font-medium text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-primary)] md:flex"
           >
             모든 게임 보기
@@ -42,7 +42,7 @@ export default function FeaturedGames() {
 
         <div className="mt-10 text-center md:hidden">
           <Link
-            href="/ko/templates/OHMT023-game-KO/games"
+            href="/ko/templates/game/games"
             className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-primary)]"
           >
             모든 게임 보기

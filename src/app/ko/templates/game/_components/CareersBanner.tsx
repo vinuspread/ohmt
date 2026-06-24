@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import { careers } from "@/app/ko/templates/OHMT023-game-KO/data/data";
+import { careers } from "@/app/ko/templates/game/data/data";
 import Button from "./ui/Button";
 import { ArrowRight } from "lucide-react";
 
@@ -31,7 +31,7 @@ export default function CareersBanner() {
             엔지니어링, 디자인, 아트, 프로덕션 분야에서 열려 있습니다.
           </p>
           <div className="mt-10">
-            <Link href="/ko/templates/OHMT023-game-KO/careers">
+            <Link href="/ko/templates/game/careers">
               <Button className="text-base px-8 py-4">
                 포지션 보기
                 <ArrowRight size={18} />
