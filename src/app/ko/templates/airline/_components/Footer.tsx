@@ -10,7 +10,7 @@ export const Footer = () => {
       <div className="max-w-[1320px] mx-auto px-6 md:px-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-10 md:mb-16">
           <div className="col-span-2 md:col-span-1">
-            <Link href="/ko/templates/OHMT016-airline-kr" className="inline-block mb-5">
+            <Link href="/ko/templates/OHMT008-airline-KO" className="inline-block mb-5">
               <span className="text-[0.78rem] md:text-[0.82rem] font-bold tracking-[0.15em] uppercase text-[var(--color-primary)] leading-none">Oh My Template</span>
             </Link>
             <p className="text-[0.85rem] text-[var(--color-primary)]/70 leading-relaxed max-w-[280px]">
@@ -22,7 +22,7 @@ export const Footer = () => {
             <h5 className="text-[0.7rem] font-medium uppercase tracking-[0.2em] text-[var(--color-accent)] mb-5">예약 및 준비</h5>
             <nav className="flex flex-col gap-3">
               {["운항 스케줄", "취항지", "여행 요건", "수하물 안내"].map(item => (
-                <Link key={item} href="/ko/templates/OHMT016-airline-kr" className="text-[0.8rem] text-[var(--color-primary)]/70 hover:text-[var(--color-primary)] transition-colors">{item}</Link>
+                <Link key={item} href="/ko/templates/OHMT008-airline-KO" className="text-[0.8rem] text-[var(--color-primary)]/70 hover:text-[var(--color-primary)] transition-colors">{item}</Link>
               ))}
             </nav>
           </div>
@@ -31,7 +31,7 @@ export const Footer = () => {
             <h5 className="text-[0.7rem] font-medium uppercase tracking-[0.2em] text-[var(--color-accent)] mb-5">기내 서비스</h5>
             <nav className="flex flex-col gap-3">
               {["퍼스트 클래스", "비즈니스 클래스", "다이닝 & 와인", "엔터테인먼트"].map(item => (
-                <Link key={item} href="/ko/templates/OHMT016-airline-kr/experience" className="text-[0.8rem] text-[var(--color-primary)]/70 hover:text-[var(--color-primary)] transition-colors">{item}</Link>
+                <Link key={item} href="/ko/templates/OHMT008-airline-KO/experience" className="text-[0.8rem] text-[var(--color-primary)]/70 hover:text-[var(--color-primary)] transition-colors">{item}</Link>
               ))}
             </nav>
           </div>
@@ -40,7 +40,7 @@ export const Footer = () => {
             <h5 className="text-[0.7rem] font-medium uppercase tracking-[0.2em] text-[var(--color-accent)] mb-5">로열티</h5>
             <nav className="flex flex-col gap-3">
               {["회원 혜택", "마일리지 적립", "마일리지 사용", "제휴사"].map(item => (
-                <Link key={item} href="/ko/templates/OHMT016-airline-kr/loyalty" className="text-[0.8rem] text-[var(--color-primary)]/70 hover:text-[var(--color-primary)] transition-colors">{item}</Link>
+                <Link key={item} href="/ko/templates/OHMT008-airline-KO/loyalty" className="text-[0.8rem] text-[var(--color-primary)]/70 hover:text-[var(--color-primary)] transition-colors">{item}</Link>
               ))}
             </nav>
           </div>
@@ -52,7 +52,7 @@ export const Footer = () => {
           </span>
           <div className="flex gap-6 md:gap-8">
             {["법적 고지", "개인정보 처리방침", "쿠키 설정"].map(item => (
-              <Link key={item} href="/ko/templates/OHMT016-airline-kr" className="text-[0.7rem] text-[var(--color-primary)]/60 hover:text-[var(--color-primary)] uppercase tracking-widest transition-colors">{item}</Link>
+              <Link key={item} href="/ko/templates/OHMT008-airline-KO" className="text-[0.7rem] text-[var(--color-primary)]/60 hover:text-[var(--color-primary)] uppercase tracking-widest transition-colors">{item}</Link>
             ))}
           </div>
         </div>

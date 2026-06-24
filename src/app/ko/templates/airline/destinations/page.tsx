@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT016-airline-kr/destinations/page.tsx
+﻿// src/app/ko/templates/OHMT008-airline-KO/destinations/page.tsx
 "use client";
 
 import React, { useState } from "react";
@@ -125,7 +125,7 @@ function DestinationsPageContent() {
                     transition={{ duration: 0.3 }}
                   >
                     <Link 
-                      href={`/ko/templates/OHMT016-airline-kr/destinations/${dest.slug}`}
+                      href={`/ko/templates/OHMT008-airline-KO/destinations/${dest.slug}`}
                       className="group block space-y-6 text-left select-none"
                     >
                       {/* Image container (Color by default, Scale on hover) */}
