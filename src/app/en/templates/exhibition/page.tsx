@@ -108,7 +108,7 @@ export default function HomePage() {
                   />
                 </div>
                 <Link
-                  href="/en/templates/OHMT005-exhibition-en/contact"
+                  href="/en/templates/OHMT003-exhibition-EN/contact"
                   className="relative overflow-hidden group inline-flex px-8 py-4 border border-black mt-10"
                 >
                   <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
@@ -234,7 +234,7 @@ export default function HomePage() {
                 {exhibitions.length} exhibitions
               </p>
               <Link
-                href="/en/templates/OHMT005-exhibition-en/exhibitions"
+                href="/en/templates/OHMT003-exhibition-EN/exhibitions"
                 className="text-[11px] font-body font-semibold uppercase tracking-[0.12em] text-black border-b border-black pb-0.5 hover:opacity-60 transition-opacity"
               >
                 Explore All
@@ -344,7 +344,7 @@ export default function HomePage() {
 
           <div className="mt-16">
             <Link
-              href="/en/templates/OHMT005-exhibition-en/events"
+              href="/en/templates/OHMT003-exhibition-EN/events"
               className="text-[11px] font-body font-semibold uppercase tracking-[0.12em] text-black border-b border-black pb-0.5 hover:opacity-60 transition-opacity"
             >
               View All Events

@@ -5,10 +5,10 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
 const menuLinks = [
-  { href: '/en/templates/OHMT005-exhibition-en/about', label: 'About' },
-  { href: '/en/templates/OHMT005-exhibition-en/exhibitions', label: 'Exhibitions' },
-  { href: '/en/templates/OHMT005-exhibition-en/events', label: 'Events' },
-  { href: '/en/templates/OHMT005-exhibition-en/contact', label: 'Contact' },
+  { href: '/en/templates/OHMT003-exhibition-EN/about', label: 'About' },
+  { href: '/en/templates/OHMT003-exhibition-EN/exhibitions', label: 'Exhibitions' },
+  { href: '/en/templates/OHMT003-exhibition-EN/events', label: 'Events' },
+  { href: '/en/templates/OHMT003-exhibition-EN/contact', label: 'Contact' },
 ];
 
 const easeOut = [0.23, 1, 0.32, 1] as const;
@@ -24,7 +24,7 @@ export const Navbar = () => {
       >
         <div className="max-w-[1400px] mx-auto px-6 h-20 flex items-center justify-between pointer-events-auto">
           <Link
-            href="/en/templates/OHMT005-exhibition-en"
+            href="/en/templates/OHMT003-exhibition-EN"
             className="text-[1rem] font-heading font-semibold uppercase tracking-[0.15em] text-white"
           >
             Oh My Template
@@ -103,7 +103,7 @@ export const Navbar = () => {
                 info@formagallery.com<br />+1 (212) 555-0147
               </p>
               <Link
-                href="/en/templates/OHMT005-exhibition-en/contact"
+                href="/en/templates/OHMT003-exhibition-EN/contact"
                 onClick={() => setMenuOpen(false)}
                 className="inline-block px-6 py-3 bg-white/60 text-black text-[11px] font-body font-semibold uppercase tracking-[0.12em] hover:bg-white transition-colors duration-200"
               >

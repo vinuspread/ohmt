@@ -84,7 +84,7 @@ export default function AboutPage() {
                   contemporary art accessible to diverse audiences.
                 </p>
                 <Link
-                  href="/en/templates/OHMT005-exhibition-en/contact"
+                  href="/en/templates/OHMT003-exhibition-EN/contact"
                   className="text-[11px] font-body font-semibold uppercase tracking-[0.12em] text-black border-b border-black pb-0.5 hover:opacity-60 transition-opacity"
                 >
                   Contact Us &rarr;
