@@ -1,10 +1,10 @@
-"use client";
+﻿"use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ShoppingBag, Search, Menu, X } from "lucide-react";
 
-const YELLOW = "#FCDF00";
+const YELLOW = "var(--color-frame)";
 
 export const Header = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -21,14 +21,14 @@ export const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: "Home", href: "/en/templates/multi-shop" },
-    { name: "Shop", href: "/en/templates/multi-shop/shop" },
-    { name: "About", href: "/en/templates/multi-shop/about" },
-    { name: "Blog", href: "/en/templates/multi-shop/blog" },
-    { name: "Contact", href: "/en/templates/multi-shop/contact" },
+    { name: "Home", href: "/en/templates/OHMT017-multi-shop-EN" },
+    { name: "Shop", href: "/en/templates/OHMT017-multi-shop-EN/shop" },
+    { name: "About", href: "/en/templates/OHMT017-multi-shop-EN/about" },
+    { name: "Blog", href: "/en/templates/OHMT017-multi-shop-EN/blog" },
+    { name: "Contact", href: "/en/templates/OHMT017-multi-shop-EN/contact" },
   ];
 
-  const isHome = pathname === "/en/templates/multi-shop";
+  const isHome = pathname === "/en/templates/OHMT017-multi-shop-EN";
   const transparent = isHome && !scrolled && !mobileOpen;
 
   return (
@@ -40,7 +40,7 @@ export const Header = () => {
       >
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between h-16 md:h-18">
           <Link
-            href="/en/templates/multi-shop"
+            href="/en/templates/OHMT017-multi-shop-EN"
             className="text-xl md:text-2xl font-bold tracking-tight transition-colors duration-300"
             style={{ color: transparent ? "#ffffff" : "#0A0A0A" }}
           >
@@ -54,7 +54,7 @@ export const Header = () => {
             {navLinks.map((link) => {
               const isActive =
                 pathname === link.href ||
-                (link.href !== "/en/templates/multi-shop" &&
+                (link.href !== "/en/templates/OHMT017-multi-shop-EN" &&
                   pathname.startsWith(link.href));
               return (
                 <Link
@@ -79,7 +79,7 @@ export const Header = () => {
               <Search size={18} strokeWidth={1.5} />
             </button>
             <Link
-              href="/en/templates/multi-shop/shop"
+              href="/en/templates/OHMT017-multi-shop-EN/shop"
               className="transition-colors duration-300 hover:opacity-70"
               style={{ color: transparent ? "rgba(255,255,255,0.7)" : "#0A0A0A" }}
               aria-label="Cart"

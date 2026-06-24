@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React from "react";
 import { Header } from "../_components/Header";
 import { Footer } from "../_components/Footer";
@@ -27,7 +27,7 @@ function ShopPageContent() {
             <h1 className="text-4xl lg:text-5xl font-bold tracking-tight">Shop</h1>
             <div className="flex flex-wrap justify-center gap-4 mt-8">
               <Link
-                href="/en/templates/multi-shop/shop"
+                href="/en/templates/OHMT017-multi-shop-EN/shop"
                 className={`text-xs uppercase tracking-[0.2em] px-5 py-2 transition-colors duration-300 ${
                   !activeCategory
                     ? 'bg-[var(--color-primary)] text-white'
@@ -39,7 +39,7 @@ function ShopPageContent() {
               {categories.map((cat) => (
                 <Link
                   key={cat.id}
-                  href={`/en/templates/multi-shop/shop/${cat.id}`}
+                  href={`/en/templates/OHMT017-multi-shop-EN/shop/${cat.id}`}
                   className={`text-xs uppercase tracking-[0.2em] px-5 py-2 transition-colors duration-300 ${
                     activeCategory === cat.id
                       ? 'bg-[var(--color-primary)] text-white'

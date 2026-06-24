@@ -4,6 +4,27 @@ import { SmoothScroll } from "./_components/SmoothScroll";
 
 export const metadata: Metadata = {
   title: "Multi-Shop - Oh My Template",
+  description: "Multi-brand shopping experience with curated collections",
+  openGraph: {
+    title: "Multi-Shop - Oh My Template",
+    description: "Multi-brand shopping experience with curated collections",
+    url: "https://ohmytemplate.com/en/templates/OHMT017-multi-shop-EN",
+    siteName: "Oh My Template",
+    images: [{ url: "/templates/OHMT017-multi-shop/og-image.jpg", width: 1200, height: 630 }],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Multi-Shop - Oh My Template",
+    description: "Multi-brand shopping experience with curated collections",
+    images: ["/templates/OHMT017-multi-shop/og-image.jpg"],
+  },
+  robots: { index: true, follow: true },
+  alternates: {
+    canonical: "https://ohmytemplate.com/en/templates/OHMT017-multi-shop-EN",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT017-multi-shop-KO" },
+  },
 };
 
 export default function MultiShopLayout({
@@ -18,11 +39,11 @@ export default function MultiShopLayout({
       `}</style>
       <SmoothScroll />
       {/* Fixed Frame Borders to prevent scroll bleed-through */}
-      <div className="fixed top-0 left-0 right-0 z-[100] bg-[#FCDF00] h-[20px] md:h-[48px]" />
-      <div className="fixed bottom-0 left-0 right-0 z-[100] bg-[#FCDF00] h-[20px] md:h-[48px]" />
-      <div className="fixed top-0 bottom-0 left-0 z-[100] bg-[#FCDF00] w-[20px] md:w-[48px]" />
-      <div className="fixed top-0 bottom-0 right-0 z-[100] bg-[#FCDF00] w-[20px] md:w-[48px]" />
-      <div className="p-[20px] md:p-[48px]" style={{ backgroundColor: "#FCDF00" }}>
+      <div className="fixed top-0 left-0 right-0 z-[100] bg-[var(--color-frame)] h-[20px] md:h-[48px]" />
+      <div className="fixed bottom-0 left-0 right-0 z-[100] bg-[var(--color-frame)] h-[20px] md:h-[48px]" />
+      <div className="fixed top-0 bottom-0 left-0 z-[100] bg-[var(--color-frame)] w-[20px] md:w-[48px]" />
+      <div className="fixed top-0 bottom-0 right-0 z-[100] bg-[var(--color-frame)] w-[20px] md:w-[48px]" />
+      <div className="p-[20px] md:p-[48px]" style={{ backgroundColor: "var(--color-frame)" }}>
         {children}
       </div>
     </>
