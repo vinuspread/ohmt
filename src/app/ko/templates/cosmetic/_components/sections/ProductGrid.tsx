@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT020-cosmetic-kr/-components/sections/ProductGrid.tsx
+﻿// src/app/ko/templates/OHMT010-cosmetic-KO/-components/sections/ProductGrid.tsx
 "use client";
 
 import React from "react";

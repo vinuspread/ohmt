@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT020-cosmetic-kr/-components/layout/Header.tsx
+﻿// src/app/ko/templates/OHMT010-cosmetic-KO/-components/layout/Header.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -43,7 +43,7 @@ export const Header = () => {
           : "bg-transparent"
       )}>
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 h-full flex items-center justify-between">
-          <Link href="/ko/templates/OHMT020-cosmetic-kr" className="text-[1rem] md:text-[1.15rem] font-black tracking-[0.12em] uppercase">
+          <Link href="/ko/templates/OHMT010-cosmetic-KO" className="text-[1rem] md:text-[1.15rem] font-black tracking-[0.12em] uppercase">
             VINUSPREAD
           </Link>
 
@@ -52,7 +52,7 @@ export const Header = () => {
             {NAV_ITEMS.map((item) => (
                 <Link
                   key={item.id}
-                  href={`/ko/templates/OHMT020-cosmetic-kr/${item.id}`}
+                  href={`/ko/templates/OHMT010-cosmetic-KO/${item.id}`}
                   className="text-[0.82rem] font-medium opacity-60 hover:opacity-100 transition-opacity uppercase tracking-widest"
                 >
 
@@ -66,7 +66,7 @@ export const Header = () => {
              <button className="hidden md:flex items-center gap-1.5 text-[0.82rem] font-bold uppercase tracking-wider opacity-60 hover:opacity-100 transition-opacity">
                <Search size={15} />
              </button>
-             <Link href="/ko/templates/OHMT020-cosmetic-kr/cart" className="hidden md:flex items-center gap-2 hover:opacity-50 transition-opacity">
+             <Link href="/ko/templates/OHMT010-cosmetic-KO/cart" className="hidden md:flex items-center gap-2 hover:opacity-50 transition-opacity">
                <ShoppingBag size={17} />
              </Link>
 
@@ -92,7 +92,7 @@ export const Header = () => {
           {NAV_ITEMS.map((item) => (
              <Link
                key={item.id}
-               href={`/ko/templates/OHMT020-cosmetic-kr/${item.id}`}
+               href={`/ko/templates/OHMT010-cosmetic-KO/${item.id}`}
                onClick={() => setMobileOpen(false)}
                className="text-[0.82rem] font-medium uppercase tracking-widest opacity-60 hover:opacity-100 py-3.5 border-b border-black/10 transition-opacity"
              >
@@ -104,7 +104,7 @@ export const Header = () => {
             <button className="flex items-center gap-2 text-[0.82rem] font-bold uppercase tracking-wider">
               <Search size={15} /> 검색
             </button>
-             <Link href="/ko/templates/OHMT020-cosmetic-kr/cart" className="flex items-center gap-2 ml-auto hover:opacity-50 transition-opacity">
+             <Link href="/ko/templates/OHMT010-cosmetic-KO/cart" className="flex items-center gap-2 ml-auto hover:opacity-50 transition-opacity">
                <ShoppingBag size={17} />
              </Link>
 
