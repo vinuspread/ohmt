@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React from "react";
 import { motion } from "motion/react";
 
@@ -60,7 +60,7 @@ export const Features = () => {
           >
             <div className="w-full aspect-[4/3] overflow-hidden">
               <img
-                src="/templates/OHMT019-coffee/alt-detail.png"
+                src="/templates/coffee/alt-detail.png"
                 alt="Coffee shop detail"
                 className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out"
               />

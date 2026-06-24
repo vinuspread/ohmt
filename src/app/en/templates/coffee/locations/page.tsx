@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React from "react";
 import { motion } from "motion/react";
 import { Header } from "../_components/Header";
@@ -19,7 +19,7 @@ function LocationsPageContent() {
         {/* Hero */}
         <section className="relative bg-[var(--color-bg-dark)] h-[350px] flex items-center overflow-hidden">
           <img
-            src="/templates/OHMT019-coffee/location-seongsu.png"
+            src="/templates/coffee/location-seongsu.png"
             alt="Locations sub visual"
             className="absolute inset-0 w-full h-full object-cover"
           />

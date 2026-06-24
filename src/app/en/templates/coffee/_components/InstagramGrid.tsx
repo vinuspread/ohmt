@@ -1,16 +1,16 @@
-"use client";
+﻿"use client";
 import React from "react";
 import { motion } from "motion/react";
 
 const easeOut = [0.23, 1, 0.32, 1] as const;
 
 const instagramImages = [
-  "/templates/OHMT019-coffee/instagram-01.png",
-  "/templates/OHMT019-coffee/instagram-02.png",
-  "/templates/OHMT019-coffee/instagram-03.png",
-  "/templates/OHMT019-coffee/instagram-04.png",
-  "/templates/OHMT019-coffee/instagram-05.png",
-  "/templates/OHMT019-coffee/instagram-06.png",
+  "/templates/coffee/instagram-01.png",
+  "/templates/coffee/instagram-02.png",
+  "/templates/coffee/instagram-03.png",
+  "/templates/coffee/instagram-04.png",
+  "/templates/coffee/instagram-05.png",
+  "/templates/coffee/instagram-06.png",
 ];
 
 export const InstagramGrid = () => {
