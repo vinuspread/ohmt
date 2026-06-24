@@ -15,7 +15,7 @@ export const products = [
     name: "시에로 라운지 체어",
     category: "의자",
     price: "$1,290",
-    image: "/templates/OHMT004-furniture/chair.png",
+    image: "/templates/furniture/chair.png",
     tag: "에센셜",
     desc: "안락함과 디자인적 절제미가 어우러진 시그니처 체어. 미니멀한 실루엣을 유지하며 이상적인 인간공학적 서포트를 보장합니다.",
     longDesc: "정제된 건축적 라인과 인간공학적 순수함에 초점을 맞춘 시에로 라운지 체어는 현대적인 공간을 빛내는 시그니처 피스입니다. 최고급 아메리칸 월넛 원목을 정교하게 밀링하고 수작업으로 샌딩한 뒤 천연 오일로 마감하여, 목재 본연의 깊고 우아한 나이테 결을 극대화했습니다. 버터처럼 부드러운 이탈리아산 풀그레인 가죽 시트와 비스듬히 기울어진 등받이 설계는 대화와 깊은 휴식의 완벽한 밸런스를 이끌어냅니다. 전통 장부맞춤 공법으로 제작되어 세대를 넘어 전수될 견고함을 자랑합니다.\n\n이 라운지 체어는 미드센추리 모던 감성을 담은 로우 프로필 설계를 기반으로 제작되어, 어느 각도에서 보아도 시각적인 여유와 정돈된 선의 조화를 느끼게 합니다. 등받이와 좌판을 연결하는 브래킷 하드웨어는 무광 분체 도장 처리를 거쳐 시각적으로 드러나지 않도록 정교하게 은폐했습니다.\n\n시간이 지날수록 천연 소가죽 시트는 자연스러운 태닝 광택과 주름을 머금으며 사용자 고유의 안락함을 선사하는 맞춤 가구로 거듭납니다.",
@@ -35,14 +35,14 @@ export const products = [
       { id: "r3", reviewer: "이서율", rating: 4, date: "2026년 5월 03일", text: "디자인이 거실 분위기를 다 살렸습니다. 굽이 조금 낮아서 다리를 쭉 뻗고 앉기에 딱입니다. 가격은 비싸지만 그 값을 하네요." },
       { id: 'r4', reviewer: '황민규', rating: 5, date: '2026년 6월 02일', text: '포장부터 설치 배송까지 완벽했습니다. 월넛 원목의 나이테 무늬가 좌우 대칭이 잘 맞아 진짜 예술 작품 같습니다.' }
     ],
-    gallery: ["/templates/OHMT004-furniture/chair.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/furniture/chair.png", "/templates/furniture/lifestyle-narrative.png"]
   },
   {
     id: "2",
     name: "벨벳 모노 소파",
     category: "소파",
     price: "$3,400",
-    image: "/templates/OHMT004-furniture/sofa.png",
+    image: "/templates/furniture/sofa.png",
     tag: "럭셔리",
     desc: "최상급 린넨과 거위털 패딩을 채워넣어 온전한 몰입과 안락을 선사하는 마스터피스 소파.",
     longDesc: "거대한 조각상 같은 묵직하고 정돈된 안식을 위해 설계된 벨벳 모노 소파는 낮고 깊은 시트 포지션으로 최상의 안락함을 제공합니다. 가마에서 건조해 수축율을 낮춘 애쉬 원목 내부 프레임에 고밀도 복원 폼과 최고급 구스다운 패딩을 레이어링하여 오래 사용해도 풍성한 쿠션감을 유지합니다. 벨기에산 고중량 천연 린넨 패브릭은 몸에 달라붙지 않고 보송보송한 촉감을 선사하며, 숨겨진 블록 다리 덕분에 거실 공간을 모던하고 넓어 보이게 연출합니다.\n\n이 소파는 넓은 팔걸이(Armrest) 디자인을 지니고 있어 찻잔이나 스마트폰, 책을 안전하게 얹어두는 간이 테이블 역할을 겸할 수 있습니다. 내부에는 특수 설계된 S자 강선 스프링 구조와 이중 코일 서스펜션 시스템을 적용해 착석 시 하중을 이상적으로 분산시킵니다.\n\n린넨 커버는 완전히 탈부착하여 드라이클리닝할 수 있어 장기간 쾌적하게 사용이 가능합니다.",
@@ -62,14 +62,14 @@ export const products = [
       { id: "r3", reviewer: "최서우", rating: 5, date: "2026년 5월 27일", text: "쿠션이 물렁하지 않고 몸을 탄탄하면서도 부드럽게 받아주는 딱 좋은 밀도입니다. 팔걸이가 넓어서 책 얹어두기 편합니다." },
       { id: 'r4', reviewer: '한유현', rating: 5, date: '2026년 6월 05일', text: '벨벳 새틴 린넨이라 촉감이 보들보들하고 여름인데도 땀이 차거나 끈적거리지 않네요. 비싼 만큼 훌륭한 소파입니다.' }
     ],
-    gallery: ["/templates/OHMT004-furniture/sofa.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/furniture/sofa.png", "/templates/furniture/lifestyle-narrative.png"]
   },
   {
     id: "3",
     name: "오크 다이닝 테이블",
     category: "다이닝",
     price: "$4,200",
-    image: "/templates/OHMT004-furniture/table.png",
+    image: "/templates/furniture/table.png",
     tag: "에센셜",
     desc: "친환경 유기농 오크 원목으로 만들어져 현대적인 주방의 중심이자 만남의 광장이 되어줄 테이블.",
     longDesc: "지속 가능한 친환경 유럽산 오크 원목으로 제작된 오크 다이닝 테이블은 내추럴 미니멀리즘의 진수입니다. 자연 그대로의 옹이와 연속적인 나이테를 보존한 넓은 와이드 상판에 친환경 투명 무광 우레탄 도장을 얇게 입혀, 목재 본연의 매트하고 따스한 촉감을 살리면서도 열이나 물, 이염에 강력하도록 보완했습니다. 사선으로 매끄럽게 뻗은 다리 설계는 식사 공간의 편안한 동선과 흔들림 없는 완벽한 지지력을 선사합니다.\n\n이 테이블 상판은 집성목이 아닌 고가의 솔리드 원목 광폭 판재를 엄선하여 제작하여, 나뭇결의 흐름이 끊기지 않고 자연스럽게 이어집니다. 모서리 부분은 섬세한 3R 라운딩 가공을 거쳐 영유아가 있는 가정에서도 안심하고 사용할 수 있습니다.\n\n하부 에이프런(Apron) 구조를 간소화하여 의자를 깊숙이 밀어 넣을 수 있어 주방의 공간 레이아웃 효율을 대폭 증대시킵니다.",
@@ -89,14 +89,14 @@ export const products = [
       { id: "r3", reviewer: "박은하", rating: 5, date: '2026년 5월 16일', text: '주방의 분위기를 완전 카페처럼 만들어 줬어요. 나무 두께도 두툼해서 안정감이 대단합니다. 돈 들인 보람이 있네요.' },
       { id: 'r4', reviewer: '윤건우', rating: 4, date: '2026년 6월 04일', text: '오크 고유의 따뜻하고 맑은 색상입니다. 원목이라 가습기나 온습도 조절 신경 쓰고 있는데 갈라짐 없이 깨끗하네요.' }
     ],
-    gallery: ["/templates/OHMT004-furniture/table.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/furniture/table.png", "/templates/furniture/lifestyle-narrative.png"]
   },
   {
     id: "4",
     name: "월넛 라운지 체어",
     category: "라운지",
     price: "$2,850",
-    image: "/templates/OHMT004-furniture/chair.png",
+    image: "/templates/furniture/chair.png",
     tag: "아이코닉",
     desc: "정교하게 손으로 다듬어진 아메리칸 월넛 바디와 조각 같은 디자인이 돋보이는 럭셔리 라운저.",
     longDesc: "미드센추리 모던 디자인의 거장들의 정신을 담은 월넛 라운지 체어는 열과 압력으로 구부린 몰드 합판(Plywood)에 엄선된 최고급 아메리칸 월넛 베니어를 접합해 제작했습니다. 수작업으로 제봉된 가죽 쿠션은 부드러운 질감과 내구성을 고루 갖춘 세미 애닐린 등급의 천연 가죽만을 고집했습니다. 고정밀 베어링 기반의 파우더 코팅 알루미늄 다리를 장착하여 매끄럽고 안정적인 회전 기능을 탑재했습니다.\n\n이 의자는 인체의 S라인 척추 곡선을 완벽히 모방한 3개 분할 셀 구조로 이루어져 있어, 눕듯이 기댔을 때 체중이 머리, 등, 허리로 완벽하게 분산됩니다. 또한 측면의 월넛 베니어는 숙련된 장인이 수작업으로 7층으로 겹쳐 프레스 가공하여 나무 고유의 탄성력을 살려냈습니다.\n\n라운지 룸뿐만 아니라 넓은 오피스의 대표실 안락의자로도 품격 높은 존재감을 발휘합니다.",
@@ -116,14 +116,14 @@ export const products = [
       { id: "r3", reviewer: "신동욱", rating: 4, date: "2026년 5월 20일", text: "집에 두고 책 읽을 때 매일 앉습니다. 쿠션이 빵빵하고 단단해서 엉덩이가 아프지 않습니다. 부피가 생각보다 크네요." },
       { id: 'r4', reviewer: '강소연', rating: 5, date: '2026년 6월 08일', text: '오토만 세트가 아니라서 아쉬웠는데 의자 단독으로도 충분히 편안하게 쉴 수 있는 훌륭한 리클라이너 대용입니다.' }
     ],
-    gallery: ["/templates/OHMT004-furniture/chair.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/furniture/chair.png", "/templates/furniture/lifestyle-narrative.png"]
   },
   {
     id: "5",
     name: "세라믹 펜던트 조명",
     category: "조명",
     price: "$890",
-    image: "/templates/OHMT004-furniture/lamp.png",
+    image: "/templates/furniture/lamp.png",
     tag: "앰비언트",
     desc: "거친 흙빛의 도자기 질감과 매끄러운 비례가 아름다운 공간의 은은한 조도를 연출해주는 조명.",
     longDesc: "도예 명장이 물레질로 빚어낸 세라믹 펜던트 조명은 자연스러운 흙의 무광 감성을 고스란히 담아냈습니다. 전등 갓 바깥쪽은 유약을 바르지 않은 거친 매트 스톤웨어 질감이지만, 안쪽은 빛 반사율을 높이기 위해 유광 밀크화이트 가공을 처리하여 따뜻하고 집중도 높은 광원을 형성합니다. 정갈한 패브릭 트위스트 전선과 황동 부속으로 마감하여 고급스러운 무드를 완성합니다.\n\n1,250도의 가마에서 이틀간 정밀 소성하여 깨짐이나 크랙 우려가 없으며, 흙 고유의 천연 미네랄 성분이 불규칙한 미세 기포를 형성해 조명이 꺼진 낮 시간에도 입체적인 자연 질감을 연출합니다.\n\n주방 아일랜드나 다이닝 테이블 위에 2~3개를 연속으로 레이어드하여 달아두면 북유럽 다이닝 룸 같은 깊이 있는 무드를 완성할 수 있습니다.",
@@ -143,14 +143,14 @@ export const products = [
       { id: "r3", reviewer: "장수미", rating: 5, date: "2026년 5월 28일", text: "화질 좋은 사진 그대로의 오묘한 흙 질감입니다. 밤에 켜놓으면 주방 조도가 은은하게 내려와 분위기가 살아요." },
       { id: 'r4', reviewer: '배정우', rating: 5, date: '2026년 6월 06일', text: '황동 마감 브래킷이 진짜 고급스럽네요. 코드선이 정갈한 베이지 패브릭 끈이라 지저분하지 않고 이쁩니다.' }
     ],
-    gallery: ["/templates/OHMT004-furniture/lamp.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/furniture/lamp.png", "/templates/furniture/lifestyle-narrative.png"]
   },
   {
     id: "6",
     name: "브루탈리스트 사이드 테이블",
     category: "리빙",
     price: "$1,150",
-    image: "/templates/OHMT004-furniture/sidetable.png",
+    image: "/templates/furniture/sidetable.png",
     tag: "로우",
     desc: "초경량 콘크리트로 캐스팅한 후 섬세한 오일 마감을 거쳐 소재 그대로의 성질을 부각한 가구.",
     longDesc: "브루탈리즘 건축 미학을 고스란히 옮겨놓은 사이드 테이블입니다. 특수 유리섬유가 융합된 건축용 하이포퍼먼스 초경량 콘크리트를 모틀(Mould) 공정으로 캐스팅하여 견고함을 살렸습니다. 콘크리트 본연의 미세한 기포 구멍과 회색 톤의 유기적인 변화를 원형 그대로 보존한 채, 무색 고투명 침투성 실러 처리를 거쳐 일상 오염이나 수분 흡수로부터 테이블을 영구적으로 보호합니다.\n\n이 사이드 테이블은 육중한 돌기둥을 연상시키는 조각 같은 모노리스(Monolith) 실루엣으로, 미니멀이나 인더스트리얼 테마 거실 소파 옆 혹은 침대 협탁으로 배치하기에 안성맞춤입니다.\n\n콘크리트 특유의 먼지가 날리지 않도록 표면을 3차에 걸쳐 미세 연마하고 친환경 코팅 마감을 완료했습니다.",
@@ -170,14 +170,14 @@ export const products = [
       { id: "r3", reviewer: "남궁민", rating: 4, date: "2026년 5월 11일", text: "묵직해서 흔들리지 않아 안정감이 있습니다. 콘크리트 질감이 거칠어 보이지만 실제 만져보면 매우 매끄럽게 마감되어 있네요." },
       { id: 'r4', reviewer: '소은혜', rating: 5, date: '2026년 6월 03일', text: '미니멀한 인테리어를 선호하신다면 무조건 마음에 드실 겁니다. 차가운 듯하면서도 정갈한 느낌을 주네요.' }
     ],
-    gallery: ["/templates/OHMT004-furniture/sidetable.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/furniture/sidetable.png", "/templates/furniture/lifestyle-narrative.png"]
   },
   {
     id: "7",
     name: "플로팅 월 데스크",
     category: "홈 오피스",
     price: "$1,650",
-    image: "/templates/OHMT004-furniture/desk.png",
+    image: "/templates/furniture/desk.png",
     tag: "슬릭",
     desc: "공간 활용도가 극대화된 책상으로, 벽면에 깔끔하게 고정되어 세련된 작업실 분위기를 연출합니다.",
     longDesc: "좁은 원룸이나 세련된 서재의 미니멀 데스크 역할을 수행하는 벽걸이형 플로팅 데스크입니다. 단단한 천연 오크 원목 상판에 정밀 레이저 컷팅한 무광 분체도장 블랙 스틸 월 프레임을 결합해 뛰어난 안전성을 제공합니다. 슬림하게 숨겨진 서랍에는 부드럽게 닫히는 소프트 클로징 하이 댐퍼 러너가 탑재되어, 노트북이나 각종 서류를 정갈하고 조용하게 수납할 수 있습니다.\n\n이 벽걸이형 책상은 하부에 다리가 없어 의자 이동이 자유로우며, 데스크 하부에는 멀티탭과 케이블 선을 완벽하게 숨길 수 있는 통합 배선 관리 덕트(Duct)를 설계하여 극도의 정돈감을 추구합니다.\n\n상판 양옆에는 필기구나 조명을 흔들림 없이 고정할 수 있는 전용 홈 슬롯 처리가 가미되어 있습니다.",
@@ -197,14 +197,14 @@ export const products = [
       { id: "r3", reviewer: "구태완", rating: 5, date: "2026년 5월 29일", text: "서랍 닫힐 때 쾅 안 닫히고 끝에서 스르륵 멈춰서 닫히는 서랍 댐퍼 느낌이 너무 고급스럽고 훌륭합니다. 오크 나무 색도 내추럴하네요." },
       { id: 'r4', reviewer: '배윤재', rating: 5, date: '2026년 6월 09일', text: '재택근무용 미니 서재에 설치했는데 인테리어 효과 만점입니다. 스위치 케이블 숨김 처리가 최고 장점이에요.' }
     ],
-    gallery: ["/templates/OHMT004-furniture/desk.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/furniture/desk.png", "/templates/furniture/lifestyle-narrative.png"]
   },
   {
     id: "8",
     name: "린넨 플랫폼 베드",
     category: "침실",
     price: "$5,400",
-    image: "/templates/OHMT004-furniture/bed.png",
+    image: "/templates/furniture/bed.png",
     tag: "서린",
     desc: "고급 벨기에산 린넨 헤드보드와 애쉬 원목 조합으로 안락함의 온전한 쉼터가 되어주는 프레임.",
     longDesc: "침실의 평화로운 조화를 선도하는 린넨 플랫폼 베드입니다. 견고한 친환경 활엽수 골조 주위를 탄탄한 고밀도 폼으로 감싸고, 벨기에 안트베르펜산 천연 린넨 패브릭으로 감싸주어 부드러운 라인과 시각적인 아늑함을 전합니다. 풍성하게 볼륨이 들어간 하이 헤드보드는 기대어 독서나 명상을 즐기기에 최상의 각도를 지원하며, 다리 부분의 애쉬 원목 다리가 안정성을 배가시킵니다.\n\n매트리스가 프레임 내부로 포근하게 안착하는 매립형 구조로 설계되어, 취침 중 매트리스의 유격을 방지하고 호텔 침구처럼 단정하고 일체감 있는 실루엣을 완성합니다.\n\n하부 플랫폼 프레임은 소음이 발생하지 않도록 이중 고정 연결 나사 체결 방식과 저소음 벨크로 라이너 가공을 결합하여, 삐걱거리는 마찰음이 전혀 나지 않습니다.",
@@ -224,14 +224,14 @@ export const products = [
       { id: "r3", reviewer: "오지연", rating: 4, date: "2026년 5월 24일", text: "헤드보드 등받이 두께감이 톡톡해서 기대 앉아 아이패드 보거나 책 읽기에 리클라이닝 소파 부럽지 않게 편하고 따뜻해요." },
       { id: 'r4', reviewer: '황성욱', rating: 5, date: '2026년 6월 02일', text: '린넨 원단이 엄청 촘촘하고 까슬거리지 않는 소프트 린넨이라 살에 닿을 때 기분이 좋습니다. 먼지도 덜 나네요.' }
     ],
-    gallery: ["/templates/OHMT004-furniture/bed.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/furniture/bed.png", "/templates/furniture/lifestyle-narrative.png"]
   },
   {
     id: "9",
     name: "애쉬 원목 워드로브",
     category: "수납",
     price: "$7,800",
-    image: "/templates/OHMT004-furniture/wardrobe.png",
+    image: "/templates/furniture/wardrobe.png",
     tag: "그랜드",
     desc: "애쉬 원목의 자연스러운 결을 살린 모노리스적 존재감, 브래스 디테일이 돋보이는 대용량 수납장.",
     longDesc: "수납장의 묵직한 럭셔리를 선사하는 애쉬 원목 옷장입니다. 천연 애쉬 우드 베니어를 대칭 북매칭(Book-matched) 공정으로 정렬하여, 양쪽 전면 도어가 마치 한 폭의 나이테 수묵화 같은 자연스러운 결을 보여줍니다. 내부는 친환경 단풍나무 원목으로 마감되어 향긋하며, 알루미늄이 아닌 수작업 주조 황동 옷걸이 봉과 벨벳 인서트 가죽 주얼리 서랍장 등을 배치해 옷의 수납 가치를 최고조로 끌어올렸습니다.\n\n이 옷장의 여닫이 도어 프레임에는 독일 헤티히(Hettich)사의 최고 사양 컴포트 힌지를 부착하여, 도어가 닫히기 직전 부드럽게 감속되어 소음과 충격 없이 스르륵 안착됩니다.\n\n내부에는 자동으로 감지되어 켜지는 매립형 고연색(CRI 95) 스마트 모션 센서 LED 스트립 조명이 매립되어 있어 옷장의 시인성과 은은한 쇼케이스 감성을 더해줍니다.",
@@ -251,7 +251,7 @@ export const products = [
       { id: "r3", reviewer: "심규선", rating: 5, date: "2026년 5월 19일", text: "내장 조명이 자동으로 켜져서 밤에 옷 찾기 너무 신기하고 편리합니다. 구획이 아주 알차게 나눠져 있어 옷 정리가 잘 돼요." },
       { id: 'r4', reviewer: '서지성', rating: 5, date: '2026년 6월 05일', text: '손잡이 부분의 통황동 디테일이 진짜 세련되었어요. 광택도 빈티지해서 옷장 원목 색과 조화가 완벽합니다.' }
     ],
-    gallery: ["/templates/OHMT004-furniture/wardrobe.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/furniture/wardrobe.png", "/templates/furniture/lifestyle-narrative.png"]
   }
 ];
 
