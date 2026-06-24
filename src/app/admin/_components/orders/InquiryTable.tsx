@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Eye, Search } from "lucide-react";
+import { Search } from "lucide-react";
 import { Modal } from "../ui/Modal";
 import { Table, type Column } from "../ui/Table";
 import { Toast } from "../ui/Toast";
@@ -100,17 +100,17 @@ export function InquiryTable({ data, templates }: { data: Inquiry[]; templates: 
     {
       key: "created_at",
       header: "접수일",
-      width: "90px",
+      width: "108px",
       render: (inquiry) => (
-        <span className="text-xs text-zinc-500">{new Date(inquiry.created_at).toLocaleDateString("ko-KR")}</span>
+        <span className="whitespace-nowrap text-xs text-zinc-500">{new Date(inquiry.created_at).toLocaleDateString("ko-KR")}</span>
       ),
     },
     {
       key: "inquiry_type",
       header: "유형",
-      width: "100px",
+      width: "108px",
       render: (inquiry) => (
-        <span className={`inline-flex rounded-full px-2 py-1 text-xs font-medium ${TYPE_CLASSES[inquiry.inquiry_type]}`}>
+        <span className={`whitespace-nowrap inline-flex rounded-full px-2.5 py-1 text-xs font-medium ${TYPE_CLASSES[inquiry.inquiry_type]}`}>
           {TYPE_LABELS[inquiry.inquiry_type]}
         </span>
       ),
@@ -118,6 +118,7 @@ export function InquiryTable({ data, templates }: { data: Inquiry[]; templates: 
     {
       key: "customer_name",
       header: "이름",
+      width: "140px",
       render: (inquiry) => (
         <div>
           <p className="font-medium text-zinc-900 text-sm">{inquiry.customer_name}</p>
@@ -133,6 +134,7 @@ export function InquiryTable({ data, templates }: { data: Inquiry[]; templates: 
     {
       key: "package_name",
       header: "예산 및 패키지",
+      width: "160px",
       render: (inquiry) => <span className="text-sm text-zinc-600">{inquiry.package_name ?? "-"}</span>,
     },
     {
@@ -158,14 +160,13 @@ export function InquiryTable({ data, templates }: { data: Inquiry[]; templates: 
     {
       key: "detail",
       header: "",
-      width: "72px",
+      width: "60px",
       render: (inquiry) => (
         <button
           type="button"
           onClick={() => openDetail(inquiry)}
-          className="inline-flex items-center gap-1.5 rounded-md border border-zinc-200 px-2.5 py-1.5 text-xs font-medium text-zinc-600 transition-colors hover:border-zinc-300 hover:text-zinc-900"
+          className="rounded-md border border-zinc-200 px-3 py-1.5 text-xs font-medium text-zinc-600 transition-colors hover:border-zinc-300 hover:text-zinc-900"
         >
-          <Eye className="h-3.5 w-3.5" />
           보기
         </button>
       ),
