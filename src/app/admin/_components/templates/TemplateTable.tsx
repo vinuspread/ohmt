@@ -13,7 +13,8 @@ import type { Template } from "@/types/template";
 
 type TemplateFilter = "all" | "published" | "private";
 type LangFilter = "all" | "en" | "ko";
-type KeySort = "asc" | "desc" | null;
+type SortField = "template_key" | "lang" | "category" | null;
+type SortDirection = "asc" | "desc";
 type ToastState = { message: string; type: "success" | "error" };
 
 function keyNumber(template_key: string | null | undefined): number {
@@ -68,7 +69,8 @@ export function TemplateTable({ data }: { data: Template[] }) {
   const [deleting, setDeleting] = useState(false);
   const [savingOrder, setSavingOrder] = useState(false);
   const [toast, setToast] = useState<ToastState | null>(null);
-  const [keySort, setKeySort] = useState<KeySort>(null);
+  const [sortField, setSortField] = useState<SortField>(null);
+  const [sortDirection, setSortDirection] = useState<SortDirection>("asc");
   const persistedOrderRef = useRef(new Map(data.map((template, index) => [template.id, index])));
   const pendingOrderRef = useRef<Template[] | null>(null);
 
@@ -93,12 +95,37 @@ export function TemplateTable({ data }: { data: Template[] }) {
   const filteredData = useMemo(() => {
     const query = searchTerm.trim().toLowerCase();
     const filtered = templates.filter((template) => matchesFilters(template, filter, langFilter, query));
-    if (!keySort) return filtered;
+    
+    if (!sortField) return filtered;
+
     return [...filtered].sort((a, b) => {
-      const diff = keyNumber(a.template_key) - keyNumber(b.template_key);
-      return keySort === "asc" ? diff : -diff;
+      if (sortField === "template_key") {
+        const valA = keyNumber(a.template_key);
+        const valB = keyNumber(b.template_key);
+        if (valA === valB) return 0;
+        const diff = valA - valB;
+        return sortDirection === "asc" ? diff : -diff;
+      }
+
+      if (sortField === "lang") {
+        const valA = a.lang ?? "";
+        const valB = b.lang ?? "";
+        return sortDirection === "asc"
+          ? valA.localeCompare(valB)
+          : valB.localeCompare(valA);
+      }
+
+      if (sortField === "category") {
+        const valA = a.category ?? "";
+        const valB = b.category ?? "";
+        return sortDirection === "asc"
+          ? valA.localeCompare(valB)
+          : valB.localeCompare(valA);
+      }
+
+      return 0;
     });
-  }, [filter, langFilter, searchTerm, templates, keySort]);
+  }, [filter, langFilter, searchTerm, templates, sortField, sortDirection]);
 
   const handleDelete = async () => {
     if (!deleteTarget) return;
@@ -175,6 +202,30 @@ export function TemplateTable({ data }: { data: Template[] }) {
     router.refresh();
   };
 
+  const handleSort = (field: SortField) => {
+    if (sortField === field) {
+      if (sortDirection === "asc") {
+        setSortDirection("desc");
+      } else {
+        setSortField(null);
+      }
+    } else {
+      setSortField(field);
+      setSortDirection("asc");
+    }
+  };
+
+  const SortIcon = ({ field }: { field: SortField }) => {
+    if (sortField !== field) {
+      return <ArrowUpDown className="h-3 w-3 text-zinc-300" />;
+    }
+    return sortDirection === "asc" ? (
+      <ArrowUp className="h-3 w-3 text-zinc-700" />
+    ) : (
+      <ArrowDown className="h-3 w-3 text-zinc-700" />
+    );
+  };
+
   return (
     <div className="p-6">
       <div className="flex flex-col gap-4 mb-6 lg:flex-row lg:items-center lg:justify-between">
@@ -237,17 +288,29 @@ export function TemplateTable({ data }: { data: Template[] }) {
           <div>썸네일</div>
           <button
             type="button"
-            onClick={() => setKeySort((s) => s === null ? "asc" : s === "asc" ? "desc" : null)}
+            onClick={() => handleSort("template_key")}
             className="flex items-center gap-1 hover:text-zinc-800 transition-colors focus-visible:outline-none"
           >
             고유키
-            {keySort === null && <ArrowUpDown className="h-3 w-3 text-zinc-300" />}
-            {keySort === "asc" && <ArrowUp className="h-3 w-3 text-zinc-700" />}
-            {keySort === "desc" && <ArrowDown className="h-3 w-3 text-zinc-700" />}
+            <SortIcon field="template_key" />
           </button>
           <div>이름</div>
-          <div>언어</div>
-          <div>카테고리</div>
+          <button
+            type="button"
+            onClick={() => handleSort("lang")}
+            className="flex items-center gap-1 hover:text-zinc-800 transition-colors focus-visible:outline-none"
+          >
+            언어
+            <SortIcon field="lang" />
+          </button>
+          <button
+            type="button"
+            onClick={() => handleSort("category")}
+            className="flex items-center gap-1 hover:text-zinc-800 transition-colors focus-visible:outline-none"
+          >
+            카테고리
+            <SortIcon field="category" />
+          </button>
           <div>가격정책</div>
           <div>상태</div>
           <div>대표</div>
@@ -265,7 +328,7 @@ export function TemplateTable({ data }: { data: Template[] }) {
                 onPreview={setPreviewUrl}
                 onDelete={setDeleteTarget}
                 onDragEnd={persistOrder}
-                sortActive={keySort !== null}
+                sortActive={sortField !== null}
               />
             ))}
           </Reorder.Group>
@@ -356,11 +419,16 @@ function TemplateRow({
       <PricingBadges consultation={template.requires_consultation ?? false} />
       <StatusPill published={template.status === "published"} />
       <div>{template.is_featured ? <CheckIcon aria-label="대표 템플릿" className="w-4 h-4 text-emerald-500" /> : <span className="text-zinc-300">-</span>}</div>
-      <div className="flex items-center gap-1">
+      <div className="flex items-center gap-1.5">
         <Link href={`/admin/templates/${template.id}`} onClick={saveScrollPosition}>
-          <Button variant="ghost" size="sm">수정</Button>
+          <Button variant="secondary" size="sm" className="rounded-[4px]">수정</Button>
         </Link>
-        <Button variant="ghost" size="sm" className="text-red-500 hover:text-red-700" onClick={() => onDelete(template)}>
+        <Button
+          variant="secondary"
+          size="sm"
+          className="text-red-600 hover:text-red-700 hover:bg-red-50 hover:border-red-200 rounded-[4px]"
+          onClick={() => onDelete(template)}
+        >
           삭제
         </Button>
       </div>
