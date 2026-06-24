@@ -1,11 +1,10 @@
-﻿'use client'
+'use client'
 
 import { motion } from 'framer-motion'
 import { MapPin, Briefcase, Edit3, Mail, Phone, Globe, TrendingUp, FileText, ShoppingCart, Users, Star, Clock, Video, Users2, Car } from 'lucide-react'
 import { DashboardLayout } from '../_components/layout/DashboardLayout'
 import { Badge } from '../_components/common/Badge'
 import Image from 'next/image'
-import { TemplateWrapper } from '../_components/TemplateWrapper'
 
 const skills = ['React', 'Next.js', 'TypeScript', 'Node.js', 'GraphQL', 'TailwindCSS', 'PostgreSQL', 'AWS']
 
@@ -42,8 +41,7 @@ const contactInfo = [
 export default function ProfilePage() {
   return (
     <DashboardLayout title="Profile">
-      <TemplateWrapper>
-        <motion.div
+      <motion.div
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
@@ -60,7 +58,7 @@ export default function ProfilePage() {
             <div className="flex items-center gap-4">
               <div className="relative shrink-0">
                 <div className="w-16 h-16 rounded-full border-2 border-[var(--color-border)] overflow-hidden bg-[var(--color-bg-surface)]">
-                  <Image src="/templates/portfolio/portfolio-1.jpg" alt="Morgan Chen" width={64} height={64} className="object-cover w-full h-full" />
+                  <Image src="/templates/OHMT007-portfolio/portfolio-1.jpg" alt="Morgan Chen" width={64} height={64} className="object-cover w-full h-full" />
                 </div>
                 <div className="absolute bottom-0.5 right-0.5 w-3.5 h-3.5 rounded-full bg-[var(--color-success)] border-2 border-[var(--color-bg-elevated)]" />
               </div>
@@ -241,7 +239,6 @@ export default function ProfilePage() {
 
         </div>
       </motion.div>
-          </TemplateWrapper>
     </DashboardLayout>
   )
 }

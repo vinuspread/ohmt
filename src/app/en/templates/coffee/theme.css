@@ -1,0 +1,27 @@
+:root {
+  --color-primary: #111118;
+  --color-secondary: #0C0C14;
+  --color-primary-dark: #0C0C14;
+  --color-accent: #3D4A5C;
+  --color-accent-hover: #2E3A4C;
+  --color-accent-light: #6B7A8E;
+  --color-bg: #FAFAFA;
+  --color-bg-secondary: #E2E2E0;
+  --color-bg-dark: #0C0C14;
+  --color-text: #111118;
+  --color-text-muted: #6B6B78;
+  --color-text-contrast: #1C1C1A;
+  --color-border: #DCDCDC;
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}

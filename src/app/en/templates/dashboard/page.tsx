@@ -11,13 +11,11 @@ import { DonutChart } from './_components/charts/DonutChart'
 import { CloudStorageRadar, ActivityCards } from './_components/charts/RadarChart'
 import { todos } from './data/dashboard-data'
 import { DashboardLayout } from './_components/layout/DashboardLayout'
-import { TemplateWrapper } from './_components/TemplateWrapper'
 
 export default function DashboardPage() {
   return (
     <DashboardLayout title="Dashboard">
-      <TemplateWrapper>
-        <div className="space-y-3">
+      <div className="space-y-3">
 
         {/* Row 1: Welcome + Stats */}
         <div className="grid grid-cols-12 gap-3 items-stretch">
@@ -93,7 +91,6 @@ export default function DashboardPage() {
 
 
       </div>
-          </TemplateWrapper>
     </DashboardLayout>
   )
 }

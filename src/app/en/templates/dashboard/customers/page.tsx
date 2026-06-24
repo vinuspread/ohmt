@@ -9,7 +9,6 @@ import { Badge } from '../_components/common/Badge'
 import { Avatar } from '../_components/common/Avatar'
 import { DataTable, type Column } from '../_components/common/DataTable'
 import { customers, customerStats, type Customer } from '../data/customers-data'
-import { TemplateWrapper } from '../_components/TemplateWrapper'
 
 type ViewMode = 'grid' | 'list'
 
@@ -54,8 +53,7 @@ export default function CustomersPage() {
 
   return (
     <DashboardLayout title="Customers">
-      <TemplateWrapper>
-        <motion.div
+      <motion.div
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
@@ -155,7 +153,6 @@ export default function CustomersPage() {
           )}
         </AnimatePresence>
       </motion.div>
-          </TemplateWrapper>
     </DashboardLayout>
   )
 }

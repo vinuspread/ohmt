@@ -8,7 +8,6 @@ import { PageHeader } from '../_components/common/PageHeader'
 import { Badge } from '../_components/common/Badge'
 import { DataTable, type Column } from '../_components/common/DataTable'
 import { orders, orderStats, type Order, type OrderStatus } from '../data/orders-data'
-import { TemplateWrapper } from '../_components/TemplateWrapper'
 
 const statusFilter: (OrderStatus | 'all')[] = ['all', 'pending', 'processing', 'shipped', 'completed', 'cancelled']
 
@@ -104,8 +103,7 @@ export default function OrdersPage() {
 
   return (
     <DashboardLayout title="주문">
-      <TemplateWrapper>
-        <motion.div
+      <motion.div
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
@@ -206,7 +204,6 @@ export default function OrdersPage() {
           )}
         </AnimatePresence>
       </motion.div>
-          </TemplateWrapper>
     </DashboardLayout>
   )
 }
