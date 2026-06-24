@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Suspense } from "react";
 import React from "react";
@@ -9,12 +9,12 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 const products = [
-  { name: "Daily Radiance Serum", price: "$78", tag: "Best Seller", image: "/templates/OHMT010-cosmetic/cosmetic-1.jpg" },
-  { name: "Vitamin C Brightening Cream", price: "$64", tag: "New", image: "/templates/OHMT010-cosmetic/cosmetic-2.png" },
-  { name: "Hydra-Glow Moisturizer", price: "$52", tag: "", image: "/templates/OHMT010-cosmetic/cosmetic-3.jpg" },
-  { name: "Retinol Renewal Oil", price: "$89", tag: "Premium", image: "/templates/OHMT010-cosmetic/cosmetic-4.jpg" },
-  { name: "Gentle Cleansing Balm", price: "$38", tag: "", image: "/templates/OHMT010-cosmetic/cosmetic-5.jpg" },
-  { name: "Overnight Recovery Mask", price: "$72", tag: "Popular", image: "/templates/OHMT010-cosmetic/cosmetic-1.jpg" }
+  { name: "Daily Radiance Serum", price: "$78", tag: "Best Seller", image: "/templates/cosmetic/cosmetic-1.jpg" },
+  { name: "Vitamin C Brightening Cream", price: "$64", tag: "New", image: "/templates/cosmetic/cosmetic-2.png" },
+  { name: "Hydra-Glow Moisturizer", price: "$52", tag: "", image: "/templates/cosmetic/cosmetic-3.jpg" },
+  { name: "Retinol Renewal Oil", price: "$89", tag: "Premium", image: "/templates/cosmetic/cosmetic-4.jpg" },
+  { name: "Gentle Cleansing Balm", price: "$38", tag: "", image: "/templates/cosmetic/cosmetic-5.jpg" },
+  { name: "Overnight Recovery Mask", price: "$72", tag: "Popular", image: "/templates/cosmetic/cosmetic-1.jpg" }
 ];
 
 function CosmeticShopPageContent() {
