@@ -10,7 +10,7 @@ export const Reserve = () => {
     <section className="relative py-28 md:py-36 overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url(/templates/OHMT019-coffee/cta-bg.png)" }}
+        style={{ backgroundImage: "url(/templates/coffee/cta-bg.png)" }}
       />
       <div
         className="absolute inset-0"

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React from "react";
 import { Header } from "../_components/Header";
 import { Footer } from "../_components/Footer";
@@ -13,7 +13,7 @@ function AboutPageContent() {
       <main className="antialiased min-h-screen bg-[var(--color-bg)] text-[var(--color-text)]">
         <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
           <img
-            src="/templates/OHMT019-coffee/story-interior.png"
+            src="/templates/coffee/story-interior.png"
             alt="Coffee shop interior"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -45,7 +45,7 @@ function AboutPageContent() {
               </div>
               <div className="aspect-[4/3] rounded-2xl overflow-hidden">
                 <img
-                  src="/templates/OHMT019-coffee/hero-drink.png"
+                  src="/templates/coffee/hero-drink.png"
                   alt="Espresso bar"
                   className="w-full h-full object-cover"
                 />
@@ -90,14 +90,14 @@ function AboutPageContent() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <img
-                  src="/templates/OHMT019-coffee/story-beans.png"
+                  src="/templates/coffee/story-beans.png"
                   alt="Coffee beans"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <img
-                  src="/templates/OHMT019-coffee/story-brewing.png"
+                  src="/templates/coffee/story-brewing.png"
                   alt="Coffee brewing"
                   className="w-full h-full object-cover"
                 />

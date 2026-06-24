@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React from "react";
 import { Header } from "../_components/Header";
 import { Footer } from "../_components/Footer";
@@ -15,7 +15,7 @@ function LocationsPageContent() {
         {/* Hero */}
         <section className="relative bg-[var(--color-bg-dark)] h-[300px] flex items-center overflow-hidden">
           <img
-            src="/templates/OHMT019-coffee/location-seongsu.png"
+            src="/templates/coffee/location-seongsu.png"
             alt="매장 안내 서브 비주얼"
             className="absolute inset-0 w-full h-full object-cover"
           />

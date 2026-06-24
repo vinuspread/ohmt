@@ -64,7 +64,7 @@ export const Hero = () => {
 
           <div className="hidden lg:flex w-[45%] items-start justify-end order-1 lg:order-2 relative mt-12">
             <motion.img
-              src="/templates/OHMT019-coffee/hero-drink.png"
+              src="/templates/coffee/hero-drink.png"
               alt="Summer coffee drink"
               className="w-full h-auto object-contain -mr-6 md:-mr-12"
               initial={{ opacity: 0, x: 40, scale: 1.08 }}
