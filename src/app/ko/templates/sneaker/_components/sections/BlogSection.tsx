@@ -4,7 +4,7 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const slugs = ["how-to-style-sneakers", "sustainable-footwear", "sneaker-care-guide", "2026-trends"];
-const imgs = ["/templates/OHMT005-sneaker/blog-1.jpg", "/templates/OHMT005-sneaker/blog-2.jpg", "/templates/OHMT005-sneaker/blog-3.jpg", "/templates/OHMT005-sneaker/blog-4.jpg"];
+const imgs = ["/templates/sneaker/blog-1.jpg", "/templates/sneaker/blog-2.jpg", "/templates/sneaker/blog-3.jpg", "/templates/sneaker/blog-4.jpg"];
 
 const posts = [
   { title: "어떤 자리든 완벽한 스니커즈 스타일링", category: "스타일", date: "2026년 5월 20일" },
