@@ -115,7 +115,7 @@ export function ContactForm({ packages, requiresConsultation = false }: { packag
           <img
             src="/contact-hero.jpg"
             alt="Oh My Template 스튜디오"
-            className="w-full h-full object-cover [object-position:center_calc(50%-60px)]"
+            className="w-full h-full object-cover [object-position:center_calc(50%-30px)]"
             onError={() => setHeroError(true)}
           />
         </div>
