@@ -32,7 +32,6 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
   const price = initialData?.price ?? 0;
   const sortOrder = initialData?.sort_order ?? 0;
   const [isFeatured, setIsFeatured] = useState(initialData?.is_featured ?? false);
-  const [applicablePackages, setApplicablePackages] = useState<string[]>(initialData?.applicable_packages ?? []);
   const [requiresConsultation, setRequiresConsultation] = useState(initialData?.requires_consultation ?? false);
   const [pricingOptions, setPricingOptions] = useState<PricingOption[]>([]);
   const [thumbnailUrl, setThumbnailUrl] = useState(initialData?.thumbnail_url ?? "");
@@ -90,7 +89,7 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
     sort_order: sortOrder,
     is_featured: isFeatured,
     tags: tags.split(",").map((tag) => tag.trim()).filter(Boolean),
-    applicable_packages: applicablePackages,
+    applicable_packages: requiresConsultation ? [] : pricingOptions.map((o) => o.slug),
     requires_consultation: requiresConsultation,
   });
 
@@ -99,8 +98,8 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
 
     if (slugError) return;
 
-    if (published && applicablePackages.length === 0 && !requiresConsultation) {
-      setToast({ message: "공개 전환을 위해 적용 가격정책을 하나 이상 선택하거나 '협의필요'를 체크해주세요.", type: "error" });
+    if (published && !requiresConsultation && pricingOptions.length === 0) {
+      setToast({ message: "공개 전환을 위해 활성화된 가격 패키지가 필요합니다. 또는 '협의필요'를 체크해주세요.", type: "error" });
       return;
     }
 
@@ -170,38 +169,18 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
         <ThumbnailField value={thumbnailUrl} onChange={setThumbnailUrl} className="md:col-span-2" />
         <div className="md:col-span-2 space-y-3 rounded-xl border border-zinc-200 bg-zinc-50/60 p-4">
           <div className="space-y-1">
-            <p className="text-sm font-medium text-zinc-700">적용 가격정책 <span className="text-red-500">*</span></p>
-            <p className="text-xs text-zinc-400">공개 전환 시 하나 이상 선택하거나 협의필요를 체크해야 합니다.</p>
+            <p className="text-sm font-medium text-zinc-700">적용 가격정책</p>
+            <p className="text-xs text-zinc-400">기본적으로 Starter · Professional · Premium 전체 적용. 협의 필요한 경우에만 아래를 체크하세요.</p>
           </div>
-          <div className="flex flex-wrap gap-4">
-            {pricingOptions.map((option) => (
-              <label key={option.slug} className="flex items-center gap-2 text-sm text-zinc-700">
-                <input
-                  type="checkbox"
-                  checked={applicablePackages.includes(option.slug)}
-                  onChange={(event) => {
-                    setApplicablePackages((current) =>
-                      event.target.checked ? [...current, option.slug] : current.filter((slug) => slug !== option.slug)
-                    );
-                  }}
-                  className="h-4 w-4 rounded border-zinc-300 text-zinc-900 focus:ring-zinc-900"
-                />
-                {option.name} ({option.price})
-              </label>
-            ))}
-            <label className="flex items-center gap-2 text-sm text-zinc-700">
-              <input
-                type="checkbox"
-                checked={requiresConsultation}
-                onChange={(event) => setRequiresConsultation(event.target.checked)}
-                className="h-4 w-4 rounded border-zinc-300 text-zinc-900 focus:ring-zinc-900"
-              />
-              협의필요
-            </label>
-          </div>
-          {pricingOptions.length === 0 && (
-            <p className="text-xs text-zinc-400">현재 언어에 등록된 활성 가격 패키지가 없습니다.</p>
-          )}
+          <label className="flex items-center gap-2 text-sm text-zinc-700">
+            <input
+              type="checkbox"
+              checked={requiresConsultation}
+              onChange={(event) => setRequiresConsultation(event.target.checked)}
+              className="h-4 w-4 rounded border-zinc-300 text-zinc-900 focus:ring-zinc-900"
+            />
+            협의필요
+          </label>
         </div>
         <label className="md:col-span-2 flex flex-col gap-1">
           <span className="text-sm font-medium text-zinc-700">설명</span>
