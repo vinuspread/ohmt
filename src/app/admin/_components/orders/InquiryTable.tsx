@@ -1,14 +1,10 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { useRouter } from "next/navigation";
 import { Search } from "lucide-react";
 import { Modal } from "../ui/Modal";
 import { Table, type Column } from "../ui/Table";
-import { Toast } from "../ui/Toast";
 import type { Inquiry, InquiryType } from "@/types/template";
-
-type ToastState = { message: string; type: "success" | "error" };
 
 const TYPE_LABELS: Record<InquiryType, string> = {
   template: "템플릿 기반",
@@ -29,23 +25,19 @@ interface TemplateInfo {
   lang: string;
 }
 
-function DetailRow({ label, value }: { label: string; value: string | null }) {
+function InfoRow({ label, value }: { label: string; value: string | null | undefined }) {
   if (!value) return null;
   return (
-    <div className="grid grid-cols-[120px_1fr] gap-3 text-sm">
-      <dt className="font-medium text-zinc-500">{label}</dt>
-      <dd className="text-zinc-900 break-words">{value}</dd>
+    <div className="space-y-0.5">
+      <p className="text-[0.62rem] uppercase tracking-widest text-zinc-400 font-bold">{label}</p>
+      <p className="text-sm text-zinc-900">{value}</p>
     </div>
   );
 }
 
 export function InquiryTable({ data, templates }: { data: Inquiry[]; templates: TemplateInfo[] }) {
-  const router = useRouter();
   const [search, setSearch] = useState("");
   const [selectedInquiry, setSelectedInquiry] = useState<Inquiry | null>(null);
-  const [note, setNote] = useState("");
-  const [savingNote, setSavingNote] = useState(false);
-  const [toast, setToast] = useState<ToastState | null>(null);
 
   const templateMap = useMemo(() => {
     const map = new Map<string, TemplateInfo>();
@@ -71,38 +63,15 @@ export function InquiryTable({ data, templates }: { data: Inquiry[]; templates: 
     );
   }, [data, search]);
 
-  const openDetail = (inquiry: Inquiry) => {
-    setSelectedInquiry(inquiry);
-    setNote(inquiry.note ?? "");
-  };
-
-  const closeDetail = () => setSelectedInquiry(null);
-
-  const handleSaveNote = async () => {
-    if (!selectedInquiry) return;
-    setSavingNote(true);
-    const response = await fetch(`/api/admin/inquiries/${selectedInquiry.id}`, {
-      method: "PATCH",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ note }),
-    });
-    setSavingNote(false);
-    if (response.ok) {
-      setToast({ message: "메모가 저장됐습니다.", type: "success" });
-      closeDetail();
-      router.refresh();
-      return;
-    }
-    setToast({ message: "메모 저장에 실패했습니다.", type: "error" });
-  };
-
   const columns: Column<Inquiry>[] = [
     {
       key: "created_at",
       header: "접수일",
       width: "108px",
       render: (inquiry) => (
-        <span className="whitespace-nowrap text-xs text-zinc-500">{new Date(inquiry.created_at).toLocaleDateString("ko-KR")}</span>
+        <span className="whitespace-nowrap text-xs text-zinc-500">
+          {new Date(inquiry.created_at).toLocaleDateString("ko-KR")}
+        </span>
       ),
     },
     {
@@ -164,7 +133,7 @@ export function InquiryTable({ data, templates }: { data: Inquiry[]; templates: 
       render: (inquiry) => (
         <button
           type="button"
-          onClick={() => openDetail(inquiry)}
+          onClick={() => setSelectedInquiry(inquiry)}
           className="rounded-md border border-zinc-200 px-3 py-1.5 text-xs font-medium text-zinc-600 transition-colors hover:border-zinc-300 hover:text-zinc-900"
         >
           보기
@@ -190,85 +159,83 @@ export function InquiryTable({ data, templates }: { data: Inquiry[]; templates: 
 
       <Modal
         open={selectedInquiry !== null}
-        onClose={closeDetail}
+        onClose={() => setSelectedInquiry(null)}
         title="문의 상세"
+        size="xl"
         footer={
-          <>
-            <button
-              type="button"
-              onClick={closeDetail}
-              className="rounded-lg px-4 py-2 text-sm font-medium text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-900"
-            >
-              닫기
-            </button>
-            <button
-              type="button"
-              onClick={handleSaveNote}
-              disabled={savingNote}
-              className="rounded-lg bg-zinc-900 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-zinc-700 disabled:cursor-not-allowed disabled:opacity-50"
-            >
-              {savingNote ? "저장 중..." : "메모 저장"}
-            </button>
-          </>
+          <button
+            type="button"
+            onClick={() => setSelectedInquiry(null)}
+            className="rounded-lg px-4 py-2 text-sm font-medium text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-900"
+          >
+            닫기
+          </button>
         }
       >
         {selectedInquiry && (() => {
           const tmpl = getTemplateInfo(selectedInquiry);
+          const isTemplate = selectedInquiry.inquiry_type === "template" && selectedInquiry.template_name;
           return (
-            <div className="space-y-5">
-              {selectedInquiry.inquiry_type === "template" && selectedInquiry.template_name && (
-                <div className="rounded-xl border border-zinc-200 overflow-hidden">
-                  {tmpl?.thumbnail_url && (
-                    <img src={tmpl.thumbnail_url} alt={selectedInquiry.template_name} className="w-full h-36 object-cover" />
+            <div className="space-y-6">
+              {/* 상단: 템플릿 정보 + 신청자 정보 */}
+              <div className="grid grid-cols-2 gap-5">
+                {/* 좌: 선택 템플릿 */}
+                <div>
+                  <p className="text-[0.62rem] uppercase tracking-widest text-zinc-400 font-bold mb-2">선택한 템플릿</p>
+                  {isTemplate ? (
+                    <div className="rounded-xl border border-zinc-200 overflow-hidden">
+                      {tmpl?.thumbnail_url ? (
+                        <img src={tmpl.thumbnail_url} alt={selectedInquiry.template_name!} className="w-full h-40 object-cover" />
+                      ) : (
+                        <div className="w-full h-40 bg-zinc-100 flex items-center justify-center text-xs text-zinc-400">이미지 없음</div>
+                      )}
+                      <div className="p-3 bg-zinc-50 space-y-1">
+                        <p className="text-sm font-bold text-zinc-900">{selectedInquiry.template_name}</p>
+                        {tmpl?.slug && (
+                          <a
+                            href={`/${selectedInquiry.lang}/templates/${tmpl.slug}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-xs text-zinc-400 hover:text-zinc-700 underline"
+                          >
+                            템플릿 보기 →
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="rounded-xl border border-zinc-100 bg-zinc-50 h-40 flex items-center justify-center text-sm text-zinc-400">
+                      템플릿 미선택
+                    </div>
                   )}
-                  <div className="p-3 bg-zinc-50">
-                    <p className="text-[0.6rem] uppercase tracking-widest text-zinc-400 font-bold mb-0.5">선택 템플릿</p>
-                    <p className="text-sm font-bold text-zinc-900">{selectedInquiry.template_name}</p>
-                    {tmpl?.slug && (
-                      <a
-                        href={`/${selectedInquiry.lang}/templates/${tmpl.slug}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-xs text-zinc-400 hover:text-zinc-700 underline mt-0.5 inline-block"
-                      >
-                        템플릿 보기 →
-                      </a>
-                    )}
+                </div>
+
+                {/* 우: 신청자 정보 */}
+                <div>
+                  <p className="text-[0.62rem] uppercase tracking-widest text-zinc-400 font-bold mb-2">신청자 정보</p>
+                  <div className="space-y-3">
+                    <InfoRow label="이름" value={selectedInquiry.customer_name} />
+                    <InfoRow label="이메일" value={selectedInquiry.customer_email} />
+                    <InfoRow label="전화번호" value={selectedInquiry.customer_phone} />
+                    <InfoRow label="회사" value={selectedInquiry.company} />
+                    <InfoRow label="직책" value={selectedInquiry.role} />
+                    <InfoRow label="예산 및 패키지" value={selectedInquiry.package_name} />
+                    <InfoRow label="접수일" value={new Date(selectedInquiry.created_at).toLocaleString("ko-KR")} />
                   </div>
                 </div>
-              )}
-
-              <dl className="space-y-3">
-                <DetailRow label="이름" value={selectedInquiry.customer_name} />
-                <DetailRow label="이메일" value={selectedInquiry.customer_email} />
-                <DetailRow label="전화번호" value={selectedInquiry.customer_phone} />
-                <DetailRow label="회사" value={selectedInquiry.company} />
-                <DetailRow label="직책" value={selectedInquiry.role} />
-                <DetailRow label="예산 및 패키지" value={selectedInquiry.package_name} />
-              </dl>
-
-              <div>
-                <p className="mb-2 text-sm font-medium text-zinc-500">문의 내용</p>
-                <p className="whitespace-pre-wrap rounded-lg bg-zinc-50 p-3 text-sm leading-relaxed text-zinc-800">{selectedInquiry.message}</p>
               </div>
 
+              {/* 하단: 문의 내용 */}
               <div>
-                <label htmlFor="inquiry-note" className="mb-2 block text-sm font-medium text-zinc-700">관리 메모</label>
-                <textarea
-                  id="inquiry-note"
-                  value={note}
-                  onChange={(e) => setNote(e.target.value)}
-                  rows={4}
-                  className="w-full resize-y rounded-lg border border-zinc-200 px-3 py-2 text-sm outline-none transition-colors focus:border-zinc-900"
-                  placeholder="내부 확인 메모를 남겨주세요."
-                />
+                <p className="text-[0.62rem] uppercase tracking-widest text-zinc-400 font-bold mb-2">문의 내용</p>
+                <p className="whitespace-pre-wrap rounded-xl bg-zinc-50 border border-zinc-100 px-4 py-3 text-sm leading-relaxed text-zinc-800">
+                  {selectedInquiry.message}
+                </p>
               </div>
             </div>
           );
         })()}
       </Modal>
-
-      {toast && <Toast message={toast.message} type={toast.type} onClose={() => setToast(null)} />}
     </div>
   );
 }
