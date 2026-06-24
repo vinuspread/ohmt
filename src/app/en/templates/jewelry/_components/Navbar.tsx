@@ -78,10 +78,10 @@ const [scrolled, setScrolled] = useState(false);
     : "";
 
   const menuItems = [
-    { name: t.nav.collections, id: "collections", href: `/en/templates/OHMT003-jewelry-en/category/collections` },
-    { name: t.nav.engagement, id: "engagement", href: `/en/templates/OHMT003-jewelry-en/category/engagement` },
-    { name: t.nav.highJewelry, id: "high-jewelry", href: `/en/templates/OHMT003-jewelry-en/category/high-jewelry` },
-    { name: t.nav.about, id: "about", href: `/en/templates/OHMT003-jewelry-en/category/about` },
+    { name: t.nav.collections, id: "collections", href: `/en/templates/OHMT002-jewelry-EN/category/collections` },
+    { name: t.nav.engagement, id: "engagement", href: `/en/templates/OHMT002-jewelry-EN/category/engagement` },
+    { name: t.nav.highJewelry, id: "high-jewelry", href: `/en/templates/OHMT002-jewelry-EN/category/high-jewelry` },
+    { name: t.nav.about, id: "about", href: `/en/templates/OHMT002-jewelry-EN/category/about` },
   ];
 
   return (
@@ -136,7 +136,7 @@ const [scrolled, setScrolled] = useState(false);
           {/* Center Logo */}
           <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center pointer-events-none">
             <Link
-              href={`/en/templates/OHMT003-jewelry-en`}
+              href={`/en/templates/OHMT002-jewelry-EN`}
               className={`text-[15px] sm:text-[18px] md:text-2xl font-serif tracking-[0.25em] -mr-[0.25em] font-normal uppercase transition-colors duration-300 pointer-events-auto text-center ${
                 !isTransparent ? "text-neutral-900" : "text-white"
               }`}
@@ -187,7 +187,7 @@ const [scrolled, setScrolled] = useState(false);
             <button className="hover:text-[var(--color-primary)] transition-colors hidden sm:block">
               <User size={18} strokeWidth={1.5} />
             </button>
-            <Link href={`/en/templates/OHMT003-jewelry-en/cart`} className="group flex items-center gap-2 hover:opacity-85 transition-opacity">
+            <Link href={`/en/templates/OHMT002-jewelry-EN/cart`} className="group flex items-center gap-2 hover:opacity-85 transition-opacity">
               <ShoppingBag size={18} strokeWidth={1.5} className="group-hover:text-[var(--color-primary)] transition-colors" />
             </Link>
           </div>
