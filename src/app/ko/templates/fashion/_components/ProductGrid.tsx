@@ -4,12 +4,12 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 
 const NEW_ARRIVALS = [
-  { id: 1, price: '$120.00', image: '/templates/OHMT001-fashion/wool-hat.png', name: "울 버킷 햇" },
-  { id: 2, price: '$850.00', image: '/templates/OHMT001-fashion/trench-coat.png', name: "클래식 트렌치 코트" },
-  { id: 3, price: '$350.00', image: '/templates/OHMT001-fashion/backpack.png', name: "미니멀리스트 백팩" },
-  { id: 4, price: '$480.00', image: '/templates/OHMT001-fashion/boots.png', name: "프리미엄 레더 부츠" },
-  { id: 5, price: '$1,200.00', image: '/templates/OHMT001-fashion/silk-dress.png', name: "실크 이브닝 드레스" },
-  { id: 6, price: '$65.00', image: '/templates/OHMT001-fashion/basic-tee.png', name: "코튼 베이직 티" }
+  { id: 1, price: '$120.00', image: '/templates/fashion/wool-hat.png', name: "울 버킷 햇" },
+  { id: 2, price: '$850.00', image: '/templates/fashion/trench-coat.png', name: "클래식 트렌치 코트" },
+  { id: 3, price: '$350.00', image: '/templates/fashion/backpack.png', name: "미니멀리스트 백팩" },
+  { id: 4, price: '$480.00', image: '/templates/fashion/boots.png', name: "프리미엄 레더 부츠" },
+  { id: 5, price: '$1,200.00', image: '/templates/fashion/silk-dress.png', name: "실크 이브닝 드레스" },
+  { id: 6, price: '$65.00', image: '/templates/fashion/basic-tee.png', name: "코튼 베이직 티" }
 ];
 
 export const ProductGrid = () => {

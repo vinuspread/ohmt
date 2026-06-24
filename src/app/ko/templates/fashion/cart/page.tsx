@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { Suspense } from "react";
 import React from "react";
@@ -13,7 +13,7 @@ import { Button } from "../_components/ui/Button";
 
 function FashionCartPageContent() {
     const items = [
-        { id: "1", name: "스컬프처럴 블레이저 V.01", price: "$890", size: "M", img: "/templates/OHMT001-fashion/product-blazer.jpg" }
+        { id: "1", name: "스컬프처럴 블레이저 V.01", price: "$890", size: "M", img: "/templates/fashion/product-blazer.jpg" }
     ];
 
     return (
