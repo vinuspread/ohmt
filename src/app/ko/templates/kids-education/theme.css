@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+:root {
+  --color-primary: #FFCE20;
+  --color-secondary: #32C992;
+  --color-accent: #6D13EC;
+  --color-red: #CE3106;
+  --color-bg: #FAF9F5;
+  --color-bg-secondary: #F5F0E6;
+  --color-text-main: #111111;
+  --color-text-muted: #555555;
+  --color-text-contrast: #FFFFFF;
+  --color-border: #111111;
+  --color-cta-bg: #6B3FA0;
+
+  --font-heading: 'Jua', sans-serif;
+  --font-body: 'Pretendard', sans-serif;
+
+  /* Spacing system (4pt base) */
+  --space-xxs: 0.25rem; /* 4px */
+  --space-xs: 0.5rem;   /* 8px */
+  --space-sm: 0.75rem;  /* 12px */
+  --space-md: 1rem;     /* 16px */
+  --space-lg: 1.5rem;   /* 24px */
+  --space-xl: 2rem;     /* 32px */
+  --space-xxl: 3rem;    /* 48px */
+  --space-xxxl: 4rem;   /* 64px */
+  --space-giant: 6rem;  /* 96px */
+
+  /* Fluid Spacing for responsive design */
+  --space-section: clamp(3rem, 8vw, 6rem); /* 48px to 96px */
+  --space-container-gap: clamp(1.5rem, 5vw, 5rem); /* 24px to 80px */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Korean Kids Academy Typography Optimization (Overriding globals.css high-specificity selectors) */
+[class*="-ko"].kids-education-ko {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+/* Jua font headings letter-spacing reset (Only widen headings to keep Jua font legible, keeping body text at default) */
+[class*="-ko"].kids-education-ko h1,
+[class*="-ko"].kids-education-ko h2,
+[class*="-ko"].kids-education-ko h3,
+[class*="-ko"].kids-education-ko h4,
+[class*="-ko"].kids-education-ko [style*="var(--font-heading)"],
+[class*="-ko"].kids-education-ko [style*="var(--theme-font-heading)"],
+.kids-education-ko h1,
+.kids-education-ko h2,
+.kids-education-ko h3,
+.kids-education-ko h4 {
+  letter-spacing: 0.04em !important;
+}
+
+
+
