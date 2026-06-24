@@ -58,6 +58,30 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
   const [pickerOpen, setPickerOpen] = useState(false);
   const [pickerSearch, setPickerSearch] = useState("");
   const [selectedTemplate, setSelectedTemplate] = useState<TemplateItem | null>(null);
+  const [attachmentFile, setAttachmentFile] = useState<File | null>(null);
+  const [fileError, setFileError] = useState<string | null>(null);
+
+  const MAX_FILE_BYTES = 5 * 1024 * 1024;
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0] ?? null;
+    if (file && file.size > MAX_FILE_BYTES) {
+      setFileError("File size exceeds 5MB.");
+      e.target.value = "";
+      setAttachmentFile(null);
+      return;
+    }
+    setFileError(null);
+    setAttachmentFile(file ?? null);
+  };
+
+  const readFileAsBase64 = (file: File): Promise<string> =>
+    new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve((reader.result as string).split(",")[1]);
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -77,6 +101,10 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
     const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
 
     try {
+      const attachment = attachmentFile
+        ? { name: attachmentFile.name, type: attachmentFile.type, data: await readFileAsBase64(attachmentFile) }
+        : null;
+
       const res = await fetch("/api/inquiries", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -91,6 +119,7 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
           package_name: packageName || null,
           template_name: template || null,
           message,
+          attachment,
         }),
       });
 
@@ -359,15 +388,29 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
             )}
 
             <div>
-              <label className={LABEL_CLASS}>{type === "other" ? "Message" : "Project Goals"}</label>
+              <label className={LABEL_CLASS}>Inquiry Details</label>
               <textarea
                 name="message" rows={6} required className={`${INPUT_CLASS} resize-none`}
                 placeholder={
-                  type === "template" ? "Tell us about your project goals and any customization needs..."
+                  type === "template" ? "Tell us about your customization needs and project goals..."
                   : type === "custom" ? "Describe your brand, audience, and what you need built..."
                   : "What can we help you with?"
                 }
               />
+            </div>
+
+            <div>
+              <label className={LABEL_CLASS}>Attachment <span className="text-zinc-400 normal-case tracking-normal font-normal">(optional)</span></label>
+              <input
+                type="file"
+                accept=".pdf,.jpg,.jpeg,.png,.gif,.zip"
+                onChange={handleFileChange}
+                className="w-full text-sm text-zinc-500 file:mr-3 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-bold file:uppercase file:tracking-widest file:bg-zinc-100 file:text-zinc-600 hover:file:bg-zinc-200 file:transition-colors cursor-pointer"
+              />
+              {fileError
+                ? <p className="mt-1.5 text-xs text-red-500">{fileError}</p>
+                : <p className="mt-1.5 text-xs text-zinc-400">PDF, JPG, PNG, GIF, ZIP · Max 5MB</p>
+              }
             </div>
 
             {error && <p className="text-sm text-red-500 text-center">{error}</p>}

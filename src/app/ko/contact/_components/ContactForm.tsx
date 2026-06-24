@@ -58,6 +58,30 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
   const [pickerOpen, setPickerOpen] = useState(false);
   const [pickerSearch, setPickerSearch] = useState("");
   const [selectedTemplate, setSelectedTemplate] = useState<TemplateItem | null>(null);
+  const [attachmentFile, setAttachmentFile] = useState<File | null>(null);
+  const [fileError, setFileError] = useState<string | null>(null);
+
+  const MAX_FILE_BYTES = 5 * 1024 * 1024;
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0] ?? null;
+    if (file && file.size > MAX_FILE_BYTES) {
+      setFileError("파일 크기가 5MB를 초과합니다.");
+      e.target.value = "";
+      setAttachmentFile(null);
+      return;
+    }
+    setFileError(null);
+    setAttachmentFile(file ?? null);
+  };
+
+  const readFileAsBase64 = (file: File): Promise<string> =>
+    new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve((reader.result as string).split(",")[1]);
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -77,6 +101,10 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
     const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
 
     try {
+      const attachment = attachmentFile
+        ? { name: attachmentFile.name, type: attachmentFile.type, data: await readFileAsBase64(attachmentFile) }
+        : null;
+
       const res = await fetch("/api/inquiries", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -91,6 +119,7 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
           package_name: packageName || null,
           template_name: template || null,
           message,
+          attachment,
         }),
       });
 
@@ -359,15 +388,29 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
             )}
 
             <div>
-              <label className={LABEL_CLASS}>{type === "other" ? "문의 내용" : "프로젝트 목표"}</label>
+              <label className={LABEL_CLASS}>문의 상세</label>
               <textarea
                 name="message" rows={6} required className={`${INPUT_CLASS} resize-none`}
                 placeholder={
-                  type === "template" ? "프로젝트 목표와 커스터마이징 요구사항을 알려주세요..."
+                  type === "template" ? "커스터마이징 요구사항과 프로젝트 목표를 알려주세요..."
                   : type === "custom" ? "브랜드, 타겟 고객, 필요한 기능을 설명해 주세요..."
                   : "무엇을 도와드릴까요?"
                 }
               />
+            </div>
+
+            <div>
+              <label className={LABEL_CLASS}>파일 첨부 <span className="text-zinc-400 normal-case tracking-normal font-normal">(선택)</span></label>
+              <input
+                type="file"
+                accept=".pdf,.jpg,.jpeg,.png,.gif,.zip"
+                onChange={handleFileChange}
+                className="w-full text-sm text-zinc-500 file:mr-3 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-bold file:uppercase file:tracking-widest file:bg-zinc-100 file:text-zinc-600 hover:file:bg-zinc-200 file:transition-colors cursor-pointer"
+              />
+              {fileError
+                ? <p className="mt-1.5 text-xs text-red-500">{fileError}</p>
+                : <p className="mt-1.5 text-xs text-zinc-400">PDF, JPG, PNG, GIF, ZIP · 최대 5MB</p>
+              }
             </div>
 
             {error && <p className="text-sm text-red-500 text-center">{error}</p>}

@@ -15,6 +15,7 @@ interface InquiryPostBody {
   template_name?: unknown;
   message?: unknown;
   website?: unknown;
+  attachment?: unknown;
 }
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -27,7 +28,7 @@ const TYPE_LABELS: Record<InquiryType, string> = {
 
 const langs: TemplateLang[] = ["ko", "en"];
 const inquiryTypes: InquiryType[] = ["template", "custom", "other"];
-const maxBodyBytes = 20_000;
+const maxBodyBytes = 8 * 1024 * 1024; // 5MB 파일 base64 + 여유분
 
 const textLimits = {
   customer_name: 80,
@@ -143,6 +144,14 @@ export async function POST(request: Request) {
       .map(([label, value]) => `<tr><td style="padding:6px 12px;color:#6b7280;width:120px;vertical-align:top">${label}</td><td style="padding:6px 12px;color:#111827">${value}</td></tr>`)
       .join("");
 
+    const att = body.attachment;
+    const validAttachment =
+      att && typeof att === "object" && att !== null &&
+      typeof (att as Record<string, unknown>).name === "string" &&
+      typeof (att as Record<string, unknown>).data === "string"
+        ? (att as { name: string; type: string; data: string })
+        : null;
+
     await resend.emails.send({
       from: "Oh My Template <onboarding@resend.dev>",
       to: [
@@ -152,6 +161,9 @@ export async function POST(request: Request) {
         "nontext75@gmail.com",
       ],
       subject: `[문의] ${TYPE_LABELS[body.inquiry_type as InquiryType]} - ${customerName.value}`,
+      attachments: validAttachment
+        ? [{ filename: validAttachment.name, content: validAttachment.data }]
+        : undefined,
       html: `
         <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:32px 24px">
           <h2 style="font-size:18px;font-weight:700;color:#111827;margin:0 0 24px">새 문의가 접수됐습니다</h2>
