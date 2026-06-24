@@ -22,7 +22,7 @@ function ExperiencePageContent() {
       desc: "신선한 블리니와 함께 슬라이스한 프렌치 캐비어를 크뤼그 클로 담보네 빈티지 샴페인으로 페어링한 요리.",
       detail: "르 베르나르뎅의 3미슐랭 셰프 앙투안 뒤부아가 창작한 세트. 오시에트라 캐비어로 시작하는 콜드 아뮤즈부슈, 샹파뉴 뵈르 블랑을 곁들인 브르타뉴산 넙치의 판시어드 메인 코스, 그리고 다크 초콜릿 밀 푀유로 마무리됩니다. 크뤼그 클로 담보네 2002와 15년산 아르마냑 디제스티프가 함께 제공됩니다.",
       tags: ["3코스", "샴페인 페어링", "퍼스트클래스 전용"],
-      img: "/templates/OHMT008-airline/michelin-dining.jpg"
+      img: "/templates/airline/michelin-dining.jpg"
     },
     {
       id: "Korean",
@@ -30,7 +30,7 @@ function ExperiencePageContent() {
       desc: "밤과 대추로 천천히 조린 프리미엄 한우 갈비찜을 온기가 유지되는 유기농 청동그릇에 담아 서빙합니다.",
       detail: "조선시대 왕실 연회 전통에서 영감을 받은 코스입니다. 한우 1++ 등급의 갈비를 구기자, 밤, 숙성 된장과 함께 8시간 끓인 요리이며, 계절 나물, 돌솥밥, 그리고 입가심용 따뜻한 대추-계피 식혜가 함께 제공됩니다. 최적의 온도를 유지하기 위해 손으로 만든 유기농 청동 그릇에 담겨집니다.",
       tags: ["계절 메뉴", "전통 조리법", "비즈니스클래스 & 퍼스트클래스"],
-      img: "/templates/OHMT008-airline/korean-cuisine.jpg"
+      img: "/templates/airline/korean-cuisine.jpg"
     },
     {
       id: "Wellness",
@@ -38,7 +38,7 @@ function ExperiencePageContent() {
       desc: "트러플 향이 나는 퀴노아와 정원의 마이크로 허브, 유기농 신선 착즙 슈퍼푸드와의 페어링.",
       detail: "영양사 유키 타나카 박사와의 협력으로 개발된 세트입니다. 완전 식물성이며 글루텐 프리이며, 트러플 향이 나는 재래종 퀴노아 타불레, 코코넛 폼이 올려진 콜드프레스 스피룰리나 비스크, 그리고 화이트 트러플 쥬와 함께 로스팅한 마이타케 버섯이 메인입니다. 로우 카카오와 망고 타르트로 마무리됩니다. 모든 재료는 유기농 인증 및 지속 가능한 출처입니다.",
       tags: ["식물성", "글루텐 프리", "전 객실 이용 가능"],
-      img: "/templates/OHMT008-airline/wellness-set.jpg"
+      img: "/templates/airline/wellness-set.jpg"
     }
   ];
 
@@ -59,7 +59,7 @@ function ExperiencePageContent() {
 
         {/* Hero Cover (Completely Borderless & Floating Atmosphere) */}
         <PageHero
-          imageSrc="/templates/OHMT008-airline/airline-experience-hero.png"
+          imageSrc="/templates/airline/airline-experience-hero.png"
           imageAlt="프리미엄 캐빈 디테일"
           label="캐빈 경험"
           title={<>세심하게 설계된 <br /><span className="text-[var(--color-accent)] font-serif normal-case font-normal">비행의 정수.</span></>}

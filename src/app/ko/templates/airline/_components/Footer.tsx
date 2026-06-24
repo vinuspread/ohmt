@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT008-airline/-components/Footer.tsx
+﻿// src/app/templates/airline/-components/Footer.tsx
 "use client";
 
 import React from "react";
