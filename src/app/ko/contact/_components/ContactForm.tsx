@@ -60,7 +60,8 @@ export function ContactForm({ packages, requiresConsultation = false }: { packag
     const email = (form.elements.namedItem("email") as HTMLInputElement).value;
     const phone = (form.elements.namedItem("phone") as HTMLInputElement)?.value || "";
     const pkg = (form.elements.namedItem("package") as HTMLSelectElement)?.value || "";
-    const packageName = packages.find((item) => item.id === pkg)?.name ?? pkg;
+    const budget = (form.elements.namedItem("budget") as HTMLSelectElement)?.value || "";
+    const packageName = type === "custom" ? budget : (packages.find((item) => item.id === pkg)?.name ?? pkg);
     const template = (form.elements.namedItem("template") as HTMLInputElement)?.value || "";
     const company = (form.elements.namedItem("company") as HTMLInputElement)?.value || "";
     const role = (form.elements.namedItem("role") as HTMLInputElement)?.value || "";
@@ -248,7 +249,19 @@ export function ContactForm({ packages, requiresConsultation = false }: { packag
                 <label className={LABEL_CLASS}>전화번호</label>
                 <input type="tel" name="phone" className={INPUT_CLASS} placeholder="010-0000-0000" />
               </div>
-              {type !== "other" && !requiresConsultation && packages.length > 0 && (
+              {type === "custom" && (
+                <div>
+                  <label className={LABEL_CLASS}>가용 예산 <span className="text-zinc-400 normal-case tracking-normal font-normal">(선택)</span></label>
+                  <select name="budget" className={INPUT_CLASS}>
+                    <option value="">예산 범위를 선택하세요</option>
+                    <option value="500만원 이내">500만원 이내</option>
+                    <option value="1천만원 이내">1천만원 이내</option>
+                    <option value="2천만원 이내">2천만원 이내</option>
+                    <option value="협의 필요">협의 필요</option>
+                  </select>
+                </div>
+              )}
+              {type === "template" && !requiresConsultation && packages.length > 0 && (
                 <div>
                   <label className={LABEL_CLASS}>패키지 <span className="text-zinc-400 normal-case tracking-normal font-normal">(선택)</span></label>
                   <select name="package" defaultValue={packageParam} className={INPUT_CLASS}>

@@ -60,7 +60,8 @@ export function ContactForm({ packages, requiresConsultation = false }: { packag
     const email = (form.elements.namedItem("email") as HTMLInputElement).value;
     const phone = (form.elements.namedItem("phone") as HTMLInputElement)?.value || "";
     const pkg = (form.elements.namedItem("package") as HTMLSelectElement)?.value || "";
-    const packageName = packages.find((item) => item.id === pkg)?.name ?? pkg;
+    const budget = (form.elements.namedItem("budget") as HTMLSelectElement)?.value || "";
+    const packageName = type === "custom" ? budget : (packages.find((item) => item.id === pkg)?.name ?? pkg);
     const template = (form.elements.namedItem("template") as HTMLInputElement)?.value || "";
     const company = (form.elements.namedItem("company") as HTMLInputElement)?.value || "";
     const role = (form.elements.namedItem("role") as HTMLInputElement)?.value || "";
@@ -248,7 +249,19 @@ export function ContactForm({ packages, requiresConsultation = false }: { packag
                 <label className={LABEL_CLASS}>Phone</label>
                 <input type="tel" name="phone" className={INPUT_CLASS} placeholder="+1-000-000-0000" />
               </div>
-              {type !== "other" && !requiresConsultation && packages.length > 0 && (
+              {type === "custom" && (
+                <div>
+                  <label className={LABEL_CLASS}>Budget <span className="text-zinc-400 normal-case tracking-normal font-normal">(optional)</span></label>
+                  <select name="budget" className={INPUT_CLASS}>
+                    <option value="">Select a budget range</option>
+                    <option value="Under ₩5M">Under ₩5,000,000</option>
+                    <option value="Under ₩10M">Under ₩10,000,000</option>
+                    <option value="Under ₩20M">Under ₩20,000,000</option>
+                    <option value="To be discussed">To be discussed</option>
+                  </select>
+                </div>
+              )}
+              {type === "template" && !requiresConsultation && packages.length > 0 && (
                 <div>
                   <label className={LABEL_CLASS}>Package <span className="text-zinc-400 normal-case tracking-normal font-normal">(optional)</span></label>
                   <select name="package" defaultValue={packageParam} className={INPUT_CLASS}>
