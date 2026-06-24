@@ -192,7 +192,7 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
                 className="w-full bg-zinc-50 dark:bg-zinc-800 border border-zinc-200 dark:border-zinc-700 rounded-lg px-4 py-2 text-sm outline-none focus:border-zinc-400 dark:focus:border-zinc-500 text-zinc-900 dark:text-zinc-100 placeholder:text-zinc-400"
               />
             </div>
-            <div className="flex-1 min-h-0 overflow-y-auto p-4 grid grid-cols-2 sm:grid-cols-3 gap-3">
+            <div className="flex-1 min-h-0 overflow-y-auto"><div className="p-4 grid grid-cols-2 sm:grid-cols-3 gap-3">
               {templateList
                 .filter((t) => t.name.toLowerCase().includes(pickerSearch.toLowerCase()))
                 .map((t) => (
@@ -217,7 +217,7 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
                     <p className="px-3 pb-3 text-xs font-semibold text-zinc-700 dark:text-zinc-300 leading-tight">{t.name}</p>
                   </button>
                 ))}
-            </div>
+            </div></div>
           </div>
         </div>
       )}
