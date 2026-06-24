@@ -45,7 +45,7 @@ export default function About() {
             </div>
             <div className="mt-10">
               <a
-                href="/ko/templates/OHMT050-wedding-kr/contact"
+                href="/ko/templates/OHMT025-wedding-KO/contact"
                 className="inline-flex items-center justify-center border-b border-[var(--color-primary)] pb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[var(--color-primary)] hover:opacity-80 transition-opacity"
               >
                 당신의 특별한 날을 계획해 보세요 →

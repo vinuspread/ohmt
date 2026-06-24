@@ -127,7 +127,7 @@ export default function AboutFull() {
               여러분의 이야기를 들려주세요
             </h2>
             <Link
-              href="/ko/templates/OHMT050-wedding-kr/contact"
+              href="/ko/templates/OHMT025-wedding-KO/contact"
               className="inline-flex items-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-white border-b border-white/40 pb-1 hover:border-white transition-colors duration-200"
             >
               촬영 문의하기

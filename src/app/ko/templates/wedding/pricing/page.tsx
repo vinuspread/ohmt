@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "가격 - Lumen 웨딩 사진",
     description: "웨딩 촬영 패키지를 확인해보세요. 에센스, 엘레강스, 에버 애프터 컬렉션.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT050-wedding-kr/pricing",
+    url: "https://ohmytemplate.com/ko/templates/OHMT025-wedding-KO/pricing",
     siteName: "Oh My Template",
     images: [{ url: "/templates/OHMT025-wedding/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT050-wedding-kr/pricing",
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT025-wedding-KO/pricing",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/OHMT049-wedding-en/pricing",
-      "ko": "https://ohmytemplate.com/ko/templates/OHMT050-wedding-kr/pricing",
+      "en": "https://ohmytemplate.com/en/templates/OHMT025-wedding-EN/pricing",
+      "ko": "https://ohmytemplate.com/ko/templates/OHMT025-wedding-KO/pricing",
     },
   },
 };

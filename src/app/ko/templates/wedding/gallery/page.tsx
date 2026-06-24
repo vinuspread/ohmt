@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "포트폴리오 - Lumen 웨딩 사진",
     description: "파인아트 웨딩 사진 포트폴리오. 전 세계에서 기록한 사랑의 이야기들.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT050-wedding-kr/gallery",
+    url: "https://ohmytemplate.com/ko/templates/OHMT025-wedding-KO/gallery",
     siteName: "Oh My Template",
     images: [{ url: "/templates/OHMT025-wedding/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT050-wedding-kr/gallery",
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT025-wedding-KO/gallery",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/OHMT049-wedding-en/gallery",
-      "ko": "https://ohmytemplate.com/ko/templates/OHMT050-wedding-kr/gallery",
+      "en": "https://ohmytemplate.com/en/templates/OHMT025-wedding-EN/gallery",
+      "ko": "https://ohmytemplate.com/ko/templates/OHMT025-wedding-KO/gallery",
     },
   },
 };
