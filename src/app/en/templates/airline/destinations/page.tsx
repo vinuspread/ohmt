@@ -125,7 +125,7 @@ function DestinationsPageContent() {
                     transition={{ duration: 0.3 }}
                   >
                     <Link 
-                      href={`/en/templates/OHMT015-airline-en/destinations/${dest.slug}`}
+                      href={`/en/templates/OHMT008-airline-EN/destinations/${dest.slug}`}
                       className="group block space-y-6 text-left select-none"
                     >
                       {/* Image container (Color by default, Scale on hover) */}

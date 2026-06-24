@@ -52,7 +52,7 @@ const navItems = [
           : "bg-transparent"
       )}>
         <div className="max-w-[1320px] mx-auto px-6 md:px-10 flex items-center justify-between w-full">
-            <Link href="/en/templates/OHMT015-airline-en" className="shrink-0 group">
+            <Link href="/en/templates/OHMT008-airline-EN" className="shrink-0 group">
             <span className="text-[0.78rem] md:text-[0.82rem] font-bold tracking-[0.15em] uppercase text-white leading-none">Oh My Template</span>
           </Link>
 
@@ -61,7 +61,7 @@ const navItems = [
             {navItems.map((item) => (
               <Link
                 key={item.slug}
-                href={`/en/templates/OHMT015-airline-en/${item.slug}`}
+                href={`/en/templates/OHMT008-airline-EN/${item.slug}`}
                 className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-white/55 hover:text-white transition-colors duration-300 relative group pb-1"
               >
                 {item.name}
@@ -108,7 +108,7 @@ const navItems = [
           {navItems.map((item) => (
             <Button
               key={item.slug}
-              href={`/en/templates/OHMT015-airline-en/${item.slug}`}
+              href={`/en/templates/OHMT008-airline-EN/${item.slug}`}
               onClick={() => setMobileOpen(false)}
               className="text-[0.9rem] font-semibold uppercase tracking-[0.14em] text-white/60 hover:text-white py-4 border-b border-white/10 transition-colors"
               asChild
@@ -118,7 +118,7 @@ const navItems = [
           ))}
             <Button
               variant="outline"
-              href="/en/templates/OHMT015-airline-en/book"
+              href="/en/templates/OHMT008-airline-EN/book"
               onClick={() => setMobileOpen(false)}
               className="text-[0.9rem] font-semibold uppercase tracking-[0.14em] hover:text-[var(--color-accent-light)] py-4 border-b border-white/10 transition-colors"
             >

@@ -68,7 +68,7 @@ function AirlineTemplateContent() {
                     <p className="text-[0.85rem] text-[var(--color-text-muted)]">Menus curated by Michelin-starred chefs.</p>
                   </div>
                 </div>
-                <Link href="/en/templates/OHMT015-airline-en/experience" className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-[var(--color-primary)] hover:translate-x-1.5 transition-transform duration-300">
+                <Link href="/en/templates/OHMT008-airline-EN/experience" className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-[var(--color-primary)] hover:translate-x-1.5 transition-transform duration-300">
                   Explore First Class <span className="text-[1.2em]">→</span>
                 </Link>
               </div>
@@ -155,7 +155,7 @@ function AirlineTemplateContent() {
 
             <div className="mt-10 md:mt-14 text-center">
               <Link
-                href="/en/templates/OHMT015-airline-en/experience"
+                href="/en/templates/OHMT008-airline-EN/experience"
                 className="inline-flex items-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.2em] px-10 py-3.5 bg-[var(--color-primary)] text-[var(--color-accent)] hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors duration-300"
               >
                 View Full Experience <ArrowRight size={14} />
