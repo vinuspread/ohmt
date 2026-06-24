@@ -170,7 +170,7 @@ export default function DocDetailPage() {
                 </p>
               </div>
               <Link
-                href="/ko/templates/OHMT028-docs-kr"
+                href="/ko/templates/OHMT014-docs-KO"
                 className="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-medium text-white bg-[var(--color-primary)] hover:opacity-90 rounded-lg transition-opacity"
               >
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -209,7 +209,7 @@ export default function DocDetailPage() {
                   {siblings.map((sibling) => (
                     <Link
                       key={sibling.slug}
-                      href={`/ko/templates/OHMT028-docs-kr/${sibling.slug}`}
+                      href={`/ko/templates/OHMT014-docs-KO/${sibling.slug}`}
                       className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm text-[var(--color-text)] bg-[var(--color-bg-secondary)] hover:bg-[var(--color-bg-hover)] rounded-md transition-colors"
                     >
                       {(() => {
@@ -225,7 +225,7 @@ export default function DocDetailPage() {
 
             <div className="mt-8 pt-4 border-t border-[var(--color-border)]">
               <Link
-                href="/ko/templates/OHMT028-docs-kr"
+                href="/ko/templates/OHMT014-docs-KO"
                 className="inline-flex items-center gap-1 text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors"
               >
                 <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
