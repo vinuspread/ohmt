@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT002-jewelry/-internal/components/Navbar.tsx
+﻿// src/app/templates/jewelry/-internal/components/Navbar.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -73,8 +73,8 @@ const [scrolled, setScrolled] = useState(false);
   const isTransparent = (isHome || isCategoryPage) && !scrolled;
 
   // Derive current category ID if on subpage
-  const currentCategory = pathname.includes("/templates/OHMT002-jewelry/category/")
-    ? pathname.split("/templates/OHMT002-jewelry/category/")[1]
+  const currentCategory = pathname.includes("/templates/jewelry/category/")
+    ? pathname.split("/templates/jewelry/category/")[1]
     : "";
 
   const menuItems = [
