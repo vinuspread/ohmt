@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import { Header } from "../_components/Header";
 import { Footer } from "../_components/Footer";
@@ -16,7 +16,7 @@ function AboutPageContent() {
 
         <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
           <img
-            src="/templates/multi-shop/about-brand.jpg"
+            src="/templates/OHMT017-multi-shop/about-brand.jpg"
             alt="Oh My Template 브랜드 소개"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -54,7 +54,7 @@ function AboutPageContent() {
               </div>
               <div className="aspect-[3/4] overflow-hidden">
                 <img
-                  src="/templates/multi-shop/category-women.jpg"
+                  src="/templates/OHMT017-multi-shop/category-women.jpg"
                   alt="Oh My Template 컬렉션"
                   className="w-full h-full object-cover"
                 />
