@@ -5,19 +5,19 @@ import { designerInfo } from '@/lib/portfolio-data';
 
 export function Footer() {
   return (
-    <footer className="bg-[#f3f3f3]">
+    <footer className="bg-[var(--color-bg-secondary)]">
       <div className="max-w-[1440px] mx-auto px-6 md:px-10 pt-16 pb-8">
         {/* Top bar */}
-        <div className="flex items-center justify-between mb-16 pb-6 border-b border-[#d0d8e4]">
-          <Link href="/ko/templates/portfolio" className="text-[1.2rem] font-black tracking-tighter text-[#1e1e1e] hover:opacity-60 transition-opacity">
+        <div className="flex items-center justify-between mb-16 pb-6 border-b border-[var(--color-border)]">
+          <Link href="/ko/templates/OHMT007-portfolio-KO" className="text-[1.2rem] font-black tracking-tighter text-[var(--color-text)] hover:opacity-60 transition-opacity">
             Oh My Template.
           </Link>
-          <div className="flex items-center gap-2 text-[13px] font-medium text-[#8a919b]">
-            <a href="#" className="hover:text-[#1e1e1e] transition-colors">BE</a>
+          <div className="flex items-center gap-2 text-[13px] font-medium text-[var(--color-text-muted)]">
+            <a href="#" className="hover:text-[var(--color-text)] transition-colors">BE</a>
             <span>/</span>
-            <a href="#" className="hover:text-[#1e1e1e] transition-colors">DR</a>
+            <a href="#" className="hover:text-[var(--color-text)] transition-colors">DR</a>
             <span>/</span>
-            <a href="#" className="hover:text-[#1e1e1e] transition-colors">X</a>
+            <a href="#" className="hover:text-[var(--color-text)] transition-colors">X</a>
           </div>
         </div>
 
@@ -25,47 +25,47 @@ export function Footer() {
         <div className="grid md:grid-cols-5 gap-12 mb-16">
           {/* Left: CTA */}
           <div className="md:col-span-3">
-            <p className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-bold text-[#1e1e1e] leading-snug mb-6">
-              여러분의 이야기를 듣고 싶습니다
+            <p className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-bold text-[var(--color-text)] leading-snug mb-6">
+              �������� �̾߱⸦ ��� �ͽ��ϴ�
               <br />
-              <span className="text-[#8a919b] font-normal">프로젝트가 있든, 인사를 건네고 싶든.</span>
+              <span className="text-[var(--color-text-muted)] font-normal">������Ʈ�� �ֵ�, �λ縦 �ǳװ� �͵�.</span>
             </p>
             <Link href={`mailto:${designerInfo.contact.email}`}
-              className="inline-block text-[1.3rem] font-bold text-[#1e1e1e] border-b-2 border-[#1e1e1e] pb-0.5 hover:opacity-60 transition-opacity">
+              className="inline-block text-[1.3rem] font-bold text-[var(--color-text)] border-b-2 border-[var(--color-primary)] pb-0.5 hover:opacity-60 transition-opacity">
               {designerInfo.contact.email}
             </Link>
           </div>
 
           {/* Right: Newsletter */}
           <div className="md:col-span-2">
-            <h3 className="text-[1.6rem] font-bold text-[#1e1e1e] mb-2">뉴스레터 구독</h3>
-            <p className="text-[0.82rem] text-[#8a919b] mb-6">팀이 전하는 디자인 트렌드 소식.</p>
+            <h3 className="text-[1.6rem] font-bold text-[var(--color-text)] mb-2">�������� ����</h3>
+            <p className="text-[0.82rem] text-[var(--color-text-muted)] mb-6">���� ���ϴ� ������ Ʈ���� �ҽ�.</p>
             <form className="space-y-3" onSubmit={e => e.preventDefault()}>
-              <input type="text" placeholder="이름"
-                className="w-full border-b border-[#d0d8e4] bg-transparent py-3 text-[0.88rem] text-[#1e1e1e] placeholder:text-[#8a919b] outline-none focus:border-[#1e1e1e] transition-colors" />
-              <input type="email" placeholder="이메일"
-                className="w-full border-b border-[#d0d8e4] bg-transparent py-3 text-[0.88rem] text-[#1e1e1e] placeholder:text-[#8a919b] outline-none focus:border-[#1e1e1e] transition-colors" />
+              <input type="text" placeholder="�̸�"
+                className="w-full border-b border-[var(--color-border)] bg-transparent py-3 text-[0.88rem] text-[var(--color-text)] placeholder:text-[var(--color-text-muted)] outline-none focus:border-[var(--color-primary)] transition-colors" />
+              <input type="email" placeholder="�̸���"
+                className="w-full border-b border-[var(--color-border)] bg-transparent py-3 text-[0.88rem] text-[var(--color-text)] placeholder:text-[var(--color-text-muted)] outline-none focus:border-[var(--color-primary)] transition-colors" />
               <button type="submit"
-                className="w-full bg-[#1e1e1e] text-white text-[0.78rem] font-bold uppercase tracking-widest py-4 mt-2 hover:bg-black transition-colors">
-                보내기
+                className="w-full bg-[var(--color-primary)] text-white text-[0.78rem] font-bold uppercase tracking-widest py-4 mt-2 hover:bg-black transition-colors">
+                ������
               </button>
             </form>
           </div>
         </div>
 
         {/* Bottom nav */}
-        <div className="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-[#d0d8e4]">
+        <div className="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-[var(--color-border)]">
           <div className="flex flex-wrap gap-6">
             {[...designerInfo.nav.map(n => ({ name: n.name, href: n.href })),
-              { name: 'Manifesto', href: '/ko/templates/portfolio/manifesto' }
+              { name: 'Manifesto', href: '/ko/templates/OHMT007-portfolio-KO/manifesto' }
             ].map(item => (
               <Link key={item.name} href={item.href}
-                className="text-[12px] text-[#5a6271] hover:text-[#1e1e1e] transition-colors">
+                className="text-[12px] text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors">
                 {item.name}
               </Link>
             ))}
           </div>
-          <span className="text-[0.75rem] text-[#8a919b]">© 2026 Oh My Template.</span>
+          <span className="text-[0.75rem] text-[var(--color-text-muted)]">�� 2026 Oh My Template.</span>
         </div>
       </div>
     </footer>

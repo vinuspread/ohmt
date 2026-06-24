@@ -9,7 +9,7 @@ interface ImageWithFallbackProps extends ImageProps {
 
 export function ImageWithFallback({
     src,
-    fallbackSrc = '/templates/portfolio/fallback.jpg',
+    fallbackSrc = '/templates/OHMT007-portfolio/fallback.jpg',
     alt,
     ...props
 }: ImageWithFallbackProps) {
