@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT010-cosmetic/-components/layout/Footer.tsx
+﻿// src/app/templates/cosmetic/-components/layout/Footer.tsx
 "use client";
 
 import React from "react";

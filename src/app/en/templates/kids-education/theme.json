@@ -1,0 +1,56 @@
+{
+  "slug": "kids-education",
+  "name": "Kids Education",
+  "name_ko": "키즈 에듀케이션",
+  "category": "lifestyle",
+  "description": "Playful and colorful children education website with clean, pill-based design",
+  "description_ko": "경쾌하고 다채로운 어린이 교육 웹사이트 템플릿",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#FFCE20",
+      "secondary": "#32C992",
+      "accent": "#6D13EC",
+      "text": {
+        "main": "#111111",
+        "muted": "#555555",
+        "contrast": "#111111"
+      },
+      "ui": {
+        "border": "#111111",
+        "hover": "#F5F0E6",
+        "shadow": "8px 8px 0px 0px #111111"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "'Baloo Chettan 2', sans-serif",
+        "weight": "700",
+        "tracking": "-0.01em",
+        "style": "font-bold tracking-tight"
+      },
+      "body": {
+        "font": "'Inter', sans-serif",
+        "weight": "500",
+        "leading": "1.5",
+        "style": "font-medium leading-relaxed"
+      }
+    },
+    "spacing": {
+      "page_pt": "96px",
+      "container": "1200px",
+      "gutter": "32px",
+      "card_gap": "24px"
+    },
+    "motion": {
+      "transition_fast": "200ms",
+      "transition_normal": "300ms",
+      "transition_slow": "500ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+    },
+    "interaction": {
+      "button": "bg-[var(--color-primary)] rounded-full font-bold hover:brightness-95 active:scale-[0.97] transition-all duration-150",
+      "card_hover": "hover:bg-white hover:border-black/15 hover:shadow-md transition-all duration-200"
+    }
+  }
+}

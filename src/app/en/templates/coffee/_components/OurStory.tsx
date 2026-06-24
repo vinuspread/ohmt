@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
@@ -34,7 +34,7 @@ export const OurStory = () => {
           transition={{ duration: 0.85, ease }}
         >
           <motion.img
-            src="/templates/OHMT019-coffee/story-interior.png"
+            src="/templates/coffee/story-interior.png"
             alt="Cafe interior"
             className="w-full h-full object-cover"
             initial={{ scale: 1.08 }}

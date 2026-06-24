@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React from "react";
 import { motion } from "motion/react";
 import { Header } from "../_components/Header";
@@ -34,7 +34,7 @@ function AboutPageContent() {
             transition={{ duration: 1, delay: 0.2, ease }}
           >
             <img
-              src="/templates/OHMT019-coffee/story-interior.png"
+              src="/templates/coffee/story-interior.png"
               alt="Cafe interior"
               className="w-full h-full object-cover"
             />
@@ -75,7 +75,7 @@ function AboutPageContent() {
             transition={{ duration: 0.7, ease }}
           >
             <img
-              src="/templates/OHMT019-coffee/story-brewing.png"
+              src="/templates/coffee/story-brewing.png"
               alt="Coffee brewing"
               className="w-full h-full object-cover"
             />
@@ -114,10 +114,10 @@ function AboutPageContent() {
         {/* Image pair */}
         <section className="grid grid-cols-2">
           <div className="aspect-square overflow-hidden">
-            <img src="/templates/OHMT019-coffee/story-beans.png" alt="Coffee beans" className="w-full h-full object-cover" />
+            <img src="/templates/coffee/story-beans.png" alt="Coffee beans" className="w-full h-full object-cover" />
           </div>
           <div className="aspect-square overflow-hidden">
-            <img src="/templates/OHMT019-coffee/hero-drink.png" alt="Espresso bar" className="w-full h-full object-cover" />
+            <img src="/templates/coffee/hero-drink.png" alt="Espresso bar" className="w-full h-full object-cover" />
           </div>
         </section>
 

@@ -1,4 +1,4 @@
-export interface Project {
+﻿export interface Project {
   id: string;
   title: string;
   location: string;
@@ -43,63 +43,63 @@ export const projects: Project[] = [
     title: "아멜리아 & 조나단",
     location: "자카르타 더 글래스하우스",
     year: 2023,
-    image: "/templates/OHMT025-wedding/gallery-01.jpg",
+    image: "/templates/wedding/gallery-01.jpg",
   },
   {
     id: "maya-cristoper",
     title: "마야 & 크리스토퍼",
     location: "발리 아야나 리조트",
     year: 2023,
-    image: "/templates/OHMT025-wedding/gallery-02.jpg",
+    image: "/templates/wedding/gallery-02.jpg",
   },
   {
     id: "clara-daniel",
     title: "클라라 & 대니얼",
     location: "발리 울루와투 절벽",
     year: 2024,
-    image: "/templates/OHMT025-wedding/wedding-story-03.jpg",
+    image: "/templates/wedding/wedding-story-03.jpg",
   },
   {
     id: "sarah-michael",
     title: "사라 & 마이클",
     location: "샤토 드 빌레트, 프랑스",
     year: 2024,
-    image: "/templates/OHMT025-wedding/gallery-03.jpg",
+    image: "/templates/wedding/gallery-03.jpg",
   },
   {
     id: "emma-james",
     title: "에마 & 제임스",
     location: "빌라 발비아노, 코모호",
     year: 2024,
-    image: "/templates/OHMT025-wedding/gallery-04.jpg",
+    image: "/templates/wedding/gallery-04.jpg",
   },
   {
     id: "sophia-alexander",
     title: "소피아 & 알렉산더",
     location: "클리프 하우스, 샌프란시스코",
     year: 2025,
-    image: "/templates/OHMT025-wedding/gallery-05.jpg",
+    image: "/templates/wedding/gallery-05.jpg",
   },
   {
     id: "olivia-ethan",
     title: "올리비아 & 이든",
     location: "빌트모어 에스테이트, 애슈빌",
     year: 2025,
-    image: "/templates/OHMT025-wedding/gallery-06.jpg",
+    image: "/templates/wedding/gallery-06.jpg",
   },
   {
     id: "isabella-william",
     title: "이사벨라 & 윌리엄",
     location: "캐슬 하워드, 요크셔",
     year: 2025,
-    image: "/templates/OHMT025-wedding/wedding-story-01.jpg",
+    image: "/templates/wedding/wedding-story-01.jpg",
   },
   {
     id: "ava-benjamin",
     title: "아바 & 벤저민",
     location: "포시즌스, 마우이",
     year: 2025,
-    image: "/templates/OHMT025-wedding/wedding-story-02.jpg",
+    image: "/templates/wedding/wedding-story-02.jpg",
   }
 ];
 
@@ -115,7 +115,7 @@ export const packages: Package[] = [
       "다운로드 가능한 온라인 개인 갤러리",
       "촬영 전 사전 조율 및 플래닝 상담"
     ],
-    image: "/templates/OHMT025-wedding/wedding-story-01.jpg",
+    image: "/templates/wedding/wedding-story-01.jpg",
   },
   {
     id: "elegance",
@@ -129,7 +129,7 @@ export const packages: Package[] = [
       "온라인 개인 갤러리 및 사진 소유권 제공",
       "서브 스냅 작가(2인 촬영) 기본 포함"
     ],
-    image: "/templates/OHMT025-wedding/about-clara.jpg",
+    image: "/templates/wedding/about-clara.jpg",
   },
   {
     id: "ever-after",
@@ -144,7 +144,7 @@ export const packages: Package[] = [
       "최고급 수제 가죽 앨범 제작",
       "온라인 갤러리 및 3주 내 고속 보정본 전달"
     ],
-    image: "/templates/OHMT025-wedding/wedding-story-02.jpg",
+    image: "/templates/wedding/wedding-story-02.jpg",
   }
 ];
 
@@ -183,48 +183,48 @@ export const steps: Step[] = [
     number: "01",
     title: "상담 및 연결",
     description: "문의 폼을 통해 연락 주시면, 따뜻한 통화로 비전과 일정에 대해 이야기 나누고 궁금한 점을 모두 해결해 드립니다.",
-    image: "/templates/OHMT025-wedding/process-01.jpg"
+    image: "/templates/wedding/process-01.jpg"
   },
   {
     number: "02",
     title: "함께하는 플래닝",
     description: "맞춤형 촬영 타임라인과 주요 포토 스팟을 함께 설계하여, 웨딩 당일 모든 장면이 자연스럽게 흘러가도록 준비합니다.",
-    image: "/templates/OHMT025-wedding/process-02.jpg"
+    image: "/templates/wedding/process-02.jpg"
   },
   {
     number: "03",
     title: "스타일링 디테일",
     description: "청첩장부터 플로럴까지, 여러분의 이야기를 더욱 특별하게 만들어 줄 작은 디테일들을 함께 큐레이팅합니다.",
-    image: "/templates/OHMT025-wedding/process-03.jpg"
+    image: "/templates/wedding/process-03.jpg"
   },
   {
     number: "04",
     title: "사전 답사",
     description: "웨딩 전에 장소를 미리 방문하여 최적의 조명과 앵글을 확인합니다. 어떤 순간도 놓치지 않도록 철저히 준비합니다.",
-    image: "/templates/OHMT025-wedding/process-04.jpg"
+    image: "/templates/wedding/process-04.jpg"
   },
   {
     number: "05",
     title: "퍼스트 룩",
     description: "축제가 시작되기 전, 서로를 처음 마주하는 숨 막히는 순간을 진정성 있게 담아냅니다. 가장 생생하고 감동적인 장면입니다.",
-    image: "/templates/OHMT025-wedding/process-05.jpg"
+    image: "/templates/wedding/process-05.jpg"
   },
   {
     number: "06",
     title: "본 촬영",
     description: "여러분은 축제를 온전히 즐기세요. 우리는 현장에 자연스럽게 녹아들어 진짜 감정과 파인아트 디테일을 기록합니다.",
-    image: "/templates/OHMT025-wedding/process-06.jpg"
+    image: "/templates/wedding/process-06.jpg"
   },
   {
     number: "07",
     title: "밤을 수놓다",
     description: "저녁이 깊어갈수록 우리는 가까이에서 춤추는 순간의 기쁨과 웃음, 그리고 조용한 교감을 포착합니다.",
-    image: "/templates/OHMT025-wedding/process-07.jpg"
+    image: "/templates/wedding/process-07.jpg"
   },
   {
     number: "08",
     title: "영원히 간직할 순간",
     description: "따뜻한 색감으로 손수 보정한 아름다운 갤러리를 전달받아 대대손손 공유하고 간직합니다.",
-    image: "/templates/OHMT025-wedding/process-08.jpg"
+    image: "/templates/wedding/process-08.jpg"
   }
 ];

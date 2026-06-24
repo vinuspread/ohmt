@@ -34,7 +34,7 @@ export const Hero = () => {
 
           <div className="order-1 md:order-2 relative h-[400px] md:h-full min-h-[480px] bg-[var(--color-bg-secondary)] overflow-hidden">
             <img
-              src="/templates/OHMT005-sneaker/hero-main.jpg"
+              src="/templates/sneaker/hero-main.jpg"
               alt="Premium Sneaker"
               className="w-full h-full object-cover object-center"
             />

@@ -1,0 +1,18 @@
+:root {
+  --color-primary: #7C3AED;
+  --color-secondary: #F5F5F5;
+  --color-accent: #06B6D4;
+  --color-bg: #080808;
+  --color-bg-secondary: #111111;
+  --color-bg-tertiary: #1A1A1A;
+  --color-text: #F5F5F5;
+  --color-text-muted: #888888;
+  --color-text-contrast: #FFFFFF;
+  --color-border: #222222;
+  --color-border-bright: #333333;
+  --font-heading: var(--font-orbitron), 'Space Grotesk', 'Pretendard', sans-serif;
+  --font-body: 'Inter', 'Pretendard', sans-serif;
+}
+
+body, * { word-break: keep-all; }
+header a, header button, header nav { letter-spacing: -0.03em; }

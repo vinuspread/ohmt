@@ -1,0 +1,61 @@
+{
+  "slug": "hotel",
+  "name": "Luxe Haven Hotel",
+  "name_ko": "럭스 헤이븐 호텔",
+  "category": "hospitality",
+  "description": "A luxury hotel booking template with elegant room showcases and reservation system.",
+  "description_ko": "고급스러운 객실 쇼케이스와 예약 시스템을 갖춘 럭셔리 호텔 템플릿.",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#1C2B24",
+      "secondary": "#C5A880",
+      "accent": "#C5A880",
+      "text": {
+        "main": "#2A2A2A",
+        "muted": "#5E5E5E",
+        "contrast": "#FAF9F6"
+      },
+      "ui": {
+        "border": "rgba(28,43,36,0.1)",
+        "hover": "#F2F0EB",
+        "shadow": "0 4px 20px rgba(0,0,0,0.06)"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Playfair Display, Noto Serif KR, serif",
+        "weight": "700",
+        "tracking": "-0.02em",
+        "style": "font-bold"
+      },
+      "body": {
+        "font": "Inter, Noto Sans KR, sans-serif",
+        "weight": "400",
+        "leading": "1.6",
+        "style": "leading-relaxed"
+      },
+      "mono": {
+        "font": "JetBrains Mono",
+        "weight": "400"
+      }
+    },
+    "spacing": {
+      "page_pt": "128px",
+      "container": "1440px",
+      "gutter": "48px",
+      "card_p": "24px",
+      "gap": "4px"
+    },
+    "motion": {
+      "transition_fast": "200ms",
+      "transition_normal": "400ms",
+      "transition_slow": "700ms",
+      "easing": "cubic-bezier(0.23, 1, 0.32, 1)"
+    },
+    "interaction": {
+      "card_hover": "scale-105 transition-transform duration-700",
+      "button": "bg-[var(--color-primary)] text-[var(--color-bg)] hover:bg-[var(--color-accent)]"
+    }
+  }
+}

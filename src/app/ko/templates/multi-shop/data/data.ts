@@ -1,10 +1,10 @@
 ﻿// src/app/ko/templates/OHMT017-multi-shop-KO/data/data.ts
 
 export const categories = [
-  { id: 'accessories', name: '액세서리', image: '/templates/OHMT017-multi-shop/category-accessories.jpg' },
-  { id: 'footwear', name: '신발', image: '/templates/OHMT017-multi-shop/category-footwear.jpg' },
-  { id: 'womens', name: '여성', image: '/templates/OHMT017-multi-shop/category-women.jpg' },
-  { id: 'mens', name: '남성', image: '/templates/OHMT017-multi-shop/category-men.jpg' },
+  { id: 'accessories', name: '액세서리', image: '/templates/multi-shop/category-accessories.jpg' },
+  { id: 'footwear', name: '신발', image: '/templates/multi-shop/category-footwear.jpg' },
+  { id: 'womens', name: '여성', image: '/templates/multi-shop/category-women.jpg' },
+  { id: 'mens', name: '남성', image: '/templates/multi-shop/category-men.jpg' },
 ]
 
 export const products = [
@@ -17,7 +17,7 @@ export const products = [
     reviewCount: 124,
     category: 'accessories',
     tag: 'New',
-    image: '/templates/OHMT017-multi-shop/product-01.jpg',
+    image: '/templates/multi-shop/product-01.jpg',
     description: '미니멀한 스퀘어 프레임 선글라스에 UV400 보호 기능. 가벼운 아세테이트 소재로 하루 종일 편안하게.',
     longDescription: '현대적인 감각과 클래식한 우아함을 동시에 갖춘 스퀘어 선글라스입니다. 수작업으로 정밀하게 폴리싱된 프리미엄 바이오 아세테이트 프레임과 견고한 UV400 렌즈를 사용하여 우수한 시야 선명도와 완벽한 자외선 차단 효과를 선사합니다. 부드럽게 라운딩 처리된 템플 아키텍처와 편안한 코받침 덕분에 장시간 착용해도 편안한 착용감을 제공합니다.\n\n이 제품은 도심 속 데일리 라이프웨어는 물론 야외 레저 활동 시에도 자외선으로부터 눈을 효과적으로 보호할 수 있도록 설계되었습니다. 시그니처 템플의 힌지 부분에는 강도를 보강한 강화 공법이 적용되어 비틀림 현상을 최소화했습니다.\n\n미니멀하고 단정한 스퀘어 실루엣은 대부분의 페이스 라인에 부드럽게 조화를 이루며, 남녀 모두 착용할 수 있는 젠더리스 디자인을 지향합니다.',
     specs: [
@@ -44,7 +44,7 @@ export const products = [
     reviewCount: 89,
     category: 'accessories',
     tag: 'New',
-    image: '/templates/OHMT017-multi-shop/product-02.jpg',
+    image: '/templates/multi-shop/product-02.jpg',
     description: '강화 스티칭이 적용된 유기농 코튼 캔버스 토트백. 넉넉한 내부 공간으로 데일리 필수품을 모두 수납.',
     longDescription: '도심 속 데일리 커뮤터와 주말 여행자 모두를 위해 설계된 고밀도 유기농 코튼 캔버스 토트백입니다. 하중이 집중되는 주요 연결 부위에 정교한 X자형 강화 스티치와 이중 웹 직조 핸들을 적용하여 뛰어난 내구성을 보장합니다. 안감을 생략한 자연스러운 내부에 스마트폰이나 키를 간편하게 수납할 수 있는 슬립 포켓을 더해, 실용적인 미학과 내추럴한 감성을 완성했습니다.\n\n이 캔버스 백은 가공되지 않은 순수한 생지 코튼 질감을 고스란히 살려 내추럴하면서도 단단한 형상을 지탱합니다. 바닥 면에는 보강 판넬을 덧대어 무거운 책이나 소지품을 넣어도 아래로 처지는 현상을 대폭 완화했습니다.\n\n시간이 지날수록 사용자의 손때가 묻어 자연스럽게 에이징되는 캔버스 고유의 텍스처를 느껴보세요.',
     specs: [
@@ -72,7 +72,7 @@ export const products = [
     reviewCount: 57,
     category: 'womens',
     tag: 'New',
-    image: '/templates/OHMT017-multi-shop/product-03.jpg',
+    image: '/templates/multi-shop/product-03.jpg',
     description: '허리에 섬세한 리본 디테일이 돋보이는 우아한 A라인 스커트. 프리미엄 피치 새틴으로 제작.',
     longDescription: '허리를 탄탄하게 잡아주면서도 물결치듯 자연스럽게 떨어지는 드레이프가 매력적인 릴라 리본 스커트입니다. 부드러운 피치 가공 새틴 원단으로 제작되어 깊이감 있는 은은한 광택과 실크처럼 매끄러운 감촉을 자랑합니다. 왼쪽 골반 라인에 장식된 셀프 타이 리본과 콘실 지퍼 디테일로 마감해 정갈한 실루엣을 제안하며, 포멀한 오피스 룩부터 격식 있는 이브닝 웨어까지 두루 어울립니다.\n\n바이어스 재단 방식을 차용하여 신체가 움직일 때마다 부드럽게 흔들리는 입체적 드레이프를 구현했습니다. 원단 표면에는 아주 미세한 피치 기모 처리가 가미되어 차가운 새틴 특유의 느낌을 지우고 따스하고 고급스러운 시각 효과를 극대화했습니다.\n\n안쪽 전체에 부드러운 스트레치 안감을 내장하여 정전기를 방지하고 활동성을 크게 높였습니다.',
     specs: [
@@ -99,7 +99,7 @@ export const products = [
     reviewCount: 203,
     category: 'footwear',
     tag: 'New',
-    image: '/templates/OHMT017-multi-shop/product-04.jpg',
+    image: '/templates/multi-shop/product-04.jpg',
     description: '쿠셔닝 인솔이 적용된 슬릭한 레더 스니커즈. 다양한 스타일에 매치되는 활용도 높은 디자인.',
     longDescription: '캐주얼 럭셔리의 정수를 담은 미니멀 레더 스니커즈입니다. 최고급 풀그레인 카프스킨 가죽을 채택하고 정교한 미싱 공정으로 정돈된 실루엣을 완성했습니다. 복사뼈를 부드럽게 감싸는 패디드 칼라와 고탄성 메모리폼 인솔이 내장되어 발의 피로를 최소화하며, 이탈리아 마곰(Margom)사의 고무 아웃솔을 결합하여 강력한 접지력과 내구성을 선사합니다.\n\n이 신발의 가장 큰 매력은 군더더기 없는 완벽한 플레인 실루엣입니다. 어떠한 로고 노출도 생략하여 의상의 품격을 높여주며, 세미 포멀 슈트 코디부터 데님 진까지 폭넓은 스펙트럼의 연출이 가능합니다.\n\n가죽 테두리는 수작업 엣지 코트 공정으로 깔끔하게 약칠 마감되어 갈라짐 현상이 없습니다.',
     specs: [
@@ -127,7 +127,7 @@ export const products = [
     reviewCount: 145,
     category: 'mens',
     tag: 'New',
-    image: '/templates/OHMT017-multi-shop/product-05.jpg',
+    image: '/templates/multi-shop/product-05.jpg',
     description: '자개 단추가 달린 루즈핏 린넨 셔츠. 따뜻한 날씨에 완벽한 통기성 원단.',
     longDescription: '벨기에산 천연 프렌치 플랙스로 제직한 클래식 린넨 셔츠는 내추럴한 통기성과 편안한 드레이프를 특징으로 합니다. 완성 후 특수 가먼트 워싱 가공을 거쳐 원단 수축을 방지하고 피부에 닿는 촉감을 극대화했습니다. 천연 자개 단추와 프렌치 플래킷, 자연스러운 레귤러 칼라 디테일을 통해 도회적인 감성과 휴양지의 여유로움을 고스란히 담아냈습니다.\n\n이 셔츠에 사용된 플랙스는 통기성이 면에 비해 약 2배 이상 뛰어나 덥고 습한 한여름 날씨에도 끈적임 없이 피부 온도를 쾌적하게 낮춰줍니다.\n\n입을수록 생활 주름이 내추럴하게 잡혀 더욱 세련된 프렌치 감성의 실루엣이 연출됩니다.',
     specs: [
@@ -154,7 +154,7 @@ export const products = [
     reviewCount: 312,
     category: 'womens',
     tag: 'Best',
-    image: '/templates/OHMT017-multi-shop/product-06.jpg',
+    image: '/templates/multi-shop/product-06.jpg',
     description: '루즈한 실루엣의 가는 골지 니트 스웨터. 부드러운 메리노 울 블렌드.',
     longDescription: '엄선된 최고급 메리노 울과 캐시미어를 황금 비율로 블렌딩하여 짠 골지 니트 스웨터입니다. 무게감 없이 포근하게 몸을 감싸주는 세밀한 12게이지 립조직으로 제작되어 편안하면서도 슬림해 보이는 실루엣을 제안합니다. 은은하게 떨어지는 드롭 숄더와 여유 있는 터틀넥 마감이 세련된 윈터 룩을 완성해 줍니다.\n\n높은 신축성을 지닌 골지 편직 기법으로 제작되어 활동 시 몸의 움직임에 부드럽게 밀착하면서도 조이지 않습니다. 목을 압박하지 않는 루즈한 모크넥 디자인은 따스하면서도 시각적으로 목선을 길고 슬림해 보이게 연출합니다.\n\n모든 솔기는 봉제 시 두껍게 튀어나오는 부분 없이 깔끔한 사시 봉제 기법으로 꼼꼼하게 마감되었습니다.',
     specs: [
@@ -182,7 +182,7 @@ export const products = [
     reviewCount: 178,
     category: 'mens',
     tag: 'Best',
-    image: '/templates/OHMT017-multi-shop/product-07.jpg',
+    image: '/templates/multi-shop/product-07.jpg',
     description: '스트레치 코튼 트윌 소재의 테일러드 슬림핏 치노. 클래식한 5포켓 스타일링.',
     longDescription: '신축성이 가미된 프리미엄 장섬유 코튼 트윌 원단으로 제작되어, 완벽한 핏감과 편안한 가동 범위를 동시에 제공하는 슬림 치노 팬츠입니다. 허벅지부터 밑단까지 정교하게 좁아지는 테이퍼드 실루엣이 모던한 분위기를 자아내며, 견고한 벨트 루프와 깔끔한 웰트 포켓, 황동 YKK 지퍼 디테일로 신뢰할 수 있는 내구성을 부여했습니다.\n\n이 치노 팬츠는 포멀한 자켓과 매치하여 깔끔한 비즈니스 캐주얼로 입거나, 가벼운 티셔츠와 스니커즈에 매칭하여 데일리 캐주얼로 입기 좋은 최적의 하이브리드 포지션입니다.\n\n원단 직조 시 이중 연사 공법을 적용하여 잦은 세탁 후에도 무릎 발사나 엉덩이 처짐 등의 형태 변형을 획기적으로 억제했습니다.',
     specs: [
@@ -209,7 +209,7 @@ export const products = [
     reviewCount: 94,
     category: 'accessories',
     tag: 'Best',
-    image: '/templates/OHMT017-multi-shop/product-08.jpg',
+    image: '/templates/multi-shop/product-08.jpg',
     description: '길이 조절 가능한 스트랩의 이탈리안 레더 크로스바디 백. 미니멀한 실루엣에 히든 포켓.',
     longDescription: '절제된 형태미와 극대화된 기능성을 탐구한 이탈리안 레더 크로스바디 백입니다. 자연스러운 엠보싱이 살아있는 베지터블 태닝 카프 스킨으로 제작하여 사용할수록 깊어지는 태닝감과 가죽 특유의 클래식한 분위기를 즐기실 수 있습니다. 전면의 마그네틱 플랩 안쪽에는 정갈한 히든 포켓이 위치해 있으며, 수납을 분할해 줄 내부 지퍼 포켓과 세련된 브라스 버클 스트랩으로 마감되었습니다.\n\n이 가방은 단색의 플랫한 가죽이 아닌, 잔잔한 페블 엠보 가공을 거쳐 일상 스크래치나 이염에 압도적으로 강합니다.\n\n크로스바디 스트랩의 버클 장치는 견고한 솔리드 브라스(통황동) 소재에 매트 솔트 코팅 처리를 하여 시간이 흐를수록 빈티지한 골드 톤으로 우아하게 에이징됩니다.',
     specs: [
@@ -237,7 +237,7 @@ export const products = [
     reviewCount: 267,
     category: 'footwear',
     tag: 'Best',
-    image: '/templates/OHMT017-multi-shop/product-09.jpg',
+    image: '/templates/multi-shop/product-09.jpg',
     description: '스택드 레더 힐의 포인티드 토 앵클 부츠. 사이드 지퍼로 간편한 착용.',
     longDescription: '슬릭하고 조형적인 실루엣이 돋보이는 포인티드 토 앵클 부츠입니다. 실크처럼 고운 기모를 자랑하는 카프 스웨이드 가죽으로 제작되었으며, 견고하게 적층된 가죽 힐이 내추럴하면서도 세련된 실루엣을 든든하게 유지해 줍니다. 부드러운 천연 가죽 안감과 충격 흡수 라텍스 인솔을 삽입해 피로도를 크게 줄였으며, 안쪽 사이드 지퍼로 손쉬운 탈착용을 돕습니다.\n\n포인티드 앞코 라인은 발가락이 조이는 불편함을 개선하기 위해 발볼 부분을 소폭 확장 설계하여, 스타일리시하면서도 장시간 보행 시 발등의 통증이 전혀 느껴지지 않습니다.\n\n밑창과 굽의 연결 부위에는 스페인 슈즈 아틀리에만의 수작업 천연 본딩 접합 공법을 고수하여 부츠의 뒤틀림을 완벽히 방지합니다.',
     specs: [
@@ -264,7 +264,7 @@ export const products = [
     reviewCount: 83,
     category: 'womens',
     tag: 'Best',
-    image: '/templates/OHMT017-multi-shop/product-10.jpg',
+    image: '/templates/multi-shop/product-10.jpg',
     description: '커스텀 플로럴 프린트의 랩 드레스. 가벼운 비스코스 소재에 플러터링한 타이 웨이스트와 V넥라인.',
     longDescription: '살랑이는 바람에 부드럽게 흩날리는 오리지널 그래픽 프린트의 플로럴 랩 드레스입니다. 텐셀사 고유의 우수한 통기성과 친환경 생산 방식이 융합된 에코 비스코스 원단을 차용해 살결에 닿는 감촉이 매우 시원합니다. 체형에 맞게 허리 선을 자유롭게 조절할 수 있는 리본 랩 디테일과 세련된 V넥라인, 로맨틱한 소맷자락 플러터 실루엣이 어우러져 매혹적인 룩을 연출합니다.\n\n이 원단은 펄프에서 추출한 비스코스 섬유 중에서도 화학 물질 사용과 탄소 배출량을 절반 수준으로 줄인 지속 가능 에코베로 원사만을 엄선하여 제작되었습니다.\n\n가슴 부분에는 깊은 V넥 파임에도 불구하고 들뜨거나 벌어지지 않도록 안쪽에 미세한 스냅 단추 처리를 더하여 한층 편안하게 활동하실 수 있습니다.',
     specs: [
@@ -292,7 +292,7 @@ export const products = [
     reviewCount: 156,
     category: 'footwear',
     tag: 'Best',
-    image: '/templates/OHMT017-multi-shop/product-11.jpg',
+    image: '/templates/multi-shop/product-11.jpg',
     description: '광택 처리된 송아지 가죽의 클래식 페니 로퍼. 쿠셔닝 풋베드와 내구성 좋은 레더 솔.',
     longDescription: '정통 브리티시 제화 공법을 충실히 따른 옥스포드 페니 로퍼입니다. 은은하고 묵직한 광택이 감도는 프리미엄 복스 카프 가죽으로 수공 제작되어, 신을수록 착용자의 발 형태에 맞춤형으로 에이징됩니다. 견고한 굿이어 웰트 공법을 적용해 평생 소장할 수 있는 품질을 자랑하며, 발바닥 전체를 지지해 줄 메모리폼 가죽 풋베드로 마감했습니다.\n\n복스 카프 특유의 매끄러운 표면 광택은 시간이 지나도 둔해지지 않으며, 전용 슈크림으로 가볍게 버핑해주면 즉시 새 신발 같은 맑은 광채를 복원할 수 있습니다.\n\n발등 부분의 페니 스트랩 웰트 스티칭은 두꺼운 왁스실을 사용하여 전통 새들 스티치 기법으로 봉제하여 뜯어짐 현상을 완벽 차단합니다.',
     specs: [
@@ -317,9 +317,9 @@ export const newArrivals = products.filter(p => p.tag === 'New')
 export const bestSellers = products.filter(p => p.tag === 'Best')
 
 export const teamMembers = [
-  { id: '1', name: 'Sofia Laurent', role: '크리에이티브 디렉터', image: '/templates/OHMT017-multi-shop/team-01.jpg', instagram: '#', linkedin: '#' },
-  { id: '2', name: 'James Avery', role: '디자인 총괄', image: '/templates/OHMT017-multi-shop/team-02.jpg', instagram: '#', linkedin: '#' },
-  { id: '3', name: 'Mia Chen', role: '브랜드 전략가', image: '/templates/OHMT017-multi-shop/team-03.jpg', instagram: '#', linkedin: '#' },
+  { id: '1', name: 'Sofia Laurent', role: '크리에이티브 디렉터', image: '/templates/multi-shop/team-01.jpg', instagram: '#', linkedin: '#' },
+  { id: '2', name: 'James Avery', role: '디자인 총괄', image: '/templates/multi-shop/team-02.jpg', instagram: '#', linkedin: '#' },
+  { id: '3', name: 'Mia Chen', role: '브랜드 전략가', image: '/templates/multi-shop/team-03.jpg', instagram: '#', linkedin: '#' },
 ]
 
 export const reviews = [
@@ -330,7 +330,7 @@ export const reviews = [
 ]
 
 export const blogPosts = [
-  { id: '1', slug: 'style-minimalist-accessories', title: '이번 시즌 미니멀 액세서리 스타일링하는 방법', category: '스타일 가이드', date: '2026년 6월 5일', readTime: '5분', image: '/templates/OHMT017-multi-shop/blog-01.jpg', excerpt: '절제된 우아함의 미학을 경험하세요. 어떤 룩도 돋보이게 만드는 미니멀 액세서리 큐레이티드 가이드.' },
-  { id: '2', slug: 'sustainable-fashion', title: '지속 가능한 패션: 우리 브랜드의 약속', category: '브랜드 스토리', date: '2026년 5월 28일', readTime: '4분', image: '/templates/OHMT017-multi-shop/blog-02.jpg', excerpt: '지속 가능한 실천을 향한 우리의 여정과 의미 있는 패션을 재정의하는 방법을 알아보세요.' },
-  { id: '3', slug: 'mens-wardrobe-checklist', title: '남성 필수 옷장 체크리스트', category: '남성 가이드', date: '2026년 5월 15일', readTime: '6분', image: '/templates/OHMT017-multi-shop/blog-03.jpg', excerpt: '시간을 초월한 옷장을 구성하는 필수 아이템 체크리스트로 클래식한 스타일을 완성하세요.' },
+  { id: '1', slug: 'style-minimalist-accessories', title: '이번 시즌 미니멀 액세서리 스타일링하는 방법', category: '스타일 가이드', date: '2026년 6월 5일', readTime: '5분', image: '/templates/multi-shop/blog-01.jpg', excerpt: '절제된 우아함의 미학을 경험하세요. 어떤 룩도 돋보이게 만드는 미니멀 액세서리 큐레이티드 가이드.' },
+  { id: '2', slug: 'sustainable-fashion', title: '지속 가능한 패션: 우리 브랜드의 약속', category: '브랜드 스토리', date: '2026년 5월 28일', readTime: '4분', image: '/templates/multi-shop/blog-02.jpg', excerpt: '지속 가능한 실천을 향한 우리의 여정과 의미 있는 패션을 재정의하는 방법을 알아보세요.' },
+  { id: '3', slug: 'mens-wardrobe-checklist', title: '남성 필수 옷장 체크리스트', category: '남성 가이드', date: '2026년 5월 15일', readTime: '6분', image: '/templates/multi-shop/blog-03.jpg', excerpt: '시간을 초월한 옷장을 구성하는 필수 아이템 체크리스트로 클래식한 스타일을 완성하세요.' },
 ]

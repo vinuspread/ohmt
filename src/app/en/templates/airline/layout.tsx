@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: "Premium aviation experience",
     url: "https://ohmytemplate.com/en/templates/OHMT008-airline-EN",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/OHMT008-airline/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/airline/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Airline - Oh My Template",
     description: "Premium aviation experience",
-    images: ["/templates/OHMT008-airline/og-image.jpg"],
+    images: ["/templates/airline/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {

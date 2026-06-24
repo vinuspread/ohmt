@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React from "react";
 import { motion } from "motion/react";
 
@@ -9,25 +9,25 @@ const picks = [
     badge: "New",
     label: "Signature Cold Brew",
     price: "$7.5",
-    image: "/templates/OHMT019-coffee/signature-coldbrew.png",
+    image: "/templates/coffee/signature-coldbrew.png",
   },
   {
     badge: "Barista's Pick",
     label: "Vanilla Oat Latte",
     price: "$6.5",
-    image: "/templates/OHMT019-coffee/signature-latte.png",
+    image: "/templates/coffee/signature-latte.png",
   },
   {
     badge: "Seasonal",
     label: "Single Origin Espresso",
     price: "$5.0",
-    image: "/templates/OHMT019-coffee/signature-espresso.png",
+    image: "/templates/coffee/signature-espresso.png",
   },
   {
     badge: "Chef's Special",
     label: "Matcha Oat Latte",
     price: "$7.0",
-    image: "/templates/OHMT019-coffee/menu-matcha.png",
+    image: "/templates/coffee/menu-matcha.png",
   },
 ];
 

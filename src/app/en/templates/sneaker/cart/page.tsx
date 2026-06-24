@@ -8,8 +8,8 @@ import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
 
 const initItems = [
-  { id: "sn-001", name: "Air Stride Pro", size: "US 10", color: "White", price: 240, qty: 1, img: "/templates/OHMT005-sneaker/product-1.jpg" },
-  { id: "sn-003", name: "Shadow Runner", size: "US 9", color: "Black", price: 320, qty: 1, img: "/templates/OHMT005-sneaker/product-3.jpg" },
+  { id: "sn-001", name: "Air Stride Pro", size: "US 10", color: "White", price: 240, qty: 1, img: "/templates/sneaker/product-1.jpg" },
+  { id: "sn-003", name: "Shadow Runner", size: "US 9", color: "Black", price: 320, qty: 1, img: "/templates/sneaker/product-3.jpg" },
 ];
 
 function CartPageContent() {

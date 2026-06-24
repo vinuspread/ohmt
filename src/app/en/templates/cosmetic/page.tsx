@@ -1,4 +1,4 @@
-// src/app/templates/OHMT010-cosmetic/page.tsx
+﻿// src/app/templates/cosmetic/page.tsx
 "use client";
 
 import React from "react";
@@ -84,7 +84,7 @@ return (
             <div className="grid md:grid-cols-2 gap-28 items-center">
               <div className="order-2 md:order-1">
                 <img 
-                  src="/templates/OHMT010-cosmetic/cosmetic-face-mask.png" 
+                  src="/templates/cosmetic/cosmetic-face-mask.png" 
                   className="w-full h-[380px] object-cover" 
                   alt="Brand story" 
                 />

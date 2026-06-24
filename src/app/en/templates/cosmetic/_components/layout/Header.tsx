@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT010-cosmetic/-components/layout/Header.tsx
+﻿// src/app/templates/cosmetic/-components/layout/Header.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";

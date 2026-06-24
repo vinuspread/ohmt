@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: "Personal branding and creative portfolio",
     url: "https://ohmytemplate.com/en/templates/OHMT007-portfolio-EN",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/OHMT007-portfolio/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/portfolio/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Portfolio - Oh My Template",
     description: "Personal branding and creative portfolio",
-    images: ["/templates/OHMT007-portfolio/og-image.jpg"],
+    images: ["/templates/portfolio/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {

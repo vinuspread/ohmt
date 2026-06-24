@@ -74,7 +74,7 @@ function BookPageContent() {
 
         {/* Global Cover Header */}
         <PageHero
-          imageSrc="/templates/OHMT008-airline/airline-book-hero.png"
+          imageSrc="/templates/airline/airline-book-hero.png"
           imageAlt="럭셔리 항공 실루엣"
           label="프리미엄 항공권 예약"
           title={<>당신만의 <br /><span className="text-[var(--color-accent)] font-serif normal-case font-normal">A380 생추어리.</span></>}

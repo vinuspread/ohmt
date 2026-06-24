@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT008-airline/-components/Header.tsx
+﻿// src/app/templates/airline/-components/Header.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";

@@ -1,4 +1,4 @@
-export interface Project {
+﻿export interface Project {
   id: string;
   title: string;
   location: string;
@@ -43,63 +43,63 @@ export const projects: Project[] = [
     title: "Amelia & Jonathan",
     location: "The Glasshouse, Jakarta",
     year: 2023,
-    image: "/templates/OHMT025-wedding/gallery-01.jpg",
+    image: "/templates/wedding/gallery-01.jpg",
   },
   {
     id: "maya-cristoper",
     title: "Maya & Cristoper",
     location: "Ayana Resort, Bali",
     year: 2023,
-    image: "/templates/OHMT025-wedding/gallery-02.jpg",
+    image: "/templates/wedding/gallery-02.jpg",
   },
   {
     id: "clara-daniel",
     title: "Clara & Daniel",
     location: "Uluwatu Cliff, Bali",
     year: 2024,
-    image: "/templates/OHMT025-wedding/wedding-story-03.jpg",
+    image: "/templates/wedding/wedding-story-03.jpg",
   },
   {
     id: "sarah-michael",
     title: "Sarah & Michael",
     location: "Chateau de Villette, France",
     year: 2024,
-    image: "/templates/OHMT025-wedding/gallery-03.jpg",
+    image: "/templates/wedding/gallery-03.jpg",
   },
   {
     id: "emma-james",
     title: "Emma & James",
     location: "Villa Balbiano, Lake Como",
     year: 2024,
-    image: "/templates/OHMT025-wedding/gallery-04.jpg",
+    image: "/templates/wedding/gallery-04.jpg",
   },
   {
     id: "sophia-alexander",
     title: "Sophia & Alexander",
     location: "Cliff House, San Francisco",
     year: 2025,
-    image: "/templates/OHMT025-wedding/gallery-05.jpg",
+    image: "/templates/wedding/gallery-05.jpg",
   },
   {
     id: "olivia-ethan",
     title: "Olivia & Ethan",
     location: "Biltmore Estate, Asheville",
     year: 2025,
-    image: "/templates/OHMT025-wedding/gallery-06.jpg",
+    image: "/templates/wedding/gallery-06.jpg",
   },
   {
     id: "isabella-william",
     title: "Isabella & William",
     location: "Castle Howard, Yorkshire",
     year: 2025,
-    image: "/templates/OHMT025-wedding/wedding-story-01.jpg",
+    image: "/templates/wedding/wedding-story-01.jpg",
   },
   {
     id: "ava-benjamin",
     title: "Ava & Benjamin",
     location: "Four Seasons, Maui",
     year: 2025,
-    image: "/templates/OHMT025-wedding/wedding-story-02.jpg",
+    image: "/templates/wedding/wedding-story-02.jpg",
   }
 ];
 
@@ -115,7 +115,7 @@ export const packages: Package[] = [
       "Online private gallery for download",
       "Pre-wedding planning consultation"
     ],
-    image: "/templates/OHMT025-wedding/wedding-story-01.jpg",
+    image: "/templates/wedding/wedding-story-01.jpg",
   },
   {
     id: "elegance",
@@ -129,7 +129,7 @@ export const packages: Package[] = [
       "Online private gallery & print release",
       "Second photographer included"
     ],
-    image: "/templates/OHMT025-wedding/about-clara.jpg",
+    image: "/templates/wedding/about-clara.jpg",
   },
   {
     id: "ever-after",
@@ -144,7 +144,7 @@ export const packages: Package[] = [
       "Premium lay-flat leather photo album",
       "Online gallery & fast-track 3-week delivery"
     ],
-    image: "/templates/OHMT025-wedding/wedding-story-02.jpg",
+    image: "/templates/wedding/wedding-story-02.jpg",
   }
 ];
 
@@ -183,48 +183,48 @@ export const steps: Step[] = [
     number: "01",
     title: "Let's Connect",
     description: "Reach out via our form. We will set up a warm call to discuss your vision, timeline, and answer any questions you have.",
-    image: "/templates/OHMT025-wedding/process-01.jpg"
+    image: "/templates/wedding/process-01.jpg"
   },
   {
     number: "02",
     title: "Plan Together",
     description: "We will co-create a tailored photography schedule and map out key spots so everything flows naturally on the big day.",
-    image: "/templates/OHMT025-wedding/process-02.jpg"
+    image: "/templates/wedding/process-02.jpg"
   },
   {
     number: "03",
     title: "Style the Details",
     description: "From stationery to florals, we help curate the small details that make your story feel uniquely yours.",
-    image: "/templates/OHMT025-wedding/process-03.jpg"
+    image: "/templates/wedding/process-03.jpg"
   },
   {
     number: "04",
     title: "Walk the Venue",
     description: "We scout your venue ahead of time to map the best light and angles, so nothing is left to chance on the day.",
-    image: "/templates/OHMT025-wedding/process-04.jpg"
+    image: "/templates/wedding/process-04.jpg"
   },
   {
     number: "05",
     title: "The First Look",
     description: "We capture that breathless first moment you see each other, raw and unscripted, before the celebration begins.",
-    image: "/templates/OHMT025-wedding/process-05.jpg"
+    image: "/templates/wedding/process-05.jpg"
   },
   {
     number: "06",
     title: "Capture the Day",
     description: "Enjoy your celebration to the fullest. We blend into the crowd to capture raw, authentic emotions and fine art details.",
-    image: "/templates/OHMT025-wedding/process-06.jpg"
+    image: "/templates/wedding/process-06.jpg"
   },
   {
     number: "07",
     title: "Dance the Night",
     description: "As the evening unfolds, we stay close to catch the joy, the laughter, and the quiet moments shared on the dance floor.",
-    image: "/templates/OHMT025-wedding/process-07.jpg"
+    image: "/templates/wedding/process-07.jpg"
   },
   {
     number: "08",
     title: "Cherish Forever",
     description: "Receive your beautiful gallery, fully hand-edited with warm tones, ready to be shared and printed for generations to come.",
-    image: "/templates/OHMT025-wedding/process-08.jpg"
+    image: "/templates/wedding/process-08.jpg"
   }
 ];

@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT012-magazine/-components/layout/Header.tsx
+﻿// src/app/templates/magazine/-components/layout/Header.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";

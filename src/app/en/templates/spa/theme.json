@@ -1,0 +1,56 @@
+{
+  "slug": "spa",
+  "name": "Spa Wellness",
+  "name_ko": "스파 웰니스",
+  "category": "lifestyle",
+  "description": "Premium spa and wellness shop template with a calming dark-green and cream palette, large lifestyle imagery, and a booking-first layout.",
+  "description_ko": "다크 그린과 크림 톤의 차분한 팔레트, 대형 라이프스타일 이미지, 예약 중심 구성을 갖춘 프리미엄 스파 웰니스 샵 템플릿.",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#C46B3A",
+      "secondary": "#1D2D1F",
+      "accent": "#4A5240",
+      "text": {
+        "main": "#1A1A1A",
+        "muted": "#6B6B6B",
+        "contrast": "#FFFFFF"
+      },
+      "ui": {
+        "border": "rgba(26,26,26,0.1)",
+        "hover": "#F7F5F1",
+        "shadow": "0 20px 50px rgba(26,26,26,0.08)"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "'Outfit', sans-serif",
+        "weight": "700",
+        "tracking": "-0.02em",
+        "style": "font-bold tracking-tight"
+      },
+      "body": {
+        "font": "'Inter', sans-serif",
+        "weight": "400",
+        "leading": "1.6",
+        "style": "leading-relaxed"
+      }
+    },
+    "spacing": {
+      "page_pt": "96px",
+      "container": "1280px",
+      "gutter": "32px",
+      "card_gap": "24px"
+    },
+    "motion": {
+      "transition_fast": "200ms",
+      "transition_normal": "300ms",
+      "transition_slow": "500ms",
+      "easing": "cubic-bezier(0.23, 1, 0.32, 1)"
+    },
+    "interaction": {
+      "button": "bg-[var(--color-primary)] text-[var(--color-text-contrast)] hover:brightness-110",
+      "card_hover": "hover:-translate-y-1 transition-transform duration-300"
+    }
+  }
+}

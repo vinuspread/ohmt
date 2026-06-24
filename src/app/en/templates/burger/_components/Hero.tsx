@@ -9,7 +9,7 @@ export const Hero = () => {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
       <motion.img
-        src="/templates/OHMT018-burger/hero-burger.png"
+        src="/templates/burger/hero-burger.png"
         alt="Handcrafted smash burger with melted cheese on a toasted brioche bun"
         className="absolute inset-0 w-full h-full object-cover"
         initial={{ scale: 1.05 }}

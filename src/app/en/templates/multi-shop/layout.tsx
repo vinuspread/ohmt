@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: "Multi-brand shopping experience with curated collections",
     url: "https://ohmytemplate.com/en/templates/OHMT017-multi-shop-EN",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/OHMT017-multi-shop/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/multi-shop/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Multi-Shop - Oh My Template",
     description: "Multi-brand shopping experience with curated collections",
-    images: ["/templates/OHMT017-multi-shop/og-image.jpg"],
+    images: ["/templates/multi-shop/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {

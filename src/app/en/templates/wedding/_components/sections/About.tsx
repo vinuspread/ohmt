@@ -17,7 +17,7 @@ export default function About() {
         {/* Image */}
         <div className="relative overflow-hidden aspect-[4/5] max-h-[80vh]">
           <motion.img
-            src="/templates/OHMT025-wedding/about-clara.jpg"
+            src="/templates/wedding/about-clara.jpg"
             alt="Clara, wedding photographer"
             className="h-full w-full object-cover object-center"
             style={{ y: imgY }}

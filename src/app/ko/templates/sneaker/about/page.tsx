@@ -16,10 +16,10 @@ const values = [
 ];
 
 const team = [
-  { name: "Marco Vinus", role: "창립자 & CEO", img: "/templates/OHMT005-sneaker/blog-1.jpg" },
-  { name: "Yuna Park", role: "디자인 총괄", img: "/templates/OHMT005-sneaker/blog-2.jpg" },
-  { name: "Tobias Krenn", role: "소재 총괄", img: "/templates/OHMT005-sneaker/blog-3.jpg" },
-  { name: "Sofia Reyes", role: "브랜드 디렉터", img: "/templates/OHMT005-sneaker/blog-4.jpg" },
+  { name: "Marco Vinus", role: "창립자 & CEO", img: "/templates/sneaker/blog-1.jpg" },
+  { name: "Yuna Park", role: "디자인 총괄", img: "/templates/sneaker/blog-2.jpg" },
+  { name: "Tobias Krenn", role: "소재 총괄", img: "/templates/sneaker/blog-3.jpg" },
+  { name: "Sofia Reyes", role: "브랜드 디렉터", img: "/templates/sneaker/blog-4.jpg" },
 ];
 
 function AboutPageContent() {
@@ -58,7 +58,7 @@ function AboutPageContent() {
               </Link>
             </div>
             <div className="aspect-[4/5] overflow-hidden bg-[var(--color-bg-secondary)]">
-              <img loading="lazy" src="/templates/OHMT005-sneaker/hero-main.jpg" alt="Vinus workshop" className="w-full h-full object-cover" />
+              <img loading="lazy" src="/templates/sneaker/hero-main.jpg" alt="Vinus workshop" className="w-full h-full object-cover" />
             </div>
           </div>
         </section>

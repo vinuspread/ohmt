@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT012-magazine/-components/sections/LatestStories.tsx
+﻿// src/app/templates/magazine/-components/sections/LatestStories.tsx
 "use client";
 
 import React from "react";
@@ -10,14 +10,14 @@ const stories = [
     tag: "사진",
     title: "빛과 그림자: 런던의 브루탈리즘 심장을 포착하다.",
     desc: "도시의 가장 논쟁이 많은 콘크리트 건축물들을 통한 사진 여행.",
-    img: '/templates/OHMT012-magazine/mag-8.jpg'
+    img: '/templates/magazine/mag-8.jpg'
   },
   {
     slug: "hidden-teahouses-kyoto",
     tag: "여행",
     title: "교토 외곽의 숨겨진 찻집들.",
     desc: "관광객들이 찾지 못하는 전통과 고요함을 발견하다.",
-    img: '/templates/OHMT012-magazine/mag-9.jpg'
+    img: '/templates/magazine/mag-9.jpg'
   }
 ];
 

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React, { useState } from "react";
 import { motion } from "motion/react";
 import { Header } from "../_components/Header";
@@ -23,7 +23,7 @@ function MenuPageContent() {
         {/* Hero */}
         <section className="relative bg-[var(--color-bg-dark)] h-[350px] flex items-center overflow-hidden">
           <img
-            src="/templates/OHMT019-coffee/alt-detail.png"
+            src="/templates/coffee/alt-detail.png"
             alt="Menu sub visual"
             className="absolute inset-0 w-full h-full object-cover"
           />

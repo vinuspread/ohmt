@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT005-sneaker/-components/layout/Header.tsx
+﻿// src/app/templates/sneaker/-components/layout/Header.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";

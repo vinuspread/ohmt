@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: "프리미엄 커피숍 & 로스터리 경험",
     url: "https://ohmytemplate.com/ko/templates/OHMT019-coffee-KO",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/OHMT019-coffee/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/coffee/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "커피 - Oh My Template",
     description: "프리미엄 커피숍 & 로스터리 경험",
-    images: ["/templates/OHMT019-coffee/og-image.jpg"],
+    images: ["/templates/coffee/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {

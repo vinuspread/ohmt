@@ -126,7 +126,7 @@ function ProductDetailPageContent() {
                   </div>
                   <Button
                     variant="primary"
-                    onClick={() => router.push('/templates/OHMT004-furniture/cart')}
+                    onClick={() => router.push('/templates/furniture/cart')}
                     className={`flex-1 py-6 rounded-full text-[14px] font-bold uppercase shadow-xl active:scale-95 ${theme.interaction.button}`}
                   >
                     Add to Bag
@@ -244,7 +244,7 @@ function ProductDetailPageContent() {
             className="relative aspect-[21/9] w-full overflow-hidden mb-16 md:mb-24 bg-zinc-50 group rounded-2xl shadow-sm"
           >
             <img 
-              src="/templates/OHMT004-furniture/lifestyle-narrative.png" 
+              src="/templates/furniture/lifestyle-narrative.png" 
               className="w-full h-full object-cover transition-transform duration-[6s] group-hover:scale-105"
               alt="Brand Lifestyle"
             />

@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 
 import Link from 'next/link'
 import { specData } from '../data/data'
@@ -48,7 +48,7 @@ export default function SpecShowcase() {
           <div className="lg:col-span-4 flex justify-center items-end relative z-10 lg:-mx-8">
             <div className="relative w-full max-w-[680px] flex items-end justify-center">
               <img
-                src="/templates/OHMT016-technology/omnibot-mockup-nuki.png"
+                src="/templates/technology/omnibot-mockup-nuki.png"
                 alt="OmniBot Gen 2 Mockup Structure"
                 className="w-full h-auto"
               />

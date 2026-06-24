@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 
@@ -7,7 +7,7 @@ export function Hero() {
         <section className="relative h-screen flex items-center justify-center overflow-hidden">
             <div className="absolute inset-0 z-0">
                 <img
-                    src="/templates/OHMT007-portfolio/portfolio-2.jpg"
+                    src="/templates/portfolio/portfolio-2.jpg"
                     className="w-full h-full object-cover"
                     alt="Hero"
                 />

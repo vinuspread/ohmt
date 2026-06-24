@@ -170,7 +170,7 @@ return (
     <section className="relative overflow-hidden bg-black text-white py-12 md:py-24">
       <div className="absolute inset-0 z-0">
         <img 
-          src="/templates/OHMT005-sneaker/promo-bg.jpg" 
+          src="/templates/sneaker/promo-bg.jpg" 
           alt="Promo Background" 
           className="w-full h-full object-cover opacity-50 brightness-75"
         />
