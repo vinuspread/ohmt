@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT012-magazine/-components/sections/Hero.tsx
+﻿// src/app/templates/magazine/-components/sections/Hero.tsx
 "use client";
 
 import React from "react";
@@ -17,7 +17,7 @@ export const Hero = () => {
     <section className="relative h-screen min-h-[700px] overflow-hidden">
       <img
         className="w-full h-full object-cover"
-        src="/templates/OHMT012-magazine/mag-hero.jpg"
+        src="/templates/magazine/mag-hero.jpg"
         alt="매거진 히어로"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/20 to-black/85" />

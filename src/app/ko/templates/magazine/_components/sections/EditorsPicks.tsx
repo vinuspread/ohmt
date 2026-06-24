@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT012-magazine/-components/sections/EditorsPicks.tsx
+﻿// src/app/templates/magazine/-components/sections/EditorsPicks.tsx
 "use client";
 
 import React from "react";
@@ -9,19 +9,19 @@ const picks = [
     slug: "sensory-language-ceramics",
     title: "도자기의 감각적 언어.",
     desc: "디지털 시대에 손공예 물건이 최고의 럭셔리가 되는 이유.",
-    img: "/templates/OHMT012-magazine/mag-5.jpg"
+    img: "/templates/magazine/mag-5.jpg"
   },
   {
     slug: "urban-gardening-vertical-revolution",
     title: "도시 원예: 수직 혁명.",
     desc: "콘크리트 공간에서 지속 가능한 식량 생태계를 재구성하다.",
-    img: "/templates/OHMT012-magazine/mag-6.jpg"
+    img: "/templates/magazine/mag-6.jpg"
   },
   {
     slug: "acoustics-of-silence",
     title: "침묵의 음향학.",
     desc: "현대의 소음으로부터 심리적 안식처를 제공하는 공간 설계.",
-    img: "/templates/OHMT012-magazine/mag-7.jpg"
+    img: "/templates/magazine/mag-7.jpg"
   }
 ];
 

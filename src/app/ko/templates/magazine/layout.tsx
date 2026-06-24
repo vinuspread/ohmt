@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: "Editorial culture and lifestyle",
     url: "https://ohmytemplate.com/ko/templates/OHMT012-magazine-KO",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/OHMT012-magazine/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/magazine/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Magazine - Oh My Template",
     description: "Editorial culture and lifestyle",
-    images: ["/templates/OHMT012-magazine/og-image.jpg"],
+    images: ["/templates/magazine/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
