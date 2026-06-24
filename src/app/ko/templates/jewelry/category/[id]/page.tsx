@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT004-jewelry-kr/category/[id]/page.tsx
+﻿// src/app/ko/templates/OHMT002-jewelry-KO/category/[id]/page.tsx
 "use client";
 
 import React, { use } from "react";
@@ -179,7 +179,7 @@ function JewelryCategoryPageContent({ params }: { params: Promise<{ id: string }
             {/* Asymmetric Emerald Grid */}
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-6 sm:gap-x-10 gap-y-12 sm:gap-y-24">
               {displayedProducts.map((item, i) => (
-                <Link key={item.id} href={`/ko/templates/OHMT004-jewelry-kr/product/${item.id}`} className="group block space-y-6">
+                <Link key={item.id} href={`/ko/templates/OHMT002-jewelry-KO/product/${item.id}`} className="group block space-y-6">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -249,7 +249,7 @@ function JewelryCategoryPageContent({ params }: { params: Promise<{ id: string }
             {/* Engagement Grid with in-frame rotation zoom */}
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10 sm:gap-12">
               {displayedProducts.map((item, i) => (
-                <Link key={item.id} href={`/ko/templates/OHMT004-jewelry-kr/product/${item.id}`} className="group block space-y-6">
+                <Link key={item.id} href={`/ko/templates/OHMT002-jewelry-KO/product/${item.id}`} className="group block space-y-6">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -307,7 +307,7 @@ function JewelryCategoryPageContent({ params }: { params: Promise<{ id: string }
               {/* Right Curated List - 9 Columns */}
               <div className="lg:col-span-9 grid grid-cols-2 md:grid-cols-2 gap-x-6 gap-y-10 sm:gap-12">
                 {displayedProducts.map((item, i) => (
-                  <Link key={item.id} href={`/ko/templates/OHMT004-jewelry-kr/product/${item.id}`} className="group block space-y-6">
+                  <Link key={item.id} href={`/ko/templates/OHMT002-jewelry-KO/product/${item.id}`} className="group block space-y-6">
                     <motion.div
                       initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}

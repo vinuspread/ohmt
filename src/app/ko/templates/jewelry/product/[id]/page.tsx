@@ -90,7 +90,7 @@ function ProductDetailPageContent({ params }: { params: Promise<{ id: string }> 
         <main className="antialiased bg-[var(--color-bg)] min-h-screen flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-3xl font-serif mb-4">상품을 찾을 수 없습니다</h1>
-            <Link href="/ko/templates/OHMT004-jewelry-kr" className="text-[var(--color-primary)] hover:underline">
+            <Link href="/ko/templates/OHMT002-jewelry-KO" className="text-[var(--color-primary)] hover:underline">
               주얼리 컬렉션으로 돌아가기
             </Link>
           </div>

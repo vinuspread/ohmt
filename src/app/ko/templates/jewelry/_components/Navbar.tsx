@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT004-jewelry-kr/-internal/components/Navbar.tsx
+﻿// src/app/ko/templates/OHMT002-jewelry-KO/-internal/components/Navbar.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -30,10 +30,10 @@ export default function Navbar() {
     : "";
 
   const menuItems = [
-    { name: "컬렉션", id: "collections", href: "/ko/templates/OHMT004-jewelry-kr/category/collections" },
-    { name: "인게이지먼트 & 웨딩", id: "engagement", href: "/ko/templates/OHMT004-jewelry-kr/category/engagement" },
-    { name: "하이 주얼리", id: "high-jewelry", href: "/ko/templates/OHMT004-jewelry-kr/category/high-jewelry" },
-    { name: "브랜드 헤리티지", id: "about", href: "/ko/templates/OHMT004-jewelry-kr/category/about" },
+    { name: "컬렉션", id: "collections", href: "/ko/templates/OHMT002-jewelry-KO/category/collections" },
+    { name: "인게이지먼트 & 웨딩", id: "engagement", href: "/ko/templates/OHMT002-jewelry-KO/category/engagement" },
+    { name: "하이 주얼리", id: "high-jewelry", href: "/ko/templates/OHMT002-jewelry-KO/category/high-jewelry" },
+    { name: "브랜드 헤리티지", id: "about", href: "/ko/templates/OHMT002-jewelry-KO/category/about" },
   ];
 
   return (
@@ -88,7 +88,7 @@ export default function Navbar() {
           {/* Center Logo */}
           <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center pointer-events-none max-w-[120px] sm:max-w-none">
             <Link
-              href="/ko/templates/OHMT004-jewelry-kr"
+              href="/ko/templates/OHMT002-jewelry-KO"
               className={`text-[14px] sm:text-[18px] md:text-2xl font-serif tracking-[0.25em] -mr-[0.25em] font-normal uppercase transition-colors duration-700 pointer-events-auto text-center ${
                 !isTransparent ? "text-neutral-900" : "text-white"
               }`}
@@ -142,7 +142,7 @@ export default function Navbar() {
             <button className="hover:text-[var(--color-primary)] transition-colors hidden sm:block">
               <User size={18} strokeWidth={1.5} />
             </button>
-            <Link href="/ko/templates/OHMT004-jewelry-kr/cart" className="group flex items-center gap-2 hover:opacity-85 transition-opacity">
+            <Link href="/ko/templates/OHMT002-jewelry-KO/cart" className="group flex items-center gap-2 hover:opacity-85 transition-opacity">
               <ShoppingBag size={18} strokeWidth={1.5} className="group-hover:text-[var(--color-primary)] transition-colors" />
             </Link>
           </div>
