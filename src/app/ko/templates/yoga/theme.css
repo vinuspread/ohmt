@@ -1,0 +1,40 @@
+:root {
+  --color-primary: #9B8B7A;
+  --color-secondary: #3A4050;
+  --color-accent: #C4956A;
+  --color-bg: #FDFCF9;
+  --color-bg-alt: #F7F5F1;
+  --color-bg-secondary: #F1EEE8;
+  --color-bg-dark: #3A4050;
+  --color-bg-medium: #7A8594;
+  --color-text: #1C1C1A;
+  --color-text-muted: #9A9690;
+  --color-text-contrast: #1C1C1A;
+  --color-border: rgba(28, 28, 26, 0.12);
+  --color-border-light: rgba(255, 255, 255, 1);
+
+  --font-heading: var(--font-pretendard);
+  --font-body: var(--font-pretendard);
+
+  --transition-base: 400ms ease-out;
+}
+
+body, * { word-break: keep-all; }
+
+header a, header button, header nav { letter-spacing: -0.03em; }
+
+.hero-bg-image {
+  background-position: center top;
+}
+@media (min-width: 768px) {
+  .hero-bg-image {
+    background-position: center -200px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

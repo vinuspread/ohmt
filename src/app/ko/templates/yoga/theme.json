@@ -1,0 +1,57 @@
+{
+  "slug": "yoga",
+  "name": "Yoga & Wellness",
+  "name_ko": "요가 & 웰니스",
+  "category": "lifestyle",
+  "description": "Premium yoga and wellness studio website template",
+  "description_ko": "프리미엄 요가 및 웰니스 스튜디오 웹사이트 템플릿",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#FDFCF9",
+      "secondary": "#1C1C1A",
+      "accent": "#C4956A",
+      "text": {
+        "main": "#1C1C1A",
+        "muted": "#9A9690",
+        "contrast": "#FFFFFF"
+      },
+      "ui": {
+        "border": "rgba(28, 28, 26, 0.12)",
+        "hover": "#F7F5F1",
+        "shadow": "none"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Inter, sans-serif",
+        "weight": "300",
+        "tracking": "-0.02em",
+        "style": "font-light tracking-tight"
+      },
+      "body": {
+        "font": "Inter, sans-serif",
+        "weight": "300",
+        "leading": "1.6",
+        "style": "font-light leading-relaxed"
+      },
+      "mono": {
+        "font": "JetBrains Mono",
+        "weight": "400"
+      }
+    },
+    "spacing": {
+      "page_pt": "120px",
+      "container": "1280px",
+      "gutter": "32px",
+      "card_p": "24px",
+      "gap": "32px"
+    },
+    "motion": {
+      "transition_fast": "200ms",
+      "transition_normal": "400ms",
+      "transition_slow": "600ms",
+      "easing": "ease-out"
+    }
+  }
+}
