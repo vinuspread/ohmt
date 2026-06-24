@@ -1,14 +1,41 @@
 "use client";
+
 import React, { useMemo } from "react";
 import { motion } from "framer-motion";
-export function TemplateWrapper({ theme, children }: { theme: any; children: React.ReactNode }) {
+
+interface ThemeConfig {
+  palette: {
+    primary: string;
+    secondary: string;
+    accent: string;
+    text: { main: string; muted: string; contrast: string };
+    ui: { border: string; hover: string; shadow: string };
+  };
+  typography: {
+    heading: { font: string; style: string };
+    body: { font: string; style: string };
+  };
+  spacing: { page_pt: string; container: string; gutter: string; card_gap?: string };
+  interaction?: { button: string; card_hover: string };
+}
+
+interface TemplateTheme {
+  theme: ThemeConfig;
+}
+
+
+export function TemplateWrapper({ theme, children }: { theme: TemplateTheme; children: React.ReactNode }) {
   const [animationComplete, setAnimationComplete] = React.useState(false);
+
   React.useEffect(() => {
     if (typeof window !== "undefined") {
-      if ("history" in window && "scrollRestoration" in window.history) window.history.scrollRestoration = "manual";
+      if ("history" in window && "scrollRestoration" in window.history) {
+        window.history.scrollRestoration = "manual";
+      }
       window.scrollTo({ top: 0, left: 0 });
     }
   }, []);
+
   const cssVariables = useMemo(() => {
     const t = theme.theme;
     return {
@@ -19,6 +46,8 @@ export function TemplateWrapper({ theme, children }: { theme: any; children: Rea
       "--theme-text-muted": t.palette.text.muted,
       "--theme-text-contrast": t.palette.text.contrast,
       "--theme-border": t.palette.ui.border,
+      "--theme-ui-hover": t.palette.ui.hover,
+      "--theme-ui-shadow": t.palette.ui.shadow,
       "--theme-font-heading": t.typography.heading.font,
       "--theme-font-body": t.typography.body.font,
       "--theme-page-pt": t.spacing.page_pt,
@@ -26,12 +55,13 @@ export function TemplateWrapper({ theme, children }: { theme: any; children: Rea
       "--theme-gutter": t.spacing.gutter,
     } as React.CSSProperties;
   }, [theme]);
+
   return (
     <div style={cssVariables} className="min-h-screen bg-[var(--theme-primary)] text-[var(--theme-secondary)]">
       <motion.div
-        initial={{opacity:0, scale:0.92, y:20}}
-        animate={{opacity:1, scale:1, y:0}}
-        transition={{duration:0.65, ease:[0.34,1.56,0.64,1]} as any}
+        initial={{ opacity: 0, scale: 0.92, y: 20 }}
+        animate={{ opacity: 1, scale: 1, y: 0 }}
+        transition={{ duration: 0.65, ease: [0.34, 1.56, 0.64, 1] }}
         onAnimationComplete={() => setAnimationComplete(true)}
         style={animationComplete ? { transform: "none", filter: "none" } : {}}
       >

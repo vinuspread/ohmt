@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -10,27 +10,27 @@ import { Header } from "./_components/layout/Header";
 import { Footer } from "./_components/layout/Footer";
 import { projects, services, stats, testimonials, blogPosts } from "@/lib/portfolio-data";
 
-/* ?�?�?� Portfolio KO FAQ Data ?�?�?� */
+/* ─── Portfolio KO FAQ Data ─── */
 const faqs = [
-  { q: '?�반?�인 ?�로?�트???�떤 과정?�로 진행?�나??', a: '모든 ?�로?�트??목표, ?��?고객, ?�공 지?��? ?�하???�스커버�??�션?�로 ?�작?�니?? �???리서�? 컨셉, ?�자?? ?�품까�? 진행?�며, 규모???�라 보통 4~12주�? ?�요?�니??' },
-  { q: '??번만 진행?�는 ?�로?�트??가?�한가??', a: '?? 가?�합?�다. 로고 ?�자?? ?�사?�트 ?�작, 캠페??컨셉 같�? ?�립?�인 ?�로?�트??진행?�니?? ?�기 계약???�수???�닙?�다.' },
-  { q: '?�떤 ?�랫?�에???�업?�나??', a: 'Figma, Adobe Creative Suite, 그리�?최신 ??개발 ?�택???�용?�니?? ?�라?�언?��????�업???�해 ?�요??모든 ?�구�??�용?�니??' },
-  { q: '리뷰 ?�운?�는 보통 �?�??�도 진행?�나??', a: '?�로?�트 범위???�라 ?�르지�? 보통 3~5번의 리뷰 ?�운?��? ?�함?�니?? �??�계?�서 명확???�드�??�로?�스�??�릅?�다.' },
-  { q: '?�반?�인 ?�로?�트 기간?� ?�마???�나??', a: '?�규�??�로?�트??4�? 중규모는 8�? ?�규모??12�??�상 ?�요?????�습?�다. ?�확???�정?� ?�로?�트 범위?� 복잡?�에 ?�라 결정?�니??' },
-  { q: '�?�� ?�라?�언?��????�업?�나??', a: '?? ?�니?? ?�?�존 차이???��?�? 비동�?커�??��??�션???�해 ???�계 ?�라?�언?��? ?�공?�으�??�업?�니??' },
-  { q: '결제???�떻�?진행?�나??', a: '?�로?�트 범위???�라 ?�체 계약�? ?�금, ?�는 ?�계�?결제 ?�션???�공?�니?? ?�세???�항?� 초기 ?�담 ???�의?�니??' },
-  { q: '?�칭 ?�에??지?�을 받을 ???�나??', a: '?? ?�칭 ???�정 기간??무료 지?�을 ?�공?�니?? 추�? 지?�이 ?�요??경우 별도???��?보수 계약???�안?�립?�다.' }
+  { q: '일반적인 프로젝트는 어떤 과정으로 진행되나요?', a: '모든 프로젝트는 목표, 타겟 고객, 성공 지표를 정하는 디스커버리 세션으로 시작합니다. 그 후 리서치, 컨셉, 디자인, 납품까지 진행되며, 규모에 따라 보통 4~12주가 소요됩니다.' },
+  { q: '한 번만 진행하는 프로젝트도 가능한가요?', a: '네, 가능합니다. 로고 디자인, 웹사이트 제작, 캠페인 컨셉 같은 독립적인 프로젝트도 진행합니다. 장기 계약이 필수는 아닙니다.' },
+  { q: '어떤 플랫폼에서 작업하나요?', a: 'Figma, Adobe Creative Suite, 그리고 최신 웹 개발 스택을 사용합니다. 클라이언트와의 협업을 위해 필요한 모든 도구를 활용합니다.' },
+  { q: '리뷰 라운드는 보통 몇 번 정도 진행되나요?', a: '프로젝트 범위에 따라 다르지만, 보통 3~5번의 리뷰 라운드를 포함합니다. 각 단계에서 명확한 피드백 프로세스를 따릅니다.' },
+  { q: '일반적인 프로젝트 기간은 얼마나 되나요?', a: '소규모 프로젝트는 4주, 중규모는 8주, 대규모는 12주 이상 소요될 수 있습니다. 정확한 일정은 프로젝트 범위와 복잡도에 따라 결정됩니다.' },
+  { q: '국제 클라이언트와도 작업하나요?', a: '네, 합니다. 타임존 차이는 있지만, 비동기 커뮤니케이션을 통해 전 세계 클라이언트와 성공적으로 협업합니다.' },
+  { q: '결제는 어떻게 진행되나요?', a: '프로젝트 범위에 따라 전체 계약금, 선금, 또는 단계별 결제 옵션을 제공합니다. 자세한 사항은 초기 상담 시 논의합니다.' },
+  { q: '런칭 후에도 지원을 받을 수 있나요?', a: '네, 런칭 후 일정 기간의 무료 지원을 제공합니다. 추가 지원이 필요한 경우 별도의 유지보수 계약을 제안드립니다.' }
 ];
 
-/* ?�?�?� Marquee ?�?�?� */
+/* ─── Marquee ─── */
 const marqueeImages = [
-  "/templates/OHMT007-portfolio/portfolio-1.png",
-  "/templates/OHMT007-portfolio/portfolio-2.png",
-  "/templates/OHMT007-portfolio/portfolio-3.png",
-  "/templates/OHMT007-portfolio/portfolio-4.png",
-  "/templates/OHMT007-portfolio/portfolio-5.png",
-  "/templates/OHMT007-portfolio/portfolio-6.png",
-  "/templates/OHMT007-portfolio/portfolio-hero.png",
+  "/templates/portfolio/portfolio-1.png",
+  "/templates/portfolio/portfolio-2.png",
+  "/templates/portfolio/portfolio-3.png",
+  "/templates/portfolio/portfolio-4.png",
+  "/templates/portfolio/portfolio-5.png",
+  "/templates/portfolio/portfolio-6.png",
+  "/templates/portfolio/portfolio-hero.png",
 ];
 
 /* arch width / top-radius pattern - repeats for variety */
@@ -88,7 +88,7 @@ function Marquee() {
   );
 }
 
-/* ?�?�?� Service Carousel ?�?�?� */
+/* ─── Service Carousel ─── */
 const serviceColors = ['#e5daf6', '#cfffb2', '#ffc9c9', '#fedca6'];
 
 function ServiceCarousel() {
@@ -106,24 +106,24 @@ function ServiceCarousel() {
               className="shrink-0 p-8 flex flex-col justify-between"
               style={{ width: 'min(300px, 78vw)', height: '360px', backgroundColor: serviceColors[i % serviceColors.length] }}
             >
-              <div className="text-[13px] text-[var(--color-text)]/50">( {s.num} )</div>
+              <div className="text-[13px] text-[#1e1e1e]/50">( {s.num} )</div>
               <div className="flex justify-center items-center flex-1">
                 {s.name.toLowerCase().includes("brand") && (
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-text)]/70"><path d="M12 3v18M3 12h18"/></svg>
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#1e1e1e]/70"><path d="M12 3v18M3 12h18"/></svg>
                 )}
                 {s.name.toLowerCase().includes("dev") && (
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-text)]/70"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/></svg>
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#1e1e1e]/70"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/></svg>
                 )}
                 {s.name.toLowerCase().includes("seo") && (
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-text)]/70"><path d="m3 16 4-4 4 4 6-6 5 5"/></svg>
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#1e1e1e]/70"><path d="m3 16 4-4 4 4 6-6 5 5"/></svg>
                 )}
                 {s.name.toLowerCase().includes("social") && (
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-text)]/70"><path d="M18 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm12 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM8.5 13.5l7 4.5m-7-7 7-4.5"/></svg>
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[#1e1e1e]/70"><path d="M18 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM6 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm12 7a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM8.5 13.5l7 4.5m-7-7 7-4.5"/></svg>
                 )}
               </div>
               <div>
-                <p className="text-[13px] font-medium uppercase tracking-widest text-[var(--color-text)] mb-2">{s.name}</p>
-                <p className="text-[0.85rem] text-[var(--color-text)]/70 leading-relaxed">{s.desc}</p>
+                <p className="text-[13px] font-medium uppercase tracking-widest text-[#1e1e1e] mb-2">{s.name}</p>
+                <p className="text-[0.85rem] text-[#1e1e1e]/70 leading-relaxed">{s.desc}</p>
               </div>
             </div>
           ))}
@@ -132,7 +132,7 @@ function ServiceCarousel() {
       {/* Arrow - Hidden on Mobile to prevent card overlap, visible on Desktop */}
       <button
         onClick={() => setActive((active + 1) % services.length)}
-        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-0 w-12 h-12 rounded-none bg-white border border-[var(--color-border)] hidden md:flex items-center justify-center hover:opacity-80 hover:border-[var(--color-primary)] transition-all z-10 active:scale-95"
+        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-0 w-12 h-12 rounded-none bg-white border border-[#d0d8e4] hidden md:flex items-center justify-center hover:opacity-80 hover:border-[#1e1e1e] transition-all z-10 active:scale-95"
       >
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
       </button>
@@ -140,14 +140,14 @@ function ServiceCarousel() {
   );
 }
 
-/* ?�?�?� FAQ Item ?�?�?� */
+/* ─── FAQ Item ─── */
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
-    <div className="border-b border-[var(--color-border)]">
+    <div className="border-b border-[#d0d8e4]">
       <button onClick={() => setOpen(!open)} className="w-full flex items-center justify-between py-6 text-left group hover:bg-white/40 transition-colors duration-300 px-0">
-        <span className="text-[0.95rem] text-[var(--color-text)] group-hover:text-[var(--color-text-muted)] transition-colors pr-8">{q}</span>
-        <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.2 }} className="text-[var(--color-text-muted)] shrink-0">
+        <span className="text-[0.95rem] text-[#1e1e1e] group-hover:text-[#5a6271] transition-colors pr-8">{q}</span>
+        <motion.span animate={{ rotate: open ? 180 : 0 }} transition={{ duration: 0.2 }} className="text-[#8a919b] shrink-0">
           <ChevronDown size={18} />
         </motion.span>
       </button>
@@ -160,7 +160,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
             transition={{ duration: 0.25 }}
             className="overflow-hidden"
           >
-            <p className="pb-5 text-[0.88rem] text-[var(--color-text-muted)] leading-relaxed">{a}</p>
+            <p className="pb-5 text-[0.88rem] text-[#5a6271] leading-relaxed">{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -168,7 +168,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
   );
 }
 
-/* ?�?�?� Testimonial Slider ?�?�?� */
+/* ─── Testimonial Slider ─── */
 function TestimonialSlider() {
   const [idx, setIdx] = useState(0);
   const t = testimonials[idx];
@@ -183,14 +183,14 @@ function TestimonialSlider() {
           transition={{ duration: 0.4 }}
           className="grid md:grid-cols-2 overflow-hidden min-h-[420px]"
         >
-          <div className="bg-[var(--color-text-muted)] overflow-hidden">
+          <div className="bg-[#8a919b] overflow-hidden">
             <img loading="lazy" src={t.img} alt={t.name} className="w-full h-full object-cover" style={{ minHeight: 380 }} />
           </div>
-          <div className="bg-[var(--color-bg-secondary)] p-10 md:p-14 flex flex-col justify-center">
-            <p className="text-[1.15rem] font-medium text-[var(--color-text)] leading-relaxed mb-10">{t.text}</p>
+          <div className="bg-[#eef0f6] p-10 md:p-14 flex flex-col justify-center">
+            <p className="text-[1.15rem] font-medium text-[#1e1e1e] leading-relaxed mb-10">{t.text}</p>
             <div>
-              <p className="text-[0.88rem] font-medium text-[var(--color-text)]">{t.name}</p>
-              <p className="text-[0.82rem] text-[var(--color-text-muted)]">{t.role}</p>
+              <p className="text-[0.88rem] font-medium text-[#1e1e1e]">{t.name}</p>
+              <p className="text-[0.82rem] text-[#8a919b]">{t.role}</p>
             </div>
           </div>
         </motion.div>
@@ -199,14 +199,14 @@ function TestimonialSlider() {
       <div className="flex gap-2 mt-6">
         {testimonials.map((_, i) => (
           <button key={i} onClick={() => setIdx(i)}
-            className={`h-1.5 rounded-full transition-all ${i === idx ? 'w-6 bg-[var(--color-primary)]' : 'w-1.5 bg-[var(--color-bg-secondary)]'}`} />
+            className={`h-1.5 rounded-full transition-all ${i === idx ? 'w-6 bg-[#1e1e1e]' : 'w-1.5 bg-[#d0d8e4]'}`} />
         ))}
       </div>
     </div>
   );
 }
 
-/* ?�?�?� Custom Cursor ?�?�?� */
+/* ─── Custom Cursor ─── */
 function CustomCursor() {
   const x = useMotionValue(-100);
   const y = useMotionValue(-100);
@@ -241,7 +241,7 @@ function CustomCursor() {
   const size = label ? 80 : 12;
   return (
     <motion.div
-      className="fixed top-0 left-0 z-[9999] pointer-events-none flex items-center justify-center rounded-full mix-blend-difference bg-[var(--color-primary)]"
+      className="fixed top-0 left-0 z-[9999] pointer-events-none flex items-center justify-center rounded-full mix-blend-difference bg-[#1e1e1e]"
       style={{
         x: sx,
         y: sy,
@@ -262,7 +262,7 @@ function CustomCursor() {
   );
 }
 
-/* ?�?�?� Main Page ?�?�?� */
+/* ─── Main Page ─── */
 function PortfolioHomeContent() {
 
   const heroRef = useRef<HTMLElement>(null);
@@ -292,7 +292,7 @@ function PortfolioHomeContent() {
             initial={{ y: 0 }}
             exit={{ y: "-100%" }}
             transition={{ duration: 0.8, ease: [0.76, 0, 0.24, 1] }}
-            className="fixed inset-0 z-[9999] bg-[var(--color-primary)] flex flex-col items-center justify-center text-white cursor-none"
+            className="fixed inset-0 z-[9999] bg-[#1e1e1e] flex flex-col items-center justify-center text-white cursor-none"
           >
             <motion.div
               initial={{ opacity: 0, scale: 0.96 }}
@@ -309,21 +309,21 @@ function PortfolioHomeContent() {
         )}
       </AnimatePresence>
 
-      <div className="bg-white text-[var(--color-text)] font-[family-name:var(--font-inter)] selection:bg-[var(--color-primary)] selection:text-white cursor-none">
+      <div className="bg-white text-[#1e1e1e] font-[family-name:var(--font-inter)] selection:bg-[#1e1e1e] selection:text-white cursor-none">
         <CustomCursor />
         <Header />
 
-        {/* ?�?� HERO ?�?� */}
+        {/* ── HERO ── */}
         <section ref={heroRef} className="relative overflow-hidden" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
           {/* Side labels */}
           <div className="absolute left-5 bottom-[45vh] hidden md:block">
-            <p className="text-[13px] text-[var(--color-text-muted)] tracking-widest uppercase"
+            <p className="text-[13px] text-[#8a919b] tracking-widest uppercase"
               style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
               ( CREATIVE JOURNAL )
             </p>
           </div>
           <div className="absolute right-5 bottom-[45vh] hidden md:block">
-            <p className="text-[13px] text-[var(--color-text-muted)] tracking-widest uppercase"
+            <p className="text-[13px] text-[#8a919b] tracking-widest uppercase"
               style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
               BE / DR / X
             </p>
@@ -338,18 +338,18 @@ function PortfolioHomeContent() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="text-[clamp(2.5rem,7vw,5rem)] font-black tracking-tighter leading-[1.0] text-[var(--color-text)] mb-6"
+              className="text-[clamp(2.5rem,7vw,5rem)] font-black tracking-tighter leading-[1.0] text-[#1e1e1e] mb-6"
             >
-              ?�각??축적,<br />
-              <span className="text-[var(--color-text)]">감각???�단??기록.</span>
+              생각의 축적,<br />
+              <span className="text-[#1e1e1e]">감각의 단단한 기록.</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.7 }}
-              className="text-[1rem] text-[var(--color-text-muted)] max-w-[480px]"
+              className="text-[1rem] text-[#5a6271] max-w-[480px]"
             >
-              가??고유???�야기�? 가???��? ?�림??갖습?�다. 매일 기록?�고 ?�제????창작?�의 ??
+              가장 고유한 이야기가 가장 넓은 울림을 갖습니다. 매일 기록하고 정제해 낸 창작자의 삶.
             </motion.p>
           </motion.div>
 
@@ -363,14 +363,14 @@ function PortfolioHomeContent() {
           </motion.div>
         </section>
 
-        {/* ?�?� TAGLINE + CLIENTS ?�?� */}
-        <section className="py-12 md:py-24 px-5 text-center border-b border-[var(--color-border)]">
+        {/* ── TAGLINE + CLIENTS ── */}
+        <section className="py-12 md:py-24 px-5 text-center border-b border-[#eef0f6]">
           <div className="max-w-[860px] mx-auto">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-[clamp(1.5rem,3.5vw,2.5rem)] font-bold text-[var(--color-text)] leading-snug mb-12"
+              className="text-[clamp(1.5rem,3.5vw,2.5rem)] font-bold text-[#1e1e1e] leading-snug mb-12"
             >
               We're Vinuspread® - a creative studio cultivating bold brands, beautiful websites,
               and ideas that refuse to be ordinary.
@@ -378,20 +378,20 @@ function PortfolioHomeContent() {
             {/* Client logos */}
             <div className="flex flex-wrap items-center justify-center gap-8 md:gap-14">
               {['Winkk', 'Coral', 'Clonify', 'Blob', 'Maiz'].map(c => (
-                <span key={c} className="text-[1rem] font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text-muted)] transition-colors cursor-default">{c}</span>
+                <span key={c} className="text-[1rem] font-medium text-[#c8c8c8] hover:text-[#8a919b] transition-colors cursor-default">{c}</span>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ?�?� LATEST PROJECTS ?�?� */}
-        <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[var(--color-border)]">
+        {/* ── LATEST PROJECTS ── */}
+        <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[#eef0f6]">
           <div className="max-w-[1440px] mx-auto">
             <div className="flex items-end justify-between mb-12">
               <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none">
-                최근<br />?�로?�트.
+                최근<br />프로젝트.
               </h2>
-              <span className="text-[0.82rem] text-[var(--color-text-muted)] hidden md:block">( _©26 )</span>
+              <span className="text-[0.82rem] text-[#8a919b] hidden md:block">( _©26 )</span>
             </div>
 
             {/* Category Filter - Horizontal Scrollable on Mobile */}
@@ -403,7 +403,7 @@ function PortfolioHomeContent() {
                   className={`px-6 py-2 text-[13px] font-black uppercase tracking-wider transition-all duration-300 inline-block whitespace-nowrap ${
                     activeCategory === cat
                       ? "bg-[var(--color-accent)] border border-[var(--color-accent)] text-white"
-                      : "border border-black/10 text-[var(--color-text-muted)] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
+                      : "border border-black/10 text-[#5a6271] hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
                   }`}
                 >
                   {cat}
@@ -423,7 +423,7 @@ function PortfolioHomeContent() {
                     exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.4 }}
                   >
-                    <Link href={`/ko/templates/OHMT007-portfolio-KO/project/${p.id}`} className="group block overflow-hidden bg-[var(--color-bg-secondary)] relative border border-black/5 hover:border-black/15 transition-all">
+                    <Link href={`/ko/templates/portfolio/project/${p.id}`} className="group block overflow-hidden bg-[#f3f3f3] relative border border-black/5 hover:border-black/15 transition-all">
                       <div className="aspect-[4/5] overflow-hidden">
                         <img loading="lazy" src={p.thumbnail} alt={p.title}
                           className="w-full h-full object-cover grayscale brightness-90 contrast-105 group-hover:grayscale-0 group-hover:scale-105 duration-1000 transition-all ease-out" />
@@ -443,13 +443,13 @@ function PortfolioHomeContent() {
           </div>
         </section>
 
-        {/* ?�?� SERVICES ?�?� */}
-        <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[var(--color-border)]">
+        {/* ── SERVICES ── */}
+        <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[#eef0f6]">
           <div className="max-w-[1440px] mx-auto">
             <div className="flex items-end justify-between mb-10">
-              <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none">?�비??</h2>
-              <Link href="/ko/templates/OHMT007-portfolio-KO/contact" className="text-[0.82rem] font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors flex items-center gap-2">
-                문의?�기 <span className="text-lg leading-none">+</span>
+              <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none">서비스.</h2>
+              <Link href="/ko/templates/portfolio/contact" className="text-[0.82rem] font-medium text-[#5a6271] hover:text-[#1e1e1e] transition-colors flex items-center gap-2">
+                문의하기 <span className="text-lg leading-none">+</span>
               </Link>
             </div>
             <motion.div
@@ -463,16 +463,16 @@ function PortfolioHomeContent() {
           </div>
         </section>
 
-        {/* ?�?� STATS + STATEMENT ?�?� */}
-        <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[var(--color-border)]">
+        {/* ── STATS + STATEMENT ── */}
+        <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[#eef0f6]">
           <div className="max-w-[1440px] mx-auto">
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-[clamp(1.8rem,4vw,3.2rem)] font-bold text-[var(--color-text)] leading-snug mb-16 max-w-3xl"
+              className="text-[clamp(1.8rem,4vw,3.2rem)] font-bold text-[#1e1e1e] leading-snug mb-16 max-w-3xl"
             >
-              바이?�스?�레?��?�� ?�?�한 브랜?��? ?�?�한 ?�이?�어�?창조?�는 ?�리?�이?�브 ?�튜?�오?�니??
+              바이너스프레드®는 대담한 브랜드와 대담한 아이디어를 창조하는 크리에이티브 스튜디오입니다.
             </motion.p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -484,32 +484,32 @@ function PortfolioHomeContent() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
                 >
-                  <p className="text-[2.8rem] font-black tracking-tighter text-[var(--color-text)] leading-none mb-1">{s.num}</p>
-                  <p className="text-[0.78rem] text-[var(--color-text-muted)] uppercase tracking-widest">{s.label}</p>
+                  <p className="text-[2.8rem] font-black tracking-tighter text-[#1e1e1e] leading-none mb-1">{s.num}</p>
+                  <p className="text-[0.78rem] text-[#8a919b] uppercase tracking-widest">{s.label}</p>
                 </motion.div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ?�?� TESTIMONIALS ?�?� */}
-        <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[var(--color-border)]">
+        {/* ── TESTIMONIALS ── */}
+        <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[#eef0f6]">
           <div className="max-w-[1440px] mx-auto">
             <div className="text-center mb-12">
-              <p className="text-[13px] font-black uppercase tracking-tight text-[var(--color-accent)] mb-4">고객 ?�기</p>
-              <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none text-[var(--color-text)]">
-                ?�?�함???�려?�하지 ?�는<br />브랜?�들???�택
+              <p className="text-[13px] font-black uppercase tracking-tight text-[var(--color-accent)] mb-4">고객 후기</p>
+              <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none text-[#1e1e1e]">
+                대담함을 두려워하지 않는<br />브랜드들의 선택
               </h2>
             </div>
             <TestimonialSlider />
           </div>
         </section>
 
-        {/* ?�?� FAQ ?�?� */}
-        <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[var(--color-border)]">
+        {/* ── FAQ ── */}
+        <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[#eef0f6]">
           <div className="max-w-[1440px] mx-auto grid md:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none">?�주 묻는 질문.</h2>
+              <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none">자주 묻는 질문.</h2>
             </div>
             <div>
               {faqs.map((item, i) => (
@@ -519,15 +519,15 @@ function PortfolioHomeContent() {
           </div>
         </section>
 
-        {/* ?�?� BLOG ?�?� */}
+        {/* ── BLOG ── */}
         <section className="py-10 md:py-20 px-5 md:px-10">
           <div className="max-w-[1440px] mx-auto">
             <div className="flex items-end justify-between mb-12">
               <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none">
-                ?�리?�이?�브<br />?�식
+                크리에이티브<br />소식
               </h2>
-              <Link href="/ko/templates/OHMT007-portfolio-KO/journal" className="text-[0.82rem] font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors flex items-center gap-2">
-                ?�식 보기 <span className="text-lg leading-none">+</span>
+              <Link href="/ko/templates/portfolio/journal" className="text-[0.82rem] font-medium text-[#5a6271] hover:text-[#1e1e1e] transition-colors flex items-center gap-2">
+                소식 보기 <span className="text-lg leading-none">+</span>
               </Link>
             </div>
 
@@ -540,13 +540,13 @@ function PortfolioHomeContent() {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
                 >
-                  <Link href="/ko/templates/OHMT007-portfolio-KO/journal" className="group block">
-                    <div className="overflow-hidden aspect-[4/3] bg-[var(--color-bg-secondary)] mb-4">
+                  <Link href="/ko/templates/portfolio/journal" className="group block">
+                    <div className="overflow-hidden aspect-[4/3] bg-[#f3f3f3] mb-4">
                       <img loading="lazy" src={post.img} alt={post.title}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                     </div>
-                    <p className="text-[0.75rem] text-[var(--color-text-muted)] mb-2">{post.date}</p>
-                    <h3 className="text-[0.95rem] font-medium text-[var(--color-text)] leading-snug group-hover:text-[var(--color-text-muted)] transition-colors">{post.title}</h3>
+                    <p className="text-[0.75rem] text-[#8a919b] mb-2">{post.date}</p>
+                    <h3 className="text-[0.95rem] font-medium text-[#1e1e1e] leading-snug group-hover:text-[#5a6271] transition-colors">{post.title}</h3>
                   </Link>
                 </motion.div>
               ))}
