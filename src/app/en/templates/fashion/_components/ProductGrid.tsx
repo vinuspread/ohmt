@@ -3,12 +3,12 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 const NEW_ARRIVALS = [
-  { id: 1, price: '$120.00', image: '/templates/OHMT001-fashion/wool-hat.png' },
-  { id: 2, price: '$850.00', image: '/templates/OHMT001-fashion/trench-coat.png' },
-  { id: 3, price: '$350.00', image: '/templates/OHMT001-fashion/backpack.png' },
-  { id: 4, price: '$480.00', image: '/templates/OHMT001-fashion/boots.png' },
-  { id: 5, price: '$1,200.00', image: '/templates/OHMT001-fashion/silk-dress.png' },
-  { id: 6, price: '$65.00', image: '/templates/OHMT001-fashion/basic-tee.png' }
+  { id: 1, price: '$120.00', image: '/templates/fashion/wool-hat.png' },
+  { id: 2, price: '$850.00', image: '/templates/fashion/trench-coat.png' },
+  { id: 3, price: '$350.00', image: '/templates/fashion/backpack.png' },
+  { id: 4, price: '$480.00', image: '/templates/fashion/boots.png' },
+  { id: 5, price: '$1,200.00', image: '/templates/fashion/silk-dress.png' },
+  { id: 6, price: '$65.00', image: '/templates/fashion/basic-tee.png' }
 ];
 
 const PRODUCT_NAMES: Record<number, string> = {
