@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: "Experience the timeless elegance and curated luxury.",
     url: "https://ohmytemplate.com/ko/templates/OHMT002-jewelry-KO",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/OHMT002-jewelry/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/jewelry/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Jewelry Mall | Oh My Template",
     description: "Experience the timeless elegance and curated luxury.",
-    images: ["/templates/OHMT002-jewelry/og-image.jpg"],
+    images: ["/templates/jewelry/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
