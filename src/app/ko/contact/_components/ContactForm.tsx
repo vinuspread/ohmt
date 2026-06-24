@@ -16,7 +16,7 @@ const INQUIRY_TYPES = [
   {
     id: "template" as InquiryType,
     title: "템플릿 기반 제작",
-    desc: "마음에 드는 템플릿으로 시작해서 브랜드에 맞게 커스터마이징합니다",
+    desc: "선택한 템플릿으로 커스터마이징 합니다.",
     icon: LayoutTemplate,
   },
   {
@@ -125,7 +125,6 @@ export function ContactForm({ packages, requiresConsultation = false }: { packag
         {INQUIRY_TYPES.map((t) => {
           const isSelected = type === t.id;
           const isDisabled = hasTemplate && t.id !== "template";
-          const Icon = t.icon;
           return (
             <button
               key={t.id}
@@ -140,9 +139,6 @@ export function ContactForm({ packages, requiresConsultation = false }: { packag
               }`}
             >
               {isSelected && <span className="absolute top-3.5 right-3.5 w-2 h-2 rounded-full bg-[#F1B100]" />}
-              <div className="w-11 h-11 rounded-xl flex items-center justify-center bg-zinc-100 dark:bg-zinc-800">
-                <Icon size={22} className={isSelected ? "text-zinc-900 dark:text-zinc-100" : "text-zinc-500 dark:text-zinc-400"} strokeWidth={1.5} />
-              </div>
               <div className="space-y-1.5 flex-1">
                 <p className="text-base font-bold leading-snug text-zinc-900 dark:text-zinc-100">
                   {t.title}
