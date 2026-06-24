@@ -10,14 +10,14 @@ import { products } from "../_components/sections/ProductGrid";
 
 const categories = [
   { id: "all", label: "All", img: null },
-  { id: "sneakers", label: "Sneakers", img: "/templates/OHMT005-sneaker/cat-sneakers.jpg" },
-  { id: "running", label: "Running", img: "/templates/OHMT005-sneaker/category-running.jpg" },
-  { id: "formal", label: "Formal", img: "/templates/OHMT005-sneaker/category-formal.jpg" },
-  { id: "boots", label: "Boots", img: "/templates/OHMT005-sneaker/cat-boots.jpg" },
-  { id: "oxford", label: "Oxford", img: "/templates/OHMT005-sneaker/cat-oxford.jpg" },
-  { id: "sports", label: "Sports", img: "/templates/OHMT005-sneaker/cat-sports.jpg" },
-  { id: "highneck", label: "High Neck", img: "/templates/OHMT005-sneaker/cat-highneck.jpg" },
-  { id: "loafers", label: "Loafers", img: "/templates/OHMT005-sneaker/cat-loafers.jpg" },
+  { id: "sneakers", label: "Sneakers", img: "/templates/sneaker/cat-sneakers.jpg" },
+  { id: "running", label: "Running", img: "/templates/sneaker/category-running.jpg" },
+  { id: "formal", label: "Formal", img: "/templates/sneaker/category-formal.jpg" },
+  { id: "boots", label: "Boots", img: "/templates/sneaker/cat-boots.jpg" },
+  { id: "oxford", label: "Oxford", img: "/templates/sneaker/cat-oxford.jpg" },
+  { id: "sports", label: "Sports", img: "/templates/sneaker/cat-sports.jpg" },
+  { id: "highneck", label: "High Neck", img: "/templates/sneaker/cat-highneck.jpg" },
+  { id: "loafers", label: "Loafers", img: "/templates/sneaker/cat-loafers.jpg" },
 ];
 
 // Map products to categories (mock assignment for demo)

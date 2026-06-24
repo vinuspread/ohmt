@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT005-sneaker/-components/sections/Hero.tsx
+﻿// src/app/templates/sneaker/-components/sections/Hero.tsx
 "use client";
 
 import React from "react";
@@ -206,7 +206,7 @@ export const Hero = () => {
           {/* Left Big Image */}
           <div className="relative aspect-[16/10] md:aspect-auto md:h-[540px] overflow-hidden group">
             <img
-              src="/templates/OHMT005-sneaker/hero-main.jpg"
+              src="/templates/sneaker/hero-main.jpg"
               alt="Premium Sneaker Street"
               className="w-full h-full object-cover object-center transition-transform duration-[1.5s] ease-out group-hover:scale-105"
             />
@@ -224,7 +224,7 @@ export const Hero = () => {
           {/* Right Vertical Image */}
           <div className="hidden md:block relative h-[540px] overflow-hidden group">
             <img
-              src="/templates/OHMT005-sneaker/hero-detail.jpg"
+              src="/templates/sneaker/hero-detail.jpg"
               alt="Premium Sneaker Product Detail Zoom"
               className="w-full h-full object-cover object-center transition-transform duration-[1.5s] ease-out group-hover:scale-105"
             />

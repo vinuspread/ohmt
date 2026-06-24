@@ -167,14 +167,14 @@ export function CategoryBanners() {
   }
 };
 const categories = [
-    { label: t.categoryBanners.items.sneakers, img: "/templates/OHMT005-sneaker/cat-sneakers-new.jpg" },
-    { label: t.categoryBanners.items.boots, img: "/templates/OHMT005-sneaker/cat-boots.jpg" },
-    { label: t.categoryBanners.items.formal, img: "/templates/OHMT005-sneaker/category-formal.jpg" },
-    { label: t.categoryBanners.items.running, img: "/templates/OHMT005-sneaker/category-running-new.jpg" },
-    { label: t.categoryBanners.items.oxford, img: "/templates/OHMT005-sneaker/cat-oxford-new.jpg" },
-    { label: t.categoryBanners.items.sports, img: "/templates/OHMT005-sneaker/cat-sports.jpg" },
-    { label: t.categoryBanners.items.highNeck, img: "/templates/OHMT005-sneaker/cat-highneck.jpg" },
-    { label: t.categoryBanners.items.loafers, img: "/templates/OHMT005-sneaker/cat-loafers-new.jpg" },
+    { label: t.categoryBanners.items.sneakers, img: "/templates/sneaker/cat-sneakers-new.jpg" },
+    { label: t.categoryBanners.items.boots, img: "/templates/sneaker/cat-boots.jpg" },
+    { label: t.categoryBanners.items.formal, img: "/templates/sneaker/category-formal.jpg" },
+    { label: t.categoryBanners.items.running, img: "/templates/sneaker/category-running-new.jpg" },
+    { label: t.categoryBanners.items.oxford, img: "/templates/sneaker/cat-oxford-new.jpg" },
+    { label: t.categoryBanners.items.sports, img: "/templates/sneaker/cat-sports.jpg" },
+    { label: t.categoryBanners.items.highNeck, img: "/templates/sneaker/cat-highneck.jpg" },
+    { label: t.categoryBanners.items.loafers, img: "/templates/sneaker/cat-loafers-new.jpg" },
   ];
 
   return (
