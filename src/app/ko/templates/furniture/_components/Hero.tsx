@@ -177,7 +177,7 @@ export const CategoryNav = () => {
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 lg:grid-cols-8 gap-4 md:gap-6">
           {categories.map((cat, i) => (
-            <Link key={i} href={`/ko/templates/OHMT008-furniture-kr/category/${cat.id}`}>
+            <Link key={i} href={`/ko/templates/OHMT004-furniture-KO/category/${cat.id}`}>
               <motion.div
                 initial={{ opacity: 0, scale: 0.95, y: 8 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}

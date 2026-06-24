@@ -39,8 +39,8 @@ export const Footer = () => {
         </div>
 
         <div className="flex items-center gap-8 text-[13px] font-medium text-[var(--color-secondary)] uppercase">
-          <Link href="/ko/templates/OHMT008-furniture-kr" className="hover:text-black transition-colors">쇼핑</Link>
-          <Link href="/ko/templates/OHMT008-furniture-kr/category/living" className="hover:text-black transition-colors">아카이브</Link>
+          <Link href="/ko/templates/OHMT004-furniture-KO" className="hover:text-black transition-colors">쇼핑</Link>
+          <Link href="/ko/templates/OHMT004-furniture-KO/category/living" className="hover:text-black transition-colors">아카이브</Link>
         </div>
 
         <div className="flex flex-col items-center md:items-end gap-3 text-[13px] font-medium uppercase text-black/30">

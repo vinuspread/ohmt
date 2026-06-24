@@ -126,7 +126,7 @@ function ProductDetailPageContent() {
                   </div>
                   <Button
                     variant="primary"
-                    onClick={() => router.push('/ko/templates/OHMT008-furniture-kr/cart')}
+                    onClick={() => router.push('/ko/templates/OHMT004-furniture-KO/cart')}
                     className={`flex-1 py-6 rounded-full text-[14px] font-bold uppercase active:scale-95 ${theme.interaction.button}`}
                   >
                     장바구니 담기
@@ -291,7 +291,7 @@ function ProductDetailPageContent() {
                 모든 작품은 소재와 공간의 대화입니다. 형태를 통해 경험을 큐레이팅하여, 모든 곡선과 선이 평온함을 느끼게 합니다. {product.desc}
               </p>
               <div className="pt-4">
-                <Link href="/ko/templates/OHMT008-furniture-kr" className="text-[13px] font-bold uppercase border-b border-black pb-1 hover:opacity-50 transition-opacity">
+                <Link href="/ko/templates/OHMT004-furniture-KO" className="text-[13px] font-bold uppercase border-b border-black pb-1 hover:opacity-50 transition-opacity">
                   더 알아보기
                 </Link>
               </div>

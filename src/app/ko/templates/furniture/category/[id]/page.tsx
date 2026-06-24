@@ -40,7 +40,7 @@ function CategoryPageContent() {
       {/* Category Header */}
       <section className="pt-20 md:pt-32 lg:pt-48 pb-12 md:pb-20 lg:pb-24 border-b border-black/5">
         <div className="max-w-[1440px] mx-auto px-6 md:px-12">
-          <Link href="/ko/templates/OHMT008-furniture-kr" className="group flex items-center gap-2 text-[12px] md:text-[13px] font-bold text-[var(--color-secondary)] hover:text-black transition-colors mb-6 md:mb-12">
+          <Link href="/ko/templates/OHMT004-furniture-KO" className="group flex items-center gap-2 text-[12px] md:text-[13px] font-bold text-[var(--color-secondary)] hover:text-black transition-colors mb-6 md:mb-12">
             <ArrowLeft size={14} className="md:w-4 group-hover:-translate-x-1 transition-transform" />
             쇼룸으로 돌아가기
           </Link>
@@ -72,7 +72,7 @@ function CategoryPageContent() {
                 transition={{ delay: i * 0.05, duration: 0.8 }}
                 className="group cursor-pointer"
               >
-                <Link href={`/ko/templates/OHMT008-furniture-kr/product/${p.id}`}>
+                <Link href={`/ko/templates/OHMT004-furniture-KO/product/${p.id}`}>
                   <div className="relative aspect-square sm:aspect-[4/3] bg-white overflow-hidden mb-3 md:mb-6 flex items-center justify-center">
                     <motion.img
                       src={p.image}
@@ -88,7 +88,7 @@ function CategoryPageContent() {
                 </Link>
 
                 <div className="px-1 mt-3 flex flex-col gap-1">
-                  <Link href={`/ko/templates/OHMT008-furniture-kr/product/${p.id}`} className="min-w-0">
+                  <Link href={`/ko/templates/OHMT004-furniture-KO/product/${p.id}`} className="min-w-0">
                     <h3 className="text-[14px] md:text-[17px] font-bold text-[var(--color-text)] group-hover:text-black transition-colors uppercase line-clamp-1">{p.name}</h3>
                   </Link>
                   <p className="text-[13px] md:text-[13px] text-[var(--color-secondary)] font-medium leading-relaxed w-full line-clamp-2">
