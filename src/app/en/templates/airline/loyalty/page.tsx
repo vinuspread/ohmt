@@ -1,4 +1,4 @@
-// src/app/templates/OHMT008-airline/loyalty/page.tsx
+﻿// src/app/templates/airline/loyalty/page.tsx
 "use client";
 
 import React, { useState } from "react";
@@ -50,7 +50,7 @@ function LoyaltyPageContent() {
 
         {/* Hero Section */}
         <PageHero
-          imageSrc="/templates/OHMT008-airline/airline-loyalty-hero.png"
+          imageSrc="/templates/airline/airline-loyalty-hero.png"
           imageAlt="VIP Airport Lounge"
           label="Skyline Loyalty Club"
           title={<>Elevate Your <br /><span className="text-[var(--color-accent)] font-serif normal-case font-normal">Every Mile.</span></>}

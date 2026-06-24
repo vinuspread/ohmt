@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT008-airline/page.tsx
+﻿// src/app/templates/airline/page.tsx
 "use client";
 
 import React from "react";
@@ -74,7 +74,7 @@ function AirlineTemplateContent() {
               </div>
               <div className="relative h-[320px] md:h-[480px] overflow-hidden">
                 <img
-                  src="/templates/OHMT008-airline/destination-3.jpg"
+                  src="/templates/airline/destination-3.jpg"
                   className="w-full h-full object-cover"
                   alt="In-flight service"
                 />
@@ -89,7 +89,7 @@ function AirlineTemplateContent() {
             <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
               <div className="relative h-[320px] md:h-[560px] overflow-hidden order-2 md:order-1">
                 <img
-                  src="/templates/OHMT008-airline/airline-experience-hero.png"
+                  src="/templates/airline/airline-experience-hero.png"
                   className="w-full h-full object-cover opacity-80"
                   alt="Vinus Air cabin crew"
                 />

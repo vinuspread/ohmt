@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT008-airline/destinations/[slug]/page.tsx
+﻿// src/app/templates/airline/destinations/[slug]/page.tsx
 "use client";
 
 import React, { useState, use } from "react";
@@ -13,12 +13,12 @@ import { ArrowLeft, Clock, DollarSign, Globe, Shield, Plane } from "lucide-react
 const ALL_MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
 const RELATED_IMGS: Record<string, string> = {
-  paris: "/templates/OHMT008-airline/destination-main.jpg",
-  tokyo: "/templates/OHMT008-airline/destination-2.jpg",
-  "new-york": "/templates/OHMT008-airline/destination-3.jpg",
-  dubai: "/templates/OHMT008-airline/destination-3.jpg",
-  sydney: "/templates/OHMT008-airline/destination-2.jpg",
-  bali: "/templates/OHMT008-airline/destination-main.jpg",
+  paris: "/templates/airline/destination-main.jpg",
+  tokyo: "/templates/airline/destination-2.jpg",
+  "new-york": "/templates/airline/destination-3.jpg",
+  dubai: "/templates/airline/destination-3.jpg",
+  sydney: "/templates/airline/destination-2.jpg",
+  bali: "/templates/airline/destination-main.jpg",
 };
 
 const CLASS_COLORS: Record<string, string> = {
@@ -52,11 +52,11 @@ export default function DestinationDetailPage({
   }
 
   // Robust local images replacements inside dest mappings
-  const localHeroImg = RELATED_IMGS[slug] || "/templates/OHMT008-airline/destination-main.jpg";
+  const localHeroImg = RELATED_IMGS[slug] || "/templates/airline/destination-main.jpg";
   const localHighlightsImgs = [
-    "/templates/OHMT008-airline/destination-main.jpg",
-    "/templates/OHMT008-airline/destination-2.jpg",
-    "/templates/OHMT008-airline/destination-3.jpg",
+    "/templates/airline/destination-main.jpg",
+    "/templates/airline/destination-2.jpg",
+    "/templates/airline/destination-3.jpg",
   ];
 
   return (
