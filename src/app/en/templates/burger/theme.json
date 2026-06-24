@@ -1,0 +1,53 @@
+{
+  "slug": "burger",
+  "name": "Burger",
+  "name_ko": "버거",
+  "category": "retail",
+  "description": "Modern burger restaurant template built with Next.js. Showcase your menu, locations, and brand story.",
+  "description_ko": "모던한 버거 레스토랑 템플릿. 메뉴, 매장 위치, 브랜드 스토리를 소개하세요.",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#FFFFFF",
+      "secondary": "#111111",
+      "accent": "#3A7D44",
+      "text": {
+        "main": "#111111",
+        "muted": "#777777",
+        "contrast": "#FFFFFF"
+      },
+      "ui": {
+        "border": "#E5EBE5",
+        "hover": "#F4F8F4",
+        "shadow": "none"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Barlow, sans-serif",
+        "weight": "700",
+        "tracking": "-0.02em",
+        "style": "font-bold tracking-tight"
+      },
+      "body": {
+        "font": "Figtree, sans-serif",
+        "weight": "400",
+        "leading": "1.6",
+        "style": "font-normal leading-relaxed"
+      }
+    },
+    "spacing": {
+      "page_pt": "120px",
+      "container": "1440px",
+      "gutter": "48px",
+      "card_p": "24px",
+      "gap": "48px"
+    },
+    "motion": {
+      "transition_fast": "200ms",
+      "transition_normal": "300ms",
+      "transition_slow": "500ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+    }
+  }
+}
