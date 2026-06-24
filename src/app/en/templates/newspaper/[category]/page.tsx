@@ -101,7 +101,7 @@ function CategoryPageContent({ params }: { params: Promise<{ category: string }>
                 >
                   <Link href={`/en/templates/OHMT013-newspaper-EN/${category}/${article.slug}`}>
                     <img
-                      src={`/templates/OHMT013-newspaper/news-${article.image}.jpg`}
+                      src={`/templates/newspaper/news-${article.image}.jpg`}
                       className="w-full h-64 object-cover mb-4 group-hover:opacity-80 transition-opacity"
                       alt={article.title}
                     />

@@ -594,7 +594,7 @@ export default function ArticleDetailPage({ params }: { params: Promise<{ catego
 
               {/* Hero image */}
               <motion.figure initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="mb-10">
-                <img loading="lazy" src={`/templates/OHMT013-newspaper/news-${article.image}.jpg`} className="w-full h-[420px] md:h-[500px] object-cover" alt={article.title} />
+                <img loading="lazy" src={`/templates/newspaper/news-${article.image}.jpg`} className="w-full h-[420px] md:h-[500px] object-cover" alt={article.title} />
                 <figcaption className="mt-3 text-[0.72rem] text-[#999] font-sans">{article.excerpt}</figcaption>
               </motion.figure>
 
@@ -631,7 +631,7 @@ export default function ArticleDetailPage({ params }: { params: Promise<{ catego
                     {related.map(([s, a]) => (
                       <Link key={s} href={`/en/templates/OHMT013-newspaper-EN/${category}/${s}`}
                         className="group flex gap-3 py-4 border-b border-[#EEE] hover:border-[var(--color-primary)] transition-colors">
-                        <img loading="lazy" src={`/templates/OHMT013-newspaper/news-${a.image}.jpg`} alt={a.title}
+                        <img loading="lazy" src={`/templates/newspaper/news-${a.image}.jpg`} alt={a.title}
                           className="w-16 h-16 object-cover shrink-0 group-hover:opacity-80 transition-opacity" />
                         <div>
                           <p className="font-[family-name:var(--theme-font-heading)] text-[0.85rem] font-bold leading-snug group-hover:text-[var(--color-primary)] transition-colors line-clamp-3">{a.title}</p>
