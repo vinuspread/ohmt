@@ -278,7 +278,7 @@ function ProductDetailPageContent() {
                   {/* Add Bag Button */}
                   <Button
                     variant="primary"
-                    onClick={() => router.push('/ko/templates/OHMT002-fashion-kr/cart')}
+                    onClick={() => router.push('/ko/templates/OHMT001-fashion-KO/cart')}
                     className="flex-1 text-[13px] font-bold uppercase tracking-[0.3em] py-6"
                   >
                     장바구니 담기
@@ -440,7 +440,7 @@ function ProductDetailPageContent() {
                   침묵을 통해 깊이를 전하는 실루엣. 각 의상은 전 세계에서 엄선된 최고급 소재로 정교하게 제작됩니다. 큐레이티드 모던 워드로브에 완벽히 통합되도록 디자인되었습니다. {product.desc}
                 </p>
                 <div className="pt-4">
-                  <Link href="/ko/templates/OHMT002-fashion-kr" className="text-[13px] font-bold uppercase tracking-[0.25em] border-b border-black pb-1 hover:opacity-50 transition-opacity">
+                  <Link href="/ko/templates/OHMT001-fashion-KO" className="text-[13px] font-bold uppercase tracking-[0.25em] border-b border-black pb-1 hover:opacity-50 transition-opacity">
                     컬렉션으로 돌아가기
                   </Link>
                 </div>

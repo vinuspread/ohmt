@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT002-fashion-kr/category/[id]/page.tsx
+﻿// src/app/ko/templates/OHMT001-fashion-KO/category/[id]/page.tsx
 "use client";
 
 import React, { use } from "react";
@@ -195,7 +195,7 @@ function FashionCategoryPageContent({ params }: { params: Promise<{ id: string }
             {/* Curated Grid - 100% matched with Main Page aesthetics */}
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 sm:gap-x-12 gap-y-16 sm:gap-y-32">
               {displayedItems.map((product) => (
-                <Link key={product.id} href={`/ko/templates/OHMT002-fashion-kr/product/${product.id}`} className="group block">
+                <Link key={product.id} href={`/ko/templates/OHMT001-fashion-KO/product/${product.id}`} className="group block">
                   {/* Image Frame with in-frame zoom and minimal tag */}
                   <div className="aspect-square bg-[var(--color-bg-secondary)] overflow-hidden mb-4 sm:mb-8 relative">
                     <span className="absolute top-3 left-3 z-20 text-[8px] font-bold tracking-[0.2em] bg-white text-black px-2.5 py-1 border border-black/10 rounded-[2px]">
@@ -262,7 +262,7 @@ function FashionCategoryPageContent({ params }: { params: Promise<{ id: string }
                   <span className="text-[14px] font-bold tracking-tight text-black/40">{article.category} - {article.date}</span>
                   <h2 className="text-xl md:text-2xl font-bold tracking-tight uppercase leading-snug">{article.title}</h2>
                   <p className="text-[14px] text-black/60 leading-relaxed font-normal tracking-[0.01em]">{article.summary}</p>
-                  <Link href={`/ko/templates/OHMT002-fashion-kr/journal/${article.id}`} className="inline-flex items-center gap-3 text-[14px] font-bold uppercase tracking-[0.3em] mr-[-0.3em] pt-4 group border-b border-black/10 w-fit pb-1 hover:border-black hover:tracking-[0.35em] hover:mr-[-0.35em] transition-[color,letter-spacing,margin] duration-700">
+                  <Link href={`/ko/templates/OHMT001-fashion-KO/journal/${article.id}`} className="inline-flex items-center gap-3 text-[14px] font-bold uppercase tracking-[0.3em] mr-[-0.3em] pt-4 group border-b border-black/10 w-fit pb-1 hover:border-black hover:tracking-[0.35em] hover:mr-[-0.35em] transition-[color,letter-spacing,margin] duration-700">
                     기사 읽기 <ArrowRight size={12} className="group-hover:translate-x-2 transition-transform duration-500" />
                   </Link>
                 </div>

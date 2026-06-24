@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Fashion KO - Oh My Template",
     description: "프리미엄 패션 브랜드 & 에디토리얼 쇼케이스",
-    url: "https://ohmytemplate.com/ko/templates/OHMT002-fashion-kr",
+    url: "https://ohmytemplate.com/ko/templates/OHMT001-fashion-KO",
     siteName: "Oh My Template",
     images: [{ url: "/templates/OHMT001-fashion/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT002-fashion-kr",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT001-fashion-en-en" },
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT001-fashion-KO",
+    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT001-fashion-EN-en" },
   },
 };
 

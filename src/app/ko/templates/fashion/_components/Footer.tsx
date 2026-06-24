@@ -31,7 +31,7 @@ export const Footer = () => {
     <footer className="bg-white pt-12 md:pt-24 pb-12 border-t border-black/5 selection:bg-black selection:text-white">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-20 mb-12 md:mb-24">
         <div className="col-span-2 lg:col-span-1">
-          <Link href="/ko/templates/OHMT002-fashion-kr" className="text-xl md:text-2xl font-black tracking-tighter uppercase block">
+          <Link href="/ko/templates/OHMT001-fashion-KO" className="text-xl md:text-2xl font-black tracking-tighter uppercase block">
             Oh My Template
           </Link>
           <p className="text-[14px] text-black/60 font-medium leading-relaxed max-w-xs mt-4 md:mt-6">
@@ -47,17 +47,17 @@ export const Footer = () => {
         <div className="space-y-4 md:space-y-8">
             <h5 className="text-[13px] font-medium uppercase tracking-tight text-black/30">카탈로그</h5>
             <ul className="space-y-3 md:space-y-4 text-[12px] font-medium uppercase tracking-widest">
-                <li><Link href="/ko/templates/OHMT002-fashion-kr/category/ss26" className="hover:text-black/40 transition-colors">26 봄/여름</Link></li>
-                <li><Link href="/ko/templates/OHMT002-fashion-kr/category/aw25" className="hover:text-black/40 transition-colors">25 가을/겨울</Link></li>
-                <li><Link href="/ko/templates/OHMT002-fashion-kr/category/core" className="hover:text-black/40 transition-colors">코어 시리즈</Link></li>
-                <li><Link href="/ko/templates/OHMT002-fashion-kr/category/limited" className="hover:text-black/40 transition-colors">리미티드 드롭</Link></li>
+                <li><Link href="/ko/templates/OHMT001-fashion-KO/category/ss26" className="hover:text-black/40 transition-colors">26 봄/여름</Link></li>
+                <li><Link href="/ko/templates/OHMT001-fashion-KO/category/aw25" className="hover:text-black/40 transition-colors">25 가을/겨울</Link></li>
+                <li><Link href="/ko/templates/OHMT001-fashion-KO/category/core" className="hover:text-black/40 transition-colors">코어 시리즈</Link></li>
+                <li><Link href="/ko/templates/OHMT001-fashion-KO/category/limited" className="hover:text-black/40 transition-colors">리미티드 드롭</Link></li>
             </ul>
         </div>
 
         <div className="space-y-4 md:space-y-8">
             <h5 className="text-[13px] font-medium uppercase tracking-tight text-black/30">고객지원</h5>
             <ul className="space-y-3 md:space-y-4 text-[12px] font-medium uppercase tracking-widest">
-                <li><Link href="/ko/templates/OHMT002-fashion-kr/category/ss26" className="hover:text-black/40 transition-colors">고객 센터</Link></li>
+                <li><Link href="/ko/templates/OHMT001-fashion-KO/category/ss26" className="hover:text-black/40 transition-colors">고객 센터</Link></li>
             </ul>
         </div>
 

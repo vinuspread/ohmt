@@ -96,7 +96,7 @@ export default function JournalArticlePage({ params }: { params: Promise<{ id: s
         <div className="max-w-[760px] mx-auto px-8 md:px-6 py-16 md:py-24">
 
           <Link
-            href="/ko/templates/OHMT002-fashion-kr/category/journal"
+            href="/ko/templates/OHMT001-fashion-KO/category/journal"
             className="inline-flex items-center gap-2 text-[12px] text-black/40 uppercase tracking-[0.2em] hover:text-black transition-colors mb-12"
           >
             <ArrowLeft size={13} /> 저널로 돌아가기
@@ -126,7 +126,7 @@ export default function JournalArticlePage({ params }: { params: Promise<{ id: s
           <div className="mt-16 pt-10 border-t border-black/8 flex items-center justify-between">
             <span className="text-[12px] text-black/30 uppercase tracking-[0.2em]">VINUSPREAD - {article.date}</span>
             <Link
-              href="/ko/templates/OHMT002-fashion-kr/category/journal"
+              href="/ko/templates/OHMT001-fashion-KO/category/journal"
               className="text-[12px] text-black/40 uppercase tracking-[0.2em] hover:text-black transition-colors"
             >
               다음 아티클 →

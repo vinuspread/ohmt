@@ -21,7 +21,7 @@ export const ProductGrid = () => {
           <div>
             <h2 className="text-2xl sm:text-[3vw] font-bold tracking-tighter tracking-[-0.03em] uppercase leading-none">신상품</h2>
           </div>
-          <Link href="/ko/templates/OHMT002-fashion-kr/category/collection" className="group flex items-center gap-2 text-[11px] sm:text-[12px] font-medium uppercase tracking-[0.15em] sm:tracking-[0.2em] border-b border-black/10 pb-1 hover:border-black transition-colors whitespace-nowrap">
+          <Link href="/ko/templates/OHMT001-fashion-KO/category/collection" className="group flex items-center gap-2 text-[11px] sm:text-[12px] font-medium uppercase tracking-[0.15em] sm:tracking-[0.2em] border-b border-black/10 pb-1 hover:border-black transition-colors whitespace-nowrap">
             전체 보기
           </Link>
         </div>
@@ -38,7 +38,7 @@ export const ProductGrid = () => {
                 className="group cursor-pointer"
               >
                 <div className="aspect-square bg-[var(--color-bg-secondary)] overflow-hidden mb-4 sm:mb-8 relative">
-                  <Link href={`/ko/templates/OHMT002-fashion-kr/product/${p.id}`} className="block w-full h-full">
+                  <Link href={`/ko/templates/OHMT001-fashion-KO/product/${p.id}`} className="block w-full h-full">
                     <img 
                       src={p.image} 
                       alt={p.name}
@@ -49,7 +49,7 @@ export const ProductGrid = () => {
                   <div className="absolute inset-6 border border-white/30 opacity-0 group-hover:opacity-100 scale-105 group-hover:scale-100 transition-[opacity,transform] duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] pointer-events-none z-10" />
                 </div>
                 <div className="space-y-1 transition-transform duration-500 ease-out group-hover:-translate-y-1">
-                  <Link href={`/ko/templates/OHMT002-fashion-kr/product/${p.id}`}>
+                  <Link href={`/ko/templates/OHMT001-fashion-KO/product/${p.id}`}>
                     <h3 className="text-[13px] sm:text-[15px] font-bold uppercase tracking-normal line-clamp-1">{p.name}</h3>
                   </Link>
                   <p className="text-[12px] sm:text-[14px] text-black/50 font-bold">{p.price}</p>
