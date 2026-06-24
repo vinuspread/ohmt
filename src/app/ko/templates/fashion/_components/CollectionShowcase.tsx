@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import { motion } from "framer-motion";
@@ -20,7 +20,7 @@ export const CollectionShowcase = () => {
               className="w-full h-full"
             >
               <img
-                src="/templates/OHMT001-fashion/exclusive-custom.jpg"
+                src="/templates/fashion/exclusive-custom.jpg"
                 alt="Exclusive Collection Lookbook" 
                 className="w-full h-full object-cover grayscale brightness-95 group-hover:grayscale-0 group-hover:scale-105 transition-[filter,transform] duration-[1.8s] ease-out-sine"
               />

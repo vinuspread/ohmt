@@ -16,7 +16,7 @@ export default function AboutPage() {
             </h1>
           </div>
           <div className="mt-12 relative min-h-[55vh] overflow-hidden">
-            <img src="/templates/OHMT003-exhibition/about-hero.jpg" alt="" className="w-full h-full object-cover" style={{ minHeight: '55vh' }} />
+            <img src="/templates/exhibition/about-hero.jpg" alt="" className="w-full h-full object-cover" style={{ minHeight: '55vh' }} />
             <div className="absolute inset-0 bg-black/25" />
             <div className="absolute top-24 left-0 right-0 max-w-[1400px] mx-auto px-6">
               <p className="font-heading font-semibold uppercase text-white leading-[0.95]" style={{ fontSize: 'clamp(4rem, 8vw, 9rem)', letterSpacing: '-0.04em' }}>

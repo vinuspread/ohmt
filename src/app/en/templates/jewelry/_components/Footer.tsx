@@ -1,4 +1,4 @@
-// src/app/templates/OHMT002-jewelry/-internal/components/Footer.tsx
+﻿// src/app/templates/jewelry/-internal/components/Footer.tsx
 "use client";
 
 import React from "react";

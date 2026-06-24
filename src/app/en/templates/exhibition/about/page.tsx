@@ -23,7 +23,7 @@ export default function AboutPage() {
           </div>
           <div className="mt-12 relative min-h-[55vh] overflow-hidden">
             <img
-              src="/templates/OHMT003-exhibition/about-hero.jpg"
+              src="/templates/exhibition/about-hero.jpg"
               alt=""
               className="w-full h-full object-cover"
               style={{ minHeight: '55vh' }}
