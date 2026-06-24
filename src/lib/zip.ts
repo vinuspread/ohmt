@@ -22,6 +22,7 @@ export interface TemplateThemeJson {
 const requiredFiles = ["_components/TemplateWrapper.tsx", "layout.tsx", "page.tsx", "theme.css", "theme.json"];
 const requiredPublicFiles = ["thumbnail.jpg"];
 const forbiddenPathPrefixes = ["src/", "translations/"];
+const textExtensions = new Set([".ts", ".tsx", ".js", ".jsx", ".css", ".json", ".md", ".html", ".svg", ".txt", ".mjs", ".cjs", ".yaml", ".yml"]);
 const forbiddenPublicExtensions = [".mp4", ".mov", ".webm"];
 const slugPattern = /^[a-z][a-z0-9-]*$/;
 const maxExtractedSize = 100 * 1024 * 1024;
@@ -127,16 +128,23 @@ export function extractAndValidateZip(buffer: Buffer, lang: "en" | "ko" = "en"):
 
     if (path.startsWith(`${slug}/`)) {
       const relativePath = path.slice(slug.length + 1);
-      files.push({ path: `${templateBasePath}/${relativePath}`, content: entry.getData() });
+      files.push({ path: `${templateBasePath}/${relativePath}`, content: normalizeContent(path, entry.getData()) });
       continue;
     }
 
     if (lang === "en" && path.startsWith(`public/templates/${slug}/`)) {
-      files.push({ path, content: entry.getData() });
+      files.push({ path, content: normalizeContent(path, entry.getData()) });
     }
   }
 
   return { slug, name: name ?? slug, description: description ?? null, themeJson, files };
+}
+
+function normalizeContent(filePath: string, data: Buffer): Buffer {
+  const ext = filePath.slice(filePath.lastIndexOf(".")).toLowerCase();
+  if (!textExtensions.has(ext)) return data;
+  const normalized = data.toString("utf-8").replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+  return Buffer.from(normalized, "utf-8");
 }
 
 function normalizeEntryPath(path: string): string {
