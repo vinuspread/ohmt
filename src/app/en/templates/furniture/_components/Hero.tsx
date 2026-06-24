@@ -101,7 +101,7 @@ const [index, setIndex] = useState(0);
     {
       id: 1,
       name: "Sculptural Lounge Chair",
-      image: "/templates/OHMT004-furniture/chair.png",
+      image: "/templates/furniture/chair.png",
       subtitle: t.hero.items.item1.subtitle,
       titleLine1: t.hero.items.item1.title1,
       titleLine2: t.hero.items.item1.title2,
@@ -110,7 +110,7 @@ const [index, setIndex] = useState(0);
     {
       id: 2,
       name: "Architectural Table Lamp",
-      image: "/templates/OHMT004-furniture/lamp.png",
+      image: "/templates/furniture/lamp.png",
       subtitle: t.hero.items.item2.subtitle,
       titleLine1: t.hero.items.item2.title1,
       titleLine2: t.hero.items.item2.title2,
@@ -119,7 +119,7 @@ const [index, setIndex] = useState(0);
     {
       id: 3,
       name: "Minimalist Solid Oak Sofa",
-      image: "/templates/OHMT004-furniture/sofa.png",
+      image: "/templates/furniture/sofa.png",
       subtitle: t.hero.items.item3.subtitle,
       titleLine1: t.hero.items.item3.title1,
       titleLine2: t.hero.items.item3.title2,
@@ -318,14 +318,14 @@ export const CategoryNav = () => {
   }
 };
 const categories = [
-    { name: "Sofas",           image: "/templates/OHMT004-furniture/sofa.png",       id: "sofas" },
-    { name: "Bedroom",         image: "/templates/OHMT004-furniture/bed.png",        id: "bedroom" },
-    { name: "Dining",          image: "/templates/OHMT004-furniture/table.png",      id: "dining" },
-    { name: "Home Office",     image: "/templates/OHMT004-furniture/desk.png",       id: "home-office" },
-    { name: "Chairs",          image: "/templates/OHMT004-furniture/chair.png",      id: "chairs" },
-    { name: "Lighting",        image: "/templates/OHMT004-furniture/lamp.png",       id: "lighting" },
-    { name: "Living",          image: "/templates/OHMT004-furniture/sidetable.png",  id: "living" },
-    { name: "Storage",         image: "/templates/OHMT004-furniture/wardrobe.png",   id: "storage" },
+    { name: "Sofas",           image: "/templates/furniture/sofa.png",       id: "sofas" },
+    { name: "Bedroom",         image: "/templates/furniture/bed.png",        id: "bedroom" },
+    { name: "Dining",          image: "/templates/furniture/table.png",      id: "dining" },
+    { name: "Home Office",     image: "/templates/furniture/desk.png",       id: "home-office" },
+    { name: "Chairs",          image: "/templates/furniture/chair.png",      id: "chairs" },
+    { name: "Lighting",        image: "/templates/furniture/lamp.png",       id: "lighting" },
+    { name: "Living",          image: "/templates/furniture/sidetable.png",  id: "living" },
+    { name: "Storage",         image: "/templates/furniture/wardrobe.png",   id: "storage" },
   ];
 
   return (
