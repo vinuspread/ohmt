@@ -2,7 +2,7 @@
 
 ## 브랜드: Oh My Template
 ## 참고 디자인: Dashmin (themelooks.net/demo/dashmin/html/dark/)
-## 작업 경로: `src/app/en/templates/dashboard/`
+## 작업 경로: `src/app/en/templates/OHMT029-dashboard-en/`
 
 ---
 
@@ -46,7 +46,7 @@
 ## 2. 파일 구조
 
 ```
-src/app/en/templates/dashboard/
+src/app/en/templates/OHMT029-dashboard-en/
 ├── layout.tsx
 ├── page.tsx                    ← 메인 대시보드
 ├── theme.css

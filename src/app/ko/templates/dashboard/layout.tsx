@@ -8,6 +8,12 @@ const geist = Geist({
   display: 'swap',
 })
 
+const geistBody = Geist({
+  subsets: ['latin'],
+  variable: '--font-body',
+  display: 'swap',
+})
+
 const geistMono = Geist_Mono({
   subsets: ['latin'],
   variable: '--font-mono',
@@ -25,7 +31,7 @@ export default function DashboardRootLayout({
   children: React.ReactNode
 }) {
   return (
-    <section className={`${geist.variable} ${geistMono.variable}`} data-theme="dark">
+    <section className={`${geist.variable} ${geistBody.variable} ${geistMono.variable}`} data-theme="dark">
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
       `}</style>

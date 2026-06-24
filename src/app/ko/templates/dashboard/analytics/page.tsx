@@ -10,7 +10,6 @@ import { DashboardLayout } from '../_components/layout/DashboardLayout'
 import { PageHeader } from '../_components/common/PageHeader'
 import { chartDefaults } from '../data/chart-theme'
 import { TrendingUp, Users, MousePointerClick, Clock } from 'lucide-react'
-import { TemplateWrapper } from '../_components/TemplateWrapper'
 
 const periods = ['7D', '30D', '90D', '1Y']
 
@@ -84,8 +83,7 @@ export default function AnalyticsPage() {
 
   return (
     <DashboardLayout title="분석">
-      <TemplateWrapper>
-        <motion.div
+      <motion.div
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
@@ -251,7 +249,6 @@ export default function AnalyticsPage() {
           </div>
         </motion.div>
       </motion.div>
-          </TemplateWrapper>
     </DashboardLayout>
   )
 }
