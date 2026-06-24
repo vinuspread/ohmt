@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Wedding - Oh My Template",
     description: "Timeless and authentic wedding photography. Capturing your love story through a documentary lens with fine art elegance.",
-    url: "https://ohmytemplate.com/en/templates/OHMT049-wedding-en",
+    url: "https://ohmytemplate.com/en/templates/OHMT025-wedding-EN",
     siteName: "Oh My Template",
     images: [{ url: "/templates/OHMT025-wedding/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT049-wedding-en",
+    canonical: "https://ohmytemplate.com/en/templates/OHMT025-wedding-EN",
     languages: {
-      "ko": "https://ohmytemplate.com/ko/templates/OHMT050-wedding-kr",
+      "ko": "https://ohmytemplate.com/ko/templates/OHMT025-wedding-KO",
     },
   },
 };

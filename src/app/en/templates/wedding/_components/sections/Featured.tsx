@@ -88,7 +88,7 @@ export default function Featured() {
 
         <div className="mt-12 text-center">
           <a
-            href="/en/templates/OHMT049-wedding-en/contact"
+            href="/en/templates/OHMT025-wedding-EN/contact"
             className="inline-flex items-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-[var(--color-text)] border-b border-[var(--color-text)] pb-1 hover:text-[var(--color-primary)] hover:border-[var(--color-primary)] transition-colors duration-300"
           >
             Inquire About Your Date

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Portfolio - Lumen Wedding Photography",
     description: "Explore our portfolio of fine art wedding photography. Real love stories captured across the world.",
-    url: "https://ohmytemplate.com/en/templates/OHMT049-wedding-en/gallery",
+    url: "https://ohmytemplate.com/en/templates/OHMT025-wedding-EN/gallery",
     siteName: "Oh My Template",
     images: [{ url: "/templates/OHMT025-wedding/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT049-wedding-en/gallery",
+    canonical: "https://ohmytemplate.com/en/templates/OHMT025-wedding-EN/gallery",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/OHMT049-wedding-en/gallery",
-      "ko": "https://ohmytemplate.com/ko/templates/OHMT050-wedding-kr/gallery",
+      "en": "https://ohmytemplate.com/en/templates/OHMT025-wedding-EN/gallery",
+      "ko": "https://ohmytemplate.com/ko/templates/OHMT025-wedding-KO/gallery",
     },
   },
 };

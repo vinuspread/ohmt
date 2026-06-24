@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About - Lumen Wedding Photography",
     description: "Meet Clara, founder and lead photographer. Capturing timeless wedding stories with fine art documentary style.",
-    url: "https://ohmytemplate.com/en/templates/OHMT049-wedding-en/about",
+    url: "https://ohmytemplate.com/en/templates/OHMT025-wedding-EN/about",
     siteName: "Oh My Template",
     images: [{ url: "/templates/OHMT025-wedding/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT049-wedding-en/about",
+    canonical: "https://ohmytemplate.com/en/templates/OHMT025-wedding-EN/about",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/OHMT049-wedding-en/about",
-      "ko": "https://ohmytemplate.com/ko/templates/OHMT050-wedding-kr/about",
+      "en": "https://ohmytemplate.com/en/templates/OHMT025-wedding-EN/about",
+      "ko": "https://ohmytemplate.com/ko/templates/OHMT025-wedding-KO/about",
     },
   },
 };

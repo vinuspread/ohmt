@@ -69,7 +69,7 @@ export default function About() {
             </div>
 
             <a
-              href="/en/templates/OHMT049-wedding-en/contact"
+              href="/en/templates/OHMT025-wedding-EN/contact"
               className="inline-flex items-center gap-3 mt-10 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-[var(--color-text)] border-b border-[var(--color-text)] pb-1 hover:text-[var(--color-primary)] hover:border-[var(--color-primary)] transition-colors duration-200"
             >
               Plan Your Day

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Pricing - Lumen Wedding Photography",
     description: "Explore our wedding photography collections. Essence, Elegance, and Ever After packages.",
-    url: "https://ohmytemplate.com/en/templates/OHMT049-wedding-en/pricing",
+    url: "https://ohmytemplate.com/en/templates/OHMT025-wedding-EN/pricing",
     siteName: "Oh My Template",
     images: [{ url: "/templates/OHMT025-wedding/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT049-wedding-en/pricing",
+    canonical: "https://ohmytemplate.com/en/templates/OHMT025-wedding-EN/pricing",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/OHMT049-wedding-en/pricing",
-      "ko": "https://ohmytemplate.com/ko/templates/OHMT050-wedding-kr/pricing",
+      "en": "https://ohmytemplate.com/en/templates/OHMT025-wedding-EN/pricing",
+      "ko": "https://ohmytemplate.com/ko/templates/OHMT025-wedding-KO/pricing",
     },
   },
 };

@@ -74,7 +74,7 @@ export default function PricingFull() {
 
                   <div className="mt-8 pt-8">
                     <Link
-                      href="/en/templates/OHMT049-wedding-en/contact"
+                      href="/en/templates/OHMT025-wedding-EN/contact"
                       className="w-full inline-flex items-center justify-center border border-[var(--color-primary)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.15em] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-[var(--color-bg)] transition-all duration-300"
                     >
                       Book This Package
@@ -95,7 +95,7 @@ export default function PricingFull() {
               Let us help you find the perfect fit for your celebration.
             </p>
             <Link
-              href="/en/templates/OHMT049-wedding-en/contact"
+              href="/en/templates/OHMT025-wedding-EN/contact"
               className="inline-flex items-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-white border-b border-white/40 pb-1 hover:border-white transition-colors duration-200"
             >
               Get in Touch

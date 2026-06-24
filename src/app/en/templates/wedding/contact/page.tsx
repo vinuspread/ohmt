@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact - Lumen Wedding Photography",
     description: "Book your wedding photography date. Reach out to check availability for your celebration.",
-    url: "https://ohmytemplate.com/en/templates/OHMT049-wedding-en/contact",
+    url: "https://ohmytemplate.com/en/templates/OHMT025-wedding-EN/contact",
     siteName: "Oh My Template",
     images: [{ url: "/templates/OHMT025-wedding/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT049-wedding-en/contact",
+    canonical: "https://ohmytemplate.com/en/templates/OHMT025-wedding-EN/contact",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/OHMT049-wedding-en/contact",
-      "ko": "https://ohmytemplate.com/ko/templates/OHMT050-wedding-kr/contact",
+      "en": "https://ohmytemplate.com/en/templates/OHMT025-wedding-EN/contact",
+      "ko": "https://ohmytemplate.com/ko/templates/OHMT025-wedding-KO/contact",
     },
   },
 };
