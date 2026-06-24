@@ -89,7 +89,7 @@ const shopLinks = [
       <div className="max-w-[1440px] mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-20 mb-20">
           <div>
-            <Link href="/en/templates/OHMT019-cosmetic-en" className="text-[1rem] md:text-[1.15rem] font-medium md:font-black tracking-[0.12em] uppercase mb-8 block">
+            <Link href="/en/templates/OHMT010-cosmetic-EN" className="text-[1rem] md:text-[1.15rem] font-medium md:font-black tracking-[0.12em] uppercase mb-8 block">
               VINUSPREAD
             </Link>
             <p className="text-[0.85rem] opacity-70 leading-[1.4] max-w-[320px]">

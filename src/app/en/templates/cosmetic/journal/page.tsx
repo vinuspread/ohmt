@@ -60,7 +60,7 @@ function CosmeticJournalPageContent() {
 
             <div className="border-t border-black/10">
               {entries.map((entry) => (
-                <Link key={entry.slug} href={`/en/templates/OHMT019-cosmetic-en/journal/${entry.slug}`}>
+                <Link key={entry.slug} href={`/en/templates/OHMT010-cosmetic-EN/journal/${entry.slug}`}>
                   <div className="py-10 px-6 grid md:grid-cols-[1fr_auto] gap-6 items-center group hover:bg-white transition-colors cursor-pointer border-b border-black/10">
                     <div>
                       <h3 className="text-[1.2rem] font-medium tracking-tight mb-2 group-hover:opacity-60 transition-opacity">{entry.title}</h3>
