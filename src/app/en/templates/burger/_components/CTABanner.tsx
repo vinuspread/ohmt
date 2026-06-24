@@ -10,7 +10,7 @@ export const CTABanner = () => {
     <section className="relative bg-[var(--color-bg-dark)] py-24 md:py-32 overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="/templates/OHMT018-burger/cta-bg.png"
+          src="/templates/burger/cta-bg.png"
           alt=""
           className="w-full h-full object-cover opacity-40"
         />
