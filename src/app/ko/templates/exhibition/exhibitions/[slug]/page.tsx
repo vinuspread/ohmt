@@ -7,12 +7,12 @@ import { Navbar } from '../../_components/Navbar';
 import { Footer } from '../../_components/Footer';
 
 const galleryImages = [
-  '/templates/OHMT003-exhibition/mosaic-01.jpg',
-  '/templates/OHMT003-exhibition/mosaic-02.jpg',
-  '/templates/OHMT003-exhibition/mosaic-03.jpg',
-  '/templates/OHMT003-exhibition/mosaic-04.jpg',
-  '/templates/OHMT003-exhibition/mosaic-05.jpg',
-  '/templates/OHMT003-exhibition/mosaic-06.jpg',
+  '/templates/exhibition/mosaic-01.jpg',
+  '/templates/exhibition/mosaic-02.jpg',
+  '/templates/exhibition/mosaic-03.jpg',
+  '/templates/exhibition/mosaic-04.jpg',
+  '/templates/exhibition/mosaic-05.jpg',
+  '/templates/exhibition/mosaic-06.jpg',
 ];
 
 export default async function ExhibitionDetailPage({ params }: { params: Promise<{ slug: string }> }) {

@@ -1,4 +1,4 @@
-import { Exhibition, GalleryEvent } from './types';
+﻿import { Exhibition, GalleryEvent } from './types';
 
 export const exhibitions: Exhibition[] = [
   {
@@ -10,8 +10,8 @@ export const exhibitions: Exhibition[] = [
     dateTo: '2026년 5월 31일',
     showroom: '메인 갤러리',
     tags: { genre: '회화', theme: '정체성', ageRating: '18+' },
-    image: '/templates/OHMT003-exhibition/exhibition-01.jpg',
-    heroImage: '/templates/OHMT003-exhibition/exhibition-hero-01.jpg',
+    image: '/templates/exhibition/exhibition-01.jpg',
+    heroImage: '/templates/exhibition/exhibition-hero-01.jpg',
     description:
       'Sophie Laurent의 첫 번째 개인전은 유기적 형태와 건축적 구조 사이의 긴장을 탐구합니다. 대형 캔버스는 제스처 추상과 정밀한 기하학적 개입을 결합하여 혼돈과 통제 사이를 오가는 구성을 만들어냅니다. 건축 배경을 바탕으로 Laurent는 가까이 살펴볼수록 숨겨진 기하학이 드러나는 층위 있는 표면을 구축합니다. 이번 전시는 초기 목탄 드로잉부터 최근 혼합 매체 작품까지 그녀의 변화하는 실천을 추적합니다.',
   },
@@ -24,8 +24,8 @@ export const exhibitions: Exhibition[] = [
     dateTo: '2026년 6월 30일',
     showroom: '이스트 윙',
     tags: { genre: '조각', theme: '산업', ageRating: '16+' },
-    image: '/templates/OHMT003-exhibition/exhibition-02.jpg',
-    heroImage: '/templates/OHMT003-exhibition/exhibition-hero-02.jpg',
+    image: '/templates/exhibition/exhibition-02.jpg',
+    heroImage: '/templates/exhibition/exhibition-hero-02.jpg',
     description:
       'Marcus Webb은 산업 소재를 무게, 균형, 아름다움에 대한 인식에 도전하는 도발적인 조각 형태로 변환합니다. 고철, 재활용 목재, 산업용 철물로 제작된 작품들은 거대하면서도 불안정한 느낌을 줍니다. 각 작품은 이스트 윙의 건축 공간과 대화하며 조각의 물성과 세련된 갤러리 공간 사이의 긴장을 만들어냅니다.',
   },
@@ -38,8 +38,8 @@ export const exhibitions: Exhibition[] = [
     dateTo: '2026년 7월 31일',
     showroom: '인스톨레이션 홀',
     tags: { genre: '설치', theme: '자연', ageRating: '12+' },
-    image: '/templates/OHMT003-exhibition/exhibition-03.jpg',
-    heroImage: '/templates/OHMT003-exhibition/exhibition-hero-03.jpg',
+    image: '/templates/exhibition/exhibition-03.jpg',
+    heroImage: '/templates/exhibition/exhibition-hero-03.jpg',
     description:
       'Yuki Tanaka는 자연광의 덧없는 특질을 포착하는 몰입형 환경 설치를 만듭니다. 반투명 재료, 영사 이미지, 섬세하게 조율된 공간 개입을 통해 Tanaka는 인스톨레이션 홀을 하루 동안 변화하는 감각적 풍경으로 변환합니다.',
   },
@@ -52,8 +52,8 @@ export const exhibitions: Exhibition[] = [
     dateTo: '2026년 9월 30일',
     showroom: '사진 윙',
     tags: { genre: '사진', theme: '사회', ageRating: '14+' },
-    image: '/templates/OHMT003-exhibition/exhibition-04.jpg',
-    heroImage: '/templates/OHMT003-exhibition/exhibition-hero-01.jpg',
+    image: '/templates/exhibition/exhibition-04.jpg',
+    heroImage: '/templates/exhibition/exhibition-hero-01.jpg',
     description:
       'Aria Novak의 다큐멘터리 사진은 빠르게 변화하는 도시 풍경의 주변부에 사는 공동체를 탐구합니다. 5년에 걸쳐 네 개 대륙 스무 개 도시를 여행하며 이주와 변화에 직면한 동네의 친밀한 초상을 담았습니다.',
   },
@@ -66,8 +66,8 @@ export const exhibitions: Exhibition[] = [
     dateTo: '2026년 10월 31일',
     showroom: '가든 갤러리',
     tags: { genre: '혼합 매체', theme: '문화', ageRating: '12+' },
-    image: '/templates/OHMT003-exhibition/exhibition-05.jpg',
-    heroImage: '/templates/OHMT003-exhibition/exhibition-hero-02.jpg',
+    image: '/templates/exhibition/exhibition-05.jpg',
+    heroImage: '/templates/exhibition/exhibition-hero-02.jpg',
     description:
       '여섯 개국 열두 명의 신진 작가가 모여 21세기를 위한 공유된 시각 언어의 개념을 탐구합니다. 조각, 섬유, 디지털 미디어, 퍼포먼스를 넘나들며 예술 형식과 문화적 전통 사이의 경계에 도전합니다.',
   },
@@ -80,8 +80,8 @@ export const exhibitions: Exhibition[] = [
     dateTo: '상설',
     showroom: '상설 컬렉션',
     tags: { genre: '개념', theme: '정체성', ageRating: '18+' },
-    image: '/templates/OHMT003-exhibition/exhibition-06.jpg',
-    heroImage: '/templates/OHMT003-exhibition/exhibition-hero-03.jpg',
+    image: '/templates/exhibition/exhibition-06.jpg',
+    heroImage: '/templates/exhibition/exhibition-hero-03.jpg',
     description:
       '2024년 갤러리가 소장한 Daniel Reeves의 작품은 기억, 기록, 역사적 서사의 본질을 탐구하는 30년간의 개념 미술을 아우릅니다. 상설 설치는 그의 경력 각 단계의 주요 작품을 선보이며 연구실에서 방문객이 방대한 아카이브를 탐색할 수 있습니다.',
   },
@@ -95,7 +95,7 @@ export const events: GalleryEvent[] = [
     time: '15:00',
     type: '작가 토크',
     ageRating: '18+',
-    image: '/templates/OHMT003-exhibition/event-01.jpg',
+    image: '/templates/exhibition/event-01.jpg',
   },
   {
     id: 'evt-02',
@@ -104,7 +104,7 @@ export const events: GalleryEvent[] = [
     time: '10:00',
     type: '워크숍',
     ageRating: '12+',
-    image: '/templates/OHMT003-exhibition/event-02.jpg',
+    image: '/templates/exhibition/event-02.jpg',
   },
   {
     id: 'evt-03',
@@ -113,7 +113,7 @@ export const events: GalleryEvent[] = [
     time: '14:00',
     type: '투어',
     ageRating: '전체',
-    image: '/templates/OHMT003-exhibition/event-01.jpg',
+    image: '/templates/exhibition/event-01.jpg',
   },
   {
     id: 'evt-04',
@@ -122,6 +122,6 @@ export const events: GalleryEvent[] = [
     time: '19:30',
     type: '퍼포먼스',
     ageRating: '16+',
-    image: '/templates/OHMT003-exhibition/event-02.jpg',
+    image: '/templates/exhibition/event-02.jpg',
   },
 ];
