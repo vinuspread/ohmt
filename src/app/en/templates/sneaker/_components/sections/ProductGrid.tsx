@@ -1,4 +1,4 @@
-﻿// src/app/en/templates/OHMT009-sneaker-en/_components/sections/ProductGrid.tsx
+﻿// src/app/en/templates/OHMT005-sneaker-EN/_components/sections/ProductGrid.tsx
 "use client";
 import { useState } from "react";
 import Link from "next/link";
@@ -448,7 +448,7 @@ function getBadgeStyle(badge: string) {
 
 function ProductCard({ product }: { product: typeof products[0] }) {
   return (
-    <Link href={`/en/templates/OHMT009-sneaker-en/product/${product.id}`} className="group block border border-black/10 hover:border-black/50 transition-all duration-300 active:scale-[0.98]">
+    <Link href={`/en/templates/OHMT005-sneaker-EN/product/${product.id}`} className="group block border border-black/10 hover:border-black/50 transition-all duration-300 active:scale-[0.98]">
       <div className="relative overflow-hidden aspect-square bg-[var(--color-bg-secondary)]">
         <img
           src={product.img}
@@ -655,7 +655,7 @@ export function ProductGrid({ title, items, limit = 8 }: Props) {
       <div className="max-w-[1440px] mx-auto px-6">
         <div className="flex items-center justify-between mb-10">
           <h2 className="text-[1.6rem] font-black tracking-[-0.02em] uppercase">{title}</h2>
-          <Link href="/en/templates/OHMT009-sneaker-en/shop-all" className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-black/50 hover:text-black transition-colors border-b border-black/20 pb-0.5">
+          <Link href="/en/templates/OHMT005-sneaker-EN/shop-all" className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-black/50 hover:text-black transition-colors border-b border-black/20 pb-0.5">
             {t.productGrid.viewAll}
           </Link>
         </div>

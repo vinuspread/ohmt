@@ -189,11 +189,11 @@ export const Hero = () => {
               {t.hero.desc}
             </p>
             <div className="flex items-center gap-4 shrink-0 flex-wrap">
-              <Link href={`/en/templates/OHMT009-sneaker-en/shop-all`}
+              <Link href={`/en/templates/OHMT005-sneaker-EN/shop-all`}
                 className="group inline-flex items-center gap-3 bg-black text-white text-[0.9rem] font-bold uppercase tracking-[0.1em] px-9 py-4.5 hover:bg-black/80 transition-all duration-300">
                 {t.hero.cta} <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1.5" />
               </Link>
-              <Link href={`/en/templates/OHMT009-sneaker-en/shop-all`}
+              <Link href={`/en/templates/OHMT005-sneaker-EN/shop-all`}
                 className="inline-flex items-center justify-center bg-white text-black border border-black text-[0.9rem] font-bold uppercase tracking-[0.1em] px-9 py-4.5 hover:bg-black hover:text-white transition-all duration-300">
                 {t.hero.cta2}
               </Link>

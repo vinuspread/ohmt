@@ -33,7 +33,7 @@ function ProductPageContent({ params }: { params: Promise<{ id: string }> }) {
         <main className="antialiased pt-20">
           {/* Breadcrumb */}
           <div className="max-w-[1440px] mx-auto px-6 py-4 border-b border-black/10">
-            <Link href="/en/templates/OHMT009-sneaker-en/shop-all" className="inline-flex items-center gap-2 text-[0.78rem] text-black/50 hover:text-black transition-colors">
+            <Link href="/en/templates/OHMT005-sneaker-EN/shop-all" className="inline-flex items-center gap-2 text-[0.78rem] text-black/50 hover:text-black transition-colors">
               <ArrowLeft size={14} /> Back to Shop
             </Link>
           </div>
@@ -212,7 +212,7 @@ function ProductPageContent({ params }: { params: Promise<{ id: string }> }) {
               <h2 className="text-[1.3rem] font-black uppercase tracking-[-0.02em] mb-8">You May Also Like</h2>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {related.map(p => (
-                  <Link key={p.id} href={`/en/templates/OHMT009-sneaker-en/product/${p.id}`} className="group block border border-black/10 hover:border-black transition-colors">
+                  <Link key={p.id} href={`/en/templates/OHMT005-sneaker-EN/product/${p.id}`} className="group block border border-black/10 hover:border-black transition-colors">
                     <div className="aspect-square overflow-hidden bg-[var(--color-bg-secondary)]">
                       <img loading="lazy" src={p.img} alt={p.name} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                     </div>
