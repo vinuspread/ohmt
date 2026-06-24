@@ -41,9 +41,9 @@ export function Modal({ open, onClose, title, children, footer }: ModalProps) {
         aria-modal="true"
         aria-labelledby={titleId}
         tabIndex={-1}
-        className="relative bg-white rounded-xl shadow-xl w-full max-w-md mx-4 p-6 outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2"
+        className="relative bg-white rounded-xl shadow-xl w-full max-w-md mx-4 flex flex-col max-h-[90vh] outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2"
       >
-        <div className="flex items-center justify-between mb-4">
+        <div className="flex items-center justify-between px-6 pt-6 pb-4 flex-shrink-0">
           <h2 id={titleId} className="text-base font-semibold text-zinc-900">
             {title}
           </h2>
@@ -56,8 +56,8 @@ export function Modal({ open, onClose, title, children, footer }: ModalProps) {
             <X aria-hidden="true" className="w-4 h-4" />
           </button>
         </div>
-        {children}
-        {footer && <div className="mt-6 flex justify-end gap-2">{footer}</div>}
+        <div className="flex-1 min-h-0 overflow-y-auto px-6 pb-2">{children}</div>
+        {footer && <div className="flex-shrink-0 px-6 py-4 border-t border-zinc-100 flex justify-end gap-2">{footer}</div>}
       </div>
     </div>
   );
