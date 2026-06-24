@@ -15,7 +15,7 @@ export default function About() {
             className="lg:col-span-7 relative aspect-[4/5] md:aspect-[16/10] lg:aspect-[4/5] w-full overflow-hidden filter grayscale contrast-125 rounded-sm"
           >
             <img
-              src="/templates/OHMT025-wedding/about-clara.jpg"
+              src="/templates/wedding/about-clara.jpg"
               alt="클라라, 웨딩 포토그래퍼"
               className="h-full w-full object-cover"
             />

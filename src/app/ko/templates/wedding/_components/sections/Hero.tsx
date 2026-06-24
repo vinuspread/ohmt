@@ -29,7 +29,7 @@ export default function Hero() {
         transition={{ duration: 1.8, ease: [0.22, 0.61, 0.36, 1] }}
       >
         <img
-          src="/templates/OHMT025-wedding/hero-bg-01.jpg"
+          src="/templates/wedding/hero-bg-01.jpg"
           alt="루멘 웨딩 파인아트 사진"
           className="h-full w-full object-cover"
         />

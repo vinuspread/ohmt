@@ -23,7 +23,7 @@ export default function AboutFull() {
           <div className="w-full max-w-[1440px] mx-auto lg:grid lg:grid-cols-[55fr_45fr] items-center">
             <div ref={imgRef} className="relative overflow-hidden aspect-[4/5] max-h-[80vh]">
               <motion.img
-                src="/templates/OHMT025-wedding/about-clara.jpg"
+                src="/templates/wedding/about-clara.jpg"
                 alt="클라라, 웨딩 포토그래퍼"
                 className="h-full w-full object-cover object-center"
                 style={{ y: imgY }}
