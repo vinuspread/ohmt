@@ -145,7 +145,12 @@ export async function POST(request: Request) {
 
     await resend.emails.send({
       from: "Oh My Template <onboarding@resend.dev>",
-      to: process.env.NOTIFY_EMAIL,
+      to: [
+        process.env.NOTIFY_EMAIL!,
+        "nontext@vinus.co.kr",
+        "vinus@vinus.co.kr",
+        "nontext75@gmail.com",
+      ],
       subject: `[문의] ${TYPE_LABELS[body.inquiry_type as InquiryType]} - ${customerName.value}`,
       html: `
         <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:32px 24px">
