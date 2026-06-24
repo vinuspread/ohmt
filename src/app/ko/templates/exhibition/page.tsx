@@ -55,7 +55,7 @@ export default function HomePage() {
                 <div className="mt-10 aspect-[3/4] overflow-hidden md:hidden">
                   <img src="/templates/OHMT003-exhibition/hero-right.jpg" alt="" className="w-full h-full object-cover" />
                 </div>
-                <Link href="/ko/templates/OHMT006-exhibition-kr/contact" className="relative overflow-hidden group inline-flex px-8 py-4 border border-black mt-10">
+                <Link href="/ko/templates/OHMT003-exhibition-KO/contact" className="relative overflow-hidden group inline-flex px-8 py-4 border border-black mt-10">
                   <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
                   <span className="relative text-black group-hover:text-white text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-300">티켓 구매</span>
                 </Link>
@@ -122,7 +122,7 @@ export default function HomePage() {
             </div>
             <div className="flex flex-col items-start md:items-end justify-end">
               <p className="text-[11px] font-body text-black/40 uppercase tracking-[0.08em] mb-2">{exhibitions.length}개 전시</p>
-              <Link href="/ko/templates/OHMT006-exhibition-kr/exhibitions" className="text-[11px] font-body font-semibold uppercase tracking-[0.12em] text-black border-b border-black pb-0.5 hover:opacity-60 transition-opacity">
+              <Link href="/ko/templates/OHMT003-exhibition-KO/exhibitions" className="text-[11px] font-body font-semibold uppercase tracking-[0.12em] text-black border-b border-black pb-0.5 hover:opacity-60 transition-opacity">
                 전체 보기
               </Link>
             </div>
@@ -187,7 +187,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="mt-16">
-            <Link href="/ko/templates/OHMT006-exhibition-kr/events" className="text-[11px] font-body font-semibold uppercase tracking-[0.12em] text-black border-b border-black pb-0.5 hover:opacity-60 transition-opacity">
+            <Link href="/ko/templates/OHMT003-exhibition-KO/events" className="text-[11px] font-body font-semibold uppercase tracking-[0.12em] text-black border-b border-black pb-0.5 hover:opacity-60 transition-opacity">
               전체 이벤트 보기
             </Link>
           </div>

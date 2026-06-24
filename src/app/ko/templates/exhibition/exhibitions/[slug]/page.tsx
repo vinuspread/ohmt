@@ -69,7 +69,7 @@ export default async function ExhibitionDetailPage({ params }: { params: Promise
                     </div>
                   ))}
                 </div>
-                <Link href="/ko/templates/OHMT006-exhibition-kr/contact" className="relative overflow-hidden group inline-flex px-8 py-4 border border-black mt-12">
+                <Link href="/ko/templates/OHMT003-exhibition-KO/contact" className="relative overflow-hidden group inline-flex px-8 py-4 border border-black mt-12">
                   <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
                   <span className="relative text-black group-hover:text-white text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-300">티켓 구매</span>
                 </Link>
@@ -99,11 +99,11 @@ export default async function ExhibitionDetailPage({ params }: { params: Promise
           <div className="max-w-[1400px] mx-auto px-6 pt-16">
             <div className="flex items-baseline justify-between mb-12">
               <p className="text-[10px] font-body font-semibold uppercase tracking-[0.12em] text-black/40">다른 전시</p>
-              <Link href="/ko/templates/OHMT006-exhibition-kr/exhibitions" className="text-[11px] font-body font-semibold uppercase tracking-[0.12em] text-black border-b border-black pb-0.5 hover:opacity-60 transition-opacity">전체 보기</Link>
+              <Link href="/ko/templates/OHMT003-exhibition-KO/exhibitions" className="text-[11px] font-body font-semibold uppercase tracking-[0.12em] text-black border-b border-black pb-0.5 hover:opacity-60 transition-opacity">전체 보기</Link>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
               {related.map((ex) => (
-                <Link key={ex.slug} href={`/ko/templates/OHMT006-exhibition-kr/exhibitions/${ex.slug}`} className="group block">
+                <Link key={ex.slug} href={`/ko/templates/OHMT003-exhibition-KO/exhibitions/${ex.slug}`} className="group block">
                   <div className="aspect-[4/3] overflow-hidden mb-5">
                     <img src={ex.image} alt={ex.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   </div>

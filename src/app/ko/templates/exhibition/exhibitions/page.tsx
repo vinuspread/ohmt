@@ -63,7 +63,7 @@ export default function ExhibitionsPage() {
                     </div>
                   ))}
                 </div>
-                <Link href={`/ko/templates/OHMT006-exhibition-kr/exhibitions/${exhibitions[0].slug}`} className="relative overflow-hidden group inline-flex px-8 py-4 border border-black">
+                <Link href={`/ko/templates/OHMT003-exhibition-KO/exhibitions/${exhibitions[0].slug}`} className="relative overflow-hidden group inline-flex px-8 py-4 border border-black">
                   <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
                   <span className="relative text-black group-hover:text-white text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-300">전시 보기</span>
                 </Link>

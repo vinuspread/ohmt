@@ -48,7 +48,7 @@ export default function AboutPage() {
                 <p className="text-[16px] leading-relaxed text-black/80 mb-8" style={{ fontFamily: 'var(--font-body)' }}>
                   전시 프로그램 외에도 작가 토크, 워크숍, 협력 프로젝트를 통해 다양한 관객이 현대미술에 접근할 수 있도록 교육과 커뮤니티 참여에 힘쓰고 있습니다.
                 </p>
-                <Link href="/ko/templates/OHMT006-exhibition-kr/contact" className="text-[11px] font-body font-semibold uppercase tracking-[0.12em] text-black border-b border-black pb-0.5 hover:opacity-60 transition-opacity">
+                <Link href="/ko/templates/OHMT003-exhibition-KO/contact" className="text-[11px] font-body font-semibold uppercase tracking-[0.12em] text-black border-b border-black pb-0.5 hover:opacity-60 transition-opacity">
                   문의하기 &rarr;
                 </Link>
               </div>

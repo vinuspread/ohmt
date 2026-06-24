@@ -1,10 +1,10 @@
 ﻿import Link from 'next/link';
 
 const navLinks = [
-  { href: '/ko/templates/OHMT006-exhibition-kr/about', label: '소개' },
-  { href: '/ko/templates/OHMT006-exhibition-kr/exhibitions', label: '전시' },
-  { href: '/ko/templates/OHMT006-exhibition-kr/events', label: '이벤트' },
-  { href: '/ko/templates/OHMT006-exhibition-kr/contact', label: '문의' },
+  { href: '/ko/templates/OHMT003-exhibition-KO/about', label: '소개' },
+  { href: '/ko/templates/OHMT003-exhibition-KO/exhibitions', label: '전시' },
+  { href: '/ko/templates/OHMT003-exhibition-KO/events', label: '이벤트' },
+  { href: '/ko/templates/OHMT003-exhibition-KO/contact', label: '문의' },
 ];
 
 export const Footer = () => {
