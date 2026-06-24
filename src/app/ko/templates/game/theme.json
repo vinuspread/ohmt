@@ -1,0 +1,52 @@
+{
+  "slug": "game",
+  "name": "Game Studio",
+  "name_ko": "게임 스튜디오",
+  "category": "portfolio",
+  "description": "Premium game studio and development showcase template built with Next.js",
+  "description_ko": "프리미엄 게임 스튜디오 및 개발 포트폴리오 쇼케이스 템플릿",
+  "mode": "dark",
+  "theme": {
+    "palette": {
+      "primary": "#080808",
+      "secondary": "#111111",
+      "accent": "#06B6D4",
+      "text": {
+        "main": "#F5F5F5",
+        "muted": "#888888",
+        "contrast": "#FFFFFF"
+      },
+      "ui": {
+        "border": "#222222",
+        "hover": "#1A1A1A",
+        "shadow": "0 20px 50px rgba(0,0,0,0.3)"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Space Grotesk, sans-serif",
+        "weight": "700",
+        "tracking": "-0.03em",
+        "style": "font-bold tracking-tighter"
+      },
+      "body": {
+        "font": "Inter, sans-serif",
+        "weight": "400",
+        "leading": "1.6",
+        "style": "font-normal leading-relaxed"
+      }
+    },
+    "spacing": {
+      "page_pt": "96px",
+      "container": "1440px",
+      "gutter": "48px",
+      "card_gap": "24px"
+    },
+    "motion": {
+      "transition_fast": "200ms",
+      "transition_normal": "300ms",
+      "transition_slow": "500ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+    }
+  }
+}
