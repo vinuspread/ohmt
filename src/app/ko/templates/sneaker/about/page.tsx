@@ -53,7 +53,7 @@ function AboutPageContent() {
               <p className="text-[0.9rem] text-black/60 leading-relaxed mb-8">
                 2019년 리스본에 작은 작업실을 열고, 책임 있는 소싱에 동참하는 제혁소와 직접 협력하기 시작했습니다. 오늘날 비누스는 40여 개국으로 배송되지만, 모든 신발에 쏟는 정성은 그대로입니다.
               </p>
-              <Link href="/ko/templates/OHMT010-sneaker-kr/shop-all" className="inline-flex items-center gap-3 bg-black text-white text-[0.82rem] font-bold uppercase tracking-[0.08em] px-8 py-4 hover:bg-black/80 transition-colors">
+              <Link href="/ko/templates/OHMT005-sneaker-KO/shop-all" className="inline-flex items-center gap-3 bg-black text-white text-[0.82rem] font-bold uppercase tracking-[0.08em] px-8 py-4 hover:bg-black/80 transition-colors">
                 컬렉션 쇼핑하기 <ArrowRight size={16} />
               </Link>
             </div>

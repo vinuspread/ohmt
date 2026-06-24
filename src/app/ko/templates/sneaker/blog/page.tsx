@@ -68,7 +68,7 @@ function BlogPageContent() {
                   <span className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-black/40 block mb-4">{filtered[0].category} · {filtered[0].date}</span>
                   <h2 className="text-[2rem] font-black uppercase tracking-[-0.03em] leading-tight mb-6">{filtered[0].title}</h2>
                   <p className="text-[0.9rem] text-black/60 leading-relaxed mb-8">{filtered[0].excerpt}</p>
-                  <Link href="/ko/templates/OHMT010-sneaker-kr/blog" className="inline-flex items-center gap-3 bg-black text-white text-[0.82rem] font-bold uppercase tracking-[0.08em] px-8 py-4 hover:bg-black/80 transition-colors">
+                  <Link href="/ko/templates/OHMT005-sneaker-KO/blog" className="inline-flex items-center gap-3 bg-black text-white text-[0.82rem] font-bold uppercase tracking-[0.08em] px-8 py-4 hover:bg-black/80 transition-colors">
                     기사 읽기 <ArrowRight size={16} />
                   </Link>
                 </div>
@@ -82,7 +82,7 @@ function BlogPageContent() {
           <div className="max-w-[1440px] mx-auto px-6">
             <div className="grid md:grid-cols-3 gap-8">
               {filtered.slice(1).map((p) => (
-                <Link key={p.slug} href="/ko/templates/OHMT010-sneaker-kr/blog" className="group block">
+                <Link key={p.slug} href="/ko/templates/OHMT005-sneaker-KO/blog" className="group block">
                   <div className="aspect-[4/3] overflow-hidden bg-[var(--color-bg-secondary)] mb-5">
                     <img loading="lazy" src={p.img} alt={p.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>

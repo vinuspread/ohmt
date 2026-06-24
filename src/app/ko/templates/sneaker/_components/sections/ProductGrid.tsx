@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT010-sneaker-kr/_components/sections/ProductGrid.tsx
+﻿// src/app/ko/templates/OHMT005-sneaker-KO/_components/sections/ProductGrid.tsx
 "use client";
 import { useState } from "react";
 import Link from "next/link";
@@ -447,7 +447,7 @@ function getBadgeStyle(badge: string) {
 
 function ProductCard({ product }: { product: typeof products[0] }) {
   return (
-    <Link href={`/ko/templates/OHMT010-sneaker-kr/product/${product.id}`} className="group block border border-black/10 hover:border-black transition-colors duration-200">
+    <Link href={`/ko/templates/OHMT005-sneaker-KO/product/${product.id}`} className="group block border border-black/10 hover:border-black transition-colors duration-200">
       <div className="relative overflow-hidden aspect-square bg-[var(--color-bg-secondary)]">
         <img
           src={product.img}
@@ -491,7 +491,7 @@ export function ProductGrid({ title, items, limit = 8 }: Props) {
       <div className="max-w-[1440px] mx-auto px-6">
         <div className="flex items-center justify-between mb-10">
           <h2 className="text-[1.6rem] font-black tracking-[-0.03em] uppercase">{title}</h2>
-          <Link href="/ko/templates/OHMT010-sneaker-kr/shop-all" className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-black/50 hover:text-black transition-colors border-b border-black/20 pb-0.5">
+          <Link href="/ko/templates/OHMT005-sneaker-KO/shop-all" className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-black/50 hover:text-black transition-colors border-b border-black/20 pb-0.5">
             전체 보기
           </Link>
         </div>

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sneaker - Oh My Template",
     description: "Urban streetwear and sneaker releases",
-    url: "https://ohmytemplate.com/ko/templates/OHMT010-sneaker-kr",
+    url: "https://ohmytemplate.com/ko/templates/OHMT005-sneaker-KO",
     siteName: "Oh My Template",
     images: [{ url: "/templates/OHMT005-sneaker/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT010-sneaker-kr",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT009-sneaker-en" },
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT005-sneaker-KO",
+    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT005-sneaker-EN" },
   },
 };
 
