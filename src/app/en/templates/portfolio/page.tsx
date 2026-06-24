@@ -11,13 +11,13 @@ import { Footer } from "./_components/layout/Footer";
 import { projects, services, stats, testimonials, faqs, blogPosts } from "@/lib/portfolio-data";
 /* === Marquee === */
 const marqueeImages = [
-  "/templates/OHMT007-portfolio/portfolio-1.png",
-  "/templates/OHMT007-portfolio/portfolio-2.png",
-  "/templates/OHMT007-portfolio/portfolio-3.png",
-  "/templates/OHMT007-portfolio/portfolio-4.png",
-  "/templates/OHMT007-portfolio/portfolio-5.png",
-  "/templates/OHMT007-portfolio/portfolio-6.png",
-  "/templates/OHMT007-portfolio/portfolio-hero.png",
+  "/templates/portfolio/portfolio-1.png",
+  "/templates/portfolio/portfolio-2.png",
+  "/templates/portfolio/portfolio-3.png",
+  "/templates/portfolio/portfolio-4.png",
+  "/templates/portfolio/portfolio-5.png",
+  "/templates/portfolio/portfolio-6.png",
+  "/templates/portfolio/portfolio-hero.png",
 ];
 
 /* arch width / top-radius pattern - repeats for variety */

@@ -12,9 +12,9 @@ import { blogPosts } from "@/lib/portfolio-data";
 
 const allPosts = [
   ...blogPosts,
-  { slug: 'ethics-minimalism', title: 'The Ethics of Minimalism in Brand Design', date: 'Mar 24, 2026', category: 'Essay', img: '/templates/OHMT007-portfolio/portfolio-1.jpg' },
-  { slug: 'recapturing-focus', title: 'Recapturing Focus in a Digital World', date: 'Feb 12, 2026', category: 'Insight', img: '/templates/OHMT007-portfolio/portfolio-2.jpg' },
-  { slug: 'radical-honesty', title: '2026 Design Trends: Radical Honesty', date: 'Jan 5, 2026', category: 'Future', img: '/templates/OHMT007-portfolio/portfolio-hero.png' },
+  { slug: 'ethics-minimalism', title: 'The Ethics of Minimalism in Brand Design', date: 'Mar 24, 2026', category: 'Essay', img: '/templates/portfolio/portfolio-1.jpg' },
+  { slug: 'recapturing-focus', title: 'Recapturing Focus in a Digital World', date: 'Feb 12, 2026', category: 'Insight', img: '/templates/portfolio/portfolio-2.jpg' },
+  { slug: 'radical-honesty', title: '2026 Design Trends: Radical Honesty', date: 'Jan 5, 2026', category: 'Future', img: '/templates/portfolio/portfolio-hero.png' },
 ];
 
 function JournalPageContent() {

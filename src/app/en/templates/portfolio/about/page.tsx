@@ -11,10 +11,10 @@ import { Footer } from "../_components/layout/Footer";
 import { stats, designerInfo } from "@/lib/portfolio-data";
 
 const team = [
-  { name: "Marco Vinus", role: "Founder & Creative Director", img: "/templates/OHMT007-portfolio/portfolio-1.jpg" },
-  { name: "Yuna Park", role: "Lead Designer", img: "/templates/OHMT007-portfolio/portfolio-2.jpg" },
-  { name: "Tobias Krenn", role: "Front-end Engineer", img: "/templates/OHMT007-portfolio/portfolio-3.png" },
-  { name: "Sofia Reyes", role: "Brand Strategist", img: "/templates/OHMT007-portfolio/portfolio-4.png" },
+  { name: "Marco Vinus", role: "Founder & Creative Director", img: "/templates/portfolio/portfolio-1.jpg" },
+  { name: "Yuna Park", role: "Lead Designer", img: "/templates/portfolio/portfolio-2.jpg" },
+  { name: "Tobias Krenn", role: "Front-end Engineer", img: "/templates/portfolio/portfolio-3.png" },
+  { name: "Sofia Reyes", role: "Brand Strategist", img: "/templates/portfolio/portfolio-4.png" },
 ];
 
 const process = [
