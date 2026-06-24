@@ -282,7 +282,7 @@ function ProductDetailPageContent() {
                 Each piece is a dialogue between material and space. We curate experiences through form, ensuring that every curve and line contributes to a sense of serenity. {product.desc}
               </p>
               <div className="pt-4">
-                <Link href="/en/templates/OHMT007-furniture-en" className="text-[13px] font-bold uppercase border-b border-black pb-1 hover:opacity-50 transition-opacity">
+                <Link href="/en/templates/OHMT004-furniture-EN" className="text-[13px] font-bold uppercase border-b border-black pb-1 hover:opacity-50 transition-opacity">
                   Explore More
                 </Link>
               </div>

@@ -22,7 +22,7 @@ const ProductCard = ({ product, index }: { product: any; index: number }) => {
       }}
       className="group cursor-pointer"
     >
-      <Link href={`/en/templates/OHMT007-furniture-en/product/${product.id}`}>
+      <Link href={`/en/templates/OHMT004-furniture-EN/product/${product.id}`}>
         <div className="relative aspect-square sm:aspect-[4/3] overflow-hidden mb-4 sm:mb-8 flex items-center justify-center">
           <motion.img
             src={product.image}
@@ -59,7 +59,7 @@ const ProductCard = ({ product, index }: { product: any; index: number }) => {
         }}
         className="px-2 mt-3 flex flex-col gap-1"
       >
-        <Link href={`/en/templates/OHMT007-furniture-en/product/${product.id}`} className="min-w-0">
+        <Link href={`/en/templates/OHMT004-furniture-EN/product/${product.id}`} className="min-w-0">
           <h3 className="text-[17px] font-bold text-[var(--color-text)] group-hover:text-black transition-colors uppercase">{product.name}</h3>
         </Link>
         <p className={`text-[13px] text-zinc-500 font-medium leading-[1.4] w-full ${theme.typography.body.style}`}>

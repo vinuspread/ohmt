@@ -1,4 +1,4 @@
-﻿// src/app/en/templates/OHMT007-furniture-en/data/data.ts
+﻿// src/app/en/templates/OHMT004-furniture-EN/data/data.ts
 
 export const C = {
   white: "var(--color-bg)",
