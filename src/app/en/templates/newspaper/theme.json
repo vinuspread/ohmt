@@ -1,11 +1,10 @@
 {
   "slug": "newspaper",
-  "name": "Newspaper",
-  "name_ko": "신문",
+  "name": "Press Newspaper",
+  "name_ko": "프레스 신문",
   "category": "media",
-  "description": "Online newspaper and news portal template",
-  "description_ko": "온라인 신문 및 뉴스 포털 템플릿",
-  "tags": [],
+  "description": "News and publishing archive",
+  "description_ko": "뉴스 및 퍼블리싱 아카이브",
   "mode": "light",
   "theme": {
     "palette": {

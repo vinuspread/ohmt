@@ -1,4 +1,4 @@
-// src/app/templates/newspaper/-components/sections/FrontPage.tsx
+// src/app/templates/OHMT013-newspaper/-components/sections/FrontPage.tsx
 "use client";
 
 import React from "react";
@@ -40,10 +40,10 @@ return (
         transition={{ duration: 0.8 }}
         className="grid md:grid-cols-[1fr_300px] gap-6 md:gap-0 border-b-2 border-black py-6 md:py-8"
       >
-        <div className="md:pr-8 md:border-r border-[#DDD]">
+        <div className="md:pr-8 md:border-r border-[var(--color-border)]">
           <span className="text-[0.7rem] font-bold uppercase tracking-[0.14em] text-[var(--color-primary)] block mb-2">{t.hero.badgeText}</span>
           <img
-            src="/templates/newspaper/news-1.jpg"
+            src="/templates/OHMT013-newspaper/news-1.jpg"
             className="w-full h-[420px] object-cover mb-5"
             alt="Hero story"
           />
@@ -61,13 +61,13 @@ return (
         </div>
         
         <div className="md:pl-8 flex flex-col gap-8">
-          <div className="border-b border-[#DDD] pb-6">
+          <div className="border-b border-[var(--color-border)] pb-6">
             <h3 className="font-[family-name:var(--theme-font-heading)] text-[1.1rem] font-bold leading-tight mb-2 text-black">
               <Link href="#" className="hover:text-[var(--color-primary)]">New evidence suggests shift in arctic current patterns.</Link>
             </h3>
             <p className="text-[0.85rem] text-[#555] leading-[1.4]">Researchers at the Polar Institute find "startling" data on ocean temperatures.</p>
           </div>
-          <div className="border-b border-[#DDD] pb-6">
+          <div className="border-b border-[var(--color-border)] pb-6">
             <h3 className="font-[family-name:var(--theme-font-heading)] text-[1.1rem] font-bold leading-tight mb-2 text-black">
               <Link href="#" className="hover:text-[var(--color-primary)]">Elections in the East: A region at a political crossroads.</Link>
             </h3>
@@ -94,23 +94,23 @@ return (
           {
             label: "Culture",
             title: "The revival of classic cinema in a streaming age.",
-            img: "/templates/newspaper/news-2.jpg",
+            img: "/templates/OHMT013-newspaper/news-2.jpg",
             desc: "Independent theaters see resurgence as audiences crave physical experiences."
           },
           {
             label: "Science",
             title: "Breakthrough in fusion energy research reported.",
-            img: "/templates/newspaper/news-3.jpg",
+            img: "/templates/OHMT013-newspaper/news-3.jpg",
             desc: "California lab achieves net energy gain for the second time this year."
           },
           {
             label: "Society",
             title: "The urban migration: Why cities are still growing.",
-            img: "/templates/newspaper/news-4.jpg",
+            img: "/templates/OHMT013-newspaper/news-4.jpg",
             desc: "Despite remote work trends, metropolitan hubs attract younger demographics."
           }
         ].map((item, i) => (
-          <div key={i} className="px-6 border-r border-[#DDD] first:pl-0 last:pr-0 last:border-r-0">
+          <div key={i} className="px-6 border-r border-[var(--color-border)] first:pl-0 last:pr-0 last:border-r-0">
             <span className="text-[0.65rem] font-bold uppercase tracking-widest text-[var(--color-primary)] block mb-2">{item.label}</span>
             <img loading="lazy" src={item.img} className="w-full h-48 object-cover mb-4" alt={item.title} />
             <h3 className="font-[family-name:var(--theme-font-heading)] text-[1.2rem] font-bold leading-snug mb-2 text-black">

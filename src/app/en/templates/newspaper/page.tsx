@@ -1,4 +1,4 @@
-// src/app/templates/newspaper/page.tsx
+// src/app/templates/OHMT013-newspaper/page.tsx
 "use client";
 
 import React from "react";
@@ -32,8 +32,8 @@ function NewspaperTemplateContent() {
               </div>
               <div className="grid md:grid-cols-2 gap-8">
                 {[1, 2, 3, 4].map(n => (
-                  <div key={n} className="flex gap-4 pb-6 border-b border-[#DDD] last:border-0 md:[&:nth-last-child(-n+2)]:border-0">
-                    <img loading="lazy" src={`/templates/newspaper/news-${n}.jpg`} className="w-24 h-20 object-cover" alt="Latest" />
+                  <div key={n} className="flex gap-4 pb-6 border-b border-[var(--color-border)] last:border-0 md:[&:nth-last-child(-n+2)]:border-0">
+                    <img loading="lazy" src={`/templates/OHMT013-newspaper/news-${n}.jpg`} className="w-24 h-20 object-cover" alt="Latest" />
                     <div>
                       <h4 className="font-[family-name:var(--theme-font-heading)] text-[0.95rem] font-bold leading-tight mb-1">
                         <Link href="#" className="hover:text-[var(--color-primary)] transition-colors duration-300">How the new trade agreement affects local manufacturing.</Link>
@@ -55,7 +55,7 @@ function NewspaperTemplateContent() {
                   { author: "Marcus Thorne", title: "The moral imperative of open-source artificial intelligence." },
                   { author: "Elena Vance", title: "Classical music isn't dying, it's just moving to YouTube." }
                 ].map((item, i) => (
-                  <div key={i} className="pb-6 border-b border-[#DDD] last:border-0">
+                  <div key={i} className="pb-6 border-b border-[var(--color-border)] last:border-0">
                     <div className="font-sans text-[0.72rem] font-bold uppercase tracking-wider text-[#555] mb-1">{item.author}</div>
                     <h4 className="font-[family-name:var(--theme-font-heading)] font-serif text-base leading-snug">
                       <Link href="#" className="hover:text-[var(--color-primary)] transition-colors duration-300">"{item.title}"</Link>
