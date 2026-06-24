@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Reorder, useDragControls } from "framer-motion";
 import { useRouter } from "next/navigation";
-import { CheckIcon, GripVertical, Search } from "lucide-react";
+import { ArrowDown, ArrowUp, ArrowUpDown, CheckIcon, GripVertical, Search } from "lucide-react";
 import { clsx } from "clsx";
 import { Button } from "../ui/Button";
 import { Modal } from "../ui/Modal";
@@ -13,7 +13,13 @@ import type { Template } from "@/types/template";
 
 type TemplateFilter = "all" | "published" | "private";
 type LangFilter = "all" | "en" | "ko";
+type KeySort = "asc" | "desc" | null;
 type ToastState = { message: string; type: "success" | "error" };
+
+function keyNumber(template_key: string | null | undefined): number {
+  if (!template_key) return Infinity;
+  return parseInt(/(\d+)$/.exec(template_key)?.[1] ?? "0", 10);
+}
 
 const filters: { value: TemplateFilter; label: string }[] = [
   { value: "all", label: "전체" },
@@ -62,6 +68,7 @@ export function TemplateTable({ data }: { data: Template[] }) {
   const [deleting, setDeleting] = useState(false);
   const [savingOrder, setSavingOrder] = useState(false);
   const [toast, setToast] = useState<ToastState | null>(null);
+  const [keySort, setKeySort] = useState<KeySort>(null);
   const persistedOrderRef = useRef(new Map(data.map((template, index) => [template.id, index])));
   const pendingOrderRef = useRef<Template[] | null>(null);
 
@@ -85,8 +92,13 @@ export function TemplateTable({ data }: { data: Template[] }) {
 
   const filteredData = useMemo(() => {
     const query = searchTerm.trim().toLowerCase();
-    return templates.filter((template) => matchesFilters(template, filter, langFilter, query));
-  }, [filter, langFilter, searchTerm, templates]);
+    const filtered = templates.filter((template) => matchesFilters(template, filter, langFilter, query));
+    if (!keySort) return filtered;
+    return [...filtered].sort((a, b) => {
+      const diff = keyNumber(a.template_key) - keyNumber(b.template_key);
+      return keySort === "asc" ? diff : -diff;
+    });
+  }, [filter, langFilter, searchTerm, templates, keySort]);
 
   const handleDelete = async () => {
     if (!deleteTarget) return;
@@ -223,7 +235,16 @@ export function TemplateTable({ data }: { data: Template[] }) {
         <div className={clsx("grid gap-3 border-b border-zinc-200 bg-zinc-50 px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-zinc-500", templateGridClass)}>
           <div aria-hidden="true" />
           <div>썸네일</div>
-          <div>고유키</div>
+          <button
+            type="button"
+            onClick={() => setKeySort((s) => s === null ? "asc" : s === "asc" ? "desc" : null)}
+            className="flex items-center gap-1 hover:text-zinc-800 transition-colors focus-visible:outline-none"
+          >
+            고유키
+            {keySort === null && <ArrowUpDown className="h-3 w-3 text-zinc-300" />}
+            {keySort === "asc" && <ArrowUp className="h-3 w-3 text-zinc-700" />}
+            {keySort === "desc" && <ArrowDown className="h-3 w-3 text-zinc-700" />}
+          </button>
           <div>이름</div>
           <div>언어</div>
           <div>카테고리</div>
@@ -244,6 +265,7 @@ export function TemplateTable({ data }: { data: Template[] }) {
                 onPreview={setPreviewUrl}
                 onDelete={setDeleteTarget}
                 onDragEnd={persistOrder}
+                sortActive={keySort !== null}
               />
             ))}
           </Reorder.Group>
@@ -288,11 +310,13 @@ function TemplateRow({
   onPreview,
   onDelete,
   onDragEnd,
+  sortActive,
 }: {
   template: Template;
   onPreview: (url: string) => void;
   onDelete: (template: Template) => void;
   onDragEnd: () => void;
+  sortActive: boolean;
 }) {
   const dragControls = useDragControls();
   const templateUrl = `/${template.lang}/templates/${template.slug}`;
@@ -310,8 +334,12 @@ function TemplateRow({
       <button
         type="button"
         aria-label="순서 변경"
-        onPointerDown={(event) => dragControls.start(event)}
-        className="flex h-7 w-7 cursor-grab items-center justify-center rounded-md text-zinc-300 transition-colors hover:bg-zinc-100 hover:text-zinc-500 active:cursor-grabbing focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2"
+        onPointerDown={(event) => !sortActive && dragControls.start(event)}
+        disabled={sortActive}
+        className={clsx(
+          "flex h-7 w-7 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-900 focus-visible:ring-offset-2",
+          sortActive ? "cursor-default text-zinc-200" : "cursor-grab text-zinc-300 hover:bg-zinc-100 hover:text-zinc-500 active:cursor-grabbing"
+        )}
       >
         <GripVertical aria-hidden="true" className="h-4 w-4" />
       </button>
