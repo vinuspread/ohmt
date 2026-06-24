@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { Resend } from "resend";
 import { createAdminClient } from "@/lib/supabase/admin";
 import type { InquiryType, TemplateLang } from "@/types/template";
 
@@ -15,6 +16,14 @@ interface InquiryPostBody {
   message?: unknown;
   website?: unknown;
 }
+
+const resend = new Resend(process.env.RESEND_API_KEY);
+
+const TYPE_LABELS: Record<InquiryType, string> = {
+  template: "템플릿 기반 제작",
+  custom: "맞춤 웹사이트 제작",
+  other: "기타 문의",
+};
 
 const langs: TemplateLang[] = ["ko", "en"];
 const inquiryTypes: InquiryType[] = ["template", "custom", "other"];
@@ -117,6 +126,42 @@ export async function POST(request: Request) {
     .single();
 
   if (error) return NextResponse.json({ error: "문의 저장에 실패했습니다." }, { status: 500 });
+
+  // 이메일 알림 (실패해도 문의 저장은 성공으로 처리)
+  if (process.env.RESEND_API_KEY && process.env.NOTIFY_EMAIL) {
+    const rowData: [string, string][] = [
+      ["유형", TYPE_LABELS[body.inquiry_type as InquiryType]],
+      ["이름", customerName.value],
+      ["이메일", customerEmail.value],
+      ...(customerPhone.value ? [["전화번호", customerPhone.value] as [string, string]] : []),
+      ...(company.value ? [["회사", company.value] as [string, string]] : []),
+      ...(role.value ? [["직책", role.value] as [string, string]] : []),
+      ...(packageName.value ? [["예산 및 패키지", packageName.value] as [string, string]] : []),
+      ...(templateName.value ? [["관심 템플릿", templateName.value] as [string, string]] : []),
+    ];
+    const rows = rowData
+      .map(([label, value]) => `<tr><td style="padding:6px 12px;color:#6b7280;width:120px;vertical-align:top">${label}</td><td style="padding:6px 12px;color:#111827">${value}</td></tr>`)
+      .join("");
+
+    await resend.emails.send({
+      from: "Oh My Template <onboarding@resend.dev>",
+      to: process.env.NOTIFY_EMAIL,
+      subject: `[문의] ${TYPE_LABELS[body.inquiry_type as InquiryType]} - ${customerName.value}`,
+      html: `
+        <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:32px 24px">
+          <h2 style="font-size:18px;font-weight:700;color:#111827;margin:0 0 24px">새 문의가 접수됐습니다</h2>
+          <table style="width:100%;border-collapse:collapse;background:#f9fafb;border-radius:8px;overflow:hidden">
+            <tbody>${rows}</tbody>
+          </table>
+          <div style="margin-top:24px">
+            <p style="font-size:12px;color:#6b7280;margin:0 0 8px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em">문의 내용</p>
+            <div style="background:#f9fafb;border-radius:8px;padding:16px;font-size:14px;color:#111827;line-height:1.6;white-space:pre-wrap">${message.value}</div>
+          </div>
+          <p style="margin-top:32px;font-size:12px;color:#9ca3af">Oh My Template · contact@ohmytemplate.com</p>
+        </div>
+      `,
+    }).catch(() => {});
+  }
 
   return NextResponse.json({ success: true, id: data.id });
 }
