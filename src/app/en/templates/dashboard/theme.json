@@ -2,56 +2,56 @@
   "slug": "dashboard",
   "name": "Dashboard",
   "name_ko": "대시보드",
-  "category": "service",
-  "description": "Analytics and business intelligence dashboard template",
-  "description_ko": "분석 및 비즈니스 인텔리전스 대시보드 템플릿",
-  "tags": [],
-  "mode": "light",
+  "category": "corporate",
+  "description": "Business analytics & intelligence dashboard with real-time charts and KPIs.",
+  "description_ko": "실시간 차트와 KPI 지표를 한눈에 파악하는 비즈니스 인텔리전스 대시보드 템플릿.",
+  "mode": "dark",
   "theme": {
     "palette": {
-      "primary": "#6654D8",
-      "secondary": "#0F172A",
-      "accent": "#6654D8",
+      "primary": "#0F1117",
+      "secondary": "#7B68EE",
+      "accent": "#7B68EE",
       "text": {
-        "main": "#0F172A",
+        "main": "#E2E8F0",
         "muted": "#94A3B8",
         "contrast": "#FFFFFF"
       },
       "ui": {
-        "border": "rgba(226,232,240,0.5)",
-        "hover": "rgba(0,0,0,0.04)",
-        "shadow": "0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06)"
+        "border": "rgba(45,49,72,0.5)",
+        "hover": "rgba(255,255,255,0.05)",
+        "shadow": "none"
       }
     },
     "typography": {
       "heading": {
-        "font": "'Geist', sans-serif",
-        "weight": "700",
-        "tracking": "-0.02em",
-        "style": "font-bold tracking-tight"
+        "font": "Geist, sans-serif",
+        "weight": "600",
+        "tracking": "-0.01em",
+        "style": "font-semibold"
       },
       "body": {
-        "font": "'Geist', sans-serif",
+        "font": "Geist, sans-serif",
         "weight": "400",
         "leading": "1.6",
-        "style": "leading-relaxed"
+        "style": "font-normal"
+      },
+      "mono": {
+        "font": "Geist Mono, monospace",
+        "weight": "400"
       }
     },
     "spacing": {
-      "page_pt": "96px",
-      "container": "1280px",
-      "gutter": "32px",
-      "card_gap": "24px"
+      "page_pt": "0px",
+      "container": "1440px",
+      "gutter": "24px",
+      "card_p": "24px",
+      "gap": "16px"
     },
     "motion": {
-      "transition_fast": "200ms",
-      "transition_normal": "300ms",
-      "transition_slow": "500ms",
+      "transition_fast": "150ms",
+      "transition_normal": "200ms",
+      "transition_slow": "300ms",
       "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
-    },
-    "interaction": {
-      "button": "bg-[var(--color-primary)] text-[var(--color-text-contrast)]",
-      "card_hover": "hover:translate-y-[-2px] transition-transform duration-300"
     }
   }
 }

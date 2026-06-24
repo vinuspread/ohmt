@@ -25,14 +25,14 @@
 ## 전체 라우트
 
 ```
-/en/templates/dashboard/             ← 1. 메인 대시보드 (INSTRUCTIONS.md)
-/en/templates/dashboard/analytics/  ← 2. 분석
-/en/templates/dashboard/reports/    ← 3. 리포트
-/en/templates/dashboard/orders/     ← 4. 주문 관리
-/en/templates/dashboard/customers/  ← 5. 고객 관리
-/en/templates/dashboard/calendar/   ← 6. 캘린더
-/en/templates/dashboard/settings/   ← 7. 설정
-/en/templates/dashboard/profile/    ← 8. 프로필
+/en/templates/OHMT029-dashboard-en/             ← 1. 메인 대시보드 (INSTRUCTIONS.md)
+/en/templates/OHMT029-dashboard-en/analytics/  ← 2. 분석
+/en/templates/OHMT029-dashboard-en/reports/    ← 3. 리포트
+/en/templates/OHMT029-dashboard-en/orders/     ← 4. 주문 관리
+/en/templates/OHMT029-dashboard-en/customers/  ← 5. 고객 관리
+/en/templates/OHMT029-dashboard-en/calendar/   ← 6. 캘린더
+/en/templates/OHMT029-dashboard-en/settings/   ← 7. 설정
+/en/templates/OHMT029-dashboard-en/profile/    ← 8. 프로필
 ```
 
 ---

@@ -6,7 +6,6 @@ import { ChevronLeft, ChevronRight, Plus, X } from 'lucide-react'
 import { DashboardLayout } from '../_components/layout/DashboardLayout'
 import { PageHeader } from '../_components/common/PageHeader'
 import { events, eventCategoryMeta, type CalendarEvent } from '../data/calendar-data'
-import { TemplateWrapper } from '../_components/TemplateWrapper'
 
 const DAYS = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
@@ -130,8 +129,7 @@ export default function CalendarPage() {
 
   return (
     <DashboardLayout title="Calendar">
-      <TemplateWrapper>
-        <motion.div
+      <motion.div
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
@@ -259,7 +257,6 @@ export default function CalendarPage() {
           </div>
         </div>
       </motion.div>
-          </TemplateWrapper>
     </DashboardLayout>
   )
 }

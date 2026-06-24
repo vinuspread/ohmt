@@ -9,24 +9,24 @@ const menuGroups = [
   {
     label: 'Main',
     items: [
-      { label: 'Dashboard', href: '/en/templates/dashboard', icon: LayoutDashboard },
-      { label: 'Analytics', href: '/en/templates/dashboard/analytics', icon: TrendingUp },
-      { label: 'Reports', href: '/en/templates/dashboard/reports', icon: FileText },
+      { label: 'Dashboard', href: '/en/templates/OHMT015-dashboard-EN', icon: LayoutDashboard },
+      { label: 'Analytics', href: '/en/templates/OHMT015-dashboard-EN/analytics', icon: TrendingUp },
+      { label: 'Reports', href: '/en/templates/OHMT015-dashboard-EN/reports', icon: FileText },
     ],
   },
   {
     label: 'Manage',
     items: [
-      { label: 'Orders', href: '/en/templates/dashboard/orders', icon: ShoppingCart },
-      { label: 'Customers', href: '/en/templates/dashboard/customers', icon: Users },
-      { label: 'Calendar', href: '/en/templates/dashboard/calendar', icon: Calendar },
+      { label: 'Orders', href: '/en/templates/OHMT015-dashboard-EN/orders', icon: ShoppingCart },
+      { label: 'Customers', href: '/en/templates/OHMT015-dashboard-EN/customers', icon: Users },
+      { label: 'Calendar', href: '/en/templates/OHMT015-dashboard-EN/calendar', icon: Calendar },
     ],
   },
   {
     label: 'Account',
     items: [
-      { label: 'Settings', href: '/en/templates/dashboard/settings', icon: Settings },
-      { label: 'Profile', href: '/en/templates/dashboard/profile', icon: UserCircle },
+      { label: 'Settings', href: '/en/templates/OHMT015-dashboard-EN/settings', icon: Settings },
+      { label: 'Profile', href: '/en/templates/OHMT015-dashboard-EN/profile', icon: UserCircle },
     ],
   },
 ]
@@ -98,7 +98,7 @@ export function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle:
       </nav>
 
       <div className={`border-t border-[var(--color-border)] flex items-center ${collapsed ? 'justify-center p-2' : 'gap-3 p-4'}`}>
-        <Avatar name="Morgan Chen" src="/templates/portfolio/portfolio-1.jpg" size="sm" />
+        <Avatar name="Morgan Chen" src="/templates/OHMT007-portfolio/portfolio-1.jpg" size="sm" />
         {!collapsed && (
           <div className="min-w-0">
             <p className="text-sm font-medium text-[var(--color-text)] truncate">Morgan Chen</p>

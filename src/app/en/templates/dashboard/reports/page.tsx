@@ -11,7 +11,6 @@ import { Badge } from '../_components/common/Badge'
 import { chartDefaults } from '../data/chart-theme'
 import { reports, reportTypeMeta, type ReportType } from '../data/reports-data'
 import { Download, TrendingUp, TrendingDown, Plus } from 'lucide-react'
-import { TemplateWrapper } from '../_components/TemplateWrapper'
 
 const filterTabs = ['All', 'Revenue', 'Traffic', 'Sales'] as const
 type FilterTab = (typeof filterTabs)[number]
@@ -57,8 +56,7 @@ export default function ReportsPage() {
 
   return (
     <DashboardLayout title="Reports">
-      <TemplateWrapper>
-        <motion.div
+      <motion.div
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
@@ -147,7 +145,6 @@ export default function ReportsPage() {
           </div>
         </motion.div>
       </motion.div>
-          </TemplateWrapper>
     </DashboardLayout>
   )
 }

@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Copy, Trash2, Plus, Eye, EyeOff } from 'lucide-react'
 import { DashboardLayout } from '../_components/layout/DashboardLayout'
 import { PageHeader } from '../_components/common/PageHeader'
-import { TemplateWrapper } from '../_components/TemplateWrapper'
 
 type SettingsTab = 'general' | 'notifications' | 'security' | 'api-keys'
 
@@ -217,8 +216,7 @@ export default function SettingsPage() {
 
   return (
     <DashboardLayout title="Settings">
-      <TemplateWrapper>
-        <motion.div
+      <motion.div
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
@@ -262,7 +260,6 @@ export default function SettingsPage() {
           </div>
         </div>
       </motion.div>
-          </TemplateWrapper>
     </DashboardLayout>
   )
 }
