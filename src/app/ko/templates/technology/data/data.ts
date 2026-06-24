@@ -1,4 +1,4 @@
-export interface FeatureItem {
+﻿export interface FeatureItem {
   id: string
   title: string
   description: string
@@ -37,21 +37,21 @@ export const featuresData: FeatureItem[] = [
     id: 'mobility',
     title: '향상된 이동성',
     description: '고성능 모션 컨트롤과 고급 자율 주행, 다양한 지형 적응 알고리즘을 갖춘 이동 시스템.',
-    image: '/templates/OHMT016-technology/feature-mobility-nuki.png',
+    image: '/templates/technology/feature-mobility-nuki.png',
     icon: '\ue911',
   },
   {
     id: 'ai',
     title: '고급 AI',
     description: '실시간 환경 분석, 객체 감지 및 응답을 극대화하도록 설계된 온디바이스 딥러닝 엔진.',
-    image: '/templates/OHMT016-technology/feature-ai-nuki.png',
+    image: '/templates/technology/feature-ai-nuki.png',
     icon: '\ue90a',
   },
   {
     id: 'dexterity',
     title: '인간형 손재주',
     description: '인간 수준의 정밀도, 속도 및 촉각 피드백으로 작업을 수행하도록 설계된 로봇 조작 기술.',
-    image: '/templates/OHMT016-technology/feature-dexterity.jpg',
+    image: '/templates/technology/feature-dexterity.jpg',
     icon: '\ue915',
   },
 ]
@@ -92,7 +92,7 @@ export const modelData: ModelItem[] = [
     slashedPrice: '$25,000 USD',
     financing: '$833.33/월 (24개월 할부)',
     saveAmount: '$5,000 절약',
-    image: '/templates/OHMT016-technology/product-gen2.png',
+    image: '/templates/technology/product-gen2.png',
   },
   {
     id: 'prime',
@@ -102,7 +102,7 @@ export const modelData: ModelItem[] = [
     slashedPrice: '$30,000 USD',
     financing: '$1,041.66/월 (24개월 할부)',
     saveAmount: '$5,000 절약',
-    image: '/templates/OHMT016-technology/product-prime.png',
+    image: '/templates/technology/product-prime.png',
   }
 ]
 
@@ -112,27 +112,27 @@ export const blogData: BlogItem[] = [
     title: 'OmiBot 로봇이 일상 생활을 변화시키고 운영을 간소화하는 방법',
     category: '아티클',
     date: '2026. 1. 28.',
-    image: '/templates/OHMT016-technology/blog-featured.png',
+    image: '/templates/technology/blog-featured.png',
   },
   {
     id: 'news1',
     title: 'OmniBot v1.3 업데이트로 앱에서 새로운 기능을 사용할 수 있습니다',
     category: '뉴스',
     date: '2026. 1. 28.',
-    image: '/templates/OHMT016-technology/news-ai.png',
+    image: '/templates/technology/news-ai.png',
   },
   {
     id: 'news2',
     title: 'AI가 인간형 로봇의 학습과 행동을 향상시키는 방법',
     category: '리소스',
     date: '2026. 1. 28.',
-    image: '/templates/OHMT016-technology/news-dexterity.png',
+    image: '/templates/technology/news-dexterity.png',
   },
   {
     id: 'news3',
     title: '인간-로봇 협업 공간을 위한 안전 프로토콜 및 규정 준수 가이드라인',
     category: '컴플라이언스',
     date: '2026. 1. 28.',
-    image: '/templates/OHMT016-technology/news-mobility.png',
+    image: '/templates/technology/news-mobility.png',
   },
 ]
