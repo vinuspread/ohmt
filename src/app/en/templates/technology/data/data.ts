@@ -1,4 +1,4 @@
-export interface FeatureItem {
+﻿export interface FeatureItem {
   id: string
   title: string
   description: string
@@ -37,21 +37,21 @@ export const featuresData: FeatureItem[] = [
     id: 'mobility',
     title: 'Enhanced mobility',
     description: 'High-performance motion control with advanced autonomous navigation and multi-terrain adaptation algorithms.',
-    image: '/templates/OHMT016-technology/feature-mobility-nuki.png',
+    image: '/templates/technology/feature-mobility-nuki.png',
     icon: '', // Custom code representing movement icon
   },
   {
     id: 'ai',
     title: 'Advanced AI',
     description: 'On-device deep learning engine designed to maximize real-time environmental analysis, object detection, and response.',
-    image: '/templates/OHMT016-technology/feature-ai-nuki.png',
+    image: '/templates/technology/feature-ai-nuki.png',
     icon: '', // Custom code representing chip/neural icon
   },
   {
     id: 'dexterity',
     title: 'Human-like dexterity',
     description: 'Robotic manipulation engineered to perform tasks with a human level of precision, speed, and tactile feedback.',
-    image: '/templates/OHMT016-technology/feature-dexterity.jpg',
+    image: '/templates/technology/feature-dexterity.jpg',
     icon: '', // Custom code representing hand/dexterity icon
   },
 ]
@@ -92,7 +92,7 @@ export const modelData: ModelItem[] = [
     slashedPrice: '$25,000 USD',
     financing: '$833.33/month with 24-month financing',
     saveAmount: 'Save $5,000',
-    image: '/templates/OHMT016-technology/product-gen2.png',
+    image: '/templates/technology/product-gen2.png',
   },
   {
     id: 'prime',
@@ -102,7 +102,7 @@ export const modelData: ModelItem[] = [
     slashedPrice: '$30,000 USD',
     financing: '$1,041.66/month with 24-month financing',
     saveAmount: 'Save $5,000',
-    image: '/templates/OHMT016-technology/product-prime.png',
+    image: '/templates/technology/product-prime.png',
   }
 ]
 
@@ -112,27 +112,27 @@ export const blogData: BlogItem[] = [
     title: 'How OmiBot’s robot could transform your daily life and streamline operations',
     category: 'Articles',
     date: 'Jan 28, 2026',
-    image: '/templates/OHMT016-technology/blog-featured.png',
+    image: '/templates/technology/blog-featured.png',
   },
   {
     id: 'news1',
     title: 'New update v1.3 for OmniBot now enables new features in your app',
     category: 'News',
     date: 'Jan 28, 2026',
-    image: '/templates/OHMT016-technology/news-ai.png',
+    image: '/templates/technology/news-ai.png',
   },
   {
     id: 'news2',
     title: 'How AI enhances learning and behavior in humanoid robots',
     category: 'Resources',
     date: 'Jan 28, 2026',
-    image: '/templates/OHMT016-technology/news-dexterity.png',
+    image: '/templates/technology/news-dexterity.png',
   },
   {
     id: 'news3',
     title: 'Safety protocols and compliance guidelines for human-robot workspaces',
     category: 'Compliance',
     date: 'Jan 28, 2026',
-    image: '/templates/OHMT016-technology/news-mobility.png',
+    image: '/templates/technology/news-mobility.png',
   },
 ]
