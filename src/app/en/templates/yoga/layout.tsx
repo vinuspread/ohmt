@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Yoga - Oh My Template",
     description: "Find your inner peace with premium yoga and wellness classes",
-    url: "https://ohmytemplate.com/en/templates/OHMT022-yoga-EN",
+    url: "https://ohmytemplate.com/en/templates/OHMT022-yoga",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/yoga/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/OHMT022-yoga/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Yoga - Oh My Template",
     description: "Find your inner peace with premium yoga and wellness classes",
-    images: ["/templates/yoga/og-image.jpg"],
+    images: ["/templates/OHMT022-yoga/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT022-yoga-EN",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT022-yoga-KO" },
+    canonical: "https://ohmytemplate.com/en/templates/OHMT022-yoga",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT022-yoga" },
   },
 };
 

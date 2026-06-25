@@ -11,12 +11,12 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 const products = [
-  { id: 1, name: "Unicorn Limited Edition", price: "$4,200", img: "/templates/museum/gundam-unicorn.jpg", category: "Nano Series" },
-  { id: 2, name: "Sazabi Executive Piece", price: "$5,850", img: "/templates/museum/gundam-sazabi.jpg", category: "Elite" },
-  { id: 3, name: "Nu-Gundam Classic", price: "$3,400", img: "/templates/museum/gundam-nu.jpg", category: "Icons" },
-  { id: 4, name: "Project-01 Prototype", price: "$2,900", img: "/templates/museum/project-1.jpg", category: "Prototype" },
-  { id: 5, name: "Project-02 Advanced", price: "$3,100", img: "/templates/museum/project-2.jpg", category: "Advanced" },
-  { id: 6, name: "Project-03 Ultimate", price: "$6,500", img: "/templates/museum/project-3.jpg", category: "Ultimate" },
+  { id: 1, name: "Unicorn Limited Edition", price: "$4,200", img: "/templates/OHMT021-museum/gundam-unicorn.jpg", category: "Nano Series" },
+  { id: 2, name: "Sazabi Executive Piece", price: "$5,850", img: "/templates/OHMT021-museum/gundam-sazabi.jpg", category: "Elite" },
+  { id: 3, name: "Nu-Gundam Classic", price: "$3,400", img: "/templates/OHMT021-museum/gundam-nu.jpg", category: "Icons" },
+  { id: 4, name: "Project-01 Prototype", price: "$2,900", img: "/templates/OHMT021-museum/project-1.jpg", category: "Prototype" },
+  { id: 5, name: "Project-02 Advanced", price: "$3,100", img: "/templates/OHMT021-museum/project-2.jpg", category: "Advanced" },
+  { id: 6, name: "Project-03 Ultimate", price: "$6,500", img: "/templates/OHMT021-museum/project-3.jpg", category: "Ultimate" },
 ];
 
 function ShopPageContent() {

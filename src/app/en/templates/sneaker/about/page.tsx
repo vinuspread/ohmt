@@ -15,10 +15,10 @@ const values = [
 ];
 
 const team = [
-  { name: "Marco Vinus", role: "Founder & CEO", img: "/templates/sneaker/blog-1.jpg" },
-  { name: "Yuna Park", role: "Head of Design", img: "/templates/sneaker/blog-2.jpg" },
-  { name: "Tobias Krenn", role: "Head of Materials", img: "/templates/sneaker/blog-3.jpg" },
-  { name: "Sofia Reyes", role: "Brand Director", img: "/templates/sneaker/blog-4.jpg" },
+  { name: "Marco Vinus", role: "Founder & CEO", img: "/templates/OHMT005-sneaker/blog-1.jpg" },
+  { name: "Yuna Park", role: "Head of Design", img: "/templates/OHMT005-sneaker/blog-2.jpg" },
+  { name: "Tobias Krenn", role: "Head of Materials", img: "/templates/OHMT005-sneaker/blog-3.jpg" },
+  { name: "Sofia Reyes", role: "Brand Director", img: "/templates/OHMT005-sneaker/blog-4.jpg" },
 ];
 
 function AboutPageContent() {
@@ -52,12 +52,12 @@ function AboutPageContent() {
               <p className="text-[0.9rem] text-black/60 leading-[1.4] mb-8">
                 In 2019 he opened a small workshop in Lisbon, partnering directly with tanneries that share our commitment to responsible sourcing. Today Vinus ships to 40+ countries, but the same care goes into every pair.
               </p>
-              <Link href="/en/templates/OHMT005-sneaker-EN/shop-all" className="inline-flex items-center gap-3 bg-black text-white text-[0.82rem] font-bold uppercase tracking-[0.08em] px-8 py-4 hover:bg-black/80 transition-colors">
+              <Link href="/en/templates/OHMT005-sneaker/shop-all" className="inline-flex items-center gap-3 bg-black text-white text-[0.82rem] font-bold uppercase tracking-[0.08em] px-8 py-4 hover:bg-black/80 transition-colors">
                 Shop the Collection <ArrowRight size={16} />
               </Link>
             </div>
             <div className="aspect-[4/5] overflow-hidden bg-[var(--color-bg-secondary)]">
-              <img loading="lazy" src="/templates/sneaker/hero-main.jpg" alt="Vinus workshop" className="w-full h-full object-cover" />
+              <img loading="lazy" src="/templates/OHMT005-sneaker/hero-main.jpg" alt="Vinus workshop" className="w-full h-full object-cover" />
             </div>
           </div>
         </section>

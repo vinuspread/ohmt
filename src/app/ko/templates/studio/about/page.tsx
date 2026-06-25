@@ -23,9 +23,9 @@ function StudioAboutPageContent() {
         { year: "2024", title: "가장 주목받는 신진 아틀리에상", category: "월간 인테리어 디자인 매거진" }
     ];
     const team: Array<{ name: string; role: string; image: string }> = [
-        { name: "박사라", role: "크리에이티브 디렉터", image: '/templates/studio/team-1.jpg' },
-        { name: "이제임스", role: "시니어 디자이너", image: '/templates/studio/team-2.jpg' },
-        { name: "엠마 로드리게스", role: "프로젝트 매니저", image: '/templates/studio/team-3.jpg' }
+        { name: "박사라", role: "크리에이티브 디렉터", image: '/templates/OHMT006-studio/team-1.jpg' },
+        { name: "이제임스", role: "시니어 디자이너", image: '/templates/OHMT006-studio/team-2.jpg' },
+        { name: "엠마 로드리게스", role: "프로젝트 매니저", image: '/templates/OHMT006-studio/team-3.jpg' }
     ];
 
     return (
@@ -71,7 +71,7 @@ function StudioAboutPageContent() {
             </section>
 
             {/* 3. Split Screen */}
-            <SplitScreenSection bgClass="bg-white" textColorClass="text-black" borderColorClass="border-transparent" imageSrc="/templates/studio/hero-2.jpg" imageAlt="Studio interior showcase" imagePosition="left">
+            <SplitScreenSection bgClass="bg-white" textColorClass="text-black" borderColorClass="border-transparent" imageSrc="/templates/OHMT006-studio/hero-2.jpg" imageAlt="Studio interior showcase" imagePosition="left">
                 <div className="space-y-3 md:space-y-4">
                     <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-[1.5] text-black break-keep">
                         {"사려 깊은 마스터플랜,"} <br />{"빈틈없는 정밀 시공."}
@@ -81,7 +81,7 @@ function StudioAboutPageContent() {
                     {"입체적인 공간 흐름 설계와 독창적인 조명 디자인, 마감재 솔루션부터 명작 가구 큐레이션 및 패브릭 스타일링까지 공간 창조의 모든 여정을 세심하게 조율합니다. 조명의 각도 하나, 가구의 보이지 않는 모서리에 이르기까지, 디테일을 향한 루미나 스튜디오의 집요한 관심은 개별 요소들이 완벽히 조화를 이뤄 삶의 품격이 온전히 묻어나는 응집력 있는 공간을 탄생시킵니다."}
                 </p>
                 <div className="pt-2 md:pt-4">
-                    <Link href={`/ko/templates/OHMT006-studio-KO/contact`} className="group inline-flex items-center gap-4 border-b-2 border-black pb-2 text-[13px] font-bold text-black transition-opacity hover:opacity-60 uppercase">
+                    <Link href={`/ko/templates/OHMT006-studio/contact`} className="group inline-flex items-center gap-4 border-b-2 border-black pb-2 text-[13px] font-bold text-black transition-opacity hover:opacity-60 uppercase">
                         {"상담 예약하기"} <ArrowUpRight size={14} />
                     </Link>
                 </div>
@@ -113,10 +113,10 @@ function StudioAboutPageContent() {
                 <div className="max-w-[1720px] mx-auto px-6 md:px-16 lg:px-24">
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 items-start">
                         <div className="md:col-span-6 aspect-[4/3] overflow-hidden">
-                            <img loading="lazy" src="/templates/studio/hero-3.jpg" alt="Travertine light curation" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s] ease-out" />
+                            <img loading="lazy" src="/templates/OHMT006-studio/hero-3.jpg" alt="Travertine light curation" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s] ease-out" />
                         </div>
                         <div className="md:col-span-6 aspect-[4/3] overflow-hidden md:mt-16">
-                            <img loading="lazy" src="/templates/studio/project-3.jpg" alt="Aluminum geometric casing" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s] ease-out" />
+                            <img loading="lazy" src="/templates/OHMT006-studio/project-3.jpg" alt="Aluminum geometric casing" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s] ease-out" />
                         </div>
                     </div>
                 </div>

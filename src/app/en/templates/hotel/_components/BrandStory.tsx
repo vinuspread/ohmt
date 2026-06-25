@@ -31,7 +31,7 @@ export const BrandStory = () => {
           transition={{ duration: 0.9, ease: EASE }}
           className="lg:w-1/2 overflow-hidden"
         >
-          <img src="/templates/hotel/story-01.jpg" alt="Oh My Template Story" className="w-full h-auto object-cover transition-transform duration-[4s] hover:scale-105" />
+          <img src="/templates/OHMT020-hotel/story-01.jpg" alt="Oh My Template Story" className="w-full h-auto object-cover transition-transform duration-[4s] hover:scale-105" />
         </motion.div>
 
         <div className="lg:w-1/2">

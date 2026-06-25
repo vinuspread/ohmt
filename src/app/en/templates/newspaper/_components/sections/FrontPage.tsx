@@ -1,4 +1,4 @@
-﻿// src/app/templates/newspaper/-components/sections/FrontPage.tsx
+﻿// src/app/templates/OHMT013-newspaper/-components/sections/FrontPage.tsx
 "use client";
 
 import React from "react";
@@ -43,7 +43,7 @@ return (
         <div className="md:pr-8 md:border-r border-[var(--color-border)]">
           <span className="text-[0.7rem] font-bold uppercase tracking-[0.14em] text-[var(--color-primary)] block mb-2">{t.hero.badgeText}</span>
           <img
-            src="/templates/newspaper/news-1.jpg"
+            src="/templates/OHMT013-newspaper/news-1.jpg"
             className="w-full h-[420px] object-cover mb-5"
             alt="Hero story"
           />
@@ -94,19 +94,19 @@ return (
           {
             label: "Culture",
             title: "The revival of classic cinema in a streaming age.",
-            img: "/templates/newspaper/news-2.jpg",
+            img: "/templates/OHMT013-newspaper/news-2.jpg",
             desc: "Independent theaters see resurgence as audiences crave physical experiences."
           },
           {
             label: "Science",
             title: "Breakthrough in fusion energy research reported.",
-            img: "/templates/newspaper/news-3.jpg",
+            img: "/templates/OHMT013-newspaper/news-3.jpg",
             desc: "California lab achieves net energy gain for the second time this year."
           },
           {
             label: "Society",
             title: "The urban migration: Why cities are still growing.",
-            img: "/templates/newspaper/news-4.jpg",
+            img: "/templates/OHMT013-newspaper/news-4.jpg",
             desc: "Despite remote work trends, metropolitan hubs attract younger demographics."
           }
         ].map((item, i) => (

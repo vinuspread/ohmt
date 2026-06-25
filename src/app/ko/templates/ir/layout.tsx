@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "투자자 관계 - Oh My Template",
     description: "기업 전략 및 재무 성과",
-    url: "https://ohmytemplate.com/ko/templates/OHMT011-ir-KO",
+    url: "https://ohmytemplate.com/ko/templates/OHMT011-ir",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/ir/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/OHMT011-ir/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "투자자 관계 - Oh My Template",
     description: "기업 전략 및 재무 성과",
-    images: ["/templates/ir/og-image.jpg"],
+    images: ["/templates/OHMT011-ir/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT011-ir-KO",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT011-ir-EN" },
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT011-ir",
+    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT011-ir" },
   },
 };
 

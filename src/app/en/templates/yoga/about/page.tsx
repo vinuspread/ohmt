@@ -16,7 +16,7 @@ function AboutContent() {
       <PageHeader
         title="About Us"
         subtitle="A sanctuary for mindful movement and personal growth."
-        image="/templates/yoga/subpage-about.jpg"
+        image="/templates/OHMT022-yoga/subpage-about.jpg"
       />
 
       {/* Our Story - split grid */}
@@ -24,7 +24,7 @@ function AboutContent() {
         {/* Left: image */}
         <div
           className="relative min-h-[60vh] md:min-h-[80vh] bg-cover bg-center border-b md:border-b-0 md:border-r border-[var(--color-border)]"
-          style={{ backgroundImage: "url('/templates/yoga/studio.jpg')" }}
+          style={{ backgroundImage: "url('/templates/OHMT022-yoga/studio.jpg')" }}
         />
 
         {/* Right: text */}
@@ -62,14 +62,14 @@ function AboutContent() {
           </p>
           <div className="mt-10 pt-8 border-t border-[var(--color-border)] flex gap-8">
             <Link
-              href="/en/templates/OHMT022-yoga-EN/classes"
+              href="/en/templates/OHMT022-yoga/classes"
               className="inline-flex items-center gap-2 text-[12px] tracking-[0.2em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] font-medium transition-colors"
               style={{ fontFamily: "var(--font-body)" }}
             >
               Explore Classes →
             </Link>
             <Link
-              href="/en/templates/OHMT022-yoga-EN/schedule"
+              href="/en/templates/OHMT022-yoga/schedule"
               className="inline-flex items-center gap-2 text-[12px] tracking-[0.2em] uppercase text-[var(--color-text-muted)] hover:text-[var(--color-text)] font-medium transition-colors"
               style={{ fontFamily: "var(--font-body)" }}
             >

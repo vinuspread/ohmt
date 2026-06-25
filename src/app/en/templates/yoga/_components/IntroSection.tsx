@@ -20,7 +20,7 @@ export default function IntroSection() {
           restores balance and reconnects you to yourself.
         </p>
         <div className="mt-10 pt-8 border-t border-white/10">
-          <Link href="/en/templates/OHMT022-yoga-EN/about"
+          <Link href="/en/templates/OHMT022-yoga/about"
             className="inline-flex items-center gap-3 text-[13px] tracking-[0.18em] uppercase text-white hover:text-white/70 group transition-colors font-medium"
             style={{ fontFamily: "var(--font-body)" }}>
             Our Story
@@ -29,7 +29,7 @@ export default function IntroSection() {
         </div>
       </div>
       <div className="min-h-[60vh] md:min-h-[80vh] bg-cover bg-center"
-           style={{ backgroundImage: "url('/templates/yoga/intro.jpg')" }} />
+           style={{ backgroundImage: "url('/templates/OHMT022-yoga/intro.jpg')" }} />
     </section>
   );
 }

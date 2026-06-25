@@ -22,7 +22,7 @@ export default function Faq() {
             className="hidden lg:block sticky top-28"
           >
             <div className="aspect-[4/5] rounded-2xl overflow-hidden">
-              <img src="/templates/spa/faq.jpg" alt="A client relaxing during a spa treatment" className="h-full w-full object-cover" />
+              <img src="/templates/OHMT026-spa/faq.jpg" alt="A client relaxing during a spa treatment" className="h-full w-full object-cover" />
             </div>
           </motion.div>
 

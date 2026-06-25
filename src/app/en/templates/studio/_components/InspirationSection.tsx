@@ -87,7 +87,7 @@ export function InspirationSection() {
                     className="relative h-[80vh] w-full overflow-hidden flex flex-col items-center justify-center text-center text-white bg-black"
                 >
                     <img
-                        src="/templates/studio/hero-2.jpg"
+                        src="/templates/OHMT006-studio/hero-2.jpg"
                         alt="Studio workspace"
                         className="absolute inset-0 w-full h-full object-cover opacity-60"
                     />

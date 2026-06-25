@@ -1,4 +1,4 @@
-﻿const basePath = "/ko/templates/OHMT026-spa-KO";
+﻿const basePath = "/ko/templates/OHMT026-spa";
 
 const sitemapLeft = [
   { label: "홈", href: basePath },

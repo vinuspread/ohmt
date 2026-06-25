@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture-KO/_components/sections/Services.tsx
+// src/app/en/templates/OHMT027-architecture/_components/sections/Services.tsx
 "use client";
 import React from "react";
 import Image from "next/image";
@@ -7,7 +7,7 @@ import { services } from "../../data/services";
 import { ScrollReveal } from "../ui/ScrollReveal";
 
 export function Services() {
-  const baseRoute = "/en/templates/OHMT027-architecture-KO";
+  const baseRoute = "/en/templates/OHMT027-architecture";
 
   return (
     <section className="bg-white py-24 lg:py-32">

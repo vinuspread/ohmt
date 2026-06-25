@@ -126,7 +126,7 @@ function ProductDetailPageContent() {
                   </div>
                   <Button
                     variant="primary"
-                    onClick={() => router.push('/ko/templates/OHMT004-furniture-KO/cart')}
+                    onClick={() => router.push('/ko/templates/OHMT004-furniture/cart')}
                     className={`flex-1 py-6 rounded-full text-[14px] font-bold uppercase active:scale-95 ${theme.interaction.button}`}
                   >
                     장바구니 담기
@@ -253,7 +253,7 @@ function ProductDetailPageContent() {
             className="relative aspect-[21/9] w-full overflow-hidden mb-16 md:mb-24 bg-zinc-50 group rounded-2xl"
           >
             <img 
-              src="/templates/furniture/lifestyle-narrative.png" 
+              src="/templates/OHMT004-furniture/lifestyle-narrative.png" 
               className="w-full h-full object-cover transition-transform duration-[6s] group-hover:scale-105"
               alt="브랜드 라이프스타일"
             />
@@ -291,7 +291,7 @@ function ProductDetailPageContent() {
                 모든 작품은 소재와 공간의 대화입니다. 형태를 통해 경험을 큐레이팅하여, 모든 곡선과 선이 평온함을 느끼게 합니다. {product.desc}
               </p>
               <div className="pt-4">
-                <Link href="/ko/templates/OHMT004-furniture-KO" className="text-[13px] font-bold uppercase border-b border-black pb-1 hover:opacity-50 transition-opacity">
+                <Link href="/ko/templates/OHMT004-furniture" className="text-[13px] font-bold uppercase border-b border-black pb-1 hover:opacity-50 transition-opacity">
                   더 알아보기
                 </Link>
               </div>

@@ -16,12 +16,12 @@ const projectsData = [
     category: 'Space Planning',
     year: '2026',
     location: 'Oslo, Norway',
-    image: '/templates/studio/project-1.jpg',
+    image: '/templates/OHMT006-studio/project-1.jpg',
     type: 'corporate',
     description: 'A cutting-edge corporate headquarters meticulously conceptualized to combine raw Scandinavian minimalism with unparalleled modern functionality. By optimizing the interplay between monolithic concrete volumes, high-density metal frame details, and organic light distribution, the space establishes an inspiring professional environment that fosters deep focus, high-fidelity collaboration, and holistic employee well-being.',
     details: 'This 8,000 sq ft office space features an open-plan layout with dedicated collaboration zones, executive suites, and quiet focus areas. The material palette includes natural oak, brushed steel, and soft concrete finishes. Custom lighting systems adjust throughout the day to support circadian rhythms.',
     services: ['Space Planning', 'Interior Design', 'Lighting Design', 'Furniture Selection'],
-    gallery: ['/templates/studio/project-1.jpg', '/templates/studio/hero-2.jpg', '/templates/studio/hero-3.jpg'],
+    gallery: ['/templates/OHMT006-studio/project-1.jpg', '/templates/OHMT006-studio/hero-2.jpg', '/templates/OHMT006-studio/hero-3.jpg'],
   },
   {
     id: 'proj-2',
@@ -29,12 +29,12 @@ const projectsData = [
     category: 'Design Philosophy',
     year: '2025',
     location: 'Kyoto, Japan',
-    image: '/templates/studio/project-2.jpg',
+    image: '/templates/OHMT006-studio/project-2.jpg',
     type: 'residential',
     description: 'A luxury residential retreat designed to evoke calm and contemplation. Drawing inspiration from Japanese minimalism, the home integrates natural materials, water features, and carefully curated negative space to create a sanctuary for modern living.',
     details: 'This 5,000 sq ft residence spans three levels with panoramic views of the surrounding landscape. Features include a meditation garden, home spa with onsen-inspired bath, and a library with floor-to-ceiling bookshelves. Every detail, from door hardware to tile grout, was selected with intention.',
     services: ['Residential Design', 'Material Curation', 'Custom Millwork', 'Landscape Integration'],
-    gallery: ['/templates/studio/project-2.jpg', '/templates/studio/hero-1.jpg', '/templates/studio/hero-2.jpg'],
+    gallery: ['/templates/OHMT006-studio/project-2.jpg', '/templates/OHMT006-studio/hero-1.jpg', '/templates/OHMT006-studio/hero-2.jpg'],
   },
   {
     id: 'proj-3',
@@ -42,12 +42,12 @@ const projectsData = [
     category: 'Object Curation',
     year: '2025',
     location: 'Basel, Switzerland',
-    image: '/templates/studio/project-3.jpg',
+    image: '/templates/OHMT006-studio/project-3.jpg',
     type: 'exhibition',
     description: 'An architectural installation merging sculpture and spatial design. This temporary pavilion showcases how geometric forms and timber construction can create immersive environments that challenge perception and engage visitors on multiple sensory levels.',
     details: 'Constructed from sustainably harvested timber, the pavilion spans 1,200 sq meters with a soaring 12-meter ceiling. The structure employs a series of interlocking geometric forms that create dramatic light patterns throughout the day. Visitors experience constantly shifting perspectives as they move through the space.',
     services: ['Spatial Design', 'Material Innovation', 'Structural Collaboration', 'Experiential Design'],
-    gallery: ['/templates/studio/project-3.jpg', '/templates/studio/hero-3.jpg', '/templates/studio/hero-1.jpg'],
+    gallery: ['/templates/OHMT006-studio/project-3.jpg', '/templates/OHMT006-studio/hero-3.jpg', '/templates/OHMT006-studio/hero-1.jpg'],
   },
 ];
 
@@ -66,7 +66,7 @@ export default function ProjectDetailPage({
           <Header />
           <div className="max-w-[1720px] mx-auto px-6 md:px-16 lg:px-24 py-48 text-center">
             <h1 className="text-4xl font-bold">Project not found</h1>
-            <Link href="/en/templates/OHMT006-studio-EN/projects" className="text-blue-600 hover:underline mt-6 inline-block">
+            <Link href="/en/templates/OHMT006-studio/projects" className="text-blue-600 hover:underline mt-6 inline-block">
               Back to projects
             </Link>
           </div>
@@ -219,7 +219,7 @@ export default function ProjectDetailPage({
               {relatedProjects.map((relProject) => (
                 <Link
                   key={relProject.id}
-                  href={`/en/templates/OHMT006-studio-EN/projects/${relProject.id}`}
+                  href={`/en/templates/OHMT006-studio/projects/${relProject.id}`}
                   className="group"
                 >
                   <div className="relative w-full h-[350px] overflow-hidden mb-6">
@@ -255,7 +255,7 @@ export default function ProjectDetailPage({
               Let's discuss your project and how we can create something exceptional together.
             </p>
             <Link
-              href="/en/templates/OHMT006-studio-EN/contact"
+              href="/en/templates/OHMT006-studio/contact"
               className="inline-flex items-center justify-center h-[54px] px-12 border border-white rounded-none text-white text-[13px] font-bold tracking-[3px] uppercase hover:bg-white hover:text-black transition-colors duration-300"
             >
               Get in Touch

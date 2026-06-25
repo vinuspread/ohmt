@@ -36,7 +36,7 @@ function CuratorNotePageContent() {
           className="aspect-[21/9] w-full bg-black mb-24 overflow-hidden relative"
         >
           <img 
-            src="/templates/museum/curator.png" 
+            src="/templates/OHMT021-museum/curator.png" 
             alt="Curator Note Architecture"
             className="w-full h-full object-cover grayscale opacity-90"
           />

@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Newspaper - Oh My Template",
     description: "News and publishing archive",
-    url: "https://ohmytemplate.com/ko/templates/OHMT013-newspaper-KO",
+    url: "https://ohmytemplate.com/ko/templates/OHMT013-newspaper",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/newspaper/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/OHMT013-newspaper/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Newspaper - Oh My Template",
     description: "News and publishing archive",
-    images: ["/templates/newspaper/og-image.jpg"],
+    images: ["/templates/OHMT013-newspaper/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT013-newspaper-KO",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT013-newspaper-EN" },
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT013-newspaper",
+    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT013-newspaper" },
   },
 };
 

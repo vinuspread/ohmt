@@ -17,7 +17,7 @@ export default function MeetOurTeam() {
         </motion.div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {team.map((member, i) => (
-            <motion.a key={member.id} href={`/ko/templates/OHMT026-spa-KO/therapists#${member.id}`} initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, delay: i * 0.1, ease: EASE_OUT }} className="group rounded-2xl overflow-hidden bg-[var(--color-bg-secondary)] border border-[var(--color-border)] hover:-translate-y-1 transition-all duration-300">
+            <motion.a key={member.id} href={`/ko/templates/OHMT026-spa/therapists#${member.id}`} initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, delay: i * 0.1, ease: EASE_OUT }} className="group rounded-2xl overflow-hidden bg-[var(--color-bg-secondary)] border border-[var(--color-border)] hover:-translate-y-1 transition-all duration-300">
               <div className="h-72 overflow-hidden"><img src={member.image} alt={member.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /></div>
               <div className="p-6">
                 <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold tracking-tight text-[var(--color-text)]">{member.name}</h3>

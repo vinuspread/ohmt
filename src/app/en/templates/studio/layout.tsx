@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Studio - Oh My Template",
     description: "Architecture and spatial design studio",
-    url: "https://ohmytemplate.com/en/templates/OHMT006-studio-EN",
+    url: "https://ohmytemplate.com/en/templates/OHMT006-studio",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/studio/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/OHMT006-studio/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Studio - Oh My Template",
     description: "Architecture and spatial design studio",
-    images: ["/templates/studio/og-image.jpg"],
+    images: ["/templates/OHMT006-studio/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT006-studio-EN",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT006-studio-KO" },
+    canonical: "https://ohmytemplate.com/en/templates/OHMT006-studio",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT006-studio" },
   },
 };
 

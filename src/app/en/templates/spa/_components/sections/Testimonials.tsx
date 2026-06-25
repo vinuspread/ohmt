@@ -6,9 +6,9 @@ import { testimonials } from "../../data/data";
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 
 const avatars = [
-  "/templates/spa/avatar-01.jpg",
-  "/templates/spa/avatar-02.jpg",
-  "/templates/spa/avatar-03.jpg",
+  "/templates/OHMT026-spa/avatar-01.jpg",
+  "/templates/OHMT026-spa/avatar-02.jpg",
+  "/templates/OHMT026-spa/avatar-03.jpg",
 ];
 
 export default function Testimonials() {

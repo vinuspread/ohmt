@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Investor Relations - Oh My Template",
     description: "Corporate strategy and financial performance",
-    url: "https://ohmytemplate.com/en/templates/OHMT011-ir-EN",
+    url: "https://ohmytemplate.com/en/templates/OHMT011-ir",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/ir/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/OHMT011-ir/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Investor Relations - Oh My Template",
     description: "Corporate strategy and financial performance",
-    images: ["/templates/ir/og-image.jpg"],
+    images: ["/templates/OHMT011-ir/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT011-ir-EN",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT011-ir-KO" },
+    canonical: "https://ohmytemplate.com/en/templates/OHMT011-ir",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT011-ir" },
   },
 };
 

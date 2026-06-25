@@ -30,7 +30,7 @@ function ProjectPageContent({ params }: { params: Promise<{ id: string }> }) {
             {/* Left: sticky meta panel */}
             <div className="md:w-[420px] lg:w-[480px] shrink-0 md:sticky md:top-16 md:h-[calc(100vh-4rem)] flex flex-col justify-between px-8 md:px-10 py-16">
               <div>
-                <Link href="/ko/templates/OHMT007-portfolio-KO"
+                <Link href="/ko/templates/OHMT007-portfolio"
                   className="inline-flex items-center gap-2 text-[13px] font-medium uppercase tracking-widest text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors mb-16">
                   <ArrowLeft size={13} /> ?�로
                 </Link>
@@ -72,7 +72,7 @@ function ProjectPageContent({ params }: { params: Promise<{ id: string }> }) {
               </div>
 
               <div className="mt-8">
-                <Link href="/ko/templates/OHMT007-portfolio-KO/contact"
+                <Link href="/ko/templates/OHMT007-portfolio/contact"
                   className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-widest text-[var(--color-text)] border-b border-[var(--color-primary)] pb-0.5 hover:opacity-50 transition-opacity">
                   비슷???�로?�트 ?�작 <ArrowUpRight size={11} />
                 </Link>
@@ -104,7 +104,7 @@ function ProjectPageContent({ params }: { params: Promise<{ id: string }> }) {
           <div className="max-w-[1440px] mx-auto px-8 md:px-10">
             <div className="flex items-end justify-between mb-14">
               <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-black uppercase tracking-tighter">??많�? ?�업</h2>
-              <Link href="/ko/templates/OHMT007-portfolio-KO"
+              <Link href="/ko/templates/OHMT007-portfolio"
                 className="flex items-center gap-2 text-[13px] font-medium uppercase tracking-widest text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors">
                 모든 ?�로?�트 <ArrowUpRight size={11} />
               </Link>
@@ -118,7 +118,7 @@ function ProjectPageContent({ params }: { params: Promise<{ id: string }> }) {
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.08 }}
                 >
-                  <Link href={`/ko/templates/OHMT007-portfolio-KO/project/${p.id}`} className="group block">
+                  <Link href={`/ko/templates/OHMT007-portfolio/project/${p.id}`} className="group block">
                     <div className="relative aspect-[4/3] overflow-hidden bg-[var(--color-bg-secondary)] mb-4">
                       <img loading="lazy" src={p.thumbnail} alt={p.title}
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />

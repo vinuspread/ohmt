@@ -19,7 +19,7 @@ export default function BlogPostFull() {
         <main className="pt-24 min-h-screen bg-[var(--color-bg)] flex items-center justify-center">
           <div className="text-center">
             <h1 className="font-[family-name:var(--font-heading)] text-4xl font-bold text-[var(--color-text)]">게시글을 찾을 수 없습니다</h1>
-            <Link href="/ko/templates/OHMT026-spa-KO/blog" className="mt-4 inline-flex text-sm text-[var(--color-primary)] hover:underline">블로그로 돌아가기</Link>
+            <Link href="/ko/templates/OHMT026-spa/blog" className="mt-4 inline-flex text-sm text-[var(--color-primary)] hover:underline">블로그로 돌아가기</Link>
           </div>
         </main>
         <Footer />
@@ -45,9 +45,9 @@ export default function BlogPostFull() {
               <p>{post.excerpt}</p>
               <p>저희 클리닉은 지식으로 고객을 지원하는 것을 믿습니다. 피부와 가능한 트리트먼트를 이해하는 것은 웰니스 여정에 관한 정보에 기반한 결정을 내리는 데 도움이 됩니다.</p>
               <p>새로운 트리트먼트를 고려 중이시든, 스킨케어의 과학에 대해 궁금하시든, 저희 팀이 안내해드립니다.</p>
-              <div className="pt-6"><a href="/ko/templates/OHMT026-spa-KO/contact" className="inline-flex items-center rounded-full bg-[var(--color-primary)] text-[var(--color-text-contrast)] px-6 py-2.5 text-sm font-semibold hover:brightness-110 active:scale-[0.97] transition-all duration-150">상담 예약하기</a></div>
+              <div className="pt-6"><a href="/ko/templates/OHMT026-spa/contact" className="inline-flex items-center rounded-full bg-[var(--color-primary)] text-[var(--color-text-contrast)] px-6 py-2.5 text-sm font-semibold hover:brightness-110 active:scale-[0.97] transition-all duration-150">상담 예약하기</a></div>
             </motion.div>
-            <div className="mt-16 pt-8 border-t border-[var(--color-border)]"><Link href="/ko/templates/OHMT026-spa-KO/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] hover:underline">← 블로그로 돌아가기</Link></div>
+            <div className="mt-16 pt-8 border-t border-[var(--color-border)]"><Link href="/ko/templates/OHMT026-spa/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] hover:underline">← 블로그로 돌아가기</Link></div>
           </div>
         </article>
       </main>

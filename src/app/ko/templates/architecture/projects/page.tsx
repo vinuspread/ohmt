@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture-KO/projects/page.tsx
+// src/app/en/templates/OHMT027-architecture/projects/page.tsx
 import React from "react";
 import type { Metadata } from "next";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
@@ -13,13 +13,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Projects Portfolio - Architecture Portfolio - Oh My Template",
     description: "Browse our selected residential, commercial, public, and interior architecture commissions.",
-    url: "https://ohmytemplate.com/en/templates/OHMT027-architecture-KO/projects",
-    images: [{ url: "/templates/architecture/og-image.jpg" }],
+    url: "https://ohmytemplate.com/en/templates/OHMT027-architecture/projects",
+    images: [{ url: "/templates/OHMT027-architecture/og-image.jpg" }],
   },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT027-architecture-KO/projects",
+    canonical: "https://ohmytemplate.com/en/templates/OHMT027-architecture/projects",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/OHMT027-architecture-EN/projects",
+      "en": "https://ohmytemplate.com/en/templates/OHMT027-architecture/projects",
     },
   },
 };

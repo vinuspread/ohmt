@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import { motion } from "motion/react";
-import { awards } from "@/app/en/templates/OHMT023-game-EN/data/data";
+import { awards } from "@/app/en/templates/OHMT023-game/data/data";
 import { Quote } from "lucide-react";
 
 export default function PressAwards() {
@@ -9,7 +9,7 @@ export default function PressAwards() {
     <section className="relative py-24 overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="/templates/game/award-bg.jpg"
+          src="/templates/OHMT023-game/award-bg.jpg"
           alt=""
           className="h-full w-full object-cover opacity-30"
         />

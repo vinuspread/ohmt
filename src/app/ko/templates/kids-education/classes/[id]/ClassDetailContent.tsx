@@ -10,7 +10,7 @@ const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 
 export default function ClassDetailContent() {
   const params = useParams();
-  const basePath = "/ko/templates/OHMT024-kids-education-KO";
+  const basePath = "/ko/templates/OHMT024-kids-education";
   const shouldReduce = useReducedMotion();
 
   const classItem = useMemo(

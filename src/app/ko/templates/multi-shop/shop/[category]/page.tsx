@@ -36,7 +36,7 @@ export default function CategoryPage({ params }: { params: Promise<{ category: s
             <div className="relative z-10 text-center text-white px-6">
               <h1 className="text-5xl lg:text-7xl font-bold tracking-tight">{category.name}</h1>
               <Link
-                href="/ko/templates/OHMT017-multi-shop-KO/shop"
+                href="/ko/templates/OHMT017-multi-shop/shop"
                 className="inline-block mt-4 text-xs uppercase tracking-[0.2em] text-white/60 hover:text-white transition-colors"
               >
                 전체 상품 &rarr;

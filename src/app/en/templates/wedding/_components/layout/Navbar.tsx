@@ -4,10 +4,10 @@ import { useState } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
 
 const navLinks = [
-  { href: "/en/templates/OHMT025-wedding-EN/about", label: "About" },
-  { href: "/en/templates/OHMT025-wedding-EN/gallery", label: "Gallery" },
-  { href: "/en/templates/OHMT025-wedding-EN/pricing", label: "Pricing" },
-  { href: "/en/templates/OHMT025-wedding-EN/contact", label: "Contact" },
+  { href: "/en/templates/OHMT025-wedding/about", label: "About" },
+  { href: "/en/templates/OHMT025-wedding/gallery", label: "Gallery" },
+  { href: "/en/templates/OHMT025-wedding/pricing", label: "Pricing" },
+  { href: "/en/templates/OHMT025-wedding/contact", label: "Contact" },
 ];
 
 export default function Navbar({ solid }: { solid?: boolean }) {
@@ -30,7 +30,7 @@ export default function Navbar({ solid }: { solid?: boolean }) {
       >
         <div className="mx-auto flex max-w-[1440px] items-center justify-between px-8 lg:px-16">
           <a
-            href="/en/templates/OHMT025-wedding-EN"
+            href="/en/templates/OHMT025-wedding"
             className={`font-[family-name:var(--font-heading)] text-xl font-light tracking-[0.15em] uppercase transition-colors duration-500 ${
               scrolled ? "text-[var(--color-text)]" : "text-white"
             }`}
@@ -56,7 +56,7 @@ export default function Navbar({ solid }: { solid?: boolean }) {
 
           <div className="flex items-center gap-4">
             <a
-              href="/en/templates/OHMT025-wedding-EN/contact"
+              href="/en/templates/OHMT025-wedding/contact"
               className={`hidden sm:inline-flex items-center border px-6 py-2.5 text-[0.7rem] font-bold uppercase tracking-[0.18em] transition-all duration-300 ${
                 scrolled
                   ? "border-[var(--color-text)] text-[var(--color-text)] hover:bg-[var(--color-text)] hover:text-white"
@@ -105,7 +105,7 @@ export default function Navbar({ solid }: { solid?: boolean }) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: navLinks.length * 0.08 }}
-                href="/en/templates/OHMT025-wedding-EN/contact"
+                href="/en/templates/OHMT025-wedding/contact"
                 onClick={() => setIsOpen(false)}
                 className="mt-4 inline-block bg-[var(--color-text)] px-10 py-4 text-sm font-bold uppercase tracking-[0.2em] text-white"
               >

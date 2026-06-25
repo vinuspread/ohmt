@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-[100dvh] overflow-hidden bg-[var(--color-secondary)]">
       <motion.img
-        src="/templates/spa/hero-bg.jpg"
+        src="/templates/OHMT026-spa/hero-bg.jpg"
         alt="Therapist preparing a calming spa treatment room"
         className="absolute inset-0 h-full w-full object-cover opacity-70"
         initial={reduce ? { scale: 1 } : { scale: 1.1 }}
@@ -39,7 +39,7 @@ export default function Hero() {
               Personalized skin and body care delivered by certified therapists in a calm, premium setting.
             </p>
             <a
-              href="/en/templates/OHMT026-spa-EN/contact"
+              href="/en/templates/OHMT026-spa/contact"
               className="inline-flex items-center rounded-full bg-[var(--color-primary)] text-[var(--color-text-contrast)] px-7 py-3.5 text-sm font-semibold hover:brightness-110 active:scale-[0.97] transition-all duration-150"
             >
               Book your free consultation

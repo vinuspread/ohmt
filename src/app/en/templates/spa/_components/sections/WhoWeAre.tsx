@@ -42,7 +42,7 @@ export default function WhoWeAre() {
               one-size-fits-all - every treatment is tailored to you.
             </p>
             <a
-              href="/en/templates/OHMT026-spa-EN/about"
+              href="/en/templates/OHMT026-spa/about"
               className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-text-contrast)] hover:text-[var(--color-primary)] transition-colors duration-200"
             >
               Meet the team

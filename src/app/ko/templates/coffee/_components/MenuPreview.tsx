@@ -94,7 +94,7 @@ export const MenuPreview = () => {
 
         <div className="text-center mt-12">
           <Link
-            href="/ko/templates/OHMT019-coffee-KO/menu"
+            href="/ko/templates/OHMT019-coffee/menu"
             className="inline-flex items-center text-sm font-semibold text-[var(--color-primary)] hover:opacity-80 transition-opacity"
           >
             전체 메뉴 보기 &rarr;

@@ -16,7 +16,7 @@ export default function ContactFull() {
             <div className="hidden lg:block relative overflow-hidden">
               <div className="sticky top-0 h-screen">
                 <img
-                  src="/templates/wedding/wedding-story-01.jpg"
+                  src="/templates/OHMT025-wedding/wedding-story-01.jpg"
                   alt="Wedding ceremony"
                   className="h-full w-full object-cover"
                 />

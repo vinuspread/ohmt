@@ -28,9 +28,9 @@ const interiors = [
 
 const views = ["Exterior", "Side", "Rear"];
 const viewImgs = [
-  "/templates/car/car-3.jpg",
-  "/templates/car/car-1.jpg",
-  "/templates/car/car-5.jpg",
+  "/templates/OHMT009-car/car-3.jpg",
+  "/templates/OHMT009-car/car-1.jpg",
+  "/templates/OHMT009-car/car-5.jpg",
 ];
 
 const BASE_PRICE = 89400;

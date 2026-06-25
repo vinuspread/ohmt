@@ -24,7 +24,7 @@ export default function MagazineArticlePage() {
           <div className="pt-16 md:pt-32 pb-16 md:pb-32 px-5 md:px-10 text-center">
             <h1 className="font-[family-name:var(--theme-font-heading)] text-4xl mb-4">Article Not Found</h1>
             <p className="text-[var(--theme-text-muted)] mb-8">The article you are looking for does not exist.</p>
-            <Link href="/en/templates/OHMT012-magazine-EN" className="text-[var(--theme-accent)] underline">
+            <Link href="/en/templates/OHMT012-magazine" className="text-[var(--theme-accent)] underline">
               Back to Magazine
             </Link>
           </div>
@@ -75,7 +75,7 @@ export default function MagazineArticlePage() {
 
             <div className="mt-16 pt-8 border-t border-[var(--theme-border)]">
               <Link
-                href="/en/templates/OHMT012-magazine-EN"
+                href="/en/templates/OHMT012-magazine"
                 className="text-[0.75rem] font-bold uppercase tracking-[0.14em] text-[var(--theme-accent)] hover:tracking-[0.2em]"
               >
                 &larr; Back to Magazine

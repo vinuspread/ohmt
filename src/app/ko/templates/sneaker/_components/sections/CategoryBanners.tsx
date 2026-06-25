@@ -5,14 +5,14 @@ import Link from "next/link";
 export function CategoryBanners() {
 
   const categories = [
-    { label: "스니커즈", img: "/templates/sneaker/cat-sneakers.jpg" },
-    { label: "부츠", img: "/templates/sneaker/cat-boots.jpg" },
-    { label: "포멀", img: "/templates/sneaker/category-formal.jpg" },
-    { label: "러닝", img: "/templates/sneaker/category-running.jpg" },
-    { label: "옥스포드", img: "/templates/sneaker/product-aura.jpg" },
-    { label: "스포츠", img: "/templates/sneaker/cat-sports.jpg" },
-    { label: "하이넥", img: "/templates/sneaker/cat-highneck.jpg" },
-    { label: "로퍼", img: "/templates/sneaker/cat-loafers.jpg" },
+    { label: "스니커즈", img: "/templates/OHMT005-sneaker/cat-sneakers.jpg" },
+    { label: "부츠", img: "/templates/OHMT005-sneaker/cat-boots.jpg" },
+    { label: "포멀", img: "/templates/OHMT005-sneaker/category-formal.jpg" },
+    { label: "러닝", img: "/templates/OHMT005-sneaker/category-running.jpg" },
+    { label: "옥스포드", img: "/templates/OHMT005-sneaker/product-aura.jpg" },
+    { label: "스포츠", img: "/templates/OHMT005-sneaker/cat-sports.jpg" },
+    { label: "하이넥", img: "/templates/OHMT005-sneaker/cat-highneck.jpg" },
+    { label: "로퍼", img: "/templates/OHMT005-sneaker/cat-loafers.jpg" },
   ];
 
   return (
@@ -20,13 +20,13 @@ export function CategoryBanners() {
       <div className="max-w-[1440px] mx-auto px-6">
         <div className="flex items-center justify-between mb-10">
           <h2 className="text-[1.6rem] font-black tracking-[-0.02em] uppercase">카테고리</h2>
-          <Link href="/ko/templates/OHMT005-sneaker-KO/shop-all" className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-black/50 hover:text-black transition-colors border-b border-black/20 pb-0.5">
+          <Link href="/ko/templates/OHMT005-sneaker/shop-all" className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-black/50 hover:text-black transition-colors border-b border-black/20 pb-0.5">
             전체 보기
           </Link>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           {categories.map((cat) => (
-            <Link key={cat.label} href="/ko/templates/OHMT005-sneaker-KO/shop-all" className="group relative overflow-hidden aspect-square bg-[var(--color-bg-secondary)]">
+            <Link key={cat.label} href="/ko/templates/OHMT005-sneaker/shop-all" className="group relative overflow-hidden aspect-square bg-[var(--color-bg-secondary)]">
               <img
                 src={cat.img}
                 alt={cat.label}

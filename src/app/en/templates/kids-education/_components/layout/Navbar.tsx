@@ -7,7 +7,7 @@ import Link from "next/link";
 const EASE_IOS = [0.32, 0.72, 0, 1] as const;
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 
-const basePath = "/en/templates/OHMT024-kids-education-EN";
+const basePath = "/en/templates/OHMT024-kids-education";
 
 const navLinks = [
   { href: basePath, label: "Home" },

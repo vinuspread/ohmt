@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Fashion - Oh My Template",
     description: "Premium fashion brand & editorial showcase",
-    url: "https://ohmytemplate.com/en/templates/OHMT001-fashion-EN-en",
+    url: "https://ohmytemplate.com/en/templates/OHMT001-fashion",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/fashion/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/OHMT001-fashion/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Fashion - Oh My Template",
     description: "Premium fashion brand & editorial showcase",
-    images: ["/templates/fashion/og-image.jpg"],
+    images: ["/templates/OHMT001-fashion/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT001-fashion-EN-en",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT001-fashion-KO" },
+    canonical: "https://ohmytemplate.com/en/templates/OHMT001-fashion",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT001-fashion" },
   },
 };
 

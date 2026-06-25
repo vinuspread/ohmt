@@ -27,7 +27,7 @@ function MyPageContent() {
       <PageHeader
         title="My Page"
         subtitle="Manage your bookings, membership, and account settings."
-        image="/templates/yoga/subpage-mypage.jpg"
+        image="/templates/OHMT022-yoga/subpage-mypage.jpg"
       />
 
       {/* Profile + stats row */}
@@ -37,7 +37,7 @@ function MyPageContent() {
           <div className="flex items-center gap-5">
             <div
               className="w-16 h-16 rounded-full bg-cover bg-center flex-shrink-0"
-              style={{ backgroundImage: "url('/templates/yoga/instructor-1.jpg')" }}
+              style={{ backgroundImage: "url('/templates/OHMT022-yoga/instructor-1.jpg')" }}
             />
             <div>
               <p
@@ -81,7 +81,7 @@ function MyPageContent() {
             </p>
           </div>
           <Link
-            href="/en/templates/OHMT022-yoga-EN/schedule"
+            href="/en/templates/OHMT022-yoga/schedule"
             className="mt-2 inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] font-medium transition-colors"
             style={{ fontFamily: "var(--font-body)" }}
           >

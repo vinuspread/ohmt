@@ -15,7 +15,7 @@ function LocationsPageContent() {
         {/* Hero */}
         <section className="relative bg-[var(--color-bg-dark)] h-[300px] flex items-center overflow-hidden">
           <img
-            src="/templates/coffee/location-seongsu.jpg"
+            src="/templates/OHMT019-coffee/location-seongsu.jpg"
             alt="매장 안내 서브 비주얼"
             className="absolute inset-0 w-full h-full object-cover"
           />

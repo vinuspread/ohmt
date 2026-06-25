@@ -26,7 +26,7 @@ const services = [
       { step: "03", title: "Material Specification", desc: "Surface-by-surface selection aligned with acoustic, thermal, and tactile criteria." },
       { step: "04", title: "Execution Oversight", desc: "On-site presence at critical milestones, holding tolerances most firms ignore." },
     ],
-    image: "/templates/studio/hero-1.jpg",
+    image: "/templates/OHMT006-studio/hero-1.jpg",
   },
   {
     idx: "02",
@@ -45,7 +45,7 @@ const services = [
       { step: "03", title: "Light Engineering", desc: "Lighting modeled as an active material across every surface at every hour." },
       { step: "04", title: "Installation Control", desc: "Direct coordination with specialists at every critical installation milestone." },
     ],
-    image: "/templates/studio/hero-2.jpg",
+    image: "/templates/OHMT006-studio/hero-2.jpg",
   },
   {
     idx: "03",
@@ -64,7 +64,7 @@ const services = [
       { step: "03", title: "Craft Selection", desc: "Match the right specialist to the specific demands of each piece." },
       { step: "04", title: "Calibration", desc: "Placement adjusted to the nearest millimeter until the piece occupies the space as designed." },
     ],
-    image: "/templates/studio/hero-3.jpg",
+    image: "/templates/OHMT006-studio/hero-3.jpg",
   },
   {
     idx: "04",
@@ -83,7 +83,7 @@ const services = [
       { step: "03", title: "Deviation Register", desc: "Live log of every RFI, substitution request, and non-conformance - nothing verbal." },
       { step: "04", title: "Final Commissioning", desc: "Room-by-room walkthrough against original specification. Snag list resolved before handover." },
     ],
-    image: "/templates/studio/project-1.jpg",
+    image: "/templates/OHMT006-studio/project-1.jpg",
   },
 ];
 
@@ -184,7 +184,7 @@ function StudioServicesPageContent() {
               </div>
             </div>
             <Link
-              href="/en/templates/OHMT006-studio-EN/contact"
+              href="/en/templates/OHMT006-studio/contact"
               className="group shrink-0 flex items-center gap-4 px-8 py-4 border border-white bg-white text-black text-[13px] font-bold uppercase tracking-widest hover:bg-transparent hover:text-white transition-all duration-300"
             >
               Start Project

@@ -34,7 +34,7 @@ export const OurStory = () => {
           transition={{ duration: 0.85, ease }}
         >
           <motion.img
-            src="/templates/coffee/story-interior.jpg"
+            src="/templates/OHMT019-coffee/story-interior.jpg"
             alt="Cafe interior"
             className="w-full h-full object-cover"
             initial={{ scale: 1.08 }}

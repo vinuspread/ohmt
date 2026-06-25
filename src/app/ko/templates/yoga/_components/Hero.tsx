@@ -23,7 +23,7 @@ export default function Hero() {
         ref={parallaxRef}
         className="absolute will-change-transform hero-bg-image"
         style={{
-          backgroundImage: "url('/templates/yoga/hero-bg.jpg')",
+          backgroundImage: "url('/templates/OHMT022-yoga/hero-bg.jpg')",
           backgroundSize: "cover",
           inset: "-10% 0 0 0",
           height: "120%",
@@ -49,12 +49,12 @@ export default function Hero() {
           </div>
 
           <div className="hidden md:flex flex-col items-end gap-4 flex-shrink-0 pb-1">
-            <Link href="/ko/templates/OHMT022-yoga-KO/classes"
+            <Link href="/ko/templates/OHMT022-yoga/classes"
               className="text-[12px] tracking-[0.2em] text-white hover:text-white/70 transition-colors border-b border-white/40 pb-1 font-medium whitespace-nowrap"
               style={{ fontFamily: "var(--font-body)" }}>
               클래스 보기
             </Link>
-            <Link href="/ko/templates/OHMT022-yoga-KO/schedule"
+            <Link href="/ko/templates/OHMT022-yoga/schedule"
               className="text-[12px] tracking-[0.2em] text-white/60 hover:text-white transition-colors font-medium whitespace-nowrap"
               style={{ fontFamily: "var(--font-body)" }}>
               일정 확인

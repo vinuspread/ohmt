@@ -87,7 +87,7 @@ function BlogPostContent({ params }: { params: Promise<{ slug: string }> }) {
               <h2 className="text-2xl font-bold tracking-tight mb-10">관련 글</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 {relatedPosts.map((rp) => (
-                  <Link key={rp.id} href={`/ko/templates/OHMT017-multi-shop-KO/blog/${rp.slug}`} className="group block">
+                  <Link key={rp.id} href={`/ko/templates/OHMT017-multi-shop/blog/${rp.slug}`} className="group block">
                     <div className="aspect-[16/10] overflow-hidden bg-[var(--color-bg-secondary)]">
                       <img
                         src={rp.image}

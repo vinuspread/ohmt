@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Coffee - Oh My Template",
     description: "Premium coffee shop & roastery experience",
-    url: "https://ohmytemplate.com/en/templates/OHMT019-coffee-EN",
+    url: "https://ohmytemplate.com/en/templates/OHMT019-coffee",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/coffee/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/OHMT019-coffee/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Coffee - Oh My Template",
     description: "Premium coffee shop & roastery experience",
-    images: ["/templates/coffee/og-image.jpg"],
+    images: ["/templates/OHMT019-coffee/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT019-coffee-EN",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT019-coffee-KO" },
+    canonical: "https://ohmytemplate.com/en/templates/OHMT019-coffee",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT019-coffee" },
   },
 };
 

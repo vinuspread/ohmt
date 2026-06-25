@@ -4,10 +4,10 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 const koNav = [
-  { num: '_01', name: 'Works', href: '/ko/templates/OHMT007-portfolio-KO' },
-  { num: '_02', name: 'About', href: '/ko/templates/OHMT007-portfolio-KO/about' },
-  { num: '_03', name: 'Journal', href: '/ko/templates/OHMT007-portfolio-KO/journal' },
-  { num: '_04', name: 'Contact', href: '/ko/templates/OHMT007-portfolio-KO/contact' },
+  { num: '_01', name: 'Works', href: '/ko/templates/OHMT007-portfolio' },
+  { num: '_02', name: 'About', href: '/ko/templates/OHMT007-portfolio/about' },
+  { num: '_03', name: 'Journal', href: '/ko/templates/OHMT007-portfolio/journal' },
+  { num: '_04', name: 'Contact', href: '/ko/templates/OHMT007-portfolio/contact' },
 ];
 
 export function Header() {
@@ -25,7 +25,7 @@ export function Header() {
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md' : 'bg-transparent'}`}>
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
           {/* Logo mark */}
-          <Link href={`/ko/templates/OHMT007-portfolio-KO`} className="text-[1.2rem] font-black tracking-tighter text-[var(--color-text)] hover:opacity-60 transition-opacity">
+          <Link href={`/ko/templates/OHMT007-portfolio`} className="text-[1.2rem] font-black tracking-tighter text-[var(--color-text)] hover:opacity-60 transition-opacity">
             Oh My Template.
           </Link>
 

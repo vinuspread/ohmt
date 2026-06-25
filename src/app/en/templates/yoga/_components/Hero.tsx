@@ -23,7 +23,7 @@ export default function Hero() {
         ref={parallaxRef}
         className="absolute will-change-transform hero-bg-image"
         style={{
-          backgroundImage: "url('/templates/yoga/hero-bg.jpg')",
+          backgroundImage: "url('/templates/OHMT022-yoga/hero-bg.jpg')",
           backgroundSize: "cover",
           inset: "-10% 0 0 0",
           height: "120%",
@@ -49,12 +49,12 @@ export default function Hero() {
           </div>
 
           <div className="hidden md:flex flex-col items-end gap-4 flex-shrink-0 pb-1">
-            <Link href="/en/templates/OHMT022-yoga-EN/classes"
+            <Link href="/en/templates/OHMT022-yoga/classes"
               className="text-[12px] tracking-[0.2em] uppercase text-white hover:text-white/70 transition-colors border-b border-white/40 pb-1 font-medium whitespace-nowrap"
               style={{ fontFamily: "var(--font-body)" }}>
               Explore Classes
             </Link>
-            <Link href="/en/templates/OHMT022-yoga-EN/schedule"
+            <Link href="/en/templates/OHMT022-yoga/schedule"
               className="text-[12px] tracking-[0.2em] uppercase text-white/60 hover:text-white transition-colors font-medium whitespace-nowrap"
               style={{ fontFamily: "var(--font-body)" }}>
               View Schedule

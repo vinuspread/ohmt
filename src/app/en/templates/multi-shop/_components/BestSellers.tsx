@@ -17,7 +17,7 @@ export const BestSellers = () => {
         <div className="mb-10 flex items-end justify-between">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Best Sellers</h2>
           <Link
-            href="/en/templates/OHMT017-multi-shop-EN/shop"
+            href="/en/templates/OHMT017-multi-shop/shop"
             className="hidden md:inline-block text-xs uppercase tracking-[0.2em] text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors duration-200 border-b border-[var(--color-text-muted)] pb-0.5"
           >
             View All
@@ -54,7 +54,7 @@ export const BestSellers = () => {
 
         <div className="text-center mt-10">
           <Link
-            href="/en/templates/OHMT017-multi-shop-EN/shop"
+            href="/en/templates/OHMT017-multi-shop/shop"
             className="inline-block bg-[var(--color-primary)] text-white px-10 py-3.5 text-xs uppercase tracking-[0.2em] font-medium hover:bg-black/80 transition-[transform,colors] duration-160 ease-out active:scale-[0.97]"
           >
             View All Products

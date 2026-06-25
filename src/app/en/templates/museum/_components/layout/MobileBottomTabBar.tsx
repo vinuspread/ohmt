@@ -21,7 +21,7 @@ const navItems = [
   },
   {
     name: "Collections",
-    href: "/templates/museum/collections",
+    href: "/templates/OHMT021-museum/collections",
     icon: ChevronUp,
     activeIcon: ChevronUp,
   },
@@ -34,7 +34,7 @@ const navItems = [
   },
   {
     name: "Shop",
-    href: "/templates/museum/souvenir",
+    href: "/templates/OHMT021-museum/souvenir",
     icon: ShoppingBag,
     activeIcon: ShoppingBag,
   },

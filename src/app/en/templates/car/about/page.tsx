@@ -31,7 +31,7 @@ function CarAboutPageContent() {
         {/* Hero */}
         <section className="relative h-[85vh] min-h-[560px] overflow-hidden flex items-end">
           <img
-            src="/templates/car/hero-1.jpg"
+            src="/templates/OHMT009-car/hero-1.jpg"
             alt="VINUS Motors"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
@@ -72,7 +72,7 @@ function CarAboutPageContent() {
 
         {/* Full-bleed */}
         <div className="relative h-[55vh] overflow-hidden">
-          <img loading="lazy" src="/templates/car/car-1.jpg" alt="" className="w-full h-full object-cover object-center" />
+          <img loading="lazy" src="/templates/OHMT009-car/car-1.jpg" alt="" className="w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-black/40" />
           <div className="absolute inset-0 flex items-center justify-center">
             <p className="text-[clamp(1.2rem,3vw,2.2rem)] font-bold tracking-tight text-white text-center max-w-[560px] px-6 leading-tight">
@@ -100,7 +100,7 @@ function CarAboutPageContent() {
 
         {/* CTA */}
         <section className="relative overflow-hidden">
-          <img loading="lazy" src="/templates/car/hero-2.jpg" alt="" className="w-full h-[420px] object-cover object-center" />
+          <img loading="lazy" src="/templates/OHMT009-car/hero-2.jpg" alt="" className="w-full h-[420px] object-cover object-center" />
           <div className="absolute inset-0 bg-black/65 flex flex-col items-center justify-center text-center px-6">
             <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-4 block">Ready?</span>
             <h2 className="text-[clamp(2rem,5vw,4rem)] font-bold tracking-tight mb-8">Experience it yourself.</h2>

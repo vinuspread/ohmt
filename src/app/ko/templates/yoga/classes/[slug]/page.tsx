@@ -35,7 +35,7 @@ function ClassDetailContent({ slug }: { slug: string }) {
           {/* 뒤로가기 */}
           <div className="px-8 md:px-14 pt-36 md:pt-44 pb-8 border-b border-[var(--color-border)]">
             <Link
-              href="/ko/templates/OHMT022-yoga-KO/classes"
+              href="/ko/templates/OHMT022-yoga/classes"
               className="text-[11px] tracking-[0.2em] uppercase text-[var(--color-text-muted)] hover:text-[var(--color-text)] font-medium transition-colors"
               style={{ fontFamily: "var(--font-body)" }}
             >
@@ -96,7 +96,7 @@ function ClassDetailContent({ slug }: { slug: string }) {
           {/* 예약 CTA */}
           <div className="px-8 md:px-14 py-8 border-t border-[var(--color-border)]">
             <Link
-              href="/ko/templates/OHMT022-yoga-KO/schedule"
+              href="/ko/templates/OHMT022-yoga/schedule"
               className="inline-flex items-center gap-2 text-[12px] tracking-[0.2em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] font-medium transition-colors"
               style={{ fontFamily: "var(--font-body)" }}
             >

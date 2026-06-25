@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
-const basePath = "/ko/templates/OHMT024-kids-education-KO";
+const basePath = "/ko/templates/OHMT024-kids-education";
 
 const upcoming = [
   { id: 1, title: "꼬마 과학자의 날", date: "6월 22일", time: "오전 10:00", price: "18,000원", category: "과학", color: "var(--color-secondary)" },

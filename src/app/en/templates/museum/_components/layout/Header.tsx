@@ -11,9 +11,9 @@ import MobileBottomTabBar from "./MobileBottomTabBar";
 
 // Light background pages
 const LIGHT_BG_ROUTES = [
-  "/templates/museum/souvenir",
-  "/templates/museum/sacred-vatican",
-  "/templates/museum/curator-note",
+  "/templates/OHMT021-museum/souvenir",
+  "/templates/OHMT021-museum/sacred-vatican",
+  "/templates/OHMT021-museum/curator-note",
 ];
 
 export default function Header() {
@@ -212,19 +212,19 @@ useMotionValueEvent(scrollY, "change", (latest) => {
         {/* 좌측: Special Exhibition / Collections / Museum Info (?�스?�톱 ?�용) */}
         <div className="flex items-center gap-8 text-[13px] uppercase tracking-[0.3em] font-bold hidden md:flex w-1/3">
           <Link
-            href="/en/templates/OHMT021-museum-EN/exhibitions"
+            href="/en/templates/OHMT021-museum/exhibitions"
             className="hover:opacity-50 transition-opacity underline-offset-8 hover:underline"
           >
             {t.nav.specialExhibition}
           </Link>
           <Link
-            href="/en/templates/OHMT021-museum-EN/collections"
+            href="/en/templates/OHMT021-museum/collections"
             className="hover:opacity-50 transition-opacity underline-offset-8 hover:underline"
           >
             {t.nav.collections}
           </Link>
           <Link
-            href="/en/templates/OHMT021-museum-EN/our-story"
+            href="/en/templates/OHMT021-museum/our-story"
             className="hover:opacity-50 transition-opacity underline-offset-8 hover:underline"
           >
             {t.nav.museumInfo}
@@ -233,7 +233,7 @@ useMotionValueEvent(scrollY, "change", (latest) => {
 
         {/* 중앙: 로고 */}
         <Link
-          href="/en/templates/OHMT021-museum-EN"
+          href="/en/templates/OHMT021-museum"
           className={`text-[15px] sm:text-[18px] md:text-2xl font-serif font-bold tracking-[0.2em] -mr-[0.2em] absolute left-1/2 -translate-x-1/2 cursor-pointer uppercase transition-colors duration-300 ${logoColor}`}
         >
           Oh My Template
@@ -249,7 +249,7 @@ useMotionValueEvent(scrollY, "change", (latest) => {
               {t.nav.tickets}
             </button>
             <Link
-              href="/en/templates/OHMT021-museum-EN/souvenir"
+              href="/en/templates/OHMT021-museum/souvenir"
               className="hover:opacity-50 transition-opacity underline-offset-8 hover:underline"
             >
               {t.nav.souvenirShop}

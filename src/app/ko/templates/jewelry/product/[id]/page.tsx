@@ -17,7 +17,7 @@ const products: Record<string, any> = {
     price: "$2,250",
     rating: 4.8,
     reviews: 127,
-    img: "/templates/jewelry/jewelry-ring.png",
+    img: "/templates/OHMT002-jewelry/jewelry-ring.png",
     category: "인게이지먼트 & 웨딩",
     desc: "우아함과 세련미의 영원한 상징. 모든 각도에서 찬란하게 빛을 머금고 뿜어내는 다이아몬드 본연의 아름다움을 극대화한 클래식 솔리테어 링입니다.",
     details: [
@@ -39,7 +39,7 @@ const products: Record<string, any> = {
     price: "$1,850",
     rating: 4.9,
     reviews: 93,
-    img: "/templates/jewelry/jewelry-pendant.png",
+    img: "/templates/OHMT002-jewelry/jewelry-pendant.png",
     category: "목걸이",
     desc: "클래식한 품격과 우아함을 자아내는 펜던트. 오직 Oh My Template만이 선별한 완벽한 원형의 최고급 남양진주와 18K 골드가 만나 매혹적인 광채를 선사합니다.",
     details: [
@@ -61,7 +61,7 @@ const products: Record<string, any> = {
     price: "$3,500",
     rating: 4.9,
     reviews: 234,
-    img: "/templates/jewelry/jewelry-ring.png",
+    img: "/templates/OHMT002-jewelry/jewelry-ring.png",
     category: "인게이지먼트 & 웨딩",
     desc: "일생의 가장 고귀한 서약을 위한 가장 완벽한 선택. 독보적인 커팅 기법으로 다이아몬드 최고의 광채와 불꽃 같은 섬광(Fire)을 극대화한 마스터피스입니다.",
     details: [
@@ -90,7 +90,7 @@ function ProductDetailPageContent({ params }: { params: Promise<{ id: string }> 
         <main className="antialiased bg-[var(--color-bg)] min-h-screen flex items-center justify-center">
           <div className="text-center">
             <h1 className="text-3xl font-serif mb-4">상품을 찾을 수 없습니다</h1>
-            <Link href="/ko/templates/OHMT002-jewelry-KO" className="text-[var(--color-primary)] hover:underline">
+            <Link href="/ko/templates/OHMT002-jewelry" className="text-[var(--color-primary)] hover:underline">
               주얼리 컬렉션으로 돌아가기
             </Link>
           </div>

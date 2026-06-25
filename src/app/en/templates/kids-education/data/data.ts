@@ -43,7 +43,7 @@ export const classes: ClassItem[] = [
     category: "Technology",
     age: "Ages 6-12",
     price: "$120",
-    image: "/templates/kids-education/class-coding.jpg",
+    image: "/templates/OHMT024-kids-education/class-coding.jpg",
     color: "var(--color-primary)",
     description: "Introduce your child to the world of programming through fun, interactive projects. They will build games, animations, and apps while learning problem-solving skills.",
     schedule: "Tue / Thu 4:00 PM - 5:30 PM",
@@ -68,7 +68,7 @@ export const classes: ClassItem[] = [
     category: "Creative Arts",
     age: "Ages 3-8",
     price: "$90",
-    image: "/templates/kids-education/class-art.jpg",
+    image: "/templates/OHMT024-kids-education/class-art.jpg",
     color: "var(--color-accent)",
     description: "Let your child explore colors, textures, and shapes in our messy and joyful art studio. Every session is a new masterpiece waiting to happen.",
     schedule: "Mon / Wed 3:30 PM - 5:00 PM",
@@ -93,7 +93,7 @@ export const classes: ClassItem[] = [
     category: "Discovery",
     age: "Ages 5-10",
     price: "$110",
-    image: "/templates/kids-education/hero-kids-science.jpg",
+    image: "/templates/OHMT024-kids-education/hero-kids-science.jpg",
     color: "var(--color-secondary)",
     description: "Hands-on experiments that make science come alive. From volcanoes to slime, every class is a new discovery.",
     schedule: "Wed / Fri 4:00 PM - 5:30 PM",
@@ -118,7 +118,7 @@ export const classes: ClassItem[] = [
     category: "Problem Solving",
     age: "Ages 4-9",
     price: "$95",
-    image: "/templates/kids-education/class-math.jpg",
+    image: "/templates/OHMT024-kids-education/class-math.jpg",
     color: "var(--color-red)",
     description: "Make math fun with puzzles, games, and hands-on activities. Your child will develop confidence in numbers while having a blast.",
     schedule: "Mon / Fri 3:30 PM - 5:00 PM",
@@ -140,9 +140,9 @@ export const classes: ClassItem[] = [
 ];
 
 export const teachers: Teacher[] = [
-  { id: "sarah", name: "Sarah Kim", role: "Creative Director", image: "/templates/kids-education/teacher-01.png", color: "var(--color-primary)" },
-  { id: "mike", name: "Mike Chen", role: "STEM Lead", image: "/templates/kids-education/teacher-02.png", color: "var(--color-secondary)" },
-  { id: "emma", name: "Emma Davis", role: "Art Instructor", image: "/templates/kids-education/teacher-03.png", color: "var(--color-accent)" },
+  { id: "sarah", name: "Sarah Kim", role: "Creative Director", image: "/templates/OHMT024-kids-education/teacher-01.png", color: "var(--color-primary)" },
+  { id: "mike", name: "Mike Chen", role: "STEM Lead", image: "/templates/OHMT024-kids-education/teacher-02.png", color: "var(--color-secondary)" },
+  { id: "emma", name: "Emma Davis", role: "Art Instructor", image: "/templates/OHMT024-kids-education/teacher-03.png", color: "var(--color-accent)" },
 ];
 
 export const homeClasses: ClassItem[] = classes.slice(0, 3);

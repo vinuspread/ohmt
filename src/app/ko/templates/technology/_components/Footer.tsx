@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 mb-12">
           {/* Logo and About */}
           <div className="md:col-span-5">
-            <Link href="/ko/templates/OHMT016-technology-KO" className="flex items-center gap-2 mb-4">
+            <Link href="/ko/templates/OHMT016-technology" className="flex items-center gap-2 mb-4">
               <svg className="w-6 h-6 text-[var(--color-accent)]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect x="3" y="3" width="6" height="6" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>
                 <rect x="15" y="3" width="6" height="6" stroke="currentColor" strokeWidth="2" strokeLinejoin="round"/>

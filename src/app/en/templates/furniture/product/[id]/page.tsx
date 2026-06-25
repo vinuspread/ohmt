@@ -126,7 +126,7 @@ function ProductDetailPageContent() {
                   </div>
                   <Button
                     variant="primary"
-                    onClick={() => router.push('/templates/furniture/cart')}
+                    onClick={() => router.push('/en/templates/OHMT004-furniture/cart')}
                     className={`flex-1 py-6 rounded-full text-[14px] font-bold uppercase shadow-xl active:scale-95 ${theme.interaction.button}`}
                   >
                     Add to Bag
@@ -244,7 +244,7 @@ function ProductDetailPageContent() {
             className="relative aspect-[21/9] w-full overflow-hidden mb-16 md:mb-24 bg-zinc-50 group rounded-2xl shadow-sm"
           >
             <img 
-              src="/templates/furniture/lifestyle-narrative.png" 
+              src="/templates/OHMT004-furniture/lifestyle-narrative.png" 
               className="w-full h-full object-cover transition-transform duration-[6s] group-hover:scale-105"
               alt="Brand Lifestyle"
             />
@@ -282,7 +282,7 @@ function ProductDetailPageContent() {
                 Each piece is a dialogue between material and space. We curate experiences through form, ensuring that every curve and line contributes to a sense of serenity. {product.desc}
               </p>
               <div className="pt-4">
-                <Link href="/en/templates/OHMT004-furniture-EN" className="text-[13px] font-bold uppercase border-b border-black pb-1 hover:opacity-50 transition-opacity">
+                <Link href="/en/templates/OHMT004-furniture" className="text-[13px] font-bold uppercase border-b border-black pb-1 hover:opacity-50 transition-opacity">
                   Explore More
                 </Link>
               </div>

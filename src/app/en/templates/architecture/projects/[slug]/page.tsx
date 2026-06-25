@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture-EN/projects/[slug]/page.tsx
+// src/app/en/templates/OHMT027-architecture/projects/[slug]/page.tsx
 import React from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -32,13 +32,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${project.title} - Architecture Portfolio - Oh My Template`,
       description: project.description,
-      url: `https://ohmytemplate.com/en/templates/OHMT027-architecture-EN/projects/${slug}`,
+      url: `https://ohmytemplate.com/en/templates/OHMT027-architecture/projects/${slug}`,
       images: [{ url: project.image }],
     },
     alternates: {
-      canonical: `https://ohmytemplate.com/en/templates/OHMT027-architecture-EN/projects/${slug}`,
+      canonical: `https://ohmytemplate.com/en/templates/OHMT027-architecture/projects/${slug}`,
       languages: {
-        "ko": `https://ohmytemplate.com/ko/templates/OHMT027-architecture-KO/projects/${slug}`,
+        "ko": `https://ohmytemplate.com/ko/templates/OHMT027-architecture/projects/${slug}`,
       },
     },
   };
@@ -68,7 +68,7 @@ export default async function ProjectDetailPage({ params }: Props) {
           {/* Header Link */}
           <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 py-8">
             <Link
-              href="/en/templates/OHMT027-architecture-EN/projects"
+              href="/en/templates/OHMT027-architecture/projects"
               className="font-sans text-[12px] font-medium tracking-[0.1em] text-[var(--color-text-secondary)] hover:text-[var(--color-text)] transition-colors"
             >
               ← BACK TO PORTFOLIO

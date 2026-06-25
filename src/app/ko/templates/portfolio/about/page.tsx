@@ -11,10 +11,10 @@ import { Footer } from "../_components/layout/Footer";
 import { stats, designerInfo } from "@/lib/portfolio-data";
 
 const team = [
-  { name: "Marco Vinus", role: "Founder & Creative Director", img: "/templates/portfolio/portfolio-1.jpg" },
-  { name: "Yuna Park", role: "Lead Designer", img: "/templates/portfolio/portfolio-2.jpg" },
-  { name: "Tobias Krenn", role: "Front-end Engineer", img: "/templates/portfolio/portfolio-3.png" },
-  { name: "Sofia Reyes", role: "Brand Strategist", img: "/templates/portfolio/portfolio-4.png" },
+  { name: "Marco Vinus", role: "Founder & Creative Director", img: "/templates/OHMT007-portfolio/portfolio-1.jpg" },
+  { name: "Yuna Park", role: "Lead Designer", img: "/templates/OHMT007-portfolio/portfolio-2.jpg" },
+  { name: "Tobias Krenn", role: "Front-end Engineer", img: "/templates/OHMT007-portfolio/portfolio-3.png" },
+  { name: "Sofia Reyes", role: "Brand Strategist", img: "/templates/OHMT007-portfolio/portfolio-4.png" },
 ];
 
 const process = [
@@ -46,7 +46,7 @@ function AboutPageContent() {
               <p className="text-[1rem] text-[var(--color-text-muted)] leading-relaxed">
                 좋�? ?�자?��? 결코 ?�식???�닙?�다. 그것?� ?�람?�이 ?�품???�용?�기 ?�에 �??�품???�???�끼??방식??바꾸???�략???�위?�니??
               </p>
-              <Link href="/ko/templates/OHMT007-portfolio-KO/contact" className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-widest text-[var(--color-text)] border-b border-[var(--color-accent)]/30 pb-0.5 hover:border-[var(--color-accent)] transition-colors">
+              <Link href="/ko/templates/OHMT007-portfolio/contact" className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-widest text-[var(--color-text)] border-b border-[var(--color-accent)]/30 pb-0.5 hover:border-[var(--color-accent)] transition-colors">
                 ?�께?�기 <ArrowUpRight size={12} />
               </Link>
             </div>

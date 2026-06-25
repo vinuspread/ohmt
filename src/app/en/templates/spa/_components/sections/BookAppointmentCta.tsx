@@ -10,7 +10,7 @@ export default function BookAppointmentCta() {
   return (
     <section className="relative overflow-hidden bg-[var(--color-secondary)] py-24 lg:py-32">
       <img
-        src="/templates/spa/cta-bg.jpg"
+        src="/templates/OHMT026-spa/cta-bg.jpg"
         alt=""
         role="presentation"
         className="absolute inset-0 h-full w-full object-cover opacity-30"
@@ -31,13 +31,13 @@ export default function BookAppointmentCta() {
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="/en/templates/OHMT026-spa-EN/contact"
+              href="/en/templates/OHMT026-spa/contact"
               className="inline-flex items-center rounded-full bg-[var(--color-primary)] text-[var(--color-text-contrast)] px-8 py-3.5 text-sm font-semibold hover:brightness-110 active:scale-[0.97] transition-all duration-150"
             >
               Book appointment
             </a>
             <a
-              href="/en/templates/OHMT026-spa-EN/service#pricing"
+              href="/en/templates/OHMT026-spa/service#pricing"
               className="inline-flex items-center rounded-full border border-white/20 text-[var(--color-text-contrast)] px-8 py-3.5 text-sm font-semibold hover:bg-white/10 transition-all duration-150"
             >
               View pricing

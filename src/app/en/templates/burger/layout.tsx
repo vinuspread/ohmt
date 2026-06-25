@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Burger - Oh My Template",
     description: "Premium burger restaurant experience",
-    url: "https://ohmytemplate.com/en/templates/OHMT018-burger-EN",
+    url: "https://ohmytemplate.com/en/templates/OHMT018-burger",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/burger/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/OHMT018-burger/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Burger - Oh My Template",
     description: "Premium burger restaurant experience",
-    images: ["/templates/burger/og-image.jpg"],
+    images: ["/templates/OHMT018-burger/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT018-burger-EN",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT018-burger-KO" },
+    canonical: "https://ohmytemplate.com/en/templates/OHMT018-burger",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT018-burger" },
   },
 };
 

@@ -177,7 +177,7 @@ export default function ArticlePage({ params }: { params: Promise<{ slug: string
           <Header />
           <div className="pt-16 md:pt-32 pb-20 text-center">
             <p className="text-xl">Article not found</p>
-            <Link href="/en/templates/OHMT010-cosmetic-EN/journal" className="text-[var(--color-accent)] mt-4 inline-block">
+            <Link href="/en/templates/OHMT010-cosmetic/journal" className="text-[var(--color-accent)] mt-4 inline-block">
               Back to Journal
             </Link>
           </div>
@@ -195,7 +195,7 @@ export default function ArticlePage({ params }: { params: Promise<{ slug: string
         {/* Article Header */}
         <section className="pt-16 md:pt-32 pb-16">
           <div className="max-w-[1440px] mx-auto px-6 md:px-10">
-            <Link href="/en/templates/OHMT010-cosmetic-EN/journal" className="inline-flex items-center gap-2 text-[0.8rem] font-bold uppercase tracking-wider text-black/60 hover:text-black transition-colors mb-8">
+            <Link href="/en/templates/OHMT010-cosmetic/journal" className="inline-flex items-center gap-2 text-[0.8rem] font-bold uppercase tracking-wider text-black/60 hover:text-black transition-colors mb-8">
               <ArrowLeft size={14} />
               Back to Journal
             </Link>
@@ -244,7 +244,7 @@ export default function ArticlePage({ params }: { params: Promise<{ slug: string
               <h3 className="text-[1.3rem] font-normal tracking-tight mb-8">More from the Journal</h3>
               <div className="grid md:grid-cols-2 gap-6">
                 {entries.filter(e => e.slug !== article.slug).slice(0, 2).map((related) => (
-                  <Link key={related.slug} href={`/en/templates/OHMT010-cosmetic-EN/journal/${related.slug}`}>
+                  <Link key={related.slug} href={`/en/templates/OHMT010-cosmetic/journal/${related.slug}`}>
                     <div className="p-6 bg-white transition-shadow cursor-pointer rounded-sm border border-black/5">
                       <h4 className="text-[1rem] font-medium mb-2 group-hover:opacity-60 transition-opacity">
                         {related.title}

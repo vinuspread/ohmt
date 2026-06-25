@@ -48,7 +48,7 @@ export default function SpecShowcase() {
           <div className="lg:col-span-4 flex justify-center items-end relative z-10 lg:-mx-8">
             <div className="relative w-full max-w-[680px] flex items-end justify-center">
               <img
-                src="/templates/technology/omnibot-mockup-nuki.png"
+                src="/templates/OHMT016-technology/omnibot-mockup-nuki.png"
                 alt="OmniBot Gen 2 목업 구조"
                 className="w-full h-auto"
               />

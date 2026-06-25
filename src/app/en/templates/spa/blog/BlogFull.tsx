@@ -15,7 +15,7 @@ export default function BlogFull() {
       <main>
         <section className="relative min-h-[50dvh] overflow-hidden bg-[var(--color-secondary)]">
           <img
-            src="/templates/spa/who-we-are.jpg"
+            src="/templates/OHMT026-spa/who-we-are.jpg"
             alt=""
             role="presentation"
             className="absolute inset-0 h-full w-full object-cover opacity-40"
@@ -45,7 +45,7 @@ export default function BlogFull() {
               {blogPosts.map((post, i) => (
                 <motion.a
                   key={post.id}
-                  href={`/en/templates/OHMT026-spa-EN/blog/${blogPosts[0].id}`}
+                  href={`/en/templates/OHMT026-spa/blog/${blogPosts[0].id}`}
                   initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-80px" }}

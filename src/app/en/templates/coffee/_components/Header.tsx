@@ -18,12 +18,12 @@ export const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: "Menu", href: "/en/templates/OHMT019-coffee-EN/menu" },
-    { name: "About", href: "/en/templates/OHMT019-coffee-EN/about" },
-    { name: "Locations", href: "/en/templates/OHMT019-coffee-EN/locations" },
+    { name: "Menu", href: "/en/templates/OHMT019-coffee/menu" },
+    { name: "About", href: "/en/templates/OHMT019-coffee/about" },
+    { name: "Locations", href: "/en/templates/OHMT019-coffee/locations" },
   ];
 
-  const isHome = pathname === "/en/templates/OHMT019-coffee-EN";
+  const isHome = pathname === "/en/templates/OHMT019-coffee";
   const transparent = isHome && !scrolled && !mobileOpen;
 
   return (
@@ -36,7 +36,7 @@ export const Header = () => {
     >
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between h-full">
         <Link
-          href="/en/templates/OHMT019-coffee-EN"
+          href="/en/templates/OHMT019-coffee"
           className="text-xl font-heading font-semibold text-white/90 hover:text-white transition-colors"
         >
           Oh My Template
@@ -53,7 +53,7 @@ export const Header = () => {
             </Link>
           ))}
           <Link
-            href="/en/templates/OHMT019-coffee-EN/menu"
+            href="/en/templates/OHMT019-coffee/menu"
             className="border border-white/40 text-white/80 px-6 py-2 text-[11px] uppercase tracking-[0.2em] font-semibold hover:bg-white hover:text-[var(--color-primary-dark)] transition-colors duration-200"
           >
             Order Now
@@ -113,7 +113,7 @@ export const Header = () => {
                 transition={{ duration: 0.25 }}
               >
                 <Link
-                  href="/en/templates/OHMT019-coffee-EN/menu"
+                  href="/en/templates/OHMT019-coffee/menu"
                   onClick={() => setMobileOpen(false)}
                   className="bg-[var(--color-primary)] text-white text-center px-6 py-3 text-xs uppercase tracking-[0.2em] font-semibold rounded-none block"
                 >

@@ -6,10 +6,10 @@ import { Menu, X } from "lucide-react";
 import Button from "./ui/Button";
 
 const navLinks = [
-  { href: "/ko/templates/OHMT023-game-KO/games", label: "게임" },
-  { href: "/ko/templates/OHMT023-game-KO/news", label: "소식" },
-  { href: "/ko/templates/OHMT023-game-KO/about", label: "소개" },
-  { href: "/ko/templates/OHMT023-game-KO/careers", label: "채용" },
+  { href: "/ko/templates/OHMT023-game/games", label: "게임" },
+  { href: "/ko/templates/OHMT023-game/news", label: "소식" },
+  { href: "/ko/templates/OHMT023-game/about", label: "소개" },
+  { href: "/ko/templates/OHMT023-game/careers", label: "채용" },
 ];
 
 export default function Navbar() {
@@ -32,7 +32,7 @@ export default function Navbar() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link
-          href="/ko/templates/OHMT023-game-KO"
+          href="/ko/templates/OHMT023-game"
           className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)] bg-clip-text text-xl font-bold text-transparent font-[var(--font-heading)]"
         >
           Oh My Template
@@ -48,7 +48,7 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link href="/ko/templates/OHMT023-game-KO/careers">
+          <Link href="/ko/templates/OHMT023-game/careers">
             <Button variant="outline" className="text-xs px-5 py-2">
               채용 중
             </Button>
@@ -76,7 +76,7 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link href="/ko/templates/OHMT023-game-KO/careers" onClick={() => setOpen(false)}>
+          <Link href="/ko/templates/OHMT023-game/careers" onClick={() => setOpen(false)}>
             <Button>채용 중</Button>
           </Link>
         </div>

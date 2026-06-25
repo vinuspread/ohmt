@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Magazine - Oh My Template",
     description: "Editorial culture and lifestyle",
-    url: "https://ohmytemplate.com/ko/templates/OHMT012-magazine-KO",
+    url: "https://ohmytemplate.com/ko/templates/OHMT012-magazine",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/magazine/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/OHMT012-magazine/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Magazine - Oh My Template",
     description: "Editorial culture and lifestyle",
-    images: ["/templates/magazine/og-image.jpg"],
+    images: ["/templates/OHMT012-magazine/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT012-magazine-KO",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT012-magazine-EN" },
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT012-magazine",
+    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT012-magazine" },
   },
 };
 

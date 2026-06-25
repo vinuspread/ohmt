@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 import Navbar from "../_components/Navbar";
 import Footer from "../_components/Footer";
 import Button from "../_components/ui/Button";
-import { careers } from "@/app/ko/templates/OHMT023-game-KO/data/data";
+import { careers } from "@/app/ko/templates/OHMT023-game/data/data";
 import { ArrowRight } from "lucide-react";
 
 import { TemplateWrapper } from "../_components/TemplateWrapper";

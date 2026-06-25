@@ -29,8 +29,8 @@ function SpecialExhibitionsContent() {
   }
 ];
   const specialExhibitions = [
-    { ...specialExhibitionsData[0], img: "/templates/museum/exhibition-poster-vinci.png" },
-    { ...specialExhibitionsData[1], img: "/templates/museum/exhibition-poster-greek.png" }
+    { ...specialExhibitionsData[0], img: "/templates/OHMT021-museum/exhibition-poster-vinci.png" },
+    { ...specialExhibitionsData[1], img: "/templates/OHMT021-museum/exhibition-poster-greek.png" }
   ];
 
   const permanentGalleriesData = [
@@ -38,8 +38,8 @@ function SpecialExhibitionsContent() {
   { name: "지도 갤러리", desc: "이탈리아의 지형학적 유산." }
 ];
   const permanentGalleries = [
-    { ...permanentGalleriesData[0], img: "/templates/museum/hero-bg.png" },
-    { ...permanentGalleriesData[1], img: "/templates/museum/vatican-hallway.png" }
+    { ...permanentGalleriesData[0], img: "/templates/OHMT021-museum/hero-bg.png" },
+    { ...permanentGalleriesData[1], img: "/templates/OHMT021-museum/vatican-hallway.png" }
   ];
 
   return (
@@ -98,7 +98,7 @@ function SpecialExhibitionsContent() {
               </p>
 
               <div className={`pt-6 ${i % 2 === 1 ? 'lg:flex lg:justify-end' : ''}`}>
-                <Link href="/ko/templates/OHMT021-museum-KO/collections" className="inline-flex items-center gap-3 text-xs font-medium uppercase tracking-normal group/btn px-8 py-3 border border-white/20 hover:bg-white hover:text-black transition-[color,background]">
+                <Link href="/ko/templates/OHMT021-museum/collections" className="inline-flex items-center gap-3 text-xs font-medium uppercase tracking-normal group/btn px-8 py-3 border border-white/20 hover:bg-white hover:text-black transition-[color,background]">
                    {"도록 보기"} <ArrowRight size={13} className="group-hover/btn:translate-x-2 transition-transform" />
                 </Link>
               </div>

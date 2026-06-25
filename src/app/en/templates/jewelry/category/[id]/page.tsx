@@ -1,4 +1,4 @@
-﻿// src/app/templates/jewelry/category/[id]/page.tsx
+﻿// src/app/templates/OHMT002-jewelry/category/[id]/page.tsx
 "use client";
 
 import React, { use } from "react";
@@ -29,18 +29,18 @@ const CATEGORY_DATA: Record<string, {
     description: "From the eternal brilliance of hand-selected diamonds to the serene flow of natural pearls,\nexplore a curated selection of Oh My Template's finest contemporary masterpieces.",
     type: "collections",
     items: [
-      { id: "1", name: "Diamond Solitaire Ring", price: "$2,250.00", img: "/templates/jewelry/jewelry-ring.png", tag: "Engagement", detail: "0.85ct round brilliant cut diamond on a clean platinum band." },
-      { id: "2", name: "Radiant Pearl Pendant", price: "$1,850.00", img: "/templates/jewelry/jewelry-pendant.png", tag: "Seasonal", detail: "Rare South Sea golden pearl with a 18k yellow gold lock." },
-      { id: "3", name: "Sapphire Bangle Set", price: "$1,200.00", img: "/templates/jewelry/jewelry-hero-main.png", tag: "Luxury", detail: "Curated blue sapphire bangle with micro-pave diamond borders." },
-      { id: "4", name: "Rose Gold Infinity Band", price: "$950.00", img: "/templates/jewelry/jewelry-ring.png", tag: "Essential", detail: "Interlocking rose gold infinity band with elegant hand finish." },
-      { id: "301", name: "Emerald Drop Pendant", price: "$2,800.00", img: "/templates/jewelry/jewelry-pendant.png", tag: "Exclusive", detail: "Vibrant Colombian emerald drop beneath a brilliant marquise diamond." },
-      { id: "302", name: "Marquise Diamond Band", price: "$1,650.00", img: "/templates/jewelry/jewelry-ring.png", tag: "Boutique", detail: "Full eternity band featuring matching marquise diamonds in platinum." },
-      { id: "303", name: "Golden Pearl Earrings", price: "$1,420.00", img: "/templates/jewelry/jewelry-hero-main.png", tag: "Signature", detail: "Prismatic South Sea golden pearls swinging on a diamond stud." },
-      { id: "304", name: "Ruby Eternity Ring", price: "$3,100.00", img: "/templates/jewelry/jewelry-ring.png", tag: "Bridal", detail: "Alternate round rubies and baguettes set in classic 18k yellow gold." },
-      { id: "305", name: "Platinum Solitaire Pendant", price: "$1,950.00", img: "/templates/jewelry/jewelry-pendant.png", tag: "Minimal", detail: "0.70ct ideal cut diamond set simply in a delicate platinum basket." },
-      { id: "306", name: "Oval Cut Engagement", price: "$3,450.00", img: "/templates/jewelry/jewelry-ring.png", tag: "Engagement", detail: "Elegant oval cut center stone mounted on a micro-pave split shank." },
-      { id: "307", name: "Diamond Hoop Earrings", price: "$1,250.00", img: "/templates/jewelry/jewelry-hero-main.png", tag: "Essential", detail: "Inside-out diamond hoops perfect for elevated daily sophisticaion." },
-      { id: "308", name: "Pearl Choker Set", price: "$2,100.00", img: "/templates/jewelry/jewelry-pendant.png", tag: "Seasonal", detail: "Double-strand akoya pearl choker with a vintage white gold sapphire clasp." }
+      { id: "1", name: "Diamond Solitaire Ring", price: "$2,250.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "Engagement", detail: "0.85ct round brilliant cut diamond on a clean platinum band." },
+      { id: "2", name: "Radiant Pearl Pendant", price: "$1,850.00", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "Seasonal", detail: "Rare South Sea golden pearl with a 18k yellow gold lock." },
+      { id: "3", name: "Sapphire Bangle Set", price: "$1,200.00", img: "/templates/OHMT002-jewelry/jewelry-hero-main.png", tag: "Luxury", detail: "Curated blue sapphire bangle with micro-pave diamond borders." },
+      { id: "4", name: "Rose Gold Infinity Band", price: "$950.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "Essential", detail: "Interlocking rose gold infinity band with elegant hand finish." },
+      { id: "301", name: "Emerald Drop Pendant", price: "$2,800.00", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "Exclusive", detail: "Vibrant Colombian emerald drop beneath a brilliant marquise diamond." },
+      { id: "302", name: "Marquise Diamond Band", price: "$1,650.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "Boutique", detail: "Full eternity band featuring matching marquise diamonds in platinum." },
+      { id: "303", name: "Golden Pearl Earrings", price: "$1,420.00", img: "/templates/OHMT002-jewelry/jewelry-hero-main.png", tag: "Signature", detail: "Prismatic South Sea golden pearls swinging on a diamond stud." },
+      { id: "304", name: "Ruby Eternity Ring", price: "$3,100.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "Bridal", detail: "Alternate round rubies and baguettes set in classic 18k yellow gold." },
+      { id: "305", name: "Platinum Solitaire Pendant", price: "$1,950.00", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "Minimal", detail: "0.70ct ideal cut diamond set simply in a delicate platinum basket." },
+      { id: "306", name: "Oval Cut Engagement", price: "$3,450.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "Engagement", detail: "Elegant oval cut center stone mounted on a micro-pave split shank." },
+      { id: "307", name: "Diamond Hoop Earrings", price: "$1,250.00", img: "/templates/OHMT002-jewelry/jewelry-hero-main.png", tag: "Essential", detail: "Inside-out diamond hoops perfect for elevated daily sophisticaion." },
+      { id: "308", name: "Pearl Choker Set", price: "$2,100.00", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "Seasonal", detail: "Double-strand akoya pearl choker with a vintage white gold sapphire clasp." }
     ]
   },
   engagement: {
@@ -50,18 +50,18 @@ const CATEGORY_DATA: Record<string, {
     description: "Celebrate the ultimate promise with our iconic bridal rings.\nRe-engineered with geometric precision and raw gemstone purity to symbolize uncompromised devotion.",
     type: "engagement",
     items: [
-      { id: "5", name: "Classic Round Brilliant", price: "$3,500.00", img: "/templates/jewelry/jewelry-ring.png", tag: "Engagement", detail: "1.20ct excellent cut brilliant diamond on a shared-prong band." },
-      { id: "6", name: "Cushion Cut Diamond Ring", price: "$2,800.00", img: "/templates/jewelry/jewelry-pendant.png", tag: "Luxury", detail: "Cushion modified brilliant diamond framed by a brilliant pave halo." },
-      { id: "7", name: "Emerald Cut Solitaire", price: "$3,200.00", img: "/templates/jewelry/jewelry-hero-main.png", tag: "Signature", detail: "Slim emerald cut diamond highlighting pristine geometric lines." },
-      { id: "8", name: "Three-Stone Engagement", price: "$2,950.00", img: "/templates/jewelry/jewelry-ring.png", tag: "Classic", detail: "Center diamond flanked by two tapered baguette side diamonds." },
-      { id: "401", name: "Princess Cut Halo", price: "$3,800.00", img: "/templates/jewelry/jewelry-pendant.png", tag: "Bridal", detail: "High contrast princess cut diamond surrounded by dual pave tiers." },
-      { id: "402", name: "Oval Diamond Platinum", price: "$4,100.00", img: "/templates/jewelry/jewelry-ring.png", tag: "Engagement", detail: "Stunning 1.50ct oval diamond on an ultra-slim high polish band." },
-      { id: "403", name: "Rose Gold Twined Band", price: "$1,650.00", img: "/templates/jewelry/jewelry-hero-main.png", tag: "Modern", detail: "Interlocking strands of micro-pave and warm 18k rose gold." },
-      { id: "404", name: "Pear Cut Solitaire", price: "$3,300.00", img: "/templates/jewelry/jewelry-ring.png", tag: "Exclusive", detail: "Tear-drop pear cut diamond elegantly set on a platinum V-prong." },
-      { id: "405", name: "Marquise Trilogy Ring", price: "$3,650.00", img: "/templates/jewelry/jewelry-pendant.png", tag: "Bridal", detail: "Marquise cut center flanked by two small matched shield-cut diamonds." },
-      { id: "406", name: "Vintage Diamond Band", price: "$1,850.00", img: "/templates/jewelry/jewelry-ring.png", tag: "Heritage", detail: "Hand-engraved milgrain border detailing with brilliant bead-set diamonds." },
-      { id: "407", name: "Hand-Carved Bridal Band", price: "$1,450.00", img: "/templates/jewelry/jewelry-hero-main.png", tag: "Bridal", detail: "Slightly asymmetric hand-burnished ring in raw platinum architecture." },
-      { id: "408", name: "Pave Cushion Ring", price: "$4,200.00", img: "/templates/jewelry/jewelry-ring.png", tag: "Engagement", detail: "Pristine cushion diamond floating inside a three-sided pave gallery." }
+      { id: "5", name: "Classic Round Brilliant", price: "$3,500.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "Engagement", detail: "1.20ct excellent cut brilliant diamond on a shared-prong band." },
+      { id: "6", name: "Cushion Cut Diamond Ring", price: "$2,800.00", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "Luxury", detail: "Cushion modified brilliant diamond framed by a brilliant pave halo." },
+      { id: "7", name: "Emerald Cut Solitaire", price: "$3,200.00", img: "/templates/OHMT002-jewelry/jewelry-hero-main.png", tag: "Signature", detail: "Slim emerald cut diamond highlighting pristine geometric lines." },
+      { id: "8", name: "Three-Stone Engagement", price: "$2,950.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "Classic", detail: "Center diamond flanked by two tapered baguette side diamonds." },
+      { id: "401", name: "Princess Cut Halo", price: "$3,800.00", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "Bridal", detail: "High contrast princess cut diamond surrounded by dual pave tiers." },
+      { id: "402", name: "Oval Diamond Platinum", price: "$4,100.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "Engagement", detail: "Stunning 1.50ct oval diamond on an ultra-slim high polish band." },
+      { id: "403", name: "Rose Gold Twined Band", price: "$1,650.00", img: "/templates/OHMT002-jewelry/jewelry-hero-main.png", tag: "Modern", detail: "Interlocking strands of micro-pave and warm 18k rose gold." },
+      { id: "404", name: "Pear Cut Solitaire", price: "$3,300.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "Exclusive", detail: "Tear-drop pear cut diamond elegantly set on a platinum V-prong." },
+      { id: "405", name: "Marquise Trilogy Ring", price: "$3,650.00", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "Bridal", detail: "Marquise cut center flanked by two small matched shield-cut diamonds." },
+      { id: "406", name: "Vintage Diamond Band", price: "$1,850.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "Heritage", detail: "Hand-engraved milgrain border detailing with brilliant bead-set diamonds." },
+      { id: "407", name: "Hand-Carved Bridal Band", price: "$1,450.00", img: "/templates/OHMT002-jewelry/jewelry-hero-main.png", tag: "Bridal", detail: "Slightly asymmetric hand-burnished ring in raw platinum architecture." },
+      { id: "408", name: "Pave Cushion Ring", price: "$4,200.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "Engagement", detail: "Pristine cushion diamond floating inside a three-sided pave gallery." }
     ]
   },
   "high-jewelry": {
@@ -71,18 +71,18 @@ const CATEGORY_DATA: Record<string, {
     description: "Rare and exceptional museum-grade masterpieces.\nUnifying high sculptural complexity, natural raw stones, and the pinnacle of classical atelier heritage.",
     type: "high",
     items: [
-      { id: "9", name: "Ruby & Diamond Tiara", price: "$12,500.00", img: "/templates/jewelry/jewelry-pendant.png", tag: "Exclusive", detail: "Historical ruby and custom marquise-cut diamond scroll tiara." },
-      { id: "10", name: "Sapphire Rivière Necklace", price: "$18,900.00", img: "/templates/jewelry/jewelry-hero-main.png", tag: "Haute", detail: "Continuous rivière necklace holding 48 matched emerald-cut sapphires." },
-      { id: "11", name: "Emerald Statement Earrings", price: "$15,600.00", img: "/templates/jewelry/jewelry-ring.png", tag: "Exceptional", detail: "Colombian emerald teardrops hanging from micro-set diamonds." },
-      { id: "12", name: "Diamond & Pearl Brooch", price: "$22,000.00", img: "/templates/jewelry/jewelry-pendant.png", tag: "Masterpiece", detail: "Baroque natural pearl mounted on a sculpted white gold feather brooch." },
-      { id: "501", name: "Empress Ruby Necklace", price: "$26,500.00", img: "/templates/jewelry/jewelry-pendant.png", tag: "Museum", detail: "15 matched oval Burmese rubies suspended on dual diamond cascades." },
-      { id: "502", name: "Imperial Emerald Ring", price: "$19,500.00", img: "/templates/jewelry/jewelry-ring.png", tag: "Haute", detail: "Glow-intensive Colombian emerald mounted with large baguette shoulders." },
-      { id: "503", name: "Sapphire Chandelier Set", price: "$17,800.00", img: "/templates/jewelry/jewelry-hero-main.png", tag: "Haute", detail: "Articulated chandelier earrings holding 24 pear-cut Ceylon sapphires." },
-      { id: "504", name: "Blue Diamond Brooch", price: "$34,000.00", img: "/templates/jewelry/jewelry-pendant.png", tag: "Masterpiece", detail: "Extremely rare fancy blue diamond set in raw hammered white gold." },
-      { id: "505", name: "Cascade Pearl Tiara", price: "$21,500.00", img: "/templates/jewelry/jewelry-ring.png", tag: "Exclusive", detail: "Pristine natural teardrop pearls arranged in a graduated arch tiara." },
-      { id: "506", name: "Art Deco Diamond Bangle", price: "$16,900.00", img: "/templates/jewelry/jewelry-hero-main.png", tag: "Haute", detail: "Geometrically structured platinum bangle set with baguettes and onyx." },
-      { id: "507", name: "Rare Pink Diamond Ring", price: "$42,000.00", img: "/templates/jewelry/jewelry-ring.png", tag: "Museum", detail: "Fancy vivid purplish pink diamond encircled by pink micro-pave." },
-      { id: "508", name: "Baroque Pearl Pendant", price: "$15,400.00", img: "/templates/jewelry/jewelry-pendant.png", tag: "Masterpiece", detail: "Sculptured golden dragon holding a unique massive baroque pearl specimen." }
+      { id: "9", name: "Ruby & Diamond Tiara", price: "$12,500.00", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "Exclusive", detail: "Historical ruby and custom marquise-cut diamond scroll tiara." },
+      { id: "10", name: "Sapphire Rivière Necklace", price: "$18,900.00", img: "/templates/OHMT002-jewelry/jewelry-hero-main.png", tag: "Haute", detail: "Continuous rivière necklace holding 48 matched emerald-cut sapphires." },
+      { id: "11", name: "Emerald Statement Earrings", price: "$15,600.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "Exceptional", detail: "Colombian emerald teardrops hanging from micro-set diamonds." },
+      { id: "12", name: "Diamond & Pearl Brooch", price: "$22,000.00", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "Masterpiece", detail: "Baroque natural pearl mounted on a sculpted white gold feather brooch." },
+      { id: "501", name: "Empress Ruby Necklace", price: "$26,500.00", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "Museum", detail: "15 matched oval Burmese rubies suspended on dual diamond cascades." },
+      { id: "502", name: "Imperial Emerald Ring", price: "$19,500.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "Haute", detail: "Glow-intensive Colombian emerald mounted with large baguette shoulders." },
+      { id: "503", name: "Sapphire Chandelier Set", price: "$17,800.00", img: "/templates/OHMT002-jewelry/jewelry-hero-main.png", tag: "Haute", detail: "Articulated chandelier earrings holding 24 pear-cut Ceylon sapphires." },
+      { id: "504", name: "Blue Diamond Brooch", price: "$34,000.00", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "Masterpiece", detail: "Extremely rare fancy blue diamond set in raw hammered white gold." },
+      { id: "505", name: "Cascade Pearl Tiara", price: "$21,500.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "Exclusive", detail: "Pristine natural teardrop pearls arranged in a graduated arch tiara." },
+      { id: "506", name: "Art Deco Diamond Bangle", price: "$16,900.00", img: "/templates/OHMT002-jewelry/jewelry-hero-main.png", tag: "Haute", detail: "Geometrically structured platinum bangle set with baguettes and onyx." },
+      { id: "507", name: "Rare Pink Diamond Ring", price: "$42,000.00", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "Museum", detail: "Fancy vivid purplish pink diamond encircled by pink micro-pave." },
+      { id: "508", name: "Baroque Pearl Pendant", price: "$15,400.00", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "Masterpiece", detail: "Sculptured golden dragon holding a unique massive baroque pearl specimen." }
     ]
   },
   about: {
@@ -96,10 +96,10 @@ const CATEGORY_DATA: Record<string, {
 };
 
 const CATEGORY_IMAGES: Record<string, string> = {
-  collections: "/templates/jewelry/jewelry-hero-main.png",
-  engagement: "/templates/jewelry/jewelry-ring.png",
-  "high-jewelry": "/templates/jewelry/jewelry-craft.png",
-  about: "/templates/jewelry/jewelry-hero-main.png"
+  collections: "/templates/OHMT002-jewelry/jewelry-hero-main.png",
+  engagement: "/templates/OHMT002-jewelry/jewelry-ring.png",
+  "high-jewelry": "/templates/OHMT002-jewelry/jewelry-craft.png",
+  about: "/templates/OHMT002-jewelry/jewelry-hero-main.png"
 };
 
 function JewelryCategoryPageContent({ params }: { params: Promise<{ id: string }> }) {
@@ -178,7 +178,7 @@ function JewelryCategoryPageContent({ params }: { params: Promise<{ id: string }
             </div>             {/* Asymmetric Emerald Grid */}
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-6 sm:gap-x-10 gap-y-12 sm:gap-y-24">
               {displayedProducts.map((item, i) => (
-                <Link key={item.id} href={`/en/templates/OHMT002-jewelry-EN/product/${item.id}`} className="group block space-y-6">
+                <Link key={item.id} href={`/en/templates/OHMT002-jewelry/product/${item.id}`} className="group block space-y-6">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -248,7 +248,7 @@ function JewelryCategoryPageContent({ params }: { params: Promise<{ id: string }
             {/* Engagement Grid with in-frame rotation zoom */}
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10 sm:gap-12">
               {displayedProducts.map((item, i) => (
-                <Link key={item.id} href={`/en/templates/OHMT002-jewelry-EN/product/${item.id}`} className="group block space-y-6">
+                <Link key={item.id} href={`/en/templates/OHMT002-jewelry/product/${item.id}`} className="group block space-y-6">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -306,7 +306,7 @@ function JewelryCategoryPageContent({ params }: { params: Promise<{ id: string }
               {/* Right Curated List - 9 Columns */}
               <div className="lg:col-span-9 grid grid-cols-2 md:grid-cols-2 gap-x-6 gap-y-10 sm:gap-12">
                 {displayedProducts.map((item, i) => (
-                  <Link key={item.id} href={`/en/templates/OHMT002-jewelry-EN/product/${item.id}`} className="group block space-y-6">
+                  <Link key={item.id} href={`/en/templates/OHMT002-jewelry/product/${item.id}`} className="group block space-y-6">
                     <motion.div
                       initial={{ opacity: 0, y: 30 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -404,7 +404,7 @@ function JewelryCategoryPageContent({ params }: { params: Promise<{ id: string }
               className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden"
             >
               <img 
-                src="/templates/jewelry/jewelry-craft.png" 
+                src="/templates/OHMT002-jewelry/jewelry-craft.png" 
                 className="absolute inset-0 w-full h-full object-cover brightness-50"
                 alt="Atelier Cinematic Film"
               />

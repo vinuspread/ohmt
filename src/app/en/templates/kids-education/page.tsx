@@ -14,7 +14,7 @@ const jsonLd = {
   "@type": "Organization",
   "name": "Oh My Template - Creative Academy",
   "description": "Playful and colorful children education platform with creative classes",
-  "url": "https://ohmytemplate.com/en/templates/OHMT024-kids-education-EN",
+  "url": "https://ohmytemplate.com/en/templates/OHMT024-kids-education",
 };
 
 export default function KidsEducationPage() {

@@ -13,7 +13,7 @@ function AboutPageContent() {
       <main className="antialiased min-h-screen bg-white text-[var(--color-text)]">
         <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
           <img
-            src="/templates/burger/story-kitchen.png"
+            src="/templates/OHMT018-burger/story-kitchen.png"
             alt="Our kitchen"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -47,7 +47,7 @@ function AboutPageContent() {
               </div>
               <div className="aspect-[4/3] overflow-hidden">
                 <img
-                  src="/templates/burger/story-ingredients.png"
+                  src="/templates/OHMT018-burger/story-ingredients.png"
                   alt="Fresh ingredients"
                   className="w-full h-full object-cover"
                 />

@@ -29,7 +29,7 @@ export default function Hero() {
         transition={{ duration: 1.8, ease: [0.22, 0.61, 0.36, 1] }}
       >
         <img
-          src="/templates/wedding/hero-bg-01.jpg"
+          src="/templates/OHMT025-wedding/hero-bg-01.jpg"
           alt="루멘 웨딩 파인아트 사진"
           className="h-full w-full object-cover"
         />
@@ -85,7 +85,7 @@ export default function Hero() {
               시간이 흘러도 변하지 않는. 진정성 있는. 다큐멘터리.
             </p>
             <a
-              href="/ko/templates/OHMT025-wedding-KO/contact"
+              href="/ko/templates/OHMT025-wedding/contact"
               className="relative overflow-hidden border border-white/40 hover:border-white px-8 py-3.5 text-[0.7rem] font-bold uppercase tracking-[0.2em] text-white group"
             >
               <span className="inline-block transition-transform duration-500 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover:-translate-y-[150%]">

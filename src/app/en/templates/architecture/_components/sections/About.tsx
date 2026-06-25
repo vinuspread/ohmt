@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture-EN/_components/sections/About.tsx
+// src/app/en/templates/OHMT027-architecture/_components/sections/About.tsx
 "use client";
 import React from "react";
 import { ScrollReveal } from "../ui/ScrollReveal";

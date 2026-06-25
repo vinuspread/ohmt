@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { navLinks } from "../../data/data";
 
-const basePath = "/ko/templates/OHMT026-spa-KO";
+const basePath = "/ko/templates/OHMT026-spa";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);

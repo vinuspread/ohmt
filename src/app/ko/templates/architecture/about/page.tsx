@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture-KO/about/page.tsx
+// src/app/en/templates/OHMT027-architecture/about/page.tsx
 import React from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -14,13 +14,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Us - Architecture Portfolio - Oh My Template",
     description: "Learn about our architectural philosophy, our history, and the visionaries behind our practice.",
-    url: "https://ohmytemplate.com/en/templates/OHMT027-architecture-KO/about",
-    images: [{ url: "/templates/architecture/og-image.jpg" }],
+    url: "https://ohmytemplate.com/en/templates/OHMT027-architecture/about",
+    images: [{ url: "/templates/OHMT027-architecture/og-image.jpg" }],
   },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT027-architecture-KO/about",
+    canonical: "https://ohmytemplate.com/en/templates/OHMT027-architecture/about",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/OHMT027-architecture-EN/about",
+      "en": "https://ohmytemplate.com/en/templates/OHMT027-architecture/about",
     },
   },
 };
@@ -37,17 +37,17 @@ export default function AboutPage() {
     {
       name: "Jessica Point",
       role: "PRINCIPAL ARCHITECT",
-      image: "/templates/architecture/project-1.jpg",
+      image: "/templates/OHMT027-architecture/project-1.jpg",
     },
     {
       name: "Ryan Baser",
       role: "LEAD INTERIOR DESIGNER",
-      image: "/templates/architecture/project-5.jpg",
+      image: "/templates/OHMT027-architecture/project-5.jpg",
     },
     {
       name: "Carrie Vath",
       role: "STRUCTURAL ENGINEER",
-      image: "/templates/architecture/project-6.jpg",
+      image: "/templates/OHMT027-architecture/project-6.jpg",
     },
   ];
 
@@ -77,7 +77,7 @@ export default function AboutPage() {
           {/* Full-Bleed Image Section */}
           <section className="relative w-full h-[50vh] md:h-[60vh] min-h-[350px] mb-24">
             <Image
-              src="/templates/architecture/about.jpg"
+              src="/templates/OHMT027-architecture/about.jpg"
               alt="Architectural studio workplace"
               fill
               className="object-cover"

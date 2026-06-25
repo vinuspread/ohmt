@@ -9,7 +9,7 @@ interface ClassCardProps {
 export default function ClassCard({ yogaClass, textClassName = "px-6 py-8" }: ClassCardProps) {
   return (
     <Link
-      href={`/ko/templates/OHMT022-yoga-KO/classes/${yogaClass.slug}`}
+      href={`/ko/templates/OHMT022-yoga/classes/${yogaClass.slug}`}
       className="group block border-b border-[var(--color-border)]"
     >
       <div className="relative aspect-[3/4] overflow-hidden">

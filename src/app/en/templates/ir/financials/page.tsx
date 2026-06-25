@@ -39,7 +39,7 @@ function IRFinancialsContent() {
         >
           <div className="absolute inset-0 z-0">
             <Image
-              src="/templates/ir/news-financial.png"
+              src="/templates/OHMT011-ir/news-financial.png"
               alt="Financials"
               fill
               priority

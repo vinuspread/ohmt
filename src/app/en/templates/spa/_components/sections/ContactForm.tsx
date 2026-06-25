@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const basePath = "/en/templates/OHMT026-spa-EN";
+const basePath = "/en/templates/OHMT026-spa";
 
 export default function ContactForm() {
   const [sent, setSent] = useState(false);

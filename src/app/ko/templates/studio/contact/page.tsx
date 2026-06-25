@@ -71,7 +71,7 @@ function StudioContactPageContent() {
 
                             <div className="relative w-full flex-grow min-h-[260px] md:min-h-[350px] lg:min-h-[400px] overflow-hidden mt-4 md:mt-12">
                                 <img
-                                    src="/templates/studio/hero-1.jpg"
+                                    src="/templates/OHMT006-studio/hero-1.jpg"
                                     className="absolute inset-0 w-full h-full object-cover hover:scale-105 transition-transform duration-[2s] ease-out"
                                     alt="Visual representation of tactile casing"
                                 />

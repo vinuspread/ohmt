@@ -45,7 +45,7 @@ function CartPageContent() {
           <ShoppingBag size={48} className="mx-auto mb-8 opacity-10 text-black" />
           <h1 className="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-[var(--color-text)] uppercase mb-6">장바구니가 비어 있습니다.</h1>
           <p className="text-[var(--color-secondary)] mb-12">컬렉션을 둘러보고 마음에 드는 작품을 찾아보세요.</p>
-          <Link href="/ko/templates/OHMT004-furniture-KO">
+          <Link href="/ko/templates/OHMT004-furniture">
             <Button variant="primary" className="px-12 py-6 rounded-full font-bold uppercase">
               계속 둘러보기
             </Button>

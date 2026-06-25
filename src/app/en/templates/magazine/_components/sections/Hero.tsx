@@ -1,4 +1,4 @@
-﻿// src/app/templates/magazine/-components/sections/Hero.tsx
+﻿// src/app/templates/OHMT012-magazine/-components/sections/Hero.tsx
 "use client";
 
 import React from "react";
@@ -9,7 +9,7 @@ export const Hero = ({ t }: { t: any }) => {
     <section className="relative h-screen min-h-[700px] overflow-hidden">
       <img
         className="w-full h-full object-cover"
-        src="/templates/magazine/mag-hero.jpg"
+        src="/templates/OHMT012-magazine/mag-hero.jpg"
         alt="Magazine Hero"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/10 to-black/80" />
@@ -31,7 +31,7 @@ export const Hero = ({ t }: { t: any }) => {
             Story by <strong className="text-white/85">Julian Vance</strong> · Photography by <strong className="text-white/85">Elena Rossi</strong>
           </div>
           <Link
-            href="/en/templates/OHMT012-magazine-EN/article/slow-living-digital-world"
+            href="/en/templates/OHMT012-magazine/article/slow-living-digital-world"
             className="text-[0.75rem] font-bold uppercase tracking-[0.14em] text-white border-b border-white/50 pb-0.5 hover:border-white w-fit"
           >
             {t.hero.cta}
@@ -82,7 +82,7 @@ export const Hero = ({ t }: { t: any }) => {
            </div>
 
           <Link
-            href="/en/templates/OHMT012-magazine-EN"
+            href="/en/templates/OHMT012-magazine"
             className="shrink-0 self-start md:self-auto text-[0.72rem] font-bold uppercase tracking-[0.18em] text-white border border-white/40 px-6 py-2.5 hover:bg-white hover:text-[var(--color-banner-bg)]"
           >
             {t.hero.cta2} ??

@@ -21,14 +21,14 @@ export const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: "홈", href: "/ko/templates/OHMT017-multi-shop-KO" },
-    { name: "쇼핑", href: "/ko/templates/OHMT017-multi-shop-KO/shop" },
-    { name: "스토리", href: "/ko/templates/OHMT017-multi-shop-KO/about" },
-    { name: "매거진", href: "/ko/templates/OHMT017-multi-shop-KO/blog" },
-    { name: "문의", href: "/ko/templates/OHMT017-multi-shop-KO/contact" },
+    { name: "홈", href: "/ko/templates/OHMT017-multi-shop" },
+    { name: "쇼핑", href: "/ko/templates/OHMT017-multi-shop/shop" },
+    { name: "스토리", href: "/ko/templates/OHMT017-multi-shop/about" },
+    { name: "매거진", href: "/ko/templates/OHMT017-multi-shop/blog" },
+    { name: "문의", href: "/ko/templates/OHMT017-multi-shop/contact" },
   ];
 
-  const isHome = pathname === "/ko/templates/OHMT017-multi-shop-KO";
+  const isHome = pathname === "/ko/templates/OHMT017-multi-shop";
   const transparent = isHome && !scrolled && !mobileOpen;
 
   return (
@@ -40,7 +40,7 @@ export const Header = () => {
       >
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between h-16 md:h-18">
           <Link
-            href="/ko/templates/OHMT017-multi-shop-KO"
+            href="/ko/templates/OHMT017-multi-shop"
             className="text-xl md:text-2xl font-bold tracking-tight transition-colors duration-300"
             style={{ color: transparent ? "#ffffff" : "#0A0A0A" }}
           >
@@ -54,7 +54,7 @@ export const Header = () => {
             {navLinks.map((link) => {
               const isActive =
                 pathname === link.href ||
-                (link.href !== "/ko/templates/OHMT017-multi-shop-KO" &&
+                (link.href !== "/ko/templates/OHMT017-multi-shop" &&
                   pathname.startsWith(link.href));
               return (
                 <Link
@@ -79,7 +79,7 @@ export const Header = () => {
               <Search size={18} strokeWidth={1.5} />
             </button>
             <Link
-              href="/ko/templates/OHMT017-multi-shop-KO/shop"
+              href="/ko/templates/OHMT017-multi-shop/shop"
               className="transition-colors duration-300 hover:opacity-70"
               style={{ color: transparent ? "rgba(255,255,255,0.7)" : "#0A0A0A" }}
               aria-label="장바구니"

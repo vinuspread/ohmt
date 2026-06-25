@@ -11,9 +11,9 @@ import MobileBottomTabBar from "./MobileBottomTabBar";
 
 // 밝은(흰색) 배경을 가진 페이지 경로 목록
 const LIGHT_BG_ROUTES = [
-  "/ko/templates/OHMT021-museum-KO/souvenir",
-  "/ko/templates/OHMT021-museum-KO/sacred-vatican",
-  "/ko/templates/OHMT021-museum-KO/curator-note",
+  "/ko/templates/OHMT021-museum/souvenir",
+  "/ko/templates/OHMT021-museum/sacred-vatican",
+  "/ko/templates/OHMT021-museum/curator-note",
 ];
 
 export default function Header() {
@@ -64,19 +64,19 @@ export default function Header() {
         {/* 좌측: Special Exhibition / Collections / Museum Info (데스크톱 전용) */}
         <div className="flex items-center gap-8 text-[13px] tracking-tight font-bold hidden md:flex w-1/3">
           <Link
-            href="/ko/templates/OHMT021-museum-KO/exhibitions"
+            href="/ko/templates/OHMT021-museum/exhibitions"
             className="hover:opacity-50 transition-opacity underline-offset-8 hover:underline"
           >
             {"특별 전시"}
           </Link>
           <Link
-            href="/ko/templates/OHMT021-museum-KO/collections"
+            href="/ko/templates/OHMT021-museum/collections"
             className="hover:opacity-50 transition-opacity underline-offset-8 hover:underline"
           >
             {"소장품"}
           </Link>
           <Link
-            href="/ko/templates/OHMT021-museum-KO/our-story"
+            href="/ko/templates/OHMT021-museum/our-story"
             className="hover:opacity-50 transition-opacity underline-offset-8 hover:underline"
           >
             {"미술관 안내"}
@@ -85,7 +85,7 @@ export default function Header() {
 
         {/* 중앙: 로고 */}
         <Link
-          href="/ko/templates/OHMT021-museum-KO"
+          href="/ko/templates/OHMT021-museum"
           className={`text-[15px] sm:text-[18px] md:text-2xl font-serif font-bold tracking-[0.2em] -mr-[0.2em] absolute left-1/2 -translate-x-1/2 cursor-pointer uppercase drop- transition-colors duration-500 ${logoColor}`}
         >
           Oh My Template
@@ -101,7 +101,7 @@ export default function Header() {
               {"티켓 예매"}
             </button>
             <Link
-              href="/ko/templates/OHMT021-museum-KO/souvenir"
+              href="/ko/templates/OHMT021-museum/souvenir"
               className="hover:opacity-50 transition-opacity underline-offset-8 hover:underline"
             >
               {"기념품샵"}

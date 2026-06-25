@@ -4,12 +4,12 @@ import { motion, useViewportScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
 
 const projects = [
-    { name: 'Spotify Satellite Office', location: 'Austin, TX', image: '/templates/studio/project-1.jpg' },
-    { name: 'Microsoft Office Lounge', location: 'Seattle, WA', image: '/templates/studio/project-2.jpg' },
-    { name: 'Allstate Employee Lounge', location: 'Chicago, IL', image: '/templates/studio/project-3.jpg' },
-    { name: 'Exxon Mobile Offices', location: 'Houston, TX', image: '/templates/studio/project-4.jpg' },
-    { name: 'Disney Employee Loft', location: 'Burbank, CA', image: '/templates/studio/project-5.jpg' },
-    { name: 'Delta Satellite Office', location: 'Atlanta, GA', image: '/templates/studio/project-6.jpg' },
+    { name: 'Spotify Satellite Office', location: 'Austin, TX', image: '/templates/OHMT006-studio/project-1.jpg' },
+    { name: 'Microsoft Office Lounge', location: 'Seattle, WA', image: '/templates/OHMT006-studio/project-2.jpg' },
+    { name: 'Allstate Employee Lounge', location: 'Chicago, IL', image: '/templates/OHMT006-studio/project-3.jpg' },
+    { name: 'Exxon Mobile Offices', location: 'Houston, TX', image: '/templates/OHMT006-studio/project-4.jpg' },
+    { name: 'Disney Employee Loft', location: 'Burbank, CA', image: '/templates/OHMT006-studio/project-5.jpg' },
+    { name: 'Delta Satellite Office', location: 'Atlanta, GA', image: '/templates/OHMT006-studio/project-6.jpg' },
 ];
 
 const containerVariants = {

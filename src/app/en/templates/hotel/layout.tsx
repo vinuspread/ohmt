@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Hotel - Oh My Template",
     description: "Premium luxury hotel & resort experience",
-    url: "https://ohmytemplate.com/en/templates/OHMT020-hotel-EN",
+    url: "https://ohmytemplate.com/en/templates/OHMT020-hotel",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/hotel/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/OHMT020-hotel/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Hotel - Oh My Template",
     description: "Premium luxury hotel & resort experience",
-    images: ["/templates/hotel/og-image.jpg"],
+    images: ["/templates/OHMT020-hotel/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT020-hotel-EN",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT020-hotel-KO" },
+    canonical: "https://ohmytemplate.com/en/templates/OHMT020-hotel",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT020-hotel" },
   },
 };
 

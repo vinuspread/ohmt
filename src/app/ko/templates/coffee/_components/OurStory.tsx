@@ -19,7 +19,7 @@ export const OurStory = () => {
           >
             <div className="aspect-[4/3] rounded-2xl overflow-hidden">
               <motion.img
-                src="/templates/coffee/story-roasting.jpg"
+                src="/templates/OHMT019-coffee/story-roasting.jpg"
                 alt="Coffee roasting process"
                 className="w-full h-full object-cover"
                 initial={{ scale: 1.08 }}
@@ -58,14 +58,14 @@ export const OurStory = () => {
               transition={{ duration: 0.55, delay: 0.2, ease: easeOut }}
             >
               <img
-                src="/templates/coffee/story-beans.jpg"
+                src="/templates/OHMT019-coffee/story-beans.jpg"
                 alt="Coffee beans"
                 className="w-full h-full object-cover"
               />
             </motion.div>
 
             <Link
-              href="/ko/templates/OHMT019-coffee-KO/about"
+              href="/ko/templates/OHMT019-coffee/about"
               className="inline-flex items-center text-sm font-semibold text-white/80 hover:text-white transition-colors"
             >
               스토리 보기 &rarr;

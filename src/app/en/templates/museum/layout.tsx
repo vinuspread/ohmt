@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Museum - Oh My Template",
     description: "Experience the epitome of elegance and durability.",
-    url: "https://ohmytemplate.com/en/templates/OHMT021-museum-EN",
+    url: "https://ohmytemplate.com/en/templates/OHMT021-museum",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/museum/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/OHMT021-museum/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
@@ -28,12 +28,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Museum - Oh My Template",
     description: "Experience the epitome of elegance and durability.",
-    images: ["/templates/museum/og-image.jpg"],
+    images: ["/templates/OHMT021-museum/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT021-museum-EN",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT021-museum-KO" },
+    canonical: "https://ohmytemplate.com/en/templates/OHMT021-museum",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT021-museum" },
   },
 };
 

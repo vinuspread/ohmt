@@ -5,7 +5,7 @@ import Link from "next/link";
 import Navbar from "../../_components/Navbar";
 import Footer from "../../_components/Footer";
 import Button from "../../_components/ui/Button";
-import { games } from "@/app/ko/templates/OHMT023-game-KO/data/data";
+import { games } from "@/app/ko/templates/OHMT023-game/data/data";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 
 import { TemplateWrapper } from "../../_components/TemplateWrapper";
@@ -33,7 +33,7 @@ export default function GameDetailPage() {
         <Navbar />
         <main className="flex min-h-screen flex-col items-center justify-center pt-24 pb-24">
           <p className="text-xl text-[var(--color-text-muted)]">게임을 찾을 수 없습니다</p>
-          <Link href="/ko/templates/OHMT023-game-KO/games" className="mt-4 text-[var(--color-primary)] hover:underline">
+          <Link href="/ko/templates/OHMT023-game/games" className="mt-4 text-[var(--color-primary)] hover:underline">
             게임 목록으로
           </Link>
         </main>
@@ -50,7 +50,7 @@ export default function GameDetailPage() {
       <main className="min-h-screen pt-24 pb-24">
         <div className="mx-auto max-w-7xl px-6">
           <Link
-            href="/ko/templates/OHMT023-game-KO/games"
+            href="/ko/templates/OHMT023-game/games"
             className="mb-8 inline-flex items-center gap-2 text-sm text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)]"
           >
             <ArrowLeft size={16} />

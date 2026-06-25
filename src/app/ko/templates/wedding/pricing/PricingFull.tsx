@@ -74,7 +74,7 @@ export default function PricingFull() {
 
                   <div className="mt-8 pt-8">
                     <Link
-                      href="/ko/templates/OHMT025-wedding-KO/contact"
+                      href="/ko/templates/OHMT025-wedding/contact"
                       className="w-full inline-flex items-center justify-center border border-[var(--color-primary)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.15em] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-[var(--color-bg)] transition-all duration-300"
                     >
                       이 패키지로 문의하기
@@ -95,7 +95,7 @@ export default function PricingFull() {
               여러분의 웨딩에 가장 잘 맞는 구성을 찾아드리겠습니다.
             </p>
             <Link
-              href="/ko/templates/OHMT025-wedding-KO/contact"
+              href="/ko/templates/OHMT025-wedding/contact"
               className="inline-flex items-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-white border-b border-white/40 pb-1 hover:border-white transition-colors duration-200"
             >
               문의하기

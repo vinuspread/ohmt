@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture-KO/_components/layout/Header.tsx
+// src/app/en/templates/OHMT027-architecture/_components/layout/Header.tsx
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
@@ -22,7 +22,7 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const baseRoute = "/en/templates/OHMT027-architecture-KO";
+  const baseRoute = "/en/templates/OHMT027-architecture";
   const navItems = [
     { name: "Home", href: baseRoute },
     { name: "Projects", href: `${baseRoute}/projects` },

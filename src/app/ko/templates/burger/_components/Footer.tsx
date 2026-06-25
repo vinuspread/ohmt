@@ -8,7 +8,7 @@ export const Footer = () => {
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-16 pb-8 md:pt-20 md:pb-10">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
           <div className="col-span-2 md:col-span-1">
-            <Link href="/ko/templates/OHMT018-burger-KO" className="text-xl font-bold tracking-tight text-white">
+            <Link href="/ko/templates/OHMT018-burger" className="text-xl font-bold tracking-tight text-white">
               Oh My Template
             </Link>
             <p className="text-sm text-white/50 mt-4 leading-relaxed max-w-[220px]">
@@ -19,18 +19,18 @@ export const Footer = () => {
           <div>
             <h4 className="text-xs uppercase tracking-[0.15em] text-white/40 mb-4">메뉴</h4>
             <div className="flex flex-col gap-2.5">
-              <Link href="/ko/templates/OHMT018-burger-KO/menu" className="text-sm text-white/60 hover:text-white transition-colors">버거</Link>
-              <Link href="/ko/templates/OHMT018-burger-KO/menu" className="text-sm text-white/60 hover:text-white transition-colors">치킨</Link>
-              <Link href="/ko/templates/OHMT018-burger-KO/menu" className="text-sm text-white/60 hover:text-white transition-colors">사이드</Link>
-              <Link href="/ko/templates/OHMT018-burger-KO/menu" className="text-sm text-white/60 hover:text-white transition-colors">쉐이크</Link>
+              <Link href="/ko/templates/OHMT018-burger/menu" className="text-sm text-white/60 hover:text-white transition-colors">버거</Link>
+              <Link href="/ko/templates/OHMT018-burger/menu" className="text-sm text-white/60 hover:text-white transition-colors">치킨</Link>
+              <Link href="/ko/templates/OHMT018-burger/menu" className="text-sm text-white/60 hover:text-white transition-colors">사이드</Link>
+              <Link href="/ko/templates/OHMT018-burger/menu" className="text-sm text-white/60 hover:text-white transition-colors">쉐이크</Link>
             </div>
           </div>
 
           <div>
             <h4 className="text-xs uppercase tracking-[0.15em] text-white/40 mb-4">회사</h4>
             <div className="flex flex-col gap-2.5">
-              <Link href="/ko/templates/OHMT018-burger-KO/about" className="text-sm text-white/60 hover:text-white transition-colors">소개</Link>
-              <Link href="/ko/templates/OHMT018-burger-KO/locations" className="text-sm text-white/60 hover:text-white transition-colors">매장</Link>
+              <Link href="/ko/templates/OHMT018-burger/about" className="text-sm text-white/60 hover:text-white transition-colors">소개</Link>
+              <Link href="/ko/templates/OHMT018-burger/locations" className="text-sm text-white/60 hover:text-white transition-colors">매장</Link>
               <Link href="#" className="text-sm text-white/60 hover:text-white transition-colors">채용</Link>
             </div>
           </div>

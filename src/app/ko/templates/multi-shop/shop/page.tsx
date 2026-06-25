@@ -27,7 +27,7 @@ function ShopPageContent() {
             <h1 className="text-4xl lg:text-5xl font-bold tracking-tight">쇼핑</h1>
             <div className="flex flex-wrap justify-center gap-4 mt-8">
               <Link
-                href="/ko/templates/OHMT017-multi-shop-KO/shop"
+                href="/ko/templates/OHMT017-multi-shop/shop"
                 className={`text-xs uppercase tracking-[0.2em] px-5 py-2 transition-colors duration-300 ${
                   !activeCategory
                     ? 'bg-[var(--color-primary)] text-white'
@@ -39,7 +39,7 @@ function ShopPageContent() {
               {categories.map((cat) => (
                 <Link
                   key={cat.id}
-                  href={`/ko/templates/OHMT017-multi-shop-KO/shop/${cat.id}`}
+                  href={`/ko/templates/OHMT017-multi-shop/shop/${cat.id}`}
                   className={`text-xs uppercase tracking-[0.2em] px-5 py-2 transition-colors duration-300 ${
                     activeCategory === cat.id
                       ? 'bg-[var(--color-primary)] text-white'

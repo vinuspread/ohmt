@@ -3,12 +3,15 @@ import { createClient } from "@supabase/supabase-js";
 import fs from "fs";
 import path from "path";
 
-const ZIPS_DIR = "D:\\Work\\ohmytemplate\\zips";
-const PROJECT_DIR = "D:\\Work\\ohmytemplate_admin";
+const ZIPS_DIR = "E:\\Work\\ohmytemplate\\zips";
+const PROJECT_DIR = "E:\\Work\\OHMT_admin";
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
-const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+let supabase = null;
+if (SUPABASE_URL && SUPABASE_KEY) {
+  supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
+}
 
 function detectLang(filename) {
   const lower = filename.toLowerCase();
@@ -30,10 +33,9 @@ async function processZip(zipFile) {
   const entries = zip.getEntries();
 
   // Find theme.json to get slug
-  const templatePrefix = `src/app/${lang}/templates/`;
   const themeEntry = entries.find((e) => {
     const p = e.entryName.replace(/\\/g, "/");
-    return p.startsWith(templatePrefix) && p.endsWith("/theme.json");
+    return p.endsWith("theme.json") && !p.includes("__MACOSX");
   });
 
   if (!themeEntry) {
@@ -44,10 +46,11 @@ async function processZip(zipFile) {
   const themeJson = JSON.parse(themeEntry.getData().toString("utf-8"));
   const slug = themeJson.slug;
 
-  // Derive the zip folder name (e.g., OHMT018-burger-EN)
+  // Derive the zip folder name (e.g. "fashion" in "fashion/theme.json" or "" if root)
   const themeEntryPath = themeEntry.entryName.replace(/\\/g, "/");
-  const zipFolderName = themeEntryPath.split("/")[4];
-  const zipFolderPrefix = `${templatePrefix}${zipFolderName}/`;
+  const pathParts = themeEntryPath.split("/");
+  const zipFolderName = pathParts[0]; 
+  const zipFolderPrefix = `${zipFolderName}/`;
 
   let fileCount = 0;
 
@@ -65,6 +68,7 @@ async function processZip(zipFile) {
     } else if (lang === "en" && entryPath.startsWith(`public/templates/${slug}/`)) {
       targetPath = path.join(PROJECT_DIR, entryPath);
     } else {
+      // Fallback: If it doesn't start with zipFolderPrefix but we want it
       continue;
     }
 
@@ -73,7 +77,12 @@ async function processZip(zipFile) {
     fileCount++;
   }
 
-  // Supabase upsert
+  // Supabase upsert (Bypassed if credentials are missing)
+  if (!SUPABASE_URL || !SUPABASE_KEY) {
+    console.log(`  ✓ 로컬 파일 추출 완료 (${fileCount}개 파일) — ${slug} [${lang}] (DB 연동 스킵)`);
+    return;
+  }
+
   const name = lang === "ko" ? (themeJson.name_ko ?? themeJson.name) : themeJson.name;
   const description = lang === "ko" ? (themeJson.description_ko ?? themeJson.description) : themeJson.description;
 

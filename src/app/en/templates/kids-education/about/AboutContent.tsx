@@ -5,7 +5,7 @@ import Link from "next/link";
 import { teachers } from "../data/data";
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
-const basePath = "/en/templates/OHMT024-kids-education-EN";
+const basePath = "/en/templates/OHMT024-kids-education";
 
 const stats = [
   { value: "8+", label: "Years of Excellence" },

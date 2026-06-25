@@ -1,4 +1,4 @@
-﻿// src/app/templates/magazine/-components/sections/LatestStories.tsx
+﻿// src/app/templates/OHMT012-magazine/-components/sections/LatestStories.tsx
 "use client";
 
 import React from "react";
@@ -10,14 +10,14 @@ const stories = [
     tag: "사진",
     title: "빛과 그림자: 런던의 브루탈리즘 심장을 포착하다.",
     desc: "도시의 가장 논쟁이 많은 콘크리트 건축물들을 통한 사진 여행.",
-    img: '/templates/magazine/mag-8.jpg'
+    img: '/templates/OHMT012-magazine/mag-8.jpg'
   },
   {
     slug: "hidden-teahouses-kyoto",
     tag: "여행",
     title: "교토 외곽의 숨겨진 찻집들.",
     desc: "관광객들이 찾지 못하는 전통과 고요함을 발견하다.",
-    img: '/templates/magazine/mag-9.jpg'
+    img: '/templates/OHMT012-magazine/mag-9.jpg'
   }
 ];
 
@@ -44,7 +44,7 @@ export const LatestStories = () => {
                 <div>
                   <span className="text-[0.875rem] font-bold uppercase tracking-tight text-[var(--theme-accent)] mb-2 block">{story.tag}</span>
                   <h3 className="font-[family-name:var(--theme-font-heading)] text-[1rem] font-normal leading-[1.4] mb-2 tracking-[-0.02em]">
-                    <Link href={`/ko/templates/OHMT012-magazine-KO/article/${story.slug}`} className="hover:text-[var(--theme-accent)] transition-colors">{story.title}</Link>
+                    <Link href={`/ko/templates/OHMT012-magazine/article/${story.slug}`} className="hover:text-[var(--theme-accent)] transition-colors">{story.title}</Link>
                   </h3>
                   <p className="text-[0.8rem] text-[var(--theme-text-muted)] leading-[1.6] font-normal">
                     {story.desc}
@@ -69,7 +69,7 @@ export const LatestStories = () => {
                     0{n}
                   </span>
                   <h5 className="font-[family-name:var(--theme-font-heading)] text-[0.9rem] leading-[1.4] self-center tracking-[-0.02em]">
-                    <Link href={`/ko/templates/OHMT012-magazine-KO/article/${slug}`} className="hover:text-[var(--theme-accent)] transition-colors">
+                    <Link href={`/ko/templates/OHMT012-magazine/article/${slug}`} className="hover:text-[var(--theme-accent)] transition-colors">
                       {mostReadItems[i]}
                     </Link>
                   </h5>

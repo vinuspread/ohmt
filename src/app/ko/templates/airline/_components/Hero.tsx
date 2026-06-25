@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT008-airline-KO/-components/Hero.tsx
+﻿// src/app/ko/templates/OHMT008-airline/-components/Hero.tsx
 "use client";
 
 import React from "react";
@@ -28,7 +28,7 @@ return (
     <section className="relative h-[72vh] min-h-[520px] flex flex-col justify-center overflow-hidden bg-[var(--color-primary)]">
       <img
         className="absolute inset-0 w-full h-full object-cover opacity-50 scale-105"
-        src="/templates/airline/airline-main-hero.png"
+        src="/templates/OHMT008-airline/airline-main-hero.png"
         alt="Airline Hero"
       />
       <div className="absolute inset-0 bg-[linear-gradient(to_bottom,rgba(5,21,46,0.2)_0%,rgba(5,21,46,0.1)_40%,rgba(5,21,46,0.7)_75%,rgba(5,21,46,0.95)_100%)]" />

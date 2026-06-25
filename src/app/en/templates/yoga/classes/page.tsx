@@ -16,7 +16,7 @@ function ClassesContent() {
       <PageHeader
         title="Our Classes"
         subtitle="Discover a practice that resonates with you. From dynamic flows to meditative stillness, we offer a range of classes for every level."
-        image="/templates/yoga/subpage-classes.jpg"
+        image="/templates/OHMT022-yoga/subpage-classes.jpg"
       />
 
       <section className="bg-[var(--color-bg)] border-b border-[var(--color-border)]">
@@ -29,7 +29,7 @@ function ClassesContent() {
             {CLASSES.length} Classes Available
           </h2>
           <Link
-            href="/en/templates/OHMT022-yoga-EN/schedule"
+            href="/en/templates/OHMT022-yoga/schedule"
             className="hidden md:inline-flex items-center gap-2 text-[12px] tracking-[0.2em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] font-medium transition-colors"
             style={{ fontFamily: "var(--font-body)" }}
           >
