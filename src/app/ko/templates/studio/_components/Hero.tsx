@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion, useViewportScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
@@ -92,7 +92,7 @@ export function Hero() {
           whileTap={{ scale: MOTION_CONSTANTS.scales.press }}
         >
           <a
-            href="/ko/templates/studio/contact"
+            href="/ko/templates/OHMT006-studio-KO/contact"
             className="inline-flex items-center justify-center h-[54px] px-12 border border-white/75 rounded-none text-white text-[13px] font-normal tracking-[3px] uppercase hover:bg-white hover:text-black transition-colors duration-200"
           >
             상담 및 문의

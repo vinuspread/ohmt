@@ -269,7 +269,7 @@ const stats = t.aboutPage.stats;
                     {t.aboutPage.splitDesc}
                 </p>
                 <div className="pt-2 md:pt-4">
-                    <Link href={`/en/templates/studio/contact`} className="group inline-flex items-center gap-4 border-b-2 border-black pb-2 text-[13px] font-bold text-black transition-opacity hover:opacity-60 uppercase">
+                    <Link href={`/en/templates/OHMT006-studio-EN/contact`} className="group inline-flex items-center gap-4 border-b-2 border-black pb-2 text-[13px] font-bold text-black transition-opacity hover:opacity-60 uppercase">
                         {t.aboutPage.splitCta} <ArrowUpRight size={14} />
                     </Link>
                 </div>

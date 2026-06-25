@@ -1,9 +1,9 @@
 ﻿export const STUDIO_ROUTES = {
   HOME: '/studio-ko',
-  SERVICES: '/ko/templates/studio/services',
-  PROJECTS: '/ko/templates/studio/projects',
-  CONTACT: '/ko/templates/studio/contact',
-  ABOUT: '/ko/templates/studio/about',
+  SERVICES: '/ko/templates/OHMT006-studio-KO/services',
+  PROJECTS: '/ko/templates/OHMT006-studio-KO/projects',
+  CONTACT: '/ko/templates/OHMT006-studio-KO/contact',
+  ABOUT: '/ko/templates/OHMT006-studio-KO/about',
 } as const;
 
 export const STUDIO_BRAND = {

@@ -6,15 +6,19 @@
   --color-text-secondary: #4A4A4A;
   --color-accent: #B8962E;
   --color-muted: #4A4A4A;
+  --color-text-muted: #4A4A4A;
+  --color-text-contrast: #1C1C1A;
   --color-border: #E2E2E0;
   --color-overlay: rgba(0, 0, 0, 0.05);
 
   /* Dark Background */
   --color-dark-bg: #0D1F3C;
   --color-dark-text: #FFFFFF;
+  --color-bg-secondary: #F5F5F3;
 
   /* Accents */
   --color-primary: #B8962E;
+  --color-secondary: #111111;
   --color-success: #1a8a4a;
   --color-alert: #e87070;
   --color-light-bg: #F5F5F3;

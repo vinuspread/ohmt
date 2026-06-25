@@ -8,7 +8,7 @@ const easeOut = [0.23, 1, 0.32, 1] as const;
 const features = [
   {
     num: "01",
-    image: "/templates/coffee/feature-order.png",
+    image: "/templates/coffee/feature-order.jpg",
     title: "온라인 주문",
     desc: "음료를 고르고, 시간을 설정하고, 기다림 없이 픽업하세요.",
     link: "/ko/templates/OHMT019-coffee-KO/menu",
@@ -16,7 +16,7 @@ const features = [
   },
   {
     num: "02",
-    image: "/templates/coffee/feature-loyalty.png",
+    image: "/templates/coffee/feature-loyalty.jpg",
     title: "리워즈 가입",
     desc: "스탬프를 모아 10번째 커피를 무료로.",
     link: "#",
@@ -24,7 +24,7 @@ const features = [
   },
   {
     num: "03",
-    image: "/templates/coffee/feature-location.png",
+    image: "/templates/coffee/feature-location.jpg",
     title: "카페 찾기",
     desc: "서울 다섯 곳에서 만나보세요.",
     link: "/ko/templates/OHMT019-coffee-KO/locations",

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { Layout, Palette, Lightbulb } from 'lucide-react';

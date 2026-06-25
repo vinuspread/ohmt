@@ -96,7 +96,7 @@ export const ReviewOverlay: React.FC = () => {
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
     >
-      {/* ?ï¿½?ï¿½ Sidebar ?ï¿½?ï¿½ */}
+      {/* ?€?€ Sidebar ?€?€ */}
       <div className={cn(
         "review-sidebar fixed right-0 top-0 h-full w-[360px] bg-[var(--color-primary)]/95 backdrop-blur-3xl border-l border-white/10 shadow-[-20px_0_50px_rgba(0,0,0,0.5)] z-[100010] flex flex-col transition-transform duration-500 ease-out",
         showSidebar ? "translate-x-0" : "translate-x-full"
@@ -189,7 +189,7 @@ export const ReviewOverlay: React.FC = () => {
         </button>
       )}
 
-      {/* ?ï¿½?ï¿½ Annotation Markers ?ï¿½?ï¿½ */}
+      {/* ?€?€ Annotation Markers ?€?€ */}
       {annotations.map((a, idx) => (
         <div 
           key={a.id}
@@ -226,7 +226,7 @@ export const ReviewOverlay: React.FC = () => {
         </div>
       ))}
 
-      {/* ?ï¿½?ï¿½ Selection Rect ?ï¿½?ï¿½ */}
+      {/* ?€?€ Selection Rect ?€?€ */}
       {dragStart && dragCurrent && (
         <div 
           className="absolute border-2 border-dashed border-pink-500 bg-pink-500/10 pointer-events-none rounded-xl"
@@ -239,7 +239,7 @@ export const ReviewOverlay: React.FC = () => {
         />
       )}
 
-      {/* ?ï¿½?ï¿½ Input Modal ?ï¿½?ï¿½ */}
+      {/* ?€?€ Input Modal ?€?€ */}
       {tempPin && (
         <div 
           className="review-modal absolute bg-[var(--color-text-contrast)] p-8 rounded-[2.5rem] shadow-[0_50px_100px_rgba(0,0,0,0.7)] border border-white/10 backdrop-blur-3xl min-w-[380px] z-[100003] animate-in slide-in-from-bottom-5 duration-500"
@@ -265,7 +265,7 @@ export const ReviewOverlay: React.FC = () => {
           <textarea 
             autoFocus
             className="w-full p-5 rounded-2xl border border-white/5 bg-white/5 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-pink-500/50 transition-all h-32 resize-none leading-[1.4]"
-            placeholder="ë§ˆìŠ¤?? ?ï¿½ê¸°???ï¿½ì • ì§€?ï¿½ï¿½? ?ï¿½ê²¨ì£¼ì„¸??.."
+            placeholder="ë§ˆìŠ¤?? ?¬ê¸°???˜ì • ì§€?œë? ?¨ê²¨ì£¼ì„¸??.."
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
           />
@@ -280,7 +280,7 @@ export const ReviewOverlay: React.FC = () => {
         </div>
       )}
 
-      {/* ?ï¿½?ï¿½ Global Styles ?ï¿½?ï¿½ */}
+      {/* ?€?€ Global Styles ?€?€ */}
       <style jsx global>{`
         .custom-scrollbar::-webkit-scrollbar { width: 4px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }

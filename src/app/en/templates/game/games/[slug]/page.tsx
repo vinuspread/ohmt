@@ -5,7 +5,7 @@ import Link from "next/link";
 import Navbar from "../../_components/Navbar";
 import Footer from "../../_components/Footer";
 import Button from "../../_components/ui/Button";
-import { games } from "@/app/en/templates/game/data/data";
+import { games } from "@/app/en/templates/OHMT023-game-EN/data/data";
 import { ArrowLeft, ExternalLink } from "lucide-react";
 
 import { TemplateWrapper } from "../../_components/TemplateWrapper";
@@ -27,7 +27,7 @@ export default function GameDetailPage() {
         <Navbar />
         <main className="flex min-h-screen flex-col items-center justify-center pt-24 pb-24">
           <p className="text-xl text-[var(--color-text-muted)]">Game not found</p>
-          <Link href="/en/templates/game/games" className="mt-4 text-[var(--color-primary)] hover:underline">
+          <Link href="/en/templates/OHMT023-game-EN/games" className="mt-4 text-[var(--color-primary)] hover:underline">
             Back to games
           </Link>
         </main>
@@ -42,7 +42,7 @@ export default function GameDetailPage() {
       <main className="min-h-screen pt-24 pb-24">
         <div className="mx-auto max-w-7xl px-6">
           <Link
-            href="/en/templates/game/games"
+            href="/en/templates/OHMT023-game-EN/games"
             className="mb-8 inline-flex items-center gap-2 text-sm text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)]"
           >
             <ArrowLeft size={16} />

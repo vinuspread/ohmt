@@ -5,23 +5,23 @@ import Link from 'next/link';
 
 export function Footer() {
     const navItems = [
-        { name: '서비스', href: '/ko/templates/studio/services' },
-        { name: '프로젝트', href: '/ko/templates/studio/projects' },
-        { name: '어바웃', href: '/ko/templates/studio/about' },
-        { name: '문의하기', href: '/ko/templates/studio/contact' },
+        { name: '서비스', href: '/ko/templates/OHMT006-studio-KO/services' },
+        { name: '프로젝트', href: '/ko/templates/OHMT006-studio-KO/projects' },
+        { name: '어바웃', href: '/ko/templates/OHMT006-studio-KO/about' },
+        { name: '문의하기', href: '/ko/templates/OHMT006-studio-KO/contact' },
     ];
 
     const connectItems = [
-        { name: 'Instagram', href: '/ko/templates/studio' },
-        { name: 'LinkedIn', href: '/ko/templates/studio' },
-        { name: 'Dribbble', href: '/ko/templates/studio' },
+        { name: 'Instagram', href: '/ko/templates/OHMT006-studio-KO' },
+        { name: 'LinkedIn', href: '/ko/templates/OHMT006-studio-KO' },
+        { name: 'Dribbble', href: '/ko/templates/OHMT006-studio-KO' },
     ];
 
     return (
         <footer className="bg-[var(--color-bg-dark)] text-white px-6 md:px-16 lg:px-24 py-10 md:py-12 border-t border-white/10 relative z-30 font-sans">
             <div className="max-w-[1720px] mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 pb-8 border-b border-white/10">
-                    <Link href="/ko/templates/studio" className="text-[20px] font-black tracking-[-1px] uppercase text-white">
+                    <Link href="/ko/templates/OHMT006-studio-KO" className="text-[20px] font-black tracking-[-1px] uppercase text-white">
                         Oh My Template<span className="font-normal">.</span>
                     </Link>
 

@@ -1,11 +1,10 @@
 {
   "slug": "ir",
-  "name": "IR",
-  "name_ko": "IR",
+  "name": "Corporate IR",
+  "name_ko": "기업 IR",
   "category": "corporate",
-  "description": "Investor relations and financial reporting template",
-  "description_ko": "투자자 관계 및 재무 보고 템플릿",
-  "tags": [],
+  "description": "A professional investor relations template with financial data, governance, and news sections.",
+  "description_ko": "재무 데이터, 지배구조, 뉴스 섹션을 갖춘 전문 기업 IR 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {

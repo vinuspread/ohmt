@@ -1,6 +1,7 @@
 /* studio Design Tokens */
 :root {
   --color-primary: #1A1A1A;
+  --color-secondary: #18181B;
   --color-accent: #1A1A1A;
   --color-accent-light: #3A3A3A;
   --color-bg: #FFFFFF;
@@ -8,6 +9,7 @@
   --color-bg-dark: #18181B;
   --color-text: #1A1A1A;
   --color-text-muted: #6E7488;
+  --color-text-contrast: #1C1C1A;
   --color-border: rgba(0,0,0,0.05);
   --color-border-light: rgba(0,0,0,0.08);
 

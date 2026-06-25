@@ -1,0 +1,56 @@
+{
+  "slug": "architecture",
+  "name": "Architecture Portfolio",
+  "name_ko": "건축 포트폴리오",
+  "category": "creative",
+  "description": "A sophisticated architecture portfolio template with editorial typography and immersive visual storytelling.",
+  "description_ko": "에디토리얼 타이포그래피와 몰입감 있는 시각적 스토리텔링을 특징으로 하는 정교한 건축 포트폴리오 템플릿.",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#B07D4F",
+      "secondary": "#1A1A1A",
+      "accent": "#888888",
+      "text": {
+        "main": "#1A1A1A",
+        "muted": "#888888",
+        "contrast": "#FFFFFF"
+      },
+      "ui": {
+        "border": "#E0E0E0",
+        "hover": "#F5F5F5",
+        "shadow": "0 20px 50px rgba(26,26,26,0.05)"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "'Cormorant Garamond', serif",
+        "weight": "400",
+        "tracking": "normal",
+        "style": "font-normal"
+      },
+      "body": {
+        "font": "'Inter', sans-serif",
+        "weight": "400",
+        "leading": "1.6",
+        "style": "leading-relaxed"
+      }
+    },
+    "spacing": {
+      "page_pt": "128px",
+      "container": "1440px",
+      "gutter": "40px",
+      "card_gap": "32px"
+    },
+    "motion": {
+      "transition_fast": "150ms",
+      "transition_normal": "300ms",
+      "transition_slow": "600ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+    },
+    "interaction": {
+      "button": "bg-[#1A1A1A] text-white hover:bg-[#333333]",
+      "card_hover": "hover:scale-[1.02] transition-transform duration-500 ease-out"
+    }
+  }
+}

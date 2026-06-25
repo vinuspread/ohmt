@@ -29,10 +29,10 @@ export function Header() {
     }, [menuOpen]);
 
     const navItems = [
-        { name: '서비스', href: '/ko/templates/studio/services' },
-        { name: '프로젝트', href: '/ko/templates/studio/projects' },
-        { name: '문의하기', href: '/ko/templates/studio/contact' },
-        { name: '어바웃', href: '/ko/templates/studio/about' },
+        { name: '서비스', href: '/ko/templates/OHMT006-studio-KO/services' },
+        { name: '프로젝트', href: '/ko/templates/OHMT006-studio-KO/projects' },
+        { name: '문의하기', href: '/ko/templates/OHMT006-studio-KO/contact' },
+        { name: '어바웃', href: '/ko/templates/OHMT006-studio-KO/about' },
     ];
 
     const isMainPage = /^\/(en|ko)?\/?templates\/studio\/?$/.test(pathname);
@@ -45,7 +45,7 @@ export function Header() {
              }`}>
                 {/* Logo */}
                 <Link
-                    href="/ko/templates/studio"
+                    href="/ko/templates/OHMT006-studio-KO"
                     className={`text-[18px] md:text-[20px] font-black tracking-[-0.5px] uppercase transition-colors duration-500 ${isLight ? 'text-black' : 'text-white'}`}
                 >
                     Oh My Template<span className="font-normal">.</span>
@@ -65,7 +65,7 @@ export function Header() {
                         ))}
                     </div>
                     <Link
-                        href="/ko/templates/studio/contact"
+                        href="/ko/templates/OHMT006-studio-KO/contact"
                         className={`h-[40px] px-8 rounded-full border text-[13px] font-bold tracking-[2.5px] uppercase transition-all duration-500 flex items-center justify-center ${
                             isLight ? 'border-black/15 text-black hover:bg-black hover:text-white' : 'border-white/30 text-white bg-white/10 hover:bg-white hover:text-black'
                         }`}
@@ -108,7 +108,7 @@ export function Header() {
                 </div>
                 <div className="px-8 pb-12">
                     <Link
-                        href="/ko/templates/studio/contact"
+                        href="/ko/templates/OHMT006-studio-KO/contact"
                         onClick={() => setMenuOpen(false)}
                         className="inline-flex items-center justify-center w-full h-[52px] rounded-full border border-white/30 text-white text-[13px] font-bold tracking-[2px] uppercase hover:bg-white hover:text-black transition-all duration-500"
                     >

@@ -98,7 +98,7 @@ export function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle:
       </nav>
 
       <div className={`border-t border-[var(--color-border)] flex items-center ${collapsed ? 'justify-center p-2' : 'gap-3 p-4'}`}>
-        <Avatar name="Morgan Chen" src="/templates/OHMT007-portfolio/portfolio-1.jpg" size="sm" />
+        <Avatar name="Morgan Chen" src="/templates/portfolio/portfolio-1.jpg" size="sm" />
         {!collapsed && (
           <div className="min-w-0">
             <p className="text-sm font-medium text-[var(--color-text)] truncate">Morgan Chen</p>

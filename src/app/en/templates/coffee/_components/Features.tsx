@@ -60,7 +60,7 @@ export const Features = () => {
           >
             <div className="w-full aspect-[4/3] overflow-hidden">
               <img
-                src="/templates/coffee/alt-detail.png"
+                src="/templates/coffee/alt-detail.jpg"
                 alt="Coffee shop detail"
                 className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out"
               />

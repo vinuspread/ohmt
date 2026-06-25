@@ -1,0 +1,16 @@
+/* architecture/theme.css */
+
+:root {
+  --color-primary: #B07D4F;
+  --color-secondary: #1A1A1A;
+  --color-accent: #888888;
+  --color-bg: #FFFFFF;
+  --color-bg-secondary: #F5F5F5;
+  --color-text: #1A1A1A;
+  --color-text-muted: #888888;
+  --color-text-contrast: #FFFFFF;
+  --color-border: #E0E0E0;
+
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Inter', sans-serif;
+}

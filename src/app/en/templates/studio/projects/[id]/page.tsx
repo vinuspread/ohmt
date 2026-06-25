@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import React, { use } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,7 +7,7 @@ import { Footer } from '../../_components/Footer';
 import { PageHeader } from '../../_components/PageHeader';
 import { ArrowRight } from 'lucide-react';
 import theme from '../../theme.json';
-import { TemplateWrapper } from "../../_components/TemplateWrapper";
+import { TemplateWrapper } from '../../_components/TemplateWrapper';
 
 const projectsData = [
   {
@@ -66,7 +66,7 @@ export default function ProjectDetailPage({
           <Header />
           <div className="max-w-[1720px] mx-auto px-6 md:px-16 lg:px-24 py-48 text-center">
             <h1 className="text-4xl font-bold">Project not found</h1>
-            <Link href="/en/templates/studio/projects" className="text-blue-600 hover:underline mt-6 inline-block">
+            <Link href="/en/templates/OHMT006-studio-EN/projects" className="text-blue-600 hover:underline mt-6 inline-block">
               Back to projects
             </Link>
           </div>
@@ -219,7 +219,7 @@ export default function ProjectDetailPage({
               {relatedProjects.map((relProject) => (
                 <Link
                   key={relProject.id}
-                  href={`/en/templates/studio/projects/${relProject.id}`}
+                  href={`/en/templates/OHMT006-studio-EN/projects/${relProject.id}`}
                   className="group"
                 >
                   <div className="relative w-full h-[350px] overflow-hidden mb-6">
@@ -255,7 +255,7 @@ export default function ProjectDetailPage({
               Let's discuss your project and how we can create something exceptional together.
             </p>
             <Link
-              href="/en/templates/studio/contact"
+              href="/en/templates/OHMT006-studio-EN/contact"
               className="inline-flex items-center justify-center h-[54px] px-12 border border-white rounded-none text-white text-[13px] font-bold tracking-[3px] uppercase hover:bg-white hover:text-black transition-colors duration-300"
             >
               Get in Touch

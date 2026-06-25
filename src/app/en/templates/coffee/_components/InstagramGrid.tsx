@@ -5,12 +5,12 @@ import { motion } from "motion/react";
 const easeOut = [0.23, 1, 0.32, 1] as const;
 
 const instagramImages = [
-  "/templates/coffee/instagram-01.png",
-  "/templates/coffee/instagram-02.png",
-  "/templates/coffee/instagram-03.png",
-  "/templates/coffee/instagram-04.png",
-  "/templates/coffee/instagram-05.png",
-  "/templates/coffee/instagram-06.png",
+  "/templates/coffee/instagram-01.jpg",
+  "/templates/coffee/instagram-02.jpg",
+  "/templates/coffee/instagram-03.jpg",
+  "/templates/coffee/instagram-04.jpg",
+  "/templates/coffee/instagram-05.jpg",
+  "/templates/coffee/instagram-06.jpg",
 ];
 
 export const InstagramGrid = () => {

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Game Studio - Oh My Template",
     description: "Premium game studio & development showcase",
-    url: "https://ohmytemplate.com/en/templates/game",
+    url: "https://ohmytemplate.com/en/templates/OHMT023-game-EN",
     siteName: "Oh My Template",
     images: [{ url: "/templates/game/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/game",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/game" },
+    canonical: "https://ohmytemplate.com/en/templates/OHMT023-game-EN",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT023-game-KO" },
   },
 };
 

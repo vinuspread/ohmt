@@ -1,4 +1,4 @@
-// src/app/templates/OHMT009-car/page.tsx
+﻿// src/app/templates/car/page.tsx
 "use client";
 
 import React from "react";
@@ -68,21 +68,21 @@ return (
           eyebrow={t.tech.badge}
           title={t.tech.title}
           desc={t.tech.desc}
-          img="/templates/OHMT009-car/car-5.jpg"
+          img="/templates/car/car-5.jpg"
         />
         
         <FullBleedSection 
           eyebrow={t.battery.badge}
           title={t.battery.title}
           desc={t.battery.desc}
-          img="/templates/OHMT009-car/hero-1.jpg"
+          img="/templates/car/hero-1.jpg"
         />
         
         <SplitSection 
           eyebrow={t.charge.badge}
           title={t.charge.title}
           desc={t.charge.desc}
-          img="/templates/OHMT009-car/hero-2.jpg"
+          img="/templates/car/hero-2.jpg"
           reverse
         />
         
@@ -92,7 +92,7 @@ return (
           eyebrow={t.interior.badge}
           title={t.interior.title}
           desc={t.interior.desc}
-          img="/templates/OHMT009-car/car-3.jpg"
+          img="/templates/car/car-3.jpg"
         />
         
         <Testimonials />

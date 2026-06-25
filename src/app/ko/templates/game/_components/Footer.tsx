@@ -1,11 +1,11 @@
 ﻿import Link from "next/link";
-import { games } from "@/app/ko/templates/game/data/data";
+import { games } from "@/app/ko/templates/OHMT023-game-KO/data/data";
 
 const companyLinks = [
-  { href: "/ko/templates/game/about", label: "소개" },
-  { href: "/ko/templates/game/news", label: "소식" },
-  { href: "/ko/templates/game/careers", label: "채용" },
-  { href: "/ko/templates/game/games", label: "게임" },
+  { href: "/ko/templates/OHMT023-game-KO/about", label: "소개" },
+  { href: "/ko/templates/OHMT023-game-KO/news", label: "소식" },
+  { href: "/ko/templates/OHMT023-game-KO/careers", label: "채용" },
+  { href: "/ko/templates/OHMT023-game-KO/games", label: "게임" },
 ];
 
 export default function Footer() {
@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-1">
             <Link
-              href="/ko/templates/game"
+              href="/ko/templates/OHMT023-game-KO"
               className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)] bg-clip-text text-xl font-bold text-transparent font-[var(--font-heading)]"
             >
               Oh My Template
@@ -33,7 +33,7 @@ export default function Footer() {
               {games.map((game) => (
                 <li key={game.id}>
                   <Link
-                    href={`/ko/templates/game/games/${game.id}`}
+                    href={`/ko/templates/OHMT023-game-KO/games/${game.id}`}
                     className="text-sm text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)]"
                   >
                     {game.title}

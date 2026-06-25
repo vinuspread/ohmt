@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Car Concept - Oh My Template",
     description: "Premium automotive concept showcase",
-    url: "https://ohmytemplate.com/en/templates/OHMT017-car-en",
+    url: "https://ohmytemplate.com/en/templates/OHMT009-car-EN",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/OHMT009-car/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/car/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Car Concept - Oh My Template",
     description: "Premium automotive concept showcase",
-    images: ["/templates/OHMT009-car/og-image.jpg"],
+    images: ["/templates/car/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT017-car-en",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT018-car-kr" },
+    canonical: "https://ohmytemplate.com/en/templates/OHMT009-car-EN",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT009-car-KO" },
   },
 };
 

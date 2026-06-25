@@ -62,12 +62,12 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1], delay: 0.45 }}
           className="mt-10 flex items-center justify-center gap-4"
         >
-          <Link href="/en/templates/game/games">
+          <Link href="/en/templates/OHMT023-game-EN/games">
             <Button variant="primary" className="text-base px-8 py-4">
               Explore Games
             </Button>
           </Link>
-          <Link href="/en/templates/game/careers">
+          <Link href="/en/templates/OHMT023-game-EN/careers">
             <Button variant="outline" className="text-base px-8 py-4">
               Join Our Team
             </Button>

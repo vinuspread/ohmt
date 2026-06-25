@@ -20,8 +20,8 @@ const models: Record<string, {
     name: "EV9", type: "All-Electric SUV",
     tagline: "Seven seats. 530km. The family car reimagined.",
     range: "530km", power: "402hp", acceleration: "5.3s", topSpeed: "210km/h",
-    price: "$79,900", heroImg: "/templates/OHMT009-car/hero-1.jpg",
-    sideImg: "/templates/OHMT009-car/car-1.jpg", interiorImg: "/templates/OHMT009-car/car-4.jpg",
+    price: "$79,900", heroImg: "/templates/car/hero-1.jpg",
+    sideImg: "/templates/car/car-1.jpg", interiorImg: "/templates/car/car-4.jpg",
     color: "#1a3a5c",
     highlights: [
       { label: "Range (WLTP)", value: "530 km" },
@@ -41,8 +41,8 @@ const models: Record<string, {
     name: "GT7", type: "Performance Sedan",
     tagline: "615hp. Four doors. Zero compromise.",
     range: "480km", power: "615hp", acceleration: "3.8s", topSpeed: "260km/h",
-    price: "$89,400", heroImg: "/templates/OHMT009-car/hero-2.jpg",
-    sideImg: "/templates/OHMT009-car/car-5.jpg", interiorImg: "/templates/OHMT009-car/car-3.jpg",
+    price: "$89,400", heroImg: "/templates/car/hero-2.jpg",
+    sideImg: "/templates/car/car-5.jpg", interiorImg: "/templates/car/car-3.jpg",
     color: "var(--color-bg-secondary)",
     highlights: [
       { label: "Range (WLTP)", value: "480 km" },
@@ -62,8 +62,8 @@ const models: Record<string, {
     name: "X5", type: "Luxury SUV",
     tagline: "Presence without compromise.",
     range: "510km", power: "355hp", acceleration: "5.9s", topSpeed: "220km/h",
-    price: "$95,200", heroImg: "/templates/OHMT009-car/hero-3.jpg",
-    sideImg: "/templates/OHMT009-car/car-2.jpg", interiorImg: "/templates/OHMT009-car/car-4.jpg",
+    price: "$95,200", heroImg: "/templates/car/hero-3.jpg",
+    sideImg: "/templates/car/car-2.jpg", interiorImg: "/templates/car/car-4.jpg",
     color: "#2a1a0a",
     highlights: [
       { label: "Range (WLTP)", value: "510 km" },
@@ -83,8 +83,8 @@ const models: Record<string, {
     name: "S3", type: "Compact Executive",
     tagline: "Precision engineering in a sharper package.",
     range: "460km", power: "295hp", acceleration: "5.1s", topSpeed: "230km/h",
-    price: "$64,900", heroImg: "/templates/OHMT009-car/car-1.jpg",
-    sideImg: "/templates/OHMT009-car/hero-1.jpg", interiorImg: "/templates/OHMT009-car/car-3.jpg",
+    price: "$64,900", heroImg: "/templates/car/car-1.jpg",
+    sideImg: "/templates/car/hero-1.jpg", interiorImg: "/templates/car/car-3.jpg",
     color: "#0a1a0a",
     highlights: [
       { label: "Range (WLTP)", value: "460 km" },
@@ -114,7 +114,7 @@ export default function CarModelDetailPage() {
           <Header />
           <div className="flex-1 flex items-center justify-center flex-col gap-6 pt-12 md:pt-24">
             <h1 className="text-2xl font-bold">Model not found</h1>
-            <Link href="/ko/templates/OHMT018-car-kr/models" className="text-[0.75rem] uppercase tracking-[0.14em] text-[var(--theme-accent)] border-b border-[var(--theme-accent)] pb-0.5">← All Models</Link>
+            <Link href="/ko/templates/OHMT009-car-KO/models" className="text-[0.75rem] uppercase tracking-[0.14em] text-[var(--theme-accent)] border-b border-[var(--theme-accent)] pb-0.5">← All Models</Link>
           </div>
         </main>
       </TemplateWrapper>
@@ -137,10 +137,10 @@ export default function CarModelDetailPage() {
             </h1>
             <p className="text-[0.95rem] text-white/60 font-normal max-w-[480px] mb-8">{model.tagline}</p>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link href="/ko/templates/OHMT018-car-kr/configure" className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.16em] px-8 py-3 bg-[var(--theme-accent)] text-black hover:opacity-85 transition-opacity w-fit">
+              <Link href="/ko/templates/OHMT009-car-KO/configure" className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.16em] px-8 py-3 bg-[var(--theme-accent)] text-black hover:opacity-85 transition-opacity w-fit">
                 Configure Your {model.name}
               </Link>
-              <Link href="/ko/templates/OHMT018-car-kr/models" className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.16em] px-8 py-3 border border-white/25 text-white hover:border-white transition-colors w-fit">
+              <Link href="/ko/templates/OHMT009-car-KO/models" className="inline-block text-[0.68rem] font-bold uppercase tracking-[0.16em] px-8 py-3 border border-white/25 text-white hover:border-white transition-colors w-fit">
                 ← All Models
               </Link>
             </div>
@@ -196,10 +196,10 @@ export default function CarModelDetailPage() {
               <p className="text-[2.5rem] font-bold text-white tracking-tight leading-none">{model.price}</p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
-              <Link href="/ko/templates/OHMT018-car-kr/configure" className="text-[0.68rem] font-bold uppercase tracking-[0.16em] px-8 py-3.5 bg-[var(--theme-accent)] text-black hover:opacity-85 transition-opacity">
+              <Link href="/ko/templates/OHMT009-car-KO/configure" className="text-[0.68rem] font-bold uppercase tracking-[0.16em] px-8 py-3.5 bg-[var(--theme-accent)] text-black hover:opacity-85 transition-opacity">
                 Build & Price
               </Link>
-              <Link href="/ko/templates/OHMT018-car-kr" className="text-[0.68rem] font-bold uppercase tracking-[0.16em] px-8 py-3.5 border border-white/25 text-white hover:border-white transition-colors">
+              <Link href="/ko/templates/OHMT009-car-KO" className="text-[0.68rem] font-bold uppercase tracking-[0.16em] px-8 py-3.5 border border-white/25 text-white hover:border-white transition-colors">
                 Book Test Drive
               </Link>
             </div>

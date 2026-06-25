@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { Suspense } from "react";
 import React from "react";
 import { useState } from "react";
@@ -79,7 +79,7 @@ function StudioHomeContent() {
                             playsInline
                             className="w-full h-full object-cover brightness-[0.78] transition-opacity duration-1000"
                         >
-                            <source src="https://pub-10d6d534a06c495c8b45f39cfed47497.r2.dev/studio-hero-bg.mp4" type="video/mp4" />
+                            <source src="/templates/studio/hero-bg.mp4" type="video/mp4" />
                         </video>
                         <div className="absolute inset-0 bg-black/20 pointer-events-none z-10" />
                     </div>
@@ -100,7 +100,7 @@ function StudioHomeContent() {
                             </h1>
                             <div className="pt-2 md:pt-4">
                                 <Link
-                                    href="/ko/templates/studio/contact"
+                                    href="/ko/templates/OHMT006-studio-KO/contact"
                                     className="inline-flex items-center gap-4 border border-white bg-white/10 hover:bg-white hover:text-black text-white px-6 md:px-8 py-3 md:py-4 text-[13px] font-bold backdrop-blur-md transition-all duration-300 rounded-none"
                                 >
                                     {"상담 및 문의"}
@@ -210,14 +210,14 @@ function StudioHomeContent() {
                     <div className="max-w-[1720px] mx-auto px-6 md:px-16 lg:px-24">
                         <div className="flex justify-between items-center pb-8 md:pb-12 border-b border-black/10 mb-10 md:mb-20">
                             <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-black break-keep">{"엄선된 포트폴리오"}</h2>
-                            <Link href="/ko/templates/studio/projects" className="text-[13px] font-bold border-b-2 border-black pb-1 hover:opacity-60 transition-all shrink-0 ml-4 whitespace-nowrap">
+                            <Link href="/ko/templates/OHMT006-studio-KO/projects" className="text-[13px] font-bold border-b-2 border-black pb-1 hover:opacity-60 transition-all shrink-0 ml-4 whitespace-nowrap">
                                 {"전체 보기 [12]"}
                             </Link>
                         </div>
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-20">
                             {featuredProjects.map((project, idx) => (
                                 <Link
-                                    href={`/ko/templates/studio/projects/${project.id}`}
+                                    href={`/ko/templates/OHMT006-studio-KO/projects/${project.id}`}
                                     key={project.id}
                                     className={`group block lg:col-span-6 ${idx === 1 ? "lg:mt-24" : ""}`}
                                 >

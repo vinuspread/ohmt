@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React from "react";
 import { Header } from "../_components/Header";
 import { Footer } from "../_components/Footer";
@@ -184,7 +184,7 @@ function StudioServicesPageContent() {
               </div>
             </div>
             <Link
-              href="/en/templates/studio/contact"
+              href="/en/templates/OHMT006-studio-EN/contact"
               className="group shrink-0 flex items-center gap-4 px-8 py-4 border border-white bg-white text-black text-[13px] font-bold uppercase tracking-widest hover:bg-transparent hover:text-white transition-all duration-300"
             >
               Start Project

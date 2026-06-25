@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { Suspense } from "react";
 import React from "react";
 import Link from "next/link";
@@ -81,7 +81,7 @@ function StudioAboutPageContent() {
                     {"입체적인 공간 흐름 설계와 독창적인 조명 디자인, 마감재 솔루션부터 명작 가구 큐레이션 및 패브릭 스타일링까지 공간 창조의 모든 여정을 세심하게 조율합니다. 조명의 각도 하나, 가구의 보이지 않는 모서리에 이르기까지, 디테일을 향한 루미나 스튜디오의 집요한 관심은 개별 요소들이 완벽히 조화를 이뤄 삶의 품격이 온전히 묻어나는 응집력 있는 공간을 탄생시킵니다."}
                 </p>
                 <div className="pt-2 md:pt-4">
-                    <Link href={`/ko/templates/studio/contact`} className="group inline-flex items-center gap-4 border-b-2 border-black pb-2 text-[13px] font-bold text-black transition-opacity hover:opacity-60 uppercase">
+                    <Link href={`/ko/templates/OHMT006-studio-KO/contact`} className="group inline-flex items-center gap-4 border-b-2 border-black pb-2 text-[13px] font-bold text-black transition-opacity hover:opacity-60 uppercase">
                         {"상담 예약하기"} <ArrowUpRight size={14} />
                     </Link>
                 </div>

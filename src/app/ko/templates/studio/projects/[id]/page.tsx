@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 import React, { use } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -7,7 +7,7 @@ import { Footer } from '../../_components/Footer';
 import { PageHeader } from '../../_components/PageHeader';
 import { ArrowRight } from 'lucide-react';
 import theme from '../../theme.json';
-import { TemplateWrapper } from "../../_components/TemplateWrapper";
+import { TemplateWrapper } from '../../_components/TemplateWrapper';
 
 const projectsData = [
   {
@@ -66,7 +66,7 @@ export default function ProjectDetailPage({
           <Header />
           <div className="max-w-[1720px] mx-auto px-6 md:px-16 lg:px-24 py-48 text-center">
             <h1 className="text-4xl font-bold">프로젝트를 찾을 수 없습니다</h1>
-            <Link href="/ko/templates/studio/projects" className="text-blue-600 hover:underline mt-6 inline-block">
+            <Link href="/ko/templates/OHMT006-studio-KO/projects" className="text-blue-600 hover:underline mt-6 inline-block">
               프로젝트로 돌아가기
             </Link>
           </div>
@@ -219,7 +219,7 @@ export default function ProjectDetailPage({
               {relatedProjects.map((relProject) => (
                 <Link
                   key={relProject.id}
-                  href={`/ko/templates/studio/projects/${relProject.id}`}
+                  href={`/ko/templates/OHMT006-studio-KO/projects/${relProject.id}`}
                   className="group"
                 >
                   <div className="relative w-full h-[350px] overflow-hidden mb-6">
@@ -255,7 +255,7 @@ export default function ProjectDetailPage({
               프로젝트에 대해 논의하고 함께 뭔가 특별한 것을 만들어봅시다.
             </p>
             <Link
-              href="/ko/templates/studio/contact"
+              href="/ko/templates/OHMT006-studio-KO/contact"
               className="inline-flex items-center justify-center h-[54px] px-12 border border-white rounded-none text-white text-[13px] font-bold tracking-[3px] uppercase hover:bg-white hover:text-black transition-colors duration-300"
             >
               문의하기

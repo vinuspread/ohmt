@@ -4,7 +4,7 @@ import { useState } from "react";
 import Navbar from "../_components/Navbar";
 import Footer from "../_components/Footer";
 import NewsCard from "../_components/ui/NewsCard";
-import { news } from "@/app/ko/templates/game/data/data";
+import { news } from "@/app/ko/templates/OHMT023-game-KO/data/data";
 
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";

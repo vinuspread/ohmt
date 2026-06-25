@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import React from "react";
 import Link from "next/link";
 import { MoveRight } from "lucide-react";
@@ -19,7 +19,7 @@ interface ProjectListItemProps {
 export function ProjectListItem({ project }: ProjectListItemProps) {
     return (
         <Link
-            href={`/ko/templates/studio/projects/${project.id}`}
+            href={`/ko/templates/OHMT006-studio-KO/projects/${project.id}`}
             className="group grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-10 lg:gap-16 items-center border-b border-black/5 pb-10 md:pb-16 last:border-b-0"
         >
             {/* Left Large High-End Image */}

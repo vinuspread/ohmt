@@ -19,7 +19,7 @@ export const OurStory = () => {
           >
             <div className="aspect-[4/3] rounded-2xl overflow-hidden">
               <motion.img
-                src="/templates/coffee/story-roasting.png"
+                src="/templates/coffee/story-roasting.jpg"
                 alt="Coffee roasting process"
                 className="w-full h-full object-cover"
                 initial={{ scale: 1.08 }}
@@ -58,7 +58,7 @@ export const OurStory = () => {
               transition={{ duration: 0.55, delay: 0.2, ease: easeOut }}
             >
               <img
-                src="/templates/coffee/story-beans.png"
+                src="/templates/coffee/story-beans.jpg"
                 alt="Coffee beans"
                 className="w-full h-full object-cover"
               />

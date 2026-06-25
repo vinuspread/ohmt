@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -50,7 +50,7 @@ export function TeamSection() {
                         <h2 className="text-[30px] md:text-[48px] leading-[1.5] font-semibold tracking-[-1.44px] text-black break-keep [overflow-wrap:normal]">
                             디자인 너머의 주역들.
                         </h2>
-                        <a href="/ko/templates/studio/about" className="h-[40px] px-[24px] border border-black rounded-[100px] flex items-center justify-center text-[12px] font-bold tracking-[2px] uppercase text-black hover:bg-black hover:text-white transition-colors shrink-0">
+                        <a href="/ko/templates/OHMT006-studio-KO/about" className="h-[40px] px-[24px] border border-black rounded-[100px] flex items-center justify-center text-[12px] font-bold tracking-[2px] uppercase text-black hover:bg-black hover:text-white transition-colors shrink-0">
                             소개 더보기
                         </a>
                     </div>

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { MOTION_CONSTANTS } from './motion-constants';
@@ -14,7 +14,7 @@ export function Hero() {
         loop
         playsInline
       >
-        <source src="https://pub-10d6d534a06c495c8b45f39cfed47497.r2.dev/studio-hero-bg.mp4" type="video/mp4" />
+        <source src="/templates/studio/hero-bg.mp4" type="video/mp4" />
       </video>
 
       {/* Main Content Layer */}

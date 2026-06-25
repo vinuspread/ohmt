@@ -1,4 +1,4 @@
-// src/app/templates/ir/page.tsx
+﻿// src/app/templates/ir/page.tsx
 "use client";
 
 import { Suspense } from "react";

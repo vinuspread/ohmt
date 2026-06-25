@@ -9,7 +9,7 @@ export const Hero = () => {
   return (
     <section className="relative w-full h-[68vh] min-h-[480px] flex flex-col items-center justify-center overflow-hidden">
       <motion.img
-        src="/templates/coffee/story-brewing.png"
+        src="/templates/coffee/story-brewing.jpg"
         alt="Coffee being brewed"
         className="absolute inset-0 w-full h-full object-cover"
         initial={{ scale: 1.12, opacity: 0 }}

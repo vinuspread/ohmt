@@ -23,7 +23,7 @@ function MenuPageContent() {
         {/* Hero */}
         <section className="relative bg-[var(--color-bg-dark)] h-[350px] flex items-center overflow-hidden">
           <img
-            src="/templates/coffee/alt-detail.png"
+            src="/templates/coffee/alt-detail.jpg"
             alt="Menu sub visual"
             className="absolute inset-0 w-full h-full object-cover"
           />

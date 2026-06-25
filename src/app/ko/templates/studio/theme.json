@@ -1,11 +1,10 @@
 {
   "slug": "studio",
-  "name": "Studio",
-  "name_ko": "스튜디오",
+  "name": "Studio Corporate",
+  "name_ko": "스튜디오 코퍼레이트",
   "category": "portfolio",
-  "description": "Creative studio and project showcase template",
-  "description_ko": "크리에이티브 스튜디오 및 프로젝트 쇼케이스 템플릿",
-  "tags": [],
+  "description": "Architecture studio portfolio template for design agencies",
+  "description_ko": "디자인 에이전시를 위한 건축 스튜디오 포트폴리오 템플릿",
   "mode": "light",
   "theme": {
     "palette": {
