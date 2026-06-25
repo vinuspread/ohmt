@@ -152,7 +152,7 @@ export async function POST(request: Request) {
         ? (att as { name: string; type: string; data: string })
         : null;
 
-    await resend.emails.send({
+    const emailPayload = {
       from: "Oh My Template <onboarding@resend.dev>",
       to: [
         process.env.NOTIFY_EMAIL!,
@@ -161,9 +161,7 @@ export async function POST(request: Request) {
         "nontext75@gmail.com",
       ],
       subject: `[문의] ${TYPE_LABELS[body.inquiry_type as InquiryType]} - ${customerName.value}`,
-      attachments: validAttachment
-        ? [{ filename: validAttachment.name, content: validAttachment.data }]
-        : undefined,
+      ...(validAttachment ? { attachments: [{ filename: validAttachment.name, content: validAttachment.data }] } : {}),
       html: `
         <div style="font-family:sans-serif;max-width:600px;margin:0 auto;padding:32px 24px">
           <h2 style="font-size:18px;font-weight:700;color:#111827;margin:0 0 24px">새 문의가 접수됐습니다</h2>
@@ -180,7 +178,11 @@ export async function POST(request: Request) {
           </div>
         </div>
       `,
-    }).catch(() => {});
+    };
+
+    await resend.emails.send(emailPayload).catch((err) => {
+      console.error("[Resend] 이메일 발송 실패:", err);
+    });
   }
 
   return NextResponse.json({ success: true, id: data.id });
