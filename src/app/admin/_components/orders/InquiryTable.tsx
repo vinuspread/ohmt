@@ -232,6 +232,25 @@ export function InquiryTable({ data, templates }: { data: Inquiry[]; templates: 
                   {selectedInquiry.message}
                 </p>
               </div>
+
+              {/* 첨부파일 */}
+              {selectedInquiry.attachment_url && (
+                <div>
+                  <p className="text-[0.62rem] uppercase tracking-widest text-zinc-400 font-bold mb-2">첨부파일</p>
+                  <a
+                    href={selectedInquiry.attachment_url}
+                    download={selectedInquiry.attachment_name ?? true}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-2.5 text-sm font-medium text-zinc-700 hover:border-zinc-400 hover:bg-white transition-all"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3M3 17v3a1 1 0 001 1h16a1 1 0 001-1v-3" />
+                    </svg>
+                    {selectedInquiry.attachment_name ?? "첨부파일 다운로드"}
+                  </a>
+                </div>
+              )}
             </div>
           );
         })()}

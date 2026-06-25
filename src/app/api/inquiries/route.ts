@@ -109,6 +109,37 @@ export async function POST(request: Request) {
   }
 
   const supabase = createAdminClient();
+
+  // 첨부파일 Storage 업로드
+  const att = body.attachment;
+  const validAttachment =
+    att && typeof att === "object" && att !== null &&
+    typeof (att as Record<string, unknown>).name === "string" &&
+    typeof (att as Record<string, unknown>).data === "string"
+      ? (att as { name: string; type: string; data: string })
+      : null;
+
+  let attachmentUrl: string | null = null;
+  let attachmentName: string | null = null;
+
+  if (validAttachment) {
+    try {
+      const buffer = Buffer.from(validAttachment.data, "base64");
+      const safeName = validAttachment.name.replace(/[^a-zA-Z0-9._-]/g, "_");
+      const filePath = `${Date.now()}-${safeName}`;
+      const { error: uploadError } = await supabase.storage
+        .from("inquiry-attachments")
+        .upload(filePath, buffer, { contentType: validAttachment.type || "application/octet-stream" });
+      if (!uploadError) {
+        const { data: urlData } = supabase.storage.from("inquiry-attachments").getPublicUrl(filePath);
+        attachmentUrl = urlData.publicUrl;
+        attachmentName = validAttachment.name;
+      }
+    } catch {
+      // 업로드 실패 시 문의 저장은 계속 진행
+    }
+  }
+
   const { data, error } = await supabase
     .from("inquiries")
     .insert({
@@ -122,6 +153,8 @@ export async function POST(request: Request) {
       package_name: packageName.value,
       template_name: templateName.value,
       message: message.value,
+      attachment_url: attachmentUrl,
+      attachment_name: attachmentName,
     })
     .select("id")
     .single();
@@ -145,22 +178,9 @@ export async function POST(request: Request) {
       .map(([label, value]) => `<tr><td style="padding:6px 12px;color:#6b7280;width:120px;vertical-align:top">${label}</td><td style="padding:6px 12px;color:#111827">${value}</td></tr>`)
       .join("");
 
-    const att = body.attachment;
-    const validAttachment =
-      att && typeof att === "object" && att !== null &&
-      typeof (att as Record<string, unknown>).name === "string" &&
-      typeof (att as Record<string, unknown>).data === "string"
-        ? (att as { name: string; type: string; data: string })
-        : null;
-
     const emailPayload = {
       from: "Oh My Template <onboarding@resend.dev>",
-      to: [
-        process.env.NOTIFY_EMAIL!,
-        "nontext@vinus.co.kr",
-        "vinus@vinus.co.kr",
-        "nontext75@gmail.com",
-      ],
+      to: process.env.NOTIFY_EMAIL!,
       subject: `[문의] ${TYPE_LABELS[body.inquiry_type as InquiryType]} - ${customerName.value}`,
       ...(validAttachment ? { attachments: [{ filename: validAttachment.name, content: validAttachment.data }] } : {}),
       html: `

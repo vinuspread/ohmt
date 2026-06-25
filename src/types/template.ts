@@ -73,6 +73,8 @@ export interface Inquiry {
   message: string;
   status: InquiryStatus;
   note: string | null;
+  attachment_url: string | null;
+  attachment_name: string | null;
   created_at: string;
   updated_at: string;
 }
