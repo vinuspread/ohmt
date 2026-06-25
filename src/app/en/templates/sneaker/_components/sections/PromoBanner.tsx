@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { useSearchParams } from "next/navigation";
@@ -170,7 +170,7 @@ return (
     <section className="relative overflow-hidden bg-black text-white py-12 md:py-24">
       <div className="absolute inset-0 z-0">
         <img 
-          src="/templates/OHMT005-sneaker/promo-bg.jpg" 
+          src="/templates/sneaker/promo-bg.jpg" 
           alt="Promo Background" 
           className="w-full h-full object-cover opacity-50 brightness-75"
         />
@@ -190,7 +190,7 @@ return (
             <div className="w-[1px] h-4 bg-white/20 hidden sm:block" />
             <p className="text-[0.85rem] opacity-75">{t.promoBanner.disclaimer}</p>
           </div>
-          <Link href="/en/templates/OHMT005-sneaker/shop-all"
+          <Link href="/en/templates/sneaker/shop-all"
             className="inline-flex items-center gap-3 bg-white text-black text-[0.82rem] font-bold uppercase tracking-[0.08em] px-8 py-4 hover:bg-black/90 transition-colors">
             {t.promoBanner.cta} <ArrowRight size={16} />
           </Link>

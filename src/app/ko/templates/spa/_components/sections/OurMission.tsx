@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
@@ -12,7 +12,7 @@ const items = [
   { title: "함께 진화하다", body: "피부는 계절, 스트레스, 나이에 따라 변합니다. 항상 필요한 것을 받을 수 있도록 플랜을 사전에 조정합니다." },
 ];
 
-const missionImages = ["/templates/OHMT026-spa/mission-01.jpg", "/templates/OHMT026-spa/mission-02.jpg", "/templates/OHMT026-spa/mission-03.jpg"];
+const missionImages = ["/templates/spa/mission-01.jpg", "/templates/spa/mission-02.jpg", "/templates/spa/mission-03.jpg"];
 
 export default function OurMission() {
   const reduce = useReducedMotion();

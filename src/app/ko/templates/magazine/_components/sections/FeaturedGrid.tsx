@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT012-magazine/-components/sections/FeaturedGrid.tsx
+// src/app/templates/magazine/-components/sections/FeaturedGrid.tsx
 "use client";
 
 import React from "react";
@@ -11,8 +11,8 @@ const featuredItems = [
 ];
 
 const subItems = [
-  { slug: "hidden-galleries-berlin-east-side", img: "/templates/OHMT012-magazine/mag-3.jpg", author: "Marta Weber", index: 1 },
-  { slug: "regenerative-agriculture-future", img: "/templates/OHMT012-magazine/mag-4.jpg", author: "Sarah Chen", index: 2 }
+  { slug: "hidden-galleries-berlin-east-side", img: "/templates/magazine/mag-3.jpg", author: "Marta Weber", index: 1 },
+  { slug: "regenerative-agriculture-future", img: "/templates/magazine/mag-4.jpg", author: "Sarah Chen", index: 2 }
 ];
 
 export const FeaturedGrid = () => {
@@ -28,7 +28,7 @@ export const FeaturedGrid = () => {
           <div className="group">
             <div className="overflow-hidden h-[480px] mb-8">
               <img
-                src="/templates/OHMT012-magazine/mag-2.jpg"
+                src="/templates/magazine/mag-2.jpg"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 alt="메인 스토리"
               />
@@ -37,7 +37,7 @@ export const FeaturedGrid = () => {
               {featuredItems[0].tag}
             </span>
             <h2 className="font-[family-name:var(--theme-font-heading)] text-[clamp(1.5rem,2.5vw,2rem)] font-normal leading-[1.3] mb-3 tracking-[-0.02em]">
-              <Link href="/ko/templates/OHMT012-magazine/article/minimalist-architecture-nordic-cities" className="hover:text-[var(--theme-accent)] transition-colors">
+              <Link href="/ko/templates/magazine/article/minimalist-architecture-nordic-cities" className="hover:text-[var(--theme-accent)] transition-colors">
                 {featuredItems[0].title}
               </Link>
             </h2>
@@ -64,7 +64,7 @@ export const FeaturedGrid = () => {
                    {featuredItems[item.index].tag}
                  </span>
                   <h3 className="font-[family-name:var(--theme-font-heading)] text-[1.2rem] font-normal leading-[1.3] mb-2 tracking-[-0.02em]">
-                   <Link href={`/ko/templates/OHMT012-magazine/article/${item.slug}`} className="hover:text-[var(--theme-accent)] transition-colors">
+                   <Link href={`/ko/templates/magazine/article/${item.slug}`} className="hover:text-[var(--theme-accent)] transition-colors">
                      {featuredItems[item.index].title}
                    </Link>
                  </h3>

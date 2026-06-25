@@ -1,4 +1,4 @@
-﻿export const rooms = [
+export const rooms = [
   {
     id: "deluxe",
     name: "디럭스 룸",
@@ -7,7 +7,7 @@
     view: "가든 뷰",
     capacity: "성인 2명",
     amenities: ["킹사이즈 침대", "레인 샤워", "무료 Wi-Fi", "미니 바", "평면 TV"],
-    image: "/templates/OHMT020-hotel/room-deluxe-01.jpg",
+    image: "/templates/hotel/room-deluxe-01.jpg",
     desc: "정성스럽게 제작된 가구와 부드러운 린넨이 조화를 이루는 디럭스 룸은 무성한 정원이 내려다보이는 고요한 휴식처를 제공합니다."
   },
   {
@@ -18,7 +18,7 @@
     view: "오션 뷰",
     capacity: "성인 3명",
     amenities: ["별도 거실", "워크인 클로젯", "자쿠지", "버틀러 서비스", "파노라마 발코니"],
-    image: "/templates/OHMT020-hotel/room-suite-01.jpg",
+    image: "/templates/hotel/room-suite-01.jpg",
     desc: "넓은 거실과 탁 트인 바다 전망의 프라이빗 발코니를 갖춘 특별한 공간입니다."
   },
   {
@@ -29,7 +29,7 @@
     view: "프라이빗 풀 & 가든",
     capacity: "성인 4명",
     amenities: ["프라이빗 풀", "야외 샤워", "가든 테라스", "개인 셰프", "라운지 공간"],
-    image: "/templates/OHMT020-hotel/room-villa-01.jpg",
+    image: "/templates/hotel/room-villa-01.jpg",
     desc: "최고의 럭셔리. 프라이빗 풀과 열대 정원, 맞춤형 버틀러 서비스를 갖춘 독립형 빌라입니다."
   }
 ];
@@ -50,7 +50,7 @@ export const testimonials = [
     location: "서울, 대한민국",
     text: "잊을 수 없는 휴식이었습니다. 웰컴 티부터 턴다운 서비스까지 모든 디테일이 완벽했습니다. 프라이빗 풀 빌라는 기대 이상이었어요.",
     rating: 5,
-    avatar: "/templates/OHMT020-hotel/guest-01.jpg"
+    avatar: "/templates/hotel/guest-01.jpg"
   },
   {
     id: 2,
@@ -58,7 +58,7 @@ export const testimonials = [
     location: "도쿄, 일본",
     text: "건축과 자연의 조화가 숨 막힐 듯 아름답습니다. 현지 허브를 사용한 스파 트리트먼트는 깊은 회복을 선사했습니다.",
     rating: 5,
-    avatar: "/templates/OHMT020-hotel/guest-02.jpg"
+    avatar: "/templates/hotel/guest-02.jpg"
   },
   {
     id: 3,
@@ -66,7 +66,7 @@ export const testimonials = [
     location: "부산, 대한민국",
     text: "도착하는 순간부터 모든 스태프의 서비스가 탁월했습니다. 예약 단계에서부터 선호도를 기억해주는 세심함에 감동했습니다.",
     rating: 5,
-    avatar: "/templates/OHMT020-hotel/guest-03.jpg"
+    avatar: "/templates/hotel/guest-03.jpg"
   },
   {
     id: 4,
@@ -74,6 +74,6 @@ export const testimonials = [
     location: "대구, 대한민국",
     text: "결혼기념일을 이곳에서 보냈는데 정말 마법 같았어요. 별빛 아래서의 프라이빗 다이닝은 평생 간직할 추억이 되었습니다.",
     rating: 5,
-    avatar: "/templates/OHMT020-hotel/guest-03.jpg"
+    avatar: "/templates/hotel/guest-03.jpg"
   }
 ];

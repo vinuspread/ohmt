@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT009-car/-components/layout/Header.tsx
+// src/app/templates/car/-components/layout/Header.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -69,7 +69,7 @@ const NAV_ITEMS = [
         isScrolled || mobileOpen ? "bg-black/95 backdrop-blur-md" : "bg-transparent"
       )}>
         <div className="max-w-[var(--theme-container)] mx-auto px-6 md:px-[var(--theme-gutter)] flex items-center justify-between w-full">
-          <Link href="/en/templates/OHMT009-car" className="text-[0.95rem] font-bold tracking-[0.25em] uppercase text-white">
+          <Link href="/en/templates/car" className="text-[0.95rem] font-bold tracking-[0.25em] uppercase text-white">
             VINUSPREAD<span className="text-[var(--theme-accent)]">.</span>
           </Link>
 
@@ -78,7 +78,7 @@ const NAV_ITEMS = [
             {NAV_ITEMS.map((item) => (
                 <Link
                   key={item.id}
-                  href={`/en/templates/OHMT009-car/${item.id}`}
+                  href={`/en/templates/car/${item.id}`}
                   className="text-[0.72rem] font-medium uppercase tracking-[0.14em] text-[var(--theme-text-muted)] hover:text-white transition-all duration-300 relative group pb-1"
                 >
 
@@ -115,7 +115,7 @@ const NAV_ITEMS = [
           {NAV_ITEMS.map((item) => (
               <Link
                 key={item.id}
-                href={`/en/templates/OHMT009-car/${item.id}`}
+                href={`/en/templates/car/${item.id}`}
                 onClick={() => setMobileOpen(false)}
                 className="text-[0.72rem] font-medium uppercase tracking-[0.14em] text-white/50 hover:text-white py-3.5 border-b border-white/[0.08] transition-colors"
               >

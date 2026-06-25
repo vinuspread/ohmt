@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT001-fashion/category/[id]/page.tsx
+// src/app/ko/templates/fashion/category/[id]/page.tsx
 "use client";
 
 import React, { use } from "react";
@@ -28,18 +28,18 @@ const CATEGORY_DATA: Record<string, {
     description: "구조와 유동성의 만남. 조각적 테일러링, 고밀도 메리노 울, 프로그레시브 실루엣을 위한 현대적 비율에 대한 상세한 탐구.",
     type: "products",
     items: [
-      { id: "1", name: "SCULPTURAL BLAZER V.01", price: "$890.00", img: "/templates/OHMT001-fashion/product-blazer.jpg", tag: "신규 입고" },
-      { id: "2", name: "OVERSIZED TRENCH COAT", price: "$1,240.00", img: "/templates/OHMT001-fashion/trench-coat.png", tag: "한정판" },
-      { id: "3", name: "MONOLITHIC TROUSERS", price: "$420.00", img: "/templates/OHMT001-fashion/product-trousers.jpg", tag: "에센셜" },
-      { id: "4", name: "ARCHIVAL MERINO KNIT", price: "$380.00", img: "/templates/OHMT001-fashion/product-knit.jpg", tag: "신규 입고" },
-      { id: "101", name: "MINIMAL WRAP COAT", price: "$1,450.00", img: "/templates/OHMT001-fashion/apollo-belvedere.png", tag: "단독" },
-      { id: "102", name: "TEXTURED SILK BLOUSE", price: "$320.00", img: "/templates/OHMT001-fashion/silk-dress.png", tag: "뉴 시즌" },
-      { id: "103", name: "RAW SEAM TROUSERS", price: "$390.00", img: "/templates/OHMT001-fashion/product-trousers.jpg", tag: "에센셜" },
-      { id: "104", name: "CLASSIC OVERCOAT", price: "$1,890.00", img: "/templates/OHMT001-fashion/hero-custom.jpg", tag: "리미티드" },
-      { id: "105", name: "DRAPED MAXI DRESS", price: "$650.00", img: "/templates/OHMT001-fashion/silk-dress.png", tag: "신규 입고" },
-      { id: "106", name: "UTILITY CARGO JACKET", price: "$780.00", img: "/templates/OHMT001-fashion/exclusive-custom.jpg", tag: "뉴 시즌" },
-      { id: "107", name: "TAILORED SUIT VEST", price: "$310.00", img: "/templates/OHMT001-fashion/product-blazer.jpg", tag: "에센셜" },
-      { id: "108", name: "HIGH-COLLAR MERINO SWEATER", price: "$450.00", img: "/templates/OHMT001-fashion/product-knit.jpg", tag: "재입고" }
+      { id: "1", name: "SCULPTURAL BLAZER V.01", price: "$890.00", img: "/templates/fashion/product-blazer.jpg", tag: "신규 입고" },
+      { id: "2", name: "OVERSIZED TRENCH COAT", price: "$1,240.00", img: "/templates/fashion/trench-coat.png", tag: "한정판" },
+      { id: "3", name: "MONOLITHIC TROUSERS", price: "$420.00", img: "/templates/fashion/product-trousers.jpg", tag: "에센셜" },
+      { id: "4", name: "ARCHIVAL MERINO KNIT", price: "$380.00", img: "/templates/fashion/product-knit.jpg", tag: "신규 입고" },
+      { id: "101", name: "MINIMAL WRAP COAT", price: "$1,450.00", img: "/templates/fashion/apollo-belvedere.png", tag: "단독" },
+      { id: "102", name: "TEXTURED SILK BLOUSE", price: "$320.00", img: "/templates/fashion/silk-dress.png", tag: "뉴 시즌" },
+      { id: "103", name: "RAW SEAM TROUSERS", price: "$390.00", img: "/templates/fashion/product-trousers.jpg", tag: "에센셜" },
+      { id: "104", name: "CLASSIC OVERCOAT", price: "$1,890.00", img: "/templates/fashion/hero-custom.jpg", tag: "리미티드" },
+      { id: "105", name: "DRAPED MAXI DRESS", price: "$650.00", img: "/templates/fashion/silk-dress.png", tag: "신규 입고" },
+      { id: "106", name: "UTILITY CARGO JACKET", price: "$780.00", img: "/templates/fashion/exclusive-custom.jpg", tag: "뉴 시즌" },
+      { id: "107", name: "TAILORED SUIT VEST", price: "$310.00", img: "/templates/fashion/product-blazer.jpg", tag: "에센셜" },
+      { id: "108", name: "HIGH-COLLAR MERINO SWEATER", price: "$450.00", img: "/templates/fashion/product-knit.jpg", tag: "재입고" }
     ]
   },
   archive: {
@@ -49,18 +49,18 @@ const CATEGORY_DATA: Record<string, {
     description: "과거 카탈로그에서 엄선한 시대를 초월한 실루엣. 현대적 장인정신과 프리미엄 소재로 재탄생하여 오래도록 사랑받는 컬렉션.",
     type: "products",
     items: [
-      { id: "5", name: "CLASSIC LEATHER JACKET", price: "$1,650.00", img: "/templates/OHMT001-fashion/trench-coat.png", tag: "아카이브" },
-      { id: "6", name: "MILITARY WOOL PARKA", price: "$980.00", img: "/templates/OHMT001-fashion/product-blazer.jpg", tag: "재입고" },
-      { id: "7", name: "LUXURY CASHMERE KNIT", price: "$450.00", img: "/templates/OHMT001-fashion/product-knit.jpg", tag: "리미티드" },
-      { id: "8", name: "PREMIUM LEATHER BOOTS", price: "$480.00", img: "/templates/OHMT001-fashion/boots.png", tag: "아카이브" },
-      { id: "201", name: "ARCHIVE SUEDE BOMBER", price: "$1,280.00", img: "/templates/OHMT001-fashion/exclusive-custom.jpg", tag: "아카이브" },
-      { id: "202", name: "WOOL OVERSIZED SCARF", price: "$220.00", img: "/templates/OHMT001-fashion/accessories-2.png", tag: "리미티드" },
-      { id: "203", name: "DOUBLE-BREASTED PEACOAT", price: "$1,150.00", img: "/templates/OHMT001-fashion/exclusive-lifestyle.png", tag: "아카이브" },
-      { id: "204", name: "RIGID SELVEDGE DENIM", price: "$290.00", img: "/templates/OHMT001-fashion/product-trousers.jpg", tag: "에센셜" },
-      { id: "205", name: "ATELIER CHELSEA BOOTS", price: "$590.00", img: "/templates/OHMT001-fashion/leather-jacket-2.png", tag: "재입고" },
-      { id: "206", name: "CORDUROY ATELIER JACKET", price: "$680.00", img: "/templates/OHMT001-fashion/silk-dress.png", tag: "아카이브" },
-      { id: "207", name: "BELTED WAISTCOAT", price: "$340.00", img: "/templates/OHMT001-fashion/basic-tee.png", tag: "에센셜" },
-      { id: "208", name: "CLASSIC SILK SHIRT", price: "$380.00", img: "/templates/OHMT001-fashion/womenswear-banner.png", tag: "리미티드" }
+      { id: "5", name: "CLASSIC LEATHER JACKET", price: "$1,650.00", img: "/templates/fashion/trench-coat.png", tag: "아카이브" },
+      { id: "6", name: "MILITARY WOOL PARKA", price: "$980.00", img: "/templates/fashion/product-blazer.jpg", tag: "재입고" },
+      { id: "7", name: "LUXURY CASHMERE KNIT", price: "$450.00", img: "/templates/fashion/product-knit.jpg", tag: "리미티드" },
+      { id: "8", name: "PREMIUM LEATHER BOOTS", price: "$480.00", img: "/templates/fashion/boots.png", tag: "아카이브" },
+      { id: "201", name: "ARCHIVE SUEDE BOMBER", price: "$1,280.00", img: "/templates/fashion/exclusive-custom.jpg", tag: "아카이브" },
+      { id: "202", name: "WOOL OVERSIZED SCARF", price: "$220.00", img: "/templates/fashion/accessories-2.png", tag: "리미티드" },
+      { id: "203", name: "DOUBLE-BREASTED PEACOAT", price: "$1,150.00", img: "/templates/fashion/exclusive-lifestyle.png", tag: "아카이브" },
+      { id: "204", name: "RIGID SELVEDGE DENIM", price: "$290.00", img: "/templates/fashion/product-trousers.jpg", tag: "에센셜" },
+      { id: "205", name: "ATELIER CHELSEA BOOTS", price: "$590.00", img: "/templates/fashion/leather-jacket-2.png", tag: "재입고" },
+      { id: "206", name: "CORDUROY ATELIER JACKET", price: "$680.00", img: "/templates/fashion/silk-dress.png", tag: "아카이브" },
+      { id: "207", name: "BELTED WAISTCOAT", price: "$340.00", img: "/templates/fashion/basic-tee.png", tag: "에센셜" },
+      { id: "208", name: "CLASSIC SILK SHIRT", price: "$380.00", img: "/templates/fashion/womenswear-banner.png", tag: "리미티드" }
     ]
   },
   journal: {
@@ -76,7 +76,7 @@ const CATEGORY_DATA: Record<string, {
         category: "디자인 대화",
         date: "2026년 5월",
         summary: "활동적인 실루엣, 해부학적 곡선, 그리고 건축적 편안함을 만들어내는 공극의 선 사이의 역동적 상호작용을 탐구합니다.",
-        img: "/templates/OHMT001-fashion/branding-custom.jpg"
+        img: "/templates/fashion/branding-custom.jpg"
       },
       {
         id: "j2",
@@ -84,7 +84,7 @@ const CATEGORY_DATA: Record<string, {
         category: "아틀리에 일기",
         date: "2026년 4월",
         summary: "최신 제로 웨이스트 커팅 알고리즘과 로컬 스튜디오에서의 수작업 마감 심 아키텍처를 상세히 소개하는 기술 워크스루.",
-        img: "/templates/OHMT001-fashion/exclusive-custom.jpg"
+        img: "/templates/fashion/exclusive-custom.jpg"
       },
       {
         id: "j3",
@@ -92,7 +92,7 @@ const CATEGORY_DATA: Record<string, {
         category: "소재 집중",
         date: "2026년 3월",
         summary: "이중 꼬임 소모사와 특수 드라이 피니시가 어떻게 높은 주름 유지력과 움직임 속 영구적 기하학적 강성을 가능하게 하는지.",
-        img: "/templates/OHMT001-fashion/hero-custom.jpg"
+        img: "/templates/fashion/hero-custom.jpg"
       }
     ]
   },
@@ -106,10 +106,10 @@ const CATEGORY_DATA: Record<string, {
 };
 
 const CATEGORY_IMAGES: Record<string, string> = {
-  collection: "/templates/OHMT001-fashion/hero-custom.jpg",
-  archive: "/templates/OHMT001-fashion/exclusive-custom.jpg",
-  journal: "/templates/OHMT001-fashion/branding-custom.jpg",
-  about: "/templates/OHMT001-fashion/hero-custom.jpg"
+  collection: "/templates/fashion/hero-custom.jpg",
+  archive: "/templates/fashion/exclusive-custom.jpg",
+  journal: "/templates/fashion/branding-custom.jpg",
+  about: "/templates/fashion/hero-custom.jpg"
 };
 
 function FashionCategoryPageContent({ params }: { params: Promise<{ id: string }> }) {
@@ -195,7 +195,7 @@ function FashionCategoryPageContent({ params }: { params: Promise<{ id: string }
             {/* Curated Grid - 100% matched with Main Page aesthetics */}
             <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 sm:gap-x-12 gap-y-16 sm:gap-y-32">
               {displayedItems.map((product) => (
-                <Link key={product.id} href={`/ko/templates/OHMT001-fashion/product/${product.id}`} className="group block">
+                <Link key={product.id} href={`/ko/templates/fashion/product/${product.id}`} className="group block">
                   {/* Image Frame with in-frame zoom and minimal tag */}
                   <div className="aspect-square bg-[var(--color-bg-secondary)] overflow-hidden mb-4 sm:mb-8 relative">
                     <span className="absolute top-3 left-3 z-20 text-[8px] font-bold tracking-[0.2em] bg-white text-black px-2.5 py-1 border border-black/10 rounded-[2px]">
@@ -262,7 +262,7 @@ function FashionCategoryPageContent({ params }: { params: Promise<{ id: string }
                   <span className="text-[14px] font-bold tracking-tight text-black/40">{article.category} - {article.date}</span>
                   <h2 className="text-xl md:text-2xl font-bold tracking-tight uppercase leading-snug">{article.title}</h2>
                   <p className="text-[14px] text-black/60 leading-relaxed font-normal tracking-[0.01em]">{article.summary}</p>
-                  <Link href={`/ko/templates/OHMT001-fashion/journal/${article.id}`} className="inline-flex items-center gap-3 text-[14px] font-bold uppercase tracking-[0.3em] mr-[-0.3em] pt-4 group border-b border-black/10 w-fit pb-1 hover:border-black hover:tracking-[0.35em] hover:mr-[-0.35em] transition-[color,letter-spacing,margin] duration-700">
+                  <Link href={`/ko/templates/fashion/journal/${article.id}`} className="inline-flex items-center gap-3 text-[14px] font-bold uppercase tracking-[0.3em] mr-[-0.3em] pt-4 group border-b border-black/10 w-fit pb-1 hover:border-black hover:tracking-[0.35em] hover:mr-[-0.35em] transition-[color,letter-spacing,margin] duration-700">
                     기사 읽기 <ArrowRight size={12} className="group-hover:translate-x-2 transition-transform duration-500" />
                   </Link>
                 </div>
@@ -313,7 +313,7 @@ function FashionCategoryPageContent({ params }: { params: Promise<{ id: string }
                   className="aspect-[4/5] bg-neutral-100 overflow-hidden relative group cursor-pointer"
                 >
                   <img 
-                    src="/templates/OHMT001-fashion/branding-custom.jpg" 
+                    src="/templates/fashion/branding-custom.jpg" 
                     alt="아틀리에 철학" 
                     className="w-full h-full object-cover brightness-95"
                   />

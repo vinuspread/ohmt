@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import Link from "next/link";
@@ -13,7 +13,7 @@ return (
           <Link href="#" className="relative block aspect-[16/10] overflow-hidden group cursor-pointer bg-gray-100">
             <div className="absolute inset-0 z-0">
               <img
-                src="/templates/OHMT001-fashion/womenswear-banner.png"
+                src="/templates/fashion/womenswear-banner.png"
                 alt="WOMENSWEAR"
                 className="w-full h-full object-cover brightness-90 group-hover:scale-105 transition-all duration-[2s] ease-out-quint"
               />
@@ -36,7 +36,7 @@ return (
           <Link href="#" className="relative block aspect-[16/10] overflow-hidden group cursor-pointer bg-gray-100">
             <div className="absolute inset-0 z-0">
               <img
-                src="/templates/OHMT001-fashion/menswear-banner.png"
+                src="/templates/fashion/menswear-banner.png"
                 alt="MENSWEAR"
                 className="w-full h-full object-cover brightness-90 group-hover:scale-105 transition-all duration-[2s] ease-out-quint"
               />

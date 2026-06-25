@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
@@ -23,7 +23,7 @@ export default function AboutFull() {
           <div className="w-full max-w-[1440px] mx-auto lg:grid lg:grid-cols-[55fr_45fr] items-center">
             <div ref={imgRef} className="relative overflow-hidden aspect-[4/5] max-h-[80vh]">
               <motion.img
-                src="/templates/OHMT025-wedding/about-clara.jpg"
+                src="/templates/wedding/about-clara.jpg"
                 alt="클라라, 웨딩 포토그래퍼"
                 className="h-full w-full object-cover object-center"
                 style={{ y: imgY }}
@@ -127,7 +127,7 @@ export default function AboutFull() {
               여러분의 이야기를 들려주세요
             </h2>
             <Link
-              href="/ko/templates/OHMT025-wedding/contact"
+              href="/ko/templates/wedding/contact"
               className="inline-flex items-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-white border-b border-white/40 pb-1 hover:border-white transition-colors duration-200"
             >
               촬영 문의하기

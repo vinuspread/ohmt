@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
@@ -42,7 +42,7 @@ export default function BlogPostFull() {
               className="mt-10"
             >
               <div className="h-80 rounded-2xl overflow-hidden">
-                <img src="/templates/OHMT026-spa/blog-detail-01.jpg" alt={post.title} className="w-full h-full object-cover" />
+                <img src="/templates/spa/blog-detail-01.jpg" alt={post.title} className="w-full h-full object-cover" />
               </div>
             </motion.div>
 
@@ -64,7 +64,7 @@ export default function BlogPostFull() {
               </p>
               <div className="pt-6">
                 <a
-                  href="/en/templates/OHMT026-spa/contact"
+                  href="/en/templates/spa/contact"
                   className="inline-flex items-center rounded-full bg-[var(--color-primary)] text-[var(--color-text-contrast)] px-6 py-2.5 text-sm font-semibold hover:brightness-110 active:scale-[0.97] transition-all duration-150"
                 >
                   Book a consultation
@@ -73,7 +73,7 @@ export default function BlogPostFull() {
             </motion.div>
 
             <div className="mt-16 pt-8 border-t border-[var(--color-border)]">
-              <Link href="/en/templates/OHMT026-spa/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] hover:underline">
+              <Link href="/en/templates/spa/blog" className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] hover:underline">
                 ← Back to blog
               </Link>
             </div>

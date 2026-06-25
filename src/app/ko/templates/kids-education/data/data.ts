@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT024-kids-education/data/data.ts
+// src/app/ko/templates/kids-education/data/data.ts
 
 export interface Highlight {
   emoji: string;
@@ -45,7 +45,7 @@ export const classes: ClassItem[] = [
     category: "IT & 테크",
     age: "6-12세 대상",
     price: "120,000원",
-    image: "/templates/OHMT024-kids-education/class-coding.jpg",
+    image: "/templates/kids-education/class-coding.jpg",
     color: "var(--color-primary)",
     description: "재미있고 직관적인 프로젝트를 통해 소프트웨어 프로그래밍의 세계를 접합니다. 게임, 애니메이션, 앱을 직접 개발하며 자연스럽게 컴퓨팅 사고력과 문제 해결 능력을 기릅니다.",
     schedule: "화 / 목 오후 4:00 - 5:30",
@@ -70,7 +70,7 @@ export const classes: ClassItem[] = [
     category: "미술 & 창작",
     age: "3-8세 대상",
     price: "90,000원",
-    image: "/templates/OHMT024-kids-education/class-art.jpg",
+    image: "/templates/kids-education/class-art.jpg",
     color: "var(--color-accent)",
     description: "아이들이 색깔, 질감, 모형을 자유롭게 경험할 수 있는 예술 놀이터입니다. 매 세션 손과 마음으로 나만의 멋진 예술 작품을 완성합니다.",
     schedule: "월 / 수 오후 3:30 - 5:00",
@@ -95,7 +95,7 @@ export const classes: ClassItem[] = [
     category: "자연 과학",
     age: "5-10세 대상",
     price: "110,000원",
-    image: "/templates/OHMT024-kids-education/hero-kids-science.jpg",
+    image: "/templates/kids-education/hero-kids-science.jpg",
     color: "var(--color-secondary)",
     description: "눈앞에서 펼쳐지는 재미있는 실험을 통해 과학의 기초 원리를 탐색합니다. 화산 폭발부터 슬라임 제작까지, 신비롭고 재미있는 실험이 매주 찾아옵니다.",
     schedule: "수 / 금 오후 4:00 - 5:30",
@@ -120,7 +120,7 @@ export const classes: ClassItem[] = [
     category: "수학 & 논리",
     age: "4-9세 대상",
     price: "95,000원",
-    image: "/templates/OHMT024-kids-education/class-math.jpg",
+    image: "/templates/kids-education/class-math.jpg",
     color: "var(--color-red)",
     description: "다채로운 교구와 수학 퍼즐 게임을 활용하여 수학을 재미있게 정복합니다. 숫자에 관한 자신감을 가지며 논리력을 키울 수 있는 신나는 보드게임 수학 놀이입니다.",
     schedule: "월 / 금 오후 3:30 - 5:00",
@@ -142,9 +142,9 @@ export const classes: ClassItem[] = [
 ];
 
 export const teachers: Teacher[] = [
-  { id: "sarah", name: "김사라", role: "교육 디렉터", image: "/templates/OHMT024-kids-education/teacher-01.png", color: "var(--color-primary)" },
-  { id: "mike", name: "마이크 첸", role: "STEM 교육 총괄", image: "/templates/OHMT024-kids-education/teacher-02.png", color: "var(--color-secondary)" },
-  { id: "emma", name: "엠마 데이비스", role: "미술 수석 강사", image: "/templates/OHMT024-kids-education/teacher-03.png", color: "var(--color-accent)" },
+  { id: "sarah", name: "김사라", role: "교육 디렉터", image: "/templates/kids-education/teacher-01.png", color: "var(--color-primary)" },
+  { id: "mike", name: "마이크 첸", role: "STEM 교육 총괄", image: "/templates/kids-education/teacher-02.png", color: "var(--color-secondary)" },
+  { id: "emma", name: "엠마 데이비스", role: "미술 수석 강사", image: "/templates/kids-education/teacher-03.png", color: "var(--color-accent)" },
 ];
 
 export const homeClasses: ClassItem[] = classes.slice(0, 3);

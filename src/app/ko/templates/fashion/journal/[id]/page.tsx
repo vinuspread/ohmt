@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { use } from "react";
 import Link from "next/link";
 import { Navbar } from "../../_components/Navbar";
@@ -29,7 +29,7 @@ const ARTICLES: Record<string, {
       "우리의 SS26 컬렉션은 이 질문에서 출발했다: 공간이 곧 소재가 될 수 있는가? 재킷의 어깨와 팔 사이의 공기, 코트 헴라인과 바닥 사이의 거리 - 그것들은 설계된 침묵이다.",
       "결과는 입는 것이 아니라 점유하는 것에 가깝다. 각 피스는 착용자 주변의 공간을 재편한다. 당신이 방에 들어설 때, 옷이 먼저 도착한다.",
     ],
-    img: "/templates/OHMT001-fashion/branding-custom.jpg",
+    img: "/templates/fashion/branding-custom.jpg",
   },
   j2: {
     id: "j2",
@@ -43,7 +43,7 @@ const ARTICLES: Record<string, {
       "우리의 커팅 알고리즘은 각 패턴 조각을 퍼즐처럼 맞춘다. 재킷의 칼라 밴드는 트라우저의 벨트 루프가 되고, 소매 거싯은 포켓 라이닝으로 변환된다. 원단 한 장에서 완전한 룩이 나온다.",
       "가장 어려운 것은 솔기였다. 수작업 마감은 느리지만 대체 불가능하다. 기계 바느질이 줄 수 없는 것이 있다 - 장인의 손이 감지하는 원단의 장력, 그 미세한 조정.",
     ],
-    img: "/templates/OHMT001-fashion/exclusive-custom.jpg",
+    img: "/templates/fashion/exclusive-custom.jpg",
   },
   j3: {
     id: "j3",
@@ -57,7 +57,7 @@ const ARTICLES: Record<string, {
       "드라이 피니시는 이 메모리를 강화한다. 표면의 미세한 처리가 섬유 사이의 마찰을 증가시켜, 원단이 공기 중에서 스스로 형태를 유지하게 한다. 이것이 우리가 '조각하는' 이유다 - 재단이 아니라 형태를 부여하는 것이다.",
       "결과는 움직임 속에서도 선이 살아있는 의복이다. 당신이 걸을 때 코트의 헴라인은 흔들리지 않는다. 그것은 건축물처럼 공간 안에 서있다.",
     ],
-    img: "/templates/OHMT001-fashion/hero-custom.jpg",
+    img: "/templates/fashion/hero-custom.jpg",
   },
 };
 
@@ -96,7 +96,7 @@ export default function JournalArticlePage({ params }: { params: Promise<{ id: s
         <div className="max-w-[760px] mx-auto px-8 md:px-6 py-16 md:py-24">
 
           <Link
-            href="/ko/templates/OHMT001-fashion/category/journal"
+            href="/ko/templates/fashion/category/journal"
             className="inline-flex items-center gap-2 text-[12px] text-black/40 uppercase tracking-[0.2em] hover:text-black transition-colors mb-12"
           >
             <ArrowLeft size={13} /> 저널로 돌아가기
@@ -126,7 +126,7 @@ export default function JournalArticlePage({ params }: { params: Promise<{ id: s
           <div className="mt-16 pt-10 border-t border-black/8 flex items-center justify-between">
             <span className="text-[12px] text-black/30 uppercase tracking-[0.2em]">VINUSPREAD - {article.date}</span>
             <Link
-              href="/ko/templates/OHMT001-fashion/category/journal"
+              href="/ko/templates/fashion/category/journal"
               className="text-[12px] text-black/40 uppercase tracking-[0.2em] hover:text-black transition-colors"
             >
               다음 아티클 →

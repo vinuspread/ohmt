@@ -31,7 +31,7 @@ export default function CareersBanner() {
             across engineering, design, art, and production.
           </p>
           <div className="mt-10">
-            <Link href="/en/templates/OHMT023-game/careers">
+            <Link href="/en/templates/game/careers">
               <Button className="text-base px-8 py-4">
                 View Open Positions
                 <ArrowRight size={18} />

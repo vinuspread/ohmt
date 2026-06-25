@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import { Header } from "../_components/Header";
 import { Footer } from "../_components/Footer";
@@ -26,7 +26,7 @@ const services = [
       { step: "03", title: "소재 선정", desc: "조도·소음 차단·촉감 기준에 맞춰 면별 마감재를 엄선합니다." },
       { step: "04", title: "시공 감리", desc: "주요 공정마다 전문가가 직접 현장에 입회하여 엄격하게 시공 품질을 관리합니다." },
     ],
-    image: "/templates/OHMT006-studio/hero-1.jpg",
+    image: "/templates/studio/hero-1.jpg",
   },
   {
     idx: "02",
@@ -45,7 +45,7 @@ const services = [
       { step: "03", title: "조명 시뮬레이션", desc: "빛을 공간의 중요 소재로 다루며, 시간대에 따른 마감 표면의 반사율을 시뮬레이션합니다." },
       { step: "04", title: "설치 관리", desc: "주요 패널 설치 및 마감 공정 시 자재 정렬 기준을 현장에서 직접 감리합니다." },
     ],
-    image: "/templates/OHMT006-studio/hero-2.jpg",
+    image: "/templates/studio/hero-2.jpg",
   },
   {
     idx: "03",
@@ -64,7 +64,7 @@ const services = [
       { step: "03", title: "장인 매칭", desc: "설계된 가구의 디자인 특성과 제작 기법에 가장 최적화된 장인 공방을 연결합니다." },
       { step: "04", title: "미세 조율", desc: "공간에 가구가 안착할 때까지 배치를 밀리미터 단위로 미세 조절합니다." },
     ],
-    image: "/templates/OHMT006-studio/hero-3.jpg",
+    image: "/templates/studio/hero-3.jpg",
   },
   {
     idx: "04",
@@ -83,7 +83,7 @@ const services = [
       { step: "03", title: "이슈 실시간 관리", desc: "현장 오차나 자재 수급 변수를 실시간 리포트로 관리하여 대처합니다." },
       { step: "04", title: "최종 검수 인도", desc: "도면 및 시방서 사양과 최종 준공 상태를 1:1 대조하여 결함을 완벽히 보완한 후 인도합니다." },
     ],
-    image: "/templates/OHMT006-studio/project-1.jpg",
+    image: "/templates/studio/project-1.jpg",
   },
 ];
 
@@ -184,7 +184,7 @@ function StudioServicesPageContent() {
               </div>
             </div>
             <Link
-              href="/ko/templates/OHMT006-studio/contact"
+              href="/ko/templates/studio/contact"
               className="group shrink-0 flex items-center gap-4 px-8 py-4 border border-white bg-white text-black text-[13px] font-bold uppercase tracking-widest hover:bg-transparent hover:text-white transition-all duration-300"
             >
               프로젝트 시작

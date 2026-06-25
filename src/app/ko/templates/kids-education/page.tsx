@@ -1,4 +1,4 @@
-﻿import { TemplateWrapper } from "./_components/TemplateWrapper";
+import { TemplateWrapper } from "./_components/TemplateWrapper";
 import themeData from "./theme.json";
 import Navbar from "./_components/layout/Navbar";
 import Hero from "./_components/sections/Hero";
@@ -14,7 +14,7 @@ const jsonLd = {
   "@type": "Organization",
   "name": "키즈 아카데미 - Oh My Template",
   "description": "놀이로 시작하는 배움. 코딩부터 미술, 과학 실험까지 50가지 이상의 어린이 창의 클래스를 만나보세요.",
-  "url": "https://ohmytemplate.com/ko/templates/OHMT024-kids-education",
+  "url": "https://ohmytemplate.com/ko/templates/kids-education",
 };
 
 export default function KidsEducationPage() {

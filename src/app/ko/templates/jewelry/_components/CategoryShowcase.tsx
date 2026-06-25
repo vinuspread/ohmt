@@ -1,11 +1,11 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 
 const categories = [
-  { name: "Ready-to-Wear", image: "/templates/OHMT002-jewelry/category-rtw.jpg" },
-  { name: "Accessories", image: "/templates/OHMT002-jewelry/category-accessories.jpg" },
-  { name: "Home Collection", image: "/templates/OHMT002-jewelry/category-home.jpg" }
+  { name: "Ready-to-Wear", image: "/templates/jewelry/category-rtw.jpg" },
+  { name: "Accessories", image: "/templates/jewelry/category-accessories.jpg" },
+  { name: "Home Collection", image: "/templates/jewelry/category-home.jpg" }
 ];
 
 export default function CategoryShowcase() {

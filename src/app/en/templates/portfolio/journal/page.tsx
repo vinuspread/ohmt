@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { Suspense } from "react";
 import React from "react";
 import Link from "next/link";
@@ -12,9 +12,9 @@ import { blogPosts } from "@/lib/portfolio-data";
 
 const allPosts = [
   ...blogPosts,
-  { slug: 'ethics-minimalism', title: 'The Ethics of Minimalism in Brand Design', date: 'Mar 24, 2026', category: 'Essay', img: '/templates/OHMT007-portfolio/portfolio-1.jpg' },
-  { slug: 'recapturing-focus', title: 'Recapturing Focus in a Digital World', date: 'Feb 12, 2026', category: 'Insight', img: '/templates/OHMT007-portfolio/portfolio-2.jpg' },
-  { slug: 'radical-honesty', title: '2026 Design Trends: Radical Honesty', date: 'Jan 5, 2026', category: 'Future', img: '/templates/OHMT007-portfolio/portfolio-hero.png' },
+  { slug: 'ethics-minimalism', title: 'The Ethics of Minimalism in Brand Design', date: 'Mar 24, 2026', category: 'Essay', img: '/templates/portfolio/portfolio-1.jpg' },
+  { slug: 'recapturing-focus', title: 'Recapturing Focus in a Digital World', date: 'Feb 12, 2026', category: 'Insight', img: '/templates/portfolio/portfolio-2.jpg' },
+  { slug: 'radical-honesty', title: '2026 Design Trends: Radical Honesty', date: 'Jan 5, 2026', category: 'Future', img: '/templates/portfolio/portfolio-hero.png' },
 ];
 
 function JournalPageContent() {
@@ -34,7 +34,7 @@ function JournalPageContent() {
         {/* Featured (first post) */}
         <section className="py-10 md:py-20 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto px-6">
-            <Link href="/en/templates/OHMT007-portfolio/journal" className="group grid md:grid-cols-2 gap-12 items-center">
+            <Link href="/en/templates/portfolio/journal" className="group grid md:grid-cols-2 gap-12 items-center">
               <div className="aspect-[4/3] overflow-hidden bg-[var(--color-bg-secondary)]">
                 <img loading="lazy" src={allPosts[0].img} alt={allPosts[0].title}
                   className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300 group-hover:scale-105" />
@@ -66,7 +66,7 @@ function JournalPageContent() {
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.06 }}
               >
-                <Link href="/en/templates/OHMT007-portfolio/journal"
+                <Link href="/en/templates/portfolio/journal"
                   className="group grid md:grid-cols-12 py-10 border-b border-[var(--color-border)] items-center hover:bg-[var(--color-bg-secondary)] transition-colors px-2 gap-6">
                   <div className="md:col-span-2 text-[13px] font-bold tracking-widest text-[var(--color-text-muted)] uppercase">{post.date}</div>
                   <div className="md:col-span-7">

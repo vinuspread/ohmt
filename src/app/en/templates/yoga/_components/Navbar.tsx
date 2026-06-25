@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
@@ -10,7 +10,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
-  const isHome = pathname === "/en/templates/OHMT022-yoga";
+  const isHome = pathname === "/en/templates/yoga";
   const isVisible = !isHome || scrolled;
 
   useEffect(() => {
@@ -29,7 +29,7 @@ export default function Navbar() {
     >
       <nav className="px-8 md:px-14 lg:px-20 flex items-center justify-between h-16 md:h-[76px]">
         <Link
-          href="/en/templates/OHMT022-yoga"
+          href="/en/templates/yoga"
           className={`text-[15px] tracking-[0.12em] uppercase font-medium transition-colors duration-300 ${
             isVisible ? "text-[var(--color-text)]" : "text-white/90"
           }`}

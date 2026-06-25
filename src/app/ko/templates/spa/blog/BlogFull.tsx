@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion, useReducedMotion } from "framer-motion";
 import Navbar from "../_components/layout/Navbar";
@@ -26,7 +26,7 @@ export default function BlogFull() {
           <div className="mx-auto max-w-7xl px-6">
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {blogPosts.map((post, i) => (
-                <motion.a key={post.id} href={`/ko/templates/OHMT026-spa/blog/${post.id}`} initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, delay: i * 0.08, ease: EASE_OUT }} className="group rounded-2xl overflow-hidden bg-[var(--color-bg-secondary)] border border-[var(--color-border)] hover:-translate-y-1 transition-all duration-300">
+                <motion.a key={post.id} href={`/ko/templates/spa/blog/${post.id}`} initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, delay: i * 0.08, ease: EASE_OUT }} className="group rounded-2xl overflow-hidden bg-[var(--color-bg-secondary)] border border-[var(--color-border)] hover:-translate-y-1 transition-all duration-300">
                   <div className="h-56 overflow-hidden"><img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /></div>
                   <div className="p-6">
                     <div className="flex items-center gap-3 text-[0.65rem] font-bold uppercase tracking-[0.15em] text-[var(--color-text-muted)]"><span>{post.category}</span><span>{post.date}</span></div>

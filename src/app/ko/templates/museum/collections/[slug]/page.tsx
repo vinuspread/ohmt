@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { use } from "react";
 import { collections } from "../../data/collections";
@@ -67,7 +67,7 @@ export default function ArtworkDetailPage({ params }: DetailPageProps) {
 
         {/* RIGHT: Sticky Content Section */}
         <div className="w-full md:w-1/2 md:h-screen md:sticky md:top-0 p-6 md:p-12 lg:p-20 flex flex-col justify-center bg-[var(--color-primary)]">
-          <Link href="/ko/templates/OHMT021-museum/collections" className="inline-flex items-center gap-2 text-[13px] uppercase tracking-normal text-white/40 hover:text-white transition-colors mb-8 w-fit">
+          <Link href="/ko/templates/museum/collections" className="inline-flex items-center gap-2 text-[13px] uppercase tracking-normal text-white/40 hover:text-white transition-colors mb-8 w-fit">
             <ArrowLeft size={13} /> Back to Archive
           </Link>
           <motion.div

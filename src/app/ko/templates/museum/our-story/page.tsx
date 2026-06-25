@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { Suspense } from "react";
 import React from "react";
 import Link from "next/link";
@@ -39,9 +39,9 @@ function MuseumInfoContent() {
 ];
   
   const grottoes = [
-    { ...grottoesData[0], img: "/templates/OHMT021-museum/papal-tombs.png" },
-    { ...grottoesData[1], img: "/templates/OHMT021-museum/curator.png" },
-    { ...grottoesData[2], img: "/templates/OHMT021-museum/vatican-hallway.png" },
+    { ...grottoesData[0], img: "/templates/museum/papal-tombs.png" },
+    { ...grottoesData[1], img: "/templates/museum/curator.png" },
+    { ...grottoesData[2], img: "/templates/museum/vatican-hallway.png" },
   ];
 
   return (
@@ -61,7 +61,7 @@ function MuseumInfoContent() {
           className="absolute inset-0"
         >
           <img
-            src="/templates/OHMT021-museum/st-peters-exterior.png"
+            src="/templates/museum/st-peters-exterior.png"
             alt="The Vatican Sanctuary"
             className="w-full h-full object-cover brightness-50"
           />
@@ -107,7 +107,7 @@ function MuseumInfoContent() {
             </p>
           </motion.div>
           <motion.div variants={fadeIn} className="relative aspect-[4/5] overflow-hidden">
-            <img loading="lazy" src="/templates/OHMT021-museum/vatican-hallway.png" alt="Museum Corridor" className="w-full h-full object-cover grayscale-[0.3] hover:scale-105 transition-transform duration-[2s]" />
+            <img loading="lazy" src="/templates/museum/vatican-hallway.png" alt="Museum Corridor" className="w-full h-full object-cover grayscale-[0.3] hover:scale-105 transition-transform duration-[2s]" />
           </motion.div>
         </motion.div>
 
@@ -142,7 +142,7 @@ function MuseumInfoContent() {
 
         <div className="grid md:grid-cols-2 gap-24 items-center mb-40">
           <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 1.2 }} className="aspect-[4/5] overflow-hidden">
-            <img loading="lazy" src="/templates/OHMT021-museum/baldaquin.png" alt="Bernini's Baldaquin" className="w-full h-full object-cover grayscale-[0.2] hover:scale-105 transition-transform duration-[2s]" />
+            <img loading="lazy" src="/templates/museum/baldaquin.png" alt="Bernini's Baldaquin" className="w-full h-full object-cover grayscale-[0.2] hover:scale-105 transition-transform duration-[2s]" />
           </motion.div>
           <div className="space-y-10">
             <span className="text-[13px] uppercase font-bold tracking-[0.5em] text-white/40">{"교황 제단"}</span>
@@ -186,7 +186,7 @@ function MuseumInfoContent() {
           {"아카이브 둘러보기"}
         </h3>
         <Link
-          href="/ko/templates/OHMT021-museum/collections"
+          href="/ko/templates/museum/collections"
           className="inline-flex items-center gap-4 text-xs font-bold uppercase tracking-[0.5em] border border-white/20 px-10 py-6 hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] transition-[color,background] duration-500 group"
         >
           {"소장품 탐색하기"}

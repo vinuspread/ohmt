@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture/_components/sections/Hero.tsx
+// src/app/en/templates/architecture/_components/sections/Hero.tsx
 "use client";
 import React, { useRef, useState } from "react";
 import Image from "next/image";
@@ -17,18 +17,18 @@ export function Hero() {
 
   const slides = [
     {
-      leftImage: "/templates/OHMT027-architecture/hero-1.jpg",
-      rightImage: "/templates/OHMT027-architecture/hero-2.jpg",
+      leftImage: "/templates/architecture/hero-1.jpg",
+      rightImage: "/templates/architecture/hero-2.jpg",
       caption: "HIGHLAND VILLA - SEOUL",
     },
     {
-      leftImage: "/templates/OHMT027-architecture/hero-2.jpg",
-      rightImage: "/templates/OHMT027-architecture/hero-3.jpg",
+      leftImage: "/templates/architecture/hero-2.jpg",
+      rightImage: "/templates/architecture/hero-3.jpg",
       caption: "MERIDIAN COMMERCE CENTER - GANGNAM",
     },
     {
-      leftImage: "/templates/OHMT027-architecture/hero-3.jpg",
-      rightImage: "/templates/OHMT027-architecture/hero-1.jpg",
+      leftImage: "/templates/architecture/hero-3.jpg",
+      rightImage: "/templates/architecture/hero-1.jpg",
       caption: "COASTAL RETREAT - GANGWON",
     },
   ];
@@ -45,7 +45,7 @@ export function Hero() {
           </h1>
           <div className="pb-2">
             <Link
-              href="/en/templates/OHMT027-architecture/projects"
+              href="/en/templates/architecture/projects"
               className="font-sans text-[12px] font-medium tracking-[0.12em] text-[var(--color-text)] uppercase border-b border-[var(--color-text)] pb-1 hover:text-[var(--color-accent)] hover:border-[var(--color-accent)] transition-colors"
             >
               VIEW PROJECTS →

@@ -1,8 +1,8 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 
-const basePath = "/en/templates/OHMT026-spa";
+const basePath = "/en/templates/spa";
 
 export default function ContactForm() {
   const [sent, setSent] = useState(false);

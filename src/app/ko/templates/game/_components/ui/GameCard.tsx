@@ -25,7 +25,7 @@ export default function GameCard({ game }: { game: Game }) {
       transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
     >
       <Link
-        href={`/ko/templates/OHMT023-game/games/${game.id}`}
+        href={`/ko/templates/game/games/${game.id}`}
         className="group block overflow-hidden rounded-2xl bg-[var(--color-bg-secondary)] border border-[var(--color-border)] transition-all duration-500 hover:border-[var(--color-primary)] hover:shadow-[0_0_30px_rgba(124,58,237,0.25)]"
       >
         <div className="relative aspect-[4/5] overflow-hidden">

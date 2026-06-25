@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT011-ir/-components/layout/Header.tsx
+// src/app/templates/ir/-components/layout/Header.tsx
 "use client";
 
 import React from "react";
@@ -6,11 +6,11 @@ import Link from "next/link";
 
 export const Header = () => {
   const navItems = [
-    { label: "개요", href: "/ko/templates/OHMT011-ir" },
-    { label: "재무 정보", href: "/ko/templates/OHMT011-ir/financials" },
-    { label: "기업 지배구조", href: "/ko/templates/OHMT011-ir/governance" },
-    { label: "뉴스", href: "/ko/templates/OHMT011-ir/news" },
-    { label: "문의", href: "/ko/templates/OHMT011-ir/contact" },
+    { label: "개요", href: "/ko/templates/ir" },
+    { label: "재무 정보", href: "/ko/templates/ir/financials" },
+    { label: "기업 지배구조", href: "/ko/templates/ir/governance" },
+    { label: "뉴스", href: "/ko/templates/ir/news" },
+    { label: "문의", href: "/ko/templates/ir/contact" },
   ];
 
   return (
@@ -20,7 +20,7 @@ export const Header = () => {
       </div>
       <nav className="sticky top-0 z-[900] h-16 bg-white border-b border-[var(--color-border)] flex items-center">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 flex items-center justify-between w-full">
-          <Link href="/ko/templates/OHMT011-ir" className="flex flex-col gap-0.5">
+          <Link href="/ko/templates/ir" className="flex flex-col gap-0.5">
             <span className="text-base font-bold text-[var(--color-dark-bg)] tracking-tight leading-none">VINUSPREAD</span>
             <span className="text-[0.58rem] font-medium uppercase tracking-[0.2em] text-[#6B6B6B] leading-none">Global Holdings</span>
           </Link>

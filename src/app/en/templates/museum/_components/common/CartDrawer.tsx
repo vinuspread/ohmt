@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ShoppingBag, ArrowRight } from "lucide-react";
@@ -42,8 +42,8 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
             {/* Content */}
             <div className="flex-1 overflow-y-auto p-8 space-y-8">
               {[
-                { name: "Unicorn Limited Edition", price: "$4,200", img: "/templates/OHMT021-museum/gundam-unicorn.jpg", size: "M" },
-                { name: "Sazabi Executive Piece", price: "$5,850", img: "/templates/OHMT021-museum/gundam-sazabi.jpg", size: "L" },
+                { name: "Unicorn Limited Edition", price: "$4,200", img: "/templates/museum/gundam-unicorn.jpg", size: "M" },
+                { name: "Sazabi Executive Piece", price: "$5,850", img: "/templates/museum/gundam-sazabi.jpg", size: "L" },
               ].map((item, i) => (
                 <div key={i} className="flex gap-6 group">
                   <div className="w-24 aspect-[3/4] bg-luxury-beige overflow-hidden">

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useParams } from "next/navigation";
 import { motion, useReducedMotion } from "framer-motion";
@@ -10,7 +10,7 @@ const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 
 export default function ClassDetailContent() {
   const params = useParams();
-  const basePath = "/en/templates/OHMT024-kids-education";
+  const basePath = "/en/templates/kids-education";
   const shouldReduce = useReducedMotion();
 
   const classItem = useMemo(

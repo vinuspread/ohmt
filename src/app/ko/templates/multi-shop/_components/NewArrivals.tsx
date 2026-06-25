@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
@@ -17,7 +17,7 @@ export const NewArrivals = () => {
         <div className="mb-10 flex items-end justify-between">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">신상품</h2>
           <Link
-            href="/ko/templates/OHMT017-multi-shop/shop"
+            href="/ko/templates/multi-shop/shop"
             className="hidden md:inline-block text-xs uppercase tracking-[0.2em] text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors duration-200 border-b border-[var(--color-text-muted)] pb-0.5"
           >
             전체보기
@@ -40,7 +40,7 @@ export const NewArrivals = () => {
 
         <div className="text-center mt-10 md:hidden">
           <Link
-            href="/ko/templates/OHMT017-multi-shop/shop"
+            href="/ko/templates/multi-shop/shop"
             className="inline-block bg-[var(--color-primary)] text-white px-8 py-3 text-xs uppercase tracking-[0.2em] active:scale-[0.97] transition-transform duration-160 ease-out"
           >
             전체보기

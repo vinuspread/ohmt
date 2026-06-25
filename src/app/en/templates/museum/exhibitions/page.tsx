@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -157,14 +157,14 @@ function SpecialExhibitionsContent() {
 };
 const specialExhibitionsData = t.exhibitionsPage.specialExhibitions;
   const specialExhibitions = [
-    { ...specialExhibitionsData[0], img: "/templates/OHMT021-museum/exhibition-poster-vinci.png" },
-    { ...specialExhibitionsData[1], img: "/templates/OHMT021-museum/exhibition-poster-greek.png" }
+    { ...specialExhibitionsData[0], img: "/templates/museum/exhibition-poster-vinci.png" },
+    { ...specialExhibitionsData[1], img: "/templates/museum/exhibition-poster-greek.png" }
   ];
 
   const permanentGalleriesData = t.exhibitionsPage.permanentGalleries;
   const permanentGalleries = [
-    { ...permanentGalleriesData[0], img: "/templates/OHMT021-museum/hero-bg.png" },
-    { ...permanentGalleriesData[1], img: "/templates/OHMT021-museum/vatican-hallway.png" }
+    { ...permanentGalleriesData[0], img: "/templates/museum/hero-bg.png" },
+    { ...permanentGalleriesData[1], img: "/templates/museum/vatican-hallway.png" }
   ];
 
   return (
@@ -223,7 +223,7 @@ const specialExhibitionsData = t.exhibitionsPage.specialExhibitions;
               </p>
 
               <div className={`pt-6 ${i % 2 === 1 ? 'lg:flex lg:justify-end' : ''}`}>
-                <Link href={`/en/templates/OHMT021-museum/collections`} className="inline-flex items-center gap-3 text-xs font-medium uppercase tracking-normal group/btn px-8 py-3 border border-white/20 hover:bg-white hover:text-black transition-all">
+                <Link href={`/en/templates/museum/collections`} className="inline-flex items-center gap-3 text-xs font-medium uppercase tracking-normal group/btn px-8 py-3 border border-white/20 hover:bg-white hover:text-black transition-all">
                    {t.exhibitionsPage.viewCatalog} <ArrowRight size={13} className="group-hover/btn:translate-x-2 transition-transform" />
                 </Link>
               </div>

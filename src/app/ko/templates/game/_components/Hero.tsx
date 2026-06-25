@@ -10,7 +10,7 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="/templates/OHMT023-game/hero-bg.jpg"
+          src="/templates/game/hero-bg.jpg"
           alt=""
           className="h-full w-full object-cover opacity-40"
         />
@@ -62,12 +62,12 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1], delay: 0.45 }}
           className="mt-10 flex items-center justify-center gap-4"
         >
-          <Link href="/ko/templates/OHMT023-game/games">
+          <Link href="/ko/templates/game/games">
             <Button variant="primary" className="text-base px-8 py-4">
               게임 둘러보기
             </Button>
           </Link>
-          <Link href="/ko/templates/OHMT023-game/careers">
+          <Link href="/ko/templates/game/careers">
             <Button variant="outline" className="text-base px-8 py-4">
               팀 합류하기
             </Button>

@@ -1,12 +1,12 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const team = [
-    { name: 'Jessica Point', role: 'Principle Designer', image: '/templates/OHMT006-studio/team-1.jpg' },
-    { name: 'Ryan Baser', role: 'Furniture Expert', image: '/templates/OHMT006-studio/team-2.jpg' },
-    { name: 'Carrie Vath', role: 'Design Lead', image: '/templates/OHMT006-studio/team-3.jpg' },
+    { name: 'Jessica Point', role: 'Principle Designer', image: '/templates/studio/team-1.jpg' },
+    { name: 'Ryan Baser', role: 'Furniture Expert', image: '/templates/studio/team-2.jpg' },
+    { name: 'Carrie Vath', role: 'Design Lead', image: '/templates/studio/team-3.jpg' },
 ];
 
 const containerVariants = {
@@ -50,7 +50,7 @@ export function TeamSection() {
                         <h2 className="text-[26px] md:text-[48px] leading-[55px] font-semibold tracking-[-1.44px] text-black">
                             Behind the design.
                         </h2>
-                        <a href="/en/templates/OHMT006-studio/about" className="h-[54px] px-[40px] border border-black rounded-[100px] flex items-center justify-center text-[13px] font-bold tracking-[3px] uppercase text-black hover:bg-black hover:text-white transition-colors">
+                        <a href="/en/templates/studio/about" className="h-[54px] px-[40px] border border-black rounded-[100px] flex items-center justify-center text-[13px] font-bold tracking-[3px] uppercase text-black hover:bg-black hover:text-white transition-colors">
                             About Us
                         </a>
                     </div>

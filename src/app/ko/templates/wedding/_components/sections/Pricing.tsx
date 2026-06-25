@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import { packages } from "../../data/data";
@@ -59,7 +59,7 @@ export default function Pricing() {
 
               <div className="mt-8 pt-8">
                 <a
-                  href="/ko/templates/OHMT025-wedding/contact"
+                  href="/ko/templates/wedding/contact"
                   className="w-full inline-flex items-center justify-center border border-[var(--color-primary)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.15em] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-[var(--color-bg)] transition-all duration-300"
                 >
                   이 패키지로 문의하기

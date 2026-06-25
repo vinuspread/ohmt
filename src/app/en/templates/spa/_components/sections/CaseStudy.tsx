@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
@@ -7,9 +7,9 @@ import { caseStudies } from "../../data/data";
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 
 const caseImages: Record<string, string> = {
-  "acne-recovery": "/templates/OHMT026-spa/case-acne-recovery.jpg",
-  "anti-aging": "/templates/OHMT026-spa/case-anti-aging.jpg",
-  "hyperpigmentation": "/templates/OHMT026-spa/case-hyperpigmentation.jpg",
+  "acne-recovery": "/templates/spa/case-acne-recovery.jpg",
+  "anti-aging": "/templates/spa/case-anti-aging.jpg",
+  "hyperpigmentation": "/templates/spa/case-hyperpigmentation.jpg",
 };
 
 export default function CaseStudy() {

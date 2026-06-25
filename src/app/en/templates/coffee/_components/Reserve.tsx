@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import { motion } from "motion/react";
 
@@ -10,7 +10,7 @@ export const Reserve = () => {
 
       {/* Background image */}
       <div className="absolute inset-0">
-        <img src="/templates/OHMT019-coffee/cta-bg.jpg" alt="" className="w-full h-full object-cover" />
+        <img src="/templates/coffee/cta-bg.jpg" alt="" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-[var(--color-bg-dark)]/93" />
       </div>
 

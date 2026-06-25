@@ -1,4 +1,4 @@
-﻿import { Suspense } from "react";
+import { Suspense } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { TemplateWrapper } from "../../_components/TemplateWrapper";
@@ -35,7 +35,7 @@ function ClassDetailContent({ slug }: { slug: string }) {
           {/* Back nav */}
           <div className="px-8 md:px-14 pt-36 md:pt-44 pb-8 border-b border-[var(--color-border)]">
             <Link
-              href="/en/templates/OHMT022-yoga/classes"
+              href="/en/templates/yoga/classes"
               className="text-[11px] tracking-[0.2em] uppercase text-[var(--color-text-muted)] hover:text-[var(--color-text)] font-medium transition-colors"
               style={{ fontFamily: "var(--font-body)" }}
             >
@@ -96,7 +96,7 @@ function ClassDetailContent({ slug }: { slug: string }) {
           {/* Book CTA */}
           <div className="px-8 md:px-14 py-8 border-t border-[var(--color-border)]">
             <Link
-              href="/en/templates/OHMT022-yoga/schedule"
+              href="/en/templates/yoga/schedule"
               className="inline-flex items-center gap-2 text-[12px] tracking-[0.2em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] font-medium transition-colors"
               style={{ fontFamily: "var(--font-body)" }}
             >

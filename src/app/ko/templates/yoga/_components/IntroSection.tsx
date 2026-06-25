@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
 export default function IntroSection() {
   return (
@@ -19,7 +19,7 @@ export default function IntroSection() {
           진정한 웰니스는 내면에서 시작됩니다. 움직임은 최고의 명약이며, 매일의 수련은 균형을 회복하고 자신을 다시 연결하도록 이끌어 줍니다.
         </p>
         <div className="mt-10 pt-8 border-t border-white/10">
-          <Link href="/ko/templates/OHMT022-yoga/about"
+          <Link href="/ko/templates/yoga/about"
             className="inline-flex items-center gap-3 text-[13px] tracking-[0.18em] text-white hover:text-white/70 group transition-colors font-medium"
             style={{ fontFamily: "var(--font-body)" }}>
             스토리 보기
@@ -28,7 +28,7 @@ export default function IntroSection() {
         </div>
       </div>
       <div className="min-h-[60vh] md:min-h-[80vh] bg-cover bg-center"
-           style={{ backgroundImage: "url('/templates/OHMT022-yoga/intro.jpg')" }} />
+           style={{ backgroundImage: "url('/templates/yoga/intro.jpg')" }} />
     </section>
   );
 }

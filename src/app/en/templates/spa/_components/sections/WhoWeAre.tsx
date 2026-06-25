@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion, useReducedMotion, useInView } from "framer-motion";
 import { useRef } from "react";
@@ -42,7 +42,7 @@ export default function WhoWeAre() {
               one-size-fits-all - every treatment is tailored to you.
             </p>
             <a
-              href="/en/templates/OHMT026-spa/about"
+              href="/en/templates/spa/about"
               className="mt-8 inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-text-contrast)] hover:text-[var(--color-primary)] transition-colors duration-200"
             >
               Meet the team

@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT011-ir/-components/layout/Header.tsx
+// src/app/templates/ir/-components/layout/Header.tsx
 "use client";
 
 import React from "react";
@@ -26,11 +26,11 @@ export const Header = () => {
   }
 };
 const navItems = [
-    { label: t.nav.overview, href: "/en/templates/OHMT011-ir" },
-    { label: t.nav.financials, href: "/en/templates/OHMT011-ir/financials" },
-    { label: t.nav.governance, href: "/en/templates/OHMT011-ir/governance" },
-    { label: t.nav.news, href: "/en/templates/OHMT011-ir/news" },
-    { label: t.nav.contact, href: "/en/templates/OHMT011-ir/contact" },
+    { label: t.nav.overview, href: "/en/templates/ir" },
+    { label: t.nav.financials, href: "/en/templates/ir/financials" },
+    { label: t.nav.governance, href: "/en/templates/ir/governance" },
+    { label: t.nav.news, href: "/en/templates/ir/news" },
+    { label: t.nav.contact, href: "/en/templates/ir/contact" },
   ];
 
   return (
@@ -40,7 +40,7 @@ const navItems = [
       </div>
       <nav className="sticky top-0 z-[900] h-16 bg-white border-b border-[var(--color-border)] flex items-center">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 flex items-center justify-between w-full">
-          <Link href="/en/templates/OHMT011-ir" className="flex flex-col gap-0.5">
+          <Link href="/en/templates/ir" className="flex flex-col gap-0.5">
             <span className="text-base font-bold text-[var(--color-dark-bg)] tracking-tight leading-none">VINUSPREAD</span>
             <span className="text-[0.58rem] font-medium uppercase tracking-[0.2em] text-[#6B6B6B] leading-none">Global Holdings</span>
           </Link>

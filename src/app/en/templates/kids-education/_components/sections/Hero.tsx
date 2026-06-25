@@ -1,12 +1,12 @@
-﻿"use client";
+"use client";
 
 import { motion, useReducedMotion, useInView, useMotionValue, animate, AnimatePresence } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 const heroSlides = [
-  { img: "/templates/OHMT024-kids-education/hero-slide-1.jpg", tag: "Creative Arts", title: "Where Every Child\nBecomes an Artist" },
-  { img: "/templates/OHMT024-kids-education/hero-slide-2.jpg", tag: "STEM Learning", title: "Coding, Science &\nMath Adventures" },
-  { img: "/templates/OHMT024-kids-education/hero-slide-3.jpg", tag: "Social & Play",  title: "Growing Together\nThrough Play" },
+  { img: "/templates/kids-education/hero-slide-1.jpg", tag: "Creative Arts", title: "Where Every Child\nBecomes an Artist" },
+  { img: "/templates/kids-education/hero-slide-2.jpg", tag: "STEM Learning", title: "Coding, Science &\nMath Adventures" },
+  { img: "/templates/kids-education/hero-slide-3.jpg", tag: "Social & Play",  title: "Growing Together\nThrough Play" },
 ];
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
@@ -7,14 +7,14 @@ const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 
 // rotate / rough position matching Figma design
 const leftPhotos = [
-  { src: "/templates/OHMT024-kids-education/photo-01.jpg", style: { top: "8%",  left: "22%", width: "210px", zIndex: 2 } },
-  { src: "/templates/OHMT024-kids-education/photo-03.jpg", style: { top: "38%", left: "29%", width: "180px", zIndex: 3 } },
-  { src: "/templates/OHMT024-kids-education/photo-05.jpg", style: { top: "62%", left: "21%", width: "195px", zIndex: 2 } },
+  { src: "/templates/kids-education/photo-01.jpg", style: { top: "8%",  left: "22%", width: "210px", zIndex: 2 } },
+  { src: "/templates/kids-education/photo-03.jpg", style: { top: "38%", left: "29%", width: "180px", zIndex: 3 } },
+  { src: "/templates/kids-education/photo-05.jpg", style: { top: "62%", left: "21%", width: "195px", zIndex: 2 } },
 ];
 const rightPhotos = [
-  { src: "/templates/OHMT024-kids-education/photo-02.jpg", style: { top: "6%",  right: "22%", width: "185px", zIndex: 2 } },
-  { src: "/templates/OHMT024-kids-education/photo-04.jpg", style: { top: "36%", right: "27%", width: "210px", zIndex: 3 } },
-  { src: "/templates/OHMT024-kids-education/photo-06.jpg", style: { top: "62%", right: "21%", width: "190px", zIndex: 2 } },
+  { src: "/templates/kids-education/photo-02.jpg", style: { top: "6%",  right: "22%", width: "185px", zIndex: 2 } },
+  { src: "/templates/kids-education/photo-04.jpg", style: { top: "36%", right: "27%", width: "210px", zIndex: 3 } },
+  { src: "/templates/kids-education/photo-06.jpg", style: { top: "62%", right: "21%", width: "190px", zIndex: 2 } },
 ];
 
 export default function PhotoSection() {
@@ -114,7 +114,7 @@ export default function PhotoSection() {
           )}
 
           <a
-            href="/ko/templates/OHMT024-kids-education/contact"
+            href="/ko/templates/kids-education/contact"
             className="inline-block mt-5 text-sm font-semibold text-[var(--color-text-muted)] hover:text-[var(--color-text-main)] transition-colors duration-150"
           >
             바로 수강 신청하기 →

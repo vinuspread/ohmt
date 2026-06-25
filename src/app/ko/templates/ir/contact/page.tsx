@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Suspense } from "react";
 import React from "react";
@@ -10,10 +10,10 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 const teamMembers = [
-  { name: "Sarah Chen", title: "Vice President, Investor Relations", phone: "+1 (212) 555-0198", email: "schen@ohmytemplate.com", image: "/templates/OHMT011-ir/member-st.png" },
-  { name: "James Rodriguez", title: "Director, Investor Relations", phone: "+1 (212) 555-0423", email: "jrodriguez@ohmytemplate.com", image: "/templates/OHMT011-ir/member-rc.png" },
-  { name: "Emily Park", title: "Manager, Shareholder Services", phone: "+1 (212) 555-0771", email: "epark@ohmytemplate.com", image: "/templates/OHMT011-ir/member-ca.png" },
-  { name: "David Kim", title: "Analyst, Financial Communications", phone: "+1 (212) 555-0635", email: "dkim@ohmytemplate.com", image: "/templates/OHMT011-ir/member-dp.png" },
+  { name: "Sarah Chen", title: "Vice President, Investor Relations", phone: "+1 (212) 555-0198", email: "schen@ohmytemplate.com", image: "/templates/ir/member-st.png" },
+  { name: "James Rodriguez", title: "Director, Investor Relations", phone: "+1 (212) 555-0423", email: "jrodriguez@ohmytemplate.com", image: "/templates/ir/member-rc.png" },
+  { name: "Emily Park", title: "Manager, Shareholder Services", phone: "+1 (212) 555-0771", email: "epark@ohmytemplate.com", image: "/templates/ir/member-ca.png" },
+  { name: "David Kim", title: "Analyst, Financial Communications", phone: "+1 (212) 555-0635", email: "dkim@ohmytemplate.com", image: "/templates/ir/member-dp.png" },
 ];
 
 function IRContactContent() {
@@ -31,7 +31,7 @@ function IRContactContent() {
         >
           <div className="absolute inset-0 z-0">
             <Image
-              src="/templates/OHMT011-ir/news-event.png"
+              src="/templates/ir/news-event.png"
               alt="Contact IR"
               fill
               priority

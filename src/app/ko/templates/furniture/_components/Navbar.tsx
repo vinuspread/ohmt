@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { useState, useEffect } from "react";
 import { Search, ShoppingBag, Menu, X } from "lucide-react";
 import Link from "next/link";
@@ -23,16 +23,16 @@ export const Navbar = () => {
       >
         <div className="max-w-[1440px] mx-auto w-full px-6 md:px-12 flex items-center justify-between">
           {/* Logo */}
-          <Link href="/ko/templates/OHMT004-furniture" className="text-xl md:text-2xl font-black lowercase text-[var(--color-text)]">
+          <Link href="/ko/templates/furniture" className="text-xl md:text-2xl font-black lowercase text-[var(--color-text)]">
             Oh My Template
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-10 text-[13px] font-medium text-[var(--color-secondary)]">
-            <Link href="/ko/templates/OHMT004-furniture/category/living" className="hover:text-[var(--color-primary)] transition-colors uppercase">{"리빙룸"}</Link>
-            <Link href="/ko/templates/OHMT004-furniture/category/bedroom" className="hover:text-[var(--color-primary)] transition-colors uppercase">{"침실"}</Link>
-            <Link href="/ko/templates/OHMT004-furniture/category/dining" className="hover:text-[var(--color-primary)] transition-colors uppercase">{"다이닝"}</Link>
-            <Link href="/ko/templates/OHMT004-furniture/category/workspace" className="hover:text-[var(--color-primary)] transition-colors uppercase">{"워크스페이스"}</Link>
+            <Link href="/ko/templates/furniture/category/living" className="hover:text-[var(--color-primary)] transition-colors uppercase">{"리빙룸"}</Link>
+            <Link href="/ko/templates/furniture/category/bedroom" className="hover:text-[var(--color-primary)] transition-colors uppercase">{"침실"}</Link>
+            <Link href="/ko/templates/furniture/category/dining" className="hover:text-[var(--color-primary)] transition-colors uppercase">{"다이닝"}</Link>
+            <Link href="/ko/templates/furniture/category/workspace" className="hover:text-[var(--color-primary)] transition-colors uppercase">{"워크스페이스"}</Link>
           </div>
 
           {/* Icons */}
@@ -40,7 +40,7 @@ export const Navbar = () => {
             <button className="hover:text-[var(--color-primary)] transition-colors">
               <Search size={20} strokeWidth={1.5} />
             </button>
-            <Link href="/ko/templates/OHMT004-furniture/cart" className="relative hover:text-[var(--color-primary)] transition-colors">
+            <Link href="/ko/templates/furniture/cart" className="relative hover:text-[var(--color-primary)] transition-colors">
               <ShoppingBag size={20} strokeWidth={1.5} />
             </Link>
             <button 
@@ -65,28 +65,28 @@ export const Navbar = () => {
           <div className="flex flex-col gap-1 border-b border-black/5 pb-4 mb-4">
             <span className="text-[13px] font-bold tracking-[0.2em] text-[var(--color-text)]/40 mb-2 uppercase">{"카테고리"}</span>
             <Link 
-              href="/ko/templates/OHMT004-furniture/category/living" 
+              href="/ko/templates/furniture/category/living" 
               onClick={() => setMobileOpen(false)}
               className="hover:text-[var(--color-primary)] py-2 transition-colors uppercase"
             >
               {"리빙룸"}
             </Link>
             <Link 
-              href="/ko/templates/OHMT004-furniture/category/bedroom" 
+              href="/ko/templates/furniture/category/bedroom" 
               onClick={() => setMobileOpen(false)}
               className="hover:text-[var(--color-primary)] py-2 transition-colors uppercase"
             >
               {"침실"}
             </Link>
             <Link 
-              href="/ko/templates/OHMT004-furniture/category/dining" 
+              href="/ko/templates/furniture/category/dining" 
               onClick={() => setMobileOpen(false)}
               className="hover:text-[var(--color-primary)] py-2 transition-colors uppercase"
             >
               {"다이닝"}
             </Link>
             <Link 
-              href="/ko/templates/OHMT004-furniture/category/workspace" 
+              href="/ko/templates/furniture/category/workspace" 
               onClick={() => setMobileOpen(false)}
               className="hover:text-[var(--color-primary)] py-2 transition-colors uppercase"
             >
@@ -98,21 +98,21 @@ export const Navbar = () => {
           <div className="flex flex-col gap-1">
             <span className="text-[13px] font-bold tracking-[0.2em] text-[var(--color-text)]/40 mb-2 uppercase">{"메뉴"}</span>
             <Link 
-              href="/ko/templates/OHMT004-furniture/cart" 
+              href="/ko/templates/furniture/cart" 
               onClick={() => setMobileOpen(false)}
               className="hover:text-[var(--color-primary)] py-2 transition-colors uppercase flex justify-between items-center"
             >
               <span>{"장바구니"}</span>
             </Link>
             <Link 
-              href="/ko/templates/OHMT004-furniture" 
+              href="/ko/templates/furniture" 
               onClick={() => setMobileOpen(false)}
               className="hover:text-[var(--color-primary)] py-2 transition-colors uppercase"
             >
               {"계정 / 로그인"}
             </Link>
             <Link 
-              href="/ko/templates/OHMT004-furniture" 
+              href="/ko/templates/furniture" 
               onClick={() => setMobileOpen(false)}
               className="hover:text-[var(--color-primary)] py-2 transition-colors uppercase"
             >

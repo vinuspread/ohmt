@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Suspense } from "react";
 import React from "react";
@@ -34,7 +34,7 @@ function CosmeticStoryPageContent() {
                   </p>
                 </div>
               </div>
-              <img loading="lazy" src="/templates/OHMT010-cosmetic/cosmetic-5.jpg" alt="Cosmetic story" className="w-full h-auto object-cover aspect-[3/4] mx-auto" />
+              <img loading="lazy" src="/templates/cosmetic/cosmetic-5.jpg" alt="Cosmetic story" className="w-full h-auto object-cover aspect-[3/4] mx-auto" />
             </div>
 
             <div className="grid md:grid-cols-3 gap-12 text-center justify-center">

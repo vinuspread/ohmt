@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion, useReducedMotion } from "framer-motion";
 import Navbar from "../_components/layout/Navbar";
@@ -16,7 +16,7 @@ export default function ServiceFull() {
       <main>
         <section className="relative min-h-[50dvh] overflow-hidden bg-[var(--color-secondary)]">
           <img
-            src="/templates/OHMT026-spa/service-hero.jpg"
+            src="/templates/spa/service-hero.jpg"
             alt=""
             role="presentation"
             className="absolute inset-0 h-full w-full object-cover opacity-40"
@@ -69,13 +69,13 @@ export default function ServiceFull() {
                     </p>
                     <div className="mt-5 flex items-center gap-4">
                       <a
-                        href={`/en/templates/OHMT026-spa/service/${services[0].id}`}
+                        href={`/en/templates/spa/service/${services[0].id}`}
                         className="text-sm font-semibold text-[var(--color-text)] hover:text-[var(--color-primary)] hover:underline"
                       >
                         Learn more →
                       </a>
                       <a
-                        href="/en/templates/OHMT026-spa/contact"
+                        href="/en/templates/spa/contact"
                         className="text-sm font-semibold text-[var(--color-primary)] hover:underline"
                       >
                         Book this treatment →
@@ -172,7 +172,7 @@ export default function ServiceFull() {
                     ))}
                   </ul>
                   <a
-                    href="/en/templates/OHMT026-spa/contact"
+                    href="/en/templates/spa/contact"
                     className={`mt-8 block w-full text-center rounded-full px-6 py-3 text-sm font-semibold transition-all duration-150 ${
                       plan.featured
                         ? "bg-[var(--color-primary)] text-[var(--color-text-contrast)] hover:brightness-110"

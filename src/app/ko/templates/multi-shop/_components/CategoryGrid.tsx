@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
@@ -18,7 +18,7 @@ export const CategoryGrid = () => {
             카테고리별 쇼핑
           </h2>
           <Link
-            href="/ko/templates/OHMT017-multi-shop/shop"
+            href="/ko/templates/multi-shop/shop"
             className="hidden md:inline-block text-xs uppercase tracking-[0.2em] text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors duration-200 border-b border-[var(--color-text-muted)] pb-0.5"
           >
             전체보기
@@ -35,7 +35,7 @@ export const CategoryGrid = () => {
               transition={{ duration: 0.35, delay: index * 0.05, ease: easeOut }}
             >
               <Link
-                href={`/ko/templates/OHMT017-multi-shop/shop/${cat.id}`}
+                href={`/ko/templates/multi-shop/shop/${cat.id}`}
                 className="group relative block overflow-hidden active:scale-[0.98] transition-transform duration-160 ease-out"
                 style={{ aspectRatio: "3/4" }}
               >

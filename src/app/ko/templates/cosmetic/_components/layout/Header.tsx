@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT010-cosmetic/-components/layout/Header.tsx
+// src/app/ko/templates/cosmetic/-components/layout/Header.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -43,7 +43,7 @@ export const Header = () => {
           : "bg-transparent"
       )}>
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 h-full flex items-center justify-between">
-          <Link href="/ko/templates/OHMT010-cosmetic" className="text-[1rem] md:text-[1.15rem] font-black tracking-[0.12em] uppercase">
+          <Link href="/ko/templates/cosmetic" className="text-[1rem] md:text-[1.15rem] font-black tracking-[0.12em] uppercase">
             VINUSPREAD
           </Link>
 
@@ -52,7 +52,7 @@ export const Header = () => {
             {NAV_ITEMS.map((item) => (
                 <Link
                   key={item.id}
-                  href={`/ko/templates/OHMT010-cosmetic/${item.id}`}
+                  href={`/ko/templates/cosmetic/${item.id}`}
                   className="text-[0.82rem] font-medium opacity-60 hover:opacity-100 transition-opacity uppercase tracking-widest"
                 >
 
@@ -89,7 +89,7 @@ export const Header = () => {
           {NAV_ITEMS.map((item) => (
              <Link
                key={item.id}
-               href={`/ko/templates/OHMT010-cosmetic/${item.id}`}
+               href={`/ko/templates/cosmetic/${item.id}`}
                onClick={() => setMobileOpen(false)}
                className="text-[0.82rem] font-medium uppercase tracking-widest opacity-60 hover:opacity-100 py-3.5 border-b border-black/10 transition-opacity"
              >

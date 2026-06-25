@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
@@ -12,21 +12,21 @@ const categories = [
     title: "창작 미술",
     description: "자기 표현력과 상상력을 키우는 음악, 미술, 연극 및 공예 놀이",
     color: "var(--color-accent)",
-    href: "/ko/templates/OHMT024-kids-education/classes",
+    href: "/ko/templates/kids-education/classes",
   },
   {
     number: "02",
     title: "STEM 창의교육",
     description: "비판적 사고와 지적 호기심을 기르는 코딩, 과학 실험 및 수학 어드벤처",
     color: "var(--color-secondary)",
-    href: "/ko/templates/OHMT024-kids-education/classes",
+    href: "/ko/templates/kids-education/classes",
   },
   {
     number: "03",
     title: "사회성 & 놀이",
     description: "교우 관계를 넓히고 협동심을 배우는 다채로운 단체 놀이와 액티비티",
     color: "var(--color-primary)",
-    href: "/ko/templates/OHMT024-kids-education/classes",
+    href: "/ko/templates/kids-education/classes",
   },
 ];
 
@@ -98,7 +98,7 @@ export default function Mission() {
               우리의 미션은 놀이 기반 교육을 통해 호기심의 불씨를 지피는 것입니다. 아이들이 공부하고 있다는 사실조차 잊은 채 몰입할 때, 가장 훌륭한 학습이 일어나기 때문입니다.
             </p>
             <Link
-              href="/ko/templates/OHMT024-kids-education/classes"
+              href="/ko/templates/kids-education/classes"
               className="inline-block mt-8 bg-[var(--color-text-main)] text-white rounded-full px-7 py-3.5 text-sm font-bold hover:brightness-110 active:scale-[0.97] transition-all duration-150"
             >
               전체 클래스 보기

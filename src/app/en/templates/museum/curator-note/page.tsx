@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
@@ -177,7 +177,7 @@ return (
           className="aspect-[21/9] w-full bg-black mb-24 overflow-hidden relative"
         >
           <img 
-            src="/templates/OHMT021-museum/curator.png" 
+            src="/templates/museum/curator.png" 
             alt="Curator Note Architecture"
             className="w-full h-full object-cover grayscale opacity-90"
           />

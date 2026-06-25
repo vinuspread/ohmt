@@ -1,4 +1,4 @@
-﻿import { TemplateWrapper } from "./_components/TemplateWrapper";
+import { TemplateWrapper } from "./_components/TemplateWrapper";
 import Navbar from "./_components/layout/Navbar";
 import Footer from "./_components/layout/Footer";
 import Hero from "./_components/sections/Hero";
@@ -24,8 +24,8 @@ export default function SpaPage() {
     "@type": "HealthClub",
     "name": "Spa Wellness",
     "description": "Premium spa and wellness shop offering personalized skin and body treatments by certified therapists.",
-    "url": "https://ohmytemplate.com/en/templates/OHMT026-spa",
-    "logo": "/templates/OHMT026-spa/logo.png",
+    "url": "https://ohmytemplate.com/en/templates/spa",
+    "logo": "/templates/spa/logo.png",
   };
 
   return (

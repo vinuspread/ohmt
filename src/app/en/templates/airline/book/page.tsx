@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT008-airline/book/page.tsx
+// src/app/templates/airline/book/page.tsx
 "use client";
 
 import React, { useState } from "react";
@@ -74,7 +74,7 @@ function BookPageContent() {
 
         {/* Global Cover Header */}
         <PageHero
-          imageSrc="/templates/OHMT008-airline/airline-book-hero.png"
+          imageSrc="/templates/airline/airline-book-hero.png"
           imageAlt="Luxury flight silhouette"
           label="Book Premium Flight Suite"
           title={<>Configure Your <br /><span className="text-[var(--color-accent)] font-serif normal-case font-normal">A380 Sanctuary.</span></>}

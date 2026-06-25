@@ -1,4 +1,4 @@
-﻿import { Suspense } from "react";
+import { Suspense } from "react";
 import Link from "next/link";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
@@ -27,7 +27,7 @@ function MyPageContent() {
       <PageHeader
         title="마이페이지"
         subtitle="예약 내역, 멤버십, 계정 설정을 관리하세요."
-        image="/templates/OHMT022-yoga/subpage-mypage.jpg"
+        image="/templates/yoga/subpage-mypage.jpg"
       />
 
       {/* 프로필 + 스탯 */}
@@ -37,7 +37,7 @@ function MyPageContent() {
           <div className="flex items-center gap-5">
             <div
               className="w-16 h-16 rounded-full bg-cover bg-center flex-shrink-0"
-              style={{ backgroundImage: "url('/templates/OHMT022-yoga/instructor-1.jpg')" }}
+              style={{ backgroundImage: "url('/templates/yoga/instructor-1.jpg')" }}
             />
             <div>
               <p
@@ -81,7 +81,7 @@ function MyPageContent() {
             </p>
           </div>
           <Link
-            href="/ko/templates/OHMT022-yoga/schedule"
+            href="/ko/templates/yoga/schedule"
             className="mt-2 inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] font-medium transition-colors"
             style={{ fontFamily: "var(--font-body)" }}
           >

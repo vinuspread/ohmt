@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Suspense } from "react";
 import { motion } from "framer-motion";
@@ -37,17 +37,17 @@ function ProductPageContent() {
               className="aspect-[4/5] bg-luxury-beige overflow-hidden"
             >
               <img 
-                src="/templates/OHMT021-museum/gundam-unicorn.jpg" 
+                src="/templates/museum/gundam-unicorn.jpg" 
                 alt="Product Detail"
                 className="w-full h-full object-cover"
               />
             </motion.div>
             <div className="grid grid-cols-2 gap-6">
               <div className="aspect-square bg-luxury-cream overflow-hidden">
-                <img loading="lazy" src="/templates/OHMT021-museum/gundam-nu.jpg" alt="Detail 1" className="w-full h-full object-cover opacity-80" />
+                <img loading="lazy" src="/templates/museum/gundam-nu.jpg" alt="Detail 1" className="w-full h-full object-cover opacity-80" />
               </div>
               <div className="aspect-square bg-luxury-cream overflow-hidden">
-                <img loading="lazy" src="/templates/OHMT021-museum/gundam-sazabi.jpg" alt="Detail 2" className="w-full h-full object-cover opacity-80" />
+                <img loading="lazy" src="/templates/museum/gundam-sazabi.jpg" alt="Detail 2" className="w-full h-full object-cover opacity-80" />
               </div>
             </div>
           </div>

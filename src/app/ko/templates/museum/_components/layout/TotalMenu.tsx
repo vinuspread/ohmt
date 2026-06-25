@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -11,12 +11,12 @@ interface TotalMenuProps {
 }
 
 const menuItems = [
-  { name: "Home", href: "/ko/templates/OHMT021-museum", desc: "Experience the Sanctuary" },
-  { name: "Museum Info", href: "/ko/templates/OHMT021-museum/our-story", desc: "Our 500-Year Legacy" },
-  { name: "Collections", href: "/ko/templates/OHMT021-museum/collections", desc: "Explore the Archive" },
-  { name: "Exhibitions", href: "/ko/templates/OHMT021-museum/exhibitions", desc: "Current & Special Showings" },
-  { name: "Souvenir Shop", href: "/ko/templates/OHMT021-museum/souvenir", desc: "Echos of History" },
-  { name: "Curator Note", href: "/ko/templates/OHMT021-museum/curator-note", desc: "Theological Insights" },
+  { name: "Home", href: "/ko/templates/museum", desc: "Experience the Sanctuary" },
+  { name: "Museum Info", href: "/ko/templates/museum/our-story", desc: "Our 500-Year Legacy" },
+  { name: "Collections", href: "/ko/templates/museum/collections", desc: "Explore the Archive" },
+  { name: "Exhibitions", href: "/ko/templates/museum/exhibitions", desc: "Current & Special Showings" },
+  { name: "Souvenir Shop", href: "/ko/templates/museum/souvenir", desc: "Echos of History" },
+  { name: "Curator Note", href: "/ko/templates/museum/curator-note", desc: "Theological Insights" },
 ];
 
 export default function TotalMenu({ isOpen, onClose }: TotalMenuProps) {

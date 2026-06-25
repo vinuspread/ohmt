@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import Link from 'next/link';
 import { designerInfo } from '@/lib/portfolio-data';
@@ -9,7 +9,7 @@ export function Footer() {
       <div className="max-w-[1440px] mx-auto px-6 md:px-10 pt-16 pb-8">
         {/* Top bar */}
         <div className="flex items-center justify-between mb-16 pb-6 border-b border-[var(--color-border)]">
-          <Link href="/ko/templates/OHMT007-portfolio" className="text-[1.2rem] font-black tracking-tighter text-[var(--color-text)] hover:opacity-60 transition-opacity">
+          <Link href="/ko/templates/portfolio" className="text-[1.2rem] font-black tracking-tighter text-[var(--color-text)] hover:opacity-60 transition-opacity">
             Oh My Template.
           </Link>
           <div className="flex items-center gap-2 text-[13px] font-medium text-[var(--color-text-muted)]">
@@ -57,7 +57,7 @@ export function Footer() {
         <div className="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-[var(--color-border)]">
           <div className="flex flex-wrap gap-6">
             {[...designerInfo.nav.map(n => ({ name: n.name, href: n.href })),
-              { name: 'Manifesto', href: '/ko/templates/OHMT007-portfolio/manifesto' }
+              { name: 'Manifesto', href: '/ko/templates/portfolio/manifesto' }
             ].map(item => (
               <Link key={item.name} href={item.href}
                 className="text-[12px] text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors">

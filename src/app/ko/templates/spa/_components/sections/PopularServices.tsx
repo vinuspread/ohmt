@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { services } from "../../data/data";
 
@@ -15,7 +15,7 @@ export default function PopularServices() {
       <div className="overflow-hidden">
         <div className="animate-marquee-right flex gap-6 w-max" style={{ animationDuration: "25s" }}>
           {duplicated.map((service, i) => (
-            <a key={`${service.id}-${i}`} href={`/ko/templates/OHMT026-spa/service#${service.id}`} className="group w-[280px] shrink-0 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] overflow-hidden hover:-translate-y-1 transition-transform duration-300">
+            <a key={`${service.id}-${i}`} href={`/ko/templates/spa/service#${service.id}`} className="group w-[280px] shrink-0 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] overflow-hidden hover:-translate-y-1 transition-transform duration-300">
               <div className="h-48 overflow-hidden"><img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /></div>
               <div className="p-6">
                 <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold tracking-tight text-[var(--color-text)]">{service.title}</h3>

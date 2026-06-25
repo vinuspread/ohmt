@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion, useViewportScroll, useTransform } from 'framer-motion';
 import Image from 'next/image';
@@ -7,9 +7,9 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { MOTION_CONSTANTS } from './motion-constants';
 
 const heroSlides = [
-  { id: 1, image: '/templates/OHMT006-studio/hero-1.jpg', title: '공간의 본질', subtitle: '삶을 짓는 디자인.' },
-  { id: 2, image: '/templates/OHMT006-studio/hero-2.jpg', title: '사적인 여백', subtitle: '영감을 깨우는 시퀀스.' },
-  { id: 3, image: '/templates/OHMT006-studio/hero-3.jpg', title: '시간의 영속성', subtitle: '시대를 관통하는 건축적 미학.' },
+  { id: 1, image: '/templates/studio/hero-1.jpg', title: '공간의 본질', subtitle: '삶을 짓는 디자인.' },
+  { id: 2, image: '/templates/studio/hero-2.jpg', title: '사적인 여백', subtitle: '영감을 깨우는 시퀀스.' },
+  { id: 3, image: '/templates/studio/hero-3.jpg', title: '시간의 영속성', subtitle: '시대를 관통하는 건축적 미학.' },
 ];
 
 export function Hero() {
@@ -92,7 +92,7 @@ export function Hero() {
           whileTap={{ scale: MOTION_CONSTANTS.scales.press }}
         >
           <a
-            href="/ko/templates/OHMT006-studio/contact"
+            href="/ko/templates/studio/contact"
             className="inline-flex items-center justify-center h-[54px] px-12 border border-white/75 rounded-none text-white text-[13px] font-normal tracking-[3px] uppercase hover:bg-white hover:text-black transition-colors duration-200"
           >
             상담 및 문의

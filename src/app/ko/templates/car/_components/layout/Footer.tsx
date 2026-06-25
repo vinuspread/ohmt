@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT009-car/-components/layout/Footer.tsx
+// src/app/ko/templates/car/-components/layout/Footer.tsx
 "use client";
 
 import React from "react";

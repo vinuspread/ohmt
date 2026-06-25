@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { NAV_ITEMS, SOCIAL_LINKS, BRAND } from "../constants";
 
 export default function Footer() {
@@ -9,7 +9,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="flex-1 px-8 md:px-14 lg:px-20 py-12 border-b md:border-b-0 md:border-r border-[var(--color-border)]">
           <Link
-            href="/en/templates/OHMT022-yoga"
+            href="/en/templates/yoga"
             className="text-[17px] font-medium text-[var(--color-text)] tracking-[-0.01em]"
             style={{ fontFamily: "var(--font-body)" }}
           >

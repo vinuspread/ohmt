@@ -1,9 +1,9 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import type { Exhibition } from '../types';
 
 export default function ExhibitionCard({ exhibition }: { exhibition: Exhibition }) {
   return (
-    <Link href={`/en/templates/OHMT003-exhibition/exhibitions/${exhibition.slug}`} className="group block cursor-pointer">
+    <Link href={`/en/templates/exhibition/exhibitions/${exhibition.slug}`} className="group block cursor-pointer">
       <div className="relative aspect-[4/3] overflow-hidden transition-transform duration-500 group-hover:-translate-y-1">
         <img
           src={exhibition.image}

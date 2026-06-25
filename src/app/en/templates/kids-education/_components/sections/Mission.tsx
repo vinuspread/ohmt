@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
@@ -12,21 +12,21 @@ const categories = [
     title: "Creative Arts",
     description: "Art, music, dance, and crafts to nurture self-expression and imagination in every child.",
     color: "var(--color-accent)",
-    href: "/en/templates/OHMT024-kids-education/classes",
+    href: "/en/templates/kids-education/classes",
   },
   {
     number: "02",
     title: "STEM Learning",
     description: "Coding, science, and math adventures that help kids think critically and love learning.",
     color: "var(--color-secondary)",
-    href: "/en/templates/OHMT024-kids-education/classes",
+    href: "/en/templates/kids-education/classes",
   },
   {
     number: "03",
     title: "Social & Play",
     description: "Group activities and teamwork games that help children make friends and grow together.",
     color: "var(--color-primary)",
-    href: "/en/templates/OHMT024-kids-education/classes",
+    href: "/en/templates/kids-education/classes",
   },
 ];
 
@@ -98,7 +98,7 @@ export default function Mission() {
               Our mission is to spark curiosity through play-based learning - because the best learning happens when children don't realize they're learning at all.
             </p>
             <Link
-              href="/en/templates/OHMT024-kids-education/classes"
+              href="/en/templates/kids-education/classes"
               className="inline-block mt-8 bg-[var(--color-text-main)] text-white rounded-full px-7 py-3.5 text-sm font-bold hover:brightness-110 active:scale-[0.97] transition-all duration-150"
             >
               View All Classes

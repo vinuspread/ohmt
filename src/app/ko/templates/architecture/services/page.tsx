@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture/services/page.tsx
+// src/app/en/templates/architecture/services/page.tsx
 import React from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -16,19 +16,19 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Services - Architecture Portfolio - Oh My Template",
     description: "Explore our professional disciplines, from high-end residential design and commercial architecture to interior planning.",
-    url: "https://ohmytemplate.com/en/templates/OHMT027-architecture/services",
-    images: [{ url: "/templates/OHMT027-architecture/og-image.jpg" }],
+    url: "https://ohmytemplate.com/en/templates/architecture/services",
+    images: [{ url: "/templates/architecture/og-image.jpg" }],
   },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT027-architecture/services",
+    canonical: "https://ohmytemplate.com/en/templates/architecture/services",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/OHMT027-architecture/services",
+      "en": "https://ohmytemplate.com/en/templates/architecture/services",
     },
   },
 };
 
 export default function ServicesPage() {
-  const baseRoute = "/en/templates/OHMT027-architecture";
+  const baseRoute = "/en/templates/architecture";
 
   const processes = [
     { step: "01", name: "Consultation", desc: "We sit down to understand your aesthetic desires, space needs, and lifestyle aspirations." },

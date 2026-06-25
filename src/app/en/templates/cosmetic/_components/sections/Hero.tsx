@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT010-cosmetic/-components/sections/Hero.tsx
+// src/app/templates/cosmetic/-components/sections/Hero.tsx
 "use client";
 
 export const Hero = () => {
@@ -81,7 +81,7 @@ return (
           
           <div className="hidden md:block w-[240px] border border-black/10 bg-white p-6 shrink-0 group">
             <img 
-              src="/templates/OHMT010-cosmetic/cosmetic-1.jpg" 
+              src="/templates/cosmetic/cosmetic-1.jpg" 
               className="w-full h-[180px] object-cover mb-4 grayscale group-hover:grayscale-0 transition-all duration-300" 
               alt="Featured product" 
             />
@@ -96,7 +96,7 @@ return (
       
       <div className="w-full h-[50vh] overflow-hidden">
         <img 
-          src="/templates/OHMT010-cosmetic/cosmetic-5.jpg" 
+          src="/templates/cosmetic/cosmetic-5.jpg" 
           className="w-full h-full object-cover object-center" 
           alt="Hero background" 
         />

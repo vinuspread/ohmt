@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import { motion } from "framer-motion";
@@ -20,7 +20,7 @@ export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center bg-[var(--color-primary)] overflow-hidden">
       <div className="absolute inset-0">
-        <img src="/templates/OHMT020-hotel/hero-main.jpg" alt="Oh My Template" className="w-full h-full object-cover opacity-60" />
+        <img src="/templates/hotel/hero-main.jpg" alt="Oh My Template" className="w-full h-full object-cover opacity-60" />
         <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-primary)]/80 via-[var(--color-primary)]/40 to-transparent" />
       </div>
 

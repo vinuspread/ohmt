@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT011-ir/-components/sections/RecentNews.tsx
+// src/app/templates/ir/-components/sections/RecentNews.tsx
 "use client";
 
 import React from "react";

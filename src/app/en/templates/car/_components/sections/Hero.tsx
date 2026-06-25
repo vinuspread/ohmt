@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT009-car/-components/sections/Hero.tsx
+// src/app/templates/car/-components/sections/Hero.tsx
 "use client";
 
 import React from "react";
@@ -54,10 +54,10 @@ return (
         loop
         playsInline
       >
-        <source src="/templates/OHMT009-car/hero-bg.mp4" type="video/mp4" />
+        <source src="/templates/car/hero-bg.mp4" type="video/mp4" />
         <img
           className="w-full h-full object-cover object-[center_40%]"
-          src="/templates/OHMT009-car/hero-main.jpg"
+          src="/templates/car/hero-main.jpg"
           alt="VINUS EV9"
         />
       </video>

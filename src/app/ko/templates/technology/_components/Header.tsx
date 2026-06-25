@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import Link from 'next/link'
 import { useState } from 'react'
@@ -11,7 +11,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full bg-[var(--color-bg)]/80 backdrop-blur-md">
       <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/ko/templates/OHMT016-technology" className="flex items-center gap-2 group">
+        <Link href="/ko/templates/technology" className="flex items-center gap-2 group">
           <svg className="w-6 h-6 text-[var(--color-accent)] transition-transform duration-300 group-hover:rotate-90" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="3" y="3" width="6" height="6" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" rx="1"/>
             <rect x="15" y="3" width="6" height="6" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" rx="1"/>
@@ -26,13 +26,13 @@ export default function Header() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
-          <Link href="/ko/templates/OHMT016-technology/products" className="text-base font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors duration-200">
+          <Link href="/ko/templates/technology/products" className="text-base font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors duration-200">
             제품
           </Link>
-          <Link href="/ko/templates/OHMT016-technology/about" className="text-base font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors duration-200">
+          <Link href="/ko/templates/technology/about" className="text-base font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors duration-200">
             회사 소개
           </Link>
-          <Link href="/ko/templates/OHMT016-technology/contact" className="text-base font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors duration-200">
+          <Link href="/ko/templates/technology/contact" className="text-base font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors duration-200">
             문의하기
           </Link>
         </nav>
@@ -67,7 +67,7 @@ export default function Header() {
         <div className="md:hidden fixed inset-0 z-[100] bg-[var(--color-bg)] flex flex-col px-6 pb-12">
           {/* Top bar with logo + close - matches header px-6 py-4 */}
           <div className="flex items-center justify-between py-4 mb-8">
-            <Link href="/ko/templates/OHMT016-technology" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2">
+            <Link href="/ko/templates/technology" onClick={() => setMobileMenuOpen(false)} className="flex items-center gap-2">
               <svg className="w-6 h-6 text-[var(--color-accent)]" viewBox="0 0 24 24" fill="none">
                 <rect x="3" y="3" width="6" height="6" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" rx="1"/>
                 <rect x="15" y="3" width="6" height="6" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" rx="1"/>
@@ -85,9 +85,9 @@ export default function Header() {
           </div>
           <nav className="flex flex-col gap-2 flex-1">
             {[
-              { label: '제품', href: '/ko/templates/OHMT016-technology/products' },
-              { label: '회사 소개', href: '/ko/templates/OHMT016-technology/about' },
-              { label: '문의하기', href: '/ko/templates/OHMT016-technology/contact' },
+              { label: '제품', href: '/ko/templates/technology/products' },
+              { label: '회사 소개', href: '/ko/templates/technology/about' },
+              { label: '문의하기', href: '/ko/templates/technology/contact' },
             ].map((item) => (
               <Link
                 key={item.label}
@@ -101,7 +101,7 @@ export default function Header() {
           </nav>
           <div className="mt-8">
             <Link
-              href="/ko/templates/OHMT016-technology/contact"
+              href="/ko/templates/technology/contact"
               onClick={() => setMobileMenuOpen(false)}
               className="w-full inline-flex items-center justify-center py-4 bg-[var(--color-accent)] text-white font-bold text-sm uppercase tracking-widest hover:opacity-90 active:scale-95 transition-all duration-300 rounded-md"
             >

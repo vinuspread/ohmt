@@ -58,7 +58,7 @@ export default function AboutStudio() {
             className="relative aspect-[4/3] overflow-hidden rounded-2xl"
           >
             <img
-              src="/templates/OHMT023-game/studio-team.jpg"
+              src="/templates/game/studio-team.jpg"
               alt="Oh My Template team"
               className="h-full w-full object-cover"
             />

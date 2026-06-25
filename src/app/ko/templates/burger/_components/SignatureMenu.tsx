@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
@@ -50,7 +50,7 @@ export const SignatureMenu = () => {
 
         <div className="text-center mt-12">
           <Link
-            href="/ko/templates/OHMT018-burger/menu"
+            href="/ko/templates/burger/menu"
             className="inline-block bg-[var(--color-primary)] text-white px-10 py-3 text-xs uppercase tracking-[0.2em] font-semibold rounded-full hover:bg-[var(--color-accent-hover)] transition-[transform,colors] duration-160 ease-out active:scale-[0.97]"
           >
             전체 메뉴 보기

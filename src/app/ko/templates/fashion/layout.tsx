@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Fashion KO - Oh My Template",
     description: "프리미엄 패션 브랜드 & 에디토리얼 쇼케이스",
-    url: "https://ohmytemplate.com/ko/templates/OHMT001-fashion",
+    url: "https://ohmytemplate.com/ko/templates/fashion",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/OHMT001-fashion/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/fashion/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Fashion KO - Oh My Template",
     description: "프리미엄 패션 브랜드 & 에디토리얼 쇼케이스",
-    images: ["/templates/OHMT001-fashion/og-image.jpg"],
+    images: ["/templates/fashion/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT001-fashion",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT001-fashion" },
+    canonical: "https://ohmytemplate.com/ko/templates/fashion",
+    languages: { "en": "https://ohmytemplate.com/en/templates/fashion" },
   },
 };
 

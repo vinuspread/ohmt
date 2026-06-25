@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
@@ -20,7 +20,7 @@ export default function BookingForm() {
         <div className="hidden lg:block relative overflow-hidden">
           <div className="sticky top-0 h-screen">
             <img
-              src="/templates/OHMT025-wedding/wedding-story-01.jpg"
+              src="/templates/wedding/wedding-story-01.jpg"
               alt="Wedding ceremony"
               className="h-full w-full object-cover"
             />

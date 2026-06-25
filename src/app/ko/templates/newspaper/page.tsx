@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT013-newspaper/page.tsx
+// src/app/ko/templates/newspaper/page.tsx
 "use client";
 
 import { Suspense } from "react";
@@ -34,7 +34,7 @@ function NewspaperTemplateContent() {
               <div className="grid md:grid-cols-2 gap-8">
                 {[1, 2, 3, 4].map(n => (
                   <div key={n} className="flex gap-4 pb-6 border-b border-[var(--color-border)] last:border-0 md:[&:nth-last-child(-n+2)]:border-0">
-                    <img loading="lazy" src={`/templates/OHMT013-newspaper/news-${n}.jpg`} className="w-24 h-20 object-cover" alt="Latest" />
+                    <img loading="lazy" src={`/templates/newspaper/news-${n}.jpg`} className="w-24 h-20 object-cover" alt="Latest" />
                     <div>
                       <h4 className="font-[family-name:var(--theme-font-heading)] text-[0.95rem] font-bold leading-tight mb-1 tracking-[-0.03em]">
                         <Link href="#" className="hover:text-[var(--color-primary)]">신규 무역 협정이 국내 제조업 생태계에 미치는 파장.</Link>

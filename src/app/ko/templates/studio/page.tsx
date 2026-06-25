@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { Suspense } from "react";
 import React from "react";
 import { useState } from "react";
@@ -22,9 +22,9 @@ function StudioHomeContent() {
     }, []);
 
     const fields = [
-        { title: "공간 큐레이션", subTitle: "기하학적 절제", location: "서울, 강남", desc: "순수한 기하학적 형태와 절제된 소재를 통해 공간의 경계를 재정의합니다. 모든 면과 선은 머무는 이에게 몰입감을 선사하며, 불필요한 장식을 배제하고 본질적인 비례미에 집중합니다.", idx: "01", image: "/templates/OHMT006-studio/hero-1.jpg" },
-        { title: "비스포크 인테리어", subTitle: "유기적인 빛", location: "경주, 불국사", desc: "천연 트래버틴 특유의 거친 질감과 은은하게 퍼지는 간접 광원이 자아내는 자연스러운 조화. 공간 곳곳으로 부드럽게 흐르는 빛은 고요하면서도 깊이 있는 세련미를 전달합니다.", idx: "02", image: "/templates/OHMT006-studio/hero-2.jpg" },
-        { title: "오브제 디렉팅", subTitle: "조각적 공간 오브제", location: "제주, 서귀포", desc: "빛의 방향과 흐름을 조율하기 위해 정교하게 다듬어진 커스텀 오브제입니다. 철저한 소재 연구를 거쳐 탄생한 가구와 집기들은 예술과 쓰임새의 경계에서 공간의 완성을 돕습니다.", idx: "03", image: "/templates/OHMT006-studio/hero-3.jpg" },
+        { title: "공간 큐레이션", subTitle: "기하학적 절제", location: "서울, 강남", desc: "순수한 기하학적 형태와 절제된 소재를 통해 공간의 경계를 재정의합니다. 모든 면과 선은 머무는 이에게 몰입감을 선사하며, 불필요한 장식을 배제하고 본질적인 비례미에 집중합니다.", idx: "01", image: "/templates/studio/hero-1.jpg" },
+        { title: "비스포크 인테리어", subTitle: "유기적인 빛", location: "경주, 불국사", desc: "천연 트래버틴 특유의 거친 질감과 은은하게 퍼지는 간접 광원이 자아내는 자연스러운 조화. 공간 곳곳으로 부드럽게 흐르는 빛은 고요하면서도 깊이 있는 세련미를 전달합니다.", idx: "02", image: "/templates/studio/hero-2.jpg" },
+        { title: "오브제 디렉팅", subTitle: "조각적 공간 오브제", location: "제주, 서귀포", desc: "빛의 방향과 흐름을 조율하기 위해 정교하게 다듬어진 커스텀 오브제입니다. 철저한 소재 연구를 거쳐 탄생한 가구와 집기들은 예술과 쓰임새의 경계에서 공간의 완성을 돕습니다.", idx: "03", image: "/templates/studio/hero-3.jpg" },
     ];
 
     const featuredProjects = [
@@ -34,7 +34,7 @@ function StudioHomeContent() {
             category: "주택 설계",
             year: "2026",
             location: "서울, 강남",
-            image: "/templates/OHMT006-studio/project-1.jpg"
+            image: "/templates/studio/project-1.jpg"
         },
         {
             id: "proj-2",
@@ -42,7 +42,7 @@ function StudioHomeContent() {
             category: "상업공간",
             year: "2025",
             location: "부산, 해운대",
-            image: "/templates/OHMT006-studio/project-2.jpg"
+            image: "/templates/studio/project-2.jpg"
         }
     ];
 
@@ -79,7 +79,7 @@ function StudioHomeContent() {
                             playsInline
                             className="w-full h-full object-cover brightness-[0.78] transition-opacity duration-1000"
                         >
-                            <source src="/templates/OHMT006-studio/hero-bg.mp4" type="video/mp4" />
+                            <source src="/templates/studio/hero-bg.mp4" type="video/mp4" />
                         </video>
                         <div className="absolute inset-0 bg-black/20 pointer-events-none z-10" />
                     </div>
@@ -100,7 +100,7 @@ function StudioHomeContent() {
                             </h1>
                             <div className="pt-2 md:pt-4">
                                 <Link
-                                    href="/ko/templates/OHMT006-studio/contact"
+                                    href="/ko/templates/studio/contact"
                                     className="inline-flex items-center gap-4 border border-white bg-white/10 hover:bg-white hover:text-black text-white px-6 md:px-8 py-3 md:py-4 text-[13px] font-bold backdrop-blur-md transition-all duration-300 rounded-none"
                                 >
                                     {"상담 및 문의"}
@@ -187,7 +187,7 @@ function StudioHomeContent() {
                     <div className="max-w-[1720px] mx-auto px-6 md:px-16 lg:px-24">
                         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
                             <div className="md:col-span-4 aspect-[3/4] overflow-hidden border border-black/10 shadow-sm relative">
-                                <img loading="lazy" src="/templates/OHMT006-studio/hero-2.jpg" alt={"정밀한 재료의 정렬."} className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]" />
+                                <img loading="lazy" src="/templates/studio/hero-2.jpg" alt={"정밀한 재료의 정렬."} className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]" />
                             </div>
                             <div className="md:col-span-5 space-y-5 md:space-y-6 lg:px-12">
                                 <span className="text-[13px] text-black/40 font-bold block">{"소재 본질의 극대화"}</span>
@@ -199,7 +199,7 @@ function StudioHomeContent() {
                                 </p>
                             </div>
                             <div className="md:col-span-3 aspect-[1/1] overflow-hidden border border-black/10 self-end md:mb-12">
-                                <img loading="lazy" src="/templates/OHMT006-studio/project-1.jpg" alt="Material swatch" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]" />
+                                <img loading="lazy" src="/templates/studio/project-1.jpg" alt="Material swatch" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]" />
                             </div>
                         </div>
                     </div>
@@ -210,14 +210,14 @@ function StudioHomeContent() {
                     <div className="max-w-[1720px] mx-auto px-6 md:px-16 lg:px-24">
                         <div className="flex justify-between items-center pb-8 md:pb-12 border-b border-black/10 mb-10 md:mb-20">
                             <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-black break-keep">{"엄선된 포트폴리오"}</h2>
-                            <Link href="/ko/templates/OHMT006-studio/projects" className="text-[13px] font-bold border-b-2 border-black pb-1 hover:opacity-60 transition-all shrink-0 ml-4 whitespace-nowrap">
+                            <Link href="/ko/templates/studio/projects" className="text-[13px] font-bold border-b-2 border-black pb-1 hover:opacity-60 transition-all shrink-0 ml-4 whitespace-nowrap">
                                 {"전체 보기 [12]"}
                             </Link>
                         </div>
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-20">
                             {featuredProjects.map((project, idx) => (
                                 <Link
-                                    href={`/ko/templates/OHMT006-studio/projects/${project.id}`}
+                                    href={`/ko/templates/studio/projects/${project.id}`}
                                     key={project.id}
                                     className={`group block lg:col-span-6 ${idx === 1 ? "lg:mt-24" : ""}`}
                                 >

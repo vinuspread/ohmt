@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Jewelry Mall | Oh My Template",
     description: "Experience the timeless elegance and curated luxury.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT002-jewelry",
+    url: "https://ohmytemplate.com/ko/templates/jewelry",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/OHMT002-jewelry/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/jewelry/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Jewelry Mall | Oh My Template",
     description: "Experience the timeless elegance and curated luxury.",
-    images: ["/templates/OHMT002-jewelry/og-image.jpg"],
+    images: ["/templates/jewelry/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT002-jewelry",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT002-jewelry" },
+    canonical: "https://ohmytemplate.com/ko/templates/jewelry",
+    languages: { "en": "https://ohmytemplate.com/en/templates/jewelry" },
   },
 };
 

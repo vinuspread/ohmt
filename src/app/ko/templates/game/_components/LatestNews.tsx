@@ -26,7 +26,7 @@ export default function LatestNews() {
             </h2>
           </div>
           <Link
-            href="/ko/templates/OHMT023-game/news"
+            href="/ko/templates/game/news"
             className="group hidden items-center gap-2 text-sm font-medium text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-primary)] md:flex"
           >
             전체 소식
@@ -42,7 +42,7 @@ export default function LatestNews() {
 
         <div className="mt-10 text-center md:hidden">
           <Link
-            href="/ko/templates/OHMT023-game/news"
+            href="/ko/templates/game/news"
             className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-primary)]"
           >
             전체 소식

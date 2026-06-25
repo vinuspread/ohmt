@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Suspense } from "react";
 import React from "react";
@@ -17,7 +17,7 @@ const products: Record<string, any> = {
     price: "$2,250",
     rating: 4.8,
     reviews: 127,
-    img: "/templates/OHMT002-jewelry/jewelry-ring.png",
+    img: "/templates/jewelry/jewelry-ring.png",
     category: "Engagement",
     desc: "A timeless symbol of elegance and sophistication. This solitaire ring features a stunning diamond that captures light beautifully from every angle.",
     details: [
@@ -39,7 +39,7 @@ const products: Record<string, any> = {
     price: "$1,850",
     rating: 4.9,
     reviews: 93,
-    img: "/templates/OHMT002-jewelry/jewelry-pendant.png",
+    img: "/templates/jewelry/jewelry-pendant.png",
     category: "Necklace",
     desc: "Exquisite pearl pendant radiating timeless elegance. Each piece is hand-selected for its lustrous quality and perfect form.",
     details: [
@@ -61,7 +61,7 @@ const products: Record<string, any> = {
     price: "$3,500",
     rating: 4.9,
     reviews: 234,
-    img: "/templates/OHMT002-jewelry/jewelry-ring.png",
+    img: "/templates/jewelry/jewelry-ring.png",
     category: "Engagement",
     desc: "The quintessential choice for engagements. This classic round brilliant diamond showcases exceptional brilliance and fire.",
     details: [

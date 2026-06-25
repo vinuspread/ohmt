@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import Link from "next/link";
@@ -534,7 +534,7 @@ export default function ArticleDetailPage({ params }: { params: Promise<{ catego
           <Header />
           <div className="max-w-[1280px] mx-auto px-8 py-16 md:py-32 text-center">
             <h1 className="text-2xl font-bold mb-4">Article not found</h1>
-            <Link href={`/en/templates/OHMT013-newspaper-EN/${category}`} className="text-[var(--color-primary)] hover:underline">Back to {category}</Link>
+            <Link href={`/en/templates/newspaperEN/${category}`} className="text-[var(--color-primary)] hover:underline">Back to {category}</Link>
           </div>
           <Footer />
         </main>
@@ -557,7 +557,7 @@ export default function ArticleDetailPage({ params }: { params: Promise<{ catego
         <div className="max-w-[1280px] mx-auto px-6 md:px-8">
           {/* Back */}
           <div className="py-6 border-b border-[#EEE]">
-            <Link href={`/en/templates/OHMT013-newspaper-EN/${category}`} className="inline-flex items-center gap-2 text-[0.72rem] font-bold uppercase tracking-wider text-[#555] hover:text-[var(--color-primary)] transition-colors">
+            <Link href={`/en/templates/newspaperEN/${category}`} className="inline-flex items-center gap-2 text-[0.72rem] font-bold uppercase tracking-wider text-[#555] hover:text-[var(--color-primary)] transition-colors">
               <ArrowLeft size={13} /> Back to {article.category}
             </Link>
           </div>
@@ -629,7 +629,7 @@ export default function ArticleDetailPage({ params }: { params: Promise<{ catego
                   </h3>
                   <div className="space-y-0">
                     {related.map(([s, a]) => (
-                      <Link key={s} href={`/en/templates/OHMT013-newspaper-EN/${category}/${s}`}
+                      <Link key={s} href={`/en/templates/newspaperEN/${category}/${s}`}
                         className="group flex gap-3 py-4 border-b border-[#EEE] hover:border-[var(--color-primary)] transition-colors">
                         <img loading="lazy" src={`/templates/newspaper/news-${a.image}.jpg`} alt={a.title}
                           className="w-16 h-16 object-cover shrink-0 group-hover:opacity-80 transition-opacity" />
@@ -663,7 +663,7 @@ export default function ArticleDetailPage({ params }: { params: Promise<{ catego
                 </h3>
                 <div className="space-y-2">
                   {otherCategories.map(cat => (
-                    <Link key={cat} href={`/en/templates/OHMT013-newspaper-EN/${cat.toLowerCase()}`}
+                    <Link key={cat} href={`/en/templates/newspaperEN/${cat.toLowerCase()}`}
                       className="flex items-center justify-between py-3 border-b border-[#EEE] group hover:border-[var(--color-primary)] transition-colors">
                       <span className="font-[family-name:var(--theme-font-heading)] font-bold text-[0.9rem] group-hover:text-[var(--color-primary)] transition-colors">{cat}</span>
                       <span className="text-[#CCC] group-hover:text-[var(--color-primary)] transition-colors">→</span>

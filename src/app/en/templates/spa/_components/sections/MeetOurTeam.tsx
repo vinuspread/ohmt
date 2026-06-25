@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion, useReducedMotion } from "framer-motion";
 import { team } from "../../data/data";
@@ -33,7 +33,7 @@ export default function MeetOurTeam() {
           {team.map((member, i) => (
             <motion.a
               key={member.id}
-              href={`/en/templates/OHMT026-spa/about#${member.id}`}
+              href={`/en/templates/spa/about#${member.id}`}
               initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}

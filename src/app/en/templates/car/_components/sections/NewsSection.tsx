@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT009-car/src/components/sections/NewsSection.tsx
+// src/app/templates/car/src/components/sections/NewsSection.tsx
 "use client";
 
 import React from "react";
@@ -8,19 +8,19 @@ const news = [
     tag: "Electric",
     title: "The ultimate guide to electric car charging: Everything you need to know",
     date: "May 3, 2026",
-    img: "/templates/OHMT009-car/car-1.jpg"
+    img: "/templates/car/car-1.jpg"
   },
   {
     tag: "Technology",
     title: "VINUS 2026: The most technologically advanced model year in history",
     date: "April 28, 2026",
-    img: "/templates/OHMT009-car/car-4.jpg"
+    img: "/templates/car/car-4.jpg"
   },
   {
     tag: "Design",
     title: "Behind the EV9: How our designers reimagined the luxury SUV from scratch",
     date: "April 15, 2026",
-    img: "/templates/OHMT009-car/car-5.jpg"
+    img: "/templates/car/car-5.jpg"
   }
 ];
 

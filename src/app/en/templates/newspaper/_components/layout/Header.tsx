@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT013-newspaper/-components/layout/Header.tsx
+// src/app/templates/newspaper/-components/layout/Header.tsx
 "use client";
 
 import React from "react";
@@ -29,12 +29,12 @@ export const Header = () => {
   }
 };
 const navItems = [
-    { name: t.nav.world, href: "/en/templates/OHMT013-newspaper/world" },
-    { name: t.nav.politics, href: "/en/templates/OHMT013-newspaper/politics" },
-    { name: t.nav.economy, href: "/en/templates/OHMT013-newspaper/economy" },
-    { name: t.nav.tech, href: "/en/templates/OHMT013-newspaper/tech" },
-    { name: t.nav.culture, href: "/en/templates/OHMT013-newspaper/culture" },
-    { name: t.nav.sports, href: "/en/templates/OHMT013-newspaper/sports" }
+    { name: t.nav.world, href: "/en/templates/newspaper/world" },
+    { name: t.nav.politics, href: "/en/templates/newspaper/politics" },
+    { name: t.nav.economy, href: "/en/templates/newspaper/economy" },
+    { name: t.nav.tech, href: "/en/templates/newspaper/tech" },
+    { name: t.nav.culture, href: "/en/templates/newspaper/culture" },
+    { name: t.nav.sports, href: "/en/templates/newspaper/sports" }
   ];
 
   return (
@@ -57,7 +57,7 @@ const navItems = [
           <div className="text-[0.75rem] text-[#555] font-medium font-sans">
             {t.nav.date}
           </div>
-          <Link href={`/en/templates/OHMT013-newspaper`} className="font-[family-name:var(--theme-font-heading)] text-[clamp(2.5rem,5.5vw,4.5rem)] font-black tracking-tighter leading-none text-center flex-1">
+          <Link href={`/en/templates/newspaper`} className="font-[family-name:var(--theme-font-heading)] text-[clamp(2.5rem,5.5vw,4.5rem)] font-black tracking-tighter leading-none text-center flex-1">
             VINUS TIMES
           </Link>
           <div className="text-[0.75rem] text-[#555] font-medium font-sans text-right">

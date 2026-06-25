@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion, useReducedMotion } from "framer-motion";
 import Navbar from "../_components/layout/Navbar";
@@ -14,7 +14,7 @@ export default function AboutFull() {
       <Navbar />
       <main className="pt-24">
         <section className="relative min-h-[60dvh] overflow-hidden bg-[var(--color-secondary)]">
-          <img src="/templates/OHMT026-spa/about-hero.jpg" alt="" className="absolute inset-0 h-full w-full object-cover opacity-50" />
+          <img src="/templates/spa/about-hero.jpg" alt="" className="absolute inset-0 h-full w-full object-cover opacity-50" />
           <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-secondary)] to-transparent" />
           <div className="relative z-10 flex h-full min-h-[60dvh] flex-col justify-end px-6 lg:px-16 pb-16">
             <motion.h1 initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: EASE_OUT }} className="font-[family-name:var(--font-heading)] text-6xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[1.05] max-w-2xl">소개</motion.h1>

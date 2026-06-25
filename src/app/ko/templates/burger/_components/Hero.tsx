@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
@@ -9,7 +9,7 @@ export const Hero = () => {
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden">
       <motion.img
-        src="/templates/OHMT018-burger/hero-burger.png"
+        src="/templates/burger/hero-burger.png"
         alt="수제 스매시 버거, 치즈가 녹아내린 브리오슈 번"
         className="absolute inset-0 w-full h-full object-cover"
         initial={{ scale: 1.05 }}
@@ -53,13 +53,13 @@ export const Hero = () => {
           transition={{ duration: 0.4, delay: 0.6, ease: easeOut }}
         >
           <Link
-            href="/ko/templates/OHMT018-burger/order"
+            href="/ko/templates/burger/order"
             className="inline-flex items-center justify-center bg-[var(--color-accent)] text-white px-8 py-3 text-xs uppercase tracking-[0.2em] font-semibold rounded-full hover:bg-[var(--color-accent-hover)] transition-[transform,colors] duration-160 ease-out active:scale-[0.97]"
           >
             주문하기
           </Link>
           <Link
-            href="/ko/templates/OHMT018-burger/locations"
+            href="/ko/templates/burger/locations"
             className="inline-flex items-center justify-center border border-white/30 text-white px-8 py-3 text-xs uppercase tracking-[0.2em] rounded-full hover:border-white/60 hover:bg-white/10 transition-[transform,colors] duration-160 ease-out active:scale-[0.97]"
           >
             매장 찾기

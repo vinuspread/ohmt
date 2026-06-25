@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -47,7 +47,7 @@ export default function GalleryFull() {
               여러분의 사랑 이야기도 아름답게 기록될 자격이 있습니다.
             </p>
             <Link
-              href="/ko/templates/OHMT025-wedding/contact"
+              href="/ko/templates/wedding/contact"
               className="inline-flex items-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-white border-b border-white/40 pb-1 hover:border-white transition-colors duration-200"
             >
               촬영 문의하기

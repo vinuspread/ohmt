@@ -1,14 +1,14 @@
-﻿export interface NavLink {
+export interface NavLink {
   label: string;
   href: string;
 }
 
 export const navLinks: NavLink[] = [
-  { label: "Home", href: "/en/templates/OHMT026-spa" },
-  { label: "About", href: "/en/templates/OHMT026-spa/about" },
-  { label: "Service", href: "/en/templates/OHMT026-spa/service" },
-  { label: "Blog", href: "/en/templates/OHMT026-spa/blog" },
-  { label: "Contact", href: "/en/templates/OHMT026-spa/contact" },
+  { label: "Home", href: "/en/templates/spa" },
+  { label: "About", href: "/en/templates/spa/about" },
+  { label: "Service", href: "/en/templates/spa/service" },
+  { label: "Blog", href: "/en/templates/spa/blog" },
+  { label: "Contact", href: "/en/templates/spa/contact" },
 ];
 
 export interface Service {
@@ -23,37 +23,37 @@ export const services: Service[] = [
     id: "laser-resurfacing",
     title: "Laser Skin Resurfacing",
     description: "Smooths texture and tone with precision laser treatment for visibly renewed skin.",
-    image: "/templates/OHMT026-spa/service-laser-resurfacing.jpg",
+    image: "/templates/spa/service-laser-resurfacing.jpg",
   },
   {
     id: "chemical-peels",
     title: "Chemical Peels",
     description: "Gentle exfoliating peels that reveal brighter, more even-toned skin.",
-    image: "/templates/OHMT026-spa/service-chemical-peels.jpg",
+    image: "/templates/spa/service-chemical-peels.jpg",
   },
   {
     id: "hydrafacial",
     title: "Hydrafacial Therapy",
     description: "A deep cleanse and hydration ritual that leaves skin glowing and refreshed.",
-    image: "/templates/OHMT026-spa/service-hydrafacial.jpg",
+    image: "/templates/spa/service-hydrafacial.jpg",
   },
   {
     id: "microneedling",
     title: "Microneedling",
     description: "Stimulates natural collagen renewal for firmer, smoother skin over time.",
-    image: "/templates/OHMT026-spa/service-microneedling.jpg",
+    image: "/templates/spa/service-microneedling.jpg",
   },
   {
     id: "body-massage",
     title: "Deep Tissue Massage",
     description: "Targets muscle tension with firm, therapeutic pressure for full-body relief.",
-    image: "/templates/OHMT026-spa/service-body-massage.jpg",
+    image: "/templates/spa/service-body-massage.jpg",
   },
   {
     id: "aromatherapy",
     title: "Aromatherapy Ritual",
     description: "Blends essential oils with gentle massage to calm the mind and restore balance.",
-    image: "/templates/OHMT026-spa/service-aromatherapy.jpg",
+    image: "/templates/spa/service-aromatherapy.jpg",
   },
 ];
 
@@ -101,10 +101,10 @@ export interface TeamMember {
 }
 
 export const team: TeamMember[] = [
-  { id: "emily-carter", name: "Dr. Emily Carter", role: "Lead Therapist", image: "/templates/OHMT026-spa/team-emily-carter.jpg" },
-  { id: "marcus-lee", name: "Marcus Lee", role: "Senior Esthetician", image: "/templates/OHMT026-spa/team-marcus-lee.jpg" },
-  { id: "ana-rivera", name: "Ana Rivera", role: "Wellness Specialist", image: "/templates/OHMT026-spa/team-ana-rivera.jpg" },
-  { id: "james-park", name: "James Park", role: "Massage Therapist", image: "/templates/OHMT026-spa/team-james-park.jpg" },
+  { id: "emily-carter", name: "Dr. Emily Carter", role: "Lead Therapist", image: "/templates/spa/team-emily-carter.jpg" },
+  { id: "marcus-lee", name: "Marcus Lee", role: "Senior Esthetician", image: "/templates/spa/team-marcus-lee.jpg" },
+  { id: "ana-rivera", name: "Ana Rivera", role: "Wellness Specialist", image: "/templates/spa/team-ana-rivera.jpg" },
+  { id: "james-park", name: "James Park", role: "Massage Therapist", image: "/templates/spa/team-james-park.jpg" },
 ];
 
 export interface FaqItem {
@@ -232,7 +232,7 @@ export const blogPosts: BlogPost[] = [
     id: "skincare-routine-guide",
     title: "Building a Skincare Routine That Actually Works",
     excerpt: "A dermatologist-approved step-by-step guide to creating a routine tailored to your skin type and concerns.",
-    image: "/templates/OHMT026-spa/blog-01.jpg",
+    image: "/templates/spa/blog-01.jpg",
     date: "2026-02-15",
     author: "Dr. Emily Carter",
     category: "Skincare",
@@ -241,7 +241,7 @@ export const blogPosts: BlogPost[] = [
     id: "benefits-of-microneedling",
     title: "What to Expect From Your First Microneedling Session",
     excerpt: "Everything you need to know about collagen induction therapy, from prep to recovery and results.",
-    image: "/templates/OHMT026-spa/blog-02.jpg",
+    image: "/templates/spa/blog-02.jpg",
     date: "2026-01-28",
     author: "Marcus Lee",
     category: "Treatments",
@@ -250,7 +250,7 @@ export const blogPosts: BlogPost[] = [
     id: "summer-skin-protection",
     title: "Summer Skin Protection: A Complete Guide",
     excerpt: "Protect your skin from UV damage, heat stress, and humidity with these expert-recommended tips.",
-    image: "/templates/OHMT026-spa/blog-03.jpg",
+    image: "/templates/spa/blog-03.jpg",
     date: "2026-01-10",
     author: "Ana Rivera",
     category: "Wellness",
@@ -259,7 +259,7 @@ export const blogPosts: BlogPost[] = [
     id: "stress-and-skin",
     title: "How Stress Affects Your Skin (And What to Do About It)",
     excerpt: "The science behind stress-induced breakouts and the treatments that can help restore balance.",
-    image: "/templates/OHMT026-spa/blog-04.jpg",
+    image: "/templates/spa/blog-04.jpg",
     date: "2025-12-22",
     author: "Dr. Emily Carter",
     category: "Wellness",
@@ -267,12 +267,12 @@ export const blogPosts: BlogPost[] = [
 ];
 
 export const instagramImages: string[] = [
-  "/templates/OHMT026-spa/instagram-01.jpg",
-  "/templates/OHMT026-spa/instagram-02.jpg",
-  "/templates/OHMT026-spa/instagram-03.jpg",
-  "/templates/OHMT026-spa/instagram-04.jpg",
-  "/templates/OHMT026-spa/instagram-05.jpg",
-  "/templates/OHMT026-spa/instagram-06.jpg",
-  "/templates/OHMT026-spa/instagram-07.jpg",
-  "/templates/OHMT026-spa/instagram-08.jpg",
+  "/templates/spa/instagram-01.jpg",
+  "/templates/spa/instagram-02.jpg",
+  "/templates/spa/instagram-03.jpg",
+  "/templates/spa/instagram-04.jpg",
+  "/templates/spa/instagram-05.jpg",
+  "/templates/spa/instagram-06.jpg",
+  "/templates/spa/instagram-07.jpg",
+  "/templates/spa/instagram-08.jpg",
 ];

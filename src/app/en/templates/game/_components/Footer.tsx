@@ -2,10 +2,10 @@ import Link from "next/link";
 import { games } from "@/app/en/templates/game/data/data";
 
 const companyLinks = [
-  { href: "/en/templates/OHMT023-game/about", label: "About" },
-  { href: "/en/templates/OHMT023-game/news", label: "News" },
-  { href: "/en/templates/OHMT023-game/careers", label: "Careers" },
-  { href: "/en/templates/OHMT023-game/games", label: "Games" },
+  { href: "/en/templates/game/about", label: "About" },
+  { href: "/en/templates/game/news", label: "News" },
+  { href: "/en/templates/game/careers", label: "Careers" },
+  { href: "/en/templates/game/games", label: "Games" },
 ];
 
 export default function Footer() {
@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-1">
             <Link
-              href="/en/templates/OHMT023-game"
+              href="/en/templates/game"
               className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)] bg-clip-text text-xl font-bold text-transparent font-[var(--font-heading)]"
             >
               Oh My Template
@@ -33,7 +33,7 @@ export default function Footer() {
               {games.map((game) => (
                 <li key={game.id}>
                   <Link
-                    href={`/en/templates/OHMT023-game/games/${game.id}`}
+                    href={`/en/templates/game/games/${game.id}`}
                     className="text-sm text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)]"
                   >
                     {game.title}

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion, useReducedMotion } from "framer-motion";
 
@@ -28,7 +28,7 @@ export default function BookConsultation() {
             questions, and build a plan that fits your goals.
           </p>
           <a
-            href="/en/templates/OHMT026-spa/contact"
+            href="/en/templates/spa/contact"
             className="mt-10 inline-flex items-center rounded-full bg-[var(--color-primary)] text-[var(--color-text-contrast)] px-8 py-3.5 text-sm font-semibold hover:brightness-110 active:scale-[0.97] transition-all duration-150"
           >
             Book your free consultation

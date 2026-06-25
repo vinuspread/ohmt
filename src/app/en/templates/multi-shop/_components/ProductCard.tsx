@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import Link from "next/link";
 import { Star } from "lucide-react";
@@ -29,7 +29,7 @@ export const ProductCard = ({
     originalPrice ? Math.round((1 - price / originalPrice) * 100) : null;
 
   return (
-    <Link href={`/en/templates/OHMT017-multi-shop/product/${id}`} className="group block active:scale-[0.98] transition-transform duration-160 ease-out">
+    <Link href={`/en/templates/multi-shop/product/${id}`} className="group block active:scale-[0.98] transition-transform duration-160 ease-out">
       <div className="overflow-hidden bg-[var(--color-bg-secondary)] aspect-[3/4] relative">
         <img
           src={image}

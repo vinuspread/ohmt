@@ -1,4 +1,4 @@
-﻿import { Exhibition, GalleryEvent } from './types';
+import { Exhibition, GalleryEvent } from './types';
 
 export const exhibitions: Exhibition[] = [
   {
@@ -10,8 +10,8 @@ export const exhibitions: Exhibition[] = [
     dateTo: 'May 31, 2026',
     showroom: 'Main Gallery',
     tags: { genre: 'Painting', theme: 'Identity', ageRating: '18+' },
-    image: '/templates/OHMT003-exhibition/exhibition-01.jpg',
-    heroImage: '/templates/OHMT003-exhibition/exhibition-hero-01.jpg',
+    image: '/templates/exhibition/exhibition-01.jpg',
+    heroImage: '/templates/exhibition/exhibition-hero-01.jpg',
     description:
       'Sophie Laurent\'s first solo exhibition at Oh My Template explores the tension between organic form and architectural structure. Her large-scale canvases merge gestural abstraction with precise geometric interventions, creating compositions that oscillate between chaos and control. Drawing on her background in architecture, Laurent constructs layered surfaces that reveal hidden geometries upon closer inspection. The exhibition traces her evolving practice from early charcoal studies to her latest mixed-media works, offering a comprehensive view of an artist at the height of her creative powers.',
   },
@@ -24,8 +24,8 @@ export const exhibitions: Exhibition[] = [
     dateTo: 'Jun 30, 2026',
     showroom: 'East Wing',
     tags: { genre: 'Sculpture', theme: 'Industrial', ageRating: '16+' },
-    image: '/templates/OHMT003-exhibition/exhibition-02.jpg',
-    heroImage: '/templates/OHMT003-exhibition/exhibition-hero-02.jpg',
+    image: '/templates/exhibition/exhibition-02.jpg',
+    heroImage: '/templates/exhibition/exhibition-hero-02.jpg',
     description:
       'Marcus Webb transforms industrial materials into provocative sculptural forms that challenge our perceptions of weight, balance, and beauty. Working with salvaged steel, reclaimed wood, and industrial hardware, Webb creates works that feel both monumental and precarious. Each piece engages with the architectural volume of the East Wing, establishing a dialogue between the raw materiality of the sculptures and the refined gallery space. "Skin & Steel" presents a decade of Webb\'s practice, from his early welded figures to recent large-scale installations.',
   },
@@ -38,8 +38,8 @@ export const exhibitions: Exhibition[] = [
     dateTo: 'Jul 31, 2026',
     showroom: 'Installation Hall',
     tags: { genre: 'Installation', theme: 'Nature', ageRating: '12+' },
-    image: '/templates/OHMT003-exhibition/exhibition-03.jpg',
-    heroImage: '/templates/OHMT003-exhibition/exhibition-hero-03.jpg',
+    image: '/templates/exhibition/exhibition-03.jpg',
+    heroImage: '/templates/exhibition/exhibition-hero-03.jpg',
     description:
       'Yuki Tanaka creates immersive environmental installations that capture the ephemeral qualities of natural light. Using translucent materials, projected imagery, and carefully calibrated spatial interventions, Tanaka transforms the Installation Hall into a sensory landscape that shifts throughout the day. "Light Residue" invites visitors to slow down and observe the subtle interplay of light, shadow, and atmosphere. The exhibition includes a major new commission created on-site during a month-long residency, responding directly to the unique architecture of Oh My Template.',
   },
@@ -52,8 +52,8 @@ export const exhibitions: Exhibition[] = [
     dateTo: 'Sep 30, 2026',
     showroom: 'Photography Wing',
     tags: { genre: 'Photography', theme: 'Society', ageRating: '14+' },
-    image: '/templates/OHMT003-exhibition/exhibition-04.jpg',
-    heroImage: '/templates/OHMT003-exhibition/exhibition-hero-01.jpg',
+    image: '/templates/exhibition/exhibition-04.jpg',
+    heroImage: '/templates/exhibition/exhibition-hero-01.jpg',
     description:
       'Aria Novak\'s documentary photography examines communities living on the margins of rapidly changing urban landscapes. Over five years, Novak traveled to twenty cities across four continents, capturing intimate portraits of neighborhoods facing displacement and transformation. Her large-format prints reveal the dignity and resilience of individuals navigating uncertain futures. "Uncertain Ground" combines these photographic works with field recordings and written testimonies, creating a multi-layered portrait of contemporary urban life at a moment of profound transition.',
   },
@@ -66,8 +66,8 @@ export const exhibitions: Exhibition[] = [
     dateTo: 'Oct 31, 2026',
     showroom: 'Garden Gallery',
     tags: { genre: 'Mixed Media', theme: 'Culture', ageRating: '12+' },
-    image: '/templates/OHMT003-exhibition/exhibition-05.jpg',
-    heroImage: '/templates/OHMT003-exhibition/exhibition-hero-02.jpg',
+    image: '/templates/exhibition/exhibition-05.jpg',
+    heroImage: '/templates/exhibition/exhibition-hero-02.jpg',
     description:
       'Collective Studio brings together twelve emerging artists from six countries to explore the concept of a shared visual language for the twenty-first century. Working across sculpture, textile, digital media, and performance, the collective challenges traditional boundaries between art forms and cultural traditions. "New Primitives" presents a series of collaborative works created during an intensive six-month residency, alongside individual pieces that reflect each artist\'s unique perspective. The exhibition spills beyond the Garden Gallery into Oh My Template&apos;s outdoor spaces, activating the entire venue.',
   },
@@ -80,8 +80,8 @@ export const exhibitions: Exhibition[] = [
     dateTo: 'ongoing',
     showroom: 'Permanent Collection',
     tags: { genre: 'Conceptual', theme: 'Identity', ageRating: '18+' },
-    image: '/templates/OHMT003-exhibition/exhibition-06.jpg',
-    heroImage: '/templates/OHMT003-exhibition/exhibition-hero-03.jpg',
+    image: '/templates/exhibition/exhibition-06.jpg',
+    heroImage: '/templates/exhibition/exhibition-hero-03.jpg',
     description:
       'Daniel Reeves\' seminal body of work, acquired by Oh My Template in 2024, spans three decades of conceptual practice that interrogates the nature of memory, documentation, and historical narrative. The permanent installation presents key works from each phase of Reeves\' career, from his early text-based pieces of the 1990s to his recent large-scale archival interventions. "After the Fact" is both a retrospective and a living archive, with selected works rotating periodically to reveal new connections and readings. The installation includes a dedicated research room where visitors can explore Reeves\' extensive archive of sketches, notes, and source materials.',
   },
@@ -95,7 +95,7 @@ export const events: GalleryEvent[] = [
     time: '15:00',
     type: 'Artist Talk',
     ageRating: '18+',
-    image: '/templates/OHMT003-exhibition/event-01.jpg',
+    image: '/templates/exhibition/event-01.jpg',
   },
   {
     id: 'evt-02',
@@ -104,7 +104,7 @@ export const events: GalleryEvent[] = [
     time: '10:00',
     type: 'Workshop',
     ageRating: '12+',
-    image: '/templates/OHMT003-exhibition/event-02.jpg',
+    image: '/templates/exhibition/event-02.jpg',
   },
   {
     id: 'evt-03',
@@ -113,7 +113,7 @@ export const events: GalleryEvent[] = [
     time: '14:00',
     type: 'Tour',
     ageRating: 'All',
-    image: '/templates/OHMT003-exhibition/event-01.jpg',
+    image: '/templates/exhibition/event-01.jpg',
   },
   {
     id: 'evt-04',
@@ -122,6 +122,6 @@ export const events: GalleryEvent[] = [
     time: '19:30',
     type: 'Performance',
     ageRating: '16+',
-    image: '/templates/OHMT003-exhibition/event-02.jpg',
+    image: '/templates/exhibition/event-02.jpg',
   },
 ];

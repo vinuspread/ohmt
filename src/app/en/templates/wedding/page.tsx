@@ -1,4 +1,4 @@
-﻿import { TemplateWrapper } from "./_components/TemplateWrapper";
+import { TemplateWrapper } from "./_components/TemplateWrapper";
 import themeData from "./theme.json";
 
 import Navbar from "./_components/layout/Navbar";
@@ -14,7 +14,7 @@ export default function TemplatePage() {
     "@type": "ProfessionalService",
     "name": "Oh My Template - Wedding Photography",
     "description": "Elegant dark portfolio template for wedding photography and cinematic capture",
-    "url": "https://ohmytemplate.com/en/templates/OHMT025-wedding",
+    "url": "https://ohmytemplate.com/en/templates/wedding",
     "telephone": "+1-512-555-0199",
     "address": {
       "@type": "PostalAddress",

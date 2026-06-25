@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT010-cosmetic/-components/layout/Footer.tsx
+// src/app/ko/templates/cosmetic/-components/layout/Footer.tsx
 "use client";
 
 import React from "react";
@@ -14,7 +14,7 @@ export const Footer = () => {
       <div className="max-w-[1440px] mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-20 mb-20">
           <div>
-            <Link href="/ko/templates/OHMT010-cosmetic" className="text-[1rem] md:text-[1.15rem] font-medium md:font-black tracking-[0.12em] uppercase mb-8 block">
+            <Link href="/ko/templates/cosmetic" className="text-[1rem] md:text-[1.15rem] font-medium md:font-black tracking-[0.12em] uppercase mb-8 block">
               VINUSPREAD
             </Link>
             <p className="text-[0.85rem] opacity-70 leading-relaxed max-w-[320px]">

@@ -1,4 +1,4 @@
-﻿import { Suspense } from "react";
+import { Suspense } from "react";
 import Link from "next/link";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
@@ -15,7 +15,7 @@ function ScheduleContent() {
       <PageHeader
         title="Book a Class"
         subtitle="Plan your week and find the class that fits your rhythm."
-        image="/templates/OHMT022-yoga/subpage-schedule.jpg"
+        image="/templates/yoga/subpage-schedule.jpg"
       />
 
       <section className="bg-[var(--color-bg)] border-b border-[var(--color-border)]">
@@ -61,7 +61,7 @@ function ScheduleContent() {
                 {day.classes.map((cls, idx) => (
                   <Link
                     key={idx}
-                    href={`/en/templates/OHMT022-yoga/classes/${cls.slug}`}
+                    href={`/en/templates/yoga/classes/${cls.slug}`}
                     className="group flex flex-col px-6 py-6 hover:bg-[var(--color-bg-alt)] transition-colors"
                   >
                     <p

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import "./theme.css";
 
 export const metadata: Metadata = {
@@ -8,9 +8,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "키즈 아카데미 - Oh My Template",
     description: "놀이로 시작하는 배움. 코딩부터 미술, 과학 실험까지 50가지 이상의 어린이 창의 클래스를 만나보세요.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT024-kids-education",
+    url: "https://ohmytemplate.com/ko/templates/kids-education",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/OHMT024-kids-education/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/kids-education/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
@@ -18,12 +18,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "키즈 아카데미 - Oh My Template",
     description: "놀이로 시작하는 배움. 코딩부터 미술, 과학 실험까지 50가지 이상의 어린이 창의 클래스를 만나보세요.",
-    images: ["/templates/OHMT024-kids-education/og-image.jpg"],
+    images: ["/templates/kids-education/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT024-kids-education",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT024-kids-education" },
+    canonical: "https://ohmytemplate.com/ko/templates/kids-education",
+    languages: { "en": "https://ohmytemplate.com/en/templates/kids-education" },
   },
 };
 

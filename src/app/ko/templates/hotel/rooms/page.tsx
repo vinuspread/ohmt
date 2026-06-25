@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState } from "react";
 import { Navbar } from "../_components/Navbar";
@@ -26,7 +26,7 @@ function RoomsPageContent() {
         {/* Hero Section */}
         <section className="relative h-[40vh] md:h-[50vh] flex items-center bg-[var(--color-primary)] overflow-hidden">
           <div className="absolute inset-0">
-            <img src="/templates/OHMT020-hotel/hero-main.jpg" alt="Rooms & Suites" className="w-full h-full object-cover opacity-50" />
+            <img src="/templates/hotel/hero-main.jpg" alt="Rooms & Suites" className="w-full h-full object-cover opacity-50" />
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)] via-[var(--color-primary)]/40 to-transparent" />
           </div>
           <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full pt-20">
@@ -113,10 +113,10 @@ function RoomsPageContent() {
                         <p className="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">{room.price}</p>
                       </div>
                       <div className="flex gap-4">
-                        <Link href={`/ko/templates/OHMT020-hotel/rooms/${room.id}`}>
+                        <Link href={`/ko/templates/hotel/rooms/${room.id}`}>
                           <Button variant="secondary" size="md" className="text-[12px] tracking-tight">상세 정보</Button>
                         </Link>
-                        <Link href="/ko/templates/OHMT020-hotel/booking">
+                        <Link href="/ko/templates/hotel/booking">
                           <Button variant="primary" size="md" className="text-[12px] tracking-tight">예약하기</Button>
                         </Link>
                       </div>

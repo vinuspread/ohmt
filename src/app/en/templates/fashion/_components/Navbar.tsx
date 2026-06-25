@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -25,19 +25,19 @@ useEffect(() => {
     <>
       <nav className={`fixed top-0 left-0 right-0 z-50 h-14 md:h-20 transition-all duration-700 flex items-center ${!isTransparent ? "bg-white/95 backdrop-blur-xl border-b border-black/5 shadow-sm" : "bg-transparent"}`}>
         <div className="max-w-[1440px] mx-auto w-full px-6 md:px-12 flex justify-between items-center transition-all">
-          <Link href="/en/templates/OHMT001-fashion" className={`text-xl md:text-2xl font-black tracking-tighter uppercase transition-colors duration-500 ${!isTransparent ? "text-black" : "text-white"}`}>
+          <Link href="/en/templates/fashion" className={`text-xl md:text-2xl font-black tracking-tighter uppercase transition-colors duration-500 ${!isTransparent ? "text-black" : "text-white"}`}>
             Oh My Template
           </Link>
 
            {/* Desktop Menu */}
            <div className={`hidden md:flex items-center gap-10 text-[14px] font-bold uppercase tracking-[0.3em] transition-colors duration-500 ${!isTransparent ? "text-black/60" : "text-white/80"}`}>
              {[
-                { name: "Collection", id: "collection", href: "/en/templates/OHMT001-fashion/category/collection" },
-                { name: "Archive", id: "archive", href: "/en/templates/OHMT001-fashion/category/archive" },
-                { name: "Journal", id: "journal", href: "/en/templates/OHMT001-fashion/category/journal" },
-                { name: "About", id: "about", href: "/en/templates/OHMT001-fashion/category/about" },
+                { name: "Collection", id: "collection", href: "/en/templates/fashion/category/collection" },
+                { name: "Archive", id: "archive", href: "/en/templates/fashion/category/archive" },
+                { name: "Journal", id: "journal", href: "/en/templates/fashion/category/journal" },
+                { name: "About", id: "about", href: "/en/templates/fashion/category/about" },
               ].map((item) => {
-                const isActive = pathname.includes(`/en/templates/OHMT001-fashion/category/${item.id}`);
+                const isActive = pathname.includes(`/en/templates/fashion/category/${item.id}`);
                return (
                  <Link
                    key={item.id}
@@ -69,7 +69,7 @@ useEffect(() => {
              <button className="hover:opacity-50 transition-opacity">
                <Search size={20} strokeWidth={1.5} />
              </button>
-             <Link href="/en/templates/OHMT001-fashion/cart" className="relative hover:opacity-50 transition-opacity">
+             <Link href="/en/templates/fashion/cart" className="relative hover:opacity-50 transition-opacity">
                <ShoppingBag size={20} strokeWidth={1.5} />
              </Link>
              <button 
@@ -95,10 +95,10 @@ useEffect(() => {
            <div className="flex flex-col gap-3 border-b border-black/5 pb-6 mb-6">
              <span className="text-[12px] font-bold tracking-[0.2em] text-black/30 mb-3 block">Series</span>
               {[
-                { name: "Collection", id: "collection", href: "/en/templates/OHMT001-fashion/category/collection" },
-                { name: "Archive", id: "archive", href: "/en/templates/OHMT001-fashion/category/archive" },
-                { name: "Journal", id: "journal", href: "/en/templates/OHMT001-fashion/category/journal" },
-                { name: "About", id: "about", href: "/en/templates/OHMT001-fashion/category/about" },
+                { name: "Collection", id: "collection", href: "/en/templates/fashion/category/collection" },
+                { name: "Archive", id: "archive", href: "/en/templates/fashion/category/archive" },
+                { name: "Journal", id: "journal", href: "/en/templates/fashion/category/journal" },
+                { name: "About", id: "about", href: "/en/templates/fashion/category/about" },
               ].map((item) => (
                 <Link
                   key={item.id}
@@ -116,21 +116,21 @@ useEffect(() => {
            <div className="flex flex-col gap-3">
              <span className="text-[12px] font-bold tracking-[0.2em] text-black/30 mb-3 block">Services</span>
              <Link
-               href="/en/templates/OHMT001-fashion/cart"
+               href="/en/templates/fashion/cart"
                onClick={() => setMobileOpen(false)}
                className="hover:text-black py-2.5 transition-colors block"
              >
                Shopping Bag
              </Link>
               <Link
-                href="/en/templates/OHMT001-fashion"
+                href="/en/templates/fashion"
                 onClick={() => setMobileOpen(false)}
                 className="hover:text-black py-2.5 transition-colors"
               >
                 Account / Login
               </Link>
               <Link
-                href="/en/templates/OHMT001-fashion"
+                href="/en/templates/fashion"
                 onClick={() => setMobileOpen(false)}
                 className="hover:text-black py-2.5 transition-colors"
               >

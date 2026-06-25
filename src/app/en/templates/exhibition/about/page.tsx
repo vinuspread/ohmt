@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 import { Navbar } from '../_components/Navbar';
@@ -23,7 +23,7 @@ export default function AboutPage() {
           </div>
           <div className="mt-12 relative min-h-[55vh] overflow-hidden">
             <img
-              src="/templates/OHMT003-exhibition/about-hero.jpg"
+              src="/templates/exhibition/about-hero.jpg"
               alt=""
               className="w-full h-full object-cover"
               style={{ minHeight: '55vh' }}
@@ -84,7 +84,7 @@ export default function AboutPage() {
                   contemporary art accessible to diverse audiences.
                 </p>
                 <Link
-                  href="/en/templates/OHMT003-exhibition/contact"
+                  href="/en/templates/exhibition/contact"
                   className="text-[11px] font-body font-semibold uppercase tracking-[0.12em] text-black border-b border-black pb-0.5 hover:opacity-60 transition-opacity"
                 >
                   Contact Us &rarr;

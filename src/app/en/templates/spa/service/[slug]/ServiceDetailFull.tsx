@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
@@ -117,7 +117,7 @@ export default function ServiceDetailFull() {
                   transition={{ duration: 0.5, ease: EASE_OUT }}
                   className="col-span-2 row-span-2 aspect-square rounded-2xl overflow-hidden"
                 >
-                  <img src="/templates/OHMT026-spa/mission-03.jpg" alt="A calm relaxation lounge with soft ambient lighting" className="h-full w-full object-cover" />
+                  <img src="/templates/spa/mission-03.jpg" alt="A calm relaxation lounge with soft ambient lighting" className="h-full w-full object-cover" />
                 </motion.div>
                 <motion.div
                   initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }}
@@ -126,7 +126,7 @@ export default function ServiceDetailFull() {
                   transition={{ duration: 0.5, delay: 0.1, ease: EASE_OUT }}
                   className="aspect-square rounded-2xl overflow-hidden"
                 >
-                  <img src="/templates/OHMT026-spa/difference-03.jpg" alt="Essential oils and botanicals arranged for the ritual" className="h-full w-full object-cover" />
+                  <img src="/templates/spa/difference-03.jpg" alt="Essential oils and botanicals arranged for the ritual" className="h-full w-full object-cover" />
                 </motion.div>
                 <motion.div
                   initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }}
@@ -135,7 +135,7 @@ export default function ServiceDetailFull() {
                   transition={{ duration: 0.5, delay: 0.15, ease: EASE_OUT }}
                   className="aspect-square rounded-2xl overflow-hidden"
                 >
-                  <img src="/templates/OHMT026-spa/who-we-are.jpg" alt="A therapist preparing the room before a session" className="h-full w-full object-cover" />
+                  <img src="/templates/spa/who-we-are.jpg" alt="A therapist preparing the room before a session" className="h-full w-full object-cover" />
                 </motion.div>
                 <motion.div
                   initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }}
@@ -144,7 +144,7 @@ export default function ServiceDetailFull() {
                   transition={{ duration: 0.5, delay: 0.2, ease: EASE_OUT }}
                   className="aspect-square rounded-2xl overflow-hidden"
                 >
-                  <img src="/templates/OHMT026-spa/mission-01.jpg" alt="Consultation before treatment" className="h-full w-full object-cover" />
+                  <img src="/templates/spa/mission-01.jpg" alt="Consultation before treatment" className="h-full w-full object-cover" />
                 </motion.div>
                 <motion.div
                   initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }}
@@ -153,7 +153,7 @@ export default function ServiceDetailFull() {
                   transition={{ duration: 0.5, delay: 0.25, ease: EASE_OUT }}
                   className="aspect-square rounded-2xl overflow-hidden"
                 >
-                  <img src="/templates/OHMT026-spa/difference-01.jpg" alt="A calm corner of the treatment space" className="h-full w-full object-cover" />
+                  <img src="/templates/spa/difference-01.jpg" alt="A calm corner of the treatment space" className="h-full w-full object-cover" />
                 </motion.div>
               </div>
             </div>
@@ -186,12 +186,12 @@ export default function ServiceDetailFull() {
 
               <div className="mt-16 flex flex-col sm:flex-row items-center gap-4">
                 <a
-                  href="/en/templates/OHMT026-spa/contact"
+                  href="/en/templates/spa/contact"
                   className="inline-flex items-center rounded-full bg-[var(--color-primary)] text-[var(--color-text-contrast)] px-8 py-3.5 text-sm font-semibold hover:brightness-110 active:scale-[0.97] transition-all duration-150"
                 >
                   Book this treatment
                 </a>
-                <Link href="/en/templates/OHMT026-spa/service" className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] hover:underline">
+                <Link href="/en/templates/spa/service" className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-primary)] hover:underline">
                   ← Back to services
                 </Link>
               </div>

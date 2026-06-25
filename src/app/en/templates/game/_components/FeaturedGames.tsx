@@ -26,7 +26,7 @@ export default function FeaturedGames() {
             </h2>
           </div>
           <Link
-            href="/en/templates/OHMT023-game/games"
+            href="/en/templates/game/games"
             className="group hidden items-center gap-2 text-sm font-medium text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-primary)] md:flex"
           >
             View All Games
@@ -42,7 +42,7 @@ export default function FeaturedGames() {
 
         <div className="mt-10 text-center md:hidden">
           <Link
-            href="/en/templates/OHMT023-game/games"
+            href="/en/templates/game/games"
             className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-primary)]"
           >
             View All Games

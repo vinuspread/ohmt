@@ -1,10 +1,10 @@
-// src/app/en/templates/OHMT027-architecture/_components/layout/Footer.tsx
+// src/app/en/templates/architecture/_components/layout/Footer.tsx
 "use client";
 import React from "react";
 import Link from "next/link";
 
 export function Footer() {
-  const baseRoute = "/en/templates/OHMT027-architecture";
+  const baseRoute = "/en/templates/architecture";
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();

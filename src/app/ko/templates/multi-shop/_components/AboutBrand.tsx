@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
@@ -21,7 +21,7 @@ export const AboutBrand = () => {
             transition={{ duration: 0.5, ease: easeOut }}
           >
             <img
-              src="/templates/OHMT017-multi-shop/about-brand.jpg"
+              src="/templates/multi-shop/about-brand.jpg"
               alt="브랜드 이미지"
               className="w-full h-full object-cover"
             />
@@ -67,7 +67,7 @@ export const AboutBrand = () => {
               ))}
             </div>
             <Link
-              href="/ko/templates/OHMT017-multi-shop/about"
+              href="/ko/templates/multi-shop/about"
               className="inline-block mt-10 bg-[var(--color-primary)] text-white px-8 py-3 text-xs uppercase tracking-[0.2em] hover:bg-black/80 transition-[transform,colors] duration-160 ease-out active:scale-[0.97]"
             >
               더 알아보기

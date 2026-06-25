@@ -1,12 +1,12 @@
-﻿"use client";
+"use client";
 
 import { motion, useReducedMotion, useInView, useMotionValue, animate, AnimatePresence } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 
 const heroSlides = [
-  { img: "/templates/OHMT024-kids-education/hero-slide-1.jpg", tag: "창작 미술", title: "모든 아이가 예술가가\n되는 아름다운 공간" },
-  { img: "/templates/OHMT024-kids-education/hero-slide-2.jpg", tag: "STEM 교육", title: "코딩, 과학, 수학으로\n떠나는 즐거운 탐험" },
-  { img: "/templates/OHMT024-kids-education/hero-slide-3.jpg", tag: "사회성 & 놀이",  title: "놀이를 통해 함께\n배우고 자라나요" },
+  { img: "/templates/kids-education/hero-slide-1.jpg", tag: "창작 미술", title: "모든 아이가 예술가가\n되는 아름다운 공간" },
+  { img: "/templates/kids-education/hero-slide-2.jpg", tag: "STEM 교육", title: "코딩, 과학, 수학으로\n떠나는 즐거운 탐험" },
+  { img: "/templates/kids-education/hero-slide-3.jpg", tag: "사회성 & 놀이",  title: "놀이를 통해 함께\n배우고 자라나요" },
 ];
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;

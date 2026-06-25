@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -87,7 +87,7 @@ function BlogPostContent({ params }: { params: Promise<{ slug: string }> }) {
               <h2 className="text-2xl font-bold tracking-tight mb-10">Related Articles</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 {relatedPosts.map((rp) => (
-                  <Link key={rp.id} href={`/en/templates/OHMT017-multi-shop/blog/${rp.slug}`} className="group block">
+                  <Link key={rp.id} href={`/en/templates/multi-shop/blog/${rp.slug}`} className="group block">
                     <div className="aspect-[16/10] overflow-hidden bg-[var(--color-bg-secondary)]">
                       <img
                         src={rp.image}

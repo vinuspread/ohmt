@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { Suspense } from "react";
 import React from "react";
 import Link from "next/link";
@@ -11,10 +11,10 @@ import { Footer } from "../_components/layout/Footer";
 import { stats, designerInfo } from "@/lib/portfolio-data";
 
 const team = [
-  { name: "Marco Vinus", role: "Founder & Creative Director", img: "/templates/OHMT007-portfolio/portfolio-1.jpg" },
-  { name: "Yuna Park", role: "Lead Designer", img: "/templates/OHMT007-portfolio/portfolio-2.jpg" },
-  { name: "Tobias Krenn", role: "Front-end Engineer", img: "/templates/OHMT007-portfolio/portfolio-3.png" },
-  { name: "Sofia Reyes", role: "Brand Strategist", img: "/templates/OHMT007-portfolio/portfolio-4.png" },
+  { name: "Marco Vinus", role: "Founder & Creative Director", img: "/templates/portfolio/portfolio-1.jpg" },
+  { name: "Yuna Park", role: "Lead Designer", img: "/templates/portfolio/portfolio-2.jpg" },
+  { name: "Tobias Krenn", role: "Front-end Engineer", img: "/templates/portfolio/portfolio-3.png" },
+  { name: "Sofia Reyes", role: "Brand Strategist", img: "/templates/portfolio/portfolio-4.png" },
 ];
 
 const process = [
@@ -46,7 +46,7 @@ function AboutPageContent() {
               <p className="text-[1rem] text-[var(--color-text-muted)] leading-[1.4]">
                 We believe great design is never decoration. It's a strategic act that changes how people feel about a product before they've used it.
               </p>
-              <Link href="/en/templates/OHMT007-portfolio/contact" className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-widest text-[var(--color-text)] border-b border-[var(--color-accent)]/30 pb-0.5 hover:border-[var(--color-accent)] transition-colors">
+              <Link href="/en/templates/portfolio/contact" className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-widest text-[var(--color-text)] border-b border-[var(--color-accent)]/30 pb-0.5 hover:border-[var(--color-accent)] transition-colors">
                 Work With Us <ArrowUpRight size={12} />
               </Link>
             </div>

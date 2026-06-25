@@ -1,14 +1,14 @@
-﻿'use client';
+'use client';
 
 import Link from 'next/link';
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
 const menuLinks = [
-  { href: '/ko/templates/OHMT003-exhibition/about', label: '소개' },
-  { href: '/ko/templates/OHMT003-exhibition/exhibitions', label: '전시' },
-  { href: '/ko/templates/OHMT003-exhibition/events', label: '이벤트' },
-  { href: '/ko/templates/OHMT003-exhibition/contact', label: '문의' },
+  { href: '/ko/templates/exhibition/about', label: '소개' },
+  { href: '/ko/templates/exhibition/exhibitions', label: '전시' },
+  { href: '/ko/templates/exhibition/events', label: '이벤트' },
+  { href: '/ko/templates/exhibition/contact', label: '문의' },
 ];
 
 const easeOut = [0.23, 1, 0.32, 1] as const;
@@ -23,7 +23,7 @@ export const Navbar = () => {
         style={{ mixBlendMode: menuOpen ? 'normal' : 'difference' }}
       >
         <div className="max-w-[1400px] mx-auto px-6 h-20 flex items-center justify-between pointer-events-auto">
-          <Link href="/ko/templates/OHMT003-exhibition" className="text-[1rem] font-heading font-semibold uppercase tracking-[0.15em] text-white">
+          <Link href="/ko/templates/exhibition" className="text-[1rem] font-heading font-semibold uppercase tracking-[0.15em] text-white">
             Oh My Template
           </Link>
           <div className="flex items-center gap-6">
@@ -68,7 +68,7 @@ export const Navbar = () => {
             <div className="hidden md:block absolute bottom-12 right-12 text-right">
               <p className="text-[12px] font-body text-white/60 mb-2">123 West 25th Street, New York, NY 10001</p>
               <p className="text-[12px] font-body text-white/60 mb-4">info@formagallery.com · +1 (212) 555-0147</p>
-              <Link href="/ko/templates/OHMT003-exhibition/contact" onClick={() => setMenuOpen(false)} className="inline-block px-6 py-3 bg-white/60 text-black text-[11px] font-body font-semibold uppercase tracking-[0.12em] hover:bg-white transition-colors duration-200">
+              <Link href="/ko/templates/exhibition/contact" onClick={() => setMenuOpen(false)} className="inline-block px-6 py-3 bg-white/60 text-black text-[11px] font-body font-semibold uppercase tracking-[0.12em] hover:bg-white transition-colors duration-200">
                 티켓 구매
               </Link>
             </div>

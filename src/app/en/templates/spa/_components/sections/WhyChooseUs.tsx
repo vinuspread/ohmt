@@ -1,20 +1,20 @@
-﻿"use client";
+"use client";
 
 import { motion, useReducedMotion } from "framer-motion";
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 
 const badges = [
-  { label: "Certified therapists", description: "Licensed professionals with advanced clinical training and ongoing education.", image: "/templates/OHMT026-spa/promo-01.jpg" },
-  { label: "Results guarantee", description: "If you're not satisfied after your first session, we'll make it right.", image: "/templates/OHMT026-spa/promo-02.jpg" },
+  { label: "Certified therapists", description: "Licensed professionals with advanced clinical training and ongoing education.", image: "/templates/spa/promo-01.jpg" },
+  { label: "Results guarantee", description: "If you're not satisfied after your first session, we'll make it right.", image: "/templates/spa/promo-02.jpg" },
 ];
 
 const avatars = [
-  "/templates/OHMT026-spa/avatar-01.jpg",
-  "/templates/OHMT026-spa/avatar-02.jpg",
-  "/templates/OHMT026-spa/avatar-03.jpg",
-  "/templates/OHMT026-spa/avatar-04.jpg",
-  "/templates/OHMT026-spa/avatar-05.jpg",
+  "/templates/spa/avatar-01.jpg",
+  "/templates/spa/avatar-02.jpg",
+  "/templates/spa/avatar-03.jpg",
+  "/templates/spa/avatar-04.jpg",
+  "/templates/spa/avatar-05.jpg",
 ];
 
 export default function WhyChooseUs() {

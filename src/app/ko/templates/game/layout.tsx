@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "게임 스튜디오 - Oh My Template",
     description: "프리미엄 게임 스튜디오 & 개발 쇼케이스",
-    url: "https://ohmytemplate.com/ko/templates/OHMT023-game",
+    url: "https://ohmytemplate.com/ko/templates/game",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/OHMT023-game/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/game/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "게임 스튜디오 - Oh My Template",
     description: "프리미엄 게임 스튜디오 & 개발 쇼케이스",
-    images: ["/templates/OHMT023-game/og-image.jpg"],
+    images: ["/templates/game/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT023-game",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT023-game" },
+    canonical: "https://ohmytemplate.com/ko/templates/game",
+    languages: { "en": "https://ohmytemplate.com/en/templates/game" },
   },
 };
 

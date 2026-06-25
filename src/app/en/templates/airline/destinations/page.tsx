@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT008-airline/destinations/page.tsx
+// src/app/templates/airline/destinations/page.tsx
 "use client";
 
 import React, { useState } from "react";
@@ -20,7 +20,7 @@ function DestinationsPageContent() {
       name: "Paris", 
       country: "France", 
       desc: "Immerse yourself in world-class art, culinary genius, and historical elegance.",
-      img: "/templates/OHMT008-airline/paris.png",
+      img: "/templates/airline/paris.png",
       mood: "Heritage & Arts"
     },
     {
@@ -28,7 +28,7 @@ function DestinationsPageContent() {
       name: "Tokyo", 
       country: "Japan", 
       desc: "Discover where ancient meticulous shrine traditions border neon skyscrapers.",
-      img: "/templates/OHMT008-airline/tokyo.png",
+      img: "/templates/airline/tokyo.png",
       mood: "Metropolitan"
     },
     {
@@ -36,7 +36,7 @@ function DestinationsPageContent() {
       name: "New York", 
       country: "USA", 
       desc: "Thrive inside the soaring energy of the world's most dramatic skyline.",
-      img: "/templates/OHMT008-airline/new-york.png",
+      img: "/templates/airline/new-york.png",
       mood: "Metropolitan"
     },
     {
@@ -44,7 +44,7 @@ function DestinationsPageContent() {
       name: "Dubai", 
       country: "UAE", 
       desc: "Indulge in unparalleled desert architecture, grand harbors, and high luxury.",
-      img: "/templates/OHMT008-airline/dubai.png",
+      img: "/templates/airline/dubai.png",
       mood: "Metropolitan"
     },
     {
@@ -52,7 +52,7 @@ function DestinationsPageContent() {
       name: "Sydney", 
       country: "Australia", 
       desc: "Delight in coastal harborside elegance, pristine bays, and upscale lifestyle.",
-      img: "/templates/OHMT008-airline/sydney.png",
+      img: "/templates/airline/sydney.png",
       mood: "Nature & Retreats"
     },
     {
@@ -60,7 +60,7 @@ function DestinationsPageContent() {
       name: "Bali", 
       country: "Indonesia", 
       desc: "Escape into cascading emerald valleys, clifftop temples, and serene beaches.",
-      img: "/templates/OHMT008-airline/bali.png",
+      img: "/templates/airline/bali.png",
       mood: "Nature & Retreats"
     },
   ];
@@ -76,7 +76,7 @@ function DestinationsPageContent() {
 
         {/* Hero Cover Banner */}
         <PageHero
-          imageSrc="/templates/OHMT008-airline/destination-main.jpg"
+          imageSrc="/templates/airline/destination-main.jpg"
           imageAlt="Global destinations"
           label="Curated Sky Escapes"
           title={<>Explore Our <br /><span className="text-[var(--color-accent)] font-serif normal-case font-normal">Refined World.</span></>}
@@ -125,7 +125,7 @@ function DestinationsPageContent() {
                     transition={{ duration: 0.3 }}
                   >
                     <Link 
-                      href={`/en/templates/OHMT008-airline/destinations/${dest.slug}`}
+                      href={`/en/templates/airline/destinations/${dest.slug}`}
                       className="group block space-y-6 text-left select-none"
                     >
                       {/* Image container (Color by default, Scale on hover) */}

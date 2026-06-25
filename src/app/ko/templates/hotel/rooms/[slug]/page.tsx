@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import { Navbar } from "../../_components/Navbar";
@@ -25,7 +25,7 @@ function RoomDetailPageContent() {
         {/* Back navigation bar */}
         <div className="pt-24 md:pt-32 pb-4 bg-[var(--color-bg)] border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between">
-            <Link href="/ko/templates/OHMT020-hotel/rooms" className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">
+            <Link href="/ko/templates/hotel/rooms" className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">
               <ArrowLeft size={14} /> 객실 목록으로 돌아가기
             </Link>
             <span className="text-xs text-[var(--color-text-muted)] tracking-tight">{room.name}</span>
@@ -129,7 +129,7 @@ function RoomDetailPageContent() {
                       </button>
                     </div>
 
-                    <Link href="/ko/templates/OHMT020-hotel/booking" className="w-full">
+                    <Link href="/ko/templates/hotel/booking" className="w-full">
                       <Button variant="primary" size="lg" className="w-full text-[12px] tracking-tight">이 객실 예약하기</Button>
                     </Link>
                   </div>

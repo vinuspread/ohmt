@@ -1,10 +1,10 @@
-﻿// src/app/en/templates/OHMT017-multi-shop/data/data.ts
+// src/app/en/templates/multi-shop/data/data.ts
 
 export const categories = [
-  { id: 'accessories', name: 'Accessories', image: '/templates/OHMT017-multi-shop/category-accessories.jpg' },
-  { id: 'footwear', name: 'Footwear', image: '/templates/OHMT017-multi-shop/category-footwear.jpg' },
-  { id: 'womens', name: "Women's", image: '/templates/OHMT017-multi-shop/category-women.jpg' },
-  { id: 'mens', name: "Men's", image: '/templates/OHMT017-multi-shop/category-men.jpg' },
+  { id: 'accessories', name: 'Accessories', image: '/templates/multi-shop/category-accessories.jpg' },
+  { id: 'footwear', name: 'Footwear', image: '/templates/multi-shop/category-footwear.jpg' },
+  { id: 'womens', name: "Women's", image: '/templates/multi-shop/category-women.jpg' },
+  { id: 'mens', name: "Men's", image: '/templates/multi-shop/category-men.jpg' },
 ]
 
 export const products = [
@@ -17,7 +17,7 @@ export const products = [
     reviewCount: 124,
     category: 'accessories',
     tag: 'New',
-    image: '/templates/OHMT017-multi-shop/product-01.jpg',
+    image: '/templates/multi-shop/product-01.jpg',
     description: 'Minimalist square-frame sunglasses with UV400 protection. Lightweight acetate construction for all-day comfort.',
     longDescription: 'Embodying classic chic with a contemporary edge, these Square Sunglasses are a testament to refined minimalism. Featuring a hand-polished premium bio-acetate frame and robust UV400 lenses, they offer unparalleled clarity and daytime eye protection. The sleek profile is balanced by comfortable, subtle nose pads and solid metal temples that gently curve for an optimal fit.\n\nDesigned for both casual city walks and dynamic outdoor leisure activities, these sunglasses block glare while keeping your outfit grounded in effortless style. The signature metal hinges are reinforced to withstand daily wear and tear without losing their tension.\n\nWith a genderless aesthetic, the clean rectangular silhouette flatters a wide range of face shapes, serving as the ultimate versatile accessory.',
     specs: [
@@ -44,7 +44,7 @@ export const products = [
     reviewCount: 89,
     category: 'accessories',
     tag: 'New',
-    image: '/templates/OHMT017-multi-shop/product-02.jpg',
+    image: '/templates/multi-shop/product-02.jpg',
     description: 'Organic cotton canvas tote with reinforced stitching. Spacious interior fits all your daily essentials.',
     longDescription: 'Engineered for the daily commuter and weekend wanderer, our Canvas Tote Bag is constructed from heavy-duty organic cotton canvas. Featuring reinforced box-stitching at key stress points and dual webbed handles, it effortlessly handles heavy loads. The spacious unlined interior includes an easy-access slip pocket for keys and smartphones, combining utilitarian purpose with a raw, natural aesthetic.\n\nThis tote is designed to hold its structural shape over time, avoiding the floppy look of cheaper alternatives. The flat bottom is reinforced with a double-layered canvas panel, ensuring your books, laptop, and water bottle remain organized and upright.\n\nThe unbleached organic cotton reveals tiny, natural seed flecks throughout, giving each individual bag a unique and authentic texture that beautifully ages with use.',
     specs: [
@@ -72,7 +72,7 @@ export const products = [
     reviewCount: 57,
     category: 'womens',
     tag: 'New',
-    image: '/templates/OHMT017-multi-shop/product-03.jpg',
+    image: '/templates/multi-shop/product-03.jpg',
     description: 'Elegant A-line skirt with delicate bow detail at the waist. Crafted from premium peached satin.',
     longDescription: 'Capturing fluid motion with a structured waist, the Lila Bow-Accent Skirt is a versatile masterpiece. Tailored from premium peached satin, it offers a luxurious matte-shine finish and a butter-soft drape. The A-line silhouette is completed with an elegant self-tie bow at the left hip, invisible side-zip closure, and a delicate midi hemline that transitions seamlessly from high-profile daytime meetings to evening events.\n\nThe bias-cut construction drape allows the skirt to follow your movements fluidly, creating an elegant silhouette. The fabric has undergone a specialized peach-skin brushing process, removing the harsh shine of standard satin and replacing it with a velvety, sophisticated touch.\n\nA matching full-length stretch lining is built in, providing anti-static performance and maximum freedom of movement throughout the day.',
     specs: [
@@ -99,7 +99,7 @@ export const products = [
     reviewCount: 203,
     category: 'footwear',
     tag: 'New',
-    image: '/templates/OHMT017-multi-shop/product-04.jpg',
+    image: '/templates/multi-shop/product-04.jpg',
     description: 'Cushioned insole and sleek leather construction. Versatile design pairs with any wardrobe.',
     longDescription: 'Redefining casual luxury, our Minimal Leather Sneaker boasts a clean, stitch-down profile made from full-grain calfskin leather. Fitted with an ultra-comfortable padded leather collar and a high-rebound cushioned footbed, it delivers cloud-like steps. The durable vulcanized rubber cupsole ensures premium grip and longevity, making it the definitive smart-casual anchor for any minimalist wardrobe.\n\nThe beauty of this sneaker lies in its unbranded, stitch-perfect minimalism. With no visible logos, it keeps your outfit looking clean and sophisticated, easily dressing up a casual suit or dressing down tailored trousers.\n\nEvery seam is stitched with high-tensile nylon thread, and the leather edges are hand-painted with high-quality edge coat to prevent cracking over time.',
     specs: [
@@ -127,7 +127,7 @@ export const products = [
     reviewCount: 145,
     category: 'mens',
     tag: 'New',
-    image: '/templates/OHMT017-multi-shop/product-05.jpg',
+    image: '/templates/multi-shop/product-05.jpg',
     description: 'Relaxed-fit linen shirt with mother-of-pearl buttons. Breathable fabric perfect for warmer days.',
     longDescription: 'Woven from premium Belgian flax, the Classic Linen Shirt is designed for natural breathability and a relaxed drape. The fabric is pre-washed to prevent shrinking and to enhance its soft texture. Detailed with genuine mother-of-pearl buttons, a clean French placket, and a soft button-down collar, it strikes a perfect balance between coastal ease and urban sophistication.\n\nThe premium flax fibers allow optimal airflow, keeping your skin dry and cool even in high heat and humidity. Unlike cheaper synthetic blends, this 100% natural linen is highly absorbent and hypoallergenic.\n\nDesigned to be worn slightly rumpled, this shirt develops character and custom drape with every single wash and wear cycle.',
     specs: [
@@ -154,7 +154,7 @@ export const products = [
     reviewCount: 312,
     category: 'womens',
     tag: 'Best',
-    image: '/templates/OHMT017-multi-shop/product-06.jpg',
+    image: '/templates/multi-shop/product-06.jpg',
     description: 'Fine-gauge ribbed knit sweater with a relaxed silhouette. Soft merino wool blend.',
     longDescription: 'Spun from an exquisite blend of merino wool and cashmere, the Ribbed Knit Sweater delivers superior warmth without weight. The fine-gauge ribbing conforms naturally to your body for a flattering drape, while the dropped shoulders create an effortlessly relaxed silhouette. Complete with cozy extended cuffs and a mock neckline, it is a timeless seasonal foundation.\n\nThe ribbed knit structure offers high elasticity, allowing for easy layering over shirts without any constriction. The cozy mock neck provides premium wind protection while creating a sophisticated, elongated neck profile.\n\nCrafted with high-precision linking, every seam is entirely flat-knit to avoid bulkiness under coats and jackets.',
     specs: [
@@ -182,7 +182,7 @@ export const products = [
     reviewCount: 178,
     category: 'mens',
     tag: 'Best',
-    image: '/templates/OHMT017-multi-shop/product-07.jpg',
+    image: '/templates/multi-shop/product-07.jpg',
     description: 'Tailored slim-fit chinos in stretch cotton twill. Classic five-pocket styling.',
     longDescription: 'Crafted from premium long-staple cotton twill with a touch of elastane, these Slim Chino Pants offer flexibility and shape retention. The tailored fit tapers gently through the leg for a sleek, contemporary silhouette. Features include dynamic reinforced belt loops, clean welt rear pockets, and a durable brass zip fly, making them ideal for day-to-night versatility.\n\nThese chinos are the ultimate wardrobe bridging piece, looking equally sophisticated with a sharp blazer at the office or styled casually with a clean tee and sneakers on the weekend.\n\nThe double-twisted yarn construction ensures that these pants maintain their structural fit after washing, eliminating baggy knees or fabric sagging.',
     specs: [
@@ -209,7 +209,7 @@ export const products = [
     reviewCount: 94,
     category: 'accessories',
     tag: 'Best',
-    image: '/templates/OHMT017-multi-shop/product-08.jpg',
+    image: '/templates/multi-shop/product-08.jpg',
     description: 'Italian leather crossbody bag with adjustable strap. Minimalist silhouette with hidden pocket.',
     longDescription: 'A study in minimalist form and utility, this Leather Crossbody Bag is constructed from vegetable-tanned Italian pebble leather that ages with a rich patina. The structured exterior features a clean hidden front slip pocket, while the main lined compartment houses zippered organization. Completed with polished brass hardware and an adjustable shoulder strap for customized carrying.\n\nTo ensure durability against scratches, the leather has undergone a gentle pebble-embossing process. This texture naturally repels dirt and moisture, keeping the bag looking immaculate through daily commutes.\n\nThe crossbody strap is secured with high-grade solid brass buckles, coated in a matte anti-tarnish glaze that develops a matching vintage tone.',
     specs: [
@@ -237,7 +237,7 @@ export const products = [
     reviewCount: 267,
     category: 'footwear',
     tag: 'Best',
-    image: '/templates/OHMT017-multi-shop/product-09.jpg',
+    image: '/templates/multi-shop/product-09.jpg',
     description: 'Pointed-toe ankle boots with stacked leather heel. Side zip for easy wear.',
     longDescription: 'Sleek and sculptural, these Pointed-Toe Ankle Boots are crafted in soft calf suede with an elegant stacked block heel. Features include a cushioned leather lining and a shock-absorbing footbed for unexpected comfort. A durable inner side zip with metal hardware ensures effortless dressing, while the sharp, modern silhouette elongates the leg line.\n\nTo prevent the common pinching associated with pointed-toe footwear, the toe box features a custom anatomically widened instep, providing a comfortable fit even during long walks.\n\nThe sole and heel are bound using a traditional handcrafted cemented process in a Spanish atelier, preventing heel separation and ensuring long-term wearability.',
     specs: [
@@ -264,7 +264,7 @@ export const products = [
     reviewCount: 83,
     category: 'womens',
     tag: 'Best',
-    image: '/templates/OHMT017-multi-shop/product-10.jpg',
+    image: '/templates/multi-shop/product-10.jpg',
     description: 'Wrap dress with custom floral print. Flattering tie waist and V-neckline in lightweight viscose.',
     longDescription: 'Defined by a fluid wrap silhouette and custom floral motifs, this Dress is crafted from lightweight viscose that flows elegantly with every movement. Designed with a flattering adjustable waist tie, a clean V-neckline, and subtle flutter sleeves, it offers a romantic yet contemporary look ideal for outdoor gatherings or evening dinner dates.\n\nThe fabric is woven from Lenzing EcoVero viscose fibers, sourced from certified sustainable wood pulp, reducing chemical use and carbon footprint by 50% compared to generic viscose.\n\nTo guarantee comfort, the neckline is equipped with a tiny, hidden security snap button, preventing any unwanted gaping during movement.',
     specs: [
@@ -292,7 +292,7 @@ export const products = [
     reviewCount: 156,
     category: 'footwear',
     tag: 'Best',
-    image: '/templates/OHMT017-multi-shop/product-11.jpg',
+    image: '/templates/multi-shop/product-11.jpg',
     description: 'Classic penny loafer in polished calf leather. Cushioned footbed and durable leather sole.',
     longDescription: 'Honoring traditional shoemaking, these Oxford Loafers are constructed from polished box-calf leather that softens with wear. Featuring a genuine Goodyear welt, a comfortable memory foam-cushioned leather insole, and a durable stacked leather sole with rubber heel taps for added traction, they are built to last a lifetime.\n\nThe semi-gloss box-calf leather holds its luster exceptionally well; a quick buff with neutral shoe cream instantly restores its original showroom shine.\n\nThe saddle strap across the vamp is stitched with high-tensile waxed thread using traditional saddle stitching, preventing any separation of the penny slot over years of wear.',
     specs: [
@@ -317,9 +317,9 @@ export const newArrivals = products.filter(p => p.tag === 'New')
 export const bestSellers = products.filter(p => p.tag === 'Best')
 
 export const teamMembers = [
-  { id: '1', name: 'Sofia Laurent', role: 'Creative Director', image: '/templates/OHMT017-multi-shop/team-01.jpg', instagram: '#', linkedin: '#' },
-  { id: '2', name: 'James Avery', role: 'Head of Design', image: '/templates/OHMT017-multi-shop/team-02.jpg', instagram: '#', linkedin: '#' },
-  { id: '3', name: 'Mia Chen', role: 'Brand Strategist', image: '/templates/OHMT017-multi-shop/team-03.jpg', instagram: '#', linkedin: '#' },
+  { id: '1', name: 'Sofia Laurent', role: 'Creative Director', image: '/templates/multi-shop/team-01.jpg', instagram: '#', linkedin: '#' },
+  { id: '2', name: 'James Avery', role: 'Head of Design', image: '/templates/multi-shop/team-02.jpg', instagram: '#', linkedin: '#' },
+  { id: '3', name: 'Mia Chen', role: 'Brand Strategist', image: '/templates/multi-shop/team-03.jpg', instagram: '#', linkedin: '#' },
 ]
 
 export const reviews = [
@@ -330,7 +330,7 @@ export const reviews = [
 ]
 
 export const blogPosts = [
-  { id: '1', slug: 'style-minimalist-accessories', title: 'How to Style Minimalist Accessories This Season', category: 'Style Guide', date: 'June 5, 2026', readTime: '5 min', image: '/templates/OHMT017-multi-shop/blog-01.jpg', excerpt: 'Discover the art of understated elegance with our curated guide to minimalist accessories that elevate any outfit.' },
-  { id: '2', slug: 'sustainable-fashion', title: 'Sustainable Fashion: Our Brand Commitment', category: 'Brand Story', date: 'May 28, 2026', readTime: '4 min', image: '/templates/OHMT017-multi-shop/blog-02.jpg', excerpt: 'Learn about our journey toward sustainable practices and how we are redefining fashion with purpose.' },
-  { id: '3', slug: 'mens-wardrobe-checklist', title: "The Essential Men's Wardrobe Checklist", category: "Men's Guide", date: 'May 15, 2026', readTime: '6 min', image: '/templates/OHMT017-multi-shop/blog-03.jpg', excerpt: 'Build a timeless wardrobe with our essential checklist of versatile pieces every man needs.' },
+  { id: '1', slug: 'style-minimalist-accessories', title: 'How to Style Minimalist Accessories This Season', category: 'Style Guide', date: 'June 5, 2026', readTime: '5 min', image: '/templates/multi-shop/blog-01.jpg', excerpt: 'Discover the art of understated elegance with our curated guide to minimalist accessories that elevate any outfit.' },
+  { id: '2', slug: 'sustainable-fashion', title: 'Sustainable Fashion: Our Brand Commitment', category: 'Brand Story', date: 'May 28, 2026', readTime: '4 min', image: '/templates/multi-shop/blog-02.jpg', excerpt: 'Learn about our journey toward sustainable practices and how we are redefining fashion with purpose.' },
+  { id: '3', slug: 'mens-wardrobe-checklist', title: "The Essential Men's Wardrobe Checklist", category: "Men's Guide", date: 'May 15, 2026', readTime: '6 min', image: '/templates/multi-shop/blog-03.jpg', excerpt: 'Build a timeless wardrobe with our essential checklist of versatile pieces every man needs.' },
 ]

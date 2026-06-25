@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT013-newspaper/-components/sections/FrontPage.tsx
+// src/app/ko/templates/newspaper/-components/sections/FrontPage.tsx
 "use client";
 
 import React from "react";
@@ -18,7 +18,7 @@ export const FrontPage = () => {
         <div className="md:pr-8 md:border-r border-[var(--color-border)]">
           <span className="text-[0.7rem] font-bold uppercase tracking-[0.14em] text-[var(--color-primary)] block mb-2">글로벌 분석</span>
           <img
-            src="/templates/OHMT013-newspaper/news-1.jpg"
+            src="/templates/newspaper/news-1.jpg"
             className="w-full h-[420px] object-cover mb-5"
             alt="Hero story"
           />
@@ -71,19 +71,19 @@ export const FrontPage = () => {
           {
             label: "문화",
             title: "스트리밍 범람의 시대, 클래식 고전 영화의 화려한 부활.",
-            img: "/templates/OHMT013-newspaper/news-2.jpg",
+            img: "/templates/newspaper/news-2.jpg",
             desc: "오프라인의 물리적 공간과 감각을 갈망하는 관객들이 다시 독립 예술영화관으로 몰려들고 있다."
           },
           {
             label: "과학",
             title: "핵융합 에너지 상용화 연구의 역사적인 획기적 이정표 달성.",
-            img: "/templates/OHMT013-newspaper/news-3.jpg",
+            img: "/templates/newspaper/news-3.jpg",
             desc: "캘리포니아 연구소, 올해에만 두 번째로 에너지 순이득(Net Energy Gain) 달성."
           },
           {
             label: "사회",
             title: "도심 이주의 거대한 파도: 대도시는 왜 여전히 팽창하는가.",
-            img: "/templates/OHMT013-newspaper/news-4.jpg",
+            img: "/templates/newspaper/news-4.jpg",
             desc: "재택근무의 트렌드 확산 속에서도, 거대 메트로폴리탄 허브는 젊은 청년 인구를 끊임없이 흡수하고 있다."
           }
         ].map((item, i) => (

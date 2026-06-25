@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT011-ir/-components/layout/Footer.tsx
+// src/app/templates/ir/-components/layout/Footer.tsx
 "use client";
 
 import React from "react";
@@ -10,7 +10,7 @@ export const Footer = () => {
       <div className="max-w-[1280px] mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
           <div className="md:col-span-1">
-            <Link href="/ko/templates/OHMT011-ir" className="flex flex-col gap-0.5 mb-6">
+            <Link href="/ko/templates/ir" className="flex flex-col gap-0.5 mb-6">
               <span className="text-base font-semibold md:font-bold text-[var(--color-dark-bg)] tracking-tight leading-none">VINUSPREAD</span>
               <span className="text-[0.58rem] font-medium uppercase tracking-[0.2em] text-[#6B6B6B] leading-none">Global Holdings</span>
             </Link>

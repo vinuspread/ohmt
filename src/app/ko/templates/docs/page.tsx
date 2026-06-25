@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -56,7 +56,7 @@ export default function DocsHomePage() {
               {featured.map((page) => (
                 <Link
                   key={page.slug}
-                  href={`/ko/templates/OHMT014-docs/${page.slug}`}
+                  href={`/ko/templates/docs/${page.slug}`}
                   className="group p-4 rounded-xl border border-[var(--color-border)] hover:border-[var(--color-accent)] hover:bg-[var(--color-bg-secondary)] transition-all duration-200"
                 >
                   <div className="w-9 h-9 rounded-lg bg-[var(--color-accent-light)] flex items-center justify-center mb-2">
@@ -78,7 +78,7 @@ export default function DocsHomePage() {
                 {docPages.map((page) => (
                   <Link
                     key={page.slug}
-                    href={`/ko/templates/OHMT014-docs/${page.slug}`}
+                    href={`/ko/templates/docs/${page.slug}`}
                     className="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-[var(--color-bg-secondary)] transition-colors group"
                   >
                     <span className="w-9 h-9 rounded-lg bg-[var(--color-accent-light)] flex items-center justify-center flex-shrink-0">

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion, useReducedMotion } from "framer-motion";
 
@@ -12,7 +12,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-[100dvh] overflow-hidden bg-[var(--color-secondary)]">
       <motion.img
-        src="/templates/OHMT026-spa/hero-bg.jpg"
+        src="/templates/spa/hero-bg.jpg"
         alt="차분한 스파 트리트먼트 룸을 준비하는 테라피스트"
         className="absolute inset-0 h-full w-full object-cover opacity-70"
         initial={reduce ? { scale: 1 } : { scale: 1.1 }}
@@ -39,7 +39,7 @@ export default function Hero() {
               공인 테라피스트가 제공하는 맞춤형 피부·바디 케어. 차분하고 프리미엄한 공간에서 경험하세요.
             </p>
             <a
-              href="/ko/templates/OHMT026-spa/contact"
+              href="/ko/templates/spa/contact"
               className="inline-flex items-center rounded-full bg-[var(--color-primary)] text-[var(--color-text-contrast)] px-7 py-3.5 text-sm font-semibold hover:brightness-110 active:scale-[0.97] transition-all duration-150"
             >
               무료 상담 예약하기

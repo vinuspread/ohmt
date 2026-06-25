@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
@@ -13,9 +13,9 @@ const items = [
 ];
 
 const missionImages = [
-  "/templates/OHMT026-spa/mission-01.jpg",
-  "/templates/OHMT026-spa/mission-02.jpg",
-  "/templates/OHMT026-spa/mission-03.jpg",
+  "/templates/spa/mission-01.jpg",
+  "/templates/spa/mission-02.jpg",
+  "/templates/spa/mission-03.jpg",
 ];
 
 export default function OurMission() {

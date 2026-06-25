@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture/_components/sections/Projects.tsx
+// src/app/en/templates/architecture/_components/sections/Projects.tsx
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
@@ -9,7 +9,7 @@ import { ScrollReveal } from "../ui/ScrollReveal";
 
 export function Projects() {
   const [filter, setFilter] = useState("All");
-  const baseRoute = "/en/templates/OHMT027-architecture";
+  const baseRoute = "/en/templates/architecture";
 
   const categories = ["All", "Residential", "Commercial", "Public", "Interior"];
 

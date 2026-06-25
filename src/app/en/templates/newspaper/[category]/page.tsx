@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Suspense } from "react";
 import React from "react";
@@ -99,7 +99,7 @@ function CategoryPageContent({ params }: { params: Promise<{ category: string }>
                   transition={{ duration: 0.5, delay: i * 0.1 }}
                   className="pb-8 border-b border-[var(--color-border)] group"
                 >
-                  <Link href={`/en/templates/OHMT013-newspaper-EN/${category}/${article.slug}`}>
+                  <Link href={`/en/templates/newspaperEN/${category}/${article.slug}`}>
                     <img
                       src={`/templates/newspaper/news-${article.image}.jpg`}
                       className="w-full h-64 object-cover mb-4 group-hover:opacity-80 transition-opacity"
@@ -107,7 +107,7 @@ function CategoryPageContent({ params }: { params: Promise<{ category: string }>
                     />
                   </Link>
                   <h2 className="font-[family-name:var(--theme-font-heading)] text-[1.3rem] font-bold leading-snug mb-3 group-hover:text-[var(--color-primary)] transition-colors">
-                    <Link href={`/en/templates/OHMT013-newspaper-EN/${category}/${article.slug}`}>{article.title}</Link>
+                    <Link href={`/en/templates/newspaperEN/${category}/${article.slug}`}>{article.title}</Link>
                   </h2>
                   <p className="text-[0.95rem] text-[#555] font-sans leading-[1.4] mb-4">
                     {article.excerpt}

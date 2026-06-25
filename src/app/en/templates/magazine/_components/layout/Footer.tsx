@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT012-magazine/-components/layout/Footer.tsx
+// src/app/templates/magazine/-components/layout/Footer.tsx
 "use client";
 
 import React from "react";
@@ -11,7 +11,7 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-start gap-10 mb-10 md:mb-16">
           <div className="max-w-[320px]">
             <Link 
-              href="/en/templates/OHMT012-magazine" 
+              href="/en/templates/magazine" 
               className="font-[family-name:var(--theme-font-heading)] text-[1.6rem] tracking-[0.12em] uppercase text-[var(--theme-text)] mb-6 block"
             >
               VINUSPREAD

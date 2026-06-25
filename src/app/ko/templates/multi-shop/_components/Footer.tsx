@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import Link from "next/link";
 
@@ -8,7 +8,7 @@ export const Footer = () => {
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-16 pb-8 md:pt-20 md:pb-10">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-10 md:gap-8">
           <div className="col-span-2 md:col-span-2">
-            <Link href="/ko/templates/OHMT017-multi-shop" className="text-2xl font-bold tracking-tight text-white">
+            <Link href="/ko/templates/multi-shop" className="text-2xl font-bold tracking-tight text-white">
               Oh My Template
             </Link>
             <p className="text-sm text-white/50 mt-4 leading-relaxed max-w-[260px]">
@@ -27,12 +27,12 @@ export const Footer = () => {
             <h5 className="text-[11px] uppercase tracking-[0.2em] text-white/30 mb-5">쇼핑</h5>
             <ul className="space-y-3 text-sm text-white/60">
               {[
-                { label: "신상품", href: "/ko/templates/OHMT017-multi-shop/shop" },
-                { label: "베스트셀러", href: "/ko/templates/OHMT017-multi-shop/shop" },
-                { label: "액세서리", href: "/ko/templates/OHMT017-multi-shop/shop/accessories" },
-                { label: "신발", href: "/ko/templates/OHMT017-multi-shop/shop/footwear" },
-                { label: "여성", href: "/ko/templates/OHMT017-multi-shop/shop/womens" },
-                { label: "남성", href: "/ko/templates/OHMT017-multi-shop/shop/mens" },
+                { label: "신상품", href: "/ko/templates/multi-shop/shop" },
+                { label: "베스트셀러", href: "/ko/templates/multi-shop/shop" },
+                { label: "액세서리", href: "/ko/templates/multi-shop/shop/accessories" },
+                { label: "신발", href: "/ko/templates/multi-shop/shop/footwear" },
+                { label: "여성", href: "/ko/templates/multi-shop/shop/womens" },
+                { label: "남성", href: "/ko/templates/multi-shop/shop/mens" },
               ].map((l) => (
                 <li key={l.label}>
                   <Link href={l.href} className="hover:text-white transition-colors duration-200">{l.label}</Link>
@@ -45,9 +45,9 @@ export const Footer = () => {
             <h5 className="text-[11px] uppercase tracking-[0.2em] text-white/30 mb-5">회사</h5>
             <ul className="space-y-3 text-sm text-white/60">
               {[
-                { label: "스토리", href: "/ko/templates/OHMT017-multi-shop/about" },
-                { label: "매거진", href: "/ko/templates/OHMT017-multi-shop/blog" },
-                { label: "문의하기", href: "/ko/templates/OHMT017-multi-shop/contact" },
+                { label: "스토리", href: "/ko/templates/multi-shop/about" },
+                { label: "매거진", href: "/ko/templates/multi-shop/blog" },
+                { label: "문의하기", href: "/ko/templates/multi-shop/contact" },
               ].map((l) => (
                 <li key={l.label}>
                   <Link href={l.href} className="hover:text-white transition-colors duration-200">{l.label}</Link>

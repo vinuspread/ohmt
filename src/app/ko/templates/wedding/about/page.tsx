@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import themeData from "../theme.json";
 import AboutFull from "./AboutFull";
@@ -11,9 +11,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "소개 - Lumen 웨딩 사진",
     description: "클라라, 대표 포토그래퍼를 소개합니다. 파인아트 다큐멘터리 스타일로 기록하는 웨딩 스토리.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT025-wedding/about",
+    url: "https://ohmytemplate.com/ko/templates/wedding/about",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/OHMT025-wedding/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/wedding/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
@@ -21,14 +21,14 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "소개 - Lumen 웨딩 사진",
     description: "클라라, 대표 포토그래퍼를 소개합니다.",
-    images: ["/templates/OHMT025-wedding/og-image.jpg"],
+    images: ["/templates/wedding/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT025-wedding/about",
+    canonical: "https://ohmytemplate.com/ko/templates/wedding/about",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/OHMT025-wedding/about",
-      "ko": "https://ohmytemplate.com/ko/templates/OHMT025-wedding/about",
+      "en": "https://ohmytemplate.com/en/templates/wedding/about",
+      "ko": "https://ohmytemplate.com/ko/templates/wedding/about",
     },
   },
 };

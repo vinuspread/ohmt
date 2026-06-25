@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT005-sneaker/-components/sections/Hero.tsx
+// src/app/ko/templates/sneaker/-components/sections/Hero.tsx
 "use client";
 
 import React from "react";
@@ -21,11 +21,11 @@ export const Hero = () => {
               한정된 기회, 한계를 깨는 움직임. 우리는 거리의 룰을 새로 씁니다.
             </p>
             <div className="flex items-center gap-4">
-              <Link href={`/ko/templates/OHMT005-sneaker/shop-all`}
+              <Link href={`/ko/templates/sneaker/shop-all`}
                 className="inline-flex items-center gap-3 bg-black text-white text-[0.82rem] font-bold uppercase tracking-[0.08em] px-8 py-4 hover:bg-black/80 transition-colors">
                 드로우 신청하기 <ArrowRight size={16} />
               </Link>
-              <Link href={`/ko/templates/OHMT005-sneaker/shop-all`}
+              <Link href={`/ko/templates/sneaker/shop-all`}
                 className="text-[0.82rem] font-bold uppercase tracking-[0.08em] text-black border-b border-black pb-0.5 hover:opacity-60 transition-opacity">
                 전체 보기
               </Link>
@@ -34,7 +34,7 @@ export const Hero = () => {
 
           <div className="order-1 md:order-2 relative h-[400px] md:h-full min-h-[480px] bg-[var(--color-bg-secondary)] overflow-hidden">
             <img
-              src="/templates/OHMT005-sneaker/hero-main.jpg"
+              src="/templates/sneaker/hero-main.jpg"
               alt="Premium Sneaker"
               className="w-full h-full object-cover object-center"
             />

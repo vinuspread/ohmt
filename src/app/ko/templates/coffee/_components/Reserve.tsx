@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
@@ -10,7 +10,7 @@ export const Reserve = () => {
     <section className="relative py-28 md:py-36 overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: "url(/templates/OHMT019-coffee/cta-bg.jpg)" }}
+        style={{ backgroundImage: "url(/templates/coffee/cta-bg.jpg)" }}
       />
       <div
         className="absolute inset-0"
@@ -38,7 +38,7 @@ export const Reserve = () => {
         >
           <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
             <Link
-              href="/ko/templates/OHMT019-coffee/locations"
+              href="/ko/templates/coffee/locations"
               className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-3 text-xs uppercase tracking-[0.2em] font-semibold rounded-none transition-[transform,colors] duration-160 ease-out active:scale-[0.97] hover:bg-white/10"
             >
               예약하기
@@ -46,7 +46,7 @@ export const Reserve = () => {
           </motion.div>
           <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
             <Link
-              href="/ko/templates/OHMT019-coffee/menu"
+              href="/ko/templates/coffee/menu"
               className="inline-flex items-center justify-center bg-white text-[var(--color-text)] px-8 py-3 text-xs uppercase tracking-[0.2em] font-semibold rounded-none transition-[transform,colors] duration-160 ease-out active:scale-[0.97] hover:bg-white/90"
             >
               픽업 주문

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
@@ -10,7 +10,7 @@ export const CTABanner = () => {
     <section className="relative bg-[var(--color-bg-dark)] py-24 md:py-32 overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="/templates/OHMT018-burger/cta-bg.png"
+          src="/templates/burger/cta-bg.png"
           alt=""
           className="w-full h-full object-cover opacity-40"
         />
@@ -42,7 +42,7 @@ export const CTABanner = () => {
           transition={{ duration: 0.4, delay: 0.2, ease: easeOut }}
         >
           <Link
-            href="/en/templates/OHMT018-burger/locations"
+            href="/en/templates/burger/locations"
             className="inline-block bg-[var(--color-accent)] text-white px-10 py-3 text-xs uppercase tracking-[0.2em] font-semibold rounded-full hover:bg-[var(--color-accent-hover)] transition-[transform,colors] duration-160 ease-out active:scale-[0.97]"
           >
             View All Locations

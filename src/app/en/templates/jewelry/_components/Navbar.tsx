@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT002-jewelry/-internal/components/Navbar.tsx
+// src/app/templates/jewelry/-internal/components/Navbar.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -73,15 +73,15 @@ const [scrolled, setScrolled] = useState(false);
   const isTransparent = (isHome || isCategoryPage) && !scrolled;
 
   // Derive current category ID if on subpage
-  const currentCategory = pathname.includes("/templates/OHMT002-jewelry/category/")
-    ? pathname.split("/templates/OHMT002-jewelry/category/")[1]
+  const currentCategory = pathname.includes("/templates/jewelry/category/")
+    ? pathname.split("/templates/jewelry/category/")[1]
     : "";
 
   const menuItems = [
-    { name: t.nav.collections, id: "collections", href: `/en/templates/OHMT002-jewelry/category/collections` },
-    { name: t.nav.engagement, id: "engagement", href: `/en/templates/OHMT002-jewelry/category/engagement` },
-    { name: t.nav.highJewelry, id: "high-jewelry", href: `/en/templates/OHMT002-jewelry/category/high-jewelry` },
-    { name: t.nav.about, id: "about", href: `/en/templates/OHMT002-jewelry/category/about` },
+    { name: t.nav.collections, id: "collections", href: `/en/templates/jewelry/category/collections` },
+    { name: t.nav.engagement, id: "engagement", href: `/en/templates/jewelry/category/engagement` },
+    { name: t.nav.highJewelry, id: "high-jewelry", href: `/en/templates/jewelry/category/high-jewelry` },
+    { name: t.nav.about, id: "about", href: `/en/templates/jewelry/category/about` },
   ];
 
   return (
@@ -136,7 +136,7 @@ const [scrolled, setScrolled] = useState(false);
           {/* Center Logo */}
           <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center pointer-events-none">
             <Link
-              href={`/en/templates/OHMT002-jewelry`}
+              href={`/en/templates/jewelry`}
               className={`text-[15px] sm:text-[18px] md:text-2xl font-serif tracking-[0.25em] -mr-[0.25em] font-normal uppercase transition-colors duration-300 pointer-events-auto text-center ${
                 !isTransparent ? "text-neutral-900" : "text-white"
               }`}
@@ -187,7 +187,7 @@ const [scrolled, setScrolled] = useState(false);
             <button className="hover:text-[var(--color-primary)] transition-colors hidden sm:block">
               <User size={18} strokeWidth={1.5} />
             </button>
-            <Link href={`/en/templates/OHMT002-jewelry/cart`} className="group flex items-center gap-2 hover:opacity-85 transition-opacity">
+            <Link href={`/en/templates/jewelry/cart`} className="group flex items-center gap-2 hover:opacity-85 transition-opacity">
               <ShoppingBag size={18} strokeWidth={1.5} className="group-hover:text-[var(--color-primary)] transition-colors" />
             </Link>
           </div>

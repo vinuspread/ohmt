@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -18,12 +18,12 @@ export const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: "메뉴", href: "/ko/templates/OHMT019-coffee/menu" },
-    { name: "소개", href: "/ko/templates/OHMT019-coffee/about" },
-    { name: "매장", href: "/ko/templates/OHMT019-coffee/locations" },
+    { name: "메뉴", href: "/ko/templates/coffee/menu" },
+    { name: "소개", href: "/ko/templates/coffee/about" },
+    { name: "매장", href: "/ko/templates/coffee/locations" },
   ];
 
-  const isHome = pathname === "/ko/templates/OHMT019-coffee";
+  const isHome = pathname === "/ko/templates/coffee";
   const transparent = isHome && !scrolled && !mobileOpen;
 
   return (
@@ -36,7 +36,7 @@ export const Header = () => {
     >
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between h-full">
         <Link
-          href="/ko/templates/OHMT019-coffee"
+          href="/ko/templates/coffee"
           className="text-xl font-heading font-semibold"
           style={{ color: "var(--color-text)" }}
         >
@@ -55,7 +55,7 @@ export const Header = () => {
             </Link>
           ))}
           <Link
-            href="/ko/templates/OHMT019-coffee/menu"
+            href="/ko/templates/coffee/menu"
             className={`px-6 py-2 text-xs uppercase tracking-[0.2em] font-semibold rounded-full transition-[transform,colors] duration-160 ease-out active:scale-[0.97] ${
               transparent
                 ? "bg-[var(--color-primary)] text-white"
@@ -120,7 +120,7 @@ export const Header = () => {
                 transition={{ duration: 0.25 }}
               >
                 <Link
-                  href="/ko/templates/OHMT019-coffee/menu"
+                  href="/ko/templates/coffee/menu"
                   onClick={() => setMobileOpen(false)}
                   className="bg-[var(--color-primary)] text-white text-center px-6 py-3 text-xs uppercase tracking-[0.2em] font-semibold rounded-none block"
                 >

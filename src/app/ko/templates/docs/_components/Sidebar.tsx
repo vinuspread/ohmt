@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -62,7 +62,7 @@ function buildTree(pages: DocPage[]): TreeNode[] {
 function PageTreeItem({ node, depth, onNavigate }: { node: TreeNode; depth: number; onNavigate: () => void }) {
   const pathname = usePathname();
   const slug = node.page.slug;
-  const isActive = pathname === `/ko/templates/OHMT014-docs/${slug}` || pathname === `/ko/templates/OHMT014-docs`;
+  const isActive = pathname === `/ko/templates/docs/${slug}` || pathname === `/ko/templates/docs`;
   const [expanded, setExpanded] = useState(true);
 
   const hasChildren = node.children.length > 0;
@@ -75,7 +75,7 @@ function PageTreeItem({ node, depth, onNavigate }: { node: TreeNode; depth: numb
         <div className="absolute left-[18px] top-0 bottom-0 w-px bg-[var(--color-border)]" />
       )}
       <Link
-        href={`/ko/templates/OHMT014-docs/${slug}`}
+        href={`/ko/templates/docs/${slug}`}
         onClick={onNavigate}
         className={`flex items-center gap-1.5 py-1.5 rounded-md transition-all duration-150 relative ${
           isRoot ? "text-sm" : "text-[13px]"
@@ -139,7 +139,7 @@ export default function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
   return (
     <aside className="w-[260px] flex-shrink-0 h-screen border-r border-[var(--color-border)] flex flex-col overflow-hidden bg-[var(--color-bg)]">
       <div className="px-4 h-14 flex items-center border-b border-[var(--color-border)]">
-        <Link href="/ko/templates/OHMT014-docs" onClick={handleNav} className="flex items-center gap-2 px-2 text-sm font-bold text-[var(--color-text)] rounded-md transition-colors duration-150">
+        <Link href="/ko/templates/docs" onClick={handleNav} className="flex items-center gap-2 px-2 text-sm font-bold text-[var(--color-text)] rounded-md transition-colors duration-150">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.5" y="0.5" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="1.5"/>
             <path d="M4 5H12M4 8H12M4 11H9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>

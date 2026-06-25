@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Car Concept - Oh My Template (KO)",
     description: "프리미엄 자동차 컨셉 쇼케이스",
-    url: "https://ohmytemplate.com/ko/templates/OHMT009-car",
+    url: "https://ohmytemplate.com/ko/templates/car",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/OHMT009-car/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/car/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Car Concept - Oh My Template (KO)",
     description: "프리미엄 자동차 컨셉 쇼케이스",
-    images: ["/templates/OHMT009-car/og-image.jpg"],
+    images: ["/templates/car/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT009-car",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT009-car" },
+    canonical: "https://ohmytemplate.com/ko/templates/car",
+    languages: { "en": "https://ohmytemplate.com/en/templates/car" },
   },
 };
 

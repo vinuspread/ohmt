@@ -1,4 +1,4 @@
-﻿const basePath = "/en/templates/OHMT024-kids-education";
+const basePath = "/en/templates/kids-education";
 
 const links = {
   explore: [

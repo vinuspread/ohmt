@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import { Truck, ShieldCheck, Undo2, Globe, Share2 } from "lucide-react";
 import Link from "next/link";
@@ -39,8 +39,8 @@ export const Footer = () => {
         </div>
 
         <div className="flex items-center gap-8 text-[13px] font-medium text-[var(--color-secondary)] uppercase">
-          <Link href="/en/templates/OHMT004-furniture" className="hover:text-black transition-colors">Shop</Link>
-          <Link href="/en/templates/OHMT004-furniture/category/living" className="hover:text-black transition-colors">Archive</Link>
+          <Link href="/en/templates/furniture" className="hover:text-black transition-colors">Shop</Link>
+          <Link href="/en/templates/furniture/category/living" className="hover:text-black transition-colors">Archive</Link>
         </div>
 
         <div className="flex flex-col items-center md:items-end gap-3 text-[13px] font-medium uppercase text-black/30">

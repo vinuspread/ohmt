@@ -1,4 +1,4 @@
-﻿const basePath = "/en/templates/OHMT026-spa";
+const basePath = "/en/templates/spa";
 
 const sitemapLeft = [
   { label: "Home", href: basePath },

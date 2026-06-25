@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import './theme.css';
 
@@ -20,9 +20,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Exhibition Website | Oh My Template",
     description: "Experience the epitome of elegance and durability.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT021-museum",
+    url: "https://ohmytemplate.com/ko/templates/museum",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/OHMT021-museum/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/museum/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
@@ -30,12 +30,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Exhibition Website | Oh My Template",
     description: "Experience the epitome of elegance and durability.",
-    images: ["/templates/OHMT021-museum/og-image.jpg"],
+    images: ["/templates/museum/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT021-museum",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT021-museum" },
+    canonical: "https://ohmytemplate.com/ko/templates/museum",
+    languages: { "en": "https://ohmytemplate.com/en/templates/museum" },
   },
 };
 

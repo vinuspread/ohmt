@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
@@ -45,7 +45,7 @@ export const Hero = () => {
             >
               <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
                 <Link
-                  href="/ko/templates/OHMT019-coffee/menu"
+                  href="/ko/templates/coffee/menu"
                   className="inline-flex items-center justify-center bg-[var(--color-primary)] text-white px-8 py-3 text-xs uppercase tracking-[0.2em] font-semibold rounded-none transition-[transform,colors] duration-160 ease-out active:scale-[0.97] w-full"
                 >
                   메뉴 보기
@@ -53,7 +53,7 @@ export const Hero = () => {
               </motion.div>
               <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
                 <Link
-                  href="/ko/templates/OHMT019-coffee/about"
+                  href="/ko/templates/coffee/about"
                   className="inline-flex items-center justify-center border-2 border-[var(--color-primary)] text-[var(--color-primary)] px-8 py-3 text-xs uppercase tracking-[0.2em] font-semibold rounded-none transition-[transform,colors] duration-160 ease-out active:scale-[0.97] w-full"
                 >
                   스토리
@@ -64,7 +64,7 @@ export const Hero = () => {
 
           <div className="hidden lg:flex w-[45%] items-start justify-end order-1 lg:order-2 relative mt-12">
             <motion.img
-              src="/templates/OHMT019-coffee/hero-drink.jpg"
+              src="/templates/coffee/hero-drink.jpg"
               alt="Summer coffee drink"
               className="w-full h-auto object-contain -mr-6 md:-mr-12"
               initial={{ opacity: 0, x: 40, scale: 1.08 }}

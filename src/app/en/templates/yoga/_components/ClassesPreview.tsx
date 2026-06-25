@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { INSTRUCTORS } from "../constants";
 
 export default function ClassesPreview() {
@@ -8,7 +8,7 @@ export default function ClassesPreview() {
       <div className="relative border-r border-[var(--color-border)] min-h-[50vh]">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/templates/OHMT022-yoga/studio.jpg')" }}
+          style={{ backgroundImage: "url('/templates/yoga/studio.jpg')" }}
         />
       </div>
 
@@ -59,7 +59,7 @@ export default function ClassesPreview() {
         {/* CTA */}
         <div className="px-8 md:px-14 lg:px-20 py-8 border-t border-[var(--color-border)]">
           <Link
-            href="/en/templates/OHMT022-yoga/about"
+            href="/en/templates/yoga/about"
             className="inline-flex items-center gap-2 text-[13px] tracking-[0.18em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] group transition-colors font-medium"
             style={{ fontFamily: "var(--font-body)" }}
           >

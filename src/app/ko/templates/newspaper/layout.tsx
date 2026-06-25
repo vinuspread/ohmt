@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Newspaper - Oh My Template",
     description: "News and publishing archive",
-    url: "https://ohmytemplate.com/ko/templates/OHMT013-newspaper",
+    url: "https://ohmytemplate.com/ko/templates/newspaper",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/OHMT013-newspaper/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/newspaper/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Newspaper - Oh My Template",
     description: "News and publishing archive",
-    images: ["/templates/OHMT013-newspaper/og-image.jpg"],
+    images: ["/templates/newspaper/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT013-newspaper",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT013-newspaper" },
+    canonical: "https://ohmytemplate.com/ko/templates/newspaper",
+    languages: { "en": "https://ohmytemplate.com/en/templates/newspaper" },
   },
 };
 

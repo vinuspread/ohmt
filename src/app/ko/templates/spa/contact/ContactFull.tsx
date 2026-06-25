@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion, useReducedMotion } from "framer-motion";
 import Navbar from "../_components/layout/Navbar";
@@ -39,7 +39,7 @@ export default function ContactFull() {
                   <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold tracking-tight text-[var(--color-text)] mb-2">연락처</h3>
                   <p className="text-sm text-[var(--color-text-muted)]">+1 (555) 010-2030<br />hello@ohmytemplate.com</p>
                 </div>
-                <div className="rounded-2xl overflow-hidden h-64"><img src="/templates/OHMT026-spa/clinic-interior.jpg" alt="클리닉 내부" className="w-full h-full object-cover" /></div>
+                <div className="rounded-2xl overflow-hidden h-64"><img src="/templates/spa/clinic-interior.jpg" alt="클리닉 내부" className="w-full h-full object-cover" /></div>
               </motion.div>
             </div>
           </div>

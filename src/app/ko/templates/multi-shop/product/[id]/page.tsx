@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { useState } from "react";
 import { notFound } from "next/navigation";
 import Link from "next/link";
@@ -231,7 +231,7 @@ export default function ProductPage({ params }: { params: Promise<{ id: string }
                 <h2 className="text-2xl font-bold tracking-tight mb-10">추천 상품</h2>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
                   {related.map((item) => (
-                    <Link key={item.id} href={`/ko/templates/OHMT017-multi-shop/product/${item.id}`} className="group block">
+                    <Link key={item.id} href={`/ko/templates/multi-shop/product/${item.id}`} className="group block">
                       <div className="aspect-[3/4] bg-[var(--color-bg-secondary)] overflow-hidden">
                         <img
                           src={item.image}

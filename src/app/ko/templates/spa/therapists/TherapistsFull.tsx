@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion, useReducedMotion } from "framer-motion";
 import Navbar from "../_components/layout/Navbar";
@@ -39,7 +39,7 @@ export default function TherapistsFull() {
                   <div className="p-6">
                     <h2 className="font-[family-name:var(--font-heading)] text-lg font-bold tracking-tight text-[var(--color-text)]">{member.name}</h2>
                     <p className="mt-1 text-sm text-[var(--color-text-muted)]">{member.role}</p>
-                    <a href="/ko/templates/OHMT026-spa/contact" className="mt-4 inline-flex items-center text-sm font-semibold text-[var(--color-primary)] hover:underline">{member.name.split(" ")[0]}에게 예약하기</a>
+                    <a href="/ko/templates/spa/contact" className="mt-4 inline-flex items-center text-sm font-semibold text-[var(--color-primary)] hover:underline">{member.name.split(" ")[0]}에게 예약하기</a>
                   </div>
                 </motion.div>
               ))}

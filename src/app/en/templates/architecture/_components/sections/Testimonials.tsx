@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture/_components/sections/Testimonials.tsx
+// src/app/en/templates/architecture/_components/sections/Testimonials.tsx
 "use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";

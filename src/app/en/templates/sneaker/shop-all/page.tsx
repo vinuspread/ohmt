@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { useState, Suspense } from "react";
 import Link from "next/link";
 import { Star, ChevronDown } from "lucide-react";
@@ -10,14 +10,14 @@ import { products } from "../_components/sections/ProductGrid";
 
 const categories = [
   { id: "all", label: "All", img: null },
-  { id: "sneakers", label: "Sneakers", img: "/templates/OHMT005-sneaker/cat-sneakers.jpg" },
-  { id: "running", label: "Running", img: "/templates/OHMT005-sneaker/category-running.jpg" },
-  { id: "formal", label: "Formal", img: "/templates/OHMT005-sneaker/category-formal.jpg" },
-  { id: "boots", label: "Boots", img: "/templates/OHMT005-sneaker/cat-boots.jpg" },
-  { id: "oxford", label: "Oxford", img: "/templates/OHMT005-sneaker/cat-oxford.jpg" },
-  { id: "sports", label: "Sports", img: "/templates/OHMT005-sneaker/cat-sports.jpg" },
-  { id: "highneck", label: "High Neck", img: "/templates/OHMT005-sneaker/cat-highneck.jpg" },
-  { id: "loafers", label: "Loafers", img: "/templates/OHMT005-sneaker/cat-loafers.jpg" },
+  { id: "sneakers", label: "Sneakers", img: "/templates/sneaker/cat-sneakers.jpg" },
+  { id: "running", label: "Running", img: "/templates/sneaker/category-running.jpg" },
+  { id: "formal", label: "Formal", img: "/templates/sneaker/category-formal.jpg" },
+  { id: "boots", label: "Boots", img: "/templates/sneaker/cat-boots.jpg" },
+  { id: "oxford", label: "Oxford", img: "/templates/sneaker/cat-oxford.jpg" },
+  { id: "sports", label: "Sports", img: "/templates/sneaker/cat-sports.jpg" },
+  { id: "highneck", label: "High Neck", img: "/templates/sneaker/cat-highneck.jpg" },
+  { id: "loafers", label: "Loafers", img: "/templates/sneaker/cat-loafers.jpg" },
 ];
 
 // Map products to categories (mock assignment for demo)
@@ -131,7 +131,7 @@ function ShopAllPageContent() {
             ) : (
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                 {filtered.map(p => (
-                  <Link key={p.id} href={`/en/templates/OHMT005-sneaker/product/${p.id}`} className="group block border border-black/10 hover:border-black transition-colors duration-300">
+                  <Link key={p.id} href={`/en/templates/sneaker/product/${p.id}`} className="group block border border-black/10 hover:border-black transition-colors duration-300">
                     <div className="relative overflow-hidden aspect-square bg-[var(--color-bg-secondary)]">
                       <img loading="lazy" src={p.img} alt={p.name} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                       {p.badge && (

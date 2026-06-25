@@ -1,10 +1,10 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 
 const navLinks = [
-  { href: '/en/templates/OHMT003-exhibition/about', label: 'About' },
-  { href: '/en/templates/OHMT003-exhibition/exhibitions', label: 'Exhibitions' },
-  { href: '/en/templates/OHMT003-exhibition/events', label: 'Events' },
-  { href: '/en/templates/OHMT003-exhibition/contact', label: 'Contact' },
+  { href: '/en/templates/exhibition/about', label: 'About' },
+  { href: '/en/templates/exhibition/exhibitions', label: 'Exhibitions' },
+  { href: '/en/templates/exhibition/events', label: 'Events' },
+  { href: '/en/templates/exhibition/contact', label: 'Contact' },
 ];
 
 export const Footer = () => {

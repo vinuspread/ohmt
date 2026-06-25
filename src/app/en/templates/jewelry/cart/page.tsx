@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Suspense } from "react";
 import React from "react";
@@ -16,7 +16,7 @@ function JewelryCartPageContent() {
       id: "1",
       name: "Tiffany-Blue Sapphire Bangle",
       price: "$1,200",
-      img: "/templates/OHMT002-jewelry/jewelry-hero-main.png",
+      img: "/templates/jewelry/jewelry-hero-main.png",
       material: "18k White Gold"
     }
   ];

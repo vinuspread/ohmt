@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { Suspense } from "react";
 import React from "react";
 import Link from "next/link";
@@ -16,10 +16,10 @@ const values = [
 ];
 
 const team = [
-  { name: "Marco Vinus", role: "창립자 & CEO", img: "/templates/OHMT005-sneaker/blog-1.jpg" },
-  { name: "Yuna Park", role: "디자인 총괄", img: "/templates/OHMT005-sneaker/blog-2.jpg" },
-  { name: "Tobias Krenn", role: "소재 총괄", img: "/templates/OHMT005-sneaker/blog-3.jpg" },
-  { name: "Sofia Reyes", role: "브랜드 디렉터", img: "/templates/OHMT005-sneaker/blog-4.jpg" },
+  { name: "Marco Vinus", role: "창립자 & CEO", img: "/templates/sneaker/blog-1.jpg" },
+  { name: "Yuna Park", role: "디자인 총괄", img: "/templates/sneaker/blog-2.jpg" },
+  { name: "Tobias Krenn", role: "소재 총괄", img: "/templates/sneaker/blog-3.jpg" },
+  { name: "Sofia Reyes", role: "브랜드 디렉터", img: "/templates/sneaker/blog-4.jpg" },
 ];
 
 function AboutPageContent() {
@@ -53,12 +53,12 @@ function AboutPageContent() {
               <p className="text-[0.9rem] text-black/60 leading-relaxed mb-8">
                 2019년 리스본에 작은 작업실을 열고, 책임 있는 소싱에 동참하는 제혁소와 직접 협력하기 시작했습니다. 오늘날 비누스는 40여 개국으로 배송되지만, 모든 신발에 쏟는 정성은 그대로입니다.
               </p>
-              <Link href="/ko/templates/OHMT005-sneaker/shop-all" className="inline-flex items-center gap-3 bg-black text-white text-[0.82rem] font-bold uppercase tracking-[0.08em] px-8 py-4 hover:bg-black/80 transition-colors">
+              <Link href="/ko/templates/sneaker/shop-all" className="inline-flex items-center gap-3 bg-black text-white text-[0.82rem] font-bold uppercase tracking-[0.08em] px-8 py-4 hover:bg-black/80 transition-colors">
                 컬렉션 쇼핑하기 <ArrowRight size={16} />
               </Link>
             </div>
             <div className="aspect-[4/5] overflow-hidden bg-[var(--color-bg-secondary)]">
-              <img loading="lazy" src="/templates/OHMT005-sneaker/hero-main.jpg" alt="Vinus workshop" className="w-full h-full object-cover" />
+              <img loading="lazy" src="/templates/sneaker/hero-main.jpg" alt="Vinus workshop" className="w-full h-full object-cover" />
             </div>
           </div>
         </section>

@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT009-car/src/components/sections/FeatureGrid.tsx
+// src/app/templates/car/src/components/sections/FeatureGrid.tsx
 "use client";
 
 import React from "react";

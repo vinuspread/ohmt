@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -265,7 +265,7 @@ const CATEGORIES = ["All", "Sculpture", "Fresco", "Marble"] as const;
                   transition={{ duration: 0.5, ease: "easeInOut" }}
                   className="relative group overflow-hidden bg-[var(--color-primary)] aspect-[3/4]"
                 >
-                  <Link href={`/en/templates/OHMT021-museum/collections/${item.slug}`} className="block w-full h-full cursor-pointer">
+                  <Link href={`/en/templates/museum/collections/${item.slug}`} className="block w-full h-full cursor-pointer">
                     <img 
                       src={item.img} 
                       alt={item.title}

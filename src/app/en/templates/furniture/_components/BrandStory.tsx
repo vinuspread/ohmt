@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { useSearchParams } from "next/navigation";
@@ -106,7 +106,7 @@ return (
           className="relative lg:w-1/2 overflow-hidden group"
         >
           <img
-            src="/templates/OHMT004-furniture/banner-lifestyle.png"
+            src="/templates/furniture/banner-lifestyle.png"
             alt="Lifestyle Craftsmanship"
             className="w-full h-auto object-cover transition-transform duration-[4s] group-hover:scale-105"
           />

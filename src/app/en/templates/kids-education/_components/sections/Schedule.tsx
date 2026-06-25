@@ -1,10 +1,10 @@
-﻿"use client";
+"use client";
 
 import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
-const basePath = "/en/templates/OHMT024-kids-education";
+const basePath = "/en/templates/kids-education";
 
 const upcoming = [
   { id: 1, title: "Young Scientists Day", date: "Jun 22", time: "10:00 AM", price: "$18", category: "Science", color: "var(--color-secondary)" },

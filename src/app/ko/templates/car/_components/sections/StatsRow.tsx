@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT009-car/-components/sections/StatsRow.tsx
+// src/app/templates/car/-components/sections/StatsRow.tsx
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";

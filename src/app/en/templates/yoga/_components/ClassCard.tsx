@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import type { YogaClass } from "../types";
 
 interface ClassCardProps {
@@ -8,7 +8,7 @@ interface ClassCardProps {
 export default function ClassCard({ yogaClass }: ClassCardProps) {
   return (
     <Link
-      href={`/en/templates/OHMT022-yoga/classes/${yogaClass.slug}`}
+      href={`/en/templates/yoga/classes/${yogaClass.slug}`}
       className="group block border-b border-[var(--color-border)]"
     >
       {/* Image */}

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
@@ -8,15 +8,15 @@ const easeOut = [0.23, 1, 0.32, 1] as const;
 const features = [
   {
     num: "01",
-    image: "/templates/OHMT019-coffee/feature-order.jpg",
+    image: "/templates/coffee/feature-order.jpg",
     title: "온라인 주문",
     desc: "음료를 고르고, 시간을 설정하고, 기다림 없이 픽업하세요.",
-    link: "/ko/templates/OHMT019-coffee/menu",
+    link: "/ko/templates/coffee/menu",
     linkText: "메뉴 보기",
   },
   {
     num: "02",
-    image: "/templates/OHMT019-coffee/feature-loyalty.jpg",
+    image: "/templates/coffee/feature-loyalty.jpg",
     title: "리워즈 가입",
     desc: "스탬프를 모아 10번째 커피를 무료로.",
     link: "#",
@@ -24,10 +24,10 @@ const features = [
   },
   {
     num: "03",
-    image: "/templates/OHMT019-coffee/feature-location.jpg",
+    image: "/templates/coffee/feature-location.jpg",
     title: "카페 찾기",
     desc: "서울 다섯 곳에서 만나보세요.",
-    link: "/ko/templates/OHMT019-coffee/locations",
+    link: "/ko/templates/coffee/locations",
     linkText: "매장 안내",
   },
 ];

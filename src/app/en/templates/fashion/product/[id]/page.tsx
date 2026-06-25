@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import { motion } from "framer-motion";
@@ -15,7 +15,7 @@ const FASHION_PRODUCTS = [
     id: 1,
     name: 'WOOL BUCKET HAT',
     price: '$120.00',
-    image: '/templates/OHMT001-fashion/wool-hat.png',
+    image: '/templates/fashion/wool-hat.png',
     category: 'Accessories',
     desc: 'A meticulously crafted structured wool bucket hat. Featuring clean geometric seams and an elegant minimalist silhouette. Perfect for high-fashion layering.',
     longDesc: 'Engineered for contemporary luxury, the Wool Bucket Hat is sculpted from heavily brushed, premium virgin wool. Designed with clean geometric panel construction, it holds its architectural silhouette while offering structural warmth. The inner lining is finished in a premium silk-blend cupro, feeling exceptionally soft against the hair and forehead. Finished with a subtle tone-on-tone embroidered logo on the side seam.\n\nThis bucket hat is designed to naturally frame the head, softening facial features while creating a sharp, modern shadow. The brim width and angle have undergone numerous drape tests to shield the eyes elegantly while maintaining ample visibility.\n\nA perfect companion for minimalist wool coats or classic leather jackets, this accessory adds a refined touch to any cold-weather ensemble.',
@@ -40,7 +40,7 @@ const FASHION_PRODUCTS = [
     id: 2,
     name: 'CLASSIC TRENCH COAT',
     price: '$850.00',
-    image: '/templates/OHMT001-fashion/trench-coat.png',
+    image: '/templates/fashion/trench-coat.png',
     category: 'Outerwear',
     desc: 'An oversized double-breasted trench coat tailored in durable cotton gabardine. Minimalist belt closure with structural storm flaps for an understated silhouette.',
     longDesc: 'A modern iteration of a timeless icon, this Classic Trench Coat is tailored from water-repellent, high-density cotton gabardine. Designed with an intentional oversized drape, it features exaggerated storm flaps, a clean hidden throat latch, and deep welt pockets. The minimalist belt closure is finished with real leather-wrapped buckles. Half-lined in a smooth viscose fabric for perfect seasonal layering.\n\nThis trench coat is built to be styled two ways: wear it loose for a modern H-line silhouette, or cinch the belt tightly for an elegant, draped A-line shape. The dropped-shoulder design ensures comfortable layering over chunky knits or structured blazers.\n\nThe premium gabardine yarn is treated with a durable water-resistant glaze, repelling light spring showers while remaining highly breathable and resistant to heavy creasing.',
@@ -65,7 +65,7 @@ const FASHION_PRODUCTS = [
     id: 3,
     name: 'MINIMALIST BACKPACK',
     price: '$350.00',
-    image: '/templates/OHMT001-fashion/backpack.png',
+    image: '/templates/fashion/backpack.png',
     category: 'Bags',
     desc: 'Crafted in premium matte black leather. Single flap compartment with clean concealed zip structures. The ultimate essential container for active modern life.',
     longDesc: 'Crafted for the modern minimalist, our flagship backpack is constructed from premium full-grain Italian pebble leather with a water-resistant matte coating. The single flap compartment opens to a spacious interior featuring a padded laptop sleeve (up to 16") and quick-access internal slots. Reinforced concealed YKK zippers and breathable mesh back pads ensure comfort and high durability.\n\nWithout any visible exterior pockets or dangling straps, it maintains a clean, block-like profile that sits perfectly over tailored suits and casual outfits alike. A hidden anti-theft zipper slot on the back panel secures your passport and wallet.\n\nThe zippers are sealed with polyurethane coating to repel moisture, ensuring your tech gear remains safe during rainy commutes.',
@@ -90,7 +90,7 @@ const FASHION_PRODUCTS = [
     id: 4,
     name: 'PREMIUM LEATHER BOOTS',
     price: '$480.00',
-    image: '/templates/OHMT001-fashion/boots.png',
+    image: '/templates/fashion/boots.png',
     category: 'Footwear',
     desc: 'Square-toe high-top boots featuring premium brushed calfskin leather. Side zip closure with a stacked leather heel. Pure sculptural aesthetics.',
     longDesc: 'Embodying sleek structural design, these Square-Toe Boots are hand-finished from premium brushed calfskin leather. Features include a side metal zip closure with a secure leather pull, a fully lined calfskin interior, and an orthotic foam-cushioned footbed. Complete with a 2-inch stacked leather block heel and rubber sole pads for exceptional traction.\n\nThe square-toe silhouette is balanced to be neither too blocky nor too sharp, ensuring it coordinates perfectly with wide-leg trousers, tailored suits, or cropped denim.\n\nThe inner side zipper is a premium Excella zip, detailed with a protective leather guard backing to prevent snagging and protect socks from catching.',
@@ -115,7 +115,7 @@ const FASHION_PRODUCTS = [
     id: 5,
     name: 'SILK EVENING DRESS',
     price: '$1,200.00',
-    image: '/templates/OHMT001-fashion/silk-dress.png',
+    image: '/templates/fashion/silk-dress.png',
     category: 'Dresses',
     desc: 'A flowing floor-length dress cut in pure heavyweight silk charmeuse. Open back architecture with a delicate fluid neckline. Understated elegance.',
     longDesc: 'A masterclass in fluidity and elegance, our Silk Evening Dress is bias-cut from high-weight silk charmeuse. Featuring a beautiful open-back design secured by delicate cross-straps and a cowl neckline that drapes gracefully. The fabric flows effortlessly around the ankles, offering a liquid-like sheen under ambient lights.\n\nDue to the bias cut, the fabric naturally stretches and contours to the body without the need for stiff, restrictive zippers. The organic mulberry silk fiber provides a cooling feel and naturally prevents static cling.\n\nThe skirt finishes in a subtle mermaid puddle train, making it the perfect gown for formal galas, black-tie events, or elegant wedding receptions.',
@@ -140,7 +140,7 @@ const FASHION_PRODUCTS = [
     id: 6,
     name: 'COTTON BASICS TEE',
     price: '$65.00',
-    image: '/templates/OHMT001-fashion/basic-tee.png',
+    image: '/templates/fashion/basic-tee.png',
     category: 'Tops',
     desc: 'A boxy heavyweight cotton jersey tee. Clean bound crew neck with side split hem architectures. Built for comfortable, long-lasting luxury basics.',
     longDesc: 'Constructed from pre-shrunk, high-density cotton jersey, the Cotton Basics Tee is built to retain its structured silhouette through years of wear. It features a boxy fit, dropped shoulders, and a thick rib-knit collar. Clean side split hems add subtle design interest and prevent bunching when tucked.\n\nTo prevent collar stretching, the neckline is finished with a bound rib collar and reinforced triple-needle chain stitching. It resists stretching out even after repeated machine washes.\n\nThe fabric undergoes a bio-silicone wash to remove all surface lint, resulting in a smooth, matte finish that feels incredibly soft yet retains a dense, structured weight.',
@@ -278,7 +278,7 @@ function ProductDetailPageContent() {
                   {/* Add Bag Button */}
                   <Button
                     variant="primary"
-                    onClick={() => router.push('/en/templates/OHMT001-fashion/cart')}
+                    onClick={() => router.push('/en/templates/fashion/cart')}
                     className="flex-1 text-[13px] font-bold uppercase tracking-[0.3em] py-6"
                   >
                     ADD TO BAG
@@ -440,7 +440,7 @@ function ProductDetailPageContent() {
                   Crafting silhouettes that speak volumes through silence. Each garment is meticulously tailored utilizing the finest materials sourced globally. Designed to integrate seamlessly into a curated modern wardrobe. {product.desc}
                 </p>
                 <div className="pt-4">
-                  <Link href="/en/templates/OHMT001-fashion" className="text-[13px] font-bold uppercase tracking-[0.25em] border-b border-black pb-1 hover:opacity-50 transition-opacity">
+                  <Link href="/en/templates/fashion" className="text-[13px] font-bold uppercase tracking-[0.25em] border-b border-black pb-1 hover:opacity-50 transition-opacity">
                     Return to Collection
                   </Link>
                 </div>

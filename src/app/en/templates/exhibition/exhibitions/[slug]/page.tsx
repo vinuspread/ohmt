@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { exhibitions } from '../../constants';
 import { TemplateWrapper } from "../../_components/TemplateWrapper";
@@ -7,12 +7,12 @@ import { Navbar } from '../../_components/Navbar';
 import { Footer } from '../../_components/Footer';
 
 const galleryImages = [
-  '/templates/OHMT003-exhibition/mosaic-01.jpg',
-  '/templates/OHMT003-exhibition/mosaic-02.jpg',
-  '/templates/OHMT003-exhibition/mosaic-03.jpg',
-  '/templates/OHMT003-exhibition/mosaic-04.jpg',
-  '/templates/OHMT003-exhibition/mosaic-05.jpg',
-  '/templates/OHMT003-exhibition/mosaic-06.jpg',
+  '/templates/exhibition/mosaic-01.jpg',
+  '/templates/exhibition/mosaic-02.jpg',
+  '/templates/exhibition/mosaic-03.jpg',
+  '/templates/exhibition/mosaic-04.jpg',
+  '/templates/exhibition/mosaic-05.jpg',
+  '/templates/exhibition/mosaic-06.jpg',
 ];
 
 export default async function ExhibitionDetailPage({
@@ -93,7 +93,7 @@ export default async function ExhibitionDetailPage({
                 </div>
 
                 <Link
-                  href="/en/templates/OHMT003-exhibition/contact"
+                  href="/en/templates/exhibition/contact"
                   className="relative overflow-hidden group inline-flex px-8 py-4 border border-black mt-12"
                 >
                   <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
@@ -136,7 +136,7 @@ export default async function ExhibitionDetailPage({
                 More Exhibitions
               </p>
               <Link
-                href="/en/templates/OHMT003-exhibition/exhibitions"
+                href="/en/templates/exhibition/exhibitions"
                 className="text-[11px] font-body font-semibold uppercase tracking-[0.12em] text-black border-b border-black pb-0.5 hover:opacity-60 transition-opacity"
               >
                 View All
@@ -144,7 +144,7 @@ export default async function ExhibitionDetailPage({
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
               {related.map((ex) => (
-                <Link key={ex.slug} href={`/en/templates/OHMT003-exhibition/exhibitions/${ex.slug}`} className="group block">
+                <Link key={ex.slug} href={`/en/templates/exhibition/exhibitions/${ex.slug}`} className="group block">
                   <div className="aspect-[4/3] overflow-hidden mb-5">
                     <img src={ex.image} alt={ex.name} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                   </div>

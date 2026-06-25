@@ -1,9 +1,9 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import { navLinks } from "../../data/data";
 
-const basePath = "/ko/templates/OHMT026-spa";
+const basePath = "/ko/templates/spa";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);

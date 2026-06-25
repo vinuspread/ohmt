@@ -6,10 +6,10 @@ import { Menu, X } from "lucide-react";
 import Button from "./ui/Button";
 
 const navLinks = [
-  { href: "/en/templates/OHMT023-game/games", label: "Games" },
-  { href: "/en/templates/OHMT023-game/news", label: "News" },
-  { href: "/en/templates/OHMT023-game/about", label: "About" },
-  { href: "/en/templates/OHMT023-game/careers", label: "Careers" },
+  { href: "/en/templates/game/games", label: "Games" },
+  { href: "/en/templates/game/news", label: "News" },
+  { href: "/en/templates/game/about", label: "About" },
+  { href: "/en/templates/game/careers", label: "Careers" },
 ];
 
 export default function Navbar() {
@@ -32,7 +32,7 @@ export default function Navbar() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
         <Link
-          href="/en/templates/OHMT023-game"
+          href="/en/templates/game"
           className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)] bg-clip-text text-xl font-bold text-transparent font-[var(--font-heading)]"
         >
           Oh My Template
@@ -48,7 +48,7 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link href="/en/templates/OHMT023-game/careers">
+          <Link href="/en/templates/game/careers">
             <Button variant="outline" className="text-xs px-5 py-2">
               We are Hiring
             </Button>
@@ -76,7 +76,7 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link href="/en/templates/OHMT023-game/careers" onClick={() => setOpen(false)}>
+          <Link href="/en/templates/game/careers" onClick={() => setOpen(false)}>
             <Button>We are Hiring</Button>
           </Link>
         </div>

@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT011-ir/-components/sections/BusinessSegments.tsx
+// src/app/templates/ir/-components/sections/BusinessSegments.tsx
 "use client";
 
 import React from "react";
@@ -7,7 +7,7 @@ const segments = [
   {
     num: "01",
     icon: "기술",
-    image: "/templates/OHMT011-ir/ir-tech.jpg",
+    image: "/templates/ir/ir-tech.jpg",
     title: "기술 및 소프트웨어",
     desc: "차세대 디지털 인프라를 구동하는 확장 가능한 클라우드 솔루션과 AI 기반 플랫폼",
     stat: "매출 기여도",
@@ -16,7 +16,7 @@ const segments = [
   {
     num: "02",
     icon: "에너지",
-    image: "/templates/OHMT011-ir/ir-energy.jpg",
+    image: "/templates/ir/ir-energy.jpg",
     title: "지속가능 에너지",
     desc: "재생 에너지 자원과 그리드 현대화에 투자하여 글로벌 에너지 전환 주도",
     stat: "전년 대비 성장률",
@@ -25,7 +25,7 @@ const segments = [
   {
     num: "03",
     icon: "인프라",
-    image: "/templates/OHMT011-ir/ir-build.jpg",
+    image: "/templates/ir/ir-build.jpg",
     title: "글로벌 인프라",
     desc: "지역사회와 상업을 연결하는 핵심 물리적 자산 개발 및 관리",
     stat: "영업 이익률",

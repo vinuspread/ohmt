@@ -9,7 +9,7 @@ export default function PressAwards() {
     <section className="relative py-24 overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="/templates/OHMT023-game/award-bg.jpg"
+          src="/templates/game/award-bg.jpg"
           alt=""
           className="h-full w-full object-cover opacity-30"
         />

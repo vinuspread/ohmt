@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT010-cosmetic/-components/layout/Header.tsx
+// src/app/templates/cosmetic/-components/layout/Header.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -101,7 +101,7 @@ const NAV_ITEMS = [
           : "bg-transparent"
       )}>
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 h-full flex items-center justify-between">
-          <Link href="/en/templates/OHMT010-cosmetic" className="text-[1rem] md:text-[1.15rem] font-black tracking-[0.12em] uppercase">
+          <Link href="/en/templates/cosmetic" className="text-[1rem] md:text-[1.15rem] font-black tracking-[0.12em] uppercase">
             VINUSPREAD
           </Link>
 
@@ -110,7 +110,7 @@ const NAV_ITEMS = [
             {NAV_ITEMS.map((item) => (
                 <Link
                   key={item.id}
-                  href={`/en/templates/OHMT010-cosmetic/${item.id}`}
+                  href={`/en/templates/cosmetic/${item.id}`}
                   className="text-[0.82rem] font-medium opacity-60 hover:opacity-100 transition-opacity uppercase tracking-widest"
                 >
 
@@ -147,7 +147,7 @@ const NAV_ITEMS = [
           {NAV_ITEMS.map((item) => (
              <Link
                key={item.id}
-               href={`/en/templates/OHMT010-cosmetic/${item.id}`}
+               href={`/en/templates/cosmetic/${item.id}`}
                onClick={() => setMobileOpen(false)}
                className="text-[0.82rem] font-medium uppercase tracking-widest opacity-60 hover:opacity-100 py-3.5 border-b border-black/10 transition-opacity"
              >

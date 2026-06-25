@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
@@ -7,9 +7,9 @@ export const metadata: Metadata = {
   openGraph: {
     title: "항공사 - Oh My Template",
     description: "프리미엄 항공 경험",
-    url: "https://ohmytemplate.com/ko/templates/OHMT008-airline",
+    url: "https://ohmytemplate.com/ko/templates/airline",
     siteName: "Oh My Template",
-    images: [{ url: "/templates/OHMT008-airline/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/airline/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "항공사 - Oh My Template",
     description: "프리미엄 항공 경험",
-    images: ["/templates/OHMT008-airline/og-image.jpg"],
+    images: ["/templates/airline/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT008-airline",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT008-airline" },
+    canonical: "https://ohmytemplate.com/ko/templates/airline",
+    languages: { "en": "https://ohmytemplate.com/en/templates/airline" },
   },
 };
 

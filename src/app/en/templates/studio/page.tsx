@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -214,7 +214,7 @@ function StudioHomeContent() {
 const fields = t.hero.fields.map((f: any, i: number) => ({
         ...f,
         idx: `0${i + 1}`,
-        image: `/templates/OHMT006-studio/hero-${i + 1}.jpg`
+        image: `/templates/studio/hero-${i + 1}.jpg`
     }));
 
     const featuredProjects = [
@@ -224,7 +224,7 @@ const fields = t.hero.fields.map((f: any, i: number) => ({
             category: "Corporate Curation",
             year: "2026",
             location: "Oslo, Norway",
-            image: "/templates/OHMT006-studio/project-1.jpg"
+            image: "/templates/studio/project-1.jpg"
         },
         {
             id: "proj-2",
@@ -232,7 +232,7 @@ const fields = t.hero.fields.map((f: any, i: number) => ({
             category: "Private Mansion",
             year: "2025",
             location: "Kyoto, Japan",
-            image: "/templates/OHMT006-studio/project-2.jpg"
+            image: "/templates/studio/project-2.jpg"
         }
     ];
 
@@ -269,7 +269,7 @@ const fields = t.hero.fields.map((f: any, i: number) => ({
                             playsInline
                             className="w-full h-full object-cover brightness-[0.78] transition-opacity duration-1000"
                         >
-                            <source src="/templates/OHMT006-studio/hero-bg.mp4" type="video/mp4" />
+                            <source src="/templates/studio/hero-bg.mp4" type="video/mp4" />
                         </video>
                         <div className="absolute inset-0 bg-black/20 pointer-events-none z-10" />
                     </div>
@@ -290,7 +290,7 @@ const fields = t.hero.fields.map((f: any, i: number) => ({
                             </h1>
                             <div className="pt-2 md:pt-4">
                                 <Link
-                                    href="/en/templates/OHMT006-studio/contact"
+                                    href="/en/templates/studio/contact"
                                     className="inline-flex items-center gap-4 border border-white bg-white/10 hover:bg-white hover:text-black text-white px-6 md:px-8 py-3 md:py-4 text-[13px] font-bold backdrop-blur-md transition-all duration-300 rounded-none"
                                 >
                                     {t.hero.cta}
@@ -377,7 +377,7 @@ const fields = t.hero.fields.map((f: any, i: number) => ({
                     <div className="max-w-[1720px] mx-auto px-6 md:px-16 lg:px-24">
                         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
                             <div className="md:col-span-4 aspect-[3/4] overflow-hidden border border-black/10 relative">
-                                <img loading="lazy" src="/templates/OHMT006-studio/hero-2.jpg" alt={t.rhythm.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]" />
+                                <img loading="lazy" src="/templates/studio/hero-2.jpg" alt={t.rhythm.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]" />
                             </div>
                             <div className="md:col-span-5 space-y-5 md:space-y-6 lg:px-12">
                                 <span className="text-[13px] font-mono text-black/40 font-bold block">{t.rhythm.label}</span>
@@ -389,7 +389,7 @@ const fields = t.hero.fields.map((f: any, i: number) => ({
                                 </p>
                             </div>
                             <div className="md:col-span-3 aspect-[1/1] overflow-hidden border border-black/10 self-end md:mb-12">
-                                <img loading="lazy" src="/templates/OHMT006-studio/project-1.jpg" alt="Material swatch" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]" />
+                                <img loading="lazy" src="/templates/studio/project-1.jpg" alt="Material swatch" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]" />
                             </div>
                         </div>
                     </div>
@@ -400,14 +400,14 @@ const fields = t.hero.fields.map((f: any, i: number) => ({
                     <div className="max-w-[1720px] mx-auto px-6 md:px-16 lg:px-24">
                         <div className="flex justify-between items-baseline pb-8 md:pb-12 border-b border-black/10 mb-10 md:mb-20">
                             <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-black">{t.portfolio.title}</h2>
-                            <Link href="/en/templates/OHMT006-studio/projects" className="text-[13px] font-bold border-b-2 border-black pb-1 hover:opacity-60 transition-all shrink-0 ml-4 whitespace-nowrap">
+                            <Link href="/en/templates/studio/projects" className="text-[13px] font-bold border-b-2 border-black pb-1 hover:opacity-60 transition-all shrink-0 ml-4 whitespace-nowrap">
                                 {t.portfolio.viewAll}
                             </Link>
                         </div>
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-20">
                             {featuredProjects.map((project, idx) => (
                                 <Link
-                                    href={`/en/templates/OHMT006-studio/projects/${project.id}`}
+                                    href={`/en/templates/studio/projects/${project.id}`}
                                     key={project.id}
                                     className={`group block lg:col-span-6 ${idx === 1 ? "lg:mt-24" : ""}`}
                                 >

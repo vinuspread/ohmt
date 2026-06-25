@@ -1,11 +1,11 @@
-﻿"use client";
+"use client";
 import React from "react";
 import Link from "next/link";
 
 const navLinks = [
-  { label: "About", href: "/en/templates/OHMT019-coffee/about" },
-  { label: "Menu", href: "/en/templates/OHMT019-coffee/menu" },
-  { label: "Locations", href: "/en/templates/OHMT019-coffee/locations" },
+  { label: "About", href: "/en/templates/coffee/about" },
+  { label: "Menu", href: "/en/templates/coffee/menu" },
+  { label: "Locations", href: "/en/templates/coffee/locations" },
   { label: "Contact", href: "#" },
 ];
 
@@ -16,7 +16,7 @@ export const Footer = () => {
     <footer className="bg-[var(--color-bg-secondary)]">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 py-14 md:py-16 flex flex-col items-center gap-8 text-center">
         <Link
-          href="/en/templates/OHMT019-coffee"
+          href="/en/templates/coffee"
           className="font-heading text-2xl font-bold text-[var(--color-text)] tracking-tight"
         >
           Oh My Template

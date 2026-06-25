@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT011-ir/-components/sections/BusinessSegments.tsx
+// src/app/templates/ir/-components/sections/BusinessSegments.tsx
 "use client";
 
 import React from "react";
@@ -8,7 +8,7 @@ const segments = [
   {
     num: "01",
     icon: "Tech",
-    image: "/templates/OHMT011-ir/ir-tech.jpg",
+    image: "/templates/ir/ir-tech.jpg",
     title: "Technology & Software",
     desc: "Scaleable cloud solutions and AI-driven platforms powering the next generation of digital infrastructure.",
     stat: "Revenue contribution",
@@ -17,7 +17,7 @@ const segments = [
   {
     num: "02",
     icon: "Energy",
-    image: "/templates/OHMT011-ir/ir-energy.jpg",
+    image: "/templates/ir/ir-energy.jpg",
     title: "Sustainable Energy",
     desc: "Investing in renewable energy assets and grid modernization to drive the global energy transition.",
     stat: "Year-over-year growth",
@@ -26,7 +26,7 @@ const segments = [
   {
     num: "03",
     icon: "Build",
-    image: "/templates/OHMT011-ir/ir-build.jpg",
+    image: "/templates/ir/ir-build.jpg",
     title: "Global Infrastructure",
     desc: "Developing and managing mission-critical physical assets that connect communities and commerce.",
     stat: "Operating margin",

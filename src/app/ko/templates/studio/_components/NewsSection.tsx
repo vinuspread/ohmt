@@ -1,13 +1,13 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const news = [
-    { date: 'jan 24, 2026', title: '오픈 오피스 공간 레이아웃의 새로운 가능성', image: '/templates/OHMT006-studio/blog-1.jpg' },
-    { date: 'dec 12, 2025', title: '상업 공간에 녹아든 미니멀리즘의 가치', image: '/templates/OHMT006-studio/blog-2.jpg' },
-    { date: 'nov 08, 2025', title: '2026 지속 가능한 공간 마감 및 소재 큐레이션', image: '/templates/OHMT006-studio/blog-3.jpg' },
-    { date: 'oct 21, 2025', title: '조명과 빛이 업무 몰입에 미치는 공간 분석', image: '/templates/OHMT006-studio/blog-4.jpg' },
+    { date: 'jan 24, 2026', title: '오픈 오피스 공간 레이아웃의 새로운 가능성', image: '/templates/studio/blog-1.jpg' },
+    { date: 'dec 12, 2025', title: '상업 공간에 녹아든 미니멀리즘의 가치', image: '/templates/studio/blog-2.jpg' },
+    { date: 'nov 08, 2025', title: '2026 지속 가능한 공간 마감 및 소재 큐레이션', image: '/templates/studio/blog-3.jpg' },
+    { date: 'oct 21, 2025', title: '조명과 빛이 업무 몰입에 미치는 공간 분석', image: '/templates/studio/blog-4.jpg' },
 ];
 
 const listVariants = {

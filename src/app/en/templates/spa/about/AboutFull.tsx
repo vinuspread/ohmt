@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion, useReducedMotion } from "framer-motion";
 import Navbar from "../_components/layout/Navbar";
@@ -15,7 +15,7 @@ export default function AboutFull() {
       <main>
         <section className="relative min-h-[50dvh] overflow-hidden bg-[var(--color-secondary)]">
           <img
-            src="/templates/OHMT026-spa/about-hero.jpg"
+            src="/templates/spa/about-hero.jpg"
             alt=""
             role="presentation"
             className="absolute inset-0 h-full w-full object-cover opacity-40"
@@ -95,7 +95,7 @@ export default function AboutFull() {
               </h2>
             </motion.div>
             <div className="grid gap-6 sm:grid-cols-3">
-              {["/templates/OHMT026-spa/clinic-interior.jpg", "/templates/OHMT026-spa/difference-01.jpg", "/templates/OHMT026-spa/difference-03.jpg"].map((src, i) => (
+              {["/templates/spa/clinic-interior.jpg", "/templates/spa/difference-01.jpg", "/templates/spa/difference-03.jpg"].map((src, i) => (
                 <motion.div
                   key={src}
                   initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }}
@@ -161,7 +161,7 @@ export default function AboutFull() {
                     <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold tracking-tight text-[var(--color-text)]">{member.name}</h3>
                     <p className="mt-1 text-sm text-[var(--color-text-muted)]">{member.role}</p>
                     <a
-                      href="/en/templates/OHMT026-spa/contact"
+                      href="/en/templates/spa/contact"
                       className="mt-4 inline-flex items-center text-sm font-semibold text-[var(--color-primary)] hover:underline"
                     >
                       Book with {member.name.split(" ")[0]}

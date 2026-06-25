@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 
@@ -15,7 +15,7 @@ export default function About() {
             className="lg:col-span-7 relative aspect-[4/5] md:aspect-[16/10] lg:aspect-[4/5] w-full overflow-hidden filter grayscale contrast-125 rounded-sm"
           >
             <img
-              src="/templates/OHMT025-wedding/about-clara.jpg"
+              src="/templates/wedding/about-clara.jpg"
               alt="클라라, 웨딩 포토그래퍼"
               className="h-full w-full object-cover"
             />
@@ -45,7 +45,7 @@ export default function About() {
             </div>
             <div className="mt-10">
               <a
-                href="/ko/templates/OHMT025-wedding/contact"
+                href="/ko/templates/wedding/contact"
                 className="inline-flex items-center justify-center border-b border-[var(--color-primary)] pb-2 text-sm font-semibold uppercase tracking-[0.15em] text-[var(--color-primary)] hover:opacity-80 transition-opacity"
               >
                 당신의 특별한 날을 계획해 보세요 →
