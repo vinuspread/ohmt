@@ -228,7 +228,7 @@ function CustomCursor() {
   const size = label ? 80 : 12;
   return (
     <motion.div
-      className="fixed top-0 left-0 z-[9999] pointer-events-none flex items-center justify-center rounded-full mix-blend-difference bg-[var(--color-primary)]"
+      className="fixed top-0 left-0 z-[9999] pointer-events-none flex items-center justify-center rounded-full mix-blend-difference bg-white"
       style={{
         x: sx,
         y: sy,

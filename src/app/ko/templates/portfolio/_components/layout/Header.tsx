@@ -3,7 +3,12 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { designerInfo } from '@/lib/portfolio-data';
+const koNav = [
+  { num: '_01', name: 'Works', href: '/ko/templates/OHMT007-portfolio-KO' },
+  { num: '_02', name: 'About', href: '/ko/templates/OHMT007-portfolio-KO/about' },
+  { num: '_03', name: 'Journal', href: '/ko/templates/OHMT007-portfolio-KO/journal' },
+  { num: '_04', name: 'Contact', href: '/ko/templates/OHMT007-portfolio-KO/contact' },
+];
 
 export function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,7 +32,7 @@ export function Header() {
           {/* Right: nav + social */}
           <div className="flex items-center gap-8">
             <nav className="hidden md:flex items-center gap-8">
-              {designerInfo.nav.map(item => (
+              {koNav.map(item => (
                 <Link
                   key={item.name}
                   href={item.href}
@@ -68,7 +73,7 @@ export function Header() {
           >
             <button onClick={() => setMenuOpen(false)} className="absolute top-5 right-6 text-3xl font-normal text-[var(--color-text)]">��</button>
             <nav className="space-y-2">
-              {designerInfo.nav.map((item, i) => (
+              {koNav.map((item, i) => (
                 <motion.div
                   key={item.name}
                   initial={{ opacity: 0, y: 20 }}
