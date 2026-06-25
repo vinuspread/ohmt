@@ -129,6 +129,7 @@ export async function POST(request: Request) {
   if (error) return NextResponse.json({ error: "문의 저장에 실패했습니다." }, { status: 500 });
 
   // 이메일 알림 (실패해도 문의 저장은 성공으로 처리)
+  console.log("[Email] KEY:", process.env.RESEND_API_KEY ? "SET" : "MISSING", "/ NOTIFY:", process.env.NOTIFY_EMAIL ?? "MISSING");
   if (process.env.RESEND_API_KEY && process.env.NOTIFY_EMAIL) {
     const rowData: [string, string][] = [
       ["유형", TYPE_LABELS[body.inquiry_type as InquiryType]],
@@ -180,9 +181,12 @@ export async function POST(request: Request) {
       `,
     };
 
-    await resend.emails.send(emailPayload).catch((err) => {
-      console.error("[Resend] 이메일 발송 실패:", err);
-    });
+    const { data: emailData, error: emailError } = await resend.emails.send(emailPayload);
+    if (emailError) {
+      console.error("[Resend] 발송 실패:", JSON.stringify(emailError));
+    } else {
+      console.log("[Resend] 발송 성공:", emailData?.id);
+    }
   }
 
   return NextResponse.json({ success: true, id: data.id });
