@@ -18,7 +18,11 @@ interface InquiryPostBody {
   attachment?: unknown;
 }
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+let resend: Resend | null = null;
+function getResend() {
+  if (!resend && process.env.RESEND_API_KEY) resend = new Resend(process.env.RESEND_API_KEY);
+  return resend;
+}
 
 const TYPE_LABELS: Record<InquiryType, string> = {
   template: "템플릿 기반 제작",
@@ -201,7 +205,7 @@ export async function POST(request: Request) {
       `,
     };
 
-    const { data: emailData, error: emailError } = await resend.emails.send(emailPayload);
+    const { data: emailData, error: emailError } = await getResend()!.emails.send(emailPayload);
     if (emailError) {
       console.error("[Resend] 발송 실패:", JSON.stringify(emailError));
     } else {
