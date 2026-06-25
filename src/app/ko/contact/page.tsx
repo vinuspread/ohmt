@@ -56,6 +56,14 @@ export default async function ContactPage({
     ? []
     : [...toPackageOptions(visiblePackageRows), { id: "undecided", name: "협의 후 결정" }];
 
+  const { data: templateRows } = await supabase
+    .from("templates")
+    .select("name, slug, thumbnail_url")
+    .eq("lang", "ko")
+    .eq("status", "published")
+    .order("sort_order");
+  const templateList = (templateRows ?? []).map((t) => ({ name: t.name as string, slug: t.slug as string, thumbnail_url: t.thumbnail_url as string | null }));
+
   return (
     <main className="min-h-screen bg-[#FCFCFD] text-zinc-900 font-sans antialiased dark:bg-zinc-950 dark:text-zinc-100">
       <header className="bg-white border-b border-zinc-200/60 sticky top-0 z-40 dark:bg-zinc-900 dark:border-zinc-800">
@@ -84,7 +92,7 @@ export default async function ContactPage({
         </div>
 
         <Suspense>
-          <ContactForm packages={packages} requiresConsultation={requiresConsultation} />
+          <ContactForm packages={packages} requiresConsultation={requiresConsultation} templateList={templateList} />
         </Suspense>
       </section>
 
