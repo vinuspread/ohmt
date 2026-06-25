@@ -3,7 +3,7 @@
 import { motion } from "motion/react";
 import Navbar from "../_components/Navbar";
 import Footer from "../_components/Footer";
-import { awards } from "@/app/en/templates/OHMT023-game/data/data";
+import { awards } from "@/app/en/templates/game/data/data";
 import { Quote } from "lucide-react";
 
 import { TemplateWrapper } from "../_components/TemplateWrapper";

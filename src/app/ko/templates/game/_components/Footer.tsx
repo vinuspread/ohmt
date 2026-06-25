@@ -1,5 +1,5 @@
-﻿import Link from "next/link";
-import { games } from "@/app/ko/templates/OHMT023-game/data/data";
+import Link from "next/link";
+import { games } from "@/app/ko/templates/game/data/data";
 
 const companyLinks = [
   { href: "/ko/templates/OHMT023-game/about", label: "소개" },

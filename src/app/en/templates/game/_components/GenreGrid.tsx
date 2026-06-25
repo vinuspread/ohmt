@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import { motion } from "motion/react";
-import { genres } from "@/app/en/templates/OHMT023-game/data/data";
+import { genres } from "@/app/en/templates/game/data/data";
 import { Sword, Crosshair, ChevronsUp, Globe, Heart, Skull } from "lucide-react";
 
 const iconMap: Record<string, React.ReactNode> = {

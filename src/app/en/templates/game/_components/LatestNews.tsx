@@ -1,9 +1,9 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { motion } from "motion/react";
 import NewsCard from "./ui/NewsCard";
-import { news } from "@/app/en/templates/OHMT023-game/data/data";
+import { news } from "@/app/en/templates/game/data/data";
 import { ArrowRight } from "lucide-react";
 
 export default function LatestNews() {

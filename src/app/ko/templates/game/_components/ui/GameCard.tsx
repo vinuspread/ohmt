@@ -1,8 +1,8 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import type { Game } from "@/app/ko/templates/OHMT023-game/data/data";
+import type { Game } from "@/app/ko/templates/game/data/data";
 
 const statusColors: Record<string, string> = {
   released: "bg-emerald-500",

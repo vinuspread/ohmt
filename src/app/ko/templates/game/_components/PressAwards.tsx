@@ -1,7 +1,7 @@
-﻿"use client";
+"use client";
 
 import { motion } from "motion/react";
-import { awards } from "@/app/ko/templates/OHMT023-game/data/data";
+import { awards } from "@/app/ko/templates/game/data/data";
 import { Quote } from "lucide-react";
 
 export default function PressAwards() {
