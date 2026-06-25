@@ -100,7 +100,7 @@ async function processZip(zipFile) {
         name: name ?? slug,
         category: themeJson.category ?? "uncategorized",
         description: description ?? null,
-        thumbnail_url: `/templates/${slug}/thumbnail.jpg`,
+        thumbnail_url: `/templates/${slug}/og-image.jpg`,
         tags: themeJson.tags ?? [],
         ...(templateKey && { template_key: templateKey }),
       })
@@ -118,7 +118,7 @@ async function processZip(zipFile) {
       name: name ?? slug,
       category: themeJson.category ?? "uncategorized",
       description: description ?? null,
-      thumbnail_url: `/templates/${slug}/thumbnail.jpg`,
+      thumbnail_url: `/templates/${slug}/og-image.jpg`,
       template_key: templateKey ?? null,
       price: 0,
       status: "uploaded",
