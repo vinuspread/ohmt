@@ -86,7 +86,7 @@
 ## 브랜드 규칙
 
 - **브랜드명은 반드시 `Oh My Template`** 으로 표기한다. (대소문자 유지)
-- 이메일: `contact@ohmytemplate.com`
+- 이메일: `vinus@vinus.co.kr`
 - 저작권: `© 2026 Oh My Template.`
 
 ---
