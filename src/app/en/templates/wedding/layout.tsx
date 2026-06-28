@@ -1,34 +1,34 @@
-import "./theme.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Wedding - Oh My Template",
-  description: "Timeless and authentic wedding photography. Capturing your love story through a documentary lens with fine art elegance.",
-  keywords: ["wedding photography", "documentary wedding", "fine art wedding", "photographer portfolio", "Oh My Template"],
-  authors: [{ name: "Oh My Template", url: "https://ohmt.site" }],
+  title: "Wedding Photography Website Template | OHMT",
+  description: "An elegant wedding photography and event website template with gallery layouts, pricing packages, and storytelling sections.",
   openGraph: {
-    title: "Wedding - Oh My Template",
-    description: "Timeless and authentic wedding photography. Capturing your love story through a documentary lens with fine art elegance.",
+    title: "Wedding Photography Website Template | OHMT",
+    description: "An elegant wedding photography and event website template with gallery layouts, pricing packages, and storytelling sections.",
     url: "https://ohmt.site/en/templates/wedding",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/wedding/og-image.jpg", width: 1200, height: 630 }],
+    siteName: "OHMT",
+    images: [{ url: "/templates/wedding/og-image.jpg", width: 1200, height: 630, alt: "Wedding Photography Website Template" }],
     locale: "en_US",
     type: "website",
+    alternateLocale: ["ko_KR"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wedding - Oh My Template",
-    description: "Timeless and authentic wedding photography. Capturing your love story through a documentary lens with fine art elegance.",
+    title: "Wedding Photography Website Template | OHMT",
+    description: "An elegant wedding photography and event website template with gallery layouts, pricing packages, and storytelling sections.",
     images: ["/templates/wedding/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
     canonical: "https://ohmt.site/en/templates/wedding",
-    languages: {
-      "ko": "https://ohmt.site/ko/templates/wedding",
-    },
+    languages: { "ko": "https://ohmt.site/ko/templates/wedding" },
   },
 };
+
+import "./theme.css";
+
+
 
 export default function WeddingLayout({ children }: { children: React.ReactNode }) {
   return (

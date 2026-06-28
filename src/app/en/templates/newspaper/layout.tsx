@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
-import './theme.css';
 
 export const metadata: Metadata = {
-  title: "Newspaper - Oh My Template",
-  description: "News and publishing archive",
+  title: "Newspaper & News Website Template | OHMT",
+  description: "A responsive newspaper and online news website template with article layouts, category sections, and editorial typography.",
   openGraph: {
-    title: "Newspaper - Oh My Template",
-    description: "News and publishing archive",
+    title: "Newspaper & News Website Template | OHMT",
+    description: "A responsive newspaper and online news website template with article layouts, category sections, and editorial typography.",
     url: "https://ohmt.site/en/templates/newspaper",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/newspaper/og-image.jpg", width: 1200, height: 630 }],
+    siteName: "OHMT",
+    images: [{ url: "/templates/newspaper/og-image.jpg", width: 1200, height: 630, alt: "Newspaper & News Website Template" }],
     locale: "en_US",
     type: "website",
+    alternateLocale: ["ko_KR"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Newspaper - Oh My Template",
-    description: "News and publishing archive",
+    title: "Newspaper & News Website Template | OHMT",
+    description: "A responsive newspaper and online news website template with article layouts, category sections, and editorial typography.",
     images: ["/templates/newspaper/og-image.jpg"],
   },
   robots: { index: true, follow: true },
@@ -25,6 +25,10 @@ export const metadata: Metadata = {
     languages: { "ko": "https://ohmt.site/ko/templates/newspaper" },
   },
 };
+
+import './theme.css';
+
+
 
 export default function NewspaperLayout({
   children,

@@ -85,7 +85,45 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} ${cormorant.variable} ${inter.variable} ${playfair.variable} ${outfit.variable} ${bebasNeue.variable}`} suppressHydrationWarning>
-      <body className="antialiased">{children}</body>
+      <body className="antialiased">
+        {children}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  "@id": "https://ohmt.site/#organization",
+                  name: "OHMT",
+                  url: "https://ohmt.site",
+                  logo: {
+                    "@type": "ImageObject",
+                    url: "https://ohmt.site/og-image.png",
+                    width: 1200,
+                    height: 630,
+                  },
+                  contactPoint: {
+                    "@type": "ContactPoint",
+                    email: "vinus@vinus.co.kr",
+                    contactType: "customer service",
+                  },
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://ohmt.site/#website",
+                  url: "https://ohmt.site",
+                  name: "OHMT",
+                  description: "Premium website templates and custom web design services",
+                  publisher: { "@id": "https://ohmt.site/#organization" },
+                  inLanguage: ["en", "ko"],
+                },
+              ],
+            }),
+          }}
+        />
+      </body>
       <Script
         defer
         src="https://cloud.umami.is/script.js"

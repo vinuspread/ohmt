@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
-import './theme.css';
 
 export const metadata: Metadata = {
-  title: "커피 - Oh My Template",
-  description: "프리미엄 커피숍 & 로스터리 경험",
+  title: "카페·로스터리 웹사이트 템플릿 | OHMT",
+  description: "카페, 커피숍, 스페셜티 로스터리를 위한 웹사이트 템플릿입니다. 메뉴, 브랜드 스토리, 온라인 숍 구성이 가능합니다.",
   openGraph: {
-    title: "커피 - Oh My Template",
-    description: "프리미엄 커피숍 & 로스터리 경험",
+    title: "카페·로스터리 웹사이트 템플릿 | OHMT",
+    description: "카페, 커피숍, 스페셜티 로스터리를 위한 웹사이트 템플릿입니다. 메뉴, 브랜드 스토리, 온라인 숍 구성이 가능합니다.",
     url: "https://ohmt.site/ko/templates/coffee",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/coffee/og-image.jpg", width: 1200, height: 630 }],
+    siteName: "OHMT",
+    images: [{ url: "/templates/coffee/og-image.jpg", width: 1200, height: 630, alt: "카페·로스터리 웹사이트 템플릿" }],
     locale: "ko_KR",
     type: "website",
+    alternateLocale: ["en_US"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "커피 - Oh My Template",
-    description: "프리미엄 커피숍 & 로스터리 경험",
+    title: "카페·로스터리 웹사이트 템플릿 | OHMT",
+    description: "카페, 커피숍, 스페셜티 로스터리를 위한 웹사이트 템플릿입니다. 메뉴, 브랜드 스토리, 온라인 숍 구성이 가능합니다.",
     images: ["/templates/coffee/og-image.jpg"],
   },
   robots: { index: true, follow: true },
@@ -25,6 +25,10 @@ export const metadata: Metadata = {
     languages: { "en": "https://ohmt.site/en/templates/coffee" },
   },
 };
+
+import './theme.css';
+
+
 
 export default function CoffeeLayout({
   children,

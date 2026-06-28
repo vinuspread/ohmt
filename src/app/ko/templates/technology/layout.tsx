@@ -1,3 +1,31 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "IT·AI 스타트업 웹사이트 템플릿 | OHMT",
+  description: "기술 스타트업, AI 기업을 위한 웹사이트 템플릿입니다. 제품 소개, 팀, 현대적인 디지털 레이아웃을 포함합니다.",
+  openGraph: {
+    title: "IT·AI 스타트업 웹사이트 템플릿 | OHMT",
+    description: "기술 스타트업, AI 기업을 위한 웹사이트 템플릿입니다. 제품 소개, 팀, 현대적인 디지털 레이아웃을 포함합니다.",
+    url: "https://ohmt.site/ko/templates/technology",
+    siteName: "OHMT",
+    images: [{ url: "/templates/technology/og-image.jpg", width: 1200, height: 630, alt: "IT·AI 스타트업 웹사이트 템플릿" }],
+    locale: "ko_KR",
+    type: "website",
+    alternateLocale: ["en_US"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IT·AI 스타트업 웹사이트 템플릿 | OHMT",
+    description: "기술 스타트업, AI 기업을 위한 웹사이트 템플릿입니다. 제품 소개, 팀, 현대적인 디지털 레이아웃을 포함합니다.",
+    images: ["/templates/technology/og-image.jpg"],
+  },
+  robots: { index: true, follow: true },
+  alternates: {
+    canonical: "https://ohmt.site/ko/templates/technology",
+    languages: { "en": "https://ohmt.site/en/templates/technology" },
+  },
+};
+
 import type { Metadata } from "next"
 import './theme.css'
 import { Inter, Inter_Tight, Noto_Sans_KR } from 'next/font/google'
@@ -21,30 +49,7 @@ const notoSansKr = Noto_Sans_KR({
   display: 'swap',
 })
 
-export const metadata: Metadata = {
-  title: 'Technology - Oh My Template',
-  description: '머신러닝 및 로보틱스 스타트업을 위한 전문적이고 역동적인 플랫폼.',
-  openGraph: {
-    title: 'Technology - Oh My Template',
-    description: '머신러닝 및 로보틱스 스타트업을 위한 전문적이고 역동적인 플랫폼.',
-    url: 'https://ohmt.site/ko/templates/technology',
-    siteName: 'Oh My Template',
-    images: [{ url: '/templates/technology/og-image.jpg', width: 1200, height: 630 }],
-    locale: 'ko_KR',
-    type: 'website',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Technology - Oh My Template',
-    description: '머신러닝 및 로보틱스 스타트업을 위한 전문적이고 역동적인 플랫폼.',
-    images: ['/templates/technology/og-image.jpg'],
-  },
-  robots: { index: true, follow: true },
-  alternates: {
-    canonical: 'https://ohmt.site/ko/templates/technology',
-    languages: { 'en': 'https://ohmt.site/en/templates/technology' },
-  },
-}
+
 
 export default function TechnologyLayout({
   children,

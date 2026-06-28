@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
-import './theme.css';
 
 export const metadata: Metadata = {
-  title: "Studio - Oh My Template",
-  description: "Architecture and spatial design studio",
+  title: "Architecture & Design Studio Website Template | OHMT",
+  description: "A sophisticated architecture and design studio website template with portfolio projects, team bios, and inquiry sections.",
   openGraph: {
-    title: "Studio - Oh My Template",
-    description: "Architecture and spatial design studio",
+    title: "Architecture & Design Studio Website Template | OHMT",
+    description: "A sophisticated architecture and design studio website template with portfolio projects, team bios, and inquiry sections.",
     url: "https://ohmt.site/en/templates/studio",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/studio/og-image.jpg", width: 1200, height: 630 }],
+    siteName: "OHMT",
+    images: [{ url: "/templates/studio/og-image.jpg", width: 1200, height: 630, alt: "Architecture & Design Studio Website Template" }],
     locale: "en_US",
     type: "website",
+    alternateLocale: ["ko_KR"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Studio - Oh My Template",
-    description: "Architecture and spatial design studio",
+    title: "Architecture & Design Studio Website Template | OHMT",
+    description: "A sophisticated architecture and design studio website template with portfolio projects, team bios, and inquiry sections.",
     images: ["/templates/studio/og-image.jpg"],
   },
   robots: { index: true, follow: true },
@@ -25,6 +25,10 @@ export const metadata: Metadata = {
     languages: { "ko": "https://ohmt.site/ko/templates/studio" },
   },
 };
+
+import './theme.css';
+
+
 
 export default function StudioLayout({
   children,

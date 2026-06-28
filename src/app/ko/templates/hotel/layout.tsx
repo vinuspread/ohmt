@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
-import './theme.css';
 
 export const metadata: Metadata = {
-  title: "Oh My Template Hotel - Oh My Template",
-  description: "프리미엄 럭셔리 호텔 & 리조트 경험",
+  title: "호텔·리조트 웹사이트 템플릿 | OHMT",
+  description: "프리미엄 호텔·리조트를 위한 웹사이트 템플릿입니다. 객실 소개, 어메니티, 예약 유도 섹션을 포함합니다.",
   openGraph: {
-    title: "Oh My Template Hotel - Oh My Template",
-    description: "프리미엄 럭셔리 호텔 & 리조트 경험",
+    title: "호텔·리조트 웹사이트 템플릿 | OHMT",
+    description: "프리미엄 호텔·리조트를 위한 웹사이트 템플릿입니다. 객실 소개, 어메니티, 예약 유도 섹션을 포함합니다.",
     url: "https://ohmt.site/ko/templates/hotel",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/hotel/og-image.jpg", width: 1200, height: 630 }],
+    siteName: "OHMT",
+    images: [{ url: "/templates/hotel/og-image.jpg", width: 1200, height: 630, alt: "호텔·리조트 웹사이트 템플릿" }],
     locale: "ko_KR",
     type: "website",
+    alternateLocale: ["en_US"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Oh My Template Hotel - Oh My Template",
-    description: "프리미엄 럭셔리 호텔 & 리조트 경험",
+    title: "호텔·리조트 웹사이트 템플릿 | OHMT",
+    description: "프리미엄 호텔·리조트를 위한 웹사이트 템플릿입니다. 객실 소개, 어메니티, 예약 유도 섹션을 포함합니다.",
     images: ["/templates/hotel/og-image.jpg"],
   },
   robots: { index: true, follow: true },
@@ -25,6 +25,10 @@ export const metadata: Metadata = {
     languages: { "en": "https://ohmt.site/en/templates/hotel" },
   },
 };
+
+import './theme.css';
+
+
 
 export default function HotelLayout({
   children,

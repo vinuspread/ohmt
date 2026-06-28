@@ -1,35 +1,35 @@
-// src/app/en/templates/architecture/layout.tsx
 import type { Metadata } from "next";
-import "./theme.css";
 
 export const metadata: Metadata = {
-  title: "Architecture Portfolio - Oh My Template",
-  description: "A sophisticated architecture portfolio template with editorial typography and immersive visual storytelling.",
-  keywords: ["architecture", "minimalism", "portfolio", "interior design", "Oh My Template"],
-  authors: [{ name: "Oh My Template", url: "https://ohmt.site" }],
+  title: "건축 포트폴리오 웹사이트 템플릿 | OHMT",
+  description: "건축 포트폴리오를 위한 세련된 웹사이트 템플릿입니다. 프로젝트 갤러리, 디자인 철학, 스튜디오 서비스 페이지를 포함합니다.",
   openGraph: {
-    title: "Architecture Portfolio - Oh My Template",
-    description: "A sophisticated architecture portfolio template with editorial typography and immersive visual storytelling.",
-    url: "https://ohmt.site/en/templates/architecture",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/architecture/og-image.jpg", width: 1200, height: 630 }],
-    locale: "en_US",
+    title: "건축 포트폴리오 웹사이트 템플릿 | OHMT",
+    description: "건축 포트폴리오를 위한 세련된 웹사이트 템플릿입니다. 프로젝트 갤러리, 디자인 철학, 스튜디오 서비스 페이지를 포함합니다.",
+    url: "https://ohmt.site/ko/templates/architecture",
+    siteName: "OHMT",
+    images: [{ url: "/templates/architecture/og-image.jpg", width: 1200, height: 630, alt: "건축 포트폴리오 웹사이트 템플릿" }],
+    locale: "ko_KR",
     type: "website",
+    alternateLocale: ["en_US"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Architecture Portfolio - Oh My Template",
-    description: "A sophisticated architecture portfolio template with editorial typography and immersive visual storytelling.",
+    title: "건축 포트폴리오 웹사이트 템플릿 | OHMT",
+    description: "건축 포트폴리오를 위한 세련된 웹사이트 템플릿입니다. 프로젝트 갤러리, 디자인 철학, 스튜디오 서비스 페이지를 포함합니다.",
     images: ["/templates/architecture/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/architecture",
-    languages: {
-      "en": "https://ohmt.site/en/templates/architecture",
-    },
+    canonical: "https://ohmt.site/ko/templates/architecture",
+    languages: { "en": "https://ohmt.site/en/templates/architecture" },
   },
 };
+
+// src/app/en/templates/architecture/layout.tsx
+import "./theme.css";
+
+
 
 export default function ArchitectureLayout({
   children,

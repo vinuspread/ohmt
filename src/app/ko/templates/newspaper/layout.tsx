@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
-import './theme.css';
 
 export const metadata: Metadata = {
-  title: "Newspaper - Oh My Template",
-  description: "News and publishing archive",
+  title: "뉴스·신문 웹사이트 템플릿 | OHMT",
+  description: "뉴스 미디어, 온라인 신문을 위한 반응형 웹사이트 템플릿입니다. 기사 레이아웃, 카테고리 섹션, 에디토리얼 타이포그래피를 포함합니다.",
   openGraph: {
-    title: "Newspaper - Oh My Template",
-    description: "News and publishing archive",
+    title: "뉴스·신문 웹사이트 템플릿 | OHMT",
+    description: "뉴스 미디어, 온라인 신문을 위한 반응형 웹사이트 템플릿입니다. 기사 레이아웃, 카테고리 섹션, 에디토리얼 타이포그래피를 포함합니다.",
     url: "https://ohmt.site/ko/templates/newspaper",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/newspaper/og-image.jpg", width: 1200, height: 630 }],
+    siteName: "OHMT",
+    images: [{ url: "/templates/newspaper/og-image.jpg", width: 1200, height: 630, alt: "뉴스·신문 웹사이트 템플릿" }],
     locale: "ko_KR",
     type: "website",
+    alternateLocale: ["en_US"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Newspaper - Oh My Template",
-    description: "News and publishing archive",
+    title: "뉴스·신문 웹사이트 템플릿 | OHMT",
+    description: "뉴스 미디어, 온라인 신문을 위한 반응형 웹사이트 템플릿입니다. 기사 레이아웃, 카테고리 섹션, 에디토리얼 타이포그래피를 포함합니다.",
     images: ["/templates/newspaper/og-image.jpg"],
   },
   robots: { index: true, follow: true },
@@ -25,6 +25,10 @@ export const metadata: Metadata = {
     languages: { "en": "https://ohmt.site/en/templates/newspaper" },
   },
 };
+
+import './theme.css';
+
+
 
 export default function NewspaperLayout({
   children,

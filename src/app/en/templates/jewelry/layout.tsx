@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
-import './theme.css';
 
 export const metadata: Metadata = {
-  title: "Jewelry Mall - Oh My Template",
-  description: "Experience the timeless elegance and curated luxury.",
+  title: "Jewelry & Luxury Brand Website Template | OHMT",
+  description: "An elegant jewelry and luxury brand website template with curated product collections, brand heritage story, and boutique-style layouts.",
   openGraph: {
-    title: "Jewelry Mall - Oh My Template",
-    description: "Experience the timeless elegance and curated luxury.",
+    title: "Jewelry & Luxury Brand Website Template | OHMT",
+    description: "An elegant jewelry and luxury brand website template with curated product collections, brand heritage story, and boutique-style layouts.",
     url: "https://ohmt.site/en/templates/jewelry",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/jewelry/og-image.jpg", width: 1200, height: 630 }],
+    siteName: "OHMT",
+    images: [{ url: "/templates/jewelry/og-image.jpg", width: 1200, height: 630, alt: "Jewelry & Luxury Brand Website Template" }],
     locale: "en_US",
     type: "website",
+    alternateLocale: ["ko_KR"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jewelry Mall - Oh My Template",
-    description: "Experience the timeless elegance and curated luxury.",
+    title: "Jewelry & Luxury Brand Website Template | OHMT",
+    description: "An elegant jewelry and luxury brand website template with curated product collections, brand heritage story, and boutique-style layouts.",
     images: ["/templates/jewelry/og-image.jpg"],
   },
   robots: { index: true, follow: true },
@@ -25,6 +25,10 @@ export const metadata: Metadata = {
     languages: { "ko": "https://ohmt.site/ko/templates/jewelry" },
   },
 };
+
+import './theme.css';
+
+
 
 export default function JewelryLayout({
   children,

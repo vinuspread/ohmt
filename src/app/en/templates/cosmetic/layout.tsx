@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
-import './theme.css';
 
 export const metadata: Metadata = {
-  title: "Cosmetic - Oh My Template",
-  description: "Premium beauty & cosmetic brand showcase",
+  title: "Beauty & Cosmetics Brand Website Template | OHMT",
+  description: "A premium beauty and cosmetics brand website template with elegant product showcase, brand story, and e-commerce ready layouts.",
   openGraph: {
-    title: "Cosmetic - Oh My Template",
-    description: "Premium beauty & cosmetic brand showcase",
+    title: "Beauty & Cosmetics Brand Website Template | OHMT",
+    description: "A premium beauty and cosmetics brand website template with elegant product showcase, brand story, and e-commerce ready layouts.",
     url: "https://ohmt.site/en/templates/cosmetic",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/cosmetic/og-image.jpg", width: 1200, height: 630 }],
+    siteName: "OHMT",
+    images: [{ url: "/templates/cosmetic/og-image.jpg", width: 1200, height: 630, alt: "Beauty & Cosmetics Brand Website Template" }],
     locale: "en_US",
     type: "website",
+    alternateLocale: ["ko_KR"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cosmetic - Oh My Template",
-    description: "Premium beauty & cosmetic brand showcase",
+    title: "Beauty & Cosmetics Brand Website Template | OHMT",
+    description: "A premium beauty and cosmetics brand website template with elegant product showcase, brand story, and e-commerce ready layouts.",
     images: ["/templates/cosmetic/og-image.jpg"],
   },
   robots: { index: true, follow: true },
@@ -25,6 +25,10 @@ export const metadata: Metadata = {
     languages: { "ko": "https://ohmt.site/ko/templates/cosmetic" },
   },
 };
+
+import './theme.css';
+
+
 
 export default function CosmeticLayout({
   children,

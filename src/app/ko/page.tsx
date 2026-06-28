@@ -80,8 +80,8 @@ const fallbackFaqs: FaqItem[] = [
 ];
 
 export const metadata: Metadata = {
-  title: "Oh My Template — 프리미엄 Next.js 웹 템플릿",
-  description: "브랜드, 에이전시, 크리에이터를 위한 프리미엄 Next.js 웹 템플릿. 전문 팀이 2일 안에 커스터마이징해 드립니다.",
+  title: "웹사이트 템플릿 & 맞춤형 홈페이지 제작 | OHMT",
+  description: "OHMT는 비즈니스 목적에 맞는 프리미엄 웹사이트 템플릿과 맞춤형 홈페이지 제작 서비스를 제공합니다. 템플릿 선택부터 커스터마이징, 기능 개발까지 상담을 통해 진행합니다.",
   alternates: {
     canonical: "https://ohmt.site/ko",
     languages: {
@@ -91,12 +91,20 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Oh My Template — 프리미엄 Next.js 웹 템플릿",
-    description: "브랜드, 에이전시, 크리에이터를 위한 프리미엄 Next.js 웹 템플릿.",
+    title: "웹사이트 템플릿 & 맞춤형 홈페이지 제작 | OHMT",
+    description: "OHMT는 프리미엄 웹사이트 템플릿과 맞춤형 홈페이지 제작 서비스를 제공합니다. 브랜드, 쇼핑몰, 포트폴리오, 스타트업에 적합합니다.",
     url: "https://ohmt.site/ko",
+    siteName: "OHMT",
     locale: "ko_KR",
+    type: "website",
     alternateLocale: ["en_US"],
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Oh My Template" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "OHMT - 프리미엄 웹사이트 템플릿" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "웹사이트 템플릿 & 맞춤형 홈페이지 제작 | OHMT",
+    description: "프리미엄 웹사이트 템플릿과 맞춤형 홈페이지 제작 서비스. 브랜드, 쇼핑몰, 스타트업에 적합합니다.",
+    images: ["/og-image.png"],
   },
 };
 

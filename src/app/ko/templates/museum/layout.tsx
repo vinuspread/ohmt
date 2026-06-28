@@ -1,4 +1,31 @@
 import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "박물관·문화기관 웹사이트 템플릿 | OHMT",
+  description: "박물관, 문화기관을 위한 프리미엄 웹사이트 템플릿입니다. 전시 소개, 관람 정보, 컬렉션 쇼케이스를 포함합니다.",
+  openGraph: {
+    title: "박물관·문화기관 웹사이트 템플릿 | OHMT",
+    description: "박물관, 문화기관을 위한 프리미엄 웹사이트 템플릿입니다. 전시 소개, 관람 정보, 컬렉션 쇼케이스를 포함합니다.",
+    url: "https://ohmt.site/ko/templates/museum",
+    siteName: "OHMT",
+    images: [{ url: "/templates/museum/og-image.jpg", width: 1200, height: 630, alt: "박물관·문화기관 웹사이트 템플릿" }],
+    locale: "ko_KR",
+    type: "website",
+    alternateLocale: ["en_US"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "박물관·문화기관 웹사이트 템플릿 | OHMT",
+    description: "박물관, 문화기관을 위한 프리미엄 웹사이트 템플릿입니다. 전시 소개, 관람 정보, 컬렉션 쇼케이스를 포함합니다.",
+    images: ["/templates/museum/og-image.jpg"],
+  },
+  robots: { index: true, follow: true },
+  alternates: {
+    canonical: "https://ohmt.site/ko/templates/museum",
+    languages: { "en": "https://ohmt.site/en/templates/museum" },
+  },
+};
+
 import { Playfair_Display, Inter } from "next/font/google";
 import './theme.css';
 
@@ -14,30 +41,7 @@ const inter = Inter({
 
 // Noto Serif KR is loaded via @import for Korean character fallback
 
-export const metadata: Metadata = {
-  title: "Exhibition Website | Oh My Template",
-  description: "Experience the epitome of elegance and durability.",
-  openGraph: {
-    title: "Exhibition Website | Oh My Template",
-    description: "Experience the epitome of elegance and durability.",
-    url: "https://ohmt.site/ko/templates/museum",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/museum/og-image.jpg", width: 1200, height: 630 }],
-    locale: "ko_KR",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Exhibition Website | Oh My Template",
-    description: "Experience the epitome of elegance and durability.",
-    images: ["/templates/museum/og-image.jpg"],
-  },
-  robots: { index: true, follow: true },
-  alternates: {
-    canonical: "https://ohmt.site/ko/templates/museum",
-    languages: { "en": "https://ohmt.site/en/templates/museum" },
-  },
-};
+
 
 export default function ExhibitionLayout({
   children,

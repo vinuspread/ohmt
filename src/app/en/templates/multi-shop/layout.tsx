@@ -1,23 +1,22 @@
 import type { Metadata } from "next";
-import './theme.css';
-import { SmoothScroll } from "./_components/SmoothScroll";
 
 export const metadata: Metadata = {
-  title: "Multi-Shop - Oh My Template",
-  description: "Multi-brand shopping experience with curated collections",
+  title: "Multi-Brand Shop Website Template | OHMT",
+  description: "A versatile multi-brand e-commerce website template with category browsing, product listings, and curated collections.",
   openGraph: {
-    title: "Multi-Shop - Oh My Template",
-    description: "Multi-brand shopping experience with curated collections",
+    title: "Multi-Brand Shop Website Template | OHMT",
+    description: "A versatile multi-brand e-commerce website template with category browsing, product listings, and curated collections.",
     url: "https://ohmt.site/en/templates/multi-shop",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/multi-shop/og-image.jpg", width: 1200, height: 630 }],
+    siteName: "OHMT",
+    images: [{ url: "/templates/multi-shop/og-image.jpg", width: 1200, height: 630, alt: "Multi-Brand Shop Website Template" }],
     locale: "en_US",
     type: "website",
+    alternateLocale: ["ko_KR"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Multi-Shop - Oh My Template",
-    description: "Multi-brand shopping experience with curated collections",
+    title: "Multi-Brand Shop Website Template | OHMT",
+    description: "A versatile multi-brand e-commerce website template with category browsing, product listings, and curated collections.",
     images: ["/templates/multi-shop/og-image.jpg"],
   },
   robots: { index: true, follow: true },
@@ -26,6 +25,11 @@ export const metadata: Metadata = {
     languages: { "ko": "https://ohmt.site/ko/templates/multi-shop" },
   },
 };
+
+import './theme.css';
+import { SmoothScroll } from "./_components/SmoothScroll";
+
+
 
 export default function MultiShopLayout({
   children,

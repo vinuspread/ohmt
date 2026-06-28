@@ -1,23 +1,22 @@
 import type { Metadata } from "next";
-import "./theme.css";
 
 export const metadata: Metadata = {
-  title: "키즈 아카데미 - Oh My Template",
-  description: "놀이로 시작하는 배움. 코딩부터 미술, 과학 실험까지 50가지 이상의 어린이 창의 클래스를 만나보세요.",
-  keywords: ["어린이 교육", "어린이 클래스", "창의 아카데미", "학습 플랫폼", "Oh My Template"],
+  title: "어린이 교육 웹사이트 템플릿 | OHMT",
+  description: "어린이 교육센터, 학원, 교육 플랫폼을 위한 웹사이트 템플릿입니다. 수업, 일정, 등록 안내 페이지를 포함합니다.",
   openGraph: {
-    title: "키즈 아카데미 - Oh My Template",
-    description: "놀이로 시작하는 배움. 코딩부터 미술, 과학 실험까지 50가지 이상의 어린이 창의 클래스를 만나보세요.",
+    title: "어린이 교육 웹사이트 템플릿 | OHMT",
+    description: "어린이 교육센터, 학원, 교육 플랫폼을 위한 웹사이트 템플릿입니다. 수업, 일정, 등록 안내 페이지를 포함합니다.",
     url: "https://ohmt.site/ko/templates/kids-education",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/kids-education/og-image.jpg", width: 1200, height: 630 }],
+    siteName: "OHMT",
+    images: [{ url: "/templates/kids-education/og-image.jpg", width: 1200, height: 630, alt: "어린이 교육 웹사이트 템플릿" }],
     locale: "ko_KR",
     type: "website",
+    alternateLocale: ["en_US"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "키즈 아카데미 - Oh My Template",
-    description: "놀이로 시작하는 배움. 코딩부터 미술, 과학 실험까지 50가지 이상의 어린이 창의 클래스를 만나보세요.",
+    title: "어린이 교육 웹사이트 템플릿 | OHMT",
+    description: "어린이 교육센터, 학원, 교육 플랫폼을 위한 웹사이트 템플릿입니다. 수업, 일정, 등록 안내 페이지를 포함합니다.",
     images: ["/templates/kids-education/og-image.jpg"],
   },
   robots: { index: true, follow: true },
@@ -26,6 +25,10 @@ export const metadata: Metadata = {
     languages: { "en": "https://ohmt.site/en/templates/kids-education" },
   },
 };
+
+import "./theme.css";
+
+
 
 export default function KidsEducationLayout({ children }: { children: React.ReactNode }) {
   return (

@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
-import './theme.css';
 
 export const metadata: Metadata = {
-  title: "Car Concept - Oh My Template (KO)",
-  description: "프리미엄 자동차 컨셉 쇼케이스",
+  title: "자동차 브랜드 웹사이트 템플릿 | OHMT",
+  description: "자동차 브랜드, 딜러십, 차량 쇼케이스를 위한 웹사이트 템플릿입니다. 다이나믹한 레이아웃과 차량 하이라이트 섹션이 특징입니다.",
   openGraph: {
-    title: "Car Concept - Oh My Template (KO)",
-    description: "프리미엄 자동차 컨셉 쇼케이스",
+    title: "자동차 브랜드 웹사이트 템플릿 | OHMT",
+    description: "자동차 브랜드, 딜러십, 차량 쇼케이스를 위한 웹사이트 템플릿입니다. 다이나믹한 레이아웃과 차량 하이라이트 섹션이 특징입니다.",
     url: "https://ohmt.site/ko/templates/car",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/car/og-image.jpg", width: 1200, height: 630 }],
+    siteName: "OHMT",
+    images: [{ url: "/templates/car/og-image.jpg", width: 1200, height: 630, alt: "자동차 브랜드 웹사이트 템플릿" }],
     locale: "ko_KR",
     type: "website",
+    alternateLocale: ["en_US"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Car Concept - Oh My Template (KO)",
-    description: "프리미엄 자동차 컨셉 쇼케이스",
+    title: "자동차 브랜드 웹사이트 템플릿 | OHMT",
+    description: "자동차 브랜드, 딜러십, 차량 쇼케이스를 위한 웹사이트 템플릿입니다. 다이나믹한 레이아웃과 차량 하이라이트 섹션이 특징입니다.",
     images: ["/templates/car/og-image.jpg"],
   },
   robots: { index: true, follow: true },
@@ -25,6 +25,10 @@ export const metadata: Metadata = {
     languages: { "en": "https://ohmt.site/en/templates/car" },
   },
 };
+
+import './theme.css';
+
+
 
 export default function CarLayout({
   children,

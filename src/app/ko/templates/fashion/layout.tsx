@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
-import './theme.css';
 
 export const metadata: Metadata = {
-  title: "Fashion KO - Oh My Template",
-  description: "프리미엄 패션 브랜드 & 에디토리얼 쇼케이스",
+  title: "패션 브랜드 웹사이트 템플릿 | OHMT",
+  description: "에디토리얼 패션 브랜드를 위한 웹사이트 템플릿입니다. 룩북, 시즌 컬렉션, 브랜드 스토리 레이아웃을 포함합니다.",
   openGraph: {
-    title: "Fashion KO - Oh My Template",
-    description: "프리미엄 패션 브랜드 & 에디토리얼 쇼케이스",
+    title: "패션 브랜드 웹사이트 템플릿 | OHMT",
+    description: "에디토리얼 패션 브랜드를 위한 웹사이트 템플릿입니다. 룩북, 시즌 컬렉션, 브랜드 스토리 레이아웃을 포함합니다.",
     url: "https://ohmt.site/ko/templates/fashion",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/fashion/og-image.jpg", width: 1200, height: 630 }],
+    siteName: "OHMT",
+    images: [{ url: "/templates/fashion/og-image.jpg", width: 1200, height: 630, alt: "패션 브랜드 웹사이트 템플릿" }],
     locale: "ko_KR",
     type: "website",
+    alternateLocale: ["en_US"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fashion KO - Oh My Template",
-    description: "프리미엄 패션 브랜드 & 에디토리얼 쇼케이스",
+    title: "패션 브랜드 웹사이트 템플릿 | OHMT",
+    description: "에디토리얼 패션 브랜드를 위한 웹사이트 템플릿입니다. 룩북, 시즌 컬렉션, 브랜드 스토리 레이아웃을 포함합니다.",
     images: ["/templates/fashion/og-image.jpg"],
   },
   robots: { index: true, follow: true },
@@ -25,6 +25,10 @@ export const metadata: Metadata = {
     languages: { "en": "https://ohmt.site/en/templates/fashion" },
   },
 };
+
+import './theme.css';
+
+
 
 export default function FashionLayout({
   children,

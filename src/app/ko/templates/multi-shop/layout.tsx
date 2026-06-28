@@ -1,23 +1,22 @@
 import type { Metadata } from "next";
-import './theme.css';
-import { SmoothScroll } from "./_components/SmoothScroll";
 
 export const metadata: Metadata = {
-  title: "멀티샵 - Oh My Template",
-  description: "큐레이션된 컬렉션을 제공하는 멀티브랜드 쇼핑 경험",
+  title: "멀티 브랜드 쇼핑몰 웹사이트 템플릿 | OHMT",
+  description: "다양한 브랜드와 상품을 위한 멀티 쇼핑몰 웹사이트 템플릿입니다. 카테고리 탐색, 상품 목록, 큐레이션 컬렉션 구성이 가능합니다.",
   openGraph: {
-    title: "멀티샵 - Oh My Template",
-    description: "큐레이션된 컬렉션을 제공하는 멀티브랜드 쇼핑 경험",
+    title: "멀티 브랜드 쇼핑몰 웹사이트 템플릿 | OHMT",
+    description: "다양한 브랜드와 상품을 위한 멀티 쇼핑몰 웹사이트 템플릿입니다. 카테고리 탐색, 상품 목록, 큐레이션 컬렉션 구성이 가능합니다.",
     url: "https://ohmt.site/ko/templates/multi-shop",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/multi-shop/og-image.jpg", width: 1200, height: 630 }],
+    siteName: "OHMT",
+    images: [{ url: "/templates/multi-shop/og-image.jpg", width: 1200, height: 630, alt: "멀티 브랜드 쇼핑몰 웹사이트 템플릿" }],
     locale: "ko_KR",
     type: "website",
+    alternateLocale: ["en_US"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "멀티샵 - Oh My Template",
-    description: "큐레이션된 컬렉션을 제공하는 멀티브랜드 쇼핑 경험",
+    title: "멀티 브랜드 쇼핑몰 웹사이트 템플릿 | OHMT",
+    description: "다양한 브랜드와 상품을 위한 멀티 쇼핑몰 웹사이트 템플릿입니다. 카테고리 탐색, 상품 목록, 큐레이션 컬렉션 구성이 가능합니다.",
     images: ["/templates/multi-shop/og-image.jpg"],
   },
   robots: { index: true, follow: true },
@@ -26,6 +25,11 @@ export const metadata: Metadata = {
     languages: { "en": "https://ohmt.site/en/templates/multi-shop" },
   },
 };
+
+import './theme.css';
+import { SmoothScroll } from "./_components/SmoothScroll";
+
+
 
 export default function MultiShopLayout({
   children,

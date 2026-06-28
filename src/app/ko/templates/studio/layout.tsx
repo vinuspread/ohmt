@@ -1,22 +1,22 @@
 import type { Metadata } from "next";
-import './theme.css';
 
 export const metadata: Metadata = {
-  title: "Studio - Oh My Template",
-  description: "Architecture and spatial design studio",
+  title: "건축·공간디자인 스튜디오 웹사이트 템플릿 | OHMT",
+  description: "건축, 공간디자인 스튜디오를 위한 웹사이트 템플릿입니다. 포트폴리오 프로젝트, 팀 소개, 문의 섹션을 포함합니다.",
   openGraph: {
-    title: "Studio - Oh My Template",
-    description: "Architecture and spatial design studio",
+    title: "건축·공간디자인 스튜디오 웹사이트 템플릿 | OHMT",
+    description: "건축, 공간디자인 스튜디오를 위한 웹사이트 템플릿입니다. 포트폴리오 프로젝트, 팀 소개, 문의 섹션을 포함합니다.",
     url: "https://ohmt.site/ko/templates/studio",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/studio/og-image.jpg", width: 1200, height: 630 }],
+    siteName: "OHMT",
+    images: [{ url: "/templates/studio/og-image.jpg", width: 1200, height: 630, alt: "건축·공간디자인 스튜디오 웹사이트 템플릿" }],
     locale: "ko_KR",
     type: "website",
+    alternateLocale: ["en_US"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Studio - Oh My Template",
-    description: "Architecture and spatial design studio",
+    title: "건축·공간디자인 스튜디오 웹사이트 템플릿 | OHMT",
+    description: "건축, 공간디자인 스튜디오를 위한 웹사이트 템플릿입니다. 포트폴리오 프로젝트, 팀 소개, 문의 섹션을 포함합니다.",
     images: ["/templates/studio/og-image.jpg"],
   },
   robots: { index: true, follow: true },
@@ -25,6 +25,10 @@ export const metadata: Metadata = {
     languages: { "en": "https://ohmt.site/en/templates/studio" },
   },
 };
+
+import './theme.css';
+
+
 
 export default function StudioLayout({
   children,

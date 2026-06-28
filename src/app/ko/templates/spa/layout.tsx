@@ -1,35 +1,34 @@
-import "./theme.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "스파 웰니스 - Oh My Template",
-  description: "다크 그린과 크림 톤의 차분한 팔레트, 대형 라이프스타일 이미지, 예약 중심 구성을 갖춘 프리미엄 스파 웰니스 샵 템플릿.",
-  keywords: ["스파 템플릿", "웰니스 웹사이트", "스파 예약", "Next.js 템플릿", "Oh My Template"],
-  authors: [{ name: "Oh My Template", url: "https://ohmt.site" }],
+  title: "스파·웰니스 웹사이트 템플릿 | OHMT",
+  description: "스파, 웰니스 브랜드를 위한 웹사이트 템플릿입니다. 서비스 메뉴, 예약 섹션, 고요한 비주얼 디자인이 특징입니다.",
   openGraph: {
-    title: "스파 웰니스 - Oh My Template",
-    description: "다크 그린과 크림 톤의 차분한 팔레트, 대형 라이프스타일 이미지, 예약 중심 구성을 갖춘 프리미엄 스파 웰니스 샵 템플릿.",
+    title: "스파·웰니스 웹사이트 템플릿 | OHMT",
+    description: "스파, 웰니스 브랜드를 위한 웹사이트 템플릿입니다. 서비스 메뉴, 예약 섹션, 고요한 비주얼 디자인이 특징입니다.",
     url: "https://ohmt.site/ko/templates/spa",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/spa/og-image.jpg", width: 1200, height: 630 }],
+    siteName: "OHMT",
+    images: [{ url: "/templates/spa/og-image.jpg", width: 1200, height: 630, alt: "스파·웰니스 웹사이트 템플릿" }],
     locale: "ko_KR",
     type: "website",
+    alternateLocale: ["en_US"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "스파 웰니스 - Oh My Template",
-    description: "다크 그린과 크림 톤의 차분한 팔레트, 대형 라이프스타일 이미지, 예약 중심 구성을 갖춘 프리미엄 스파 웰니스 샵 템플릿.",
+    title: "스파·웰니스 웹사이트 템플릿 | OHMT",
+    description: "스파, 웰니스 브랜드를 위한 웹사이트 템플릿입니다. 서비스 메뉴, 예약 섹션, 고요한 비주얼 디자인이 특징입니다.",
     images: ["/templates/spa/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
     canonical: "https://ohmt.site/ko/templates/spa",
-    languages: {
-      "en": "https://ohmt.site/en/templates/spa",
-      "ko": "https://ohmt.site/ko/templates/spa",
-    },
+    languages: { "en": "https://ohmt.site/en/templates/spa" },
   },
 };
+
+import "./theme.css";
+
+
 
 export default function SpaLayout({ children }: { children: React.ReactNode }) {
   return (

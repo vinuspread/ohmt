@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
@@ -5,6 +6,24 @@ import { Logo } from "@/components/Logo";
 import { createClient } from "@/lib/supabase/server";
 import { ContactForm } from "./_components/ContactForm";
 import type { PackageOption } from "./_components/ContactForm";
+
+export const metadata: Metadata = {
+  title: "Contact & Custom Web Design Inquiry | OHMT",
+  description: "Get in touch with OHMT for custom website design, template-based builds, or general inquiries. We respond within 1 business day.",
+  alternates: {
+    canonical: "https://ohmt.site/en/contact",
+    languages: { ko: "https://ohmt.site/ko/contact" },
+  },
+  openGraph: {
+    title: "Contact & Custom Web Design Inquiry | OHMT",
+    description: "Get in touch with OHMT for custom website design, template-based builds, or general inquiries.",
+    url: "https://ohmt.site/en/contact",
+    siteName: "OHMT",
+    locale: "en_US",
+    type: "website",
+  },
+  robots: { index: true, follow: true },
+};
 
 interface TemplatePricingPolicy {
   applicable_packages: string[] | null;

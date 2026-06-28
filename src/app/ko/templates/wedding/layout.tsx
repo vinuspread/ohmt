@@ -1,10 +1,34 @@
-import "./theme.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "루멘 웨딩 - 프리미엄 웨딩 사진작가 포트폴리오 템플릿",
-  description: "현실적이고 감성적인 다큐멘터리 스타일로 영원한 사랑을 기록합니다. Oh My Template의 프리미엄 템플릿입니다.",
+  title: "웨딩 사진·이벤트 웹사이트 템플릿 | OHMT",
+  description: "웨딩 사진작가, 이벤트 업체를 위한 우아한 웹사이트 템플릿입니다. 갤러리, 패키지 요금, 스토리텔링 레이아웃을 포함합니다.",
+  openGraph: {
+    title: "웨딩 사진·이벤트 웹사이트 템플릿 | OHMT",
+    description: "웨딩 사진작가, 이벤트 업체를 위한 우아한 웹사이트 템플릿입니다. 갤러리, 패키지 요금, 스토리텔링 레이아웃을 포함합니다.",
+    url: "https://ohmt.site/ko/templates/wedding",
+    siteName: "OHMT",
+    images: [{ url: "/templates/wedding/og-image.jpg", width: 1200, height: 630, alt: "웨딩 사진·이벤트 웹사이트 템플릿" }],
+    locale: "ko_KR",
+    type: "website",
+    alternateLocale: ["en_US"],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "웨딩 사진·이벤트 웹사이트 템플릿 | OHMT",
+    description: "웨딩 사진작가, 이벤트 업체를 위한 우아한 웹사이트 템플릿입니다. 갤러리, 패키지 요금, 스토리텔링 레이아웃을 포함합니다.",
+    images: ["/templates/wedding/og-image.jpg"],
+  },
+  robots: { index: true, follow: true },
+  alternates: {
+    canonical: "https://ohmt.site/ko/templates/wedding",
+    languages: { "en": "https://ohmt.site/en/templates/wedding" },
+  },
 };
+
+import "./theme.css";
+
+
 
 export default function TemplateLayout({ children }: { children: React.ReactNode }) {
   return (
