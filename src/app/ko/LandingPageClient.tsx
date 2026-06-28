@@ -116,22 +116,22 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://www.ohmt.site/#website",
-        url: "https://www.ohmt.site",
+        "@id": "https://ohmt.site/#website",
+        url: "https://ohmt.site",
         name: "Oh My Template",
         description: "브랜드, 에이전시, 크리에이터를 위한 프리미엄 Next.js 웹 템플릿 서비스.",
         inLanguage: ["en", "ko"],
         potentialAction: {
           "@type": "SearchAction",
-          target: "https://www.ohmt.site/ko?q={search_term_string}",
+          target: "https://ohmt.site/ko?q={search_term_string}",
           "query-input": "required name=search_term_string",
         },
       },
       {
         "@type": "Organization",
-        "@id": "https://www.ohmt.site/#organization",
+        "@id": "https://ohmt.site/#organization",
         name: "Oh My Template",
-        url: "https://www.ohmt.site",
+        url: "https://ohmt.site",
         email: "contact@ohmytemplate.com",
         description: "브랜드, 에이전시, 크리에이터를 위한 프리미엄 Next.js 웹 템플릿 서비스.",
         sameAs: [],
@@ -144,15 +144,15 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
     "@type": "ItemList",
     name: "Oh My Template — 템플릿 컬렉션",
     description: "프리미엄 Next.js 웹 템플릿",
-    url: "https://www.ohmt.site/ko",
+    url: "https://ohmt.site/ko",
     numberOfItems: templates.length,
     itemListElement: templates.map((template, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: template.name,
       description: template.desc,
-      url: `https://www.ohmt.site${template.url}`,
-      image: template.image ? `https://www.ohmt.site${template.image}` : undefined,
+      url: `https://ohmt.site${template.url}`,
+      image: template.image ? `https://ohmt.site${template.image}` : undefined,
     })),
   };
 

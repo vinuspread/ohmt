@@ -16,8 +16,8 @@ export default function ArchitectureHome() {
     "@context": "https://schema.org",
     "@type": "ArchitecturalFirm",
     "name": "Oh My Template - Architecture Portfolio",
-    "url": "https://ohmytemplate.com/en/templates/architecture",
-    "image": "https://ohmytemplate.com/templates/architecture/og-image.jpg",
+    "url": "https://ohmt.site/en/templates/architecture",
+    "image": "https://ohmt.site/templates/architecture/og-image.jpg",
     "description": "A sophisticated architecture portfolio template with editorial typography and immersive visual storytelling.",
     "address": {
       "@type": "PostalAddress",

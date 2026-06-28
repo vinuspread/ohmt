@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Investor Relations - Oh My Template",
     description: "Corporate strategy and financial performance",
-    url: "https://ohmytemplate.com/en/templates/ir",
+    url: "https://ohmt.site/en/templates/ir",
     siteName: "Oh My Template",
     images: [{ url: "/templates/ir/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/ir",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/ir" },
+    canonical: "https://ohmt.site/en/templates/ir",
+    languages: { "ko": "https://ohmt.site/ko/templates/ir" },
   },
 };
 

@@ -199,7 +199,7 @@ export async function POST(request: Request) {
           </div>
           <div style="margin-top:32px;padding-top:24px;border-top:1px solid #e5e7eb;display:flex;align-items:center;justify-content:space-between">
             <p style="font-size:12px;color:#9ca3af;margin:0">Oh My Template · contact@ohmytemplate.com</p>
-            <a href="https://ohmytemplate.com/admin/orders" style="font-size:12px;font-weight:600;color:#111827;text-decoration:none;background:#f3f4f6;padding:6px 14px;border-radius:6px">관리자 문의 보기 →</a>
+            <a href="https://ohmt.site/admin/orders" style="font-size:12px;font-weight:600;color:#111827;text-decoration:none;background:#f3f4f6;padding:6px 14px;border-radius:6px">관리자 문의 보기 →</a>
           </div>
         </div>
       `,

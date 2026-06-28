@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Technology - Oh My Template',
     description: 'Empower machine learning and robotics startups with a professional, dynamic platform.',
-    url: 'https://ohmytemplate.com/en/templates/technology',
+    url: 'https://ohmt.site/en/templates/technology',
     siteName: 'Oh My Template',
     images: [{ url: '/templates/technology/og-image.jpg', width: 1200, height: 630 }],
     locale: 'en_US',
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: 'https://ohmytemplate.com/en/templates/technology',
-    languages: { 'ko': 'https://ohmytemplate.com/ko/templates/technology' },
+    canonical: 'https://ohmt.site/en/templates/technology',
+    languages: { 'ko': 'https://ohmt.site/ko/templates/technology' },
   },
 }
 

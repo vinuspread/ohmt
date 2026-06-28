@@ -14,13 +14,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Us - Architecture Portfolio - Oh My Template",
     description: "Learn about our architectural philosophy, our history, and the visionaries behind our practice.",
-    url: "https://ohmytemplate.com/en/templates/architecture/about",
+    url: "https://ohmt.site/en/templates/architecture/about",
     images: [{ url: "/templates/architecture/og-image.jpg" }],
   },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/architecture/about",
+    canonical: "https://ohmt.site/en/templates/architecture/about",
     languages: {
-      "ko": "https://ohmytemplate.com/ko/templates/architecture/about",
+      "ko": "https://ohmt.site/ko/templates/architecture/about",
     },
   },
 };

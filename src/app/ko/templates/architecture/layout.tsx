@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   title: "Architecture Portfolio - Oh My Template",
   description: "A sophisticated architecture portfolio template with editorial typography and immersive visual storytelling.",
   keywords: ["architecture", "minimalism", "portfolio", "interior design", "Oh My Template"],
-  authors: [{ name: "Oh My Template", url: "https://ohmytemplate.com" }],
+  authors: [{ name: "Oh My Template", url: "https://ohmt.site" }],
   openGraph: {
     title: "Architecture Portfolio - Oh My Template",
     description: "A sophisticated architecture portfolio template with editorial typography and immersive visual storytelling.",
-    url: "https://ohmytemplate.com/en/templates/architecture",
+    url: "https://ohmt.site/en/templates/architecture",
     siteName: "Oh My Template",
     images: [{ url: "/templates/architecture/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/architecture",
+    canonical: "https://ohmt.site/en/templates/architecture",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/architecture",
+      "en": "https://ohmt.site/en/templates/architecture",
     },
   },
 };

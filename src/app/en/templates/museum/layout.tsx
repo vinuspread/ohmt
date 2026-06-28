@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Museum - Oh My Template",
     description: "Experience the epitome of elegance and durability.",
-    url: "https://ohmytemplate.com/en/templates/museum",
+    url: "https://ohmt.site/en/templates/museum",
     siteName: "Oh My Template",
     images: [{ url: "/templates/museum/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/museum",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/museum" },
+    canonical: "https://ohmt.site/en/templates/museum",
+    languages: { "ko": "https://ohmt.site/ko/templates/museum" },
   },
 };
 

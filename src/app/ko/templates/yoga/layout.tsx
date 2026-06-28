@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "요가 - Oh My Template",
     description: "프리미엄 요가 및 웰니스 클래스로 일상의 균형을 되찾으세요",
-    url: "https://ohmytemplate.com/ko/templates/yoga",
+    url: "https://ohmt.site/ko/templates/yoga",
     siteName: "Oh My Template",
     images: [{ url: "/templates/yoga/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/yoga",
-    languages: { "en": "https://ohmytemplate.com/en/templates/yoga" },
+    canonical: "https://ohmt.site/ko/templates/yoga",
+    languages: { "en": "https://ohmt.site/en/templates/yoga" },
   },
 };
 

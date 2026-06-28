@@ -32,13 +32,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${project.title} - Architecture Portfolio - Oh My Template`,
       description: project.description,
-      url: `https://ohmytemplate.com/en/templates/architecture/projects/${slug}`,
+      url: `https://ohmt.site/en/templates/architecture/projects/${slug}`,
       images: [{ url: project.image }],
     },
     alternates: {
-      canonical: `https://ohmytemplate.com/en/templates/architecture/projects/${slug}`,
+      canonical: `https://ohmt.site/en/templates/architecture/projects/${slug}`,
       languages: {
-        "ko": `https://ohmytemplate.com/ko/templates/architecture/projects/${slug}`,
+        "ko": `https://ohmt.site/ko/templates/architecture/projects/${slug}`,
       },
     },
   };

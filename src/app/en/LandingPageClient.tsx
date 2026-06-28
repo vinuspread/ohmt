@@ -116,22 +116,22 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://www.ohmt.site/#website",
-        url: "https://www.ohmt.site",
+        "@id": "https://ohmt.site/#website",
+        url: "https://ohmt.site",
         name: "Oh My Template",
         description: "Premium Next.js web templates for brands, agencies, and creators.",
         inLanguage: ["en", "ko"],
         potentialAction: {
           "@type": "SearchAction",
-          target: "https://www.ohmt.site/en?q={search_term_string}",
+          target: "https://ohmt.site/en?q={search_term_string}",
           "query-input": "required name=search_term_string",
         },
       },
       {
         "@type": "Organization",
-        "@id": "https://www.ohmt.site/#organization",
+        "@id": "https://ohmt.site/#organization",
         name: "Oh My Template",
-        url: "https://www.ohmt.site",
+        url: "https://ohmt.site",
         email: "contact@ohmytemplate.com",
         description: "Premium Next.js web templates for brands, agencies, and creators. Fully customized by our team in 2 days.",
         sameAs: [],
@@ -144,15 +144,15 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
     "@type": "ItemList",
     name: "Oh My Template — Template Collection",
     description: "Premium Next.js web templates",
-    url: "https://www.ohmt.site/en",
+    url: "https://ohmt.site/en",
     numberOfItems: templates.length,
     itemListElement: templates.map((template, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: template.name,
       description: template.desc,
-      url: `https://www.ohmt.site${template.url}`,
-      image: template.image ? `https://www.ohmt.site${template.image}` : undefined,
+      url: `https://ohmt.site${template.url}`,
+      image: template.image ? `https://ohmt.site${template.image}` : undefined,
     })),
   };
 

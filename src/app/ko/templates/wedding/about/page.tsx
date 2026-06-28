@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: "소개 - Lumen 웨딩 사진",
   description: "클라라, Oh My Template 대표 포토그래퍼를 소개합니다. 파인아트 다큐멘터리 스타일로 전 세계의 웨딩 스토리를 기록합니다.",
   keywords: ["웨딩 포토그래퍼", "파인아트 웨딩 사진", "다큐멘터리 웨딩"],
-  authors: [{ name: "Oh My Template", url: "https://ohmytemplate.com" }],
+  authors: [{ name: "Oh My Template", url: "https://ohmt.site" }],
   openGraph: {
     title: "소개 - Lumen 웨딩 사진",
     description: "클라라, 대표 포토그래퍼를 소개합니다. 파인아트 다큐멘터리 스타일로 기록하는 웨딩 스토리.",
-    url: "https://ohmytemplate.com/ko/templates/wedding/about",
+    url: "https://ohmt.site/ko/templates/wedding/about",
     siteName: "Oh My Template",
     images: [{ url: "/templates/wedding/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/wedding/about",
+    canonical: "https://ohmt.site/ko/templates/wedding/about",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/wedding/about",
-      "ko": "https://ohmytemplate.com/ko/templates/wedding/about",
+      "en": "https://ohmt.site/en/templates/wedding/about",
+      "ko": "https://ohmt.site/ko/templates/wedding/about",
     },
   },
 };

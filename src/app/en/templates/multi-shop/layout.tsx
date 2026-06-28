@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Multi-Shop - Oh My Template",
     description: "Multi-brand shopping experience with curated collections",
-    url: "https://ohmytemplate.com/en/templates/multi-shop",
+    url: "https://ohmt.site/en/templates/multi-shop",
     siteName: "Oh My Template",
     images: [{ url: "/templates/multi-shop/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/multi-shop",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/multi-shop" },
+    canonical: "https://ohmt.site/en/templates/multi-shop",
+    languages: { "ko": "https://ohmt.site/ko/templates/multi-shop" },
   },
 };
 

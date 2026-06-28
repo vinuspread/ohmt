@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Yoga - Oh My Template",
     description: "Find your inner peace with premium yoga and wellness classes",
-    url: "https://ohmytemplate.com/en/templates/yoga",
+    url: "https://ohmt.site/en/templates/yoga",
     siteName: "Oh My Template",
     images: [{ url: "/templates/yoga/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/yoga",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/yoga" },
+    canonical: "https://ohmt.site/en/templates/yoga",
+    languages: { "ko": "https://ohmt.site/ko/templates/yoga" },
   },
 };
 

@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   title: "Kids Academy - Oh My Template",
   description: "Where learning meets play. Discover 50+ fun and creative classes for kids, from coding to art and science experiments.",
   keywords: ["kids education", "children classes", "creative academy", "learning platform", "Oh My Template"],
-  authors: [{ name: "Oh My Template", url: "https://ohmytemplate.com" }],
+  authors: [{ name: "Oh My Template", url: "https://ohmt.site" }],
   openGraph: {
     title: "Kids Academy - Oh My Template",
     description: "Where learning meets play. Discover 50+ fun and creative classes for kids, from coding to art and science experiments.",
-    url: "https://ohmytemplate.com/en/templates/kids-education",
+    url: "https://ohmt.site/en/templates/kids-education",
     siteName: "Oh My Template",
     images: [{ url: "/templates/kids-education/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/kids-education",
+    canonical: "https://ohmt.site/en/templates/kids-education",
     languages: {
-      "ko": "https://ohmytemplate.com/ko/templates/kids-education",
+      "ko": "https://ohmt.site/ko/templates/kids-education",
     },
   },
 };

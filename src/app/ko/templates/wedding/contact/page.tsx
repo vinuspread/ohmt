@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: "문의 - Lumen 웨딩 사진",
   description: "웨딩 촬영 일정을 문의하세요. 여러분의 특별한 날을 아름답게 기록해드립니다.",
   keywords: ["웨딩 촬영 문의", "웨딩 포토그래퍼 예약", "웨딩 사진 문의"],
-  authors: [{ name: "Oh My Template", url: "https://ohmytemplate.com" }],
+  authors: [{ name: "Oh My Template", url: "https://ohmt.site" }],
   openGraph: {
     title: "문의 - Lumen 웨딩 사진",
     description: "웨딩 촬영 일정을 문의하세요. 여러분의 특별한 날을 아름답게 기록해드립니다.",
-    url: "https://ohmytemplate.com/ko/templates/wedding/contact",
+    url: "https://ohmt.site/ko/templates/wedding/contact",
     siteName: "Oh My Template",
     images: [{ url: "/templates/wedding/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/wedding/contact",
+    canonical: "https://ohmt.site/ko/templates/wedding/contact",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/wedding/contact",
-      "ko": "https://ohmytemplate.com/ko/templates/wedding/contact",
+      "en": "https://ohmt.site/en/templates/wedding/contact",
+      "ko": "https://ohmt.site/ko/templates/wedding/contact",
     },
   },
 };

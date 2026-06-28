@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "커피 - Oh My Template",
     description: "프리미엄 커피숍 & 로스터리 경험",
-    url: "https://ohmytemplate.com/ko/templates/coffee",
+    url: "https://ohmt.site/ko/templates/coffee",
     siteName: "Oh My Template",
     images: [{ url: "/templates/coffee/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/coffee",
-    languages: { "en": "https://ohmytemplate.com/en/templates/coffee" },
+    canonical: "https://ohmt.site/ko/templates/coffee",
+    languages: { "en": "https://ohmt.site/en/templates/coffee" },
   },
 };
 

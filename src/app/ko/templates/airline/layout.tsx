@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "항공사 - Oh My Template",
     description: "프리미엄 항공 경험",
-    url: "https://ohmytemplate.com/ko/templates/airline",
+    url: "https://ohmt.site/ko/templates/airline",
     siteName: "Oh My Template",
     images: [{ url: "/templates/airline/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/airline",
-    languages: { "en": "https://ohmytemplate.com/en/templates/airline" },
+    canonical: "https://ohmt.site/ko/templates/airline",
+    languages: { "en": "https://ohmt.site/en/templates/airline" },
   },
 };
 

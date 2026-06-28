@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "전시 - Oh My Template",
     description: "프리미엄 전시 및 이벤트 경험",
-    url: "https://ohmytemplate.com/ko/templates/exhibition",
+    url: "https://ohmt.site/ko/templates/exhibition",
     siteName: "Oh My Template",
     images: [{ url: "/templates/exhibition/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/exhibition",
-    languages: { "en": "https://ohmytemplate.com/en/templates/exhibition" },
+    canonical: "https://ohmt.site/ko/templates/exhibition",
+    languages: { "en": "https://ohmt.site/en/templates/exhibition" },
   },
 };
 

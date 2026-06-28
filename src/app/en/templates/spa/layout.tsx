@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   title: "Spa Wellness - Oh My Template",
   description: "Premium spa and wellness shop template with a calming dark-green and cream palette, large lifestyle imagery, and a booking-first layout.",
   keywords: ["spa template", "wellness website", "spa booking", "Next.js template", "Oh My Template"],
-  authors: [{ name: "Oh My Template", url: "https://ohmytemplate.com" }],
+  authors: [{ name: "Oh My Template", url: "https://ohmt.site" }],
   openGraph: {
     title: "Spa Wellness - Oh My Template",
     description: "Premium spa and wellness shop template with a calming dark-green and cream palette, large lifestyle imagery, and a booking-first layout.",
-    url: "https://ohmytemplate.com/en/templates/spa",
+    url: "https://ohmt.site/en/templates/spa",
     siteName: "Oh My Template",
     images: [{ url: "/templates/spa/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -23,10 +23,10 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/spa",
+    canonical: "https://ohmt.site/en/templates/spa",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/spa",
-      "ko": "https://ohmytemplate.com/ko/templates/spa",
+      "en": "https://ohmt.site/en/templates/spa",
+      "ko": "https://ohmt.site/ko/templates/spa",
     },
   },
 };

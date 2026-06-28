@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Newspaper - Oh My Template",
     description: "News and publishing archive",
-    url: "https://ohmytemplate.com/ko/templates/newspaper",
+    url: "https://ohmt.site/ko/templates/newspaper",
     siteName: "Oh My Template",
     images: [{ url: "/templates/newspaper/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/newspaper",
-    languages: { "en": "https://ohmytemplate.com/en/templates/newspaper" },
+    canonical: "https://ohmt.site/ko/templates/newspaper",
+    languages: { "en": "https://ohmt.site/en/templates/newspaper" },
   },
 };
 

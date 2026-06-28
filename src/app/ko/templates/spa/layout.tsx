@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   title: "스파 웰니스 - Oh My Template",
   description: "다크 그린과 크림 톤의 차분한 팔레트, 대형 라이프스타일 이미지, 예약 중심 구성을 갖춘 프리미엄 스파 웰니스 샵 템플릿.",
   keywords: ["스파 템플릿", "웰니스 웹사이트", "스파 예약", "Next.js 템플릿", "Oh My Template"],
-  authors: [{ name: "Oh My Template", url: "https://ohmytemplate.com" }],
+  authors: [{ name: "Oh My Template", url: "https://ohmt.site" }],
   openGraph: {
     title: "스파 웰니스 - Oh My Template",
     description: "다크 그린과 크림 톤의 차분한 팔레트, 대형 라이프스타일 이미지, 예약 중심 구성을 갖춘 프리미엄 스파 웰니스 샵 템플릿.",
-    url: "https://ohmytemplate.com/ko/templates/spa",
+    url: "https://ohmt.site/ko/templates/spa",
     siteName: "Oh My Template",
     images: [{ url: "/templates/spa/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -23,10 +23,10 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/spa",
+    canonical: "https://ohmt.site/ko/templates/spa",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/spa",
-      "ko": "https://ohmytemplate.com/ko/templates/spa",
+      "en": "https://ohmt.site/en/templates/spa",
+      "ko": "https://ohmt.site/ko/templates/spa",
     },
   },
 };

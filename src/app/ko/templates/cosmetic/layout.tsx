@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Cosmetic - Oh My Template",
     description: "프리미엄 뷰티 & 코스메틱 브랜드 쇼케이스",
-    url: "https://ohmytemplate.com/ko/templates/cosmetic",
+    url: "https://ohmt.site/ko/templates/cosmetic",
     siteName: "Oh My Template",
     images: [{ url: "/templates/cosmetic/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/cosmetic",
-    languages: { "en": "https://ohmytemplate.com/en/templates/cosmetic" },
+    canonical: "https://ohmt.site/ko/templates/cosmetic",
+    languages: { "en": "https://ohmt.site/en/templates/cosmetic" },
   },
 };
 

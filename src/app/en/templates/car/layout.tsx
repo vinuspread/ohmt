@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Car Concept - Oh My Template",
     description: "Premium automotive concept showcase",
-    url: "https://ohmytemplate.com/en/templates/car",
+    url: "https://ohmt.site/en/templates/car",
     siteName: "Oh My Template",
     images: [{ url: "/templates/car/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/car",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/car" },
+    canonical: "https://ohmt.site/en/templates/car",
+    languages: { "ko": "https://ohmt.site/ko/templates/car" },
   },
 };
 

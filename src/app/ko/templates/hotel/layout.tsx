@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Oh My Template Hotel - Oh My Template",
     description: "프리미엄 럭셔리 호텔 & 리조트 경험",
-    url: "https://ohmytemplate.com/ko/templates/hotel",
+    url: "https://ohmt.site/ko/templates/hotel",
     siteName: "Oh My Template",
     images: [{ url: "/templates/hotel/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/hotel",
-    languages: { "en": "https://ohmytemplate.com/en/templates/hotel" },
+    canonical: "https://ohmt.site/ko/templates/hotel",
+    languages: { "en": "https://ohmt.site/en/templates/hotel" },
   },
 };
 

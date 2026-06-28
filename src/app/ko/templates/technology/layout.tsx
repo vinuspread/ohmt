@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Technology - Oh My Template',
     description: '머신러닝 및 로보틱스 스타트업을 위한 전문적이고 역동적인 플랫폼.',
-    url: 'https://ohmytemplate.com/ko/templates/technology',
+    url: 'https://ohmt.site/ko/templates/technology',
     siteName: 'Oh My Template',
     images: [{ url: '/templates/technology/og-image.jpg', width: 1200, height: 630 }],
     locale: 'ko_KR',
@@ -41,8 +41,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: 'https://ohmytemplate.com/ko/templates/technology',
-    languages: { 'en': 'https://ohmytemplate.com/en/templates/technology' },
+    canonical: 'https://ohmt.site/ko/templates/technology',
+    languages: { 'en': 'https://ohmt.site/en/templates/technology' },
   },
 }
 

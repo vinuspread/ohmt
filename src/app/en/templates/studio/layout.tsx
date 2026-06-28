@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Studio - Oh My Template",
     description: "Architecture and spatial design studio",
-    url: "https://ohmytemplate.com/en/templates/studio",
+    url: "https://ohmt.site/en/templates/studio",
     siteName: "Oh My Template",
     images: [{ url: "/templates/studio/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/studio",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/studio" },
+    canonical: "https://ohmt.site/en/templates/studio",
+    languages: { "ko": "https://ohmt.site/ko/templates/studio" },
   },
 };
 
