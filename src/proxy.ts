@@ -3,6 +3,14 @@ import { NextResponse, type NextRequest } from "next/server";
 import { getAllowedAdminEmails, isAllowedAdminEmail } from "@/lib/admin-auth";
 
 export async function proxy(request: NextRequest) {
+  // www → non-www 301 리다이렉트
+  const host = request.headers.get("host") ?? "";
+  if (host.startsWith("www.")) {
+    const url = request.nextUrl.clone();
+    url.host = host.replace(/^www\./, "");
+    return NextResponse.redirect(url, { status: 301 });
+  }
+
   const { pathname } = request.nextUrl;
 
   // 루트 접근 시 언어 감지 후 리디렉션
@@ -77,4 +85,6 @@ export async function proxy(request: NextRequest) {
   return response;
 }
 
-export const config = { matcher: ["/", "/admin/:path*", "/api/admin/:path*"] };
+export const config = {
+  matcher: ["/((?!_next|_vercel|.*\\..*).*)"],
+};
