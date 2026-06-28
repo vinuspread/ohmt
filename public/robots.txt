@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.ohmt.site/sitemap.xml
+Sitemap: https://ohmt.site/sitemap.xml
