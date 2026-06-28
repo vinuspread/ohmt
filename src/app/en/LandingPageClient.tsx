@@ -132,7 +132,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
         "@id": "https://ohmt.site/#organization",
         name: "Oh My Template",
         url: "https://ohmt.site",
-        email: "contact@ohmytemplate.com",
+        email: "vinus@vinus.co.kr",
         description: "Premium Next.js web templates for brands, agencies, and creators. Fully customized by our team in 2 days.",
         sameAs: [],
       },
@@ -729,7 +729,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             </Link>
             <div className="flex gap-8 text-xs font-bold text-zinc-400 uppercase tracking-widest dark:text-zinc-500">
               <Link href="/ko" className="hover:text-zinc-950 transition-colors dark:hover:text-zinc-100">Korean</Link>
-              <a href="mailto:contact@ohmytemplate.com" className="hover:text-zinc-950 transition-colors dark:hover:text-zinc-100">Contact</a>
+              <a href="mailto:vinus@vinus.co.kr" className="hover:text-zinc-950 transition-colors dark:hover:text-zinc-100">Contact</a>
               {isAdmin && (
                 <Link href="/admin/templates" className="hover:text-zinc-950 transition-colors dark:hover:text-zinc-100">Admin</Link>
               )}

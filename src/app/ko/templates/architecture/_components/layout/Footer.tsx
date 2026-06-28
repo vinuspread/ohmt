@@ -29,7 +29,7 @@ export function Footer() {
             <div className="font-sans text-[14px] text-white/70 space-y-2 leading-relaxed">
               <p>123 Architectural Blvd, Seongbuk-gu, Seoul, Republic of Korea</p>
               <p>T. +82 (0)2 1234 5678</p>
-              <p>E. contact@ohmytemplate.com</p>
+              <p>E. vinus@vinus.co.kr</p>
             </div>
           </div>
 

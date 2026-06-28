@@ -37,7 +37,7 @@ export const Footer = () => {
           <div>
             <h4 className="text-xs uppercase tracking-[0.15em] text-white/40 mb-4">문의</h4>
             <div className="flex flex-col gap-2.5 text-sm text-white/60">
-              <a href="mailto:contact@ohmytemplate.com" className="hover:text-white transition-colors">contact@ohmytemplate.com</a>
+              <a href="mailto:vinus@vinus.co.kr" className="hover:text-white transition-colors">vinus@vinus.co.kr</a>
               <p>02-1234-5678</p>
             </div>
             <div className="flex gap-4 mt-5">

@@ -29,7 +29,7 @@ export const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={14} strokeWidth={1.2} className="text-[var(--color-accent)] flex-shrink-0" />
-                <span>contact@ohmytemplate.com</span>
+                <span>vinus@vinus.co.kr</span>
               </div>
             </div>
           </div>

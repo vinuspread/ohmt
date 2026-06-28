@@ -7,7 +7,7 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 const contactInfo = [
-  { icon: Mail, title: "Email", details: "contact@ohmytemplate.com" },
+  { icon: Mail, title: "Email", details: "vinus@vinus.co.kr" },
   { icon: MapPin, title: "Studio", details: "Seoul, South Korea" },
   { icon: Clock, title: "Hours", details: "Mon-Fri, 9AM-6PM" },
 ];

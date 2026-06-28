@@ -15,10 +15,10 @@ export default function Footer() {
             <div>
               <p className="text-[0.65rem] uppercase tracking-[0.2em] text-white/40 mb-3">Contact</p>
               <a
-                href="mailto:contact@ohmytemplate.com"
+                href="mailto:vinus@vinus.co.kr"
                 className="text-white/70 hover:text-white transition-colors"
               >
-                contact@ohmytemplate.com
+                vinus@vinus.co.kr
               </a>
               <p className="text-white/40 mt-1 text-xs">Austin, TX · Worldwide</p>
             </div>
