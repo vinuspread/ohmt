@@ -1,7 +1,7 @@
 "use client";
 
-import { useState, Suspense } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 type Device = "desktop" | "tablet" | "mobile";
 
@@ -40,18 +40,26 @@ function PhoneIcon() {
 
 const ICONS = { desktop: <MonitorIcon />, tablet: <TabletIcon />, mobile: <PhoneIcon /> };
 
-function PreviewBarInner({ children }: { children: React.ReactNode }) {
+export function PreviewBar({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
-  const searchParams = useSearchParams();
-  const isIframe = searchParams.get("iframe") === "1";
   const [device, setDevice] = useState<Device>("desktop");
+  // null = 아직 감지 중, true = iframe 내부, false = 일반 창
+  const [isInIframe, setIsInIframe] = useState<boolean | null>(null);
 
-  // iframe 내부: 바 없이 템플릿 그대로 렌더
-  if (isIframe) {
+  useEffect(() => {
+    try {
+      setIsInIframe(window.self !== window.top);
+    } catch {
+      setIsInIframe(true);
+    }
+  }, []);
+
+  // iframe 내부이거나 아직 감지 중이면 템플릿 그대로 렌더
+  if (isInIframe !== false) {
     return <>{children}</>;
   }
 
-  // 미리보기 모드: 바 + iframe (children 미사용)
+  // 일반 창: 바 + iframe
   const iframeWidth = device === "tablet" ? 768 : device === "mobile" ? 390 : null;
   const showGrayBg = device !== "desktop";
 
@@ -90,7 +98,7 @@ function PreviewBarInner({ children }: { children: React.ReactNode }) {
       >
         <iframe
           key={device}
-          src={`${pathname}?iframe=1`}
+          src={pathname}
           style={{
             width: iframeWidth ?? "100%",
             height: "100%",
@@ -104,13 +112,5 @@ function PreviewBarInner({ children }: { children: React.ReactNode }) {
         />
       </div>
     </>
-  );
-}
-
-export function PreviewBar({ children }: { children: React.ReactNode }) {
-  return (
-    <Suspense fallback={<>{children}</>}>
-      <PreviewBarInner>{children}</PreviewBarInner>
-    </Suspense>
   );
 }
