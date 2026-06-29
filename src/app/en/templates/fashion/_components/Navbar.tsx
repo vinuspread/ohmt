@@ -18,7 +18,7 @@ useEffect(() => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const isHome = /^\/(en|ko)?\/?templates\/fashion\/?$/.test(pathname);
+  const isHome = /^\/(en|ko)?\/?templates\/(OHMT001-)?fashion\/?$/.test(pathname);
   const isTransparent = isHome && !scrolled && !mobileOpen;
 
   return (
@@ -26,7 +26,7 @@ useEffect(() => {
       <nav className={`fixed top-0 left-0 right-0 z-50 h-14 md:h-20 transition-all duration-700 flex items-center ${!isTransparent ? "bg-white/95 backdrop-blur-xl border-b border-black/5 shadow-sm" : "bg-transparent"}`}>
         <div className="max-w-[1440px] mx-auto w-full px-6 md:px-12 flex justify-between items-center transition-all">
           <Link href="/en/templates/fashion" className={`text-xl md:text-2xl font-black tracking-tighter uppercase transition-colors duration-500 ${!isTransparent ? "text-black" : "text-white"}`}>
-            Oh My Template
+            OHMT
           </Link>
 
            {/* Desktop Menu */}

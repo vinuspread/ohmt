@@ -19,7 +19,7 @@ export const Footer = () => {
           href="/en/templates/coffee"
           className="font-heading text-2xl font-bold text-[var(--color-text)] tracking-tight"
         >
-          Oh My Template
+          OHMT
         </Link>
 
         <nav className="flex flex-wrap justify-center gap-x-7 gap-y-2">
@@ -52,7 +52,7 @@ export const Footer = () => {
         <div className="w-full h-px bg-[var(--color-text-muted)]/15" />
 
         <div className="flex flex-col md:flex-row items-center justify-between w-full gap-2 text-[11px] text-[var(--color-text-muted)]">
-          <p>&copy; 2026 Oh My Template. All rights reserved.</p>
+          <p>&copy; 2026 OHMT. All rights reserved.</p>
           <Link href="#" className="hover:text-[var(--color-text)] transition-colors">Privacy Policy</Link>
         </div>
       </div>

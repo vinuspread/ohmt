@@ -31,7 +31,7 @@ export default function Hero() {
           transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1] }}
           className="mb-4 text-sm font-medium tracking-[0.2em] text-[var(--color-text-muted)] uppercase"
         >
-          Oh My Template
+          OHMT
         </motion.p>
 
         <motion.h1

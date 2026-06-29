@@ -27,7 +27,7 @@ export const Navbar = () => {
       <nav className={`fixed top-0 left-0 w-full h-16 md:h-20 z-50 transition-all duration-500 flex items-center ${scrolled || mobileOpen ? "bg-[var(--color-bg)]/95 backdrop-blur-xl border-b border-[var(--color-border)]" : "bg-transparent"}`}>
         <div className="max-w-[1440px] mx-auto w-full px-6 md:px-12 flex items-center justify-between">
           <Link href="/en/templates/hotel" className={`text-2xl md:text-3xl font-[var(--font-heading)] font-bold tracking-tight transition-colors duration-300 ${scrolled || mobileOpen ? "text-[var(--color-primary)]" : "text-white"}`}>
-            Oh My Template
+            OHMT
           </Link>
 
           <div className={`hidden md:flex items-center gap-10 text-[13px] font-medium uppercase tracking-[0.15em] transition-colors duration-300 ${scrolled ? "text-[var(--color-text-muted)]" : "text-white/80"}`}>

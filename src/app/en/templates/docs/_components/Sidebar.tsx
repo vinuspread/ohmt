@@ -177,7 +177,7 @@ export default function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
               <path d="M16.5 16.5L20 20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
             </svg>
             <p className="text-sm text-[var(--color-text-muted)]">No results for &ldquo;{searchQuery}&rdquo;</p>
-            <p className="text-xs text-[var(--color-text-muted)] mt-1">Try a different search term</p>
+            <p className="text-sm text-[var(--color-text-muted)] mt-1">Try a different search term</p>
           </div>
         )}
         {filteredTree.length === 0 && !searchQuery && (

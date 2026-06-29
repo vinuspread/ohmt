@@ -33,7 +33,7 @@ export default function Pricing() {
                   <h3 className="text-xl font-bold text-[var(--color-text)] mb-2 font-heading transition-colors group-hover:text-[var(--color-accent)]">
                     {model.name}
                   </h3>
-                  <p className="text-xs text-[var(--color-text-muted)] leading-[1.2] mb-6">
+                  <p className="text-sm text-[var(--color-text-muted)] leading-[1.2] mb-6">
                     {model.description}
                   </p>
                 </div>
@@ -51,7 +51,7 @@ export default function Pricing() {
                     </span>
                   </div>
 
-                  <p className="text-[11px] text-[var(--color-text-muted)] mb-6">
+                  <p className="text-[14px] text-[var(--color-text-muted)] mb-6">
                     {model.financing}
                   </p>
 

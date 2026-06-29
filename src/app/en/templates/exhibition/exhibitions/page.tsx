@@ -74,7 +74,7 @@ export default function ExhibitionsPage() {
                   ].map((item) => (
                     <div key={item.label} className="flex justify-between items-baseline py-4 border-b border-[var(--color-border)]">
                       <p className="text-[10px] font-body font-semibold uppercase tracking-[0.1em] text-black/35">{item.label}</p>
-                      <p className="text-[13px] font-body font-semibold text-black">{item.value}</p>
+                      <p className="text-[15px] font-body font-semibold text-black">{item.value}</p>
                     </div>
                   ))}
                 </div>

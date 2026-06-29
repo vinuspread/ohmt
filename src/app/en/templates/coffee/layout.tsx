@@ -1,34 +1,30 @@
 import type { Metadata } from "next";
+import './theme.css';
 
 export const metadata: Metadata = {
-  title: "Coffee Shop & Roastery Website Template | OHMT",
-  description: "A warm and elegant website template for coffee shops, cafes, and specialty roasteries. Includes menu, brand story, and shop sections.",
+  title: "OHMT - Coffee",
+  description: "Premium coffee shop & roastery experience",
   openGraph: {
-    title: "Coffee Shop & Roastery Website Template | OHMT",
-    description: "A warm and elegant website template for coffee shops, cafes, and specialty roasteries. Includes menu, brand story, and shop sections.",
-    url: "https://ohmt.site/en/templates/coffee",
+    title: "OHMT - Coffee",
+    description: "Premium coffee shop & roastery experience",
+    url: "https://ohmytemplate.com/en/templates/coffee",
     siteName: "OHMT",
-    images: [{ url: "/templates/coffee/og-image.jpg", width: 1200, height: 630, alt: "Coffee Shop & Roastery Website Template" }],
+    images: [{ url: "/templates/coffee/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
-    alternateLocale: ["ko_KR"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Coffee Shop & Roastery Website Template | OHMT",
-    description: "A warm and elegant website template for coffee shops, cafes, and specialty roasteries. Includes menu, brand story, and shop sections.",
+    title: "OHMT - Coffee",
+    description: "Premium coffee shop & roastery experience",
     images: ["/templates/coffee/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/coffee",
-    languages: { "ko": "https://ohmt.site/ko/templates/coffee" },
+    canonical: "https://ohmytemplate.com/en/templates/coffee",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/coffee" },
   },
 };
-
-import './theme.css';
-
-
 
 export default function CoffeeLayout({
   children,

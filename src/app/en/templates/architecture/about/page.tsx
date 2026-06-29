@@ -9,10 +9,10 @@ import { ScrollReveal } from "../_components/ui/ScrollReveal";
 import { CustomCursor } from "../_components/ui/CustomCursor";
 
 export const metadata: Metadata = {
-  title: "About Us - Architecture Portfolio - Oh My Template",
+  title: "About Us - Architecture Portfolio - OHMT",
   description: "Learn about our architectural philosophy, our history, and the visionaries behind our award-winning practice.",
   openGraph: {
-    title: "About Us - Architecture Portfolio - Oh My Template",
+    title: "About Us - Architecture Portfolio - OHMT",
     description: "Learn about our architectural philosophy, our history, and the visionaries behind our practice.",
     url: "https://ohmt.site/en/templates/architecture/about",
     images: [{ url: "/templates/architecture/og-image.jpg" }],

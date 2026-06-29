@@ -9,10 +9,10 @@ export function CtaBanner() {
   const baseRoute = "/en/templates/architecture";
 
   return (
-    <section className="relative h-[60vh] md:h-[70vh] min-h-[400px] w-full overflow-hidden">
+    <section className="relative h-[40vh] md:h-[46vh] min-h-[280px] w-full overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/templates/architecture/cta-bg.jpg"
+        src="/templates/architecture/project-3.jpg"
         alt="Architectural facade night view"
         fill
         className="object-cover"

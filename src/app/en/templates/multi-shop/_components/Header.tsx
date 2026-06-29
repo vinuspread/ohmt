@@ -44,7 +44,7 @@ export const Header = () => {
             className="text-xl md:text-2xl font-bold tracking-tight transition-colors duration-300"
             style={{ color: transparent ? "#ffffff" : "#0A0A0A" }}
           >
-            Oh My Template
+            OHMT
           </Link>
 
           <nav

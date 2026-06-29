@@ -18,7 +18,7 @@ export default function AboutPage() {
                 letterSpacing: '-0.04em',
               }}
             >
-              Oh My Template
+              OHMT
             </h1>
           </div>
           <div className="mt-12 relative min-h-[55vh] overflow-hidden">
@@ -66,9 +66,9 @@ export default function AboutPage() {
               </div>
               <div className="mt-8 lg:mt-0">
                 <p className="text-[16px] leading-relaxed text-black/80 mb-6" style={{ fontFamily: 'var(--font-body)' }}>
-                  Oh My Template Gallery was founded in 2018 with a singular mission: to create a space where
+                  OHMT Gallery was founded in 2018 with a singular mission: to create a space where
                   contemporary art challenges, inspires, and transforms. Housed in a converted
-                  industrial building in Chelsea, Oh My Template has quickly established itself as a
+                  industrial building in Chelsea, OHMT has quickly established itself as a
                   destination for groundbreaking exhibitions that push the boundaries of artistic
                   practice.
                 </p>
@@ -79,7 +79,7 @@ export default function AboutPage() {
                   challenge assumptions, and open new ways of seeing the world.
                 </p>
                 <p className="text-[16px] leading-relaxed text-black/80 mb-8" style={{ fontFamily: 'var(--font-body)' }}>
-                  Beyond our exhibition program, Oh My Template is committed to education and community
+                  Beyond our exhibition program, OHMT is committed to education and community
                   engagement through artist talks, workshops, and collaborative projects that make
                   contemporary art accessible to diverse audiences.
                 </p>

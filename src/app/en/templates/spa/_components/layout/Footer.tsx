@@ -80,7 +80,7 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-6 py-5 text-xs text-white/40 text-center">
-          © 2026 Oh My Template. All Rights Reserved.
+          © 2026 Oh My Template.
         </div>
       </div>
     </footer>

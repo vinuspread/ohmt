@@ -18,7 +18,7 @@ export default function Footer() {
               href="/en/templates/game"
               className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)] bg-clip-text text-xl font-bold text-transparent font-[var(--font-heading)]"
             >
-              Oh My Template
+              OHMT
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-[var(--color-text-muted)]">
               Building worlds that inspire. Breaking limits that define.
@@ -83,7 +83,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-[var(--color-border)] pt-8 text-center text-sm text-[var(--color-text-muted)]">
-          <p>&copy; 2026 Oh My Template. Contact: vinus@vinus.co.kr</p>
+          <p>&copy; 2026 OHMT. Contact: contact@ohmytemplate.com</p>
         </div>
       </div>
     </footer>

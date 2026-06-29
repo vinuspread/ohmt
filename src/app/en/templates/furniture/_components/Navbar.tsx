@@ -47,7 +47,7 @@ export const Navbar = () => {
     "badge": `Our Story / Narrative`,
     "title1": `Between material`,
     "title2": `and space.`,
-    "sub": `Founded on the principles of purity and precision, Oh My Template is an archive of essential interiors.`,
+    "sub": `Founded on the principles of purity and precision, OHMT is an archive of essential interiors.`,
     "desc": `Each piece in our collection is a dialogue. We explore the tension between raw material and refined form, creating objects that bring a sense of serenity to the modern home. 01 Edition.`,
     "journal": `Read the Journal`
   },
@@ -110,7 +110,7 @@ export const Navbar = () => {
         <div className="max-w-[1440px] mx-auto w-full px-6 md:px-12 flex items-center justify-between">
           {/* Logo */}
           <Link href={`/en/templates/furniture`} className="text-xl md:text-2xl font-black lowercase text-[var(--color-text)]">
-            Oh My Template
+            OHMT
           </Link>
 
           {/* Desktop Menu */}

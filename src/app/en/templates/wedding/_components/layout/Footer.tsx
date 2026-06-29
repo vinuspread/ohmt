@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 export default function Footer() {
   return (
@@ -20,7 +20,7 @@ export default function Footer() {
               >
                 vinus@vinus.co.kr
               </a>
-              <p className="text-white/40 mt-1 text-xs">Austin, TX · Worldwide</p>
+              <p className="text-white/40 mt-1 text-sm">Austin, TX · Worldwide</p>
             </div>
             <div>
               <p className="text-[0.65rem] uppercase tracking-[0.2em] text-white/40 mb-3">Follow</p>
@@ -37,7 +37,7 @@ export default function Footer() {
             Fine Art Wedding Photography
           </p>
           <p className="text-[0.65rem] text-white/30">
-            © 2026 Oh My Template. All rights reserved.
+            © 2026 Oh My Template.
           </p>
         </div>
       </div>

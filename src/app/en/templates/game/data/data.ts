@@ -126,7 +126,7 @@ export const games: Game[] = [
 export const news: NewsItem[] = [
   {
     id: "tech-announcement",
-    title: "Oh My Template Unveils New Game Engine Technology",
+    title: "OHMT Unveils New Game Engine Technology",
     category: "Technology",
     date: "June 12, 2026",
     image: "/templates/game/news-01.jpg",
@@ -142,7 +142,7 @@ export const news: NewsItem[] = [
   },
   {
     id: "studio-expansion",
-    title: "Oh My Template Opens New Development Hub",
+    title: "OHMT Opens New Development Hub",
     category: "Studio",
     date: "April 15, 2026",
     image: "/templates/game/news-03.jpg",

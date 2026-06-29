@@ -7,7 +7,7 @@ export const STUDIO_ROUTES = {
 } as const;
 
 export const STUDIO_BRAND = {
-  NAME: 'Oh My Template.',
+  NAME: 'OHMT.',
   TAGLINE: 'Elevating the corporate landscape through strategic design and architectural excellence.',
   EMAIL: 'hello@ohmytemplate.design',
   PHONE: '512 827 2100',

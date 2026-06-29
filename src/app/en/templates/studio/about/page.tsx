@@ -74,7 +74,7 @@ function StudioAboutPageContent() {
   },
   "cta": `Start Project`,
   "footer": {
-    "copyright": `© 2026 Vinuspread Studio. All rights reserved.`,
+    "copyright": `© 2026 Oh My Template.`,
     "contact": `Austin, Texas · hello@ohmytemplate.com`
   },
   "aboutPage": {
@@ -248,7 +248,7 @@ const stats = t.aboutPage.stats;
                                         <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-black shrink-0">{s.value}</div>
                                         <div className="space-y-1 sm:space-y-2">
                                             <h4 className="text-[13px] font-bold text-black/50 uppercase">{s.label}</h4>
-                                            <p className="text-[13px] md:text-[14px] text-black/60 leading-[1.4] font-normal break-keep">{s.desc}</p>
+                                            <p className="text-[15px] md:text-[14px] text-black/60 leading-[1.4] font-normal break-keep">{s.desc}</p>
                                         </div>
                                     </div>
                                 ))}

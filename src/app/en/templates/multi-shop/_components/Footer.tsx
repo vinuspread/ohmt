@@ -9,7 +9,7 @@ export const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-10 md:gap-8">
           <div className="col-span-2 md:col-span-2">
             <Link href="/en/templates/multi-shop" className="text-2xl font-bold tracking-tight text-white">
-              Oh My Template
+              OHMT
             </Link>
             <p className="text-sm text-white/50 mt-4 leading-relaxed max-w-[260px]">
               Curated fashion for the modern minimalist. Thoughtfully designed pieces that transcend seasons.
@@ -69,7 +69,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-16 pt-6 border-t border-white/8 flex flex-col md:flex-row justify-between items-center gap-3 text-[11px] text-white/25">
-          <p>&copy; 2026 Oh My Template.</p>
+          <p>&copy; 2026 OHMT.</p>
           <div className="flex gap-6">
             <Link href="#" className="hover:text-white/50 transition-colors duration-200">Privacy Policy</Link>
             <Link href="#" className="hover:text-white/50 transition-colors duration-200">Terms of Service</Link>

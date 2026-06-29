@@ -1,34 +1,30 @@
 import type { Metadata } from "next";
+import './theme.css';
 
 export const metadata: Metadata = {
-  title: "Automotive & Car Brand Website Template | OHMT",
-  description: "A sleek automotive website template for car brands, dealerships, and vehicle showcases. Features dynamic layouts and vehicle highlight sections.",
+  title: "OHMT - Car Concept",
+  description: "Premium automotive concept showcase",
   openGraph: {
-    title: "Automotive & Car Brand Website Template | OHMT",
-    description: "A sleek automotive website template for car brands, dealerships, and vehicle showcases. Features dynamic layouts and vehicle highlight sections.",
-    url: "https://ohmt.site/en/templates/car",
+    title: "OHMT - Car Concept",
+    description: "Premium automotive concept showcase",
+    url: "https://ohmytemplate.com/en/templates/car",
     siteName: "OHMT",
-    images: [{ url: "/templates/car/og-image.jpg", width: 1200, height: 630, alt: "Automotive & Car Brand Website Template" }],
+    images: [{ url: "/templates/car/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
-    alternateLocale: ["ko_KR"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Automotive & Car Brand Website Template | OHMT",
-    description: "A sleek automotive website template for car brands, dealerships, and vehicle showcases. Features dynamic layouts and vehicle highlight sections.",
+    title: "OHMT - Car Concept",
+    description: "Premium automotive concept showcase",
     images: ["/templates/car/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/car",
-    languages: { "ko": "https://ohmt.site/ko/templates/car" },
+    canonical: "https://ohmytemplate.com/en/templates/car",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/car" },
   },
 };
-
-import './theme.css';
-
-
 
 export default function CarLayout({
   children,

@@ -43,7 +43,7 @@ export function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle:
       <div className="h-16 flex items-center px-4 border-b border-[var(--color-border)]">
         {!collapsed && (
           <span className="text-lg font-[var(--font-heading)] font-semibold text-[var(--color-primary)]">
-            Oh My Template
+            OHMT
           </span>
         )}
       </div>
@@ -102,7 +102,7 @@ export function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle:
         {!collapsed && (
           <div className="min-w-0">
             <p className="text-sm font-medium text-[var(--color-text)] truncate">Morgan Chen</p>
-            <p className="text-xs text-[var(--color-text-muted)] truncate">morgan@ohmytemplate.io</p>
+            <p className="text-sm text-[var(--color-text-muted)] truncate">morgan@ohmytemplate.io</p>
           </div>
         )}
       </div>

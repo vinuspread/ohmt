@@ -180,8 +180,8 @@ export const SCHEDULE: ScheduleItem[] = [
 ];
 
 export const BRAND = {
-  name: "Oh My Template",
+  name: "OHMT",
   tagline: "Find Your Peace",
-  email: "vinus@vinus.co.kr",
-  copyright: "2026 Oh My Template.",
+  email: "contact@ohmytemplate.com",
+  copyright: "2026 OHMT.",
 } as const;

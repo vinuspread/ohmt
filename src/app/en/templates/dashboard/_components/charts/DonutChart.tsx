@@ -34,7 +34,7 @@ export function DonutChart({
         </div>
 
         <h4 className="mt-3 text-sm font-medium text-[var(--color-text)]">{label}</h4>
-        <p className="text-xs text-[var(--color-success)]">{subLabel}</p>
+        <p className="text-sm text-[var(--color-success)]">{subLabel}</p>
 
         {metrics && (
           <div className="mt-4 w-full space-y-1.5 border-t border-[var(--color-border)] pt-3">

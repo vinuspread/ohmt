@@ -130,7 +130,7 @@ export const MenuPreview = () => {
               />
             </div>
             <div className="text-center">
-              <p className="font-heading text-[var(--color-text)] text-[12px] font-bold leading-snug">{item.name}</p>
+              <p className="font-heading text-[var(--color-text)] text-[14px] font-bold leading-snug">{item.name}</p>
               <span className="text-[var(--color-text-muted)] text-[12px] font-semibold">{item.price}</span>
             </div>
           </motion.div>

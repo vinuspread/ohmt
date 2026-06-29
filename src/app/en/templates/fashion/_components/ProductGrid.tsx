@@ -60,7 +60,7 @@ return (
                   <Link href={`/en/templates/fashion/product/${p.id}`}>
                     <h3 className="text-[13px] sm:text-[15px] font-bold uppercase tracking-normal line-clamp-1">{productName}</h3>
                   </Link>
-                  <p className="text-[12px] sm:text-[14px] text-black/50 font-bold">{p.price}</p>
+                  <p className="text-[14px] sm:text-[14px] text-black/50 font-bold">{p.price}</p>
                 </div>
               </motion.div>
             );

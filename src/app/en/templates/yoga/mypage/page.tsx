@@ -53,7 +53,7 @@ function MyPageContent() {
                 Alex Kim
               </h2>
               <p
-                className="mt-0.5 text-[13px] text-[var(--color-text-muted)]"
+                className="mt-0.5 text-[15px] text-[var(--color-text-muted)]"
                 style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
               >
                 alex.kim@email.com
@@ -74,7 +74,7 @@ function MyPageContent() {
               Monthly Membership
             </p>
             <p
-              className="mt-1 text-[13px] text-[var(--color-text-muted)]"
+              className="mt-1 text-[15px] text-[var(--color-text-muted)]"
               style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
             >
               Renews Jul 1, 2026 · $89/mo
@@ -146,7 +146,7 @@ function MyPageContent() {
                   {item.date}
                 </p>
                 <p
-                  className="mt-0.5 text-[12px] text-[var(--color-text-muted)]"
+                  className="mt-0.5 text-[14px] text-[var(--color-text-muted)]"
                   style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
                 >
                   {item.time}
@@ -162,7 +162,7 @@ function MyPageContent() {
                   {item.name}
                 </p>
                 <p
-                  className="mt-0.5 text-[12px] text-[var(--color-text-muted)]"
+                  className="mt-0.5 text-[14px] text-[var(--color-text-muted)]"
                   style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
                 >
                   {item.instructor}
@@ -218,7 +218,7 @@ function MyPageContent() {
             {PAYMENT_HISTORY.map((item, i) => (
               <div key={i} className="grid grid-cols-[5rem_1fr_auto] md:grid-cols-[8rem_1fr_auto] items-center gap-x-6 md:gap-x-10 px-8 md:px-14 lg:px-20 py-5">
                 <p
-                  className="text-[12px] text-[var(--color-text-muted)]"
+                  className="text-[14px] text-[var(--color-text-muted)]"
                   style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
                 >
                   {item.date}

@@ -31,7 +31,7 @@ function JewelryCartPageContent() {
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
           <Link href="/jewelry" className="text-xs uppercase tracking-[0.4em] font-bold text-neutral-400 hover:text-[var(--color-primary)]">Back to Boutique</Link>
           <div className="absolute left-1/2 -translate-x-1/2">
-            <Link href="/jewelry" className="text-3xl font-serif tracking-[0.25em] font-normal uppercase text-neutral-900">Oh My Template</Link>
+            <Link href="/jewelry" className="text-3xl font-serif tracking-[0.25em] font-normal uppercase text-neutral-900">OHMT</Link>
           </div>
           <div className="flex items-center gap-6">
             <ShoppingBag size={20} strokeWidth={1.2} />
@@ -99,7 +99,7 @@ function JewelryCartPageContent() {
                 Begin Checkout
               </Button>
               <div className="text-center">
-                 <p className="text-[13px] text-neutral-400">"Complimentary shipping and signature packaging on all orders."</p>
+                 <p className="text-[15px] text-neutral-400">"Complimentary shipping and signature packaging on all orders."</p>
               </div>
             </div>
           </div>

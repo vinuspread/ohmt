@@ -20,7 +20,7 @@ export const Features = () => {
             </div>
             <div>
                <h4 className="text-sm font-bold text-[var(--color-text)] mb-0.5">{item.title}</h4>
-               <p className="text-[13px] font-medium text-[var(--color-secondary)]">{item.desc}</p>
+               <p className="text-[15px] font-medium text-[var(--color-secondary)]">{item.desc}</p>
             </div>
           </div>
         ))}
@@ -34,7 +34,7 @@ export const Footer = () => {
     <footer className="bg-white text-[var(--color-primary)] py-12 md:py-20 border-t border-black/5">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12">
         <div className="text-center md:text-left">
-          <h2 className="text-xl md:text-2xl font-medium md:font-black lowercase mb-1">Oh My Template</h2>
+          <h2 className="text-xl md:text-2xl font-medium md:font-black lowercase mb-1">OHMT</h2>
           <p className="text-[13px] text-[var(--color-secondary)] font-medium uppercase">Essential Interior Archive</p>
         </div>
 

@@ -67,7 +67,7 @@ export const Features = () => {
             </div>
             <div className="absolute bottom-0 right-0 bg-[var(--color-bg-dark)] text-white p-6 w-[200px]">
               <p className="text-[9px] uppercase tracking-[0.2em] text-white/45 mb-2">Our Mission</p>
-              <p className="text-[13px] leading-relaxed text-white/75">
+              <p className="text-[15px] leading-relaxed text-white/75">
                 To serve coffee as an experience - not a transaction.
               </p>
             </div>

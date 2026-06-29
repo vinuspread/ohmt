@@ -173,7 +173,7 @@ function SouvenirShopContent() {
                 </div>
                 <div className="space-y-3 px-2">
                   <h3 className="font-serif text-xl tracking-tight leading-tight">{product.name}</h3>
-                  <p className="text-xs text-black/70 line-clamp-2 font-sans leading-[1.4]">{product.desc}</p>
+                  <p className="text-sm text-black/70 line-clamp-2 font-sans leading-[1.4]">{product.desc}</p>
                   <div className="flex items-center justify-between pt-6 border-t border-black/5">
                     <span className="text-sm font-bold tracking-[0.1em]">{product.price}</span>
                     <button className="text-[12px] uppercase tracking-[0.2em] font-bold border-b border-black/20 hover:border-black transition-colors pb-1">

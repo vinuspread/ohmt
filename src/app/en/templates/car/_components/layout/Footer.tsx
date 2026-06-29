@@ -48,7 +48,7 @@ export const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-[var(--theme-border)] gap-6">
           <span className="text-[0.7rem] text-[var(--theme-text-muted)] uppercase tracking-widest">
-            © 2026 VINUSPREAD Motors. All rights reserved.
+            © 2026 Oh My Template.
           </span>
           <div className="flex flex-wrap gap-4 md:gap-8">
             {["Privacy", "Terms", "Cookies"].map(item => (

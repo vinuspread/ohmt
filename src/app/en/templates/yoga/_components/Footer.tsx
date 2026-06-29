@@ -66,7 +66,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="flex items-center justify-between px-8 md:px-14 lg:px-20 py-6">
-        <p className="text-[13px] text-[var(--color-text-muted)]"
+        <p className="text-[15px] text-[var(--color-text-muted)]"
            style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}>
           &copy; {BRAND.copyright}
         </p>

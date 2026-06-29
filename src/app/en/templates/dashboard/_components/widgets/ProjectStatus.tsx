@@ -59,7 +59,7 @@ export function ProjectStatus({ className = '' }: { className?: string }) {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-[var(--color-text)]">{p.name}</p>
-                <p className="text-xs text-[var(--color-text-muted)]">Due {p.due} · {p.manager}</p>
+                <p className="text-sm text-[var(--color-text-muted)]">Due {p.due} · {p.manager}</p>
               </div>
               <div className="flex items-center gap-3">
                 <div className="flex -space-x-2">
@@ -84,7 +84,7 @@ export function ProjectStatus({ className = '' }: { className?: string }) {
                 style={{ background: p.statusColor }}
               />
             </div>
-            <p className="text-[10px] text-[var(--color-text-muted)] text-right">{p.progress}% complete</p>
+            <p className="text-[14px] text-[var(--color-text-muted)] text-right">{p.progress}% complete</p>
           </div>
         ))}
       </div>

@@ -1,31 +1,4 @@
 import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Museum & Cultural Institution Website Template | OHMT",
-  description: "A premium museum and cultural institution website template with exhibition highlights, visitor information, and collection showcase sections.",
-  openGraph: {
-    title: "Museum & Cultural Institution Website Template | OHMT",
-    description: "A premium museum and cultural institution website template with exhibition highlights, visitor information, and collection showcase sections.",
-    url: "https://ohmt.site/en/templates/museum",
-    siteName: "OHMT",
-    images: [{ url: "/templates/museum/og-image.jpg", width: 1200, height: 630, alt: "Museum & Cultural Institution Website Template" }],
-    locale: "en_US",
-    type: "website",
-    alternateLocale: ["ko_KR"],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Museum & Cultural Institution Website Template | OHMT",
-    description: "A premium museum and cultural institution website template with exhibition highlights, visitor information, and collection showcase sections.",
-    images: ["/templates/museum/og-image.jpg"],
-  },
-  robots: { index: true, follow: true },
-  alternates: {
-    canonical: "https://ohmt.site/en/templates/museum",
-    languages: { "ko": "https://ohmt.site/ko/templates/museum" },
-  },
-};
-
 import { Playfair_Display, Inter } from "next/font/google";
 import './theme.css';
 
@@ -39,7 +12,30 @@ const inter = Inter({
   variable: "--font-sans",
 });
 
-
+export const metadata: Metadata = {
+  title: "OHMT - Museum",
+  description: "Experience the epitome of elegance and durability.",
+  openGraph: {
+    title: "OHMT - Museum",
+    description: "Experience the epitome of elegance and durability.",
+    url: "https://ohmytemplate.com/en/templates/museum",
+    siteName: "OHMT",
+    images: [{ url: "/templates/museum/og-image.jpg", width: 1200, height: 630 }],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "OHMT - Museum",
+    description: "Experience the epitome of elegance and durability.",
+    images: ["/templates/museum/og-image.jpg"],
+  },
+  robots: { index: true, follow: true },
+  alternates: {
+    canonical: "https://ohmytemplate.com/en/templates/museum",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/museum" },
+  },
+};
 
 export default function ExhibitionLayout({
   children,

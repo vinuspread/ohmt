@@ -97,7 +97,7 @@ function CartPageContent() {
                       <span className="text-[16px] font-bold text-[var(--color-text)]">{item.price}</span>
                     </div>
                     
-                    <p className="text-[13px] text-[var(--color-secondary)] mb-8 max-w-sm">{item.desc}</p>
+                    <p className="text-[15px] text-[var(--color-secondary)] mb-8 max-w-sm">{item.desc}</p>
                     
                     <div className="flex items-center justify-between mt-auto">
                       <div className="flex items-center gap-6 border border-black/10 rounded-full px-4 py-2">
@@ -144,7 +144,7 @@ function CartPageContent() {
             </Button>
             
             <div className="mt-10 flex flex-col gap-4">
-              <p className="text-[13px] text-center text-[var(--color-secondary)] font-medium">Secure payment powered by Stripe. Global delivery available.</p>
+              <p className="text-[15px] text-center text-[var(--color-secondary)] font-medium">Secure payment powered by Stripe. Global delivery available.</p>
             </div>
           </div>
         </div>

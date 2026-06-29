@@ -35,7 +35,7 @@ export default function Navbar({ solid }: { solid?: boolean }) {
               scrolled ? "text-[var(--color-text)]" : "text-white"
             }`}
           >
-            Oh My Template
+            OHMT
           </a>
 
           <nav className="hidden lg:flex items-center gap-10">

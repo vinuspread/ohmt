@@ -62,7 +62,7 @@ export default function BenefitsSection() {
                 {panel.label}
               </p>
               <p
-                className="text-[13px] text-white/65 mt-2"
+                className="text-[15px] text-white/65 mt-2"
                 style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
               >
                 {panel.sub}

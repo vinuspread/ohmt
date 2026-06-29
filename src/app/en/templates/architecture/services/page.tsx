@@ -11,10 +11,10 @@ import { CustomCursor } from "../_components/ui/CustomCursor";
 import { services } from "../data/services";
 
 export const metadata: Metadata = {
-  title: "Services - Architecture Portfolio - Oh My Template",
+  title: "Services - Architecture Portfolio - OHMT",
   description: "Explore our professional disciplines, from high-end residential design and commercial architecture to interior planning.",
   openGraph: {
-    title: "Services - Architecture Portfolio - Oh My Template",
+    title: "Services - Architecture Portfolio - OHMT",
     description: "Explore our professional disciplines, from high-end residential design and commercial architecture to interior planning.",
     url: "https://ohmt.site/en/templates/architecture/services",
     images: [{ url: "/templates/architecture/og-image.jpg" }],

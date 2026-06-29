@@ -96,7 +96,7 @@ export default function ProfilePage() {
                 <s.icon size={18} strokeWidth={1.5} style={{ color: s.color }} />
               </div>
               <div>
-                <p className="text-xs text-[var(--color-text-muted)] mb-0.5">{s.label}</p>
+                <p className="text-sm text-[var(--color-text-muted)] mb-0.5">{s.label}</p>
                 <p className="text-xl font-[var(--font-mono)] font-bold text-[var(--color-text)]">{s.value}</p>
               </div>
             </motion.div>
@@ -180,7 +180,7 @@ export default function ProfilePage() {
                       </div>
                       <div className="flex-1 min-w-0">
                         <p className="text-sm text-[var(--color-text)]">{item.action}</p>
-                        <p className="text-xs text-[var(--color-text-muted)] mt-0.5">{item.time}</p>
+                        <p className="text-sm text-[var(--color-text-muted)] mt-0.5">{item.time}</p>
                       </div>
                       <span
                         className="text-[10px] font-medium px-2 py-0.5 rounded-full shrink-0 capitalize"
@@ -226,7 +226,7 @@ export default function ProfilePage() {
                       </div>
                       <div className="min-w-0 flex-1">
                         <p className="text-sm font-medium text-[var(--color-text)] truncate">{ev.title}</p>
-                        <p className="text-[11px] text-[var(--color-text-muted)] mt-0.5">
+                        <p className="text-[14px] text-[var(--color-text-muted)] mt-0.5">
                           {ev.date} · {ev.time}–{ev.end}
                         </p>
                       </div>

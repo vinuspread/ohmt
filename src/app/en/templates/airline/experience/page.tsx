@@ -128,7 +128,7 @@ function ExperiencePageContent() {
                                 ))}
                               </div>
                               <p className="text-[14px] text-[#7A7A7A] leading-[1.4] font-normal normal-case">{meal.desc}</p>
-                              <p className="text-[13px] text-[#7A7A7A]/80 leading-[1.85] font-normal normal-case border-l-2 border-[var(--color-accent)]/30 pl-4">{meal.detail}</p>
+                              <p className="text-[15px] text-[#7A7A7A]/80 leading-[1.85] font-normal normal-case border-l-2 border-[var(--color-accent)]/30 pl-4">{meal.detail}</p>
                             </div>
                           </motion.div>
                         )}

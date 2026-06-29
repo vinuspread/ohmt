@@ -36,7 +36,7 @@ export const Header = () => {
           className="text-xl md:text-2xl font-bold tracking-tight transition-colors duration-300 font-[var(--font-heading)]"
           style={{ color: transparent ? "#FFFFFF" : "#FFFFFF" }}
         >
-          Oh My Template
+          OHMT
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">

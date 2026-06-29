@@ -96,7 +96,7 @@ function MenuPageContent() {
                       <h3 className="text-sm md:text-base font-bold font-heading leading-snug">{item.name}</h3>
                       <span className="text-sm font-semibold text-[var(--color-accent)] shrink-0">${item.price.toFixed(2)}</span>
                     </div>
-                    <p className="text-xs text-[var(--color-text-muted)] leading-relaxed line-clamp-2 flex-grow">{item.description}</p>
+                    <p className="text-sm text-[var(--color-text-muted)] leading-relaxed line-clamp-2 flex-grow">{item.description}</p>
                     {item.options && item.options.length > 0 && (
                       <div className="flex gap-1.5 mt-4 pt-3 border-t border-[var(--color-border)]">
                         {item.options.map((opt) => (

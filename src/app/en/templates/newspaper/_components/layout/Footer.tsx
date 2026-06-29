@@ -25,7 +25,7 @@ export const Footer = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10 gap-4">
           <div className="font-sans text-[0.72rem] opacity-40">
-            © 2026 Vinuspread Times Publishing Company. All rights reserved.
+            © 2026 Oh My Template.
           </div>
           <div className="flex gap-6 opacity-60">
             {["Twitter", "Facebook", "Instagram", "YouTube"].map(social => (

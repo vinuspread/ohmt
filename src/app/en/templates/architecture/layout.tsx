@@ -1,35 +1,35 @@
+// src/app/en/templates/architecture/layout.tsx
 import type { Metadata } from "next";
+import "./theme.css";
 
 export const metadata: Metadata = {
-  title: "Architecture Portfolio Website Template | OHMT",
-  description: "A sophisticated architecture portfolio website template with project galleries, design philosophy, and studio services pages.",
+  title: "OHMT - Architecture Portfolio",
+  description: "A sophisticated architecture portfolio template with editorial typography and immersive visual storytelling.",
+  keywords: ["architecture", "minimalism", "portfolio", "interior design", "OHMT"],
+  authors: [{ name: "OHMT", url: "https://ohmytemplate.com" }],
   openGraph: {
-    title: "Architecture Portfolio Website Template | OHMT",
-    description: "A sophisticated architecture portfolio website template with project galleries, design philosophy, and studio services pages.",
-    url: "https://ohmt.site/en/templates/architecture",
+    title: "OHMT - Architecture Portfolio",
+    description: "A sophisticated architecture portfolio template with editorial typography and immersive visual storytelling.",
+    url: "https://ohmytemplate.com/en/templates/architecture",
     siteName: "OHMT",
-    images: [{ url: "/templates/architecture/og-image.jpg", width: 1200, height: 630, alt: "Architecture Portfolio Website Template" }],
+    images: [{ url: "/templates/architecture/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
-    alternateLocale: ["ko_KR"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Architecture Portfolio Website Template | OHMT",
-    description: "A sophisticated architecture portfolio website template with project galleries, design philosophy, and studio services pages.",
+    title: "OHMT - Architecture Portfolio",
+    description: "A sophisticated architecture portfolio template with editorial typography and immersive visual storytelling.",
     images: ["/templates/architecture/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/architecture",
-    languages: { "ko": "https://ohmt.site/ko/templates/architecture" },
+    canonical: "https://ohmytemplate.com/en/templates/architecture",
+    languages: {
+      "ko": "https://ohmytemplate.com/ko/templates/architecture",
+    },
   },
 };
-
-// src/app/en/templates/architecture/layout.tsx
-import "./theme.css";
-
-
 
 export default function ArchitectureLayout({
   children,

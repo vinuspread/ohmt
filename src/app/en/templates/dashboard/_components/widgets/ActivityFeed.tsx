@@ -44,7 +44,7 @@ export function ActivityFeed({ className = '' }: { className?: string }) {
                 <span className="font-medium">{a.user}</span>{' '}
                 <span className="text-[var(--color-text-muted)]">{a.action}</span>
               </p>
-              <p className="text-xs text-[var(--color-text-muted)] mt-0.5">{a.time}</p>
+              <p className="text-sm text-[var(--color-text-muted)] mt-0.5">{a.time}</p>
             </div>
           </li>
         ))}

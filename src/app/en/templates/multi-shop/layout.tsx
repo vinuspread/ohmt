@@ -1,35 +1,31 @@
 import type { Metadata } from "next";
+import './theme.css';
+import { SmoothScroll } from "./_components/SmoothScroll";
 
 export const metadata: Metadata = {
-  title: "Multi-Brand Shop Website Template | OHMT",
-  description: "A versatile multi-brand e-commerce website template with category browsing, product listings, and curated collections.",
+  title: "OHMT - Multi-Shop",
+  description: "Multi-brand shopping experience with curated collections",
   openGraph: {
-    title: "Multi-Brand Shop Website Template | OHMT",
-    description: "A versatile multi-brand e-commerce website template with category browsing, product listings, and curated collections.",
-    url: "https://ohmt.site/en/templates/multi-shop",
+    title: "OHMT - Multi-Shop",
+    description: "Multi-brand shopping experience with curated collections",
+    url: "https://ohmytemplate.com/en/templates/multi-shop",
     siteName: "OHMT",
-    images: [{ url: "/templates/multi-shop/og-image.jpg", width: 1200, height: 630, alt: "Multi-Brand Shop Website Template" }],
+    images: [{ url: "/templates/multi-shop/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
-    alternateLocale: ["ko_KR"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Multi-Brand Shop Website Template | OHMT",
-    description: "A versatile multi-brand e-commerce website template with category browsing, product listings, and curated collections.",
+    title: "OHMT - Multi-Shop",
+    description: "Multi-brand shopping experience with curated collections",
     images: ["/templates/multi-shop/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/multi-shop",
-    languages: { "ko": "https://ohmt.site/ko/templates/multi-shop" },
+    canonical: "https://ohmytemplate.com/en/templates/multi-shop",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/multi-shop" },
   },
 };
-
-import './theme.css';
-import { SmoothScroll } from "./_components/SmoothScroll";
-
-
 
 export default function MultiShopLayout({
   children,

@@ -29,7 +29,7 @@ function ScheduleContent() {
             {SCHEDULE.reduce((acc, d) => acc + d.classes.length, 0)} Classes
           </h2>
           <p
-            className="hidden md:block text-[12px] text-[var(--color-text-muted)]"
+            className="hidden md:block text-[14px] text-[var(--color-text-muted)]"
             style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
           >
             Schedule subject to change
@@ -77,7 +77,7 @@ function ScheduleContent() {
                       {cls.name}
                     </p>
                     <p
-                      className="mt-1.5 text-[12px] text-[var(--color-text-muted)]"
+                      className="mt-1.5 text-[14px] text-[var(--color-text-muted)]"
                       style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
                     >
                       {cls.instructor}

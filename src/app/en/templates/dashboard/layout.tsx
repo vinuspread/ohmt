@@ -1,32 +1,4 @@
-import type { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Admin Dashboard Website Template | OHMT",
-  description: "A clean and functional admin dashboard template with data charts, tables, and analytics widgets. Ideal for SaaS products and internal tools.",
-  openGraph: {
-    title: "Admin Dashboard Website Template | OHMT",
-    description: "A clean and functional admin dashboard template with data charts, tables, and analytics widgets. Ideal for SaaS products and internal tools.",
-    url: "https://ohmt.site/en/templates/dashboard",
-    siteName: "OHMT",
-    images: [{ url: "/templates/dashboard/og-image.jpg", width: 1200, height: 630, alt: "Admin Dashboard Website Template" }],
-    locale: "en_US",
-    type: "website",
-    alternateLocale: ["ko_KR"],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Admin Dashboard Website Template | OHMT",
-    description: "A clean and functional admin dashboard template with data charts, tables, and analytics widgets. Ideal for SaaS products and internal tools.",
-    images: ["/templates/dashboard/og-image.jpg"],
-  },
-  robots: { index: true, follow: true },
-  alternates: {
-    canonical: "https://ohmt.site/en/templates/dashboard",
-    languages: { "ko": "https://ohmt.site/ko/templates/dashboard" },
-  },
-};
-
-
+import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './theme.css'
 
@@ -48,7 +20,10 @@ const geistMono = Geist_Mono({
   display: 'swap',
 })
 
-
+export const metadata: Metadata = {
+  title: 'OHMT - Dashboard',
+  description: 'OHMT admin dashboard template',
+}
 
 export default function DashboardRootLayout({
   children,

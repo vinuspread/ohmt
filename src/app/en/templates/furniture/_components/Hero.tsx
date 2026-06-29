@@ -157,7 +157,7 @@ const [index, setIndex] = useState(0);
               <h1 className="text-[clamp(1.8rem,5vw,3rem)] lg:text-[clamp(2.5rem,6vw,6rem)] font-bold text-[var(--color-text)] leading-[1.1] mb-3 md:mb-8 uppercase">
                 {current.titleLine1}<br />{current.titleLine2}
               </h1>
-              <p className="text-[13px] md:text-[17px] text-[var(--color-secondary)] font-medium leading-[1.4] max-w-lg mb-5 md:mb-10 hidden sm:block">
+              <p className="text-[15px] md:text-[17px] text-[var(--color-secondary)] font-medium leading-[1.4] max-w-lg mb-5 md:mb-10 hidden sm:block">
                 {current.desc}
               </p>
 

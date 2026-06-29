@@ -20,7 +20,7 @@ export function RevenueBarChart() {
           <h3 className="text-base font-[var(--font-heading)] font-semibold text-[var(--color-text)]">
             Monthly Revenue Breakdown
           </h3>
-          <p className="text-xs text-[var(--color-text-muted)]">Net Profit · Revenue · Cashflow - FY 2026</p>
+          <p className="text-sm text-[var(--color-text-muted)]">Net Profit · Revenue · Cashflow - FY 2026</p>
         </div>
       </div>
 

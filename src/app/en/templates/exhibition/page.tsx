@@ -76,7 +76,7 @@ export default function HomePage() {
               letterSpacing: '-0.04em',
             }}
           >
-            Oh My Template
+            OHMT
           </h1>
 
           <div className="flex-1 grid md:grid-cols-2 gap-12 mt-12">

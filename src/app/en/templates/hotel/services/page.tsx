@@ -46,7 +46,7 @@ function ServicesPageContent() {
               <span className="text-[11px] font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] block mb-3">Wellness & Leisure</span>
               <h2 className="text-3xl md:text-4xl font-[var(--font-heading)] font-bold text-[var(--color-primary)] mb-6">Designed For Your Well-being</h2>
               <p className="text-base text-[var(--color-text-muted)] leading-relaxed">
-                At Oh My Template, we curate services that speak to the soul. From Michelin-starred culinary journeys and restorative therapies to customized local itineraries, every detail is engineered to ensure absolute tranquility.
+                At OHMT, we curate services that speak to the soul. From Michelin-starred culinary journeys and restorative therapies to customized local itineraries, every detail is engineered to ensure absolute tranquility.
               </p>
             </motion.div>
           </div>

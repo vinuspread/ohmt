@@ -157,7 +157,7 @@ function StudioServicesPageContent() {
                           <span className="text-[11px] text-black/25 shrink-0 pt-1">{phase.step}</span>
                           <div className="space-y-0.5">
                             <p className="text-[14px] font-semibold text-black leading-snug">{phase.title}</p>
-                            <p className="text-[13px] text-black/45 font-normal leading-[1.4]">{phase.desc}</p>
+                            <p className="text-[15px] text-black/45 font-normal leading-[1.4]">{phase.desc}</p>
                           </div>
                         </div>
                       ))}

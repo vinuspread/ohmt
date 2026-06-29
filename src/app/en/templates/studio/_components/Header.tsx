@@ -69,13 +69,13 @@ export function Header() {
   },
   "cta": `Start Project`,
   "footer": {
-    "copyright": `© 2026 Oh My Template Studio. All rights reserved.`,
+    "copyright": `© 2026 Oh My Template.`,
     "contact": `Austin, Texas · hello@ohmytemplate.com`
   },
   "aboutPage": {
     "category": `Architectural Core`,
     "title1": `ABOUT`,
-    "title2": `Oh My Template.`,
+    "title2": `OHMT.`,
     "philosophy": {
       "title": `Space as a canvas.`,
       "desc": `We operate at the convergence of architecture, spatial brand experience, and tactile interaction. Our design lab is dedicated to executing systems that evoke silence, celebrate material honesty, and command physical space with ultimate rigor.`
@@ -237,7 +237,7 @@ useEffect(() => {
                     href="/en/templates/studio"
                     className={`text-[18px] md:text-[20px] font-black tracking-[-0.5px] uppercase transition-colors duration-500 ${isLight ? 'text-black' : 'text-white'}`}
                 >
-                    Oh My Template<span className="font-normal">.</span>
+                    OHMT<span className="font-normal">.</span>
                 </Link>
 
                 {/* Desktop Nav */}

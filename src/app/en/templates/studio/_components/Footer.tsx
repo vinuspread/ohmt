@@ -67,13 +67,13 @@ export function Footer() {
   },
   "cta": `Start Project`,
   "footer": {
-    "copyright": `© 2026 Oh My Template Studio. All rights reserved.`,
+    "copyright": `© 2026 Oh My Template.`,
     "contact": `Austin, Texas · hello@ohmytemplate.com`
   },
   "aboutPage": {
     "category": `Architectural Core`,
     "title1": `ABOUT`,
-    "title2": `Oh My Template.`,
+    "title2": `OHMT.`,
     "philosophy": {
       "title": `Space as a canvas.`,
       "desc": `We operate at the convergence of architecture, spatial brand experience, and tactile interaction. Our design lab is dedicated to executing systems that evoke silence, celebrate material honesty, and command physical space with ultimate rigor.`
@@ -217,7 +217,7 @@ const navItems = [
             <div className="max-w-[1720px] mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 pb-8 border-b border-white/10">
                     <Link href="/en/templates/studio" className="text-[20px] font-black tracking-[-1px] uppercase text-white">
-                        Oh My Template<span className="font-normal">.</span>
+                        OHMT<span className="font-normal">.</span>
                     </Link>
 
                     <nav className="flex flex-wrap gap-6 md:gap-10">

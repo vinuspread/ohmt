@@ -94,3 +94,6 @@ test-cosmetic-mobile.png
 
 # template zip packaging output (codex task)
 /dist/template-zips/
+
+.vercel
+.env*

@@ -39,7 +39,7 @@ export const Header = () => {
           href="/en/templates/coffee"
           className="text-xl font-heading font-semibold text-white/90 hover:text-white transition-colors"
         >
-          Oh My Template
+          OHMT
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">

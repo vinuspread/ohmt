@@ -65,7 +65,7 @@ export function Footer() {
               </Link>
             ))}
           </div>
-          <span className="text-[0.75rem] text-[var(--color-text-muted)]">© 2026 Vinuspread.</span>
+          <span className="text-[0.75rem] text-[var(--color-text-muted)]">© 2026 Oh My Template.</span>
         </div>
       </div>
     </footer>

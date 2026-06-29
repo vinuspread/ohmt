@@ -49,7 +49,7 @@ export const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-[var(--color-border)] gap-6">
           <span className="text-[0.7rem] text-[#6B6B6B] uppercase tracking-widest font-medium">
-            © 2026 Vinuspread Global Holdings. All rights reserved.
+            © 2026 Oh My Template.
           </span>
           <div className="flex gap-8">
             {["Privacy Policy", "Terms of Use", "Stock Disclaimer"].map(item => (

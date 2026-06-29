@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Navbar from "../_components/Navbar";
@@ -26,7 +26,7 @@ export default function NewsPage() {
           <div className="mb-12">
             <h1 className="font-[var(--font-heading)] text-5xl font-bold">News & Updates</h1>
             <p className="mt-3 text-[var(--color-text-muted)]">
-              The latest from Oh My Template
+              The latest from OHMT
             </p>
           </div>
 

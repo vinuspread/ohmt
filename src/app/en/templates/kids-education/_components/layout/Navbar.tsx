@@ -25,7 +25,7 @@ export default function Navbar() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--color-bg)]/95 backdrop-blur-sm border-b border-black/8">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Link href={basePath} className="text-xl font-bold tracking-tight" style={{ fontFamily: "var(--font-heading)" }}>
-            Oh My Template
+            OHMT
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">

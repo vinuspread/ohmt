@@ -72,7 +72,7 @@ function StudioContactPageContent() {
   },
   "cta": `Start Project`,
   "footer": {
-    "copyright": `© 2026 Vinuspread Studio. All rights reserved.`,
+    "copyright": `© 2026 Oh My Template.`,
     "contact": `Austin, Texas · hello@ohmytemplate.com`
   },
   "aboutPage": {

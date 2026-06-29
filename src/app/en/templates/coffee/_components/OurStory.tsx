@@ -80,7 +80,7 @@ export const OurStory = () => {
                 transition={{ duration: 0.3 }}
               >
                 <p className="text-[12px] font-semibold tracking-[0.18em] text-white/90">{testimonials[index].name}</p>
-                <p className="text-[11px] text-white/45 mt-1">{testimonials[index].source}</p>
+                <p className="text-[14px] text-white/45 mt-1">{testimonials[index].source}</p>
               </motion.div>
             </AnimatePresence>
 

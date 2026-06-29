@@ -11,7 +11,7 @@ export const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-10 md:mb-16">
           <div className="col-span-2 md:col-span-1">
             <Link href="/en/templates/airline" className="inline-block mb-5">
-              <span className="text-[0.78rem] md:text-[0.82rem] font-bold tracking-[0.15em] uppercase text-[var(--color-primary)] leading-none">Oh My Template</span>
+              <span className="text-[0.78rem] md:text-[0.82rem] font-bold tracking-[0.15em] uppercase text-[var(--color-primary)] leading-none">OHMT</span>
             </Link>
             <p className="text-[0.85rem] text-[var(--color-primary)]/70 leading-[1.4] max-w-[280px]">
               Setting the global standard for luxury travel. Experience excellence across all continents.
@@ -48,7 +48,7 @@ export const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-[var(--color-primary)]/20 gap-4">
           <span className="text-[0.7rem] text-[var(--color-primary)]/60 uppercase tracking-widest font-medium">
-            © 2026 Vinus Air. A Member of Global Skies Alliance.
+            © 2026 Oh My Template.
           </span>
           <div className="flex gap-6 md:gap-8">
             {["Legal Notice", "Privacy Policy", "Cookie Settings"].map(item => (

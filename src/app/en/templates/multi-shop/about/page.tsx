@@ -17,7 +17,7 @@ function AboutPageContent() {
         <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
           <img
             src="/templates/multi-shop/about-brand.jpg"
-            alt="About Oh My Template"
+            alt="About OHMT"
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/40" />
@@ -41,7 +41,7 @@ function AboutPageContent() {
                   Clothes That Don't<br />Try Too Hard.
                 </h2>
                 <p className="text-base leading-relaxed text-[var(--color-text-muted)]">
-                  We started Oh My Template because we wanted clothes that didn't try so hard.
+                  We started OHMT because we wanted clothes that didn't try so hard.
                   Pieces that felt considered without being precious. Sharp without being cold.
                   The kind of wardrobe you reach for without thinking, because everything in it
                   just works.
@@ -56,7 +56,7 @@ function AboutPageContent() {
               <div className="aspect-[3/4] overflow-hidden">
                 <img
                   src="/templates/multi-shop/category-women.jpg"
-                  alt="Oh My Template collection"
+                  alt="OHMT collection"
                   className="w-full h-full object-cover"
                 />
               </div>

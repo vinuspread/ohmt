@@ -22,7 +22,7 @@ function JewelryPageContent() {
     "about": `About`
   },
   "hero": {
-    "badge": `Oh My Template Fine Jewelry`,
+    "badge": `OHMT Fine Jewelry`,
     "title1": `The Radiance`,
     "title2": `of Forever`,
     "cta1": `Explore The Edition`,
@@ -53,11 +53,11 @@ function JewelryPageContent() {
   },
   "craftsmanship": {
     "badge": `Artisan Technique`,
-    "quote": `Every facet is a dialogue between light and stone, hand-polished to achieve Oh My Template's signature brilliance.`,
+    "quote": `Every facet is a dialogue between light and stone, hand-polished to achieve OHMT's signature brilliance.`,
     "heritage": `The Heritage`,
     "title1": `Hand-Set`,
     "title2": `With Soul`,
-    "desc": `At Oh My Template, we believe a jewel is more than a material; it is a silent observer of life's most precious moments. Our artisans spend hundreds of hours perfecting a single setting.`,
+    "desc": `At OHMT, we believe a jewel is more than a material; it is a silent observer of life's most precious moments. Our artisans spend hundreds of hours perfecting a single setting.`,
     "process": `Discover The Process`
   }
 };
@@ -98,7 +98,7 @@ const { scrollYProgress } = useScroll({
             <img
               src="/templates/jewelry/jewelry-hero-main.png"
               className="w-full h-full object-cover grayscale-[0.2]"
-              alt="Oh My Template Fine Jewelry Hero"
+              alt="OHMT Fine Jewelry Hero"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
           </motion.div>

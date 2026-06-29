@@ -12,7 +12,7 @@ import Footer from "./_components/layout/Footer";
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Oh My Template - Creative Academy",
+  "name": "OHMT - Creative Academy",
   "description": "Playful and colorful children education platform with creative classes",
   "url": "https://ohmt.site/en/templates/kids-education",
 };

@@ -34,7 +34,7 @@ export function TodoList({ todos: initialTodos }: { todos: Todo[] }) {
           <h3 className="text-base font-[var(--font-heading)] font-semibold text-[var(--color-text)]">
             Today&apos;s Tasks
           </h3>
-          <p className="text-xs text-[var(--color-text-muted)]">{dateStr}</p>
+          <p className="text-sm text-[var(--color-text-muted)]">{dateStr}</p>
         </div>
         <button className="flex items-center gap-1.5 px-3 py-1.5 rounded-[var(--radius-md)] text-xs font-medium text-[var(--color-primary)] bg-[var(--color-primary-muted)] hover:bg-[var(--color-primary-border)] transition-colors">
           <Plus size={14} strokeWidth={1.5} />

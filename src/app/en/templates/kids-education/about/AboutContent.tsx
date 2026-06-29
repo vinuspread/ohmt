@@ -66,7 +66,7 @@ export default function AboutContent() {
                 Our Mission
               </h2>
               <p className="text-base text-[var(--color-text-muted)] leading-relaxed">
-                At Oh My Template Creative Academy, we believe that every child is born with a natural sense of wonder. Our mission is to nurture that wonder through hands-on, play-based learning experiences that spark creativity, build confidence, and foster a lifelong love of learning.
+                At OHMT Creative Academy, we believe that every child is born with a natural sense of wonder. Our mission is to nurture that wonder through hands-on, play-based learning experiences that spark creativity, build confidence, and foster a lifelong love of learning.
               </p>
             </motion.div>
             <motion.div

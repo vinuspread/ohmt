@@ -61,7 +61,7 @@ export default function PressAwards() {
         >
           <Quote size={32} className="mx-auto mb-4 text-[var(--color-primary)]" />
           <blockquote className="text-lg leading-relaxed text-[var(--color-text)] md:text-xl">
-            "Oh My Template has redefined what a indie studio can achieve. <span className="text-[var(--color-accent)]">Shadow Realm</span> is a masterclass in world-building and technical ambition."
+            "OHMT has redefined what a indie studio can achieve. <span className="text-[var(--color-accent)]">Shadow Realm</span> is a masterclass in world-building and technical ambition."
           </blockquote>
           <p className="mt-4 text-sm text-[var(--color-text-muted)]">
             - Game Informer, Editor's Choice

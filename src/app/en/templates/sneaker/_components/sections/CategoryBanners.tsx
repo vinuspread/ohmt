@@ -158,7 +158,7 @@ export function CategoryBanners() {
       "returns": `Returns`,
       "contact": `Contact`
     },
-    "copyright": `© 2026 Vinus. All rights reserved.`,
+    "copyright": `© 2026 Oh My Template.`,
     "legal": {
       "privacy": `Privacy`,
       "terms": `Terms`,

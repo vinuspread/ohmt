@@ -53,7 +53,7 @@ export const Hero = () => {
       "returns": `Returns`,
       "faq": `FAQ`
     },
-    "copyright": `© 2026 Vinuspread Beauty. All Rights Reserved. Made in France.`
+    "copyright": `© 2026 Oh My Template.`
   },
   "story": {
     "title": `Conscious beauty for the modern age.`,

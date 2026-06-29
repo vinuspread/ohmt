@@ -18,7 +18,7 @@ export default function Footer() {
                 <circle cx="12" cy="12" r="2" fill="currentColor"/>
               </svg>
               <span className="text-xl font-bold tracking-tight text-[var(--color-text)] font-heading">
-                Oh My Template
+                OHMT
               </span>
             </Link>
             <p className="text-sm text-[var(--color-text-muted)] leading-[1.2] max-w-sm">
@@ -77,8 +77,8 @@ export default function Footer() {
 
         {/* Bottom copyright */}
         <div className="pt-8 border-t border-[var(--color-border)] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-          <p className="text-xs text-[var(--color-text-muted)]">
-            © 2026 Robotflow Template. All rights reserved.
+          <p className="text-sm text-[var(--color-text-muted)]">
+            © 2026 Oh My Template.
           </p>
           <div className="flex gap-6 sm:gap-4">
             <span className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-accent)] cursor-pointer transition-colors">

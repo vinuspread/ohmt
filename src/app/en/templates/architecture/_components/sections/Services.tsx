@@ -28,24 +28,20 @@ export function Services() {
 
             return (
               <ScrollReveal key={service.id}>
-                <div
-                  className={`flex flex-col ${
-                    isEven ? "lg:flex-row-reverse" : "lg:flex-row"
-                  } items-center gap-12 lg:gap-20`}
-                >
-                  {/* Image (60%) */}
-                  <div className="relative w-full lg:w-[60%] aspect-[4/3] overflow-hidden group">
+                <div className="grid grid-cols-12 gap-8 items-center">
+                  {/* Image — col 1–7 or 6–12 */}
+                  <div className={`col-span-12 lg:col-span-7 ${isEven ? "lg:order-last" : ""} relative aspect-[4/3] overflow-hidden group`}>
                     <Image
                       src={service.image}
                       alt={service.name}
                       fill
                       className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                      sizes="(max-width: 1024px) 100vw, 60vw"
+                      sizes="(max-width: 1024px) 100vw, 58vw"
                     />
                   </div>
 
-                  {/* Text Block (40%) */}
-                  <div className="w-full lg:w-[40%] space-y-6 lg:px-6">
+                  {/* Text Block — col 8–12 or 1–5 */}
+                  <div className={`col-span-12 lg:col-span-5 space-y-6 ${isEven ? "lg:order-first lg:pl-0 lg:pr-8" : "lg:pl-8"}`}>
                     <span className="font-sans text-[11px] font-medium tracking-[0.15em] text-[var(--color-text-secondary)] uppercase block">
                       {service.label}
                     </span>

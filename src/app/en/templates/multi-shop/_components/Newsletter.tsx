@@ -26,7 +26,7 @@ export const Newsletter = () => {
             Subscribe
           </button>
         </div>
-        <p className="text-[11px] text-white/25 mt-4">
+        <p className="text-[14px] text-white/25 mt-4">
           No spam. Unsubscribe anytime.
         </p>
       </div>

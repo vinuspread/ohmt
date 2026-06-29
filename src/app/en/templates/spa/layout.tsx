@@ -1,34 +1,35 @@
+import "./theme.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Spa & Wellness Website Template | OHMT",
-  description: "A calming and elegant spa and wellness website template with service menus, booking sections, and serene visual aesthetics.",
+  title: "OHMT - Spa Wellness",
+  description: "Premium spa and wellness shop template with a calming dark-green and cream palette, large lifestyle imagery, and a booking-first layout.",
+  keywords: ["spa template", "wellness website", "spa booking", "Next.js template", "OHMT"],
+  authors: [{ name: "OHMT", url: "https://ohmytemplate.com" }],
   openGraph: {
-    title: "Spa & Wellness Website Template | OHMT",
-    description: "A calming and elegant spa and wellness website template with service menus, booking sections, and serene visual aesthetics.",
-    url: "https://ohmt.site/en/templates/spa",
+    title: "OHMT - Spa Wellness",
+    description: "Premium spa and wellness shop template with a calming dark-green and cream palette, large lifestyle imagery, and a booking-first layout.",
+    url: "https://ohmytemplate.com/en/templates/spa",
     siteName: "OHMT",
-    images: [{ url: "/templates/spa/og-image.jpg", width: 1200, height: 630, alt: "Spa & Wellness Website Template" }],
+    images: [{ url: "/templates/spa/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
-    alternateLocale: ["ko_KR"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Spa & Wellness Website Template | OHMT",
-    description: "A calming and elegant spa and wellness website template with service menus, booking sections, and serene visual aesthetics.",
+    title: "OHMT - Spa Wellness",
+    description: "Premium spa and wellness shop template with a calming dark-green and cream palette, large lifestyle imagery, and a booking-first layout.",
     images: ["/templates/spa/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/spa",
-    languages: { "ko": "https://ohmt.site/ko/templates/spa" },
+    canonical: "https://ohmytemplate.com/en/templates/spa",
+    languages: {
+      "en": "https://ohmytemplate.com/en/templates/spa",
+      "ko": "https://ohmytemplate.com/ko/templates/spa",
+    },
   },
 };
-
-import "./theme.css";
-
-
 
 export default function SpaLayout({ children }: { children: React.ReactNode }) {
   return (

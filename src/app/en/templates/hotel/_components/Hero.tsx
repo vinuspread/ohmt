@@ -20,7 +20,7 @@ export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center bg-[var(--color-primary)] overflow-hidden">
       <div className="absolute inset-0">
-        <img src="/templates/hotel/hero-main.jpg" alt="Oh My Template" className="w-full h-full object-cover opacity-60" />
+        <img src="/templates/hotel/hero-main.jpg" alt="OHMT" className="w-full h-full object-cover opacity-60" />
         <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-primary)]/80 via-[var(--color-primary)]/40 to-transparent" />
       </div>
 
@@ -33,7 +33,7 @@ export const Hero = () => {
             Where Serenity Meets Elegance.
           </motion.h1>
           <motion.p variants={itemVariants} className="text-base md:text-lg text-[var(--color-bg)]/80 font-[var(--font-body)] max-w-xl mb-10 md:mb-14 leading-relaxed">
-            Nestled between ancient forests and the cerulean sea, Oh My Template offers an unparalleled retreat where every moment is crafted for your well-being.
+            Nestled between ancient forests and the cerulean sea, OHMT offers an unparalleled retreat where every moment is crafted for your well-being.
           </motion.p>
         </motion.div>
 

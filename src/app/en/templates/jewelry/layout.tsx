@@ -1,34 +1,30 @@
 import type { Metadata } from "next";
+import './theme.css';
 
 export const metadata: Metadata = {
-  title: "Jewelry & Luxury Brand Website Template | OHMT",
-  description: "An elegant jewelry and luxury brand website template with curated product collections, brand heritage story, and boutique-style layouts.",
+  title: "OHMT - Jewelry Mall",
+  description: "Experience the timeless elegance and curated luxury.",
   openGraph: {
-    title: "Jewelry & Luxury Brand Website Template | OHMT",
-    description: "An elegant jewelry and luxury brand website template with curated product collections, brand heritage story, and boutique-style layouts.",
-    url: "https://ohmt.site/en/templates/jewelry",
+    title: "OHMT - Jewelry Mall",
+    description: "Experience the timeless elegance and curated luxury.",
+    url: "https://ohmytemplate.com/en/templates/jewelry",
     siteName: "OHMT",
-    images: [{ url: "/templates/jewelry/og-image.jpg", width: 1200, height: 630, alt: "Jewelry & Luxury Brand Website Template" }],
+    images: [{ url: "/templates/jewelry/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
-    alternateLocale: ["ko_KR"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Jewelry & Luxury Brand Website Template | OHMT",
-    description: "An elegant jewelry and luxury brand website template with curated product collections, brand heritage story, and boutique-style layouts.",
+    title: "OHMT - Jewelry Mall",
+    description: "Experience the timeless elegance and curated luxury.",
     images: ["/templates/jewelry/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/jewelry",
-    languages: { "ko": "https://ohmt.site/ko/templates/jewelry" },
+    canonical: "https://ohmytemplate.com/en/templates/jewelry",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/jewelry" },
   },
 };
-
-import './theme.css';
-
-
 
 export default function JewelryLayout({
   children,

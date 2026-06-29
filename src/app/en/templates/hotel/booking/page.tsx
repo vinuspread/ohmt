@@ -63,8 +63,8 @@ function BookingPageContent() {
                           <BedDouble size={18} className={`mt-0.5 flex-shrink-0 transition-colors ${selected === r.id ? "text-[var(--color-accent)]" : "text-[var(--color-text-muted)]"}`} />
                           <div>
                             <p className="text-sm font-semibold text-[var(--color-primary)]">{r.name}</p>
-                            <p className="text-xs text-[var(--color-text-muted)] mt-0.5">{r.size}</p>
-                            <p className="text-xs font-medium text-[var(--color-accent)] mt-1">{r.price}</p>
+                            <p className="text-sm text-[var(--color-text-muted)] mt-0.5">{r.size}</p>
+                            <p className="text-sm font-medium text-[var(--color-accent)] mt-1">{r.price}</p>
                           </div>
                         </div>
                       </button>
@@ -92,7 +92,7 @@ function BookingPageContent() {
                     <div>
                       <h2 className="text-2xl font-[var(--font-heading)] font-bold text-[var(--color-primary)] mb-2">Reservation Confirmed</h2>
                       <p className="text-sm text-[var(--color-text-muted)] max-w-md mx-auto">
-                        Thank you for choosing Oh My Template. Your reservation request has been received. Our team will contact you within 24 hours to confirm your booking details.
+                        Thank you for choosing OHMT. Your reservation request has been received. Our team will contact you within 24 hours to confirm your booking details.
                       </p>
                     </div>
                     <Button variant="primary" size="md" onClick={() => setSubmitted(false)} className="text-[11px] tracking-[0.2em] uppercase rounded-sm mt-2">Make Another Reservation</Button>
@@ -158,7 +158,7 @@ function BookingPageContent() {
                       <Button variant="primary" size="lg" className="w-full text-[11px] tracking-[0.2em] uppercase rounded-sm">
                         Request Reservation
                       </Button>
-                      <p className="text-[11px] text-[var(--color-text-muted)] text-center mt-3">No payment required at this stage. Our team will contact you to confirm.</p>
+                      <p className="text-[14px] text-[var(--color-text-muted)] text-center mt-3">No payment required at this stage. Our team will contact you to confirm.</p>
                     </div>
                   </form>
                 )}

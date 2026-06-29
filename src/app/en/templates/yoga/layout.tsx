@@ -1,34 +1,30 @@
 import type { Metadata } from "next";
+import "./theme.css";
 
 export const metadata: Metadata = {
-  title: "Yoga & Wellness Studio Website Template | OHMT",
-  description: "A serene yoga and wellness studio website template with class schedules, membership options, and instructor profiles.",
+  title: "OHMT - Yoga",
+  description: "Find your inner peace with premium yoga and wellness classes",
   openGraph: {
-    title: "Yoga & Wellness Studio Website Template | OHMT",
-    description: "A serene yoga and wellness studio website template with class schedules, membership options, and instructor profiles.",
-    url: "https://ohmt.site/en/templates/yoga",
+    title: "OHMT - Yoga",
+    description: "Find your inner peace with premium yoga and wellness classes",
+    url: "https://ohmytemplate.com/en/templates/yoga",
     siteName: "OHMT",
-    images: [{ url: "/templates/yoga/og-image.jpg", width: 1200, height: 630, alt: "Yoga & Wellness Studio Website Template" }],
+    images: [{ url: "/templates/yoga/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
-    alternateLocale: ["ko_KR"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yoga & Wellness Studio Website Template | OHMT",
-    description: "A serene yoga and wellness studio website template with class schedules, membership options, and instructor profiles.",
+    title: "OHMT - Yoga",
+    description: "Find your inner peace with premium yoga and wellness classes",
     images: ["/templates/yoga/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/yoga",
-    languages: { "ko": "https://ohmt.site/ko/templates/yoga" },
+    canonical: "https://ohmytemplate.com/en/templates/yoga",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/yoga" },
   },
 };
-
-import "./theme.css";
-
-
 
 export default function YogaLayout({
   children,

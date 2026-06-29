@@ -79,7 +79,7 @@ function StudioHomeContent() {
   },
   "cta": `Start Project`,
   "footer": {
-    "copyright": `© 2026 Vinuspread Studio. All rights reserved.`,
+    "copyright": `© 2026 Oh My Template.`,
     "contact": `Austin, Texas · hello@ohmytemplate.com`
   },
   "aboutPage": {
@@ -322,7 +322,7 @@ const fields = t.hero.fields.map((f: any, i: number) => ({
                                             <h3 className="text-[16px] md:text-[20px] font-bold text-white">{activeHeroField.subTitle}</h3>
                                             <span className="text-[13px] font-mono text-white/40">- {activeHeroField.location}</span>
                                         </div>
-                                        <p className="text-[13px] md:text-[14px] text-white/50 font-normal leading-[1.4] line-clamp-3 md:line-clamp-none">{activeHeroField.desc}</p>
+                                        <p className="text-[15px] md:text-[14px] text-white/50 font-normal leading-[1.4] line-clamp-3 md:line-clamp-none">{activeHeroField.desc}</p>
                                     </div>
                                     <div className="flex items-center gap-3">
                                         <button onClick={handlePrev} className="w-7 h-7 md:w-8 md:h-8 rounded-full border border-white/20 hover:border-white text-white flex items-center justify-center transition-colors">

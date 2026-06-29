@@ -1,34 +1,30 @@
 import type { Metadata } from "next";
+import './theme.css';
 
 export const metadata: Metadata = {
-  title: "Game Studio Website Template | OHMT",
-  description: "A dynamic game studio website template for indie studios, game developers, and esports brands. Includes game showcase and careers sections.",
+  title: "OHMT - Game Studio",
+  description: "Premium game studio & development showcase",
   openGraph: {
-    title: "Game Studio Website Template | OHMT",
-    description: "A dynamic game studio website template for indie studios, game developers, and esports brands. Includes game showcase and careers sections.",
-    url: "https://ohmt.site/en/templates/game",
+    title: "OHMT - Game Studio",
+    description: "Premium game studio & development showcase",
+    url: "https://ohmytemplate.com/en/templates/game",
     siteName: "OHMT",
-    images: [{ url: "/templates/game/og-image.jpg", width: 1200, height: 630, alt: "Game Studio Website Template" }],
+    images: [{ url: "/templates/game/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
-    alternateLocale: ["ko_KR"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Game Studio Website Template | OHMT",
-    description: "A dynamic game studio website template for indie studios, game developers, and esports brands. Includes game showcase and careers sections.",
+    title: "OHMT - Game Studio",
+    description: "Premium game studio & development showcase",
     images: ["/templates/game/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/game",
-    languages: { "ko": "https://ohmt.site/ko/templates/game" },
+    canonical: "https://ohmytemplate.com/en/templates/game",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/game" },
   },
 };
-
-import './theme.css';
-
-
 
 export default function GameLayout({
   children,

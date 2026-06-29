@@ -27,7 +27,7 @@ export const Navbar = () => {
             href="/en/templates/exhibition"
             className="text-[1rem] font-heading font-semibold uppercase tracking-[0.15em] text-white"
           >
-            Oh My Template
+            OHMT
           </Link>
 
           <div className="flex items-center gap-6">

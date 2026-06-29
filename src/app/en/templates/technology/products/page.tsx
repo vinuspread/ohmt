@@ -95,7 +95,7 @@ export default function TechnologyProductsPage() {
                         {model.saveAmount}
                       </span>
                     </div>
-                    <p className="text-[11px] text-[var(--color-text-muted)]">{model.financing}</p>
+                    <p className="text-[14px] text-[var(--color-text-muted)]">{model.financing}</p>
                     <div className="pt-2">
                       <a
                         href="#reserve"

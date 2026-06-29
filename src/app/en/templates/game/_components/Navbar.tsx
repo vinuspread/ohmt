@@ -35,7 +35,7 @@ export default function Navbar() {
           href="/en/templates/game"
           className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)] bg-clip-text text-xl font-bold text-transparent font-[var(--font-heading)]"
         >
-          Oh My Template
+          OHMT
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

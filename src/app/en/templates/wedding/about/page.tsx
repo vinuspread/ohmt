@@ -5,14 +5,14 @@ import AboutFull from "./AboutFull";
 
 export const metadata: Metadata = {
   title: "About - Lumen Wedding Photography",
-  description: "Meet Clara, founder and lead photographer at Oh My Template. Capturing timeless wedding stories across the world with fine art documentary style.",
+  description: "Meet Clara, founder and lead photographer at OHMT. Capturing timeless wedding stories across the world with fine art documentary style.",
   keywords: ["wedding photographer", "fine art wedding photography", "documentary wedding photos"],
-  authors: [{ name: "Oh My Template", url: "https://ohmt.site" }],
+  authors: [{ name: "OHMT", url: "https://ohmytemplate.com" }],
   openGraph: {
     title: "About - Lumen Wedding Photography",
     description: "Meet Clara, founder and lead photographer. Capturing timeless wedding stories with fine art documentary style.",
-    url: "https://ohmt.site/en/templates/wedding/about",
-    siteName: "Oh My Template",
+    url: "https://ohmytemplate.com/en/templates/wedding/about",
+    siteName: "OHMT",
     images: [{ url: "/templates/wedding/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/wedding/about",
+    canonical: "https://ohmytemplate.com/en/templates/wedding/about",
     languages: {
-      "en": "https://ohmt.site/en/templates/wedding/about",
-      "ko": "https://ohmt.site/ko/templates/wedding/about",
+      "en": "https://ohmytemplate.com/en/templates/wedding/about",
+      "ko": "https://ohmytemplate.com/ko/templates/wedding/about",
     },
   },
 };

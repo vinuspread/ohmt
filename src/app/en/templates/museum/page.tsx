@@ -36,7 +36,7 @@ function HomeContent() {
     "souvenirShop": `Souvenir Shop`
   },
   "hero": {
-    "badge": `Musei Vaticani · Oh My Template Curation`,
+    "badge": `Musei Vaticani · OHMT Curation`,
     "title1": `THE ETERNAL`,
     "title2": `Masterpieces`,
     "cta": `Begin Journey`
@@ -60,7 +60,7 @@ function HomeContent() {
     "p2": `Our curation seeks to extract the structural brilliance from the overwhelming ornamentation. By highlighting works like the Laocoön or the delicate Pietà in an isolated, digital space, we allow their raw theological and emotional gravity to echo without the noise of the physical gallery crowd.`,
     "p3": `Every brushstroke captured by Raphael, every chisel strike endured by Michelangelo. These are not relics of the past. They are continuing dialogues on the nature of humanity, suffering, knowledge, and divinity.`,
     "curator": `Curator`,
-    "curatorName": `Oh My Template Exhibition`
+    "curatorName": `OHMT Exhibition`
   },
   "ourStory": {
     "heritage": `MUSEI VATICANI · 500 YEARS OF HERITAGE`,
@@ -254,7 +254,7 @@ function HomeContent() {
           <div className="flex-1 text-center md:text-left">
             <span className="text-[8px] md:text-[13px] uppercase font-bold tracking-[0.5em] text-black/40 block mb-2 md:mb-4">{t.audioGuide.badge}</span>
             <h3 className="text-lg md:text-3xl font-serif font-bold mb-3 md:mb-4">{t.audioGuide.title}</h3>
-            <p className="text-black/60 font-normal max-w-xs md:max-w-md text-xs md:text-sm leading-[1.4]">
+            <p className="text-black/60 font-normal max-w-xs md:max-w-md text-sm md:text-sm leading-[1.4]">
               {t.audioGuide.desc}
             </p>
           </div>

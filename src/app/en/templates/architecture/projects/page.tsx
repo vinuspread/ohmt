@@ -8,10 +8,10 @@ import { Projects } from "../_components/sections/Projects";
 import { CustomCursor } from "../_components/ui/CustomCursor";
 
 export const metadata: Metadata = {
-  title: "Projects Portfolio - Architecture Portfolio - Oh My Template",
+  title: "Projects Portfolio - Architecture Portfolio - OHMT",
   description: "Browse our selected residential, commercial, public, and interior architecture commissions.",
   openGraph: {
-    title: "Projects Portfolio - Architecture Portfolio - Oh My Template",
+    title: "Projects Portfolio - Architecture Portfolio - OHMT",
     description: "Browse our selected residential, commercial, public, and interior architecture commissions.",
     url: "https://ohmt.site/en/templates/architecture/projects",
     images: [{ url: "/templates/architecture/og-image.jpg" }],

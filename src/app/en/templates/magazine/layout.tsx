@@ -1,34 +1,30 @@
 import type { Metadata } from "next";
+import './theme.css';
 
 export const metadata: Metadata = {
-  title: "Magazine & Editorial Website Template | OHMT",
-  description: "A sophisticated magazine and editorial website template for culture, lifestyle, and digital media brands. Features article layouts and category navigation.",
+  title: "OHMT - Magazine",
+  description: "Editorial culture and lifestyle",
   openGraph: {
-    title: "Magazine & Editorial Website Template | OHMT",
-    description: "A sophisticated magazine and editorial website template for culture, lifestyle, and digital media brands. Features article layouts and category navigation.",
-    url: "https://ohmt.site/en/templates/magazine",
+    title: "OHMT - Magazine",
+    description: "Editorial culture and lifestyle",
+    url: "https://ohmytemplate.com/en/templates/magazine",
     siteName: "OHMT",
-    images: [{ url: "/templates/magazine/og-image.jpg", width: 1200, height: 630, alt: "Magazine & Editorial Website Template" }],
+    images: [{ url: "/templates/magazine/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
-    alternateLocale: ["ko_KR"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Magazine & Editorial Website Template | OHMT",
-    description: "A sophisticated magazine and editorial website template for culture, lifestyle, and digital media brands. Features article layouts and category navigation.",
+    title: "OHMT - Magazine",
+    description: "Editorial culture and lifestyle",
     images: ["/templates/magazine/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/magazine",
-    languages: { "ko": "https://ohmt.site/ko/templates/magazine" },
+    canonical: "https://ohmytemplate.com/en/templates/magazine",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/magazine" },
   },
 };
-
-import './theme.css';
-
-
 
 export default function MagazineLayout({
   children,

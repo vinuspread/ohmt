@@ -1,34 +1,30 @@
 import type { Metadata } from "next";
+import './theme.css';
 
 export const metadata: Metadata = {
-  title: "Luxury Hotel & Resort Website Template | OHMT",
-  description: "A premium hotel and resort website template with room listings, amenities showcase, and booking call-to-action sections.",
+  title: "OHMT - Hotel",
+  description: "Premium luxury hotel & resort experience",
   openGraph: {
-    title: "Luxury Hotel & Resort Website Template | OHMT",
-    description: "A premium hotel and resort website template with room listings, amenities showcase, and booking call-to-action sections.",
-    url: "https://ohmt.site/en/templates/hotel",
+    title: "OHMT - Hotel",
+    description: "Premium luxury hotel & resort experience",
+    url: "https://ohmytemplate.com/en/templates/hotel",
     siteName: "OHMT",
-    images: [{ url: "/templates/hotel/og-image.jpg", width: 1200, height: 630, alt: "Luxury Hotel & Resort Website Template" }],
+    images: [{ url: "/templates/hotel/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
-    alternateLocale: ["ko_KR"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Luxury Hotel & Resort Website Template | OHMT",
-    description: "A premium hotel and resort website template with room listings, amenities showcase, and booking call-to-action sections.",
+    title: "OHMT - Hotel",
+    description: "Premium luxury hotel & resort experience",
     images: ["/templates/hotel/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/hotel",
-    languages: { "ko": "https://ohmt.site/ko/templates/hotel" },
+    canonical: "https://ohmytemplate.com/en/templates/hotel",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/hotel" },
   },
 };
-
-import './theme.css';
-
-
 
 export default function HotelLayout({
   children,

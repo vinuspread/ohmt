@@ -53,7 +53,7 @@ const navItems = [
       )}>
         <div className="max-w-[1320px] mx-auto px-6 md:px-10 flex items-center justify-between w-full">
             <Link href="/en/templates/airline" className="shrink-0 group">
-            <span className="text-[0.78rem] md:text-[0.82rem] font-bold tracking-[0.15em] uppercase text-white leading-none">Oh My Template</span>
+            <span className="text-[0.78rem] md:text-[0.82rem] font-bold tracking-[0.15em] uppercase text-white leading-none">OHMT</span>
           </Link>
 
           {/* Desktop GNB */}

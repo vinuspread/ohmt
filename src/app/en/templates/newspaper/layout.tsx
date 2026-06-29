@@ -1,34 +1,30 @@
 import type { Metadata } from "next";
+import './theme.css';
 
 export const metadata: Metadata = {
-  title: "Newspaper & News Website Template | OHMT",
-  description: "A responsive newspaper and online news website template with article layouts, category sections, and editorial typography.",
+  title: "OHMT - Newspaper",
+  description: "News and publishing archive",
   openGraph: {
-    title: "Newspaper & News Website Template | OHMT",
-    description: "A responsive newspaper and online news website template with article layouts, category sections, and editorial typography.",
-    url: "https://ohmt.site/en/templates/newspaper",
+    title: "OHMT - Newspaper",
+    description: "News and publishing archive",
+    url: "https://ohmytemplate.com/en/templates/newspaper",
     siteName: "OHMT",
-    images: [{ url: "/templates/newspaper/og-image.jpg", width: 1200, height: 630, alt: "Newspaper & News Website Template" }],
+    images: [{ url: "/templates/newspaper/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
-    alternateLocale: ["ko_KR"],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Newspaper & News Website Template | OHMT",
-    description: "A responsive newspaper and online news website template with article layouts, category sections, and editorial typography.",
+    title: "OHMT - Newspaper",
+    description: "News and publishing archive",
     images: ["/templates/newspaper/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/newspaper",
-    languages: { "ko": "https://ohmt.site/ko/templates/newspaper" },
+    canonical: "https://ohmytemplate.com/en/templates/newspaper",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/newspaper" },
   },
 };
-
-import './theme.css';
-
-
 
 export default function NewspaperLayout({
   children,

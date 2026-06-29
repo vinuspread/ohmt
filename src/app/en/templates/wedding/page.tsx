@@ -12,7 +12,7 @@ export default function TemplatePage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "Oh My Template - Wedding Photography",
+    "name": "OHMT - Wedding Photography",
     "description": "Elegant dark portfolio template for wedding photography and cinematic capture",
     "url": "https://ohmt.site/en/templates/wedding",
     "telephone": "+1-512-555-0199",

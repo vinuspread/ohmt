@@ -31,7 +31,7 @@ return (
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-20 mb-12 md:mb-24">
         <div className="col-span-2 lg:col-span-1">
           <Link href="/en/templates/fashion" className="text-xl md:text-2xl font-black tracking-tighter uppercase block">
-            Oh My Template
+            OHMT
           </Link>
           <p className="text-[14px] text-black/60 font-medium leading-[1.4] max-w-xs mt-4 md:mt-6">
             Crafting silhouettes that speak volumes through silence. Redefining digital luxury for the next generation.
@@ -72,7 +72,7 @@ return (
 
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-8 md:pt-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-[12px] font-medium tracking-[0.4em] text-black/20 uppercase">
-            © 2026 Oh My Template Laboratory. All rights reserved.
+            © 2026 Oh My Template.
           </p>
           <div className="flex gap-10 text-[12px] font-medium tracking-[0.2em] text-black/40 uppercase">
               <Link href="#" className="hover:text-black transition-colors">Seoul</Link>

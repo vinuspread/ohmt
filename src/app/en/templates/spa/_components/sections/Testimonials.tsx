@@ -51,7 +51,7 @@ export default function Testimonials() {
                 />
                 <div>
                   <p className="text-sm font-bold text-[var(--color-text)]">{t.name}</p>
-                  <p className="text-xs text-[var(--color-text-muted)]">{t.role}</p>
+                  <p className="text-sm text-[var(--color-text-muted)]">{t.role}</p>
                 </div>
               </div>
             </motion.div>
