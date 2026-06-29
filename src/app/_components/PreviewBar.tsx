@@ -13,7 +13,7 @@ const DEVICES: { id: Device; label: string; width: number | null }[] = [
 
 function MonitorIcon() {
   return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <rect x="2" y="3" width="20" height="14" rx="2" />
       <path d="M8 21h8M12 17v4" />
     </svg>
@@ -22,7 +22,7 @@ function MonitorIcon() {
 
 function TabletIcon() {
   return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <rect x="4" y="2" width="16" height="20" rx="2" />
       <circle cx="12" cy="18" r="1" fill="currentColor" stroke="none" />
     </svg>
@@ -31,18 +31,14 @@ function TabletIcon() {
 
 function PhoneIcon() {
   return (
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
       <rect x="6" y="2" width="12" height="20" rx="2" />
       <circle cx="12" cy="18" r="1" fill="currentColor" stroke="none" />
     </svg>
   );
 }
 
-const ICONS = {
-  desktop: <MonitorIcon />,
-  tablet: <TabletIcon />,
-  mobile: <PhoneIcon />,
-};
+const ICONS = { desktop: <MonitorIcon />, tablet: <TabletIcon />, mobile: <PhoneIcon /> };
 
 function PreviewBarInner({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -50,15 +46,18 @@ function PreviewBarInner({ children }: { children: React.ReactNode }) {
   const isIframe = searchParams.get("iframe") === "1";
   const [device, setDevice] = useState<Device>("desktop");
 
+  // iframe 내부: 바 없이 템플릿 그대로 렌더
   if (isIframe) {
     return <>{children}</>;
   }
 
-  const active = DEVICES.find((d) => d.id === device)!;
+  // 미리보기 모드: 바 + iframe (children 미사용)
+  const iframeWidth = device === "tablet" ? 768 : device === "mobile" ? 390 : null;
+  const showGrayBg = device !== "desktop";
 
   return (
     <>
-      {/* Preview bar */}
+      {/* 미리보기 바 */}
       <div
         style={{ zIndex: 99999 }}
         className="fixed top-0 left-0 right-0 h-11 bg-zinc-950 border-b border-zinc-800 flex items-center justify-center gap-1"
@@ -75,9 +74,9 @@ function PreviewBarInner({ children }: { children: React.ReactNode }) {
             }`}
           >
             {ICONS[d.id]}
-            <span className="hidden sm:inline">{d.label}</span>
+            <span>{d.label}</span>
             {d.width && (
-              <span className={`text-[10px] ${device === d.id ? "text-zinc-500" : "text-zinc-600"}`}>
+              <span className={`text-[10px] ml-0.5 ${device === d.id ? "text-zinc-400" : "text-zinc-600"}`}>
                 {d.width}px
               </span>
             )}
@@ -85,31 +84,25 @@ function PreviewBarInner({ children }: { children: React.ReactNode }) {
         ))}
       </div>
 
-      {/* Content area */}
-      {device === "desktop" ? (
-        <>{children}</>
-      ) : (
-        <div className="fixed inset-0 pt-11 bg-zinc-900 flex justify-center overflow-hidden">
-          {/* device frame */}
-          <div
-            className="relative h-full flex flex-col"
-            style={{
-              width: active.width!,
-              maxWidth: "100%",
-            }}
-          >
-            <iframe
-              key={device}
-              src={`${pathname}?iframe=1`}
-              className="w-full flex-1 bg-white"
-              style={{
-                border: "none",
-                boxShadow: "0 0 0 1px rgba(255,255,255,0.08), 0 8px 48px rgba(0,0,0,0.5)",
-              }}
-            />
-          </div>
-        </div>
-      )}
+      {/* iframe 영역 */}
+      <div
+        className={`fixed inset-0 pt-11 flex justify-center ${showGrayBg ? "bg-zinc-800" : "bg-white"}`}
+      >
+        <iframe
+          key={device}
+          src={`${pathname}?iframe=1`}
+          style={{
+            width: iframeWidth ?? "100%",
+            height: "100%",
+            border: "none",
+            background: "white",
+            display: "block",
+            ...(showGrayBg && {
+              boxShadow: "0 0 0 1px rgba(255,255,255,0.06), 0 8px 40px rgba(0,0,0,0.5)",
+            }),
+          }}
+        />
+      </div>
     </>
   );
 }
