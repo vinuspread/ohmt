@@ -87,7 +87,7 @@ function PreviewBarInner({ children }: { children: React.ReactNode }) {
 
       {/* Content area */}
       {device === "desktop" ? (
-        <div className="pt-11">{children}</div>
+        <>{children}</>
       ) : (
         <div className="fixed inset-0 pt-11 bg-zinc-900 flex justify-center overflow-hidden">
           {/* device frame */}
@@ -116,7 +116,7 @@ function PreviewBarInner({ children }: { children: React.ReactNode }) {
 
 export function PreviewBar({ children }: { children: React.ReactNode }) {
   return (
-    <Suspense fallback={<div className="pt-11">{children}</div>}>
+    <Suspense fallback={<>{children}</>}>
       <PreviewBarInner>{children}</PreviewBarInner>
     </Suspense>
   );
