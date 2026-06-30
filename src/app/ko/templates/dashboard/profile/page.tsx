@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { motion } from 'framer-motion'
 import { MapPin, Briefcase, Edit3, Mail, Phone, Globe, TrendingUp, FileText, ShoppingCart, Users, Star, Clock, Video, Users2, Car } from 'lucide-react'

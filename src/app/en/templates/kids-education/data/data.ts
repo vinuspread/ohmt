@@ -1,4 +1,4 @@
-﻿export interface Highlight {
+export interface Highlight {
   emoji: string;
   title: string;
   description: string;

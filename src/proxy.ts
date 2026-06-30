@@ -77,4 +77,6 @@ export async function proxy(request: NextRequest) {
   return response;
 }
 
-export const config = { matcher: ["/", "/admin/:path*", "/api/admin/:path*"] };
+export const config = {
+  matcher: ["/((?!_next|_vercel|.*\\..*).*)"],
+};

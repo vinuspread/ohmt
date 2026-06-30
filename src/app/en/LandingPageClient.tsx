@@ -116,23 +116,23 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://www.ohmt.site/#website",
-        url: "https://www.ohmt.site",
+        "@id": "https://ohmt.site/#website",
+        url: "https://ohmt.site",
         name: "Oh My Template",
         description: "Premium Next.js web templates for brands, agencies, and creators.",
         inLanguage: ["en", "ko"],
         potentialAction: {
           "@type": "SearchAction",
-          target: "https://www.ohmt.site/en?q={search_term_string}",
+          target: "https://ohmt.site/en?q={search_term_string}",
           "query-input": "required name=search_term_string",
         },
       },
       {
         "@type": "Organization",
-        "@id": "https://www.ohmt.site/#organization",
+        "@id": "https://ohmt.site/#organization",
         name: "Oh My Template",
-        url: "https://www.ohmt.site",
-        email: "contact@ohmytemplate.com",
+        url: "https://ohmt.site",
+        email: "vinus@vinus.co.kr",
         description: "Premium Next.js web templates for brands, agencies, and creators. Fully customized by our team in 2 days.",
         sameAs: [],
       },
@@ -144,15 +144,15 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
     "@type": "ItemList",
     name: "Oh My Template — Template Collection",
     description: "Premium Next.js web templates",
-    url: "https://www.ohmt.site/en",
+    url: "https://ohmt.site/en",
     numberOfItems: templates.length,
     itemListElement: templates.map((template, index) => ({
       "@type": "ListItem",
       position: index + 1,
       name: template.name,
       description: template.desc,
-      url: `https://www.ohmt.site${template.url}`,
-      image: template.image ? `https://www.ohmt.site${template.image}` : undefined,
+      url: `https://ohmt.site${template.url}`,
+      image: template.image ? `https://ohmt.site${template.image}` : undefined,
     })),
   };
 
@@ -729,7 +729,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             </Link>
             <div className="flex gap-8 text-xs font-bold text-zinc-400 uppercase tracking-widest dark:text-zinc-500">
               <Link href="/ko" className="hover:text-zinc-950 transition-colors dark:hover:text-zinc-100">Korean</Link>
-              <a href="mailto:contact@ohmytemplate.com" className="hover:text-zinc-950 transition-colors dark:hover:text-zinc-100">Contact</a>
+              <a href="mailto:vinus@vinus.co.kr" className="hover:text-zinc-950 transition-colors dark:hover:text-zinc-100">Contact</a>
               {isAdmin && (
                 <Link href="/admin/templates" className="hover:text-zinc-950 transition-colors dark:hover:text-zinc-100">Admin</Link>
               )}

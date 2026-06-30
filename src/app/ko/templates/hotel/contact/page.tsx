@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState } from "react";
 import { Navbar } from "../_components/Navbar";
@@ -69,7 +69,7 @@ function ContactPageContent() {
                     <Mail className="text-[var(--color-accent)] flex-shrink-0 mt-1" size={18} />
                     <div>
                       <h4 className="font-semibold text-[var(--color-primary)] mb-1">일반 문의 이메일</h4>
-                      <p className="text-[var(--color-text-muted)]">contact@ohmytemplate.com</p>
+                      <p className="text-[var(--color-text-muted)]">vinus@vinus.co.kr</p>
                     </div>
                   </div>
                 </div>

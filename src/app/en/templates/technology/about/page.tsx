@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";

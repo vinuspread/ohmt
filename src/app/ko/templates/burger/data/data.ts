@@ -1,4 +1,4 @@
-﻿export const menuCategories = [
+export const menuCategories = [
   { id: 'sets',     label: '세트 메뉴' },
   { id: 'burger',   label: '버거' },
   { id: 'chicken',  label: '치킨' },

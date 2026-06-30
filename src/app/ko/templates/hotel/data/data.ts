@@ -1,4 +1,4 @@
-﻿export const rooms = [
+export const rooms = [
   {
     id: "deluxe",
     name: "디럭스 룸",

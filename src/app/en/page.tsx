@@ -80,23 +80,31 @@ const fallbackFaqs: FaqItem[] = [
 ];
 
 export const metadata: Metadata = {
-  title: "Oh My Template — Premium Next.js Web Templates",
-  description: "Premium Next.js web templates for brands, agencies, and creators. Fully customized by our team in 2 days.",
+  title: "Premium Website Templates & Custom Web Design | OHMT",
+  description: "OHMT provides premium website templates and custom web design services for brands, businesses, portfolios, shops, magazines, and digital products. Ready in 2 days.",
   alternates: {
-    canonical: "https://www.ohmt.site/en",
+    canonical: "https://ohmt.site/en",
     languages: {
-      en: "https://www.ohmt.site/en",
-      ko: "https://www.ohmt.site/ko",
-      "x-default": "https://www.ohmt.site/en",
+      en: "https://ohmt.site/en",
+      ko: "https://ohmt.site/ko",
+      "x-default": "https://ohmt.site/en",
     },
   },
   openGraph: {
-    title: "Oh My Template — Premium Next.js Web Templates",
-    description: "Premium Next.js web templates for brands, agencies, and creators. Fully customized by our team in 2 days.",
-    url: "https://www.ohmt.site/en",
+    title: "Premium Website Templates & Custom Web Design | OHMT",
+    description: "OHMT provides premium website templates and custom web design services for brands, businesses, portfolios, shops, magazines, and digital products.",
+    url: "https://ohmt.site/en",
+    siteName: "OHMT",
     locale: "en_US",
+    type: "website",
     alternateLocale: ["ko_KR"],
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Oh My Template" }],
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "OHMT — Premium Website Templates" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Premium Website Templates & Custom Web Design | OHMT",
+    description: "Premium website templates and custom web design for brands, businesses, and digital products.",
+    images: ["/og-image.png"],
   },
 };
 

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
@@ -5,6 +6,24 @@ import { Logo } from "@/components/Logo";
 import { createClient } from "@/lib/supabase/server";
 import { ContactForm } from "./_components/ContactForm";
 import type { PackageOption } from "./_components/ContactForm";
+
+export const metadata: Metadata = {
+  title: "문의 & 맞춤형 홈페이지 제작 상담 | OHMT",
+  description: "OHMT에 웹사이트 제작, 템플릿 기반 홈페이지, 맞춤형 개발 등을 문의해주세요. 영업일 기준 1일 이내 답변 드립니다.",
+  alternates: {
+    canonical: "https://ohmt.site/ko/contact",
+    languages: { en: "https://ohmt.site/en/contact" },
+  },
+  openGraph: {
+    title: "문의 & 맞춤형 홈페이지 제작 상담 | OHMT",
+    description: "OHMT에 웹사이트 제작, 템플릿 기반 홈페이지, 맞춤형 개발 등을 문의해주세요.",
+    url: "https://ohmt.site/ko/contact",
+    siteName: "OHMT",
+    locale: "ko_KR",
+    type: "website",
+  },
+  robots: { index: true, follow: true },
+};
 
 interface TemplatePricingPolicy {
   applicable_packages: string[] | null;

@@ -1,0 +1,20 @@
+:root {
+  --bg: #FFFFFF;
+  --bg-alt: #F7F8FA;
+  --surface: #FFFFFF;
+  --accent: #1E3A5F;
+  --accent-light: #2C5282;
+  --accent-soft: #E8EDF3;
+  --text: #1A1A2E;
+  --text-muted: #6B7280;
+  --text-on-accent: #FFFFFF;
+  --border: rgba(0, 0, 0, 0.08);
+  --border-light: rgba(0, 0, 0, 0.04);
+  --font-display: 'Montserrat', sans-serif;
+  --font-body: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}

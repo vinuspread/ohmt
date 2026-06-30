@@ -1,40 +1,84 @@
 import type { MetadataRoute } from "next";
-import { createClient } from "@/lib/supabase/server";
 
-const siteUrl = "https://www.ohmt.site";
+const BASE = "https://ohmt.site";
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const supabase = await createClient();
-  const { data: templates } = await supabase
-    .from("templates")
-    .select("slug, lang, updated_at")
-    .eq("status", "published");
+const TEMPLATE_SLUGS = [
+  "airline",
+  "burger",
+  "car",
+  "coffee",
+  "cosmetic",
+  "dashboard",
+  "docs",
+  "exhibition",
+  "fashion",
+  "furniture",
+  "game",
+  "hotel",
+  "ir",
+  "jewelry",
+  "kids-education",
+  "magazine",
+  "multi-shop",
+  "museum",
+  "newspaper",
+  "portfolio",
+  "sneaker",
+  "spa",
+  "studio",
+  "technology",
+  "wedding",
+  "yoga",
+] as const;
 
-  const templateUrls: MetadataRoute.Sitemap = (templates ?? []).map((template) => ({
-    url: `${siteUrl}/${template.lang}/templates/${template.slug}`,
-    lastModified: template.updated_at ? new Date(template.updated_at) : new Date(),
-    changeFrequency: "monthly" as const,
-    priority: 0.8,
-  }));
+const NOW = new Date();
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const templateUrls: MetadataRoute.Sitemap = TEMPLATE_SLUGS.flatMap((slug) => [
+    {
+      url: `${BASE}/en/templates/${slug}`,
+      lastModified: NOW,
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+    },
+    {
+      url: `${BASE}/ko/templates/${slug}`,
+      lastModified: NOW,
+      changeFrequency: "weekly" as const,
+      priority: 0.7,
+    },
+  ]);
 
   return [
     {
-      url: siteUrl,
-      lastModified: new Date(),
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
-      url: `${siteUrl}/en`,
-      lastModified: new Date(),
+      url: BASE,
+      lastModified: NOW,
       changeFrequency: "weekly",
       priority: 1.0,
     },
     {
-      url: `${siteUrl}/ko`,
-      lastModified: new Date(),
+      url: `${BASE}/en`,
+      lastModified: NOW,
       changeFrequency: "weekly",
       priority: 1.0,
+    },
+    {
+      url: `${BASE}/ko`,
+      lastModified: NOW,
+      changeFrequency: "weekly",
+      priority: 1.0,
+    },
+    {
+      url: `${BASE}/en/contact`,
+      lastModified: NOW,
+      changeFrequency: "monthly",
+      priority: 0.6,
+    },
+    {
+      url: `${BASE}/ko/contact`,
+      lastModified: NOW,
+      changeFrequency: "monthly",
+      priority: 0.6,
     },
     ...templateUrls,
   ];

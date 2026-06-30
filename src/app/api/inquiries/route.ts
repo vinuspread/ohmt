@@ -18,7 +18,11 @@ interface InquiryPostBody {
   attachment?: unknown;
 }
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+let resend: Resend | null = null;
+function getResend() {
+  if (!resend && process.env.RESEND_API_KEY) resend = new Resend(process.env.RESEND_API_KEY);
+  return resend;
+}
 
 const TYPE_LABELS: Record<InquiryType, string> = {
   template: "템플릿 기반 제작",
@@ -194,14 +198,14 @@ export async function POST(request: Request) {
             <div style="background:#f9fafb;border-radius:8px;padding:16px;font-size:14px;color:#111827;line-height:1.6;white-space:pre-wrap">${message.value}</div>
           </div>
           <div style="margin-top:32px;padding-top:24px;border-top:1px solid #e5e7eb;display:flex;align-items:center;justify-content:space-between">
-            <p style="font-size:12px;color:#9ca3af;margin:0">Oh My Template · contact@ohmytemplate.com</p>
-            <a href="https://ohmytemplate.com/admin/orders" style="font-size:12px;font-weight:600;color:#111827;text-decoration:none;background:#f3f4f6;padding:6px 14px;border-radius:6px">관리자 문의 보기 →</a>
+            <p style="font-size:12px;color:#9ca3af;margin:0">Oh My Template · vinus@vinus.co.kr</p>
+            <a href="https://ohmt.site/admin/orders" style="font-size:12px;font-weight:600;color:#111827;text-decoration:none;background:#f3f4f6;padding:6px 14px;border-radius:6px">관리자 문의 보기 →</a>
           </div>
         </div>
       `,
     };
 
-    const { data: emailData, error: emailError } = await resend.emails.send(emailPayload);
+    const { data: emailData, error: emailError } = await getResend()!.emails.send(emailPayload);
     if (emailError) {
       console.error("[Resend] 발송 실패:", JSON.stringify(emailError));
     } else {

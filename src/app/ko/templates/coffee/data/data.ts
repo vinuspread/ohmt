@@ -1,4 +1,4 @@
-﻿export const menuCategories = [
+export const menuCategories = [
   { id: 'all', label: '전체' },
   { id: 'coffee', label: '커피' },
   { id: 'non-coffee', label: '논커피' },
