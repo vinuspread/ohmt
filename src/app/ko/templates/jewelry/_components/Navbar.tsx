@@ -30,10 +30,10 @@ export default function Navbar() {
     : "";
 
   const menuItems = [
-    { name: "而щ젆??, id: "collections", href: "/ko/templates/OHMT002-jewelry/category/collections" },
-    { name: "?멸쾶?댁?癒쇳듃 & ?⑤뵫", id: "engagement", href: "/ko/templates/OHMT002-jewelry/category/engagement" },
-    { name: "?섏씠 二쇱뼹由?, id: "high-jewelry", href: "/ko/templates/OHMT002-jewelry/category/high-jewelry" },
-    { name: "釉뚮옖???ㅻ━?곗?", id: "about", href: "/ko/templates/OHMT002-jewelry/category/about" },
+    { name: "컬렉션", id: "collections", href: "/ko/templates/OHMT002-jewelry/category/collections" },
+    { name: "약혼 & 웨딩", id: "engagement", href: "/ko/templates/OHMT002-jewelry/category/engagement" },
+    { name: "하이 주얼리", id: "high-jewelry", href: "/ko/templates/OHMT002-jewelry/category/high-jewelry" },
+    { name: "브랜드 스토리", id: "about", href: "/ko/templates/OHMT002-jewelry/category/about" },
   ];
 
   return (

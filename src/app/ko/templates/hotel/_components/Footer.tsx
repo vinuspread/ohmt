@@ -12,16 +12,16 @@ export const Footer = () => {
           <div>
             <h3 className="text-2xl font-[var(--font-heading)] font-bold mb-4">OHMT</h3>
             <p className="text-sm text-[var(--color-bg)]/60 leading-relaxed max-w-xs">
-              議곗슜????뀛由? ?쒓컙??硫덉텣 ?댁떇泥? ?꿸낵 諛붾떎媛 留뚮굹??怨녹뿉??紐⑤뱺 ?쒓컙??異붿뼲???⑸땲??
+              고요한 럭셔리, 영원한 안식처. 숲이 바다를 만나는 곳, 모든 순간이 기억이 됩니다.
             </p>
           </div>
 
           <div>
-            <h4 className="text-[11px] font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] mb-5">?곕씫泥?/h4>
+            <h4 className="text-[11px] font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] mb-5">연락처</h4>
             <div className="flex flex-col gap-3 text-sm text-[var(--color-bg)]/70">
               <div className="flex items-center gap-3">
                 <MapPin size={14} strokeWidth={1.2} className="text-[var(--color-accent)] flex-shrink-0" />
-                <span>123 ?덈윭?덊떚 踰좎씠, 肄붿궗臾댁씠, ?쒓뎅</span>
+                <span>123 세레니티 베이, 코사무이, 태국</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={14} strokeWidth={1.2} className="text-[var(--color-accent)] flex-shrink-0" />
@@ -35,12 +35,12 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-[11px] font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] mb-5">諛붾줈媛湲?/h4>
+            <h4 className="text-[11px] font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] mb-5">빠른 링크</h4>
             <div className="flex flex-col gap-2">
-              <Link href="#" className="text-sm text-[var(--color-bg)]/70 hover:text-[var(--color-accent)] transition-colors">媛쒖씤?뺣낫泥섎━諛⑹묠</Link>
-              <Link href="#" className="text-sm text-[var(--color-bg)]/70 hover:text-[var(--color-accent)] transition-colors">?댁슜?쎄?</Link>
-              <Link href="#" className="text-sm text-[var(--color-bg)]/70 hover:text-[var(--color-accent)] transition-colors">梨꾩슜 ?뺣낫</Link>
-              <Link href="#" className="text-sm text-[var(--color-bg)]/70 hover:text-[var(--color-accent)] transition-colors">誘몃뵒???쇳꽣</Link>
+              <Link href="#" className="text-sm text-[var(--color-bg)]/70 hover:text-[var(--color-accent)] transition-colors">개인정보처리방침</Link>
+              <Link href="#" className="text-sm text-[var(--color-bg)]/70 hover:text-[var(--color-accent)] transition-colors">이용약관</Link>
+              <Link href="#" className="text-sm text-[var(--color-bg)]/70 hover:text-[var(--color-accent)] transition-colors">접근성 안내</Link>
+              <Link href="#" className="text-sm text-[var(--color-bg)]/70 hover:text-[var(--color-accent)] transition-colors">쿠키 정책</Link>
             </div>
           </div>
         </div>
