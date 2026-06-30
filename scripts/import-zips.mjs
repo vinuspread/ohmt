@@ -56,12 +56,14 @@ async function processZip(zipFile) {
     console.error(`  ✗ theme.json 파싱 실패 (인코딩 오류): ${zipFile}`);
     return;
   }
-  const slug = themeJson.slug;
-
   // Derive the full template directory prefix in the zip
-  // e.g. "src/app/en/templates/OHMT001-fashion/theme.json" → prefix = "src/app/en/templates/OHMT001-fashion/"
+  // e.g. "src/app/en/templates/OHMT011-ir/theme.json" → prefix = "src/app/en/templates/OHMT011-ir/"
   const themeEntryPath = themeEntry.entryName.replace(/\\/g, "/");
   const zipFolderPrefix = themeEntryPath.slice(0, themeEntryPath.lastIndexOf("/") + 1);
+
+  // Use zip folder name as slug (e.g. "OHMT011-ir"), not theme.json slug
+  const zipFolderName = zipFolderPrefix.split("/").filter(Boolean).pop();
+  const slug = zipFolderName;
 
   let fileCount = 0;
 
@@ -76,10 +78,9 @@ async function processZip(zipFile) {
     if (entryPath.startsWith(zipFolderPrefix)) {
       const relPath = entryPath.slice(zipFolderPrefix.length);
       targetPath = path.join(PROJECT_DIR, `src/app/${lang}/templates/${slug}`, relPath);
-    } else if (lang === "en" && entryPath.startsWith(`public/templates/${slug}/`)) {
+    } else if (entryPath.startsWith("public/templates/")) {
       targetPath = path.join(PROJECT_DIR, entryPath);
     } else {
-      // Fallback: If it doesn't start with zipFolderPrefix but we want it
       continue;
     }
 
