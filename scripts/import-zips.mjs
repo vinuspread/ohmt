@@ -26,8 +26,14 @@ async function processZip(zipFile) {
   const templateKey = extractTemplateKey(zipFile);
   const zipPath = path.join(ZIPS_DIR, zipFile);
 
-  const zip = new AdmZip(zipPath);
-  const entries = zip.getEntries();
+  let zip, entries;
+  try {
+    zip = new AdmZip(zipPath);
+    entries = zip.getEntries();
+  } catch (e) {
+    console.error(`  ✗ zip 열기 실패: ${e.message}`);
+    return;
+  }
 
   // Find theme.json to get slug
   const templatePrefix = `src/app/${lang}/templates/`;
@@ -41,7 +47,13 @@ async function processZip(zipFile) {
     return;
   }
 
-  const themeJson = JSON.parse(themeEntry.getData().toString("utf-8"));
+  let themeJson;
+  try {
+    themeJson = JSON.parse(themeEntry.getData().toString("utf-8"));
+  } catch (e) {
+    console.error(`  ✗ theme.json 파싱 실패 (인코딩 오류): ${zipFile}`);
+    return;
+  }
   const slug = themeJson.slug;
 
   // Derive the zip folder name (e.g., OHMT018-burger-EN)
