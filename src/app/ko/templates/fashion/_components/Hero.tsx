@@ -35,12 +35,14 @@ export const Hero = () => {
             2026년 설립
           </span>
           <h1 className="text-2xl sm:text-[3vw] md:text-[2.4vw] font-normal tracking-[-0.04em] leading-[1.2] mb-8 sm:mb-16 drop-shadow-2xl" style={{ fontFamily: "'Bodoni Moda', 'Nanum Myeongjo', 'Bodoni MT', 'Didot', serif" }}>
-            <span className="block sm:whitespace-nowrap font-normal">처음 입는 순간부터, 당신의 것이 됩니다</span>
-            <span className="block sm:whitespace-nowrap font-bold">완벽함은 디테일 안에 있다</span>
+            <span className="block sm:whitespace-nowrap font-normal">처음 입는 순간부터 온전히 당신의 것</span>
+            <span className="block sm:whitespace-nowrap font-bold">완벽함을 완성하는 디테일</span>
           </h1>
 
-          <p className="text-[1rem] sm:text-[1.1rem] text-white/75 max-w-[580px] leading-[1.7] mb-8 sm:mb-16 font-normal drop-shadow-lg" style={{ fontFamily: "'Pretendard', sans-serif" }}>
-            일시적인 트렌드를 따르기보다 당신의 감성과 개성을 온전히 표현하는 패션. 세련되고 개인적인 스타일을 추구하는 사람들을 위한 컬렉션입니다.
+          <p className="text-[1rem] sm:text-[1.1rem] text-white/75 max-w-[580px] mx-auto text-center leading-[1.7] mb-8 sm:mb-16 font-normal drop-shadow-lg" style={{ fontFamily: "'Pretendard', sans-serif" }}>
+            일시적인 트렌드를 따르기보다 당신의 감성과 개성을 온전히 표현하는 패션.
+            <br />
+            세련되고 개인적인 스타일을 추구하는 사람들을 위한 컬렉션입니다.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
