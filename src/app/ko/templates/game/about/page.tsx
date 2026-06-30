@@ -1,16 +1,16 @@
-﻿"use client";
+"use client";
 
 import { motion } from "motion/react";
 import Navbar from "../_components/Navbar";
 import Footer from "../_components/Footer";
-import { awards } from "@/app/ko/templates/OHMT023-game-KO/data/data";
+import { awards } from "@/app/ko/templates/OHMT023-game/data/data";
 import { Quote } from "lucide-react";
 
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 
 const timeline = [
-  { year: "2018", event: "Oh My Template, 텍사스 오스틴에서 5명의 팀으로 설립" },
+  { year: "2018", event: "OHMT, 텍사스 오스틴에서 5명의 팀으로 설립" },
   { year: "2019", event: "시드 펀딩 확보, 첫 번째 타이틀 개발 시작" },
   { year: "2020", event: "40명으로 팀 확장, 섀도우 렐름 개발 발표" },
   { year: "2021", event: "캐나다 몬트리얼에 두 번째 스튜디오 오픈" },
@@ -87,7 +87,7 @@ export default function AboutPage() {
                     <Quote size={18} />
                   </div>
                   <h3 className="font-[var(--font-heading)] text-sm font-bold">{award.name}</h3>
-                  <p className="mt-1 text-xs text-[var(--color-text-muted)]">{award.category}</p>
+                  <p className="mt-1 text-sm text-[var(--color-text-muted)]">{award.category}</p>
                   <span className="mt-2 block text-xs text-[var(--color-accent)]">{award.year}년</span>
                 </motion.div>
               ))}

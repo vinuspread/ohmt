@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 
-const images = ["/templates/spa/difference-01.jpg", "/templates/spa/difference-02.jpg", "/templates/spa/difference-03.jpg"];
+const images = ["/templates/OHMT026-spa/difference-01.jpg", "/templates/OHMT026-spa/difference-02.jpg", "/templates/OHMT026-spa/difference-03.jpg"];
 
 export default function OurDifference() {
   const reduce = useReducedMotion();

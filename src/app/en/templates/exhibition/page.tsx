@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState, useRef } from 'react';
 import Link from 'next/link';
@@ -14,7 +14,7 @@ const easeOut = [0.23, 1, 0.32, 1] as const;
 
 type Tab = 'on-show' | 'opening-soon' | 'permanent';
 
-const mosaicImages = Array.from({ length: 9 }, (_, i) => `/templates/exhibition/mosaic-0${i + 1}.jpg`);
+const mosaicImages = Array.from({ length: 9 }, (_, i) => `/templates/OHMT003-exhibition/mosaic-0${i + 1}.jpg`);
 
 const events = [
   {
@@ -23,7 +23,7 @@ const events = [
     time: '15:00',
     type: 'Artist Talk',
     ageRating: '18+',
-    image: '/templates/exhibition/event-01.jpg',
+    image: '/templates/OHMT003-exhibition/event-01.jpg',
   },
   {
     title: 'Drawing Workshop',
@@ -31,7 +31,7 @@ const events = [
     time: '10:00',
     type: 'Workshop',
     ageRating: '12+',
-    image: '/templates/exhibition/event-02.jpg',
+    image: '/templates/OHMT003-exhibition/event-02.jpg',
   },
   {
     title: 'Curator Tour: Echoes of Form',
@@ -39,7 +39,7 @@ const events = [
     time: '14:00',
     type: 'Tour',
     ageRating: 'All',
-    image: '/templates/exhibition/event-01.jpg',
+    image: '/templates/OHMT003-exhibition/event-01.jpg',
   },
   {
     title: 'Performance: Bodies in Space',
@@ -47,7 +47,7 @@ const events = [
     time: '19:30',
     type: 'Performance',
     ageRating: '16+',
-    image: '/templates/exhibition/event-02.jpg',
+    image: '/templates/OHMT003-exhibition/event-02.jpg',
   },
 ];
 
@@ -76,13 +76,13 @@ export default function HomePage() {
               letterSpacing: '-0.04em',
             }}
           >
-            Oh My Template
+            OHMT
           </h1>
 
           <div className="flex-1 grid md:grid-cols-2 gap-12 mt-12">
             <div className="aspect-[3/4] overflow-hidden">
               <img
-                src="/templates/exhibition/hero-left.jpg"
+                src="/templates/OHMT003-exhibition/hero-left.jpg"
                 alt=""
                 className="w-full h-full object-cover"
               />
@@ -102,13 +102,13 @@ export default function HomePage() {
                 </h2>
                 <div className="mt-10 aspect-[3/4] overflow-hidden md:hidden">
                   <img
-                    src="/templates/exhibition/hero-right.jpg"
+                    src="/templates/OHMT003-exhibition/hero-right.jpg"
                     alt=""
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <Link
-                  href="/en/templates/OHMT003-exhibition-EN/contact"
+                  href="/en/templates/OHMT003-exhibition/contact"
                   className="relative overflow-hidden group inline-flex px-8 py-4 border border-black mt-10"
                 >
                   <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
@@ -120,7 +120,7 @@ export default function HomePage() {
 
               <div className="hidden md:block w-[70%] aspect-[3/4] overflow-hidden self-end">
                 <img
-                  src="/templates/exhibition/hero-right.jpg"
+                  src="/templates/OHMT003-exhibition/hero-right.jpg"
                   alt=""
                   className="w-full h-full object-cover"
                 />
@@ -234,7 +234,7 @@ export default function HomePage() {
                 {exhibitions.length} exhibitions
               </p>
               <Link
-                href="/en/templates/OHMT003-exhibition-EN/exhibitions"
+                href="/en/templates/OHMT003-exhibition/exhibitions"
                 className="text-[11px] font-body font-semibold uppercase tracking-[0.12em] text-black border-b border-black pb-0.5 hover:opacity-60 transition-opacity"
               >
                 Explore All
@@ -344,7 +344,7 @@ export default function HomePage() {
 
           <div className="mt-16">
             <Link
-              href="/en/templates/OHMT003-exhibition-EN/events"
+              href="/en/templates/OHMT003-exhibition/events"
               className="text-[11px] font-body font-semibold uppercase tracking-[0.12em] text-black border-b border-black pb-0.5 hover:opacity-60 transition-opacity"
             >
               View All Events

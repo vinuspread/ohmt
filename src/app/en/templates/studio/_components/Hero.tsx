@@ -14,7 +14,7 @@ export function Hero() {
         loop
         playsInline
       >
-        <source src="/templates/studio/hero-bg.mp4" type="video/mp4" />
+        <source src="/templates/OHMT006-studio/hero-bg.mp4" type="video/mp4" />
       </video>
 
       {/* Main Content Layer */}

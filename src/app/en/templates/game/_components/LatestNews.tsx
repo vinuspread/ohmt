@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import NewsCard from "./ui/NewsCard";
-import { news } from "@/app/en/templates/OHMT023-game-EN/data/data";
+import { news } from "@/app/en/templates/OHMT023-game/data/data";
 import { ArrowRight } from "lucide-react";
 
 export default function LatestNews() {
@@ -26,7 +26,7 @@ export default function LatestNews() {
             </h2>
           </div>
           <Link
-            href="/en/templates/OHMT023-game-EN/news"
+            href="/en/templates/OHMT023-game/news"
             className="group hidden items-center gap-2 text-sm font-medium text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-primary)] md:flex"
           >
             All News
@@ -42,7 +42,7 @@ export default function LatestNews() {
 
         <div className="mt-10 text-center md:hidden">
           <Link
-            href="/en/templates/OHMT023-game-EN/news"
+            href="/en/templates/OHMT023-game/news"
             className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-primary)]"
           >
             All News

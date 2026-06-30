@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import { motion } from "motion/react";
 import { Header } from "../_components/Header";
@@ -19,7 +19,7 @@ function LocationsPageContent() {
         {/* Hero */}
         <section className="relative bg-[var(--color-bg-dark)] h-[350px] flex items-center overflow-hidden">
           <img
-            src="/templates/coffee/location-seongsu.jpg"
+            src="/templates/OHMT019-coffee/location-seongsu.jpg"
             alt="Locations sub visual"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -90,7 +90,7 @@ function LocationsPageContent() {
             <div className="text-center mb-12">
               <p className="text-[10px] uppercase tracking-[0.25em] text-[var(--color-text-muted)] mb-3">Partnership</p>
               <h2 className="text-3xl font-bold font-heading mb-4 text-[var(--color-text)]">Franchise Inquiry</h2>
-              <p className="text-sm text-[var(--color-text-muted)]">We invite partners to create a unique coffee culture with the Oh My Template brand.</p>
+              <p className="text-sm text-[var(--color-text-muted)]">We invite partners to create a unique coffee culture with the OHMT brand.</p>
             </div>
             <form onSubmit={(e) => { e.preventDefault(); alert("Inquiry submitted successfully! A representative will contact you soon."); }} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

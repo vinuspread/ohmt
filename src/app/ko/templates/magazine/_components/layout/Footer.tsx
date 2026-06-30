@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT012-magazine-KO/-components/layout/Footer.tsx
+﻿// src/app/ko/templates/OHMT012-magazine/-components/layout/Footer.tsx
 "use client";
 
 import React from "react";
@@ -11,7 +11,7 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-start gap-10 mb-10 md:mb-16">
           <div className="max-w-[320px]">
             <Link 
-              href="/ko/templates/OHMT012-magazine-KO" 
+              href="/ko/templates/OHMT012-magazine" 
               className="font-[family-name:var(--theme-font-heading)] text-[1.6rem] tracking-[0.12em] uppercase text-[var(--theme-text)] mb-6 block"
             >
               VINUSPREAD
@@ -51,7 +51,7 @@ export const Footer = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-[var(--theme-border)] gap-6">
           <span className="text-[0.7rem] text-[var(--theme-text-muted)] uppercase tracking-widest font-medium">
-            © 2026 VINUSPREAD Magazine. 모던 에스테트를 위해 제작되었습니다.
+            © 2026 Oh My Template.
           </span>
           <div className="flex gap-8">
             {["개인정보", "이용약관", "쿠키"].map(item => (

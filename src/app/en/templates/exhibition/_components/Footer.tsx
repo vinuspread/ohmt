@@ -1,10 +1,10 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 
 const navLinks = [
-  { href: '/en/templates/OHMT003-exhibition-EN/about', label: 'About' },
-  { href: '/en/templates/OHMT003-exhibition-EN/exhibitions', label: 'Exhibitions' },
-  { href: '/en/templates/OHMT003-exhibition-EN/events', label: 'Events' },
-  { href: '/en/templates/OHMT003-exhibition-EN/contact', label: 'Contact' },
+  { href: '/en/templates/OHMT003-exhibition/about', label: 'About' },
+  { href: '/en/templates/OHMT003-exhibition/exhibitions', label: 'Exhibitions' },
+  { href: '/en/templates/OHMT003-exhibition/events', label: 'Events' },
+  { href: '/en/templates/OHMT003-exhibition/contact', label: 'Contact' },
 ];
 
 export const Footer = () => {
@@ -26,7 +26,7 @@ export const Footer = () => {
         <div className="border-t border-white/15 mt-12" />
 
         <div className="flex justify-between items-center mt-8">
-          <p className="text-[11px] text-white/40">&copy; 2026 Oh My Template.</p>
+          <p className="text-[14px] text-white/40">&copy; 2026 OHMT.</p>
           <div className="flex items-center gap-4">
             <a href="#" className="text-white/40 hover:text-white transition-colors" aria-label="Instagram">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">

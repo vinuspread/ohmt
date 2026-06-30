@@ -31,7 +31,7 @@ export default function ServiceFull() {
                   <div className="p-6">
                     <h2 className="font-[family-name:var(--font-heading)] text-lg font-bold tracking-tight text-[var(--color-text)]">{service.title}</h2>
                     <p className="mt-2 text-sm text-[var(--color-text-muted)] leading-relaxed">{service.description}</p>
-                    <a href="/ko/templates/OHMT026-spa-KO/contact" className="mt-5 inline-flex items-center text-sm font-semibold text-[var(--color-primary)] hover:underline">예약하기 →</a>
+                    <a href="/ko/templates/OHMT026-spa/contact" className="mt-5 inline-flex items-center text-sm font-semibold text-[var(--color-primary)] hover:underline">예약하기 →</a>
                   </div>
                 </motion.div>
               ))}

@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture-EN/_components/sections/About.tsx
+// src/app/en/templates/OHMT027-architecture/_components/sections/About.tsx
 "use client";
 import React from "react";
 import { ScrollReveal } from "../ui/ScrollReveal";
@@ -21,9 +21,9 @@ export function About() {
     <section className="bg-white py-24 lg:py-32 border-b border-[var(--color-border)]">
       <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20">
         <ScrollReveal>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-20 items-start">
-            {/* Left: Stats */}
-            <div className="flex flex-col gap-10">
+          <div className="grid grid-cols-12 gap-8 items-start">
+            {/* Left: Stats — col 1–4 */}
+            <div className="col-span-12 lg:col-span-4 flex flex-col gap-10">
               {stats.map((stat, index) => (
                 <div key={index} className="flex flex-col border-b border-[var(--color-border)] pb-6 last:border-b-0 last:pb-0">
                   <span className="font-heading font-normal text-[64px] lg:text-[80px] leading-none text-[var(--color-text)]">
@@ -36,8 +36,8 @@ export function About() {
               ))}
             </div>
 
-            {/* Right: Brand Philosophy */}
-            <div className="lg:col-span-2 space-y-8 lg:pt-4">
+            {/* Right: Brand Philosophy — col 5–12 */}
+            <div className="col-span-12 lg:col-span-8 space-y-8 lg:pt-4">
               <h2 className="font-heading font-normal text-[26px] md:text-[32px] lg:text-[36px] leading-[1.4] text-[var(--color-text)]">
                 We believe that space has the power to transform the way people live. Our work converges precision craftsmanship with organic spatial dialogue.
               </h2>

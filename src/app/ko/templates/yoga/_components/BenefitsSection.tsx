@@ -1,10 +1,10 @@
 ﻿import Link from "next/link";
 
 const PANELS = [
-  { image: "/templates/yoga/class-vinyasa.jpg", label: "비니아사 플로우", sub: "다이나믹 무브먼트", href: "/ko/templates/OHMT022-yoga-KO/classes/vinyasa-flow" },
-  { image: "/templates/yoga/class-hatha.jpg", label: "하타 요가", sub: "고요함과 호흡", href: "/ko/templates/OHMT022-yoga-KO/classes/hatha-yoga" },
-  { image: "/templates/yoga/class-meditation.jpg", label: "명상", sub: "내면의 고요", href: "/ko/templates/OHMT022-yoga-KO/classes/meditation" },
-  { image: "/templates/yoga/class-pilates.jpg", label: "필라테스", sub: "코어 & 정렬", href: "/ko/templates/OHMT022-yoga-KO/classes/pilates" },
+  { image: "/templates/OHMT022-yoga/class-vinyasa.jpg", label: "비니아사 플로우", sub: "다이나믹 무브먼트", href: "/ko/templates/OHMT022-yoga/classes/vinyasa-flow" },
+  { image: "/templates/OHMT022-yoga/class-hatha.jpg", label: "하타 요가", sub: "고요함과 호흡", href: "/ko/templates/OHMT022-yoga/classes/hatha-yoga" },
+  { image: "/templates/OHMT022-yoga/class-meditation.jpg", label: "명상", sub: "내면의 고요", href: "/ko/templates/OHMT022-yoga/classes/meditation" },
+  { image: "/templates/OHMT022-yoga/class-pilates.jpg", label: "필라테스", sub: "코어 & 정렬", href: "/ko/templates/OHMT022-yoga/classes/pilates" },
 ];
 
 export default function BenefitsSection() {
@@ -20,7 +20,7 @@ export default function BenefitsSection() {
           넘어선 요가
         </h2>
         <Link
-          href="/ko/templates/OHMT022-yoga-KO/classes"
+          href="/ko/templates/OHMT022-yoga/classes"
           className="hidden md:inline-flex items-center gap-2 text-[13px] tracking-[0.15em] text-[var(--color-text)] hover:text-[var(--color-text-muted)] group transition-colors font-medium"
           style={{ fontFamily: "var(--font-body)" }}
         >
@@ -62,7 +62,7 @@ export default function BenefitsSection() {
                 {panel.label}
               </p>
               <p
-                className="text-[13px] text-white/65 mt-2"
+                className="text-[15px] text-white/65 mt-2"
                 style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
               >
                 {panel.sub}

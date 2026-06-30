@@ -15,7 +15,7 @@ function ScheduleContent() {
       <PageHeader
         title="Book a Class"
         subtitle="Plan your week and find the class that fits your rhythm."
-        image="/templates/yoga/subpage-schedule.jpg"
+        image="/templates/OHMT022-yoga/subpage-schedule.jpg"
       />
 
       <section className="bg-[var(--color-bg)] border-b border-[var(--color-border)]">
@@ -29,7 +29,7 @@ function ScheduleContent() {
             {SCHEDULE.reduce((acc, d) => acc + d.classes.length, 0)} Classes
           </h2>
           <p
-            className="hidden md:block text-[12px] text-[var(--color-text-muted)]"
+            className="hidden md:block text-[14px] text-[var(--color-text-muted)]"
             style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
           >
             Schedule subject to change
@@ -61,7 +61,7 @@ function ScheduleContent() {
                 {day.classes.map((cls, idx) => (
                   <Link
                     key={idx}
-                    href={`/en/templates/OHMT022-yoga-EN/classes/${cls.slug}`}
+                    href={`/en/templates/OHMT022-yoga/classes/${cls.slug}`}
                     className="group flex flex-col px-6 py-6 hover:bg-[var(--color-bg-alt)] transition-colors"
                   >
                     <p
@@ -77,7 +77,7 @@ function ScheduleContent() {
                       {cls.name}
                     </p>
                     <p
-                      className="mt-1.5 text-[12px] text-[var(--color-text-muted)]"
+                      className="mt-1.5 text-[14px] text-[var(--color-text-muted)]"
                       style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
                     >
                       {cls.instructor}

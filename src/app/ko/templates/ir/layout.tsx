@@ -1,28 +1,28 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "투자자 관계 - Oh My Template",
+  title: "OHMT - 투자자 관계",
   description: "기업 전략 및 재무 성과",
   openGraph: {
-    title: "투자자 관계 - Oh My Template",
+    title: "OHMT - 투자자 관계",
     description: "기업 전략 및 재무 성과",
-    url: "https://ohmytemplate.com/ko/templates/OHMT011-ir-KO",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/ir/og-image.jpg", width: 1200, height: 630 }],
+    url: "https://ohmytemplate.com/ko/templates/OHMT011-ir",
+    siteName: "OHMT",
+    images: [{ url: "/templates/OHMT011-ir/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "투자자 관계 - Oh My Template",
+    title: "OHMT - 투자자 관계",
     description: "기업 전략 및 재무 성과",
-    images: ["/templates/ir/og-image.jpg"],
+    images: ["/templates/OHMT011-ir/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT011-ir-KO",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT011-ir-EN" },
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT011-ir",
+    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT011-ir" },
   },
 };
 

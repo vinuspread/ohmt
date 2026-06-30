@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import './theme.css';
 
@@ -15,27 +15,27 @@ const inter = Inter({
 // Noto Serif KR is loaded via @import for Korean character fallback
 
 export const metadata: Metadata = {
-  title: "Exhibition Website | Oh My Template",
+  title: "OHMT - Exhibition Website",
   description: "Experience the epitome of elegance and durability.",
   openGraph: {
-    title: "Exhibition Website | Oh My Template",
+    title: "OHMT - Exhibition Website",
     description: "Experience the epitome of elegance and durability.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT021-museum-KO",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/museum/og-image.jpg", width: 1200, height: 630 }],
+    url: "https://ohmytemplate.com/ko/templates/OHMT021-museum",
+    siteName: "OHMT",
+    images: [{ url: "/templates/OHMT021-museum/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Exhibition Website | Oh My Template",
+    title: "OHMT - Exhibition Website",
     description: "Experience the epitome of elegance and durability.",
-    images: ["/templates/museum/og-image.jpg"],
+    images: ["/templates/OHMT021-museum/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT021-museum-KO",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT021-museum-EN" },
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT021-museum",
+    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT021-museum" },
   },
 };
 

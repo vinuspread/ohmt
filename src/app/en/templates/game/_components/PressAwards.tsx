@@ -1,7 +1,7 @@
-﻿"use client";
+"use client";
 
 import { motion } from "motion/react";
-import { awards } from "@/app/en/templates/OHMT023-game-EN/data/data";
+import { awards } from "@/app/en/templates/OHMT023-game/data/data";
 import { Quote } from "lucide-react";
 
 export default function PressAwards() {
@@ -9,7 +9,7 @@ export default function PressAwards() {
     <section className="relative py-24 overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="/templates/game/award-bg.jpg"
+          src="/templates/OHMT023-game/award-bg.jpg"
           alt=""
           className="h-full w-full object-cover opacity-30"
         />
@@ -61,7 +61,7 @@ export default function PressAwards() {
         >
           <Quote size={32} className="mx-auto mb-4 text-[var(--color-primary)]" />
           <blockquote className="text-lg leading-relaxed text-[var(--color-text)] md:text-xl">
-            "Oh My Template has redefined what a indie studio can achieve. <span className="text-[var(--color-accent)]">Shadow Realm</span> is a masterclass in world-building and technical ambition."
+            "OHMT has redefined what a indie studio can achieve. <span className="text-[var(--color-accent)]">Shadow Realm</span> is a masterclass in world-building and technical ambition."
           </blockquote>
           <p className="mt-4 text-sm text-[var(--color-text-muted)]">
             - Game Informer, Editor's Choice

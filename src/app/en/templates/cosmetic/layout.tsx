@@ -1,28 +1,28 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "Cosmetic - Oh My Template",
+  title: "OHMT - Cosmetic",
   description: "Premium beauty & cosmetic brand showcase",
   openGraph: {
-    title: "Cosmetic - Oh My Template",
+    title: "OHMT - Cosmetic",
     description: "Premium beauty & cosmetic brand showcase",
-    url: "https://ohmytemplate.com/en/templates/OHMT010-cosmetic-EN",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/cosmetic/og-image.jpg", width: 1200, height: 630 }],
+    url: "https://ohmytemplate.com/en/templates/OHMT010-cosmetic",
+    siteName: "OHMT",
+    images: [{ url: "/templates/OHMT010-cosmetic/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Cosmetic - Oh My Template",
+    title: "OHMT - Cosmetic",
     description: "Premium beauty & cosmetic brand showcase",
-    images: ["/templates/cosmetic/og-image.jpg"],
+    images: ["/templates/OHMT010-cosmetic/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT010-cosmetic-EN",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT010-cosmetic-KO" },
+    canonical: "https://ohmytemplate.com/en/templates/OHMT010-cosmetic",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT010-cosmetic" },
   },
 };
 

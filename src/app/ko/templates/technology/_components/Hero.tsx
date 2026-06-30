@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import Link from 'next/link'
 
@@ -26,8 +26,8 @@ export default function Hero() {
         {/* Image fills remaining space */}
         <div className="flex-1 overflow-hidden">
           <img
-            src="/templates/technology/hero-clean-robot.png?v=3"
-            alt="Oh My Template 자동화 로봇"
+            src="/templates/OHMT016-technology/hero-clean-robot.png?v=3"
+            alt="OHMT 자동화 로봇"
             className="w-full h-full object-cover"
             style={{ objectPosition: '60% top' }}
           />
@@ -58,8 +58,8 @@ export default function Hero() {
         />
         {/* Robot background */}
         <div
-          className="absolute inset-0 z-0 bg-no-repeat pointer-events-none bg-[position:right_bottom] bg-[length:auto_100%] -translate-x-[400px]"
-          style={{ backgroundImage: "url('/templates/technology/hero-clean-robot.png?v=3')" }}
+          className="absolute inset-0 z-0 bg-no-repeat pointer-events-none bg-[position:right_bottom] bg-[length:auto_100%] lg:-translate-x-[50px] xl:-translate-x-[200px] 2xl:-translate-x-[300px] transition-transform duration-300"
+          style={{ backgroundImage: "url('/templates/OHMT016-technology/hero-clean-robot.png?v=3')" }}
         />
         <div className="relative z-10 mx-auto max-w-7xl px-6 w-full">
           <div className="w-1/2 flex flex-col items-start pr-8">

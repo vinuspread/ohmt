@@ -101,7 +101,7 @@ const [index, setIndex] = useState(0);
     {
       id: 1,
       name: "Sculptural Lounge Chair",
-      image: "/templates/furniture/chair.png",
+      image: "/templates/OHMT004-furniture/chair.png",
       subtitle: t.hero.items.item1.subtitle,
       titleLine1: t.hero.items.item1.title1,
       titleLine2: t.hero.items.item1.title2,
@@ -110,7 +110,7 @@ const [index, setIndex] = useState(0);
     {
       id: 2,
       name: "Architectural Table Lamp",
-      image: "/templates/furniture/lamp.png",
+      image: "/templates/OHMT004-furniture/lamp.png",
       subtitle: t.hero.items.item2.subtitle,
       titleLine1: t.hero.items.item2.title1,
       titleLine2: t.hero.items.item2.title2,
@@ -119,7 +119,7 @@ const [index, setIndex] = useState(0);
     {
       id: 3,
       name: "Minimalist Solid Oak Sofa",
-      image: "/templates/furniture/sofa.png",
+      image: "/templates/OHMT004-furniture/sofa.png",
       subtitle: t.hero.items.item3.subtitle,
       titleLine1: t.hero.items.item3.title1,
       titleLine2: t.hero.items.item3.title2,
@@ -157,7 +157,7 @@ const [index, setIndex] = useState(0);
               <h1 className="text-[clamp(1.8rem,5vw,3rem)] lg:text-[clamp(2.5rem,6vw,6rem)] font-bold text-[var(--color-text)] leading-[1.1] mb-3 md:mb-8 uppercase">
                 {current.titleLine1}<br />{current.titleLine2}
               </h1>
-              <p className="text-[13px] md:text-[17px] text-[var(--color-secondary)] font-medium leading-[1.4] max-w-lg mb-5 md:mb-10 hidden sm:block">
+              <p className="text-[15px] md:text-[17px] text-[var(--color-secondary)] font-medium leading-[1.4] max-w-lg mb-5 md:mb-10 hidden sm:block">
                 {current.desc}
               </p>
 
@@ -318,14 +318,14 @@ export const CategoryNav = () => {
   }
 };
 const categories = [
-    { name: "Sofas",           image: "/templates/furniture/sofa.png",       id: "sofas" },
-    { name: "Bedroom",         image: "/templates/furniture/bed.png",        id: "bedroom" },
-    { name: "Dining",          image: "/templates/furniture/table.png",      id: "dining" },
-    { name: "Home Office",     image: "/templates/furniture/desk.png",       id: "home-office" },
-    { name: "Chairs",          image: "/templates/furniture/chair.png",      id: "chairs" },
-    { name: "Lighting",        image: "/templates/furniture/lamp.png",       id: "lighting" },
-    { name: "Living",          image: "/templates/furniture/sidetable.png",  id: "living" },
-    { name: "Storage",         image: "/templates/furniture/wardrobe.png",   id: "storage" },
+    { name: "Sofas",           image: "/templates/OHMT004-furniture/sofa.png",       id: "sofas" },
+    { name: "Bedroom",         image: "/templates/OHMT004-furniture/bed.png",        id: "bedroom" },
+    { name: "Dining",          image: "/templates/OHMT004-furniture/table.png",      id: "dining" },
+    { name: "Home Office",     image: "/templates/OHMT004-furniture/desk.png",       id: "home-office" },
+    { name: "Chairs",          image: "/templates/OHMT004-furniture/chair.png",      id: "chairs" },
+    { name: "Lighting",        image: "/templates/OHMT004-furniture/lamp.png",       id: "lighting" },
+    { name: "Living",          image: "/templates/OHMT004-furniture/sidetable.png",  id: "living" },
+    { name: "Storage",         image: "/templates/OHMT004-furniture/wardrobe.png",   id: "storage" },
   ];
 
   return (
@@ -338,7 +338,7 @@ const categories = [
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 lg:grid-cols-8 gap-4 md:gap-6">
           {categories.map((cat, i) => (
-            <Link key={i} href={`/en/templates/OHMT004-furniture-EN/category/${cat.id}`}>
+            <Link key={i} href={`/en/templates/OHMT004-furniture/category/${cat.id}`}>
               <motion.div
                 initial={{ opacity: 0, scale: 0.95, y: 8 }}
                 whileInView={{ opacity: 1, scale: 1, y: 0 }}

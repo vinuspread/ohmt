@@ -16,7 +16,7 @@ function ClassesContent() {
       <PageHeader
         title="클래스"
         subtitle="당신의 마음에 울리는 수련을 찾아보세요. 다이내믹한 플로우부터 고요한 명상까지, 모든 레벨을 위한 다양한 클래스를 제공합니다."
-        image="/templates/yoga/subpage-classes.jpg"
+        image="/templates/OHMT022-yoga/subpage-classes.jpg"
       />
 
       <section className="bg-[var(--color-bg)] border-b border-[var(--color-border)]">
@@ -29,7 +29,7 @@ function ClassesContent() {
             {CLASSES.length}개 클래스
           </h2>
           <Link
-            href="/ko/templates/OHMT022-yoga-KO/schedule"
+            href="/ko/templates/OHMT022-yoga/schedule"
             className="hidden md:inline-flex items-center gap-2 text-[12px] tracking-[0.2em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] font-medium transition-colors"
             style={{ fontFamily: "var(--font-body)" }}
           >

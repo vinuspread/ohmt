@@ -1,16 +1,16 @@
-﻿"use client";
+"use client";
 
 import { motion } from "motion/react";
 import Navbar from "../_components/Navbar";
 import Footer from "../_components/Footer";
-import { awards } from "@/app/en/templates/OHMT023-game-EN/data/data";
+import { awards } from "@/app/en/templates/OHMT023-game/data/data";
 import { Quote } from "lucide-react";
 
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 
 const timeline = [
-  { year: "2018", event: "Oh My Template founded in Austin, TX with a team of 5" },
+  { year: "2018", event: "OHMT founded in Austin, TX with a team of 5" },
   { year: "2019", event: "Secured seed funding and began development of first title" },
   { year: "2020", event: "Grew to 40 team members, announced Shadow Realm" },
   { year: "2021", event: "Opened second studio in Montreal, Canada" },
@@ -88,7 +88,7 @@ export default function AboutPage() {
                     <Quote size={18} />
                   </div>
                   <h3 className="font-[var(--font-heading)] text-sm font-bold">{award.name}</h3>
-                  <p className="mt-1 text-xs text-[var(--color-text-muted)]">{award.category}</p>
+                  <p className="mt-1 text-sm text-[var(--color-text-muted)]">{award.category}</p>
                   <span className="mt-2 block text-xs text-[var(--color-accent)]">{award.year}</span>
                 </motion.div>
               ))}

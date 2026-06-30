@@ -1,28 +1,28 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "Fashion KO - Oh My Template",
+  title: "OHMT - Fashion",
   description: "프리미엄 패션 브랜드 & 에디토리얼 쇼케이스",
   openGraph: {
-    title: "Fashion KO - Oh My Template",
+    title: "OHMT - Fashion",
     description: "프리미엄 패션 브랜드 & 에디토리얼 쇼케이스",
-    url: "https://ohmytemplate.com/ko/templates/OHMT001-fashion-KO",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/fashion/og-image.jpg", width: 1200, height: 630 }],
+    url: "https://ohmytemplate.com/ko/templates/OHMT001-fashion",
+    siteName: "OHMT",
+    images: [{ url: "/templates/OHMT001-fashion/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Fashion KO - Oh My Template",
+    title: "OHMT - Fashion",
     description: "프리미엄 패션 브랜드 & 에디토리얼 쇼케이스",
-    images: ["/templates/fashion/og-image.jpg"],
+    images: ["/templates/OHMT001-fashion/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT001-fashion-KO",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT001-fashion-EN-en" },
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT001-fashion",
+    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT001-fashion" },
   },
 };
 

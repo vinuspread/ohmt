@@ -1,4 +1,4 @@
-﻿// src/app/templates/jewelry/-internal/components/Navbar.tsx
+// src/app/templates/OHMT002-jewelry/-internal/components/Navbar.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -17,7 +17,7 @@ export default function Navbar() {
     "about": `About`
   },
   "hero": {
-    "badge": `Oh My Template Fine Jewelry`,
+    "badge": `OHMT Fine Jewelry`,
     "title1": `The Radiance`,
     "title2": `of Forever`,
     "cta1": `Explore The Edition`,
@@ -48,11 +48,11 @@ export default function Navbar() {
   },
   "craftsmanship": {
     "badge": `Artisan Technique`,
-    "quote": `Every facet is a dialogue between light and stone, hand-polished to achieve Oh My Template's signature brilliance.`,
+    "quote": `Every facet is a dialogue between light and stone, hand-polished to achieve OHMT's signature brilliance.`,
     "heritage": `The Heritage`,
     "title1": `Hand-Set`,
     "title2": `With Soul`,
-    "desc": `At Oh My Template, we believe a jewel is more than a material; it is a silent observer of life's most precious moments. Our artisans spend hundreds of hours perfecting a single setting.`,
+    "desc": `At OHMT, we believe a jewel is more than a material; it is a silent observer of life's most precious moments. Our artisans spend hundreds of hours perfecting a single setting.`,
     "process": `Discover The Process`
   }
 };
@@ -73,15 +73,15 @@ const [scrolled, setScrolled] = useState(false);
   const isTransparent = (isHome || isCategoryPage) && !scrolled;
 
   // Derive current category ID if on subpage
-  const currentCategory = pathname.includes("/templates/jewelry/category/")
-    ? pathname.split("/templates/jewelry/category/")[1]
+  const currentCategory = pathname.includes("/templates/OHMT002-jewelry/category/")
+    ? pathname.split("/templates/OHMT002-jewelry/category/")[1]
     : "";
 
   const menuItems = [
-    { name: t.nav.collections, id: "collections", href: `/en/templates/OHMT002-jewelry-EN/category/collections` },
-    { name: t.nav.engagement, id: "engagement", href: `/en/templates/OHMT002-jewelry-EN/category/engagement` },
-    { name: t.nav.highJewelry, id: "high-jewelry", href: `/en/templates/OHMT002-jewelry-EN/category/high-jewelry` },
-    { name: t.nav.about, id: "about", href: `/en/templates/OHMT002-jewelry-EN/category/about` },
+    { name: t.nav.collections, id: "collections", href: `/en/templates/OHMT002-jewelry/category/collections` },
+    { name: t.nav.engagement, id: "engagement", href: `/en/templates/OHMT002-jewelry/category/engagement` },
+    { name: t.nav.highJewelry, id: "high-jewelry", href: `/en/templates/OHMT002-jewelry/category/high-jewelry` },
+    { name: t.nav.about, id: "about", href: `/en/templates/OHMT002-jewelry/category/about` },
   ];
 
   return (
@@ -136,12 +136,12 @@ const [scrolled, setScrolled] = useState(false);
           {/* Center Logo */}
           <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center pointer-events-none">
             <Link
-              href={`/en/templates/OHMT002-jewelry-EN`}
+              href={`/en/templates/OHMT002-jewelry`}
               className={`text-[15px] sm:text-[18px] md:text-2xl font-serif tracking-[0.25em] -mr-[0.25em] font-normal uppercase transition-colors duration-300 pointer-events-auto text-center ${
                 !isTransparent ? "text-neutral-900" : "text-white"
               }`}
             >
-              Oh My Template
+              OHMT
             </Link>
           </div>
 
@@ -187,7 +187,7 @@ const [scrolled, setScrolled] = useState(false);
             <button className="hover:text-[var(--color-primary)] transition-colors hidden sm:block">
               <User size={18} strokeWidth={1.5} />
             </button>
-            <Link href={`/en/templates/OHMT002-jewelry-EN/cart`} className="group flex items-center gap-2 hover:opacity-85 transition-opacity">
+            <Link href={`/en/templates/OHMT002-jewelry/cart`} className="group flex items-center gap-2 hover:opacity-85 transition-opacity">
               <ShoppingBag size={18} strokeWidth={1.5} className="group-hover:text-[var(--color-primary)] transition-colors" />
             </Link>
           </div>
@@ -217,7 +217,7 @@ const [scrolled, setScrolled] = useState(false);
             >
               <div className="space-y-16">
                 <div className="flex justify-between items-center">
-                  <span className="text-sm font-serif tracking-[0.2em] uppercase text-neutral-900">Oh My Template</span>
+                  <span className="text-sm font-serif tracking-[0.2em] uppercase text-neutral-900">OHMT</span>
                   <button onClick={() => setMobileMenuOpen(false)} className="p-2 text-neutral-500 hover:text-neutral-900">
                     <X size={20} />
                   </button>
@@ -244,7 +244,7 @@ const [scrolled, setScrolled] = useState(false);
               </div>
 
               <div className="space-y-6 border-t border-neutral-200/50 pt-8 text-[14px] tracking-[0.2em] text-neutral-400 font-bold uppercase">
-                <p>© 2026 MAISON Oh My Template</p>
+                <p>© 2026 Oh My Template.</p>
                 <div className="flex gap-4">
                   <a href="#" className="hover:text-[var(--color-primary)] transition-colors">Instagram</a>
                   <a href="#" className="hover:text-[var(--color-primary)] transition-colors">Pinterest</a>

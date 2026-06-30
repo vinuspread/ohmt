@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import { Header } from "../_components/Header";
 import { Footer } from "../_components/Footer";
@@ -13,7 +13,7 @@ function AboutPageContent() {
       <main className="antialiased min-h-screen bg-[var(--color-bg)] text-[var(--color-text)]">
         <section className="relative h-[50vh] min-h-[400px] flex items-center justify-center overflow-hidden">
           <img
-            src="/templates/coffee/story-interior.jpg"
+            src="/templates/OHMT019-coffee/story-interior.jpg"
             alt="Coffee shop interior"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -37,7 +37,7 @@ function AboutPageContent() {
                   천천히 즐길<br />가치가 있는 커피.
                 </h2>
                 <p className="text-base leading-relaxed text-[var(--color-text-muted)]">
-                  Oh My Template은 성수동의 작은 커피 카트에서 시작했습니다. 주말 취미 프로젝트로 시작된 이곳은 어느덧 동네의 핫플레이스로 자리잡았습니다. 창립자들은 에티오피아와 콜롬비아의 커피 산지를 수년간 여행하며 품질에 대한 열정을 공유하는 농부들과 관계를 구축했습니다.
+                  OHMT은 성수동의 작은 커피 카트에서 시작했습니다. 주말 취미 프로젝트로 시작된 이곳은 어느덧 동네의 핫플레이스로 자리잡았습니다. 창립자들은 에티오피아와 콜롬비아의 커피 산지를 수년간 여행하며 품질에 대한 열정을 공유하는 농부들과 관계를 구축했습니다.
                 </p>
                 <p className="text-base leading-relaxed text-[var(--color-text-muted)] mt-4">
                   오늘날 우리는 소량 배치로 직접 원두를 로스팅하고, 모든 과정에 담긴 정성이 반영된 커피를 제공합니다. 씨앗에서 한 잔까지, 올바른 방식으로 하는 것이 우리의 신념입니다.
@@ -45,7 +45,7 @@ function AboutPageContent() {
               </div>
               <div className="aspect-[4/3] rounded-2xl overflow-hidden">
                 <img
-                  src="/templates/coffee/hero-drink.jpg"
+                  src="/templates/OHMT019-coffee/hero-drink.jpg"
                   alt="Espresso bar"
                   className="w-full h-full object-cover"
                 />
@@ -90,14 +90,14 @@ function AboutPageContent() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <img
-                  src="/templates/coffee/story-beans.jpg"
+                  src="/templates/OHMT019-coffee/story-beans.jpg"
                   alt="Coffee beans"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <img
-                  src="/templates/coffee/story-brewing.jpg"
+                  src="/templates/OHMT019-coffee/story-brewing.jpg"
                   alt="Coffee brewing"
                   className="w-full h-full object-cover"
                 />

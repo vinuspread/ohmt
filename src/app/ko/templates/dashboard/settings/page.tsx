@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -66,7 +66,7 @@ function APIKeyRow({ name, keyValue, created }: { name: string; keyValue: string
             {visible ? <EyeOff size={14} strokeWidth={1.5} /> : <Eye size={14} strokeWidth={1.5} />}
           </button>
         </div>
-        <p className="text-[10px] text-[var(--color-text-muted)] mt-0.5">생성일 {created}</p>
+        <p className="text-[14px] text-[var(--color-text-muted)] mt-0.5">생성일 {created}</p>
       </div>
       <div className="flex items-center gap-1">
         <button
@@ -105,7 +105,7 @@ function TabContent({ tab }: { tab: SettingsTab }) {
           <h4 className="text-sm font-medium text-[var(--color-text)] border-b border-[var(--color-border)] pb-2">기본 정보</h4>
           <FormInput label="이름" value="Morgan Chen" />
           <FormInput label="이메일" value="morgan@ohmytemplate.io" />
-          <FormInput label="회사" value="Oh My Template" />
+          <FormInput label="회사" value="OHMT" />
           <div>
             <label className="block text-xs font-medium text-[var(--color-text-muted)] mb-1.5">시간대</label>
             <select className="w-full px-3 py-2 text-sm bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-[var(--radius-md)] text-[var(--color-text)] focus:outline-none focus:border-[var(--color-primary-border)] transition-colors">
@@ -195,7 +195,7 @@ function TabContent({ tab }: { tab: SettingsTab }) {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm text-[var(--color-text)]">인증 앱을 통한 2FA</p>
-                <p className="text-xs text-[var(--color-text-muted)]">추가 보안 계층 설정</p>
+                <p className="text-sm text-[var(--color-text-muted)]">추가 보안 계층 설정</p>
               </div>
               <ToggleSwitch checked={false} onChange={() => {}} />
             </div>

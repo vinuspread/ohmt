@@ -23,7 +23,7 @@ export default function PopularServices() {
           {duplicated.map((service, i) => (
             <a
               key={`${service.id}-${i}`}
-              href={`/en/templates/OHMT026-spa-EN/service#${service.id}`}
+              href={`/en/templates/OHMT026-spa/service#${service.id}`}
               className="group w-[280px] shrink-0 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] overflow-hidden hover:-translate-y-1 transition-transform duration-300"
             >
               <div className="h-48 overflow-hidden">

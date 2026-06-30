@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -9,24 +9,24 @@ const menuGroups = [
   {
     label: '메인',
     items: [
-      { label: '대시보드', href: '/ko/templates/OHMT015-dashboard-KO', icon: LayoutDashboard },
-      { label: '분석', href: '/ko/templates/OHMT015-dashboard-KO/analytics', icon: TrendingUp },
-      { label: '리포트', href: '/ko/templates/OHMT015-dashboard-KO/reports', icon: FileText },
+      { label: '대시보드', href: '/ko/templates/OHMT015-dashboard', icon: LayoutDashboard },
+      { label: '분석', href: '/ko/templates/OHMT015-dashboard/analytics', icon: TrendingUp },
+      { label: '리포트', href: '/ko/templates/OHMT015-dashboard/reports', icon: FileText },
     ],
   },
   {
     label: '관리',
     items: [
-      { label: '주문', href: '/ko/templates/OHMT015-dashboard-KO/orders', icon: ShoppingCart },
-      { label: '고객', href: '/ko/templates/OHMT015-dashboard-KO/customers', icon: Users },
-      { label: '캘린더', href: '/ko/templates/OHMT015-dashboard-KO/calendar', icon: Calendar },
+      { label: '주문', href: '/ko/templates/OHMT015-dashboard/orders', icon: ShoppingCart },
+      { label: '고객', href: '/ko/templates/OHMT015-dashboard/customers', icon: Users },
+      { label: '캘린더', href: '/ko/templates/OHMT015-dashboard/calendar', icon: Calendar },
     ],
   },
   {
     label: '계정',
     items: [
-      { label: '설정', href: '/ko/templates/OHMT015-dashboard-KO/settings', icon: Settings },
-      { label: '프로필', href: '/ko/templates/OHMT015-dashboard-KO/profile', icon: UserCircle },
+      { label: '설정', href: '/ko/templates/OHMT015-dashboard/settings', icon: Settings },
+      { label: '프로필', href: '/ko/templates/OHMT015-dashboard/profile', icon: UserCircle },
     ],
   },
 ]
@@ -43,7 +43,7 @@ export function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle:
       <div className="h-16 flex items-center px-4 border-b border-[var(--color-border)]">
         {!collapsed && (
           <span className="text-lg font-[var(--font-heading)] font-semibold text-[var(--color-primary)]">
-            Oh My Template
+            OHMT
           </span>
         )}
       </div>
@@ -98,11 +98,11 @@ export function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle:
       </nav>
 
       <div className={`border-t border-[var(--color-border)] flex items-center ${collapsed ? 'justify-center p-2' : 'gap-3 p-4'}`}>
-        <Avatar name="Morgan Chen" src="/templates/portfolio/portfolio-1.jpg" size="sm" />
+        <Avatar name="Morgan Chen" src="/templates/OHMT007-portfolio/portfolio-1.jpg" size="sm" />
         {!collapsed && (
           <div className="min-w-0">
             <p className="text-sm font-medium text-[var(--color-text)] truncate">Morgan Chen</p>
-            <p className="text-xs text-[var(--color-text-muted)] truncate">morgan@ohmytemplate.io</p>
+            <p className="text-sm text-[var(--color-text-muted)] truncate">morgan@ohmytemplate.io</p>
           </div>
         )}
       </div>

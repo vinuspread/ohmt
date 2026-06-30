@@ -1,4 +1,4 @@
-﻿// src/app/templates/airline/-components/Header.tsx
+// src/app/templates/OHMT008-airline/-components/Header.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -52,8 +52,8 @@ const navItems = [
           : "bg-transparent"
       )}>
         <div className="max-w-[1320px] mx-auto px-6 md:px-10 flex items-center justify-between w-full">
-            <Link href="/ko/templates/OHMT008-airline-KO" className="shrink-0 group">
-            <span className="text-[0.78rem] md:text-[0.82rem] font-bold tracking-[0.15em] uppercase text-white leading-none">Oh My Template</span>
+            <Link href="/ko/templates/OHMT008-airline" className="shrink-0 group">
+            <span className="text-[0.78rem] md:text-[0.82rem] font-bold tracking-[0.15em] uppercase text-white leading-none">OHMT</span>
           </Link>
 
           {/* Desktop GNB */}
@@ -61,7 +61,7 @@ const navItems = [
             {navItems.map((item) => (
               <Link
                 key={item.slug}
-                href={`/ko/templates/OHMT008-airline-KO/${item.slug}`}
+                href={`/ko/templates/OHMT008-airline/${item.slug}`}
                 className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-white/55 hover:text-white transition-colors duration-300 relative group pb-1"
               >
                 {item.name}
@@ -108,7 +108,7 @@ const navItems = [
           {navItems.map((item) => (
             <Link
               key={item.slug}
-              href={`/ko/templates/OHMT008-airline-KO/${item.slug}`}
+              href={`/ko/templates/OHMT008-airline/${item.slug}`}
               onClick={() => setMobileOpen(false)}
               className="text-[0.9rem] font-semibold uppercase tracking-[0.14em] text-white/60 hover:text-white py-4 border-b border-white/10 transition-colors"
             >
@@ -116,7 +116,7 @@ const navItems = [
             </Link>
           ))}
           <Link
-            href="/ko/templates/OHMT008-airline-KO/book"
+            href="/ko/templates/OHMT008-airline/book"
             onClick={() => setMobileOpen(false)}
             className="text-[0.9rem] font-semibold uppercase tracking-[0.14em] text-[var(--color-accent)] hover:text-[var(--color-accent-light)] py-4 border-b border-white/10 transition-colors"
           >

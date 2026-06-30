@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -9,24 +9,24 @@ const menuGroups = [
   {
     label: 'Main',
     items: [
-      { label: 'Dashboard', href: '/en/templates/OHMT015-dashboard-EN', icon: LayoutDashboard },
-      { label: 'Analytics', href: '/en/templates/OHMT015-dashboard-EN/analytics', icon: TrendingUp },
-      { label: 'Reports', href: '/en/templates/OHMT015-dashboard-EN/reports', icon: FileText },
+      { label: 'Dashboard', href: '/en/templates/OHMT015-dashboard', icon: LayoutDashboard },
+      { label: 'Analytics', href: '/en/templates/OHMT015-dashboard/analytics', icon: TrendingUp },
+      { label: 'Reports', href: '/en/templates/OHMT015-dashboard/reports', icon: FileText },
     ],
   },
   {
     label: 'Manage',
     items: [
-      { label: 'Orders', href: '/en/templates/OHMT015-dashboard-EN/orders', icon: ShoppingCart },
-      { label: 'Customers', href: '/en/templates/OHMT015-dashboard-EN/customers', icon: Users },
-      { label: 'Calendar', href: '/en/templates/OHMT015-dashboard-EN/calendar', icon: Calendar },
+      { label: 'Orders', href: '/en/templates/OHMT015-dashboard/orders', icon: ShoppingCart },
+      { label: 'Customers', href: '/en/templates/OHMT015-dashboard/customers', icon: Users },
+      { label: 'Calendar', href: '/en/templates/OHMT015-dashboard/calendar', icon: Calendar },
     ],
   },
   {
     label: 'Account',
     items: [
-      { label: 'Settings', href: '/en/templates/OHMT015-dashboard-EN/settings', icon: Settings },
-      { label: 'Profile', href: '/en/templates/OHMT015-dashboard-EN/profile', icon: UserCircle },
+      { label: 'Settings', href: '/en/templates/OHMT015-dashboard/settings', icon: Settings },
+      { label: 'Profile', href: '/en/templates/OHMT015-dashboard/profile', icon: UserCircle },
     ],
   },
 ]
@@ -43,7 +43,7 @@ export function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle:
       <div className="h-16 flex items-center px-4 border-b border-[var(--color-border)]">
         {!collapsed && (
           <span className="text-lg font-[var(--font-heading)] font-semibold text-[var(--color-primary)]">
-            Oh My Template
+            OHMT
           </span>
         )}
       </div>
@@ -98,11 +98,11 @@ export function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle:
       </nav>
 
       <div className={`border-t border-[var(--color-border)] flex items-center ${collapsed ? 'justify-center p-2' : 'gap-3 p-4'}`}>
-        <Avatar name="Morgan Chen" src="/templates/portfolio/portfolio-1.jpg" size="sm" />
+        <Avatar name="Morgan Chen" src="/templates/OHMT007-portfolio/portfolio-1.jpg" size="sm" />
         {!collapsed && (
           <div className="min-w-0">
             <p className="text-sm font-medium text-[var(--color-text)] truncate">Morgan Chen</p>
-            <p className="text-xs text-[var(--color-text-muted)] truncate">morgan@ohmytemplate.io</p>
+            <p className="text-sm text-[var(--color-text-muted)] truncate">morgan@ohmytemplate.io</p>
           </div>
         )}
       </div>

@@ -1,9 +1,9 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import { navLinks } from "../../data/data";
 
-const basePath = "/ko/templates/OHMT026-spa-KO";
+const basePath = "/ko/templates/OHMT026-spa";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -28,7 +28,7 @@ export default function Navbar() {
           className="font-[family-name:var(--font-heading)] text-lg font-bold tracking-tight"
           style={{ color: scrolled ? "var(--color-text)" : "var(--color-text-contrast)" }}
         >
-          Oh My Template
+          OHMT
         </a>
 
         <div className="hidden lg:flex items-center gap-8">

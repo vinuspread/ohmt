@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next"
+import type { Metadata } from "next"
 import './theme.css'
 import { Inter, Inter_Tight, Noto_Sans_KR } from 'next/font/google'
 
@@ -22,27 +22,27 @@ const notoSansKr = Noto_Sans_KR({
 })
 
 export const metadata: Metadata = {
-  title: 'Technology - Oh My Template',
+  title: 'OHMT - Technology',
   description: '머신러닝 및 로보틱스 스타트업을 위한 전문적이고 역동적인 플랫폼.',
   openGraph: {
-    title: 'Technology - Oh My Template',
+    title: 'OHMT - Technology',
     description: '머신러닝 및 로보틱스 스타트업을 위한 전문적이고 역동적인 플랫폼.',
-    url: 'https://ohmytemplate.com/ko/templates/OHMT016-technology-KO',
-    siteName: 'Oh My Template',
-    images: [{ url: '/templates/technology/og-image.jpg', width: 1200, height: 630 }],
+    url: 'https://ohmytemplate.com/ko/templates/OHMT016-technology',
+    siteName: 'OHMT',
+    images: [{ url: '/templates/OHMT016-technology/og-image.jpg', width: 1200, height: 630 }],
     locale: 'ko_KR',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Technology - Oh My Template',
+    title: 'OHMT - Technology',
     description: '머신러닝 및 로보틱스 스타트업을 위한 전문적이고 역동적인 플랫폼.',
-    images: ['/templates/technology/og-image.jpg'],
+    images: ['/templates/OHMT016-technology/og-image.jpg'],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: 'https://ohmytemplate.com/ko/templates/OHMT016-technology-KO',
-    languages: { 'en': 'https://ohmytemplate.com/en/templates/OHMT016-technology-EN' },
+    canonical: 'https://ohmytemplate.com/ko/templates/OHMT016-technology',
+    languages: { 'en': 'https://ohmytemplate.com/en/templates/OHMT016-technology' },
   },
 }
 

@@ -1,0 +1,25 @@
+{
+  "slug": "OHMT029-fitness",
+  "name": "Fitness Studio",
+  "name_ko": "피트니스 스튜디오",
+  "category": "lifestyle",
+  "description": "Premium wellness studio template for B2B consignment and B2C boutique fitness.",
+  "description_ko": "B2B 위탁운영 및 B2C 부티크 피트니스를 위한 프리미엄 웰니스 스튜디오 템플릿.",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#FFFFFF",
+      "secondary": "#F7F8FA",
+      "accent": "#1E3A5F",
+      "text": { "main": "#1A1A2E", "muted": "#6B7280", "contrast": "#FFFFFF" },
+      "ui": { "border": "rgba(0,0,0,0.08)", "hover": "#E8EDF3", "shadow": "0 4px 20px rgba(0,0,0,0.06)" }
+    },
+    "typography": {
+      "heading": { "font": "Montserrat, sans-serif", "weight": "600", "tracking": "-0.02em", "style": "font-semibold tracking-tight" },
+      "body": { "font": "Noto Sans KR, sans-serif", "weight": "400", "leading": "1.6", "style": "leading-relaxed" }
+    },
+    "spacing": { "page_pt": "80px", "container": "1440px", "gutter": "48px", "card_gap": "24px" },
+    "motion": { "transition_fast": "200ms", "transition_normal": "300ms", "transition_slow": "600ms", "easing": "cubic-bezier(0.16, 1, 0.3, 1)" },
+    "interaction": { "button": "bg-[var(--accent)] text-[var(--text-on-accent)] hover:bg-[var(--accent-light)]", "card_hover": "hover:-translate-y-1 hover:shadow-md transition-all" }
+  }
+}

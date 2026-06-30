@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const basePath = "/en/templates/OHMT026-spa-EN";
+const basePath = "/en/templates/OHMT026-spa";
 
 export default function ContactForm() {
   const [sent, setSent] = useState(false);
@@ -94,7 +94,7 @@ export default function ContactForm() {
         Send message
       </button>
 
-      <p className="text-xs text-[var(--color-text-muted)] text-center">
+      <p className="text-sm text-[var(--color-text-muted)] text-center">
         We&apos;ll respond within 24 hours. Your information is kept confidential.
       </p>
     </form>

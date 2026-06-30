@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import { useSearchParams } from "next/navigation";
 import { motion } from "framer-motion";
@@ -18,7 +18,7 @@ function CuratorNotePageContent() {
     "souvenirShop": `Souvenir Shop`
   },
   "hero": {
-    "badge": `Musei Vaticani - Oh My Template Curation`,
+    "badge": `Musei Vaticani - OHMT Curation`,
     "title1": `THE ETERNAL`,
     "title2": `Masterpieces`,
     "cta": `Begin Journey`
@@ -42,7 +42,7 @@ function CuratorNotePageContent() {
     "p2": `Our curation seeks to extract the structural brilliance from the overwhelming ornamentation. By highlighting works like the Laocoön or the delicate Pietà in an isolated, digital space, we allow their raw theological and emotional gravity to echo without the noise of the physical gallery crowd.`,
     "p3": `Every brushstroke captured by Raphael, every chisel strike endured by Michelangelo - these are not relics of the past. They are continuing dialogues on the nature of humanity, suffering, knowledge, and divinity.`,
     "curator": `Curator`,
-    "curatorName": `Oh My Template Exhibition`
+    "curatorName": `OHMT Exhibition`
   },
   "ourStory": {
     "heritage": `MUSEI VATICANI - 500 YEARS OF HERITAGE`,
@@ -177,7 +177,7 @@ return (
           className="aspect-[21/9] w-full bg-black mb-24 overflow-hidden relative"
         >
           <img 
-            src="/templates/museum/curator.png" 
+            src="/templates/OHMT021-museum/curator.png" 
             alt="Curator Note Architecture"
             className="w-full h-full object-cover grayscale opacity-90"
           />

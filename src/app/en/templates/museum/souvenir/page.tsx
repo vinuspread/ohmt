@@ -16,7 +16,7 @@ const products = [
     name: "Laocoön Scale Replica",
     category: "Artifact Replicas",
     price: "??40.00",
-    img: "/templates/museum/museum-replica-laocoon.png",
+    img: "/templates/OHMT021-museum/museum-replica-laocoon.png",
     desc: "A hand-finished resin replica of the Trojan priest, capturing every sinew in 1/8 scale."
   },
   {
@@ -24,7 +24,7 @@ const products = [
     name: "Vatican Archives: 500 Years",
     category: "Exhibition Catalogs",
     price: "??5.00",
-    img: "/templates/museum/museum-catalog-vatican.png",
+    img: "/templates/OHMT021-museum/museum-catalog-vatican.png",
     desc: "The definitive monograph of the museum's history, bound in premium linen."
   },
   {
@@ -32,7 +32,7 @@ const products = [
     name: "St. Peter's Nocturnal Print",
     category: "Fine Art Prints",
     price: "??20.00",
-    img: "/templates/museum/museum-print-st-peters.png",
+    img: "/templates/OHMT021-museum/museum-print-st-peters.png",
     desc: "Limited edition Giclée print on 300gsm Hahnemühle paper."
   },
   {
@@ -40,7 +40,7 @@ const products = [
     name: "Pietà Silver Pendant",
     category: "Jewelry",
     price: "??5.00",
-    img: "/templates/museum/museum-jewelry-pieta.png",
+    img: "/templates/OHMT021-museum/museum-jewelry-pieta.png",
     desc: "Sterling silver commemorative medal featuring Michelangelo's masterpiece."
   },
   {
@@ -48,7 +48,7 @@ const products = [
     name: "Apollo Belvedere Bust",
     category: "Artifact Replicas",
     price: "??80.00",
-    img: "/templates/museum/museum-apollo-bust.png",
+    img: "/templates/OHMT021-museum/museum-apollo-bust.png",
     desc: "A bronze-casted miniature bust of the Apollo Belvedere, reflecting classical perfection."
   },
   {
@@ -56,7 +56,7 @@ const products = [
     name: "Renaissance Sketchbook",
     category: "Stationery",
     price: "??2.00",
-    img: "/templates/museum/museum-sketchbook.png",
+    img: "/templates/OHMT021-museum/museum-sketchbook.png",
     desc: "Hand-stitched leather sketchbook with archival-grade paper for artists."
   },
   {
@@ -64,7 +64,7 @@ const products = [
     name: "Papal Seal Wax Set",
     category: "Stationery",
     price: "??5.00",
-    img: "/templates/museum/museum-wax-seal.png",
+    img: "/templates/OHMT021-museum/museum-wax-seal.png",
     desc: "Authentic brass seal with three sticks of crimson Vatican wax."
   },
   {
@@ -72,7 +72,7 @@ const products = [
     name: "Raphael's Angels Silk Scarf",
     category: "Lifestyle",
     price: "??10.00",
-    img: "/templates/museum/museum-silk-scarf.png",
+    img: "/templates/OHMT021-museum/museum-silk-scarf.png",
     desc: "100% silk scarf featuring detail from the Sistine Madonna."
   },
   {
@@ -80,7 +80,7 @@ const products = [
     name: "Augustus of Prima Porta Bust",
     category: "Artifact Replicas",
     price: "??20.00",
-    img: "/templates/museum/museum-replica-laocoon.png",
+    img: "/templates/OHMT021-museum/museum-replica-laocoon.png",
     desc: "Full-scale replica of the head of Augustus, the first Roman Emperor."
   },
   {
@@ -88,7 +88,7 @@ const products = [
     name: "Archival Ink Fountain Pen",
     category: "Stationery",
     price: "??45.00",
-    img: "/templates/museum/museum-fountain-pen.png",
+    img: "/templates/OHMT021-museum/museum-fountain-pen.png",
     desc: "Handcrafted ebony fountain pen with a 14k gold nib."
   },
   {
@@ -96,7 +96,7 @@ const products = [
     name: "The Sistine Chapel Blueprint",
     category: "Fine Art Prints",
     price: "??5.00",
-    img: "/templates/museum/museum-blueprint.png",
+    img: "/templates/OHMT021-museum/museum-blueprint.png",
     desc: "Architectural blueprint print showing the structural genius of the chapel."
   },
   {
@@ -104,7 +104,7 @@ const products = [
     name: "Romanesque Bronze Candle",
     category: "Lifestyle",
     price: "??5.00",
-    img: "/templates/museum/museum-bronze-candle.png",
+    img: "/templates/OHMT021-museum/museum-bronze-candle.png",
     desc: "Hand-poured beeswax candle in a cast bronze vessel."
   },
   {
@@ -112,7 +112,7 @@ const products = [
     name: "Vatican Museum Tote Bag",
     category: "Lifestyle",
     price: "??5.00",
-    img: "/templates/museum/museum-catalog-vatican.png",
+    img: "/templates/OHMT021-museum/museum-catalog-vatican.png",
     desc: "Premium heavyweight cotton tote with minimalist typography."
   }
 ];
@@ -173,7 +173,7 @@ function SouvenirShopContent() {
                 </div>
                 <div className="space-y-3 px-2">
                   <h3 className="font-serif text-xl tracking-tight leading-tight">{product.name}</h3>
-                  <p className="text-xs text-black/70 line-clamp-2 font-sans leading-[1.4]">{product.desc}</p>
+                  <p className="text-sm text-black/70 line-clamp-2 font-sans leading-[1.4]">{product.desc}</p>
                   <div className="flex items-center justify-between pt-6 border-t border-black/5">
                     <span className="text-sm font-bold tracking-[0.1em]">{product.price}</span>
                     <button className="text-[12px] uppercase tracking-[0.2em] font-bold border-b border-black/20 hover:border-black transition-colors pb-1">
@@ -230,7 +230,7 @@ function SouvenirShopContent() {
                using high-precision 3D scans of the original works to ensure absolute fidelity to the source.
              </p>
           </div>
-          <Link href="/en/templates/OHMT021-museum-EN/collections" className="group flex items-center gap-4 text-xs uppercase tracking-[0.4em] font-bold bg-black text-white px-10 py-6 hover:bg-[var(--color-bg-secondary)] transition-colors">
+          <Link href="/en/templates/OHMT021-museum/collections" className="group flex items-center gap-4 text-xs uppercase tracking-[0.4em] font-bold bg-black text-white px-10 py-6 hover:bg-[var(--color-bg-secondary)] transition-colors">
             Back to Collections <ChevronRight size={16} className="group-hover:translate-x-2 transition-transform" />
           </Link>
         </motion.div>

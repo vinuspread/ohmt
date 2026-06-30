@@ -24,8 +24,8 @@ export default function SpaPage() {
     "@type": "HealthClub",
     "name": "Spa Wellness",
     "description": "Premium spa and wellness shop offering personalized skin and body treatments by certified therapists.",
-    "url": "https://ohmytemplate.com/ko/templates/OHMT026-spa-KO",
-    "logo": "/templates/spa/logo.png",
+    "url": "https://ohmytemplate.com/ko/templates/OHMT026-spa",
+    "logo": "/templates/OHMT026-spa/logo.png",
   };
 
   return (

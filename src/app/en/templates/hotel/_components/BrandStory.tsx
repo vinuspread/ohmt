@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import { motion } from "framer-motion";
@@ -31,7 +31,7 @@ export const BrandStory = () => {
           transition={{ duration: 0.9, ease: EASE }}
           className="lg:w-1/2 overflow-hidden"
         >
-          <img src="/templates/hotel/story-01.jpg" alt="Oh My Template Story" className="w-full h-auto object-cover transition-transform duration-[4s] hover:scale-105" />
+          <img src="/templates/OHMT020-hotel/story-01.jpg" alt="OHMT Story" className="w-full h-auto object-cover transition-transform duration-[4s] hover:scale-105" />
         </motion.div>
 
         <div className="lg:w-1/2">
@@ -53,7 +53,7 @@ export const BrandStory = () => {
               className="h-[2px] w-12 md:w-16 bg-[var(--color-accent)] mb-6 md:mb-8"
             />
             <motion.p variants={textItem} className="text-base md:text-lg text-[var(--color-text)] font-medium leading-relaxed mb-4">
-              Founded on the belief that true luxury lies in harmony with nature, Oh My Template was born from a vision to create a retreat where time slows and the soul breathes.
+              Founded on the belief that true luxury lies in harmony with nature, OHMT was born from a vision to create a retreat where time slows and the soul breathes.
             </motion.p>
             <motion.p variants={textItem} className="text-sm md:text-base text-[var(--color-text-muted)] leading-relaxed">
               Every suite and villa is thoughtfully positioned to frame the natural beauty of the coastline. From the locally sourced stone used in construction to the organic produce in our kitchens, sustainability and craftsmanship define every aspect of your stay.

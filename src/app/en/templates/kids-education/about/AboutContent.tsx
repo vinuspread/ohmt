@@ -1,11 +1,11 @@
-﻿"use client";
+"use client";
 
 import { motion, useReducedMotion } from "framer-motion";
 import Link from "next/link";
 import { teachers } from "../data/data";
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
-const basePath = "/en/templates/OHMT024-kids-education-EN";
+const basePath = "/en/templates/OHMT024-kids-education";
 
 const stats = [
   { value: "8+", label: "Years of Excellence" },
@@ -66,7 +66,7 @@ export default function AboutContent() {
                 Our Mission
               </h2>
               <p className="text-base text-[var(--color-text-muted)] leading-relaxed">
-                At Oh My Template Creative Academy, we believe that every child is born with a natural sense of wonder. Our mission is to nurture that wonder through hands-on, play-based learning experiences that spark creativity, build confidence, and foster a lifelong love of learning.
+                At OHMT Creative Academy, we believe that every child is born with a natural sense of wonder. Our mission is to nurture that wonder through hands-on, play-based learning experiences that spark creativity, build confidence, and foster a lifelong love of learning.
               </p>
             </motion.div>
             <motion.div

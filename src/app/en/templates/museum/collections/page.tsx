@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
@@ -23,7 +23,7 @@ function CollectionsPageContent() {
     "souvenirShop": `Souvenir Shop`
   },
   "hero": {
-    "badge": `Musei Vaticani - Oh My Template Curation`,
+    "badge": `Musei Vaticani - OHMT Curation`,
     "title1": `THE ETERNAL`,
     "title2": `Masterpieces`,
     "cta": `Begin Journey`
@@ -47,7 +47,7 @@ function CollectionsPageContent() {
     "p2": `Our curation seeks to extract the structural brilliance from the overwhelming ornamentation. By highlighting works like the Laocoön or the delicate Pietà in an isolated, digital space, we allow their raw theological and emotional gravity to echo without the noise of the physical gallery crowd.`,
     "p3": `Every brushstroke captured by Raphael, every chisel strike endured by Michelangelo - these are not relics of the past. They are continuing dialogues on the nature of humanity, suffering, knowledge, and divinity.`,
     "curator": `Curator`,
-    "curatorName": `Oh My Template Exhibition`
+    "curatorName": `OHMT Exhibition`
   },
   "ourStory": {
     "heritage": `MUSEI VATICANI - 500 YEARS OF HERITAGE`,
@@ -265,7 +265,7 @@ const CATEGORIES = ["All", "Sculpture", "Fresco", "Marble"] as const;
                   transition={{ duration: 0.5, ease: "easeInOut" }}
                   className="relative group overflow-hidden bg-[var(--color-primary)] aspect-[3/4]"
                 >
-                  <Link href={`/en/templates/OHMT021-museum-EN/collections/${item.slug}`} className="block w-full h-full cursor-pointer">
+                  <Link href={`/en/templates/OHMT021-museum/collections/${item.slug}`} className="block w-full h-full cursor-pointer">
                     <img 
                       src={item.img} 
                       alt={item.title}

@@ -1,4 +1,4 @@
-﻿// src/app/templates/magazine/-components/sections/FeaturedGrid.tsx
+﻿// src/app/templates/OHMT012-magazine/-components/sections/FeaturedGrid.tsx
 "use client";
 
 import React from "react";
@@ -17,7 +17,7 @@ export const FeaturedGrid = ({ t }: { t: any }) => {
           <div className="group">
             <div className="overflow-hidden h-[520px] mb-8">
               <img
-                src="/templates/magazine/mag-2.jpg"
+                src="/templates/OHMT012-magazine/mag-2.jpg"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 alt="Main story"
               />
@@ -26,7 +26,7 @@ export const FeaturedGrid = ({ t }: { t: any }) => {
               {t.featuredGrid.items[0].tag}
             </span>
             <h2 className="font-[family-name:var(--theme-font-heading)] text-[clamp(1.5rem,2.5vw,2rem)] font-normal leading-tight mb-3">
-              <Link href="/en/templates/OHMT012-magazine-EN/article/minimalist-architecture-nordic-cities" className="hover:text-[var(--theme-accent)] transition-colors">
+              <Link href="/en/templates/OHMT012-magazine/article/minimalist-architecture-nordic-cities" className="hover:text-[var(--theme-accent)] transition-colors">
                 {t.featuredGrid.items[0].title}
               </Link>
             </h2>
@@ -43,13 +43,13 @@ export const FeaturedGrid = ({ t }: { t: any }) => {
              {[
                {
                  slug: "hidden-galleries-berlin-east-side",
-                 img: "/templates/magazine/mag-3.jpg",
+                 img: "/templates/OHMT012-magazine/mag-3.jpg",
                  author: "Marta Weber",
                  index: 1
                },
                {
                  slug: "regenerative-agriculture-future",
-                 img: "/templates/magazine/mag-4.jpg",
+                 img: "/templates/OHMT012-magazine/mag-4.jpg",
                  author: "Sarah Chen",
                  index: 2
                }
@@ -66,7 +66,7 @@ export const FeaturedGrid = ({ t }: { t: any }) => {
                    {t.featuredGrid.items[item.index].tag}
                  </span>
                  <h3 className="font-[family-name:var(--theme-font-heading)] text-[1.35rem] font-normal leading-snug mb-2">
-                   <Link href={`/en/templates/OHMT012-magazine-EN/article/${item.slug}`} className="hover:text-[var(--theme-accent)] transition-colors">
+                   <Link href={`/en/templates/OHMT012-magazine/article/${item.slug}`} className="hover:text-[var(--theme-accent)] transition-colors">
                      {t.featuredGrid.items[item.index].title}
                    </Link>
                  </h3>

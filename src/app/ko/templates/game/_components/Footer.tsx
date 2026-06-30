@@ -1,11 +1,11 @@
-﻿import Link from "next/link";
-import { games } from "@/app/ko/templates/OHMT023-game-KO/data/data";
+import Link from "next/link";
+import { games } from "@/app/ko/templates/OHMT023-game/data/data";
 
 const companyLinks = [
-  { href: "/ko/templates/OHMT023-game-KO/about", label: "소개" },
-  { href: "/ko/templates/OHMT023-game-KO/news", label: "소식" },
-  { href: "/ko/templates/OHMT023-game-KO/careers", label: "채용" },
-  { href: "/ko/templates/OHMT023-game-KO/games", label: "게임" },
+  { href: "/ko/templates/OHMT023-game/about", label: "소개" },
+  { href: "/ko/templates/OHMT023-game/news", label: "소식" },
+  { href: "/ko/templates/OHMT023-game/careers", label: "채용" },
+  { href: "/ko/templates/OHMT023-game/games", label: "게임" },
 ];
 
 export default function Footer() {
@@ -15,10 +15,10 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-1">
             <Link
-              href="/ko/templates/OHMT023-game-KO"
+              href="/ko/templates/OHMT023-game"
               className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)] bg-clip-text text-xl font-bold text-transparent font-[var(--font-heading)]"
             >
-              Oh My Template
+              OHMT
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-[var(--color-text-muted)]">
               영감을 주는 세상을 만들고, 한계를 정의하는 경계를 허물다.
@@ -33,7 +33,7 @@ export default function Footer() {
               {games.map((game) => (
                 <li key={game.id}>
                   <Link
-                    href={`/ko/templates/OHMT023-game-KO/games/${game.id}`}
+                    href={`/ko/templates/OHMT023-game/games/${game.id}`}
                     className="text-sm text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)]"
                   >
                     {game.title}
@@ -83,7 +83,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-[var(--color-border)] pt-8 text-center text-sm text-[var(--color-text-muted)]">
-          <p>&copy; 2026 Oh My Template. Contact: contact@ohmytemplate.com</p>
+          <p>&copy; 2026 OHMT. Contact: contact@ohmytemplate.com</p>
         </div>
       </div>
     </footer>

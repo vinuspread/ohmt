@@ -10,14 +10,14 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 const boardMembers = [
-  { name: "James A. Whitfield", role: "Chairman of the Board", initials: "JW", bio: "Former CEO of MagnaCorp International with 35 years of experience in the energy sector.", image: "/templates/ir/member-jw.png" },
-  { name: "Elena M. Santos", role: "Lead Independent Director", initials: "ES", bio: "President of Pacific Advisors Group, serving on five public company boards.", image: "/templates/ir/member-es.png" },
-  { name: "David K. Park", role: "Audit Committee Chair", initials: "DP", bio: "Retired Partner at Deloitte LLP, CPA with expertise in financial reporting and internal controls.", image: "/templates/ir/member-dp.png" },
-  { name: "Sarah L. Thornton", role: "Compensation Chair", initials: "ST", bio: "Former CHRO of GlobalTech Industries, specialist in executive compensation and talent strategy.", image: "/templates/ir/member-st.png" },
-  { name: "Robert M. Chen", role: "Director", initials: "RC", bio: "Founder and Managing Partner of Crestview Capital, a $4.2B private equity firm.", image: "/templates/ir/member-rc.png" },
-  { name: "Maria V. Gonzalez", role: "Director", initials: "MG", bio: "CEO of Horizon Renewables, recognized leader in sustainable energy transition.", image: "/templates/ir/member-mg.png" },
-  { name: "Thomas W. Hayes", role: "Director", initials: "TH", bio: "Former Under Secretary of the Treasury, expert in regulatory affairs and public policy.", image: "/templates/ir/member-th.png" },
-  { name: "Catherine N. Adebayo", role: "Director", initials: "CA", bio: "COO of Sterling Bank, experienced in corporate governance and risk management.", image: "/templates/ir/member-ca.png" },
+  { name: "James A. Whitfield", role: "Chairman of the Board", initials: "JW", bio: "Former CEO of MagnaCorp International with 35 years of experience in the energy sector.", image: "/templates/OHMT011-ir/member-jw.png" },
+  { name: "Elena M. Santos", role: "Lead Independent Director", initials: "ES", bio: "President of Pacific Advisors Group, serving on five public company boards.", image: "/templates/OHMT011-ir/member-es.png" },
+  { name: "David K. Park", role: "Audit Committee Chair", initials: "DP", bio: "Retired Partner at Deloitte LLP, CPA with expertise in financial reporting and internal controls.", image: "/templates/OHMT011-ir/member-dp.png" },
+  { name: "Sarah L. Thornton", role: "Compensation Chair", initials: "ST", bio: "Former CHRO of GlobalTech Industries, specialist in executive compensation and talent strategy.", image: "/templates/OHMT011-ir/member-st.png" },
+  { name: "Robert M. Chen", role: "Director", initials: "RC", bio: "Founder and Managing Partner of Crestview Capital, a $4.2B private equity firm.", image: "/templates/OHMT011-ir/member-rc.png" },
+  { name: "Maria V. Gonzalez", role: "Director", initials: "MG", bio: "CEO of Horizon Renewables, recognized leader in sustainable energy transition.", image: "/templates/OHMT011-ir/member-mg.png" },
+  { name: "Thomas W. Hayes", role: "Director", initials: "TH", bio: "Former Under Secretary of the Treasury, expert in regulatory affairs and public policy.", image: "/templates/OHMT011-ir/member-th.png" },
+  { name: "Catherine N. Adebayo", role: "Director", initials: "CA", bio: "COO of Sterling Bank, experienced in corporate governance and risk management.", image: "/templates/OHMT011-ir/member-ca.png" },
 ];
 
 const committees = [
@@ -67,7 +67,7 @@ function IRGovernanceContent() {
         >
           <div className="absolute inset-0 z-0">
             <Image
-              src="/templates/ir/ir-2.jpg"
+              src="/templates/OHMT011-ir/ir-2.jpg"
               alt="Governance"
               fill
               priority

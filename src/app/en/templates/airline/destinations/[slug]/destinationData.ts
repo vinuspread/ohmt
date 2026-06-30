@@ -1,4 +1,4 @@
-﻿// src/app/templates/airline/destinations/[slug]/destinationData.ts
+﻿// src/app/templates/OHMT008-airline/destinations/[slug]/destinationData.ts
 
 export interface Highlight {
   name: string;
@@ -39,7 +39,7 @@ export const destinations: Record<string, Destination> = {
     iataCode: "CDG",
     tagline: "City of Light & Romance",
     desc: "Paris enchants every traveler with its grand boulevards, world-class cuisine, and iconic landmarks. From the Eiffel Tower's golden glow at dusk to the quiet charm of Montmartre's cobbled streets, the French capital offers an unmatched blend of art, history, and modern luxury.",
-    heroImg: "/templates/airline/paris.png",
+    heroImg: "/templates/OHMT008-airline/paris.png",
     flightDuration: "12h 30m",
     priceFrom: "$1,890",
     facts: [
@@ -53,17 +53,17 @@ export const destinations: Record<string, Destination> = {
       {
         name: "Eiffel Tower",
         desc: "The iconic iron lattice tower on the Champ de Mars - best seen illuminated at night from Trocadéro.",
-        img: "/templates/airline/michelin-dining.jpg",
+        img: "/templates/OHMT008-airline/michelin-dining.jpg",
       },
       {
         name: "The Louvre",
         desc: "Home to 35,000 works of art including the Mona Lisa and Venus de Milo - the world's largest art museum.",
-        img: "/templates/airline/korean-cuisine.jpg",
+        img: "/templates/OHMT008-airline/korean-cuisine.jpg",
       },
       {
         name: "Montmartre",
         desc: "A bohemian hilltop neighborhood with winding streets, the Sacré-Cœur basilica and breathtaking city views.",
-        img: "/templates/airline/wellness-set.jpg",
+        img: "/templates/OHMT008-airline/wellness-set.jpg",
       },
     ],
     flights: [
@@ -80,7 +80,7 @@ export const destinations: Record<string, Destination> = {
     iataCode: "NRT",
     tagline: "Where Tradition Meets Futurism",
     desc: "Tokyo is a city of extraordinary contrasts - ancient temples stand beside neon-lit skyscrapers, and serene gardens border the world's busiest train stations. Japan's capital offers an unparalleled sensory experience that blends meticulous craftsmanship with cutting-edge modernity.",
-    heroImg: "/templates/airline/tokyo.png",
+    heroImg: "/templates/OHMT008-airline/tokyo.png",
     flightDuration: "2h 30m",
     priceFrom: "$480",
     facts: [
@@ -94,17 +94,17 @@ export const destinations: Record<string, Destination> = {
       {
         name: "Shibuya Crossing",
         desc: "The world's busiest pedestrian crossing - a living symbol of Tokyo's electric energy and pace.",
-        img: "/templates/airline/destination-2.jpg",
+        img: "/templates/OHMT008-airline/destination-2.jpg",
       },
       {
         name: "Senso-ji Temple",
         desc: "Tokyo's oldest and most significant Buddhist temple in Asakusa, framed by traditional Nakamise shopping street.",
-        img: "/templates/airline/destination-3.jpg",
+        img: "/templates/OHMT008-airline/destination-3.jpg",
       },
       {
         name: "Mount Fuji Day Trip",
         desc: "Japan's iconic sacred peak, best viewed from Hakone or Fujikawaguchiko - a short ride from the city.",
-        img: "/templates/airline/destination-main.jpg",
+        img: "/templates/OHMT008-airline/destination-main.jpg",
       },
     ],
     flights: [
@@ -121,7 +121,7 @@ export const destinations: Record<string, Destination> = {
     iataCode: "JFK",
     tagline: "The City That Never Sleeps",
     desc: "New York City pulses with an energy found nowhere else on earth. From the soaring towers of Manhattan to the cultural riches of Brooklyn, this global metropolis offers world-class dining, art, fashion, and entertainment - all within one extraordinary city.",
-    heroImg: "/templates/airline/new-york.png",
+    heroImg: "/templates/OHMT008-airline/new-york.png",
     flightDuration: "14h 00m",
     priceFrom: "$1,650",
     facts: [
@@ -135,17 +135,17 @@ export const destinations: Record<string, Destination> = {
       {
         name: "Central Park",
         desc: "843 acres of landscaped parkland in the heart of Manhattan - the green lungs of New York City.",
-        img: "/templates/airline/airline-main-hero.png",
+        img: "/templates/OHMT008-airline/airline-main-hero.png",
       },
       {
         name: "The Metropolitan Museum",
         desc: "One of the world's greatest art museums - over 5,000 years of art from every corner of the globe.",
-        img: "/templates/airline/destination-main.jpg",
+        img: "/templates/OHMT008-airline/destination-main.jpg",
       },
       {
         name: "Brooklyn Bridge",
         desc: "An engineering marvel connecting Manhattan and Brooklyn - best walked at sunrise for iconic skyline views.",
-        img: "/templates/airline/airline-experience-hero.png",
+        img: "/templates/OHMT008-airline/airline-experience-hero.png",
       },
     ],
     flights: [
@@ -162,7 +162,7 @@ export const destinations: Record<string, Destination> = {
     iataCode: "DXB",
     tagline: "Luxury in the Desert",
     desc: "Dubai is a city of superlatives - the tallest tower, the largest mall, the most luxurious hotels. Rising from the Arabian Desert, this gleaming metropolis has transformed itself into a global hub of commerce, tourism, and architectural ambition unlike any other.",
-    heroImg: "/templates/airline/dubai.png",
+    heroImg: "/templates/OHMT008-airline/dubai.png",
     flightDuration: "9h 45m",
     priceFrom: "$1,100",
     facts: [
@@ -176,17 +176,17 @@ export const destinations: Record<string, Destination> = {
       {
         name: "Burj Khalifa",
         desc: "The world's tallest building at 828m - take the lift to the 148th floor observatory for breathtaking views.",
-        img: "/templates/airline/destination-3.jpg",
+        img: "/templates/OHMT008-airline/destination-3.jpg",
       },
       {
         name: "Dubai Marina",
         desc: "A stunning waterfront district lined with skyscrapers, luxury yachts, fine dining, and vibrant nightlife.",
-        img: "/templates/airline/airline-book-hero.png",
+        img: "/templates/OHMT008-airline/airline-book-hero.png",
       },
       {
         name: "Desert Safari",
         desc: "Experience dune bashing, camel riding, and a traditional Bedouin dinner under the stars - unforgettable.",
-        img: "/templates/airline/airline-loyalty-hero.png",
+        img: "/templates/OHMT008-airline/airline-loyalty-hero.png",
       },
     ],
     flights: [
@@ -203,7 +203,7 @@ export const destinations: Record<string, Destination> = {
     iataCode: "SYD",
     tagline: "Harbor-side Elegance",
     desc: "Sydney captivates with its stunning harbor, world-famous Opera House, and golden surf beaches. Australia's most iconic city blends a relaxed coastal lifestyle with a sophisticated urban culture - making it one of the world's most desirable destinations.",
-    heroImg: "/templates/airline/sydney.png",
+    heroImg: "/templates/OHMT008-airline/sydney.png",
     flightDuration: "10h 30m",
     priceFrom: "$1,200",
     facts: [
@@ -217,17 +217,17 @@ export const destinations: Record<string, Destination> = {
       {
         name: "Sydney Opera House",
         desc: "One of the 20th century's greatest architectural triumphs - a UNESCO World Heritage Site on the harbor.",
-        img: "/templates/airline/wellness-set.jpg",
+        img: "/templates/OHMT008-airline/wellness-set.jpg",
       },
       {
         name: "Bondi Beach",
         desc: "Australia's most famous beach - golden sand, rolling surf, and a vibrant café and boutique scene.",
-        img: "/templates/airline/korean-cuisine.jpg",
+        img: "/templates/OHMT008-airline/korean-cuisine.jpg",
       },
       {
         name: "Blue Mountains",
         desc: "Just 90 minutes from the city - dramatic sandstone cliffs, waterfalls, and ancient eucalyptus forests.",
-        img: "/templates/airline/michelin-dining.jpg",
+        img: "/templates/OHMT008-airline/michelin-dining.jpg",
       },
     ],
     flights: [
@@ -244,7 +244,7 @@ export const destinations: Record<string, Destination> = {
     iataCode: "DPS",
     tagline: "Tropical Paradise Awaits",
     desc: "Bali is a world of its own - terraced rice paddies cascade into jungle valleys, sacred temples perch on coastal clifftops, and the air carries the scent of incense and frangipani. Indonesia's Island of the Gods offers an extraordinary blend of spiritual richness and natural beauty.",
-    heroImg: "/templates/airline/bali.png",
+    heroImg: "/templates/OHMT008-airline/bali.png",
     flightDuration: "7h 00m",
     priceFrom: "$620",
     facts: [
@@ -258,17 +258,17 @@ export const destinations: Record<string, Destination> = {
       {
         name: "Ubud Rice Terraces",
         desc: "The legendary Tegallalang terraces - emerald staircases of rice carved into the hillside for centuries.",
-        img: "/templates/airline/destination-2.jpg",
+        img: "/templates/OHMT008-airline/destination-2.jpg",
       },
       {
         name: "Tanah Lot Temple",
         desc: "A mythical sea temple perched on a rocky islet - most spectacular at sunset when silhouetted against the sky.",
-        img: "/templates/airline/airline-experience-hero.png",
+        img: "/templates/OHMT008-airline/airline-experience-hero.png",
       },
       {
         name: "Seminyak Beach",
         desc: "Bali's most stylish beach strip - designer beach clubs, superb surf, and legendary sunset cocktails.",
-        img: "/templates/airline/destination-main.jpg",
+        img: "/templates/OHMT008-airline/destination-main.jpg",
       },
     ],
     flights: [

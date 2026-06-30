@@ -1,0 +1,25 @@
+{
+  "slug": "OHMT028-ev",
+  "name": "EV Concept",
+  "name_ko": "전기차 컨셉",
+  "category": "retail",
+  "description": "Futuristic electric vehicle brand with cinematic scroll sequences and immersive order experience.",
+  "description_ko": "시네마틱 스크롤 시퀀스와 몰입형 주문 경험을 갖춘 미래형 전기차 브랜드 템플릿.",
+  "mode": "dark",
+  "theme": {
+    "palette": {
+      "primary": "#0E1210",
+      "secondary": "#161C18",
+      "accent": "#FFD94A",
+      "text": { "main": "#F4F2EE", "muted": "rgba(244,242,238,0.35)", "contrast": "#0E1210" },
+      "ui": { "border": "rgba(244,242,238,0.10)", "hover": "#161C18", "shadow": "0 4px 24px rgba(0,0,0,0.4)" }
+    },
+    "typography": {
+      "heading": { "font": "Michroma, sans-serif", "weight": "400", "tracking": "0.02em", "style": "tracking-wide uppercase" },
+      "body": { "font": "Inter, sans-serif", "weight": "400", "leading": "1.6", "style": "leading-relaxed" }
+    },
+    "spacing": { "page_pt": "100px", "container": "1440px", "gutter": "48px", "card_gap": "24px" },
+    "motion": { "transition_fast": "200ms", "transition_normal": "400ms", "transition_slow": "800ms", "easing": "cubic-bezier(0.16, 1, 0.3, 1)" },
+    "interaction": { "button": "bg-[var(--accent)] text-[var(--text-on-accent)] hover:brightness-110", "card_hover": "hover:scale-[1.02] transition-transform" }
+  }
+}

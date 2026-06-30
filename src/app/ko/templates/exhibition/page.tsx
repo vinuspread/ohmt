@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { useState, useRef } from 'react';
 import Link from 'next/link';
@@ -13,13 +13,13 @@ import theme from "./theme.json";
 const easeOut = [0.23, 1, 0.32, 1] as const;
 type Tab = 'on-show' | 'opening-soon' | 'permanent';
 
-const mosaicImages = Array.from({ length: 9 }, (_, i) => `/templates/exhibition/mosaic-0${i + 1}.jpg`);
+const mosaicImages = Array.from({ length: 9 }, (_, i) => `/templates/OHMT003-exhibition/mosaic-0${i + 1}.jpg`);
 
 const events = [
-  { title: '작가 토크: Sophie Laurent', date: '2026년 6월 14일', time: '15:00', type: '작가 토크', ageRating: '18+', image: '/templates/exhibition/event-01.jpg' },
-  { title: '드로잉 워크숍', date: '2026년 6월 21일', time: '10:00', type: '워크숍', ageRating: '12+', image: '/templates/exhibition/event-02.jpg' },
-  { title: '큐레이터 투어: Echoes of Form', date: '2026년 6월 28일', time: '14:00', type: '투어', ageRating: '전체', image: '/templates/exhibition/event-01.jpg' },
-  { title: '퍼포먼스: 공간 속의 몸', date: '2026년 7월 5일', time: '19:30', type: '퍼포먼스', ageRating: '16+', image: '/templates/exhibition/event-02.jpg' },
+  { title: '작가 토크: Sophie Laurent', date: '2026년 6월 14일', time: '15:00', type: '작가 토크', ageRating: '18+', image: '/templates/OHMT003-exhibition/event-01.jpg' },
+  { title: '드로잉 워크숍', date: '2026년 6월 21일', time: '10:00', type: '워크숍', ageRating: '12+', image: '/templates/OHMT003-exhibition/event-02.jpg' },
+  { title: '큐레이터 투어: Echoes of Form', date: '2026년 6월 28일', time: '14:00', type: '투어', ageRating: '전체', image: '/templates/OHMT003-exhibition/event-01.jpg' },
+  { title: '퍼포먼스: 공간 속의 몸', date: '2026년 7월 5일', time: '19:30', type: '퍼포먼스', ageRating: '16+', image: '/templates/OHMT003-exhibition/event-02.jpg' },
 ];
 
 export default function HomePage() {
@@ -41,11 +41,11 @@ export default function HomePage() {
       <section className="min-h-screen bg-[var(--color-bg)] flex flex-col justify-between">
         <div className="max-w-[1400px] mx-auto px-6 pt-32 flex-1 flex flex-col">
           <h1 className="font-heading font-semibold uppercase leading-none text-black" style={{ fontSize: 'clamp(5rem, 10vw, 9rem)', letterSpacing: '-0.04em' }}>
-            Oh My Template
+            OHMT
           </h1>
           <div className="flex-1 grid md:grid-cols-2 gap-12 mt-12">
             <div className="aspect-[3/4] overflow-hidden">
-              <img src="/templates/exhibition/hero-left.jpg" alt="" className="w-full h-full object-cover" />
+              <img src="/templates/OHMT003-exhibition/hero-left.jpg" alt="" className="w-full h-full object-cover" />
             </div>
             <div className="flex flex-col justify-between">
               <div>
@@ -53,15 +53,15 @@ export default function HomePage() {
                   대담한 예술<br />새로운 시각
                 </h2>
                 <div className="mt-10 aspect-[3/4] overflow-hidden md:hidden">
-                  <img src="/templates/exhibition/hero-right.jpg" alt="" className="w-full h-full object-cover" />
+                  <img src="/templates/OHMT003-exhibition/hero-right.jpg" alt="" className="w-full h-full object-cover" />
                 </div>
-                <Link href="/ko/templates/OHMT003-exhibition-KO/contact" className="relative overflow-hidden group inline-flex px-8 py-4 border border-black mt-10">
+                <Link href="/ko/templates/OHMT003-exhibition/contact" className="relative overflow-hidden group inline-flex px-8 py-4 border border-black mt-10">
                   <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
                   <span className="relative text-black group-hover:text-white text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-300">티켓 구매</span>
                 </Link>
               </div>
               <div className="hidden md:block w-[70%] aspect-[3/4] overflow-hidden self-end">
-                <img src="/templates/exhibition/hero-right.jpg" alt="" className="w-full h-full object-cover" />
+                <img src="/templates/OHMT003-exhibition/hero-right.jpg" alt="" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
@@ -122,7 +122,7 @@ export default function HomePage() {
             </div>
             <div className="flex flex-col items-start md:items-end justify-end">
               <p className="text-[11px] font-body text-black/40 uppercase tracking-[0.08em] mb-2">{exhibitions.length}개 전시</p>
-              <Link href="/ko/templates/OHMT003-exhibition-KO/exhibitions" className="text-[11px] font-body font-semibold uppercase tracking-[0.12em] text-black border-b border-black pb-0.5 hover:opacity-60 transition-opacity">
+              <Link href="/ko/templates/OHMT003-exhibition/exhibitions" className="text-[11px] font-body font-semibold uppercase tracking-[0.12em] text-black border-b border-black pb-0.5 hover:opacity-60 transition-opacity">
                 전체 보기
               </Link>
             </div>
@@ -187,7 +187,7 @@ export default function HomePage() {
             ))}
           </div>
           <div className="mt-16">
-            <Link href="/ko/templates/OHMT003-exhibition-KO/events" className="text-[11px] font-body font-semibold uppercase tracking-[0.12em] text-black border-b border-black pb-0.5 hover:opacity-60 transition-opacity">
+            <Link href="/ko/templates/OHMT003-exhibition/events" className="text-[11px] font-body font-semibold uppercase tracking-[0.12em] text-black border-b border-black pb-0.5 hover:opacity-60 transition-opacity">
               전체 이벤트 보기
             </Link>
           </div>

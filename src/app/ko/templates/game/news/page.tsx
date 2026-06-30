@@ -1,10 +1,10 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import Navbar from "../_components/Navbar";
 import Footer from "../_components/Footer";
 import NewsCard from "../_components/ui/NewsCard";
-import { news } from "@/app/ko/templates/OHMT023-game-KO/data/data";
+import { news } from "@/app/ko/templates/OHMT023-game/data/data";
 
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
@@ -26,7 +26,7 @@ export default function NewsPage() {
           <div className="mb-12">
             <h1 className="font-[var(--font-heading)] text-5xl font-bold">소식 및 업데이트</h1>
             <p className="mt-3 text-[var(--color-text-muted)]">
-              Oh My Template의 최신 소식
+              OHMT의 최신 소식
             </p>
           </div>
 

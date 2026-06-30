@@ -9,34 +9,34 @@ type Category = "All" | "Coffee" | "Cold Brew" | "Tea" | "Ade" | "Food";
 
 const menuItems: { category: Category; name: string; price: string; image: string }[] = [
   // Coffee
-  { category: "Coffee",    name: "Espresso",          price: "$4.0",  image: "/templates/coffee/menu-espresso.jpg" },
-  { category: "Coffee",    name: "Americano",          price: "$4.5",  image: "/templates/coffee/menu-americano.jpg" },
-  { category: "Coffee",    name: "Cappuccino",         price: "$5.0",  image: "/templates/coffee/menu-cappuccino.jpg" },
-  { category: "Coffee",    name: "Vanilla Latte",      price: "$5.5",  image: "/templates/coffee/menu-vanilla-latte.jpg" },
-  { category: "Coffee",    name: "Flat White",         price: "$5.5",  image: "/templates/coffee/menu-flat-white.jpg" },
-  { category: "Coffee",    name: "Cortado",            price: "$5.0",  image: "/templates/coffee/menu-cortado.jpg" },
-  { category: "Coffee",    name: "Caramel Macchiato",  price: "$6.0",  image: "/templates/coffee/menu-caramel-macchiato.jpg" },
-  { category: "Coffee",    name: "Mocha",              price: "$6.0",  image: "/templates/coffee/menu-mocha.jpg" },
+  { category: "Coffee",    name: "Espresso",          price: "$4.0",  image: "/templates/OHMT019-coffee/menu-espresso.jpg" },
+  { category: "Coffee",    name: "Americano",          price: "$4.5",  image: "/templates/OHMT019-coffee/menu-americano.jpg" },
+  { category: "Coffee",    name: "Cappuccino",         price: "$5.0",  image: "/templates/OHMT019-coffee/menu-cappuccino.jpg" },
+  { category: "Coffee",    name: "Vanilla Latte",      price: "$5.5",  image: "/templates/OHMT019-coffee/menu-vanilla-latte.jpg" },
+  { category: "Coffee",    name: "Flat White",         price: "$5.5",  image: "/templates/OHMT019-coffee/menu-flat-white.jpg" },
+  { category: "Coffee",    name: "Cortado",            price: "$5.0",  image: "/templates/OHMT019-coffee/menu-cortado.jpg" },
+  { category: "Coffee",    name: "Caramel Macchiato",  price: "$6.0",  image: "/templates/OHMT019-coffee/menu-caramel-macchiato.jpg" },
+  { category: "Coffee",    name: "Mocha",              price: "$6.0",  image: "/templates/OHMT019-coffee/menu-mocha.jpg" },
   // Cold Brew
-  { category: "Cold Brew", name: "Cold Brew",          price: "$6.0",  image: "/templates/coffee/menu-cold-brew.jpg" },
-  { category: "Cold Brew", name: "Cold Foam Brew",     price: "$6.5",  image: "/templates/coffee/menu-cold-foam.jpg" },
-  { category: "Cold Brew", name: "Nitro Cold Brew",    price: "$7.0",  image: "/templates/coffee/menu-nitro.jpg" },
-  { category: "Cold Brew", name: "Cold Brew Tonic",    price: "$7.0",  image: "/templates/coffee/menu-cold-brew-tonic.jpg" },
-  { category: "Cold Brew", name: "Black Ice",          price: "$6.5",  image: "/templates/coffee/menu-black-ice.jpg" },
+  { category: "Cold Brew", name: "Cold Brew",          price: "$6.0",  image: "/templates/OHMT019-coffee/menu-cold-brew.jpg" },
+  { category: "Cold Brew", name: "Cold Foam Brew",     price: "$6.5",  image: "/templates/OHMT019-coffee/menu-cold-foam.jpg" },
+  { category: "Cold Brew", name: "Nitro Cold Brew",    price: "$7.0",  image: "/templates/OHMT019-coffee/menu-nitro.jpg" },
+  { category: "Cold Brew", name: "Cold Brew Tonic",    price: "$7.0",  image: "/templates/OHMT019-coffee/menu-cold-brew-tonic.jpg" },
+  { category: "Cold Brew", name: "Black Ice",          price: "$6.5",  image: "/templates/OHMT019-coffee/menu-black-ice.jpg" },
   // Tea
-  { category: "Tea",       name: "Green Tea",          price: "$4.0",  image: "/templates/coffee/menu-green-tea.jpg" },
-  { category: "Tea",       name: "Earl Grey",          price: "$4.5",  image: "/templates/coffee/menu-earl-grey.jpg" },
-  { category: "Tea",       name: "Chamomile",          price: "$4.5",  image: "/templates/coffee/menu-chamomile.jpg" },
-  { category: "Tea",       name: "Peppermint",         price: "$4.5",  image: "/templates/coffee/menu-peppermint.jpg" },
-  { category: "Tea",       name: "Yuzu Tea",           price: "$5.0",  image: "/templates/coffee/menu-yuzu-tea.jpg" },
+  { category: "Tea",       name: "Green Tea",          price: "$4.0",  image: "/templates/OHMT019-coffee/menu-green-tea.jpg" },
+  { category: "Tea",       name: "Earl Grey",          price: "$4.5",  image: "/templates/OHMT019-coffee/menu-earl-grey.jpg" },
+  { category: "Tea",       name: "Chamomile",          price: "$4.5",  image: "/templates/OHMT019-coffee/menu-chamomile.jpg" },
+  { category: "Tea",       name: "Peppermint",         price: "$4.5",  image: "/templates/OHMT019-coffee/menu-peppermint.jpg" },
+  { category: "Tea",       name: "Yuzu Tea",           price: "$5.0",  image: "/templates/OHMT019-coffee/menu-yuzu-tea.jpg" },
   // Ade
-  { category: "Ade",       name: "Lemon Ade",          price: "$5.5",  image: "/templates/coffee/menu-lemon-ade.jpg" },
-  { category: "Ade",       name: "Grapefruit Ade",     price: "$5.5",  image: "/templates/coffee/menu-grapefruit-ade.jpg" },
-  { category: "Ade",       name: "Matcha Ade",         price: "$6.0",  image: "/templates/coffee/menu-matcha-ade.jpg" },
+  { category: "Ade",       name: "Lemon Ade",          price: "$5.5",  image: "/templates/OHMT019-coffee/menu-lemon-ade.jpg" },
+  { category: "Ade",       name: "Grapefruit Ade",     price: "$5.5",  image: "/templates/OHMT019-coffee/menu-grapefruit-ade.jpg" },
+  { category: "Ade",       name: "Matcha Ade",         price: "$6.0",  image: "/templates/OHMT019-coffee/menu-matcha-ade.jpg" },
   // Food
-  { category: "Food",      name: "Croissant",          price: "$4.5",  image: "/templates/coffee/menu-croissant.jpg" },
-  { category: "Food",      name: "Pound Cake",         price: "$5.0",  image: "/templates/coffee/menu-pound-cake.jpg" },
-  { category: "Food",      name: "Madeleine",          price: "$3.5",  image: "/templates/coffee/menu-madeleine.jpg" },
+  { category: "Food",      name: "Croissant",          price: "$4.5",  image: "/templates/OHMT019-coffee/menu-croissant.jpg" },
+  { category: "Food",      name: "Pound Cake",         price: "$5.0",  image: "/templates/OHMT019-coffee/menu-pound-cake.jpg" },
+  { category: "Food",      name: "Madeleine",          price: "$3.5",  image: "/templates/OHMT019-coffee/menu-madeleine.jpg" },
 ];
 
 const categories: Category[] = ["All", "Coffee", "Cold Brew", "Tea", "Ade", "Food"];
@@ -130,7 +130,7 @@ export const MenuPreview = () => {
               />
             </div>
             <div className="text-center">
-              <p className="font-heading text-[var(--color-text)] text-[12px] font-bold leading-snug">{item.name}</p>
+              <p className="font-heading text-[var(--color-text)] text-[14px] font-bold leading-snug">{item.name}</p>
               <span className="text-[var(--color-text-muted)] text-[12px] font-semibold">{item.price}</span>
             </div>
           </motion.div>
@@ -140,7 +140,7 @@ export const MenuPreview = () => {
 
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 mt-10 flex justify-center">
         <Link
-          href="/en/templates/OHMT019-coffee-EN/menu"
+          href="/en/templates/OHMT019-coffee/menu"
           className="inline-flex items-center justify-center border border-[var(--color-text)] text-[var(--color-text)] px-10 py-3 text-[11px] uppercase tracking-[0.2em] font-semibold hover:bg-[var(--color-text)] hover:text-white transition-colors duration-300"
         >
           View Full Menu &nbsp;&rarr;

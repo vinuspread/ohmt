@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -22,10 +22,10 @@ function JewelryPageContent() {
   const heroOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   const products = [
-    { name: "다이아몬드 솔리테어 링", price: "$4,250", img: "/templates/jewelry/jewelry-ring.png", tag: "웨딩" },
-    { name: "래디언트 펄 펜던트", price: "$1,850", img: "/templates/jewelry/jewelry-pendant.png", tag: "시즈널" },
-    { name: "사파이어 뱅글", price: "$12,200", img: "/templates/jewelry/jewelry-hero-main.png", tag: "럭셔리" },
-    { name: "로즈 골드 인피니티 밴드", price: "$3,400", img: "/templates/jewelry/jewelry-ring.png", tag: "에센셜" },
+    { name: "다이아몬드 솔리테어 링", price: "$4,250", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "웨딩" },
+    { name: "래디언트 펄 펜던트", price: "$1,850", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "시즈널" },
+    { name: "사파이어 뱅글", price: "$12,200", img: "/templates/OHMT002-jewelry/jewelry-hero-main.png", tag: "럭셔리" },
+    { name: "로즈 골드 인피니티 밴드", price: "$3,400", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "에센셜" },
   ];
 
   const filteredProducts = products.filter((product) => {
@@ -48,9 +48,9 @@ function JewelryPageContent() {
             className="absolute inset-0 z-0"
           >
             <img
-              src="/templates/jewelry/jewelry-hero-main.png"
+              src="/templates/OHMT002-jewelry/jewelry-hero-main.png"
               className="w-full h-full object-cover grayscale-[0.2]"
-              alt="Oh My Template Fine Jewelry Hero"
+              alt="OHMT Fine Jewelry Hero"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/40" />
           </motion.div>
@@ -62,7 +62,7 @@ function JewelryPageContent() {
               transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
             >
               <span className="text-[13px] md:text-[15px] uppercase text-white mb-6 block tracking-tight font-bold opacity-80">
-                Oh My Template FINE JEWELRY
+                OHMT FINE JEWELRY
               </span>
               <h2 className="text-white mb-12 flex flex-col items-center tracking-[0.05em] max-w-6xl mx-auto space-y-4">
                 <span className="block font-extralight text-white/90 text-center text-lg md:text-2xl tracking-tight" style={{ fontFamily: "'Nanum Myeongjo', serif" }}>시간이 흘러도 빛을 잃지 않는 고귀한 명작,</span>
@@ -163,12 +163,12 @@ function JewelryPageContent() {
                 transition={{ duration: 1.5 }}
                 className="aspect-[4/5] overflow-hidden"
               >
-                <img loading="lazy" src="/templates/jewelry/jewelry-craft.png" alt="Jewelry Craftsmanship" className="w-full h-full object-cover" />
+                <img loading="lazy" src="/templates/OHMT002-jewelry/jewelry-craft.png" alt="Jewelry Craftsmanship" className="w-full h-full object-cover" />
               </motion.div>
               <div className="absolute -bottom-10 -right-6 lg:-bottom-14 lg:-right-14 w-72 bg-white p-8 hidden md:block shadow-[0_40px_80px_rgba(0,0,0,0.08)] border border-neutral-100">
                 <span className="text-[var(--color-primary)] text-[13px] font-bold uppercase tracking-[0.3em] block mb-3">아틀리에의 장인정신</span>
                 <p className="text-sm text-neutral-800 leading-relaxed font-bold font-serif">
-                  "모든 단면은 빛과 원석의 깊은 대화입니다. Oh My Template만의 독보적인 광채를 구현하기 위해 장인의 손길로 정교하게 다듬어집니다."
+                  "모든 단면은 빛과 원석의 깊은 대화입니다. OHMT만의 독보적인 광채를 구현하기 위해 장인의 손길로 정교하게 다듬어집니다."
                 </p>
               </div>
             </div>
@@ -182,7 +182,7 @@ function JewelryPageContent() {
               <span className="text-[13px] uppercase tracking-[0.3em] text-neutral-400 font-bold">HERITAGE</span>
               <h3 className="text-3xl md:text-5xl font-serif font-bold leading-[1.5] tracking-[-0.01em]">영혼을 담아 <span className="text-[var(--color-primary)]">빚어낸 찬란함</span></h3>
               <p className="text-sm md:text-base text-neutral-600 leading-[1.7] md:leading-[1.8] max-w-md">
-                Oh My Template는 주얼리가 단순한 장신구를 넘어, 삶의 가장 찬란한 순간을 함께 기억하는 영원한 동반자라 믿습니다. 하나의 완벽한 세팅을 위해, 장인들은 수백 시간 동안 예술에 가까운 헌신을 바칩니다.
+                OHMT는 주얼리가 단순한 장신구를 넘어, 삶의 가장 찬란한 순간을 함께 기억하는 영원한 동반자라 믿습니다. 하나의 완벽한 세팅을 위해, 장인들은 수백 시간 동안 예술에 가까운 헌신을 바칩니다.
               </p>
               <div className="flex items-center gap-4 group cursor-pointer pt-2">
                 <div className="w-11 h-11 rounded-full border border-neutral-200 flex items-center justify-center group-hover:bg-[var(--color-primary)] group-hover:border-[var(--color-primary)] group-hover:text-white transition-all duration-500 flex-shrink-0">

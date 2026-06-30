@@ -70,7 +70,7 @@ export function ActivityCards() {
           </div>
         ))}
       </div>
-      <p className="mt-4 text-xs text-[var(--color-text-muted)] leading-relaxed">
+      <p className="mt-4 text-sm text-[var(--color-text-muted)] leading-relaxed">
         All KPIs measured against Q2 2026 targets. Dealer satisfaction based on NPS survey across 48 regional partners.
       </p>
     </motion.div>
@@ -94,7 +94,7 @@ function SimpleDonut({ percentage, label, suffix = '%', color }: { percentage: n
           </span>
         </div>
       </div>
-      <p className="mt-2 text-xs text-[var(--color-text-muted)] text-center">{label}</p>
+      <p className="mt-2 text-sm text-[var(--color-text-muted)] text-center">{label}</p>
     </div>
   )
 }

@@ -15,7 +15,7 @@ function ScheduleContent() {
       <PageHeader
         title="예약하기"
         subtitle="한 주를 계획하고 나에게 맞는 클래스를 찾아보세요."
-        image="/templates/yoga/subpage-schedule.jpg"
+        image="/templates/OHMT022-yoga/subpage-schedule.jpg"
       />
 
       <section className="bg-[var(--color-bg)] border-b border-[var(--color-border)]">
@@ -29,7 +29,7 @@ function ScheduleContent() {
             {SCHEDULE.reduce((acc, d) => acc + d.classes.length, 0)}개 클래스
           </h2>
           <p
-            className="hidden md:block text-[12px] text-[var(--color-text-muted)]"
+            className="hidden md:block text-[14px] text-[var(--color-text-muted)]"
             style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
           >
             일정은 변경될 수 있습니다
@@ -64,7 +64,7 @@ function ScheduleContent() {
                   {day.classes.map((cls, idx) => (
                     <Link
                       key={idx}
-                      href={`/ko/templates/OHMT022-yoga-KO/classes/${cls.slug}`}
+                      href={`/ko/templates/OHMT022-yoga/classes/${cls.slug}`}
                       className={`group flex flex-col ${pl} ${pr} py-6 hover:bg-[var(--color-bg-alt)] transition-colors`}
                     >
                       <p
@@ -80,7 +80,7 @@ function ScheduleContent() {
                         {cls.name}
                       </p>
                       <p
-                        className="mt-1.5 text-[12px] text-[var(--color-text-muted)]"
+                        className="mt-1.5 text-[14px] text-[var(--color-text-muted)]"
                         style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
                       >
                         {cls.instructor}

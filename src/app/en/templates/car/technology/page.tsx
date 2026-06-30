@@ -12,28 +12,28 @@ const technologies = [
     title: "AI-Pilot 2.0",
     desc: "Neural network driving assistance that learns your habits and anticipates road conditions in real-time.",
     detail: "Processes 4,000 data points per second from 12 sensors. Reacts in 0.02 seconds - 10× faster than human reflex.",
-    img: "/templates/car/car-1.jpg",
+    img: "/templates/OHMT009-car/car-1.jpg",
   },
   {
     num: "02",
     title: "Quantum Battery",
     desc: "Solid-state architecture delivering 530km range with 350kW ultra-fast charging capability.",
     detail: "10% to 80% charge in 22 minutes. 100km of range added in under 5 minutes at high-speed stations.",
-    img: "/templates/car/hero-1.jpg",
+    img: "/templates/OHMT009-car/hero-1.jpg",
   },
   {
     num: "03",
     title: "Adaptive Suspension",
     desc: "Active damping system that reads road surfaces 1,000 times per second for unparalleled comfort.",
     detail: "Each wheel adjusts independently in 2ms. The result: zero compromise between sport and comfort.",
-    img: "/templates/car/hero-3.jpg",
+    img: "/templates/OHMT009-car/hero-3.jpg",
   },
   {
     num: "04",
     title: "Panoramic OS",
     desc: "A 30-inch floating display with haptic feedback and voice-native AI interface.",
     detail: "Learns your preferences within 3 drives. The interface disappears - only what you need, when you need it.",
-    img: "/templates/car/car-5.jpg",
+    img: "/templates/OHMT009-car/car-5.jpg",
   },
 ];
 
@@ -48,7 +48,7 @@ function CarTechnologyPageContent() {
         {/* Hero */}
         <section className="relative h-[70vh] min-h-[500px] overflow-hidden flex items-end">
           <img
-            src="/templates/car/car-3.jpg"
+            src="/templates/OHMT009-car/car-3.jpg"
             alt="VINUS Technology"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
@@ -129,7 +129,7 @@ function CarTechnologyPageContent() {
 
         {/* Full-bleed strip */}
         <div className="relative h-[50vh] overflow-hidden">
-          <img loading="lazy" src="/templates/car/hero-2.jpg" alt="" className="w-full h-full object-cover object-center" />
+          <img loading="lazy" src="/templates/OHMT009-car/hero-2.jpg" alt="" className="w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
             <p className="text-[clamp(1.5rem,4vw,3rem)] font-bold tracking-tight text-center max-w-[600px] px-6">
               Every detail engineered to move you forward.

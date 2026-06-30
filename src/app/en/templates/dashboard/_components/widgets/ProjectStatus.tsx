@@ -4,11 +4,11 @@ import { motion } from 'framer-motion'
 import { Avatar } from '../common/Avatar'
 
 const people: Record<string, string> = {
-  'Morgan Chen': '/templates/portfolio/portfolio-1.jpg',
-  'Sarah Yoon': '/templates/portfolio/portfolio-5.png',
-  'James Kang': '/templates/portfolio/portfolio-4.png',
-  'Mia Torres': '/templates/portfolio/portfolio-3.png',
-  'Daniel Park': '/templates/portfolio/portfolio-2.jpg',
+  'Morgan Chen': '/templates/OHMT007-portfolio/portfolio-1.jpg',
+  'Sarah Yoon': '/templates/OHMT007-portfolio/portfolio-5.png',
+  'James Kang': '/templates/OHMT007-portfolio/portfolio-4.png',
+  'Mia Torres': '/templates/OHMT007-portfolio/portfolio-3.png',
+  'Daniel Park': '/templates/OHMT007-portfolio/portfolio-2.jpg',
 }
 
 const projects = [
@@ -59,7 +59,7 @@ export function ProjectStatus({ className = '' }: { className?: string }) {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-[var(--color-text)]">{p.name}</p>
-                <p className="text-xs text-[var(--color-text-muted)]">Due {p.due} · {p.manager}</p>
+                <p className="text-sm text-[var(--color-text-muted)]">Due {p.due} · {p.manager}</p>
               </div>
               <div className="flex items-center gap-3">
                 <div className="flex -space-x-2">
@@ -84,7 +84,7 @@ export function ProjectStatus({ className = '' }: { className?: string }) {
                 style={{ background: p.statusColor }}
               />
             </div>
-            <p className="text-[10px] text-[var(--color-text-muted)] text-right">{p.progress}% complete</p>
+            <p className="text-[14px] text-[var(--color-text-muted)] text-right">{p.progress}% complete</p>
           </div>
         ))}
       </div>

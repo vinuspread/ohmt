@@ -1,4 +1,4 @@
-﻿import { TemplateWrapper } from "./_components/TemplateWrapper";
+import { TemplateWrapper } from "./_components/TemplateWrapper";
 import themeData from "./theme.json";
 
 import Navbar from "./_components/layout/Navbar";
@@ -12,9 +12,9 @@ export default function TemplatePage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": "Oh My Template - Wedding Photography",
+    "name": "OHMT - Wedding Photography",
     "description": "Elegant dark portfolio template for wedding photography and cinematic capture",
-    "url": "https://ohmytemplate.com/ko/templates/OHMT025-wedding-KO",
+    "url": "https://ohmytemplate.com/ko/templates/OHMT025-wedding",
     "telephone": "+1-512-555-0199",
     "address": {
       "@type": "PostalAddress",

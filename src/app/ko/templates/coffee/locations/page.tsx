@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import { Header } from "../_components/Header";
 import { Footer } from "../_components/Footer";
@@ -15,7 +15,7 @@ function LocationsPageContent() {
         {/* Hero */}
         <section className="relative bg-[var(--color-bg-dark)] h-[300px] flex items-center overflow-hidden">
           <img
-            src="/templates/coffee/location-seongsu.jpg"
+            src="/templates/OHMT019-coffee/location-seongsu.jpg"
             alt="매장 안내 서브 비주얼"
             className="absolute inset-0 w-full h-full object-cover"
           />
@@ -72,7 +72,7 @@ function LocationsPageContent() {
             <div className="text-center mb-12">
               <p className="text-xs uppercase tracking-[0.3em] text-[var(--color-text-muted)] mb-3">파트너십</p>
               <h2 className="text-3xl font-bold font-heading mb-4 text-[var(--color-text)]">가맹점 문의</h2>
-              <p className="text-sm text-[var(--color-text-muted)]">Oh My Template 브랜드와 함께 특별한 커피 문화를 만들어갈 파트너를 모십니다.</p>
+              <p className="text-sm text-[var(--color-text-muted)]">OHMT 브랜드와 함께 특별한 커피 문화를 만들어갈 파트너를 모십니다.</p>
             </div>
             <form onSubmit={(e) => { e.preventDefault(); alert("문의가 접수되었습니다. 담당자가 곧 연락드리겠습니다."); }} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

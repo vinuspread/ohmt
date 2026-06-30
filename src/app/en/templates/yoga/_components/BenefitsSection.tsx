@@ -1,10 +1,10 @@
 ﻿import Link from "next/link";
 
 const PANELS = [
-  { image: "/templates/yoga/class-vinyasa.jpg", label: "Vinyasa Flow", sub: "Dynamic Movement", href: "/en/templates/OHMT022-yoga-EN/classes/vinyasa-flow" },
-  { image: "/templates/yoga/class-hatha.jpg", label: "Hatha Yoga", sub: "Stillness & Breath", href: "/en/templates/OHMT022-yoga-EN/classes/hatha-yoga" },
-  { image: "/templates/yoga/class-meditation.jpg", label: "Meditation", sub: "Inner Quiet", href: "/en/templates/OHMT022-yoga-EN/classes/meditation" },
-  { image: "/templates/yoga/class-pilates.jpg", label: "Pilates", sub: "Core & Alignment", href: "/en/templates/OHMT022-yoga-EN/classes/pilates" },
+  { image: "/templates/OHMT022-yoga/class-vinyasa.jpg", label: "Vinyasa Flow", sub: "Dynamic Movement", href: "/en/templates/OHMT022-yoga/classes/vinyasa-flow" },
+  { image: "/templates/OHMT022-yoga/class-hatha.jpg", label: "Hatha Yoga", sub: "Stillness & Breath", href: "/en/templates/OHMT022-yoga/classes/hatha-yoga" },
+  { image: "/templates/OHMT022-yoga/class-meditation.jpg", label: "Meditation", sub: "Inner Quiet", href: "/en/templates/OHMT022-yoga/classes/meditation" },
+  { image: "/templates/OHMT022-yoga/class-pilates.jpg", label: "Pilates", sub: "Core & Alignment", href: "/en/templates/OHMT022-yoga/classes/pilates" },
 ];
 
 export default function BenefitsSection() {
@@ -20,7 +20,7 @@ export default function BenefitsSection() {
           Quick Fixes
         </h2>
         <Link
-          href="/en/templates/OHMT022-yoga-EN/classes"
+          href="/en/templates/OHMT022-yoga/classes"
           className="hidden md:inline-flex items-center gap-2 text-[13px] tracking-[0.15em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] group transition-colors font-medium"
           style={{ fontFamily: "var(--font-body)" }}
         >
@@ -62,7 +62,7 @@ export default function BenefitsSection() {
                 {panel.label}
               </p>
               <p
-                className="text-[13px] text-white/65 mt-2"
+                className="text-[15px] text-white/65 mt-2"
                 style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
               >
                 {panel.sub}

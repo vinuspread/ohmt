@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowRight, MousePointerClick, Headphones } from "lucide-react";
@@ -36,7 +36,7 @@ function HomeContent() {
     "souvenirShop": `Souvenir Shop`
   },
   "hero": {
-    "badge": `Musei Vaticani · Oh My Template Curation`,
+    "badge": `Musei Vaticani · OHMT Curation`,
     "title1": `THE ETERNAL`,
     "title2": `Masterpieces`,
     "cta": `Begin Journey`
@@ -60,7 +60,7 @@ function HomeContent() {
     "p2": `Our curation seeks to extract the structural brilliance from the overwhelming ornamentation. By highlighting works like the Laocoön or the delicate Pietà in an isolated, digital space, we allow their raw theological and emotional gravity to echo without the noise of the physical gallery crowd.`,
     "p3": `Every brushstroke captured by Raphael, every chisel strike endured by Michelangelo. These are not relics of the past. They are continuing dialogues on the nature of humanity, suffering, knowledge, and divinity.`,
     "curator": `Curator`,
-    "curatorName": `Oh My Template Exhibition`
+    "curatorName": `OHMT Exhibition`
   },
   "ourStory": {
     "heritage": `MUSEI VATICANI · 500 YEARS OF HERITAGE`,
@@ -206,7 +206,7 @@ function HomeContent() {
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-[var(--color-primary)] z-10" />
           <img 
-            src="/templates/museum/hero-bg.png" 
+            src="/templates/OHMT021-museum/hero-bg.png" 
             alt="Vatican Ceiling"
             className="w-full h-full object-cover opacity-80"
           />
@@ -236,7 +236,7 @@ function HomeContent() {
             From the whisper of ancient marble to the fire of the Sistine ceiling, an encounter that five centuries of patronage have been preparing for you.
           </motion.p>
           <motion.div variants={fadeIn} className="pointer-events-auto flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
-            <Link href={`/en/templates/OHMT021-museum-EN/collections`} className="w-fit mx-auto px-8 md:px-10 py-3 md:py-4 border border-[var(--color-accent)]/30 text-xs uppercase tracking-[0.5em] hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors duration-300 backdrop-blur-sm">
+            <Link href={`/en/templates/OHMT021-museum/collections`} className="w-fit mx-auto px-8 md:px-10 py-3 md:py-4 border border-[var(--color-accent)]/30 text-xs uppercase tracking-[0.5em] hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors duration-300 backdrop-blur-sm">
               {t.hero.cta}
             </Link>
           </motion.div>
@@ -254,7 +254,7 @@ function HomeContent() {
           <div className="flex-1 text-center md:text-left">
             <span className="text-[8px] md:text-[13px] uppercase font-bold tracking-[0.5em] text-black/40 block mb-2 md:mb-4">{t.audioGuide.badge}</span>
             <h3 className="text-lg md:text-3xl font-serif font-bold mb-3 md:mb-4">{t.audioGuide.title}</h3>
-            <p className="text-black/60 font-normal max-w-xs md:max-w-md text-xs md:text-sm leading-[1.4]">
+            <p className="text-black/60 font-normal max-w-xs md:max-w-md text-sm md:text-sm leading-[1.4]">
               {t.audioGuide.desc}
             </p>
           </div>
@@ -289,7 +289,7 @@ function HomeContent() {
                 transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: i * 0.08 }}
                 className="w-[85vw] sm:w-[80vw] md:w-[50vw] lg:w-[35vw] xl:w-[25vw] shrink-0"
               >
-                <Link href={`/en/templates/OHMT021-museum-EN/collections/${item.slug}`} className="group relative cursor-pointer block">
+                <Link href={`/en/templates/OHMT021-museum/collections/${item.slug}`} className="group relative cursor-pointer block">
                   <div className="relative aspect-[3/4] bg-[var(--color-bg-secondary)] overflow-hidden mb-8">
                     <img 
                       src={item.img} 
@@ -339,7 +339,7 @@ function HomeContent() {
               <br /><br />
               {t.curatorNote.p2}
             </p>
-            <Link href={`/en/templates/OHMT021-museum-EN/curator-note`} className="inline-flex items-center gap-4 text-xs font-bold uppercase tracking-[0.5em] group pb-2 border-b border-black">
+            <Link href={`/en/templates/OHMT021-museum/curator-note`} className="inline-flex items-center gap-4 text-xs font-bold uppercase tracking-[0.5em] group pb-2 border-b border-black">
               {t.gallery.readEssay} <ArrowRight size={14} className="group-hover:translate-x-3 transition-transform duration-300" />
             </Link>
           </motion.div>
@@ -352,7 +352,7 @@ function HomeContent() {
             className="order-1 md:order-2 relative aspect-[4/3] md:aspect-[3/4] overflow-hidden rounded-sm"
           >
              <img
-               src="/templates/museum/curator.png"
+               src="/templates/OHMT021-museum/curator.png"
                alt="Vatican Museum Interior"
                className="w-full h-full object-cover grayscale"
              />

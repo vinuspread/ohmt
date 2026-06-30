@@ -26,7 +26,7 @@ export const Newsletter = () => {
             구독하기
           </button>
         </div>
-        <p className="text-[11px] text-white/25 mt-4">
+        <p className="text-[14px] text-white/25 mt-4">
           스팸 없음. 언제든 구독 취소 가능.
         </p>
       </div>

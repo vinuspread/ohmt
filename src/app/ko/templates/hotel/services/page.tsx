@@ -28,7 +28,7 @@ function ServicesPageContent() {
         {/* Hero Section */}
         <section className="relative h-[40vh] md:h-[50vh] flex items-center bg-[var(--color-primary)] overflow-hidden">
           <div className="absolute inset-0">
-            <img src="/templates/hotel/hero-main.jpg" alt="Services" className="w-full h-full object-cover opacity-50" />
+            <img src="/templates/OHMT020-hotel/hero-main.jpg" alt="Services" className="w-full h-full object-cover opacity-50" />
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)] via-[var(--color-primary)]/40 to-transparent" />
           </div>
           <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full pt-20">
@@ -83,7 +83,7 @@ function ServicesPageContent() {
           <div className="max-w-[1440px] mx-auto px-6 md:px-12">
             <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
               <div className="w-full lg:w-1/2 overflow-hidden aspect-[16/10] border border-[var(--color-border)]">
-                <img src="/templates/hotel/story-01.jpg" alt="Aman Spa" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]" />
+                <img src="/templates/OHMT020-hotel/story-01.jpg" alt="Aman Spa" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]" />
               </div>
               <div className="w-full lg:w-1/2 flex flex-col gap-6">
                 <span className="text-[12px] font-semibold text-[var(--color-accent)] tracking-tight block">시그니처 프로그램</span>

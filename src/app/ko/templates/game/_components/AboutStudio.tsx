@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "motion/react";
 
@@ -27,7 +27,7 @@ export default function AboutStudio() {
               스튜디오
             </h2>
             <p className="mt-6 text-base leading-relaxed text-[var(--color-text-muted)]">
-              2018년, Oh My Template는 오스틴의 작은 사무실에서 다섯 명의 열정적인 개발자로
+              2018년, OHMT는 오스틴의 작은 사무실에서 다섯 명의 열정적인 개발자로
               시작했습니다. 오늘날 우리는 세 대륙에 걸쳐 200명 이상의 크리에이터로 구성된
               가족으로, 단 하나의 사명으로 뭉쳐 있습니다: 영감을 주는 세상을 만들고
               인터랙티브 스토리텔링의 한계를 허무는 것입니다.
@@ -58,8 +58,8 @@ export default function AboutStudio() {
             className="relative aspect-[4/3] overflow-hidden rounded-2xl"
           >
             <img
-              src="/templates/game/studio-team.jpg"
-              alt="Oh My Template 팀"
+              src="/templates/OHMT023-game/studio-team.jpg"
+              alt="OHMT 팀"
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 border border-[var(--color-border)] rounded-2xl pointer-events-none" />

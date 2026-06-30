@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -34,7 +34,7 @@ function MuseumInfoContent() {
     "souvenirShop": `Souvenir Shop`
   },
   "hero": {
-    "badge": `Musei Vaticani ??Oh My Template Curation`,
+    "badge": `Musei Vaticani ??OHMT Curation`,
     "title1": `THE ETERNAL`,
     "title2": `Masterpieces`,
     "cta": `Begin Journey`
@@ -58,7 +58,7 @@ function MuseumInfoContent() {
     "p2": `Our curation seeks to extract the structural brilliance from the overwhelming ornamentation. By highlighting works like the Laocoön or the delicate Pietà in an isolated, digital space, we allow their raw theological and emotional gravity to echo without the noise of the physical gallery crowd.`,
     "p3": `Every brushstroke captured by Raphael, every chisel strike endured by Michelangelo ??these are not relics of the past. They are continuing dialogues on the nature of humanity, suffering, knowledge, and divinity.`,
     "curator": `Curator`,
-    "curatorName": `Oh My Template Exhibition`
+    "curatorName": `OHMT Exhibition`
   },
   "ourStory": {
     "heritage": `MUSEI VATICANI ??500 YEARS OF HERITAGE`,
@@ -173,9 +173,9 @@ const timelineData = t.ourStory.timeline;
   const grottoesData = t.ourStory.grottoes;
   
   const grottoes = [
-    { ...grottoesData[0], img: "/templates/museum/papal-tombs.png" },
-    { ...grottoesData[1], img: "/templates/museum/curator.png" },
-    { ...grottoesData[2], img: "/templates/museum/vatican-hallway.png" },
+    { ...grottoesData[0], img: "/templates/OHMT021-museum/papal-tombs.png" },
+    { ...grottoesData[1], img: "/templates/OHMT021-museum/curator.png" },
+    { ...grottoesData[2], img: "/templates/OHMT021-museum/vatican-hallway.png" },
   ];
 
   return (
@@ -195,7 +195,7 @@ const timelineData = t.ourStory.timeline;
           className="absolute inset-0"
         >
           <img
-            src="/templates/museum/st-peters-exterior.png"
+            src="/templates/OHMT021-museum/st-peters-exterior.png"
             alt="The Vatican Sanctuary"
             className="w-full h-full object-cover brightness-50"
           />
@@ -241,7 +241,7 @@ const timelineData = t.ourStory.timeline;
             </p>
           </motion.div>
           <motion.div variants={fadeIn} className="relative aspect-[4/5] overflow-hidden">
-            <img loading="lazy" src="/templates/museum/vatican-hallway.png" alt="Museum Corridor" className="w-full h-full object-cover grayscale-[0.3] hover:scale-105 transition-transform duration-[2s]" />
+            <img loading="lazy" src="/templates/OHMT021-museum/vatican-hallway.png" alt="Museum Corridor" className="w-full h-full object-cover grayscale-[0.3] hover:scale-105 transition-transform duration-[2s]" />
           </motion.div>
         </motion.div>
 
@@ -276,7 +276,7 @@ const timelineData = t.ourStory.timeline;
 
         <div className="grid md:grid-cols-2 gap-24 items-center mb-40">
           <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 1.2 }} className="aspect-[4/5] overflow-hidden">
-            <img loading="lazy" src="/templates/museum/baldaquin.png" alt="Bernini's Baldaquin" className="w-full h-full object-cover grayscale-[0.2] hover:scale-105 transition-transform duration-[2s]" />
+            <img loading="lazy" src="/templates/OHMT021-museum/baldaquin.png" alt="Bernini's Baldaquin" className="w-full h-full object-cover grayscale-[0.2] hover:scale-105 transition-transform duration-[2s]" />
           </motion.div>
           <div className="space-y-10">
             <span className="text-[13px] uppercase font-bold tracking-[0.5em] text-white/40">{t.ourStory.altar}</span>
@@ -320,7 +320,7 @@ const timelineData = t.ourStory.timeline;
           {t.ourStory.visitArchive}
         </h3>
         <Link
-          href={`/en/templates/OHMT021-museum-EN/collections`}
+          href={`/en/templates/OHMT021-museum/collections`}
           className="inline-flex items-center gap-4 text-xs font-bold uppercase tracking-[0.5em] border border-white/20 px-10 py-6 hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] transition-all duration-300 group"
         >
           {t.ourStory.exploreBtn}

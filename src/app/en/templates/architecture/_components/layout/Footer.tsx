@@ -1,10 +1,10 @@
-// src/app/en/templates/OHMT027-architecture-EN/_components/layout/Footer.tsx
+﻿// src/app/en/templates/OHMT027-architecture/_components/layout/Footer.tsx
 "use client";
 import React from "react";
 import Link from "next/link";
 
 export function Footer() {
-  const baseRoute = "/en/templates/OHMT027-architecture-EN";
+  const baseRoute = "/en/templates/OHMT027-architecture";
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,12 +18,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Left: Logo & Contact */}
           <div className="space-y-6">
-            <Link href={baseRoute} className="flex items-center gap-2">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2L2 12L12 22L22 12L12 2Z" fill="var(--color-accent)" />
-              </svg>
-              <span className="font-sans font-medium text-[14px] tracking-[0.05em] text-white">
-                OH MY TEMPLATE
+            <Link href={baseRoute} className="flex items-center">
+              <span className="font-sans font-bold text-[18px] tracking-[0.06em] text-white">
+                OHMT
               </span>
             </Link>
             <div className="font-sans text-[14px] text-white/70 space-y-2 leading-relaxed">
@@ -128,8 +125,8 @@ export function Footer() {
 
       {/* Bottom Area */}
       <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 py-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-        <p className="font-sans text-[13px] text-white/50">
-          © 2026 Oh My Template. All rights reserved.
+        <p className="font-sans text-[15px] text-white/50">
+          © 2026 Oh My Template.
         </p>
         <div className="flex gap-6 text-[13px] text-white/50 font-sans">
           <Link href={`${baseRoute}`} className="hover:text-white transition-colors">

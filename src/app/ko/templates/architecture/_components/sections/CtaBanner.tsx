@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture-KO/_components/sections/CtaBanner.tsx
+// src/app/en/templates/OHMT027-architecture/_components/sections/CtaBanner.tsx
 "use client";
 import React from "react";
 import Image from "next/image";
@@ -6,13 +6,13 @@ import Link from "next/link";
 import { ScrollReveal } from "../ui/ScrollReveal";
 
 export function CtaBanner() {
-  const baseRoute = "/en/templates/OHMT027-architecture-KO";
+  const baseRoute = "/ko/templates/OHMT027-architecture";
 
   return (
-    <section className="relative h-[60vh] md:h-[70vh] min-h-[400px] w-full overflow-hidden">
+    <section className="relative h-[40vh] md:h-[46vh] min-h-[280px] w-full overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/templates/architecture/cta-bg.jpg"
+        src="/templates/OHMT027-architecture/project-3.jpg"
         alt="Architectural facade night view"
         fill
         className="object-cover"

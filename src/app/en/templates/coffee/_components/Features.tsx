@@ -60,14 +60,14 @@ export const Features = () => {
           >
             <div className="w-full aspect-[4/3] overflow-hidden">
               <img
-                src="/templates/coffee/alt-detail.jpg"
+                src="/templates/OHMT019-coffee/alt-detail.jpg"
                 alt="Coffee shop detail"
                 className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out"
               />
             </div>
             <div className="absolute bottom-0 right-0 bg-[var(--color-bg-dark)] text-white p-6 w-[200px]">
               <p className="text-[9px] uppercase tracking-[0.2em] text-white/45 mb-2">Our Mission</p>
-              <p className="text-[13px] leading-relaxed text-white/75">
+              <p className="text-[15px] leading-relaxed text-white/75">
                 To serve coffee as an experience - not a transaction.
               </p>
             </div>

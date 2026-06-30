@@ -1,29 +1,29 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 import { SmoothScroll } from "./_components/SmoothScroll";
 
 export const metadata: Metadata = {
-  title: "멀티샵 - Oh My Template",
+  title: "OHMT - 멀티샵",
   description: "큐레이션된 컬렉션을 제공하는 멀티브랜드 쇼핑 경험",
   openGraph: {
-    title: "멀티샵 - Oh My Template",
+    title: "OHMT - 멀티샵",
     description: "큐레이션된 컬렉션을 제공하는 멀티브랜드 쇼핑 경험",
-    url: "https://ohmytemplate.com/ko/templates/OHMT017-multi-shop-KO",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/multi-shop/og-image.jpg", width: 1200, height: 630 }],
+    url: "https://ohmytemplate.com/ko/templates/OHMT017-multi-shop",
+    siteName: "OHMT",
+    images: [{ url: "/templates/OHMT017-multi-shop/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "멀티샵 - Oh My Template",
+    title: "OHMT - 멀티샵",
     description: "큐레이션된 컬렉션을 제공하는 멀티브랜드 쇼핑 경험",
-    images: ["/templates/multi-shop/og-image.jpg"],
+    images: ["/templates/OHMT017-multi-shop/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT017-multi-shop-KO",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT017-multi-shop-EN" },
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT017-multi-shop",
+    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT017-multi-shop" },
   },
 };
 

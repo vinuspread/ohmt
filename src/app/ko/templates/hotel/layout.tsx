@@ -1,28 +1,28 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "Oh My Template Hotel - Oh My Template",
+  title: "OHMT - Hotel",
   description: "프리미엄 럭셔리 호텔 & 리조트 경험",
   openGraph: {
-    title: "Oh My Template Hotel - Oh My Template",
+    title: "OHMT - Hotel",
     description: "프리미엄 럭셔리 호텔 & 리조트 경험",
-    url: "https://ohmytemplate.com/ko/templates/OHMT020-hotel-KO",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/hotel/og-image.jpg", width: 1200, height: 630 }],
+    url: "https://ohmytemplate.com/ko/templates/OHMT020-hotel",
+    siteName: "OHMT",
+    images: [{ url: "/templates/OHMT020-hotel/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Oh My Template Hotel - Oh My Template",
+    title: "OHMT - Hotel",
     description: "프리미엄 럭셔리 호텔 & 리조트 경험",
-    images: ["/templates/hotel/og-image.jpg"],
+    images: ["/templates/OHMT020-hotel/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT020-hotel-KO",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT020-hotel-EN" },
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT020-hotel",
+    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT020-hotel" },
   },
 };
 

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import { motion } from "motion/react";
 import { Header } from "../_components/Header";
@@ -34,7 +34,7 @@ function AboutPageContent() {
             transition={{ duration: 1, delay: 0.2, ease }}
           >
             <img
-              src="/templates/coffee/story-interior.jpg"
+              src="/templates/OHMT019-coffee/story-interior.jpg"
               alt="Cafe interior"
               className="w-full h-full object-cover"
             />
@@ -55,7 +55,7 @@ function AboutPageContent() {
               Brewing with purpose,<br />serving with care.
             </h2>
             <p className="text-base leading-[1.8] text-[var(--color-text-muted)]">
-              Oh My Template started as a small coffee cart in Seongsu-dong.
+              OHMT started as a small coffee cart in Seongsu-dong.
               What began as a weekend passion project grew into a neighborhood
               staple. Our founders spent years traveling through coffee regions
               in Ethiopia and Colombia, building relationships with farmers who
@@ -75,7 +75,7 @@ function AboutPageContent() {
             transition={{ duration: 0.7, ease }}
           >
             <img
-              src="/templates/coffee/story-brewing.jpg"
+              src="/templates/OHMT019-coffee/story-brewing.jpg"
               alt="Coffee brewing"
               className="w-full h-full object-cover"
             />
@@ -114,10 +114,10 @@ function AboutPageContent() {
         {/* Image pair */}
         <section className="grid grid-cols-2">
           <div className="aspect-square overflow-hidden">
-            <img src="/templates/coffee/story-beans.jpg" alt="Coffee beans" className="w-full h-full object-cover" />
+            <img src="/templates/OHMT019-coffee/story-beans.jpg" alt="Coffee beans" className="w-full h-full object-cover" />
           </div>
           <div className="aspect-square overflow-hidden">
-            <img src="/templates/coffee/hero-drink.jpg" alt="Espresso bar" className="w-full h-full object-cover" />
+            <img src="/templates/OHMT019-coffee/hero-drink.jpg" alt="Espresso bar" className="w-full h-full object-cover" />
           </div>
         </section>
 

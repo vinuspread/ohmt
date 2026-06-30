@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture-EN/_components/sections/Hero.tsx
+// src/app/en/templates/OHMT027-architecture/_components/sections/Hero.tsx
 "use client";
 import React, { useRef, useState } from "react";
 import Image from "next/image";
@@ -17,19 +17,22 @@ export function Hero() {
 
   const slides = [
     {
-      leftImage: "/templates/architecture/hero-1.jpg",
-      rightImage: "/templates/architecture/hero-2.jpg",
-      caption: "HIGHLAND VILLA - SEOUL",
+      leftImage: "/templates/OHMT027-architecture/hero-1.jpg",
+      rightImage: "/templates/OHMT027-architecture/hero-2.jpg",
+      title: "HIGHLAND VILLA",
+      location: "SEOUL, KOREA",
     },
     {
-      leftImage: "/templates/architecture/hero-2.jpg",
-      rightImage: "/templates/architecture/hero-3.jpg",
-      caption: "MERIDIAN COMMERCE CENTER - GANGNAM",
+      leftImage: "/templates/OHMT027-architecture/hero-2.jpg",
+      rightImage: "/templates/OHMT027-architecture/hero-3.jpg",
+      title: "MERIDIAN COMMERCE CENTER",
+      location: "GANGNAM, SEOUL",
     },
     {
-      leftImage: "/templates/architecture/hero-3.jpg",
-      rightImage: "/templates/architecture/hero-1.jpg",
-      caption: "COASTAL RETREAT - GANGWON",
+      leftImage: "/templates/OHMT027-architecture/hero-3.jpg",
+      rightImage: "/templates/OHMT027-architecture/hero-1.jpg",
+      title: "COASTAL RETREAT",
+      location: "GANGWON, KOREA",
     },
   ];
 
@@ -45,7 +48,7 @@ export function Hero() {
           </h1>
           <div className="pb-2">
             <Link
-              href="/en/templates/OHMT027-architecture-EN/projects"
+              href="/en/templates/OHMT027-architecture/projects"
               className="font-sans text-[12px] font-medium tracking-[0.12em] text-[var(--color-text)] uppercase border-b border-[var(--color-text)] pb-1 hover:text-[var(--color-accent)] hover:border-[var(--color-accent)] transition-colors"
             >
               VIEW PROJECTS →
@@ -99,34 +102,37 @@ export function Hero() {
           ))}
         </Swiper>
 
-        {/* Custom Navigation Overlay */}
-        <div className="absolute left-8 md:left-12 lg:left-20 right-8 md:right-12 lg:right-20 bottom-6 z-20 flex justify-between items-center pointer-events-none">
-          {/* Left: Active Caption */}
-          <div className="font-sans text-[12px] font-medium tracking-[0.1em] text-white bg-black/40 px-3 py-1.5 backdrop-blur-sm pointer-events-auto">
-            {slides[activeIndex].caption}
-          </div>
+        </div>
 
-          {/* Right: Counter & Navigation Buttons */}
-          <div className="flex items-center gap-6 bg-black/40 px-4 py-2 backdrop-blur-sm pointer-events-auto">
-            <span className="font-sans text-[13px] font-semibold text-[var(--color-accent)] tracking-[0.05em]">
-              0{activeIndex + 1} / 0{slides.length}
-            </span>
-            <div className="flex gap-2">
-              <button
-                onClick={() => swiperRef.current?.slidePrev()}
-                className="w-[36px] height-[36px] h-[36px] border border-white/50 hover:border-white text-white flex items-center justify-center transition-colors duration-200"
-                aria-label="Previous Slide"
-              >
-                <ArrowLeft size={16} />
-              </button>
-              <button
-                onClick={() => swiperRef.current?.slideNext()}
-                className="w-[36px] height-[36px] h-[36px] border border-white/50 hover:border-white text-white flex items-center justify-center transition-colors duration-200"
-                aria-label="Next Slide"
-              >
-                <ArrowRight size={16} />
-              </button>
-            </div>
+      {/* Below-image: Caption + Navigation */}
+      <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 pt-5 flex justify-between items-center">
+        <div className="flex flex-col gap-0.5">
+          <span className="font-sans text-[12px] font-semibold tracking-[0.12em] text-[var(--color-text)] uppercase">
+            {slides[activeIndex].title}
+          </span>
+          <span className="font-sans text-[11px] tracking-[0.1em] text-[var(--color-text-secondary)] uppercase">
+            {slides[activeIndex].location}
+          </span>
+        </div>
+        <div className="flex items-center gap-6">
+          <span className="font-sans text-[13px] text-[var(--color-text-secondary)] tracking-[0.05em]">
+            0{activeIndex + 1} / 0{slides.length}
+          </span>
+          <div className="flex gap-2">
+            <button
+              onClick={() => swiperRef.current?.slidePrev()}
+              className="w-[36px] h-[36px] border border-[var(--color-border)] hover:border-[var(--color-text)] text-[var(--color-text)] flex items-center justify-center transition-colors duration-200"
+              aria-label="Previous Slide"
+            >
+              <ArrowLeft size={15} />
+            </button>
+            <button
+              onClick={() => swiperRef.current?.slideNext()}
+              className="w-[36px] h-[36px] border border-[var(--color-border)] hover:border-[var(--color-text)] text-[var(--color-text)] flex items-center justify-center transition-colors duration-200"
+              aria-label="Next Slide"
+            >
+              <ArrowRight size={15} />
+            </button>
           </div>
         </div>
       </div>

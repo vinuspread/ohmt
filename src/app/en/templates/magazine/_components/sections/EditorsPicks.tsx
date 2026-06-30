@@ -1,4 +1,4 @@
-﻿// src/app/templates/magazine/-components/sections/EditorsPicks.tsx
+﻿// src/app/templates/OHMT012-magazine/-components/sections/EditorsPicks.tsx
 "use client";
 
 import React from "react";
@@ -9,19 +9,19 @@ const picks = [
     slug: "sensory-language-ceramics",
     title: "The sensory language of ceramics.",
     desc: "Why handcrafted objects are becoming the ultimate luxury in a digital era.",
-    img: "/templates/magazine/mag-5.jpg"
+    img: "/templates/OHMT012-magazine/mag-5.jpg"
   },
   {
     slug: "urban-gardening-vertical-revolution",
     title: "Urban gardening: A vertical revolution.",
     desc: "Reclaiming concrete spaces to build sustainable food ecosystems in the city.",
-    img: "/templates/magazine/mag-6.jpg"
+    img: "/templates/OHMT012-magazine/mag-6.jpg"
   },
   {
     slug: "acoustics-of-silence",
     title: "The acoustics of silence.",
     desc: "Designing spaces that offer psychological refuge from the noise of modern life.",
-    img: "/templates/magazine/mag-7.jpg"
+    img: "/templates/OHMT012-magazine/mag-7.jpg"
   }
 ];
 
@@ -40,7 +40,7 @@ export const EditorsPicks = ({ t }: { t: any }) => {
                  <img loading="lazy" src={pick.img} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt={t.editorsPicks.items[i].title} />
                </div>
                <h3 className="font-[family-name:var(--theme-font-heading)] text-[1.3rem] font-normal leading-tight mb-3">
-                 <Link href={`/en/templates/OHMT012-magazine-EN/article/${pick.slug}`} className="hover:text-[var(--theme-accent)] transition-colors">{t.editorsPicks.items[i].title}</Link>
+                 <Link href={`/en/templates/OHMT012-magazine/article/${pick.slug}`} className="hover:text-[var(--theme-accent)] transition-colors">{t.editorsPicks.items[i].title}</Link>
                </h3>
                <p className="text-[0.875rem] text-[var(--theme-text-muted)] leading-[1.65] mb-4 font-normal">
                  {t.editorsPicks.items[i].desc}

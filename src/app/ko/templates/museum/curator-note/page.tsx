@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { Suspense } from "react";
 import React from "react";
 import { motion } from "framer-motion";
@@ -36,7 +36,7 @@ function CuratorNotePageContent() {
           className="aspect-[21/9] w-full bg-black mb-24 overflow-hidden relative"
         >
           <img 
-            src="/templates/museum/curator.png" 
+            src="/templates/OHMT021-museum/curator.png" 
             alt="Curator Note Architecture"
             className="w-full h-full object-cover grayscale opacity-90"
           />
@@ -60,7 +60,7 @@ function CuratorNotePageContent() {
           
           <div className="border-t border-black/20 mt-20 pt-10">
             <span className="text-xs uppercase tracking-[0.4em] font-bold block mb-2">{"큐레이터"}</span>
-            <span className="font-serif text-2xl">{"Oh My Template 엑시비션"}</span>
+            <span className="font-serif text-2xl">{"OHMT 엑시비션"}</span>
           </div>
         </motion.article>
 

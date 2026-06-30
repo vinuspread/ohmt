@@ -28,7 +28,7 @@ export default function CareAdvantages() {
             transition={{ duration: 0.6, ease: EASE_OUT }}
           >
             <div className="aspect-[4/5] rounded-2xl overflow-hidden mb-8">
-              <img src="/templates/spa/care-advantages.jpg" alt="Advanced spa equipment used in our treatments" className="h-full w-full object-cover" />
+              <img src="/templates/OHMT026-spa/care-advantages.jpg" alt="Advanced spa equipment used in our treatments" className="h-full w-full object-cover" />
             </div>
             <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">
               Care advantages

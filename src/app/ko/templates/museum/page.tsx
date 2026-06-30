@@ -62,7 +62,7 @@ function HomeContent() {
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-[var(--color-primary)] z-10" />
           <img 
-            src="/templates/museum/hero-bg.png" 
+            src="/templates/OHMT021-museum/hero-bg.png" 
             alt="Vatican Ceiling"
             className="w-full h-full object-cover opacity-80"
           />
@@ -97,7 +97,7 @@ function HomeContent() {
             고대 대리석의 속삭임부터 시스티나 천장화의 불꽃까지, 5세기의 후원이 당신을 위해 준비해온 단 하나의 여정.
           </motion.p>
           <motion.div variants={fadeIn} className="pointer-events-auto flex flex-col sm:flex-row gap-4 md:gap-6 justify-center">
-            <Link href="/ko/templates/OHMT021-museum-KO/collections" className="w-fit mx-auto px-8 md:px-10 py-3 md:py-4 border border-[var(--color-accent)]/30 text-xs uppercase tracking-[0.5em] hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors duration-500 backdrop-blur-sm">
+            <Link href="/ko/templates/OHMT021-museum/collections" className="w-fit mx-auto px-8 md:px-10 py-3 md:py-4 border border-[var(--color-accent)]/30 text-xs uppercase tracking-[0.5em] hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors duration-500 backdrop-blur-sm">
               {"여정 시작하기"}
             </Link>
           </motion.div>
@@ -115,7 +115,7 @@ function HomeContent() {
           <div className="flex-1 text-center md:text-left">
             <span className="text-[8px] md:text-[13px] uppercase font-bold tracking-[0.5em] text-black/40 block mb-2 md:mb-4">{"경험의 깊이를 더하다"}</span>
             <h3 className="text-lg md:text-3xl font-serif font-bold mb-3 md:mb-4">{"공식 오디오 가이드"}</h3>
-            <p className="text-black/60 font-normal max-w-xs md:max-w-md text-xs md:text-sm leading-relaxed">
+            <p className="text-black/60 font-normal max-w-xs md:max-w-md text-sm md:text-sm leading-relaxed">
               {"세계적인 미술 사학자들의 깊이 있는 해설과 함께 바티칸의 위대한 유산들을 더 깊이 있게 만나보세요. 다국어 오디오 가이드가 지원됩니다."}
             </p>
           </div>
@@ -150,7 +150,7 @@ function HomeContent() {
                 transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: i * 0.08 }}
                 className="w-[85vw] sm:w-[80vw] md:w-[50vw] lg:w-[35vw] xl:w-[25vw] shrink-0"
               >
-                <Link href={`/ko/templates/OHMT021-museum-KO/collections/${item.slug}`} className="group relative cursor-pointer block">
+                <Link href={`/ko/templates/OHMT021-museum/collections/${item.slug}`} className="group relative cursor-pointer block">
                   <div className="relative aspect-[3/4] bg-[var(--color-bg-secondary)] overflow-hidden mb-8">
                     <img 
                       src={item.img} 
@@ -200,7 +200,7 @@ function HomeContent() {
               <br /><br />
               {"우리의 큐레이션은 압도적인 장식성 너머에 존재하는 구조적인 눈부심을 포착하고자 합니다. 라오콘(Laocoön)이나 피에타(Pietà)와 같은 걸작들을 고요하고 정제된 디지털 공간에 홀로 세움으로써, 번잡한 미술관의 소음 없이 그 작품들이 지닌 순수한 신학적·감정적 무게감을 오롯이 전하고자 합니다."}
             </p>
-            <Link href="/ko/templates/OHMT021-museum-KO/curator-note" className="inline-flex items-center gap-4 text-xs font-bold uppercase tracking-[0.5em] group pb-2 border-b border-black">
+            <Link href="/ko/templates/OHMT021-museum/curator-note" className="inline-flex items-center gap-4 text-xs font-bold uppercase tracking-[0.5em] group pb-2 border-b border-black">
               {"에세이 읽기"} <ArrowRight size={14} className="group-hover:translate-x-3 transition-transform duration-300" />
             </Link>
           </motion.div>
@@ -213,7 +213,7 @@ function HomeContent() {
             className="order-1 md:order-2 relative aspect-[4/3] md:aspect-[3/4] overflow-hidden rounded-sm"
           >
              <img
-               src="/templates/museum/curator.png"
+               src="/templates/OHMT021-museum/curator.png"
                alt="Vatican Museum Interior"
                className="w-full h-full object-cover grayscale"
              />

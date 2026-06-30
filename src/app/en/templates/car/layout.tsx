@@ -1,28 +1,28 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "Car Concept - Oh My Template",
+  title: "OHMT - Car Concept",
   description: "Premium automotive concept showcase",
   openGraph: {
-    title: "Car Concept - Oh My Template",
+    title: "OHMT - Car Concept",
     description: "Premium automotive concept showcase",
-    url: "https://ohmytemplate.com/en/templates/OHMT009-car-EN",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/car/og-image.jpg", width: 1200, height: 630 }],
+    url: "https://ohmytemplate.com/en/templates/OHMT009-car",
+    siteName: "OHMT",
+    images: [{ url: "/templates/OHMT009-car/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Car Concept - Oh My Template",
+    title: "OHMT - Car Concept",
     description: "Premium automotive concept showcase",
-    images: ["/templates/car/og-image.jpg"],
+    images: ["/templates/OHMT009-car/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT009-car-EN",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT009-car-KO" },
+    canonical: "https://ohmytemplate.com/en/templates/OHMT009-car",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT009-car" },
   },
 };
 

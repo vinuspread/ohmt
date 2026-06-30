@@ -69,13 +69,13 @@ export function Header() {
   },
   "cta": `Start Project`,
   "footer": {
-    "copyright": `© 2026 Oh My Template Studio. All rights reserved.`,
+    "copyright": `© 2026 Oh My Template.`,
     "contact": `Austin, Texas · hello@ohmytemplate.com`
   },
   "aboutPage": {
     "category": `Architectural Core`,
     "title1": `ABOUT`,
-    "title2": `Oh My Template.`,
+    "title2": `OHMT.`,
     "philosophy": {
       "title": `Space as a canvas.`,
       "desc": `We operate at the convergence of architecture, spatial brand experience, and tactile interaction. Our design lab is dedicated to executing systems that evoke silence, celebrate material honesty, and command physical space with ultimate rigor.`
@@ -217,10 +217,10 @@ useEffect(() => {
     }, [menuOpen]);
 
     const navItems = [
-        { name: t.nav.services, href: '/en/templates/OHMT006-studio-EN/services' },
-        { name: t.nav.projects, href: '/en/templates/OHMT006-studio-EN/projects' },
-        { name: t.nav.contact, href: '/en/templates/OHMT006-studio-EN/contact' },
-        { name: t.nav.about, href: '/en/templates/OHMT006-studio-EN/about' },
+        { name: t.nav.services, href: '/en/templates/OHMT006-studio/services' },
+        { name: t.nav.projects, href: '/en/templates/OHMT006-studio/projects' },
+        { name: t.nav.contact, href: '/en/templates/OHMT006-studio/contact' },
+        { name: t.nav.about, href: '/en/templates/OHMT006-studio/about' },
     ];
 
     const isMainPage = /^\/(en|ko)?\/?templates\/studio\/?$/.test(pathname);
@@ -234,10 +234,10 @@ useEffect(() => {
             }`}>
                 {/* Logo */}
                 <Link
-                    href="/en/templates/OHMT006-studio-EN"
+                    href="/en/templates/OHMT006-studio"
                     className={`text-[18px] md:text-[20px] font-black tracking-[-0.5px] uppercase transition-colors duration-500 ${isLight ? 'text-black' : 'text-white'}`}
                 >
-                    Oh My Template<span className="font-normal">.</span>
+                    OHMT<span className="font-normal">.</span>
                 </Link>
 
                 {/* Desktop Nav */}
@@ -254,7 +254,7 @@ useEffect(() => {
                         ))}
                     </div>
                     <Link
-                        href="/en/templates/OHMT006-studio-EN/contact"
+                        href="/en/templates/OHMT006-studio/contact"
                         className={`h-[40px] px-8 rounded-full border text-[13px] font-bold tracking-[2.5px] uppercase transition-all duration-500 flex items-center justify-center ${
                             isLight ? 'border-black/15 text-black hover:bg-black hover:text-white' : 'border-white/30 text-white bg-white/10 hover:bg-white hover:text-black'
                         }`}
@@ -297,7 +297,7 @@ useEffect(() => {
                 </div>
                 <div className="px-8 pb-12">
                     <Link
-                        href="/en/templates/OHMT006-studio-EN/contact"
+                        href="/en/templates/OHMT006-studio/contact"
                         onClick={() => setMenuOpen(false)}
                         className="inline-flex items-center justify-center w-full h-[52px] rounded-full border border-white/30 text-white text-[13px] font-bold tracking-[2px] uppercase hover:bg-white hover:text-black transition-all duration-500"
                     >

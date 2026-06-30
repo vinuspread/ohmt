@@ -1,28 +1,28 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "Car Concept - Oh My Template (KO)",
+  title: "Car Concept - OHMT (KO)",
   description: "프리미엄 자동차 컨셉 쇼케이스",
   openGraph: {
-    title: "Car Concept - Oh My Template (KO)",
+    title: "Car Concept - OHMT (KO)",
     description: "프리미엄 자동차 컨셉 쇼케이스",
-    url: "https://ohmytemplate.com/ko/templates/OHMT009-car-KO",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/car/og-image.jpg", width: 1200, height: 630 }],
+    url: "https://ohmytemplate.com/ko/templates/OHMT009-car",
+    siteName: "OHMT",
+    images: [{ url: "/templates/OHMT009-car/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Car Concept - Oh My Template (KO)",
+    title: "Car Concept - OHMT (KO)",
     description: "프리미엄 자동차 컨셉 쇼케이스",
-    images: ["/templates/car/og-image.jpg"],
+    images: ["/templates/OHMT009-car/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT009-car-KO",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT009-car-EN" },
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT009-car",
+    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT009-car" },
   },
 };
 

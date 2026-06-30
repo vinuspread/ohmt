@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
@@ -7,7 +7,7 @@ import Link from "next/link";
 const EASE_IOS = [0.32, 0.72, 0, 1] as const;
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 
-const basePath = "/ko/templates/OHMT024-kids-education-KO";
+const basePath = "/ko/templates/OHMT024-kids-education";
 
 const navLinks = [
   { href: basePath, label: "홈" },
@@ -25,7 +25,7 @@ export default function Navbar() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--color-bg)]/95 backdrop-blur-sm border-b border-black/8">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Link href={basePath} className="text-xl font-bold tracking-tight" style={{ fontFamily: "var(--font-heading)" }}>
-            Oh My Template
+            OHMT
           </Link>
           
           <nav className="hidden md:flex items-center gap-8">

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import './theme.css';
 
@@ -13,27 +13,27 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Museum - Oh My Template",
+  title: "OHMT - Museum",
   description: "Experience the epitome of elegance and durability.",
   openGraph: {
-    title: "Museum - Oh My Template",
+    title: "OHMT - Museum",
     description: "Experience the epitome of elegance and durability.",
-    url: "https://ohmytemplate.com/en/templates/OHMT021-museum-EN",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/museum/og-image.jpg", width: 1200, height: 630 }],
+    url: "https://ohmytemplate.com/en/templates/OHMT021-museum",
+    siteName: "OHMT",
+    images: [{ url: "/templates/OHMT021-museum/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Museum - Oh My Template",
+    title: "OHMT - Museum",
     description: "Experience the epitome of elegance and durability.",
-    images: ["/templates/museum/og-image.jpg"],
+    images: ["/templates/OHMT021-museum/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT021-museum-EN",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT021-museum-KO" },
+    canonical: "https://ohmytemplate.com/en/templates/OHMT021-museum",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT021-museum" },
   },
 };
 

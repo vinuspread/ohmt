@@ -27,7 +27,7 @@ function MyPageContent() {
       <PageHeader
         title="마이페이지"
         subtitle="예약 내역, 멤버십, 계정 설정을 관리하세요."
-        image="/templates/yoga/subpage-mypage.jpg"
+        image="/templates/OHMT022-yoga/subpage-mypage.jpg"
       />
 
       {/* 프로필 + 스탯 */}
@@ -37,7 +37,7 @@ function MyPageContent() {
           <div className="flex items-center gap-5">
             <div
               className="w-16 h-16 rounded-full bg-cover bg-center flex-shrink-0"
-              style={{ backgroundImage: "url('/templates/yoga/instructor-1.jpg')" }}
+              style={{ backgroundImage: "url('/templates/OHMT022-yoga/instructor-1.jpg')" }}
             />
             <div>
               <p
@@ -53,7 +53,7 @@ function MyPageContent() {
                 김지수
               </h2>
               <p
-                className="mt-0.5 text-[13px] text-[var(--color-text-muted)]"
+                className="mt-0.5 text-[15px] text-[var(--color-text-muted)]"
                 style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
               >
                 jisoo.kim@email.com
@@ -74,14 +74,14 @@ function MyPageContent() {
               월 정기권
             </p>
             <p
-              className="mt-1 text-[13px] text-[var(--color-text-muted)]"
+              className="mt-1 text-[15px] text-[var(--color-text-muted)]"
               style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
             >
               2026. 7. 1 갱신 · 89,000원/월
             </p>
           </div>
           <Link
-            href="/ko/templates/OHMT022-yoga-KO/schedule"
+            href="/ko/templates/OHMT022-yoga/schedule"
             className="mt-2 inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] font-medium transition-colors"
             style={{ fontFamily: "var(--font-body)" }}
           >
@@ -145,7 +145,7 @@ function MyPageContent() {
                   {item.date}
                 </p>
                 <p
-                  className="mt-0.5 text-[12px] text-[var(--color-text-muted)]"
+                  className="mt-0.5 text-[14px] text-[var(--color-text-muted)]"
                   style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
                 >
                   {item.time}
@@ -159,7 +159,7 @@ function MyPageContent() {
                   {item.name}
                 </p>
                 <p
-                  className="mt-0.5 text-[12px] text-[var(--color-text-muted)]"
+                  className="mt-0.5 text-[14px] text-[var(--color-text-muted)]"
                   style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
                 >
                   {item.instructor}
@@ -211,7 +211,7 @@ function MyPageContent() {
             {PAYMENT_HISTORY.map((item, i) => (
               <div key={i} className="grid grid-cols-[5rem_1fr_auto] md:grid-cols-[8rem_1fr_auto] items-center gap-x-6 md:gap-x-10 px-8 md:px-14 lg:px-20 py-5">
                 <p
-                  className="text-[12px] text-[var(--color-text-muted)]"
+                  className="text-[14px] text-[var(--color-text-muted)]"
                   style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
                 >
                   {item.date}

@@ -10,6 +10,8 @@
   --color-text-muted: #888888;
   --color-text-contrast: #FFFFFF;
   --color-border: #E0E0E0;
+  --color-footer-bg: #0F0F0F;
+  --color-text-secondary: #888888;
 
   --font-heading: 'Cormorant Garamond', serif;
   --font-body: 'Inter', sans-serif;

@@ -8,7 +8,7 @@ interface ClassCardProps {
 export default function ClassCard({ yogaClass }: ClassCardProps) {
   return (
     <Link
-      href={`/en/templates/OHMT022-yoga-EN/classes/${yogaClass.slug}`}
+      href={`/en/templates/OHMT022-yoga/classes/${yogaClass.slug}`}
       className="group block border-b border-[var(--color-border)]"
     >
       {/* Image */}
@@ -35,7 +35,7 @@ export default function ClassCard({ yogaClass }: ClassCardProps) {
           {yogaClass.name}
         </h3>
         <p
-          className="mt-3 text-[13px] text-[var(--color-text-muted)] leading-[1.75]"
+          className="mt-3 text-[15px] text-[var(--color-text-muted)] leading-[1.75]"
           style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
         >
           {yogaClass.description}

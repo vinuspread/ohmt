@@ -73,7 +73,7 @@ function StudioProjectsPageContent() {
   },
   "cta": `Start Project`,
   "footer": {
-    "copyright": `© 2026 Vinuspread Studio. All rights reserved.`,
+    "copyright": `© 2026 Oh My Template.`,
     "contact": `Austin, Texas · hello@ohmytemplate.com`
   },
   "aboutPage": {
@@ -214,7 +214,7 @@ const [filter, setFilter] = useState("all");
             category: t.servicesPage.items[0].title,
             year: "2026",
             location: "Oslo, Norway",
-            image: "/templates/studio/project-1.jpg",
+            image: "/templates/OHMT006-studio/project-1.jpg",
             type: "corporate"
         },
         {
@@ -223,7 +223,7 @@ const [filter, setFilter] = useState("all");
             category: t.manifesto.label,
             year: "2025",
             location: "Kyoto, Japan",
-            image: "/templates/studio/project-2.jpg",
+            image: "/templates/OHMT006-studio/project-2.jpg",
             type: "residential"
         },
         {
@@ -232,7 +232,7 @@ const [filter, setFilter] = useState("all");
             category: t.servicesPage.items[2].category,
             year: "2025",
             location: "Basel, Switzerland",
-            image: "/templates/studio/project-3.jpg",
+            image: "/templates/OHMT006-studio/project-3.jpg",
             type: "exhibition"
         }
     ];
@@ -293,7 +293,7 @@ const [filter, setFilter] = useState("all");
                 bgClass="bg-[var(--color-bg-dark)]"
                 textColorClass="text-white"
                 borderColorClass="border-white/5"
-                imageSrc="/templates/studio/hero-3.jpg"
+                imageSrc="/templates/OHMT006-studio/hero-3.jpg"
                 imageAlt="High-end furniture close up"
                 imagePosition="right"
             >

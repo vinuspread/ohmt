@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState } from "react";
 import { Navbar } from "../_components/Navbar";
@@ -25,7 +25,7 @@ function ContactPageContent() {
         {/* Hero Section */}
         <section className="relative h-[40vh] md:h-[50vh] flex items-center bg-[var(--color-primary)] overflow-hidden">
           <div className="absolute inset-0">
-            <img src="/templates/hotel/story-03.jpg" alt="Contact" className="w-full h-full object-cover opacity-60" />
+            <img src="/templates/OHMT020-hotel/story-03.jpg" alt="Contact" className="w-full h-full object-cover opacity-60" />
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)] via-[var(--color-primary)]/40 to-transparent" />
           </div>
           <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full pt-20">
@@ -46,7 +46,7 @@ function ContactPageContent() {
                   <span className="text-[11px] font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] block mb-3">Reach Out</span>
                   <h2 className="text-3xl font-[var(--font-heading)] font-bold text-[var(--color-primary)] mb-6">Our Resort Location</h2>
                   <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-                    Set on a secluded hillside dropping into a private bay, Oh My Template is situated on Koh Samui’s pristine north-eastern coast.
+                    Set on a secluded hillside dropping into a private bay, OHMT is situated on Koh Samui’s pristine north-eastern coast.
                   </p>
                 </div>
 
@@ -77,7 +77,7 @@ function ContactPageContent() {
                 {/* OpenStreetMap embed - Koh Samui, Thailand */}
                 <div className="aspect-[16/10] border border-[var(--color-border)] overflow-hidden">
                   <iframe
-                    title="Oh My Template Location"
+                    title="OHMT Location"
                     src="https://www.openstreetmap.org/export/embed.html?bbox=99.9%2C9.45%2C100.15%2C9.6&layer=mapnik&marker=9.527%2C100.063"
                     className="w-full h-full"
                     style={{ border: 0 }}

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -17,12 +17,12 @@ export const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: "메뉴", href: "/ko/templates/OHMT018-burger-KO/menu" },
-    { name: "소개", href: "/ko/templates/OHMT018-burger-KO/about" },
-    { name: "매장", href: "/ko/templates/OHMT018-burger-KO/locations" },
+    { name: "메뉴", href: "/ko/templates/OHMT018-burger/menu" },
+    { name: "소개", href: "/ko/templates/OHMT018-burger/about" },
+    { name: "매장", href: "/ko/templates/OHMT018-burger/locations" },
   ];
 
-  const isHome = pathname === "/ko/templates/OHMT018-burger-KO";
+  const isHome = pathname === "/ko/templates/OHMT018-burger";
   const transparent = isHome && !scrolled && !mobileOpen;
 
   return (
@@ -32,11 +32,11 @@ export const Header = () => {
     >
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between h-full">
         <Link
-          href="/ko/templates/OHMT018-burger-KO"
+          href="/ko/templates/OHMT018-burger"
           className="text-xl md:text-2xl font-bold tracking-tight transition-colors duration-300 font-[var(--font-heading)]"
           style={{ color: transparent ? "#FFFFFF" : "#FFFFFF" }}
         >
-          Oh My Template
+          OHMT
         </Link>
 
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
@@ -54,12 +54,12 @@ export const Header = () => {
                   </Link>
                   {/* Dropdown Menu */}
                   <div className="absolute left-1/2 -translate-x-1/2 top-full hidden group-hover:block bg-white text-black shadow-lg py-2 w-40 border border-neutral-100">
-                    <Link href="/ko/templates/OHMT018-burger-KO/menu" className="block px-4 py-2 text-xs hover:bg-[var(--color-bg-secondary)] hover:text-[var(--color-primary)] transition-colors">세트 메뉴</Link>
-                    <Link href="/ko/templates/OHMT018-burger-KO/menu" className="block px-4 py-2 text-xs hover:bg-[var(--color-bg-secondary)] hover:text-[var(--color-primary)] transition-colors">버거</Link>
-                    <Link href="/ko/templates/OHMT018-burger-KO/menu" className="block px-4 py-2 text-xs hover:bg-[var(--color-bg-secondary)] hover:text-[var(--color-primary)] transition-colors">치킨</Link>
-                    <Link href="/ko/templates/OHMT018-burger-KO/menu" className="block px-4 py-2 text-xs hover:bg-[var(--color-bg-secondary)] hover:text-[var(--color-primary)] transition-colors">사이드</Link>
-                    <Link href="/ko/templates/OHMT018-burger-KO/menu" className="block px-4 py-2 text-xs hover:bg-[var(--color-bg-secondary)] hover:text-[var(--color-primary)] transition-colors">디저트</Link>
-                    <Link href="/ko/templates/OHMT018-burger-KO/menu" className="block px-4 py-2 text-xs hover:bg-[var(--color-bg-secondary)] hover:text-[var(--color-primary)] transition-colors">음료</Link>
+                    <Link href="/ko/templates/OHMT018-burger/menu" className="block px-4 py-2 text-xs hover:bg-[var(--color-bg-secondary)] hover:text-[var(--color-primary)] transition-colors">세트 메뉴</Link>
+                    <Link href="/ko/templates/OHMT018-burger/menu" className="block px-4 py-2 text-xs hover:bg-[var(--color-bg-secondary)] hover:text-[var(--color-primary)] transition-colors">버거</Link>
+                    <Link href="/ko/templates/OHMT018-burger/menu" className="block px-4 py-2 text-xs hover:bg-[var(--color-bg-secondary)] hover:text-[var(--color-primary)] transition-colors">치킨</Link>
+                    <Link href="/ko/templates/OHMT018-burger/menu" className="block px-4 py-2 text-xs hover:bg-[var(--color-bg-secondary)] hover:text-[var(--color-primary)] transition-colors">사이드</Link>
+                    <Link href="/ko/templates/OHMT018-burger/menu" className="block px-4 py-2 text-xs hover:bg-[var(--color-bg-secondary)] hover:text-[var(--color-primary)] transition-colors">디저트</Link>
+                    <Link href="/ko/templates/OHMT018-burger/menu" className="block px-4 py-2 text-xs hover:bg-[var(--color-bg-secondary)] hover:text-[var(--color-primary)] transition-colors">음료</Link>
                   </div>
                 </div>
               );
@@ -76,7 +76,7 @@ export const Header = () => {
             );
           })}
           <Link
-            href="/ko/templates/OHMT018-burger-KO/order"
+            href="/ko/templates/OHMT018-burger/order"
             className={`px-6 py-2 text-xs uppercase tracking-[0.2em] font-semibold rounded-full transition-[transform,colors] duration-160 ease-out active:scale-[0.97] ${transparent ? 'bg-[var(--color-accent)] text-white hover:bg-[var(--color-accent-hover)]' : 'bg-white text-[var(--color-primary)] hover:bg-white/90'}`}
           >
             주문하기
@@ -107,7 +107,7 @@ export const Header = () => {
               </Link>
             ))}
             <Link
-              href="/ko/templates/OHMT018-burger-KO/order"
+              href="/ko/templates/OHMT018-burger/order"
               onClick={() => setMobileOpen(false)}
               className="bg-[var(--color-accent)] text-white text-center px-6 py-3 text-xs uppercase tracking-[0.2em] font-semibold rounded-full"
             >

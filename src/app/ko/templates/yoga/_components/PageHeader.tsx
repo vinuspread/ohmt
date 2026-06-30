@@ -13,7 +13,7 @@ export default function PageHeader({ title, subtitle, image }: PageHeaderProps) 
             className={`text-[12px] tracking-[0.25em] uppercase mb-8 ${image ? "text-white/40" : "text-[var(--color-text-muted)]"}`}
             style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
           >
-            Oh My Template
+            OHMT
           </p>
           <h1
             className={`text-[clamp(2.8rem,6vw,6rem)] font-normal leading-[1.05] tracking-[-0.03em] ${image ? "text-white" : "text-[var(--color-text)]"}`}

@@ -24,7 +24,7 @@ export default function AboutFull() {
           <div className="w-full max-w-[1440px] mx-auto lg:grid lg:grid-cols-[55fr_45fr] items-center">
             <div ref={imgRef} className="relative overflow-hidden aspect-[4/5] max-h-[80vh]">
               <motion.img
-                src="/templates/wedding/about-clara.jpg"
+                src="/templates/OHMT025-wedding/about-clara.jpg"
                 alt="Clara, wedding photographer"
                 className="h-full w-full object-cover object-center"
                 style={{ y: imgY }}
@@ -131,7 +131,7 @@ export default function AboutFull() {
               Let's Tell Your Story
             </h2>
             <Link
-              href="/en/templates/OHMT025-wedding-EN/contact"
+              href="/en/templates/OHMT025-wedding/contact"
               className="inline-flex items-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-white border-b border-white/40 pb-1 hover:border-white transition-colors duration-200"
             >
               Book Your Date

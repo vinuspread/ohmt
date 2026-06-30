@@ -1,4 +1,4 @@
-﻿// src/app/templates/ir/page.tsx
+﻿// src/app/templates/OHMT011-ir/page.tsx
 "use client";
 
 import { Suspense } from "react";
@@ -33,7 +33,7 @@ function IRTemplateContent() {
             <div className="grid md:grid-cols-2 gap-20 items-center">
               <div className="order-2 md:order-1">
                 <img
-                  src="/templates/ir/ir-2.jpg"
+                  src="/templates/OHMT011-ir/ir-2.jpg"
                   className="w-full h-[500px] object-cover"
                   alt="재무 개요"
                 />

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './theme.css'
 
@@ -21,8 +21,8 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Oh My Template Dashboard',
-  description: 'Oh My Template admin dashboard template',
+  title: 'OHMT - Dashboard',
+  description: 'OHMT admin dashboard template',
 }
 
 export default function DashboardRootLayout({

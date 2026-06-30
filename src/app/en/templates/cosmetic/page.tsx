@@ -1,4 +1,4 @@
-﻿// src/app/templates/cosmetic/page.tsx
+﻿// src/app/templates/OHMT010-cosmetic/page.tsx
 "use client";
 
 import React from "react";
@@ -62,7 +62,7 @@ function CosmeticTemplateContent() {
       "returns": `Returns`,
       "faq": `FAQ`
     },
-    "copyright": `© 2026 Vinuspread Beauty. All Rights Reserved. Made in France.`
+    "copyright": `© 2026 Oh My Template.`
   },
   "story": {
     "title": `Conscious beauty for the modern age.`,
@@ -84,7 +84,7 @@ return (
             <div className="grid md:grid-cols-2 gap-28 items-center">
               <div className="order-2 md:order-1">
                 <img 
-                  src="/templates/cosmetic/cosmetic-face-mask.png" 
+                  src="/templates/OHMT010-cosmetic/cosmetic-face-mask.png" 
                   className="w-full h-[380px] object-cover" 
                   alt="Brand story" 
                 />

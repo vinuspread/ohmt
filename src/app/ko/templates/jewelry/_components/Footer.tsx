@@ -1,4 +1,4 @@
-﻿// src/app/templates/jewelry/-internal/components/Footer.tsx
+﻿// src/app/templates/OHMT002-jewelry/-internal/components/Footer.tsx
 "use client";
 
 import React from "react";
@@ -53,7 +53,7 @@ export default function Footer() {
 
       {/* Footer Bottom Bar */}
       <div className="max-w-[1440px] mx-auto mt-20 pt-8 border-t border-neutral-200/30 flex flex-col md:flex-row justify-between items-center gap-6 text-[13px] font-medium text-neutral-400 uppercase tracking-widest">
-        <span>© 2026 MAISON VINUSPREAD FINE JEWELRY. 모든 권리 보유.</span>
+        <span>© 2026 Oh My Template.</span>
         <div className="flex gap-8">
           <a href="#" className="hover:text-[var(--color-primary)] transition-colors">Instagram</a>
           <a href="#" className="hover:text-[var(--color-primary)] transition-colors">LinkedIn</a>

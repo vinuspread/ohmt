@@ -1,10 +1,10 @@
-﻿// src/app/templates/cosmetic/-components/layout/Header.tsx
+﻿// src/app/templates/OHMT010-cosmetic/-components/layout/Header.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { clsx } from "clsx";
-import { Menu, X, Search, ShoppingBag } from "lucide-react";
+import { Menu, X, Search } from "lucide-react";
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -60,7 +60,7 @@ export const Header = () => {
       "returns": `Returns`,
       "faq": `FAQ`
     },
-    "copyright": `© 2026 Vinuspread Beauty. All Rights Reserved. Made in France.`
+    "copyright": `© 2026 Oh My Template.`
   },
   "story": {
     "title": `Conscious beauty for the modern age.`,
@@ -101,7 +101,7 @@ const NAV_ITEMS = [
           : "bg-transparent"
       )}>
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 h-full flex items-center justify-between">
-          <Link href="/en/templates/OHMT010-cosmetic-EN" className="text-[1rem] md:text-[1.15rem] font-black tracking-[0.12em] uppercase">
+          <Link href="/en/templates/OHMT010-cosmetic" className="text-[1rem] md:text-[1.15rem] font-black tracking-[0.12em] uppercase">
             VINUSPREAD
           </Link>
 
@@ -110,7 +110,7 @@ const NAV_ITEMS = [
             {NAV_ITEMS.map((item) => (
                 <Link
                   key={item.id}
-                  href={`/en/templates/OHMT010-cosmetic-EN/${item.id}`}
+                  href={`/en/templates/OHMT010-cosmetic/${item.id}`}
                   className="text-[0.82rem] font-medium opacity-60 hover:opacity-100 transition-opacity uppercase tracking-widest"
                 >
 
@@ -124,9 +124,6 @@ const NAV_ITEMS = [
              <button className="hidden md:flex items-center gap-1.5 text-[0.82rem] font-bold uppercase tracking-wider opacity-60 hover:opacity-100 transition-opacity">
                <Search size={15} />
              </button>
-             <Link href="/en/templates/OHMT010-cosmetic-EN/cart" className="hidden md:flex items-center gap-2 hover:opacity-50 transition-opacity">
-               <ShoppingBag size={17} />
-             </Link>
 
 
             {/* Mobile hamburger */}
@@ -150,7 +147,7 @@ const NAV_ITEMS = [
           {NAV_ITEMS.map((item) => (
              <Link
                key={item.id}
-               href={`/en/templates/OHMT010-cosmetic-EN/${item.id}`}
+               href={`/en/templates/OHMT010-cosmetic/${item.id}`}
                onClick={() => setMobileOpen(false)}
                className="text-[0.82rem] font-medium uppercase tracking-widest opacity-60 hover:opacity-100 py-3.5 border-b border-black/10 transition-opacity"
              >
@@ -162,9 +159,6 @@ const NAV_ITEMS = [
             <button className="flex items-center gap-2 text-[0.82rem] font-bold uppercase tracking-wider">
               <Search size={15} /> Search
             </button>
-             <Link href="/en/templates/OHMT010-cosmetic-EN/cart" className="flex items-center gap-2 ml-auto hover:opacity-50 transition-opacity">
-               <ShoppingBag size={17} />
-             </Link>
 
           </div>
         </div>

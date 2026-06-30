@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import type { Game } from "@/app/en/templates/OHMT023-game-EN/data/data";
+import type { Game } from "@/app/en/templates/OHMT023-game/data/data";
 
 const statusColors: Record<string, string> = {
   released: "bg-emerald-500",
@@ -19,7 +19,7 @@ export default function GameCard({ game }: { game: Game }) {
       transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
     >
       <Link
-        href={`/en/templates/OHMT023-game-EN/games/${game.id}`}
+        href={`/en/templates/OHMT023-game/games/${game.id}`}
         className="group block overflow-hidden rounded-2xl bg-[var(--color-bg-secondary)] border border-[var(--color-border)] transition-all duration-500 hover:border-[var(--color-primary)] hover:shadow-[0_0_30px_rgba(124,58,237,0.25)]"
       >
         <div className="relative aspect-[4/5] overflow-hidden">

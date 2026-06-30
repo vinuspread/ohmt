@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import { motion } from "framer-motion";
@@ -20,7 +20,7 @@ export const CollectionShowcase = () => {
               className="w-full h-full"
             >
               <img
-                src="/templates/fashion/exclusive-custom.jpg"
+                src="/templates/OHMT001-fashion/exclusive-custom.jpg"
                 alt="Exclusive Collection Lookbook" 
                 className="w-full h-full object-cover grayscale brightness-95 group-hover:grayscale-0 group-hover:scale-105 transition-[filter,transform] duration-[1.8s] ease-out-sine"
               />
@@ -51,7 +51,7 @@ export const CollectionShowcase = () => {
               whileInView={{ opacity: 0.6, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: 0.2, duration: 1.2, ease: "easeOut" }}
-              className="text-[13px] text-black/70 leading-[1.7] font-medium tracking-[0.02em] max-w-md normal-case"
+              className="text-[15px] text-black/70 leading-[1.7] font-medium tracking-[0.02em] max-w-md normal-case"
             >
               우리는 절제된 우아함과 타협하지 않는 품질을 추구합니다. 현대적인 실루엣에 깊은 감정적 울림을 불어넣어 시간의 흐름을 초월하는 독창적인 라이프스타일을 제시합니다. 거장의 테일러링과 세심하게 엄선된 소재로 정교하게 제작된 리미티드 에디션 컬렉션을 만나보세요.
             </motion.p>
@@ -63,7 +63,7 @@ export const CollectionShowcase = () => {
               transition={{ delay: 0.4, duration: 1 }}
               className="pt-2"
             >
-              <Button variant="outline" className="px-8 py-4 sm:px-12 sm:py-4.5 text-[13px] sm:text-[13px] font-bold uppercase tracking-[0.25em] sm:tracking-[0.3em] mr-[-0.25em] sm:mr-[-0.3em] hover:tracking-[0.35em] hover:mr-[-0.35em] transition-all duration-700 ease-out">
+              <Button variant="outline" className="px-8 py-3 sm:px-12 sm:py-3.5 text-[13px] sm:text-[13px] font-bold uppercase tracking-[0.25em] sm:tracking-[0.3em] mr-[-0.25em] sm:mr-[-0.3em] hover:tracking-[0.35em] hover:mr-[-0.35em] transition-all duration-700 ease-out">
                 룩북 둘러보기
               </Button>
             </motion.div>

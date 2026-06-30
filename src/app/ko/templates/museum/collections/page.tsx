@@ -116,7 +116,7 @@ function CollectionsPageContent() {
                   transition={{ duration: 0.5, ease: "easeInOut" }}
                   className="relative group overflow-hidden bg-[var(--color-primary)] aspect-[3/4]"
                 >
-                  <Link href={`/ko/templates/OHMT021-museum-KO/collections/${item.slug}`} className="block w-full h-full cursor-pointer">
+                  <Link href={`/ko/templates/OHMT021-museum/collections/${item.slug}`} className="block w-full h-full cursor-pointer">
                     <img 
                       src={item.img} 
                       alt={item.title}

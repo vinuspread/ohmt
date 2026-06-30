@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import { Header } from "../_components/Header";
 import { Footer } from "../_components/Footer";
@@ -16,8 +16,8 @@ function AboutPageContent() {
 
         <section className="relative h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
           <img
-            src="/templates/multi-shop/about-brand.jpg"
-            alt="Oh My Template 브랜드 소개"
+            src="/templates/OHMT017-multi-shop/about-brand.jpg"
+            alt="OHMT 브랜드 소개"
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/40" />
@@ -41,7 +41,7 @@ function AboutPageContent() {
                   과하지 않은<br />옷의 완성.
                 </h2>
                 <p className="text-base leading-relaxed text-[var(--color-text-muted)]">
-                  Oh My Template는 과하지 않은 옷을 만들고 싶다는 마음에서 시작되었습니다.
+                  OHMT는 과하지 않은 옷을 만들고 싶다는 마음에서 시작되었습니다.
                   정성을 느끼게 하면서도 부담스럽지 않고, 날카롭지만 차갑지 않은.
                   생각할 것 없이 손이 가는 옷장, 그 안의 모든 것이 그냥 잘 맞아떨어지는.
                 </p>
@@ -54,8 +54,8 @@ function AboutPageContent() {
               </div>
               <div className="aspect-[3/4] overflow-hidden">
                 <img
-                  src="/templates/multi-shop/category-women.jpg"
-                  alt="Oh My Template 컬렉션"
+                  src="/templates/OHMT017-multi-shop/category-women.jpg"
+                  alt="OHMT 컬렉션"
                   className="w-full h-full object-cover"
                 />
               </div>

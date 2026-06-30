@@ -31,7 +31,7 @@ export default function CTASection() {
             Every level. Every body.
           </p>
           <Link
-            href="/en/templates/OHMT022-yoga-EN/classes"
+            href="/en/templates/OHMT022-yoga/classes"
             className="mt-8 inline-flex items-center gap-2 text-[12px] tracking-[0.2em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] group transition-colors font-medium"
             style={{ fontFamily: "var(--font-body)" }}
           >

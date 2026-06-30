@@ -36,7 +36,7 @@ export default function CustomersPage() {
           <Avatar name={c.name} src={c.avatarUrl} size="sm" />
           <div>
             <p className="text-sm font-medium text-[var(--color-text)]">{c.name}</p>
-            <p className="text-xs text-[var(--color-text-muted)]">{c.email}</p>
+            <p className="text-sm text-[var(--color-text-muted)]">{c.email}</p>
           </div>
         </div>
       ),
@@ -103,7 +103,7 @@ export default function CustomersPage() {
             { label: '이탈률', value: `${customerStats.churn}%`, color: 'var(--color-warning)' },
           ].map((stat) => (
             <div key={stat.label} className="bg-[var(--color-bg-elevated)] rounded-[var(--radius-lg)] p-5 border border-[var(--color-border)]">
-              <p className="text-xs text-[var(--color-text-muted)] mb-1">{stat.label}</p>
+              <p className="text-sm text-[var(--color-text-muted)] mb-1">{stat.label}</p>
               <p className="text-2xl font-[var(--font-mono)] font-bold" style={{ color: stat.color }}>{typeof stat.value === 'number' ? stat.value.toLocaleString() : stat.value}</p>
             </div>
           ))}
@@ -127,7 +127,7 @@ export default function CustomersPage() {
                   <div className="flex flex-col items-center text-center">
                     <Avatar name={customer.name} src={customer.avatarUrl} size="lg" />
                     <h4 className="mt-3 text-sm font-medium text-[var(--color-text)]">{customer.name}</h4>
-                    <p className="text-xs text-[var(--color-text-muted)] mt-0.5">{customer.email}</p>
+                    <p className="text-sm text-[var(--color-text-muted)] mt-0.5">{customer.email}</p>
                     <div className="mt-3 flex items-center gap-2">
                       <PlanBadge plan={customer.plan} />
                       <div className={`w-1.5 h-1.5 rounded-[var(--radius-full)] ${customer.status === 'active' ? 'bg-[var(--color-success)]' : 'bg-[var(--color-text-muted)]'}`} />

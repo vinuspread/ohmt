@@ -1,4 +1,4 @@
-﻿const basePath = "/ko/templates/OHMT024-kids-education-KO";
+﻿const basePath = "/ko/templates/OHMT024-kids-education";
 
 const links = {
   explore: [
@@ -52,7 +52,7 @@ export default function Footer() {
                 className="text-3xl font-bold text-white leading-none mb-4"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
-                Oh My Template
+                OHMT
               </h3>
             </a>
             <p className="text-sm text-white/50 leading-relaxed max-w-xs">
@@ -121,7 +121,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-6xl px-6 py-5 flex flex-col sm:flex-row justify-between items-center gap-3 text-[0.65rem] font-bold uppercase tracking-wider text-white/30">
-          <p>© 2026 Oh My Template. All Rights Reserved.</p>
+          <p>© 2026 Oh My Template.</p>
           <div className="flex gap-6">
             <a href="#" className="[@media(hover:hover)]:hover:text-white transition-colors duration-150">라이선스</a>
             <a href="#" className="[@media(hover:hover)]:hover:text-white transition-colors duration-150">개인정보처리방침</a>

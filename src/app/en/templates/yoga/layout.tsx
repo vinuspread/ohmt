@@ -1,28 +1,28 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import "./theme.css";
 
 export const metadata: Metadata = {
-  title: "Yoga - Oh My Template",
+  title: "OHMT - Yoga",
   description: "Find your inner peace with premium yoga and wellness classes",
   openGraph: {
-    title: "Yoga - Oh My Template",
+    title: "OHMT - Yoga",
     description: "Find your inner peace with premium yoga and wellness classes",
-    url: "https://ohmytemplate.com/en/templates/OHMT022-yoga-EN",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/yoga/og-image.jpg", width: 1200, height: 630 }],
+    url: "https://ohmytemplate.com/en/templates/OHMT022-yoga",
+    siteName: "OHMT",
+    images: [{ url: "/templates/OHMT022-yoga/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yoga - Oh My Template",
+    title: "OHMT - Yoga",
     description: "Find your inner peace with premium yoga and wellness classes",
-    images: ["/templates/yoga/og-image.jpg"],
+    images: ["/templates/OHMT022-yoga/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT022-yoga-EN",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT022-yoga-KO" },
+    canonical: "https://ohmytemplate.com/en/templates/OHMT022-yoga",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT022-yoga" },
   },
 };
 

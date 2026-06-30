@@ -48,9 +48,7 @@
   --focus-outline-offset: 2px;
 }
 
-body[lang="ko"], [lang="ko"] {
-  word-break: keep-all;
-}
+
 
 /* Accessibility: Respect motion preferences */
 @media (prefers-reduced-motion: reduce) {
@@ -63,5 +61,36 @@ body[lang="ko"], [lang="ko"] {
   }
 }
 
-/* Header nav letter-spacing */
-header a, header button, header span, header nav { letter-spacing: -0.03em; }
+
+body[lang="ko"], [lang="ko"], :root {
+  word-break: keep-all;
+  letter-spacing: -0.025em;
+}
+
+h1, h2, h3, h4, h5, h6, 
+.font-heading, 
+[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
+  letter-spacing: -0.04em;
+}
+
+header a, header button, header span, header nav, 
+nav a, nav button, nav span {
+  letter-spacing: -0.03em;
+}
+
+/* Korean typography rules (Korean Kerning Rule) */
+body[lang="ko"], [lang="ko"], :root {
+  word-break: keep-all;
+  letter-spacing: -0.025em;
+}
+
+h1, h2, h3, h4, h5, h6, 
+.font-heading, 
+[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
+  letter-spacing: -0.04em;
+}
+
+header a, header button, header span, header nav, 
+nav a, nav button, nav span {
+  letter-spacing: -0.03em;
+}

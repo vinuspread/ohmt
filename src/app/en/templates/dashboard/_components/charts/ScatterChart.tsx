@@ -42,7 +42,7 @@ export function DealerScatterChart() {
       <div className="flex items-start justify-between mb-4">
         <div>
           <h3 className="text-base font-semibold text-[var(--color-text)]">Dealer Performance</h3>
-          <p className="text-xs text-[var(--color-text-muted)] mt-0.5">Test drives vs. close rate - 120 dealers</p>
+          <p className="text-sm text-[var(--color-text-muted)] mt-0.5">Test drives vs. close rate - 120 dealers</p>
         </div>
       </div>
       <div style={{ height: 280 }}>

@@ -1,4 +1,4 @@
-﻿// src/app/templates/newspaper/-components/layout/Footer.tsx
+﻿// src/app/templates/OHMT013-newspaper/-components/layout/Footer.tsx
 "use client";
 
 import React from "react";
@@ -9,7 +9,7 @@ export const Footer = () => {
     <footer className="bg-black text-white py-16">
       <div className="max-w-[1280px] mx-auto px-8">
         <div className="text-center mb-10 border-b border-white/10 pb-10">
-          <Link href="/en/templates/OHMT013-newspaper-EN" className="font-[family-name:var(--theme-font-heading)] text-4xl font-black tracking-tighter text-white">
+          <Link href="/en/templates/OHMT013-newspaper" className="font-[family-name:var(--theme-font-heading)] text-4xl font-black tracking-tighter text-white">
             VINUS TIMES
           </Link>
           <p className="font-sans text-[0.78rem] opacity-50 mt-2 uppercase tracking-widest">Independent Journalism Since 2026</p>
@@ -25,7 +25,7 @@ export const Footer = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10 gap-4">
           <div className="font-sans text-[0.72rem] opacity-40">
-            © 2026 Vinuspread Times Publishing Company. All rights reserved.
+            © 2026 Oh My Template.
           </div>
           <div className="flex gap-6 opacity-60">
             {["Twitter", "Facebook", "Instagram", "YouTube"].map(social => (

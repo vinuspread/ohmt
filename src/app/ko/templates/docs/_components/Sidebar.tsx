@@ -62,7 +62,7 @@ function buildTree(pages: DocPage[]): TreeNode[] {
 function PageTreeItem({ node, depth, onNavigate }: { node: TreeNode; depth: number; onNavigate: () => void }) {
   const pathname = usePathname();
   const slug = node.page.slug;
-  const isActive = pathname === `/ko/templates/OHMT014-docs-KO/${slug}` || pathname === `/ko/templates/OHMT014-docs-KO`;
+  const isActive = pathname === `/ko/templates/OHMT014-docs/${slug}` || pathname === `/ko/templates/OHMT014-docs`;
   const [expanded, setExpanded] = useState(true);
 
   const hasChildren = node.children.length > 0;
@@ -75,7 +75,7 @@ function PageTreeItem({ node, depth, onNavigate }: { node: TreeNode; depth: numb
         <div className="absolute left-[18px] top-0 bottom-0 w-px bg-[var(--color-border)]" />
       )}
       <Link
-        href={`/ko/templates/OHMT014-docs-KO/${slug}`}
+        href={`/ko/templates/OHMT014-docs/${slug}`}
         onClick={onNavigate}
         className={`flex items-center gap-1.5 py-1.5 rounded-md transition-all duration-150 relative ${
           isRoot ? "text-sm" : "text-[13px]"
@@ -139,7 +139,7 @@ export default function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
   return (
     <aside className="w-[260px] flex-shrink-0 h-screen border-r border-[var(--color-border)] flex flex-col overflow-hidden bg-[var(--color-bg)]">
       <div className="px-4 h-14 flex items-center border-b border-[var(--color-border)]">
-        <Link href="/ko/templates/OHMT014-docs-KO" onClick={handleNav} className="flex items-center gap-2 px-2 text-sm font-bold text-[var(--color-text)] rounded-md transition-colors duration-150">
+        <Link href="/ko/templates/OHMT014-docs" onClick={handleNav} className="flex items-center gap-2 px-2 text-sm font-bold text-[var(--color-text)] rounded-md transition-colors duration-150">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="0.5" y="0.5" width="15" height="15" rx="3" stroke="currentColor" strokeWidth="1.5"/>
             <path d="M4 5H12M4 8H12M4 11H9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
@@ -177,7 +177,7 @@ export default function Sidebar({ onNavigate }: { onNavigate?: () => void }) {
               <path d="M16.5 16.5L20 20" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
             </svg>
             <p className="text-sm text-[var(--color-text-muted)]">&ldquo;{searchQuery}&rdquo;에 대한 결과가 없습니다</p>
-            <p className="text-xs text-[var(--color-text-muted)] mt-1">다른 검색어를 입력해보세요</p>
+            <p className="text-sm text-[var(--color-text-muted)] mt-1">다른 검색어를 입력해보세요</p>
           </div>
         )}
         {filteredTree.length === 0 && !searchQuery && (

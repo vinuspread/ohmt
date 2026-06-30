@@ -11,12 +11,12 @@ interface TotalMenuProps {
 }
 
 const menuItems = [
-  { name: "Home", href: "/ko/templates/OHMT021-museum-KO", desc: "Experience the Sanctuary" },
-  { name: "Museum Info", href: "/ko/templates/OHMT021-museum-KO/our-story", desc: "Our 500-Year Legacy" },
-  { name: "Collections", href: "/ko/templates/OHMT021-museum-KO/collections", desc: "Explore the Archive" },
-  { name: "Exhibitions", href: "/ko/templates/OHMT021-museum-KO/exhibitions", desc: "Current & Special Showings" },
-  { name: "Souvenir Shop", href: "/ko/templates/OHMT021-museum-KO/souvenir", desc: "Echos of History" },
-  { name: "Curator Note", href: "/ko/templates/OHMT021-museum-KO/curator-note", desc: "Theological Insights" },
+  { name: "Home", href: "/ko/templates/OHMT021-museum", desc: "Experience the Sanctuary" },
+  { name: "Museum Info", href: "/ko/templates/OHMT021-museum/our-story", desc: "Our 500-Year Legacy" },
+  { name: "Collections", href: "/ko/templates/OHMT021-museum/collections", desc: "Explore the Archive" },
+  { name: "Exhibitions", href: "/ko/templates/OHMT021-museum/exhibitions", desc: "Current & Special Showings" },
+  { name: "Souvenir Shop", href: "/ko/templates/OHMT021-museum/souvenir", desc: "Echos of History" },
+  { name: "Curator Note", href: "/ko/templates/OHMT021-museum/curator-note", desc: "Theological Insights" },
 ];
 
 export default function TotalMenu({ isOpen, onClose }: TotalMenuProps) {
@@ -70,7 +70,7 @@ export default function TotalMenu({ isOpen, onClose }: TotalMenuProps) {
             className="max-w-[1440px] mx-auto w-full border-t border-[var(--color-accent)]/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6"
           >
             <div className="text-[13px] uppercase font-bold tracking-widest text-[var(--color-accent)]/30">
-              © 2026 VINUSPREAD ARCHIVE. ALL RIGHTS RESERVED.
+              © 2026 Oh My Template.
             </div>
             <div className="flex gap-8 text-[13px] uppercase font-bold tracking-widest">
               <a href="#" className="hover:opacity-50">Instagram</a>

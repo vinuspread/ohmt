@@ -74,7 +74,7 @@ function StudioAboutPageContent() {
   },
   "cta": `Start Project`,
   "footer": {
-    "copyright": `© 2026 Vinuspread Studio. All rights reserved.`,
+    "copyright": `© 2026 Oh My Template.`,
     "contact": `Austin, Texas · hello@ohmytemplate.com`
   },
   "aboutPage": {
@@ -211,9 +211,9 @@ const stats = t.aboutPage.stats;
     
     const teamMembers = t.aboutPage.team;
     const team = [
-        { name: teamMembers[0].name, role: teamMembers[0].role, image: '/templates/studio/team-1.jpg' },
-        { name: teamMembers[1].name, role: teamMembers[1].role, image: '/templates/studio/team-2.jpg' },
-        { name: teamMembers[2].name, role: teamMembers[2].role, image: '/templates/studio/team-3.jpg' }
+        { name: teamMembers[0].name, role: teamMembers[0].role, image: '/templates/OHMT006-studio/team-1.jpg' },
+        { name: teamMembers[1].name, role: teamMembers[1].role, image: '/templates/OHMT006-studio/team-2.jpg' },
+        { name: teamMembers[2].name, role: teamMembers[2].role, image: '/templates/OHMT006-studio/team-3.jpg' }
     ];
 
     return (
@@ -248,7 +248,7 @@ const stats = t.aboutPage.stats;
                                         <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-black shrink-0">{s.value}</div>
                                         <div className="space-y-1 sm:space-y-2">
                                             <h4 className="text-[13px] font-bold text-black/50 uppercase">{s.label}</h4>
-                                            <p className="text-[13px] md:text-[14px] text-black/60 leading-[1.4] font-normal break-keep">{s.desc}</p>
+                                            <p className="text-[15px] md:text-[14px] text-black/60 leading-[1.4] font-normal break-keep">{s.desc}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -259,7 +259,7 @@ const stats = t.aboutPage.stats;
             </section>
 
             {/* 3. Split Screen */}
-            <SplitScreenSection bgClass="bg-white" textColorClass="text-black" borderColorClass="border-transparent" imageSrc="/templates/studio/hero-2.jpg" imageAlt="Studio interior showcase" imagePosition="left">
+            <SplitScreenSection bgClass="bg-white" textColorClass="text-black" borderColorClass="border-transparent" imageSrc="/templates/OHMT006-studio/hero-2.jpg" imageAlt="Studio interior showcase" imagePosition="left">
                 <div className="space-y-3 md:space-y-4">
                     <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-[1.1] text-black break-keep">
                         {t.aboutPage.splitTitle1} <br />{t.aboutPage.splitTitle2}
@@ -269,7 +269,7 @@ const stats = t.aboutPage.stats;
                     {t.aboutPage.splitDesc}
                 </p>
                 <div className="pt-2 md:pt-4">
-                    <Link href={`/en/templates/OHMT006-studio-EN/contact`} className="group inline-flex items-center gap-4 border-b-2 border-black pb-2 text-[13px] font-bold text-black transition-opacity hover:opacity-60 uppercase">
+                    <Link href={`/en/templates/OHMT006-studio/contact`} className="group inline-flex items-center gap-4 border-b-2 border-black pb-2 text-[13px] font-bold text-black transition-opacity hover:opacity-60 uppercase">
                         {t.aboutPage.splitCta} <ArrowUpRight size={14} />
                     </Link>
                 </div>
@@ -301,10 +301,10 @@ const stats = t.aboutPage.stats;
                 <div className="max-w-[1720px] mx-auto px-6 md:px-16 lg:px-24">
                     <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-12 items-start">
                         <div className="md:col-span-6 aspect-[4/3] overflow-hidden">
-                            <img loading="lazy" src="/templates/studio/hero-3.jpg" alt="Travertine light curation" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s] ease-out" />
+                            <img loading="lazy" src="/templates/OHMT006-studio/hero-3.jpg" alt="Travertine light curation" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s] ease-out" />
                         </div>
                         <div className="md:col-span-6 aspect-[4/3] overflow-hidden md:mt-16">
-                            <img loading="lazy" src="/templates/studio/project-3.jpg" alt="Aluminum geometric casing" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s] ease-out" />
+                            <img loading="lazy" src="/templates/OHMT006-studio/project-3.jpg" alt="Aluminum geometric casing" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s] ease-out" />
                         </div>
                     </div>
                 </div>

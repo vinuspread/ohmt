@@ -45,7 +45,7 @@ function CartPageContent() {
           <ShoppingBag size={48} className="mx-auto mb-8 opacity-10 text-black" />
           <h1 className="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-[var(--color-text)] uppercase mb-6">장바구니가 비어 있습니다.</h1>
           <p className="text-[var(--color-secondary)] mb-12">컬렉션을 둘러보고 마음에 드는 작품을 찾아보세요.</p>
-          <Link href="/ko/templates/OHMT004-furniture-KO">
+          <Link href="/ko/templates/OHMT004-furniture">
             <Button variant="primary" className="px-12 py-6 rounded-full font-bold uppercase">
               계속 둘러보기
             </Button>
@@ -97,7 +97,7 @@ function CartPageContent() {
                       <span className="text-[16px] font-bold text-[var(--color-text)]">{item.price}</span>
                     </div>
                     
-                    <p className="text-[13px] text-[var(--color-secondary)] mb-8 max-w-sm">{item.desc}</p>
+                    <p className="text-[15px] text-[var(--color-secondary)] mb-8 max-w-sm">{item.desc}</p>
                     
                     <div className="flex items-center justify-between mt-auto">
                       <div className="flex items-center gap-6 border border-black/10 rounded-full px-4 py-2">
@@ -144,7 +144,7 @@ function CartPageContent() {
             </Button>
             
             <div className="mt-10 flex flex-col gap-4">
-              <p className="text-[13px] text-center text-[var(--color-secondary)] font-medium">Stripe 기반 안전 결제. 전 세계 배송 가능.</p>
+              <p className="text-[15px] text-center text-[var(--color-secondary)] font-medium">Stripe 기반 안전 결제. 전 세계 배송 가능.</p>
             </div>
           </div>
         </div>

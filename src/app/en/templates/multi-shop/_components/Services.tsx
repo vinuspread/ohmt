@@ -35,7 +35,7 @@ export const Services = () => {
               <s.icon strokeWidth={1.0} className="text-white/60 w-9 h-9 md:w-12 md:h-12" />
               <div>
                 <h4 className="text-sm font-semibold text-white tracking-wide">{s.title}</h4>
-                <p className="text-[11px] md:text-xs text-white/50 mt-1 md:mt-2 leading-relaxed max-w-full md:max-w-[200px]">{s.description}</p>
+                <p className="text-[14px] md:text-xs text-white/50 mt-1 md:mt-2 leading-relaxed max-w-full md:max-w-[200px]">{s.description}</p>
               </div>
             </div>
           ))}

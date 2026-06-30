@@ -40,7 +40,7 @@ export const Reviews = () => {
               </p>
               <div className="mt-5 pt-4 border-t border-[var(--color-border)]">
                 <p className="text-sm font-semibold text-[var(--color-text)]">{r.reviewer}</p>
-                <p className="text-xs text-[var(--color-text-muted)] mt-0.5">{r.product}</p>
+                <p className="text-sm text-[var(--color-text-muted)] mt-0.5">{r.product}</p>
               </div>
             </div>
           ))}
@@ -56,7 +56,7 @@ export const Reviews = () => {
             &ldquo;{review.text}&rdquo;
           </p>
           <p className="text-sm font-semibold mt-5">{review.reviewer}</p>
-          <p className="text-xs text-[var(--color-text-muted)] mt-1">{review.product}</p>
+          <p className="text-sm text-[var(--color-text-muted)] mt-1">{review.product}</p>
 
           <div className="flex items-center justify-center gap-6 mt-8">
             <button onClick={prev} className="p-1 hover:opacity-60 transition-opacity duration-200 active:scale-[0.95]" aria-label="이전">

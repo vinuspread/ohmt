@@ -1,0 +1,12 @@
+@layer base {
+  .resort-template {
+    --bg: #7C9BAB;
+    --bg-dark: #0A0E0E;
+    --accent: #FFC392;
+    --text: #FFFFFF;
+    --text-muted: rgba(255, 255, 255, 0.6);
+    --text-dark: #0A0E0E;
+    --border: rgba(255, 255, 255, 0.25);
+    --border-dark: rgba(255, 255, 255, 0.15);
+  }
+}

@@ -1,32 +1,32 @@
-﻿import "./theme.css";
+import "./theme.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "스파 웰니스 - Oh My Template",
+  title: "OHMT - 스파 웰니스",
   description: "다크 그린과 크림 톤의 차분한 팔레트, 대형 라이프스타일 이미지, 예약 중심 구성을 갖춘 프리미엄 스파 웰니스 샵 템플릿.",
-  keywords: ["스파 템플릿", "웰니스 웹사이트", "스파 예약", "Next.js 템플릿", "Oh My Template"],
-  authors: [{ name: "Oh My Template", url: "https://ohmytemplate.com" }],
+  keywords: ["스파 템플릿", "웰니스 웹사이트", "스파 예약", "Next.js 템플릿", "OHMT"],
+  authors: [{ name: "OHMT", url: "https://ohmytemplate.com" }],
   openGraph: {
-    title: "스파 웰니스 - Oh My Template",
+    title: "OHMT - 스파 웰니스",
     description: "다크 그린과 크림 톤의 차분한 팔레트, 대형 라이프스타일 이미지, 예약 중심 구성을 갖춘 프리미엄 스파 웰니스 샵 템플릿.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT026-spa-KO",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/spa/og-image.jpg", width: 1200, height: 630 }],
+    url: "https://ohmytemplate.com/ko/templates/OHMT026-spa",
+    siteName: "OHMT",
+    images: [{ url: "/templates/OHMT026-spa/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "스파 웰니스 - Oh My Template",
+    title: "OHMT - 스파 웰니스",
     description: "다크 그린과 크림 톤의 차분한 팔레트, 대형 라이프스타일 이미지, 예약 중심 구성을 갖춘 프리미엄 스파 웰니스 샵 템플릿.",
-    images: ["/templates/spa/og-image.jpg"],
+    images: ["/templates/OHMT026-spa/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT026-spa-KO",
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT026-spa",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/OHMT026-spa-EN",
-      "ko": "https://ohmytemplate.com/ko/templates/OHMT026-spa-KO",
+      "en": "https://ohmytemplate.com/en/templates/OHMT026-spa",
+      "ko": "https://ohmytemplate.com/ko/templates/OHMT026-spa",
     },
   },
 };

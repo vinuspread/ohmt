@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture-EN/contact/page.tsx
+// src/app/en/templates/OHMT027-architecture/contact/page.tsx
 "use client";
 import React, { useState } from "react";
 import { TemplateWrapper } from "../_components/TemplateWrapper";

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
@@ -169,7 +169,7 @@ function SneakerPageContent() {
       "returns": `Returns`,
       "contact": `Contact`
     },
-    "copyright": `© 2026 Vinus. All rights reserved.`,
+    "copyright": `© 2026 Oh My Template.`,
     "legal": {
       "privacy": `Privacy`,
       "terms": `Terms`,

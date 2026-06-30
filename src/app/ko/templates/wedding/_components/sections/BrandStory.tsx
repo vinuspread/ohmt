@@ -41,7 +41,7 @@ export default function BrandStory() {
             style={{ x: x1, opacity: reduce ? 1 : imgOpacity }}
           >
             <img
-              src="/templates/wedding/wedding-story-01.jpg"
+              src="/templates/OHMT025-wedding/wedding-story-01.jpg"
               alt="결혼식 디테일"
               className="h-full w-full object-cover contrast-110 saturate-110 ring-1 ring-black/10"
             />
@@ -52,7 +52,7 @@ export default function BrandStory() {
             style={{ x: x2, opacity: reduce ? 1 : imgOpacity }}
           >
             <img
-              src="/templates/wedding/wedding-story-02.jpg"
+              src="/templates/OHMT025-wedding/wedding-story-02.jpg"
               alt="결혼식 순간"
               className="h-full w-full object-cover contrast-110 saturate-110 ring-1 ring-black/10"
             />
@@ -63,7 +63,7 @@ export default function BrandStory() {
             style={{ x: x3, opacity: reduce ? 1 : imgOpacity }}
           >
             <img
-              src="/templates/wedding/wedding-story-03.jpg"
+              src="/templates/OHMT025-wedding/wedding-story-03.jpg"
               alt="결혼식 예식"
               className="h-full w-full object-cover contrast-110 saturate-110 ring-1 ring-black/10"
             />
@@ -96,12 +96,12 @@ export default function BrandStory() {
       <section className="lg:hidden bg-[var(--color-bg-secondary)] py-20 px-8">
         <div className="grid grid-cols-2 gap-4 max-w-sm mx-auto mb-12">
           <img
-            src="/templates/wedding/wedding-story-01.jpg"
+            src="/templates/OHMT025-wedding/wedding-story-01.jpg"
             alt="결혼식 디테일"
             className="w-full aspect-[3/4] object-cover contrast-110 saturate-110 ring-1 ring-black/10"
           />
           <img
-            src="/templates/wedding/wedding-story-02.jpg"
+            src="/templates/OHMT025-wedding/wedding-story-02.jpg"
             alt="결혼식 순간"
             className="w-full aspect-[3/4] object-cover contrast-110 saturate-110 ring-1 ring-black/10 mt-10"
           />
@@ -132,7 +132,7 @@ export default function BrandStory() {
         </motion.div>
 
         <img
-          src="/templates/wedding/wedding-story-03.jpg"
+          src="/templates/OHMT025-wedding/wedding-story-03.jpg"
           alt="결혼식 예식"
           className="w-full max-w-xs mx-auto mt-12 aspect-[16/10] object-cover contrast-110 saturate-110 ring-1 ring-black/10"
         />

@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT008-airline-KO/page.tsx
+﻿// src/app/ko/templates/OHMT008-airline/page.tsx
 "use client";
 
 import React from "react";
@@ -68,13 +68,13 @@ function AirlineTemplateContent() {
                     <p className="text-[0.85rem] text-[var(--color-text-muted)]">미슐랭 스타 셰프가 엄선한 프리미엄 기내식.</p>
                   </div>
                 </div>
-                <Link href="/ko/templates/OHMT008-airline-KO/experience" className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-[var(--color-primary)] hover:translate-x-1.5 transition-transform duration-300">
+                <Link href="/ko/templates/OHMT008-airline/experience" className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-[var(--color-primary)] hover:translate-x-1.5 transition-transform duration-300">
                   퍼스트 클래스 살펴보기 <span className="text-[1.2em]">→</span>
                 </Link>
               </div>
               <div className="relative h-[320px] md:h-[480px] overflow-hidden">
                 <img
-                  src="/templates/airline/destination-3.jpg"
+                  src="/templates/OHMT008-airline/destination-3.jpg"
                   className="w-full h-full object-cover"
                   alt="기내 서비스"
                 />
@@ -89,7 +89,7 @@ function AirlineTemplateContent() {
             <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
               <div className="relative h-[320px] md:h-[560px] overflow-hidden order-2 md:order-1">
                 <img
-                  src="/templates/airline/airline-experience-hero.png"
+                  src="/templates/OHMT008-airline/airline-experience-hero.png"
                   className="w-full h-full object-cover opacity-80"
                   alt="비누스 에어 객실 승무원"
                 />
@@ -155,7 +155,7 @@ function AirlineTemplateContent() {
 
             <div className="mt-10 md:mt-14 text-center">
               <Link
-                href="/ko/templates/OHMT008-airline-KO/experience"
+                href="/ko/templates/OHMT008-airline/experience"
                 className="inline-flex items-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.2em] px-10 py-3.5 bg-[var(--color-primary)] text-[var(--color-accent)] hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors duration-300"
               >
                 전체 경험 보기 <ArrowRight size={14} />

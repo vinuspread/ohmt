@@ -74,12 +74,12 @@ export default function ExhibitionsPage() {
                   ].map((item) => (
                     <div key={item.label} className="flex justify-between items-baseline py-4 border-b border-[var(--color-border)]">
                       <p className="text-[10px] font-body font-semibold uppercase tracking-[0.1em] text-black/35">{item.label}</p>
-                      <p className="text-[13px] font-body font-semibold text-black">{item.value}</p>
+                      <p className="text-[15px] font-body font-semibold text-black">{item.value}</p>
                     </div>
                   ))}
                 </div>
                 <Link
-                  href={`/en/templates/OHMT003-exhibition-EN/exhibitions/${exhibitions[0].slug}`}
+                  href={`/en/templates/OHMT003-exhibition/exhibitions/${exhibitions[0].slug}`}
                   className="relative overflow-hidden group inline-flex px-8 py-4 border border-black"
                 >
                   <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />

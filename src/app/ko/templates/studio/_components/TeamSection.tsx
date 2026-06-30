@@ -4,9 +4,9 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const team = [
-    { name: '제시카 포인트', role: '대표 건축 디렉터', image: '/templates/studio/team-1.jpg' },
-    { name: '라이언 베이저', role: '오브제 & 가구 큐레이터', image: '/templates/studio/team-2.jpg' },
-    { name: '캐리 배스', role: '수석 인테리어 디자이너', image: '/templates/studio/team-3.jpg' },
+    { name: '제시카 포인트', role: '대표 건축 디렉터', image: '/templates/OHMT006-studio/team-1.jpg' },
+    { name: '라이언 베이저', role: '오브제 & 가구 큐레이터', image: '/templates/OHMT006-studio/team-2.jpg' },
+    { name: '캐리 배스', role: '수석 인테리어 디자이너', image: '/templates/OHMT006-studio/team-3.jpg' },
 ];
 
 const containerVariants = {
@@ -50,7 +50,7 @@ export function TeamSection() {
                         <h2 className="text-[30px] md:text-[48px] leading-[1.5] font-semibold tracking-[-1.44px] text-black break-keep [overflow-wrap:normal]">
                             디자인 너머의 주역들.
                         </h2>
-                        <a href="/ko/templates/OHMT006-studio-KO/about" className="h-[40px] px-[24px] border border-black rounded-[100px] flex items-center justify-center text-[12px] font-bold tracking-[2px] uppercase text-black hover:bg-black hover:text-white transition-colors shrink-0">
+                        <a href="/ko/templates/OHMT006-studio/about" className="h-[40px] px-[24px] border border-black rounded-[100px] flex items-center justify-center text-[12px] font-bold tracking-[2px] uppercase text-black hover:bg-black hover:text-white transition-colors shrink-0">
                             소개 더보기
                         </a>
                     </div>

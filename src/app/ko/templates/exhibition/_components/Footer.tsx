@@ -1,10 +1,10 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 
 const navLinks = [
-  { href: '/ko/templates/OHMT003-exhibition-KO/about', label: '소개' },
-  { href: '/ko/templates/OHMT003-exhibition-KO/exhibitions', label: '전시' },
-  { href: '/ko/templates/OHMT003-exhibition-KO/events', label: '이벤트' },
-  { href: '/ko/templates/OHMT003-exhibition-KO/contact', label: '문의' },
+  { href: '/ko/templates/OHMT003-exhibition/about', label: '소개' },
+  { href: '/ko/templates/OHMT003-exhibition/exhibitions', label: '전시' },
+  { href: '/ko/templates/OHMT003-exhibition/events', label: '이벤트' },
+  { href: '/ko/templates/OHMT003-exhibition/contact', label: '문의' },
 ];
 
 export const Footer = () => {
@@ -22,7 +22,7 @@ export const Footer = () => {
         <div className="border-t border-white/15 mt-12" />
 
         <div className="flex justify-between items-center mt-8">
-          <p className="text-[11px] text-white/40">&copy; 2026 Oh My Template.</p>
+          <p className="text-[14px] text-white/40">&copy; 2026 OHMT.</p>
           <div className="flex items-center gap-4">
             <a href="#" className="text-white/40 hover:text-white transition-colors" aria-label="Instagram">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="2" y="2" width="20" height="20" rx="5" /><circle cx="12" cy="12" r="5" /><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none" /></svg>

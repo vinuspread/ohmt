@@ -136,7 +136,7 @@ export default function Testimonials() {
                     {review.name[0]}
                   </div>
                   <div>
-                    <p className="text-xs font-bold leading-tight">{review.name}</p>
+                    <p className="text-sm font-bold leading-tight">{review.name}</p>
                     <p className="text-[0.68rem] text-[var(--color-text-muted)]">{review.role}</p>
                   </div>
                 </div>

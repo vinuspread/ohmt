@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const basePath = "/ko/templates/OHMT026-spa-KO";
+const basePath = "/ko/templates/OHMT026-spa";
 
 export default function ContactForm() {
   const [sent, setSent] = useState(false);
@@ -48,7 +48,7 @@ export default function ContactForm() {
         <textarea id="message" rows={4} placeholder="목표나 질문을 알려주세요..." className="w-full bg-[var(--color-bg-secondary)] border border-[var(--color-border)] rounded-xl px-4 py-3 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-muted)]/50 focus:border-[var(--color-text)] focus:outline-none transition-colors resize-none" />
       </div>
       <button type="submit" className="w-full rounded-full bg-[var(--color-primary)] text-[var(--color-text-contrast)] px-6 py-3.5 text-sm font-semibold hover:brightness-110 active:scale-[0.97] transition-all duration-150">보내기</button>
-      <p className="text-xs text-[var(--color-text-muted)] text-center">24시간 이내에 답변드립니다. 개인정보는 안전하게 보관됩니다.</p>
+      <p className="text-sm text-[var(--color-text-muted)] text-center">24시간 이내에 답변드립니다. 개인정보는 안전하게 보관됩니다.</p>
     </form>
   );
 }

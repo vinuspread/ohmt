@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -22,7 +22,7 @@ function JewelryPageContent() {
     "about": `About`
   },
   "hero": {
-    "badge": `Oh My Template Fine Jewelry`,
+    "badge": `OHMT Fine Jewelry`,
     "title1": `The Radiance`,
     "title2": `of Forever`,
     "cta1": `Explore The Edition`,
@@ -53,11 +53,11 @@ function JewelryPageContent() {
   },
   "craftsmanship": {
     "badge": `Artisan Technique`,
-    "quote": `Every facet is a dialogue between light and stone, hand-polished to achieve Oh My Template's signature brilliance.`,
+    "quote": `Every facet is a dialogue between light and stone, hand-polished to achieve OHMT's signature brilliance.`,
     "heritage": `The Heritage`,
     "title1": `Hand-Set`,
     "title2": `With Soul`,
-    "desc": `At Oh My Template, we believe a jewel is more than a material; it is a silent observer of life's most precious moments. Our artisans spend hundreds of hours perfecting a single setting.`,
+    "desc": `At OHMT, we believe a jewel is more than a material; it is a silent observer of life's most precious moments. Our artisans spend hundreds of hours perfecting a single setting.`,
     "process": `Discover The Process`
   }
 };
@@ -70,10 +70,10 @@ const { scrollYProgress } = useScroll({
   const heroOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   const products = [
-    { name: t.products.items.item1, price: "$4,250", img: "/templates/jewelry/jewelry-ring.png", tag: t.products.tags.engagement },
-    { name: t.products.items.item2, price: "$1,850", img: "/templates/jewelry/jewelry-pendant.png", tag: t.products.tags.seasonal },
-    { name: t.products.items.item3, price: "$12,200", img: "/templates/jewelry/jewelry-hero-main.png", tag: t.products.tags.luxury },
-    { name: t.products.items.item4, price: "$3,400", img: "/templates/jewelry/jewelry-ring.png", tag: t.products.tags.essential },
+    { name: t.products.items.item1, price: "$4,250", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: t.products.tags.engagement },
+    { name: t.products.items.item2, price: "$1,850", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: t.products.tags.seasonal },
+    { name: t.products.items.item3, price: "$12,200", img: "/templates/OHMT002-jewelry/jewelry-hero-main.png", tag: t.products.tags.luxury },
+    { name: t.products.items.item4, price: "$3,400", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: t.products.tags.essential },
   ];
 
   const filteredProducts = products.filter((product) => {
@@ -96,9 +96,9 @@ const { scrollYProgress } = useScroll({
             className="absolute inset-0 z-0"
           >
             <img
-              src="/templates/jewelry/jewelry-hero-main.png"
+              src="/templates/OHMT002-jewelry/jewelry-hero-main.png"
               className="w-full h-full object-cover grayscale-[0.2]"
-              alt="Oh My Template Fine Jewelry Hero"
+              alt="OHMT Fine Jewelry Hero"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
           </motion.div>
@@ -209,7 +209,7 @@ const { scrollYProgress } = useScroll({
                 transition={{ duration: 1.5 }}
                 className="aspect-[4/5] overflow-hidden"
               >
-                <img loading="lazy" src="/templates/jewelry/jewelry-craft.png" alt="Jewelry Craftsmanship" className="w-full h-full object-cover" />
+                <img loading="lazy" src="/templates/OHMT002-jewelry/jewelry-craft.png" alt="Jewelry Craftsmanship" className="w-full h-full object-cover" />
               </motion.div>
               <div className="absolute -bottom-10 -right-6 lg:-bottom-14 lg:-right-14 w-72 bg-white p-8 hidden md:block border border-neutral-100">
                 <span className="text-[var(--color-primary)] text-[13px] font-bold uppercase tracking-[0.3em] block mb-3">{t.craftsmanship.badge}</span>

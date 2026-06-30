@@ -43,27 +43,27 @@ function OrderDetailPanel({ order, onClose }: { order: Order; onClose: () => voi
 
         <div className="space-y-4">
           <div>
-            <p className="text-xs text-[var(--color-text-muted)] mb-1">Date</p>
+            <p className="text-sm text-[var(--color-text-muted)] mb-1">Date</p>
             <p className="text-sm text-[var(--color-text)]">{order.date}, 2026</p>
           </div>
           <div>
-            <p className="text-xs text-[var(--color-text-muted)] mb-1">Customer</p>
+            <p className="text-sm text-[var(--color-text-muted)] mb-1">Customer</p>
             <p className="text-sm text-[var(--color-text)]">{order.customer}</p>
           </div>
           <div>
-            <p className="text-xs text-[var(--color-text-muted)] mb-1">Email</p>
+            <p className="text-sm text-[var(--color-text-muted)] mb-1">Email</p>
             <p className="text-sm text-[var(--color-text)]">{order.email}</p>
           </div>
           <div>
-            <p className="text-xs text-[var(--color-text-muted)] mb-1">Plan</p>
+            <p className="text-sm text-[var(--color-text-muted)] mb-1">Plan</p>
             <p className="text-sm text-[var(--color-text)]">{order.plan}</p>
           </div>
           <div>
-            <p className="text-xs text-[var(--color-text-muted)] mb-1">Amount</p>
+            <p className="text-sm text-[var(--color-text-muted)] mb-1">Amount</p>
             <p className="text-sm font-[var(--font-mono)] text-[var(--color-text)]">${order.amount}</p>
           </div>
           <div>
-            <p className="text-xs text-[var(--color-text-muted)] mb-1">Status</p>
+            <p className="text-sm text-[var(--color-text-muted)] mb-1">Status</p>
             <Badge variant={statusBadgeVariant[order.status]}>
               {order.status.charAt(0).toUpperCase() + order.status.slice(1)}
             </Badge>
@@ -135,7 +135,7 @@ export default function OrdersPage() {
             { label: 'Completed', value: orderStats.completed, color: 'var(--color-success)' },
           ].map((stat) => (
             <div key={stat.label} className="bg-[var(--color-bg-elevated)] rounded-[var(--radius-lg)] p-5 border border-[var(--color-border)]">
-              <p className="text-xs text-[var(--color-text-muted)] mb-1">{stat.label}</p>
+              <p className="text-sm text-[var(--color-text-muted)] mb-1">{stat.label}</p>
               <p className="text-2xl font-[var(--font-mono)] font-bold" style={{ color: stat.color }}>{stat.value.toLocaleString()}</p>
             </div>
           ))}

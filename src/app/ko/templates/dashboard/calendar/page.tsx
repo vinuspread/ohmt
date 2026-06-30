@@ -95,8 +95,8 @@ function EventPanel({ date, events, onClose }: { date: string; events: CalendarE
             <div className="w-2 h-2 rounded-full mt-1.5 shrink-0" style={{ backgroundColor: eventCategoryMeta[ev.category].color }} />
             <div className="min-w-0">
               <p className="text-sm font-medium text-[var(--color-text)]">{ev.title}</p>
-              <p className="text-xs text-[var(--color-text-muted)]">{ev.time}</p>
-              <p className="text-xs text-[var(--color-text-muted)] mt-0.5">{ev.description}</p>
+              <p className="text-sm text-[var(--color-text-muted)]">{ev.time}</p>
+              <p className="text-sm text-[var(--color-text-muted)] mt-0.5">{ev.description}</p>
             </div>
           </div>
         ))}
@@ -156,8 +156,8 @@ export default function CalendarPage() {
                   <div key={ev.id} className="flex items-start gap-2">
                     <div className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ backgroundColor: eventCategoryMeta[ev.category].color }} />
                     <div className="min-w-0">
-                      <p className="text-xs font-medium text-[var(--color-text)] truncate">{ev.title}</p>
-                      <p className="text-[10px] text-[var(--color-text-muted)]">{ev.date} {ev.time}</p>
+                      <p className="text-sm font-medium text-[var(--color-text)] truncate">{ev.title}</p>
+                      <p className="text-[14px] text-[var(--color-text-muted)]">{ev.date} {ev.time}</p>
                     </div>
                   </div>
                 ))}

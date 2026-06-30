@@ -1,4 +1,4 @@
-﻿// src/app/en/templates/OHMT005-sneaker-EN/_components/sections/ProductGrid.tsx
+﻿// src/app/en/templates/OHMT005-sneaker/_components/sections/ProductGrid.tsx
 "use client";
 import { useState } from "react";
 import Link from "next/link";
@@ -13,7 +13,7 @@ export const products = [
     originalPrice: 280,
     rating: 4.5,
     reviews: 128,
-    img: "/templates/sneaker/product-1.jpg?v=2",
+    img: "/templates/OHMT005-sneaker/product-1.jpg?v=2",
     badge: "Best Seller",
     longDesc: "Engineered for record-breaking speed and stability. The Air Stride Pro combines an integrated carbon-fiber flyplate with high-rebound dual-density foam cushioning. Designed to propel you forward with minimal energy loss, the engineered warp-knit mesh upper ensures lightweight breathability and structural support.\n\nAt the heart of this shoe is a full-length 3D carbon plate embedded throughout the midsole, which quickly converts landing impacts into forward propulsion. Additionally, the high-density TPU heel counter at the rear ensures absolute wobble-free stability.\n\nThis is a premium racing platform providing the perfect gait mechanics not only for full-course marathoners but also for crew runners seeking high-speed training sessions.",
     specs: [
@@ -40,7 +40,7 @@ export const products = [
     originalPrice: null,
     rating: 4.3,
     reviews: 96,
-    img: "/templates/sneaker/product-2.jpg",
+    img: "/templates/OHMT005-sneaker/product-2.jpg",
     badge: null,
     longDesc: "The definitive everyday staple designed to add depth to your casual wardrobe. The Urban Classic is handcrafted from premium full-grain leather that molds to your unique foot shape over time. Its clean, retro silhouette is anchored by a durable stitched rubber cupsole, ensuring timeless versatility.\n\nBy minimizing external logos, this shoe merges elegantly with formal slacks or casual denim pants. The interior is lined with butter-soft natural pigskin leather to prevent friction and enhance comfort.\n\nFinished with robust sidewall stitching, these shoes represent a classic essential engineered to stay in your wardrobe for years.",
     specs: [
@@ -67,7 +67,7 @@ export const products = [
     originalPrice: 380,
     rating: 4.7,
     reviews: 214,
-    img: "/templates/sneaker/product-3.jpg",
+    img: "/templates/OHMT005-sneaker/product-3.jpg",
     badge: "20% Off",
     longDesc: "A stealthy fusion of high-performance materials and dark cyberpunk aesthetics. Features water-resistant ripstop panels, a responsive foam midsole, and tactical quick-lace toggle hardware.\n\nThe upper is reinforced with ballistic nylon skin to withstand scrapes and tears in rough environments. It also incorporates 3M reflective panels to maximize visibility during nighttime excursions.\n\nWhether facing heavy monsoon rains or navigating dark streets, this shoe is the ultimate tactical answer for all-weather urban commuters.",
     specs: [
@@ -94,7 +94,7 @@ export const products = [
     originalPrice: null,
     rating: 4.2,
     reviews: 73,
-    img: "/templates/sneaker/product-4.jpg",
+    img: "/templates/OHMT005-sneaker/product-4.jpg",
     badge: null,
     longDesc: "Built for agility on multi-directional terrains and indoor sports courts. Low-profile, responsive midsole combines with knit zone grids to support active side-to-side cuts and explosive sprints.\n\nThe low-drop outsole is designed to maximize ground contact, providing a solid base for squats, deadlifts, or court movements. Lateral outriggers are integrated to prevent rolling during hard cuts.\n\nThis is a highly specialized training shoe ideal for crossfit, agility workouts, and high-intensity fitness sessions.",
     specs: [
@@ -120,7 +120,7 @@ export const products = [
     originalPrice: 190,
     rating: 4.4,
     reviews: 182,
-    img: "/templates/sneaker/product-5.jpg",
+    img: "/templates/OHMT005-sneaker/product-5.jpg",
     badge: "15% Off",
     longDesc: "Soft pearlescent leather finishes meet relaxed comfort. The Pearl Low features raw edges, custom metal eyelets, and an Ortholite comfort foam insole that keeps your steps cushioned and dry.\n\nThe leather surfaces undergo a special coating process that creates a subtle opal glow over time, resulting in an elegant patina. Designed with a wider toe-box, it accommodates high arches comfortably.\n\nA perfect choice to wear with cropped trousers, skirts, or light denim, offering a refined urban aesthetic.",
     specs: [
@@ -146,7 +146,7 @@ export const products = [
     originalPrice: null,
     rating: 4.6,
     reviews: 104,
-    img: "/templates/sneaker/product-6.jpg",
+    img: "/templates/OHMT005-sneaker/product-6.jpg",
     badge: "New",
     longDesc: "A rugged hybrid sneaker boot designed to tackle high-altitude mountain trails and muddy urban streets with ease. Equipped with a fully waterproof membrane, a reinforced rubber rand, and a Vibram outsole.\n\nThe flexible neoprene ankle collar wraps the ankle snugly, ensuring dirt, pebbles, or water cannot penetrate the interior. Speed hooks allow for fast and secure lace adjustments.\n\nThis boot ensures unparalleled traction and ankle stability on slippery, wet stones or uneven icy roads.",
     specs: [
@@ -172,7 +172,7 @@ export const products = [
     originalPrice: 250,
     rating: 4.1,
     reviews: 58,
-    img: "/templates/sneaker/product-7.jpg",
+    img: "/templates/OHMT005-sneaker/product-7.jpg",
     badge: null,
     longDesc: "Electrify your stride. A track-oriented trainer sporting fluorescent TPU panels, breathable monofilament mesh, and a high-traction rubber outsole designed for fast speed trials.\n\nThe upper features seamless heat-bonding technology, completely eliminating stitch lines that might cause skin irritation or pressure points. You can run sockless with complete confidence.\n\nThe vibrant neon colorway significantly enhances visibility during late-evening runs, ensuring cars and cyclists can spot you from a distance.",
     specs: [
@@ -197,7 +197,7 @@ export const products = [
     originalPrice: null,
     rating: 4.5,
     reviews: 239,
-    img: "/templates/sneaker/product-8.jpg",
+    img: "/templates/OHMT005-sneaker/product-8.jpg",
     badge: null,
     longDesc: "Crafted for high-rebound energy returns during high-intensity interval training. Designed with a flexible grooved forefoot and a high-stability wider heel platform to lock down your stance.\n\nIt secures your heels firmly during heavy lifting exercises while the responsive midsole cushioning absorbs impact during explosive plyometric jump moves.\n\nA versatile fitness shoe engineered to handle crossfit, group training, and dynamic weightlifting sessions.",
     specs: [
@@ -222,7 +222,7 @@ export const products = [
     originalPrice: 400,
     rating: 4.8,
     reviews: 311,
-    img: "/templates/sneaker/product-9.jpg",
+    img: "/templates/OHMT005-sneaker/product-9.jpg",
     badge: "15% Off",
     longDesc: "Our premier trail running sneaker built for extreme terrains. Boasts a GORE-TEX waterproof lining, a high-density rock plate in the forefoot, and a deep-grooved mud-clearing outsole.\n\nReinforced rubber toe caps and heel guards protect your feet from impacts against rocks, roots, or trail debris, keeping the construction intact over long distances.\n\nKeep your running pace steady and comfortable across the mud, creeks, and rugged mountain paths under any weather conditions.",
     specs: [
@@ -247,7 +247,7 @@ export const products = [
     originalPrice: null,
     rating: 4.3,
     reviews: 87,
-    img: "/templates/sneaker/product-10.jpg",
+    img: "/templates/OHMT005-sneaker/product-10.jpg",
     badge: null,
     longDesc: "The elegance of formal footwear fused with the lightweight comfort of modern trainers. Upholstered in polished calfskin suede with a streamlined low profile.\n\nDesigned specifically for professionals who need to maintain a smart, dressy appearance at work while desiring sneaker-like underfoot comfort. Elegant hand-stitched detailing outlines the edges.\n\nA hybrid masterpiece that pairs beautifully with suit setups or slim-fit slacks, enhancing your professional look.",
     specs: [
@@ -272,7 +272,7 @@ export const products = [
     originalPrice: 220,
     rating: 4.4,
     reviews: 142,
-    img: "/templates/sneaker/product-11.jpg",
+    img: "/templates/OHMT005-sneaker/product-11.jpg",
     badge: "15% Off",
     longDesc: "Durable ripstop upper combined with dual-strap midfoot locks for technical trail security. A rugged high-traction tread ensures grip over loose sand and gravel.\n\nReplacing standard laces with dual velcro strap bands prevents snagging hazards on branches and weeds while providing a customizable, locked-in fit across the instep.\n\nMaximize your trail-running control and agility with deep outsole lugs designed to grip uneven surfaces.",
     specs: [
@@ -297,7 +297,7 @@ export const products = [
     originalPrice: null,
     rating: 4.6,
     reviews: 196,
-    img: "/templates/sneaker/product-12.jpg",
+    img: "/templates/OHMT005-sneaker/product-12.jpg",
     badge: "New",
     longDesc: "Zero weight, maximum cushion. Weighing only 190g, the Apex Lite is structured from single-thread monofilament yarn and an ultra-light gas-infused foam midsole.\n\nThe seamless socks-like collar wraps your ankle gently, preventing stitch friction and irritation during long walks or fast pacing sessions.\n\nDesigned for modern urban runners who want to feel weightless and stay stylish during their daily commute.",
     specs: [
@@ -322,7 +322,7 @@ export const products = [
     originalPrice: 185,
     rating: 4.2,
     reviews: 63,
-    img: "/templates/sneaker/product-13.jpg",
+    img: "/templates/OHMT005-sneaker/product-13.jpg",
     badge: null,
     longDesc: "A daily fitness sneaker sporting an elastic slip-on opening and flexible knit upper. Conforms instantly to your unique foot shape for all-day active ease.\n\nEliminating laces entirely, the rear heel pull tab allows you to slip them on effortlessly. The interior features a removable ortholite insole with ergonomic arch support.\n\nThe ideal companion for light walks, grocery runs, or casual weekend travels where convenience is key.",
     specs: [
@@ -347,7 +347,7 @@ export const products = [
     originalPrice: null,
     rating: 4.5,
     reviews: 77,
-    img: "/templates/sneaker/product-14.jpg",
+    img: "/templates/OHMT005-sneaker/product-14.jpg",
     badge: null,
     longDesc: "Class classic meets technical sole. High-grade Italian calf leather upper fitted with hand-sewn penny slots, sitting on a high-cushion rubber cupsole.\n\nDitch the stiff feeling of traditional hard leather dress shoes and enjoy superior cushioning even when standing all day during long work hours.\n\nAn essential smart hybrid shoe for businessmen, consultants, and anyone seeking a polished look without sacrificing foot health.",
     specs: [
@@ -372,7 +372,7 @@ export const products = [
     originalPrice: 320,
     rating: 4.7,
     reviews: 188,
-    img: "/templates/sneaker/product-15.jpg",
+    img: "/templates/OHMT005-sneaker/product-15.jpg",
     badge: "12% Off",
     longDesc: "Built to shatter personal bests during marathon racing. A full-length curved carbon fiber plate is sandwiched between two generous layers of nitrogen-infused cushioning.\n\nEach step returns landing energy as forward momentum, reducing muscle fatigue and helping you maintain a high speed over long distances.\n\nThe upper mesh is woven from semi-transparent monofilament yarns, yielding outstanding breathability that is three times more effective than standard cotton.",
     specs: [
@@ -397,7 +397,7 @@ export const products = [
     originalPrice: null,
     rating: 4.0,
     reviews: 44,
-    img: "/templates/sneaker/product-16.jpg",
+    img: "/templates/OHMT005-sneaker/product-16.jpg",
     badge: null,
     longDesc: "Retro skate styling crafted from heavy-duty organic canvas and premium suede overlays. A thicker cupsole and padded tongue ensure durable daily comfort.\n\nThe areas most prone to friction during skate tricks are reinforced with double-stitched leather panels to prevent premature tearing.\n\nA great match for loose wide jeans, cargo trousers, or casual street fashion, adding a rugged, laid-back charm to your outfit.",
     specs: [
@@ -448,7 +448,7 @@ function getBadgeStyle(badge: string) {
 
 function ProductCard({ product }: { product: typeof products[0] }) {
   return (
-    <Link href={`/en/templates/OHMT005-sneaker-EN/product/${product.id}`} className="group block border border-black/10 hover:border-black/50 transition-all duration-300 active:scale-[0.98]">
+    <Link href={`/en/templates/OHMT005-sneaker/product/${product.id}`} className="group block border border-black/10 hover:border-black/50 transition-all duration-300 active:scale-[0.98]">
       <div className="relative overflow-hidden aspect-square bg-[var(--color-bg-secondary)]">
         <img
           src={product.img}
@@ -638,7 +638,7 @@ export function ProductGrid({ title, items, limit = 8 }: Props) {
         "returns": `Returns`,
         "contact": `Contact`
       },
-      "copyright": `© 2026 Vinus. All rights reserved.`,
+      "copyright": `© 2026 Oh My Template.`,
       "legal": {
         "privacy": `Privacy`,
         "terms": `Terms`,
@@ -655,7 +655,7 @@ export function ProductGrid({ title, items, limit = 8 }: Props) {
       <div className="max-w-[1440px] mx-auto px-6">
         <div className="flex items-center justify-between mb-10">
           <h2 className="text-[1.6rem] font-black tracking-[-0.02em] uppercase">{title}</h2>
-          <Link href="/en/templates/OHMT005-sneaker-EN/shop-all" className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-black/50 hover:text-black transition-colors border-b border-black/20 pb-0.5">
+          <Link href="/en/templates/OHMT005-sneaker/shop-all" className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-black/50 hover:text-black transition-colors border-b border-black/20 pb-0.5">
             {t.productGrid.viewAll}
           </Link>
         </div>

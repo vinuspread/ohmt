@@ -9,7 +9,7 @@ export default function Footer() {
         {/* Brand */}
         <div className="flex-1 px-8 md:px-14 lg:px-20 py-12 border-b md:border-b-0 md:border-r border-[var(--color-border)]">
           <Link
-            href="/ko/templates/OHMT022-yoga-KO"
+            href="/ko/templates/OHMT022-yoga"
             className="text-[17px] font-medium text-[var(--color-text)] tracking-[-0.01em]"
             style={{ fontFamily: "var(--font-body)" }}
           >
@@ -66,7 +66,7 @@ export default function Footer() {
 
       {/* Bottom bar */}
       <div className="flex items-center justify-between px-8 md:px-14 lg:px-20 py-6">
-        <p className="text-[13px] text-[var(--color-text-muted)]"
+        <p className="text-[15px] text-[var(--color-text-muted)]"
            style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}>
           &copy; {BRAND.copyright}
         </p>

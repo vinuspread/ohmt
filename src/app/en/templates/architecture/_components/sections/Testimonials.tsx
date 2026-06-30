@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture-EN/_components/sections/Testimonials.tsx
+// src/app/en/templates/OHMT027-architecture/_components/sections/Testimonials.tsx
 "use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -33,14 +33,10 @@ export function Testimonials() {
             className="w-full"
           >
             {testimonials.map((t, index) => (
-              <SwiperSlide key={index}>
-                <div className="bg-white p-8 md:p-10 h-full flex flex-col justify-between shadow-sm border border-black/5">
+              <SwiperSlide key={index} className="!h-auto flex">
+                <div className="bg-white p-8 md:p-10 w-full flex flex-col justify-between shadow-sm border border-black/5">
                   <div className="space-y-4">
-                    {/* Double Quote Sign */}
-                    <span className="font-heading font-normal text-[80px] leading-none text-[var(--color-border)] block -mb-8 -mt-4 select-none">
-                      “
-                    </span>
-                    <p className="font-heading font-normal text-[18px] md:text-[20px] leading-[1.6] text-[var(--color-text)] relative z-10">
+                    <p className="font-heading font-normal text-[15px] md:text-[16px] leading-[1.6] text-[var(--color-text)] relative z-10">
                       {t.quote}
                     </p>
                   </div>
@@ -49,7 +45,7 @@ export function Testimonials() {
                     <h4 className="font-sans font-medium text-[14px] text-[var(--color-text)]">
                       {t.client}
                     </h4>
-                    <p className="font-sans text-[13px] text-[var(--color-text-secondary)] mt-1">
+                    <p className="font-sans text-[15px] text-[var(--color-text-secondary)] mt-1">
                       {t.company}
                     </p>
                   </div>

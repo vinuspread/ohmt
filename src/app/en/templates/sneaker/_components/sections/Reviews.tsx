@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 import { Star } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 const ratings = [5, 5, 4, 5];
@@ -159,7 +159,7 @@ export const Reviews = () => {
       "returns": `Returns`,
       "contact": `Contact`
     },
-    "copyright": `© 2026 Vinus. All rights reserved.`,
+    "copyright": `© 2026 Oh My Template.`,
     "legal": {
       "privacy": `Privacy`,
       "terms": `Terms`,

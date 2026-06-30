@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT005-sneaker-KO/_components/sections/ProductGrid.tsx
+﻿// src/app/ko/templates/OHMT005-sneaker/_components/sections/ProductGrid.tsx
 "use client";
 import { useState } from "react";
 import Link from "next/link";
@@ -12,7 +12,7 @@ export const products = [
     originalPrice: 280,
     rating: 4.5,
     reviews: 128,
-    img: "/templates/sneaker/product-1.jpg",
+    img: "/templates/OHMT005-sneaker/product-1.jpg",
     badge: "베스트셀러",
     longDesc: "신기록 갱신을 목표로 하는 질주와 고도의 안정을 위해 인체공학적으로 설계된 하이퍼포먼스 레이싱화입니다. 탄소 섬유 플레이트와 고반발 이중 밀도 폼 쿠셔닝을 결합하여 에너지 손실을 최소화하면서 폭발적인 추진력을 불어넣습니다. 통기성을 극대화한 워프 니트 메쉬 갑피가 러닝 내내 쾌적한 피팅감을 선사합니다.\n\n이 신발의 핵심은 중창 전체에 내장된 풀사이즈 3D 카본 플레이트로, 착지 시 가해지는 하중을 전방 추진력으로 신속하게 변환해 줍니다. 또한 뒤꿈치 부분의 고밀도 TPU 힐 카운터가 흔들림 없는 안정을 약속합니다.\n\n마라톤 풀코스 주자뿐만 아니라 스피드 훈련을 즐기는 크루 러너들에게 완벽한 주행 메커니즘을 제공하는 최상급 레이싱 플랫폼입니다.",
     specs: [
@@ -39,7 +39,7 @@ export const products = [
     originalPrice: null,
     rating: 4.3,
     reviews: 96,
-    img: "/templates/sneaker/product-2.jpg",
+    img: "/templates/OHMT005-sneaker/product-2.jpg",
     badge: null,
     longDesc: "매일의 일상에 깊이를 더하는 미니멀리즘 데일리 클래식 스니커즈입니다. 최고급 천연 풀그레인 가죽을 수작업으로 제봉하여 착용할수록 발 모양에 편안하게 길들여집니다. 정교하게 스티칭된 천연 고무 아웃솔과 레트로한 실루엣이 결합되어 어떤 룩에도 자연스럽게 매치됩니다.\n\n외관의 로고 노출을 최소화하여 미니멀한 슬랙스 코디나 캐주얼 데님 팬츠 코디에 아주 우아하게 융합됩니다. 내부는 부드러운 천연 돈피 가죽 안감을 덧대어 쓸림을 방지했습니다.\n\n세대를 아우르는 단정한 디테일과 튼튼한 컵솔 마감으로 평생 소장하며 신을 수 있는 클래식 에센셜 슈즈입니다.",
     specs: [
@@ -66,7 +66,7 @@ export const products = [
     originalPrice: 380,
     rating: 4.7,
     reviews: 214,
-    img: "/templates/sneaker/product-3.jpg",
+    img: "/templates/OHMT005-sneaker/product-3.jpg",
     badge: "20% 할인",
     longDesc: "고기능성 아웃도어 소재와 다크한 사이버펑크 미학이 결합된 하이엔드 테크 스니커즈입니다. 고강도 방수 립스탑 패널, 쿠셔닝 리스폰스 미드솔, 편리한 신속 끈 조절형 퀵 레이스 토글 장치를 탑재했습니다.\n\n갑피는 마모와 찢어짐에 강한 발리스틱 나일론 스킨을 채택하여 거친 암석 지대나 진흙탕 속에서도 원단 손상이 없습니다. 또한 야간 활동 시 시인성을 극대화해 줄 3M 스카치 리플렉티브 패널이 탑재되었습니다.\n\n도시의 장마철이나 궂은 날씨 속에서도 패션과 기능을 동시에 충족시켜 줄 궁극의 전천후 테크웨어 슈즈입니다.",
     specs: [
@@ -93,7 +93,7 @@ export const products = [
     originalPrice: null,
     rating: 4.2,
     reviews: 73,
-    img: "/templates/sneaker/product-4.jpg",
+    img: "/templates/OHMT005-sneaker/product-4.jpg",
     badge: null,
     longDesc: "역동적인 방향 전환과 트레이닝에 최적화된 로우 프로필 민첩성 트레이너입니다. 반응성이 우수한 중창과 타이트한 니트 지지 그리드를 조합하여 폭발적인 스크린과 사이드 컷을 안정적으로 제어합니다.\n\n지면과 발바닥의 밀착도를 높이기 위해 설계된 로우 드롭 아웃솔은 스쿼트나 데드리프트 등 헬스장 웨이트 트레이닝 시 강력한 지지면을 확보해 줍니다. 좌우 횡방향 쏠림을 방지하기 위한 측면 사이드 범퍼도 장착되었습니다.\n\n체육관 스포츠, 크로스핏 및 고강도 기능성 트레이닝에 최적화된 스페셜 플레이어 슈즈입니다.",
     specs: [
@@ -119,7 +119,7 @@ export const products = [
     originalPrice: 190,
     rating: 4.4,
     reviews: 182,
-    img: "/templates/sneaker/product-5.jpg",
+    img: "/templates/OHMT005-sneaker/product-5.jpg",
     badge: "15% 할인",
     longDesc: "부드러운 진주빛 펄 가죽 광택과 내추럴한 편안함이 어우러진 데일리 로우탑 슈즈입니다. 컷오프 러프 에지와 커스텀 금속 아일렛 디테일을 지녔으며, 오소라이트 풋베드로 쿠셔닝을 강화했습니다.\n\n시간이 지날수록 가죽 표면에 자연스러운 주름이 가며 진주 가루를 흩뿌린 듯 은은한 오팔 광채가 감돌아 독특한 깊이감을 선사합니다. 발볼 부분이 여유롭게 제작되어 발등이 높으신 분들도 쾌적하게 착용할 수 있습니다.\n\n단정한 크롭 슬랙스나 미디 스커트에 매치하면 세련된 도회적 미학을 가미해 주는 클래식 스니커즈입니다.",
     specs: [
@@ -145,7 +145,7 @@ export const products = [
     originalPrice: null,
     rating: 4.6,
     reviews: 104,
-    img: "/templates/sneaker/product-6.jpg",
+    img: "/templates/OHMT005-sneaker/product-6.jpg",
     badge: "신상품",
     longDesc: "높은 산행과 거친 지형, 도심의 악천후를 극복하기 위해 설계된 전천후 하이브리드 하이탑 부츠 스니커즈입니다. 완전한 방수 기능성 멤브레인 내장막, 견고한 고무 보강 테두리, 그리고 세계적인 접지력의 비브람창으로 무장했습니다.\n\n발목 부분을 단단하면서도 부드럽게 감싸주는 패딩 네오프렌 칼라를 삽입하여, 흙이나 자갈이 신발 내부로 유입되는 것을 원천 차단해 줍니다. 하이탑이지만 엘라스틱 퀵 끈 레이싱 덕분에 피팅 조절이 매우 빠릅니다.\n\n산악 하이킹 트래킹은 물론 도심 속 눈비 내리는 고르지 못한 지면에서도 뛰어난 안정성을 보장하는 올테레인 마스터피스입니다.",
     specs: [
@@ -171,7 +171,7 @@ export const products = [
     originalPrice: 250,
     rating: 4.1,
     reviews: 58,
-    img: "/templates/sneaker/product-7.jpg",
+    img: "/templates/OHMT005-sneaker/product-7.jpg",
     badge: null,
     longDesc: "러너의 질주에 폭발적인 에너지를 불어넣는 트랙 전문 훈련화입니다. 시선을 사로잡는 형광 TPU 힐 카운터, 통기성이 우수한 모노필라멘트 메쉬, 트랙 접지력이 강력한 경량 러버 솔을 적용했습니다.\n\n갑피는 무봉제 열압착 공법(Seamless Heat-Bonding)으로 조립되어 실밥으로 인한 발등 쓸림이나 압박감이 전혀 없고, 양말을 신지 않고 러닝을 뛰어도 피부 마찰이 없습니다.\n\n눈에 띄는 고휘도 네온 컬러웨이는 야간 야외 러닝 시 멀리서도 러너의 위치를 명확히 인지시켜 주어 안전한 런닝 환경을 제공합니다.",
     specs: [
@@ -196,7 +196,7 @@ export const products = [
     originalPrice: null,
     rating: 4.5,
     reviews: 239,
-    img: "/templates/sneaker/product-8.jpg",
+    img: "/templates/OHMT005-sneaker/product-8.jpg",
     badge: null,
     longDesc: "고강도 서킷 트레이닝 및 피트니스 시 즉각적인 충격 완화와 고도의 수평 반발력을 제공하는 하이테크 피트니스 트레이닝 슈즈입니다. 깊은 앞코 유연성 홈(Flex Grooves)과 넓고 탄탄한 뒤꿈치 하중 분산 플레이트가 바닥과의 강력한 밀착력을 형성합니다.\n\n스쿼트나 리프팅 동작 시 뒤꿈치가 지면에서 뜨는 것을 막아주고, 고강도 플라이오메트릭 점프 동작 시 가해지는 관절 충격을 고탄성 완충 폼이 부드럽게 흡수합니다.\n\n크로스핏, 실내 헬스, GX 그룹 운동 등 다이나믹한 스포츠 웨이트 트레이닝에 완벽한 스탠스를 제공하는 피트니스 전용 마스터피스입니다.",
     specs: [
@@ -221,7 +221,7 @@ export const products = [
     originalPrice: 400,
     rating: 4.8,
     reviews: 311,
-    img: "/templates/sneaker/product-9.jpg",
+    img: "/templates/OHMT005-sneaker/product-9.jpg",
     badge: "15% 할인",
     longDesc: "산악 험로와 젖은 바위밭, 진흙탕을 달리는 고강도 트레일 러너들을 위한 최상급 아웃도어 트레일러입니다. 고어텍스 방수 안감, 바닥의 날카로운 자갈로부터 발바닥을 보호하는 플레이트, 그리고 흙을 배출하는 돌기창을 지녔습니다.\n\n산길의 돌뿌리나 거친 바위에 부딪히는 신발 앞코와 뒤꿈치 부분에는 튼튼한 토캡 가드와 힐 캡 가드를 덧대어 내구성을 한 차원 끌어올렸습니다.\n\n어떤 험난한 자연환경에서도 발을 완벽하게 보호하며 쾌적한 아웃도어 런닝 페이스를 유지하도록 설계된 트레일 프로 스니커즈입니다.",
     specs: [
@@ -246,7 +246,7 @@ export const products = [
     originalPrice: null,
     rating: 4.3,
     reviews: 87,
-    img: "/templates/sneaker/product-10.jpg",
+    img: "/templates/OHMT005-sneaker/product-10.jpg",
     badge: null,
     longDesc: "비즈니스 캐주얼에 최적화된 하이브리드 포멀 스니커즈입니다. 옥스포드화 고유의 단정한 디테일에 스니커즈의 가벼운 고무 솔과 부드러운 카프 스웨이드를 매칭했습니다.\n\n직장에서 구두 대신 격식을 차리면서도 운동화 수준의 발의 편안함을 선사하기 위해 개발되었습니다. 테두리는 핸드 스티치 디테일로 정성스럽게 마감되어 고급 세단의 가죽 시트 같은 완성도를 자아냅니다.\n\n슬림하고 세련된 슬랙스 라인이나 단정한 수트 셋업 하부에 매치하기에 최고의 럭셔리 하이브리드 로퍼입니다.",
     specs: [
@@ -271,7 +271,7 @@ export const products = [
     originalPrice: 220,
     rating: 4.4,
     reviews: 142,
-    img: "/templates/sneaker/product-11.jpg",
+    img: "/templates/OHMT005-sneaker/product-11.jpg",
     badge: "15% 할인",
     longDesc: "견고한 발리스틱 나일론 소재와 발등을 단단하게 감싸는 이중 벨크로 스트랩 고정 장치를 갖추어, 거친 아웃도어 환경에서도 흔들림 없는 지지력을 자랑하는 테크니컬 아웃도어 슈즈입니다.\n\n발등 부위에 신발 끈 대신 탄탄한 벨크로 이중 밴드를 탑재하여, 질주 시 신발 끈이 나뭇가지에 걸려 풀리는 사고를 근본적으로 방지하고 발 전체를 든든하게 락킹해 줍니다.\n\n어떠한 오프로드 환경에서도 아웃솔 러그의 접지력을 극대화하여 활기차고 빠른 질주를 가능하게 돕습니다.",
     specs: [
@@ -296,7 +296,7 @@ export const products = [
     originalPrice: null,
     rating: 4.6,
     reviews: 196,
-    img: "/templates/sneaker/product-12.jpg",
+    img: "/templates/OHMT005-sneaker/product-12.jpg",
     badge: "신상품",
     longDesc: "최소한의 무게로 누리는 극상의 아늑함을 구현한 데일리 스포츠 런닝 슈즈입니다. 270mm 기준 단 190g에 불과하여, 한 스레드로 짠 고기능성 니트 상판과 질소 주입 초경량 탄성 폼을 적용했습니다.\n\n양말을 신은 듯 발등을 포근하고 부드럽게 감싸는 일체형 삭스 라이닝 구조는 장시간 걷거나 뛰어도 신발 내부의 봉제선 마찰로 인한 물집이나 피부 자극이 없습니다.\n\n피로도 없는 가벼움과 세련된 니트 감성을 동시에 원하는 트렌디한 어반 러너와 현대인의 데일리 워킹에 완벽히 동화됩니다.",
     specs: [
@@ -321,7 +321,7 @@ export const products = [
     originalPrice: 185,
     rating: 4.2,
     reviews: 63,
-    img: "/templates/sneaker/product-13.jpg",
+    img: "/templates/OHMT005-sneaker/product-13.jpg",
     badge: null,
     longDesc: "유연한 스포츠 라이프스타일을 추구하는 이들을 위한 이지 슬립온 운동화입니다. 신축성이 탁월한 플렉스 직조 메쉬 소재가 발의 복잡한 움직임에 따라 유기적으로 수축 팽창하여 신속한 탈착과 오래 지속되는 안락함을 선사합니다.\n\n신발끈을 묶는 번거로움 없이 뒤꿈치 풀탭을 당겨 부드럽게 발을 집어넣을 수 있으며, 인솔 내부에는 탈착이 가능한 컴포트 아치 서포트 패드가 탑재되어 보행 시 아치 무너짐을 막아줍니다.\n\n동네 산책, 마트 장보기, 가벼운 야외 운동 시 신속하고 가장 편하게 선택하게 될 마이 데일리 스니커즈입니다.",
     specs: [
@@ -346,7 +346,7 @@ export const products = [
     originalPrice: null,
     rating: 4.5,
     reviews: 77,
-    img: "/templates/sneaker/product-14.jpg",
+    img: "/templates/OHMT005-sneaker/product-14.jpg",
     badge: null,
     longDesc: "전통적인 이탈리아 페니 로퍼의 단정한 클래식 실루엣에 스포티한 컴포트 아웃솔의 기술을 결합한 프리미엄 하이브리드 로퍼 스니커즈입니다. 광택이 수려한 송아지 천연 가죽 바디를 수공 제작하고 발바닥에는 푹신한 컵솔을 하이브리드 접합했습니다.\n\n격식 있는 정장이나 캐주얼한 캐주얼 셋업 코디 시 하부 구두 특유의 딱딱함에서 벗어나, 종일 서 있어도 뛰어난 쿠셔닝을 만끽할 수 있습니다.\n\n구두의 무게와 발 피로감에 시달리던 직장인과 미팅이 잦은 비즈니스맨들에게 최적의 스마트 워킹 가치를 선사합니다.",
     specs: [
@@ -371,7 +371,7 @@ export const products = [
     originalPrice: 320,
     rating: 4.7,
     reviews: 188,
-    img: "/templates/sneaker/product-15.jpg",
+    img: "/templates/OHMT005-sneaker/product-15.jpg",
     badge: "12% 할인",
     longDesc: "러닝 크루의 마라톤 피비를 갱신해 줄 풀-레벨 고강도 카본 레이싱 러닝화입니다. 전체 길이에 걸쳐 휘어진 고강도 카본 섬유 플레이트가 질소 가스를 주입해 고도로 팽창한 미드솔 사이에 샌드위치 구조로 완벽히 융합되어 폭발적인 반발 에너지를 제공합니다.\n\n매 발걸음 딛을 때마다 지면으로부터의 충격 에너지를 즉각적인 탄성 추진력으로 되돌려 주어, 다리 근육의 피로도를 방지하고 고속 질주 페이스를 오래 유지할 수 있도록 이끌어 줍니다.\n\n갑피는 반투명한 초경량 필라멘트 원사로 촘촘히 엮어, 발을 견고히 고정하면서도 땀 배출력이 무려 면의 3배 이상 뛰어나 쾌적한 레이싱을 선사합니다.",
     specs: [
@@ -396,7 +396,7 @@ export const products = [
     originalPrice: null,
     rating: 4.0,
     reviews: 44,
-    img: "/templates/sneaker/product-16.jpg",
+    img: "/templates/OHMT005-sneaker/product-16.jpg",
     badge: null,
     longDesc: "올드스쿨 스케이트보더들의 터프하고 자유로운 감성을 고스란히 담아낸 스트리트 캔버스 스니커즈입니다. 촘촘하고 두터운 헤비 코튼 캔버스 원단에 마모 저항력이 뛰어난 천연 스웨이드 패치를 레이어링하고, 푹신한 패디드 텅(설포)과 든든한 벌커나이즈 솔로 마무리했습니다.\n\n스케이트보드 트릭 시 마찰이 가장 잦은 옆면 솔기 부분에는 이중 스티치 가죽 스키드 패치 처리를 가미해, 보드가 지면과 긁히는 마찰에도 스니커즈가 쉽게 찢어지지 않습니다.\n\n자유분방한 오버사이즈 와이드 진이나 힙한 스트리트 패션 코디에 완벽히 매칭되어 러프하고 힙한 매력을 배가시킵니다.",
     specs: [
@@ -447,7 +447,7 @@ function getBadgeStyle(badge: string) {
 
 function ProductCard({ product }: { product: typeof products[0] }) {
   return (
-    <Link href={`/ko/templates/OHMT005-sneaker-KO/product/${product.id}`} className="group block border border-black/10 hover:border-black transition-colors duration-200">
+    <Link href={`/ko/templates/OHMT005-sneaker/product/${product.id}`} className="group block border border-black/10 hover:border-black transition-colors duration-200">
       <div className="relative overflow-hidden aspect-square bg-[var(--color-bg-secondary)]">
         <img
           src={product.img}
@@ -491,7 +491,7 @@ export function ProductGrid({ title, items, limit = 8 }: Props) {
       <div className="max-w-[1440px] mx-auto px-6">
         <div className="flex items-center justify-between mb-10">
           <h2 className="text-[1.6rem] font-black tracking-[-0.03em] uppercase">{title}</h2>
-          <Link href="/ko/templates/OHMT005-sneaker-KO/shop-all" className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-black/50 hover:text-black transition-colors border-b border-black/20 pb-0.5">
+          <Link href="/ko/templates/OHMT005-sneaker/shop-all" className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-black/50 hover:text-black transition-colors border-b border-black/20 pb-0.5">
             전체 보기
           </Link>
         </div>

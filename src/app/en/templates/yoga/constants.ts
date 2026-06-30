@@ -1,11 +1,11 @@
-﻿import type { YogaClass, Instructor, Testimonial, ScheduleItem } from "./types";
+import type { YogaClass, Instructor, Testimonial, ScheduleItem } from "./types";
 
 export const NAV_ITEMS = [
-  { label: "Home", href: "/en/templates/OHMT022-yoga-EN" },
-  { label: "Classes", href: "/en/templates/OHMT022-yoga-EN/classes" },
-  { label: "About", href: "/en/templates/OHMT022-yoga-EN/about" },
-  { label: "Book", href: "/en/templates/OHMT022-yoga-EN/schedule" },
-  { label: "My Page", href: "/en/templates/OHMT022-yoga-EN/mypage" },
+  { label: "Home", href: "/en/templates/OHMT022-yoga" },
+  { label: "Classes", href: "/en/templates/OHMT022-yoga/classes" },
+  { label: "About", href: "/en/templates/OHMT022-yoga/about" },
+  { label: "Book", href: "/en/templates/OHMT022-yoga/schedule" },
+  { label: "My Page", href: "/en/templates/OHMT022-yoga/mypage" },
 ] as const;
 
 export const SOCIAL_LINKS = [
@@ -22,7 +22,7 @@ export const CLASSES: YogaClass[] = [
     subtitle: "Dynamic Breath-Linked Movement",
     description: "A fluid sequence of poses synchronized with breath, building heat and focus.",
     longDescription: "Vinyasa Flow links each movement with an inhale or exhale, creating a moving meditation that builds internal heat, improves flexibility, and strengthens the body. Suitable for those who want a dynamic practice that challenges both mind and body.",
-    image: "/templates/yoga/class-vinyasa.jpg",
+    image: "/templates/OHMT022-yoga/class-vinyasa.jpg",
     duration: "60 min",
     level: "Intermediate",
     benefits: ["Builds cardiovascular endurance", "Improves flexibility", "Reduces stress", "Enhances mind-body connection"],
@@ -34,7 +34,7 @@ export const CLASSES: YogaClass[] = [
     subtitle: "Traditional Poses & Breath Work",
     description: "A gentle introduction to foundational poses held with conscious breathing.",
     longDescription: "Hatha is a traditional approach that emphasizes holding poses for longer durations, focusing on alignment and breath. This practice builds a strong foundation for all other yoga styles and is perfect for beginners or those seeking a slower, more meditative practice.",
-    image: "/templates/yoga/class-hatha.jpg",
+    image: "/templates/OHMT022-yoga/class-hatha.jpg",
     duration: "75 min",
     level: "All Levels",
     benefits: ["Builds core strength", "Improves posture", "Increases body awareness", "Promotes relaxation"],
@@ -46,7 +46,7 @@ export const CLASSES: YogaClass[] = [
     subtitle: "Inner Stillness Practice",
     description: "Guided meditation sessions to calm the mind and cultivate inner peace.",
     longDescription: "Our meditation sessions combine breath awareness, body scanning, and guided visualization to help quiet the mind. Regular practice reduces anxiety, improves concentration, and fosters a deep sense of inner calm and clarity.",
-    image: "/templates/yoga/class-meditation.jpg",
+    image: "/templates/OHMT022-yoga/class-meditation.jpg",
     duration: "45 min",
     level: "All Levels",
     benefits: ["Reduces anxiety", "Improves concentration", "Enhances emotional health", "Promotes better sleep"],
@@ -58,7 +58,7 @@ export const CLASSES: YogaClass[] = [
     subtitle: "Core Strength & Alignment",
     description: "A focused practice that strengthens the core and improves body alignment.",
     longDescription: "Pilates focuses on strengthening the deep core muscles, improving spinal alignment, and building long, lean muscles. Each session targets postural muscles, helping to prevent injury and create a balanced, aligned body.",
-    image: "/templates/yoga/class-pilates.jpg",
+    image: "/templates/OHMT022-yoga/class-pilates.jpg",
     duration: "50 min",
     level: "All Levels",
     benefits: ["Strengthens core", "Improves posture", "Increases flexibility", "Prevents injury"],
@@ -71,21 +71,21 @@ export const INSTRUCTORS: Instructor[] = [
     name: "Sofia Chen",
     role: "Vinyasa & Hatha Instructor",
     bio: "With over 15 years of practice and certification in multiple yoga traditions, Sofia brings warmth and precision to every class.",
-    image: "/templates/yoga/instructor-1.jpg",
+    image: "/templates/OHMT022-yoga/instructor-1.jpg",
   },
   {
     id: "2",
     name: "Marcus Webb",
     role: "Meditation & Breathwork Guide",
     bio: "Marcus specializes in mindfulness and meditation, drawing from Buddhist traditions and modern neuroscience.",
-    image: "/templates/yoga/instructor-2.jpg",
+    image: "/templates/OHMT022-yoga/instructor-2.jpg",
   },
   {
     id: "3",
     name: "Lena Park",
     role: "Pilates & Alignment Coach",
     bio: "A former dancer turned Pilates specialist, Lena focuses on alignment, core strength, and graceful movement.",
-    image: "/templates/yoga/instructor-3.jpg",
+    image: "/templates/OHMT022-yoga/instructor-3.jpg",
   },
 ];
 
@@ -180,8 +180,8 @@ export const SCHEDULE: ScheduleItem[] = [
 ];
 
 export const BRAND = {
-  name: "Oh My Template",
+  name: "OHMT",
   tagline: "Find Your Peace",
   email: "contact@ohmytemplate.com",
-  copyright: "2026 Oh My Template.",
+  copyright: "2026 OHMT.",
 } as const;

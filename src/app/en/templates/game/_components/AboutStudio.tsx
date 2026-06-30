@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "motion/react";
 
@@ -27,7 +27,7 @@ export default function AboutStudio() {
               The Studio
             </h2>
             <p className="mt-6 text-base leading-relaxed text-[var(--color-text-muted)]">
-              Founded in 2018, Oh My Template began as a team of five passionate developers
+              Founded in 2018, OHMT began as a team of five passionate developers
               in a small Austin office. Today, we are a family of over 200 creators spanning
               three continents, united by a single mission: to build worlds that inspire and
               break the limits of interactive storytelling.
@@ -58,8 +58,8 @@ export default function AboutStudio() {
             className="relative aspect-[4/3] overflow-hidden rounded-2xl"
           >
             <img
-              src="/templates/game/studio-team.jpg"
-              alt="Oh My Template team"
+              src="/templates/OHMT023-game/studio-team.jpg"
+              alt="OHMT team"
               className="h-full w-full object-cover"
             />
             <div className="absolute inset-0 border border-[var(--color-border)] rounded-2xl pointer-events-none" />

@@ -67,13 +67,13 @@ export function Footer() {
   },
   "cta": `Start Project`,
   "footer": {
-    "copyright": `© 2026 Oh My Template Studio. All rights reserved.`,
+    "copyright": `© 2026 Oh My Template.`,
     "contact": `Austin, Texas · hello@ohmytemplate.com`
   },
   "aboutPage": {
     "category": `Architectural Core`,
     "title1": `ABOUT`,
-    "title2": `Oh My Template.`,
+    "title2": `OHMT.`,
     "philosophy": {
       "title": `Space as a canvas.`,
       "desc": `We operate at the convergence of architecture, spatial brand experience, and tactile interaction. Our design lab is dedicated to executing systems that evoke silence, celebrate material honesty, and command physical space with ultimate rigor.`
@@ -200,10 +200,10 @@ export function Footer() {
   }
 };
 const navItems = [
-        { name: t.nav.services, href: '/en/templates/OHMT006-studio-EN/services' },
-        { name: t.nav.projects, href: '/en/templates/OHMT006-studio-EN/projects' },
-        { name: t.nav.about, href: '/en/templates/OHMT006-studio-EN/about' },
-        { name: t.nav.contact, href: '/en/templates/OHMT006-studio-EN/contact' },
+        { name: t.nav.services, href: '/en/templates/OHMT006-studio/services' },
+        { name: t.nav.projects, href: '/en/templates/OHMT006-studio/projects' },
+        { name: t.nav.about, href: '/en/templates/OHMT006-studio/about' },
+        { name: t.nav.contact, href: '/en/templates/OHMT006-studio/contact' },
     ];
 
     const connectItems = [
@@ -216,8 +216,8 @@ const navItems = [
         <footer className="bg-[var(--color-bg-dark)] text-white px-6 md:px-16 lg:px-24 py-10 md:py-12 border-t border-white/10 relative z-30 font-sans">
             <div className="max-w-[1720px] mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 pb-8 border-b border-white/10">
-                    <Link href="/en/templates/OHMT006-studio-EN" className="text-[20px] font-black tracking-[-1px] uppercase text-white">
-                        Oh My Template<span className="font-normal">.</span>
+                    <Link href="/en/templates/OHMT006-studio" className="text-[20px] font-black tracking-[-1px] uppercase text-white">
+                        OHMT<span className="font-normal">.</span>
                     </Link>
 
                     <nav className="flex flex-wrap gap-6 md:gap-10">

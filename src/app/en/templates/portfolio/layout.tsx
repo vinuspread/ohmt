@@ -1,28 +1,28 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "Portfolio - Oh My Template",
+  title: "OHMT - Portfolio",
   description: "Personal branding and creative portfolio",
   openGraph: {
-    title: "Portfolio - Oh My Template",
+    title: "OHMT - Portfolio",
     description: "Personal branding and creative portfolio",
-    url: "https://ohmytemplate.com/en/templates/OHMT007-portfolio-EN",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/portfolio/og-image.jpg", width: 1200, height: 630 }],
+    url: "https://ohmytemplate.com/en/templates/OHMT007-portfolio",
+    siteName: "OHMT",
+    images: [{ url: "/templates/OHMT007-portfolio/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Portfolio - Oh My Template",
+    title: "OHMT - Portfolio",
     description: "Personal branding and creative portfolio",
-    images: ["/templates/portfolio/og-image.jpg"],
+    images: ["/templates/OHMT007-portfolio/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT007-portfolio-EN",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT007-portfolio-KO" },
+    canonical: "https://ohmytemplate.com/en/templates/OHMT007-portfolio",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT007-portfolio" },
   },
 };
 

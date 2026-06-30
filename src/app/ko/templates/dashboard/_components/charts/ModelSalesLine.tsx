@@ -32,7 +32,7 @@ export function ModelSalesLine() {
     >
       <div className="mb-4">
         <h3 className="text-base font-semibold text-[var(--color-text)]">Units Sold by Model</h3>
-        <p className="text-xs text-[var(--color-text-muted)] mt-0.5">Monthly unit sales - EV9 · GT7 · X5 · S3</p>
+        <p className="text-sm text-[var(--color-text-muted)] mt-0.5">Monthly unit sales - EV9 · GT7 · X5 · S3</p>
       </div>
       <div style={{ height: 280 }}>
         <ResponsiveContainer width="100%" height="100%">

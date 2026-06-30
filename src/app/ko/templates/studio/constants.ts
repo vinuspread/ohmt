@@ -1,13 +1,13 @@
-﻿export const STUDIO_ROUTES = {
+export const STUDIO_ROUTES = {
   HOME: '/studio-ko',
-  SERVICES: '/ko/templates/OHMT006-studio-KO/services',
-  PROJECTS: '/ko/templates/OHMT006-studio-KO/projects',
-  CONTACT: '/ko/templates/OHMT006-studio-KO/contact',
-  ABOUT: '/ko/templates/OHMT006-studio-KO/about',
+  SERVICES: '/ko/templates/OHMT006-studio/services',
+  PROJECTS: '/ko/templates/OHMT006-studio/projects',
+  CONTACT: '/ko/templates/OHMT006-studio/contact',
+  ABOUT: '/ko/templates/OHMT006-studio/about',
 } as const;
 
 export const STUDIO_BRAND = {
-  NAME: 'Oh My Template.',
+  NAME: 'OHMT.',
   TAGLINE: '감각적인 공간 설계로 삶의 질을 높입니다.',
   EMAIL: 'hello@ohmytemplate.design',
   PHONE: '+82 (2) 6123-4567',

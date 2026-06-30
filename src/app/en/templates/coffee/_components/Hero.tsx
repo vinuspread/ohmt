@@ -9,7 +9,7 @@ export const Hero = () => {
   return (
     <section className="relative w-full h-[68vh] min-h-[480px] flex flex-col items-center justify-center overflow-hidden">
       <motion.img
-        src="/templates/coffee/story-brewing.jpg"
+        src="/templates/OHMT019-coffee/story-brewing.jpg"
         alt="Coffee being brewed"
         className="absolute inset-0 w-full h-full object-cover"
         initial={{ scale: 1.12, opacity: 0 }}
@@ -45,7 +45,7 @@ export const Hero = () => {
           whileTap={{ scale: 0.98 }}
         >
           <Link
-            href="/en/templates/OHMT019-coffee-EN/menu"
+            href="/en/templates/OHMT019-coffee/menu"
             className="inline-flex items-center justify-center border border-white/50 text-white px-10 py-3 text-[11px] uppercase tracking-[0.25em] font-semibold hover:bg-white hover:text-[var(--color-primary-dark)] transition-colors duration-300"
           >
             Reservation

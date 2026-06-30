@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT024-kids-education-KO/contact/page.tsx
+﻿// src/app/ko/templates/OHMT024-kids-education/contact/page.tsx
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";

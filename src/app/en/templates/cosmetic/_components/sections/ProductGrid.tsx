@@ -1,13 +1,13 @@
-﻿// src/app/templates/cosmetic/-components/sections/ProductGrid.tsx
+﻿// src/app/templates/OHMT010-cosmetic/-components/sections/ProductGrid.tsx
 "use client";
 
 import React from "react";
 import { motion } from "framer-motion";
 import { useSearchParams } from "next/navigation";
 const products = [
-  { id: 1, name: "Gentle Cleanser", price: "$42.00", img: "/templates/cosmetic/cosmetic-2.png", tag: "essential" },
-  { id: 2, name: "Hydrating Mist", price: "$38.00", img: "/templates/cosmetic/cosmetic-botanical-dropper.png", tag: "new" },
-  { id: 3, name: "Night Cream", price: "$95.00", img: "/templates/cosmetic/cosmetic-collection-marble.png", tag: "bestseller" }
+  { id: 1, name: "Gentle Cleanser", price: "$42.00", img: "/templates/OHMT010-cosmetic/cosmetic-2.png", tag: "essential" },
+  { id: 2, name: "Hydrating Mist", price: "$38.00", img: "/templates/OHMT010-cosmetic/cosmetic-botanical-dropper.png", tag: "new" },
+  { id: 3, name: "Night Cream", price: "$95.00", img: "/templates/OHMT010-cosmetic/cosmetic-collection-marble.png", tag: "bestseller" }
 ];
 
 const containerVariants = {
@@ -85,7 +85,7 @@ export const ProductGrid = () => {
       "returns": `Returns`,
       "faq": `FAQ`
     },
-    "copyright": `© 2026 Vinuspread Beauty. All Rights Reserved. Made in France.`
+    "copyright": `© 2026 Oh My Template.`
   },
   "story": {
     "title": `Conscious beauty for the modern age.`,

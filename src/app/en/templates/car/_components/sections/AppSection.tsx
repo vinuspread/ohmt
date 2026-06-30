@@ -1,4 +1,4 @@
-﻿// src/app/templates/car/src/components/sections/AppSection.tsx
+﻿// src/app/templates/OHMT009-car/src/components/sections/AppSection.tsx
 "use client";
 
 import React from "react";
@@ -16,7 +16,7 @@ export const AppSection = () => {
         {/* Left: image */}
         <div className="relative overflow-hidden min-h-[360px]">
           <img
-            src="/templates/car/car-4.jpg"
+            src="/templates/OHMT009-car/car-4.jpg"
             alt="VINUS Interior"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />

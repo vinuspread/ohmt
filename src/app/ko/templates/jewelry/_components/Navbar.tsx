@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT002-jewelry-KO/-internal/components/Navbar.tsx
+// src/app/ko/templates/OHMT002-jewelry/-internal/components/Navbar.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -30,10 +30,10 @@ export default function Navbar() {
     : "";
 
   const menuItems = [
-    { name: "컬렉션", id: "collections", href: "/ko/templates/OHMT002-jewelry-KO/category/collections" },
-    { name: "인게이지먼트 & 웨딩", id: "engagement", href: "/ko/templates/OHMT002-jewelry-KO/category/engagement" },
-    { name: "하이 주얼리", id: "high-jewelry", href: "/ko/templates/OHMT002-jewelry-KO/category/high-jewelry" },
-    { name: "브랜드 헤리티지", id: "about", href: "/ko/templates/OHMT002-jewelry-KO/category/about" },
+    { name: "컬렉션", id: "collections", href: "/ko/templates/OHMT002-jewelry/category/collections" },
+    { name: "인게이지먼트 & 웨딩", id: "engagement", href: "/ko/templates/OHMT002-jewelry/category/engagement" },
+    { name: "하이 주얼리", id: "high-jewelry", href: "/ko/templates/OHMT002-jewelry/category/high-jewelry" },
+    { name: "브랜드 헤리티지", id: "about", href: "/ko/templates/OHMT002-jewelry/category/about" },
   ];
 
   return (
@@ -88,12 +88,12 @@ export default function Navbar() {
           {/* Center Logo */}
           <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center pointer-events-none max-w-[120px] sm:max-w-none">
             <Link
-              href="/ko/templates/OHMT002-jewelry-KO"
+              href="/ko/templates/OHMT002-jewelry"
               className={`text-[14px] sm:text-[18px] md:text-2xl font-serif tracking-[0.25em] -mr-[0.25em] font-normal uppercase transition-colors duration-700 pointer-events-auto text-center ${
                 !isTransparent ? "text-neutral-900" : "text-white"
               }`}
             >
-              Oh My Template
+              OHMT
             </Link>
           </div>
 
@@ -142,7 +142,7 @@ export default function Navbar() {
             <button className="hover:text-[var(--color-primary)] transition-colors hidden sm:block">
               <User size={18} strokeWidth={1.5} />
             </button>
-            <Link href="/ko/templates/OHMT002-jewelry-KO/cart" className="group flex items-center gap-2 hover:opacity-85 transition-opacity">
+            <Link href="/ko/templates/OHMT002-jewelry/cart" className="group flex items-center gap-2 hover:opacity-85 transition-opacity">
               <ShoppingBag size={18} strokeWidth={1.5} className="group-hover:text-[var(--color-primary)] transition-colors" />
             </Link>
           </div>
@@ -172,7 +172,7 @@ export default function Navbar() {
             >
               <div className="space-y-16">
                 <div className="flex justify-between items-center">
-                  <span className="text-sm font-serif tracking-[0.2em] uppercase text-neutral-900">Oh My Template</span>
+                  <span className="text-sm font-serif tracking-[0.2em] uppercase text-neutral-900">OHMT</span>
                   <button onClick={() => setMobileMenuOpen(false)} className="p-2 text-neutral-500 hover:text-neutral-900">
                     <X size={20} />
                   </button>
@@ -199,7 +199,7 @@ export default function Navbar() {
               </div>
 
               <div className="space-y-6 border-t border-neutral-200/50 pt-8 text-[14px] tracking-[0.2em] text-neutral-400 font-bold uppercase">
-                <p>© 2026 MAISON Oh My Template</p>
+                <p>© 2026 Oh My Template.</p>
                 <div className="flex gap-4">
                   <a href="#" className="hover:text-[var(--color-primary)] transition-colors">Instagram</a>
                   <a href="#" className="hover:text-[var(--color-primary)] transition-colors">Pinterest</a>

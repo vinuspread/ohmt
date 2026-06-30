@@ -62,7 +62,7 @@ export const Testimonials = () => {
               </blockquote>
               <div className="w-12 h-[2px] bg-[var(--color-accent)] mx-auto mb-6" />
               <p className="text-sm font-semibold text-[var(--color-bg)]">{current.name}</p>
-              <p className="text-xs text-[var(--color-bg)]/60 mt-1">{current.location}</p>
+              <p className="text-sm text-[var(--color-bg)]/60 mt-1">{current.location}</p>
             </motion.div>
           </AnimatePresence>
 

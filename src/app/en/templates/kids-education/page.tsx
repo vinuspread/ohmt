@@ -1,4 +1,4 @@
-﻿import { TemplateWrapper } from "./_components/TemplateWrapper";
+import { TemplateWrapper } from "./_components/TemplateWrapper";
 import themeData from "./theme.json";
 import Navbar from "./_components/layout/Navbar";
 import Hero from "./_components/sections/Hero";
@@ -12,9 +12,9 @@ import Footer from "./_components/layout/Footer";
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Oh My Template - Creative Academy",
+  "name": "OHMT - Creative Academy",
   "description": "Playful and colorful children education platform with creative classes",
-  "url": "https://ohmytemplate.com/en/templates/OHMT024-kids-education-EN",
+  "url": "https://ohmytemplate.com/en/templates/OHMT024-kids-education",
 };
 
 export default function KidsEducationPage() {

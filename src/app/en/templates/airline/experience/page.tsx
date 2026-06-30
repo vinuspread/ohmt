@@ -1,4 +1,4 @@
-﻿// src/app/templates/airline/experience/page.tsx
+﻿// src/app/templates/OHMT008-airline/experience/page.tsx
 "use client";
 
 import React, { useState } from "react";
@@ -22,7 +22,7 @@ function ExperiencePageContent() {
       desc: "Seared French Caviar with fresh blinis, paired with Krug Clos d'Ambonnay vintage champagne.",
       detail: "Crafted by Chef Antoine Dubois, 3-Michelin-star alumnus of Le Bernardin. The set opens with a cold amuse-bouche of oscietra caviar on buckwheat blini, followed by a main of pan-seared Brittany turbot with champagne beurre blanc, and closes with a dark chocolate mille-feuille. Wine pairing includes Krug Clos d'Ambonnay 2002 and a 15-year Armagnac digestif.",
       tags: ["3-Course", "Champagne Pairing", "First Class Only"],
-      img: "/templates/airline/michelin-dining.jpg"
+      img: "/templates/OHMT008-airline/michelin-dining.jpg"
     },
     {
       id: "Korean",
@@ -30,7 +30,7 @@ function ExperiencePageContent() {
       desc: "Premium Hanwoo Beef Galbi-Jjim slow-cooked with chestnut and red dates, served in warm organic bronzware.",
       detail: "Inspired by the Joseon Dynasty's royal banquet tradition. The course features braised Hanwoo 1++ grade short ribs simmered for 8 hours with goji berries, chestnuts, and aged doenjang. Accompanied by seasonal namul, stone-pot rice, and a warm jujube-cinnamon sikhye as a palate cleanser. Served in handcrafted organic bronzware to retain optimal temperature.",
       tags: ["Seasonal Menu", "Heritage Recipe", "Business & First"],
-      img: "/templates/airline/korean-cuisine.jpg"
+      img: "/templates/OHMT008-airline/korean-cuisine.jpg"
     },
     {
       id: "Wellness",
@@ -38,7 +38,7 @@ function ExperiencePageContent() {
       desc: "Truffle-infused quinoa and garden micro-herbs, paired with organic fresh pressed superfoods.",
       detail: "Developed in collaboration with nutritionist Dr. Yuki Tanaka. The set is entirely plant-based and gluten-free, featuring a truffled heirloom quinoa tabbouleh, cold-pressed spirulina bisque with coconut foam, and a main of roasted maitake mushroom with white truffle jus. Finished with a raw cacao and mango tart. All ingredients are certified organic and sustainably sourced.",
       tags: ["Plant-Based", "Gluten-Free", "All Cabins"],
-      img: "/templates/airline/wellness-set.jpg"
+      img: "/templates/OHMT008-airline/wellness-set.jpg"
     }
   ];
 
@@ -59,7 +59,7 @@ function ExperiencePageContent() {
 
         {/* Hero Cover (Completely Borderless & Floating Atmosphere) */}
         <PageHero
-          imageSrc="/templates/airline/airline-experience-hero.png"
+          imageSrc="/templates/OHMT008-airline/airline-experience-hero.png"
           imageAlt="Premium Cabin Detail"
           label="The Cabin Experience"
           title={<>Crafted Beyond <br /><span className="text-[var(--color-accent)] font-serif normal-case font-normal">Expectations.</span></>}
@@ -128,7 +128,7 @@ function ExperiencePageContent() {
                                 ))}
                               </div>
                               <p className="text-[14px] text-[#7A7A7A] leading-[1.4] font-normal normal-case">{meal.desc}</p>
-                              <p className="text-[13px] text-[#7A7A7A]/80 leading-[1.85] font-normal normal-case border-l-2 border-[var(--color-accent)]/30 pl-4">{meal.detail}</p>
+                              <p className="text-[15px] text-[#7A7A7A]/80 leading-[1.85] font-normal normal-case border-l-2 border-[var(--color-accent)]/30 pl-4">{meal.detail}</p>
                             </div>
                           </motion.div>
                         )}

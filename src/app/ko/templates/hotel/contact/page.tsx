@@ -25,7 +25,7 @@ function ContactPageContent() {
         {/* Hero Section */}
         <section className="relative h-[40vh] md:h-[50vh] flex items-center bg-[var(--color-primary)] overflow-hidden">
           <div className="absolute inset-0">
-            <img src="/templates/hotel/hero-main.jpg" alt="Contact" className="w-full h-full object-cover opacity-50" />
+            <img src="/templates/OHMT020-hotel/hero-main.jpg" alt="Contact" className="w-full h-full object-cover opacity-50" />
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)] via-[var(--color-primary)]/40 to-transparent" />
           </div>
           <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full pt-20">
@@ -76,7 +76,7 @@ function ContactPageContent() {
 
                 {/* Styled Map Placeholder */}
                 <div className="aspect-[16/10] bg-[var(--color-bg-secondary)] border border-[var(--color-border)] relative flex flex-col items-center justify-center p-8 text-center text-xs text-[var(--color-text-muted)] overflow-hidden">
-                  <div className="absolute inset-0 bg-cover opacity-20 pointer-events-none" style={{ backgroundImage: "url('/templates/hotel/story-01.jpg')" }} />
+                  <div className="absolute inset-0 bg-cover opacity-20 pointer-events-none" style={{ backgroundImage: "url('/templates/OHMT020-hotel/story-01.jpg')" }} />
                   <MapPin size={32} className="text-[var(--color-accent)] mb-3 relative z-10" />
                   <span className="font-semibold text-[var(--color-primary)] relative z-10 mb-1">인터랙티브 지도 미리보기</span>
                   <span className="relative z-10 max-w-xs leading-relaxed">지도 모듈 로딩이 보류되었습니다. 리조트는 코사무이 국제공항(USM)에서 전용 셔틀 차량으로 약 15분 거리에 위치하고 있습니다.</span>

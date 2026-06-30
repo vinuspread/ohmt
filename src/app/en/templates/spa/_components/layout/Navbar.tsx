@@ -1,9 +1,9 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import { navLinks } from "../../data/data";
 
-const basePath = "/en/templates/OHMT026-spa-EN";
+const basePath = "/en/templates/OHMT026-spa";
 
 export default function Navbar({ solid = false }: { solid?: boolean }) {
   const [scrolled, setScrolled] = useState(false);
@@ -35,7 +35,7 @@ export default function Navbar({ solid = false }: { solid?: boolean }) {
           className="font-[family-name:var(--font-heading)] text-xl font-bold tracking-tight"
           style={{ color: isDark ? "var(--color-text)" : "var(--color-text-contrast)" }}
         >
-          Oh My Template
+          OHMT
         </a>
 
         <div className="hidden lg:flex items-center gap-8">

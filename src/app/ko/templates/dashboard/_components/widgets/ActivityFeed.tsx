@@ -4,10 +4,10 @@ import { motion } from 'framer-motion'
 import { Avatar } from '../common/Avatar'
 
 const activities = [
-  { user: 'Daniel Park', src: '/templates/portfolio/portfolio-2.jpg', action: 'Confirmed EV9 order - Obsidian Black, Full spec', time: '4m ago', type: 'success' },
-  { user: 'Mia Torres', src: '/templates/portfolio/portfolio-3.png', action: 'Submitted GT7 test drive request at Seoul flagship', time: '22m ago', type: 'info' },
-  { user: 'James Kang', src: '/templates/portfolio/portfolio-4.png', action: 'Closed X5 fleet deal - 12 units for Lotte Corp.', time: '51m ago', type: 'primary' },
-  { user: 'Sarah Yoon', src: '/templates/portfolio/portfolio-5.png', action: 'Updated S3 configurator pricing for KR market', time: '1h ago', type: 'neutral' },
+  { user: 'Daniel Park', src: '/templates/OHMT007-portfolio/portfolio-2.jpg', action: 'Confirmed EV9 order - Obsidian Black, Full spec', time: '4m ago', type: 'success' },
+  { user: 'Mia Torres', src: '/templates/OHMT007-portfolio/portfolio-3.png', action: 'Submitted GT7 test drive request at Seoul flagship', time: '22m ago', type: 'info' },
+  { user: 'James Kang', src: '/templates/OHMT007-portfolio/portfolio-4.png', action: 'Closed X5 fleet deal - 12 units for Lotte Corp.', time: '51m ago', type: 'primary' },
+  { user: 'Sarah Yoon', src: '/templates/OHMT007-portfolio/portfolio-5.png', action: 'Updated S3 configurator pricing for KR market', time: '1h ago', type: 'neutral' },
 ]
 
 const typeColor: Record<string, string> = {
@@ -44,7 +44,7 @@ export function ActivityFeed({ className = '' }: { className?: string }) {
                 <span className="font-medium">{a.user}</span>{' '}
                 <span className="text-[var(--color-text-muted)]">{a.action}</span>
               </p>
-              <p className="text-xs text-[var(--color-text-muted)] mt-0.5">{a.time}</p>
+              <p className="text-sm text-[var(--color-text-muted)] mt-0.5">{a.time}</p>
             </div>
           </li>
         ))}

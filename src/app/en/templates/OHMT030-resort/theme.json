@@ -1,0 +1,25 @@
+{
+  "slug": "OHMT030-resort",
+  "name": "Coastal Luxury Resort",
+  "name_ko": "해안 럭셔리 리조트",
+  "category": "hospitality",
+  "description": "A seaside sanctuary of minimalist luxury.",
+  "description_ko": "미니멀리즘 럭셔리가 깃든 해안의 안식처.",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#7C9BAB",
+      "secondary": "#0A0E0E",
+      "accent": "#FFC392",
+      "text": { "main": "#FFFFFF", "muted": "rgba(255,255,255,0.6)", "contrast": "#0A0E0E" },
+      "ui": { "border": "rgba(255,255,255,0.25)", "hover": "rgba(255,255,255,0.15)", "shadow": "0 4px 24px rgba(0,0,0,0.3)" }
+    },
+    "typography": {
+      "heading": { "font": "Instrument Sans, sans-serif", "weight": "600", "tracking": "0.02em", "style": "tracking-wide" },
+      "body": { "font": "Instrument Sans, sans-serif", "weight": "400", "leading": "1.7", "style": "leading-relaxed" }
+    },
+    "spacing": { "page_pt": "100px", "container": "1440px", "gutter": "48px", "card_gap": "24px" },
+    "motion": { "transition_fast": "200ms", "transition_normal": "400ms", "transition_slow": "800ms", "easing": "cubic-bezier(0.16, 1, 0.3, 1)" },
+    "interaction": { "button": "bg-[var(--accent)] text-[var(--text-contrast)] hover:brightness-110", "card_hover": "hover:scale-[1.02] transition-transform" }
+  }
+}

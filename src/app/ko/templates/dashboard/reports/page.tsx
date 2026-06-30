@@ -108,7 +108,7 @@ export default function ReportsPage() {
                   <TrendBadge trend={report.trend} />
                 </div>
                 <h4 className="text-sm font-medium text-[var(--color-text)] mb-1">{report.title}</h4>
-                <p className="text-xs text-[var(--color-text-muted)] mb-4">{report.date}</p>
+                <p className="text-sm text-[var(--color-text-muted)] mb-4">{report.date}</p>
                 <button className="flex items-center gap-1.5 text-xs text-[var(--color-primary)] hover:text-[var(--color-primary-hover)] transition-colors font-medium">
                   <Download size={14} strokeWidth={1.5} />
                   다운로드

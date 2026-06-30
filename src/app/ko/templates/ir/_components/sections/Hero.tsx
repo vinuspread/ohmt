@@ -1,4 +1,4 @@
-﻿// src/app/templates/ir/-components/sections/Hero.tsx
+﻿// src/app/templates/OHMT011-ir/-components/sections/Hero.tsx
 "use client";
 
 import React from "react";
@@ -14,7 +14,7 @@ export const Hero = () => {
     >
       <video
         className="absolute inset-0 w-full h-full object-cover opacity-25"
-        src="/templates/ir/hero-bg.mp4"
+        src="/templates/OHMT011-ir/hero-bg.mp4"
         autoPlay
         loop
         muted

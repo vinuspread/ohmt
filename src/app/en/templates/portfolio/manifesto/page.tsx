@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { Suspense } from "react";
 import React from "react";
@@ -38,7 +38,7 @@ function PortfolioManifestoPageContent() {
                             </div>
                         </div>
                         <div className="lg:col-span-4 bg-[var(--color-bg-secondary)] aspect-[3/4] overflow-hidden p-12 flex flex-col justify-between">
-                            <span className="text-[13px] font-black tracking-[0.4em] uppercase opacity-20">Oh My Template laboratory // 2025</span>
+                            <span className="text-[13px] font-black tracking-[0.4em] uppercase opacity-20">OHMT laboratory // 2025</span>
                             <div className="space-y-4">
                                 <div className="w-12 h-[1px] bg-black" />
                                 <p className="text-[13px] font-black tracking-widest uppercase leading-[1.4]">

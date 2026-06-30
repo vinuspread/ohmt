@@ -4,10 +4,10 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const news = [
-    { date: 'jan 24, 2026', title: 're-thinking the open office floor plan', image: '/templates/studio/blog-1.jpg' },
-    { date: 'dec 12, 2025', title: 'minimalism in the corporate landscape', image: '/templates/studio/blog-2.jpg' },
-    { date: 'nov 08, 2025', title: 'sustainable furniture sourcing for 2026', image: '/templates/studio/blog-3.jpg' },
-    { date: 'oct 21, 2025', title: 'the impact of light on productivity', image: '/templates/studio/blog-4.jpg' },
+    { date: 'jan 24, 2026', title: 're-thinking the open office floor plan', image: '/templates/OHMT006-studio/blog-1.jpg' },
+    { date: 'dec 12, 2025', title: 'minimalism in the corporate landscape', image: '/templates/OHMT006-studio/blog-2.jpg' },
+    { date: 'nov 08, 2025', title: 'sustainable furniture sourcing for 2026', image: '/templates/OHMT006-studio/blog-3.jpg' },
+    { date: 'oct 21, 2025', title: 'the impact of light on productivity', image: '/templates/OHMT006-studio/blog-4.jpg' },
 ];
 
 const listVariants = {

@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
@@ -14,7 +14,7 @@ return (
         className="absolute inset-0"
       >
         <img
-          src="/templates/fashion/branding-custom.jpg"
+          src="/templates/OHMT001-fashion/branding-custom.jpg"
           alt="Luxury Fashion Hero" 
           className="w-full h-full object-cover brightness-75"
           loading="eager"
@@ -33,13 +33,13 @@ return (
           <span className="text-[13px] md:text-[12px] uppercase tracking-[0.6em] sm:tracking-[1em] font-bold mb-6 sm:mb-12 block opacity-60" style={{ fontFamily: "'Pretendard', sans-serif" }}>
             ESTABLISHED 2026
           </span>
-          <h1 className="text-4xl sm:text-[6vw] md:text-[5vw] font-normal tracking-[-0.02em] leading-[1.0] mb-8 sm:mb-16 drop-shadow-2xl" style={{ fontFamily: "'Bodoni Moda', 'Bodoni MT', 'Didot', serif" }}>
+          <h1 className="text-4xl sm:text-[6vw] md:text-[5vw] font-normal tracking-[-0.02em] leading-[1.2] mb-8 sm:mb-16 drop-shadow-2xl" style={{ fontFamily: "'Bodoni Moda', 'Bodoni MT', 'Didot', serif" }}>
             <span className="block whitespace-nowrap">LUXURY BRAND</span>
             <span className="block text-white/40 whitespace-nowrap">NEVER FADES</span>
           </h1>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
-            <button className="relative px-8 py-4 sm:px-12 sm:py-6 bg-white text-black text-[13px] sm:text-[12px] font-bold tracking-[0.3em] sm:tracking-[0.4em] border border-white overflow-hidden group" style={{ fontFamily: "'Pretendard', sans-serif" }}>
+            <button className="relative px-8 py-3.5 sm:px-12 sm:py-4.5 bg-white text-black text-[13px] sm:text-[12px] font-bold tracking-[0.3em] sm:tracking-[0.4em] border border-white overflow-hidden group" style={{ fontFamily: "'Pretendard', sans-serif" }}>
               <span className="relative z-10 group-hover:text-white transition-colors duration-500">EXPLORE COLLECTION</span>
               <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-[0.6s] ease-[0.16,1,0.3,1] origin-bottom" />
             </button>

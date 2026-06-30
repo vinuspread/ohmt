@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
@@ -15,7 +15,7 @@ export const Hero = () => {
         className="absolute inset-0"
       >
         <img
-          src="/templates/fashion/branding-custom.jpg"
+          src="/templates/OHMT001-fashion/branding-custom.jpg"
           alt="Luxury Fashion Hero" 
           className="w-full h-full object-cover brightness-75"
           loading="eager"
@@ -34,7 +34,7 @@ export const Hero = () => {
           <span className="text-[13px] md:text-[12px] uppercase tracking-[0.3em] sm:tracking-[0.5em] font-bold mb-6 sm:mb-12 block opacity-60" style={{ fontFamily: "'Pretendard', sans-serif" }}>
             2026년 설립
           </span>
-          <h1 className="text-2xl sm:text-[3vw] md:text-[2.4vw] font-normal tracking-[-0.04em] leading-[1.0] mb-8 sm:mb-16 drop-shadow-2xl" style={{ fontFamily: "'Bodoni Moda', 'Nanum Myeongjo', 'Bodoni MT', 'Didot', serif" }}>
+          <h1 className="text-2xl sm:text-[3vw] md:text-[2.4vw] font-normal tracking-[-0.04em] leading-[1.2] mb-8 sm:mb-16 drop-shadow-2xl" style={{ fontFamily: "'Bodoni Moda', 'Nanum Myeongjo', 'Bodoni MT', 'Didot', serif" }}>
             <span className="block whitespace-nowrap font-normal">처음 입는 순간부터, 당신의 것이 됩니다</span>
             <span className="block whitespace-nowrap font-bold">완벽함은 디테일 안에 있다</span>
           </h1>
@@ -44,7 +44,7 @@ export const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
-             <button className="relative px-8 py-4 sm:px-12 sm:py-6 bg-white text-black text-[13px] sm:text-[12px] font-bold tracking-[0.15em] sm:tracking-[0.2em] border border-white overflow-hidden group" style={{ fontFamily: "'Pretendard', sans-serif" }}>
+             <button className="relative px-8 py-3.5 sm:px-12 sm:py-4.5 bg-white text-black text-[13px] sm:text-[12px] font-bold tracking-[0.15em] sm:tracking-[0.2em] border border-white overflow-hidden group" style={{ fontFamily: "'Pretendard', sans-serif" }}>
               <span className="relative z-10 group-hover:text-white transition-colors duration-500">컬렉션 탐색</span>
               <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-[0.6s] ease-[0.16,1,0.3,1] origin-bottom" />
             </button>

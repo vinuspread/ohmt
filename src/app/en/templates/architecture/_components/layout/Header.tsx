@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture-EN/_components/layout/Header.tsx
+// src/app/en/templates/OHMT027-architecture/_components/layout/Header.tsx
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
@@ -22,7 +22,7 @@ export function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const baseRoute = "/en/templates/OHMT027-architecture-EN";
+  const baseRoute = "/en/templates/OHMT027-architecture";
   const navItems = [
     { name: "Home", href: baseRoute },
     { name: "Projects", href: `${baseRoute}/projects` },
@@ -48,19 +48,9 @@ export function Header() {
     >
       <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 flex justify-between items-center">
         {/* Logo */}
-        <Link href={baseRoute} className="flex items-center gap-2 group">
-          <svg
-            width="14"
-            height="14"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            className="transition-transform duration-500 group-hover:rotate-45"
-          >
-            <path d="M12 2L2 12L12 22L22 12L12 2Z" fill="var(--color-accent)" />
-          </svg>
-          <span className="font-sans font-medium text-[14px] tracking-[0.05em] text-[var(--color-text)]">
-            OH MY TEMPLATE
+        <Link href={baseRoute} className="flex items-center group">
+          <span className="font-sans font-bold text-[18px] tracking-[0.06em] text-[var(--color-text)]">
+            OHMT
           </span>
         </Link>
 
@@ -72,10 +62,10 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`font-sans text-[13px] tracking-[0.05em] transition-all duration-200 ${
+                className={`font-sans text-[13px] tracking-[0.05em] transition-all duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-full after:bg-[var(--color-text)] after:transition-transform after:duration-300 after:origin-left ${
                   active
-                    ? "bg-[var(--color-text)] text-white px-4 py-1.5"
-                    : "text-[var(--color-text-secondary)] hover:text-[var(--color-text)] relative py-1 after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-full after:scale-x-0 after:bg-[var(--color-text)] hover:after:scale-x-100 after:transition-transform after:duration-300 after:origin-left"
+                    ? "text-[var(--color-text)] after:scale-x-100"
+                    : "text-[var(--color-text-secondary)] hover:text-[var(--color-text)] after:scale-x-0 hover:after:scale-x-100"
                 }`}
               >
                 {item.name}

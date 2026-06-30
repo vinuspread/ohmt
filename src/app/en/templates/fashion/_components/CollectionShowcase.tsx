@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import { motion } from "framer-motion";
@@ -19,7 +19,7 @@ return (
               className="w-full h-full"
             >
               <img
-                src="/templates/fashion/exclusive-custom.jpg"
+                src="/templates/OHMT001-fashion/exclusive-custom.jpg"
                 alt="Exclusive Collection Lookbook" 
                 className="w-full h-full object-cover grayscale brightness-95 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[1.8s] ease-out-sine"
               />
@@ -62,7 +62,7 @@ return (
               transition={{ delay: 0.4, duration: 1 }}
               className="pt-2"
             >
-              <Button variant="outline" className="px-8 py-4 sm:px-12 sm:py-4.5 text-[13px] sm:text-[13px] font-bold uppercase tracking-[0.25em] sm:tracking-[0.3em] mr-[-0.25em] sm:mr-[-0.3em] hover:tracking-[0.35em] hover:mr-[-0.35em] transition-all duration-700 ease-out">
+              <Button variant="outline" className="px-8 py-3 sm:px-12 sm:py-3.5 text-[13px] sm:text-[13px] font-bold uppercase tracking-[0.25em] sm:tracking-[0.3em] mr-[-0.25em] sm:mr-[-0.3em] hover:tracking-[0.35em] hover:mr-[-0.35em] transition-all duration-700 ease-out">
                 DISCOVER LOOKBOOK
               </Button>
             </motion.div>

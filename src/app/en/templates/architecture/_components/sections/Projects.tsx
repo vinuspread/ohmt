@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture-EN/_components/sections/Projects.tsx
+// src/app/en/templates/OHMT027-architecture/_components/sections/Projects.tsx
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
@@ -9,7 +9,7 @@ import { ScrollReveal } from "../ui/ScrollReveal";
 
 export function Projects() {
   const [filter, setFilter] = useState("All");
-  const baseRoute = "/en/templates/OHMT027-architecture-EN";
+  const baseRoute = "/en/templates/OHMT027-architecture";
 
   const categories = ["All", "Residential", "Commercial", "Public", "Interior"];
 
@@ -19,18 +19,19 @@ export function Projects() {
   });
 
   const getGridClass = (index: number) => {
-    switch (index) {
+    // Pattern repeats every 5: full / 7+5 / 5+7
+    const pattern = index % 5;
+    switch (pattern) {
       case 0:
-        return "col-span-12 aspect-[16/7] md:aspect-[21/9]";
+        return "col-span-12 aspect-[21/9]";
       case 1:
+        return "col-span-12 md:col-span-7 aspect-[4/3]";
       case 2:
-        return "col-span-12 md:col-span-6 aspect-[4/3]";
+        return "col-span-12 md:col-span-5 aspect-[4/3]";
       case 3:
-        return "col-span-12 md:col-span-8 aspect-[4/3] md:aspect-[16/10]";
+        return "col-span-12 md:col-span-5 aspect-[4/3]";
       case 4:
-        return "col-span-12 md:col-span-4 aspect-[4/3] md:aspect-[3/4]";
-      case 5:
-        return "col-span-12 aspect-[16/7] md:aspect-[21/9]";
+        return "col-span-12 md:col-span-7 aspect-[4/3]";
       default:
         return "col-span-12 md:col-span-6 aspect-[4/3]";
     }
@@ -60,10 +61,10 @@ export function Projects() {
                 <button
                   key={cat}
                   onClick={() => setFilter(cat)}
-                  className={`font-sans text-[13px] tracking-[0.05em] py-1.5 px-4 transition-all duration-300 ${
+                  className={`font-sans text-[13px] tracking-[0.05em] py-1.5 px-0 mr-6 transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-full after:bg-[var(--color-text)] after:transition-transform after:duration-300 after:origin-left ${
                     active
-                      ? "bg-[var(--color-text)] text-white"
-                      : "text-[var(--color-text-secondary)] hover:text-[var(--color-text)]"
+                      ? "text-[var(--color-text)] after:scale-x-100"
+                      : "text-[var(--color-text-secondary)] hover:text-[var(--color-text)] after:scale-x-0 hover:after:scale-x-100"
                   }`}
                 >
                   {cat}
@@ -74,7 +75,7 @@ export function Projects() {
         </ScrollReveal>
 
         {/* Magazine Grid */}
-        <div className="grid grid-cols-12 gap-y-16 gap-x-8">
+        <div className="grid grid-cols-12 gap-8">
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project, idx) => {
               const gridClass = getGridClass(idx);

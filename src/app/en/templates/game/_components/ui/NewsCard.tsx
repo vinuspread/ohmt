@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import { motion } from "motion/react";
-import type { NewsItem } from "@/app/en/templates/OHMT023-game-EN/data/data";
+import type { NewsItem } from "@/app/en/templates/OHMT023-game/data/data";
 
 export default function NewsCard({ item }: { item: NewsItem }) {
   return (

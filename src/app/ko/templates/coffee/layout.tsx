@@ -1,28 +1,28 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "커피 - Oh My Template",
+  title: "OHMT - 커피",
   description: "프리미엄 커피숍 & 로스터리 경험",
   openGraph: {
-    title: "커피 - Oh My Template",
+    title: "OHMT - 커피",
     description: "프리미엄 커피숍 & 로스터리 경험",
-    url: "https://ohmytemplate.com/ko/templates/OHMT019-coffee-KO",
-    siteName: "Oh My Template",
-    images: [{ url: "/templates/coffee/og-image.jpg", width: 1200, height: 630 }],
+    url: "https://ohmytemplate.com/ko/templates/OHMT019-coffee",
+    siteName: "OHMT",
+    images: [{ url: "/templates/OHMT019-coffee/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "커피 - Oh My Template",
+    title: "OHMT - 커피",
     description: "프리미엄 커피숍 & 로스터리 경험",
-    images: ["/templates/coffee/og-image.jpg"],
+    images: ["/templates/OHMT019-coffee/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT019-coffee-KO",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT019-coffee-EN" },
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT019-coffee",
+    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT019-coffee" },
   },
 };
 

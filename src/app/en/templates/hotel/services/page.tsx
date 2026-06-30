@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import { Navbar } from "../_components/Navbar";
@@ -28,7 +28,7 @@ function ServicesPageContent() {
         {/* Hero Section */}
         <section className="relative h-[40vh] md:h-[50vh] flex items-center bg-[var(--color-primary)] overflow-hidden">
           <div className="absolute inset-0">
-            <img src="/templates/hotel/amenity-pool.jpg" alt="Services" className="w-full h-full object-cover opacity-60" />
+            <img src="/templates/OHMT020-hotel/amenity-pool.jpg" alt="Services" className="w-full h-full object-cover opacity-60" />
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)] via-[var(--color-primary)]/40 to-transparent" />
           </div>
           <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full pt-20">
@@ -46,7 +46,7 @@ function ServicesPageContent() {
               <span className="text-[11px] font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] block mb-3">Wellness & Leisure</span>
               <h2 className="text-3xl md:text-4xl font-[var(--font-heading)] font-bold text-[var(--color-primary)] mb-6">Designed For Your Well-being</h2>
               <p className="text-base text-[var(--color-text-muted)] leading-relaxed">
-                At Oh My Template, we curate services that speak to the soul. From Michelin-starred culinary journeys and restorative therapies to customized local itineraries, every detail is engineered to ensure absolute tranquility.
+                At OHMT, we curate services that speak to the soul. From Michelin-starred culinary journeys and restorative therapies to customized local itineraries, every detail is engineered to ensure absolute tranquility.
               </p>
             </motion.div>
           </div>
@@ -83,7 +83,7 @@ function ServicesPageContent() {
           <div className="max-w-[1440px] mx-auto px-6 md:px-12">
             <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
               <div className="w-full lg:w-1/2 overflow-hidden aspect-[16/10] border border-[var(--color-border)]">
-                <img src="/templates/hotel/story-01.jpg" alt="Aman Spa" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]" />
+                <img src="/templates/OHMT020-hotel/story-01.jpg" alt="Aman Spa" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]" />
               </div>
               <div className="w-full lg:w-1/2 flex flex-col gap-6">
                 <span className="text-[11px] font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] block">Signature Program</span>

@@ -12,7 +12,7 @@ export function WelcomeCard() {
         <h2 className="text-xl font-[var(--font-heading)] font-semibold text-[var(--color-text)]">
           VINUSPREAD Motors
         </h2>
-        <p className="text-xs text-[var(--color-text-muted)] mt-1">Operations & Sales Dashboard</p>
+        <p className="text-sm text-[var(--color-text-muted)] mt-1">Operations & Sales Dashboard</p>
 
         <div className="mt-6">
           <div className="flex items-center justify-between mb-2">
@@ -27,7 +27,7 @@ export function WelcomeCard() {
               transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
             />
           </div>
-          <p className="text-xs text-[var(--color-text-muted)] mt-1">1,204 of 1,400 units delivered</p>
+          <p className="text-sm text-[var(--color-text-muted)] mt-1">1,204 of 1,400 units delivered</p>
         </div>
       </div>
     </div>

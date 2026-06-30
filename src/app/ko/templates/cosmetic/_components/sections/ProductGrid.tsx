@@ -1,13 +1,13 @@
-﻿// src/app/ko/templates/OHMT010-cosmetic-KO/-components/sections/ProductGrid.tsx
+﻿// src/app/ko/templates/OHMT010-cosmetic/-components/sections/ProductGrid.tsx
 "use client";
 
 import React from "react";
 import { motion } from "framer-motion";
 
 const products = [
-  { id: 1, name: "보태니컬 젠틀 딥 클렌저", price: "$42.00", img: "/templates/cosmetic/cosmetic-2.png", tag: "essential", tagLabel: "기본" },
-  { id: 2, name: "인텐시브 하이드레이팅 미스트", price: "$38.00", img: "/templates/cosmetic/cosmetic-botanical-dropper.png", tag: "new", tagLabel: "신상품" },
-  { id: 3, name: "에센셜 나이트 리페어 크림", price: "$95.00", img: "/templates/cosmetic/cosmetic-collection-marble.png", tag: "bestseller", tagLabel: "베스트셀러" }
+  { id: 1, name: "보태니컬 젠틀 딥 클렌저", price: "$42.00", img: "/templates/OHMT010-cosmetic/cosmetic-2.png", tag: "essential", tagLabel: "기본" },
+  { id: 2, name: "인텐시브 하이드레이팅 미스트", price: "$38.00", img: "/templates/OHMT010-cosmetic/cosmetic-botanical-dropper.png", tag: "new", tagLabel: "신상품" },
+  { id: 3, name: "에센셜 나이트 리페어 크림", price: "$95.00", img: "/templates/OHMT010-cosmetic/cosmetic-collection-marble.png", tag: "bestseller", tagLabel: "베스트셀러" }
 ];
 
 const containerVariants = {

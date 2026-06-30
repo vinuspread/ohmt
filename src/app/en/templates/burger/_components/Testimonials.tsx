@@ -29,7 +29,7 @@ export const Testimonials = () => {
               </p>
               <div className="mt-6 pt-4 border-t border-[var(--color-border)]">
                 <p className="text-sm font-bold">{t.name}</p>
-                <p className="text-xs text-[var(--color-text-muted)] mt-0.5">{t.location}</p>
+                <p className="text-sm text-[var(--color-text-muted)] mt-0.5">{t.location}</p>
               </div>
             </motion.div>
           ))}

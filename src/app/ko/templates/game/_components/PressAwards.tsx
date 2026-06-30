@@ -1,7 +1,7 @@
-﻿"use client";
+"use client";
 
 import { motion } from "motion/react";
-import { awards } from "@/app/ko/templates/OHMT023-game-KO/data/data";
+import { awards } from "@/app/ko/templates/OHMT023-game/data/data";
 import { Quote } from "lucide-react";
 
 export default function PressAwards() {
@@ -9,7 +9,7 @@ export default function PressAwards() {
     <section className="relative py-24 overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src="/templates/game/award-bg.jpg"
+          src="/templates/OHMT023-game/award-bg.jpg"
           alt=""
           className="h-full w-full object-cover opacity-30"
         />
@@ -61,7 +61,7 @@ export default function PressAwards() {
         >
           <Quote size={32} className="mx-auto mb-4 text-[var(--color-primary)]" />
           <blockquote className="text-lg leading-relaxed text-[var(--color-text)] md:text-xl">
-            "Oh My Template은 인디 스튜디오가 이룰 수 있는 기준을 새로 썼습니다. <span className="text-[var(--color-accent)]">섀도우 렐름</span>은 세계관 구축과 기술적 야망의 걸작입니다."
+            "OHMT은 인디 스튜디오가 이룰 수 있는 기준을 새로 썼습니다. <span className="text-[var(--color-accent)]">섀도우 렐름</span>은 세계관 구축과 기술적 야망의 걸작입니다."
           </blockquote>
           <p className="mt-4 text-sm text-[var(--color-text-muted)]">
             - Game Informer, 에디터스 초이스

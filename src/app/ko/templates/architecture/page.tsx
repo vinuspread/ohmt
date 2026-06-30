@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture-KO/page.tsx
+// src/app/en/templates/OHMT027-architecture/page.tsx
 import React from "react";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
 import { Header } from "./_components/layout/Header";
@@ -15,9 +15,9 @@ export default function ArchitectureHome() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ArchitecturalFirm",
-    "name": "Oh My Template - Architecture Portfolio",
-    "url": "https://ohmytemplate.com/en/templates/OHMT027-architecture-KO",
-    "image": "https://ohmytemplate.com/templates/architecture/og-image.jpg",
+    "name": "OHMT - Architecture Portfolio",
+    "url": "https://ohmytemplate.com/en/templates/OHMT027-architecture",
+    "image": "https://ohmytemplate.com/templates/OHMT027-architecture/og-image.jpg",
     "description": "A sophisticated architecture portfolio template with editorial typography and immersive visual storytelling.",
     "address": {
       "@type": "PostalAddress",
