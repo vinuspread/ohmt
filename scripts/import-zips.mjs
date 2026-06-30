@@ -3,8 +3,8 @@ import { createClient } from "@supabase/supabase-js";
 import fs from "fs";
 import path from "path";
 
-const ZIPS_DIR = "E:\\Work\\ohmytemplate\\zips";
-const PROJECT_DIR = "E:\\Work\\OHMT_admin";
+const ZIPS_DIR = "D:\\Work\\ohmytemplate\\zips";
+const PROJECT_DIR = "D:\\Work\\ohmytemplate_admin";
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 
