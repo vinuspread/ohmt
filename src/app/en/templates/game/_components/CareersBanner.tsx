@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "motion/react";
-import { careers } from "@/app/en/templates/OHMT023-game/data/data";
+import { careers } from "../data/data";
 import Button from "./ui/Button";
 import { ArrowRight } from "lucide-react";
 

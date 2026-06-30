@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion } from "motion/react";
 import Navbar from "../_components/Navbar";
 import Footer from "../_components/Footer";
-import { careers } from "@/app/en/templates/OHMT023-game/data/data";
+import { careers } from "../data/data";
 import { ArrowRight } from "lucide-react";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";

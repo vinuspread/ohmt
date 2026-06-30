@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "motion/react";
 import GameCard from "./ui/GameCard";
-import { games } from "@/app/en/templates/OHMT023-game/data/data";
+import { games } from "../data/data";
 import { ArrowRight } from "lucide-react";
 
 export default function FeaturedGames() {

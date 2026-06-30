@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { games } from "@/app/en/templates/OHMT023-game/data/data";
+import { games } from "../data/data";
 
 const companyLinks = [
   { href: "/en/templates/OHMT023-game/about", label: "About" },
