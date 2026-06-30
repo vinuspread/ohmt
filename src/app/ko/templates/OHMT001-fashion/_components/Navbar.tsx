@@ -33,12 +33,14 @@ export const Navbar = () => {
            {/* Desktop Menu */}
            <div className={`hidden md:flex items-center gap-10 text-[14px] font-bold uppercase tracking-[0.3em] transition-colors duration-500 ${!isTransparent ? "text-black/60" : "text-white/80"}`}>
              {[
-                { name: "컬렉션", id: "collection", href: "/ko/templates/OHMT001-fashion/category/collection" },
-                { name: "아카이브", id: "archive", href: "/ko/templates/OHMT001-fashion/category/archive" },
-                { name: "저널", id: "journal", href: "/ko/templates/OHMT001-fashion/category/journal" },
-                { name: "브랜드", id: "about", href: "/ko/templates/OHMT001-fashion/category/about" },
-              ].map((item) => {
-                const isActive = pathname.includes(`/ko/templates/OHMT001-fashion/category/${item.id}`);
+                 { name: "컬렉션", id: "collection", href: "/ko/templates/OHMT001-fashion/category/collection" },
+                 { name: "아카이브", id: "archive", href: "/ko/templates/OHMT001-fashion/category/archive" },
+                 { name: "저널", id: "journal", href: "/ko/templates/OHMT001-fashion/journal" },
+                 { name: "브랜드", id: "about", href: "/ko/templates/OHMT001-fashion/about" },
+               ].map((item) => {
+                 const isActive = item.id === "journal" || item.id === "about"
+    ? pathname.includes(`/ko/templates/OHMT001-fashion/${item.id}`)
+    : pathname.includes(`/ko/templates/OHMT001-fashion/category/${item.id}`);
                return (
                  <Link
                    key={item.id}
@@ -94,22 +96,22 @@ export const Navbar = () => {
         <div className="flex flex-col px-8 text-[13px] font-bold uppercase tracking-[0.25em] text-black/60">
           {/* Categories */}
            <div className="flex flex-col gap-3 border-b border-black/5 pb-6 mb-6">
-             <span className="text-[12px] font-bold tracking-[0.2em] text-black/30 mb-3 block">시리즈</span>
-              {[
-                { name: "컬렉션", id: "collection", href: "/ko/templates/OHMT001-fashion/category/collection" },
-                { name: "아카이브", id: "archive", href: "/ko/templates/OHMT001-fashion/category/archive" },
-                { name: "저널", id: "journal", href: "/ko/templates/OHMT001-fashion/category/journal" },
-                { name: "브랜드", id: "about", href: "/ko/templates/OHMT001-fashion/category/about" },
-              ].map((item) => (
-               <Link
-                 key={item.id}
-                 href={item.href}
-                 onClick={() => setMobileOpen(false)}
-                 className="hover:text-black py-2.5 transition-colors block"
-               >
-                 {item.name}
-               </Link>
-             ))}
+              <span className="text-[12px] font-bold tracking-[0.2em] text-black/30 mb-3 block">시리즈</span>
+               {[
+                 { name: "컬렉션", id: "collection", href: "/ko/templates/OHMT001-fashion/category/collection" },
+                 { name: "아카이브", id: "archive", href: "/ko/templates/OHMT001-fashion/category/archive" },
+                 { name: "저널", id: "journal", href: "/ko/templates/OHMT001-fashion/journal" },
+                 { name: "브랜드", id: "about", href: "/ko/templates/OHMT001-fashion/about" },
+               ].map((item) => (
+                 <Link
+                   key={item.id}
+                   href={item.href}
+                   onClick={() => setMobileOpen(false)}
+                  className="hover:text-black py-2.5 transition-colors block"
+                >
+                  {item.name}
+                </Link>
+              ))}
            </div>
 
 
