@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT013-newspaper/page.tsx
+// src/app/templates/OHMT013-newspaper/page.tsx
 "use client";
 
 import React from "react";

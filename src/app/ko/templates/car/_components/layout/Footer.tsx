@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT009-car/-components/layout/Footer.tsx
+// src/app/ko/templates/OHMT009-car/-components/layout/Footer.tsx
 "use client";
 
 import React from "react";
@@ -48,7 +48,7 @@ export const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-[var(--theme-border)] gap-6">
           <span className="text-[0.7rem] text-[var(--theme-text-muted)] uppercase tracking-widest">
-            © 2026 Oh My Template.
+            © 2026 OHMT.
           </span>
           <div className="flex flex-wrap gap-4 md:gap-8">
             {["개인정보처리방침", "이용약관", "쿠키 정책"].map(item => (

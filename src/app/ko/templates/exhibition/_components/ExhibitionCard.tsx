@@ -1,4 +1,4 @@
-﻿import Link from 'next/link';
+import Link from 'next/link';
 import type { Exhibition } from '../types';
 
 export default function ExhibitionCard({ exhibition }: { exhibition: Exhibition }) {

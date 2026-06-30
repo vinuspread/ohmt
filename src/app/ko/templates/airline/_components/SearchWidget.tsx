@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT008-airline/-components/SearchWidget.tsx
+// src/app/templates/OHMT008-airline/-components/SearchWidget.tsx
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";

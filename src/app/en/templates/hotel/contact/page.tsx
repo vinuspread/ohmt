@@ -46,7 +46,7 @@ function ContactPageContent() {
                   <span className="text-[11px] font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] block mb-3">Reach Out</span>
                   <h2 className="text-3xl font-[var(--font-heading)] font-bold text-[var(--color-primary)] mb-6">Our Resort Location</h2>
                   <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-                    Set on a secluded hillside dropping into a private bay, OHMT is situated on Koh Samui’s pristine north-eastern coast.
+                    Set on a secluded hillside dropping into a private bay, OHMT is situated on Koh Samui?셲 pristine north-eastern coast.
                   </p>
                 </div>
 
@@ -69,7 +69,7 @@ function ContactPageContent() {
                     <Mail className="text-[var(--color-accent)] flex-shrink-0 mt-1" size={18} />
                     <div>
                       <h4 className="font-semibold text-[var(--color-primary)] mb-1">General Inquiries</h4>
-                      <p className="text-[var(--color-text-muted)]">vinus@vinus.co.kr</p>
+                      <p className="text-[var(--color-text-muted)]">contact@ohmt.site</p>
                     </div>
                   </div>
                 </div>
@@ -152,3 +152,4 @@ export default function ContactPage() {
     </React.Suspense>
   );
 }
+

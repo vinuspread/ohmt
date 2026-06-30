@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT008-airline/-components/Footer.tsx
+// src/app/templates/OHMT008-airline/-components/Footer.tsx
 "use client";
 
 import React from "react";
@@ -48,7 +48,7 @@ export const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-[var(--color-primary)]/20 gap-4">
           <span className="text-[0.7rem] text-[var(--color-primary)]/60 uppercase tracking-widest font-medium">
-            © 2026 Oh My Template.
+            © 2026 OHMT.
           </span>
           <div className="flex gap-6 md:gap-8">
             {["법적 고지", "개인정보 처리방침", "쿠키 설정"].map(item => (

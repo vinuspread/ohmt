@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT010-cosmetic/-components/sections/Hero.tsx
+// src/app/templates/OHMT010-cosmetic/-components/sections/Hero.tsx
 "use client";
 
 export const Hero = () => {
@@ -53,7 +53,7 @@ export const Hero = () => {
       "returns": `Returns`,
       "faq": `FAQ`
     },
-    "copyright": `© 2026 Oh My Template.`
+    "copyright": `© 2026 OHMT.`
   },
   "story": {
     "title": `Conscious beauty for the modern age.`,

@@ -1,4 +1,4 @@
-﻿"use client"
+"use client"
 
 import Link from 'next/link'
 
@@ -78,7 +78,7 @@ export default function Footer() {
         {/* Bottom copyright */}
         <div className="pt-8 border-t border-[var(--color-border)] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <p className="text-sm text-[var(--color-text-muted)]">
-            © 2026 Oh My Template.
+            © 2026 OHMT.
           </p>
           <div className="flex gap-6 sm:gap-4">
             <span className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-accent)] cursor-pointer transition-colors">

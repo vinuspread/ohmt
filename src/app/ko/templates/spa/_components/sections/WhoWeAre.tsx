@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion, useReducedMotion, useInView } from "framer-motion";
 import { useRef } from "react";

@@ -12,38 +12,38 @@ export const Footer = () => {
               OHMT
             </Link>
             <p className="text-sm text-white/50 mt-4 leading-relaxed max-w-[220px]">
-              서울에서 생각하고 엄선한 스페셜티 커피.
+              ?쒖슱?먯꽌 ?앷컖?섍퀬 ?꾩꽑???ㅽ럹?쒗떚 而ㅽ뵾.
             </p>
           </div>
 
           <div>
             <h4 className="text-xs uppercase tracking-[0.15em] text-white/40 mb-4">Menu</h4>
             <div className="flex flex-col gap-2.5">
-              <Link href="/ko/templates/OHMT019-coffee/menu" className="text-sm text-white/60 hover:text-white transition-colors">커피</Link>
-              <Link href="/ko/templates/OHMT019-coffee/menu" className="text-sm text-white/60 hover:text-white transition-colors">논커피</Link>
-              <Link href="/ko/templates/OHMT019-coffee/menu" className="text-sm text-white/60 hover:text-white transition-colors">푸드</Link>
+              <Link href="/ko/templates/OHMT019-coffee/menu" className="text-sm text-white/60 hover:text-white transition-colors">而ㅽ뵾</Link>
+              <Link href="/ko/templates/OHMT019-coffee/menu" className="text-sm text-white/60 hover:text-white transition-colors">?쇱빱??/Link>
+              <Link href="/ko/templates/OHMT019-coffee/menu" className="text-sm text-white/60 hover:text-white transition-colors">?몃뱶</Link>
             </div>
           </div>
 
           <div>
-            <h4 className="text-xs uppercase tracking-[0.15em] text-white/40 mb-4">매장 안내</h4>
+            <h4 className="text-xs uppercase tracking-[0.15em] text-white/40 mb-4">留ㅼ옣 ?덈궡</h4>
             <div className="flex flex-col gap-2.5">
-              <Link href="/ko/templates/OHMT019-coffee/locations" className="text-sm text-white/60 hover:text-white transition-colors">성수</Link>
-              <Link href="/ko/templates/OHMT019-coffee/locations" className="text-sm text-white/60 hover:text-white transition-colors">이태원</Link>
-              <Link href="/ko/templates/OHMT019-coffee/locations" className="text-sm text-white/60 hover:text-white transition-colors">강남</Link>
+              <Link href="/ko/templates/OHMT019-coffee/locations" className="text-sm text-white/60 hover:text-white transition-colors">?깆닔</Link>
+              <Link href="/ko/templates/OHMT019-coffee/locations" className="text-sm text-white/60 hover:text-white transition-colors">?댄깭??/Link>
+              <Link href="/ko/templates/OHMT019-coffee/locations" className="text-sm text-white/60 hover:text-white transition-colors">媛뺣궓</Link>
             </div>
           </div>
 
           <div>
-            <h4 className="text-xs uppercase tracking-[0.15em] text-white/40 mb-4">문의</h4>
+            <h4 className="text-xs uppercase tracking-[0.15em] text-white/40 mb-4">臾몄쓽</h4>
             <div className="flex flex-col gap-2.5 text-sm text-white/60">
-              <a href="mailto:contact@ohmytemplate.com" className="hover:text-white transition-colors">contact@ohmytemplate.com</a>
+              <a href="mailto:contact@ohmt.site" className="hover:text-white transition-colors">contact@ohmt.site</a>
               <p>02-1234-5678</p>
             </div>
             <div className="flex gap-4 mt-5">
-              <Link href="#" className="text-xs text-white/40 hover:text-white transition-colors uppercase tracking-[0.1em]">인스타그램</Link>
-              <Link href="#" className="text-xs text-white/40 hover:text-white transition-colors uppercase tracking-[0.1em]">트위터</Link>
-              <Link href="#" className="text-xs text-white/40 hover:text-white transition-colors uppercase tracking-[0.1em]">페이스북</Link>
+              <Link href="#" className="text-xs text-white/40 hover:text-white transition-colors uppercase tracking-[0.1em]">?몄뒪?洹몃옩</Link>
+              <Link href="#" className="text-xs text-white/40 hover:text-white transition-colors uppercase tracking-[0.1em]">?몄쐞??/Link>
+              <Link href="#" className="text-xs text-white/40 hover:text-white transition-colors uppercase tracking-[0.1em]">?섏씠?ㅻ턿</Link>
             </div>
           </div>
         </div>
@@ -55,3 +55,4 @@ export const Footer = () => {
     </footer>
   );
 };
+

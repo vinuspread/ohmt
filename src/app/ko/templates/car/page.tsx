@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT009-car/page.tsx
+// src/app/ko/templates/OHMT009-car/page.tsx
 "use client";
 
 import { Suspense } from "react";

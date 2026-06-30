@@ -1,4 +1,4 @@
-﻿import { TemplateWrapper } from "./_components/TemplateWrapper";
+import { TemplateWrapper } from "./_components/TemplateWrapper";
 import Navbar from "./_components/layout/Navbar";
 import Footer from "./_components/layout/Footer";
 import Hero from "./_components/sections/Hero";

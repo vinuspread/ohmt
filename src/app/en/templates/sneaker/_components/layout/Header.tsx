@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT005-sneaker/-components/layout/Header.tsx
+// src/app/templates/OHMT005-sneaker/-components/layout/Header.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -162,7 +162,7 @@ export const Header = () => {
       "returns": `Returns`,
       "contact": `Contact`
     },
-    "copyright": `© 2026 Oh My Template.`,
+    "copyright": `© 2026 OHMT.`,
     "legal": {
       "privacy": `Privacy`,
       "terms": `Terms`,

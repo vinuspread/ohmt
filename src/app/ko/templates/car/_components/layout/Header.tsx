@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT009-car/-components/layout/Header.tsx
+// src/app/ko/templates/OHMT009-car/-components/layout/Header.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";

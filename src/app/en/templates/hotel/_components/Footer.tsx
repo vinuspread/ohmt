@@ -29,7 +29,7 @@ export const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={14} strokeWidth={1.2} className="text-[var(--color-accent)] flex-shrink-0" />
-                <span>vinus@vinus.co.kr</span>
+                <span>contact@ohmt.site</span>
               </div>
             </div>
           </div>
@@ -56,3 +56,4 @@ export const Footer = () => {
     </footer>
   );
 };
+

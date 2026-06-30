@@ -73,7 +73,7 @@ function StudioProjectsPageContent() {
   },
   "cta": `Start Project`,
   "footer": {
-    "copyright": `© 2026 Oh My Template.`,
+    "copyright": `© 2026 OHMT.`,
     "contact": `Austin, Texas · hello@ohmytemplate.com`
   },
   "aboutPage": {

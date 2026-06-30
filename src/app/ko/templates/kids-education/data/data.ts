@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT024-kids-education/data/data.ts
+// src/app/ko/templates/OHMT024-kids-education/data/data.ts
 
 export interface Highlight {
   emoji: string;

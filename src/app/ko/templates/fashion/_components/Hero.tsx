@@ -35,8 +35,8 @@ export const Hero = () => {
             2026년 설립
           </span>
           <h1 className="text-2xl sm:text-[3vw] md:text-[2.4vw] font-normal tracking-[-0.04em] leading-[1.2] mb-8 sm:mb-16 drop-shadow-2xl" style={{ fontFamily: "'Bodoni Moda', 'Nanum Myeongjo', 'Bodoni MT', 'Didot', serif" }}>
-            <span className="block whitespace-nowrap font-normal">처음 입는 순간부터, 당신의 것이 됩니다</span>
-            <span className="block whitespace-nowrap font-bold">완벽함은 디테일 안에 있다</span>
+            <span className="block sm:whitespace-nowrap font-normal">처음 입는 순간부터, 당신의 것이 됩니다</span>
+            <span className="block sm:whitespace-nowrap font-bold">완벽함은 디테일 안에 있다</span>
           </h1>
 
           <p className="text-[1rem] sm:text-[1.1rem] text-white/75 max-w-[580px] leading-[1.7] mb-8 sm:mb-16 font-normal drop-shadow-lg" style={{ fontFamily: "'Pretendard', sans-serif" }}>

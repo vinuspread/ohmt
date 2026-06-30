@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT013-newspaper/-components/layout/Footer.tsx
+// src/app/templates/OHMT013-newspaper/-components/layout/Footer.tsx
 "use client";
 
 import React from "react";
@@ -25,7 +25,7 @@ export const Footer = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10 gap-4">
           <div className="font-sans text-[0.72rem] opacity-40">
-            © 2026 Oh My Template.
+            © 2026 OHMT.
           </div>
           <div className="flex gap-3 md:gap-6 opacity-60 flex-wrap justify-center md:justify-end">
             {["Twitter", "Facebook", "Instagram", "YouTube"].map(social => (

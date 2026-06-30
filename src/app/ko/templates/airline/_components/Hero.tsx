@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT008-airline/-components/Hero.tsx
+// src/app/ko/templates/OHMT008-airline/-components/Hero.tsx
 "use client";
 
 import React from "react";

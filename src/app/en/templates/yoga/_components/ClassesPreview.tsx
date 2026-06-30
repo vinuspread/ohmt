@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { INSTRUCTORS } from "../constants";
 
 export default function ClassesPreview() {

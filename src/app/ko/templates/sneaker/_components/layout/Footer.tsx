@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 
@@ -59,7 +59,7 @@ export const Footer = () => {
         </div>
 
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[0.75rem] text-white/30">© 2026 Oh My Template.</p>
+          <p className="text-[0.75rem] text-white/30">© 2026 OHMT.</p>
           <div className="flex gap-6">
             {[
               { label: "개인정보처리방침", href: "#" },

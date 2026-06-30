@@ -30,10 +30,10 @@ export default function Navbar() {
     : "";
 
   const menuItems = [
-    { name: "컬렉션", id: "collections", href: "/ko/templates/OHMT002-jewelry/category/collections" },
-    { name: "인게이지먼트 & 웨딩", id: "engagement", href: "/ko/templates/OHMT002-jewelry/category/engagement" },
-    { name: "하이 주얼리", id: "high-jewelry", href: "/ko/templates/OHMT002-jewelry/category/high-jewelry" },
-    { name: "브랜드 헤리티지", id: "about", href: "/ko/templates/OHMT002-jewelry/category/about" },
+    { name: "而щ젆??, id: "collections", href: "/ko/templates/OHMT002-jewelry/category/collections" },
+    { name: "?멸쾶?댁?癒쇳듃 & ?⑤뵫", id: "engagement", href: "/ko/templates/OHMT002-jewelry/category/engagement" },
+    { name: "?섏씠 二쇱뼹由?, id: "high-jewelry", href: "/ko/templates/OHMT002-jewelry/category/high-jewelry" },
+    { name: "釉뚮옖???ㅻ━?곗?", id: "about", href: "/ko/templates/OHMT002-jewelry/category/about" },
   ];
 
   return (
@@ -199,7 +199,7 @@ export default function Navbar() {
               </div>
 
               <div className="space-y-6 border-t border-neutral-200/50 pt-8 text-[14px] tracking-[0.2em] text-neutral-400 font-bold uppercase">
-                <p>© 2026 Oh My Template.</p>
+                <p>짤 2026 OHMT.</p>
                 <div className="flex gap-4">
                   <a href="#" className="hover:text-[var(--color-primary)] transition-colors">Instagram</a>
                   <a href="#" className="hover:text-[var(--color-primary)] transition-colors">Pinterest</a>

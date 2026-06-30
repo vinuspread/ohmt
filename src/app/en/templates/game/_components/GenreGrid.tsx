@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "motion/react";
 import { genres } from "@/app/en/templates/OHMT023-game/data/data";

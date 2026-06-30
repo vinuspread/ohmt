@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 
 const PANELS = [
   { image: "/templates/OHMT022-yoga/class-vinyasa.jpg", label: "Vinyasa Flow", sub: "Dynamic Movement", href: "/en/templates/OHMT022-yoga/classes/vinyasa-flow" },

@@ -182,6 +182,6 @@ export const SCHEDULE: ScheduleItem[] = [
 export const BRAND = {
   name: "OHMT",
   tagline: "Find Your Peace",
-  email: "contact@ohmytemplate.com",
+  email: "contact@ohmt.site",
   copyright: "2026 OHMT.",
 } as const;

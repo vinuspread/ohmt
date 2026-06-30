@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 export default function Footer() {
   return (
@@ -9,16 +9,16 @@ export default function Footer() {
             className="font-[family-name:var(--font-heading)] font-light capitalize text-white leading-[1.05]"
             style={{ fontSize: "clamp(3rem, 8vw, 6rem)" }}
           >
-            Oh My<br />Template
+            OHMT
           </h2>
           <div className="flex flex-col sm:flex-row gap-10 lg:gap-16 text-sm font-[family-name:var(--font-body)]">
             <div>
               <p className="text-[0.65rem] uppercase tracking-[0.2em] text-white/40 mb-3">Contact</p>
               <a
-                href="mailto:vinus@vinus.co.kr"
+                href="mailto:contact@ohmt.site"
                 className="text-white/70 hover:text-white transition-colors"
               >
-                vinus@vinus.co.kr
+                contact@ohmt.site
               </a>
               <p className="text-white/40 mt-1 text-sm">Austin, TX · Worldwide</p>
             </div>
@@ -37,10 +37,11 @@ export default function Footer() {
             Fine Art Wedding Photography
           </p>
           <p className="text-[0.65rem] text-white/30">
-            © 2026 Oh My Template.
+            © 2026 OHMT.
           </p>
         </div>
       </div>
     </footer>
   );
 }
+

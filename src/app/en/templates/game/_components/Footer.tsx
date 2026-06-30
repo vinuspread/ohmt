@@ -83,9 +83,10 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-[var(--color-border)] pt-8 text-center text-sm text-[var(--color-text-muted)]">
-          <p>&copy; 2026 OHMT. Contact: contact@ohmytemplate.com</p>
+          <p>&copy; 2026 OHMT. Contact: contact@ohmt.site</p>
         </div>
       </div>
     </footer>
   );
 }
+

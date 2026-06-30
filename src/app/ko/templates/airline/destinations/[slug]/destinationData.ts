@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT008-airline/destinations/[slug]/destinationData.ts
+// src/app/templates/OHMT008-airline/destinations/[slug]/destinationData.ts
 
 export interface Highlight {
   name: string;

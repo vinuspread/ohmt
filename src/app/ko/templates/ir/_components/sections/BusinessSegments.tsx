@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT011-ir/-components/sections/BusinessSegments.tsx
+// src/app/templates/OHMT011-ir/-components/sections/BusinessSegments.tsx
 "use client";
 
 import React from "react";

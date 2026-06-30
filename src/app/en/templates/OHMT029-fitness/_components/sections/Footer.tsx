@@ -47,7 +47,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-12 mt-12 border-t border-[var(--border)]">
-          <p className="text-[14px] text-[var(--text-muted)]">© 2026 Oh My Template. All rights reserved.</p>
+          <p className="text-[14px] text-[var(--text-muted)]">짤 2026 OHMT. All rights reserved.</p>
         </div>
       </div>
     </footer>

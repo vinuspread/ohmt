@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT013-newspaper/-components/layout/Header.tsx
+// src/app/ko/templates/OHMT013-newspaper/-components/layout/Header.tsx
 "use client";
 
 import React from "react";

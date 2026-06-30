@@ -62,7 +62,7 @@ export function Footer() {
                   hello@ohmytemplate.com
                 </a>
                 <p className="text-[14px] text-white/60">
-                  Mon – Sun, 9am – 8pm
+                  Mon ??Sun, 9am ??8pm
                 </p>
               </div>
             </div>
@@ -86,7 +86,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-white/10 max-w-[1440px] mx-auto px-10 py-6">
           <div className="flex flex-col md:flex-row justify-between gap-3 text-[12px] text-white/25">
-            <p>&copy; 2026 Oh My Template.</p>
+            <p>&copy; 2026 OHMT.</p>
             <p>Privacy Policy &middot; Terms of Use</p>
             <p>Template by OHMT.</p>
           </div>

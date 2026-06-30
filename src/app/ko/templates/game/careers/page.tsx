@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "motion/react";
 import Navbar from "../_components/Navbar";
@@ -80,7 +80,7 @@ export default function CareersPage() {
               <h3 className="font-[var(--font-heading)] text-2xl font-bold">현재 열린 포지션이 없습니다</h3>
               <p className="mt-2 text-[var(--color-text-muted)]">
                 현재 열린 포지션은 없지만, 항상 인재를 찾고 있습니다.
-                contact@ohmytemplate.com으로 이력서를 보내주세요.
+                contact@ohmt.site으로 이력서를 보내주세요.
               </p>
             </div>
           )}
@@ -90,3 +90,4 @@ export default function CareersPage() {
     </TemplateWrapper>
   );
 }
+

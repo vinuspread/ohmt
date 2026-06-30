@@ -1,4 +1,4 @@
-﻿const basePath = "/en/templates/OHMT026-spa";
+const basePath = "/en/templates/OHMT026-spa";
 
 const sitemapLeft = [
   { label: "Home", href: basePath },
@@ -80,7 +80,7 @@ export default function Footer() {
 
       <div className="border-t border-white/10">
         <div className="mx-auto max-w-7xl px-6 py-5 text-xs text-white/40 text-center">
-          © 2026 Oh My Template.
+          © 2026 OHMT.
         </div>
       </div>
     </footer>

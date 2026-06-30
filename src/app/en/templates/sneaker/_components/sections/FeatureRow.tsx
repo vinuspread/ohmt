@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import { Leaf, Shield, Truck, Recycle } from "lucide-react";
 import { useSearchParams } from "next/navigation";
 const icons = [
@@ -164,7 +164,7 @@ export function FeatureRow() {
       "returns": `Returns`,
       "contact": `Contact`
     },
-    "copyright": `© 2026 Oh My Template.`,
+    "copyright": `© 2026 OHMT.`,
     "legal": {
       "privacy": `Privacy`,
       "terms": `Terms`,

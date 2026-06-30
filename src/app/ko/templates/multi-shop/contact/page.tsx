@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import { Header } from "../_components/Header";
 import { Footer } from "../_components/Footer";
@@ -7,7 +7,7 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 const contactInfo = [
-  { icon: Mail, title: "이메일", details: "vinus@vinus.co.kr" },
+  { icon: Mail, title: "이메일", details: "contact@ohmt.site" },
   { icon: MapPin, title: "스튜디오", details: "서울, 대한민국" },
   { icon: Clock, title: "영업시간", details: "월-금, 오전 9시-오후 6시" },
 ];
@@ -88,4 +88,5 @@ export default function ContactPage() {
     </React.Suspense>
   );
 }
+
 

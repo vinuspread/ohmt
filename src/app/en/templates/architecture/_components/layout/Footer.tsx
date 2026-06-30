@@ -1,4 +1,4 @@
-﻿// src/app/en/templates/OHMT027-architecture/_components/layout/Footer.tsx
+// src/app/en/templates/OHMT027-architecture/_components/layout/Footer.tsx
 "use client";
 import React from "react";
 import Link from "next/link";
@@ -26,7 +26,7 @@ export function Footer() {
             <div className="font-sans text-[14px] text-white/70 space-y-2 leading-relaxed">
               <p>123 Architectural Blvd, Seongbuk-gu, Seoul, Republic of Korea</p>
               <p>T. +82 (0)2 1234 5678</p>
-              <p>E. contact@ohmytemplate.com</p>
+              <p>E. contact@ohmt.site</p>
             </div>
           </div>
 
@@ -126,7 +126,7 @@ export function Footer() {
       {/* Bottom Area */}
       <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 py-8 flex flex-col sm:flex-row justify-between items-center gap-4">
         <p className="font-sans text-[15px] text-white/50">
-          © 2026 Oh My Template.
+          © 2026 OHMT.
         </p>
         <div className="flex gap-6 text-[13px] text-white/50 font-sans">
           <Link href={`${baseRoute}`} className="hover:text-white transition-colors">
@@ -143,3 +143,4 @@ export function Footer() {
     </footer>
   );
 }
+

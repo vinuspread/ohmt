@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React from "react";
 import Link from "next/link";
 import { Mail, ArrowRight, Globe, Link as LinkIcon, ExternalLink } from "lucide-react";
@@ -73,7 +73,7 @@ export const Footer = () => {
 
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-8 md:pt-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-[12px] font-medium tracking-tight text-black/20 uppercase">
-            © 2026 Oh My Template.
+            © 2026 OHMT.
           </p>
           <div className="flex gap-10 text-[12px] font-medium tracking-[0.2em] text-black/40 uppercase">
               <Link href="#" className="hover:text-black transition-colors">Seoul</Link>

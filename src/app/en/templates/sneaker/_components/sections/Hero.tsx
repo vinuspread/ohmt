@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT005-sneaker/-components/sections/Hero.tsx
+// src/app/templates/OHMT005-sneaker/-components/sections/Hero.tsx
 "use client";
 
 import React from "react";
@@ -161,7 +161,7 @@ export const Hero = () => {
       "returns": `Returns`,
       "contact": `Contact`
     },
-    "copyright": `© 2026 Oh My Template.`,
+    "copyright": `© 2026 OHMT.`,
     "legal": {
       "privacy": `Privacy`,
       "terms": `Terms`,

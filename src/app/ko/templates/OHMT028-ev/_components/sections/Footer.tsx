@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 const base = "/ko/templates/OHMT028-ev";
 const sitemap = [
@@ -98,7 +98,7 @@ export function Footer() {
         {/* 하단 바 */}
         <div className="flex flex-row items-center justify-between gap-4 pt-6 border-t border-[var(--border)]">
           <p className="font-inter text-[14px] text-[var(--text-muted)]">
-            © 2026 Oh My Template.
+            © 2026 OHMT.
           </p>
           <div className="flex items-center gap-4">
             <a href="#" className="font-inter text-[11px] text-[var(--text-muted)] hover:text-[var(--text)] transition-colors">개인정보처리방침</a>

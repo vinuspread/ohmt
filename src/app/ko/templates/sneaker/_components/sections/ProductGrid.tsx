@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT005-sneaker/_components/sections/ProductGrid.tsx
+// src/app/ko/templates/OHMT005-sneaker/_components/sections/ProductGrid.tsx
 "use client";
 import { useState } from "react";
 import Link from "next/link";

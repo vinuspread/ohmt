@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT012-magazine/-components/sections/Hero.tsx
+// src/app/templates/OHMT012-magazine/-components/sections/Hero.tsx
 "use client";
 
 import React from "react";

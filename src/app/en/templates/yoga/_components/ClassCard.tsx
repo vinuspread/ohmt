@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import type { YogaClass } from "../types";
 
 interface ClassCardProps {

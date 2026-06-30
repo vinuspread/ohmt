@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT008-airline/loyalty/page.tsx
+// src/app/templates/OHMT008-airline/loyalty/page.tsx
 "use client";
 
 import React, { useState } from "react";

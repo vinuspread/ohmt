@@ -1,4 +1,4 @@
-﻿// src/app/(premium)/templates/OHMT004-furniture/page.tsx
+// src/app/(premium)/templates/OHMT004-furniture/page.tsx
 "use client";
 
 import React from "react";

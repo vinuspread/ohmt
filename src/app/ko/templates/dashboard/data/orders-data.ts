@@ -1,4 +1,4 @@
-﻿export type OrderStatus = 'pending' | 'processing' | 'shipped' | 'completed' | 'cancelled'
+export type OrderStatus = 'pending' | 'processing' | 'shipped' | 'completed' | 'cancelled'
 
 export type Order = {
   id: number

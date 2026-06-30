@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT010-cosmetic/-components/sections/Hero.tsx
+// src/app/ko/templates/OHMT010-cosmetic/-components/sections/Hero.tsx
 "use client";
 
 export const Hero = () => {

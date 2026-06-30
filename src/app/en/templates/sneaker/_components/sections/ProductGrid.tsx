@@ -1,4 +1,4 @@
-﻿// src/app/en/templates/OHMT005-sneaker/_components/sections/ProductGrid.tsx
+// src/app/en/templates/OHMT005-sneaker/_components/sections/ProductGrid.tsx
 "use client";
 import { useState } from "react";
 import Link from "next/link";
@@ -638,7 +638,7 @@ export function ProductGrid({ title, items, limit = 8 }: Props) {
         "returns": `Returns`,
         "contact": `Contact`
       },
-      "copyright": `© 2026 Oh My Template.`,
+      "copyright": `© 2026 OHMT.`,
       "legal": {
         "privacy": `Privacy`,
         "terms": `Terms`,

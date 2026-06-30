@@ -58,11 +58,10 @@ async function processZip(zipFile) {
   }
   const slug = themeJson.slug;
 
-  // Derive the zip folder name (e.g. "fashion" in "fashion/theme.json" or "" if root)
+  // Derive the full template directory prefix in the zip
+  // e.g. "src/app/en/templates/OHMT001-fashion/theme.json" → prefix = "src/app/en/templates/OHMT001-fashion/"
   const themeEntryPath = themeEntry.entryName.replace(/\\/g, "/");
-  const pathParts = themeEntryPath.split("/");
-  const zipFolderName = pathParts[0]; 
-  const zipFolderPrefix = `${zipFolderName}/`;
+  const zipFolderPrefix = themeEntryPath.slice(0, themeEntryPath.lastIndexOf("/") + 1);
 
   let fileCount = 0;
 

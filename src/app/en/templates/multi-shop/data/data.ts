@@ -1,4 +1,4 @@
-﻿// src/app/en/templates/OHMT017-multi-shop/data/data.ts
+// src/app/en/templates/OHMT017-multi-shop/data/data.ts
 
 export const categories = [
   { id: 'accessories', name: 'Accessories', image: '/templates/OHMT017-multi-shop/category-accessories.jpg' },

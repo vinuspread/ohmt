@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT010-cosmetic/-components/layout/Footer.tsx
+// src/app/ko/templates/OHMT010-cosmetic/-components/layout/Footer.tsx
 "use client";
 
 import React from "react";
@@ -51,7 +51,7 @@ export const Footer = () => {
         </div>
         
         <div className="pt-10 border-t border-white/10 text-[0.8rem] opacity-40 text-center md:text-left">
-          © 2026 Oh My Template.
+          © 2026 OHMT.
         </div>
       </div>
     </footer>

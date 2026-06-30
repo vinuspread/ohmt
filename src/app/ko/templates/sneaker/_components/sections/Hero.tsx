@@ -1,4 +1,4 @@
-﻿// src/app/ko/templates/OHMT005-sneaker/-components/sections/Hero.tsx
+// src/app/ko/templates/OHMT005-sneaker/-components/sections/Hero.tsx
 "use client";
 
 import React from "react";

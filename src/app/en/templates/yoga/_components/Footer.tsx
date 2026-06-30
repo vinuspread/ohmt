@@ -1,4 +1,4 @@
-﻿import Link from "next/link";
+import Link from "next/link";
 import { NAV_ITEMS, SOCIAL_LINKS, BRAND } from "../constants";
 
 export default function Footer() {

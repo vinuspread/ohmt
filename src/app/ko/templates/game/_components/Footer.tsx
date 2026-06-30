@@ -2,10 +2,10 @@ import Link from "next/link";
 import { games } from "@/app/ko/templates/OHMT023-game/data/data";
 
 const companyLinks = [
-  { href: "/ko/templates/OHMT023-game/about", label: "소개" },
-  { href: "/ko/templates/OHMT023-game/news", label: "소식" },
-  { href: "/ko/templates/OHMT023-game/careers", label: "채용" },
-  { href: "/ko/templates/OHMT023-game/games", label: "게임" },
+  { href: "/ko/templates/OHMT023-game/about", label: "?뚭컻" },
+  { href: "/ko/templates/OHMT023-game/news", label: "?뚯떇" },
+  { href: "/ko/templates/OHMT023-game/careers", label: "梨꾩슜" },
+  { href: "/ko/templates/OHMT023-game/games", label: "寃뚯엫" },
 ];
 
 export default function Footer() {
@@ -21,7 +21,7 @@ export default function Footer() {
               OHMT
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-[var(--color-text-muted)]">
-              영감을 주는 세상을 만들고, 한계를 정의하는 경계를 허물다.
+              ?곴컧??二쇰뒗 ?몄긽??留뚮뱾怨? ?쒓퀎瑜??뺤쓽?섎뒗 寃쎄퀎瑜??덈Ъ??
             </p>
           </div>
 
@@ -83,9 +83,10 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-[var(--color-border)] pt-8 text-center text-sm text-[var(--color-text-muted)]">
-          <p>&copy; 2026 OHMT. Contact: contact@ohmytemplate.com</p>
+          <p>&copy; 2026 OHMT. Contact: contact@ohmt.site</p>
         </div>
       </div>
     </footer>
   );
 }
+

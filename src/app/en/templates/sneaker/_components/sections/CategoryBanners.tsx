@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -158,7 +158,7 @@ export function CategoryBanners() {
       "returns": `Returns`,
       "contact": `Contact`
     },
-    "copyright": `© 2026 Oh My Template.`,
+    "copyright": `© 2026 OHMT.`,
     "legal": {
       "privacy": `Privacy`,
       "terms": `Terms`,

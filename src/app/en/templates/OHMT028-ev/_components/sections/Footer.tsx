@@ -20,7 +20,7 @@ export function Footer() {
     <footer className="bg-[var(--bg-alt)] border-t border-[var(--border)]">
       <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 pt-6 pb-10 md:pt-12 md:pb-16">
 
-        {/* 뉴스레터 */}
+        {/* ?댁뒪?덊꽣 */}
         <div className="border border-[var(--border)] rounded-2xl p-6 md:p-12 mb-10 md:mb-16 text-center">
           <p className="font-michroma text-[clamp(17px,2vw,26px)] text-[var(--text)] mb-2 md:mb-3">
             Stay in the loop
@@ -40,20 +40,19 @@ export function Footer() {
           </div>
         </div>
 
-        {/* 링크 그리드 */}
+        {/* 留곹겕 洹몃━??*/}
         <div className="flex flex-col md:flex-row gap-8 md:gap-12 mb-8 md:mb-12">
-          {/* 브랜드 */}
+          {/* 釉뚮옖??*/}
           <div className="md:w-1/3">
             <p className="font-michroma text-xl text-[var(--text)] mb-2">OHMT</p>
             <p className="font-inter text-[15px] text-[var(--text-muted)] mb-5 leading-relaxed">
               Small car. Big city fun. Zero emissions, all character.
             </p>
             <button className="inline-flex items-center gap-2 bg-[var(--accent)] text-[var(--text-on-light)] px-5 py-2.5 rounded-full text-[12px] font-inter font-medium tracking-[0.04em] hover:bg-[var(--accent-dark)] transition-colors">
-              Reserve now →
-            </button>
+              Reserve now ??            </button>
           </div>
 
-          {/* 모바일: 2열 통합 메뉴 / 데스크탑: Explore + Follow 분리 */}
+          {/* 紐⑤컮?? 2???듯빀 硫붾돱 / ?곗뒪?ы깙: Explore + Follow 遺꾨━ */}
           <div className="md:hidden grid grid-cols-2 gap-x-6 gap-y-3">
             {[...sitemap, ...socials].map((item) => (
               <a
@@ -93,10 +92,10 @@ export function Footer() {
           </div>
         </div>
 
-        {/* 하단 바 */}
+        {/* ?섎떒 諛?*/}
         <div className="flex flex-row items-center justify-between gap-4 pt-6 border-t border-[var(--border)]">
           <p className="font-inter text-[14px] text-[var(--text-muted)]">
-            © 2026 Oh My Template.
+            짤 2026 OHMT.
           </p>
           <div className="flex items-center gap-4">
             <a href="#" className="font-inter text-[11px] text-[var(--text-muted)] hover:text-[var(--text)] transition-colors">Privacy</a>

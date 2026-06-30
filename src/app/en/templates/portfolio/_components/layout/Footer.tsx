@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import Link from 'next/link';
 import { designerInfo } from '@/lib/portfolio-data';
@@ -65,7 +65,7 @@ export function Footer() {
               </Link>
             ))}
           </div>
-          <span className="text-[0.75rem] text-[var(--color-text-muted)]">© 2026 Oh My Template.</span>
+          <span className="text-[0.75rem] text-[var(--color-text-muted)]">© 2026 OHMT.</span>
         </div>
       </div>
     </footer>

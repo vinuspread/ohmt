@@ -244,7 +244,7 @@ const [scrolled, setScrolled] = useState(false);
               </div>
 
               <div className="space-y-6 border-t border-neutral-200/50 pt-8 text-[14px] tracking-[0.2em] text-neutral-400 font-bold uppercase">
-                <p>© 2026 Oh My Template.</p>
+                <p>짤 2026 OHMT.</p>
                 <div className="flex gap-4">
                   <a href="#" className="hover:text-[var(--color-primary)] transition-colors">Instagram</a>
                   <a href="#" className="hover:text-[var(--color-primary)] transition-colors">Pinterest</a>
