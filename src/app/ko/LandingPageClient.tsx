@@ -266,7 +266,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           {/* Ambient Glows */}
           <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-gradient-to-b from-amber-500/5 via-orange-500/5 to-transparent blur-[120px] rounded-full pointer-events-none" />
 
-          {/* Arrow Buttons */}
+          <div className="relative">
           <button onClick={goPrev} aria-label="이전" className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-9 h-9 flex items-center justify-center rounded-full border border-zinc-200 bg-white/80 hover:bg-white text-zinc-400 hover:text-zinc-900 backdrop-blur-sm transition-all dark:border-zinc-700 dark:bg-zinc-800/80 dark:hover:bg-zinc-800 dark:text-zinc-500 dark:hover:text-zinc-100">
             <ChevronLeft size={18} />
           </button>
@@ -318,6 +318,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
               </div>
             </div>
           </div>
+          </div>{/* /relative wrapper for arrows */}
 
           {/* Infinite Horizontal Scroll Marquee */}
           <div className="relative mt-16 w-full overflow-hidden select-none pointer-events-auto">
