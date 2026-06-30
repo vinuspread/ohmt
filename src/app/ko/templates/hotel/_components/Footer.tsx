@@ -12,7 +12,7 @@ export const Footer = () => {
           <div>
             <h3 className="text-2xl font-[var(--font-heading)] font-bold mb-4">OHMT</h3>
             <p className="text-sm text-[var(--color-bg)]/60 leading-relaxed max-w-xs">
-              고요한 럭셔리, 영원한 안식처. 숲이 바다를 만나는 곳, 모든 순간이 기억이 됩니다.
+              고요한 럭셔리, 영원한 안식처. 숲과 바다가 만나는 곳, 모든 순간이 기억이 됩니다.
             </p>
           </div>
 
@@ -21,7 +21,7 @@ export const Footer = () => {
             <div className="flex flex-col gap-3 text-sm text-[var(--color-bg)]/70">
               <div className="flex items-center gap-3">
                 <MapPin size={14} strokeWidth={1.2} className="text-[var(--color-accent)] flex-shrink-0" />
-                <span>123 세레니티 베이, 코사무이, 태국</span>
+                <span>123 세레니티 베이, 코 사무이, 태국</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone size={14} strokeWidth={1.2} className="text-[var(--color-accent)] flex-shrink-0" />
@@ -35,12 +35,12 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-[11px] font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] mb-5">빠른 링크</h4>
+            <h4 className="text-[11px] font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] mb-5">링크</h4>
             <div className="flex flex-col gap-2">
               <Link href="#" className="text-sm text-[var(--color-bg)]/70 hover:text-[var(--color-accent)] transition-colors">개인정보처리방침</Link>
               <Link href="#" className="text-sm text-[var(--color-bg)]/70 hover:text-[var(--color-accent)] transition-colors">이용약관</Link>
-              <Link href="#" className="text-sm text-[var(--color-bg)]/70 hover:text-[var(--color-accent)] transition-colors">접근성 안내</Link>
-              <Link href="#" className="text-sm text-[var(--color-bg)]/70 hover:text-[var(--color-accent)] transition-colors">쿠키 정책</Link>
+              <Link href="#" className="text-sm text-[var(--color-bg)]/70 hover:text-[var(--color-accent)] transition-colors">梨꾩슜 ?뺣낫</Link>
+              <Link href="#" className="text-sm text-[var(--color-bg)]/70 hover:text-[var(--color-accent)] transition-colors">보도자료</Link>
             </div>
           </div>
         </div>

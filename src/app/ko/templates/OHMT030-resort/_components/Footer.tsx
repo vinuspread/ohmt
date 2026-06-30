@@ -11,7 +11,7 @@ export function Footer() {
             지금 예약하세요
           </p>
           <h2 className="text-[clamp(32px,4vw,56px)] font-semibold text-white leading-[1.1] tracking-[-0.02em]">
-            아름다운 바다와 자연이 함께하는 리조트에서 특별한 여행을 시작하세요
+            해안의 이야기를 시작하세요
           </h2>
           <a href="#"
             className="inline-block rounded-full bg-white px-8 py-3.5 text-[var(--text-dark)] text-[15px] font-medium hover:opacity-85 transition-opacity">
@@ -19,7 +19,6 @@ export function Footer() {
           </a>
         </div>
       </div>
-
 
       {/* Main footer */}
       <footer className="bg-[var(--bg-dark)]">
@@ -30,7 +29,7 @@ export function Footer() {
             <div className="md:col-span-1">
               <p className="text-white text-xl font-semibold tracking-widest mb-4">OHMT</p>
               <p className="text-[14px] text-white/50 leading-relaxed mb-6 break-keep">
-                조용한 럭셔리, 영원한 안식처. 숲과 바다가 만나는 곳에서 모든 순간을 기억으로.
+                고요한 해안의 럭셔리 공간입니다. 바다와 가장 가까운 당신만의 안식처를 경험하세요.
               </p>
               <p className="text-[13px] text-white/40 leading-relaxed">
                 88 Tidal Walk<br />Byron Bay, Australia
@@ -39,9 +38,9 @@ export function Footer() {
 
             {/* Navigation */}
             <div>
-              <p className="text-[11px] font-medium text-white/30 tracking-widest uppercase mb-5">내비게이션</p>
+              <p className="text-[11px] font-medium text-white/30 tracking-widest uppercase mb-5">탐색</p>
               <div className="flex flex-col gap-3">
-                {["리조트 소개", "객실", "레스토랑", "액티비티", "예약"].map((l) => (
+                {["호텔 소개", "빌라", "체험", "다이닝", "예약"].map((l) => (
                   <a key={l} href="#"
                     className="text-[14px] text-white/60 hover:text-white transition-colors">
                     {l}
@@ -63,9 +62,8 @@ export function Footer() {
                   hello@ohmytemplate.com
                 </a>
                 <p className="text-[14px] text-white/60">
-                  월-금 오전 9시 - 오후 8시
+                  월-일 오전 9시 - 오후 8시
                 </p>
-
               </div>
             </div>
 

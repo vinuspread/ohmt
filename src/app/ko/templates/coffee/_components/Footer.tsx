@@ -11,39 +11,39 @@ export const Footer = () => {
             <Link href="/ko/templates/OHMT019-coffee" className="text-xl font-heading font-semibold text-white">
               OHMT
             </Link>
-            <p className="text-sm text-white/50 mt-4 leading-relaxed max-w-[220px]">
-              일상에서 특별함을 발견하는 커피.
+                        <p className="text-sm text-white/50 mt-4 leading-relaxed max-w-[220px]">
+              산지에서 직접 공들여 만든 최고의 콜드브루.
             </p>
           </div>
 
           <div>
             <h4 className="text-xs uppercase tracking-[0.15em] text-white/40 mb-4">Menu</h4>
             <div className="flex flex-col gap-2.5">
-              <Link href="/ko/templates/OHMT019-coffee/menu" className="text-sm text-white/60 hover:text-white transition-colors">커피</Link>
-              <Link href="/ko/templates/OHMT019-coffee/menu" className="text-sm text-white/60 hover:text-white transition-colors">시즌 메뉴</Link>
+              <Link href="/ko/templates/OHMT019-coffee/menu" className="text-sm text-white/60 hover:text-white transition-colors">콜드브루</Link>
+              <Link href="/ko/templates/OHMT019-coffee/menu" className="text-sm text-white/60 hover:text-white transition-colors">라떼</Link>
               <Link href="/ko/templates/OHMT019-coffee/menu" className="text-sm text-white/60 hover:text-white transition-colors">디저트</Link>
             </div>
           </div>
 
           <div>
-            <h4 className="text-xs uppercase tracking-[0.15em] text-white/40 mb-4">매장 안내</h4>
+            <h4 className="text-xs uppercase tracking-[0.15em] text-white/40 mb-4">留ㅼ옣 ?덈궡</h4>
             <div className="flex flex-col gap-2.5">
-              <Link href="/ko/templates/OHMT019-coffee/locations" className="text-sm text-white/60 hover:text-white transition-colors">서울</Link>
-              <Link href="/ko/templates/OHMT019-coffee/locations" className="text-sm text-white/60 hover:text-white transition-colors">강남</Link>
-              <Link href="/ko/templates/OHMT019-coffee/locations" className="text-sm text-white/60 hover:text-white transition-colors">홍대</Link>
+              <Link href="/ko/templates/OHMT019-coffee/locations" className="text-sm text-white/60 hover:text-white transition-colors">강남점</Link>
+              <Link href="/ko/templates/OHMT019-coffee/locations" className="text-sm text-white/60 hover:text-white transition-colors">홍대점</Link>
+              <Link href="/ko/templates/OHMT019-coffee/locations" className="text-sm text-white/60 hover:text-white transition-colors">부산점</Link>
             </div>
           </div>
 
           <div>
-            <h4 className="text-xs uppercase tracking-[0.15em] text-white/40 mb-4">고객센터</h4>
+            <h4 className="text-xs uppercase tracking-[0.15em] text-white/40 mb-4">연락처</h4>
             <div className="flex flex-col gap-2.5 text-sm text-white/60">
               <a href="mailto:contact@ohmt.site" className="hover:text-white transition-colors">contact@ohmt.site</a>
               <p>02-1234-5678</p>
             </div>
             <div className="flex gap-4 mt-5">
-              <Link href="#" className="text-xs text-white/40 hover:text-white transition-colors uppercase tracking-[0.1em]">이용약관</Link>
-              <Link href="#" className="text-xs text-white/40 hover:text-white transition-colors uppercase tracking-[0.1em]">개인정보처리방침</Link>
-              <Link href="#" className="text-xs text-white/40 hover:text-white transition-colors uppercase tracking-[0.1em]">사이트맵</Link>
+              <Link href="#" className="text-xs text-white/40 hover:text-white transition-colors uppercase tracking-[0.1em]">인스타그램</Link>
+              <Link href="#" className="text-xs text-white/40 hover:text-white transition-colors uppercase tracking-[0.1em]">트위터</Link>
+              <Link href="#" className="text-xs text-white/40 hover:text-white transition-colors uppercase tracking-[0.1em]">페이스북</Link>
             </div>
           </div>
         </div>
