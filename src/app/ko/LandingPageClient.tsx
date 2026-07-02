@@ -29,6 +29,7 @@ export interface FaqItem {
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 const ALL_LABEL = "전체";
+const PAGE_SIZE = 9;
 
 const POPULAR_TAGS = ["패션", "포트폴리오", "에이전시", "럭셔리", "미니멀"];
 
@@ -54,6 +55,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [activeCategory, setActiveCategory] = useState(ALL_LABEL);
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
   const [isAdmin, setIsAdmin] = useState(false);
   const [descModalTemplate, setDescModalTemplate] = useState<TemplateItem | null>(null);
   const [featuredTemplateId, setFeaturedTemplateId] = useState<string | null>(null);
@@ -209,6 +211,15 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
     }
     return filteredTemplates;
   }, [filteredTemplates, featuredItem]);
+
+  useEffect(() => {
+    setVisibleCount(PAGE_SIZE);
+  }, [filteredTemplates]);
+
+  const visibleGridItems = useMemo(
+    () => gridItems.slice(0, visibleCount),
+    [gridItems, visibleCount]
+  );
 
   const goToContact = (packageId?: string, template?: TemplateItem) => {
     const params = new URLSearchParams();
@@ -509,7 +520,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
 
                   {/* General Grid */}
                   <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {gridItems.map((template) => (
+                    {visibleGridItems.map((template) => (
                       <motion.div
                         key={template.id}
                         layout
@@ -579,6 +590,17 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                       </motion.div>
                     ))}
                   </motion.div>
+                  {visibleCount < gridItems.length && (
+                    <div className="flex justify-center pt-4">
+                      <button
+                        type="button"
+                        onClick={() => setVisibleCount((prev) => prev + PAGE_SIZE)}
+                        className="inline-flex items-center gap-2 px-6 py-3 border border-zinc-300 hover:border-zinc-900 text-sm font-bold text-zinc-600 hover:text-zinc-900 rounded-lg transition-all duration-200 dark:border-zinc-700 dark:text-zinc-400 dark:hover:border-zinc-400 dark:hover:text-zinc-200"
+                      >
+                        더보기 ({gridItems.length - visibleCount}개 남음)
+                      </button>
+                    </div>
+                  )}
                 </div>
               )}
             </AnimatePresence>
