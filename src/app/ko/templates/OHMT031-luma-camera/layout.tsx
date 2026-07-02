@@ -1,7 +1,6 @@
 import "./theme.css";
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
-import DevicePreviewShell from "@/components/DevicePreviewShell";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -41,7 +40,7 @@ export const metadata: Metadata = {
 export default function LumaCameraLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className={`luma-camera-template ${geist.variable}`} style={{ fontFamily: "var(--font-geist), Arial, sans-serif" }}>
-      <DevicePreviewShell>{children}</DevicePreviewShell>
+      {children}
     </div>
   );
 }
