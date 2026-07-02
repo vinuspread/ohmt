@@ -98,13 +98,13 @@ export const metadata: Metadata = {
     locale: "ko_KR",
     type: "website",
     alternateLocale: ["en_US"],
-    images: [{ url: "https://ohmt.site/og-image.jpg", width: 1200, height: 630, alt: "오마이템플릿 - 프리미엄 웹사이트 템플릿" }],
+    images: [{ url: "https://ohmt.site/og-image.png", secureUrl: "https://ohmt.site/og-image.png", width: 1200, height: 630, alt: "오마이템플릿 - 프리미엄 웹사이트 템플릿", type: "image/png" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "오마이템플릿",
     description: "브랜드에 맞춘 디자인과 개발, 운영까지 제공하는 프리미엄 템플릿 서비스입니다.",
-    images: ["https://ohmt.site/og-image.jpg"],
+    images: ["https://ohmt.site/og-image.png"],
   },
 };
 
