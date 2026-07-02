@@ -154,7 +154,7 @@ export default function ShopPage() {
             <div className="bg-white/55 p-8 md:p-10">
               <h2 className="text-3xl font-semibold leading-[1.08] tracking-[-0.035em]">아직 고르기 어렵다면.</h2>
               <p className="mt-5 text-sm leading-6 text-[var(--luma-muted)]">자주 찍는 장면을 먼저 보고, 그 장면에 맞는 바디를 고르세요.</p>
-              <Link href="/ko/templates/luma-camera/scenes" className="mt-8 inline-flex items-center gap-2 bg-[var(--luma-dark)] px-6 py-3 text-sm font-bold text-white">
+              <Link href="/ko/templates/OHMT031-luma-camera/scenes" className="mt-8 inline-flex items-center gap-2 bg-[var(--luma-dark)] px-6 py-3 text-sm font-bold text-white">
                 장면 비교하기 <ArrowRight size={16} />
               </Link>
             </div>

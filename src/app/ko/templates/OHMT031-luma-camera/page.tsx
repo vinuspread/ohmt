@@ -128,12 +128,12 @@ export default function LumaCameraPage() {
             OHMT
           </Link>
           <div className="hidden items-center gap-3 text-xs font-semibold text-white/70 md:flex lg:gap-7">
-            <Link href="/ko/templates/luma-camera/image-engine" className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 transition-colors hover:text-white">이미지</Link>
-            <Link href="/ko/templates/luma-camera/scenes" className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 transition-colors hover:text-white">장면</Link>
-            <Link href="/ko/templates/luma-camera/stories" className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 transition-colors hover:text-white">스토리</Link>
-            <Link href="/ko/templates/luma-camera/shop" className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 transition-colors hover:text-white">구매</Link>
+            <Link href="/ko/templates/OHMT031-luma-camera/image-engine" className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 transition-colors hover:text-white">이미지</Link>
+            <Link href="/ko/templates/OHMT031-luma-camera/scenes" className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 transition-colors hover:text-white">장면</Link>
+            <Link href="/ko/templates/OHMT031-luma-camera/stories" className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 transition-colors hover:text-white">스토리</Link>
+            <Link href="/ko/templates/OHMT031-luma-camera/shop" className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 transition-colors hover:text-white">구매</Link>
           </div>
-          <Link href="/ko/templates/luma-camera/shop" className="inline-flex min-h-11 items-center justify-center bg-white/10 px-4 text-xs font-bold text-white transition-colors hover:bg-white hover:text-[#222222]">
+          <Link href="/ko/templates/OHMT031-luma-camera/shop" className="inline-flex min-h-11 items-center justify-center bg-white/10 px-4 text-xs font-bold text-white transition-colors hover:bg-white hover:text-[#222222]">
             예약하기
           </Link>
         </nav>
@@ -158,10 +158,10 @@ export default function LumaCameraPage() {
                 주머니에 들어가는 바디로 아침 거리, 작업대, 저녁 식탁까지 기록합니다. 색은 덜 만지고, 촬영 메모는 사진 옆에 남깁니다.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link href="/ko/templates/luma-camera/shop" className="inline-flex items-center justify-center gap-2 bg-white px-6 py-3 text-sm font-bold text-[var(--luma-ink)] transition-transform duration-200 ease-out active:scale-[0.97]">
+                <Link href="/ko/templates/OHMT031-luma-camera/shop" className="inline-flex items-center justify-center gap-2 bg-white px-6 py-3 text-sm font-bold text-[var(--luma-ink)] transition-transform duration-200 ease-out active:scale-[0.97]">
                   카메라 보기 <ArrowRight size={16} />
                 </Link>
-                <Link href="/ko/templates/luma-camera/image-engine" className="inline-flex items-center justify-center bg-white/12 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-white/20">
+                <Link href="/ko/templates/OHMT031-luma-camera/image-engine" className="inline-flex items-center justify-center bg-white/12 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-white/20">
                   이미지 엔진 보기
                 </Link>
               </div>
@@ -184,8 +184,8 @@ export default function LumaCameraPage() {
                       <p className="mt-2 text-sm leading-6 text-[var(--luma-muted)]">{product.note}</p>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Link href="/ko/templates/luma-camera/image-engine" className="inline-flex min-h-11 min-w-11 items-center text-sm font-bold text-[var(--luma-ink)]">자세히 보기</Link>
-                      <Link href="/ko/templates/luma-camera/shop" className="inline-flex min-h-11 items-center bg-[var(--luma-dark)] px-5 text-sm font-bold text-white transition-transform duration-200 ease-out active:scale-[0.97]">
+                      <Link href="/ko/templates/OHMT031-luma-camera/image-engine" className="inline-flex min-h-11 min-w-11 items-center text-sm font-bold text-[var(--luma-ink)]">자세히 보기</Link>
+                      <Link href="/ko/templates/OHMT031-luma-camera/shop" className="inline-flex min-h-11 items-center bg-[var(--luma-dark)] px-5 text-sm font-bold text-white transition-transform duration-200 ease-out active:scale-[0.97]">
                         예약하기
                       </Link>
                     </div>

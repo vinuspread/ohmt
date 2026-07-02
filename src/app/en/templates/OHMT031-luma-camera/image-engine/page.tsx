@@ -94,7 +94,7 @@ export default function ImageEnginePage() {
               <h2 className="mt-5 text-3xl font-bold leading-[1.08] tracking-[-0.035em]">The recipe stays attached.</h2>
             </div>
             <div className="flex items-end">
-              <Link href="/en/templates/luma-camera/shop" className="inline-flex items-center gap-2 bg-white px-6 py-3 text-sm font-bold text-[var(--luma-ink)]">
+              <Link href="/en/templates/OHMT031-luma-camera/shop" className="inline-flex items-center gap-2 bg-white px-6 py-3 text-sm font-bold text-[var(--luma-ink)]">
                 Choose a camera <ArrowRight size={16} />
               </Link>
             </div>

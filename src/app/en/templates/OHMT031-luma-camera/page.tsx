@@ -132,12 +132,12 @@ export default function LumaCameraPage() {
             OHMT
           </Link>
           <div className="hidden items-center gap-3 text-xs font-semibold text-white/70 md:flex lg:gap-7">
-            <Link href="/en/templates/luma-camera/image-engine" className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 transition-colors hover:text-white">Image</Link>
-            <Link href="/en/templates/luma-camera/scenes" className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 transition-colors hover:text-white">Scenes</Link>
-            <Link href="/en/templates/luma-camera/stories" className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 transition-colors hover:text-white">Stories</Link>
-            <Link href="/en/templates/luma-camera/shop" className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 transition-colors hover:text-white">Shop</Link>
+            <Link href="/en/templates/OHMT031-luma-camera/image-engine" className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 transition-colors hover:text-white">Image</Link>
+            <Link href="/en/templates/OHMT031-luma-camera/scenes" className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 transition-colors hover:text-white">Scenes</Link>
+            <Link href="/en/templates/OHMT031-luma-camera/stories" className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 transition-colors hover:text-white">Stories</Link>
+            <Link href="/en/templates/OHMT031-luma-camera/shop" className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 transition-colors hover:text-white">Shop</Link>
           </div>
-          <Link href="/en/templates/luma-camera/shop" className="inline-flex min-h-11 items-center justify-center bg-white/10 px-4 text-xs font-bold text-white transition-colors hover:bg-white hover:text-[#222222]">
+          <Link href="/en/templates/OHMT031-luma-camera/shop" className="inline-flex min-h-11 items-center justify-center bg-white/10 px-4 text-xs font-bold text-white transition-colors hover:bg-white hover:text-[#222222]">
             Reserve
           </Link>
         </nav>
@@ -162,10 +162,10 @@ export default function LumaCameraPage() {
                 A premium compact camera for makers who want tactile hardware, honest color, and a calmer way to capture every day.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link href="/en/templates/luma-camera/shop" className="inline-flex items-center justify-center gap-2 bg-white px-6 py-3 text-sm font-bold text-[var(--luma-ink)] transition-transform duration-200 ease-out active:scale-[0.97]">
+                <Link href="/en/templates/OHMT031-luma-camera/shop" className="inline-flex items-center justify-center gap-2 bg-white px-6 py-3 text-sm font-bold text-[var(--luma-ink)] transition-transform duration-200 ease-out active:scale-[0.97]">
                   Explore camera <ArrowRight size={16} />
                 </Link>
-                <Link href="/en/templates/luma-camera/image-engine" className="inline-flex items-center justify-center bg-white/12 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-white/20">
+                <Link href="/en/templates/OHMT031-luma-camera/image-engine" className="inline-flex items-center justify-center bg-white/12 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-white/20">
                   See image engine
                 </Link>
               </div>
@@ -188,8 +188,8 @@ export default function LumaCameraPage() {
                       <p className="mt-2 text-sm leading-6 text-[var(--luma-muted)]">{product.note}</p>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Link href="/en/templates/luma-camera/image-engine" className="inline-flex min-h-11 min-w-11 items-center text-sm font-bold text-[var(--luma-ink)]">Explore</Link>
-                      <Link href="/en/templates/luma-camera/shop" className="inline-flex min-h-11 items-center bg-[var(--luma-dark)] px-5 text-sm font-bold text-white transition-transform duration-200 ease-out active:scale-[0.97]">
+                      <Link href="/en/templates/OHMT031-luma-camera/image-engine" className="inline-flex min-h-11 min-w-11 items-center text-sm font-bold text-[var(--luma-ink)]">Explore</Link>
+                      <Link href="/en/templates/OHMT031-luma-camera/shop" className="inline-flex min-h-11 items-center bg-[var(--luma-dark)] px-5 text-sm font-bold text-white transition-transform duration-200 ease-out active:scale-[0.97]">
                         Reserve
                       </Link>
                     </div>

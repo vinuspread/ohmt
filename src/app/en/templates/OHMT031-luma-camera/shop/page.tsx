@@ -154,7 +154,7 @@ export default function ShopPage() {
             <div className="bg-white/55 p-8 md:p-10">
               <h2 className="text-3xl font-semibold leading-[1.08] tracking-[-0.035em]">Not sure yet?</h2>
               <p className="mt-5 text-sm leading-6 text-[var(--luma-muted)]">Start with the scenes you actually shoot, then choose the body that fits them.</p>
-              <Link href="/en/templates/luma-camera/scenes" className="mt-8 inline-flex items-center gap-2 bg-[var(--luma-dark)] px-6 py-3 text-sm font-bold text-white">
+              <Link href="/en/templates/OHMT031-luma-camera/scenes" className="mt-8 inline-flex items-center gap-2 bg-[var(--luma-dark)] px-6 py-3 text-sm font-bold text-white">
                 Compare scenes <ArrowRight size={16} />
               </Link>
             </div>

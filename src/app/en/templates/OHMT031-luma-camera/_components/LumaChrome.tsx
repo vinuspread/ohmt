@@ -23,7 +23,7 @@ export function LumaChrome({ children }: { children: React.ReactNode }) {
               </Link>
             ))}
           </div>
-          <Link href="/en/templates/luma-camera/shop" className="inline-flex min-h-11 items-center justify-center bg-white/10 px-4 text-xs font-bold text-white transition-colors hover:bg-white hover:text-[#222222]">
+          <Link href="/en/templates/OHMT031-luma-camera/shop" className="inline-flex min-h-11 items-center justify-center bg-white/10 px-4 text-xs font-bold text-white transition-colors hover:bg-white hover:text-[#222222]">
             Reserve
           </Link>
         </nav>

@@ -57,7 +57,7 @@ export default function StoriesPage() {
                   <h2 className="mt-4 text-2xl font-bold leading-[1.08] tracking-[-0.035em]">{note}</h2>
                 </div>
               ))}
-              <Link href="/ko/templates/luma-camera/image-engine" className="inline-flex w-fit items-center gap-2 bg-[var(--luma-dark)] px-6 py-3 text-sm font-bold text-white">
+              <Link href="/ko/templates/OHMT031-luma-camera/image-engine" className="inline-flex w-fit items-center gap-2 bg-[var(--luma-dark)] px-6 py-3 text-sm font-bold text-white">
                 이미지 엔진 보기 <ArrowRight size={16} />
               </Link>
             </div>

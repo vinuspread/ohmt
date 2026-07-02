@@ -74,7 +74,7 @@ export default function ScenesPage() {
         <section className="px-4 pb-24 md:px-8 md:pb-32">
           <div className="mx-auto flex max-w-[1380px] flex-col justify-between gap-8 bg-white/55 p-7 md:flex-row md:items-center md:p-10">
             <h2 className="max-w-2xl text-3xl font-bold leading-[1.08] tracking-[-0.035em]">The useful camera is the one already nearby.</h2>
-            <Link href="/en/templates/luma-camera/shop" className="inline-flex items-center gap-2 bg-[var(--luma-dark)] px-6 py-3 text-sm font-bold text-white">
+            <Link href="/en/templates/OHMT031-luma-camera/shop" className="inline-flex items-center gap-2 bg-[var(--luma-dark)] px-6 py-3 text-sm font-bold text-white">
               Reserve LUMA <ArrowRight size={16} />
             </Link>
           </div>
