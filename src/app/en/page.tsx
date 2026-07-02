@@ -80,7 +80,7 @@ const fallbackFaqs: FaqItem[] = [
 ];
 
 export const metadata: Metadata = {
-  title: "Oh My Template",
+  title: "ohmytemplates",
   description: "OHMT provides premium website templates and custom web design services for brands, businesses, portfolios, shops, magazines, and digital products. Ready in 2 days.",
   alternates: {
     canonical: "https://ohmt.site/en",
