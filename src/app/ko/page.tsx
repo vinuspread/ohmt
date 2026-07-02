@@ -80,7 +80,7 @@ const fallbackFaqs: FaqItem[] = [
 ];
 
 export const metadata: Metadata = {
-  title: "웹사이트 템플릿 & 맞춤형 홈페이지 제작 | OHMT",
+  title: "오마이템플릿",
   description: "OHMT는 비즈니스 목적에 맞는 프리미엄 웹사이트 템플릿과 맞춤형 홈페이지 제작 서비스를 제공합니다. 템플릿 선택부터 커스터마이징, 기능 개발까지 상담을 통해 진행합니다.",
   alternates: {
     canonical: "https://ohmt.site/ko",
