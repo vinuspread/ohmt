@@ -1,0 +1,52 @@
+{
+  "slug": "luma-camera",
+  "name": "LUMA Camera",
+  "name_ko": "루마 카메라",
+  "category": "retail",
+  "description": "A premium compact camera template for product storytelling, everyday shooting scenes, image-quality samples, app notes, and creator-focused shop pages.",
+  "description_ko": "제품 스토리, 일상 촬영 장면, 이미지 품질 샘플, 앱 노트, 크리에이터 중심 구매 흐름을 갖춘 프리미엄 컴팩트 카메라 템플릿.",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#F4F1EA",
+      "secondary": "#10120F",
+      "accent": "#D7FF63",
+      "text": {
+        "main": "#141611",
+        "muted": "#696D62",
+        "contrast": "#F8F5ED"
+      },
+      "ui": {
+        "border": "#D9D4C8",
+        "hover": "#ECE7DC",
+        "shadow": "rgba(19, 20, 16, 0.12)"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Geist, Arial, sans-serif",
+        "weight": "700",
+        "tracking": "-0.04em",
+        "style": "font-bold tracking-tight"
+      },
+      "body": {
+        "font": "Geist, Arial, sans-serif",
+        "weight": "400",
+        "leading": "1.7",
+        "style": "font-normal leading-relaxed"
+      }
+    },
+    "spacing": {
+      "container": "1440px",
+      "gutter": "24px",
+      "section": "112px",
+      "card_p": "28px"
+    },
+    "motion": {
+      "transition_fast": "160ms",
+      "transition_normal": "240ms",
+      "transition_slow": "420ms",
+      "easing": "cubic-bezier(0.23, 1, 0.32, 1)"
+    }
+  }
+}
