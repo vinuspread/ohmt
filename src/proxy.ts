@@ -5,8 +5,13 @@ import { getAllowedAdminEmails, isAllowedAdminEmail } from "@/lib/admin-auth";
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // 루트 접근 시 언어 감지 후 리디렉션
+  // 루트 접근 시 크롤러는 page.tsx로 통과 (OG 태그 제공), 사람은 언어 감지 후 리디렉션
   if (pathname === "/") {
+    const ua = request.headers.get("user-agent") ?? "";
+    const isCrawler = /bot|crawl|spider|facebookexternalhit|twitterbot|linkedinbot|whatsapp|telegram|slack|discord|kakaotalk|Iframely|Threads/i.test(ua);
+    if (isCrawler) {
+      return NextResponse.next();
+    }
     const country = request.headers.get("x-vercel-ip-country") ?? "";
     if (country === "KR") {
       return NextResponse.redirect(new URL("/ko", request.url));
