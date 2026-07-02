@@ -55,13 +55,13 @@ export const metadata: Metadata = {
     siteName: "Oh My Template",
     title: "Oh My Template — Premium Next.js Web Templates",
     description: "Premium Next.js web templates for brands, agencies, and creators. Fully customized by our team in 2 days.",
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Oh My Template" }],
+    images: [{ url: "/og-image-v2.png", width: 1200, height: 630, alt: "Oh My Template" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Oh My Template — Premium Next.js Web Templates",
     description: "Premium Next.js web templates for brands, agencies, and creators.",
-    images: ["/og-image.png"],
+    images: ["/og-image-v2.png"],
   },
   robots: {
     index: true,
@@ -100,7 +100,7 @@ export default function RootLayout({
                   url: "https://ohmt.site",
                   logo: {
                     "@type": "ImageObject",
-                    url: "https://ohmt.site/og-image.png",
+                    url: "https://ohmt.site/og-image-v2.png",
                     width: 1200,
                     height: 630,
                   },

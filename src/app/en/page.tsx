@@ -98,13 +98,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     type: "website",
     alternateLocale: ["ko_KR"],
-    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "Oh My Template — Premium Website Templates" }],
+    images: [{ url: "/og-image-v2.png", width: 1200, height: 630, alt: "Oh My Template — Premium Website Templates" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Oh My Template",
     description: "A premium template service offering design, development, and ongoing support tailored to your brand.",
-    images: ["/og-image.png"],
+    images: ["/og-image-v2.png"],
   },
 };
 
