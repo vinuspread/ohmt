@@ -7,7 +7,7 @@ const products = [
   {
     name: "LUMA One",
     price: "$1,890",
-    note: "가방에 넣기 쉬운 기본 바디",
+    note: "가방에 넣을지 고민하지 않는 기본 바디",
     spec: "28mm 고정 렌즈",
     image: "/templates/luma-camera/shop-one-kit.jpg?v=20260702f",
     details: ["뉴트럴 / 웜 프로파일", "데일리 캐리 모드", "앱 노트"],
@@ -16,7 +16,7 @@ const products = [
   {
     name: "LUMA One Pro",
     price: "$2,460",
-    note: "작업대에서 손에 걸리는 필드 키트",
+    note: "작업대에서 손에 안정적으로 걸리는 필드 키트",
     spec: "28mm 렌즈 + 그립",
     image: "/templates/luma-camera/shop-pro-kit.jpg?v=20260702f",
     details: ["그립 + 노트 모드", "확장 레시피 메모리", "작업용 필드 스트랩"],
@@ -70,11 +70,11 @@ export default function ShopPage() {
             <div>
               <Sparkles size={28} strokeWidth={1.5} />
               <h1 className="mt-6 max-w-4xl text-[clamp(2.35rem,5vw,5.4rem)] font-bold leading-[1.02] tracking-[-0.04em]">
-                자주 들고 나갈 카메라를 고르세요.
+                자주 들고 나갈 쪽을 고르세요.
               </h1>
             </div>
             <p className="max-w-sm text-lg leading-8 text-[var(--luma-muted)]">
-              One은 매일 들기 좋고, Pro는 작업대에서 안정적입니다. 둘 다 같은 색과 노트 흐름을 씁니다.
+              One은 매일 들기 좋고, Pro는 작업대에서 안정적입니다. 색과 노트 흐름은 두 바디 모두 같습니다.
             </p>
           </div>
         </section>
@@ -116,7 +116,7 @@ export default function ShopPage() {
         <section className="px-4 pb-24 md:px-8 md:pb-32">
           <div className="mx-auto grid max-w-[1380px] gap-12 lg:grid-cols-[0.86fr_1.14fr]">
             <div>
-              <h2 className="text-[clamp(1.8rem,3vw,3.35rem)] font-bold leading-[1.08] tracking-[-0.035em]">선택은 단순합니다. 얼마나 자주 장면을 준비하는지에 달려 있습니다.</h2>
+              <h2 className="text-[clamp(1.8rem,3vw,3.35rem)] font-bold leading-[1.08] tracking-[-0.035em]">선택은 단순합니다. 자주 찍는 장면이 기준입니다.</h2>
             </div>
             <div className="grid gap-4">
               {guide.map((item) => (

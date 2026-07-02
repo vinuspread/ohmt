@@ -28,16 +28,16 @@ const scenes = [
 
 const fieldRules = [
   {
-    title: "빠르게 깨어남",
-    text: "피사체가 카메라에 반응하기 전에 준비됩니다.",
+    title: "빠르게 준비됨",
+    text: "피사체가 카메라를 의식하기 전에 켜집니다.",
   },
   {
-    title: "작게 머물기",
-    text: "방이 스스로의 분위기를 유지할 만큼 작게 머뭅니다.",
+    title: "작게 머무름",
+    text: "방이 스스로의 분위기를 유지할 만큼만 존재합니다.",
   },
   {
     title: "톤을 지킴",
-    text: "아침의 온기, 저녁의 푸른 빛, 촛불의 색을 각각 남깁니다.",
+    text: "아침의 온기, 저녁의 푸른빛, 촛불의 색을 각각 남깁니다.",
   },
 ];
 
@@ -73,7 +73,7 @@ export default function ScenesPage() {
 
         <section className="px-4 pb-24 md:px-8 md:pb-32">
           <div className="mx-auto flex max-w-[1380px] flex-col justify-between gap-8 bg-white/55 p-7 md:flex-row md:items-center md:p-10">
-            <h2 className="max-w-2xl text-3xl font-bold leading-[1.08] tracking-[-0.035em]">쓸모 있는 카메라는 이미 가까이에 있습니다.</h2>
+            <h2 className="max-w-2xl text-3xl font-bold leading-[1.08] tracking-[-0.035em]">쓸모 있는 카메라는 가까이에 있을 때 더 자주 쓰입니다.</h2>
             <Link href="/ko/templates/OHMT031-luma-camera/shop" className="inline-flex items-center gap-2 bg-[var(--luma-dark)] px-6 py-3 text-sm font-bold text-white">
               LUMA 예약하기 <ArrowRight size={16} />
             </Link>

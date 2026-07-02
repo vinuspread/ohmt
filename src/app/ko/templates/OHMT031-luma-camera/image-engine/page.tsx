@@ -6,14 +6,14 @@ import { LumaChrome } from "../_components/LumaChrome";
 const samples = [
   {
     label: "컬러",
-    title: "피부, 세라믹, 과일, 금속을 한 빛 안에 둡니다.",
+    title: "피부, 세라믹, 과일, 금속이 같은 빛 안에 머뭅니다.",
     text: "따뜻한 자연광은 살리고, 색을 프리셋처럼 한쪽으로 밀지 않습니다.",
     image: "/templates/luma-camera/engine-color-grid.jpg?v=20260702f",
   },
   {
     label: "저조도",
-    title: "창밖의 푸른빛과 램프의 온도를 같이 둡니다.",
-    text: "그림자는 보이게 두고, 장면에 필요한 만큼의 입자만 남깁니다.",
+    title: "창밖의 푸른빛과 램프의 온도를 함께 둡니다.",
+    text: "그림자는 보이게 두고, 장면에 어울리는 만큼의 입자만 남깁니다.",
     image: "/templates/luma-camera/engine-lowlight-room.jpg?v=20260702f",
   },
   {
@@ -27,7 +27,7 @@ const samples = [
 const profileNotes = [
   {
     title: "기본 프로파일",
-    text: "피부, 음식, 돌, 천, 나무를 자주 찍는 사람을 위한 웜 베이스입니다.",
+    text: "피부, 음식, 돌, 천, 나무를 자주 찍는 사람을 위한 따뜻한 출발점입니다.",
   },
   {
     title: "저조도 프로파일",
@@ -40,9 +40,9 @@ const profileNotes = [
 ];
 
 const workflow = [
-  "중립 프로파일로 찍거나 저장한 컬러 레시피에서 시작합니다.",
+  "중립 프로파일로 찍거나 저장해둔 컬러 레시피에서 시작합니다.",
   "초점, 렌즈, 시간, 위치를 기억이 선명할 때 남깁니다.",
-  "비슷한 빛과 장소를 나중에 찾을 수 있게 컬렉션으로 묶습니다.",
+  "비슷한 빛과 장소를 나중에 다시 찾을 수 있게 컬렉션으로 묶습니다.",
 ];
 
 export default function ImageEnginePage() {
@@ -91,7 +91,7 @@ export default function ImageEnginePage() {
             </div>
             <div>
               <Smartphone size={26} strokeWidth={1.5} />
-              <h2 className="mt-5 text-3xl font-bold leading-[1.08] tracking-[-0.035em]">레시피는 사진 옆에 둡니다.</h2>
+              <h2 className="mt-5 text-3xl font-bold leading-[1.08] tracking-[-0.035em]">레시피는 사진 곁에 둡니다.</h2>
             </div>
             <div className="flex items-end">
               <Link href="/ko/templates/OHMT031-luma-camera/shop" className="inline-flex items-center gap-2 bg-white px-6 py-3 text-sm font-bold text-[var(--luma-ink)]">

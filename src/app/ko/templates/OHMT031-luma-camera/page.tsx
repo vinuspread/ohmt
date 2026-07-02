@@ -7,23 +7,23 @@ import { ArrowRight, Focus, Moon, Smartphone, Sparkles } from "lucide-react";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
 
 const moments = [
-  { label: "아침 거리", value: "1/500", detail: "손이 올라가기 전에 켜지고, 셔터음은 작게 남습니다." },
-  { label: "스튜디오", value: "45 MP", detail: "작은 오브젝트를 잘라도 표면과 색이 버팁니다." },
-  { label: "블루아워", value: "ISO 12800", detail: "노이즈를 밀어 없애기보다 빛의 온도를 남깁니다." },
+  { label: "아침 거리", value: "1/500", detail: "손이 올라가기도 전에 켜지고, 셔터음은 짧게 사라집니다." },
+  { label: "스튜디오", value: "45 MP", detail: "작은 오브젝트를 잘라 써도 표면과 색이 무너지지 않습니다." },
+  { label: "블루아워", value: "ISO 12800", detail: "노이즈를 지우기보다 그 시간의 빛을 남깁니다." },
 ];
 
 const products = [
   {
     name: "LUMA One",
     price: "$1,890",
-    note: "외출할 때 망설이지 않는 기본 바디",
+    note: "가방에 넣을지 고민하지 않는 기본 바디",
     spec: "28mm 고정 렌즈",
     image: "/templates/luma-camera/product-one.jpg?v=20260702e",
   },
   {
     name: "LUMA One Pro",
     price: "$2,460",
-    note: "작업대와 여행에 맞춘 필드 키트",
+    note: "작업대와 여행에서 손에 안정적으로 걸리는 필드 키트",
     spec: "28mm 렌즈 + 그립",
     image: "/templates/luma-camera/product-pro.jpg?v=20260702e",
   },
@@ -32,22 +32,22 @@ const products = [
 const scenes = [
   {
     title: "아침 거리",
-    text: "코트 소매 밖으로 꺼내는 시간이 짧고, 셔터 소리는 길을 방해하지 않습니다.",
+    text: "코트 소매 밖으로 꺼내는 시간이 짧고, 셔터 소리는 길 위의 흐름을 깨지 않습니다.",
     image: "/templates/luma-camera/morning-street.jpg?v=20260702e",
   },
   {
     title: "스튜디오 테이블",
-    text: "세라믹, 과일, 종이 패키지를 한 테이블에서 찍어도 색이 따로 놀지 않습니다.",
+    text: "세라믹, 과일, 종이 패키지가 한 테이블에 있어도 색이 따로 떠 보이지 않습니다.",
     image: "/templates/luma-camera/studio-table.jpg?v=20260702e",
   },
   {
     title: "블루아워",
-    text: "창밖의 푸른빛과 실내 조명의 온기를 한쪽으로 뭉개지 않습니다.",
+    text: "창밖의 푸른빛과 실내 조명의 온기를 한 색으로 뭉개지 않습니다.",
     image: "/templates/luma-camera/blue-hour.jpg?v=20260702e",
   },
   {
     title: "조용한 저녁",
-    text: "카메라가 커지는 순간 달라지는 식탁의 공기를 작게 건드립니다.",
+    text: "큰 장비가 들어오면 달라지는 식탁의 공기를 작게 건드립니다.",
     image: "/templates/luma-camera/quiet-dinner.jpg?v=20260702e",
   },
 ];
@@ -55,19 +55,19 @@ const scenes = [
 const imageQuality = [
   {
     label: "컬러",
-    title: "색을 많이 만지지 않아도 되는 파일",
+    title: "보정이 덜 필요한 색",
     text: "피부, 세라믹, 과일, 천이 같은 빛 안에 있을 때 서로의 색을 밀어내지 않습니다.",
     image: "/templates/luma-camera/sample-color.jpg?v=20260702e",
   },
   {
     label: "저조도",
-    title: "저조도에서도 방의 온도를 남깁니다",
-    text: "블루아워와 실내 조명에서 입자를 조금 남겨두고, 그림자를 검게 눌러버리지 않습니다.",
+    title: "어두워도 방의 온도는 남게",
+    text: "블루아워와 실내 조명에서 입자를 조금 남기고, 그림자를 검게 눌러버리지 않습니다.",
     image: "/templates/luma-camera/sample-lowlight.jpg?v=20260702e",
   },
   {
     label: "디테일",
-    title: "질감은 선명하게, 가장자리는 차분하게",
+    title: "질감은 또렷하게, 가장자리는 차분하게",
     text: "천, 세라믹, 종이, 금속의 표면을 과한 샤픈 효과 없이 읽히게 둡니다.",
     image: "/templates/luma-camera/sample-detail.jpg?v=20260702e",
   },
@@ -95,7 +95,7 @@ export default function LumaCameraPage() {
     "@context": "https://schema.org",
     "@type": "OnlineStore",
     name: "LUMA Camera",
-    description: "작은 바디, 자연스러운 컬러, 촬영 노트를 중심에 둔 컴팩트 카메라 템플릿.",
+    description: "작은 바디와 자연스러운 색, 촬영 노트까지 함께 남기는 컴팩트 카메라 템플릿.",
     url: "https://ohmytemplate.com/ko/templates/OHMT031-luma-camera",
     image: "https://ohmytemplate.com/templates/luma-camera/og-image.jpg?v=20260702e",
     brand: {
@@ -152,10 +152,10 @@ export default function LumaCameraPage() {
             <div className="absolute left-0 top-0 p-6 text-white md:p-10 lg:p-14">
               <p className="mb-5 text-xs font-bold uppercase tracking-[0.22em] text-white/62">Compact image system</p>
               <h1 className="max-w-[720px] text-[clamp(2.6rem,5vw,5.4rem)] font-bold leading-[1.02] tracking-[-0.04em]">
-                작은 바디. 오래 남는 장면.
+                작은 바디.<br />오래 남는 장면.
               </h1>
               <p className="mt-6 max-w-[560px] text-base leading-7 text-white/72 md:text-lg">
-                주머니에 들어가는 바디로 아침 거리, 작업대, 저녁 식탁까지 기록합니다. 색은 덜 만지고, 촬영 메모는 사진 옆에 남깁니다.
+                주머니에 들어가는 바디로 아침 거리, 작업대, 저녁 식탁까지 자연스럽게 기록합니다. 색은 덜 만지고, 촬영 메모는 사진 곁에 남깁니다.
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Link href="/ko/templates/OHMT031-luma-camera/shop" className="inline-flex items-center justify-center gap-2 bg-white px-6 py-3 text-sm font-bold text-[var(--luma-ink)] transition-transform duration-200 ease-out active:scale-[0.97]">
@@ -202,10 +202,10 @@ export default function LumaCameraPage() {
               <div className="max-w-2xl">
                 <Focus size={25} strokeWidth={1.5} />
                 <h2 className="mt-6 text-[clamp(1.8rem,3vw,3.35rem)] font-bold leading-[1.08] tracking-[-0.035em]">
-                  큰 카메라를 꺼내지 않아도 남는 파일.
+                  큰 카메라 없이도 오래 쓰는 파일.
                 </h2>
                 <p className="mt-6 text-lg leading-8 text-[var(--luma-muted)]">
-                  색, 저조도, 디테일을 따로 과장하지 않습니다. 찍은 뒤 바로 쓸 수 있는 기준을 맞추고, 왜 찍었는지는 사진 옆에 남깁니다.
+                  색, 저조도, 디테일을 따로 과장하지 않습니다. 찍은 뒤 바로 고를 수 있는 기준을 맞추고, 왜 찍었는지는 사진 곁에 남깁니다.
                 </p>
               </div>
             </Reveal>
@@ -230,9 +230,9 @@ export default function LumaCameraPage() {
                 <div className="grid gap-5 lg:grid-cols-[1.08fr_0.92fr]">
                   <div className="bg-[var(--luma-dark)] p-6 text-white md:p-8">
                     <Smartphone size={22} strokeWidth={1.5} />
-                    <h3 className="mt-5 text-2xl font-bold leading-[1.08] tracking-[-0.04em]">사진 옆에 메모가 남습니다.</h3>
+                    <h3 className="mt-5 text-2xl font-bold leading-[1.08] tracking-[-0.04em]">사진 곁에 메모가 남습니다.</h3>
                     <p className="mt-4 max-w-xl text-sm leading-6 text-white/68">
-                      렌즈, 색 조합, 장소, 묶어둘 컬렉션을 한 번에 남깁니다. 나중에 파일명만 보고 찾는 시간을 줄입니다.
+                      렌즈, 색 조합, 장소, 묶어둘 컬렉션을 한 번에 남깁니다. 나중에 파일명만 뒤지는 시간을 줄입니다.
                     </p>
                   </div>
                   <div className="grid bg-[var(--luma-bg)] sm:grid-cols-3 lg:grid-cols-1">
@@ -258,7 +258,7 @@ export default function LumaCameraPage() {
                   장면이 카메라를 의식하기 전에.
                 </h2>
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--luma-muted)]">
-                  꺼내는 시간이 짧고, 바디가 작아 방의 분위기를 덜 건드립니다. 사진은 장면이 바뀌기 전에 남습니다.
+                  꺼내는 시간이 짧고, 바디가 작아 방의 분위기를 덜 건드립니다. 사진은 장면이 흐트러지기 전에 남습니다.
                 </p>
               </div>
             </Reveal>
@@ -319,7 +319,7 @@ export default function LumaCameraPage() {
                   앱은 사진 옆에 이유를 남깁니다.
                 </h2>
                 <p className="mt-6 max-w-xl text-lg leading-8 text-white/62">
-                  렌즈 메모, 컬러 레시피, 위치, 컬렉션을 사진과 함께 둡니다. 한 달 뒤에도 어떤 빛에서 찍었는지 바로 알 수 있습니다.
+                  렌즈 메모, 컬러 레시피, 위치, 컬렉션을 사진과 함께 둡니다. 한 달 뒤에도 어떤 빛에서 찍었는지 바로 떠올릴 수 있습니다.
                 </p>
               </div>
             </Reveal>
@@ -338,11 +338,11 @@ export default function LumaCameraPage() {
                 <div>
                   <Sparkles size={24} strokeWidth={1.5} />
                   <h2 className="mt-5 max-w-3xl text-[clamp(1.8rem,3vw,3.35rem)] font-bold leading-[1.08] tracking-[-0.035em]">
-                    자주 들고 나갈 카메라를 고르세요.
+                    자주 들고 나갈 쪽을 고르세요.
                   </h2>
                 </div>
                 <p className="max-w-sm text-sm leading-6 text-[var(--luma-muted)]">
-                  One은 매일 들기 좋고, Pro는 작업대에서 안정적입니다. 둘 다 같은 색과 노트 흐름을 씁니다.
+                  One은 매일 들기 좋고, Pro는 작업대에서 안정적입니다. 색과 노트 흐름은 두 바디 모두 같습니다.
                 </p>
               </div>
             </Reveal>

@@ -4,9 +4,9 @@ import { ArrowRight, Smartphone } from "lucide-react";
 import { LumaChrome } from "../_components/LumaChrome";
 
 const notes = [
-  "컬러 레시피를 사진 옆에 둡니다.",
+  "컬러 레시피를 사진 곁에 둡니다.",
   "초점과 렌즈 메모를 바로 남깁니다.",
-  "흩어진 촬영을 쓸 수 있는 묶음으로 정리합니다.",
+  "흩어진 촬영을 다시 찾기 쉬운 묶음으로 정리합니다.",
 ];
 
 const archiveSteps = [
@@ -33,7 +33,7 @@ export default function StoriesPage() {
             <div>
               <Smartphone size={30} strokeWidth={1.5} />
               <h1 className="mt-6 max-w-3xl text-[clamp(2.35rem,5vw,5.4rem)] font-bold leading-[1.02] tracking-[-0.04em]">
-                사진을 찍은 이유가 같이 남습니다.
+                사진을 찍은 이유까지 같이 남습니다.
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-8 text-white/62">
                 노트, 레시피, 컬렉션을 사진 가까이에 둡니다. 나중에 파일명만 보고 찾는 일을 줄입니다.
@@ -78,9 +78,9 @@ export default function StoriesPage() {
         <section className="px-4 pb-24 md:px-8 md:pb-32">
           <div className="mx-auto grid max-w-[1380px] gap-4 lg:grid-cols-[0.85fr_1.15fr]">
             <div className="bg-[var(--luma-dark)] p-8 text-white md:p-10">
-              <h2 className="text-3xl font-bold leading-[1.08] tracking-[-0.035em]">사진을 관리하기보다, 다시 찾기 쉽게.</h2>
+              <h2 className="text-3xl font-bold leading-[1.08] tracking-[-0.035em]">관리보다, 다시 찾기 쉽게.</h2>
               <p className="mt-5 text-sm leading-6 text-white/64">
-                앱은 필요한 메모만 보관합니다. 촬영한 빛, 장소, 이유를 사진 옆에서 확인합니다.
+                앱은 필요한 메모만 보관합니다. 촬영한 빛, 장소, 이유를 사진 곁에서 확인합니다.
               </p>
             </div>
             <div className="relative min-h-[360px] overflow-hidden">
