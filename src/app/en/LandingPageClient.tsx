@@ -788,7 +788,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                     <div className="flex items-start justify-between gap-4">
                       <div className="space-y-1">
                         <span className="text-[0.65rem] text-zinc-400 font-bold uppercase tracking-wider dark:text-zinc-500">{descModalTemplate.category}</span>
-                        <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100">{descModalTemplate.name}</h3>
+                        <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">{descModalTemplate.name}</h3>
                       </div>
                       <button
                         type="button"
@@ -802,16 +802,16 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                     {descModalTemplate.applicableIndustries.length > 0 && (
                       <div className="space-y-1">
                         <p className="text-[0.65rem] text-zinc-400 font-bold uppercase tracking-wider dark:text-zinc-500">Applicable Industries</p>
-                        <p className="text-sm font-medium" style={{ color: "#F1B100" }}>
+                        <p className="text-base font-medium" style={{ color: "#F1B100" }}>
                           {descModalTemplate.applicableIndustries.join(", ")}
                         </p>
                       </div>
                     )}
-                    <p className="text-sm text-zinc-900 leading-relaxed font-normal whitespace-pre-line dark:text-white">
+                    <p className="text-base text-zinc-900 leading-relaxed font-normal whitespace-pre-line dark:text-white">
                       {descModalTemplate.desc}
                     </p>
                     {descModalTemplate.hashtags.length > 0 && (
-                      <p className="text-xs text-zinc-400 dark:text-zinc-500">
+                      <p className="text-base text-zinc-400 dark:text-zinc-500">
                         {descModalTemplate.hashtags.join(" ")}
                       </p>
                     )}
