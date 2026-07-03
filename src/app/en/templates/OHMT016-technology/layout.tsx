@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import './theme.css'
 import { Inter, Inter_Tight } from 'next/font/google'
 
