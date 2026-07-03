@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Instrument_Sans } from "next/font/google";
 import "./theme.css";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
