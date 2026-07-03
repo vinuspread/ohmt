@@ -4,7 +4,7 @@ import fs from "fs";
 import path from "path";
 
 const ZIPS_DIR = "E:\\Work\\ohmytemplate\\zips";
-const PROJECT_DIR = "E:\\Work\\ohmytemplate";
+const PROJECT_DIR = process.env.OHMT_PROJECT_DIR ?? process.cwd();
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const LEGACY_SLUGS = [
