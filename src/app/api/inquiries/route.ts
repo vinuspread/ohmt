@@ -163,7 +163,10 @@ export async function POST(request: Request) {
     .select("id")
     .single();
 
-  if (error) return NextResponse.json({ error: "문의 저장에 실패했습니다." }, { status: 500 });
+  if (error) {
+    console.error("[Inquiries] insert error:", JSON.stringify(error));
+    return NextResponse.json({ error: "문의 저장에 실패했습니다." }, { status: 500 });
+  }
 
   // 이메일 알림 (실패해도 문의 저장은 성공으로 처리)
   console.log("[Email] KEY:", process.env.RESEND_API_KEY ? "SET" : "MISSING", "/ NOTIFY:", process.env.NOTIFY_EMAIL ?? "MISSING");
