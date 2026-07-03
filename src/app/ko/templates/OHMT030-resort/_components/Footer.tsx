@@ -7,14 +7,11 @@ export function Footer() {
           className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black/30" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center gap-6">
-          <p className="text-[13px] font-medium text-white/70 tracking-widest uppercase">
-            지금 예약하세요
-          </p>
-          <h2 className="text-[clamp(32px,4vw,56px)] font-semibold text-white leading-[1.1] tracking-[-0.02em]">
-            해안의 이야기를 시작하세요
+            <h2 className="text-[clamp(32px,4vw,56px)] font-semibold text-white leading-[1.1] tracking-[-0.02em]">
+              해안의 이야기를 시작하세요
           </h2>
           <a href="#"
-            className="inline-block rounded-full bg-white px-8 py-3.5 text-[var(--text-dark)] text-[15px] font-medium hover:opacity-85 transition-opacity">
+            className="inline-block rounded-full bg-white px-8 py-3.5 text-[var(--text-dark)] text-[15px] font-medium hover:opacity-85 transition-opacity focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]">
             예약하기
           </a>
         </div>
@@ -73,7 +70,7 @@ export function Footer() {
               <div className="flex flex-col gap-3">
                 {["Facebook", "Instagram", "Pinterest"].map((l) => (
                   <a key={l} href="#"
-                    className="text-[14px] text-white/60 hover:text-white transition-colors">
+                    className="text-[14px] text-white/60 hover:text-white transition-colors focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]">
                     {l}
                   </a>
                 ))}

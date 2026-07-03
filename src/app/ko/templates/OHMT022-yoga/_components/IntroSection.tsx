@@ -8,7 +8,7 @@ export default function IntroSection() {
            style={{ fontFamily: "var(--font-body)" }}>
           우리의 철학
         </p>
-        <h2 className="text-[clamp(2.4rem,3.8vw,4.2rem)] font-normal text-white leading-[1.08] tracking-[-0.02em]"
+        <h2 className="text-[clamp(2.4rem,3.8vw,4.2rem)] font-normal text-white leading-[1.1] tracking-[-0.02em]"
             style={{ fontFamily: "var(--font-heading)" }}>
           움직임의
           <br />
@@ -16,7 +16,7 @@ export default function IntroSection() {
         </h2>
         <p className="mt-8 text-[16px] text-white/50 leading-[1.9] max-w-[360px] font-normal"
            style={{ fontFamily: "var(--font-body)" }}>
-          진정한 웰니스는 내면에서 시작됩니다. 움직임은 최고의 명약이며, 매일의 수련은 균형을 회복하고 자신을 다시 연결하도록 이끌어 줍니다.
+          웰니스는 거창한 결심보다 매일의 호흡에서 시작됩니다. 천천히 움직이며 몸의 균형을 다시 느껴보세요.
         </p>
         <div className="mt-10 pt-8 border-t border-white/10">
           <Link href="/ko/templates/OHMT022-yoga/about"

@@ -18,37 +18,42 @@ const products = [
     price: "$1,890",
     note: "가방에 넣을지 고민하지 않는 기본 바디",
     spec: "28mm 고정 렌즈",
-    image: "/templates/luma-camera/product-one.jpg?v=20260702e",
+    image: "/templates/OHMT031-luma-camera/product-one.jpg?v=20260702e",
   },
   {
     name: "LUMA One Pro",
     price: "$2,460",
     note: "작업대와 여행에서 손에 안정적으로 걸리는 필드 키트",
     spec: "28mm 렌즈 + 그립",
-    image: "/templates/luma-camera/product-pro.jpg?v=20260702e",
+    image: "/templates/OHMT031-luma-camera/product-pro.jpg?v=20260702e",
   },
 ];
 
-const scenes = [
+const photoSamples = [
   {
-    title: "아침 거리",
-    text: "코트 소매 밖으로 꺼내는 시간이 짧고, 셔터 소리는 길 위의 흐름을 깨지 않습니다.",
-    image: "/templates/luma-camera/morning-street.jpg?v=20260702e",
+    title: "창가 인물",
+    text: "피부를 밀어 올리지 않고, 니트와 세라믹의 톤까지 같은 빛 안에 둡니다.",
+    image: "/templates/OHMT031-luma-camera/sample-portrait.png?v=20260703a",
   },
   {
-    title: "스튜디오 테이블",
-    text: "세라믹, 과일, 종이 패키지가 한 테이블에 있어도 색이 따로 떠 보이지 않습니다.",
-    image: "/templates/luma-camera/studio-table.jpg?v=20260702e",
+    title: "블루아워 풍경",
+    text: "하늘의 푸른 층과 도시의 작은 불빛을 과한 HDR 없이 분리합니다.",
+    image: "/templates/OHMT031-luma-camera/sample-landscape.png?v=20260703a",
   },
   {
-    title: "블루아워",
-    text: "창밖의 푸른빛과 실내 조명의 온기를 한 색으로 뭉개지 않습니다.",
-    image: "/templates/luma-camera/blue-hour.jpg?v=20260702e",
+    title: "생활 정물",
+    text: "컵, 과일, 천처럼 자주 찍는 재료의 색을 과장하지 않고 맞춥니다.",
+    image: "/templates/OHMT031-luma-camera/sample-color.jpg?v=20260702e",
   },
   {
-    title: "조용한 저녁",
-    text: "큰 장비가 들어오면 달라지는 식탁의 공기를 작게 건드립니다.",
-    image: "/templates/luma-camera/quiet-dinner.jpg?v=20260702e",
+    title: "실내 저조도",
+    text: "푸른 창밖과 따뜻한 조명이 같은 프레임 안에서도 각자의 온도를 지킵니다.",
+    image: "/templates/OHMT031-luma-camera/sample-lowlight.jpg?v=20260702e",
+  },
+  {
+    title: "질감 클로즈업",
+    text: "천, 세라믹, 종이의 가장자리를 과하게 세우지 않고 표면만 또렷하게 남깁니다.",
+    image: "/templates/OHMT031-luma-camera/sample-detail.jpg?v=20260702e",
   },
 ];
 
@@ -57,19 +62,19 @@ const imageQuality = [
     label: "컬러",
     title: "보정이 덜 필요한 색",
     text: "피부, 세라믹, 과일, 천이 같은 빛 안에 있을 때 서로의 색을 밀어내지 않습니다.",
-    image: "/templates/luma-camera/sample-color.jpg?v=20260702e",
+    image: "/templates/OHMT031-luma-camera/engine-color-grid.jpg?v=20260702f",
   },
   {
     label: "저조도",
     title: "어두워도 방의 온도는 남게",
     text: "블루아워와 실내 조명에서 입자를 조금 남기고, 그림자를 검게 눌러버리지 않습니다.",
-    image: "/templates/luma-camera/sample-lowlight.jpg?v=20260702e",
+    image: "/templates/OHMT031-luma-camera/engine-lowlight-room.jpg?v=20260702f",
   },
   {
     label: "디테일",
     title: "질감은 또렷하게, 가장자리는 차분하게",
     text: "천, 세라믹, 종이, 금속의 표면을 과한 샤픈 효과 없이 읽히게 둡니다.",
-    image: "/templates/luma-camera/sample-detail.jpg?v=20260702e",
+    image: "/templates/OHMT031-luma-camera/engine-texture-close.jpg?v=20260702f",
   },
 ];
 
@@ -97,7 +102,7 @@ export default function LumaCameraPage() {
     name: "LUMA Camera",
     description: "작은 바디와 자연스러운 색, 촬영 노트까지 함께 남기는 컴팩트 카메라 템플릿.",
     url: "https://ohmytemplate.com/ko/templates/OHMT031-luma-camera",
-    image: "https://ohmytemplate.com/templates/luma-camera/og-image.jpg?v=20260702e",
+    image: "https://ohmytemplate.com/templates/OHMT031-luma-camera/og-image.jpg?v=20260702e",
     brand: {
       "@type": "Brand",
       name: "OHMT",
@@ -111,7 +116,7 @@ export default function LumaCameraPage() {
         "@type": "Product",
         name: product.name,
         description: `${product.note}. ${product.spec}.`,
-        image: "https://ohmytemplate.com/templates/luma-camera/hero-camera.jpg?v=20260702e",
+        image: "https://ohmytemplate.com/templates/OHMT031-luma-camera/hero-camera.jpg?v=20260702e",
       },
     })),
   };
@@ -147,7 +152,7 @@ export default function LumaCameraPage() {
             transition={{ duration: 0.75, ease: EASE }}
             className="relative mx-auto min-h-[76dvh] max-w-[1380px] overflow-hidden bg-[var(--luma-dark)] shadow-2xl shadow-black/12"
           >
-            <Image unoptimized src="/templates/luma-camera/hero-camera.jpg?v=20260702e" alt="LUMA 컴팩트 카메라 제품 이미지" fill priority className="object-cover" sizes="100vw" />
+            <Image unoptimized src="/templates/OHMT031-luma-camera/hero-camera.jpg?v=20260702e" alt="LUMA 컴팩트 카메라 제품 이미지" fill priority className="object-cover" sizes="100vw" />
             <div className="absolute inset-0 bg-gradient-to-br from-black/76 via-black/30 to-black/5" />
             <div className="absolute left-0 top-0 p-6 text-white md:p-10 lg:p-14">
               <p className="mb-5 text-xs font-bold uppercase tracking-[0.22em] text-white/62">Compact image system</p>
@@ -255,25 +260,25 @@ export default function LumaCameraPage() {
             <Reveal>
               <div className="max-w-3xl">
                 <h2 className="text-[clamp(1.8rem,3vw,3.35rem)] font-bold leading-[1.08] tracking-[-0.035em]">
-                  장면이 카메라를 의식하기 전에.
+                  카메라보다 먼저 보여야 하는 것.
                 </h2>
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--luma-muted)]">
-                  꺼내는 시간이 짧고, 바디가 작아 방의 분위기를 덜 건드립니다. 사진은 장면이 흐트러지기 전에 남습니다.
+                  인물의 피부톤, 풍경의 원경, 실내의 어둠, 가까운 표면까지 확인합니다. 바디를 반복해서 보여주기보다 LUMA가 남기는 파일의 성격을 먼저 보여줍니다.
                 </p>
               </div>
             </Reveal>
 
-            <div className="mt-14 grid gap-4 md:grid-cols-2">
-              {scenes.map((scene, index) => (
-                <Reveal key={scene.title} delay={index * 0.05}>
+            <div className="mt-14 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+              {photoSamples.map((sample, index) => (
+                <Reveal key={sample.title} delay={index * 0.05}>
                   <article className="group relative aspect-[7/5] overflow-hidden bg-[var(--luma-dark)] shadow-xl shadow-black/[0.06]">
                     <div className="absolute inset-0">
-                      <Image unoptimized src={scene.image} alt={`${scene.title} 촬영 장면의 LUMA 카메라`} fill className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" sizes="(min-width: 768px) 50vw, 100vw" />
+                      <Image unoptimized src={sample.image} alt={`LUMA로 촬영한 ${sample.title} 샘플`} fill className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" sizes="(min-width: 1024px) 33vw, 100vw" />
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/72 via-black/16 to-transparent" />
                     <div className="absolute bottom-0 left-0 max-w-xl p-6 text-white md:p-8">
-                      <h3 className="text-2xl font-bold tracking-[-0.04em]">{scene.title}</h3>
-                      <p className="mt-3 text-sm leading-6 text-white/72">{scene.text}</p>
+                      <h3 className="text-2xl font-bold tracking-[-0.04em]">{sample.title}</h3>
+                      <p className="mt-3 text-sm leading-6 text-white/72">{sample.text}</p>
                     </div>
                   </article>
                 </Reveal>
@@ -286,7 +291,7 @@ export default function LumaCameraPage() {
           <div className="mx-auto grid max-w-[1380px] gap-4 lg:grid-cols-[1fr_0.78fr]">
             <Reveal>
               <div className="group relative min-h-[620px] overflow-hidden bg-[var(--luma-dark)]">
-                <Image unoptimized src="/templates/luma-camera/engine-lowlight-room.jpg?v=20260702f" alt="따뜻한 실내 조명과 푸른 창밖 빛의 LUMA 저조도 샘플" fill className="object-cover transition-transform duration-700 ease-out group-hover:scale-105" sizes="(min-width: 1024px) 58vw, 100vw" />
+                <Image unoptimized src="/templates/OHMT031-luma-camera/engine-lowlight-room.jpg?v=20260702f" alt="따뜻한 실내 조명과 푸른 창밖 빛의 LUMA 저조도 샘플" fill className="object-cover transition-transform duration-700 ease-out group-hover:scale-105" sizes="(min-width: 1024px) 58vw, 100vw" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                 <div className="absolute bottom-0 max-w-xl p-7 text-white md:p-10">
                   <Moon size={24} strokeWidth={1.5} />
@@ -298,12 +303,12 @@ export default function LumaCameraPage() {
             <div className="grid gap-4">
               <Reveal delay={0.08}>
                 <div className="relative min-h-[300px] overflow-hidden bg-white">
-                  <Image unoptimized src="/templates/luma-camera/body-detail.jpg?v=20260702e" alt="LUMA 카메라 바디와 렌즈 디테일" fill className="object-cover" sizes="(min-width: 1024px) 40vw, 100vw" />
+                  <Image unoptimized src="/templates/OHMT031-luma-camera/body-detail.jpg?v=20260702e" alt="LUMA 카메라 바디와 렌즈 디테일" fill className="object-cover" sizes="(min-width: 1024px) 40vw, 100vw" />
                 </div>
               </Reveal>
               <Reveal delay={0.12}>
                 <div className="relative min-h-[300px] overflow-hidden bg-white">
-                  <Image unoptimized src="/templates/luma-camera/app-insight.jpg?v=20260702e" alt="LUMA 앱과 카메라" fill className="object-cover" sizes="(min-width: 1024px) 40vw, 100vw" />
+                  <Image unoptimized src="/templates/OHMT031-luma-camera/app-insight.jpg?v=20260702e" alt="LUMA 앱과 카메라" fill className="object-cover" sizes="(min-width: 1024px) 40vw, 100vw" />
                 </div>
               </Reveal>
             </div>
@@ -325,7 +330,7 @@ export default function LumaCameraPage() {
             </Reveal>
             <Reveal delay={0.1}>
               <div className="relative aspect-[4/3] overflow-hidden">
-                <Image unoptimized src="/templates/luma-camera/app-collection-view.jpg?v=20260702f" alt="LUMA 앱 컬렉션 화면과 카메라" fill className="object-cover" sizes="(min-width: 1024px) 48vw, 100vw" />
+                <Image unoptimized src="/templates/OHMT031-luma-camera/app-collection-view.jpg?v=20260702f" alt="LUMA 앱 컬렉션 화면과 카메라" fill className="object-cover" sizes="(min-width: 1024px) 48vw, 100vw" />
               </div>
             </Reveal>
           </div>

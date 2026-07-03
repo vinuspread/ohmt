@@ -19,10 +19,10 @@ export default function LatestNews() {
         >
           <div>
             <span className="text-sm font-medium tracking-[0.2em] text-[var(--color-primary)] uppercase">
-              Latest
+              DEV LOG & UPDATES
             </span>
             <h2 className="mt-2 font-[var(--font-heading)] text-4xl font-bold md:text-5xl">
-              최신 소식
+              최신 개발 소식
             </h2>
           </div>
           <Link

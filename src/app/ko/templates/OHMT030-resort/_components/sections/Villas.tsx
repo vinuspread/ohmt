@@ -25,7 +25,7 @@ export function Villas() {
               온전한 휴식과 머무름, 그리고 바다의 고요한 리듬에 집중할 수 있도록 설계했습니다.
             </p>
             <Link href={`${base}/#contact`}
-              className="inline-block rounded-full border border-white/50 px-6 py-3 text-white text-[15px] hover:bg-white/10 transition-all">
+              className="inline-block rounded-full border border-white/50 px-6 py-3 text-white text-[15px] hover:bg-white/10 transition-all focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]">
               문의하기
             </Link>
           </div>
@@ -41,7 +41,7 @@ export function Villas() {
                 </div>
                 <div className="flex-shrink-0">
                   <Link href={`${base}/#`}
-                    className="inline-flex items-center text-[var(--accent)] text-base hover:opacity-70 transition-opacity">
+                    className="inline-flex items-center text-[var(--accent)] text-base hover:opacity-70 transition-opacity focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]">
                     더 보기 &rarr;
                   </Link>
                 </div>

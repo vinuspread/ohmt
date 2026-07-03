@@ -7,22 +7,22 @@ const scenes = [
   {
     title: "아침 거리",
     text: "코트 곁에 두고 나가도 어색하지 않은, 하루가 굳기 전의 카메라.",
-    image: "/templates/luma-camera/scene-travel-morning.jpg?v=20260702f",
+    image: "/templates/OHMT031-luma-camera/scene-travel-morning.jpg?v=20260702f",
   },
   {
     title: "키친 카운터",
     text: "음식, 세라믹, 포장, 메모가 같은 작업대 위에 놓인 순간.",
-    image: "/templates/luma-camera/scene-kitchen-counter.jpg?v=20260702f",
+    image: "/templates/OHMT031-luma-camera/scene-kitchen-counter.jpg?v=20260702f",
   },
   {
     title: "작업실",
     text: "소재 샘플, 스케치, 작은 오브젝트를 큰 세팅 없이 기록합니다.",
-    image: "/templates/luma-camera/scene-workshop.jpg?v=20260702f",
+    image: "/templates/OHMT031-luma-camera/scene-workshop.jpg?v=20260702f",
   },
   {
     title: "조용한 저녁",
     text: "장비가 커지는 순간 분위기가 달라지는 방을 위한 작은 카메라.",
-    image: "/templates/luma-camera/quiet-dinner.jpg?v=20260702e",
+    image: "/templates/OHMT031-luma-camera/quiet-dinner.jpg?v=20260702e",
   },
 ];
 

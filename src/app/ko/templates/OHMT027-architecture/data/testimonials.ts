@@ -1,6 +1,22 @@
 export const testimonials = [
-  { quote: "Working with OHMT was unlike any other architectural experience. They listened, then created something we could never have imagined ourselves.", client: "Minjung Park", company: "Highland Villa Client" },
-  { quote: "The Civic Pavilion project exceeded every brief requirement. Their ability to translate community values into physical form is exceptional.", client: "Director Kim Sujin", company: "Seoul City Culture Division" },
-  { quote: "From concept to handover, the process was seamless. The result is a building that our employees are genuinely proud to work in.", client: "Lee Jungho", company: "Meridian Group CEO" },
-  { quote: "Our retreat has become the most important space in our lives. It gives us calm, perspective, and a deep sense of place.", client: "Yoon Hyerim & Choi Donghwan", company: "Coastal Retreat Clients" }
-]
+  {
+    quote: "OHMT와의 작업은 이전의 어떤 건축 경험과도 달랐습니다. 우리의 이야기를 오래 듣고, 우리가 상상하지 못한 공간으로 번역해주었습니다.",
+    client: "박민정",
+    company: "하이랜드 빌라 클라이언트",
+  },
+  {
+    quote: "시빅 파빌리온은 모든 요구 조건을 넘어섰습니다. 지역의 가치를 물리적인 공간으로 바꾸는 능력이 탁월했습니다.",
+    client: "김수진 디렉터",
+    company: "서울시 문화공간팀",
+  },
+  {
+    quote: "콘셉트부터 인도까지 과정이 매끄러웠습니다. 직원들이 자부심을 가지고 일하는 건물이 완성되었습니다.",
+    client: "이준호",
+    company: "메리디언 그룹 CEO",
+  },
+  {
+    quote: "우리의 리트리트는 삶에서 가장 중요한 공간이 되었습니다. 차분함과 시야, 그리고 장소에 대한 깊은 감각을 줍니다.",
+    client: "윤혜림 · 최동환",
+    company: "코스탈 리트리트 클라이언트",
+  },
+];

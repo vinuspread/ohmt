@@ -28,7 +28,7 @@ export default function ClassesContent() {
             <span className="inline-flex items-center justify-center bg-[var(--color-secondary)] text-white rounded-full px-5 py-2.5 text-xs font-bold uppercase tracking-wider leading-none mb-4">
               교육 프로그램
             </span>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mt-3 leading-none" style={{ fontFamily: "var(--font-heading)" }}>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mt-3 leading-[1.1]" style={{ fontFamily: "var(--font-heading)" }}>
               창의 클래스 둘러보기
             </h1>
           </motion.div>

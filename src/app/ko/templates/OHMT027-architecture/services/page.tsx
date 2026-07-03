@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture/services/page.tsx
+// src/app/ko/templates/OHMT027-architecture/services/page.tsx
 import React from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -11,18 +11,19 @@ import { CustomCursor } from "../_components/ui/CustomCursor";
 import { services } from "../data/services";
 
 export const metadata: Metadata = {
-  title: "Services - Architecture Portfolio - OHMT",
-  description: "Explore our professional disciplines, from high-end residential design and commercial architecture to interior planning.",
+  title: "서비스 - 건축 포트폴리오 - OHMT",
+  description: "하이엔드 주거 설계, 상업 건축, 인테리어 계획까지 OHMT의 전문 서비스를 소개합니다.",
   openGraph: {
-    title: "Services - Architecture Portfolio - OHMT",
-    description: "Explore our professional disciplines, from high-end residential design and commercial architecture to interior planning.",
-    url: "https://ohmytemplate.com/en/templates/OHMT027-architecture/services",
+    title: "서비스 - 건축 포트폴리오 - OHMT",
+    description: "하이엔드 주거 설계, 상업 건축, 인테리어 계획까지 OHMT의 전문 서비스를 소개합니다.",
+    url: "https://ohmytemplate.com/ko/templates/OHMT027-architecture/services",
     images: [{ url: "/templates/OHMT027-architecture/og-image.jpg" }],
   },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT027-architecture/services",
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT027-architecture/services",
     languages: {
       "en": "https://ohmytemplate.com/en/templates/OHMT027-architecture/services",
+      "ko": "https://ohmytemplate.com/ko/templates/OHMT027-architecture/services",
     },
   },
 };
@@ -31,10 +32,10 @@ export default function ServicesPage() {
   const baseRoute = "/ko/templates/OHMT027-architecture";
 
   const processes = [
-    { step: "01", name: "Consultation", desc: "We sit down to understand your aesthetic desires, space needs, and lifestyle aspirations." },
-    { step: "02", name: "Schematic Concept", desc: "Our team drafts initial layout options and raw material alignments for spatial mapping." },
-    { step: "03", name: "Detail Design", desc: "Micro-curating details, lighting plans, bespoke furniture curation, and documentation." },
-    { step: "04", name: "Execution", desc: "Rigorous oversight on site to ensure final construction perfectly matches the technical spec." },
+    { step: "01", name: "상담", desc: "취향, 공간의 필요, 생활 방식과 예산을 함께 확인합니다." },
+    { step: "02", name: "개념 설계", desc: "공간의 방향을 잡는 초기 배치와 재료 전략을 제안합니다." },
+    { step: "03", name: "상세 설계", desc: "디테일, 조명, 맞춤 가구, 시공 문서를 정밀하게 다듬습니다." },
+    { step: "04", name: "실행", desc: "현장에서 설계 의도가 정확히 구현되도록 면밀하게 감리합니다." },
   ];
 
   return (
@@ -48,13 +49,13 @@ export default function ServicesPage() {
             <ScrollReveal>
               <div className="space-y-6 max-w-4xl">
                 <span className="font-sans text-[11px] font-medium tracking-[0.15em] text-[#888888] uppercase block">
-                  CAPABILITIES
+                  역량
                 </span>
-                <h1 className="font-heading font-normal text-[48px] md:text-[64px] lg:text-[72px] leading-tight text-[#1A1A1A]">
-                  Our Services.
+                <h1 className="font-heading font-normal text-[48px] md:text-[64px] lg:text-[72px] leading-[1.1] text-[#1A1A1A]">
+                  서비스.
                 </h1>
                 <p className="font-heading font-normal text-[24px] md:text-[28px] leading-[1.5] text-[#888888] pt-4">
-                  We offer a complete suite of architectural services, shaped around structural excellence and premium materiality.
+                  구조적 완성도와 프리미엄 재료 감각을 중심으로 건축 전 과정을 설계합니다.
                 </p>
               </div>
             </ScrollReveal>
@@ -81,7 +82,7 @@ export default function ServicesPage() {
                       <span className="font-sans text-[11px] font-medium tracking-[0.15em] text-[#B07D4F] uppercase block">
                         {service.label}
                       </span>
-                      <h2 className="font-heading font-normal text-[32px] md:text-[36px] text-[#1A1A1A] leading-tight">
+                      <h2 className="font-heading font-normal text-[32px] md:text-[36px] text-[#1A1A1A] leading-[1.1]">
                         {service.name}
                       </h2>
                       <p className="font-sans text-[16px] leading-[1.7] text-[#888888]">
@@ -91,7 +92,7 @@ export default function ServicesPage() {
                       {/* Features List */}
                       <div className="pt-4">
                         <h4 className="font-sans text-[12px] font-semibold text-[#1A1A1A] tracking-wider uppercase mb-4">
-                          Core Features:
+                          주요 범위
                         </h4>
                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[14px] text-[#888888] font-sans">
                           {service.features.map((f, i) => (
@@ -115,7 +116,7 @@ export default function ServicesPage() {
               <ScrollReveal>
                 <div className="border-b border-[#E0E0E0] pb-8 mb-16">
                   <h2 className="font-heading font-normal text-[30px] md:text-[36px] text-[#1A1A1A]">
-                    Working Process.
+                    작업 과정.
                   </h2>
                 </div>
               </ScrollReveal>
@@ -144,18 +145,18 @@ export default function ServicesPage() {
           <section className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 text-center">
             <ScrollReveal>
               <div className="max-w-2xl mx-auto space-y-6">
-                <h2 className="font-heading font-normal text-[32px] md:text-[38px] text-[#1A1A1A] leading-tight">
-                  Ready to collaborate on your next space?
+                <h2 className="font-heading font-normal text-[32px] md:text-[38px] text-[#1A1A1A] leading-[1.1]">
+                  다음 공간을 함께 준비할까요?
                 </h2>
                 <p className="font-sans text-[15px] text-[#888888] leading-relaxed max-w-md mx-auto">
-                  Let's discuss how we can bring your architectural visions into reality.
+                  당신의 건축적 비전을 현실의 공간으로 옮기는 방법을 이야기해보세요.
                 </p>
                 <div className="pt-4">
                   <Link
                     href={`${baseRoute}/contact`}
                     className="inline-block bg-[#0A0A0A] text-white px-8 py-3.5 text-[14px] font-sans tracking-[0.08em] hover:bg-zinc-800 transition-colors"
                   >
-                    GET IN TOUCH
+                    문의하기
                   </Link>
                 </div>
               </div>

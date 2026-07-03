@@ -6,7 +6,7 @@ const services = [
   {
     icon: Truck,
     title: "무료배송",
-    description: "전 세계 $75 이상 주문 시 무료 배송.",
+    description: "전 세계 10만 원 이상 주문 시 무료 배송.",
   },
   {
     icon: RefreshCw,

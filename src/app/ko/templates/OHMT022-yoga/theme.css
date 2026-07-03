@@ -17,7 +17,9 @@
   --font-body: var(--font-pretendard);
 
   --transition-base: 400ms ease-out;
-}
+
+  --focus-ring: 2px solid var(--color-primary);
+  --focus-ring-offset: 2px;}
 
 body, * { word-break: keep-all; }
 

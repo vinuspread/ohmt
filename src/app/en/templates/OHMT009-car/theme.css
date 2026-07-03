@@ -21,8 +21,8 @@
   --color-info: #0284C7;
 
   /* Typography */
-  --font-heading: 'Bebas Neue', 'Inter', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
 
   /* Typography Scale */
   --font-size-h1: clamp(2.4rem, 5vw, 4rem);

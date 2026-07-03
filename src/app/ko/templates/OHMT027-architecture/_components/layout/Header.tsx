@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture/_components/layout/Header.tsx
+// src/app/ko/templates/OHMT027-architecture/_components/layout/Header.tsx
 "use client";
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
@@ -80,7 +80,7 @@ export function Header() {
             href={`${baseRoute}/contact`}
             className="bg-[#0A0A0A] text-white px-6 py-2.5 text-[13px] font-sans tracking-[0.08em] transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98] block"
           >
-            CONTACT
+            문의하기
           </Link>
         </div>
 
@@ -88,7 +88,7 @@ export function Header() {
         <button
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           className="md:hidden text-[#1A1A1A] focus:outline-none"
-          aria-label="Toggle Menu"
+          aria-label="메뉴 열기"
         >
           {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
         </button>
@@ -119,7 +119,7 @@ export function Header() {
             onClick={() => setIsMobileMenuOpen(false)}
             className="bg-[#0A0A0A] text-white py-3 text-center text-[14px] font-sans tracking-[0.08em]"
           >
-            CONTACT US
+            문의하기
           </Link>
         </div>
       )}

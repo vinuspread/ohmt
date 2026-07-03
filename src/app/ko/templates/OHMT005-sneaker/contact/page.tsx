@@ -23,7 +23,7 @@ function ContactPageContent() {
         <section className="pt-16 md:pt-32 pb-16 border-b border-black/10">
           <div className="max-w-[1440px] mx-auto px-6">
             <span className="text-[0.7rem] font-bold uppercase tracking-[0.25em] text-black/40 block mb-4">문의하기</span>
-            <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-black tracking-[-0.03em] uppercase leading-[1.5]">고객 문의</h1>
+            <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-black tracking-[-0.03em] uppercase leading-[1.1]">고객 문의</h1>
           </div>
         </section>
 
@@ -42,8 +42,8 @@ function ContactPageContent() {
                   <span className="mt-1 text-black/30"><Mail size={20} /></span>
                   <div>
                     <p className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-black/40 mb-1">이메일</p>
-                    <p className="text-[0.9rem] font-bold">hello@vinus.co</p>
-                    <p className="text-[0.82rem] text-black/50">반품 및 교환: returns@vinus.co</p>
+                    <p className="text-[0.9rem] font-bold">hello@ohmt.co</p>
+                    <p className="text-[0.82rem] text-black/50">반품 및 교환: returns@ohmt.co</p>
                   </div>
                 </div>
 

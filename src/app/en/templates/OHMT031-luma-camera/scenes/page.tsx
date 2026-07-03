@@ -7,22 +7,22 @@ const scenes = [
   {
     title: "Morning street",
     text: "A camera small enough to leave near the coat, ready before the day turns deliberate.",
-    image: "/templates/luma-camera/scene-travel-morning.jpg?v=20260702f",
+    image: "/templates/OHMT031-luma-camera/scene-travel-morning.jpg?v=20260702f",
   },
   {
     title: "Studio table",
     text: "Food, ceramics, packaging, and notes can stay on the same working surface.",
-    image: "/templates/luma-camera/scene-kitchen-counter.jpg?v=20260702f",
+    image: "/templates/OHMT031-luma-camera/scene-kitchen-counter.jpg?v=20260702f",
   },
   {
     title: "Workshop",
     text: "Material samples, sketches, and small objects can be archived without building a full setup.",
-    image: "/templates/luma-camera/scene-workshop.jpg?v=20260702f",
+    image: "/templates/OHMT031-luma-camera/scene-workshop.jpg?v=20260702f",
   },
   {
     title: "Quiet dinner",
     text: "A small camera for rooms where the mood changes when the gear gets too loud.",
-    image: "/templates/luma-camera/quiet-dinner.jpg?v=20260702e",
+    image: "/templates/OHMT031-luma-camera/quiet-dinner.jpg?v=20260702e",
   },
 ];
 

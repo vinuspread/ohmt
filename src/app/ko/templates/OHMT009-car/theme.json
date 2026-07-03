@@ -3,8 +3,8 @@
   "name": "Automotive Car",
   "name_ko": "오토모티브 카",
   "category": "corporate",
-  "description": "Premium automotive concept template built with Next.js. Showcase car models, technology, and brand heritage.",
-  "description_ko": "프리미엄 자동차 컨셉 템플릿. 차량 모델, 기술, 브랜드 헤리티지를 소개하세요.",
+  "description": "An automotive concept template for model showcases, technology pages, heritage storytelling, and high-impact product imagery with a premium showroom feel.",
+  "description_ko": "차량 모델, 기술 페이지, 브랜드 헤리티지, 임팩트 있는 제품 이미지를 프리미엄 쇼룸 감도로 구성한 자동차 컨셉 템플릿.",
   "mode": "dark",
   "theme": {
     "palette": {
@@ -24,13 +24,13 @@
     },
     "typography": {
       "heading": {
-        "font": "Bebas Neue",
+        "font": "Montserrat",
         "weight": "700",
         "tracking": "-0.03em",
         "style": "400"
       },
       "body": {
-        "font": "Inter",
+        "font": "Montserrat",
         "weight": "400",
         "leading": "1.6",
         "style": "300"

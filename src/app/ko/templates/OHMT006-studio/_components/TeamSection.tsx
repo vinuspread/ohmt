@@ -47,7 +47,7 @@ export function TeamSection() {
                 >
                     <span className="text-[13px] font-normal tracking-[3px] uppercase text-black/60">Team</span>
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-                        <h2 className="text-[30px] md:text-[48px] leading-[1.5] font-semibold tracking-[-1.44px] text-black break-keep [overflow-wrap:normal]">
+                        <h2 className="text-[30px] md:text-[48px] leading-[1.1] font-semibold tracking-[-1.44px] text-black break-keep [overflow-wrap:normal]">
                             디자인 너머의 주역들.
                         </h2>
                         <a href="/ko/templates/OHMT006-studio/about" className="h-[40px] px-[24px] border border-black rounded-[100px] flex items-center justify-center text-[12px] font-bold tracking-[2px] uppercase text-black hover:bg-black hover:text-white transition-colors shrink-0">
@@ -90,7 +90,7 @@ export function TeamSection() {
                                 viewport={{ once: true, margin: '-50px' }}
                                 className="flex flex-col items-center text-center"
                             >
-                                <h3 className="text-[24px] leading-[30px] font-bold tracking-[-0.72px] text-black mb-[8px]">
+                                <h3 className="text-[24px] leading-[1.1] font-bold tracking-[-0.72px] text-black mb-[8px]">
                                     {member.name}
                                 </h3>
                                 <span className="text-[13px] font-normal tracking-0 uppercase text-black/60">

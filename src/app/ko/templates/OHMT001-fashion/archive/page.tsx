@@ -14,7 +14,7 @@ const SEASONS = [
     id: "ss26",
     label: "SS26 — 봄/여름",
     title: "첫 번째 빛",
-    image: "/templates/fashion/exclusive-custom.jpg",
+    image: "/templates/OHMT001-fashion/exclusive-custom.jpg",
     description:
       "구조와 유동성의 긴장 속에서 탄생한 데뷔 컬렉션. 테일러드 실루엣이 드레이프 오간자와 만나 통제된 부드러움을 탐구합니다.",
     year: "2026",
@@ -23,7 +23,7 @@ const SEASONS = [
     id: "aw25",
     label: "AW25 — 가을/겨울",
     title: "콘크리트 정원",
-    image: "/templates/fashion/branding-custom.jpg",
+    image: "/templates/OHMT001-fashion/branding-custom.jpg",
     description:
       "인간의 손길로 부드러워진 브루탈리스트 형태. 울, 가죽, 생지 가장자리로 정의된, 보호와 노출 사이를 걷는 시즌.",
     year: "2025",
@@ -32,7 +32,7 @@ const SEASONS = [
     id: "core",
     label: "코어 시리즈",
     title: "영구적 대상",
-    image: "/templates/fashion/hero-custom.jpg",
+    image: "/templates/OHMT001-fashion/hero-custom.jpg",
     description:
       "기초. 한 시즌이 아닌 평생을 위해 디자인된 의복. 모든 스티치와 솔기, 실루엣이 본질적 형태로 정제되었습니다.",
     year: "2025",
@@ -41,7 +41,7 @@ const SEASONS = [
     id: "limited",
     label: "리미티드 드롭",
     title: "모뉴먼트",
-    image: "/templates/fashion/exclusive-lifestyle.png",
+    image: "/templates/OHMT001-fashion/exclusive-lifestyle.png",
     description:
       "의복과 조각의 경계를 탐구한 실험적 캡슐. 전 세계 50피스 한정 에디션으로 제작되었습니다.",
     year: "2024",
@@ -57,7 +57,7 @@ function PageContent() {
         {/* Hero */}
         <section className="relative h-[40vh] md:h-[50vh] overflow-hidden flex items-center justify-center pt-14 md:pt-20">
           <img
-            src="/templates/fashion/archive-hero.jpg"
+            src="/templates/OHMT001-fashion/archive-hero.jpg"
             alt="아카이브"
             className="absolute inset-0 w-full h-full object-cover brightness-[0.35]"
           />

@@ -9,12 +9,12 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 const products = [
-  { name: "Daily Radiance Serum", price: "$78", tag: "Best Seller", image: "/templates/OHMT010-cosmetic/cosmetic-1.jpg" },
-  { name: "Vitamin C Brightening Cream", price: "$64", tag: "New", image: "/templates/OHMT010-cosmetic/cosmetic-2.png" },
-  { name: "Hydra-Glow Moisturizer", price: "$52", tag: "", image: "/templates/OHMT010-cosmetic/cosmetic-3.jpg" },
-  { name: "Retinol Renewal Oil", price: "$89", tag: "Premium", image: "/templates/OHMT010-cosmetic/cosmetic-4.jpg" },
-  { name: "Gentle Cleansing Balm", price: "$38", tag: "", image: "/templates/OHMT010-cosmetic/cosmetic-5.jpg" },
-  { name: "Overnight Recovery Mask", price: "$72", tag: "Popular", image: "/templates/OHMT010-cosmetic/cosmetic-1.jpg" }
+  { name: "데일리 래디언스 세럼", price: "₩78,000", tag: "베스트셀러", image: "/templates/OHMT010-cosmetic/serum-product.png" },
+  { name: "비타민 C 브라이트닝 크림", price: "₩64,000", tag: "신제품", image: "/templates/OHMT010-cosmetic/cream-product.png" },
+  { name: "하이드라 글로우 모이스처라이저", price: "₩52,000", tag: "", image: "/templates/OHMT010-cosmetic/cosmetic-3.jpg" },
+  { name: "레티놀 리뉴얼 오일", price: "₩89,000", tag: "프리미엄", image: "/templates/OHMT010-cosmetic/cosmetic-4.jpg" },
+  { name: "젠틀 클렌징 밤", price: "₩38,000", tag: "", image: "/templates/OHMT010-cosmetic/balm-product.png" },
+  { name: "오버나이트 리커버리 마스크", price: "₩72,000", tag: "추천", image: "/templates/OHMT010-cosmetic/mask-product.png" }
 ];
 
 function CosmeticShopPageContent() {
@@ -26,9 +26,9 @@ function CosmeticShopPageContent() {
         <section className="pt-48 pb-16 md:pb-32">
           <div className="max-w-[1440px] mx-auto px-6 md:px-10">
             <div className="mb-16">
-              <span className="text-[0.65rem] font-bold uppercase tracking-[0.3em] text-black/40 mb-4 block">Shop All</span>
-              <h1 className="text-[clamp(2rem,4vw,3.5rem)] font-normal tracking-tight leading-[1.5]">
-                Clean formulations.<br />Visible results.
+              <span className="text-[0.65rem] font-bold uppercase tracking-[0.3em] text-black/40 mb-4 block">쇼핑하기</span>
+              <h1 className="text-[clamp(2rem,4vw,3.5rem)] font-normal tracking-tight leading-[1.1]">
+                순수한 성분 처방.<br />피부로 입증하는 변화.
               </h1>
             </div>
 

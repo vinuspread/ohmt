@@ -53,7 +53,7 @@ export const exhibitions: Exhibition[] = [
     showroom: '사진 윙',
     tags: { genre: '사진', theme: '사회', ageRating: '14+' },
     image: '/templates/OHMT003-exhibition/exhibition-04.jpg',
-    heroImage: '/templates/OHMT003-exhibition/exhibition-hero-01.jpg',
+    heroImage: '/templates/OHMT003-exhibition/exhibition-hero-04.jpg',
     description:
       'Aria Novak의 다큐멘터리 사진은 빠르게 변화하는 도시 풍경의 주변부에 사는 공동체를 탐구합니다. 5년에 걸쳐 네 개 대륙 스무 개 도시를 여행하며 이주와 변화에 직면한 동네의 친밀한 초상을 담았습니다.',
   },
@@ -67,7 +67,7 @@ export const exhibitions: Exhibition[] = [
     showroom: '가든 갤러리',
     tags: { genre: '혼합 매체', theme: '문화', ageRating: '12+' },
     image: '/templates/OHMT003-exhibition/exhibition-05.jpg',
-    heroImage: '/templates/OHMT003-exhibition/exhibition-hero-02.jpg',
+    heroImage: '/templates/OHMT003-exhibition/exhibition-hero-05.jpg',
     description:
       '여섯 개국 열두 명의 신진 작가가 모여 21세기를 위한 공유된 시각 언어의 개념을 탐구합니다. 조각, 섬유, 디지털 미디어, 퍼포먼스를 넘나들며 예술 형식과 문화적 전통 사이의 경계에 도전합니다.',
   },
@@ -81,7 +81,7 @@ export const exhibitions: Exhibition[] = [
     showroom: '상설 컬렉션',
     tags: { genre: '개념', theme: '정체성', ageRating: '18+' },
     image: '/templates/OHMT003-exhibition/exhibition-06.jpg',
-    heroImage: '/templates/OHMT003-exhibition/exhibition-hero-03.jpg',
+    heroImage: '/templates/OHMT003-exhibition/exhibition-hero-06.jpg',
     description:
       '2024년 갤러리가 소장한 Daniel Reeves의 작품은 기억, 기록, 역사적 서사의 본질을 탐구하는 30년간의 개념 미술을 아우릅니다. 상설 설치는 그의 경력 각 단계의 주요 작품을 선보이며 연구실에서 방문객이 방대한 아카이브를 탐색할 수 있습니다.',
   },

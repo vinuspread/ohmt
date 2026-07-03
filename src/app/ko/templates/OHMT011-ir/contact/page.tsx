@@ -47,7 +47,7 @@ function IRContactContent() {
                 <div className="w-6 h-[1px] bg-[var(--color-accent)]" />
                 투자자 관계
               </div>
-              <h1 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold tracking-tight leading-[1.5] mb-6">
+              <h1 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold tracking-tight leading-[1.1] mb-6">
                 문의하기
               </h1>
               <p className="text-[0.9rem] text-white/55 leading-[1.8] max-w-[520px] font-normal">
@@ -70,7 +70,7 @@ function IRContactContent() {
               <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-5">
                 팀 소개
               </span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.5] mb-6">
+              <h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.1] mb-6">
                 IR 팀 소개
               </h2>
               <p className="text-[0.88rem] text-[#6B6B6B] leading-[1.82] font-normal">
@@ -135,7 +135,7 @@ function IRContactContent() {
                 <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-5">
                   메시지 보내기
                 </span>
-                <h2 className="text-[clamp(1.5rem,2.5vw,2.2rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.5] mb-6">
+                <h2 className="text-[clamp(1.5rem,2.5vw,2.2rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.1] mb-6">
                   문의 제출
                 </h2>
                 <p className="text-[0.88rem] text-[#6B6B6B] leading-[1.82] font-normal mb-8">

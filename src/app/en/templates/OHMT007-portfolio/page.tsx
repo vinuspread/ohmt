@@ -297,7 +297,7 @@ const heroRef = useRef<HTMLElement>(null);
               className="text-center"
             >
               <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-4">
-                Vinuspread<span className="text-[var(--color-accent)]">.</span>
+                OHMT<span className="text-[var(--color-accent)]">.</span>
               </h2>
               <p className="text-[13px] tracking-[0.3em] uppercase text-white/40">Creative Studio / Seoul</p>
             </motion.div>
@@ -368,7 +368,7 @@ const heroRef = useRef<HTMLElement>(null);
               viewport={{ once: true }}
               className="text-[clamp(1.5rem,3.5vw,2.5rem)] font-bold text-[var(--color-text)] leading-snug mb-12"
             >
-              We're Vinuspread® - a creative studio cultivating bold brands, beautiful websites,
+              We're OHMT - a creative studio cultivating bold brands, beautiful websites,
               and ideas that refuse to be ordinary.
             </motion.p>
             {/* Client logos */}
@@ -381,7 +381,7 @@ const heroRef = useRef<HTMLElement>(null);
         </section>
 
         {/*  LATEST PROJECTS  */}
-        <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[var(--color-border)]">
+        <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[var(--color-border)] overflow-hidden">
           <div className="max-w-[1440px] mx-auto">
             <div className="flex items-end justify-between mb-12">
               <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none">
@@ -468,7 +468,7 @@ const heroRef = useRef<HTMLElement>(null);
               viewport={{ once: true }}
               className="text-[clamp(1.8rem,4vw,3.2rem)] font-bold text-[var(--color-text)] leading-snug mb-16 max-w-3xl"
             >
-              Vinuspread® is a creative studio shaping bold brands and daring ideas.
+              OHMT is a creative studio shaping bold brands and daring ideas.
             </motion.p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">

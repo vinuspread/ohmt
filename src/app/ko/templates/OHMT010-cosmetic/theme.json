@@ -3,8 +3,8 @@
   "name": "Cosmetic Wellness",
   "name_ko": "코스메틱 웰니스",
   "category": "retail",
-  "description": "Luxury cosmetic brand template built with Next.js. Showcase products, journal articles, and brand story.",
-  "description_ko": "럭셔리 코스메틱 브랜드 템플릿. 제품, 저널, 브랜드 스토리를 소개하세요.",
+  "description": "A luxury beauty template for skincare lines, product education, journal content, and brand rituals, designed around soft imagery and confident retail cues.",
+  "description_ko": "스킨케어 라인, 제품 교육, 저널 콘텐츠, 브랜드 리추얼을 부드러운 이미지와 명확한 구매 흐름으로 담은 럭셔리 뷰티 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {

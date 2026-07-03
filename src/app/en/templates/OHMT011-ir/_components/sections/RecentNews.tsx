@@ -10,7 +10,7 @@ const newsItems = [
     date: "May 5, 2026",
     tag: "Earnings",
     tagColor: "bg-[#EAF0FB] text-[#2356b3]",
-    title: "Vinuspread Global Holdings announces record Q1 2026 financial results."
+    title: "OHMT Global Holdings announces record Q1 2026 financial results."
   },
   {
     date: "April 28, 2026",

@@ -1,1 +1,309 @@
-export default function Page() { return null; }
+"use client";
+import React, { useState } from "react";
+import { useParams, useRouter } from "next/navigation";
+import Navbar from "../../_components/Navbar";
+import Footer from "../../_components/Footer";
+import theme from "../../theme.json";
+import { TemplateWrapper } from "../../_components/TemplateWrapper";
+import { ArrowLeft, ShoppingBag, Calendar, Sparkles, Shield, Heart } from "lucide-react";
+
+const PRODUCTS_KO = [
+  { 
+    id: 1, 
+    name: "다이아몬드 솔리테어 반지", 
+    price: "₩4,250,000", 
+    img: "/templates/OHMT002-jewelry/jewelry-ring.png", 
+    category: "engagement",
+    desc: "하우스의 장인 정신으로 완성된 클래식 다이아몬드 솔리테어 반지입니다. 6발 프롱 백금 세팅으로 원석 본연의 빛과 영롱함을 극대화했습니다.",
+    specs: { carat: "1.5ct", gemstone: "Round Brilliant Diamond", metal: "Platinum 950", clarity: "VVS1" }
+  },
+  { 
+    id: 2, 
+    name: "로즈 골드 인피니티 밴드", 
+    price: "₩3,400,000", 
+    img: "/templates/OHMT002-jewelry/infinity-band.png", 
+    category: "engagement",
+    desc: "영원을 상징하는 이터니티 스타일의 로즈 골드 다이아몬드 밴드입니다. 촘촘히 연결된 다이아몬드들이 손끝에서 찬란한 반짝임을 연출합니다.",
+    specs: { carat: "0.8ct", gemstone: "Full-Cut Diamonds", metal: "18K Rose Gold", clarity: "VS2" }
+  },
+  { 
+    id: 3, 
+    name: "에메랄드 컷 헤일로 반지", 
+    price: "₩6,800,000", 
+    img: "/templates/OHMT002-jewelry/emerald-cut-ring.png", 
+    category: "engagement",
+    desc: "고혹적인 매력의 에메랄드 컷 다이아몬드 주위를 라운드 다이아몬드가 헤일로 형태로 감싼 아르데코 감성의 하이엔드 링입니다.",
+    specs: { carat: "2.0ct", gemstone: "Emerald-Cut Diamond", metal: "Platinum 950", clarity: "VVS2" }
+  },
+  { 
+    id: 4, 
+    name: "레이디언트 펄 펜던트", 
+    price: "₩1,850,000", 
+    img: "/templates/OHMT002-jewelry/jewelry-pendant.png", 
+    category: "collections",
+    desc: "영롱한 빛깔의 남양 진주와 세밀하게 세팅된 다이아몬드 참이 우아함을 한층 강조하는 드롭 네클리스 펜던트입니다.",
+    specs: { gemstone: "South Sea Pearl & Diamonds", metal: "18K Yellow Gold", clarity: "Natural High Lustre" }
+  },
+  { 
+    id: 5, 
+    name: "클래식 테니스 다이아몬드 목걸이", 
+    price: "₩15,500,000", 
+    img: "/templates/OHMT002-jewelry/tennis-necklace.png", 
+    category: "high-jewelry",
+    desc: "메종의 최상위 아틀리에 라인에서만 생산되는 시그니처 테니스 넥클리스입니다. 균일한 투명도의 브릴리언트 다이아몬드가 끊임없이 연결된 걸작입니다.",
+    specs: { carat: "3.5ct Total", gemstone: "Round Cut Diamonds", metal: "18K White Gold", clarity: "VVS1" }
+  },
+  { 
+    id: 6, 
+    name: "티파니 블루 사파이어 뱅글", 
+    price: "₩12,200,000", 
+    img: "/templates/OHMT002-jewelry/bangle-item.png", 
+    category: "high-jewelry",
+    desc: "차갑게 빛나는 플래티넘 밴드 위로 티파니 블루 사파이어와 마키즈 다이아몬드가 조화롭게 세팅된 오트 주얼리 뱅글 팔찌입니다.",
+    specs: { gemstone: "Blue Sapphires & Diamonds", metal: "Platinum 950", clarity: "Eye-Clean" }
+  },
+  { 
+    id: 7, 
+    name: "골드 링크 체인 팔찌", 
+    price: "₩2,950,000", 
+    img: "/templates/OHMT002-jewelry/gold-link-bracelet.png", 
+    category: "high-jewelry",
+    desc: "장인의 핸드 피니시 기법으로 직조된 클래식 볼드 체인 브레이슬릿입니다. 시간이 흘러도 변치 않는 18K 옐로우 골드의 기품을 선사합니다.",
+    specs: { gemstone: "Pure Yellow Gold Links", metal: "18K Yellow Gold", clarity: "Polished Satin Finish" }
+  },
+  { 
+    id: 8, 
+    name: "다이아몬드 스터드 귀걸이", 
+    price: "₩1,250,000", 
+    img: "/templates/OHMT002-jewelry/diamond-studs.png", 
+    category: "collections",
+    desc: "데일리 럭셔리를 지향하는 베이직 4발 프롱 다이아몬드 스터드 이어링입니다. 완벽한 프로포션 컷으로 강렬한 파이어(Fire)를 자랑합니다.",
+    specs: { carat: "0.5ct Each", gemstone: "Round Diamonds", metal: "18K White Gold", clarity: "VS1" }
+  },
+  { 
+    id: 9, 
+    name: "펄 드롭 아코야 귀걸이", 
+    price: "₩980,000", 
+    img: "/templates/OHMT002-jewelry/pearl-drop-earrings.png", 
+    category: "collections",
+    desc: "바다의 온전한 무드를 머금은 최상급 아코야 진주가 가는 골드 체인 아래로 유려하게 매달린 매력적인 이어링 드롭 세트입니다.",
+    specs: { gemstone: "Akoya Sea Pearls", metal: "18K Yellow Gold", clarity: "AAAA Mirror Lustre" }
+  },
+  { 
+    id: 10, 
+    name: "에메랄드 샹들리에 귀걸이", 
+    price: "₩18,900,000", 
+    img: "/templates/OHMT002-jewelry/emerald-chandelier.png", 
+    category: "high-jewelry",
+    desc: "화려한 빅토리아 시대의 샹들리에에서 영감을 얻은 하이엔드 드롭 귀걸이입니다. 정밀하게 조각된 천연 에메랄드가 극적인 기품을 자랑합니다.",
+    specs: { carat: "4.2ct Total", gemstone: "Deep Forest Emeralds", metal: "18K White Gold", clarity: "VVS2" }
+  }
+];
+
+export default function ProductDetailPage() {
+  const params = useParams();
+  const router = useRouter();
+  const id = Number(params?.id || "1");
+  const product = PRODUCTS_KO.find(p => p.id === id) || PRODUCTS_KO[0];
+
+  const [bookingModal, setBookingModal] = useState(false);
+  const [isLiked, setIsLiked] = useState(false);
+  const [formData, setFormData] = useState({ name: "", phone: "", date: "" });
+
+  const handleBooking = (e: React.FormEvent) => {
+    e.preventDefault();
+    alert(`${formData.name}님, ${formData.date} 살롱 프라이빗 예약 상담 신청이 접수되었습니다.`);
+    setBookingModal(false);
+  };
+
+  return (
+    <TemplateWrapper theme={theme}>
+      <main className="min-h-screen bg-[#FAF8F5] text-[#1E352F] font-sans selection:bg-[#C5A880] selection:text-white pb-20">
+        <Navbar />
+
+        <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-28 md:pt-36">
+          {/* Back button */}
+          <button 
+            onClick={() => router.back()}
+            className="flex items-center gap-2 text-[0.8rem] uppercase tracking-[0.2em] mb-8 hover:opacity-75 transition-opacity"
+          >
+            <ArrowLeft className="w-4 h-4" /> Back to Lineup
+          </button>
+
+          {/* Sticky Split Grid */}
+          <div className="grid md:grid-cols-2 gap-12 md:gap-24 items-start">
+            
+            {/* Left: Sticky Image Gallery */}
+            <div className="md:sticky md:top-28 w-full aspect-[4/5] bg-white border border-[#1E352F]/10 overflow-hidden relative shadow-sm">
+              <img 
+                src={product.img} 
+                alt={product.name} 
+                className="w-full h-full object-cover transition-transform duration-700 hover:scale-105"
+              />
+              <span className="absolute top-6 left-6 text-[0.62rem] font-bold uppercase tracking-[0.3em] bg-[#1E352F] text-white px-3 py-1.5">
+                {product.category}
+              </span>
+            </div>
+
+            {/* Right: Scrolling Detail Panel */}
+            <div className="flex flex-col">
+              <h1 className="font-[family-name:var(--theme-font-heading)] text-[clamp(2.2rem,4vw,3.8rem)] leading-[1.1] mb-4 font-bold tracking-tight">
+                {product.name}
+              </h1>
+              
+              <div className="text-[1.3rem] font-medium tracking-tight mb-8 text-[#C5A880]">
+                {product.price}
+              </div>
+
+              <div className="border-t border-b border-[#1E352F]/10 py-6 mb-8">
+                <p className="text-[0.98rem] leading-relaxed text-[#1E352F]/80 mb-6 font-normal break-keep">
+                  {product.desc}
+                </p>
+                <div className="flex items-center gap-2 text-[0.8rem] text-[#C5A880] uppercase tracking-[0.15em] font-bold">
+                  <Sparkles className="w-4 h-4" /> Conflict-Free Ethical Sourcing Guarantee
+                </div>
+              </div>
+
+              {/* Gemstone Specifications */}
+              <div className="mb-8">
+                <h3 className="text-[0.8rem] uppercase tracking-[0.2em] font-bold mb-4">Specifications</h3>
+                <div className="grid grid-cols-2 gap-y-4 gap-x-8 text-[0.9rem] border border-[#1E352F]/10 p-5 bg-white">
+                  <div>
+                    <span className="text-[#1E352F]/50 block text-[0.75rem] uppercase tracking-[0.1em] mb-1">Gemstone</span>
+                    <span className="font-medium">{product.specs.gemstone}</span>
+                  </div>
+                  <div>
+                    <span className="text-[#1E352F]/50 block text-[0.75rem] uppercase tracking-[0.1em] mb-1">Metal Type</span>
+                    <span className="font-medium">{product.specs.metal}</span>
+                  </div>
+                  {product.specs.carat && (
+                    <div>
+                      <span className="text-[#1E352F]/50 block text-[0.75rem] uppercase tracking-[0.1em] mb-1">Carat Weight</span>
+                      <span className="font-medium">{product.specs.carat}</span>
+                    </div>
+                  )}
+                  {product.specs.clarity && (
+                    <div>
+                      <span className="text-[#1E352F]/50 block text-[0.75rem] uppercase tracking-[0.1em] mb-1">Clarity Grade</span>
+                      <span className="font-medium">{product.specs.clarity}</span>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Action Buttons */}
+              <div className="flex flex-col gap-4">
+                <div className="flex gap-4">
+                  <button 
+                    onClick={() => alert("장바구니에 담겼습니다.")}
+                    className="flex-1 bg-[#1E352F] text-[#FAF8F5] py-4 text-[0.85rem] uppercase tracking-[0.2em] font-bold hover:opacity-90 transition-opacity flex items-center justify-center gap-3"
+                  >
+                    <ShoppingBag className="w-4 h-4" /> Add to Cart
+                  </button>
+                  <button 
+                    onClick={() => setIsLiked(!isLiked)}
+                    className={`w-14 border border-[#1E352F]/20 flex items-center justify-center transition-colors ${isLiked ? "bg-red-50/50 border-red-200 text-red-500" : "hover:bg-[#1E352F]/5"}`}
+                  >
+                    <svg className="w-5 h-5 text-red-500" fill={isLiked ? "currentColor" : "none"} viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  </button>
+                </div>
+
+                <button 
+                  onClick={() => setBookingModal(true)}
+                  className="w-full border border-[#1E352F] py-4 text-[0.85rem] uppercase tracking-[0.2em] font-bold text-[#1E352F] hover:bg-[#1E352F] hover:text-white transition-all flex items-center justify-center gap-3"
+                >
+                  <Calendar className="w-4 h-4" /> Book Salon Appointment
+                </button>
+              </div>
+
+              {/* Premium Guarantee Badges */}
+              <div className="mt-10 grid grid-cols-2 gap-4 border-t border-[#1E352F]/10 pt-8">
+                <div className="flex gap-3 items-start">
+                  <Shield className="w-5 h-5 text-[#C5A880] shrink-0" />
+                  <div>
+                    <h4 className="text-[0.85rem] font-bold uppercase tracking-[0.1em] mb-1">Lifetime Warranty</h4>
+                    <p className="text-[0.72rem] text-[#1E352F]/60 leading-relaxed">평생 보증서 및 하우스의 철저한 세공 감정을 연동 제공합니다.</p>
+                  </div>
+                </div>
+                <div className="flex gap-3 items-start">
+                  <Sparkles className="w-5 h-5 text-[#C5A880] shrink-0" />
+                  <div>
+                    <h4 className="text-[0.85rem] font-bold uppercase tracking-[0.1em] mb-1">Maison Packaging</h4>
+                    <p className="text-[0.72rem] text-[#1E352F]/60 leading-relaxed">하우스의 시그니처 딥 그린 가죽 케이스 패키지에 동봉됩니다.</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        {/* Private Salon Appointment Booking Modal */}
+        {bookingModal && (
+          <div className="fixed inset-0 z-50 bg-[#1E352F]/40 backdrop-blur-md flex items-center justify-center p-6">
+            <div className="bg-[#FAF8F5] border border-[#1E352F]/20 max-w-[480px] w-full p-8 shadow-2xl relative">
+              <h2 className="font-[family-name:var(--theme-font-heading)] text-[1.8rem] font-bold mb-4 tracking-tight">Private Salon Booking</h2>
+              <p className="text-[0.85rem] text-[#1E352F]/70 mb-6 leading-relaxed">
+                하우스 오브 오엠티의 오프라인 메종 살롱에서 주얼리 스페셜리스트의 1:1 VIP 퍼스널 쇼핑과 프라이빗 큐레이션을 경험해 보세요.
+              </p>
+              
+              <form onSubmit={handleBooking} className="flex flex-col gap-4">
+                <div>
+                  <label className="text-[0.68rem] uppercase tracking-[0.15em] font-bold block mb-1">성함 (Full Name)</label>
+                  <input 
+                    type="text" 
+                    required 
+                    value={formData.name}
+                    onChange={e => setFormData({ ...formData, name: e.target.value })}
+                    className="w-full bg-white border border-[#1E352F]/15 px-4 py-2.5 text-[0.9rem] focus:outline-none focus:border-[#C5A880]" 
+                  />
+                </div>
+                <div>
+                  <label className="text-[0.68rem] uppercase tracking-[0.15em] font-bold block mb-1">연락처 (Contact Phone)</label>
+                  <input 
+                    type="tel" 
+                    required 
+                    value={formData.phone}
+                    onChange={e => setFormData({ ...formData, phone: e.target.value })}
+                    className="w-full bg-white border border-[#1E352F]/15 px-4 py-2.5 text-[0.9rem] focus:outline-none focus:border-[#C5A880]" 
+                  />
+                </div>
+                <div>
+                  <label className="text-[0.68rem] uppercase tracking-[0.15em] font-bold block mb-1">희망 방문 일정 (Desired Date)</label>
+                  <input 
+                    type="date" 
+                    required 
+                    value={formData.date}
+                    onChange={e => setFormData({ ...formData, date: e.target.value })}
+                    className="w-full bg-white border border-[#1E352F]/15 px-4 py-2.5 text-[0.9rem] focus:outline-none focus:border-[#C5A880]" 
+                  />
+                </div>
+
+                <div className="flex gap-4 mt-6">
+                  <button 
+                    type="button"
+                    onClick={() => setBookingModal(false)}
+                    className="flex-1 border border-[#1E352F]/20 py-3 text-[0.8rem] uppercase tracking-[0.15em] font-bold hover:bg-[#1E352F]/5 transition-colors"
+                  >
+                    Cancel
+                  </button>
+                  <button 
+                    type="submit"
+                    className="flex-1 bg-[#1E352F] text-white py-3 text-[0.8rem] uppercase tracking-[0.15em] font-bold hover:opacity-90 transition-opacity"
+                  >
+                    Confirm Booking
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        )}
+
+        <Footer />
+      </main>
+    </TemplateWrapper>
+  );
+}

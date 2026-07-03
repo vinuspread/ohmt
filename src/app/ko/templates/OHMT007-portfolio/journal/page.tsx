@@ -12,9 +12,9 @@ import { blogPosts } from "@/lib/portfolio-data";
 
 const allPosts = [
   ...blogPosts,
-  { slug: 'ethics-minimalism', title: 'The Ethics of Minimalism in Brand Design', date: 'Mar 24, 2026', category: 'Essay', img: '/templates/OHMT007-portfolio/portfolio-1.jpg' },
-  { slug: 'recapturing-focus', title: 'Recapturing Focus in a Digital World', date: 'Feb 12, 2026', category: 'Insight', img: '/templates/OHMT007-portfolio/portfolio-2.jpg' },
-  { slug: 'radical-honesty', title: '2026 Design Trends: Radical Honesty', date: 'Jan 5, 2026', category: 'Future', img: '/templates/OHMT007-portfolio/portfolio-hero.png' },
+  { slug: 'ethics-minimalism', title: '브랜드 디자인에서 미니멀리즘을 쓰는 법', date: '2026. 3. 24.', category: '에세이', img: '/templates/OHMT007-portfolio/portfolio-1.jpg' },
+  { slug: 'recapturing-focus', title: '디지털 환경에서 집중을 되찾는 인터페이스', date: '2026. 2. 12.', category: '인사이트', img: '/templates/OHMT007-portfolio/portfolio-2.jpg' },
+  { slug: 'radical-honesty', title: '2026 디자인 트렌드: 더 솔직한 브랜드 언어', date: '2026. 1. 5.', category: '미래', img: '/templates/OHMT007-portfolio/portfolio-3.png' },
 ];
 
 function JournalPageContent() {
@@ -27,7 +27,7 @@ function JournalPageContent() {
         <section className="pt-40 pb-16 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto px-6">
             <span className="text-[13px] font-bold tracking-[0.4em] uppercase text-[var(--color-text-muted)] block mb-6">크리에이티브 디스패치</span>
-            <h1 className="text-[clamp(4rem,10vw,9rem)] font-medium uppercase tracking-tighter leading-[1.5]">저널</h1>
+            <h1 className="text-[clamp(4rem,10vw,9rem)] font-medium uppercase tracking-tighter leading-[1.1]">저널</h1>
           </div>
         </section>
 
@@ -44,11 +44,11 @@ function JournalPageContent() {
                   <span className="text-[13px] font-medium uppercase tracking-widest text-[var(--color-text)] bg-[var(--color-primary)]/10 px-2 py-1">{allPosts[0].category}</span>
                   <span className="text-[13px] text-[var(--color-text-muted)]/60">{allPosts[0].date}</span>
                 </div>
-                <h2 className="text-[2rem] font-medium uppercase tracking-tighter leading-tight mb-6 group-hover:text-[var(--color-text)] transition-colors">
+                <h2 className="text-[2rem] font-medium uppercase tracking-tighter leading-[1.1] mb-6 group-hover:text-[var(--color-text)] transition-colors">
                   {allPosts[0].title}
                 </h2>
                 <span className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-widest text-[var(--color-text-muted)]/60 group-hover:text-[var(--color-text)] transition-colors">
-                  기사 ?�기 <ArrowUpRight size={12} />
+                  기사 읽기 <ArrowUpRight size={12} />
                 </span>
               </div>
             </Link>

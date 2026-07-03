@@ -20,7 +20,7 @@ function AboutPageContent() {
           <div className="absolute inset-0 bg-black/50" />
           <div className="relative z-10 text-center text-white px-6">
             <p className="text-xs uppercase tracking-[0.3em] text-white/60 mb-4">소개</p>
-            <h1 className="text-5xl lg:text-7xl font-bold font-heading leading-[1.05]">
+            <h1 className="text-5xl lg:text-7xl font-bold font-heading leading-[1.1]">
               스토리
             </h1>
           </div>
@@ -33,7 +33,7 @@ function AboutPageContent() {
                 <p className="text-xs uppercase tracking-[0.25em] text-[var(--color-text-muted)] mb-4">
                   철학
                 </p>
-                <h2 className="text-3xl md:text-4xl font-bold font-heading leading-[1.15] mb-8">
+                <h2 className="text-3xl md:text-4xl font-bold font-heading leading-[1.1] mb-8">
                   천천히 즐길<br />가치가 있는 커피.
                 </h2>
                 <p className="text-base leading-relaxed text-[var(--color-text-muted)]">

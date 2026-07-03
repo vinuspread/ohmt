@@ -2,10 +2,10 @@ import Link from "next/link";
 import { TemplateWrapper } from "./TemplateWrapper";
 
 const navItems = [
-  { label: "Image", href: "/en/templates/luma-camera/image-engine" },
-  { label: "Scenes", href: "/en/templates/luma-camera/scenes" },
-  { label: "Stories", href: "/en/templates/luma-camera/stories" },
-  { label: "Shop", href: "/en/templates/luma-camera/shop" },
+  { label: "Image", href: "/en/templates/OHMT031-luma-camera/image-engine" },
+  { label: "Scenes", href: "/en/templates/OHMT031-luma-camera/scenes" },
+  { label: "Stories", href: "/en/templates/OHMT031-luma-camera/stories" },
+  { label: "Shop", href: "/en/templates/OHMT031-luma-camera/shop" },
 ];
 
 export function LumaChrome({ children }: { children: React.ReactNode }) {

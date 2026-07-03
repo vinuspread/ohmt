@@ -20,36 +20,36 @@ export function Hero() {
 
   return (
     <section className="relative w-full min-h-[100dvh] bg-[var(--bg)] overflow-hidden">
-      {/* Hero 배경 이미지 */}
+      {/* Hero background */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url('/templates/OHMT028-ev/hero-static.jpg')" }}
       />
-      {/* 그라데이션 오버레이 */}
+      {/* Gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)]/80 via-[var(--bg)]/20 to-transparent" />
 
-      {/* 정렬선을 일치시킨 메인 콘텐츠 레이어 */}
+      {/* Main content layer */}
       <div className="absolute inset-0 max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 w-full h-full flex flex-col justify-end pb-16 z-10 pointer-events-none">
         <div className="w-full flex flex-col md:flex-row md:items-end justify-between gap-12 pointer-events-auto">
-          {/* 좌측 텍스트 영역 */}
-          <div className="max-w-[560px] w-full">
+          {/* Left text area */}
+          <div className="w-full max-w-[560px] lg:max-w-[760px]">
             <span ref={labelRef} className="font-inter font-medium text-[11px] tracking-[0.15em] text-[var(--accent)] uppercase block mb-4">
               Introducing NUBI, Urban Electric Vehicle
             </span>
-            <h1 ref={headingRef} className="font-michroma text-[clamp(36px,4vw,56px)] leading-[1.1] tracking-[-0.02em] text-[var(--text)] mb-8">
+            <h1 ref={headingRef} className="font-michroma text-[clamp(42px,11vw,56px)] leading-[1.08] tracking-[-0.02em] text-[var(--text)] mb-8 md:text-[clamp(60px,7vw,88px)] lg:text-[clamp(56px,6vw,88px)]">
               Small car,<br />big city fun.
             </h1>
-            <div ref={ctaRef} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-              <button className="inline-flex items-center justify-center gap-2.5 bg-[var(--accent)] text-[var(--text-on-light)] px-7 py-3.5 rounded-full text-[13px] font-inter font-medium tracking-[0.03em] hover:bg-[var(--accent-dark)] transition-colors duration-300 w-full sm:w-auto">
-                Reserve now →
+            <div ref={ctaRef} className="flex flex-row items-center gap-3 sm:gap-4">
+              <button className="inline-flex h-12 flex-1 items-center justify-center whitespace-nowrap rounded-full bg-[var(--accent)] px-4 text-[12px] font-inter font-medium tracking-[0.01em] text-[var(--text-on-light)] transition-colors duration-300 hover:bg-[var(--accent-dark)] sm:h-auto sm:w-auto sm:flex-none sm:px-7 sm:py-3.5 sm:text-[13px] sm:tracking-[0.03em]">
+                Reserve now
               </button>
-              <button className="inline-flex items-center justify-center gap-2.5 border border-[var(--text)]/40 text-[var(--text)] px-7 py-3.5 rounded-full text-[13px] font-inter font-medium tracking-[0.03em] hover:border-[var(--text)] transition-colors duration-300 w-full sm:w-auto">
-                Explore NUBI →
+              <button className="inline-flex h-12 flex-1 items-center justify-center whitespace-nowrap rounded-full border border-[var(--text)]/40 px-4 text-[12px] font-inter font-medium tracking-[0.01em] text-[var(--text)] transition-colors duration-300 hover:border-[var(--text)] sm:h-auto sm:w-auto sm:flex-none sm:px-7 sm:py-3.5 sm:text-[13px] sm:tracking-[0.03em]">
+                Explore NUBI
               </button>
             </div>
           </div>
 
-          {/* 우측 PiP 영상 썸네일 */}
+          {/* Right PiP video thumbnail */}
           <div className="flex items-center gap-4 cursor-pointer group flex-shrink-0">
             <div className="w-[160px] h-[90px] rounded-lg overflow-hidden border border-[var(--border)] relative transition-transform duration-300 group-hover:scale-105">
               <div
@@ -70,7 +70,7 @@ export function Hero() {
         </div>
       </div>
 
-      {/* 우측 수직선 장식 */}
+      {/* Right vertical line decoration */}
       <div className="absolute right-8 top-1/2 -translate-y-1/2 pointer-events-none z-10 hidden md:block">
         <div className="w-[1px] h-[80px] bg-gradient-to-b from-transparent via-[var(--text-muted)] to-transparent" />
       </div>

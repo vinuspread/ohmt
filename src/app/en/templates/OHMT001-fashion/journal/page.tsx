@@ -16,7 +16,7 @@ const ARTICLES = [
     date: "June 15, 2026",
     excerpt:
       "A visual meditation on endings and the quiet beauty of letting go. Shot over three days in the Venetian lagoon.",
-    image: "/templates/fashion/journal-hero-v2.png",
+    image: "/templates/OHMT001-fashion/journal-hero-v2.png",
     featured: true,
   },
   {
@@ -26,7 +26,7 @@ const ARTICLES = [
     date: "May 28, 2026",
     excerpt:
       "Selvedge, weight, and the obsessive pursuit of the perfect fade. We trace our denim to a single mill in Okayama.",
-    image: "/templates/fashion/hero-custom.jpg",
+    image: "/templates/OHMT001-fashion/hero-custom.jpg",
   },
   {
     id: 3,
@@ -35,7 +35,7 @@ const ARTICLES = [
     date: "May 10, 2026",
     excerpt:
       "Behind the seams of our most technically demanding garment to date: the structured wool overcoat.",
-    image: "/templates/fashion/exclusive-lifestyle.png",
+    image: "/templates/OHMT001-fashion/exclusive-lifestyle.png",
   },
   {
     id: 4,
@@ -44,7 +44,7 @@ const ARTICLES = [
     date: "April 22, 2026",
     excerpt:
       "A practical guide to building a capsule wardrobe that ages with you, not against you.",
-    image: "/templates/fashion/branding-custom.jpg",
+    image: "/templates/OHMT001-fashion/branding-custom.jpg",
   },
 ];
 

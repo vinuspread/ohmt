@@ -12,7 +12,7 @@ export default function TechDesign() {
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
               미적 공학
             </span>
-            <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.03em] leading-none text-[var(--color-text)] font-heading break-keep">
+            <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.03em] leading-[1.1] text-[var(--color-text)] font-heading break-keep">
               기술과 디자인의 만남
             </h2>
           </div>
@@ -47,7 +47,7 @@ export default function TechDesign() {
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
                 system presentation v2
               </span>
-              <h3 className="text-xl md:text-3xl font-extrabold text-white font-heading tracking-tight leading-snug break-keep">
+              <h3 className="text-xl md:text-3xl font-extrabold text-white font-heading tracking-tight leading-[1.1] break-keep">
                 OmniBot Gen 2: 자율 주행 데모 및 하드웨어 레이아웃 리뷰
               </h3>
               

@@ -31,7 +31,7 @@ function CosmeticTemplateContent() {
                 />
               </div>
               <div className="order-1 md:order-2">
-                <h2 className="text-[1.6rem] md:text-[2.8rem] font-normal leading-[1.5] mb-8">
+                <h2 className="text-[1.6rem] md:text-[2.8rem] font-normal leading-[1.1] mb-8">
                   현대적이고 의식 있는 뷰티의 기준.
                 </h2>
                 <p className="text-[0.95rem] text-[var(--color-text-muted)] leading-[1.9] mb-12 max-w-[480px]">

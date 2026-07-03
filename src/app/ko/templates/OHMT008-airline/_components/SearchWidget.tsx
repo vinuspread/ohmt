@@ -11,40 +11,16 @@ const TRIP_TYPES = [
   { label: "편도", value: "oneway" },
 ];
 
-export const SearchWidget = () => {
-  const [tripType, setTripType] = useState("roundtrip");
-  const [paxOpen, setPaxOpen] = useState(false);
-  const [adults, setAdults] = useState(1);
-  const [children, setChildren] = useState(0);
-  const [cabin, setCabin] = useState("Economy");
-  const paxRef = useRef<HTMLDivElement>(null);
+type CounterProps = {
+  label: string;
+  sub: string;
+  value: number;
+  min: number;
+  onChange: (v: number) => void;
+};
 
-  useEffect(() => {
-    const handler = (e: MouseEvent) => {
-      if (paxRef.current && !paxRef.current.contains(e.target as Node)) {
-        setPaxOpen(false);
-      }
-    };
-    document.addEventListener("mousedown", handler);
-    return () => document.removeEventListener("mousedown", handler);
-  }, []);
-
-  const totalPax = adults + children;
-  const paxLabel = `승객 ${totalPax}명`;
-
-  const Counter = ({
-    label,
-    sub,
-    value,
-    min,
-    onChange,
-  }: {
-    label: string;
-    sub: string;
-    value: number;
-    min: number;
-    onChange: (v: number) => void;
-  }) => (
+function Counter({ label, sub, value, min, onChange }: CounterProps) {
+  return (
     <div className="flex items-center justify-between py-3 border-b border-[#eee] last:border-0">
       <div>
         <p className="text-[0.82rem] font-semibold text-[var(--color-primary)]">{label}</p>
@@ -68,9 +44,31 @@ export const SearchWidget = () => {
       </div>
     </div>
   );
+}
+
+export const SearchWidget = () => {
+  const [tripType, setTripType] = useState("roundtrip");
+  const [paxOpen, setPaxOpen] = useState(false);
+  const [adults, setAdults] = useState(1);
+  const [children, setChildren] = useState(0);
+  const [cabin, setCabin] = useState("Economy");
+  const paxRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (paxRef.current && !paxRef.current.contains(e.target as Node)) {
+        setPaxOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, []);
+
+  const totalPax = adults + children;
+  const paxLabel = `승객 ${totalPax}명`;
 
   return (
-    <section className="relative z-[200] mt-[-20px] md:mt-[-60px] px-4 md:px-10">
+    <section className="relative z-[200] mt-[-28px] md:mt-[-68px] px-4 md:px-10">
       <div className="max-w-[1320px] mx-auto bg-white border border-[var(--color-border)] border-t-[3px] border-t-[var(--color-accent)]">
 
         {/* Trip type tabs */}
@@ -79,7 +77,7 @@ export const SearchWidget = () => {
             <button
               key={value}
               onClick={() => setTripType(value)}
-              className={`px-4 md:px-6 py-2.5 text-[0.72rem] font-bold tracking-[0.1em] uppercase relative transition-colors duration-300 -mb-px ${
+              className={`px-4 md:px-6 py-2.5 text-sm font-bold tracking-[-0.02em] uppercase relative transition-colors duration-300 -mb-px ${
                 tripType === value
                   ? "text-[var(--color-primary)]"
                   : "text-[var(--color-text-muted)] hover:text-[var(--color-primary)]"
@@ -163,7 +161,7 @@ export const SearchWidget = () => {
                   </div>
                 </div>
                 <Button variant="outline" onClick={() => setPaxOpen(false)}
-                  className="w-full mt-4 py-2.5 text-[0.7rem] font-bold uppercase tracking-[0.14em] hover:opacity-85 transition-opacity">
+                  className="w-full mt-4 py-2.5 text-[0.7rem] font-bold uppercase tracking-[0.14em] ">
                   완료
                 </Button>
               </div>
@@ -173,7 +171,7 @@ export const SearchWidget = () => {
           {/* SEARCH Mobile */}
           <Button variant="primary" className="w-full flex flex-row items-center justify-center gap-3 py-4 px-8 hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors duration-300 group">
             <Search size={18} className="transition-transform duration-300 group-hover:scale-110" />
-            <span className="text-[0.72rem] font-bold uppercase tracking-[0.2em]">항공편 검색</span>
+            <span className="text-sm font-bold uppercase tracking-[-0.02em]">항공편 검색</span>
           </Button>
         </div>
 
@@ -239,7 +237,7 @@ export const SearchWidget = () => {
                   </div>
                 </div>
                 <Button variant="outline" onClick={() => setPaxOpen(false)}
-                  className="w-full mt-4 py-2.5 text-[0.7rem] font-bold uppercase tracking-[0.14em] hover:opacity-85 transition-opacity">
+                  className="w-full mt-4 py-2.5 text-[0.7rem] font-bold uppercase tracking-[0.14em] ">
                   완료
                 </Button>
               </div>
@@ -249,7 +247,7 @@ export const SearchWidget = () => {
           {/* SEARCH */}
           <Button variant="primary" className="w-[200px] flex-shrink-0 flex flex-col items-center justify-center gap-2 hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors duration-300 min-h-[100px] group">
             <Search size={18} className="transition-transform duration-300 group-hover:scale-110" />
-            <span className="text-[0.72rem] font-bold uppercase tracking-[0.2em]">항공편 검색</span>
+            <span className="text-sm font-bold uppercase tracking-[-0.02em]">항공편 검색</span>
           </Button>
         </div>
       </div>

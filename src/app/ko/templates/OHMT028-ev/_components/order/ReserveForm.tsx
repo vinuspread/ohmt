@@ -10,7 +10,7 @@ export function ReserveForm() {
 
   return (
     <section>
-      <h2 className="font-michroma text-[clamp(18px,2vw,28px)] text-[var(--text)] leading-[1.0] tracking-[-0.02em] mb-6">
+      <h2 className="font-michroma text-[clamp(18px,2vw,28px)] text-[var(--text)] leading-[1.1] tracking-[-0.02em] mb-6">
         예약 정보
       </h2>
       <div className="space-y-4">

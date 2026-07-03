@@ -30,7 +30,7 @@ export const BrandStory = () => {
               transition={{ delay: 0.15, duration: 0.5 }}
               className="text-[12px] md:text-[13px] font-medium text-[var(--color-accent)] tracking-tight block mb-6 md:mb-8"
             >
-              브랜드 스토리
+              BRAND PHILOSOPHY
             </motion.span>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -38,7 +38,7 @@ export const BrandStory = () => {
               transition={{ delay: 0.2, duration: 0.6 }}
               className="text-[clamp(1.8rem,4vw,3.5rem)] font-[var(--font-heading)] font-bold text-[var(--color-primary)] leading-[1.2] mb-6 md:mb-8 break-keep [overflow-wrap:normal]"
             >
-              자연이 빚어낸<br />성역
+              자연이 정성껏 빚어낸<br />영혼의 안식처
             </motion.h2>
             <motion.div
               initial={{ opacity: 0, scaleX: 0 }}
@@ -53,7 +53,8 @@ export const BrandStory = () => {
               transition={{ delay: 0.3, duration: 0.6 }}
               className="text-base md:text-lg text-[var(--color-text)] font-medium leading-relaxed mb-4"
             >
-              진정한 럭셔리는 자연과의 조화에 있다는 믿음으로, 럭스 헤이븐은 시간이 느리게 흐르고 영혼이 숨쉬는 휴식처를 만들겠다는 비전에서 탄생했습니다.
+              진정한 럭셔리는 자연과 무리 없이 공존하는 감각에서 시작됩니다.
+              시간이 느리게 흐르고, 몸과 마음이 다시 숨을 고르는 공간을 만들었습니다.
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
@@ -61,7 +62,8 @@ export const BrandStory = () => {
               transition={{ delay: 0.35, duration: 0.6 }}
               className="text-sm md:text-base text-[var(--color-text-muted)] leading-relaxed"
             >
-              모든 스위트와 빌라는 해안선의 자연미를 담아 정성스럽게 배치되었습니다. 건축에 사용된 현지 석재부터 주방의 유기농 식재료까지, 지속 가능성과 장인 정신이 모든 순간을 정의합니다.
+              모든 스위트와 빌라는 해안선의 자연미를 따라 배치했습니다.
+              현지 석재, 유기농 식재료, 장인의 손길이 머무는 동안의 리듬을 차분하게 완성합니다.
             </motion.p>
           </motion.div>
         </div>

@@ -9,7 +9,7 @@ const newsItems = [
     date: "2026년 5월 5일",
     tag: "실적 발표",
     tagColor: "bg-[#EAF0FB] text-[#2356b3]",
-    title: "Vinuspread Global Holdings, 2026년 1분기 최대 실적 발표"
+    title: "OHMT Global Holdings, 2026년 1분기 최대 실적 발표"
   },
   {
     date: "2026년 4월 28일",
@@ -54,7 +54,7 @@ export const RecentNews = () => {
                 <span className={clsx("inline-block text-[0.58rem] font-bold uppercase tracking-[0.16em] px-2 py-0.5 rounded-[2px] mb-2", item.tagColor)}>
                   {item.tag}
                 </span>
-                <h3 className="text-base font-bold text-black leading-snug group-hover:text-[var(--color-dark-bg)] transition-colors">
+                <h3 className="text-base font-bold text-black leading-[1.1] group-hover:text-[var(--color-dark-bg)] transition-colors">
                   {item.title}
                 </h3>
               </div>

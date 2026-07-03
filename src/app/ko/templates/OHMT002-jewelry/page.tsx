@@ -22,10 +22,10 @@ function JewelryPageContent() {
   const heroOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   const products = [
-    { name: "다이아몬드 솔리테어 링", price: "$4,250", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "웨딩" },
-    { name: "래디언트 펄 펜던트", price: "$1,850", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "시즈널" },
-    { name: "사파이어 뱅글", price: "$12,200", img: "/templates/OHMT002-jewelry/jewelry-hero-main.png", tag: "럭셔리" },
-    { name: "로즈 골드 인피니티 밴드", price: "$3,400", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "에센셜" },
+    { id: 1, name: "다이아몬드 솔리테어 링", price: "₩4,250,000", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "웨딩" },
+    { id: 4, name: "래디언트 펄 펜던트", price: "₩1,850,000", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "시즈널" },
+    { id: 6, name: "사파이어 뱅글", price: "₩12,200,000", img: "/templates/OHMT002-jewelry/bangle-item.png", tag: "럭셔리" },
+    { id: 2, name: "로즈 골드 인피니티 밴드", price: "₩3,400,000", img: "/templates/OHMT002-jewelry/infinity-band.png", tag: "에센셜" },
   ];
 
   const filteredProducts = products.filter((product) => {
@@ -86,10 +86,9 @@ function JewelryPageContent() {
         <section className="py-10 md:py-20 md:py-32 px-6 md:px-12 bg-white">
           <div className="max-w-[1440px] mx-auto">
             <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 md:mb-16 gap-8">
-              <div>
-                <span className="text-[13px] text-[var(--color-primary)] mb-3 block tracking-[0.3em] font-bold uppercase">BOUTIQUE</span>
-                <h3 className="text-3xl md:text-5xl font-serif font-bold tracking-[-0.03em]">모던 클래식 에디션</h3>
-              </div>
+                <div>
+                  <h3 className="text-3xl md:text-5xl font-serif font-bold tracking-[-0.04em]">모던 클래식 에디션</h3>
+                </div>
               <div className="flex items-center gap-6 md:gap-10 overflow-x-auto pb-1" style={{ scrollbarWidth: "none" }}>
                 {[
                   { id: "All", label: "전체" },
@@ -100,11 +99,11 @@ function JewelryPageContent() {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`pb-2 text-[13px] uppercase tracking-[0.3em] font-bold transition-all duration-500 cursor-pointer whitespace-nowrap border-b-[1.5px] shrink-0 ${
-                      activeTab === tab.id
-                        ? "text-neutral-900 border-[var(--color-primary)]"
-                        : "text-neutral-400 border-transparent hover:text-neutral-700 hover:border-neutral-300"
-                    }`}
+                    className={`pb-2 text-[13px] uppercase tracking-[0.3em] font-bold transition-all duration-500 cursor-pointer whitespace-nowrap border-b-[1.5px] shrink-0 focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] focus-visible:ring-offset-2 ${
+                       activeTab === tab.id
+                         ? "text-neutral-900 border-[var(--color-primary)]"
+                         : "text-neutral-500 border-transparent hover:text-neutral-700 hover:border-neutral-300"
+                     }`}
                   >
                     {tab.label}
                   </button>
@@ -122,28 +121,30 @@ function JewelryPageContent() {
                   transition={{ duration: 1, delay: i * 0.15 }}
                   className="group cursor-pointer"
                 >
-                  <div className="relative aspect-[3/4] mb-4 overflow-hidden bg-[var(--color-bg-secondary)] border border-neutral-100">
+                  <Link href={`/ko/templates/OHMT002-jewelry/product/${item.id}`} className="relative mb-4 block aspect-[3/4] overflow-hidden bg-[var(--color-bg-secondary)]">
                     <img
                       src={item.img}
                       alt={item.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[2.5s] ease-out"
+                      className="w-full h-full object-cover scale-[1.06] group-hover:scale-[1.12] transition-transform duration-[2.5s] ease-out"
                     />
                     <div className="absolute top-3 right-3 z-10">
-                      <button className="p-2 rounded-full bg-white/60 backdrop-blur-md text-neutral-400 hover:text-[var(--color-primary)] transition-colors">
-                        <Heart size={14} strokeWidth={1.5} />
-                      </button>
+                      <span className="block p-2 rounded-none bg-white/60 backdrop-blur-md text-neutral-400 group-hover:text-[var(--color-primary)] transition-colors" aria-hidden="true">
+                        <Heart size={14} strokeWidth={1.5} aria-hidden="true" />
+                      </span>
                     </div>
                     <div className="absolute top-3 left-3">
-                      <span className="text-[10px] bg-white/95 text-[var(--color-primary)] border border-neutral-200/60 rounded-[2px] px-2 py-0.5 uppercase font-bold tracking-[0.15em] backdrop-blur-sm">{item.tag}</span>
+                      <span className="text-[10px] bg-white/95 text-[var(--color-primary)] border border-neutral-200/60 rounded-none px-2 py-0.5 uppercase font-bold tracking-[0.15em] backdrop-blur-sm">{item.tag}</span>
                     </div>
                     <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[90%] z-20 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-700 hidden sm:block">
-                      <button className="w-full py-3 bg-[var(--color-primary)] text-white text-[13px] font-bold uppercase tracking-[0.1em] hover:bg-neutral-900">
+                      <span className="block w-full py-3 bg-[var(--color-primary)] text-center text-[13px] font-bold uppercase tracking-[0.1em] text-white">
                         프라이빗 예약 신청
-                      </button>
+                      </span>
                     </div>
-                  </div>
+                  </Link>
                   <div className="space-y-1 text-center">
-                    <h4 className="text-sm md:text-base font-serif font-bold text-neutral-800 group-hover:text-[var(--color-primary)] transition-colors leading-tight truncate">{item.name}</h4>
+                    <Link href={`/ko/templates/OHMT002-jewelry/product/${item.id}`} className="block">
+                      <h4 className="text-sm md:text-base font-serif font-bold text-neutral-800 group-hover:text-[var(--color-primary)] transition-colors leading-tight truncate">{item.name}</h4>
+                    </Link>
                     <p className="text-sm text-neutral-500 font-bold">{item.price}</p>
                   </div>
                 </motion.div>
@@ -166,8 +167,8 @@ function JewelryPageContent() {
                 <img loading="lazy" src="/templates/OHMT002-jewelry/jewelry-craft.png" alt="Jewelry Craftsmanship" className="w-full h-full object-cover" />
               </motion.div>
               <div className="absolute -bottom-10 -right-6 lg:-bottom-14 lg:-right-14 w-72 bg-white p-8 hidden md:block shadow-[0_40px_80px_rgba(0,0,0,0.08)] border border-neutral-100">
-                <span className="text-[var(--color-primary)] text-[13px] font-bold uppercase tracking-[0.3em] block mb-3">아틀리에의 장인정신</span>
-                <p className="text-sm text-neutral-800 leading-relaxed font-bold font-serif">
+                <span className="text-[var(--color-primary)] text-[13px] font-bold uppercase tracking-[-0.03em] block mb-3">아틀리에의 장인정신</span>
+                <p className="text-sm text-neutral-800 leading-relaxed font-bold font-serif break-keep tracking-[-0.025em]">
                   "모든 단면은 빛과 원석의 깊은 대화입니다. OHMT만의 독보적인 광채를 구현하기 위해 장인의 손길로 정교하게 다듬어집니다."
                 </p>
               </div>
@@ -179,9 +180,9 @@ function JewelryPageContent() {
               viewport={{ once: true }}
               className="space-y-8"
             >
-              <span className="text-[13px] uppercase tracking-[0.3em] text-neutral-400 font-bold">HERITAGE</span>
-              <h3 className="text-3xl md:text-5xl font-serif font-bold leading-[1.5] tracking-[-0.01em]">영혼을 담아 <span className="text-[var(--color-primary)]">빚어낸 찬란함</span></h3>
-              <p className="text-sm md:text-base text-neutral-600 leading-[1.7] md:leading-[1.8] max-w-md">
+              <span className="text-[13px] uppercase tracking-[-0.03em] text-neutral-500 font-bold">HERITAGE</span>
+              <h3 className="text-3xl md:text-5xl font-serif font-bold leading-[1.1] tracking-[-0.04em]">영혼을 담아 <span className="text-[var(--color-primary)]">빚어낸 찬란함</span></h3>
+              <p className="text-sm md:text-base text-neutral-600 leading-[1.7] md:leading-[1.8] max-w-md break-keep tracking-[-0.025em]">
                 OHMT는 주얼리가 단순한 장신구를 넘어, 삶의 가장 찬란한 순간을 함께 기억하는 영원한 동반자라 믿습니다. 하나의 완벽한 세팅을 위해, 장인들은 수백 시간 동안 예술에 가까운 헌신을 바칩니다.
               </p>
               <div className="flex items-center gap-4 group cursor-pointer pt-2">

@@ -26,7 +26,7 @@ export function SpecsHero() {
           <p className="font-inter text-[11px] tracking-[0.15em] text-[var(--accent)] uppercase mb-4">
             성능 제원
           </p>
-          <h1 className="font-michroma text-[clamp(36px,4.5vw,64px)] text-[var(--text)] leading-[0.93] tracking-[-0.03em] mb-4">
+          <h1 className="font-michroma text-[clamp(36px,4.5vw,64px)] text-[var(--text)] leading-[1.1] tracking-[-0.03em] mb-4">
             설계로 증명합니다.
           </h1>
           <p className="font-inter text-[15px] text-[var(--text-muted)] max-w-[440px] leading-relaxed">

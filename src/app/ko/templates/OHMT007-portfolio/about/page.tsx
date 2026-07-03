@@ -11,17 +11,17 @@ import { Footer } from "../_components/layout/Footer";
 import { stats, designerInfo } from "@/lib/portfolio-data";
 
 const team = [
-  { name: "Marco Vinus", role: "Founder & Creative Director", img: "/templates/OHMT007-portfolio/portfolio-1.jpg" },
-  { name: "Yuna Park", role: "Lead Designer", img: "/templates/OHMT007-portfolio/portfolio-2.jpg" },
-  { name: "Tobias Krenn", role: "Front-end Engineer", img: "/templates/OHMT007-portfolio/portfolio-3.png" },
-  { name: "Sofia Reyes", role: "Brand Strategist", img: "/templates/OHMT007-portfolio/portfolio-4.png" },
+  { name: "Marco Vinus", role: "창립자 / 크리에이티브 디렉터", img: "/templates/OHMT007-portfolio/portfolio-1.png" },
+  { name: "Yuna Park", role: "리드 디자이너", img: "/templates/OHMT007-portfolio/portfolio-2.png" },
+  { name: "Tobias Krenn", role: "프론트엔드 엔지니어", img: "/templates/OHMT007-portfolio/portfolio-3.png" },
+  { name: "Sofia Reyes", role: "브랜드 전략가", img: "/templates/OHMT007-portfolio/portfolio-4.png" },
 ];
 
 const process = [
-  { num: "01", title: "Discover", desc: "We start with deep listening - understanding your goals, audience, and the gap you're trying to close." },
-  { num: "02", title: "Define", desc: "We map the strategic terrain: competitive landscape, positioning, and the story that will set you apart." },
-  { num: "03", title: "Design", desc: "Concepts are built, refined, and tested against real context - not just on a mood board." },
-  { num: "04", title: "Deliver", desc: "We hand off production-ready assets with clear guidelines and stay close through launch." },
+  { num: "01", title: "발견", desc: "목표, 고객, 해결해야 할 간극을 먼저 듣고 정리합니다." },
+  { num: "02", title: "정의", desc: "경쟁 환경, 포지셔닝, 브랜드가 가져야 할 목소리를 구체화합니다." },
+  { num: "03", title: "디자인", desc: "콘셉트를 만들고 실제 사용 맥락에서 검토하며 다듬습니다." },
+  { num: "04", title: "전달", desc: "바로 사용할 수 있는 산출물과 가이드를 넘기고 런칭까지 함께 봅니다." },
 ];
 
 function AboutPageContent() {
@@ -34,20 +34,20 @@ function AboutPageContent() {
         <section className="pt-40 pb-14 md:pb-28 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto px-6 grid md:grid-cols-2 gap-20 items-end">
             <div>
-              <span className="text-[13px] font-bold tracking-[0.4em] uppercase text-[var(--color-text-muted)] block mb-6">?�튜?�오 ?�개</span>
-              <h1 className="text-[clamp(3rem,8vw,7rem)] font-medium uppercase tracking-tighter leading-[1.5]">
-                We make<br />the bold<br /><span className="text-[var(--color-text)]">visible.</span>
+              <span className="text-[13px] font-bold tracking-[0.4em] uppercase text-[var(--color-text-muted)] block mb-6">스튜디오 소개</span>
+              <h1 className="text-[clamp(3rem,8vw,7rem)] font-medium uppercase tracking-tighter leading-[1.1]">
+                대담한<br />생각을<br /><span className="text-[var(--color-text)]">보이게.</span>
               </h1>
             </div>
             <div className="space-y-6">
               <p className="text-[1rem] text-[var(--color-text-muted)] leading-relaxed">
-                Founded in Seoul in 2019, Vinuspread is a creative studio that partners with brands and founders who have something real to say - and want the world to hear it.
+                2019년 서울에서 시작한 OHMT는 분명한 이야기를 가진 브랜드와 창업자를 위한 크리에이티브 스튜디오입니다.
               </p>
               <p className="text-[1rem] text-[var(--color-text-muted)] leading-relaxed">
-                좋�? ?�자?��? 결코 ?�식???�닙?�다. 그것?� ?�람?�이 ?�품???�용?�기 ?�에 �??�품???�???�끼??방식??바꾸???�략???�위?�니??
+                좋은 디자인은 장식이 아닙니다. 사람들이 제품을 쓰기 전, 이미 어떻게 느낄지를 바꾸는 전략입니다.
               </p>
               <Link href="/ko/templates/OHMT007-portfolio/contact" className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-widest text-[var(--color-text)] border-b border-[var(--color-accent)]/30 pb-0.5 hover:border-[var(--color-accent)] transition-colors">
-                ?�께?�기 <ArrowUpRight size={12} />
+                함께하기 <ArrowUpRight size={12} />
               </Link>
             </div>
           </div>
@@ -78,8 +78,8 @@ function AboutPageContent() {
         <section className="py-14 md:py-28 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto px-6">
             <div className="mb-16">
-              <span className="text-[13px] font-bold tracking-[0.3em] uppercase text-[var(--color-text-muted)] block mb-4">?�업 방식</span>
-              <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-medium uppercase tracking-tighter leading-none">?�로?�스</h2>
+              <span className="text-[13px] font-bold tracking-[0.3em] uppercase text-[var(--color-text-muted)] block mb-4">작업 방식</span>
+              <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-medium uppercase tracking-tighter leading-[1.1]">프로세스</h2>
             </div>
             <div className="grid md:grid-cols-4 gap-0 divide-x divide-white/10 border-x border-[var(--color-border)]">
               {process.map((step, i) => (
@@ -104,8 +104,8 @@ function AboutPageContent() {
         <section className="py-14 md:py-28">
           <div className="max-w-[1440px] mx-auto px-6">
             <div className="mb-16">
-              <span className="text-[13px] font-bold tracking-[0.3em] uppercase text-[var(--color-text-muted)] block mb-4">???�플</span>
-              <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-medium uppercase tracking-tighter leading-none">?� ?�개</h2>
+              <span className="text-[13px] font-bold tracking-[0.3em] uppercase text-[var(--color-text-muted)] block mb-4">사람들</span>
+              <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-medium uppercase tracking-tighter leading-[1.1]">팀 소개</h2>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {team.map((m, i) => (

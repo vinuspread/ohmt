@@ -14,7 +14,7 @@ export const Footer = () => {
               href="/en/templates/OHMT012-magazine" 
               className="font-[family-name:var(--theme-font-heading)] text-[1.6rem] tracking-[0.12em] uppercase text-[var(--theme-text)] mb-6 block"
             >
-              VINUSPREAD
+              OHMT
             </Link>
             <p className="text-[0.85rem] text-[var(--theme-text-muted)] leading-[1.4] font-normal">
               A premium lifestyle editorial exploring the intersections of design, culture, and sustainability.

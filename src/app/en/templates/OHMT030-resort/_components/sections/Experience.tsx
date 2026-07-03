@@ -54,14 +54,14 @@ export function Experience() {
           {/* Controls */}
           <div className="flex items-center gap-4 mt-16">
             <button onClick={prev}
-              className="w-11 h-11 rounded-full border border-white/40 flex items-center justify-center text-white hover:bg-white/10 transition-colors">
+              className="w-11 h-11 rounded-full border border-white/40 flex items-center justify-center text-white hover:bg-white/10 transition-colors focus-visible:ring-[var(--accent)] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" aria-label="Previous">
               <ArrowLeft size={17} />
             </button>
             <span className="text-[13px] text-white/50 tabular-nums">
               {String(active + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
             </span>
             <button onClick={next}
-              className="w-11 h-11 rounded-full bg-white flex items-center justify-center text-[var(--bg-dark)] hover:opacity-85 transition-opacity">
+              className="w-11 h-11 rounded-full bg-white flex items-center justify-center text-[var(--bg-dark)] hover:opacity-85 transition-opacity focus-visible:ring-[var(--accent)] focus-visible:ring-2 focus-visible:ring-offset-2" aria-label="Next">
               <ArrowRight size={17} />
             </button>
           </div>

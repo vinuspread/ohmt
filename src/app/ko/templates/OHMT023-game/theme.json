@@ -3,8 +3,8 @@
   "name": "Game Studio",
   "name_ko": "게임 스튜디오",
   "category": "portfolio",
-  "description": "Premium game studio and development showcase template built with Next.js",
-  "description_ko": "프리미엄 게임 스튜디오 및 개발 포트폴리오 쇼케이스 템플릿",
+  "description": "A game studio showcase template for trailers, screenshots, news, awards, and team storytelling, built for launches and portfolio credibility.",
+  "description_ko": "트레일러, 스크린샷, 뉴스, 수상 내역, 팀 스토리를 담아 출시와 포트폴리오 신뢰를 함께 만드는 게임 스튜디오 템플릿.",
   "mode": "dark",
   "theme": {
     "palette": {

@@ -1,7 +1,12 @@
 "use client";
 import { Leaf, Shield, Zap, Recycle } from "lucide-react";
 
-const icons = [<Leaf size={24} />, <Shield size={24} />, <Zap size={24} />, <Recycle size={24} />];
+const icons = [
+  <Leaf key="leaf" size={24} />,
+  <Shield key="shield" size={24} />,
+  <Zap key="zap" size={24} />,
+  <Recycle key="recycle" size={24} />,
+];
 
 const features = [
   { icon: icons[0], title: "친환경 소재", desc: "책임감 있게 조달된 친환경 원단" },

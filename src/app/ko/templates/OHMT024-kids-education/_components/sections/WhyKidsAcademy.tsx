@@ -27,7 +27,7 @@ export default function WhyKidsAcademy() {
           <span className="inline-flex items-center justify-center bg-[var(--color-accent)] text-white rounded-full px-5 py-2.5 text-xs font-bold uppercase tracking-wider leading-none mb-4">
             키즈 아카데미를 선택해야 하는 이유
           </span>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-none mt-3" style={{ fontFamily: "var(--font-heading)" }}>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1] mt-3" style={{ fontFamily: "var(--font-heading)" }}>
             성장하는 아이들을 위한 특별함
           </h2>
         </motion.div>
@@ -48,7 +48,7 @@ export default function WhyKidsAcademy() {
                 >
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-bold tracking-tight leading-none" style={{ fontFamily: "var(--font-heading)" }}>
+                <h3 className="text-xl font-bold tracking-tight leading-[1.1]" style={{ fontFamily: "var(--font-heading)" }}>
                   {item.title}
                 </h3>
                 <p className="mt-2 text-sm text-[var(--color-text-muted)] leading-relaxed">

@@ -58,7 +58,7 @@ export default function BookingForm() {
                 </div>
                 <div>
                   <label htmlFor="partner" className="block text-xs uppercase tracking-[0.1em] font-semibold text-[var(--color-text-muted)] mb-2">
-                    Partner's Name *
+                    Partner&apos;s Name *
                   </label>
                   <input
                     type="text"

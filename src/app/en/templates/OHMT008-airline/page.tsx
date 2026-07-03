@@ -1,8 +1,8 @@
-// src/app/templates/OHMT008-airline/page.tsx
 "use client";
 
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { Header } from "./_components/Header";
 import { Footer } from "./_components/Footer";
 import { Hero } from "./_components/Hero";
@@ -10,6 +10,16 @@ import { SearchWidget } from "./_components/SearchWidget";
 import theme from "./theme.json";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
 import { ArrowRight, Utensils, BedDouble, Wifi, ShieldCheck } from "lucide-react";
+
+const sectionVariants = {
+  initial: { opacity: 0, y: 40 },
+  whileInView: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.23, 1, 0.32, 1] as const } }
+};
+
+const staggerChildren = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.23, 1, 0.32, 1] as const } }
+};
 
 function AirlineTemplateContent() {
   const services = [
@@ -31,7 +41,7 @@ function AirlineTemplateContent() {
     {
       icon: ShieldCheck,
       title: "Priority Concierge Service",
-      desc: "Dedicated personal concierge from pre-departure lounge access through seamless arrivals at every Vinus Air destination."
+      desc: "Dedicated personal concierge from pre-departure lounge access through seamless arrivals at every OHMT destination."
     }
   ];
 
@@ -45,10 +55,16 @@ function AirlineTemplateContent() {
         <SearchWidget />
 
         {/* Section 1: The Experience */}
-        <section className="py-16 md:py-24 bg-white">
+        <motion.section
+          variants={sectionVariants}
+          initial="initial"
+          whileInView="whileInView"
+          viewport={{ once: true, margin: "-80px" }}
+          className="py-16 md:py-24 bg-white"
+        >
           <div className="max-w-[1320px] mx-auto px-6 md:px-10">
             <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-              <div>
+              <motion.div variants={staggerChildren}>
                 <span className="block text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-5">
                   The Experience
                 </span>
@@ -68,35 +84,51 @@ function AirlineTemplateContent() {
                     <p className="text-[0.85rem] text-[var(--color-text-muted)]">Menus curated by Michelin-starred chefs.</p>
                   </div>
                 </div>
-                <Link href="/en/templates/OHMT008-airline/experience" className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-[var(--color-primary)] hover:translate-x-1.5 transition-transform duration-300">
-                  Explore First Class <span className="text-[1.2em]">→</span>
+                <Link href="/en/templates/OHMT008-airline/experience" className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[-0.02em] text-[var(--color-primary)] group transition-[gap] duration-[var(--transition-fast)] hover:gap-4">
+                  Explore First Class <span className="text-[1.2em] transition-transform duration-[var(--transition-fast)] group-hover:translate-x-1">→</span>
                 </Link>
-              </div>
+              </motion.div>
               <div className="relative h-[320px] md:h-[480px] overflow-hidden">
-                <img
+                <motion.img
+                  initial={{ scale: 1.1 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1] as const }}
                   src="/templates/OHMT008-airline/destination-3.jpg"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-[var(--transition-slow)] hover:scale-105"
                   alt="In-flight service"
                 />
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Section 2: Crew / Service image + stats */}
-        <section className="bg-[var(--color-primary)] py-16 md:py-24">
+        <motion.section
+          variants={sectionVariants}
+          initial="initial"
+          whileInView="whileInView"
+          viewport={{ once: true, margin: "-80px" }}
+          className="bg-[var(--color-primary)] py-16 md:py-24"
+        >
           <div className="max-w-[1320px] mx-auto px-6 md:px-10">
             <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-              <div className="relative h-[320px] md:h-[560px] overflow-hidden order-2 md:order-1">
+              <motion.div
+                initial={{ scale: 1.1, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, ease: [0.23, 1, 0.32, 1] as const }}
+                className="relative h-[320px] md:h-[560px] overflow-hidden order-2 md:order-1"
+              >
                 <img
                   src="/templates/OHMT008-airline/airline-experience-hero.png"
-                  className="w-full h-full object-cover opacity-80"
-                  alt="Vinus Air cabin crew"
+                  className="w-full h-full object-cover opacity-80 transition-transform duration-[var(--transition-slow)] hover:scale-105"
+                  alt="OHMT cabin crew"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)]/60 via-transparent to-transparent" />
-              </div>
+              </motion.div>
               <div className="order-1 md:order-2 space-y-8 md:space-y-10">
-                <div>
+                <motion.div variants={staggerChildren}>
                   <span className="block text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-5">
                     White Glove Service
                   </span>
@@ -104,11 +136,11 @@ function AirlineTemplateContent() {
                     Every moment attended, <br />
                     <span className="font-normal text-[var(--color-accent)]">with precision.</span>
                   </h2>
-                </div>
-                <p className="text-[0.95rem] text-white/60 leading-[1.82] font-normal">
+                </motion.div>
+                <motion.p variants={staggerChildren} className="text-[0.95rem] text-white/60 leading-[1.82] font-normal">
                   Our cabin crew are trained at the world's premier hospitality institutes. From the moment you board to your final destination, every request is met with grace, discretion, and expertise.
-                </p>
-                <div className="grid grid-cols-3 gap-6 border-t border-white/10 pt-8 md:pt-10">
+                </motion.p>
+                <motion.div variants={staggerChildren} className="grid grid-cols-3 gap-6 border-t border-white/10 pt-8 md:pt-10">
                   {[
                     { value: "200+", label: "Destinations" },
                     { value: "98%", label: "On-Time Rate" },
@@ -119,50 +151,66 @@ function AirlineTemplateContent() {
                       <div className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-white/40 mt-1">{stat.label}</div>
                     </div>
                   ))}
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Section 3: Service Cards */}
-        <section className="py-16 md:py-24 bg-[var(--color-bg-secondary)]">
+        <motion.section
+          variants={sectionVariants}
+          initial="initial"
+          whileInView="whileInView"
+          viewport={{ once: true, margin: "-80px" }}
+          className="py-16 md:py-24 bg-[var(--color-bg-secondary)]"
+        >
           <div className="max-w-[1320px] mx-auto px-6 md:px-10">
-            <div className="mb-10 md:mb-14">
+            <motion.div variants={staggerChildren} className="mb-10 md:mb-14">
               <span className="block text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-4">
                 Our Services
               </span>
               <h2 className="font-[family-name:var(--theme-font-heading)] text-[clamp(1.8rem,3.5vw,3rem)] font-bold tracking-tight text-[var(--color-primary)] leading-[1.1]">
                 Crafted for those who <br className="hidden md:block" />expect the extraordinary.
               </h2>
-            </div>
+            </motion.div>
 
-             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-               {services.map((s) => (
-                 <div key={s.title} className="bg-white border border-[var(--color-border)] p-8 md:p-8 space-y-6 group hover:border-[var(--color-accent)] transition-colors duration-300">
-                   <div className="w-10 h-10 bg-[var(--color-primary)] flex items-center justify-center group-hover:bg-[var(--color-accent)] transition-colors duration-300">
-                     <s.icon size={18} className="text-[var(--color-accent)] group-hover:text-[var(--color-primary)] transition-colors duration-300" />
-                   </div>
-                   <h3 className="text-[0.92rem] font-bold text-[var(--color-primary)] leading-tight uppercase tracking-wide">
-                     {s.title}
-                   </h3>
-                   <p className="text-[0.82rem] text-[var(--color-text-muted)] leading-[1.4] font-normal">
-                     {s.desc}
-                   </p>
-                 </div>
-               ))}
-             </div>
+             <motion.div
+               initial="initial"
+               whileInView="whileInView"
+               viewport={{ once: true }}
+               variants={{ whileInView: { transition: { staggerChildren: 0.1 } } }}
+               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
+             >
+                {services.map((s) => (
+                  <motion.div
+                    key={s.title}
+                    variants={{ initial: { opacity: 0, y: 24 }, whileInView: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.23, 1, 0.32, 1] as const } } }}
+                    className="bg-white border border-[var(--color-border)] p-8 md:p-8 space-y-6 group hover:border-[var(--color-accent)] hover:translate-y-[-4px] transition-all duration-[var(--transition-base)]"
+                  >
+                    <div className="w-10 h-10 bg-[var(--color-primary)] flex items-center justify-center group-hover:bg-[var(--color-accent)] transition-colors duration-[var(--transition-base)]">
+                      <s.icon size={18} className="text-[var(--color-accent)] group-hover:text-[var(--color-primary)] transition-colors duration-[var(--transition-base)]" />
+                    </div>
+                    <h3 className="text-[0.92rem] font-bold text-[var(--color-primary)] leading-tight uppercase tracking-wide">
+                      {s.title}
+                    </h3>
+                    <p className="text-[0.82rem] text-[var(--color-text-muted)] leading-[1.4] font-normal">
+                      {s.desc}
+                    </p>
+                  </motion.div>
+                ))}
+             </motion.div>
 
-            <div className="mt-10 md:mt-14 text-center">
+            <motion.div variants={staggerChildren} className="mt-10 md:mt-14 text-center">
               <Link
                 href="/en/templates/OHMT008-airline/experience"
-                className="inline-flex items-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.2em] px-10 py-3.5 bg-[var(--color-primary)] text-[var(--color-accent)] hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors duration-300"
+                className="inline-flex items-center gap-3 text-sm font-bold uppercase tracking-[-0.02em] px-10 py-3.5 bg-[var(--color-primary)] text-[var(--color-accent)] hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] transition-all duration-[var(--transition-base)] active:scale-[0.97]"
               >
                 View Full Experience <ArrowRight size={14} />
               </Link>
-            </div>
+            </motion.div>
           </div>
-        </section>
+        </motion.section>
 
         <Footer />
       </main>

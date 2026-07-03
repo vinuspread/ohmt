@@ -4,15 +4,15 @@ import { useState, useEffect, useCallback } from "react";
 const slides = [
   {
     image: "/templates/OHMT029-fitness/hero.jpg",
-    headline: "더 나은 삶을 위한,<br />프리미엄 웰니스.",
+    headline: "더 나은 하루를 위한<br />프리미엄 웰니스.",
   },
   {
     image: "/templates/OHMT029-fitness/about-hero.jpg",
-    headline: "오직 당신만을 위해 설계된<br />맞춤형 프로그램.",
+    headline: "당신의 몸에 맞춘<br />1:1 프로그램.",
   },
   {
     image: "/templates/OHMT029-fitness/program-hero.jpg",
-    headline: "스튜디오의 한계를 넘어<br />일상의 균형을 찾다.",
+    headline: "스튜디오 밖에서도<br />균형을 이어갑니다.",
   },
 ];
 
@@ -49,18 +49,18 @@ export function Hero() {
           <span dangerouslySetInnerHTML={{ __html: slides[current].headline }} />
         </h1>
         <p className="text-[15px] text-white/70 mt-6 max-w-[440px] leading-relaxed">
-          더 나은 삶을 기대하는 당신을 위한 프리미엄 웰니스.
+          신체 분석과 코칭을 바탕으로 일상에 맞는 운동 루틴을 설계합니다.
         </p>
         <div className="flex items-center gap-4 mt-10">
           <a
             href="/ko/templates/OHMT029-fitness/programs"
-            className="bg-white text-[var(--accent)] text-[13px] font-semibold px-7 py-3.5 rounded-lg hover:bg-white/90 transition-colors tracking-wide"
+            className="bg-white text-[var(--accent)] text-[13px] font-semibold px-7 py-3.5 rounded-lg hover:bg-white/90 transition-colors tracking-wide focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
           >
-            프로그램 살펴보기 →
+            프로그램 보기 →
           </a>
           <a
             href="/ko/templates/OHMT029-fitness/about#contact"
-            className="border border-white/30 text-white text-[13px] font-semibold px-7 py-3.5 rounded-lg hover:border-white/60 transition-colors tracking-wide"
+            className="border border-white/30 text-white text-[13px] font-semibold px-7 py-3.5 rounded-lg hover:border-white/60 transition-colors tracking-wide focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
           >
             문의하기
           </a>
@@ -72,7 +72,8 @@ export function Hero() {
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+            aria-label={`슬라이드 ${i + 1}`}
+            className={`w-2 h-2 rounded-full transition-all duration-300 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 ${
               i === current ? "bg-white w-6" : "bg-white/40"
             }`}
           />

@@ -1,8 +1,8 @@
-// src/app/ko/templates/OHMT008-airline/page.tsx
 "use client";
 
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { Header } from "./_components/Header";
 import { Footer } from "./_components/Footer";
 import { Hero } from "./_components/Hero";
@@ -10,6 +10,16 @@ import { SearchWidget } from "./_components/SearchWidget";
 import theme from "./theme.json";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
 import { ArrowRight, Utensils, BedDouble, Wifi, ShieldCheck } from "lucide-react";
+
+const sectionVariants = {
+  initial: { opacity: 0, y: 40 },
+  whileInView: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.23, 1, 0.32, 1] as const } }
+};
+
+const staggerChildren = {
+  initial: { opacity: 0, y: 20 },
+  whileInView: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.23, 1, 0.32, 1] as const } }
+};
 
 function AirlineTemplateContent() {
   const services = [
@@ -31,7 +41,7 @@ function AirlineTemplateContent() {
     {
       icon: ShieldCheck,
       title: "프라이오리티 컨시어지 서비스",
-      desc: "출발 전 라운지 이용부터 도착지까지 모든 비누스 에어 취항지에서 전담 개인 컨시어지가 함께합니다."
+      desc: "출발 전 라운지 이용부터 도착지까지 모든 OHMT 취항지에서 전담 개인 컨시어지가 함께합니다."
     }
   ];
 
@@ -45,18 +55,24 @@ function AirlineTemplateContent() {
         <SearchWidget />
 
         {/* Section 1: The Experience */}
-        <section className="py-16 md:py-24 bg-white">
+        <motion.section
+          variants={sectionVariants}
+          initial="initial"
+          whileInView="whileInView"
+          viewport={{ once: true, margin: "-80px" }}
+          className="py-16 md:py-24 bg-white"
+        >
           <div className="max-w-[1320px] mx-auto px-6 md:px-10">
             <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-              <div>
+              <motion.div variants={staggerChildren}>
                 <span className="block text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-5">
                   프리미엄 경험
                 </span>
-                <h2 className="font-[family-name:var(--theme-font-heading)] text-[clamp(2rem,3.5vw,3rem)] font-bold tracking-tight text-[var(--color-primary)] leading-[1.5] mb-6">
+                <h2 className="font-[family-name:var(--theme-font-heading)] text-[clamp(2rem,3.5vw,3rem)] font-[var(--font-weight-heading)] tracking-tight text-[var(--color-primary)] leading-[1.1] mb-6">
                   모든 디테일이 완성하는<br />타협 없는 럭셔리.
                 </h2>
                 <p className="text-[0.95rem] text-[var(--color-text-muted)] leading-[1.82] mb-8 md:mb-10 font-normal">
-                  시그니처 캐비어 서비스에서부터 하늘 위 가장 조용한 객실까지, 비누스 에어는 여행의 의미를 새롭게 정의합니다. 최첨단 기술로 무장한 기단이 당신의 모든 순간을 매끄럽고 기억에 남도록 만들어 드립니다.
+                  시그니처 캐비어 서비스에서부터 하늘 위 가장 조용한 객실까지, OHMT는 여행의 의미를 새롭게 정의합니다. 최첨단 기술로 무장한 기단이 당신의 모든 순간을 매끄럽고 기억에 남도록 만들어 드립니다.
                 </p>
                 <div className="grid grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-10">
                   <div>
@@ -68,47 +84,63 @@ function AirlineTemplateContent() {
                     <p className="text-[0.85rem] text-[var(--color-text-muted)]">미슐랭 스타 셰프가 엄선한 프리미엄 기내식.</p>
                   </div>
                 </div>
-                <Link href="/ko/templates/OHMT008-airline/experience" className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-[var(--color-primary)] hover:translate-x-1.5 transition-transform duration-300">
-                  퍼스트 클래스 살펴보기 <span className="text-[1.2em]">→</span>
+                <Link href="/ko/templates/OHMT008-airline/experience" className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[-0.02em] text-[var(--color-primary)] group transition-[gap] duration-[var(--transition-fast)] hover:gap-4">
+                  퍼스트 클래스 살펴보기 <span className="text-[1.2em] transition-transform duration-[var(--transition-fast)] group-hover:translate-x-1">→</span>
                 </Link>
-              </div>
+              </motion.div>
               <div className="relative h-[320px] md:h-[480px] overflow-hidden">
-                <img
+                <motion.img
+                  initial={{ scale: 1.1 }}
+                  whileInView={{ scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 1.2, ease: [0.23, 1, 0.32, 1] as const }}
                   src="/templates/OHMT008-airline/destination-3.jpg"
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-[var(--transition-slow)] hover:scale-105"
                   alt="기내 서비스"
                 />
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Section 2: Crew / Service image + stats */}
-        <section className="bg-[var(--color-primary)] py-16 md:py-24">
+        <motion.section
+          variants={sectionVariants}
+          initial="initial"
+          whileInView="whileInView"
+          viewport={{ once: true, margin: "-80px" }}
+          className="bg-[var(--color-primary)] py-16 md:py-24"
+        >
           <div className="max-w-[1320px] mx-auto px-6 md:px-10">
             <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
-              <div className="relative h-[320px] md:h-[560px] overflow-hidden order-2 md:order-1">
+              <motion.div
+                initial={{ scale: 1.1, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 1, ease: [0.23, 1, 0.32, 1] as const }}
+                className="relative h-[320px] md:h-[560px] overflow-hidden order-2 md:order-1"
+              >
                 <img
                   src="/templates/OHMT008-airline/airline-experience-hero.png"
-                  className="w-full h-full object-cover opacity-80"
-                  alt="비누스 에어 객실 승무원"
+                  className="w-full h-full object-cover opacity-80 transition-transform duration-[var(--transition-slow)] hover:scale-105"
+                  alt="OHMT 객실 승무원"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)]/60 via-transparent to-transparent" />
-              </div>
+              </motion.div>
               <div className="order-1 md:order-2 space-y-8 md:space-y-10">
-                <div>
+                <motion.div variants={staggerChildren}>
                   <span className="block text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-5">
                     화이트 글러브 서비스
                   </span>
-                  <h2 className="font-[family-name:var(--theme-font-heading)] text-[clamp(1.8rem,3.5vw,3rem)] font-bold tracking-tight text-white leading-[1.5]">
-                    모든 순간은 정밀하게, <br />
-                    <span className="font-normal text-[var(--color-accent)]">세심하게.</span>
+<h2 className="font-[family-name:var(--theme-font-heading)] text-[clamp(1.8rem,3.5vw,3rem)] font-[var(--font-weight-heading)] tracking-tight text-white leading-[1.1]">
+                  모든 순간은 정밀하게, <br />
+                  <span className="font-[var(--font-weight-heading)] text-[var(--color-accent)]">세심하게.</span>
                   </h2>
-                </div>
-                <p className="text-[0.95rem] text-white/60 leading-[1.82] font-normal">
-                  비누스 에어의 객실 승무원은 세계 최고의 서비스 교육 기관에서 훈련받았습니다. 탑승 순간부터 목적지에 도착할 때까지, 모든 요청은 우아함과 재량, 전문성으로 응대됩니다.
-                </p>
-                <div className="grid grid-cols-3 gap-6 border-t border-white/10 pt-8 md:pt-10">
+                </motion.div>
+                <motion.p variants={staggerChildren} className="text-[0.95rem] text-white/60 leading-[1.82] font-normal">
+                  OHMT의 객실 승무원은 세계 최고의 서비스 교육 기관에서 훈련받았습니다.<br />탑승 순간부터 목적지에 도착할 때까지, 모든 요청은 우아함과 재량, 전문성으로 응대됩니다.
+                </motion.p>
+                <motion.div variants={staggerChildren} className="grid grid-cols-3 gap-6 border-t border-white/10 pt-8 md:pt-10">
                   {[
                     { value: "200+", label: "취항지" },
                     { value: "98%", label: "정시율" },
@@ -119,50 +151,66 @@ function AirlineTemplateContent() {
                       <div className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-white/40 mt-1">{stat.label}</div>
                     </div>
                   ))}
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
-        </section>
+        </motion.section>
 
         {/* Section 3: Service Cards */}
-        <section className="py-16 md:py-24 bg-[var(--color-bg-secondary)]">
+        <motion.section
+          variants={sectionVariants}
+          initial="initial"
+          whileInView="whileInView"
+          viewport={{ once: true, margin: "-80px" }}
+          className="py-16 md:py-24 bg-[var(--color-bg-secondary)]"
+        >
           <div className="max-w-[1320px] mx-auto px-6 md:px-10">
-            <div className="mb-10 md:mb-14">
+            <motion.div variants={staggerChildren} className="mb-10 md:mb-14">
               <span className="block text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-4">
                 서비스
               </span>
-              <h2 className="font-[family-name:var(--theme-font-heading)] text-[clamp(1.8rem,3.5vw,3rem)] font-bold tracking-tight text-[var(--color-primary)] leading-[1.5]">
+              <h2 className="font-[family-name:var(--theme-font-heading)] text-[clamp(1.8rem,3.5vw,3rem)] font-[var(--font-weight-heading)] tracking-tight text-[var(--color-primary)] leading-[1.1]">
                 특별함을 기대하는 당신을<br className="hidden md:block" />위해 준비했습니다.
               </h2>
-            </div>
+            </motion.div>
 
-             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-               {services.map((s) => (
-                 <div key={s.title} className="bg-white border border-[var(--color-border)] p-8 md:p-8 space-y-6 group hover:border-[var(--color-accent)] transition-colors duration-300">
-                   <div className="w-10 h-10 bg-[var(--color-primary)] flex items-center justify-center group-hover:bg-[var(--color-accent)] transition-colors duration-300">
-                     <s.icon size={18} className="text-[var(--color-accent)] group-hover:text-[var(--color-primary)] transition-colors duration-300" />
-                   </div>
-                   <h3 className="text-[0.92rem] font-bold text-[var(--color-primary)] leading-tight uppercase tracking-wide">
-                     {s.title}
-                   </h3>
-                   <p className="text-[0.82rem] text-[var(--color-text-muted)] leading-relaxed font-normal">
-                     {s.desc}
-                   </p>
-                 </div>
-               ))}
-             </div>
+             <motion.div
+               initial="initial"
+               whileInView="whileInView"
+               viewport={{ once: true }}
+               variants={{ whileInView: { transition: { staggerChildren: 0.1 } } }}
+               className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
+             >
+                {services.map((s) => (
+                  <motion.div
+                    key={s.title}
+                    variants={{ initial: { opacity: 0, y: 24 }, whileInView: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.23, 1, 0.32, 1] as const } } }}
+                    className="bg-white border border-[var(--color-border)] p-8 md:p-8 space-y-6 group hover:border-[var(--color-accent)] hover:translate-y-[-4px] transition-all duration-[var(--transition-base)]"
+                  >
+                    <div className="w-10 h-10 bg-[var(--color-primary)] flex items-center justify-center group-hover:bg-[var(--color-accent)] transition-colors duration-[var(--transition-base)]">
+                      <s.icon size={18} className="text-[var(--color-accent)] group-hover:text-[var(--color-primary)] transition-colors duration-[var(--transition-base)]" />
+                    </div>
+                    <h3 className="text-[0.92rem] font-bold text-[var(--color-primary)] leading-[1.1] uppercase tracking-wide">
+                      {s.title}
+                    </h3>
+                    <p className="text-[0.82rem] text-[var(--color-text-muted)] leading-relaxed font-normal">
+                      {s.desc}
+                    </p>
+                  </motion.div>
+                ))}
+             </motion.div>
 
-            <div className="mt-10 md:mt-14 text-center">
+            <motion.div variants={staggerChildren} className="mt-10 md:mt-14 text-center">
               <Link
                 href="/ko/templates/OHMT008-airline/experience"
-                className="inline-flex items-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.2em] px-10 py-3.5 bg-[var(--color-primary)] text-[var(--color-accent)] hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] transition-colors duration-300"
+                className="inline-flex items-center gap-3 text-sm font-bold uppercase tracking-[-0.02em] px-10 py-3.5 bg-[var(--color-primary)] text-[var(--color-accent)] hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] transition-all duration-[var(--transition-base)] active:scale-[0.97]"
               >
                 전체 경험 보기 <ArrowRight size={14} />
               </Link>
-            </div>
+            </motion.div>
           </div>
-        </section>
+        </motion.section>
 
         <Footer />
       </main>

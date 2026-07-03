@@ -11,7 +11,7 @@ export const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-10 md:mb-16">
           <div className="col-span-2 md:col-span-1">
             <Link href="/en/templates/OHMT008-airline" className="inline-block mb-5">
-              <span className="text-[0.78rem] md:text-[0.82rem] font-bold tracking-[0.15em] uppercase text-[var(--color-primary)] leading-none">OHMT</span>
+              <span className="text-sm md:text-base font-bold tracking-[0.15em] uppercase text-[var(--color-primary)] leading-none">OHMT</span>
             </Link>
             <p className="text-[0.85rem] text-[var(--color-primary)]/70 leading-[1.4] max-w-[280px]">
               Setting the global standard for luxury travel. Experience excellence across all continents.

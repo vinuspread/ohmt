@@ -10,19 +10,19 @@ import { Header } from "./_components/layout/Header";
 import { Footer } from "./_components/layout/Footer";
 import { projects, services, stats, testimonials, blogPosts } from "@/lib/portfolio-data";
 
-/* ?�?�?� Portfolio KO FAQ Data ?�?�?� */
+/* Portfolio KO FAQ Data */
 const faqs = [
-  { q: '?�반?�인 ?�로?�트???�떤 과정?�로 진행?�나??', a: '모든 ?�로?�트??목표, ?��?고객, ?�공 지?��? ?�하???�스커버�??�션?�로 ?�작?�니?? �???리서�? 컨셉, ?�자?? ?�품까�? 진행?�며, 규모???�라 보통 4~12주�? ?�요?�니??' },
-  { q: '??번만 진행?�는 ?�로?�트??가?�한가??', a: '?? 가?�합?�다. 로고 ?�자?? ?�사?�트 ?�작, 캠페??컨셉 같�? ?�립?�인 ?�로?�트??진행?�니?? ?�기 계약???�수???�닙?�다.' },
-  { q: '?�떤 ?�랫?�에???�업?�나??', a: 'Figma, Adobe Creative Suite, 그리�?최신 ??개발 ?�택???�용?�니?? ?�라?�언?��????�업???�해 ?�요??모든 ?�구�??�용?�니??' },
-  { q: '리뷰 ?�운?�는 보통 �?�??�도 진행?�나??', a: '?�로?�트 범위???�라 ?�르지�? 보통 3~5번의 리뷰 ?�운?��? ?�함?�니?? �??�계?�서 명확???�드�??�로?�스�??�릅?�다.' },
-  { q: '?�반?�인 ?�로?�트 기간?� ?�마???�나??', a: '?�규�??�로?�트??4�? 중규모는 8�? ?�규모??12�??�상 ?�요?????�습?�다. ?�확???�정?� ?�로?�트 범위?� 복잡?�에 ?�라 결정?�니??' },
-  { q: '�?�� ?�라?�언?��????�업?�나??', a: '?? ?�니?? ?�?�존 차이???��?�? 비동�?커�??��??�션???�해 ???�계 ?�라?�언?��? ?�공?�으�??�업?�니??' },
-  { q: '결제???�떻�?진행?�나??', a: '?�로?�트 범위???�라 ?�체 계약�? ?�금, ?�는 ?�계�?결제 ?�션???�공?�니?? ?�세???�항?� 초기 ?�담 ???�의?�니??' },
-  { q: '?�칭 ?�에??지?�을 받을 ???�나??', a: '?? ?�칭 ???�정 기간??무료 지?�을 ?�공?�니?? 추�? 지?�이 ?�요??경우 별도???��?보수 계약???�안?�립?�다.' }
+  { q: "일반 프로젝트는 어떤 과정으로 진행되나요?", a: "목표, 고객, 성공 기준을 정리하는 디스커버리 세션으로 시작합니다. 이후 리서치, 콘셉트, 디자인, 납품까지 진행하며 보통 4~12주가 필요합니다." },
+  { q: "한 번만 진행하는 프로젝트도 가능한가요?", a: "네, 가능합니다. 로고 디자인, 웹사이트 제작, 캠페인 콘셉트처럼 독립적인 프로젝트도 진행합니다. 장기 계약이 필수는 아닙니다." },
+  { q: "어떤 툴로 협업하나요?", a: "Figma, Adobe Creative Suite, 최신 웹 개발 스택을 사용합니다. 클라이언트 협업에 필요한 툴은 프로젝트에 맞춰 정합니다." },
+  { q: "리뷰 라운드는 보통 몇 번 진행되나요?", a: "범위에 따라 다르지만 보통 3~5회의 리뷰 라운드를 포함합니다. 각 단계에서 피드백 기준을 명확히 잡습니다." },
+  { q: "프로젝트 기간은 얼마나 걸리나요?", a: "소규모 프로젝트는 약 4주, 중간 규모는 8주, 큰 규모는 12주 이상이 필요할 수 있습니다. 정확한 일정은 범위와 복잡도에 따라 정합니다." },
+  { q: "해외 클라이언트와도 협업하나요?", a: "네. 시간대가 달라도 비동기 커뮤니케이션과 정기 체크인으로 전 세계 클라이언트와 협업합니다." },
+  { q: "결제는 어떻게 진행되나요?", a: "프로젝트 범위에 따라 착수금과 잔금, 또는 단계별 결제 옵션을 제안합니다. 세부 조건은 초기 상담에서 협의합니다." },
+  { q: "런칭 후에도 지원을 받을 수 있나요?", a: "네. 런칭 후 일정 기간 기본 지원을 제공합니다. 추가 운영이 필요하면 별도 유지보수 계약을 제안합니다." }
 ];
 
-/* ?�?�?� Marquee ?�?�?� */
+/* Marquee */
 const marqueeImages = [
   "/templates/OHMT007-portfolio/portfolio-1.png",
   "/templates/OHMT007-portfolio/portfolio-2.png",
@@ -88,7 +88,7 @@ function Marquee() {
   );
 }
 
-/* ?�?�?� Service Carousel ?�?�?� */
+/* Service Carousel */
 const serviceColors = ['#e5daf6', '#cfffb2', '#ffc9c9', '#fedca6'];
 
 function ServiceCarousel() {
@@ -140,7 +140,7 @@ function ServiceCarousel() {
   );
 }
 
-/* ?�?�?� FAQ Item ?�?�?� */
+/* FAQ Item */
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
   return (
@@ -168,7 +168,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
   );
 }
 
-/* ?�?�?� Testimonial Slider ?�?�?� */
+/* Testimonial Slider */
 function TestimonialSlider() {
   const [idx, setIdx] = useState(0);
   const t = testimonials[idx];
@@ -206,7 +206,7 @@ function TestimonialSlider() {
   );
 }
 
-/* ?�?�?� Custom Cursor ?�?�?� */
+/* Custom Cursor */
 function CustomCursor() {
   const x = useMotionValue(-100);
   const y = useMotionValue(-100);
@@ -262,7 +262,7 @@ function CustomCursor() {
   );
 }
 
-/* ?�?�?� Main Page ?�?�?� */
+/* Main Page */
 function PortfolioHomeContent() {
 
   const heroRef = useRef<HTMLElement>(null);
@@ -301,7 +301,7 @@ function PortfolioHomeContent() {
               className="text-center"
             >
               <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-4">
-                Vinuspread<span className="text-[var(--color-accent)]">.</span>
+                OHMT<span className="text-[var(--color-accent)]">.</span>
               </h2>
               <p className="text-[13px] tracking-[0.3em] uppercase text-white/40">Creative Studio / Seoul</p>
             </motion.div>
@@ -313,7 +313,7 @@ function PortfolioHomeContent() {
         <CustomCursor />
         <Header />
 
-        {/* ?�?� HERO ?�?� */}
+        {/* HERO */}
         <section ref={heroRef} className="relative overflow-hidden" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
           {/* Side labels */}
           <div className="absolute left-5 bottom-[45vh] hidden md:block">
@@ -338,10 +338,10 @@ function PortfolioHomeContent() {
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="text-[clamp(2.5rem,7vw,5rem)] font-black tracking-tighter leading-[1.0] text-[var(--color-text)] mb-6"
+              className="text-[clamp(2.5rem,7vw,5rem)] font-black tracking-tighter leading-[1.1] text-[var(--color-text)] mb-6"
             >
-              ?�각??축적,<br />
-              <span className="text-[var(--color-text)]">감각???�단??기록.</span>
+              생각의 축적,<br />
+              <span className="text-[var(--color-text)]">감각의 기록.</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 15 }}
@@ -349,7 +349,8 @@ function PortfolioHomeContent() {
               transition={{ delay: 0.4, duration: 0.7 }}
               className="text-[1rem] text-[var(--color-text-muted)] max-w-[480px]"
             >
-              가??고유???�야기�? 가???��? ?�림??갖습?�다. 매일 기록?�고 ?�제????창작?�의 ??
+              브랜드의 고유한 이야기를 시각 언어로 정리합니다.
+              매일의 기록에서 오래 남을 장면을 찾습니다.
             </motion.p>
           </motion.div>
 
@@ -363,7 +364,7 @@ function PortfolioHomeContent() {
           </motion.div>
         </section>
 
-        {/* ?�?� TAGLINE + CLIENTS ?�?� */}
+        {/* TAGLINE + CLIENTS */}
         <section className="py-12 md:py-24 px-5 text-center border-b border-[var(--color-border)]">
           <div className="max-w-[860px] mx-auto">
             <motion.p
@@ -372,8 +373,8 @@ function PortfolioHomeContent() {
               viewport={{ once: true }}
               className="text-[clamp(1.5rem,3.5vw,2.5rem)] font-bold text-[var(--color-text)] leading-snug mb-12"
             >
-              We're Vinuspread® - a creative studio cultivating bold brands, beautiful websites,
-              and ideas that refuse to be ordinary.
+              OHMT는 브랜드, 웹사이트, 캠페인 아이디어를 함께 설계하는
+              서울 기반 크리에이티브 스튜디오입니다.
             </motion.p>
             {/* Client logos */}
             <div className="flex flex-wrap items-center justify-center gap-8 md:gap-14">
@@ -384,12 +385,12 @@ function PortfolioHomeContent() {
           </div>
         </section>
 
-        {/* ?�?� LATEST PROJECTS ?�?� */}
-        <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[var(--color-border)]">
+        {/* LATEST PROJECTS */}
+        <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[var(--color-border)] overflow-hidden">
           <div className="max-w-[1440px] mx-auto">
             <div className="flex items-end justify-between mb-12">
-              <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none">
-                최근<br />?�로?�트.
+              <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-[1.1]">
+                최근<br />프로젝트.
               </h2>
               <span className="text-[0.82rem] text-[var(--color-text-muted)] hidden md:block">( _©26 )</span>
             </div>
@@ -443,13 +444,13 @@ function PortfolioHomeContent() {
           </div>
         </section>
 
-        {/* ?�?� SERVICES ?�?� */}
+        {/* SERVICES */}
         <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto">
             <div className="flex items-end justify-between mb-10">
-              <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none">?�비??</h2>
+              <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-[1.1]">서비스.</h2>
               <Link href="/ko/templates/OHMT007-portfolio/contact" className="text-[0.82rem] font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors flex items-center gap-2">
-                문의?�기 <span className="text-lg leading-none">+</span>
+                문의하기 <span className="text-lg leading-none">+</span>
               </Link>
             </div>
             <motion.div
@@ -463,7 +464,7 @@ function PortfolioHomeContent() {
           </div>
         </section>
 
-        {/* ?�?� STATS + STATEMENT ?�?� */}
+        {/* STATS + STATEMENT */}
         <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto">
             <motion.p
@@ -472,7 +473,8 @@ function PortfolioHomeContent() {
               viewport={{ once: true }}
               className="text-[clamp(1.8rem,4vw,3.2rem)] font-bold text-[var(--color-text)] leading-snug mb-16 max-w-3xl"
             >
-              바이?�스?�레?��?�� ?�?�한 브랜?��? ?�?�한 ?�이?�어�?창조?�는 ?�리?�이?�브 ?�튜?�오?�니??
+              브랜드가 말해야 할 것을 찾고,
+              사람들이 기억할 수 있는 형태로 만듭니다.
             </motion.p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -492,24 +494,24 @@ function PortfolioHomeContent() {
           </div>
         </section>
 
-        {/* ?�?� TESTIMONIALS ?�?� */}
+        {/* TESTIMONIALS */}
         <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto">
             <div className="text-center mb-12">
-              <p className="text-[13px] font-black uppercase tracking-tight text-[var(--color-accent)] mb-4">고객 ?�기</p>
-              <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none text-[var(--color-text)]">
-                ?�?�함???�려?�하지 ?�는<br />브랜?�들???�택
+              <p className="text-[13px] font-black uppercase tracking-tight text-[var(--color-accent)] mb-4">고객 후기</p>
+              <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-[1.1] text-[var(--color-text)]">
+                분명한 태도를 가진<br />브랜드들이 선택합니다.
               </h2>
             </div>
             <TestimonialSlider />
           </div>
         </section>
 
-        {/* ?�?� FAQ ?�?� */}
+        {/* FAQ */}
         <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto grid md:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none">?�주 묻는 질문.</h2>
+              <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-[1.1]">자주 묻는 질문.</h2>
             </div>
             <div>
               {faqs.map((item, i) => (
@@ -519,15 +521,15 @@ function PortfolioHomeContent() {
           </div>
         </section>
 
-        {/* ?�?� BLOG ?�?� */}
+        {/* BLOG */}
         <section className="py-10 md:py-20 px-5 md:px-10">
           <div className="max-w-[1440px] mx-auto">
             <div className="flex items-end justify-between mb-12">
-              <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none">
-                ?�리?�이?�브<br />?�식
+              <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-[1.1]">
+                크리에이티브<br />노트
               </h2>
               <Link href="/ko/templates/OHMT007-portfolio/journal" className="text-[0.82rem] font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors flex items-center gap-2">
-                ?�식 보기 <span className="text-lg leading-none">+</span>
+                글 보기 <span className="text-lg leading-none">+</span>
               </Link>
             </div>
 
@@ -546,7 +548,7 @@ function PortfolioHomeContent() {
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                     </div>
                     <p className="text-[0.75rem] text-[var(--color-text-muted)] mb-2">{post.date}</p>
-                    <h3 className="text-[0.95rem] font-medium text-[var(--color-text)] leading-snug group-hover:text-[var(--color-text-muted)] transition-colors">{post.title}</h3>
+                    <h3 className="text-[0.95rem] font-medium text-[var(--color-text)] leading-[1.1] group-hover:text-[var(--color-text-muted)] transition-colors">{post.title}</h3>
                   </Link>
                 </motion.div>
               ))}

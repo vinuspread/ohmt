@@ -39,7 +39,7 @@ export const EditorsPicks = () => {
                <div className="overflow-hidden h-[260px] mb-5">
                  <img loading="lazy" src={pick.img} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" alt={pick.title} />
                </div>
-                <h3 className="font-[family-name:var(--theme-font-heading)] text-[1.15rem] font-normal leading-[1.3] mb-3 tracking-[-0.02em]">
+                <h3 className="font-[family-name:var(--theme-font-heading)] text-[1.15rem] font-normal leading-[1.1] mb-3 tracking-[-0.02em]">
                  <Link href={`/ko/templates/OHMT012-magazine/article/${pick.slug}`} className="hover:text-[var(--theme-accent)] transition-colors">{pick.title}</Link>
                </h3>
                 <p className="text-[0.8rem] text-[var(--theme-text-muted)] leading-[1.65] mb-4 font-normal">

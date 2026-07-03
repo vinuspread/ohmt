@@ -17,9 +17,15 @@
   --color-border-dark: rgba(252, 252, 252, 0.15);
   --font-heading: 'Inter', Pretendard, sans-serif;
   --font-body: Pretendard, sans-serif;
-}
 
-* { word-break: keep-all; }
+  --focus-ring: 2px solid var(--color-primary);
+  --focus-ring-offset: 2px;}
+
+* {
+  word-break: keep-all;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
 
 body[lang="ko"], [lang="ko"], :root {
@@ -53,4 +59,46 @@ h1, h2, h3, h4, h5, h6,
 header a, header button, header span, header nav, 
 nav a, nav button, nav span {
   letter-spacing: -0.03em;
+}
+
+.exhibition-ko {
+  overflow-x: clip;
+}
+
+.exhibition-ko [class*="overflow-x-auto"] {
+  max-width: 100%;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+
+.exhibition-ko [class*="overflow-x-auto"]::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+@supports not (overflow: clip) {
+  .exhibition-ko {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 767px) {
+  .exhibition-ko h1 {
+    font-size: clamp(4rem, 18vw, 5.5rem) !important;
+    line-height: 0.95 !important;
+  }
+
+  .exhibition-ko h2 {
+    text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

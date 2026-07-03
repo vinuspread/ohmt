@@ -40,3 +40,4 @@ export default function WeddingLayout({ children }: { children: React.ReactNode 
     </>
   );
 }
+

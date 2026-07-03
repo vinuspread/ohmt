@@ -31,14 +31,14 @@ export function Button({
 
   // Variant variants using CSS variables
   const variantClasses = {
-    primary: `bg-[var(--color-accent)] text-[var(--color-primary)] hover:bg-[var(--color-accent)/90]`,
-    secondary: `bg-[var(--color-primary)] text-[var(--color-primary-foreground, #ffffff)] hover:bg-[var(--color-primary)/90]`,
-    outline: `border border-[var(--color-accent)] text-[var(--color-accent)] hover:bg-[var(--color-accent)/20]`,
-    ghost: `hover:bg-[var(--color-accent)/10] hover:text-[var(--color-accent)]`,
+    primary: `bg-[var(--color-accent)] text-[var(--color-primary)] hover:brightness-110`,
+    secondary: `bg-[var(--color-primary)] text-[var(--color-primary-foreground, #ffffff)] hover:brightness-110`,
+    outline: `border border-[var(--color-accent)] text-[var(--color-accent)] hover:bg-[var(--color-accent)] hover:text-white`,
+    ghost: `hover:bg-[var(--color-accent)] hover:text-white`,
   }[variant];
 
   // Base classes
-  const baseClasses = `inline-flex items-center justify-center rounded-none font-medium transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none`;
+  const baseClasses = `inline-flex items-center justify-center rounded-none font-medium transition-[background,color,border-color,transform,filter] duration-[var(--transition-fast)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none active:scale-[0.97]`;
 
   const finalClassName = twMerge(
     clsx(

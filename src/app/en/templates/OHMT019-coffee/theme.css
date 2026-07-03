@@ -15,13 +15,61 @@
 
   --font-heading: 'Playfair Display', serif;
   --font-body: 'Inter', sans-serif;
+
+  --focus-ring: 2px solid var(--color-primary);
+  --focus-ring-offset: 2px;
+
+  --space-container-x-mobile: 1.25rem;
+  --space-section-y-mobile: 5rem;
+  --type-section-title-mobile: clamp(1.875rem, 8vw, 2.25rem);
+  --rail-gap-mobile: 0.75rem;
 }
 
 body {
   font-family: var(--font-body);
   color: var(--color-text);
+  overflow-x: clip;
+}
+
+@media (max-width: 640px) {
+  body {
+    text-size-adjust: 100%;
+  }
+
+  h1,
+  h2 {
+    text-wrap: balance;
+  }
+
+  h2,
+  .font-heading[class*="text-4xl"],
+  .font-heading[class*="text-5xl"] {
+    font-size: var(--type-section-title-mobile);
+  }
+
+  [class*="px-10"],
+  [class*="px-12"] {
+    padding-left: var(--space-container-x-mobile);
+    padding-right: var(--space-container-x-mobile);
+  }
+}
+
+@supports not (overflow: clip) {
+  body {
+    overflow-x: hidden;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

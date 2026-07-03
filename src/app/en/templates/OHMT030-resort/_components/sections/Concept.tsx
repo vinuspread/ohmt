@@ -55,7 +55,7 @@ export function Concept() {
             <div className="flex items-center justify-between mt-12">
               <Link
                 href={`${base}/#`}
-                className="inline-flex items-center gap-2 rounded-full border border-white/60 px-6 py-3 text-white text-[14px] hover:bg-white/10 transition-colors"
+                className="inline-flex items-center gap-2 rounded-full border border-white/60 px-6 py-3 text-white text-[14px] hover:bg-white/10 transition-colors focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]"
               >
                 Find Out More <ArrowRight size={15} />
               </Link>
@@ -63,7 +63,7 @@ export function Concept() {
               <div className="flex items-center gap-3">
                 <button
                   onClick={prev}
-                  className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center text-white hover:bg-white/15 transition-colors"
+                  className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center text-white hover:bg-white/15 transition-colors focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]"
                   aria-label="Previous"
                 >
                   <ArrowLeft size={16} />
@@ -73,7 +73,7 @@ export function Concept() {
                 </span>
                 <button
                   onClick={next}
-                  className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center text-white hover:bg-white/15 transition-colors"
+                  className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center text-white hover:bg-white/15 transition-colors focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]"
                   aria-label="Next"
                 >
                   <ArrowRight size={16} />

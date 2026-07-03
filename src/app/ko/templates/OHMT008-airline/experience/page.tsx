@@ -62,7 +62,7 @@ function ExperiencePageContent() {
           imageSrc="/templates/OHMT008-airline/airline-experience-hero.png"
           imageAlt="프리미엄 캐빈 디테일"
           label="캐빈 경험"
-          title={<>세심하게 설계된 <br /><span className="text-[var(--color-accent)] font-serif normal-case font-normal">비행의 정수.</span></>}
+          title={<>세심하게 설계된 <br /><span className="text-[var(--color-accent)] font-[family-name:var(--font-heading)] normal-case font-[var(--font-weight-accent)]">비행의 정수.</span></>}
           description="대륙간 비행의 모든 디테일을 재정의합니다. 사전 예약으로 미슐랭 스타 셰프의 시그니처 메뉴를 즐기고 탑승 전 엘리트 수하물 한도를 확인하세요."
           descMaxWidth="max-w-[680px]"
         />
@@ -74,7 +74,7 @@ function ExperiencePageContent() {
             {/* Header section with clean vertical layout */}
             <div className="mb-10 md:mb-20 space-y-4 max-w-[800px]">
               <span className="text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">미식 큐레이션</span>
-              <h2 className="text-[clamp(1.5rem,4vw,3.5rem)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight leading-none">
+              <h2 className="text-[clamp(1.2rem,3.5vw,3rem)] font-[family-name:var(--theme-font-heading)] font-[var(--font-weight-heading)] text-[var(--color-primary)] uppercase tracking-tight leading-[1.1]">
                 사전 예약 시그니처 스카이 다이닝
               </h2>
               <div className="h-[2px] bg-[var(--color-accent)] w-12" />
@@ -90,13 +90,19 @@ function ExperiencePageContent() {
                 {meals.map((meal, index) => {
                   const isOpen = selectedMeal === meal.id;
                   return (
-                    <div key={meal.id}>
+                    <motion.div
+                      key={meal.id}
+                      initial={{ opacity: 0, y: 16 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: index * 0.1, ease: [0.23, 1, 0.32, 1] as const }}
+                    >
                       <button
                         onClick={() => setSelectedMeal(meal.id)}
-                        className="w-full flex items-center justify-between gap-6 py-6 md:py-8 text-left group select-none cursor-pointer"
+                        className="w-full flex items-center justify-between gap-6 py-6 md:py-8 text-left group select-none cursor-pointer active:scale-[0.99] transition-transform duration-[var(--transition-fast)]"
                       >
                         <div className="flex items-center gap-5 md:gap-6">
-                          <span className="font-serif text-xl md:text-2xl font-normal text-[var(--color-border)] group-hover:text-[var(--color-accent)]/40 transition-colors duration-300 w-7 md:w-8 shrink-0">
+                          <span className="font-[family-name:var(--font-heading)] text-xl md:text-2xl font-normal text-[var(--color-border)] group-hover:text-[var(--color-accent)]/40 transition-colors duration-300 w-7 md:w-8 shrink-0">
                             0{index + 1}
                           </span>
                           <h4 className={`font-bold text-[15px] md:text-[18px] uppercase tracking-wider transition-colors duration-300 ${isOpen ? "text-[var(--color-accent)]" : "text-[var(--color-primary)] group-hover:text-[var(--color-accent)]"}`}>
@@ -133,7 +139,7 @@ function ExperiencePageContent() {
                           </motion.div>
                         )}
                       </AnimatePresence>
-                    </div>
+                    </motion.div>
                   );
                 })}
               </div>
@@ -159,7 +165,7 @@ function ExperiencePageContent() {
                             ))}
                           </div>
                           <span className="text-[12px] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)] block">다이닝 패스</span>
-                          <h3 className="font-[family-name:var(--theme-font-heading)] text-xl font-bold text-white">{meal.name}</h3>
+                          <h3 className="font-[family-name:var(--theme-font-heading)] text-xl font-[var(--font-weight-heading)] text-white">{meal.name}</h3>
                         </div>
                       </div>
                     </motion.div>
@@ -178,7 +184,7 @@ function ExperiencePageContent() {
             {/* Header */}
             <div className="mb-10 md:mb-20 space-y-4 max-w-[800px]">
               <span className="text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">수하물 사전 체크</span>
-              <h2 className="text-[clamp(1.5rem,4vw,3.5rem)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight leading-none">
+              <h2 className="text-[clamp(1.2rem,3.5vw,3rem)] font-[family-name:var(--theme-font-heading)] font-[var(--font-weight-heading)] text-[var(--color-primary)] uppercase tracking-tight leading-[1.1]">
                 스마트 수하물 추가 요금 계산기
               </h2>
               <div className="h-[2px] bg-[var(--color-accent)] w-12" />
@@ -287,7 +293,7 @@ function ExperiencePageContent() {
               <span className="block text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-4">
                 엘리트 라운지 & 스파
               </span>
-              <h2 className="font-[family-name:var(--theme-font-heading)] text-[clamp(1.5rem,5vw,3.8rem)] font-bold tracking-tight text-[var(--color-primary)] leading-tight mb-20 uppercase">
+              <h2 className="font-[family-name:var(--theme-font-heading)] text-[clamp(1.5rem,5vw,3.8rem)] font-[var(--font-weight-heading)] tracking-tight text-[var(--color-primary)] leading-[1.1] mb-20 uppercase">
                 스카이 생추어리 서비스.
               </h2>
 
@@ -299,18 +305,25 @@ function ExperiencePageContent() {
                 { title: "기내 아로마테라피 스파", desc: "스킨케어 리메디, 맞춤형 드라이 미스트 아로마테라피, 스트레칭 가이드를 포함한 기내 웰니스." },
                 { title: "울트라 HD 기내 엔터테인먼트", desc: "32인치 4K 해상도 스크린, 1,500시간 이상의 주문형 문화 콘텐츠 및 실시간 국제 뉴스." }
               ].map((f, i) => (
-                <div key={f.title} className="space-y-6 text-left normal-case relative pl-8 border-l-2 border-[var(--color-accent)]">
+                <motion.div
+                  key={f.title}
+                  initial={{ opacity: 0, x: -16 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.08, ease: [0.23, 1, 0.32, 1] as const }}
+                  className="space-y-6 text-left normal-case relative pl-8 border-l-2 border-[var(--color-accent)] hover:border-l-[var(--color-accent-light)] transition-colors duration-[var(--transition-base)]"
+                >
                   {/* Subtle index tag */}
                   <span className="text-[14px] font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] block">
                     구역 0{i + 1}
                   </span>
-                  <h3 className="font-[family-name:var(--theme-font-heading)] text-2xl font-bold text-[var(--color-primary)] tracking-tight">
+                  <h3 className="font-[family-name:var(--theme-font-heading)] text-2xl font-[var(--font-weight-heading)] text-[var(--color-primary)] tracking-tight">
                     {f.title}
                   </h3>
                   <p className="text-[14px] text-[#7A7A7A] leading-relaxed font-normal">
                     {f.desc}
                   </p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

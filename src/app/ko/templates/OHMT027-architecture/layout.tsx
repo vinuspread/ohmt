@@ -1,32 +1,34 @@
-// src/app/en/templates/OHMT027-architecture/layout.tsx
+// src/app/ko/templates/OHMT027-architecture/layout.tsx
 import type { Metadata } from "next";
 import "./theme.css";
 
 export const metadata: Metadata = {
-  title: "OHMT - Architecture Portfolio",
-  description: "A sophisticated architecture portfolio template with editorial typography and immersive visual storytelling.",
-  keywords: ["architecture", "minimalism", "portfolio", "interior design", "OHMT"],
+  title: "OHMT - 건축 포트폴리오",
+  description: "에디토리얼 타이포그래피와 몰입감 있는 비주얼 스토리텔링을 갖춘 건축 포트폴리오 템플릿입니다.",
+  keywords: ["건축", "건축 포트폴리오", "미니멀리즘", "인테리어 디자인", "OHMT"],
   authors: [{ name: "OHMT", url: "https://ohmytemplate.com" }],
   openGraph: {
-    title: "OHMT - Architecture Portfolio",
-    description: "A sophisticated architecture portfolio template with editorial typography and immersive visual storytelling.",
-    url: "https://ohmytemplate.com/en/templates/OHMT027-architecture",
+    title: "OHMT - 건축 포트폴리오",
+    description: "에디토리얼 타이포그래피와 몰입감 있는 비주얼 스토리텔링을 갖춘 건축 포트폴리오 템플릿입니다.",
+    url: "https://ohmytemplate.com/ko/templates/OHMT027-architecture",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT027-architecture/og-image.jpg", width: 1200, height: 630 }],
-    locale: "en_US",
+    locale: "ko_KR",
+    alternateLocale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Architecture Portfolio",
-    description: "A sophisticated architecture portfolio template with editorial typography and immersive visual storytelling.",
+    title: "OHMT - 건축 포트폴리오",
+    description: "에디토리얼 타이포그래피와 몰입감 있는 비주얼 스토리텔링을 갖춘 건축 포트폴리오 템플릿입니다.",
     images: ["/templates/OHMT027-architecture/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT027-architecture",
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT027-architecture",
     languages: {
       "en": "https://ohmytemplate.com/en/templates/OHMT027-architecture",
+      "ko": "https://ohmytemplate.com/ko/templates/OHMT027-architecture",
     },
   },
 };
@@ -45,3 +47,4 @@ export default function ArchitectureLayout({
     </>
   );
 }
+

@@ -16,7 +16,7 @@ export default function PricingFull() {
         <section className="bg-[var(--color-secondary)] py-24 lg:py-32">
           <div className="mx-auto max-w-7xl px-6">
             <motion.div initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: EASE_OUT }} className="text-center">
-              <h1 className="font-[family-name:var(--font-heading)] text-6xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[1.05]">가격 플랜</h1>
+              <h1 className="font-[family-name:var(--font-heading)] text-6xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[1.1]">가격 플랜</h1>
               <p className="mt-4 text-[0.95rem] text-white/60 leading-relaxed max-w-md mx-auto">라이프스타일에 맞는 멤버십을 선택하세요. 언제든지 업그레이드 또는 취소 가능합니다.</p>
             </motion.div>
           </div>

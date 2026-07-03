@@ -32,25 +32,25 @@ function CarAboutPageContent() {
         <section className="relative h-[85vh] min-h-[560px] overflow-hidden flex items-end">
           <img
             src="/templates/OHMT009-car/hero-1.jpg"
-            alt="VINUS Motors"
+            alt="OHMT Motors"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
-          <div className="relative max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)] pb-12 md:pb-24 w-full">
-            <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-4 block">About VINUS</span>
-            <h1 className="font-[family-name:var(--theme-font-heading)] text-[clamp(2.8rem,6vw,5.5rem)] tracking-tight leading-[1.1] max-w-[680px]">
-              Born from a belief<br />that driving should be<br />extraordinary.
+          <div className="relative max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)] pb-8 md:pb-12 w-full">
+            <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-4 block">About OHMT</span>
+            <h1 className="font-[family-name:var(--theme-font-heading)] text-[clamp(2.8rem,6vw,5.5rem)] font-bold tracking-tight leading-[1.02] max-w-[680px]">
+              Engineered for<br />extraordinary driving.
             </h1>
           </div>
         </section>
 
         {/* Mission */}
         <section className="border-b border-[var(--theme-border)]">
-          <div className="max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)] py-12 md:py-20 grid md:grid-cols-2 gap-10 md:gap-20 items-center">
-            <p className="text-[clamp(1.1rem,2vw,1.4rem)] text-white font-normal leading-[1.4]">
-              Founded in 2018, VINUS Motors set out to build vehicles that inspire. Not just modes of transport, but objects of desire - where cutting-edge technology meets uncompromising design.
+          <div className="max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)] py-10 md:py-14 grid md:grid-cols-2 gap-10 md:gap-20 items-center">
+            <p className="text-[clamp(1.2rem,2.2vw,1.55rem)] text-white font-normal leading-[1.5] break-keep">
+              Founded in 2018, OHMT Motors set out to build vehicles that inspire. Not just modes of transport, but objects of desire - where cutting-edge technology meets uncompromising design.
             </p>
-            <p className="text-[0.9rem] text-[var(--theme-text-muted)] leading-[1.4] font-normal">
+            <p className="text-[1.02rem] text-white/50 leading-[1.6] font-normal break-keep">
               Today, we employ over 12,000 people across three continents, with a network of 200+ showrooms worldwide. Our commitment to sustainable luxury drives every decision we make. We don't just build cars. We build the future of personal movement.
             </p>
           </div>
@@ -72,7 +72,7 @@ function CarAboutPageContent() {
 
         {/* Full-bleed */}
         <div className="relative h-[55vh] overflow-hidden">
-          <img loading="lazy" src="/templates/OHMT009-car/car-1.jpg" alt="" className="w-full h-full object-cover object-center" />
+          <img loading="lazy" src="/templates/OHMT009-car/about-factory.jpg" alt="" className="w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-black/40" />
           <div className="absolute inset-0 flex items-center justify-center">
             <p className="text-[clamp(1.2rem,3vw,2.2rem)] font-bold tracking-tight text-white text-center max-w-[560px] px-6 leading-tight">
@@ -100,12 +100,12 @@ function CarAboutPageContent() {
 
         {/* CTA */}
         <section className="relative overflow-hidden">
-          <img loading="lazy" src="/templates/OHMT009-car/hero-2.jpg" alt="" className="w-full h-[420px] object-cover object-center" />
+          <img loading="lazy" src="/templates/OHMT009-car/about-closing.jpg" alt="" className="w-full h-[420px] object-cover object-center" />
           <div className="absolute inset-0 bg-black/65 flex flex-col items-center justify-center text-center px-6">
             <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-4 block">Ready?</span>
             <h2 className="text-[clamp(2rem,5vw,4rem)] font-bold tracking-tight mb-8">Experience it yourself.</h2>
             <Link
-              href="/car"
+              href="/en/templates/OHMT009-car/configure"
               className="text-[0.72rem] font-bold uppercase tracking-[0.16em] px-8 py-3.5 bg-[var(--theme-accent)] text-black hover:opacity-85 transition-opacity"
             >
               Book a Test Drive

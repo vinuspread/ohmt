@@ -1,4 +1,4 @@
-// VINUSPREAD Motors - Internal Operations Dashboard Data
+// OHMT Motors - Internal Operations Dashboard Data
 
 export const monthlyRevenue = [
   { month: 'Jan', netProfit: 1840000, revenue: 5120000, cashflow: 980000 },

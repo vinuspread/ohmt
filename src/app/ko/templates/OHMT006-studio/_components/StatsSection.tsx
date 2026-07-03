@@ -54,7 +54,7 @@ export function StatsSection() {
           viewport={{ once: true, margin: '-50px' }}
           className="flex flex-col gap-[32px] mb-[120px] text-center"
         >
-          <h2 className="text-[26px] md:text-[48px] leading-[55px] font-semibold tracking-[-1.44px] text-[#090B19] max-w-2xl mx-auto">
+          <h2 className="text-[26px] md:text-[48px] leading-[1.1] font-semibold tracking-[-1.44px] text-[#090B19] max-w-2xl mx-auto">
             By the numbers
           </h2>
           <p className="text-[16px] leading-[26px] text-[var(--color-text-muted)] max-w-xl mx-auto">

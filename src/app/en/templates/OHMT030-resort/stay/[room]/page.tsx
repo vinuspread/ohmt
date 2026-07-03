@@ -147,7 +147,7 @@ export default async function RoomPage({ params }: { params: Promise<{ room: str
               <input type="date" lang="en" placeholder="Check in"
                 className="flex-1 px-5 py-3 rounded-full border border-white/20 bg-transparent text-white text-[15px] outline-none focus:border-white/60 transition-all" />
             </div>
-            <button className="mt-6 rounded-full bg-[var(--accent)] px-8 py-3 text-[var(--text-dark)] text-[15px] font-medium hover:bg-[#ffb37a] transition-all">
+            <button className="mt-6 rounded-full bg-[var(--accent)] px-8 py-3 text-[var(--text-dark)] text-[15px] font-medium hover:bg-[var(--accent-hover)] transition-all">
               Submit Request
             </button>
           </div>

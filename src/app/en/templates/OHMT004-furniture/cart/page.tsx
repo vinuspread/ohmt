@@ -45,7 +45,7 @@ function CartPageContent() {
           <ShoppingBag size={48} className="mx-auto mb-8 opacity-10 text-black" />
           <h1 className="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-[var(--color-text)] uppercase mb-6">Your bag is empty.</h1>
           <p className="text-[var(--color-secondary)] mb-12">Explore our collection to find your next masterpiece.</p>
-          <Link href="/furniture">
+          <Link href="/en/templates/OHMT004-furniture">
             <Button variant="primary" className="px-12 py-6 rounded-full font-bold uppercase">
               Continue Exploring
             </Button>

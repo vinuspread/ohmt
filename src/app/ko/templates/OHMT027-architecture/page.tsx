@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture/page.tsx
+// src/app/ko/templates/OHMT027-architecture/page.tsx
 import React from "react";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
 import { Header } from "./_components/layout/Header";
@@ -15,13 +15,13 @@ export default function ArchitectureHome() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ArchitecturalFirm",
-    "name": "OHMT - Architecture Portfolio",
-    "url": "https://ohmytemplate.com/en/templates/OHMT027-architecture",
+    "name": "OHMT - 건축 포트폴리오",
+    "url": "https://ohmytemplate.com/ko/templates/OHMT027-architecture",
     "image": "https://ohmytemplate.com/templates/OHMT027-architecture/og-image.jpg",
-    "description": "A sophisticated architecture portfolio template with editorial typography and immersive visual storytelling.",
+    "description": "에디토리얼 타이포그래피와 몰입감 있는 비주얼 스토리텔링을 갖춘 건축 포트폴리오 템플릿입니다.",
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Seoul",
+      "addressLocality": "서울",
       "addressCountry": "KR"
     }
   };

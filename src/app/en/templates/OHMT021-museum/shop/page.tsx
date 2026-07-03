@@ -3,6 +3,7 @@
 import { Suspense } from "react";
 import { motion } from "framer-motion";
 import { Filter, ChevronDown, ShoppingBag, Heart, ArrowRight } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 import Header from "../_components/layout/Header";
 import Footer from "../_components/layout/Footer";
@@ -60,11 +61,13 @@ function ShopPageContent() {
               className="group cursor-pointer"
             >
               <div className="relative aspect-[3/4] bg-luxury-cream mb-6 overflow-hidden">
-                <img 
-                  src={product.img} 
-                  alt={product.name}
-                  className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 group-hover:scale-110 transition-all duration-[1s]"
-                />
+                <Link href={`/en/templates/OHMT021-museum/product/${product.id}`} className="block h-full">
+                  <img
+                    src={product.img}
+                    alt={product.name}
+                    className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 group-hover:scale-110 transition-all duration-[1s]"
+                  />
+                </Link>
                 <div className="absolute top-4 right-4 z-10 opacity-0 group-hover:opacity-100 transition-opacity">
                   <button className="w-10 h-10 rounded-full bg-white flex items-center justify-center hover:bg-black hover:text-white transition-colors">
                     <Heart size={16} />
@@ -79,7 +82,9 @@ function ShopPageContent() {
               <div className="flex justify-between items-start">
                 <div>
                   <p className="text-[12px] uppercase tracking-widest text-luxury-gray mb-1">{product.category}</p>
-                  <h4 className="text-xl font-serif tracking-tight transition-all">{product.name}</h4>
+                  <Link href={`/en/templates/OHMT021-museum/product/${product.id}`} className="hover:text-luxury-gray transition-colors">
+                    <h4 className="text-xl font-serif tracking-tight transition-all">{product.name}</h4>
+                  </Link>
                 </div>
                 <span className="font-serif text-lg tracking-tighter">{product.price}</span>
               </div>

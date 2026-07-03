@@ -9,13 +9,13 @@ export default function PopularServices() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-16 max-w-2xl">
           <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">인기 서비스</span>
-          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[1.05]">고객들이 사랑하는 트리트먼트</h2>
+          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[1.1]">고객들이 사랑하는 트리트먼트</h2>
         </div>
       </div>
       <div className="overflow-hidden">
         <div className="animate-marquee-right flex gap-6 w-max" style={{ animationDuration: "25s" }}>
           {duplicated.map((service, i) => (
-            <a key={`${service.id}-${i}`} href={`/ko/templates/OHMT026-spa/service#${service.id}`} className="group w-[280px] shrink-0 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] overflow-hidden hover:-translate-y-1 transition-transform duration-300">
+            <a key={`${service.id}-${i}`} href={`/ko/templates/OHMT026-spa/service/${service.id}`} className="group w-[280px] shrink-0 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] overflow-hidden hover:-translate-y-1 transition-transform duration-300">
               <div className="h-48 overflow-hidden"><img src={service.image} alt={service.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /></div>
               <div className="p-6">
                 <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold tracking-tight text-[var(--color-text)]">{service.title}</h3>

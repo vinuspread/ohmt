@@ -4,31 +4,31 @@ import { Footer } from "../_components/Footer";
 const menu = [
   { category: "스타터", tag: "스타터",
     items: [
-      { name: "그릴드 에게해 문어", desc: "와일드 오레가노, 로컬 케이퍼, 레몬즙과 함께 천천히 구운", price: "$28", img: "dish-octopus.jpg" },
-      { name: "크레탄 다코스", desc: "올리브 오일에 적신 보리 루스크, 간 토마토, 배럴 에이징 페타", price: "$16", img: "restaurant-terrace-food.jpg" },
-      { name: "칼라마리 프리토", desc: "가볍게 튀긴 바삭한 오징어, 하우스메이드 시트러스 마늘 아이올리", price: "$18", img: "pkg-bbq.jpg" },
-      { name: "칠드 가스파초", desc: "햇살에 익은 토마토, 오이, 청피망, 셰리 식초", price: "$15", img: "restaurant-indoor.jpg" },
+      { name: "그릴드 에게해 문어", desc: "와일드 오레가노, 로컬 케이퍼, 레몬즙과 함께 천천히 구운", price: "₩28,000", img: "dish-octopus.jpg" },
+      { name: "크레탄 다코스", desc: "올리브 오일에 적신 보리 루스크, 간 토마토, 배럴 에이징 페타", price: "₩16,000", img: "restaurant-terrace-food.jpg" },
+      { name: "칼라마리 프리토", desc: "가볍게 튀긴 바삭한 오징어, 하우스메이드 시트러스 마늘 아이올리", price: "₩18,000", img: "pkg-bbq.jpg" },
+      { name: "칠드 가스파초", desc: "햇살에 익은 토마토, 오이, 청피망, 셰리 식초", price: "₩15,000", img: "restaurant-indoor.jpg" },
     ] },
   { category: "메인", tag: "메인",
     items: [
-      { name: "솔트 크러스트 도미", desc: "소금에 구운 통 도미, 허브와 함께 테이블 사이드에서 서빙", price: "$42", img: "dining.jpg" },
-      { name: "슬로우 로스트 양 어깨살", desc: "와일드 허브, 마늘, 푸짐하게 익힌 부드러운 양고기", price: "$38", img: "gallery-8.jpg" },
-      { name: "랍스터 링귀니", desc: "핸드메이드 파스타, 로컬 랍스터, 크리미 사프란, 화이트 와인", price: "$46", img: "terrace-dining-caldera.jpg" },
-      { name: "와일드 머쉬룸 리소토", desc: "아퀘렐로 쌀, 숲 버섯, 파르미지아노 레지아노, 트러플 오일", price: "$32", img: "dish-risotto.jpg" },
+      { name: "솔트 크러스트 도미", desc: "소금에 구운 통 도미, 허브와 함께 테이블 사이드에서 서빙", price: "₩42,000", img: "dining.jpg" },
+      { name: "슬로우 로스트 양 어깨살", desc: "와일드 허브, 마늘, 푸짐하게 익힌 부드러운 양고기", price: "₩38,000", img: "gallery-8.jpg" },
+      { name: "랍스터 링귀니", desc: "핸드메이드 파스타, 로컬 랍스터, 크리미 사프란, 화이트 와인", price: "₩46,000", img: "terrace-dining-caldera.jpg" },
+      { name: "와일드 머쉬룸 리소토", desc: "아퀘렐로 쌀, 숲 버섯, 파르미지아노 레지아노, 트러플 오일", price: "₩32,000", img: "dish-risotto.jpg" },
     ] },
   { category: "디저트", tag: "디저트",
     items: [
-      { name: "그릭 요거트 바클라바", desc: "겹겹이 쌓은 필로, 호두, 꽃 시럽, 걸쭉한 그릭 요거트", price: "$14", img: "dish-baklava.jpg" },
-      { name: "오렌지 아몬드 케이크", desc: "세몰리나, 블러드 오렌지 시럽, 토스티드 아몬드 플레이크", price: "$12", img: "dish-cake.jpg" },
-      { name: "허니 & 피그 아이스크림", desc: "와일드 타임 허니, 건조 스미르나 무화과, 바닐라 빈", price: "$10", img: "dish-icecream.jpg" },
-      { name: "올리브 오일 초콜릿 무스", desc: "다크 쿠베르튀르, 얼리 하베스트 올리브 오일, 씨솔트 플레이크", price: "$16", img: "dish-mousse.jpg" },
+      { name: "그릭 요거트 바클라바", desc: "겹겹이 쌓은 필로, 호두, 꽃 시럽, 걸쭉한 그릭 요거트", price: "₩14,000", img: "dish-baklava.jpg" },
+      { name: "오렌지 아몬드 케이크", desc: "세몰리나, 블러드 오렌지 시럽, 토스티드 아몬드 플레이크", price: "₩12,000", img: "dish-cake.jpg" },
+      { name: "허니 & 피그 아이스크림", desc: "와일드 타임 허니, 건조 스미르나 무화과, 바닐라 빈", price: "₩10,000", img: "dish-icecream.jpg" },
+      { name: "올리브 오일 초콜릿 무스", desc: "다크 쿠베르튀르, 얼리 하베스트 올리브 오일, 씨솔트 플레이크", price: "₩16,000", img: "dish-mousse.jpg" },
     ] },
   { category: "와인", tag: "와인",
     items: [
-      { name: "아시르티코, 산토리니 2023", desc: "상쾌한 미네랄리티, 시트러스, 이 섬의 시그니처 드라이 화이트", price: "$14", img: "bar-rooftop-sunset.jpg" },
-      { name: "크시노마브로, 나우사 2020", desc: "복합적인 레드, 와일드 체리, 선드라이 토마토, 따뜻한 스파이스", price: "$18", img: "concept-2.jpg" },
-      { name: "만딜라리아, 로도스 2021", desc: "풀바디, 다크 프루트, 부드러운 오크, 긴 여운", price: "$16", img: "aerial-caldera-golden.jpg" },
-      { name: "빈산토, 산토리니", desc: "자연 건조 포도로 만든 달콤한 와인, 배럴 에이징 4년", price: "$22", img: "aerial-village-dusk.jpg" },
+      { name: "아시르티코, 산토리니 2023", desc: "상쾌한 미네랄리티, 시트러스, 이 섬의 시그니처 드라이 화이트", price: "₩14,000", img: "bar-rooftop-sunset.jpg" },
+      { name: "크시노마브로, 나우사 2020", desc: "복합적인 레드, 와일드 체리, 선드라이 토마토, 따뜻한 스파이스", price: "₩18,000", img: "concept-2.jpg" },
+      { name: "만딜라리아, 로도스 2021", desc: "풀바디, 다크 프루트, 부드러운 오크, 긴 여운", price: "₩16,000", img: "aerial-caldera-golden.jpg" },
+      { name: "빈산토, 산토리니", desc: "자연 건조 포도로 만든 달콤한 와인, 배럴 에이징 4년", price: "₩22,000", img: "aerial-village-dusk.jpg" },
     ] },
 ];
 
@@ -49,7 +49,7 @@ export default function DinePage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-transparent" />
           <div className="relative z-10 max-w-[1440px] mx-auto w-full px-10">
-            <h1 className="text-white tracking-[-0.04em] leading-[0.85] mb-3 font-semibold uppercase"
+            <h1 className="text-white tracking-[-0.04em] leading-[1.1] mb-3 font-semibold uppercase"
                 style={{ fontSize: "clamp(60px, 10vw, 160px)" }}>
               더<br />큘리너리
             </h1>
@@ -110,7 +110,7 @@ export default function DinePage() {
                     </span>
                     <span className="text-[var(--accent)] text-sm font-semibold ml-auto">{item.price}</span>
                   </div>
-                  <h3 className="text-white text-[15px] font-medium leading-snug mb-1">{item.name}</h3>
+                  <h3 className="text-white text-[15px] font-medium leading-[1.1] mb-1">{item.name}</h3>
                   <p className="text-white/50 text-[14px] leading-relaxed">{item.desc}</p>
                 </div>
               </div>

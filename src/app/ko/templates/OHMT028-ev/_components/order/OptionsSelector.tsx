@@ -21,7 +21,7 @@ export function OptionsSelector({
 
   return (
     <section>
-      <h2 className="font-michroma text-[clamp(18px,2vw,28px)] text-[var(--text)] leading-[1.0] tracking-[-0.02em] mb-6">
+      <h2 className="font-michroma text-[clamp(18px,2vw,28px)] text-[var(--text)] leading-[1.1] tracking-[-0.02em] mb-6">
         옵션 추가
       </h2>
       <div className="space-y-0">

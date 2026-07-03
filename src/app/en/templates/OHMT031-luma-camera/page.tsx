@@ -18,41 +18,42 @@ const products = [
     price: "$1,890",
     note: "Everyday compact body",
     spec: "28mm fixed lens",
-    image: "/templates/luma-camera/product-one.jpg?v=20260702e",
+    image: "/templates/OHMT031-luma-camera/product-one.jpg?v=20260702e",
   },
   {
     name: "LUMA One Pro",
     price: "$2,460",
     note: "Creator field kit",
     spec: "28mm lens + grip",
-    image: "/templates/luma-camera/product-pro.jpg?v=20260702e",
+    image: "/templates/OHMT031-luma-camera/product-pro.jpg?v=20260702e",
   },
 ];
 
-const scenes = [
+const photoSamples = [
   {
-    title: "Morning street",
-    text: "Fast wake capture for quiet walks, window light, and the frame that disappears first.",
-    image: "/templates/luma-camera/morning-street.jpg?v=20260702e",
-    mode: "image",
+    title: "Window portrait",
+    text: "Skin stays natural while knit fabric and ceramic keep the same quiet light.",
+    image: "/templates/OHMT031-luma-camera/sample-portrait.png?v=20260703a",
   },
   {
-    title: "Studio table",
-    text: "High-detail files for makers shooting objects, packaging, and small editorial sets.",
-    image: "/templates/luma-camera/studio-table.jpg?v=20260702e",
-    mode: "image",
+    title: "Blue-hour landscape",
+    text: "Layered sky and small city lights stay separated without an overcooked HDR look.",
+    image: "/templates/OHMT031-luma-camera/sample-landscape.png?v=20260703a",
   },
   {
-    title: "Blue hour",
-    text: "Low-light color that keeps dusk blue, street lamps warm, and shadows believable.",
-    image: "/templates/luma-camera/blue-hour.jpg?v=20260702e",
-    mode: "text",
+    title: "Everyday still life",
+    text: "Cups, fruit, and fabric hold believable color in the light people actually use.",
+    image: "/templates/OHMT031-luma-camera/sample-color.jpg?v=20260702e",
   },
   {
-    title: "Quiet dinner",
-    text: "A small camera for social rooms where the moment matters more than the gear.",
-    image: "/templates/luma-camera/quiet-dinner.jpg?v=20260702e",
-    mode: "text",
+    title: "Indoor low light",
+    text: "Blue windows and warm practical light stay separate instead of becoming one muddy tone.",
+    image: "/templates/OHMT031-luma-camera/sample-lowlight.jpg?v=20260702e",
+  },
+  {
+    title: "Texture close-up",
+    text: "Fabric, ceramic, and paper stay crisp without the brittle edge of oversharpening.",
+    image: "/templates/OHMT031-luma-camera/sample-detail.jpg?v=20260702e",
   },
 ];
 
@@ -61,19 +62,19 @@ const imageQuality = [
     label: "Color",
     title: "Neutral color that survives editing",
     text: "The default profile holds skin, stone, food, and fabric in a soft contrast curve, so the file does not collapse when you crop or grade it.",
-    image: "/templates/luma-camera/sample-color.jpg?v=20260702e",
+    image: "/templates/OHMT031-luma-camera/engine-color-grid.jpg?v=20260702f",
   },
   {
     label: "Low light",
     title: "Texture instead of plastic smoothness",
     text: "Blue-hour and indoor scenes keep a little grain, warm practical light, and believable shadow detail.",
-    image: "/templates/luma-camera/sample-lowlight.jpg?v=20260702e",
+    image: "/templates/OHMT031-luma-camera/engine-lowlight-room.jpg?v=20260702f",
   },
   {
     label: "Detail",
     title: "Crisp texture without the brittle edge",
     text: "Fabric, ceramic, paper, and brushed metal keep their surface detail without turning into an over-sharpened technical demo.",
-    image: "/templates/luma-camera/sample-detail.jpg?v=20260702e",
+    image: "/templates/OHMT031-luma-camera/engine-texture-close.jpg?v=20260702f",
   },
 ];
 
@@ -101,7 +102,7 @@ export default function LumaCameraPage() {
     name: "LUMA Camera",
     description: "Premium compact camera system with quiet hardware, honest color, creator notes, and reservation options.",
     url: "https://ohmytemplate.com/en/templates/OHMT031-luma-camera",
-    image: "https://ohmytemplate.com/templates/luma-camera/og-image.jpg?v=20260702e",
+    image: "https://ohmytemplate.com/templates/OHMT031-luma-camera/og-image.jpg?v=20260702e",
     brand: {
       "@type": "Brand",
       name: "OHMT",
@@ -115,7 +116,7 @@ export default function LumaCameraPage() {
         "@type": "Product",
         name: product.name,
         description: `${product.note}. ${product.spec}.`,
-        image: "https://ohmytemplate.com/templates/luma-camera/hero-camera.jpg?v=20260702e",
+        image: "https://ohmytemplate.com/templates/OHMT031-luma-camera/hero-camera.jpg?v=20260702e",
       },
     })),
   };
@@ -151,7 +152,7 @@ export default function LumaCameraPage() {
             transition={{ duration: 0.75, ease: EASE }}
             className="relative mx-auto min-h-[76dvh] max-w-[1380px] overflow-hidden bg-[var(--luma-dark)] shadow-2xl shadow-black/12"
           >
-            <Image unoptimized src="/templates/luma-camera/hero-camera.jpg?v=20260702e" alt="LUMA compact camera product shot" fill priority className="object-cover" sizes="100vw" />
+            <Image unoptimized src="/templates/OHMT031-luma-camera/hero-camera.jpg?v=20260702e" alt="LUMA compact camera product shot" fill priority className="object-cover" sizes="100vw" />
             <div className="absolute inset-0 bg-gradient-to-br from-black/76 via-black/30 to-black/5" />
             <div className="absolute left-0 top-0 p-6 text-white md:p-10 lg:p-14">
               <p className="mb-5 text-xs font-bold uppercase tracking-[0.22em] text-white/62">Compact image system</p>
@@ -259,25 +260,25 @@ export default function LumaCameraPage() {
             <Reveal>
               <div className="max-w-3xl">
                 <h2 className="text-[clamp(1.8rem,3vw,3.35rem)] font-bold leading-[1.08] tracking-[-0.035em]">
-                  Designed for scenes that happen before you are ready.
+                  What the camera sees matters more.
                 </h2>
                 <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--luma-muted)]">
-                  LUMA wakes quickly, keeps color believable, and stays small enough to bring into the room instead of planning around it.
+                  Portrait tone, distant landscape, indoor shadow, and close texture all need to show up before the product story asks for trust.
                 </p>
               </div>
             </Reveal>
 
-            <div className="mt-14 grid gap-4 md:grid-cols-2">
-              {scenes.map((scene, index) => (
-                <Reveal key={scene.title} delay={index * 0.05}>
+            <div className="mt-14 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+              {photoSamples.map((sample, index) => (
+                <Reveal key={sample.title} delay={index * 0.05}>
                   <article className="group relative aspect-[7/5] overflow-hidden bg-[var(--luma-dark)] shadow-xl shadow-black/[0.06]">
                     <div className="absolute inset-0">
-                      <Image unoptimized src={scene.image} alt={`LUMA camera in a ${scene.title.toLowerCase()} scene`} fill className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" sizes="(min-width: 768px) 50vw, 100vw" />
+                      <Image unoptimized src={sample.image} alt={`LUMA sample image for ${sample.title.toLowerCase()}`} fill className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" sizes="(min-width: 1024px) 33vw, 100vw" />
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/72 via-black/16 to-transparent" />
                     <div className="absolute bottom-0 left-0 max-w-xl p-6 text-white md:p-8">
-                      <h3 className="text-2xl font-bold tracking-[-0.04em]">{scene.title}</h3>
-                      <p className="mt-3 text-sm leading-6 text-white/72">{scene.text}</p>
+                      <h3 className="text-2xl font-bold tracking-[-0.04em]">{sample.title}</h3>
+                      <p className="mt-3 text-sm leading-6 text-white/72">{sample.text}</p>
                     </div>
                   </article>
                 </Reveal>
@@ -290,7 +291,7 @@ export default function LumaCameraPage() {
           <div className="mx-auto grid max-w-[1380px] gap-4 lg:grid-cols-[1fr_0.78fr]">
             <Reveal>
               <div className="group relative min-h-[620px] overflow-hidden bg-[var(--luma-dark)]">
-                <Image unoptimized src="/templates/luma-camera/engine-lowlight-room.jpg?v=20260702f" alt="LUMA low-light sample with warm indoor light" fill className="object-cover transition-transform duration-700 ease-out group-hover:scale-105" sizes="(min-width: 1024px) 58vw, 100vw" />
+                <Image unoptimized src="/templates/OHMT031-luma-camera/engine-lowlight-room.jpg?v=20260702f" alt="LUMA low-light sample with warm indoor light" fill className="object-cover transition-transform duration-700 ease-out group-hover:scale-105" sizes="(min-width: 1024px) 58vw, 100vw" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                 <div className="absolute bottom-0 max-w-xl p-7 text-white md:p-10">
                   <Moon size={24} strokeWidth={1.5} />
@@ -302,12 +303,12 @@ export default function LumaCameraPage() {
             <div className="grid gap-4">
               <Reveal delay={0.08}>
                 <div className="relative min-h-[300px] overflow-hidden bg-white">
-                  <Image unoptimized src="/templates/luma-camera/body-detail.jpg?v=20260702e" alt="LUMA camera body and lens detail" fill className="object-cover" sizes="(min-width: 1024px) 40vw, 100vw" />
+                  <Image unoptimized src="/templates/OHMT031-luma-camera/body-detail.jpg?v=20260702e" alt="LUMA camera body and lens detail" fill className="object-cover" sizes="(min-width: 1024px) 40vw, 100vw" />
                 </div>
               </Reveal>
               <Reveal delay={0.12}>
                 <div className="relative min-h-[300px] overflow-hidden bg-white">
-                  <Image unoptimized src="/templates/luma-camera/app-insight.jpg?v=20260702e" alt="LUMA companion app beside the camera" fill className="object-cover" sizes="(min-width: 1024px) 40vw, 100vw" />
+                  <Image unoptimized src="/templates/OHMT031-luma-camera/app-insight.jpg?v=20260702e" alt="LUMA companion app beside the camera" fill className="object-cover" sizes="(min-width: 1024px) 40vw, 100vw" />
                 </div>
               </Reveal>
             </div>
@@ -329,7 +330,7 @@ export default function LumaCameraPage() {
             </Reveal>
             <Reveal delay={0.1}>
               <div className="relative aspect-[4/3] overflow-hidden">
-                <Image unoptimized src="/templates/luma-camera/app-collection-view.jpg?v=20260702f" alt="LUMA companion app collection view and camera" fill className="object-cover" sizes="(min-width: 1024px) 48vw, 100vw" />
+                <Image unoptimized src="/templates/OHMT031-luma-camera/app-collection-view.jpg?v=20260702f" alt="LUMA companion app collection view and camera" fill className="object-cover" sizes="(min-width: 1024px) 48vw, 100vw" />
               </div>
             </Reveal>
           </div>

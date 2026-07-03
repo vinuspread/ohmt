@@ -29,6 +29,17 @@ interface ReviewContextType {
 
 const ReviewContext = createContext<ReviewContextType | undefined>(undefined);
 
+let annotationSequence = 0;
+
+function createAnnotationId() {
+  if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
+    return crypto.randomUUID();
+  }
+
+  annotationSequence += 1;
+  return `annotation-${Date.now().toString(36)}-${annotationSequence}`;
+}
+
 export const ReviewProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [isReviewMode, setReviewMode] = useState(false);
   const [annotations, setAnnotations] = useState<Annotation[]>([]);
@@ -50,7 +61,7 @@ export const ReviewProvider: React.FC<{ children: React.ReactNode }> = ({ childr
 
   const addAnnotation = (x: number, y: number, text: string, options?: { width?: number; height?: number; category?: string; priority?: 'low' | 'medium' | 'high'; filePath?: string; line?: number }) => {
     const newAnnotation: Annotation = {
-      id: Math.random().toString(36).substr(2, 9),
+      id: createAnnotationId(),
       x,
       y,
       width: options?.width,

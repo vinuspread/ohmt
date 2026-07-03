@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture/_components/sections/Projects.tsx
+// src/app/ko/templates/OHMT027-architecture/_components/sections/Projects.tsx
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
@@ -8,13 +8,13 @@ import { projects } from "../../data/projects";
 import { ScrollReveal } from "../ui/ScrollReveal";
 
 export function Projects() {
-  const [filter, setFilter] = useState("All");
+  const [filter, setFilter] = useState("전체");
   const baseRoute = "/ko/templates/OHMT027-architecture";
 
-  const categories = ["All", "Residential", "Commercial", "Public", "Interior"];
+  const categories = ["전체", "주거", "상업", "공공", "인테리어"];
 
   const filteredProjects = projects.filter((project) => {
-    if (filter === "All") return true;
+    if (filter === "전체") return true;
     return project.category === filter;
   });
 
@@ -43,10 +43,10 @@ export function Projects() {
         <ScrollReveal>
           <div className="flex flex-col sm:flex-row justify-between items-baseline gap-4 border-b border-[#E0E0E0] pb-8 mb-12">
             <h2 className="font-heading font-normal text-[40px] md:text-[48px] text-[#1A1A1A]">
-              Selected Projects.
+              주요 프로젝트.
             </h2>
             <span className="font-sans text-[13px] text-[#888888] tracking-wider uppercase">
-              {projects.length} Projects
+              {projects.length}개 프로젝트
             </span>
           </div>
         </ScrollReveal>
@@ -106,7 +106,7 @@ export function Projects() {
                         <span className="font-sans text-[11px] font-medium tracking-[0.15em] text-[#B07D4F] uppercase block">
                           {project.category}
                         </span>
-                        <h3 className="font-heading font-normal text-[24px] text-white leading-none">
+                        <h3 className="font-heading font-normal text-[24px] text-white leading-[1.1]">
                           {project.title}
                         </h3>
                       </div>

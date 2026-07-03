@@ -19,7 +19,7 @@ export default function TherapistsFull() {
           <div className="mx-auto max-w-7xl px-6">
             <motion.div initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: EASE_OUT }} className="max-w-2xl">
               <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">테라피스트</span>
-              <h1 className="mt-4 font-[family-name:var(--font-heading)] text-6xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[1.05]">전문가를 만나보세요</h1>
+              <h1 className="mt-4 font-[family-name:var(--font-heading)] text-6xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[1.1]">전문가를 만나보세요</h1>
               <p className="mt-4 text-[0.95rem] text-white/60 leading-relaxed max-w-lg">저희 클리닉의 모든 테라피스트는 면허를 소지하고 경험이 풍부하며 당신의 웰니스 목표 달성을 열정적으로 돕습니다.</p>
             </motion.div>
           </div>

@@ -29,13 +29,13 @@ function CarTemplateContent() {
     "title2": `car`,
     "title3": `era is`,
     "title4": `upon us.`,
-    "desc": `Zero emissions. Infinite ambition. The VINUS EV9 redefines what a luxury vehicle can be.`,
+    "desc": `Zero emissions. Infinite ambition. The OHMT EV9 redefines what a luxury vehicle can be.`,
     "explore": `Explore EV9`,
     "allModels": `All Models`,
     "from": `From`
   },
   "tech": {
-    "badge": `VINUS Technology`,
+    "badge": `OHMT Technology`,
     "title": `Where technology\nmeets design.`,
     "desc": `Our proprietary AI platform integrates real-time road analysis, predictive suspension response, and adaptive powertrain management - delivering a driving experience that feels less engineered and more alive.`
   },
@@ -68,14 +68,14 @@ return (
           eyebrow={t.tech.badge}
           title={t.tech.title}
           desc={t.tech.desc}
-          img="/templates/OHMT009-car/car-5.jpg"
+          img="/templates/OHMT009-car/tech-dashboard-custom.png"
         />
         
         <FullBleedSection 
           eyebrow={t.battery.badge}
           title={t.battery.title}
           desc={t.battery.desc}
-          img="/templates/OHMT009-car/hero-1.jpg"
+          img="/templates/OHMT009-car/home-banner-sub.jpg"
         />
         
         <SplitSection 

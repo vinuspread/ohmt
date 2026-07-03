@@ -33,7 +33,7 @@ export const Features = () => {
               A fresh menu, a welcoming space, and coffee made with care. That is what we come back to, every day.
             </p>
 
-            <div className="flex gap-4 md:gap-6">
+            <div className="flex flex-wrap gap-3 md:gap-6">
               {badges.map((b, i) => (
                 <motion.div
                   key={i}

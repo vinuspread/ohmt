@@ -3,8 +3,8 @@
   "name": "Luxe Haven Hotel",
   "name_ko": "럭스 헤이븐 호텔",
   "category": "hospitality",
-  "description": "A luxury hotel booking template with elegant room showcases and reservation system.",
-  "description_ko": "고급스러운 객실 쇼케이스와 예약 시스템을 갖춘 럭셔리 호텔 템플릿.",
+  "description": "A luxury hotel booking template for room showcases, amenities, reservation flows, and destination storytelling with an elegant hospitality tone.",
+  "description_ko": "객실 쇼케이스, 어메니티, 예약 흐름, 여행지 스토리를 우아한 호스피탈리티 톤으로 구성한 럭셔리 호텔 예약 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {

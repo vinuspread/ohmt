@@ -49,7 +49,7 @@ export const BlogPreview = () => {
                     <span>·</span>
                     <span>{post.readTime} 소요</span>
                   </div>
-                  <h3 className="text-base font-bold mt-2 leading-snug motion-safe:group-hover:opacity-70 transition-opacity duration-200">
+                  <h3 className="text-base font-bold mt-2 leading-[1.1] motion-safe:group-hover:opacity-70 transition-opacity duration-200">
                     {post.title}
                   </h3>
                   <p className="text-sm text-[var(--color-text-muted)] mt-2 leading-relaxed">

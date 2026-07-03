@@ -14,7 +14,7 @@ const ARTICLES_KO = [
     category: "캠페인",
     title: "마지막 시즌",
     date: "2026년 6월 15일",
-    image: "/templates/fashion/journal-hero-v2.png",
+    image: "/templates/OHMT001-fashion/journal-hero-v2.png",
     content: `끝과 그 조용한 아름다움에 대한 시각적 명상. 베네치아 석호에서 3일간 촬영되었습니다.
 
     공기는 소금기와 침묵으로 가득 차 있습니다. 우리는 밀려가는 조수를 바라보며, 영원한 것 같으면서도 찰나처럼 느껴졌던 한 시즌의 마지막 흔적들을 떠나보냅니다. 이 공간에서 옷은 단순한 직물이기를 멈추고 하나의 방패이자 기억, 그리고 두 번째 피부가 됩니다.
@@ -26,7 +26,7 @@ const ARTICLES_KO = [
     category: "소재",
     title: "일본 데님에 대하여",
     date: "2026년 5월 28일",
-    image: "/templates/fashion/hero-custom.jpg",
+    image: "/templates/OHMT001-fashion/hero-custom.jpg",
     content: `셀비지, 무게, 그리고 완벽한 색바램에 대한 집착. 오카야마의 한 공장으로 거슬러 올라갑니다.
 
     우리가 선보이는 데님의 진정한 성격을 이해하려면 오래된 셔틀 직기의 리듬을 이해해야 합니다. 현대식 초고속 직기 속도의 아주 작은 일부로만 작동하는 이 빈티지 기계들은 기계가 흉내 낼 수 없는 자연스러운 텐션과 구조적인 변화를 직물에 불어넣습니다.
@@ -38,7 +38,7 @@ const ARTICLES_KO = [
     category: "컬렉션",
     title: "조용한 장인정신",
     date: "2026년 5월 10일",
-    image: "/templates/fashion/exclusive-lifestyle.png",
+    image: "/templates/OHMT001-fashion/exclusive-lifestyle.png",
     content: `지금까지 가장 기술적으로 까다로운 의복, 구조적 울 오버코트의 솔기 뒤 이야기.
 
     우리는 진정한 럭셔리란 보이지 않는 곳에 숨겨진 세심한 디테일에 있다고 믿습니다. 우리의 구조적 울 오버코트는 이러한 철학을 고스란히 보여주는 대표적인 제품입니다. 두꺼운 이중직 울 겉감 아래에는 말총 캔버스로 정교하게 설계된 내부 심지가 자리 잡고 있으며, 칼라에 손바느질로 고정되어 주름이 지지 않고 자연스럽게 롤링됩니다.
@@ -50,7 +50,7 @@ const ARTICLES_KO = [
     category: "스타일",
     title: "계절을 위한 옷차림",
     date: "2026년 4월 22일",
-    image: "/templates/fashion/branding-custom.jpg",
+    image: "/templates/OHMT001-fashion/branding-custom.jpg",
     content: `당신과 함께 나이 들어가는 캡슐 워드로브를 만들기 위한 실용적인 안내.
 
     현대의 옷장은 옷이 채 닳기도 전에 유행이 지나버리는 트렌드 제품들로 채워지기 일쑤입니다. 우리는 다른 접근법을 제안합니다. 계절과 세월을 아우르며 자연스럽게 녹아드는 기본 아이템들로 정교하게 큐레이션된 컬렉션입니다.

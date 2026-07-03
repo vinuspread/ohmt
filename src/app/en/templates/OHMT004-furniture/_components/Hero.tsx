@@ -48,7 +48,7 @@ export const Hero = () => {
     "badge": `Our Story / Narrative`,
     "title1": `Between material`,
     "title2": `and space.`,
-    "sub": `Founded on the principles of purity and precision, Vinuspread is an archive of essential interiors.`,
+    "sub": `Founded on the principles of purity and precision, OHMT is an archive of essential interiors.`,
     "desc": `Each piece in our collection is a dialogue. We explore the tension between raw material and refined form, creating objects that bring a sense of serenity to the modern home. 01 Edition.`,
     "journal": `Read the Journal`
   },
@@ -101,7 +101,7 @@ const [index, setIndex] = useState(0);
     {
       id: 1,
       name: "Sculptural Lounge Chair",
-      image: "/templates/OHMT004-furniture/chair.png",
+      image: "/templates/furniture/chair.png",
       subtitle: t.hero.items.item1.subtitle,
       titleLine1: t.hero.items.item1.title1,
       titleLine2: t.hero.items.item1.title2,
@@ -110,7 +110,7 @@ const [index, setIndex] = useState(0);
     {
       id: 2,
       name: "Architectural Table Lamp",
-      image: "/templates/OHMT004-furniture/lamp.png",
+      image: "/templates/furniture/lamp.png",
       subtitle: t.hero.items.item2.subtitle,
       titleLine1: t.hero.items.item2.title1,
       titleLine2: t.hero.items.item2.title2,
@@ -119,7 +119,7 @@ const [index, setIndex] = useState(0);
     {
       id: 3,
       name: "Minimalist Solid Oak Sofa",
-      image: "/templates/OHMT004-furniture/sofa.png",
+      image: "/templates/furniture/sofa.png",
       subtitle: t.hero.items.item3.subtitle,
       titleLine1: t.hero.items.item3.title1,
       titleLine2: t.hero.items.item3.title2,
@@ -140,34 +140,34 @@ const [index, setIndex] = useState(0);
   const current = HERO_PRODUCTS[index];
 
   return (
-    <section className="relative bg-white overflow-x-clip selection:bg-[var(--color-text)] selection:text-white min-h-[70vh] md:h-[85vh] md:min-h-[600px] flex flex-col py-10 md:py-16 lg:py-20">
-        <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex-1 grid grid-cols-2 lg:grid-cols-2 gap-4 md:gap-12 items-center">
+    <section className="relative bg-white overflow-x-clip selection:bg-[var(--color-text)] selection:text-white flex flex-col pt-10 pb-4 lg:pt-0 lg:pb-0" style={{ minHeight: "clamp(600px, 88vh, 1000px)" }}>
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 flex-1 grid grid-cols-1 lg:grid-cols-[48%_52%] items-stretch w-full">
         {/* Left: Content */}
-        <div className="z-30 relative col-span-2 sm:col-span-1">
+        <div className="z-10 relative flex flex-col justify-center order-last lg:order-first py-0 lg:py-20">
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
-              initial={{ opacity: 0, x: -50 }}
+              initial={{ opacity: 0, x: -40 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: 50 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              exit={{ opacity: 0, x: 40 }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
               className="flex flex-col"
             >
-              <span className="text-[11px] md:text-[12px] font-bold text-[var(--color-secondary)] uppercase mb-3 md:mb-6 block">{current.subtitle}</span>
-              <h1 className="text-[clamp(1.8rem,5vw,3rem)] lg:text-[clamp(2.5rem,6vw,6rem)] font-bold text-[var(--color-text)] leading-[1.1] mb-3 md:mb-8 uppercase">
+              <span className="text-[12px] font-bold text-[var(--color-secondary)] uppercase mb-4 lg:mb-8 block tracking-wider">{current.subtitle}</span>
+              <h1 className="text-[clamp(2rem,6.5vw,2.8rem)] lg:text-[clamp(3.8rem,5.2vw,5.5rem)] font-bold text-[var(--color-text)] leading-[1.08] mb-4 lg:mb-10 uppercase [text-wrap:balance] lg:[text-wrap:normal]">
                 {current.titleLine1}<br />{current.titleLine2}
               </h1>
-              <p className="text-[15px] md:text-[17px] text-[var(--color-secondary)] font-medium leading-[1.4] max-w-lg mb-5 md:mb-10 hidden sm:block">
+              <p className="text-[14px] lg:text-[15px] text-[var(--color-secondary)] font-normal leading-relaxed max-w-sm mb-6 lg:mb-12">
                 {current.desc}
               </p>
 
-              <div className="flex flex-row sm:flex-row items-center gap-3 md:gap-6">
-                <Button variant="primary" className="px-5 md:px-12 py-2.5 md:py-4 text-[12px] md:text-[15px] font-bold rounded-full flex items-center gap-2 whitespace-nowrap">
-                  {t.hero.cta} <ArrowRight size={14} className="md:w-[18px]" />
+              <div className="hidden lg:flex items-center gap-6">
+                <Button variant="primary" className="px-10 py-4 text-[14px] font-bold rounded-full flex items-center gap-3 whitespace-nowrap">
+                  {t.hero.cta} <ArrowRight size={16} />
                 </Button>
-                <Button variant="ghost" className="group hidden sm:flex items-center gap-3 md:gap-4 text-[13px] md:text-[15px] font-bold whitespace-nowrap">
-                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full border border-black/10 flex items-center justify-center group-hover:bg-[var(--color-primary)] group-hover:text-white transition-all duration-500 flex-shrink-0">
-                    <Play size={14} className="md:w-4" fill="currentColor" />
+                <Button variant="ghost" className="group flex items-center gap-3 text-[14px] font-bold whitespace-nowrap">
+                  <div className="w-11 h-11 rounded-full border border-black/10 flex items-center justify-center group-hover:bg-[var(--color-primary)] group-hover:text-white transition-colors duration-500 flex-shrink-0">
+                    <Play size={13} fill="currentColor" />
                   </div>
                   {t.hero.video}
                 </Button>
@@ -177,16 +177,16 @@ const [index, setIndex] = useState(0);
         </div>
 
         {/* Right: Large Single Product Slider */}
-        <div className="relative col-span-2 sm:col-span-1 h-[280px] sm:h-full sm:min-h-[420px] md:min-h-[520px] flex items-center justify-center overflow-visible order-first sm:order-last lg:order-2">
+        <div className="relative h-[360px] sm:h-[420px] lg:h-auto order-first lg:order-2 overflow-visible">
             <AnimatePresence mode="popLayout" initial={false} custom={direction}>
               <motion.div
                 key={index}
                 custom={direction}
-                initial={{ opacity: 0, x: direction > 0 ? 300 : -300, scale: 0.8 }}
+                initial={{ opacity: 0, x: direction > 0 ? 260 : -260, scale: 0.85 }}
                 animate={{ opacity: 1, x: 0, scale: 1 }}
-                exit={{ opacity: 0, x: direction > 0 ? -300 : 300, scale: 0.8 }}
+                exit={{ opacity: 0, x: direction > 0 ? -260 : 260, scale: 0.85 }}
                 transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute inset-0 sm:-inset-x-8 md:-inset-x-32 sm:inset-y-0 flex items-center justify-center"
+                className="absolute -inset-x-8 lg:-inset-x-16 inset-y-0 lg:-inset-y-8 flex items-center justify-center"
               >
                  <motion.img
                    src={current.image}
@@ -198,8 +198,21 @@ const [index, setIndex] = useState(0);
         </div>
       </div>
 
+      {/* Mobile Actions */}
+      <div className="flex lg:hidden items-center justify-start gap-4 px-6 pt-6 pb-6 z-30">
+        <Button variant="primary" className="px-6 py-3 text-[13px] font-bold rounded-full flex items-center gap-2 whitespace-nowrap">
+          {t.hero.cta} <ArrowRight size={14} />
+        </Button>
+        <Button variant="ghost" className="group flex items-center gap-2 text-[13px] font-bold whitespace-nowrap">
+          <div className="w-9 h-9 rounded-full border border-black/10 flex items-center justify-center group-hover:bg-[var(--color-primary)] group-hover:text-white transition-colors duration-500 flex-shrink-0">
+            <Play size={12} fill="currentColor" />
+          </div>
+          {t.hero.video}
+        </Button>
+      </div>
+
       {/* Slider Controls */}
-      <div className="flex items-center justify-center gap-4 md:gap-10 pb-4 md:pb-8 z-30">
+      <div className="flex items-center justify-center gap-4 md:gap-10 pb-6 lg:pb-10 z-30">
           <button
             onClick={prevSlide}
             className="w-8 h-8 md:w-10 md:h-10 rounded-full border border-black/5 flex items-center justify-center hover:bg-white hover:border-black/20 transition-all shadow-sm hover:shadow-md flex-shrink-0"
@@ -271,7 +284,7 @@ export const CategoryNav = () => {
     "badge": `Our Story / Narrative`,
     "title1": `Between material`,
     "title2": `and space.`,
-    "sub": `Founded on the principles of purity and precision, Vinuspread is an archive of essential interiors.`,
+    "sub": `Founded on the principles of purity and precision, OHMT is an archive of essential interiors.`,
     "desc": `Each piece in our collection is a dialogue. We explore the tension between raw material and refined form, creating objects that bring a sense of serenity to the modern home. 01 Edition.`,
     "journal": `Read the Journal`
   },
@@ -318,14 +331,14 @@ export const CategoryNav = () => {
   }
 };
 const categories = [
-    { name: "Sofas",           image: "/templates/OHMT004-furniture/sofa.png",       id: "sofas" },
-    { name: "Bedroom",         image: "/templates/OHMT004-furniture/bed.png",        id: "bedroom" },
-    { name: "Dining",          image: "/templates/OHMT004-furniture/table.png",      id: "dining" },
-    { name: "Home Office",     image: "/templates/OHMT004-furniture/desk.png",       id: "home-office" },
-    { name: "Chairs",          image: "/templates/OHMT004-furniture/chair.png",      id: "chairs" },
-    { name: "Lighting",        image: "/templates/OHMT004-furniture/lamp.png",       id: "lighting" },
-    { name: "Living",          image: "/templates/OHMT004-furniture/sidetable.png",  id: "living" },
-    { name: "Storage",         image: "/templates/OHMT004-furniture/wardrobe.png",   id: "storage" },
+    { name: "Sofas",           image: "/templates/furniture/sofa.png",       id: "sofas" },
+    { name: "Bedroom",         image: "/templates/furniture/bed.png",        id: "bedroom" },
+    { name: "Dining",          image: "/templates/furniture/table.png",      id: "dining" },
+    { name: "Home Office",     image: "/templates/furniture/desk.png",       id: "home-office" },
+    { name: "Chairs",          image: "/templates/furniture/chair.png",      id: "chairs" },
+    { name: "Lighting",        image: "/templates/furniture/lamp.png",       id: "lighting" },
+    { name: "Living",          image: "/templates/furniture/sidetable.png",  id: "living" },
+    { name: "Storage",         image: "/templates/furniture/wardrobe.png",   id: "storage" },
   ];
 
   return (

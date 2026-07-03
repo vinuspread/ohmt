@@ -45,7 +45,7 @@ const services = [
       { step: "03", title: "Light Engineering", desc: "Lighting modeled as an active material across every surface at every hour." },
       { step: "04", title: "Installation Control", desc: "Direct coordination with specialists at every critical installation milestone." },
     ],
-    image: "/templates/OHMT006-studio/hero-2.jpg",
+    image: "/templates/OHMT006-studio/service-consulting.jpg",
   },
   {
     idx: "03",

@@ -15,7 +15,7 @@ const SEASONS = [
     id: "ss26",
     label: "Spring / Summer 26",
     title: "The First Light",
-    image: "/templates/fashion/exclusive-custom.jpg",
+    image: "/templates/OHMT001-fashion/exclusive-custom.jpg",
     description:
       "A debut collection born from the tension between structure and fluidity. Tailored silhouettes meet draped organza — a study in controlled softness.",
     year: "2026",
@@ -24,7 +24,7 @@ const SEASONS = [
     id: "aw25",
     label: "Autumn / Winter 25",
     title: "Concrete Garden",
-    image: "/templates/fashion/branding-custom.jpg",
+    image: "/templates/OHMT001-fashion/branding-custom.jpg",
     description:
       "Brutalist forms softened by human touch. Wool, leather, and raw-edged seams define a season that walks the line between shelter and exposure.",
     year: "2025",
@@ -33,7 +33,7 @@ const SEASONS = [
     id: "core",
     label: "Core Series",
     title: "Permanent Objects",
-    image: "/templates/fashion/hero-custom.jpg",
+    image: "/templates/OHMT001-fashion/hero-custom.jpg",
     description:
       "The foundation. Garments designed not for a single season but for a lifetime. Every stitch, seam, and silhouette refined to its essential form.",
     year: "2025",
@@ -42,7 +42,7 @@ const SEASONS = [
     id: "limited",
     label: "Limited Drop",
     title: "Monument",
-    image: "/templates/fashion/exclusive-lifestyle.png",
+    image: "/templates/OHMT001-fashion/exclusive-lifestyle.png",
     description:
       "An experimental capsule exploring the boundary between garment and sculpture. Produced in an edition of 50 pieces worldwide.",
     year: "2024",
@@ -59,7 +59,7 @@ function PageContent() {
           eyebrow="Archive"
           title="The Archive"
           description="Every collection is a document of its moment. Here, they remain as references for the next silhouette."
-          image="/templates/fashion/archive-hero.jpg"
+          image="/templates/OHMT001-fashion/archive-hero.jpg"
           imageAlt="Archive editorial fashion campaign"
         />
 

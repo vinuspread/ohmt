@@ -37,7 +37,8 @@ export default function PortfolioLayout({
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
         @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
       `}</style>
-      {children}
+      <div className="portfolio-template">{children}</div>
     </>
   );
 }
+

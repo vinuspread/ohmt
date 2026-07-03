@@ -25,10 +25,10 @@ export default function GenreGrid() {
           className="mb-14 text-center"
         >
           <span className="text-sm font-medium tracking-[0.2em] text-[var(--color-primary)] uppercase">
-            Our Expertise
+            OUR EXPERTISE
           </span>
           <h2 className="mt-2 font-[var(--font-heading)] text-4xl font-bold md:text-5xl">
-            전문 장르
+            장르별 전문성
           </h2>
         </motion.div>
 

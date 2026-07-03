@@ -20,17 +20,17 @@ export const SplitSection = ({ eyebrow, title, desc, img, reverse }: SplitProps)
         ? "md:pl-16 md:pr-[max(60px,calc((100vw-1440px)/2+60px))] [direction:ltr]" 
         : "md:pr-16 md:pl-[max(60px,calc((100vw-1440px)/2+60px))] [direction:ltr]"
     )}>
-      <span className="block text-[0.65rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-text-muted)] mb-5">
+      <span className="block text-[0.68rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-5">
         {eyebrow}
       </span>
-      <h2 className="text-[clamp(2rem,3.5vw,3.2rem)] font-extrabold tracking-tight leading-[1.2] mb-5 text-white whitespace-pre-line">
+      <h2 className="text-[clamp(2.2rem,3.8vw,3.5rem)] font-extrabold tracking-[-0.04em] leading-[1.15] mb-6 text-white whitespace-pre-line">
         {title}
       </h2>
-      <p className="text-[0.88rem] text-[var(--theme-text-muted)] leading-[1.4] font-normal mb-10 max-w-[380px]">
+      <p className="text-[0.92rem] md:text-[0.98rem] text-white/60 leading-[1.8] font-normal mb-10 max-w-[420px]">
         {desc}
       </p>
-      <button type="button" className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-white hover:translate-x-1.5 transition-all duration-300 text-left">
-        Discover More <span className="text-[1.2em]">→</span>
+      <button type="button" className="inline-flex items-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.16em] text-white border-b border-white/20 pb-1 hover:border-[var(--theme-accent)] hover:text-[var(--theme-accent)] transition-all duration-300 w-fit text-left">
+        Discover More <span className="text-[1.2em]">&rarr;</span>
       </button>
     </div>
     <div className="overflow-hidden group [direction:ltr]">
@@ -42,19 +42,19 @@ export const SplitSection = ({ eyebrow, title, desc, img, reverse }: SplitProps)
 export const FullBleedSection = ({ eyebrow, title, desc, img }: Omit<SplitProps, "reverse">) => (
   <div className="relative h-[75vh] min-h-[500px] overflow-hidden">
     <img loading="lazy" src={img} className="w-full h-full object-cover" alt={title} />
-    <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent" />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
     <div className="absolute bottom-0 left-0 right-0 px-6 py-8 md:px-[var(--theme-gutter)] md:pb-20 max-w-[var(--theme-container)] mx-auto">
-      <span className="block text-[0.65rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-text-muted)] mb-5">
+      <span className="block text-[0.68rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-5">
         {eyebrow}
       </span>
-      <h2 className="text-[clamp(2rem,4vw,4rem)] font-bold tracking-tight leading-[1.2] mb-4 max-w-[600px] text-white whitespace-pre-line">
+      <h2 className="text-[clamp(2.2rem,4.2vw,4.2rem)] font-bold tracking-[-0.04em] leading-[1.15] mb-5 max-w-[700px] text-white whitespace-pre-line">
         {title}
       </h2>
-      <p className="text-[0.88rem] text-[var(--theme-text-muted)] font-normal mb-8 max-w-[400px]">
+      <p className="text-[0.92rem] md:text-[0.98rem] text-white/60 font-normal mb-8 max-w-[460px]">
         {desc}
       </p>
-      <button type="button" className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-white hover:translate-x-1.5 transition-all duration-300">
-        View Specs <span className="text-[1.2em]">→</span>
+      <button type="button" className="inline-flex items-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.16em] text-white border-b border-white/20 pb-1 hover:border-[var(--theme-accent)] hover:text-[var(--theme-accent)] transition-all duration-300 w-fit">
+        View Specs <span className="text-[1.2em]">&rarr;</span>
       </button>
     </div>
   </div>

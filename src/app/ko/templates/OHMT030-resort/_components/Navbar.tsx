@@ -33,7 +33,7 @@ export function Navbar() {
           <div className="hidden md:flex items-center gap-6">
             {navLinks.map((l) => (
               <Link key={l.label} href={l.href}
-                className="text-white/80 hover:text-white text-[15px] font-medium transition-colors">
+                className="text-white/80 hover:text-white text-[15px] font-medium transition-colors focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]">
                 {l.label}
               </Link>
             ))}
@@ -46,11 +46,11 @@ export function Navbar() {
 
           <div className="hidden md:flex items-center gap-6">
             <Link href={`${base}/#contact`}
-              className="text-white/80 hover:text-white text-[15px] font-medium transition-colors">
+              className="text-white/80 hover:text-white text-[15px] font-medium transition-colors focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]">
               문의하기
             </Link>
             <Link href={`${base}/#book`}
-              className="text-[var(--accent)] hover:text-[#ffb37a] text-[15px] font-medium transition-colors">
+              className="text-[var(--accent)] hover:text-[var(--accent-hover)] text-[15px] font-medium transition-colors focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]">
               예약하기 &rarr;
             </Link>
           </div>

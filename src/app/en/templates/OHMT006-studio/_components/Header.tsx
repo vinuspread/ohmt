@@ -223,7 +223,7 @@ useEffect(() => {
         { name: t.nav.about, href: '/en/templates/OHMT006-studio/about' },
     ];
 
-    const isMainPage = /^\/(en|ko)?\/?templates\/studio\/?$/.test(pathname);
+    const isMainPage = /^\/(?:en|ko)\/templates\/OHMT006-studio\/?$/.test(pathname);
     const isProjectDetail = pathname.includes('/projects/') && !pathname.endsWith('/projects');
     const isLight = scrolled || (!isMainPage && !isProjectDetail);
 

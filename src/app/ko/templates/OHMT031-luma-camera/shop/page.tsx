@@ -9,7 +9,7 @@ const products = [
     price: "$1,890",
     note: "가방에 넣을지 고민하지 않는 기본 바디",
     spec: "28mm 고정 렌즈",
-    image: "/templates/luma-camera/shop-one-kit.jpg?v=20260702f",
+    image: "/templates/OHMT031-luma-camera/shop-one-kit.jpg?v=20260702f",
     details: ["뉴트럴 / 웜 프로파일", "데일리 캐리 모드", "앱 노트"],
     bestFor: "산책, 식사, 여행처럼 카메라를 챙길지 오래 고민하고 싶지 않은 날.",
   },
@@ -18,7 +18,7 @@ const products = [
     price: "$2,460",
     note: "작업대에서 손에 안정적으로 걸리는 필드 키트",
     spec: "28mm 렌즈 + 그립",
-    image: "/templates/luma-camera/shop-pro-kit.jpg?v=20260702f",
+    image: "/templates/OHMT031-luma-camera/shop-pro-kit.jpg?v=20260702f",
     details: ["그립 + 노트 모드", "확장 레시피 메모리", "작업용 필드 스트랩"],
     bestFor: "오브젝트 촬영, 제품 디테일, 저조도 실내, 반복해서 쓰는 색 조합.",
   },
@@ -132,7 +132,7 @@ export default function ShopPage() {
         <section className="px-4 pb-24 md:px-8 md:pb-32">
           <div className="mx-auto grid max-w-[1380px] gap-4 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="relative min-h-[460px] overflow-hidden">
-              <Image unoptimized src="/templates/luma-camera/product-pro.jpg?v=20260702e" alt="패브릭 위에 놓인 LUMA One Pro 바디 디테일" fill className="object-cover" sizes="(min-width: 1024px) 55vw, 100vw" />
+              <Image unoptimized src="/templates/OHMT031-luma-camera/product-pro.jpg?v=20260702e" alt="패브릭 위에 놓인 LUMA One Pro 바디 디테일" fill className="object-cover" sizes="(min-width: 1024px) 55vw, 100vw" />
             </div>
             <div className="bg-[var(--luma-dark)] p-8 text-white md:p-10">
               <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/50">구성품</p>
@@ -159,7 +159,7 @@ export default function ShopPage() {
               </Link>
             </div>
             <div className="relative min-h-[360px] overflow-hidden">
-              <Image unoptimized src="/templates/luma-camera/quiet-dinner.jpg?v=20260702e" alt="조용한 저녁 테이블의 LUMA 카메라" fill className="object-cover" sizes="(min-width: 1024px) 58vw, 100vw" />
+              <Image unoptimized src="/templates/OHMT031-luma-camera/quiet-dinner.jpg?v=20260702e" alt="조용한 저녁 테이블의 LUMA 카메라" fill className="object-cover" sizes="(min-width: 1024px) 58vw, 100vw" />
             </div>
           </div>
         </section>

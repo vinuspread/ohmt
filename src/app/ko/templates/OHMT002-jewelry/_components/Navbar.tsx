@@ -21,9 +21,9 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const isHome = /^\/(en|ko)?\/?templates\/jewelry\/?$/.test(pathname);
-  const isCategoryPage = /^\/(en|ko)?\/?templates\/jewelry\/category\//.test(pathname);
-  const isTransparent = (isHome || isCategoryPage) && !scrolled;
+  const isHome = /^\/(en|ko)?\/?templates\/(OHMT002-)?jewelry\/?$/.test(pathname);
+  const isCategoryPage = /^\/(en|ko)?\/?templates\/(OHMT002-)?jewelry\/category\//.test(pathname);
+  const isTransparent = isHome && !scrolled;
 
   const currentCategory = isCategoryPage
     ? pathname.split("/category/")[1]
@@ -48,7 +48,7 @@ export default function Navbar() {
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex justify-between items-center transition-all w-full">
           
           {/* Desktop Left - Curation Categories */}
-          <div className="hidden lg:flex items-center gap-8 text-[14px] uppercase tracking-[0.2em] -mr-[0.3em] font-bold">
+          <div className="hidden lg:flex items-center gap-8 text-[14px] uppercase tracking-[-0.03em] font-bold">
             {menuItems.slice(0, 3).map((item) => {
               const isActive = currentCategory === item.id;
               return (
@@ -104,7 +104,7 @@ export default function Navbar() {
             }`}
           >
             {/* Desktop Only About Link on the right of Logo */}
-            <div className="hidden lg:flex items-center text-[14px] uppercase tracking-[0.2em] font-bold">
+            <div className="hidden lg:flex items-center text-[14px] uppercase tracking-[-0.03em] font-bold">
               {menuItems.slice(3).map((item) => {
                 const isActive = currentCategory === item.id;
                 return (
@@ -178,7 +178,7 @@ export default function Navbar() {
                   </button>
                 </div>
 
-                <div className="flex flex-col gap-8 text-[14px] uppercase tracking-[0.3em] font-bold text-neutral-600">
+                <div className="flex flex-col gap-8 text-[14px] uppercase tracking-[-0.03em] font-bold text-neutral-600">
                   {menuItems.map((item) => {
                     const isActive = currentCategory === item.id;
                     return (
@@ -198,8 +198,8 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <div className="space-y-6 border-t border-neutral-200/50 pt-8 text-[14px] tracking-[0.2em] text-neutral-400 font-bold uppercase">
-                <p>© 2026 OHMT.</p>
+              <div className="space-y-6 border-t border-neutral-200/50 pt-8 text-[14px] tracking-[-0.03em] text-neutral-500 font-bold uppercase">
+                <p>© 2026 Oh My Template.</p>
                 <div className="flex gap-4">
                   <a href="#" className="hover:text-[var(--color-primary)] transition-colors">Instagram</a>
                   <a href="#" className="hover:text-[var(--color-primary)] transition-colors">Pinterest</a>

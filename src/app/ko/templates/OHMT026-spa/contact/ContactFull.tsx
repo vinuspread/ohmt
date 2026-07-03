@@ -16,9 +16,9 @@ export default function ContactFull() {
         <section className="bg-[var(--color-secondary)] py-24 lg:py-32">
           <div className="mx-auto max-w-7xl px-6">
             <motion.div initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: EASE_OUT }} className="max-w-2xl">
-              <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">문의</span>
-              <h1 className="mt-4 font-[family-name:var(--font-heading)] text-6xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[1.05]">예약하기</h1>
-              <p className="mt-4 text-[0.95rem] text-white/60 leading-relaxed max-w-lg">웰니스 여정을 시작할 준비가 되셨나요? 아래 양식을 작성해주시면 24시간 이내에 연락드리겠습니다.</p>
+              <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">BOOK A SESSION</span>
+              <h1 className="mt-4 font-[family-name:var(--font-heading)] text-6xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[1.1]">피부 진단 상담 예약</h1>
+              <p className="mt-4 text-[0.95rem] text-white/60 leading-relaxed max-w-lg">피부 고민과 원하는 변화를 남겨주세요. 24시간 이내에 상담 가능 시간을 안내해 드립니다.</p>
             </motion.div>
           </div>
         </section>

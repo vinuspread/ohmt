@@ -13,7 +13,7 @@ export default function Hero() {
       >
         {/* Text area - solid bg, no overlap */}
         <div className="px-6 pt-10 pb-6 bg-[var(--color-bg)] flex-shrink-0">
-          <h1 className="text-[clamp(3rem,11vw,4rem)] font-extrabold tracking-[-0.04em] leading-[1.08] text-[var(--color-text)] font-heading mb-4 break-keep">
+          <h1 className="text-[clamp(3rem,11vw,4rem)] font-extrabold tracking-[-0.04em] leading-[1.1] text-[var(--color-text)] font-heading mb-4 break-keep">
             자율성은<br />
             미래가 아닙니다<br />
             <span className="text-[var(--color-accent)]">바로 지금입니다.</span>
@@ -63,7 +63,7 @@ export default function Hero() {
         />
         <div className="relative z-10 mx-auto max-w-7xl px-6 w-full">
           <div className="w-1/2 flex flex-col items-start pr-8">
-            <h1 className="text-[clamp(2.5rem,5vw,4.5rem)] font-extrabold tracking-[-0.04em] leading-[1.08] text-[var(--color-text)] font-heading break-keep">
+            <h1 className="text-[clamp(2.5rem,5vw,4.5rem)] font-extrabold tracking-[-0.04em] leading-[1.1] text-[var(--color-text)] font-heading break-keep">
               자율성은 미래가<br />
               아닙니다<br />
               <span className="text-[var(--color-accent)]">바로 지금입니다.</span>

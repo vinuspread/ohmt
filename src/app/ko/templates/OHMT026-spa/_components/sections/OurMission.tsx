@@ -23,7 +23,7 @@ export default function OurMission() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
           <motion.div initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6, ease: EASE_OUT }}>
             <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">미션</span>
-            <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[1.05]">케어의 철학</h2>
+            <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[1.1]">케어의 철학</h2>
             <p className="mt-5 text-[0.95rem] text-[var(--color-text-muted)] leading-relaxed max-w-md mb-10">우리는 좋은 피부는 빠른 해결책이 아닌 일관되고 개인화된 케어에서 온다고 믿습니다.</p>
             <div className="space-y-2">
               {items.map((item, i) => {

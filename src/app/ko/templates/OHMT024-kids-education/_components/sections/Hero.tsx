@@ -73,7 +73,7 @@ export default function Hero() {
             initial={shouldReduce ? { opacity: 0 } : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2, delay: 0.05, ease: EASE_OUT }}
-            className="text-4xl sm:text-7xl md:text-8xl font-bold leading-[1.15] sm:leading-none tracking-tight mx-auto"
+            className="text-4xl sm:text-6xl md:text-7xl font-bold leading-[1.12] tracking-tight mx-auto"
             style={{ fontFamily: "var(--font-heading)", maxWidth: "24ch" }}
           >
             놀며 발견하는<br />

@@ -43,43 +43,45 @@ const navItems = [
         <div className="bg-[#9B1528] px-6 h-full flex items-center text-[0.72rem] font-bold uppercase tracking-widest shrink-0">
           {t.nav.breaking}
         </div>
-        <div className="flex whitespace-nowrap animate-ticker pl-8">
-          {[1, 2].map(i => (
-            <span key={i} className="pr-20 text-[0.78rem] font-semibold tracking-wide">
-              {t.nav.ticker}
-            </span>
-          ))}
+        <div className="min-w-0 flex-1 overflow-hidden">
+          <div className="flex whitespace-nowrap animate-ticker pl-8">
+            {[1, 2].map(i => (
+              <span key={i} className="pr-20 text-[0.78rem] font-semibold tracking-wide">
+                {t.nav.ticker}
+              </span>
+            ))}
+          </div>
         </div>
       </div>
       
-      <div className="max-w-[1280px] mx-auto px-8 py-6">
-        <div className="flex justify-between items-start mb-3">
-          <div className="text-[0.75rem] text-[#555] font-medium font-sans">
+      <div className="max-w-[1280px] mx-auto px-4 md:px-8 py-5 md:py-6">
+        <div className="flex flex-col items-center gap-3 md:flex-row md:justify-between md:items-start md:mb-3">
+          <div className="text-[0.72rem] text-[#555] font-medium font-sans md:text-[0.75rem]">
             {t.nav.date}
           </div>
-          <Link href={`/en/templates/OHMT013-newspaper`} className="font-[family-name:var(--theme-font-heading)] text-[clamp(2.5rem,5.5vw,4.5rem)] font-black tracking-tighter leading-none text-center flex-1">
-            VINUS TIMES
+          <Link href={`/en/templates/OHMT013-newspaper`} className="font-[family-name:var(--theme-font-heading)] text-[clamp(2.2rem,13vw,4.5rem)] font-black tracking-tighter leading-none text-center md:flex-1">
+            OHMT TIMES
           </Link>
-          <div className="text-[0.75rem] text-[#555] font-medium font-sans text-right">
+          <div className="hidden text-[0.75rem] text-[#555] font-medium font-sans text-right md:block">
             {t.nav.price}
           </div>
         </div>
       </div>
 
       <nav className="sticky top-0 z-[100] bg-white border-y border-[var(--color-border)]">
-        <div className="max-w-[1280px] mx-auto px-8 h-11 flex items-center justify-between">
-          <div className="flex h-full">
+        <div className="max-w-[1280px] mx-auto h-auto px-0 md:h-11 md:px-8 md:flex md:items-center md:justify-between">
+          <div className="flex h-11 overflow-x-auto">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={`${item.href}`}
-                className="px-4 h-full flex items-center text-[0.78rem] font-bold uppercase tracking-wider text-black border-r border-[var(--color-border)] hover:bg-black hover:text-white transition-all"
+                className="shrink-0 px-4 h-full flex items-center text-[0.78rem] font-bold uppercase tracking-wider text-black border-r border-[var(--color-border)] hover:bg-black hover:text-white transition-all"
               >
                 {item.name}
               </Link>
             ))}
           </div>
-          <div className="flex items-center gap-6">
+          <div className="hidden items-center gap-6 md:flex">
             <Link href="#" className="text-[0.78rem] font-bold uppercase text-black">{t.nav.signIn}</Link>
             <button className="bg-[var(--color-primary)] text-white px-4 py-1.5 text-[0.75rem] font-bold uppercase tracking-wide hover:bg-[#9B1528] transition-all">
               {t.nav.subscribe}

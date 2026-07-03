@@ -3,8 +3,8 @@
   "name": "Exhibition Gallery",
   "name_ko": "전시 갤러리",
   "category": "portfolio",
-  "description": "Modern art gallery and exhibition website template",
-  "description_ko": "현대 미술 갤러리 및 전시 웹사이트 템플릿",
+  "description": "A contemporary exhibition template for museums, galleries, and cultural programs, with immersive artwork sections, event detail pages, and editorial navigation.",
+  "description_ko": "미술관, 갤러리, 문화 프로그램을 위한 전시 템플릿. 작품 섹션, 행사 상세 페이지, 에디토리얼 탐색 구조를 갖췄습니다.",
   "mode": "light",
   "theme": {
     "palette": {

@@ -17,8 +17,8 @@ export default function BlogFull() {
           <div className="mx-auto max-w-7xl px-6">
             <motion.div initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: EASE_OUT }} className="max-w-2xl">
               <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">블로그</span>
-              <h1 className="mt-4 font-[family-name:var(--font-heading)] text-6xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[1.05]">인사이트 & 조언</h1>
-              <p className="mt-4 text-[0.95rem] text-white/60 leading-relaxed max-w-lg">전문가 팀이 전하는 스킨케어 팁, 트리트먼트 가이드, 웰니스 지혜.</p>
+              <h1 className="mt-4 font-[family-name:var(--font-heading)] text-6xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[1.1]">스킨케어 노트</h1>
+              <p className="mt-4 text-[0.95rem] text-white/60 leading-relaxed max-w-lg">피부 관리 루틴, 트리트먼트 전후 관리, 계절별 케어 팁을 정리했습니다.</p>
             </motion.div>
           </div>
         </section>
@@ -30,7 +30,7 @@ export default function BlogFull() {
                   <div className="h-56 overflow-hidden"><img src={post.image} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" /></div>
                   <div className="p-6">
                     <div className="flex items-center gap-3 text-[0.65rem] font-bold uppercase tracking-[0.15em] text-[var(--color-text-muted)]"><span>{post.category}</span><span>{post.date}</span></div>
-                    <h2 className="mt-3 font-[family-name:var(--font-heading)] text-lg font-bold tracking-tight text-[var(--color-text)] leading-snug group-hover:text-[var(--color-primary)] transition-colors duration-200">{post.title}</h2>
+                    <h2 className="mt-3 font-[family-name:var(--font-heading)] text-lg font-bold tracking-tight text-[var(--color-text)] leading-[1.1] group-hover:text-[var(--color-primary)] transition-colors duration-200">{post.title}</h2>
                     <p className="mt-2 text-sm text-[var(--color-text-muted)] leading-relaxed line-clamp-2">{post.excerpt}</p>
                     <div className="mt-4 flex items-center gap-2 text-xs text-[var(--color-text-muted)]"><span>{post.author}</span></div>
                   </div>

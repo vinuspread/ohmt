@@ -7,14 +7,14 @@ const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 
 // rotate / rough position matching Figma design
 const leftPhotos = [
-  { src: "/templates/OHMT024-kids-education/photo-01.jpg", style: { top: "8%",  left: "22%", width: "210px", zIndex: 2 } },
-  { src: "/templates/OHMT024-kids-education/photo-03.jpg", style: { top: "38%", left: "29%", width: "180px", zIndex: 3 } },
-  { src: "/templates/OHMT024-kids-education/photo-05.jpg", style: { top: "62%", left: "21%", width: "195px", zIndex: 2 } },
+  { src: "/templates/OHMT024-kids-education/photo-01.jpg", style: { top: "8%", left: "15vw", width: "210px", zIndex: 2 } },
+  { src: "/templates/OHMT024-kids-education/photo-03.jpg", style: { top: "39%", left: "13vw", width: "180px", zIndex: 2 } },
+  { src: "/templates/OHMT024-kids-education/photo-05.jpg", style: { top: "62%", left: "14vw", width: "195px", zIndex: 2 } },
 ];
 const rightPhotos = [
-  { src: "/templates/OHMT024-kids-education/photo-02.jpg", style: { top: "6%",  right: "22%", width: "185px", zIndex: 2 } },
-  { src: "/templates/OHMT024-kids-education/photo-04.jpg", style: { top: "36%", right: "27%", width: "210px", zIndex: 3 } },
-  { src: "/templates/OHMT024-kids-education/photo-06.jpg", style: { top: "62%", right: "21%", width: "190px", zIndex: 2 } },
+  { src: "/templates/OHMT024-kids-education/photo-02.jpg", style: { top: "6%", right: "16vw", width: "185px", zIndex: 2 } },
+  { src: "/templates/OHMT024-kids-education/photo-04.jpg", style: { top: "36%", right: "8vw", width: "210px", zIndex: 2 } },
+  { src: "/templates/OHMT024-kids-education/photo-06.jpg", style: { top: "62%", right: "14vw", width: "190px", zIndex: 2 } },
 ];
 
 export default function PhotoSection() {
@@ -38,7 +38,7 @@ export default function PhotoSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.35, delay: idx * 0.1, ease: EASE_OUT }}
-          className="absolute hidden lg:block aspect-[4/3] rounded-2xl overflow-hidden shadow-lg"
+          className="absolute hidden xl:block aspect-[4/3] rounded-2xl overflow-hidden shadow-lg"
           style={photo.style}
         >
           <img src={photo.src} alt="" className="w-full h-full object-cover" />
@@ -53,7 +53,7 @@ export default function PhotoSection() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.1 }}
           transition={{ duration: 0.35, delay: idx * 0.1, ease: EASE_OUT }}
-          className="absolute hidden lg:block aspect-[4/3] rounded-2xl overflow-hidden shadow-lg"
+          className="absolute hidden xl:block aspect-[4/3] rounded-2xl overflow-hidden shadow-lg"
           style={photo.style}
         >
           <img src={photo.src} alt="" className="w-full h-full object-cover" />
@@ -61,7 +61,7 @@ export default function PhotoSection() {
       ))}
 
       {/* Center content */}
-      <div className="relative z-10 mx-auto max-w-xl px-6 text-center">
+      <div className="relative z-10 mx-auto max-w-[560px] px-6 text-center">
         <motion.div
           initial={shouldReduce ? { opacity: 0 } : { opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}

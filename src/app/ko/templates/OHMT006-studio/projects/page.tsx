@@ -74,7 +74,7 @@ function StudioProjectsPageContent() {
 
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-10 border-b border-black/5 pb-6 md:pb-10">
                         <div className="max-w-[680px]">
-                            <h2 className="text-[clamp(1.8rem,4.5vw,4.5rem)] font-bold leading-[1.5] text-black break-keep">
+                            <h2 className="text-[clamp(1.8rem,4.5vw,4.5rem)] font-bold leading-[1.1] text-black break-keep">
                                 {"물리적인 형태와 섬세한 텍스처가 구현하는 구조적 미학."}
                             </h2>
                         </div>
@@ -115,7 +115,7 @@ function StudioProjectsPageContent() {
                 imagePosition="right"
             >
                 <div className="space-y-4 max-w-[480px]">
-                    <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.5] break-keep">
+                    <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.1] break-keep">
                         {"비스포크 가구"} <br />
                         {"오브제 큐레이션"}
                     </h3>

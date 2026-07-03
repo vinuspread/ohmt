@@ -8,19 +8,19 @@ const samples = [
     label: "Color",
     title: "Skin, ceramic, fruit, and metal stay in the same room.",
     text: "The default profile keeps warm daylight believable without pushing the file into a preset look.",
-    image: "/templates/luma-camera/engine-color-grid.jpg?v=20260702f",
+    image: "/templates/OHMT031-luma-camera/engine-color-grid.jpg?v=20260702f",
   },
   {
     label: "Low light",
     title: "Blue window light can sit beside a warm lamp.",
     text: "Shadow detail stays present, with a little grain left where the scene needs it.",
-    image: "/templates/luma-camera/engine-lowlight-room.jpg?v=20260702f",
+    image: "/templates/OHMT031-luma-camera/engine-lowlight-room.jpg?v=20260702f",
   },
   {
     label: "Detail",
     title: "Texture reads clearly without the brittle edge.",
     text: "Paper, fabric, brushed metal, and glaze keep their surface instead of turning into a sharpening test.",
-    image: "/templates/luma-camera/engine-texture-close.jpg?v=20260702f",
+    image: "/templates/OHMT031-luma-camera/engine-texture-close.jpg?v=20260702f",
   },
 ];
 
@@ -61,7 +61,7 @@ export default function ImageEnginePage() {
               </p>
             </div>
             <div className="relative min-h-[520px] overflow-hidden bg-[var(--luma-dark)]">
-              <Image unoptimized src="/templates/luma-camera/sample-color.jpg?v=20260702e" alt="LUMA color sample with warm daylight materials" fill priority className="object-cover" sizes="(min-width: 1024px) 58vw, 100vw" />
+              <Image unoptimized src="/templates/OHMT031-luma-camera/sample-color.jpg?v=20260702e" alt="LUMA color sample with warm daylight materials" fill priority className="object-cover" sizes="(min-width: 1024px) 58vw, 100vw" />
             </div>
           </div>
         </section>
@@ -125,7 +125,7 @@ export default function ImageEnginePage() {
         <section className="px-4 pb-24 md:px-8 md:pb-32">
           <div className="mx-auto grid max-w-[1380px] gap-4 lg:grid-cols-[1.15fr_0.85fr]">
             <div className="relative min-h-[460px] overflow-hidden bg-[var(--luma-dark)]">
-              <Image unoptimized src="/templates/luma-camera/app-recipe-view.jpg?v=20260702f" alt="LUMA app storing image recipes and notes" fill className="object-cover" sizes="(min-width: 1024px) 58vw, 100vw" />
+              <Image unoptimized src="/templates/OHMT031-luma-camera/app-recipe-view.jpg?v=20260702f" alt="LUMA app storing image recipes and notes" fill className="object-cover" sizes="(min-width: 1024px) 58vw, 100vw" />
             </div>
             <div className="bg-white/55 p-7 md:p-10">
               <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--luma-muted)]">After capture</p>

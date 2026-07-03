@@ -4,11 +4,11 @@ import type { Exhibition } from '../types';
 export default function ExhibitionCard({ exhibition }: { exhibition: Exhibition }) {
   return (
     <Link href={`/en/templates/OHMT003-exhibition/exhibitions/${exhibition.slug}`} className="group block cursor-pointer">
-      <div className="relative aspect-[4/3] overflow-hidden transition-transform duration-500 group-hover:-translate-y-1">
+      <div className="relative aspect-[4/3] overflow-hidden transition-transform duration-300 ease-out group-hover:-translate-y-1">
         <img
           src={exhibition.image}
           alt={exhibition.name}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-105"
         />
       </div>
 

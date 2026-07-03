@@ -22,7 +22,7 @@ export const Stats = () => {
               transition={{ delay: i * 0.1, duration: 1, ease: [0.22, 1, 0.36, 1] }}
               className="text-center md:text-left flex flex-col gap-2"
             >
-              <h3 className="text-[clamp(2.5rem,8vw,5rem)] md:text-[clamp(3rem,10vw,6rem)] font-bold text-[var(--color-text)] leading-none mb-4">
+              <h3 className="text-[clamp(2.5rem,8vw,5rem)] md:text-[clamp(3rem,10vw,6rem)] font-bold text-[var(--color-text)] leading-[1.1] mb-4">
                 {item.value}
               </h3>
               <div className="h-[2px] w-12 bg-black mb-6 mx-auto md:mx-0" />

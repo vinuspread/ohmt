@@ -1,5 +1,6 @@
 import { Michroma, Inter } from "next/font/google";
 import "./theme.css";
+import { TemplateWrapper } from "./_components/TemplateWrapper";
 
 const michroma = Michroma({
   subsets: ["latin"],
@@ -15,7 +16,8 @@ const inter = Inter({
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className={`${michroma.variable} ${inter.variable}`}>
-      {children}
+      <TemplateWrapper>{children}</TemplateWrapper>
     </div>
   );
 }
+

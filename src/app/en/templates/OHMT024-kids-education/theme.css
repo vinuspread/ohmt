@@ -31,6 +31,9 @@
   /* Fluid Spacing for responsive design */
   --space-section: clamp(3rem, 8vw, 6rem); /* 48px to 96px */
   --space-container-gap: clamp(1.5rem, 5vw, 5rem); /* 24px to 80px */
+
+  --focus-ring: 2px solid var(--color-primary);
+  --focus-ring-offset: 2px;
 }
 
 @media (prefers-reduced-motion: reduce) {

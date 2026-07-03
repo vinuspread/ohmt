@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture/_components/sections/Hero.tsx
+// src/app/ko/templates/OHMT027-architecture/_components/sections/Hero.tsx
 "use client";
 import React, { useRef, useState } from "react";
 import Image from "next/image";
@@ -19,20 +19,20 @@ export function Hero() {
     {
       leftImage: "/templates/OHMT027-architecture/hero-1.jpg",
       rightImage: "/templates/OHMT027-architecture/hero-2.jpg",
-      title: "HIGHLAND VILLA",
-      location: "SEOUL, KOREA",
+      title: "하이랜드 빌라",
+      location: "서울 성북구",
     },
     {
       leftImage: "/templates/OHMT027-architecture/hero-2.jpg",
       rightImage: "/templates/OHMT027-architecture/hero-3.jpg",
-      title: "MERIDIAN COMMERCE CENTER",
-      location: "GANGNAM, SEOUL",
+      title: "메리디언 커머스 센터",
+      location: "서울 강남구",
     },
     {
       leftImage: "/templates/OHMT027-architecture/hero-3.jpg",
       rightImage: "/templates/OHMT027-architecture/hero-1.jpg",
-      title: "COASTAL RETREAT",
-      location: "GANGWON, KOREA",
+      title: "코스탈 리트리트",
+      location: "강원 양양",
     },
   ];
 
@@ -41,17 +41,17 @@ export function Hero() {
       {/* Top Content Area */}
       <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 pt-16 pb-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <h1 className="font-heading font-normal text-[48px] md:text-[64px] lg:text-[72px] leading-[1.05] tracking-[-0.02em] text-[#1A1A1A] max-w-3xl">
-            Designing Architecture
+          <h1 className="font-heading font-normal text-[48px] md:text-[64px] lg:text-[72px] leading-[1.1] tracking-[-0.02em] text-[#1A1A1A] max-w-3xl">
+            공간의 언어를
             <br />
-            That Speaks for Itself.
+            설계합니다.
           </h1>
           <div className="pb-2">
             <Link
               href="/ko/templates/OHMT027-architecture/projects"
               className="font-sans text-[12px] font-medium tracking-[0.12em] text-[#1A1A1A] uppercase border-b border-[#1A1A1A] pb-1 hover:text-[#B07D4F] hover:border-[#B07D4F] transition-colors"
             >
-              VIEW PROJECTS →
+              프로젝트 보기 →
             </Link>
           </div>
         </div>
@@ -79,7 +79,7 @@ export function Hero() {
                 <div className="relative w-[62%] h-full overflow-hidden">
                   <Image
                     src={slide.leftImage}
-                    alt={`Hero architectural view left ${index + 1}`}
+                    alt={`건축 프로젝트 메인 이미지 ${index + 1}`}
                     fill
                     priority={index === 0}
                     className="object-cover transition-transform duration-[6000ms] ease-out scale-100 group-hover:scale-105"
@@ -90,7 +90,7 @@ export function Hero() {
                 <div className="relative w-[38%] h-full overflow-hidden">
                   <Image
                     src={slide.rightImage}
-                    alt={`Hero architectural view right ${index + 1}`}
+                    alt={`건축 프로젝트 보조 이미지 ${index + 1}`}
                     fill
                     priority={index === 0}
                     className="object-cover transition-transform duration-[6000ms] ease-out scale-100"

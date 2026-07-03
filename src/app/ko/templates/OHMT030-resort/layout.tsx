@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans_KR, Instrument_Sans } from "next/font/google";
 import "./theme.css";
+import { TemplateWrapper } from "./_components/TemplateWrapper";
 
 const notoSansKr = Noto_Sans_KR({
   subsets: ["latin"],
@@ -30,7 +31,8 @@ export default function ResortLayout({ children }: { children: React.ReactNode }
       className={`resort-template ${notoSansKr.variable} ${instrumentSans.variable}`}
       style={{ fontFamily: "var(--font-noto-sans-kr), var(--font-instrument-sans), sans-serif", backgroundColor: "var(--bg)" }}
     >
-      {children}
+      <TemplateWrapper>{children}</TemplateWrapper>
     </div>
   );
 }
+

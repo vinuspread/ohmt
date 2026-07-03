@@ -28,6 +28,16 @@
   --focus-outline-offset: 2px;
 }
 
+.portfolio-template {
+  overflow-x: clip;
+}
+
+@supports not (overflow: clip) {
+  .portfolio-template {
+    overflow-x: hidden;
+  }
+}
+
 /* Accessibility: Respect motion preferences */
 @media (prefers-reduced-motion: reduce) {
   *,

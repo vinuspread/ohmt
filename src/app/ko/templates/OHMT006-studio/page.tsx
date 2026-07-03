@@ -79,23 +79,16 @@ function StudioHomeContent() {
                             playsInline
                             className="w-full h-full object-cover brightness-[0.78] transition-opacity duration-1000"
                         >
-                            <source src="/templates/OHMT006-studio/hero-bg.mp4" type="video/mp4" />
+                            <source src="https://pub-10d6d534a06c495c8b45f39cfed47497.r2.dev/studio-hero-bg.mp4" type="video/mp4" />
                         </video>
                         <div className="absolute inset-0 bg-black/20 pointer-events-none z-10" />
-                    </div>
-
-                    {/* SNS */}
-                    <div className="absolute left-6 bottom-32 z-20 hidden md:flex flex-col items-center gap-6 bg-white/90 backdrop-blur-md py-6 px-4 border border-black/5 shadow-sm">
-                        <a href="#" className="text-[13px] font-bold text-black/50 hover:text-black">Fb</a>
-                        <a href="#" className="text-[13px] font-bold text-black/50 hover:text-black">Tw</a>
-                        <a href="#" className="text-[13px] font-bold text-black/50 hover:text-black">Ig</a>
                     </div>
 
                     {/* Heading */}
                     <div className="relative z-20 max-w-[1720px] mx-auto w-full px-6 md:px-16 lg:px-24 h-full flex flex-col justify-center">
                         <div className="space-y-5 md:space-y-8 max-w-5xl">
                             <span className="text-[13px] font-bold text-white/60 block">{"ARCHITECTURAL STUDIO"}</span>
-                            <h1 className="text-[clamp(2.6rem,7vw,6.5rem)] font-bold leading-[1.2] text-white break-keep">
+                            <h1 className="text-[clamp(2.6rem,7vw,6.5rem)] font-bold leading-[1.1] text-white break-keep">
                                 {"형태는 침묵하고,"}<br /><span className="font-serif font-normal lowercase text-white/90">{"공간은 이야기를 시작한다."}</span>
                             </h1>
                             <div className="pt-2 md:pt-4">
@@ -155,7 +148,7 @@ function StudioHomeContent() {
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-start">
                             <div className="lg:col-span-5 space-y-3 md:space-y-4">
                                 <span className="text-[13px] text-white/40 font-bold block">{"스튜디오 철학"}</span>
-                                <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold leading-[1.5] text-white break-keep">
+                                <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold leading-[1.1] text-white break-keep">
                                     {"빛과 그림자,"} <br />{"그리고 감각의 균형."}
                                 </h2>
                             </div>
@@ -191,15 +184,15 @@ function StudioHomeContent() {
                             </div>
                             <div className="md:col-span-5 space-y-5 md:space-y-6 lg:px-12">
                                 <span className="text-[13px] text-black/40 font-bold block">{"소재 본질의 극대화"}</span>
-                                <h3 className="text-2xl md:text-3xl lg:text-5xl font-bold text-black leading-[1.5] break-keep">
+                                <h3 className="text-2xl md:text-3xl lg:text-5xl font-bold text-black leading-[1.1] break-keep tracking-[-0.04em]">
                                     {"이음새 없는 섬세한 결합."}
                                 </h3>
-                                <p className="text-[15px] md:text-[16px] lg:text-[18px] text-black/50 leading-relaxed font-normal break-keep">
-                                    {"정밀하게 가공된 스톤 패널과 아노다이징 처리된 알루미늄 프레임의 만남. 서로 다른 소재가 이루는 매끄러운 단차와 연속적인 구조를 통해 시각적 안정감을 선사합니다."}
+                                <p className="text-[15px] md:text-[16px] lg:text-[18px] text-black/50 leading-relaxed font-normal break-keep tracking-[-0.025em]">
+                                    {"정밀하게 가공된 스톤 패널 and 아노다이징 처리된 알루미늄 프레임의 만남. 서로 다른 소재가 이루는 매끄러운 단차와 연속적인 구조를 통해 시각적 안정감을 선사합니다."}
                                 </p>
                             </div>
                             <div className="md:col-span-3 aspect-[1/1] overflow-hidden border border-black/10 self-end md:mb-12">
-                                <img loading="lazy" src="/templates/OHMT006-studio/project-1.jpg" alt="Material swatch" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]" />
+                                <img loading="lazy" src="/templates/OHMT006-studio/material-swatch.jpg" alt="Material swatch" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]" />
                             </div>
                         </div>
                     </div>

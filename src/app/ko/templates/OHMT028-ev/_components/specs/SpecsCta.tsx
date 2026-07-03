@@ -34,11 +34,12 @@ export function SpecsCta() {
     >
       <div className="absolute inset-0 bg-[var(--bg)]/60" />
       <div className="relative z-10 text-center px-6">
-        <h2 className="font-michroma text-[clamp(32px,4vw,56px)] text-[var(--text)] leading-[0.93] tracking-[-0.03em] mb-4">
-          원하는 NUBI를<br />먼저 확보하세요.
+        <h2 className="font-michroma text-[clamp(32px,4vw,56px)] text-[var(--text)] leading-[1.1] tracking-[-0.03em] mb-4">
+          온라인 스펙 커스텀으로<br />원하는 NUBI 슬롯을<br />먼저 선점하세요.
         </h2>
         <p className="font-inter text-[14px] text-[var(--text-muted)] mb-8">
-          2,890만 원부터 시작됩니다. 예약금 35만 원은 언제든 전액 환불됩니다.
+          2,890만 원부터 시작합니다.
+          예약금 35만 원은 언제든 전액 환불됩니다.
         </p>
         <button className="inline-flex items-center gap-2 bg-[var(--accent)] text-[var(--text-on-light)] px-8 py-4 rounded-full text-[14px] font-inter font-medium tracking-[0.03em] hover:bg-[var(--accent-dark)] transition-colors duration-300 mb-6">
           지금 사전 예약하기 →

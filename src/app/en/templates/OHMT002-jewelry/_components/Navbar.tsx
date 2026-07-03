@@ -68,9 +68,9 @@ const [scrolled, setScrolled] = useState(false);
   }, []);
 
   // Determine if it is the home page
-  const isHome = /^\/(en|ko)?\/?templates\/jewelry\/?$/.test(pathname);
-  const isCategoryPage = /^\/(en|ko)?\/?templates\/jewelry\/category\//.test(pathname);
-  const isTransparent = (isHome || isCategoryPage) && !scrolled;
+  const isHome = /^\/(en|ko)?\/?templates\/(OHMT002-)?jewelry\/?$/.test(pathname);
+  const isCategoryPage = /^\/(en|ko)?\/?templates\/(OHMT002-)?jewelry\/category\//.test(pathname);
+  const isTransparent = isHome && !scrolled;
 
   // Derive current category ID if on subpage
   const currentCategory = pathname.includes("/templates/OHMT002-jewelry/category/")
@@ -243,8 +243,8 @@ const [scrolled, setScrolled] = useState(false);
                 </div>
               </div>
 
-              <div className="space-y-6 border-t border-neutral-200/50 pt-8 text-[14px] tracking-[0.2em] text-neutral-400 font-bold uppercase">
-                <p>짤 2026 OHMT.</p>
+              <div className="space-y-6 border-t border-neutral-200/50 pt-8 text-[14px] tracking-[0.2em] text-neutral-500 font-bold uppercase">
+                <p>© 2026 Oh My Template.</p>
                 <div className="flex gap-4">
                   <a href="#" className="hover:text-[var(--color-primary)] transition-colors">Instagram</a>
                   <a href="#" className="hover:text-[var(--color-primary)] transition-colors">Pinterest</a>

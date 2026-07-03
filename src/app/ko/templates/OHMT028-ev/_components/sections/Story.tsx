@@ -45,17 +45,18 @@ export function Story() {
         <div className="w-full md:block hidden" />
         <div className="w-full flex flex-col justify-center py-20 md:py-32 px-0 md:pl-16 lg:pl-20 pointer-events-auto">
           <SplitHeading
-            text="이 도시는 매일, 온전히 당신의 것입니다."
+            text="복잡한 도시의 모든 도로가 마침내 당신의 편이 됩니다."
             className="font-michroma text-[clamp(24px,3vw,40px)] text-[var(--text-on-light)] leading-[1.05] tracking-[-0.02em] mb-6"
           />
           <p className="font-inter text-[15px] text-[var(--text-muted-light)] leading-relaxed max-w-[480px] mb-8">
-            좁은 골목길의 심부름부터 즉흥적인 주말 드라이브까지, NUBI는 도시의 모든 순간에 어울립니다. 바깥은 작아도 안은 놀랍도록 여유롭고, 배출은 없어도 즐거움은 충분합니다.
+            퇴근길 가벼운 러닝부터 주말의 야간 드라이브까지.
+            NUBI는 당신의 어떤 하루 속 동선에도 자연스럽게 녹아듭니다.
           </p>
           <a
             href="/ko/templates/OHMT028-ev/story"
             className="font-inter text-[12px] font-medium tracking-[0.06em] uppercase text-[var(--text-on-light)] hover:opacity-60 transition-opacity inline-flex items-center gap-2"
           >
-            스토리 보기 →
+            스토리 보기
           </a>
         </div>
       </div>

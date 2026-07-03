@@ -55,7 +55,7 @@ function APIKeyRow({ name, keyValue, created }: { name: string; keyValue: string
   const [copied, setCopied] = useState(false)
 
   return (
-    <div className="flex items-center justify-between py-3 border-b border-[var(--color-border)] last:border-0">
+    <div className="flex flex-wrap items-center justify-between gap-2 py-3 border-b border-[var(--color-border)] last:border-0">
       <div className="min-w-0 flex-1">
         <p className="text-sm font-medium text-[var(--color-text)]">{name}</p>
         <div className="flex items-center gap-2 mt-1">
@@ -223,14 +223,14 @@ export default function SettingsPage() {
       >
         <PageHeader title="Settings" />
 
-        <div className="flex gap-6">
-          <div className="w-48 shrink-0">
-            <nav className="space-y-1">
+        <div className="flex flex-col gap-6 lg:flex-row">
+          <div className="w-full lg:w-48 lg:shrink-0">
+            <nav className="flex gap-1 overflow-x-auto lg:flex-col lg:gap-0 lg:space-y-1 lg:overflow-visible">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`w-full text-left px-3 py-2 rounded-[var(--radius-md)] text-sm transition-colors relative ${
+                  className={`shrink-0 whitespace-nowrap text-left px-3 py-2 rounded-[var(--radius-md)] text-sm transition-colors relative lg:w-full ${
                     activeTab === tab.id
                       ? 'text-[var(--color-primary)] font-medium'
                       : 'text-[var(--color-text-muted)] hover:text-[var(--color-text)] hover:bg-[var(--color-bg-hover)]'

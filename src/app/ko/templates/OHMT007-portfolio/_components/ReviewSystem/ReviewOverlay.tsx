@@ -83,10 +83,10 @@ export const ReviewOverlay: React.FC = () => {
   };
 
   const statusLabels: Record<Annotation['status'], string> = {
-    pending: 'Pending',
-    'in-progress': 'In Progress',
-    done: 'Done',
-    rejected: 'Rejected'
+    pending: '대기',
+    'in-progress': '진행 중',
+    done: '완료',
+    rejected: '반려'
   };
 
   return (
@@ -96,7 +96,7 @@ export const ReviewOverlay: React.FC = () => {
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
     >
-      {/* ?�?� Sidebar ?�?� */}
+      {/* Sidebar */}
       <div className={cn(
         "review-sidebar fixed right-0 top-0 h-full w-[360px] bg-[var(--color-primary)]/95 backdrop-blur-3xl border-l border-white/10 shadow-[-20px_0_50px_rgba(0,0,0,0.5)] z-[100010] flex flex-col transition-transform duration-500 ease-out",
         showSidebar ? "translate-x-0" : "translate-x-full"
@@ -105,9 +105,9 @@ export const ReviewOverlay: React.FC = () => {
           <div>
             <h2 className="text-white font-black text-xl tracking-tighter flex items-center gap-2">
               <div className="w-2 h-2 bg-pink-500 rounded-full animate-pulse" />
-              DesignReview
+              디자인 리뷰
             </h2>
-            <p className="text-[13px] text-gray-500 font-bold uppercase tracking-[0.2em] mt-1">Master's Command Center</p>
+            <p className="text-[13px] text-gray-500 font-bold uppercase tracking-[0.2em] mt-1">피드백 센터</p>
           </div>
           <button onClick={() => setShowSidebar(false)} className="text-gray-500 hover:text-white transition-colors">
             <X size={20} />
@@ -120,7 +120,7 @@ export const ReviewOverlay: React.FC = () => {
                <div className="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center">
                   <Filter size={24} />
                </div>
-               <p className="text-sm">No notes registered yet..<br/>Click on the screen to leave your first instruction!</p>
+               <p className="text-sm">아직 등록된 메모가 없습니다.<br/>화면을 클릭해 첫 피드백을 남겨보세요.</p>
             </div>
           ) : (
             annotations.map((a, idx) => (
@@ -189,7 +189,7 @@ export const ReviewOverlay: React.FC = () => {
         </button>
       )}
 
-      {/* ?�?� Annotation Markers ?�?� */}
+      {/* Annotation Markers */}
       {annotations.map((a, idx) => (
         <div 
           key={a.id}
@@ -226,7 +226,7 @@ export const ReviewOverlay: React.FC = () => {
         </div>
       ))}
 
-      {/* ?�?� Selection Rect ?�?� */}
+      {/* Selection Rect */}
       {dragStart && dragCurrent && (
         <div 
           className="absolute border-2 border-dashed border-pink-500 bg-pink-500/10 pointer-events-none rounded-xl"
@@ -239,7 +239,7 @@ export const ReviewOverlay: React.FC = () => {
         />
       )}
 
-      {/* ?�?� Input Modal ?�?� */}
+      {/* Input Modal */}
       {tempPin && (
         <div 
           className="review-modal absolute bg-[var(--color-text-contrast)] p-8 rounded-[2.5rem] shadow-[0_50px_100px_rgba(0,0,0,0.7)] border border-white/10 backdrop-blur-3xl min-w-[380px] z-[100003] animate-in slide-in-from-bottom-5 duration-500"
@@ -254,9 +254,9 @@ export const ReviewOverlay: React.FC = () => {
             <div>
               <h3 className="text-white font-black text-lg tracking-tight flex items-center gap-2">
                 <MessageSquarePlus size={18} className="text-pink-500" />
-                New Instruction
+                새 피드백
               </h3>
-              <p className="text-[13px] text-gray-500 font-bold uppercase tracking-widest">Master's Insight</p>
+              <p className="text-[13px] text-gray-500 font-bold uppercase tracking-widest">검토 메모</p>
             </div>
             <button onClick={() => setTempPin(null)} className="text-gray-500 hover:text-white transition-colors">
               <X size={20} />
@@ -265,7 +265,7 @@ export const ReviewOverlay: React.FC = () => {
           <textarea 
             autoFocus
             className="w-full p-6 rounded-2xl border border-white/5 bg-white/5 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-pink-500/50 transition-all h-32 resize-none leading-relaxed"
-            placeholder="마스?? ?�기???�정 지?��? ?�겨주세??.."
+            placeholder="수정이 필요한 부분과 원하는 방향을 남겨주세요."
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
           />
@@ -274,13 +274,13 @@ export const ReviewOverlay: React.FC = () => {
               onClick={handleAdd}
               className="flex-1 bg-pink-500 text-white py-4 rounded-2xl text-sm font-black uppercase tracking-widest hover:bg-pink-400 transition-all active:scale-[0.98]"
             >
-              Add Command
+              메모 추가
             </button>
           </div>
         </div>
       )}
 
-      {/* ?�?� Global Styles ?�?� */}
+      {/* Global Styles */}
       <style jsx global>{`
         .custom-scrollbar::-webkit-scrollbar { width: 4px; }
         .custom-scrollbar::-webkit-scrollbar-track { background: transparent; }

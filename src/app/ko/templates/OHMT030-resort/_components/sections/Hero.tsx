@@ -25,7 +25,7 @@ export function Hero() {
         </div>
 
         <div className="absolute inset-0 flex items-center justify-start pl-8 md:pl-16 pointer-events-none">
-          <h1 className="font-semibold text-white leading-[0.85] tracking-[-0.04em] select-none"
+          <h1 className="font-semibold text-white leading-[1.1] tracking-[-0.04em] select-none"
               style={{ fontSize: "clamp(80px, 16vw, 280px)" }}>
             <span className="block">Slow</span>
             <span className="block">Luxuriance</span>
@@ -40,7 +40,7 @@ export function Hero() {
             </p>
             <div className="flex gap-3">
               {[FacebookLogo, InstagramLogo, XLogo].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 rounded-full border border-white/50 flex items-center justify-center text-white hover:bg-white/10 transition-all">
+                <a key={i} href="#" aria-label={`소셜 링크 ${i + 1}`} className="w-10 h-10 rounded-full border border-white/50 flex items-center justify-center text-white hover:bg-white/10 transition-all focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]">
                   <Icon size={16} weight="bold" />
                 </a>
               ))}

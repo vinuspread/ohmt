@@ -79,7 +79,7 @@ function DestinationsPageContent() {
           imageSrc="/templates/OHMT008-airline/destination-main.jpg"
           imageAlt="Global destinations"
           label="Curated Sky Escapes"
-          title={<>Explore Our <br /><span className="text-[var(--color-accent)] font-serif normal-case font-normal">Refined World.</span></>}
+          title={<>Explore Our <br /><span className="text-[var(--color-accent)] font-[family-name:var(--font-heading)] normal-case font-bold">Refined World.</span></>}
           description="Over 200 destinations across 80 countries. Our global network connects you with legendary metropolitan wonders, historical cultural heritages, and tranquil tropical sanctuaries - always with uncompromised luxury."
         />
 
@@ -133,7 +133,7 @@ function DestinationsPageContent() {
                         <img
                           src={dest.img}
                           alt={dest.name}
-                          className="w-full h-full object-cover transition-transform duration-300 ease-out"
+                          className="w-full h-full object-cover transition-transform duration-[var(--transition-slow)] group-hover:scale-105"
                         />
                         <div className="absolute top-4 left-4 z-10">
                           <span className="text-[13px] font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] bg-[var(--color-primary)] px-3.5 py-1.5 border border-[var(--color-accent)]/25 rounded-full">
@@ -159,7 +159,7 @@ function DestinationsPageContent() {
                         </div>
 
                         {/* Interactive text link with subtle motion */}
-                        <span className="text-[14px] font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] inline-flex items-center gap-2 transition-colors duration-300 group-hover:text-[var(--color-accent)]/80">
+                        <span className="text-[14px] font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] inline-flex items-center gap-2 transition-all duration-[var(--transition-fast)] group-hover:gap-3">
                           DISCOVER FLIGHTS <Plane size={14} />
                         </span>
                       </div>

@@ -1,6 +1,7 @@
 'use client';
 
-import { motion, useViewportScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
+import type { Variants } from 'framer-motion';
 import Image from 'next/image';
 
 const projects = [
@@ -23,7 +24,7 @@ const containerVariants = {
     },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
     hidden: { opacity: 0, y: 50, scale: 0.9 },
     visible: {
         opacity: 1,
@@ -31,14 +32,12 @@ const itemVariants = {
         scale: 1,
         transition: {
             duration: 0.65,
-            ease: [0.23, 1, 0.32, 1] as any
+            ease: [0.23, 1, 0.32, 1],
         }
     },
 };
 
 export function ProjectGrid() {
-    const { scrollY } = useViewportScroll();
-
     return (
         <section className="bg-white py-[120px] px-[64px]">
             {/* Header */}
@@ -51,7 +50,7 @@ export function ProjectGrid() {
             >
                 <span className="text-[13px] font-normal tracking-[3px] uppercase text-[#090B19] opacity-60">포트폴리오</span>
                 <div className="flex flex-col md:flex-row justify-between items-end gap-8">
-                    <h2 className="text-[26px] md:text-[48px] leading-[55px] font-semibold tracking-[-1.44px] text-[#090B19] break-keep">
+                    <h2 className="text-[26px] md:text-[48px] leading-[1.1] font-semibold tracking-[-1.44px] text-[#090B19] break-keep">
                         함께 만들어낸 공간의 감동을 감상해보세요.
                     </h2>
                     <a href="#" className="h-[54px] px-[40px] border border-[#090B19] rounded-none flex items-center justify-center text-[13px] font-bold tracking-[3px] uppercase text-[#090B19] hover:bg-[#090B19] hover:text-white transition-colors">
@@ -69,7 +68,7 @@ export function ProjectGrid() {
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[32px]"
             >
                 {projects.map((project, idx) => {
-                    const parallaxY = useTransform(scrollY, [1000, 2000], [0, (idx % 3) * 60 - 60]);
+                    const parallaxY = (idx % 3) * 20 - 20;
 
                     return (
                     <motion.div

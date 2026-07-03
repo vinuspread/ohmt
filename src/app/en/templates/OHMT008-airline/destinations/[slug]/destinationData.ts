@@ -53,7 +53,7 @@ export const destinations: Record<string, Destination> = {
       {
         name: "Eiffel Tower",
         desc: "The iconic iron lattice tower on the Champ de Mars - best seen illuminated at night from Trocadéro.",
-        img: "/templates/OHMT008-airline/michelin-dining.jpg",
+        img: "/templates/OHMT008-airline/paris-gallery.jpg",
       },
       {
         name: "The Louvre",
@@ -99,7 +99,7 @@ export const destinations: Record<string, Destination> = {
       {
         name: "Senso-ji Temple",
         desc: "Tokyo's oldest and most significant Buddhist temple in Asakusa, framed by traditional Nakamise shopping street.",
-        img: "/templates/OHMT008-airline/destination-3.jpg",
+        img: "/templates/OHMT008-airline/tokyo-gallery.jpg",
       },
       {
         name: "Mount Fuji Day Trip",
@@ -140,7 +140,7 @@ export const destinations: Record<string, Destination> = {
       {
         name: "The Metropolitan Museum",
         desc: "One of the world's greatest art museums - over 5,000 years of art from every corner of the globe.",
-        img: "/templates/OHMT008-airline/destination-main.jpg",
+        img: "/templates/OHMT008-airline/newyork-gallery.jpg",
       },
       {
         name: "Brooklyn Bridge",
@@ -176,7 +176,7 @@ export const destinations: Record<string, Destination> = {
       {
         name: "Burj Khalifa",
         desc: "The world's tallest building at 828m - take the lift to the 148th floor observatory for breathtaking views.",
-        img: "/templates/OHMT008-airline/destination-3.jpg",
+        img: "/templates/OHMT008-airline/dubai-gallery.jpg",
       },
       {
         name: "Dubai Marina",
@@ -217,7 +217,7 @@ export const destinations: Record<string, Destination> = {
       {
         name: "Sydney Opera House",
         desc: "One of the 20th century's greatest architectural triumphs - a UNESCO World Heritage Site on the harbor.",
-        img: "/templates/OHMT008-airline/wellness-set.jpg",
+        img: "/templates/OHMT008-airline/sydney-gallery.jpg",
       },
       {
         name: "Bondi Beach",
@@ -268,7 +268,7 @@ export const destinations: Record<string, Destination> = {
       {
         name: "Seminyak Beach",
         desc: "Bali's most stylish beach strip - designer beach clubs, superb surf, and legendary sunset cocktails.",
-        img: "/templates/OHMT008-airline/destination-main.jpg",
+        img: "/templates/OHMT008-airline/bali-gallery.jpg",
       },
     ],
     flights: [

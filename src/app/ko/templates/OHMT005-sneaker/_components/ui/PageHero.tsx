@@ -39,7 +39,7 @@ export function PageHero({ title, subtitle, image, breadcrumb }: PageHeroProps) 
                             {subtitle}
                         </span>
                     )}
-                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[1.5]">
+                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[1.1]">
                         {title}
                     </h1>
                 </motion.div>

@@ -11,8 +11,8 @@ import { Footer } from "../_components/layout/Footer";
 import { stats, designerInfo } from "@/lib/portfolio-data";
 
 const team = [
-  { name: "Marco Vinus", role: "Founder & Creative Director", img: "/templates/OHMT007-portfolio/portfolio-1.jpg" },
-  { name: "Yuna Park", role: "Lead Designer", img: "/templates/OHMT007-portfolio/portfolio-2.jpg" },
+  { name: "Marco Vinus", role: "Founder & Creative Director", img: "/templates/OHMT007-portfolio/portfolio-1.png" },
+  { name: "Yuna Park", role: "Lead Designer", img: "/templates/OHMT007-portfolio/portfolio-2.png" },
   { name: "Tobias Krenn", role: "Front-end Engineer", img: "/templates/OHMT007-portfolio/portfolio-3.png" },
   { name: "Sofia Reyes", role: "Brand Strategist", img: "/templates/OHMT007-portfolio/portfolio-4.png" },
 ];
@@ -41,7 +41,7 @@ function AboutPageContent() {
             </div>
             <div className="space-y-6">
               <p className="text-[1rem] text-[var(--color-text-muted)] leading-[1.4]">
-                Founded in Seoul in 2019, Vinuspread is a creative studio that partners with brands and founders who have something real to say - and want the world to hear it.
+                Founded in Seoul in 2019, OHMT is a creative studio that partners with brands and founders who have something real to say - and want the world to hear it.
               </p>
               <p className="text-[1rem] text-[var(--color-text-muted)] leading-[1.4]">
                 We believe great design is never decoration. It's a strategic act that changes how people feel about a product before they've used it.

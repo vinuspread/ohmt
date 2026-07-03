@@ -26,7 +26,7 @@ export function PageHeader({ category, title, breadcrumb, isBadgeCategory = fals
                                 {category}
                             </span>
                         )}
-                        <h1 className="text-[clamp(1.8rem,7vw,6.5rem)] font-bold leading-[1.5] text-black">
+                        <h1 className="text-[clamp(1.8rem,7vw,6.5rem)] font-bold leading-[1.1] text-black">
                             {title}
                         </h1>
                     </div>

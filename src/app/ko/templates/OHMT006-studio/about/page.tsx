@@ -45,7 +45,7 @@ function StudioAboutPageContent() {
                 <div className="max-w-[1720px] mx-auto px-6 md:px-16 lg:px-24">
                     <div className="grid lg:grid-cols-12 gap-8 md:gap-20 items-start">
                         <div className="lg:col-span-5 space-y-3 md:space-y-4">
-                            <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold leading-[1.5] text-black break-keep">
+                            <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold leading-[1.1] text-black break-keep">
                                 {"이유가 있는 설계, 본질을 담는 공간."}
                             </h2>
                         </div>
@@ -73,7 +73,7 @@ function StudioAboutPageContent() {
             {/* 3. Split Screen */}
             <SplitScreenSection bgClass="bg-white" textColorClass="text-black" borderColorClass="border-transparent" imageSrc="/templates/OHMT006-studio/hero-2.jpg" imageAlt="Studio interior showcase" imagePosition="left">
                 <div className="space-y-3 md:space-y-4">
-                    <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-[1.5] text-black break-keep">
+                    <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-[1.1] text-black break-keep">
                         {"사려 깊은 마스터플랜,"} <br />{"빈틈없는 정밀 시공."}
                     </h3>
                 </div>
@@ -90,7 +90,7 @@ function StudioAboutPageContent() {
             {/* 4. Awards */}
             <section className="py-12 md:py-36 bg-[var(--color-bg-dark)] text-white">
                 <div className="max-w-[1720px] mx-auto px-6 md:px-16 lg:px-24 space-y-8 md:space-y-16">
-                    <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-white leading-none break-keep">
+                    <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-white leading-[1.1] break-keep">
                         {"공간의 예술적 가치로"} <br />{"인정받은 영광의 순간들."}
                     </h2>
                     <div className="border-t border-white/5 divide-y divide-white/5">
@@ -126,7 +126,7 @@ function StudioAboutPageContent() {
             <section className="py-12 md:py-36 bg-white border-t border-black/5">
                 <div className="max-w-[1720px] mx-auto px-6 md:px-16 lg:px-24 space-y-8 md:space-y-16">
                     <div className="text-center max-w-xl mx-auto">
-                        <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-black leading-none break-keep">
+                        <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-black leading-[1.1] break-keep">
                             {"공간을 빚는 아틀리에 마스터들."}
                         </h2>
                     </div>

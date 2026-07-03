@@ -3,8 +3,8 @@
   "name": "Furniture Modern",
   "name_ko": "모던 가구",
   "category": "retail",
-  "description": "A modern furniture store template with clean design and product-focused layouts.",
-  "description_ko": "깔끔한 디자인과 제품 중심 레이아웃의 모던 가구 쇼핑몰 템플릿.",
+  "description": "A furniture commerce template for curated rooms, product-focused grids, lifestyle imagery, and calm purchasing paths that keep materials and proportions visible.",
+  "description_ko": "공간 큐레이션, 제품 그리드, 라이프스타일 이미지, 구매 동선을 함께 담아 소재와 비례가 잘 보이는 가구 커머스 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {

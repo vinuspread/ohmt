@@ -41,3 +41,4 @@ export default function KidsEducationLayout({ children }: { children: React.Reac
     </div>
   );
 }
+
