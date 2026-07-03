@@ -19,6 +19,8 @@ export interface TemplateItem {
   slug: string;
   applicablePackages: string[];
   requiresConsultation: boolean;
+  applicableIndustries: string[];
+  hashtags: string[];
 }
 
 export interface FaqItem {
@@ -797,9 +799,22 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                         <X size={20} />
                       </button>
                     </div>
+                    {descModalTemplate.applicableIndustries.length > 0 && (
+                      <div className="space-y-1">
+                        <p className="text-[0.65rem] text-zinc-400 font-bold uppercase tracking-wider dark:text-zinc-500">이런 업종에 적용 가능합니다.</p>
+                        <p className="text-sm font-medium" style={{ color: "#F1B100" }}>
+                          {descModalTemplate.applicableIndustries.join(", ")}
+                        </p>
+                      </div>
+                    )}
                     <p className="text-sm text-zinc-500 leading-relaxed font-light whitespace-pre-line dark:text-zinc-400">
                       {descModalTemplate.desc}
                     </p>
+                    {descModalTemplate.hashtags.length > 0 && (
+                      <p className="text-xs text-zinc-400 dark:text-zinc-500">
+                        {descModalTemplate.hashtags.join(" ")}
+                      </p>
+                    )}
                     <Link
                       href={descModalTemplate.url}
                       target="_blank"

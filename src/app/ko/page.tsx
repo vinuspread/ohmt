@@ -143,6 +143,8 @@ export default async function Page() {
     slug: template.slug,
     applicablePackages: template.applicable_packages ?? [],
     requiresConsultation: template.requires_consultation ?? false,
+    applicableIndustries: template.applicable_industries ?? [],
+    hashtags: template.hashtags ?? [],
   }));
 
   const faqRows: Pick<Faq, "id" | "question" | "answer">[] = faqData ?? [];
