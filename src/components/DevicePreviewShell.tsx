@@ -2,7 +2,7 @@
 
 import { Monitor, Smartphone, Tablet } from "lucide-react";
 import Link from "next/link";
-import { useMemo, useState, useSyncExternalStore } from "react";
+import { useEffect, useMemo, useState } from "react";
 
 type DeviceId = "desktop" | "tablet" | "mobile";
 
@@ -12,13 +12,6 @@ type Device = {
   width: number | "100%";
   height?: number;
   icon: React.ComponentType<{ size?: number }>;
-};
-
-type PreviewState = {
-  ready: boolean;
-  isRawPreview: boolean;
-  isAlreadyFramed: boolean;
-  previewSrc: string;
 };
 
 const DEVICES: Device[] = [
@@ -40,51 +33,37 @@ const HIDE_SCROLLBAR_STYLE = `
   }
 `;
 
-const SERVER_PREVIEW_STATE: PreviewState = {
-  ready: false,
-  isRawPreview: false,
-  isAlreadyFramed: false,
-  previewSrc: "",
-};
-
-function getPreviewState(): PreviewState {
-  if (typeof window === "undefined") {
-    return SERVER_PREVIEW_STATE;
-  }
-
-  const url = new URL(window.location.href);
-  const params = new URLSearchParams(url.search);
-  const isRawPreview = params.get("preview") === "raw";
-  const isAlreadyFramed = window.self !== window.top;
-
-  params.set("preview", "raw");
-
-  return {
-    ready: true,
-    isRawPreview,
-    isAlreadyFramed,
-    previewSrc: `${url.pathname}?${params.toString()}`,
-  };
-}
-
-function subscribePreviewState() {
-  return () => {};
-}
-
 export default function DevicePreviewShell({ children }: { children: React.ReactNode }) {
   const [device, setDevice] = useState<DeviceId>("desktop");
-  const previewState = useSyncExternalStore(subscribePreviewState, getPreviewState, () => SERVER_PREVIEW_STATE);
+  const [mounted, setMounted] = useState(false);
+  const [isRawPreview, setIsRawPreview] = useState(false);
+  const [isAlreadyFramed, setIsAlreadyFramed] = useState(false);
+  const [previewSrc, setPreviewSrc] = useState("");
+
+  useEffect(() => {
+    try {
+      const url = new URL(window.location.href);
+      const params = new URLSearchParams(url.search);
+      setIsRawPreview(params.get("preview") === "raw");
+      setIsAlreadyFramed(window.self !== window.top);
+      params.set("preview", "raw");
+      setPreviewSrc(`${url.pathname}?${params.toString()}`);
+    } catch {
+      setIsAlreadyFramed(true);
+    }
+    setMounted(true);
+  }, []);
 
   const activeDevice = useMemo(
     () => DEVICES.find((item) => item.id === device) ?? DEVICES[0],
     [device],
   );
 
-  if (!previewState.ready) {
+  if (!mounted) {
     return <>{children}</>;
   }
 
-  if (previewState.isRawPreview || previewState.isAlreadyFramed) {
+  if (isRawPreview || isAlreadyFramed) {
     return (
       <>
         <style>{HIDE_SCROLLBAR_STYLE}</style>
@@ -128,7 +107,7 @@ export default function DevicePreviewShell({ children }: { children: React.React
           </div>
 
           <a
-            href={previewState.previewSrc}
+            href={previewSrc}
             className="shrink-0 text-xs font-semibold text-neutral-500 transition-colors hover:text-neutral-950"
           >
             Original
@@ -155,8 +134,8 @@ export default function DevicePreviewShell({ children }: { children: React.React
           }}
         >
           <iframe
-            key={`${device}-${previewState.previewSrc}`}
-            src={previewState.previewSrc}
+            key={`${device}-${previewSrc}`}
+            src={previewSrc}
             title={`${activeDevice.label} preview`}
             className="h-full w-full border-0 bg-white"
           />
