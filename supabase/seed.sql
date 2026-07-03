@@ -1,6 +1,6 @@
 -- Oh My Template - Seed Data
 -- Supabase SQL Editor에서 실행 (slug, lang) 단위로 en/ko 행을 각각 생성
--- 총 30개 템플릿 x 2 (en/ko) = 60행
+-- 총 31개 템플릿 x 2 (en/ko) = 62행
 
 delete from templates
 where slug in (
@@ -33,7 +33,8 @@ where slug in (
   'architecture',
   'ev',
   'fitness',
-  'resort'
+  'resort',
+  'luma-camera'
 );
 
 insert into templates (slug, lang, template_key, name, category, description, thumbnail_url, price, status, sort_order, is_featured) values
@@ -156,7 +157,11 @@ insert into templates (slug, lang, template_key, name, category, description, th
 
 -- 30. Resort
 ('OHMT030-resort', 'en', 'OHMT030', 'Coastal Luxury Resort', 'hospitality', 'A coastal resort template for rooms, dining, experiences, booking prompts, and destination storytelling with a quiet luxury hospitality mood.', '/templates/OHMT030-resort/og-image.jpg', 0, 'published', 30, false),
-('OHMT030-resort', 'ko', 'OHMT030', '해안 럭셔리 리조트', 'hospitality', '객실, 다이닝, 경험, 예약 유도, 여행지 스토리를 조용한 럭셔리 호스피탈리티 무드로 구성한 코스탈 리조트 템플릿.', '/templates/OHMT030-resort/og-image.jpg', 0, 'published', 30, false)
+('OHMT030-resort', 'ko', 'OHMT030', '해안 럭셔리 리조트', 'hospitality', '객실, 다이닝, 경험, 예약 유도, 여행지 스토리를 조용한 럭셔리 호스피탈리티 무드로 구성한 코스탈 리조트 템플릿.', '/templates/OHMT030-resort/og-image.jpg', 0, 'published', 30, false),
+
+-- 31. LUMA Camera
+('OHMT031-luma-camera', 'en', 'OHMT031', 'LUMA Camera', 'retail', 'A premium compact camera template for product storytelling, everyday shooting scenes, image-quality samples, app notes, and creator-focused shop pages.', '/templates/OHMT031-luma-camera/og-image.jpg', 0, 'published', 31, false),
+('OHMT031-luma-camera', 'ko', 'OHMT031', '루마 카메라', 'retail', '제품 스토리, 일상 촬영 장면, 이미지 품질 샘플, 앱 노트, 크리에이터 중심 구매 흐름을 갖춘 프리미엄 컴팩트 카메라 템플릿.', '/templates/OHMT031-luma-camera/og-image.jpg', 0, 'published', 31, false)
 
 on conflict (slug, lang) do update set
   template_key = excluded.template_key,

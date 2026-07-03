@@ -38,6 +38,7 @@ const LEGACY_SLUGS = [
   "ev",
   "fitness",
   "resort",
+  "luma-camera",
 ];
 
 let supabase = null;
