@@ -1,9 +1,9 @@
-import { PreviewBar } from "@/app/_components/PreviewBar";
+import DevicePreviewShell from "@/components/DevicePreviewShell";
 
 export default function EnTemplatesLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  return <PreviewBar>{children}</PreviewBar>;
+  return <DevicePreviewShell>{children}</DevicePreviewShell>;
 }
