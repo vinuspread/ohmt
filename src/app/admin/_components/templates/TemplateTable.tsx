@@ -194,12 +194,11 @@ export function TemplateTable({ data }: { data: Template[] }) {
       setTemplates(nextTemplates);
       persistedOrderRef.current = new Map(nextTemplates.map((template, index) => [template.id, index]));
       setToast({ message: "노출 순서가 저장됐습니다.", type: "success" });
-      router.refresh();
       return;
     }
 
     setToast({ message: "노출 순서 저장에 실패했습니다.", type: "error" });
-    router.refresh();
+    router.refresh(); // 실패 시에만 서버 상태로 리셋
   };
 
   const handleSort = (field: SortField) => {
