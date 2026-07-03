@@ -21,12 +21,12 @@ const checks = [
   },
   {
     path: "src/app/ko/templates/OHMT001-fashion/layout.tsx",
-    includes: ["/templates/fashion/og-image.jpg"],
+    includes: ["/templates/OHMT001-fashion/og-image.jpg"],
     excludes: ["DevicePreviewShell"],
   },
   {
     path: "src/app/en/templates/OHMT001-fashion/layout.tsx",
-    includes: ["/templates/fashion/og-image.jpg"],
+    includes: ["/templates/OHMT001-fashion/og-image.jpg"],
     excludes: ["DevicePreviewShell"],
   },
 ];
@@ -38,7 +38,7 @@ const requiredPaths = [
   "src/app/en/templates/OHMT001-fashion/collection/page.tsx",
   "src/app/en/templates/OHMT001-fashion/archive/page.tsx",
   "src/app/en/templates/OHMT001-fashion/_data/products.ts",
-  "public/templates/fashion/og-image.jpg",
+  "public/templates/OHMT001-fashion/og-image.jpg",
   "public/templates/fashion/about-hero-v2.png",
   "public/templates/OHMT001-fashion/og-image.jpg",
 ];
