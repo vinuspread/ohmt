@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture/layout.tsx
+﻿// src/app/en/templates/OHMT027-architecture/layout.tsx
 import type { Metadata } from "next";
 import "./theme.css";
 
