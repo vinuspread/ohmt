@@ -1,0 +1,38 @@
+﻿:root {
+  --luma-bg: #f4f1ea;
+  --luma-ink: #141611;
+  --luma-muted: #696d62;
+  --luma-line: #d9d4c8;
+  --luma-dark: #10120f;
+  --luma-accent: #d7ff63;
+  --luma-soft: #ece7dc;
+  --luma-ease: cubic-bezier(0.23, 1, 0.32, 1);
+  --space-container-x-mobile: 20px;
+  --space-section-y-mobile: 72px;
+  --type-display-mobile: clamp(2.55rem, 13vw, 4.1rem);
+  --type-section-title-mobile: clamp(2rem, 9vw, 3.2rem);
+  --rail-gap-mobile: 14px;
+}
+
+.luma-camera-template {
+  background: var(--luma-bg);
+  color: var(--luma-ink);
+  word-break: keep-all;
+}
+
+.luma-grain {
+  background-image:
+    radial-gradient(circle at 20% 10%, rgba(255, 255, 255, 0.72), transparent 32%),
+    linear-gradient(135deg, rgba(20, 22, 17, 0.04), transparent 40%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .luma-camera-template *,
+  .luma-camera-template *::before,
+  .luma-camera-template *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
