@@ -96,7 +96,7 @@ export async function POST(request: NextRequest) {
         name,
         category: themeJson.category ?? "uncategorized",
         description,
-        thumbnail_url: `/templates/${slug}/thumbnail.jpg`,
+        thumbnail_url: `/templates/${slug}/og-image.jpg`,
         tags: themeJson.tags ?? [],
         ...(templateKey && { template_key: templateKey }),
       })
@@ -114,7 +114,7 @@ export async function POST(request: NextRequest) {
       name,
       category: themeJson.category ?? "uncategorized",
       description,
-      thumbnail_url: `/templates/${slug}/thumbnail.jpg`,
+      thumbnail_url: `/templates/${slug}/og-image.jpg`,
       template_key: templateKey ?? null,
       price: 0,
       status: "uploaded",
