@@ -148,10 +148,10 @@ textarea:focus-visible {
   outline-offset: 2px;
 }
 
-/* Anti-aliasing — applied globally, not just inherited from html */
-html, body, * {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Anti-aliasing — body only, not forced on all elements */
+body {
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
   text-rendering: optimizeLegibility;
 }
 
