@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: "프리미엄 가구 & 인테리어 디자인 쇼케이스",
     url: "https://ohmytemplate.com/ko/templates/OHMT004-furniture",
     siteName: "OHMT",
-    images: [{ url: "/templates/furniture/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/OHMT004-furniture/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "OHMT - Furniture",
     description: "프리미엄 가구 & 인테리어 디자인 쇼케이스",
-    images: ["/templates/furniture/og-image.jpg"],
+    images: ["/templates/OHMT004-furniture/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
