@@ -3,10 +3,43 @@ import { createClient } from "@supabase/supabase-js";
 import fs from "fs";
 import path from "path";
 
-const ZIPS_DIR = "D:\\Work\\ohmytemplate\\zips";
-const PROJECT_DIR = "D:\\Work\\ohmytemplate_admin";
+const ZIPS_DIR = "E:\\Work\\ohmytemplate\\zips";
+const PROJECT_DIR = "E:\\Work\\ohmytemplate";
 const SUPABASE_URL = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const SUPABASE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const LEGACY_SLUGS = [
+  "fashion",
+  "jewelry",
+  "exhibition",
+  "furniture",
+  "sneaker",
+  "studio",
+  "portfolio",
+  "airline",
+  "car",
+  "cosmetic",
+  "ir",
+  "magazine",
+  "newspaper",
+  "docs",
+  "dashboard",
+  "technology",
+  "multi-shop",
+  "burger",
+  "coffee",
+  "hotel",
+  "museum",
+  "yoga",
+  "game",
+  "kids-education",
+  "wedding",
+  "spa",
+  "architecture",
+  "ev",
+  "fitness",
+  "resort",
+  "luma-camera",
+];
 
 let supabase = null;
 if (SUPABASE_URL && SUPABASE_KEY) {
@@ -79,7 +112,8 @@ async function processZip(zipFile) {
       const relPath = entryPath.slice(zipFolderPrefix.length);
       targetPath = path.join(PROJECT_DIR, `src/app/${lang}/templates/${slug}`, relPath);
     } else if (entryPath.startsWith("public/templates/")) {
-      targetPath = path.join(PROJECT_DIR, entryPath);
+      const publicRelativePath = entryPath.replace(/^public\/templates\/[^/]+\//, "");
+      targetPath = path.join(PROJECT_DIR, "public/templates", slug, publicRelativePath);
     } else {
       continue;
     }
@@ -133,7 +167,7 @@ async function processZip(zipFile) {
       thumbnail_url: `/templates/${slug}/og-image.jpg`,
       template_key: templateKey ?? null,
       price: 0,
-      status: "uploaded",
+      status: "published",
       sort_order: keyNum,
       is_featured: false,
       tags: themeJson.tags ?? [],
@@ -151,6 +185,12 @@ async function main() {
     .sort();
 
   console.log(`총 ${zipFiles.length}개 zip 처리 시작\n`);
+
+  if (supabase) {
+    const { error } = await supabase.from("templates").delete().in("slug", LEGACY_SLUGS);
+    if (error) console.error(`legacy slug 삭제 실패: ${error.message}`);
+    else console.log(`legacy slug 삭제 완료 (${LEGACY_SLUGS.length}개)\n`);
+  }
 
   for (const zipFile of zipFiles) {
     process.stdout.write(`${zipFile}\n`);

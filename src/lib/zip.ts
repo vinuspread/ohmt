@@ -20,7 +20,7 @@ export interface TemplateThemeJson {
 }
 
 const requiredFiles = ["_components/TemplateWrapper.tsx", "layout.tsx", "page.tsx", "theme.css", "theme.json"];
-const requiredPublicFiles = ["thumbnail.jpg"];
+const requiredPublicFiles = ["og-image.jpg"];
 const forbiddenPathPrefixes = ["src/", "translations/"];
 const textExtensions = new Set([".ts", ".tsx", ".js", ".jsx", ".css", ".json", ".md", ".html", ".svg", ".txt", ".mjs", ".cjs", ".yaml", ".yml"]);
 const forbiddenPublicExtensions = [".mp4", ".mov", ".webm"];
