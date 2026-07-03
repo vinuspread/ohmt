@@ -807,7 +807,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                         </p>
                       </div>
                     )}
-                    <p className="text-sm text-zinc-500 leading-relaxed font-normal whitespace-pre-line dark:text-zinc-400">
+                    <p className="text-sm text-zinc-900 leading-relaxed font-normal whitespace-pre-line dark:text-white">
                       {descModalTemplate.desc}
                     </p>
                     {descModalTemplate.hashtags.length > 0 && (
