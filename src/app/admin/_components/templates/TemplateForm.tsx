@@ -37,6 +37,8 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
   const [thumbnailUrl, setThumbnailUrl] = useState(initialData?.thumbnail_url ?? "");
   const [tags, setTags] = useState(initialData?.tags.join(", ") ?? "");
   const [description, setDescription] = useState(initialData?.description ?? "");
+  const [applicableIndustries, setApplicableIndustries] = useState(initialData?.applicable_industries?.join(", ") ?? "");
+  const [hashtags, setHashtags] = useState(initialData?.hashtags?.join(" ") ?? "");
   const [templateKey, setTemplateKey] = useState(initialData?.template_key ?? "");
   const [loading, setLoading] = useState(false);
   const [toast, setToast] = useState<ToastState | null>(null);
@@ -89,6 +91,8 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
     sort_order: sortOrder,
     is_featured: isFeatured,
     tags: tags.split(",").map((tag) => tag.trim()).filter(Boolean),
+    applicable_industries: applicableIndustries.split(",").map((item) => item.trim()).filter(Boolean),
+    hashtags: hashtags.split(" ").map((tag) => tag.trim()).filter(Boolean),
     applicable_packages: requiresConsultation ? [] : pricingOptions.map((o) => o.slug),
     requires_consultation: requiresConsultation,
   });
@@ -185,6 +189,27 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
         <label className="md:col-span-2 flex flex-col gap-1">
           <span className="text-sm font-medium text-zinc-700">설명</span>
           <textarea value={description} onChange={(event) => setDescription(event.target.value)} className={`${inputClassName} min-h-28 resize-y`} />
+        </label>
+        <label className="md:col-span-2 flex flex-col gap-1">
+          <span className="text-sm font-medium text-zinc-700">적용가능업종</span>
+          <textarea
+            value={applicableIndustries}
+            onChange={(event) => setApplicableIndustries(event.target.value)}
+            placeholder="패션 브랜드, 디자이너 브랜드, 의류 쇼핑몰"
+            className={`${inputClassName} min-h-16 resize-y`}
+          />
+          <p className="text-xs text-zinc-400">쉼표(,)로 구분해서 입력하세요.</p>
+        </label>
+        <label className="md:col-span-2 flex flex-col gap-1">
+          <span className="text-sm font-medium text-zinc-700">해시태그</span>
+          <input
+            type="text"
+            value={hashtags}
+            onChange={(event) => setHashtags(event.target.value)}
+            placeholder="#패션 #의류 #쇼핑몰 #이커머스"
+            className={inputClassName}
+          />
+          <p className="text-xs text-zinc-400">공백으로 구분해서 입력하세요. # 기호를 포함해서 입력하세요.</p>
         </label>
       </div>
 

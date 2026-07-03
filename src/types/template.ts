@@ -15,6 +15,8 @@ export interface Template {
   sort_order: number;
   is_featured: boolean;
   tags: string[];
+  applicable_industries: string[];
+  hashtags: string[];
   applicable_packages: string[];
   requires_consultation: boolean;
   created_at: string;
