@@ -1,7 +1,8 @@
 "use client";
 import React, { useMemo } from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 export function TemplateWrapper({ theme, children }: { theme: any; children: React.ReactNode }) {
+  const prefersReducedMotion = useReducedMotion();
   const [animationComplete, setAnimationComplete] = React.useState(false);
   React.useEffect(() => {
     if (typeof window !== "undefined") {
@@ -29,8 +30,8 @@ export function TemplateWrapper({ theme, children }: { theme: any; children: Rea
   return (
     <div style={cssVariables} className="min-h-screen bg-[var(--theme-primary)] text-[var(--theme-secondary)]">
       <motion.div
-        initial={{opacity:0, filter:"blur(4px)"}}
-        animate={{opacity:1, filter:"blur(0px)"}}
+        initial={prefersReducedMotion ? {} : {opacity:0, filter:"blur(4px)"}}
+        animate={prefersReducedMotion ? {} : {opacity:1, filter:"blur(0px)"}}
         transition={{duration:0.9, ease:[0.25,0.1,0.25,1]}}
         onAnimationComplete={() => setAnimationComplete(true)}
         style={animationComplete ? { transform: "none", filter: "none" } : {}}

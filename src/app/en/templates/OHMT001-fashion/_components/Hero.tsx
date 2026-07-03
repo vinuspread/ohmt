@@ -14,7 +14,7 @@ return (
         className="absolute inset-0"
       >
         <img
-          src="/templates/OHMT001-fashion/branding-custom.jpg"
+          src="/templates/fashion/branding-custom.jpg"
           alt="Luxury Fashion Hero" 
           className="w-full h-full object-cover brightness-75"
           loading="eager"
@@ -30,26 +30,26 @@ return (
            transition={{ delay: 0.8, duration: 1 }}
            className="max-w-5xl"
         >
-          <span className="text-[13px] md:text-[12px] uppercase tracking-[0.6em] sm:tracking-[1em] font-bold mb-6 sm:mb-12 block opacity-60" style={{ fontFamily: "'Pretendard', sans-serif" }}>
-            ESTABLISHED 2026
+          <span className="text-[13px] md:text-[12px] uppercase tracking-[0.3em] sm:tracking-[0.4em] font-bold mb-3 sm:mb-4 block opacity-60" style={{ fontFamily: "'Pretendard', sans-serif" }}>
+            EST. 2026
           </span>
-          <h1 className="text-4xl sm:text-[6vw] md:text-[5vw] font-normal tracking-[-0.02em] leading-[1.2] mb-8 sm:mb-16 drop-shadow-2xl" style={{ fontFamily: "'Bodoni Moda', 'Bodoni MT', 'Didot', serif" }}>
+          <h1 className="text-4xl sm:text-[6vw] md:text-[5vw] font-normal tracking-[-0.02em] leading-[0.94] mb-4 sm:mb-5 drop-shadow-2xl" style={{ fontFamily: "var(--font-bodoni)" }}>
             <span className="block whitespace-nowrap">LUXURY BRAND</span>
             <span className="block text-white/40 whitespace-nowrap">NEVER FADES</span>
           </h1>
 
-          <p className="text-[1rem] sm:text-[1.1rem] text-white/75 max-w-[580px] mx-auto text-center leading-[1.7] mb-8 sm:mb-16 font-normal drop-shadow-lg" style={{ fontFamily: "'Pretendard', sans-serif" }}>
+          <p className="text-[1rem] sm:text-[1.1rem] text-white/75 max-w-[580px] mx-auto text-center leading-[1.42] mb-7 sm:mb-9 font-normal drop-shadow-lg" style={{ fontFamily: "'Pretendard', sans-serif" }}>
             Expressing emotion and individuality beyond fleeting trends.
             <br />
             A collection for those pursuing refined, personal style.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
-            <button className="relative px-8 py-3.5 sm:px-12 sm:py-4.5 bg-white text-black text-[13px] sm:text-[12px] font-bold tracking-[0.3em] sm:tracking-[0.4em] border border-white overflow-hidden group" style={{ fontFamily: "'Pretendard', sans-serif" }}>
+            <button className="relative px-8 py-3.5 sm:px-12 sm:py-4.5 bg-white text-black text-[13px] sm:text-[12px] font-bold tracking-[0.3em] sm:tracking-[0.4em] overflow-hidden group" style={{ fontFamily: "'Pretendard', sans-serif" }}>
               <span className="relative z-10 group-hover:text-white transition-colors duration-500">EXPLORE COLLECTION</span>
               <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-[0.6s] ease-[0.16,1,0.3,1] origin-bottom" />
             </button>
-            <Button variant="ghost" className="text-[13px] sm:text-[12px] font-bold tracking-[0.3em] sm:tracking-[0.4em] hover:tracking-[0.48em] transition-all duration-700 ease-out">
+            <Button variant="ghost" className="text-[13px] sm:text-[12px] font-bold tracking-[0.3em] sm:tracking-[0.4em] border border-white hover:opacity-60 transition-opacity duration-300 px-8 py-3.5 sm:px-12 sm:py-4">
               WATCH CAMPAIGN
             </Button>
           </div>

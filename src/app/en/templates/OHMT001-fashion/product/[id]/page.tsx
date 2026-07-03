@@ -9,15 +9,7 @@ import { Footer } from "../../_components/Footer";
 import { TemplateWrapper } from "../../_components/TemplateWrapper";
 import { ArrowLeft, ShoppingBag, Heart } from "lucide-react";
 import theme from "../../theme.json";
-
-const PRODUCTS = [
-  { id: 1, name: "WOOL BUCKET HAT", price: "$120.00", image: "/templates/OHMT001-fashion/wool-hat.png", material: "Pure New Wool", color: "Charcoal Black", description: "Sculpted from premium Italian wool. A modern reinterpretation of a timeless silhouette. Features a structured brim and breathable cotton lining." },
-  { id: 2, name: "CLASSIC TRENCH COAT", price: "$850.00", image: "/templates/OHMT001-fashion/trench-coat.png", material: "Cotton Gabardine", color: "Ivory", description: "Double-breasted trench coat crafted from densely woven cotton gabardine. Raglan sleeves, storm flap, and buckle strap detailing at collar and cuffs." },
-  { id: 3, name: "MINIMALIST BACKPACK", price: "$350.00", image: "/templates/OHMT001-fashion/backpack.png", material: "Waxed Canvas & Leather", color: "Black", description: "A refined carry solution with a single main compartment, padded laptop sleeve, and hand-finished leather trim. Minimal hardware, maximum utility." },
-  { id: 4, name: "PREMIUM LEATHER BOOTS", price: "$480.00", image: "/templates/OHMT001-fashion/boots.png", material: "Full-Grain Calf Leather", color: "Dark Chestnut", description: "Goodyear-welted boots with a Blake stitch construction. Vegetable-tanned leather upper, leather sole, and a subtle square toe profile." },
-  { id: 5, name: "SILK EVENING DRESS", price: "$1,200.00", image: "/templates/OHMT001-fashion/silk-dress.png", material: "18 Momme Silk", color: "Midnight Blue", description: "Floor-length bias-cut dress in liquid silk satin. Adjustable shoulder ties and a draped cowl back. Each piece cut individually." },
-  { id: 6, name: "COTTON BASICS TEE", price: "$65.00", image: "/templates/OHMT001-fashion/basic-tee.png", material: "Supima Cotton Jersey", color: "White", description: "Heavyweight 260gsm Supima cotton. Ribbed crewneck, reinforced shoulder seams, and a boxy fit that holds its shape wash after wash." },
-];
+import { PRODUCTS } from "../../_data/products";
 
 const SIZES = ["XS", "S", "M", "L", "XL"];
 
@@ -73,7 +65,12 @@ function ProductDetailContent() {
               className="flex flex-col justify-center"
             >
               <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-black/30 mb-4">New Arrival</p>
-              <h1 className="text-[28px] sm:text-[3.5vw] font-bold tracking-tighter uppercase leading-none mb-4">{product.name}</h1>
+              <h1
+                className="mb-4 text-[36px] font-bold leading-[0.95] tracking-[-0.035em] sm:text-[4vw]"
+                style={{ fontFamily: "var(--font-bodoni)" }}
+              >
+                {product.name}
+              </h1>
               <p className="text-[16px] md:text-[20px] font-bold text-black/60 mb-8">{product.price}</p>
 
               <div className="space-y-4 mb-8 pb-8 border-b border-black/5">

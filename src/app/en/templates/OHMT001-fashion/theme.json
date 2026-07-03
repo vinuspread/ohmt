@@ -3,28 +3,28 @@
   "name": "Fashion Laboratory",
   "name_ko": "패션 연구소",
   "category": "lifestyle",
-  "description": "A high-end fashion laboratory template with sculptural tailoring and minimalist aesthetics.",
-  "description_ko": "조형적 테일러링과 미니멀리스트 미학을 갖춘 하이엔드 패션 연구소 템플릿.",
+  "description": "An editorial fashion house template for collections, journals, archives, and brand stories, built around precise typography and quiet luxury imagery.",
+  "description_ko": "컬렉션, 저널, 아카이브, 브랜드 스토리를 차분한 럭셔리 톤으로 보여주는 에디토리얼 패션 하우스 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {
-      "primary": "#FFFFFF",
-      "secondary": "#050505",
+      "primary": "#000000",
+      "secondary": "#000000",
       "accent": "#000000",
       "text": {
         "main": "#000000",
-        "muted": "#4A4A4A",
+        "muted": "#737373",
         "contrast": "#FFFFFF"
       },
       "ui": {
-        "border": "#EEEEEE",
-        "hover": "#F9F9F9",
+        "border": "#E5E5E5",
+        "hover": "#F5F5F5",
         "shadow": "none"
       }
     },
     "typography": {
       "heading": {
-        "font": "Bodoni Moda, Bodoni MT, Didot, Noto Serif KR, serif",
+        "font": "Libre Bodoni, Bodoni MT, Didot, Noto Serif KR, serif",
         "weight": "700",
         "tracking": "-0.03em",
         "style": "font-bold tracking-tighter uppercase"
@@ -34,10 +34,6 @@
         "weight": "400",
         "leading": "1.6",
         "style": "font-normal leading-relaxed"
-      },
-      "mono": {
-        "font": "JetBrains Mono",
-        "weight": "400"
       }
     },
     "spacing": {

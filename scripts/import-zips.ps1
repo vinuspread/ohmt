@@ -1,5 +1,5 @@
 # zip에서 템플릿 추출 후 프로젝트에 반영
-# OHMT00X-slug 경로를 slug 경로로 변환
+# 서비스 라우트는 /[lang]/templates/OHMT00X-slug 형식을 유지한다.
 
 param(
     [string]$ZipDir = "E:\Work\ohmytemplate\zips",
@@ -55,26 +55,44 @@ foreach ($zip in $zips) {
     $slug = $slugMap[$ohmtKey]
     if (-not $slug) { Write-Host "SKIP (no slug map): $zipName"; continue }
 
-    Write-Host "Processing: $zipName → $slug ($lang)"
+    Write-Host "Processing: $zipName → $ohmtKey ($lang)"
 
     # 임시 폴더에 압축 해제
     $tempDir = "$tempBase\$zipName"
     Expand-Archive -Path $zip.FullName -DestinationPath $tempDir -Force
 
     # 1. public/templates/[slug]/ → 프로젝트 public
+    # ZIP 내부 소스가 /templates/[slug]를 참조하는 경우가 있어 slug 경로를 유지한다.
+    # DB/썸네일 등 기존 레코드는 /templates/[OHMT00X-slug]를 참조할 수 있어 OHMT 경로에도 복사한다.
     $pubSrc = "$tempDir\public\templates\$slug"
     $pubDst = "$ProjectDir\public\templates\$slug"
     if (Test-Path $pubSrc) {
         New-Item -ItemType Directory -Force $pubDst | Out-Null
         Copy-Item -Path "$pubSrc\*" -Destination $pubDst -Recurse -Force
+
+        $ohmtPubDst = "$ProjectDir\public\templates\$ohmtKey"
+        New-Item -ItemType Directory -Force $ohmtPubDst | Out-Null
+        Copy-Item -Path "$pubSrc\*" -Destination $ohmtPubDst -Recurse -Force
     }
 
-    # 2. src/app/[lang]/templates/OHMT00X-slug/ → 프로젝트 src
+    # 2. src/app/[lang]/templates/OHMT00X-slug/ → 실제 서비스 라우트에 복사
     $srcSrc = "$tempDir\src\app\$lang\templates\$ohmtKey"
-    $srcDst = "$ProjectDir\src\app\$lang\templates\$slug"
+    $srcDst = "$ProjectDir\src\app\$lang\templates\$ohmtKey"
     if (Test-Path $srcSrc) {
-        if (Test-Path $srcDst) { Remove-Item -Recurse -Force $srcDst }
-        Copy-Item -Path $srcSrc -Destination $srcDst -Recurse -Force
+        New-Item -ItemType Directory -Force $srcDst | Out-Null
+        Copy-Item -Path "$srcSrc\*" -Destination $srcDst -Recurse -Force
+
+        # Preview shell은 src/app/[lang]/templates/layout.tsx에서 공통 적용한다.
+        # ZIP별 layout에 포함된 wrapper는 중복 프레임/빌드 의존성 문제를 만들 수 있어 제거한다.
+        $layoutPath = "$srcDst\layout.tsx"
+        if (Test-Path $layoutPath) {
+            $layout = Get-Content -LiteralPath $layoutPath -Raw
+            if ($layout -match "DevicePreviewShell") {
+                $layout = $layout -replace "import DevicePreviewShell from ['""]@/components/DevicePreviewShell['""];(\r?\n)?", ""
+                $layout = $layout -replace "<DevicePreviewShell>\{children\}</DevicePreviewShell>", "{children}"
+                Set-Content -LiteralPath $layoutPath -Value $layout -NoNewline
+            }
+        }
     }
 }
 

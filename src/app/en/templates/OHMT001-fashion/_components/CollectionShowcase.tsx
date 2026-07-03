@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import { Button } from "./ui/Button";
 export const CollectionShowcase = () => {
 return (
-    <section className="py-12 md:py-24 lg:py-32 bg-[#F9F9FB] selection:bg-black selection:text-white overflow-hidden">
+    <section className="py-12 md:py-24 lg:py-32 bg-[var(--color-bg-secondary)] selection:bg-black selection:text-white overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-24 items-center">
           
@@ -19,9 +19,9 @@ return (
               className="w-full h-full"
             >
               <img
-                src="/templates/OHMT001-fashion/exclusive-custom.jpg"
+                src="/templates/fashion/exclusive-custom.jpg"
                 alt="Exclusive Collection Lookbook" 
-                className="w-full h-full object-cover grayscale brightness-95 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[1.8s] ease-out-sine"
+                className="w-full h-full object-cover grayscale brightness-95 group-hover:grayscale-0 group-hover:scale-105 transition-all duration-[1.8s] ease-[cubic-bezier(0.39,0.575,0.565,1)]"
               />
               <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-1000" />
             </motion.div>
@@ -34,14 +34,13 @@ return (
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 1.2, ease: "easeOut" }}
-              className="space-y-3 sm:space-y-4"
             >
-              <span className="text-[11px] uppercase tracking-[0.4em] sm:tracking-[0.6em] text-black/40 font-medium block">
-                LIMITED EDITION
-              </span>
-              <h3 className="text-3xl md:text-5xl font-normal tracking-[-0.03em] uppercase leading-[1.1]">
-                THE EXCLUSIVE <br />
-                <span className="font-semibold">LIFESTYLE LAB</span>
+              <h3
+                className="text-[36px] font-bold leading-[0.98] tracking-[-0.035em] md:text-[58px]"
+                style={{ fontFamily: "var(--font-bodoni)" }}
+              >
+                The Exclusive <br />
+                <span>Lifestyle Lab</span>
               </h3>
             </motion.div>
 

@@ -1,65 +1,31 @@
 /* fashion Design Tokens */
 :root {
-  /* Color System */
+  /* Color System — Monochrome Minimalist Luxury */
   --color-bg: #FFFFFF;
   --color-bg-secondary: #F5F5F5;
   --color-text: #000000;
-  --color-text-secondary: #888888;
+  --color-text-secondary: #4D4D4D;
+  --color-text-muted: #737373;
+  --color-text-contrast: #FFFFFF;
   --color-accent: #000000;
-  --color-secondary: #C9A84C;
-  --color-muted: #888888;
-  --color-text-muted: #888888;
-  --color-border: #EEEEEE;
+  --color-primary: #000000;
+  --color-border: #E5E5E5;
   --color-overlay: rgba(0, 0, 0, 0.05);
 
-  /* Accents */
-  --color-primary: #000000;
-  --color-gold: #C9A84C;
-  --color-white: #FFFFFF;
-  --color-text-contrast: #FFFFFF;
-
   /* Typography */
-  --font-heading: 'Bodoni Moda', 'Bodoni MT', 'Didot', 'Noto Serif KR', serif;
+  --font-heading: 'Libre Bodoni', 'Bodoni MT', 'Didot', 'Noto Serif KR', serif;
+  --font-bodoni: var(--font-heading);
   --font-body: 'Inter', 'Pretendard', sans-serif;
-  --font-serif: 'Bodoni Moda', 'Bodoni MT', 'Didot', serif;
+  --font-serif: 'Libre Bodoni', 'Bodoni MT', 'Didot', serif;
   --font-sans-kr: 'Pretendard', sans-serif;
-
-  /* Typography Scale */
-  --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
-  --text-base: 1rem;
-  --text-lg: 1.125rem;
-  --text-xl: 1.25rem;
-  --text-2xl: 1.5rem;
-  --text-3xl: 1.875rem;
-  --text-4xl: 2.25rem;
-  --text-5xl: 3rem;
-  --text-6xl: 3.75rem;
-
-  /* Spacing Scale */
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
-  --spacing-2xl: 3rem;
-  --spacing-3xl: 4rem;
-  --spacing-4xl: 6rem;
 
   /* Transitions */
   --transition-duration: 300ms;
   --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Interactive States */
+  /* Focus */
   --focus-outline: 2px solid var(--color-primary);
   --focus-outline-offset: 2px;
-
-  /* Border Radius */
-  --radius-none: 0;
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 1rem;
-  --radius-full: 9999px;
 }
 
 /* Accessibility: Respect motion preferences */

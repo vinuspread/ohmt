@@ -9,32 +9,23 @@ return (
       {/* Background Image with Zoom and Grayscale Hover */}
       <div className="absolute inset-0">
         <img
-          src="/templates/OHMT001-fashion/hero-custom.jpg"
+          src="/templates/fashion/hero-custom.jpg"
           alt="Luxury Branding Atmosphere" 
-          className="w-full h-full object-cover grayscale brightness-[0.35] opacity-50 group-hover:scale-110 transition-transform duration-[6s] ease-out-quint"
+          className="w-full h-full object-cover grayscale brightness-[0.35] opacity-50 group-hover:scale-110 transition-transform duration-[6s] ease-[cubic-bezier(0.22,1,0.36,1)]"
         />
         <div className="absolute inset-0 bg-black/40" />
       </div>
 
       {/* Philosophy Content */}
       <div className="w-full max-w-4xl mx-auto text-center relative z-10 px-8 sm:px-12">
-          <motion.p 
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 0.5, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 1.2 }}
-            className="text-[11px] uppercase tracking-[0.6em] sm:tracking-[0.8em] pl-[0.6em] sm:pl-[0.8em] mb-4 sm:mb-8 font-medium opacity-50 font-sans"
-          >
-            THE VINUSPREAD ATTITUDE
-          </motion.p>
-         
+          
           <motion.h2
             initial={{ opacity: 0, y: 25 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ delay: 0.2, duration: 1.5 }}
             className="text-[13px] sm:text-[2.5vw] md:text-[1.6vw] lg:text-[1.3vw] font-thin tracking-[-0.01em] uppercase mb-6 sm:mb-12 leading-[1.3] font-serif"
-            style={{ fontFamily: "'Noto Serif KR', serif" }}
+            style={{ fontFamily: "var(--font-bodoni)" }}
           >
             <span className="block">CRAFTING SILHOUETTES THAT SPEAK</span>
             <span className="block text-white/20 font-thin font-serif tracking-[0.01em]">VOLUMES THROUGH SILENCE.</span>
