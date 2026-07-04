@@ -10,7 +10,7 @@ export const Footer = () => {
       <div className="max-w-[1280px] mx-auto px-4 md:px-8">
         <div className="text-center mb-10 border-b border-white/10 pb-10">
           <Link href="/ko/templates/OHMT013-newspaper" className="font-[family-name:var(--theme-font-heading)] text-4xl font-black tracking-tighter text-white">
-            VINUSPREAD TIMES
+             OHMT TIMES
           </Link>
           <p className="font-sans text-[0.78rem] opacity-50 mt-2 uppercase tracking-widest">2026년부터 지켜온 정론직필의 가치</p>
         </div>

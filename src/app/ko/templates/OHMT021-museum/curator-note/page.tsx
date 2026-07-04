@@ -26,7 +26,7 @@ function CuratorNotePageContent() {
           className="mb-20 text-center"
         >
           <span className="text-[10px] uppercase font-bold tracking-[0.5em] text-black/40 block mb-6">{"에디토리얼"}</span>
-          <h1 className="text-5xl md:text-8xl font-serif leading-[1.5] tracking-tighter break-keep">{"신성한 비례"}</h1>
+          <h1 className="text-5xl md:text-8xl font-serif leading-[1.1] tracking-tighter break-keep">{"신성한 비례"}</h1>
         </motion.div>
 
         <motion.div 

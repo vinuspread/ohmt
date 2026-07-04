@@ -1,0 +1,53 @@
+"use client";
+
+type SubpageHeroProps = {
+  eyebrow: string;
+  title: string;
+  description?: string;
+  image: string;
+  imageAlt: string;
+  align?: "center" | "left";
+};
+
+export function SubpageHero({
+  eyebrow,
+  title,
+  description,
+  image,
+  imageAlt,
+  align = "center",
+}: SubpageHeroProps) {
+  const isLeft = align === "left";
+
+  return (
+    <section className="relative flex h-[42vh] min-h-[360px] items-center overflow-hidden pt-14 md:h-[48vh] md:min-h-[460px] md:pt-20">
+      <img
+        src={image}
+        alt={imageAlt}
+        className="absolute inset-0 h-full w-full object-cover brightness-[0.78] contrast-[1.04]"
+      />
+      <div className="absolute inset-0 bg-black/10" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black/34 via-black/6 to-black/38" />
+      <div
+        className={`relative z-10 mx-auto flex w-full max-w-[1440px] flex-col px-6 md:px-12 ${
+          isLeft ? "items-start text-left" : "items-center text-center"
+        }`}
+      >
+        <span className="mb-4 text-[10px] font-bold uppercase tracking-[0.32em] text-white/62">
+          {eyebrow}
+        </span>
+        <h1
+          className="max-w-full whitespace-nowrap text-[32px] font-bold leading-[0.94] tracking-[-0.035em] text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.25)] break-keep sm:text-[46px] md:text-[58px] lg:text-[72px]"
+          style={{ fontFamily: "var(--font-bodoni)" }}
+        >
+          {title}
+        </h1>
+        {description ? (
+          <p className="mt-5 max-w-xl text-[14px] leading-[1.65] text-white/74 break-keep md:text-[15px]">
+            {description}
+          </p>
+        ) : null}
+      </div>
+    </section>
+  );
+}

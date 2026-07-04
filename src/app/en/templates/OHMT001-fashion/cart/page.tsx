@@ -26,7 +26,12 @@ function FashionCartPageContent() {
                 <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
                     <div className="flex-1 space-y-16">
                         <div className="border-b border-black pb-8 flex justify-between items-end">
-                            <h1 className="text-3xl md:text-4xl font-bold tracking-tighter">Shopping Bag</h1>
+                            <h1
+                              className="text-[36px] font-bold leading-none tracking-[-0.035em] md:text-[48px]"
+                              style={{ fontFamily: "var(--font-bodoni)" }}
+                            >
+                              Shopping Bag
+                            </h1>
                             <span className="text-[13px] font-bold tracking-widest text-black/30">1 Item</span>
                         </div>
 
@@ -38,7 +43,12 @@ function FashionCartPageContent() {
                                 <div className="flex-1 flex flex-col justify-between py-2">
                                     <div className="space-y-6">
                                         <div className="flex justify-between items-start">
-                                            <h2 className="text-2xl font-bold tracking-tighter max-w-xs">{item.name}</h2>
+                                            <h2
+                                              className="max-w-xs text-[28px] font-bold leading-none tracking-[-0.03em]"
+                                              style={{ fontFamily: "var(--font-bodoni)" }}
+                                            >
+                                              {item.name}
+                                            </h2>
                                             <span className="text-lg font-bold">{item.price}</span>
                                         </div>
                                         <div className="flex gap-10 text-[13px] font-bold tracking-[0.2em] text-black/40">
@@ -63,7 +73,12 @@ function FashionCartPageContent() {
 
                     <div className="w-full lg:w-[400px] space-y-12 h-fit lg:sticky lg:top-48">
                         <div className="space-y-8">
-                             <h3 className="text-xl font-bold tracking-tighter border-b border-black pb-6">Summary</h3>
+                             <h3
+                               className="border-b border-black pb-6 text-[28px] font-bold leading-none tracking-[-0.03em]"
+                               style={{ fontFamily: "var(--font-bodoni)" }}
+                             >
+                               Summary
+                             </h3>
                              <div className="space-y-4 text-[13px] font-bold tracking-widest">
                                  <div className="flex justify-between opacity-40">
                                      <span>Subtotal</span>
@@ -96,10 +111,10 @@ function FashionCartPageContent() {
 }
 
 
-export default function FashionCartPage(props: any) {
+export default function FashionCartPage() {
   return (
     <React.Suspense fallback={null}>
-      <FashionCartPageContent {...props} />
+      <FashionCartPageContent />
     </React.Suspense>
   );
 }

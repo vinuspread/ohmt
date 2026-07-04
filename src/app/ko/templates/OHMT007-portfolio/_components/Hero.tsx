@@ -22,7 +22,7 @@ export function Hero() {
                 >
                     COMMERCIAL EST. 2024
                 </motion.span>
-                <h1 className="text-[12vw] md:text-[8vw] font-extrabold leading-[1.2] tracking-tighter uppercase mb-12">
+                <h1 className="text-[12vw] md:text-[8vw] font-extrabold leading-[1.1] tracking-tighter uppercase mb-12">
                     THE FUTURE <br /> OF FORM.
                 </h1>
             </div>

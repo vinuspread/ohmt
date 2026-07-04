@@ -16,7 +16,7 @@ export default function WhyChooseUs() {
       <div className="mx-auto max-w-7xl px-6">
         <motion.div initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6, ease: EASE_OUT }} className="text-center mb-16">
           <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">선택해야 하는 이유</span>
-          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[1.05]">수천 명이 신뢰하는 곳</h2>
+          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[1.1]">수천 명이 신뢰하는 곳</h2>
         </motion.div>
         <div className="grid gap-6 lg:grid-cols-4 mb-12">
           <motion.div initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.5, delay: 0, ease: EASE_OUT }} className="lg:col-span-2 rounded-2xl bg-white/5 border border-white/10 p-8 lg:p-12">

@@ -16,7 +16,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 const Button = React.forwardRef<any, ButtonProps>(
   ({ variant = 'primary', size, className, href, children, ...rest }, ref) => {
     const variantMap: Record<Variant, string> = {
-      primary: 'flex-1 py-4 bg-[var(--color-primary)] text-white text-[13px] uppercase tracking-[0.3em] font-bold hover:bg-[#5fb3a9] transition-all',
+      primary: 'flex-1 py-4 bg-[var(--color-primary)] text-white text-[13px] uppercase tracking-[0.3em] font-bold hover:bg-[var(--color-primary-hover)] transition-all',
       white: 'px-10 py-4 bg-white text-neutral-900 text-[13px] font-bold uppercase tracking-[0.3em] hover:bg-[var(--color-primary)] hover:text-white transition-all',
       ghost: 'px-6 py-4 border border-neutral-300 text-neutral-600 hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-all',
       dark: 'w-full py-8 bg-neutral-900 text-white text-[13px] font-bold uppercase tracking-[0.5em] hover:bg-[var(--color-primary)] transition-all',

@@ -303,7 +303,7 @@ export async function POST(request: Request) {
       category: themeJson.category ?? "uncategorized",
       description_en: themeJson.description ?? null,
       description_ko: themeJson.description_ko ?? null,
-      thumbnail_url: `/templates/${slug}/thumbnail.jpg`,
+      thumbnail_url: `/templates/${slug}/og-image.jpg`,
       price: 0,
       status: "draft",
       sort_order: 999,

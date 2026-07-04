@@ -142,7 +142,7 @@ function SouvenirShopContent() {
           className="mb-20 text-center"
         >
           <span className="text-[13px] uppercase font-bold tracking-[0.5em] text-black/40 block mb-6">The Museum Store</span>
-          <h1 className="text-5xl md:text-8xl font-serif tracking-tighter leading-none mb-8">Echos of History</h1>
+          <h1 className="text-5xl md:text-8xl font-serif tracking-tighter leading-[1.1] mb-8">Echos of History</h1>
           <p className="max-w-2xl mx-auto text-black/60 font-serif text-lg leading-relaxed">
             Curated objects that transmit the legacy of the Vatican Museums into the modern home. 
             Each piece is selected for its material integrity and theological depth.
@@ -172,7 +172,7 @@ function SouvenirShopContent() {
                   </div>
                 </div>
                 <div className="space-y-3 px-2">
-                  <h3 className="font-serif text-xl tracking-tight leading-tight">{product.name}</h3>
+                  <h3 className="font-serif text-xl tracking-tight leading-[1.1]">{product.name}</h3>
                   <p className="text-sm text-black/70 line-clamp-2 font-sans leading-relaxed">{product.desc}</p>
                   <div className="flex items-center justify-between pt-6 border-t border-black/5">
                     <span className="text-sm font-bold tracking-[0.1em]">{product.price}</span>

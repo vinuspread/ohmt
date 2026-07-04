@@ -24,7 +24,7 @@ function CosmeticStoryPageContent() {
                 </h1>
                 <div className="space-y-5 text-[0.95rem] text-black/60 leading-[1.4]">
                   <p>
-                    VINUSPREAD was founded on a radical idea: that luxury skincare shouldn't come at the cost of transparency. We set out to create a line of products that are as honest as they are effective.
+                    OHMT was founded on a radical idea: that luxury skincare shouldn't come at the cost of transparency. We set out to create a line of products that are as honest as they are effective.
                   </p>
                   <p>
                     Every formula is developed in our own laboratories, using sustainably sourced ingredients that are rigorously tested for purity and performance. We never compromise on quality - and we never use fillers, synthetic fragrances, or harsh preservatives.

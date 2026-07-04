@@ -1,15 +1,13 @@
 "use client";
 import { Leaf, Shield, Truck, Recycle } from "lucide-react";
-import { useSearchParams } from "next/navigation";
 const icons = [
-  <Leaf size={34} strokeWidth={1.5} />, 
-  <Shield size={34} strokeWidth={1.5} />, 
-  <Truck size={34} strokeWidth={1.5} />, 
-  <Recycle size={34} strokeWidth={1.5} />
+  <Leaf key="leaf" size={34} strokeWidth={1.5} />, 
+  <Shield key="shield" size={34} strokeWidth={1.5} />, 
+  <Truck key="truck" size={34} strokeWidth={1.5} />, 
+  <Recycle key="recycle" size={34} strokeWidth={1.5} />
 ];
 
 export function FeatureRow() {
-  const searchParams = useSearchParams();
   const t = {
   "nav": {
     "categories": `Categories`,

@@ -13,7 +13,7 @@ import { Button } from "../_components/ui/Button";
 
 function FashionCartPageContent() {
     const items = [
-        { id: "1", name: "스컬프처럴 블레이저 V.01", price: "$890", size: "M", img: "/templates/OHMT001-fashion/product-blazer.jpg" }
+        { id: "1", name: "스컬프처럴 블레이저 V.01", price: "₩890,000", size: "M", img: "/templates/OHMT001-fashion/product-blazer.jpg" }
     ];
 
     return (
@@ -67,7 +67,7 @@ function FashionCartPageContent() {
                              <div className="space-y-4 text-[13px] font-bold tracking-widest">
                                   <div className="flex justify-between opacity-40">
                                       <span>소계</span>
-                                      <span>$890.00</span>
+                                      <span>₩890,000</span>
                                   </div>
                                   <div className="flex justify-between opacity-40">
                                       <span>배송비</span>
@@ -75,7 +75,7 @@ function FashionCartPageContent() {
                                   </div>
                                   <div className="flex justify-between border-t border-black/5 pt-6 text-sm tracking-tight opacity-100">
                                       <span>예상 합계</span>
-                                      <span>$890.00</span>
+                                      <span>₩890,000</span>
                                   </div>
                              </div>
                         </div>

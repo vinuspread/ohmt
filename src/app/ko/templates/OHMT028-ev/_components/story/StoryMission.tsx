@@ -9,11 +9,11 @@ gsap.registerPlugin(ScrollTrigger);
 const values = [
   {
     title: "도시가 먼저",
-    body: "고속도로보다 골목길을 먼저 생각합니다. NUBI의 모든 결정은 당신이 실제로 살고 있는 도시의 거리에서 출발합니다.",
+    body: "고속도로보다 골목길을 먼저 생각합니다. NUBI의 모든 결정은 실제 도시의 거리에서 출발합니다.",
   },
   {
     title: "달리는 즐거움",
-    body: "제로 에미션이 드라이빙의 즐거움을 앗아가지는 않습니다. NUBI는 민첩하고 반응이 빠르며, 매일 타도 질리지 않습니다.",
+    body: "제로 에미션이 운전의 재미를 지우지는 않습니다. NUBI는 민첩하고 반응이 빠르며, 매일 타도 질리지 않습니다.",
   },
   {
     title: "모두를 위한 EV",
@@ -41,14 +41,14 @@ export function StoryMission() {
         <p className="font-inter text-[11px] tracking-[0.15em] text-[var(--accent)] uppercase mb-6">
           우리가 믿는 것
         </p>
-        <h2 className="font-michroma text-[clamp(28px,3vw,44px)] text-[var(--text-on-light)] leading-[1.0] tracking-[-0.02em] mb-16 md:mb-20">
-          세 가지 원칙.<br />타협은 없습니다.
+        <h2 className="font-michroma text-[clamp(28px,3vw,44px)] text-[var(--text-on-light)] leading-[1.1] tracking-[-0.02em] mb-16 md:mb-20">
+          엔지니어링을 관통하는<br />세 가지 철칙.
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-[var(--border-light)]">
           {values.map((v) => (
             <div key={v.title} className="value-item py-10 md:py-0 md:px-10 first:md:pl-0 last:md:pr-0">
               <div className="w-6 h-[2px] bg-[var(--accent)] mb-6" />
-              <h3 className="font-michroma text-[17px] text-[var(--text-on-light)] mb-4 leading-snug">
+              <h3 className="font-michroma text-[17px] text-[var(--text-on-light)] mb-4 leading-[1.1]">
                 {v.title}
               </h3>
               <p className="font-inter text-[14px] text-[var(--text-muted-light)] leading-relaxed">

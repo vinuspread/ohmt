@@ -19,6 +19,9 @@
 
   --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+
+  --focus-ring: 2px solid var(--color-primary);
+  --focus-ring-offset: 2px;
 }
 
 @media (prefers-color-scheme: dark) {

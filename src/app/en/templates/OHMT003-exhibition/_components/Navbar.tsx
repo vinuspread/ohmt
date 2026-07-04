@@ -36,22 +36,22 @@ export const Navbar = () => {
             </span>
             <button
               onClick={() => setMenuOpen(!menuOpen)}
-              className="w-10 h-10 bg-black flex items-center justify-center relative"
+              className="w-10 h-10 bg-black flex items-center justify-center relative active:scale-[0.95] transition-transform duration-100"
               aria-label="Toggle menu"
             >
               <div className="w-5 h-4 relative">
                 <motion.span
-                  className="absolute left-0 top-0 w-full h-[1.5px] bg-white block origin-center"
+                  className="absolute left-0 top-0 w-full h-[2px] bg-white block origin-center"
                   animate={menuOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
                   transition={{ duration: 0.3, ease: easeOut }}
                 />
                 <motion.span
-                  className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-[1.5px] bg-white block"
+                  className="absolute left-0 top-1/2 -translate-y-1/2 w-full h-[2px] bg-white block"
                   animate={menuOpen ? { opacity: 0 } : { opacity: 1 }}
                   transition={{ duration: 0.2 }}
                 />
                 <motion.span
-                  className="absolute left-0 bottom-0 w-full h-[1.5px] bg-white block origin-center"
+                  className="absolute left-0 bottom-0 w-full h-[2px] bg-white block origin-center"
                   animate={menuOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
                   transition={{ duration: 0.3, ease: easeOut }}
                 />

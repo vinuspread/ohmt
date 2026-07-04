@@ -44,7 +44,7 @@ export default function TechnologyProductsPage() {
             <span className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] block">
               제품 라인업
             </span>
-            <h1 className="mb-6 text-[clamp(2.2rem,5vw,3.8rem)] font-bold tracking-[-0.03em] leading-[1.15] text-[var(--color-text)] font-heading break-keep">
+            <h1 className="mb-6 text-[clamp(2.2rem,5vw,3.8rem)] font-bold tracking-[-0.03em] leading-[1.1] text-[var(--color-text)] font-heading break-keep">
               모든 운영 규모에 맞춰 설계되다
             </h1>
             <p className="mx-auto max-w-2xl text-base md:text-lg text-[var(--color-text-muted)] leading-[1.2]">
@@ -60,7 +60,7 @@ export default function TechnologyProductsPage() {
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
                 모델
               </span>
-              <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.2] text-[var(--color-text)] font-heading break-keep">
+              <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.1] text-[var(--color-text)] font-heading break-keep">
                 시스템 선택
               </h2>
             </div>
@@ -118,7 +118,7 @@ export default function TechnologyProductsPage() {
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
                 핵심 기능
               </span>
-              <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.2] text-[var(--color-text)] font-heading break-keep">
+              <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.1] text-[var(--color-text)] font-heading break-keep">
                 주요 기능
               </h2>
               <p className="mt-4 mx-auto max-w-xl text-sm md:text-base text-[var(--color-text-muted)] leading-[1.2]">
@@ -156,7 +156,7 @@ export default function TechnologyProductsPage() {
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
                 사양
               </span>
-              <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.2] text-[var(--color-text)] font-heading break-keep">
+              <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.1] text-[var(--color-text)] font-heading break-keep">
                 모델 비교
               </h2>
             </div>
@@ -206,7 +206,7 @@ export default function TechnologyProductsPage() {
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
                   예약
                 </span>
-                <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.2] text-[var(--color-text)] font-heading mb-6 break-keep">
+                <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.1] text-[var(--color-text)] font-heading mb-6 break-keep">
                   오늘 유닛을 확보하세요
                 </h2>
                 <p className="text-sm text-[var(--color-text-muted)] leading-[1.6] max-w-sm">

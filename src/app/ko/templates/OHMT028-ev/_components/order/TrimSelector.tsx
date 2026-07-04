@@ -17,7 +17,7 @@ export function TrimSelector({
 }) {
   return (
     <section>
-      <h2 className="font-michroma text-[clamp(18px,2vw,28px)] text-[var(--text)] leading-[1.0] tracking-[-0.02em] mb-6">
+      <h2 className="font-michroma text-[clamp(18px,2vw,28px)] text-[var(--text)] leading-[1.1] tracking-[-0.02em] mb-6">
         트림 선택
       </h2>
       <div className="space-y-0">

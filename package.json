@@ -4,9 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "npm run verify:source",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "verify:source": "node scripts/verify-template-source.mjs",
+    "deploy:check": "powershell -ExecutionPolicy Bypass -File scripts/check-vercel-target.ps1",
+    "deploy:prod": "powershell -ExecutionPolicy Bypass -File scripts/deploy-ohmt-prod.ps1",
+    "verify:live": "powershell -ExecutionPolicy Bypass -File scripts/verify-live-template.ps1"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1069.0",

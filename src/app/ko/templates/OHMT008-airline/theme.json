@@ -1,10 +1,10 @@
 {
-  "slug": "airline",
+  "slug": "OHMT008-airline",
   "name": "Travel Airline",
   "name_ko": "트래블 항공",
   "category": "hospitality",
-  "description": "Premium aviation experience template built with Next.js. Showcase destinations, book flights, and explore luxury travel experiences.",
-  "description_ko": "프리미엄 항공 경험 템플릿. 목적지를 소개하고 항공권을 예약하며 럭셔리한 여행 경험을 탐색하세요.",
+  "description": "A premium airline template for destination discovery, flight booking, membership moments, and luxury travel storytelling across polished marketing pages.",
+  "description_ko": "목적지 탐색, 항공권 예약, 멤버십 경험, 럭셔리 여행 스토리를 세련된 마케팅 페이지로 엮은 프리미엄 항공 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {

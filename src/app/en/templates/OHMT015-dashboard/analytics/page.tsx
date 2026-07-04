@@ -111,7 +111,7 @@ export default function AnalyticsPage() {
           }
         />
 
-        <div className="grid grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
           {statsCards.map((card) => (
             <StatCard key={card.label} {...card} />
           ))}
@@ -148,8 +148,8 @@ export default function AnalyticsPage() {
           </div>
         </div>
 
-        <div className="grid grid-cols-12 gap-3">
-          <div className="col-span-5">
+        <div className="grid grid-cols-1 gap-3 lg:grid-cols-12">
+          <div className="lg:col-span-5">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
@@ -185,7 +185,7 @@ export default function AnalyticsPage() {
             </motion.div>
           </div>
 
-          <div className="col-span-7">
+          <div className="lg:col-span-7">
             <motion.div
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
@@ -193,6 +193,7 @@ export default function AnalyticsPage() {
               className="bg-[var(--color-bg-elevated)] rounded-[var(--radius-lg)] p-5 border border-[var(--color-border)]"
             >
               <h3 className="text-base font-[var(--font-heading)] font-semibold text-[var(--color-text)] mb-4">Top Pages</h3>
+              <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-[var(--color-border)]">
@@ -217,6 +218,7 @@ export default function AnalyticsPage() {
                   ))}
                 </tbody>
               </table>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -228,7 +230,7 @@ export default function AnalyticsPage() {
           className="bg-[var(--color-bg-elevated)] rounded-[var(--radius-lg)] p-5 border border-[var(--color-border)]"
         >
           <h3 className="text-base font-[var(--font-heading)] font-semibold text-[var(--color-text)] mb-4">Device Breakdown</h3>
-          <div className="grid grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-3 sm:gap-8">
             {devices.map((device) => (
               <div key={device.name}>
                 <div className="flex items-center justify-between mb-2">

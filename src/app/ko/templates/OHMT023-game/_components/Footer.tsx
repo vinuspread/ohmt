@@ -2,10 +2,10 @@ import Link from "next/link";
 import { games } from "../data/data";
 
 const companyLinks = [
-  { href: "/ko/templates/OHMT023-game/about", label: "?뚭컻" },
-  { href: "/ko/templates/OHMT023-game/news", label: "?뚯떇" },
-  { href: "/ko/templates/OHMT023-game/careers", label: "梨꾩슜" },
-  { href: "/ko/templates/OHMT023-game/games", label: "寃뚯엫" },
+  { href: "/ko/templates/OHMT023-game/about", label: "스튜디오 소개" },
+  { href: "/ko/templates/OHMT023-game/news", label: "소식" },
+  { href: "/ko/templates/OHMT023-game/careers", label: "채용" },
+  { href: "/ko/templates/OHMT023-game/games", label: "게임" },
 ];
 
 export default function Footer() {
@@ -21,13 +21,13 @@ export default function Footer() {
               OHMT
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-[var(--color-text-muted)]">
-              ?곴컧??二쇰뒗 ?몄긽??留뚮뱾怨? ?쒓퀎瑜??뺤쓽?섎뒗 寃쎄퀎瑜??덈Ъ??
+              상상력을 플레이 가능한 세계로 만들고, 장르의 경계를 다시 정의합니다.
             </p>
           </div>
 
           <div>
             <h4 className="mb-4 text-sm font-semibold tracking-[0.1em] text-[var(--color-text)] uppercase">
-              Games
+              게임
             </h4>
             <ul className="space-y-3">
               {games.map((game) => (
@@ -45,7 +45,7 @@ export default function Footer() {
 
           <div>
             <h4 className="mb-4 text-sm font-semibold tracking-[0.1em] text-[var(--color-text)] uppercase">
-              Company
+              회사
             </h4>
             <ul className="space-y-3">
               {companyLinks.map((link) => (
@@ -63,7 +63,7 @@ export default function Footer() {
 
           <div>
             <h4 className="mb-4 text-sm font-semibold tracking-[0.1em] text-[var(--color-text)] uppercase">
-              Connect
+              채널
             </h4>
             <ul className="space-y-3">
               <li>
@@ -89,4 +89,3 @@ export default function Footer() {
     </footer>
   );
 }
-

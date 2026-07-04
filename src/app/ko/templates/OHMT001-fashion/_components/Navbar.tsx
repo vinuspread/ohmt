@@ -31,16 +31,14 @@ export const Navbar = () => {
           </Link>
 
            {/* Desktop Menu */}
-           <div className={`hidden md:flex items-center gap-10 text-[14px] font-bold uppercase tracking-[0.3em] transition-colors duration-500 ${!isTransparent ? "text-black/60" : "text-white/80"}`}>
+           <div className={`hidden md:flex items-center gap-10 text-[14px] font-bold uppercase tracking-[-0.03em] transition-colors duration-500 ${!isTransparent ? "text-black/60" : "text-white/80"}`}>
              {[
-                 { name: "컬렉션", id: "collection", href: "/ko/templates/OHMT001-fashion/category/collection" },
-                 { name: "아카이브", id: "archive", href: "/ko/templates/OHMT001-fashion/category/archive" },
-                 { name: "저널", id: "journal", href: "/ko/templates/OHMT001-fashion/journal" },
-                 { name: "브랜드", id: "about", href: "/ko/templates/OHMT001-fashion/about" },
-               ].map((item) => {
-                 const isActive = item.id === "journal" || item.id === "about"
-    ? pathname.includes(`/ko/templates/OHMT001-fashion/${item.id}`)
-    : pathname.includes(`/ko/templates/OHMT001-fashion/category/${item.id}`);
+                 { name: "컬렉션", id: "collection", href: "/ko/templates/OHMT001-fashion/collection" },
+                  { name: "아카이브", id: "archive", href: "/ko/templates/OHMT001-fashion/archive" },
+                  { name: "저널", id: "journal", href: "/ko/templates/OHMT001-fashion/journal" },
+                  { name: "브랜드", id: "about", href: "/ko/templates/OHMT001-fashion/about" },
+                ].map((item) => {
+                  const isActive = pathname.includes(`/ko/templates/OHMT001-fashion/${item.id}`);
                return (
                  <Link
                    key={item.id}
@@ -69,18 +67,18 @@ export const Navbar = () => {
 
            {/* Icons */}
            <div className={`flex items-center gap-4 sm:gap-6 transition-colors duration-500 ${!isTransparent ? "text-black" : "text-white"}`}>
-             <button className="hover:opacity-50 transition-opacity">
-               <Search size={20} strokeWidth={1.5} />
+             <button className="hover:opacity-50 transition-opacity focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-500" aria-label="검색">
+               <Search size={20} strokeWidth={1.5} aria-hidden="true" />
              </button>
-             <Link href="/ko/templates/OHMT001-fashion/cart" className="relative hover:opacity-50 transition-opacity">
-               <ShoppingBag size={20} strokeWidth={1.5} />
+             <Link href="/ko/templates/OHMT001-fashion/cart" className="relative hover:opacity-50 transition-opacity focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-500" aria-label="쇼핑백">
+               <ShoppingBag size={20} strokeWidth={1.5} aria-hidden="true" />
              </Link>
              <button 
-               className="md:hidden p-1"
+               className="md:hidden p-1 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-500"
                onClick={() => setMobileOpen(!mobileOpen)}
-               aria-label="Toggle menu"
+               aria-label={mobileOpen ? "메뉴 닫기" : "메뉴 열기"}
              >
-               {mobileOpen ? <X size={24} /> : <Menu size={24} />}
+               {mobileOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
              </button>
            </div>
 
@@ -89,35 +87,35 @@ export const Navbar = () => {
 
       {/* Mobile Menu Drawer */}
       <div 
-        className={`fixed inset-x-0 z-40 bg-white border-b border-black/5 transition-[max-height,opacity] duration-500 md:hidden overflow-hidden ${
+        className={`fixed inset-x-0 z-40 bg-white border-b border-[var(--color-border)] transition-[max-height,opacity] duration-500 md:hidden overflow-hidden ${
           mobileOpen ? "top-14 max-h-[550px] opacity-100 py-10" : "top-14 max-h-0 opacity-0 py-0"
         }`}
       >
-        <div className="flex flex-col px-8 text-[13px] font-bold uppercase tracking-[0.25em] text-black/60">
+        <div className="flex flex-col px-8 text-[13px] font-bold uppercase tracking-[-0.03em] text-black/60">
           {/* Categories */}
            <div className="flex flex-col gap-3 border-b border-black/5 pb-6 mb-6">
-              <span className="text-[12px] font-bold tracking-[0.2em] text-black/30 mb-3 block">시리즈</span>
-               {[
-                 { name: "컬렉션", id: "collection", href: "/ko/templates/OHMT001-fashion/category/collection" },
-                 { name: "아카이브", id: "archive", href: "/ko/templates/OHMT001-fashion/category/archive" },
-                 { name: "저널", id: "journal", href: "/ko/templates/OHMT001-fashion/journal" },
-                 { name: "브랜드", id: "about", href: "/ko/templates/OHMT001-fashion/about" },
-               ].map((item) => (
-                 <Link
-                   key={item.id}
-                   href={item.href}
-                   onClick={() => setMobileOpen(false)}
-                  className="hover:text-black py-2.5 transition-colors block"
-                >
-                  {item.name}
-                </Link>
-              ))}
+               <span className="text-[12px] font-bold tracking-[-0.03em] text-[var(--color-text-muted)] mb-3 block">시리즈</span>
+                {[
+                  { name: "컬렉션", id: "collection", href: "/ko/templates/OHMT001-fashion/collection" },
+                  { name: "아카이브", id: "archive", href: "/ko/templates/OHMT001-fashion/archive" },
+                  { name: "저널", id: "journal", href: "/ko/templates/OHMT001-fashion/journal" },
+                  { name: "브랜드", id: "about", href: "/ko/templates/OHMT001-fashion/about" },
+                ].map((item) => (
+                  <Link
+                    key={item.id}
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                   className="hover:text-black py-2.5 transition-colors block"
+                 >
+                   {item.name}
+                 </Link>
+               ))}
            </div>
 
 
           {/* Utilities */}
            <div className="flex flex-col gap-3">
-             <span className="text-[12px] font-bold tracking-[0.2em] text-black/30 mb-3 block">서비스</span>
+              <span className="text-[12px] font-bold tracking-[-0.03em] text-[var(--color-text-muted)] mb-3 block">서비스</span>
               <Link
                 href="/ko/templates/OHMT001-fashion/cart"
                 onClick={() => setMobileOpen(false)}

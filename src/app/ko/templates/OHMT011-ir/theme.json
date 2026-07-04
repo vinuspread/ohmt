@@ -1,10 +1,10 @@
 {
-  "slug": "ir",
+  "slug": "OHMT011-ir",
   "name": "Corporate IR",
   "name_ko": "기업 IR",
   "category": "corporate",
-  "description": "A professional investor relations template with financial data, governance, and news sections.",
-  "description_ko": "재무 데이터, 지배구조, 뉴스 섹션을 갖춘 전문 기업 IR 템플릿.",
+  "description": "An investor relations template for financial highlights, governance, filings, news, and shareholder communication with a clear corporate information structure.",
+  "description_ko": "재무 하이라이트, 지배구조, 공시, 뉴스, 주주 커뮤니케이션을 명확한 기업 정보 구조로 정리한 IR 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {

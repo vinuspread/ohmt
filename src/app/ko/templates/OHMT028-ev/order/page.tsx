@@ -27,7 +27,7 @@ export default function OrderPage() {
             <p className="font-inter text-[11px] tracking-[0.15em] text-[var(--accent)] uppercase mb-3">
               사전 예약
             </p>
-            <h1 className="font-michroma text-[clamp(32px,4.5vw,60px)] text-[var(--text)] leading-[0.95] tracking-[-0.03em]">
+            <h1 className="font-michroma text-[clamp(32px,4.5vw,60px)] text-[var(--text)] leading-[1.1] tracking-[-0.03em]">
               NUBI 예약하기
             </h1>
           </div>

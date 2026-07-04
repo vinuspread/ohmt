@@ -1,15 +1,15 @@
-// src/app/templates/OHMT008-airline/-components/Header.tsx
 "use client";
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 import { clsx } from "clsx";
 import { Menu, X } from "lucide-react";
 import { Button } from "./ui/Button";
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  
+
   const t = {
   "nav": {
     "book": `Book`,
@@ -43,38 +43,64 @@ const navItems = [
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const navStagger = {
+    animate: {
+      transition: { staggerChildren: 0.06, delayChildren: 0.3 }
+    }
+  };
+
+  const navFadeUp = {
+    initial: { opacity: 0, y: -8 },
+    animate: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.23, 1, 0.32, 1] as const } }
+  };
+
+  const mobileItemVariants = {
+    initial: { opacity: 0, x: -16 },
+    animate: (i: number) => ({
+      opacity: 1, x: 0,
+      transition: { delay: 0.1 + i * 0.05, duration: 0.35, ease: [0.23, 1, 0.32, 1] as const }
+    }),
+    exit: { opacity: 0, x: -8, transition: { duration: 0.15 } }
+  };
+
   return (
     <>
       <nav className={clsx(
-        "fixed top-0 left-0 right-0 z-[900] h-[72px] flex items-center transition-[background,backdrop-filter] duration-300",
+        "fixed top-0 left-0 right-0 z-[900] h-[72px] flex items-center transition-[background,backdrop-filter] duration-[var(--transition-base)]",
         isScrolled || mobileOpen
           ? "bg-[var(--color-primary)] backdrop-blur-xl"
           : "bg-transparent"
       )}>
         <div className="max-w-[1320px] mx-auto px-6 md:px-10 flex items-center justify-between w-full">
             <Link href="/en/templates/OHMT008-airline" className="shrink-0 group">
-            <span className="text-[0.78rem] md:text-[0.82rem] font-bold tracking-[0.15em] uppercase text-white leading-none">OHMT</span>
+            <span className="text-sm md:text-base font-bold tracking-[0.15em] uppercase text-white leading-none transition-[opacity] duration-[var(--transition-fast)] group-hover:opacity-70">OHMT</span>
           </Link>
 
           {/* Desktop GNB */}
-          <div className="hidden lg:flex gap-10 absolute left-1/2 -translate-x-1/2">
+          <motion.div
+            variants={navStagger}
+            initial="initial"
+            animate="animate"
+            className="hidden lg:flex gap-10 absolute left-1/2 -translate-x-1/2"
+          >
             {navItems.map((item) => (
-              <Link
-                key={item.slug}
-                href={`/en/templates/OHMT008-airline/${item.slug}`}
-                className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-white/55 hover:text-white transition-colors duration-300 relative group pb-1"
-              >
-                {item.name}
-                <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-[var(--color-accent)] transition-[width] duration-300 group-hover:w-full" />
-              </Link>
+              <motion.div key={item.slug} variants={navFadeUp}>
+                <Link
+                  href={`/en/templates/OHMT008-airline/${item.slug}`}
+                  className="text-sm font-semibold uppercase tracking-[-0.02em] text-white/55 hover:text-white transition-[color] duration-[var(--transition-fast)] relative group pb-1"
+                >
+                  {item.name}
+                  <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-[var(--color-accent)] transition-[width] duration-[var(--transition-base)] group-hover:w-full" />
+                </Link>
+              </motion.div>
             ))}
-          </div>
+          </motion.div>
 
           <div className="flex items-center gap-4">
-            <Button variant="ghost" href="#" className="hidden lg:block text-[0.7rem] font-medium uppercase tracking-[0.1em] text-white/55 hover:text-white transition-colors">
+            <Button variant="ghost" href="#" className="hidden lg:block text-[0.7rem] font-medium uppercase tracking-[0.1em] text-white/55 hover:text-white transition-[color] duration-[var(--transition-fast)]">
               {t.nav.login}
             </Button>
-            <Button variant="primary" className="hidden lg:block text-[0.75rem] font-bold uppercase tracking-[0.14em] px-6 py-2.5 hover:opacity-85 transition-opacity duration-300">
+            <Button variant="primary" className="hidden lg:block text-sm font-bold uppercase tracking-[-0.02em] px-6 py-2.5 ">
               {t.nav.bookTrip}
             </Button>
 
@@ -85,48 +111,86 @@ const navItems = [
               onClick={() => setMobileOpen((v) => !v)}
               aria-label="Toggle menu"
             >
-              {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+              <motion.div
+                key={mobileOpen ? "close" : "menu"}
+                initial={{ rotate: -90, opacity: 0 }}
+                animate={{ rotate: 0, opacity: 1 }}
+                exit={{ rotate: 90, opacity: 0 }}
+                transition={{ duration: 0.2, ease: [0.23, 1, 0.32, 1] as const }}
+              >
+                {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+              </motion.div>
             </Button>
           </div>
         </div>
       </nav>
 
       {/* Mobile backdrop */}
-      {mobileOpen && (
-        <div
-          className="fixed inset-0 top-[72px] z-[840] bg-black/60 lg:hidden"
-          onClick={() => setMobileOpen(false)}
-        />
-      )}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 top-[72px] z-[840] bg-black/60 lg:hidden"
+            onClick={() => setMobileOpen(false)}
+          />
+        )}
+      </AnimatePresence>
 
       {/* Mobile drawer */}
       <div className={clsx(
-        "fixed top-[72px] left-0 right-0 z-[850] bg-[var(--color-primary)] border-t border-white/10 transition-[max-height,opacity] duration-300 lg:hidden overflow-hidden",
+        "fixed top-[72px] left-0 right-0 z-[850] bg-[var(--color-primary)] border-t border-white/10 transition-[max-height,opacity] duration-[var(--transition-base)] lg:hidden overflow-hidden",
         mobileOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
       )}>
         <div className="flex flex-col px-6 py-8 gap-1">
-          {navItems.map((item) => (
-            <Button
+          {navItems.map((item, i) => (
+            <motion.div
               key={item.slug}
-              href={`/en/templates/OHMT008-airline/${item.slug}`}
-              onClick={() => setMobileOpen(false)}
-              className="text-[0.9rem] font-semibold uppercase tracking-[0.14em] text-white/60 hover:text-white py-4 border-b border-white/10 transition-colors"
-              asChild
+              custom={i}
+              variants={mobileItemVariants}
+              initial="initial"
+              animate={mobileOpen ? "animate" : "initial"}
+              exit="exit"
             >
-              {item.name}
-            </Button>
+              <Button
+                href={`/en/templates/OHMT008-airline/${item.slug}`}
+                onClick={() => setMobileOpen(false)}
+                className="w-full text-left text-sm font-semibold uppercase tracking-[-0.02em] text-white/60 hover:text-white py-4 border-b border-white/10 transition-[color] duration-[var(--transition-fast)]"
+                asChild
+              >
+                {item.name}
+              </Button>
+            </motion.div>
           ))}
+          <motion.div
+            custom={navItems.length}
+            variants={mobileItemVariants}
+            initial="initial"
+            animate={mobileOpen ? "animate" : "initial"}
+            exit="exit"
+          >
             <Button
               variant="outline"
               href="/en/templates/OHMT008-airline/book"
               onClick={() => setMobileOpen(false)}
-              className="text-[0.9rem] font-semibold uppercase tracking-[0.14em] hover:text-[var(--color-accent-light)] py-4 border-b border-white/10 transition-colors"
+              className="w-full text-left text-sm font-semibold uppercase tracking-[-0.02em] hover:text-[var(--color-accent-light)] py-4 border-b border-white/10 transition-[color] duration-[var(--transition-fast)]"
             >
               {t.nav.bookTrip}
             </Button>
-          <Link href="#" onClick={() => setMobileOpen(false)} className="text-[0.85rem] font-medium uppercase tracking-[0.1em] text-white/40 hover:text-white transition-colors py-4">
-            {t.nav.login}
-          </Link>
+          </motion.div>
+          <motion.div
+            custom={navItems.length + 1}
+            variants={mobileItemVariants}
+            initial="initial"
+            animate={mobileOpen ? "animate" : "initial"}
+            exit="exit"
+          >
+            <Link href="#" onClick={() => setMobileOpen(false)} className="block text-[0.85rem] font-medium uppercase tracking-[0.1em] text-white/40 hover:text-white transition-[color] duration-[var(--transition-fast)] py-4">
+              {t.nav.login}
+            </Link>
+          </motion.div>
         </div>
       </div>
     </>

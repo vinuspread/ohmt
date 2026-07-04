@@ -40,11 +40,11 @@ export default function Hero() {
                style={{ fontFamily: "var(--font-body)" }}>
               {BRAND.tagline}
             </p>
-            <h1 className="text-[clamp(3.5rem,8vw,7.5rem)] font-normal text-white leading-[1.05] tracking-[-0.03em]"
+            <h1 className="text-[clamp(3.5rem,8vw,7.5rem)] font-normal text-white leading-[1.1] tracking-[-0.03em]"
                 style={{ fontFamily: "var(--font-heading)" }}>
-              모든 움직임에
+              모든 호흡과
               <br />
-              깃든 고요함
+              움직임의 고요
             </h1>
           </div>
 

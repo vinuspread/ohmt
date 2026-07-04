@@ -35,7 +35,9 @@
   --shadow-card: 0 1px 3px rgba(0,0,0,0.4), 0 1px 2px rgba(0,0,0,0.3);
   --shadow-elevated: 0 4px 16px rgba(0,0,0,0.5);
   --shadow-focus: 0 0 0 3px var(--color-primary-border);
-}
+
+  --focus-ring: 2px solid var(--color-primary);
+  --focus-ring-offset: 2px;}
 
 /* Korean typography */
 body, * { word-break: keep-all; }
@@ -103,4 +105,14 @@ h1, h2, h3, h4, h5, h6,
 header a, header button, header span, header nav, 
 nav a, nav button, nav span {
   letter-spacing: -0.03em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

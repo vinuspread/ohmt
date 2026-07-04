@@ -1,11 +1,13 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export function TemplateWrapper({ children }: { children: React.ReactNode }) {
   const [animationComplete, setAnimationComplete] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setAnimationComplete(true), 800);
+    const prefersReducedMotion =
+      typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const timer = setTimeout(() => setAnimationComplete(true), prefersReducedMotion ? 0 : 800);
     return () => clearTimeout(timer);
   }, []);
 

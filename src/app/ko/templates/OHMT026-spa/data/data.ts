@@ -21,12 +21,12 @@ export interface Service {
 }
 
 export const services: Service[] = [
-  { id: "laser-resurfacing", title: "레이저 스킨 리서페이싱", description: "정밀 레이저로 피부 결과 톤을 개선하고 생기 있는 피부로 가꿔줍니다.", image: "/templates/OHMT026-spa/service-01.jpg" },
-  { id: "chemical-peels", title: "케미컬 필", description: "순한 각질 제거 필로 환하고 고른 피부 톤을 만들어줍니다.", image: "/templates/OHMT026-spa/service-02.jpg" },
-  { id: "hydrafacial", title: "하이드라페이셜", description: "딥 클렌징과 보충으로 피부에 윤기와 생기를 되찾아주는 리추얼.", image: "/templates/OHMT026-spa/service-03.jpg" },
-  { id: "microneedling", title: "마이크로니들링", description: "자연 콜라겐 생성을 촉진하여 탄력 있고 매끄러운 피부로.", image: "/templates/OHMT026-spa/service-04.jpg" },
-  { id: "body-massage", title: "딥 티슈 마사지", description: "강하고 치료적인 압력으로 근육 긴장을 완화하는 전신 릴리프.", image: "/templates/OHMT026-spa/service-05.jpg" },
-  { id: "aromatherapy", title: "아로마테라피 리추얼", description: "에센셜 오일과 부드러운 마사지가 조화를 이루어 마음을 진정시키고 균형을 회복합니다.", image: "/templates/OHMT026-spa/service-06.jpg" },
+  { id: "laser-resurfacing", title: "레이저 스킨 리서페이싱", description: "정밀 레이저로 피부 결과 톤을 개선하고 생기 있는 피부로 가꿔줍니다.", image: "/templates/OHMT026-spa/service-laser-resurfacing.jpg" },
+  { id: "chemical-peels", title: "케미컬 필", description: "순한 각질 제거 필로 환하고 고른 피부 톤을 만들어줍니다.", image: "/templates/OHMT026-spa/service-chemical-peels.jpg" },
+  { id: "hydrafacial", title: "하이드라페이셜", description: "딥 클렌징과 보충으로 피부에 윤기와 생기를 되찾아주는 리추얼.", image: "/templates/OHMT026-spa/service-hydrafacial.jpg" },
+  { id: "microneedling", title: "마이크로니들링", description: "자연 콜라겐 생성을 촉진하여 탄력 있고 매끄러운 피부로.", image: "/templates/OHMT026-spa/service-microneedling.jpg" },
+  { id: "body-massage", title: "딥 티슈 마사지", description: "깊은 압으로 뭉친 근육을 풀고 몸의 긴장을 낮춥니다.", image: "/templates/OHMT026-spa/service-body-massage.jpg" },
+  { id: "aromatherapy", title: "아로마테라피 리추얼", description: "에센셜 오일과 부드러운 마사지로 호흡과 몸을 편안하게 합니다.", image: "/templates/OHMT026-spa/service-aromatherapy.jpg" },
 ];
 
 export interface PricingPlan {
@@ -52,10 +52,10 @@ export interface TeamMember {
 }
 
 export const team: TeamMember[] = [
-  { id: "emily-carter", name: "에밀리 카터 박사", role: "수석 테라피스트", image: "/templates/OHMT026-spa/team-01.jpg" },
-  { id: "marcus-lee", name: "마커스 리", role: "시니어 에스테티션", image: "/templates/OHMT026-spa/team-02.jpg" },
-  { id: "ana-rivera", name: "아나 리베라", role: "웰니스 스페셜리스트", image: "/templates/OHMT026-spa/team-03.jpg" },
-  { id: "james-park", name: "제임스 박", role: "마사지 테라피스트", image: "/templates/OHMT026-spa/team-04.jpg" },
+  { id: "emily-carter", name: "에밀리 카터 박사", role: "수석 테라피스트", image: "/templates/OHMT026-spa/team-emily-carter.jpg" },
+  { id: "marcus-lee", name: "마커스 리", role: "시니어 에스테티션", image: "/templates/OHMT026-spa/team-marcus-lee.jpg" },
+  { id: "ana-rivera", name: "아나 리베라", role: "웰니스 스페셜리스트", image: "/templates/OHMT026-spa/team-ana-rivera.jpg" },
+  { id: "james-park", name: "제임스 박", role: "마사지 테라피스트", image: "/templates/OHMT026-spa/team-james-park.jpg" },
 ];
 
 export interface FaqItem {
@@ -80,7 +80,7 @@ export interface Testimonial {
 export const testimonials: Testimonial[] = [
   { name: "김수아", role: "2024년부터 회원", quote: "여기 팀은 진정으로 귀 기울여 줍니다. 피부가 이렇게 차분하고 균일해진 적이 없어요." },
   { name: "이준호", role: "2025년부터 회원", quote: "예약이 간편하고 매번 그 주에 필요한 맞춤 관리를 받는 기분이에요." },
-  { name: "박지영", role: "2023년부터 회원", quote: "들어서는 순간부터 나가는 순간까지 프리미엄 경험 그 자체입니다." },
+  { name: "박지영", role: "2023년부터 회원", quote: "들어서는 순간부터 나갈 때까지 조용히 관리받는 느낌이 좋습니다." },
 ];
 
 export interface StatCounter {
@@ -102,9 +102,9 @@ export interface Advantage {
 
 export const advantages: Advantage[] = [
   { title: "공인 테라피스트", description: "모든 트리트먼트는 고급 교육을 받은 면허 전문가가 진행합니다." },
-  { title: "맞춤형 플랜", description: "당신의 피부는 유일합니다. 모든 세션을 개인에게 맞춥니다." },
-  { title: "프리미엄 제품", description: "안전하고 확실한 결과를 위해 의료용 등급 유기농 제품을 사용합니다." },
-  { title: "차분한 환경", description: "스트레스를 줄이고 치유를 촉진하도록 설계된 고요한 공간에서 휴식하세요." },
+  { title: "맞춤형 플랜", description: "피부 상태와 목표에 따라 세션 구성을 조정합니다." },
+  { title: "프리미엄 제품", description: "민감한 피부에도 부담이 적은 전문 제품을 선별해 사용합니다." },
+  { title: "차분한 환경", description: "조용한 공간에서 상담부터 마무리까지 여유 있게 진행합니다." },
   { title: "유연한 예약", description: "언제든 온라인으로 예약하세요. 24시간 전 통보로 무료 변경 가능합니다." },
   { title: "결과 보장", description: "첫 세션 후 만족하지 않으시면 바로 조치해드립니다." },
 ];
@@ -121,14 +121,14 @@ export const caseStudies: CaseStudy[] = [
   {
     id: "acne-recovery",
     title: "여드름 흉터 개선",
-    summary: "마이크로니들링과 레이저 치료를 통해 낭성 여드름에서 매끄럽고 자신감 있는 피부로의 6개월 여정.",
+    summary: "마이크로니들링과 레이저 치료를 병행한 6개월 개선 사례.",
     detail: "고객은 장기간 활동성 여드름 이후 깊은 낭성 여드름 흉터를 가지고 내원했습니다. 프랙셔널 CO2 레이저 리서페이싱과 6주 간격 4회 마이크로니들링을 병행하고, 레티노이드와 비타민 C 세럼을 포함한 의료용 홈케어 루틴을 지원했습니다.",
     result: "6개월 후 흉터 깊이가 90% 감소했습니다. 고객은 자신감이 현저히 개선되었다고 보고했으며, 현재 분기별 유지 세션으로 결과를 관리하고 있습니다.",
   },
   {
     id: "anti-aging",
-    title: "에이징 관리 트랜스포메이션",
-    summary: "필, 콜라겐 유도, 맞춤형 스킨케어를 결합한 종합 항노화 프로그램.",
+    title: "에이징 관리 사례",
+    summary: "필, 콜라겐 유도, 맞춤형 홈케어를 결합한 항노화 프로그램.",
     detail: "40대 후반의 고객이 수술 없이 미세 주름, 탄력 저하, 색소 침착을 해결하고자 했습니다. 중간 깊이 케미컬 필과 PRP 마이크로니들링을 교차하는 12개월 프로토콜을 설계하고, 엄격한 선크림과 펩타이드 제품 사용을 병행했습니다.",
     result: "3개월 내 피부 탄력과 결이 눈에 띄게 개선되었습니다. 미세 주름이 60% 감소하고 전체 프로그램 후 색소 침착이 확연히 줄었습니다.",
   },
@@ -136,7 +136,7 @@ export const caseStudies: CaseStudy[] = [
     id: "hyperpigmentation",
     title: "색소 침착 교정",
     summary: "표적 필과 레이저 치료의 조합으로 기미와 자외선 손상 개선.",
-    detail: "고객은 자외선 노출과 호르몬 변화로 악화된顽固한 기미를 가지고 있었습니다. 락트산 순차 표면 필과 광범위 자외선 차단 교육, 타이로시나제 억제 홈케어 프로토콜을 결합한 부드러운 접근법을 사용했습니다.",
+    detail: "고객은 자외선 노출과 호르몬 변화로 짙어진 기미를 가지고 있었습니다. 락트산 필과 자외선 차단 교육, 타이로시나제 억제 홈케어를 함께 진행했습니다.",
     result: "5개월 동안 반동 색소 침착 없이 기미가 70% 개선되었습니다. 현재 8주마다 유지 필을 지속하고 있습니다.",
   },
 ];
@@ -152,8 +152,8 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
-  { id: "skincare-routine-guide", title: "실제로 효과 있는 스킨케어 루틴 만들기", excerpt: "피부 타입과 고민에 맞는 루틴을 만드는 피부과 전문의 승인 단계별 가이드.", image: "/templates/OHMT026-spa/blog-01.jpg", date: "2026-02-15", author: "에밀리 카터 박사", category: "스킨케어" },
-  { id: "benefits-of-microneedling", title: "첫 마이크로니들링, 무엇을 기대할까", excerpt: "준비부터 회복, 결과까지 콜라겐 유도 요법에 대해 알아야 할 모든 것.", image: "/templates/OHMT026-spa/blog-02.jpg", date: "2026-01-28", author: "마커스 리", category: "트리트먼트" },
-  { id: "summer-skin-protection", title: "여름철 피부 보호 완벽 가이드", excerpt: "자외선 손상, 열 스트레스, 습기로부터 피부를 보호하는 전문가 추천 팁.", image: "/templates/OHMT026-spa/blog-03.jpg", date: "2026-01-10", author: "아나 리베라", category: "웰니스" },
-  { id: "stress-and-skin", title: "스트레스가 피부에 미치는 영향과 해결법", excerpt: "스트레스 유발 트러블의 과학과 균형 회복에 도움이 되는 트리트먼트.", image: "/templates/OHMT026-spa/blog-04.jpg", date: "2025-12-22", author: "에밀리 카터 박사", category: "웰니스" },
+  { id: "skincare-routine-guide", title: "내 피부에 맞는 루틴 만들기", excerpt: "피부 타입과 고민에 맞춰 아침, 저녁 루틴을 정리하는 방법.", image: "/templates/OHMT026-spa/blog-01.jpg", date: "2026-02-15", author: "에밀리 카터 박사", category: "스킨케어" },
+  { id: "benefits-of-microneedling", title: "첫 마이크로니들링 전 알아둘 것", excerpt: "준비, 회복, 결과까지 첫 방문 전에 확인하면 좋은 내용.", image: "/templates/OHMT026-spa/blog-02.jpg", date: "2026-01-28", author: "마커스 리", category: "트리트먼트" },
+  { id: "summer-skin-protection", title: "여름 피부를 지키는 기본 루틴", excerpt: "자외선, 열감, 습도 변화에 맞춰 피부 부담을 줄이는 방법.", image: "/templates/OHMT026-spa/blog-03.jpg", date: "2026-01-10", author: "아나 리베라", category: "웰니스" },
+  { id: "stress-and-skin", title: "스트레스가 피부에 남기는 신호", excerpt: "스트레스성 트러블을 줄이기 위해 살펴볼 생활 습관과 케어.", image: "/templates/OHMT026-spa/blog-04.jpg", date: "2025-12-22", author: "에밀리 카터 박사", category: "웰니스" },
 ];

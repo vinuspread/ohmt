@@ -26,9 +26,9 @@ export function Footer() {
           {/* Left: CTA */}
           <div className="md:col-span-3">
             <p className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-bold text-[var(--color-text)] leading-snug mb-6">
-              �������� �̾߱⸦ ��� �ͽ��ϴ�
+              프로젝트 이야기를 듣고 싶습니다
               <br />
-              <span className="text-[var(--color-text-muted)] font-normal">������Ʈ�� �ֵ�, �λ縦 �ǳװ� �͵�.</span>
+              <span className="text-[var(--color-text-muted)] font-normal">짧은 문의도, 가벼운 인사도 좋아요.</span>
             </p>
             <Link href={`mailto:${designerInfo.contact.email}`}
               className="inline-block text-[1.3rem] font-bold text-[var(--color-text)] border-b-2 border-[var(--color-primary)] pb-0.5 hover:opacity-60 transition-opacity">
@@ -38,16 +38,16 @@ export function Footer() {
 
           {/* Right: Newsletter */}
           <div className="md:col-span-2">
-            <h3 className="text-[1.6rem] font-bold text-[var(--color-text)] mb-2">�������� ����</h3>
-            <p className="text-[0.82rem] text-[var(--color-text-muted)] mb-6">���� ���ϴ� ������ Ʈ���� �ҽ�.</p>
+            <h3 className="text-[1.6rem] font-bold text-[var(--color-text)] mb-2">뉴스레터 구독</h3>
+            <p className="text-[0.82rem] text-[var(--color-text-muted)] mb-6">가끔 보내는 작업 노트와 소식.</p>
             <form className="space-y-3" onSubmit={e => e.preventDefault()}>
-              <input type="text" placeholder="�̸�"
+              <input type="text" placeholder="이름"
                 className="w-full border-b border-[var(--color-border)] bg-transparent py-3 text-[0.88rem] text-[var(--color-text)] placeholder:text-[var(--color-text-muted)] outline-none focus:border-[var(--color-primary)] transition-colors" />
-              <input type="email" placeholder="�̸���"
+              <input type="email" placeholder="이메일"
                 className="w-full border-b border-[var(--color-border)] bg-transparent py-3 text-[0.88rem] text-[var(--color-text)] placeholder:text-[var(--color-text-muted)] outline-none focus:border-[var(--color-primary)] transition-colors" />
               <button type="submit"
                 className="w-full bg-[var(--color-primary)] text-white text-[0.78rem] font-bold uppercase tracking-widest py-4 mt-2 hover:bg-black transition-colors">
-                ������
+                구독하기
               </button>
             </form>
           </div>
@@ -65,7 +65,7 @@ export function Footer() {
               </Link>
             ))}
           </div>
-          <span className="text-[0.75rem] text-[var(--color-text-muted)]">�� 2026 OHMT.</span>
+          <span className="text-[0.75rem] text-[var(--color-text-muted)]">© 2026 OHMT.</span>
         </div>
       </div>
     </footer>

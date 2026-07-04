@@ -32,6 +32,16 @@ nav a, nav button, nav span {
   letter-spacing: -0.03em;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 /* Korean typography rules (Korean Kerning Rule) */
 body[lang="ko"], [lang="ko"], :root {
   word-break: keep-all;

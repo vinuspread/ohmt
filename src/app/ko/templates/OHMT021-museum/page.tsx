@@ -83,7 +83,7 @@ function HomeContent() {
           </motion.span>
           <motion.h2
             variants={fadeIn}
-            className="text-3xl md:text-4xl lg:text-[4vw] font-normal leading-[1.0] tracking-[-0.03em] mb-8 md:mb-12 text-[var(--color-accent)]"
+            className="text-3xl md:text-4xl lg:text-[4vw] font-normal leading-[1.1] tracking-[-0.03em] mb-8 md:mb-12 text-[var(--color-accent)]"
             style={{ fontFamily: "'Nanum Myeongjo', 'Noto Serif KR', serif" }}
           >
             {"수천 년의 침묵 속에서"} <br />
@@ -194,7 +194,7 @@ function HomeContent() {
             className="order-2 md:order-1 max-w-lg"
           >
             <span className="text-[12px] md:text-[13px] uppercase font-bold tracking-[0.5em] text-black/40 mb-4 md:mb-6 block">{"에디토리얼"}</span>
-            <h3 className="text-4xl md:text-7xl font-serif font-bold mb-4 md:mb-10 leading-[1.5] tracking-[-0.03em]">{"신성한 비례"}</h3>
+             <h3 className="text-4xl md:text-7xl font-serif font-bold mb-4 md:mb-10 leading-[1.1] tracking-[-0.03em]">{"신성한 비례"}</h3>
             <p className="text-base md:text-lg text-black/70 leading-relaxed mb-4 md:mb-10 font-normal">
               {"바티칸 미술관은 단순히 역사적 유물의 저장소가 아닌, 완벽을 향한 인류의 끊임없는 열망이 담긴 거대한 기념비와 같습니다. 그 회랑을 거니는 것은 르네상스 시대의 지성과 영혼이 물리적으로 구현된 공간을 직접 마주하는 것과 다름없습니다."}
               <br /><br />

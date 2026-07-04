@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'motion/react';
 import { exhibitions } from './constants';
@@ -15,6 +15,16 @@ const easeOut = [0.23, 1, 0.32, 1] as const;
 type Tab = 'on-show' | 'opening-soon' | 'permanent';
 
 const mosaicImages = Array.from({ length: 9 }, (_, i) => `/templates/OHMT003-exhibition/mosaic-0${i + 1}.jpg`);
+
+const mosaicArtworksEn = [
+  { title: 'Intersection of Form', artist: 'Sophie Laurent', year: '2024' },
+  { title: 'The Weight of Time', artist: 'Marc Debussy', year: '2023' },
+  { title: 'Fantasy of Light', artist: 'Elena Rostova', year: '2025' },
+  { title: 'Abyss of Silence', artist: 'Jean-Luc Godard', year: '2022' },
+  { title: 'Geometric Order', artist: 'Anna K.', year: '2024' },
+  { title: 'Melody of the City', artist: 'David Miller', year: '2023' },
+  { title: 'Deconstructed Space', artist: 'Clara Oswald', year: '2025' },
+];
 
 const events = [
   {
@@ -54,6 +64,38 @@ const events = [
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState<Tab>('on-show');
   const sliderRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const elementHeight = rect.height;
+      const windowHeight = window.innerHeight;
+      
+      const scrollRange = elementHeight - windowHeight;
+      if (scrollRange <= 0) return;
+      
+      const currentScroll = -rect.top;
+      const progress = Math.min(Math.max(currentScroll / scrollRange, 0), 1);
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
+  }, []);
+
+  // Translate right image grid by up to -620px to perfectly dock with text bottom baseline
+  const y = scrollProgress <= 0.75 
+    ? `${(scrollProgress / 0.75) * -620}px` 
+    : '-620px';
 
   const filtered = exhibitions.filter((ex) => ex.status === activeTab);
 
@@ -102,14 +144,14 @@ export default function HomePage() {
                 </h2>
                 <div className="mt-10 aspect-[3/4] overflow-hidden md:hidden">
                   <img
-                    src="/templates/OHMT003-exhibition/hero-right.jpg"
+                    src="/templates/OHMT003-exhibition/hero-right-sub.jpg"
                     alt=""
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <Link
                   href="/en/templates/OHMT003-exhibition/contact"
-                  className="relative overflow-hidden group inline-flex px-8 py-4 border border-black mt-10"
+                  className="relative overflow-hidden group inline-flex px-8 py-4 border border-black mt-10 active:scale-[0.97] transition-transform duration-100"
                 >
                   <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
                   <span className="relative text-black group-hover:text-white text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-300">
@@ -120,7 +162,7 @@ export default function HomePage() {
 
               <div className="hidden md:block w-[70%] aspect-[3/4] overflow-hidden self-end">
                 <img
-                  src="/templates/OHMT003-exhibition/hero-right.jpg"
+                  src="/templates/OHMT003-exhibition/hero-right-sub.jpg"
                   alt=""
                   className="w-full h-full object-cover"
                 />
@@ -129,7 +171,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        <div className="max-w-[1400px] mx-auto px-6 pb-12 mt-[200px]">
+        <div className="w-full max-w-[1400px] mx-auto px-6 pb-12 mt-[200px] overflow-hidden">
           <div className="flex items-center justify-between mb-6">
             <span className="text-[10px] font-body font-semibold uppercase tracking-[0.1em] text-black/60">
               Popular Now
@@ -137,14 +179,14 @@ export default function HomePage() {
             <div className="flex gap-2">
               <button
                 onClick={() => scrollSlider('left')}
-                className="w-8 h-8 border border-black flex items-center justify-center text-[12px] hover:bg-black hover:text-white transition-colors duration-200"
+                className="w-8 h-8 border border-black flex items-center justify-center text-[12px] hover:bg-black hover:text-white active:scale-[0.95] transition duration-200"
                 aria-label="Previous"
               >
                 &larr;
               </button>
               <button
                 onClick={() => scrollSlider('right')}
-                className="w-8 h-8 border border-black flex items-center justify-center text-[12px] hover:bg-black hover:text-white transition-colors duration-200"
+                className="w-8 h-8 border border-black flex items-center justify-center text-[12px] hover:bg-black hover:text-white active:scale-[0.95] transition duration-200"
                 aria-label="Next"
               >
                 &rarr;
@@ -153,11 +195,11 @@ export default function HomePage() {
           </div>
           <div
             ref={sliderRef}
-            className="flex gap-10 overflow-x-auto scrollbar-hide"
+            className="flex w-full max-w-full gap-6 md:gap-10 overflow-x-auto scrollbar-hide"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
           >
             {exhibitions.slice(0, 3).map((ex) => (
-              <div key={ex.slug} className="flex-none w-[340px]">
+              <div key={ex.slug} className="flex-none w-[min(340px,calc(100vw-48px))]">
                 <ExhibitionCard exhibition={ex} />
               </div>
             ))}
@@ -166,52 +208,91 @@ export default function HomePage() {
       </section>
 
       {/* Section 2 - Mosaic */}
-      <section className="relative bg-[var(--color-bg)]" style={{ height: '280vh' }}>
-        <div className="sticky top-[12%] z-10 pointer-events-none max-w-[1400px] mx-auto px-6 pt-24" style={{ mixBlendMode: 'difference' }}>
+      <section className="relative bg-[var(--color-bg)]" style={{ height: '230vh' }}>
+        {/* Sticky Overlay Text (Natural CSS sticky layout) */}
+        <div className="sticky z-10 pointer-events-none max-w-[1400px] mx-auto px-6 pt-24" style={{ top: '12vh' }}>
           <h2
-            className="font-heading font-semibold uppercase text-white"
+            className="font-heading font-semibold uppercase text-black"
             style={{ fontSize: 'clamp(3rem, 5vw, 4.5rem)', letterSpacing: '-0.04em', lineHeight: '0.96' }}
           >
             Collect What<br />Moves You
           </h2>
-          <p className="mt-6 text-[18px] font-body text-white/70 leading-relaxed max-w-[36ch]">
+          <p className="mt-6 text-[18px] font-body text-black/60 leading-relaxed max-w-[36ch]">
             Every piece is chosen to provoke, comfort, or challenge - sometimes all at once.
           </p>
         </div>
 
-        <div className="max-w-[1400px] mx-auto px-6 pt-[40vh]">
-
+        {/* Mosaic Image Grid (Block level grid following natural scroll flow) */}
+        <div className="max-w-[1400px] mx-auto px-6 pt-[22vh] pb-[65vh]">
           {/* Row 1: wide left + portrait right */}
           <div className="grid grid-cols-3 gap-6 mb-6">
-            <div className="col-span-2 aspect-[16/10] overflow-hidden">
-              <img src={mosaicImages[0]} alt="" className="w-full h-full object-cover" />
+            <div className="col-span-2 aspect-[16/10] overflow-hidden group relative cursor-pointer">
+              <img src={mosaicImages[0]} alt={mosaicArtworksEn[0].title} className="w-full h-full object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+              <div className="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out flex flex-col justify-end p-6 z-10">
+                <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300 ease-out">
+                  <span className="text-[11px] text-white/60 tracking-[0.2em] uppercase font-bold">{mosaicArtworksEn[0].artist}</span>
+                  <h4 className="font-serif text-lg md:text-xl font-bold text-white mt-1">{mosaicArtworksEn[0].title}</h4>
+                  <p className="text-[11px] text-white/40 mt-1 font-body">{mosaicArtworksEn[0].year}</p>
+                </div>
+              </div>
             </div>
-            <div className="col-span-1 aspect-[16/10] overflow-hidden">
-              <img src={mosaicImages[1]} alt="" className="w-full h-full object-cover" />
+            <div className="col-span-1 aspect-[16/10] overflow-hidden group relative cursor-pointer">
+              <img src={mosaicImages[1]} alt={mosaicArtworksEn[1].title} className="w-full h-full object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+              <div className="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out flex flex-col justify-end p-6 z-10">
+                <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300 ease-out">
+                  <span className="text-[11px] text-white/60 tracking-[0.2em] uppercase font-bold">{mosaicArtworksEn[1].artist}</span>
+                  <h4 className="font-serif text-lg md:text-xl font-bold text-white mt-1">{mosaicArtworksEn[1].title}</h4>
+                  <p className="text-[11px] text-white/40 mt-1 font-body">{mosaicArtworksEn[1].year}</p>
+                </div>
+              </div>
             </div>
           </div>
           {/* Row 2: 3 equal */}
           <div className="grid grid-cols-3 gap-6 mb-6">
-            {mosaicImages.slice(2, 5).map((src) => (
-              <div key={src} className="aspect-[4/3] overflow-hidden">
-                <img src={src} alt="" className="w-full h-full object-cover" />
-              </div>
-            ))}
+            {mosaicImages.slice(2, 5).map((src, index) => {
+              const artwork = mosaicArtworksEn[index + 2];
+              return (
+                <div key={src} className="aspect-[4/3] overflow-hidden group relative cursor-pointer">
+                  <img src={src} alt={artwork.title} className="w-full h-full object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out flex flex-col justify-end p-6 z-10">
+                    <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300 ease-out">
+                      <span className="text-[11px] text-white/60 tracking-[0.2em] uppercase font-bold">{artwork.artist}</span>
+                      <h4 className="font-serif text-lg md:text-xl font-bold text-white mt-1">{artwork.title}</h4>
+                      <p className="text-[11px] text-white/40 mt-1 font-body">{artwork.year}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
           {/* Row 3: portrait left + wide right */}
           <div className="grid grid-cols-3 gap-6">
-            <div className="col-span-1 aspect-[16/10] overflow-hidden">
-              <img src={mosaicImages[5]} alt="" className="w-full h-full object-cover" />
+            <div className="col-span-1 aspect-[16/10] overflow-hidden group relative cursor-pointer">
+              <img src={mosaicImages[5]} alt={mosaicArtworksEn[5].title} className="w-full h-full object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+              <div className="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out flex flex-col justify-end p-6 z-10">
+                <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300 ease-out">
+                  <span className="text-[11px] text-white/60 tracking-[0.2em] uppercase font-bold">{mosaicArtworksEn[5].artist}</span>
+                  <h4 className="font-serif text-lg md:text-xl font-bold text-white mt-1">{mosaicArtworksEn[5].title}</h4>
+                  <p className="text-[11px] text-white/40 mt-1 font-body">{mosaicArtworksEn[5].year}</p>
+                </div>
+              </div>
             </div>
-            <div className="col-span-2 aspect-[16/10] overflow-hidden">
-              <img src={mosaicImages[6]} alt="" className="w-full h-full object-cover" />
+            <div className="col-span-2 aspect-[16/10] overflow-hidden group relative cursor-pointer">
+              <img src={mosaicImages[6]} alt={mosaicArtworksEn[6].title} className="w-full h-full object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+              <div className="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out flex flex-col justify-end p-6 z-10">
+                <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300 ease-out">
+                  <span className="text-[11px] text-white/60 tracking-[0.2em] uppercase font-bold">{mosaicArtworksEn[6].artist}</span>
+                  <h4 className="font-serif text-lg md:text-xl font-bold text-white mt-1">{mosaicArtworksEn[6].title}</h4>
+                  <p className="text-[11px] text-white/40 mt-1 font-body">{mosaicArtworksEn[6].year}</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Section 3 - Exhibition List */}
-      <section className="bg-[var(--color-bg)] py-32">
+      <section className="relative z-30 bg-[#FCFCFC] pt-28 pb-32" style={{ backgroundColor: 'var(--color-bg)' }}>
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div>
@@ -247,7 +328,7 @@ export default function HomePage() {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className="pb-3 text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-200"
+                className="pb-3 text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-200 active:scale-[0.97]"
                 style={{
                   color: activeTab === tab ? '#000000' : 'rgba(0,0,0,0.4)',
                   borderBottom: activeTab === tab ? '2px solid #000000' : '2px solid transparent',
@@ -315,29 +396,31 @@ export default function HomePage() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-10">
-            {events.map((evt) => (
+            {events.slice(0, 2).map((evt) => (
               <div key={evt.title} className="group cursor-pointer">
                 <div className="aspect-[16/9] overflow-hidden">
                   <img
                     src={evt.image}
                     alt={evt.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-105"
                   />
                 </div>
                 <div className="flex items-center justify-between mt-6">
-                  <p className="text-[11px] font-body text-black/50 tracking-[0.06em] uppercase">
+                  <p className="text-[11px] font-body text-black/50 tracking-[0.06em]">
                     {evt.date} <span className="mx-1.5 opacity-40">·</span> {evt.time}
                   </p>
-                  <span className="text-[10px] font-body font-semibold uppercase tracking-[0.1em] text-white bg-black px-2.5 py-1">
-                    {evt.ageRating}
-                  </span>
+                  <div className="flex gap-2">
+                    <span className="text-[10px] font-body font-semibold uppercase tracking-[0.1em] px-2.5 py-1 border border-black">
+                      {evt.type}
+                    </span>
+                    <span className="text-[10px] font-body font-semibold uppercase tracking-[0.1em] text-white bg-black px-2.5 py-1">
+                      {evt.ageRating}
+                    </span>
+                  </div>
                 </div>
-                <h3 className="mt-3 text-[1.25rem] font-heading font-semibold uppercase tracking-[-0.02em] text-black leading-tight">
+                <h3 className="mt-3 text-[1.25rem] font-heading font-semibold tracking-[-0.02em] text-black leading-tight">
                   {evt.title}
                 </h3>
-                <p className="mt-2 text-[11px] font-body text-black/40 uppercase tracking-[0.08em]">
-                  {evt.type}
-                </p>
               </div>
             ))}
           </div>

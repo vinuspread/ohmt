@@ -50,7 +50,7 @@ export default function DinePage() {
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-transparent" />
           <div className="relative z-10 max-w-[1440px] mx-auto w-full px-10">
             <h1 className="text-white tracking-[-0.02em] leading-[0.85] mb-6 font-semibold uppercase"
-              style={{ fontSize: "clamp(80px, 14vw, 220px)" }}>
+              style={{ fontSize: "clamp(60px, 10vw, 160px)" }}>
             THE<br />CULINARY
           </h1>
             <p className="text-white/70 text-[19px] max-w-[520px] font-[300] leading-relaxed">

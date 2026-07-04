@@ -43,7 +43,7 @@ function IRTemplateContent() {
                 <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-5">
                   경영진 메시지
                 </span>
-                <h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.5] mb-6">
+                <h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.1] mb-6">
                   변화하는 시대의 가치 창출
                 </h2>
                 <p className="text-[0.88rem] text-[#6B6B6B] leading-[1.82] mb-8 font-normal">

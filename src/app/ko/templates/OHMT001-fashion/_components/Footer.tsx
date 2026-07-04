@@ -8,7 +8,7 @@ export const Newsletter = () => {
         <section className="py-12 md:py-24 lg:py-32 bg-[var(--color-bg-secondary)] text-black">
             <div className="max-w-[1440px] mx-auto px-6 md:px-12 text-center">
                 <span className="text-[13px] uppercase tracking-tight font-bold opacity-40 mb-6 md:mb-10 block">연결하기</span>
-                <h2 className="text-[28px] sm:text-[4vw] font-bold tracking-[-0.03em] uppercase mb-10 md:mb-16 leading-none">
+                <h2 className="text-[28px] sm:text-[4vw] font-bold tracking-[-0.03em] uppercase mb-10 md:mb-16 leading-[1.1]">
                     래보라토리 시리즈에 합류하세요
                 </h2>
                 <div className="max-w-2xl mx-auto relative group">
@@ -35,7 +35,8 @@ export const Footer = () => {
             OHMT
           </Link>
           <p className="text-[14px] text-black/60 font-medium leading-relaxed max-w-xs mt-4 md:mt-6">
-            침묵 속에서 울려 퍼지는 형태의 언어. 다음 세대를 위한 디지털 럭셔리를 재정의합니다.
+            침묵 속에서 울려 퍼지는 형태의 언어.<br />
+            다음 세대를 위한 디지털 럭셔리를 재정의합니다.
           </p>
           <div className="flex gap-6 mt-8 md:mt-12">
             <Link href="#" className="hover:opacity-50 transition-opacity"><Globe size={18} /></Link>
@@ -47,17 +48,17 @@ export const Footer = () => {
         <div className="space-y-4 md:space-y-8">
             <h5 className="text-[13px] font-medium uppercase tracking-tight text-black/30">카탈로그</h5>
             <ul className="space-y-3 md:space-y-4 text-[12px] font-medium uppercase tracking-widest">
-                <li><Link href="/ko/templates/OHMT001-fashion/category/ss26" className="hover:text-black/40 transition-colors">26 봄/여름</Link></li>
-                <li><Link href="/ko/templates/OHMT001-fashion/category/aw25" className="hover:text-black/40 transition-colors">25 가을/겨울</Link></li>
-                <li><Link href="/ko/templates/OHMT001-fashion/category/core" className="hover:text-black/40 transition-colors">코어 시리즈</Link></li>
-                <li><Link href="/ko/templates/OHMT001-fashion/category/limited" className="hover:text-black/40 transition-colors">리미티드 드롭</Link></li>
+                <li><Link href="/ko/templates/OHMT001-fashion/collection" className="hover:text-black/40 transition-colors">26 봄/여름</Link></li>
+                <li><Link href="/ko/templates/OHMT001-fashion/archive" className="hover:text-black/40 transition-colors">25 가을/겨울</Link></li>
+                <li><Link href="/ko/templates/OHMT001-fashion/collection" className="hover:text-black/40 transition-colors">코어 시리즈</Link></li>
+                <li><Link href="/ko/templates/OHMT001-fashion/archive" className="hover:text-black/40 transition-colors">리미티드 드롭</Link></li>
             </ul>
         </div>
 
         <div className="space-y-4 md:space-y-8">
             <h5 className="text-[13px] font-medium uppercase tracking-tight text-black/30">고객지원</h5>
             <ul className="space-y-3 md:space-y-4 text-[12px] font-medium uppercase tracking-widest">
-                <li><Link href="/ko/templates/OHMT001-fashion/category/ss26" className="hover:text-black/40 transition-colors">고객 센터</Link></li>
+                <li><Link href="/ko/templates/OHMT001-fashion/about" className="hover:text-black/40 transition-colors">고객 센터</Link></li>
             </ul>
         </div>
 

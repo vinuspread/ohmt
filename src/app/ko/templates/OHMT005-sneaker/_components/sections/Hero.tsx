@@ -14,7 +14,7 @@ export const Hero = () => {
             <span className="text-[0.7rem] font-bold uppercase tracking-[0.25em] text-black/40 mb-6 block">
               뉴 컬렉션 - 2026
             </span>
-            <h1 className="text-[clamp(2.4rem,5vw,4.5rem)] font-black tracking-[-0.03em] leading-[1.2] text-black mb-6 uppercase">
+            <h1 className="text-[clamp(2.4rem,5vw,4.5rem)] font-black tracking-[-0.03em] leading-[1.1] text-black mb-6 uppercase">
               거리를 지배하는<br />날 선 감각.
             </h1>
             <p className="text-[0.95rem] text-black/60 leading-relaxed max-w-[380px] mb-10">
@@ -41,7 +41,7 @@ export const Hero = () => {
             <div className="absolute bottom-6 left-6 bg-white px-4 py-3">
               <p className="text-[0.65rem] font-bold uppercase tracking-[0.15em] text-black/40">주목할 모델</p>
               <p className="text-[0.95rem] font-black text-black">Air Max Pro</p>
-              <p className="text-[0.85rem] font-bold text-black">$240 USD</p>
+              <p className="text-[0.85rem] font-bold text-black">₩240,000</p>
             </div>
           </div>
         </div>

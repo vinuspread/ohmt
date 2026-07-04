@@ -15,7 +15,7 @@ const menuItems = [
   { name: "Museum Info", href: "/ko/templates/OHMT021-museum/our-story", desc: "Our 500-Year Legacy" },
   { name: "Collections", href: "/ko/templates/OHMT021-museum/collections", desc: "Explore the Archive" },
   { name: "Exhibitions", href: "/ko/templates/OHMT021-museum/exhibitions", desc: "Current & Special Showings" },
-  { name: "Souvenir Shop", href: "/ko/templates/OHMT021-museum/souvenir", desc: "Echos of History" },
+  { name: "Museum Shop", href: "/ko/templates/OHMT021-museum/shop", desc: "Editions & Collectibles" },
   { name: "Curator Note", href: "/ko/templates/OHMT021-museum/curator-note", desc: "Theological Insights" },
 ];
 

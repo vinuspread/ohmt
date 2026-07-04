@@ -1,10 +1,10 @@
 {
-  "slug": "technology",
+  "slug": "OHMT016-technology",
   "name": "Robotflow Technology",
   "name_ko": "로보플로우 테크놀로지",
   "category": "corporate",
-  "description": "Technology and robotics company landing page template",
-  "description_ko": "테크놀로지 및 로보틱스 기업 랜딩 페이지 템플릿",
+  "description": "A technology and robotics landing page template for product vision, capability sections, use cases, and enterprise-grade proof points.",
+  "description_ko": "제품 비전, 기능 섹션, 활용 사례, 엔터프라이즈 신뢰 요소를 담는 테크놀로지 및 로보틱스 랜딩 페이지 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {

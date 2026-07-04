@@ -22,7 +22,7 @@ export default function ExhibitionsPage() {
       <main>
         <section className="bg-[var(--color-bg)] pt-40 pb-16 border-b border-[var(--color-border)]">
           <div className="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-            <h1 className="font-heading font-semibold uppercase text-black leading-none" style={{ fontSize: 'clamp(4rem, 7vw, 7rem)', letterSpacing: '-0.04em' }}>
+            <h1 className="font-heading font-semibold uppercase text-black leading-[1.1]" style={{ fontSize: 'clamp(4rem, 7vw, 7rem)', letterSpacing: '-0.04em' }}>
               전시
             </h1>
             <p className="text-[14px] font-body text-black/50 leading-relaxed max-w-[32ch] md:text-right">
@@ -35,7 +35,7 @@ export default function ExhibitionsPage() {
         <section className="border-b border-[var(--color-border)]">
           <div className="grid md:grid-cols-[3fr_2fr] h-[75vh]">
             <div className="relative overflow-hidden">
-              <img src={exhibitions[0].heroImage} alt={exhibitions[0].name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <img src={exhibitions[0].heroImage} alt={exhibitions[0].name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 ease-out" />
               <span className="absolute top-8 left-8 text-[10px] font-body font-semibold uppercase tracking-[0.15em] text-white/70 bg-black/40 px-3 py-1.5">주목 전시</span>
             </div>
             <div className="flex flex-col justify-between p-12 md:p-16 border-l border-[var(--color-border)]">
@@ -43,7 +43,7 @@ export default function ExhibitionsPage() {
                 <p className="text-[10px] font-body font-semibold uppercase tracking-[0.12em] text-black/35 mb-8">
                   {exhibitions[0].tags.genre} <span className="mx-1">·</span> {exhibitions[0].tags.theme}
                 </p>
-                <h2 className="font-heading font-semibold uppercase text-black leading-[0.95]" style={{ fontSize: 'clamp(2rem, 3.5vw, 3.5rem)', letterSpacing: '-0.04em' }}>
+                <h2 className="font-heading font-semibold uppercase text-black leading-[1.1]" style={{ fontSize: 'clamp(2rem, 3.5vw, 3.5rem)', letterSpacing: '-0.04em' }}>
                   {exhibitions[0].name}
                 </h2>
                 <p className="mt-6 text-[14px] font-body text-black/55 leading-[1.7]">
@@ -63,7 +63,7 @@ export default function ExhibitionsPage() {
                     </div>
                   ))}
                 </div>
-                <Link href={`/ko/templates/OHMT003-exhibition/exhibitions/${exhibitions[0].slug}`} className="relative overflow-hidden group inline-flex px-8 py-4 border border-black">
+                <Link href={`/ko/templates/OHMT003-exhibition/exhibitions/${exhibitions[0].slug}`} className="relative overflow-hidden group inline-flex px-8 py-4 border border-black active:scale-[0.97] transition-transform duration-100">
                   <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
                   <span className="relative text-black group-hover:text-white text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-300">전시 보기</span>
                 </Link>
@@ -76,7 +76,7 @@ export default function ExhibitionsPage() {
           <div className="max-w-[1400px] mx-auto px-6">
             <div className="flex gap-10 mb-12 border-b border-[var(--color-border)]">
               {(['on-show', 'opening-soon', 'permanent'] as const).map((tab) => (
-                <button key={tab} onClick={() => setActiveTab(tab)} className="pb-3 text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-200"
+                <button key={tab} onClick={() => setActiveTab(tab)} className="pb-3 text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-200 active:scale-[0.97]"
                   style={{ color: activeTab === tab ? '#000000' : 'rgba(0,0,0,0.4)', borderBottom: activeTab === tab ? '2px solid #000000' : '2px solid transparent' }}>
                   {tab === 'on-show' ? '전시 중' : tab === 'opening-soon' ? '개막 예정' : '상설 전시'}
                 </button>

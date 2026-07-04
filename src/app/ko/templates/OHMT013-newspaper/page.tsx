@@ -12,6 +12,17 @@ import theme from "./theme.json";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
 
 function NewspaperTemplateContent() {
+  const base = "/ko/templates/OHMT013-newspaper";
+  const latestArticles = [1, 2, 3, 4].map((n) => ({
+    id: n,
+    href: `${base}/economy/trade-agreement-manufacturing`,
+  }));
+  const opinions = [
+    { author: "사라 젠킨스", title: "현재의 도시 계획 모델이 미래 세대의 삶을 파괴하는 이유.", href: `${base}/opinion/urban-planning-youth` },
+    { author: "마커스 손", title: "오픈소스 인공지능(AI)이 지닌 시대적 도덕적 책무.", href: `${base}/opinion/open-source-ai` },
+    { author: "엘레나 밴스", title: "클래식 음악은 종말을 맞이하는 것이 아니라, 유튜브로 이동하고 있을 뿐이다.", href: `${base}/opinion/classical-music-youtube` }
+  ];
+
   return (
     <TemplateWrapper theme={theme}>
       <main className="antialiased bg-white text-[var(--color-secondary)] selection:bg-[var(--color-primary)] selection:text-white">
@@ -32,12 +43,12 @@ function NewspaperTemplateContent() {
                 <h2 className="font-[family-name:var(--theme-font-heading)] text-2xl font-bold tracking-[-0.03em]">최신 심층 분석</h2>
               </div>
               <div className="grid md:grid-cols-2 gap-8">
-                {[1, 2, 3, 4].map(n => (
-                  <div key={n} className="flex gap-4 pb-6 border-b border-[var(--color-border)] last:border-0 md:[&:nth-last-child(-n+2)]:border-0">
-                    <img loading="lazy" src={`/templates/OHMT013-newspaper/news-${n}.jpg`} className="w-24 h-20 object-cover" alt="Latest" />
+                {latestArticles.map((item) => (
+                  <div key={item.id} className="flex gap-4 pb-6 border-b border-[var(--color-border)] last:border-0 md:[&:nth-last-child(-n+2)]:border-0">
+                    <img loading="lazy" src={`/templates/OHMT013-newspaper/news-${item.id}.jpg`} className="w-24 h-20 object-cover" alt="Latest" />
                     <div>
                       <h4 className="font-[family-name:var(--theme-font-heading)] text-[0.95rem] font-bold leading-tight mb-1 tracking-[-0.03em]">
-                        <Link href="#" className="hover:text-[var(--color-primary)]">신규 무역 협정이 국내 제조업 생태계에 미치는 파장.</Link>
+                        <Link href={item.href} className="hover:text-[var(--color-primary)]">신규 무역 협정이 국내 제조업 생태계에 미치는 파장.</Link>
                       </h4>
                       <div className="font-sans text-[0.72rem] text-[#555] font-medium uppercase">5분 전</div>
                     </div>
@@ -51,15 +62,11 @@ function NewspaperTemplateContent() {
                 <h2 className="font-[family-name:var(--theme-font-heading)] text-2xl font-bold tracking-[-0.03em]">오피니언 & 칼럼</h2>
               </div>
               <div className="flex flex-col gap-6">
-                {[
-                  { author: "사라 젠킨스", title: "현재의 도시 계획 모델이 미래 세대의 삶을 파괴하는 이유." },
-                  { author: "마커스 손", title: "오픈소스 인공지능(AI)이 지닌 시대적 도덕적 책무." },
-                  { author: "엘레나 밴스", title: "클래식 음악은 종말을 맞이하는 것이 아니라, 유튜브로 이동하고 있을 뿐이다." }
-                ].map((item, i) => (
+                {opinions.map((item, i) => (
                   <div key={i} className="pb-6 border-b border-[var(--color-border)] last:border-0">
                     <div className="font-sans text-[0.72rem] font-bold uppercase tracking-wider text-[#555] mb-1">{item.author}</div>
                     <h4 className="font-[family-name:var(--theme-font-heading)] font-serif text-base leading-snug tracking-[-0.03em]">
-                      <Link href="#" className="hover:text-[var(--color-primary)]">"{item.title}"</Link>
+                      <Link href={item.href} className="hover:text-[var(--color-primary)]">"{item.title}"</Link>
                     </h4>
                   </div>
                 ))}

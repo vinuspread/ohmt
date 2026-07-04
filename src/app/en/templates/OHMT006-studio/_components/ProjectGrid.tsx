@@ -1,6 +1,7 @@
 'use client';
 
-import { motion, useViewportScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
+import type { Variants } from 'framer-motion';
 import Image from 'next/image';
 
 const projects = [
@@ -23,7 +24,7 @@ const containerVariants = {
     },
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
     hidden: { opacity: 0, y: 50, scale: 0.9 },
     visible: {
         opacity: 1,
@@ -31,14 +32,12 @@ const itemVariants = {
         scale: 1,
         transition: {
             duration: 0.65,
-            ease: [0.23, 1, 0.32, 1] as any
+            ease: [0.23, 1, 0.32, 1],
         }
     },
 };
 
 export function ProjectGrid() {
-    const { scrollY } = useViewportScroll();
-
     return (
         <section className="bg-white py-[120px] px-[64px]">
             {/* Header */}
@@ -69,7 +68,7 @@ export function ProjectGrid() {
                 className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[32px]"
             >
                 {projects.map((project, idx) => {
-                    const parallaxY = useTransform(scrollY, [1000, 2000], [0, (idx % 3) * 60 - 60]);
+                    const parallaxY = (idx % 3) * 20 - 20;
 
                     return (
                     <motion.div

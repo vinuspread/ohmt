@@ -1,10 +1,10 @@
 {
-  "slug": "museum",
+  "slug": "OHMT021-museum",
   "name": "Exhibition Musei Vaticani",
   "name_ko": "전시 뮤지 바티카니",
   "category": "portfolio",
-  "description": "Museum and gallery exhibition",
-  "description_ko": "뮤지엄 및 갤러리 전시",
+  "description": "A museum and gallery template for exhibitions, collection highlights, visiting information, and cultural storytelling with a calm institutional presence.",
+  "description_ko": "전시, 소장품 하이라이트, 방문 정보, 문화적 스토리를 차분한 기관형 톤으로 보여주는 뮤지엄 및 갤러리 템플릿.",
   "mode": "dark",
   "theme": {
     "palette": {

@@ -54,7 +54,7 @@ function SpecialExhibitionsContent() {
       <section className="px-6 md:px-12 mb-20 md:mb-32 lg:mb-40 text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
           <span className="text-[13px] uppercase font-bold tracking-[0.5em] text-white/40 mb-8 block font-sans">{"현재 진행 중인 전시"}</span>
-          <h2 className="text-5xl md:text-[7vw] font-serif leading-none tracking-tighter mb-12 break-keep">{"특별 전시."}</h2>
+          <h2 className="text-5xl md:text-[7vw] font-serif leading-[1.1] tracking-tighter mb-12 break-keep">{"특별 전시."}</h2>
         </motion.div>
       </section>
 
@@ -86,7 +86,7 @@ function SpecialExhibitionsContent() {
             
             <div className={`space-y-6 ${i % 2 === 1 ? 'lg:order-1 lg:text-right' : ''}`}>
               <span className="text-[12px] uppercase font-bold tracking-[0.6em] text-white/30 block mb-4 font-sans">{exhib.tag}</span>
-              <h3 className="text-4xl md:text-6xl font-serif tracking-tighter leading-none mb-6 break-keep">{exhib.name}</h3>
+              <h3 className="text-4xl md:text-6xl font-serif tracking-tighter leading-[1.1] mb-6 break-keep">{exhib.name}</h3>
               
               <div className={`flex flex-col gap-3 text-xs font-medium uppercase tracking-normal text-white/40 font-sans ${i % 2 === 1 ? 'lg:items-end' : ''}`}>
                  <div className="flex items-center gap-3"><Calendar size={14} strokeWidth={1.5} /> {exhib.period}</div>

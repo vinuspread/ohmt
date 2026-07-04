@@ -11,7 +11,7 @@ const stats = [
 
 export default function AboutStudio() {
   return (
-    <section className="relative py-24 bg-[var(--color-bg-secondary)]">
+    <section className="relative overflow-hidden py-24 bg-[var(--color-bg-secondary)]">
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <motion.div

@@ -11,7 +11,7 @@ export default function AboutPage() {
       <main>
         <section className="bg-[var(--color-bg)] pt-32">
           <div className="max-w-[1400px] mx-auto px-6">
-            <h1 className="font-heading font-semibold uppercase text-black leading-none" style={{ fontSize: 'clamp(4rem, 7vw, 7rem)', letterSpacing: '-0.04em' }}>
+            <h1 className="font-heading font-semibold uppercase text-black leading-[1.1]" style={{ fontSize: 'clamp(4rem, 7vw, 7rem)', letterSpacing: '-0.04em' }}>
               OHMT
             </h1>
           </div>

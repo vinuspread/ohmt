@@ -73,11 +73,11 @@ export default function Hero() {
             initial={shouldReduce ? { opacity: 0 } : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2, delay: 0.05, ease: EASE_OUT }}
-            className="text-4xl sm:text-7xl md:text-8xl font-bold leading-[1.15] sm:leading-none tracking-tight mx-auto"
-            style={{ fontFamily: "var(--font-heading)", maxWidth: "24ch" }}
+            className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.12] tracking-tight mx-auto"
+            style={{ fontFamily: "var(--font-heading)", maxWidth: "28ch" }}
           >
-            Discover the World of{" "}
-            <span className="text-[var(--color-primary)]">Creative Learning</span>
+            <span className="block whitespace-nowrap">Discover the World of</span>
+            <span className="block whitespace-nowrap text-[var(--color-primary)]">Creative Learning</span>
           </motion.h1>
 
           {/* Subtext */}

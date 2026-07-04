@@ -1,10 +1,10 @@
 {
-  "slug": "dashboard",
+  "slug": "OHMT015-dashboard",
   "name": "Dashboard",
   "name_ko": "대시보드",
   "category": "corporate",
-  "description": "Business analytics & intelligence dashboard with real-time charts and KPIs.",
-  "description_ko": "실시간 차트와 KPI 지표를 한눈에 파악하는 비즈니스 인텔리전스 대시보드 템플릿.",
+  "description": "A business intelligence dashboard template with KPI panels, real-time charts, operational summaries, and compact layouts for repeated data review.",
+  "description_ko": "KPI 패널, 실시간 차트, 운영 요약, 반복 확인에 적합한 밀도 있는 레이아웃을 갖춘 비즈니스 인텔리전스 대시보드 템플릿.",
   "mode": "dark",
   "theme": {
     "palette": {

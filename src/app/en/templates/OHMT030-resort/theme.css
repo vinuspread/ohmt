@@ -8,5 +8,54 @@
     --text-dark: #0A0E0E;
     --border: rgba(255, 255, 255, 0.25);
     --border-dark: rgba(255, 255, 255, 0.15);
+    --accent-hover: #ffb37a;
+    --focus-ring: 2px solid var(--accent);
+    --focus-ring-offset: 2px;
+    overflow-x: clip;
+  }
+}
+
+@supports not (overflow: clip) {
+  .resort-template {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 767px) {
+  .resort-template [class*="px-10"],
+  .resort-template [class*="px-12"] {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  .resort-template h2 {
+    font-size: clamp(1.875rem, 9.5vw, 3.5rem) !important;
+    line-height: 1.08 !important;
+    text-wrap: balance;
+  }
+
+  .resort-template h1 {
+    font-size: clamp(3.5rem, 14vw, 4.6rem) !important;
+    line-height: 0.88 !important;
+    letter-spacing: -0.025em !important;
+  }
+
+  .resort-template h1 span {
+    max-width: calc(100vw - 2.5rem);
+    overflow-wrap: normal;
+  }
+
+  .resort-template p {
+    text-wrap: pretty;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resort-template *,
+  .resort-template *::before,
+  .resort-template *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }

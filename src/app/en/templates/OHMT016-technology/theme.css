@@ -21,6 +21,9 @@
   --transition-normal: 300ms;
   --transition-slow: 500ms;
   --transition-easing: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --focus-ring: 2px solid var(--color-primary);
+  --focus-ring-offset: 2px;
 }
 
 /* Accessibility: Respect motion preferences */

@@ -103,39 +103,41 @@ export const MenuPreview = () => {
         </motion.div>
       </div>
 
-      <div
-        ref={trackRef}
-        className="flex gap-3 md:gap-4 px-6 md:px-12 overflow-x-auto select-none"
-        style={{ cursor: "grab", scrollbarWidth: "none", msOverflowStyle: "none" }}
-        onMouseDown={onMouseDown}
-        onMouseMove={onMouseMove}
-        onMouseUp={onMouseUp}
-        onMouseLeave={onMouseUp}
-      >
-        {filtered.map((item, i) => (
-          <motion.div
-            key={item.name + active}
-            className="flex-none w-[160px] md:w-[190px] group cursor-pointer"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.35, delay: Math.min(i * 0.04, 0.3), ease }}
-            whileHover={{ y: -4 }}
-          >
-            <div className="aspect-square overflow-hidden flex items-center justify-center mb-3">
-              <img
-                src={item.image}
-                alt={item.name}
-                className="w-full h-full object-contain pointer-events-none group-hover:scale-105 transition-transform duration-500 ease-out"
-                draggable={false}
-              />
-            </div>
-            <div className="text-center">
-              <p className="font-heading text-[var(--color-text)] text-[14px] font-bold leading-snug">{item.name}</p>
-              <span className="text-[var(--color-text-muted)] text-[12px] font-semibold">{item.price}</span>
-            </div>
-          </motion.div>
-        ))}
-        <div className="flex-none w-6 md:w-12" />
+      <div className="w-full overflow-hidden">
+        <div
+          ref={trackRef}
+          className="flex w-full max-w-full gap-3 md:gap-4 px-6 md:px-12 overflow-x-auto select-none"
+          style={{ cursor: "grab", scrollbarWidth: "none", msOverflowStyle: "none" }}
+          onMouseDown={onMouseDown}
+          onMouseMove={onMouseMove}
+          onMouseUp={onMouseUp}
+          onMouseLeave={onMouseUp}
+        >
+          {filtered.map((item, i) => (
+            <motion.div
+              key={item.name + active}
+              className="flex-none w-[160px] md:w-[190px] group cursor-pointer"
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.35, delay: Math.min(i * 0.04, 0.3), ease }}
+              whileHover={{ y: -4 }}
+            >
+              <div className="aspect-square overflow-hidden flex items-center justify-center mb-3">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-full h-full object-contain pointer-events-none group-hover:scale-105 transition-transform duration-500 ease-out"
+                  draggable={false}
+                />
+              </div>
+              <div className="text-center">
+                <p className="font-heading text-[var(--color-text)] text-[14px] font-bold leading-snug">{item.name}</p>
+                <span className="text-[var(--color-text-muted)] text-[12px] font-semibold">{item.price}</span>
+              </div>
+            </motion.div>
+          ))}
+          <div className="flex-none w-6 md:w-12" />
+        </div>
       </div>
 
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 mt-10 flex justify-center">

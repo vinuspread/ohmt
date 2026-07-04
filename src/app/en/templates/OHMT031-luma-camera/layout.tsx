@@ -1,4 +1,4 @@
-import "./theme.css";
+﻿import "./theme.css";
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     description: "A premium compact camera landing page for creators who want quiet hardware and serious image quality.",
     url: "https://ohmytemplate.com/en/templates/OHMT031-luma-camera",
     siteName: "OHMT",
-    images: [{ url: "/templates/luma-camera/og-image.jpg", width: 1200, height: 630 }],
+    images: [{ url: "/templates/OHMT031-luma-camera/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     alternateLocale: "ko_KR",
     type: "website",
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "OHMT - LUMA Camera",
     description: "A premium compact camera landing page for creators who want quiet hardware and serious image quality.",
-    images: ["/templates/luma-camera/og-image.jpg"],
+    images: ["/templates/OHMT031-luma-camera/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
@@ -44,3 +44,4 @@ export default function LumaCameraLayout({ children }: { children: React.ReactNo
     </div>
   );
 }
+

@@ -77,7 +77,7 @@ function BookPageContent() {
           imageSrc="/templates/OHMT008-airline/airline-book-hero.png"
           imageAlt="럭셔리 항공 실루엣"
           label="프리미엄 항공권 예약"
-          title={<>당신만의 <br /><span className="text-[var(--color-accent)] font-serif normal-case font-normal">A380 생추어리.</span></>}
+          title={<>당신만의 <br /><span className="text-[var(--color-accent)] font-[family-name:var(--font-heading)] normal-case font-[var(--font-weight-accent)]">A380 생추어리.</span></>}
           description="비행의 모든 요소를 맞춤 설정하세요. 엘리트 목적지를 선택하고, 프라이빗 스위트를 고르며, 미쉐린 다이닝을 사전 예약하세요."
         />
 
@@ -133,7 +133,7 @@ function BookPageContent() {
                   >
                     <div className="space-y-4">
                       <span className="text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">Step 01</span>
-                      <h2 className="text-[clamp(1.3rem,3vw,2.5rem)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight leading-tight">
+                      <h2 className="text-[clamp(1.3rem,3vw,2.5rem)] font-[family-name:var(--theme-font-heading)] font-[var(--font-weight-heading)] text-[var(--color-primary)] uppercase tracking-tight leading-[1.1]">
                         경로 및 객실 등급 선택.
                       </h2>
                       <div className="h-[2px] bg-[var(--color-accent)] w-12" />
@@ -229,7 +229,7 @@ function BookPageContent() {
                   >
                     <div className="space-y-4">
                       <span className="text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">Step 02</span>
-                      <h2 className="text-[clamp(1.3rem,3vw,2.5rem)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight leading-tight">
+                      <h2 className="text-[clamp(1.3rem,3vw,2.5rem)] font-[family-name:var(--theme-font-heading)] font-[var(--font-weight-heading)] text-[var(--color-primary)] uppercase tracking-tight leading-[1.1]">
                         A380 객실 스위트 맵.
                       </h2>
                       <div className="h-[2px] bg-[var(--color-accent)] w-12" />
@@ -256,7 +256,7 @@ function BookPageContent() {
                               onClick={() => handleSeatClick(seat)}
                               className={`aspect-square flex flex-col items-center justify-center text-[14px] font-bold transition-colors duration-300 relative rounded-none cursor-pointer ${
                                 isOccupied
-                                  ? "bg-neutral-100 border border-neutral-200 text-neutral-400 cursor-not-allowed"
+                                  ? "bg-neutral-100 border border-neutral-200 text-neutral-500 cursor-not-allowed"
                                   : isSelected
                                     ? "bg-[var(--color-accent)] text-[var(--color-primary)]"
                                     : "bg-white border border-[var(--color-border)] text-[var(--color-primary)] hover:border-[var(--color-accent)]"
@@ -333,7 +333,7 @@ function BookPageContent() {
                       <div className="w-16 h-16 bg-[var(--color-accent)] flex items-center justify-center mx-auto mb-6 rounded-full">
                         <Check size={28} className="text-[var(--color-primary)] font-bold" />
                       </div>
-                      <h2 className="text-3xl font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)]">맞춤 탑승권이 생성되었습니다.</h2>
+                      <h2 className="text-3xl font-[family-name:var(--theme-font-heading)] font-[var(--font-weight-heading)] text-[var(--color-primary)]">맞춤 탑승권이 생성되었습니다.</h2>
                       <p className="text-[14px] text-[#7A7A7A] max-w-md mx-auto leading-relaxed normal-case">
                         프라이빗 생추어리가 예약되었습니다. 럭셔리 스카이라인 티켓 인보이스 요약을 확인하세요.
                       </p>
@@ -346,8 +346,8 @@ function BookPageContent() {
                       {/* Pass details */}
                       <div className="flex justify-between items-start border-b border-white/10 pb-6 mb-8">
                         <div>
-                          <p className="text-[14px] uppercase tracking-[0.3em] text-[var(--color-accent)] font-bold">비누스 항공 프리미엄 패스</p>
-                          <h3 className="font-[family-name:var(--theme-font-heading)] text-xl font-bold tracking-tight text-white mt-1">일등석 스위트</h3>
+                          <p className="text-[14px] uppercase tracking-[0.3em] text-[var(--color-accent)] font-bold">OHMT 프리미엄 패스</p>
+                          <h3 className="font-[family-name:var(--theme-font-heading)] text-xl font-[var(--font-weight-heading)] tracking-tight text-white mt-1">일등석 스위트</h3>
                         </div>
                         <span className="text-[18px] text-[var(--color-accent)] font-black bg-[var(--color-accent)]/10 px-4 py-1.5 rounded-full">{selectedSeat?.id}</span>
                       </div>
@@ -402,7 +402,7 @@ function BookPageContent() {
 
             {/* Right Col: Real-time Live Invoice Summary - desktop only */}
             <div className="hidden lg:block lg:col-span-4 space-y-8 sticky top-28 lg:pl-10">
-              <h3 className="font-[family-name:var(--theme-font-heading)] text-lg font-bold text-[var(--color-primary)] uppercase tracking-wider pb-4 border-b-2 border-[var(--color-primary)]">
+              <h3 className="font-[family-name:var(--theme-font-heading)] text-lg font-[var(--font-weight-heading)] text-[var(--color-primary)] uppercase tracking-wider pb-4 border-b-2 border-[var(--color-primary)]">
                 요금 요약
               </h3>
 

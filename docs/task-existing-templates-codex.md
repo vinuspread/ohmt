@@ -2,7 +2,7 @@
 
 ## 배경
 
-`airline`, `car`, `cosmetic`, `dashboard`, `docs`, `exhibition`, `fashion`, `furniture`, `ir`, `jewelry`, `magazine`, `multi-shop`, `newspaper`, `portfolio`, `sneaker`, `studio`, `technology` — 17개 템플릿(EN/KO 합쳐 34개)은 현재 저장소 코드와 `supabase/seed.sql` 직접 insert로 등록되어 있고, 실제 zip 업로드 시스템(`/admin/uploads`)을 통과한 적이 없다. 그래서 `theme.json`에 슬러그/카테고리/설명 같은 메타데이터 필드가 없고, `thumbnail.jpg`도 없는 템플릿이 대부분이다.
+`airline`, `car`, `cosmetic`, `dashboard`, `docs`, `exhibition`, `fashion`, `furniture`, `ir`, `jewelry`, `magazine`, `multi-shop`, `newspaper`, `portfolio`, `sneaker`, `studio`, `technology` — 17개 템플릿(EN/KO 합쳐 34개)은 현재 저장소 코드와 `supabase/seed.sql` 직접 insert로 등록되어 있고, 실제 zip 업로드 시스템(`/admin/uploads`)을 통과한 적이 없다. 그래서 `theme.json`에 슬러그/카테고리/설명 같은 메타데이터 필드가 없고, `og-image.jpg`도 없는 템플릿이 대부분이다.
 
 이번 작업은 **이 17개 템플릿의 코드를 건드리지 않고(레이아웃/로직/텍스트 변경 금지)**, 현재 zip 업로드 시스템이 요구하는 형식에 맞춰 **EN/KO 각각 별도의 zip 파일로 패키징**하는 것이다. `wedding` 템플릿은 이미 새 시스템으로 정상 등록되어 있으므로 이번 작업 대상이 아니다.
 
@@ -11,7 +11,7 @@
 ## 작업 범위 제한
 
 - 위 17개 슬러그 외에 다른 템플릿(`wedding` 포함) 폴더는 절대 건드리지 않는다.
-- 각 템플릿의 페이지/컴포넌트/로직/텍스트는 수정하지 않는다. 오직 **메타데이터(theme.json) 추가**와 **thumbnail.jpg 준비**, **zip 패키징**만 한다.
+- 각 템플릿의 페이지/컴포넌트/로직/텍스트는 수정하지 않는다. 오직 **메타데이터(theme.json) 추가**와 **og-image.jpg 준비**, **zip 패키징**만 한다.
 - `globals.css`, `tailwind.config.ts` 등 공통 파일은 건드리지 않는다.
 
 ## 1. theme.json 메타데이터 보강
@@ -61,19 +61,19 @@
 `category` 값은 반드시 아래 허용값 중 하나여야 한다 (위 표는 이미 허용값 안에서 골랐음):
 `retail`, `corporate`, `portfolio`, `media`, `service`, `hospitality`, `lifestyle`, `uncategorized`
 
-## 2. thumbnail.jpg 준비
+## 2. og-image.jpg 준비
 
-업로드 시스템은 **en zip에만** `public/templates/[slug]/thumbnail.jpg`가 정확히 그 파일명으로 존재할 것을 요구한다 (`.jpg` 고정, `.png`/`.svg` 불가).
+업로드 시스템은 **en zip에만** `public/templates/[slug]/og-image.jpg`가 정확히 그 파일명으로 존재할 것을 요구한다 (`.jpg` 고정, `.png`/`.svg` 불가).
 
 | slug | 현재 상태 | 처리 방법 |
 |---|---|---|
-| dashboard | `thumbnail.png` 있음 | `thumbnail.jpg`로 변환(리네임이 아니라 jpg 인코딩 변환) |
-| docs | `thumbnail.png`, `thumbnail.svg` 있음 | `thumbnail.png`를 `thumbnail.jpg`로 변환 |
-| 나머지 15개 | thumbnail 없음 | 템플릿의 메인 히어로 이미지를 복사해 `thumbnail.jpg`로 변환 (예: airline → `airline-main-hero.png`, jewelry → `jewelry-hero-main.png` 등 각 폴더에서 "메인/히어로"로 보이는 첫 이미지를 선택) |
+| dashboard | `thumbnail.png` 있음 | `og-image.jpg`로 변환(리네임이 아니라 jpg 인코딩 변환) |
+| docs | `thumbnail.png`, `thumbnail.svg` 있음 | `thumbnail.png`를 `og-image.jpg`로 변환 |
+| 나머지 15개 | og-image 없음 | 템플릿의 메인 히어로 이미지를 복사해 `og-image.jpg`로 변환 (예: airline → `airline-main-hero.png`, jewelry → `jewelry-hero-main.png` 등 각 폴더에서 "메인/히어로"로 보이는 첫 이미지를 선택) |
 
 확실한 히어로 이미지를 찾기 애매한 템플릿(예: magazine, newspaper, sneaker처럼 파일명이 `1,2,3...`으로만 되어 있는 경우)은 임의로 정하지 말고, 후보 2~3개를 결과 리포트에 적어서 사용자가 선택하게 한다.
 
-변환 시 원본 파일은 그대로 두고, `thumbnail.jpg`는 **zip에 포함될 사본으로만** 생성한다 (저장소의 `public/templates/[slug]/`에 실제로 추가해도 되고, 임시 빌드 폴더에서만 만들어도 된다 — 단, 저장소에 추가한다면 기존 파일 삭제/이름 변경은 하지 말 것).
+변환 시 원본 파일은 그대로 두고, `og-image.jpg`는 **zip에 포함될 사본으로만** 생성한다 (저장소의 `public/templates/[slug]/`에 실제로 추가해도 되고, 임시 빌드 폴더에서만 만들어도 된다 — 단, 저장소에 추가한다면 기존 파일 삭제/이름 변경은 하지 말 것).
 
 ## 3. zip 패키징 규칙
 
@@ -91,7 +91,7 @@ airline-en.zip
 └── public/
     └── templates/
         └── airline/
-            ├── thumbnail.jpg          ← 2번에서 준비한 파일
+            ├── og-image.jpg          ← 2번에서 준비한 파일
             └── (기존 이미지 전부, .mp4/.mov/.webm 제외)
 ```
 
@@ -108,7 +108,7 @@ ko 예시 (`airline-ko.zip`)는 `src/app/ko/templates/airline/` 내용을 동일
 
 작업이 끝나면 아래 내용을 정리해서 보고한다:
 - 생성된 34개 zip 목록과 각 zip 크기
-- thumbnail을 자동으로 못 정한 템플릿과 후보 이미지 목록
+- og-image를 자동으로 못 정한 템플릿과 후보 이미지 목록
 - theme.json에 이미 `slug`/`category` 등 필드가 있었는데 표와 다른 값이 들어있던 경우 (덮어썼는지 여부)
 - zip 검증 규칙(`src/lib/zip.ts`)을 실제로 통과하는지 직접 시뮬레이션했는지 여부 (가능하면 `extractAndValidateZip`을 로컬에서 돌려보고 통과 확인)
 

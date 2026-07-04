@@ -11,4 +11,17 @@
 
   --font-heading: var(--theme-font-heading, 'Elms Sans'), sans-serif;
   --font-body: var(--theme-font-body, 'Inter Tight'), sans-serif;
+
+  --focus-ring: 2px solid var(--color-primary);
+  --focus-ring-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

@@ -48,7 +48,7 @@ export const BusinessSegments = () => {
             <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-3 md:mb-5">
               전략적 포트폴리오
             </span>
-            <h2 className="text-[clamp(1.9rem,3.2vw,2.8rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.5] max-w-[560px] break-keep">
+            <h2 className="text-[clamp(1.9rem,3.2vw,2.8rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.1] max-w-[560px] break-keep">
               핵심 분야의 다각화된 성장
             </h2>
           </div>
@@ -66,7 +66,7 @@ export const BusinessSegments = () => {
               <div className="p-6 sm:p-8 md:p-6 lg:p-8 xl:p-10">
                 <span className="text-[0.7rem] font-bold tracking-[0.25em] text-[var(--color-border)] block mb-2 md:mb-4">{s.num}</span>
                 <span className="text-[0.85rem] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-2 md:mb-4 block">{s.icon}</span>
-                <h3 className="text-[1.25rem] font-bold text-[var(--color-dark-bg)] mb-2 md:mb-3 leading-snug">{s.title}</h3>
+                <h3 className="text-[1.25rem] font-bold text-[var(--color-dark-bg)] mb-2 md:mb-3 leading-[1.1]">{s.title}</h3>
                 <p className="text-[0.93rem] text-[#6B6B6B] leading-[1.72] mb-6 md:mb-8 break-keep">{s.desc}</p>
                 <div className="pt-4 md:pt-5 border-t border-[var(--color-border)] flex flex-col gap-1">
                   <span className="text-[0.7rem] font-bold uppercase tracking-[0.14em] text-[#6B6B6B]">{s.stat}</span>

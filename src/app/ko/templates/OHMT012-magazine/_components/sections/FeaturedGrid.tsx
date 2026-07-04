@@ -36,7 +36,7 @@ export const FeaturedGrid = () => {
             <span className="text-[0.875rem] font-bold uppercase tracking-tight text-[var(--theme-accent)] mb-3 block">
               {featuredItems[0].tag}
             </span>
-            <h2 className="font-[family-name:var(--theme-font-heading)] text-[clamp(1.5rem,2.5vw,2rem)] font-normal leading-[1.3] mb-3 tracking-[-0.02em]">
+            <h2 className="font-[family-name:var(--theme-font-heading)] text-[clamp(1.5rem,2.5vw,2rem)] font-normal leading-[1.1] mb-3 tracking-[-0.02em]">
               <Link href="/ko/templates/OHMT012-magazine/article/minimalist-architecture-nordic-cities" className="hover:text-[var(--theme-accent)] transition-colors">
                 {featuredItems[0].title}
               </Link>
@@ -63,7 +63,7 @@ export const FeaturedGrid = () => {
                  <span className="text-[0.875rem] font-bold uppercase tracking-tight text-[var(--theme-accent)] mb-2 block">
                    {featuredItems[item.index].tag}
                  </span>
-                  <h3 className="font-[family-name:var(--theme-font-heading)] text-[1.2rem] font-normal leading-[1.3] mb-2 tracking-[-0.02em]">
+                  <h3 className="font-[family-name:var(--theme-font-heading)] text-[1.2rem] font-normal leading-[1.1] mb-2 tracking-[-0.02em]">
                    <Link href={`/ko/templates/OHMT012-magazine/article/${item.slug}`} className="hover:text-[var(--theme-accent)] transition-colors">
                      {featuredItems[item.index].title}
                    </Link>

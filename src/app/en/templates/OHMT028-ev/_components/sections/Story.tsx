@@ -30,7 +30,7 @@ export function Story() {
 
   return (
     <section ref={sectionRef} id="story" className="relative w-full bg-[var(--light-bg)] overflow-hidden">
-      {/* 모바일: 이미지 위에 쌓기 */}
+      {/* Mobile: stacked layout */}
       <div className="md:hidden w-full h-[65vw] min-h-[260px] overflow-hidden">
         <div
           className="w-full h-full bg-cover bg-[center_bottom]"
@@ -38,7 +38,7 @@ export function Story() {
         />
       </div>
 
-      {/* 데스크탑: 절대 포지션 분할 배경 */}
+      {/* Desktop: absolute positioned split bg */}
       <div className="hidden md:flex absolute inset-0 flex-row pointer-events-none z-0">
         <div className="w-1/2 relative overflow-hidden">
           <div
@@ -50,7 +50,7 @@ export function Story() {
         <div className="w-1/2 bg-[var(--light-bg)]" />
       </div>
 
-      {/* 콘텐츠 */}
+      {/* Content */}
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 md:min-h-[80vh] md:grid md:grid-cols-2 pointer-events-none">
         <div className="hidden md:block" />
         <div className="w-full flex flex-col justify-center py-10 md:py-32 md:pl-16 lg:pl-20 pointer-events-auto">

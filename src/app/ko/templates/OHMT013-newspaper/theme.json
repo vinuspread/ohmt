@@ -1,10 +1,10 @@
 {
-  "slug": "newspaper",
+  "slug": "OHMT013-newspaper",
   "name": "Press Newspaper",
   "name_ko": "프레스 신문",
   "category": "media",
-  "description": "News and publishing archive",
-  "description_ko": "뉴스 및 퍼블리싱 아카이브",
+  "description": "A newspaper and publishing archive template for headline-led stories, category browsing, article pages, and a restrained reading experience.",
+  "description_ko": "헤드라인 중심 기사, 카테고리 탐색, 상세 기사, 차분한 읽기 경험을 갖춘 뉴스 및 퍼블리싱 아카이브 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {

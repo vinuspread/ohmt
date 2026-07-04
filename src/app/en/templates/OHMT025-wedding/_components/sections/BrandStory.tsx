@@ -132,7 +132,7 @@ export default function BrandStory() {
             className="mt-2 font-[family-name:var(--font-heading)] font-light normal-case text-[var(--color-text)] leading-[1.2] text-balance"
             style={{ fontSize: "clamp(1.8rem, 7vw, 2.4rem)" }}
           >
-            It's a <span className="whitespace-nowrap">once-in-a-lifetime</span> celebration.
+            It&apos;s a <span className="whitespace-nowrap">once-in-a-lifetime</span> celebration.
           </p>
           <p className="mt-6 text-sm text-[var(--color-text-muted)] leading-relaxed font-[family-name:var(--font-body)]">
             Documentary storytelling meets fine art composition. Every frame feels lived-in, not posed.

@@ -54,13 +54,13 @@ export function Hero() {
         <div className="flex items-center gap-4 mt-10">
           <a
             href="/en/templates/OHMT029-fitness/programs"
-            className="bg-white text-[var(--accent)] text-[13px] font-semibold px-7 py-3.5 rounded-lg hover:bg-white/90 transition-colors tracking-wide"
+            className="bg-white text-[var(--accent)] text-[13px] font-semibold px-7 py-3.5 rounded-lg hover:bg-white/90 transition-colors tracking-wide focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
           >
             Explore programs →
           </a>
           <a
             href="/en/templates/OHMT029-fitness/about#contact"
-            className="border border-white/30 text-white text-[13px] font-semibold px-7 py-3.5 rounded-lg hover:border-white/60 transition-colors tracking-wide"
+            className="border border-white/30 text-white text-[13px] font-semibold px-7 py-3.5 rounded-lg hover:border-white/60 transition-colors tracking-wide focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
           >
             Contact us
           </a>
@@ -72,7 +72,8 @@ export function Hero() {
           <button
             key={i}
             onClick={() => setCurrent(i)}
-            className={`w-2 h-2 rounded-full transition-all duration-300 ${
+            aria-label={`Slide ${i + 1}`}
+            className={`w-2 h-2 rounded-full transition-all duration-300 focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2 ${
               i === current ? "bg-white w-6" : "bg-white/40"
             }`}
           />

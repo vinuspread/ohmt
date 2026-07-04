@@ -27,7 +27,7 @@ export default function EnrollmentForm() {
           <span className="inline-flex items-center justify-center bg-[var(--color-red)] text-white rounded-full px-5 py-2.5 text-xs font-bold uppercase tracking-wider leading-none mb-4">
             수강 신청
           </span>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-none mt-3" style={{ fontFamily: "var(--font-heading)" }}>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1] mt-3" style={{ fontFamily: "var(--font-heading)" }}>
             함께 시작해요
           </h2>
           <p className="mt-4 text-base text-[var(--color-text-muted)] max-w-md mx-auto">
@@ -52,7 +52,7 @@ export default function EnrollmentForm() {
               <div className="w-20 h-20 bg-[var(--color-secondary)] rounded-2xl flex items-center justify-center text-4xl mx-auto mb-6 text-white">
                 ★
               </div>
-              <h3 className="text-3xl font-bold tracking-tight leading-none" style={{ fontFamily: "var(--font-heading)" }}>
+              <h3 className="text-3xl font-bold tracking-tight leading-[1.1]" style={{ fontFamily: "var(--font-heading)" }}>
                 신청해 주셔서 감사합니다!
               </h3>
               <p className="mt-4 text-sm text-[var(--color-text-muted)] max-w-sm mx-auto">

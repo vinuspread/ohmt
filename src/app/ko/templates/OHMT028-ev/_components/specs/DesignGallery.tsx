@@ -31,7 +31,7 @@ export function DesignGallery() {
     <section className="bg-[var(--bg)]">
       <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 py-24 md:py-32">
         <div className="flex items-center justify-between mb-10">
-          <h2 className="font-michroma text-[clamp(24px,2.5vw,40px)] text-[var(--text)] leading-[1.0] tracking-[-0.02em]">
+          <h2 className="font-michroma text-[clamp(24px,2.5vw,40px)] text-[var(--text)] leading-[1.1] tracking-[-0.02em]">
             디자인 상세
           </h2>
           <div className="flex gap-1 border border-[var(--border)] rounded-full p-1">
@@ -64,7 +64,7 @@ export function DesignGallery() {
             <p className="font-inter text-[11px] tracking-[0.12em] text-[var(--accent)] uppercase mb-2">
               {tabLabels[tab]}
             </p>
-            <h3 className="font-michroma text-[clamp(20px,2vw,30px)] text-[var(--text)] leading-[1.05] tracking-[-0.02em] mb-3">
+            <h3 className="font-michroma text-[clamp(20px,2vw,30px)] text-[var(--text)] leading-[1.1] tracking-[-0.02em] mb-3">
               {featured.title}
             </h3>
             <p className="font-inter text-[14px] text-[var(--text-muted)] leading-relaxed">

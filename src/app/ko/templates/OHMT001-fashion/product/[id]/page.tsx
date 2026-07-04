@@ -9,15 +9,7 @@ import { Footer } from "../../_components/Footer";
 import { TemplateWrapper } from "../../_components/TemplateWrapper";
 import { ArrowLeft, ShoppingBag, Heart } from "lucide-react";
 import theme from "../../theme.json";
-
-const PRODUCTS = [
-  { id: 1, name: "울 버킷 햇", price: "$120.00", image: "/templates/OHMT001-fashion/wool-hat.png", material: "퓨어 뉴질랜드 울", color: "차콜 블랙", description: "프리미엄 이탈리안 울로 제작된 모던한 실루엣의 버킷 햇입니다. 구조적인 브림과 통기성 좋은 코튼 안감이 특징입니다." },
-  { id: 2, name: "클래식 트렌치 코트", price: "$850.00", image: "/templates/OHMT001-fashion/trench-coat.png", material: "코튼 개버딘", color: "아이보리", description: "고밀도 코튼 개버딘으로 제작된 더블 브레스트 트렌치 코트입니다. 래글런 슬리브, 스톰 플랩, 칼라와 커프스의 버클 스트랩 디테일이 돋보입니다." },
-  { id: 3, name: "미니멀리스트 백팩", price: "$350.00", image: "/templates/OHMT001-fashion/backpack.png", material: "왁스드 캔버스 & 레더", color: "블랙", description: "하나의 메인 수납공간과 패딩 처리된 노트북 슬리브, 수공 마감 레더 트림이 적용된 세련된 백팩입니다." },
-  { id: 4, name: "프리미엄 레더 부츠", price: "$480.00", image: "/templates/OHMT001-fashion/boots.png", material: "풀그레인 송아지 가죽", color: "다크 체스트넛", description: "굿이어 웰트 공법과 블레이크 스티치로 제작된 부츠입니다. 식물성 가죽 갑피, 레더 솔, 모던한 스퀘어 토 프로필이 특징입니다." },
-  { id: 5, name: "실크 이브닝 드레스", price: "$1,200.00", image: "/templates/OHMT001-fashion/silk-dress.png", material: "18mm 실크 새틴", color: "미드나잇 블루", description: "리퀴드 실크 새틴의 바이어스 컷 플로어-랭스 드레스입니다. 조절 가능한 숄더 타이와 드레이프 카울 백이 적용되었습니다." },
-  { id: 6, name: "코튼 베이직 티", price: "$65.00", image: "/templates/OHMT001-fashion/basic-tee.png", material: "수피마 코튼 저지", color: "화이트", description: "헤비웨이트 260gsm 수피마 코튼. 리브 크루넥, 강화 숄더 심, 세탁 후에도 형태를 유지하는 박시 핏입니다." },
-];
+import { PRODUCTS } from "../../_data/products";
 
 const SIZES = ["XS", "S", "M", "L", "XL"];
 
@@ -73,7 +65,7 @@ function ProductDetailContent() {
               className="flex flex-col justify-center"
             >
               <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-black/30 mb-4">신상품</p>
-              <h1 className="text-[28px] sm:text-[3.5vw] font-bold tracking-tighter uppercase leading-none mb-4">{product.name}</h1>
+              <h1 className="text-[28px] sm:text-[3.5vw] font-bold tracking-tighter uppercase leading-[1.1] mb-4">{product.name}</h1>
               <p className="text-[16px] md:text-[20px] font-bold text-black/60 mb-8">{product.price}</p>
 
               <div className="space-y-4 mb-8 pb-8 border-b border-black/5">
@@ -116,7 +108,7 @@ function ProductDetailContent() {
 
               <div className="mt-10 pt-8 border-t border-black/5">
                 <p className="text-[15px] text-black/40 leading-relaxed">
-                  $500 이상 주문 시 무료 배송. 30일 이내 무료 반품 가능.
+                  ₩500,000 이상 주문 시 무료 배송. 30일 이내 무료 반품 가능.
                 </p>
               </div>
             </motion.div>

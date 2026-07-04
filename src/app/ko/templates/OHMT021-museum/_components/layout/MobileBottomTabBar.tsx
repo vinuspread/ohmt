@@ -34,7 +34,7 @@ const navItems = [
   },
   {
     name: "Shop",
-    href: "/ko/templates/OHMT021-museum/souvenir",
+    href: "/ko/templates/OHMT021-museum/shop",
     icon: ShoppingBag,
     activeIcon: ShoppingBag,
   },

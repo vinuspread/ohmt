@@ -1,10 +1,10 @@
 {
-  "slug": "jewelry",
+  "slug": "OHMT002-jewelry",
   "name": "Jewelry Luxury",
   "name_ko": "주얼리 럭셔리",
   "category": "retail",
-  "description": "A luxury jewelry boutique template with elegant product showcases and brand storytelling.",
-  "description_ko": "우아한 제품 쇼케이스와 브랜드 스토리텔링을 갖춘 럭셔리 주얼리 부티크 템플릿.",
+  "description": "A refined jewelry boutique template for hero collections, product categories, bridal stories, and atelier trust signals with a polished luxury retail flow.",
+  "description_ko": "대표 컬렉션, 제품 카테고리, 브라이덜 스토리, 아틀리에 신뢰 요소를 고급 리테일 흐름으로 구성한 주얼리 부티크 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {

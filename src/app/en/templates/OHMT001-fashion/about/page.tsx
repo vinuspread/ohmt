@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { Navbar } from "../_components/Navbar";
 import { Footer } from "../_components/Footer";
+import { SubpageHero } from "../_components/SubpageHero";
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
@@ -13,14 +14,13 @@ function AboutContent() {
       <main className="antialiased min-h-screen bg-white">
         <Navbar />
 
-        <section className="relative h-[70vh] overflow-hidden">
-          <img src="/templates/OHMT001-fashion/exclusive-custom.jpg" alt="" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/20" />
-          <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-            <span className="text-[11px] uppercase tracking-widest text-white/60">EST. 2026</span>
-            <h1 className="font-[family-name:var(--font-bodoni)] text-[48px] md:text-[72px] text-white font-bold tracking-tight mt-4">The Brand</h1>
-          </div>
-        </section>
+        <SubpageHero
+          eyebrow="EST. 2026"
+          title="The Brand"
+          description="A fashion laboratory built around restraint, material discipline, and pieces designed to outlast the season that introduced them."
+          image="/templates/OHMT001-fashion/about-hero-v2.png"
+          imageAlt="Fashion atelier brand story"
+        />
 
         <section className="bg-black py-24 md:py-32">
           <div className="max-w-3xl mx-auto px-6 text-center">
@@ -35,7 +35,7 @@ function AboutContent() {
           <div className="max-w-[1440px] mx-auto px-6 md:px-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
               <div>
-                <span className="text-[11px] uppercase tracking-widest text-black/40">Our Story</span>
+                <span className="text-[11px] uppercase tracking-widest text-[var(--color-text-muted)]">Our Story</span>
                 <p className="text-[16px] text-black/70 leading-relaxed mt-6">
                   Founded in 2026 with a single conviction: that clothing should outlast the moment it was made for. We work with a small circle of mills and artisans who share our obsession with material integrity. Every garment is pattern-cut by hand, sewn slowly, and finished without shortcuts.
                 </p>
@@ -50,18 +50,19 @@ function AboutContent() {
           </div>
         </section>
 
-        <section className="py-20 md:py-28 bg-[#F9F9F9]">
+        <section className="py-24 md:py-32 bg-[var(--color-bg-secondary)]">
           <div className="max-w-[1440px] mx-auto px-6 md:px-12">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-0">
+            <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-black/[0.08]">
               {[
                 { num: "01", title: "Quality", desc: "Every material is chosen for longevity, not cost." },
                 { num: "02", title: "Craft", desc: "Hand-finished details that machines cannot replicate." },
                 { num: "03", title: "Timelessness", desc: "Designed to be worn decades from now." },
               ].map((item, i) => (
-                <div key={item.num} className={i < 2 ? "md:border-r border-black/10 md:pr-12 lg:pr-20" : "md:pl-12 lg:pl-20"}>
-                  <span className="text-[11px] font-mono text-black/20">{item.num}</span>
-                  <h3 className="font-[family-name:var(--font-bodoni)] text-[20px] font-bold tracking-tight mt-2">{item.title}</h3>
-                  <p className="text-[14px] text-black/60 leading-relaxed mt-3">{item.desc}</p>
+                <div key={item.num} className={`py-12 md:py-0 ${i === 0 ? "md:pr-16 lg:pr-24" : i === 1 ? "md:px-16 lg:px-24" : "md:pl-16 lg:pl-24"}`}>
+                  <span className="block text-[9px] font-mono tracking-[0.25em] text-black/30 mb-7">— {item.num}</span>
+                  <h3 className="font-[family-name:var(--font-bodoni)] text-[28px] md:text-[32px] font-bold tracking-tight leading-tight">{item.title}</h3>
+                  <div className="w-6 h-px bg-black/20 my-5" />
+                  <p className="text-[14px] text-black/55 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -69,9 +70,14 @@ function AboutContent() {
         </section>
 
         <section className="bg-white py-20 text-center">
-          <p className="text-[20px] text-black/50">Ready to wear something that lasts?</p>
+          <p
+            className="text-[28px] text-black/58 md:text-[36px]"
+            style={{ fontFamily: "var(--font-bodoni)" }}
+          >
+            Ready to wear something that lasts?
+          </p>
           <Link
-            href="/en/templates/OHMT001-fashion/category/collection"
+            href="/en/templates/OHMT001-fashion/collection"
             className="inline-block bg-black text-white px-10 py-4 mt-8 text-[12px] uppercase tracking-[0.3em] hover:opacity-70 transition-opacity"
           >
             Explore Collection

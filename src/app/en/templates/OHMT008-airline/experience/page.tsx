@@ -62,7 +62,7 @@ function ExperiencePageContent() {
           imageSrc="/templates/OHMT008-airline/airline-experience-hero.png"
           imageAlt="Premium Cabin Detail"
           label="The Cabin Experience"
-          title={<>Crafted Beyond <br /><span className="text-[var(--color-accent)] font-serif normal-case font-normal">Expectations.</span></>}
+          title={<>Crafted Beyond <br /><span className="text-[var(--color-accent)] font-[family-name:var(--font-heading)] normal-case font-bold">Expectations.</span></>}
           description="We redefine every detail of transcontinental flight. Pre-book your signature Michelin-starred menus and compute elite baggage limits prior to boarding."
           descMaxWidth="max-w-[680px]"
         />
@@ -74,7 +74,7 @@ function ExperiencePageContent() {
             {/* Header section with clean vertical layout */}
             <div className="mb-10 md:mb-20 space-y-4 max-w-[800px]">
               <span className="text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">Gourmet Curation</span>
-              <h2 className="text-[clamp(1.5rem,4vw,3.5rem)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight leading-none">
+              <h2 className="text-[clamp(1.2rem,3.5vw,3rem)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight leading-none">
                 Pre-book Signature Sky Dining
               </h2>
               <div className="h-[2px] bg-[var(--color-accent)] w-12" />
@@ -90,13 +90,19 @@ function ExperiencePageContent() {
                 {meals.map((meal, index) => {
                   const isOpen = selectedMeal === meal.id;
                   return (
-                    <div key={meal.id}>
+                    <motion.div
+                      initial={{ opacity: 0, y: 16 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: index * 0.1, ease: [0.23, 1, 0.32, 1] as const }}
+                      key={meal.id}
+                    >
                       <button
                         onClick={() => setSelectedMeal(meal.id)}
-                        className="w-full flex items-center justify-between gap-6 py-6 md:py-8 text-left group select-none cursor-pointer"
+                        className="w-full flex items-center justify-between gap-6 py-6 md:py-8 text-left group select-none cursor-pointer active:scale-[0.99] transition-transform duration-[var(--transition-fast)]"
                       >
                         <div className="flex items-center gap-5 md:gap-6">
-                          <span className="font-serif text-xl md:text-2xl font-normal text-[var(--color-border)] group-hover:text-[var(--color-accent)]/40 transition-colors duration-300 w-7 md:w-8 shrink-0">
+                          <span className="font-[family-name:var(--font-heading)] text-xl md:text-2xl font-normal text-[var(--color-border)] group-hover:text-[var(--color-accent)]/40 transition-colors duration-300 w-7 md:w-8 shrink-0">
                             0{index + 1}
                           </span>
                           <h4 className={`font-bold text-[15px] md:text-[18px] uppercase tracking-wider transition-colors duration-300 ${isOpen ? "text-[var(--color-accent)]" : "text-[var(--color-primary)] group-hover:text-[var(--color-accent)]"}`}>
@@ -133,7 +139,7 @@ function ExperiencePageContent() {
                           </motion.div>
                         )}
                       </AnimatePresence>
-                    </div>
+                    </motion.div>
                   );
                 })}
               </div>
@@ -178,7 +184,7 @@ function ExperiencePageContent() {
             {/* Header */}
             <div className="mb-10 md:mb-20 space-y-4 max-w-[800px]">
               <span className="text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">Luggage Precheck</span>
-              <h2 className="text-[clamp(1.5rem,4vw,3.5rem)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight leading-none">
+              <h2 className="text-[clamp(1.2rem,3.5vw,3rem)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight leading-none">
                 Smart Baggage Surcharge Calculator
               </h2>
               <div className="h-[2px] bg-[var(--color-accent)] w-12" />
@@ -271,7 +277,7 @@ function ExperiencePageContent() {
                       {totalBaggageSurcharge > 0 ? `$${totalBaggageSurcharge.toLocaleString()} USD` : "FREE OF CHARGE"}
                     </span>
                     <p className="text-[14px] text-[#7A7A7A] normal-case leading-[1.4] font-normal">
-                      *Allowance status calculations are generated in real-time according to premier IATA weight standards and Vinus Airline structural parameters.
+                      *Allowance status calculations are generated in real-time according to premier IATA weight standards and OHMT structural parameters.
                     </p>
                   </div>
                 </div>
@@ -299,7 +305,14 @@ function ExperiencePageContent() {
                 { title: "In-Flight Aromatherapy Spa", desc: "Curated in-flight body wellness including skincare remedies, custom dry mist aromatherapy, and stretching guides." },
                 { title: "Ultra-HD Inflight Entertainment", desc: "32-inch 4K resolution screens boasting 1,500+ hours of on-demand cultural blockbusters and live international news." }
               ].map((f, i) => (
-                <div key={f.title} className="space-y-6 text-left normal-case relative pl-8 border-l-2 border-[var(--color-accent)]">
+                <motion.div
+                  key={f.title}
+                  initial={{ opacity: 0, x: -16 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: i * 0.08, ease: [0.23, 1, 0.32, 1] as const }}
+                  className="space-y-6 text-left normal-case relative pl-8 border-l-2 border-[var(--color-accent)] hover:border-l-[var(--color-accent-light)] transition-colors duration-[var(--transition-base)]"
+                >
                   {/* Subtle index tag */}
                   <span className="text-[14px] font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] block">
                     ZONE 0{i + 1}
@@ -310,7 +323,7 @@ function ExperiencePageContent() {
                   <p className="text-[14px] text-[#7A7A7A] leading-[1.4] font-normal">
                     {f.desc}
                   </p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

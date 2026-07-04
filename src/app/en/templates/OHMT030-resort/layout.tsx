@@ -1,6 +1,7 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { Instrument_Sans } from "next/font/google";
 import "./theme.css";
+import { TemplateWrapper } from "./_components/TemplateWrapper";
 
 const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
@@ -24,7 +25,8 @@ export default function ResortLayout({ children }: { children: React.ReactNode }
       className={`resort-template ${instrumentSans.variable}`}
       style={{ fontFamily: "var(--font-instrument-sans), sans-serif", backgroundColor: "var(--bg)" }}
     >
-      {children}
+      <TemplateWrapper>{children}</TemplateWrapper>
     </div>
   );
 }
+

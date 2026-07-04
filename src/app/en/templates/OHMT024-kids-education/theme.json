@@ -1,10 +1,10 @@
 {
-  "slug": "kids-education",
+  "slug": "OHMT024-kids-education",
   "name": "Kids Education",
   "name_ko": "키즈 에듀케이션",
   "category": "lifestyle",
-  "description": "Playful and colorful children education website with clean, pill-based design",
-  "description_ko": "경쾌하고 다채로운 어린이 교육 웹사이트 템플릿",
+  "description": "A children education template with playful sections, program details, parent trust signals, and bright pill-based UI for schools and learning brands.",
+  "description_ko": "경쾌한 섹션, 프로그램 안내, 학부모 신뢰 요소, 밝은 필형 UI를 갖춘 어린이 교육 및 러닝 브랜드 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {

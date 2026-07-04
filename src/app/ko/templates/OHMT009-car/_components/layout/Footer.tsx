@@ -11,7 +11,7 @@ export const Footer = () => {
         <div className="grid grid-cols-3 md:grid-cols-4 gap-6 md:gap-12 mb-8 md:mb-16">
           <div className="col-span-3 md:col-span-1 mb-2 md:mb-0">
             <span className="text-[0.95rem] md:text-[1.2rem] font-medium md:font-bold tracking-[0.25em] uppercase text-white mb-3 block">
-              VINUSPREAD<span className="text-[var(--theme-accent)]">.</span>
+              OHMT<span className="text-[var(--theme-accent)]">.</span>
             </span>
             <p className="hidden md:block text-[0.85rem] text-[var(--theme-text-muted)] leading-relaxed max-w-[280px]">
               더 높은 기준을 원하는 모든 이를 위한, 공학의 완성.
@@ -39,7 +39,7 @@ export const Footer = () => {
           <div>
             <h5 className="text-[0.75rem] font-medium uppercase tracking-[0.2em] text-white mb-4">회사</h5>
             <nav className="flex flex-col gap-3">
-              {["VINUSPREAD 소개", "지속가능경영", "보도자료", "채용"].map(item => (
+              {["OHMT 소개", "지속가능경영", "보도자료", "채용"].map(item => (
                 <Link key={item} href="#" className="text-[0.75rem] text-[var(--theme-text-muted)] hover:text-white transition-colors">{item}</Link>
               ))}
             </nav>

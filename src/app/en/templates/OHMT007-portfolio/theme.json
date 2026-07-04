@@ -1,10 +1,10 @@
 {
-  "slug": "portfolio",
+  "slug": "OHMT007-portfolio",
   "name": "Portfolio Brutalist",
   "name_ko": "포트폴리오 브루탈리스트",
   "category": "portfolio",
-  "description": "Personal branding and creative portfolio",
-  "description_ko": "개인 브랜딩 및 크리에이티브 포트폴리오",
+  "description": "A personal portfolio template for independent creatives, with profile storytelling, selected work, journal entries, and a clean structure for building credibility.",
+  "description_ko": "독립 크리에이터를 위한 개인 포트폴리오 템플릿. 프로필 스토리, 선별 작업, 저널, 신뢰를 만드는 간결한 구조를 갖췄습니다.",
   "mode": "light",
   "theme": {
     "palette": {

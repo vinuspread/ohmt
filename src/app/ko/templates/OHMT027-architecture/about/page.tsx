@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture/about/page.tsx
+// src/app/ko/templates/OHMT027-architecture/about/page.tsx
 import React from "react";
 import type { Metadata } from "next";
 import Image from "next/image";
@@ -9,44 +9,45 @@ import { ScrollReveal } from "../_components/ui/ScrollReveal";
 import { CustomCursor } from "../_components/ui/CustomCursor";
 
 export const metadata: Metadata = {
-  title: "About Us - Architecture Portfolio - OHMT",
-  description: "Learn about our architectural philosophy, our history, and the visionaries behind our award-winning practice.",
+  title: "소개 - 건축 포트폴리오 - OHMT",
+  description: "OHMT의 건축 철학, 스튜디오의 역사, 그리고 프로젝트를 이끄는 팀을 소개합니다.",
   openGraph: {
-    title: "About Us - Architecture Portfolio - OHMT",
-    description: "Learn about our architectural philosophy, our history, and the visionaries behind our practice.",
-    url: "https://ohmytemplate.com/en/templates/OHMT027-architecture/about",
+    title: "소개 - 건축 포트폴리오 - OHMT",
+    description: "OHMT의 건축 철학, 스튜디오의 역사, 그리고 프로젝트를 이끄는 팀을 소개합니다.",
+    url: "https://ohmytemplate.com/ko/templates/OHMT027-architecture/about",
     images: [{ url: "/templates/OHMT027-architecture/og-image.jpg" }],
   },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT027-architecture/about",
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT027-architecture/about",
     languages: {
       "en": "https://ohmytemplate.com/en/templates/OHMT027-architecture/about",
+      "ko": "https://ohmytemplate.com/ko/templates/OHMT027-architecture/about",
     },
   },
 };
 
 export default function AboutPage() {
   const timeline = [
-    { year: "2012", title: "Practice Founded", desc: "Established in Seoul with a focus on high-end residential design." },
-    { year: "2016", title: "Expansion to Public Spaces", desc: "Won the national design competition for the Jongno Civic Pavilion." },
-    { year: "2020", title: "Global Recognition", desc: "Awarded the Grand Prix of Spatial Architecture for Highland Villa." },
-    { year: "2024", title: "Carbon Neutral Practice", desc: "Committed to 100% sustainable construction methodologies." },
+    { year: "2012", title: "스튜디오 설립", desc: "서울을 기반으로 하이엔드 주거 설계에 집중하며 시작했습니다." },
+    { year: "2016", title: "공공 공간으로 확장", desc: "종로 시빅 파빌리온 설계 공모에서 당선되었습니다." },
+    { year: "2020", title: "국제적 인정", desc: "하이랜드 빌라로 공간건축 그랑프리를 수상했습니다." },
+    { year: "2024", title: "탄소중립 실천", desc: "지속 가능한 시공 방식과 재료 전략을 전 프로젝트에 적용합니다." },
   ];
 
   const team = [
     {
-      name: "Jessica Point",
-      role: "PRINCIPAL ARCHITECT",
+      name: "제시카 포인트",
+      role: "대표 건축가",
       image: "/templates/OHMT027-architecture/project-1.jpg",
     },
     {
-      name: "Ryan Baser",
-      role: "LEAD INTERIOR DESIGNER",
+      name: "라이언 베이서",
+      role: "리드 인테리어 디자이너",
       image: "/templates/OHMT027-architecture/project-5.jpg",
     },
     {
-      name: "Carrie Vath",
-      role: "STRUCTURAL ENGINEER",
+      name: "캐리 바스",
+      role: "구조 엔지니어",
       image: "/templates/OHMT027-architecture/project-6.jpg",
     },
   ];
@@ -62,13 +63,13 @@ export default function AboutPage() {
             <ScrollReveal>
               <div className="space-y-6 max-w-4xl">
                 <span className="font-sans text-[11px] font-medium tracking-[0.15em] text-[#888888] uppercase block">
-                  OUR CONTEXT
+                  우리의 맥락
                 </span>
-                <h1 className="font-heading font-normal text-[48px] md:text-[64px] lg:text-[72px] leading-tight text-[#1A1A1A]">
-                  About the Practice.
+                <h1 className="font-heading font-normal text-[48px] md:text-[64px] lg:text-[72px] leading-[1.1] text-[#1A1A1A]">
+                  스튜디오 소개.
                 </h1>
                 <p className="font-heading font-normal text-[24px] md:text-[28px] leading-[1.5] text-[#888888] pt-4">
-                  We believe that space has the power to transform the way people live. Our designs converge precision craftsmanship with organic spatial dialogue.
+                  공간은 사람들이 살아가는 방식을 바꿀 수 있다고 믿습니다. 우리의 설계는 정밀한 장인정신과 유기적인 공간의 대화를 하나로 엮습니다.
                 </p>
               </div>
             </ScrollReveal>
@@ -78,7 +79,7 @@ export default function AboutPage() {
           <section className="relative w-full h-[50vh] md:h-[60vh] min-h-[350px] mb-24">
             <Image
               src="/templates/OHMT027-architecture/about.jpg"
-              alt="Architectural studio workplace"
+              alt="건축 스튜디오 작업 공간"
               fill
               className="object-cover"
               sizes="100vw"
@@ -91,15 +92,15 @@ export default function AboutPage() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                 <div className="lg:col-span-4">
                   <h2 className="font-heading font-normal text-[30px] md:text-[36px] text-[#1A1A1A]">
-                    Silent Authority.
+                    조용한 존재감.
                   </h2>
                 </div>
                 <div className="lg:col-span-8 font-sans text-[16px] leading-[1.8] text-[#888888] space-y-6">
                   <p>
-                    Every corner, surface, and void we touch is calculated to evoke deep emotional resonance. Our architectural discipline ensures that massive spatial layouts retain microscopic structural detail and material excellence.
+                    우리가 다루는 모든 모서리, 표면, 비어 있는 공간은 깊은 감각적 울림을 만들기 위해 계산됩니다. 큰 공간의 흐름 안에서도 작은 디테일과 재료의 완성도를 놓치지 않습니다.
                   </p>
                   <p>
-                    We operate at the convergence of architecture, spatial brand experience, and tactile interaction. Our design lab is dedicated to executing systems that evoke silence, celebrate material honesty, and command physical space with ultimate rigor.
+                    우리는 건축, 공간 브랜드 경험, 촉각적 상호작용이 만나는 지점에서 일합니다. 침묵을 만들고, 재료의 정직함을 드러내며, 물리적 공간을 엄격하게 조직하는 시스템을 설계합니다.
                   </p>
                 </div>
               </div>
@@ -112,7 +113,7 @@ export default function AboutPage() {
               <ScrollReveal>
                 <div className="border-b border-[#E0E0E0] pb-8 mb-16">
                   <h2 className="font-heading font-normal text-[30px] md:text-[36px] text-[#1A1A1A]">
-                    Our History.
+                    우리의 역사.
                   </h2>
                 </div>
               </ScrollReveal>
@@ -142,7 +143,7 @@ export default function AboutPage() {
             <ScrollReveal>
               <div className="border-b border-[#E0E0E0] pb-8 mb-16">
                 <h2 className="font-heading font-normal text-[30px] md:text-[36px] text-[#1A1A1A]">
-                  The Team.
+                  팀.
                 </h2>
               </div>
             </ScrollReveal>

@@ -41,7 +41,7 @@ export const PageHero = ({
           {labelIcon}
           {label}
         </span>
-        <h1 className="font-[family-name:var(--theme-font-heading)] text-[clamp(2rem,4vw,3.5rem)] font-bold tracking-tight text-white leading-[1.5] mb-8 uppercase">
+        <h1 className="font-[family-name:var(--theme-font-heading)] text-[clamp(2rem,4vw,3.5rem)] font-[var(--font-weight-heading)] tracking-tight text-white leading-[1.1] mb-8 uppercase">
           {title}
         </h1>
         <div className={`h-[1px] bg-white/20 w-32 mb-8 ${isCenter ? "mx-auto" : ""}`} />

@@ -36,7 +36,7 @@ export function InspirationSection() {
                     className="flex flex-col gap-[32px] mb-[120px] border-b border-[#F3F6FC] pb-[64px]"
                 >
                     <span className="text-[13px] font-normal tracking-[3px] uppercase text-[#090B19] opacity-60">우리의 전문성</span>
-                    <h2 className="text-[26px] md:text-[48px] leading-[55px] font-semibold tracking-[-1.44px] text-[#090B19] break-keep">
+                    <h2 className="text-[26px] md:text-[48px] leading-[1.1] font-semibold tracking-[-1.44px] text-[#090B19] break-keep">
                         정교한 디테일로 만드는 최상의 공간.
                     </h2>
                 </motion.div>
@@ -66,7 +66,7 @@ export function InspirationSection() {
                                     <Icon size={24} className="text-[#090B19]" strokeWidth={1.5} />
                                 </motion.div>
                                 <div>
-                                    <h3 className="text-[24px] leading-[30px] font-bold tracking-[-0.72px] text-[#090B19] mb-[16px]">
+                                    <h3 className="text-[24px] leading-[1.1] font-bold tracking-[-0.72px] text-[#090B19] mb-[16px]">
                                         {service.title}
                                     </h3>
                                     <p className="text-[16px] leading-[26px] font-normal text-[var(--color-text-muted)] break-keep">
@@ -98,7 +98,7 @@ export function InspirationSection() {
                         viewport={{ once: true, margin: '-50px' }}
                         className="relative z-10 max-w-4xl px-4"
                     >
-                        <h2 className="text-[26px] md:text-[48px] leading-[55px] font-semibold tracking-[-1.44px] mb-[48px] break-keep">
+                        <h2 className="text-[26px] md:text-[48px] leading-[1.1] font-semibold tracking-[-1.44px] mb-[48px] break-keep">
                             공간이 지닌 가치를 재발견하고, 이를 시대를 초월한 감각적인 경험으로 혁신합니다.
                         </h2>
                         <motion.div

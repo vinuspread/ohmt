@@ -45,7 +45,7 @@ export const BrandStory = () => {
     "badge": `Our Story / Narrative`,
     "title1": `Between material`,
     "title2": `and space.`,
-    "sub": `Founded on the principles of purity and precision, Vinuspread is an archive of essential interiors.`,
+    "sub": `Founded on the principles of purity and precision, OHMT is an archive of essential interiors.`,
     "desc": `Each piece in our collection is a dialogue. We explore the tension between raw material and refined form, creating objects that bring a sense of serenity to the modern home. 01 Edition.`,
     "journal": `Read the Journal`
   },

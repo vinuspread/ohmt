@@ -78,12 +78,12 @@ export default function AboutPage() {
 
         <section className="py-24 bg-white">
           <div className="max-w-[800px] mx-auto px-6">
-            <p className="text-neutral-400 text-[13px] uppercase tracking-[0.15em] mb-16 text-center">The Journey</p>
+            <p className="text-neutral-500 text-[13px] uppercase tracking-[0.15em] mb-16 text-center">The Journey</p>
             <div className="relative border-l border-neutral-200 ml-4 md:ml-28 space-y-12">
               {timeline.map((t) => (
                 <div key={t.year} className="relative pl-8 md:pl-12 group">
                   {/* Timeline Dot */}
-                  <div className="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full bg-neutral-300 group-hover:bg-[#7C9BAB] transition-all duration-300 border border-white" />
+                  <div className="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full bg-neutral-300 group-hover:bg-[var(--bg)] transition-all duration-300 border border-white" />
                   
                   {/* Year */}
                   <div className="md:absolute md:left-[-110px] md:top-0 md:text-right md:w-[80px] mb-2 md:mb-0">
@@ -94,7 +94,7 @@ export default function AboutPage() {
                   
                   {/* Content */}
                   <div>
-                    <h3 className="text-neutral-900 text-lg font-semibold mb-2 group-hover:text-[#7C9BAB] transition-colors duration-300">
+                    <h3 className="text-neutral-900 text-lg font-semibold mb-2 group-hover:text-[var(--bg)] transition-colors duration-300">
                       {t.title}
                     </h3>
                     <p className="text-neutral-500 text-[14px] leading-relaxed">

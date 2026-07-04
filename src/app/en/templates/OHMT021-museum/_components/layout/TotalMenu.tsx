@@ -11,12 +11,12 @@ interface TotalMenuProps {
 }
 
 const menuItems = [
-  { name: "Home", href: "/exhibition", desc: "Experience the Sanctuary" },
-  { name: "Museum Info", href: "/templates/OHMT021-museum/our-story", desc: "Our 500-Year Legacy" },
-  { name: "Collections", href: "/templates/OHMT021-museum/collections", desc: "Explore the Archive" },
-  { name: "Exhibitions", href: "/templates/OHMT021-museum/exhibitions", desc: "Current & Special Showings" },
-  { name: "Souvenir Shop", href: "/templates/OHMT021-museum/souvenir", desc: "Echos of History" },
-  { name: "Curator Note", href: "/templates/OHMT021-museum/curator-note", desc: "Theological Insights" },
+  { name: "Home", href: "/en/templates/OHMT021-museum", desc: "Experience the Sanctuary" },
+  { name: "Museum Info", href: "/en/templates/OHMT021-museum/our-story", desc: "Our 500-Year Legacy" },
+  { name: "Collections", href: "/en/templates/OHMT021-museum/collections", desc: "Explore the Archive" },
+  { name: "Exhibitions", href: "/en/templates/OHMT021-museum/exhibitions", desc: "Current & Special Showings" },
+  { name: "Museum Shop", href: "/en/templates/OHMT021-museum/shop", desc: "Editions & Collectibles" },
+  { name: "Curator Note", href: "/en/templates/OHMT021-museum/curator-note", desc: "Theological Insights" },
 ];
 
 export default function TotalMenu({ isOpen, onClose }: TotalMenuProps) {

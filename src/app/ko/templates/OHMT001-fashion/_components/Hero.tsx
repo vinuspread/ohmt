@@ -31,26 +31,26 @@ export const Hero = () => {
            transition={{ delay: 0.8, duration: 1 }}
            className="max-w-5xl"
         >
-          <span className="text-[13px] md:text-[12px] uppercase tracking-[0.3em] sm:tracking-[0.5em] font-bold mb-6 sm:mb-12 block opacity-60" style={{ fontFamily: "'Pretendard', sans-serif" }}>
+          <span className="text-[13px] md:text-[12px] uppercase tracking-[0.3em] sm:tracking-[0.5em] font-bold mb-3 sm:mb-4 block opacity-60" style={{ fontFamily: "'Pretendard', sans-serif" }}>
             2026년 설립
           </span>
-          <h1 className="text-2xl sm:text-[3vw] md:text-[2.4vw] font-normal tracking-[-0.04em] leading-[1.2] mb-8 sm:mb-16 drop-shadow-2xl" style={{ fontFamily: "'Bodoni Moda', 'Nanum Myeongjo', 'Bodoni MT', 'Didot', serif" }}>
+          <h1 className="text-2xl sm:text-[3vw] md:text-[2.4vw] font-normal tracking-[-0.04em] leading-[0.94] mb-4 sm:mb-5 drop-shadow-2xl" style={{ fontFamily: "var(--font-bodoni)" }}>
             <span className="block sm:whitespace-nowrap font-normal">처음 입는 순간부터 온전히 당신의 것</span>
             <span className="block sm:whitespace-nowrap font-bold">완벽함을 완성하는 디테일</span>
           </h1>
 
-          <p className="text-[1rem] sm:text-[1.1rem] text-white/75 max-w-[580px] mx-auto text-center leading-[1.7] mb-8 sm:mb-16 font-normal drop-shadow-lg" style={{ fontFamily: "'Pretendard', sans-serif" }}>
+          <p className="text-[1rem] sm:text-[1.1rem] text-white/75 max-w-[580px] mx-auto text-center leading-[1.42] mb-7 sm:mb-9 font-normal drop-shadow-lg" style={{ fontFamily: "'Pretendard', sans-serif" }}>
             일시적인 트렌드를 따르기보다 당신의 감성과 개성을 온전히 표현하는 패션.
             <br />
             세련되고 개인적인 스타일을 추구하는 사람들을 위한 컬렉션입니다.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
-             <button className="relative px-8 py-3.5 sm:px-12 sm:py-4.5 bg-white text-black text-[13px] sm:text-[12px] font-bold tracking-[0.15em] sm:tracking-[0.2em] border border-white overflow-hidden group" style={{ fontFamily: "'Pretendard', sans-serif" }}>
+             <button className="relative px-8 py-3.5 sm:px-12 sm:py-4.5 bg-white text-black text-[13px] sm:text-[12px] font-bold tracking-[0.15em] sm:tracking-[0.2em] overflow-hidden group" style={{ fontFamily: "'Pretendard', sans-serif" }}>
               <span className="relative z-10 group-hover:text-white transition-colors duration-500">컬렉션 탐색</span>
               <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-[0.6s] ease-[0.16,1,0.3,1] origin-bottom" />
             </button>
-            <Button variant="ghost" className="text-[13px] sm:text-[12px] font-bold tracking-[0.15em] sm:tracking-[0.2em] hover:tracking-[0.3em] transition-all duration-700 ease-out">
+            <Button variant="ghost" className="text-[13px] sm:text-[12px] font-bold tracking-[0.15em] sm:tracking-[0.2em] border border-white hover:opacity-60 transition-opacity duration-300 px-8 py-3.5 sm:px-12 sm:py-4">
               캠페인 보기
             </Button>
           </div>

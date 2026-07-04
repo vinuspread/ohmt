@@ -20,7 +20,7 @@ export const RoomTabs = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-[clamp(1.8rem,4vw,3.2rem)] font-[var(--font-heading)] font-bold text-[var(--color-primary)] leading-[1.2]">
+          <h2 className="text-[clamp(1.8rem,4vw,3.2rem)] font-[var(--font-heading)] font-bold text-[var(--color-primary)] leading-[1.1]">
             <span className="text-[12px] md:text-[13px] font-medium text-[var(--color-accent)] tracking-tight block mb-4">객실 안내</span>
             객실 & 스위트
           </h2>

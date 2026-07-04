@@ -42,8 +42,8 @@ export default function ContactPage() {
                   <span className="mt-1 text-black/30"><Mail size={20} /></span>
                   <div>
                     <p className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-black/40 mb-1">Email</p>
-                    <p className="text-[0.9rem] font-bold">hello@vinus.co</p>
-                    <p className="text-[0.82rem] text-black/50">Returns & Exchanges: returns@vinus.co</p>
+                    <p className="text-[0.9rem] font-bold">hello@ohmt.co</p>
+                    <p className="text-[0.82rem] text-black/50">Returns & Exchanges: returns@ohmt.co</p>
                   </div>
                 </div>
 

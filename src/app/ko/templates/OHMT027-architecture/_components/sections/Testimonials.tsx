@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture/_components/sections/Testimonials.tsx
+// src/app/ko/templates/OHMT027-architecture/_components/sections/Testimonials.tsx
 "use client";
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,7 +15,7 @@ export function Testimonials() {
         <ScrollReveal>
           <div className="mb-16">
             <h2 className="font-heading font-normal text-[36px] md:text-[40px] text-[#1A1A1A]">
-              What Our Clients Say.
+              클라이언트의 말.
             </h2>
           </div>
         </ScrollReveal>

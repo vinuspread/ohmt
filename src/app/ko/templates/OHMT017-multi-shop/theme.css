@@ -16,7 +16,9 @@
 
   --font-heading: 'Jost', Pretendard, sans-serif;
   --font-body: 'Inter', Pretendard, sans-serif;
-}
+
+  --focus-ring: 2px solid var(--color-primary);
+  --focus-ring-offset: 2px;}
 
 body {
   font-family: var(--font-body);
@@ -64,4 +66,14 @@ h1, h2, h3, h4, h5, h6,
 header a, header button, header span, header nav, 
 nav a, nav button, nav span {
   letter-spacing: -0.03em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

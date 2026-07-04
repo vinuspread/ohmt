@@ -33,16 +33,18 @@ export function StoryOrigin() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
           <div className="reveal">
-            <h2 className="font-michroma text-[clamp(24px,3vw,40px)] text-[var(--text)] leading-[1.05] tracking-[-0.02em]">
-              차고에서 시작해,<br />도시를 바꾼다.
+            <h2 className="font-michroma text-[clamp(24px,3vw,40px)] text-[var(--text)] leading-[1.1] tracking-[-0.02em]">
+              작은 차고에서 시작된 집념,<br />마침내 도심의 풍경을 바꾸다.
             </h2>
           </div>
           <div className="reveal space-y-5">
             <p className="font-inter text-[15px] text-[var(--text-muted)] leading-relaxed">
-              2022년, 발렌시아의 작은 팀이 결심했습니다. 기존 시스템도, 관행도, 타협도 없이 도시 이동 수단을 처음부터 다시 설계하기로.
+              2022년, 발렌시아의 작은 팀은 도시 이동 수단을 처음부터 다시 설계하기로 했습니다.
+              기존 시스템과 관행을 그대로 따르지 않기로 한 결정이었습니다.
             </p>
             <p className="font-inter text-[15px] text-[var(--text-muted)] leading-relaxed">
-              조건은 단 하나였습니다. 어디든 주차할 수 있을 만큼 작고, 누구나 탈 수 있을 만큼 합리적이며, 굳이 타고 싶어질 만큼 매력적인 차.
+              조건은 분명했습니다. 어디든 주차할 만큼 작고, 매일 탈 만큼 합리적일 것.
+              그리고 굳이 타고 싶어질 만큼 매력적일 것.
             </p>
             <p className="font-inter text-[15px] text-[var(--text-muted)] leading-relaxed">
               3년이 지난 지금, 그 차가 NUBI입니다.

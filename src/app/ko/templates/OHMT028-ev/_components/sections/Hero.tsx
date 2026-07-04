@@ -30,17 +30,17 @@ export function Hero() {
         <div className="w-full flex flex-col md:flex-row md:items-end justify-between gap-12 pointer-events-auto">
           <div className="max-w-[560px] w-full">
             <span ref={labelRef} className="font-inter font-medium text-[11px] tracking-[0.15em] text-[var(--accent)] uppercase block mb-4">
-              NUBI — 도시를 위한 전기차
+              NUBI — THE URBAN EV
             </span>
-            <h1 ref={headingRef} className="font-michroma text-[clamp(28px,4vw,56px)] leading-[1.1] tracking-[-0.02em] text-[var(--text)] mb-8">
-              작은 크기로,<br />도시를 장악하세요
+            <h1 ref={headingRef} className="font-michroma text-[clamp(34px,9vw,48px)] leading-[1.12] tracking-[-0.02em] text-[var(--text)] mb-8 md:text-[clamp(48px,6vw,72px)]">
+              컴팩트한 크기,<br />압도적인 기동성으로<br />도심을 장악하다
             </h1>
-            <div ref={ctaRef} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
-              <button className="inline-flex items-center justify-center gap-2.5 bg-[var(--accent)] text-[var(--text-on-light)] px-7 py-3.5 rounded-full text-[13px] font-inter font-medium tracking-[0.03em] hover:bg-[var(--accent-dark)] transition-colors duration-300 w-full sm:w-auto">
-                사전 예약하기 →
+            <div ref={ctaRef} className="flex flex-row items-center gap-3 sm:gap-4">
+              <button className="inline-flex h-12 flex-1 items-center justify-center whitespace-nowrap rounded-full bg-[var(--accent)] px-4 text-[12px] font-inter font-medium tracking-[0.01em] text-[var(--text-on-light)] transition-colors duration-300 hover:bg-[var(--accent-dark)] sm:h-auto sm:w-auto sm:flex-none sm:px-7 sm:py-3.5 sm:text-[13px] sm:tracking-[0.03em]">
+                사전 예약하기
               </button>
-              <button className="inline-flex items-center justify-center gap-2.5 border border-[var(--text)]/40 text-[var(--text)] px-7 py-3.5 rounded-full text-[13px] font-inter font-medium tracking-[0.03em] hover:border-[var(--text)] transition-colors duration-300 w-full sm:w-auto">
-                NUBI 살펴보기 →
+              <button className="inline-flex h-12 flex-1 items-center justify-center whitespace-nowrap rounded-full border border-[var(--text)]/40 px-4 text-[12px] font-inter font-medium tracking-[0.01em] text-[var(--text)] transition-colors duration-300 hover:border-[var(--text)] sm:h-auto sm:w-auto sm:flex-none sm:px-7 sm:py-3.5 sm:text-[13px] sm:tracking-[0.03em]">
+                NUBI 살펴보기
               </button>
             </div>
           </div>

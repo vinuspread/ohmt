@@ -4,10 +4,10 @@ import { useState, useRef } from "react";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
 
 const testimonials = [
-  { name: "이 가족", role: "빌라 솔라야 투숙객", quote: "OHMT에서의 시간은 완전히 다른 세계에 온 듯했습니다. 각 빌라는 저마다의 이야기를 가지고 있고, 바다가 보이는 위치는 숨이 멎을 듯 아름다웠습니다.", rating: "9.3" },
-  { name: "아멜리아 & 제임스 파커", role: "빌라 미라이아 투숙객", quote: "파도 소리와 함께 잠에서 깨고, 눈앞에 펼쳐진 바다와 하늘만 있는 경험은 평생 간직할 것입니다.", rating: "9.1" },
-  { name: "제임스 윌리엄스", role: "솔로 여행자", quote: "건축, 고요함, 직원, 음식. 모든 것이 의도적으로 정교하게 만들어졌습니다. OHMT는 단순한 리조트가 아니라 하나의 철학입니다.", rating: "9.4" },
-  { name: "니나 데이비스", role: "빌라 아자리 투숙객", quote: "빌라를 보러 왔다가 영혼을 얻어 갔습니다. OHMT는 숨 쉴 공간과 고요함, 그리고 진정한 휴식이 무엇인지 기억하게 해주었습니다.", rating: "9.0" },
+  { name: "이 가족", role: "빌라 솔라야 투숙객", quote: "빌라에서 바로 보이는 바다와 조용한 동선이 좋았습니다. 아이와 함께 지내기에도 편안했어요.", rating: "9.3" },
+  { name: "아멜리아 & 제임스 파커", role: "빌라 미라이아 투숙객", quote: "파도 소리로 아침을 시작했습니다. 일정 없이 머무는 시간이 가장 좋았어요.", rating: "9.1" },
+  { name: "제임스 윌리엄스", role: "솔로 여행자", quote: "객실, 음식, 서비스가 모두 차분했습니다. 혼자 쉬러 오기에 좋은 곳입니다.", rating: "9.4" },
+  { name: "니나 데이비스", role: "빌라 아자리 투숙객", quote: "공간이 넓고 조용해서 오래 쉬었습니다. 다시 돌아오고 싶은 리조트예요.", rating: "9.0" },
 ];
 
 export function Testimonials() {
@@ -25,9 +25,6 @@ export function Testimonials() {
         {/* Header */}
         <div className="flex items-end justify-between mb-12">
           <div>
-            <span className="text-[13px] font-medium text-[var(--accent)] tracking-widest uppercase mb-3 block">
-              투숙객 후기
-            </span>
             <h2 className="text-[clamp(26px,3vw,42px)] font-semibold text-white leading-[1.1] tracking-[-0.04em]">
               투숙객의 진솔한 이야기
             </h2>

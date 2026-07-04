@@ -7,8 +7,11 @@ export const Newsletter = () => {
         <section className="py-12 md:py-24 lg:py-32 bg-[var(--color-bg-secondary)] text-black">
             <div className="max-w-[1440px] mx-auto px-6 md:px-12 text-center">
                 <span className="text-[13px] uppercase tracking-[0.4em] sm:tracking-[0.6em] font-bold opacity-40 mb-6 md:mb-10 block">Stay Connected</span>
-                <h2 className="text-[28px] sm:text-[4vw] font-bold tracking-tighter uppercase mb-10 md:mb-16 leading-none">
-                    JOIN THE LABORATORY SERIES
+                <h2
+                    className="mb-10 text-[34px] font-bold leading-none tracking-[-0.035em] sm:text-[4.5vw] md:mb-16"
+                    style={{ fontFamily: "var(--font-bodoni)" }}
+                >
+                    Join the Laboratory Series
                 </h2>
                 <div className="max-w-2xl mx-auto relative group">
                     <input 
@@ -46,17 +49,17 @@ return (
         <div className="space-y-4 md:space-y-8">
             <h5 className="text-[13px] font-medium uppercase tracking-[0.4em] text-black/30">Catalogs</h5>
             <ul className="space-y-3 md:space-y-4 text-[12px] font-medium uppercase tracking-widest">
-                <li><Link href="/en/templates/OHMT001-fashion/category/ss26" className="hover:text-black/40 transition-colors">Spring/Summer 26</Link></li>
-                <li><Link href="/en/templates/OHMT001-fashion/category/aw25" className="hover:text-black/40 transition-colors">Autumn/Winter 25</Link></li>
-                <li><Link href="/en/templates/OHMT001-fashion/category/core" className="hover:text-black/40 transition-colors">Core Series</Link></li>
-                <li><Link href="/en/templates/OHMT001-fashion/category/limited" className="hover:text-black/40 transition-colors">Limited Drop</Link></li>
+                <li><Link href="/en/templates/OHMT001-fashion/collection" className="hover:text-black/40 transition-colors">Spring/Summer 26</Link></li>
+                <li><Link href="/en/templates/OHMT001-fashion/archive" className="hover:text-black/40 transition-colors">Autumn/Winter 25</Link></li>
+                <li><Link href="/en/templates/OHMT001-fashion/collection" className="hover:text-black/40 transition-colors">Core Series</Link></li>
+                <li><Link href="/en/templates/OHMT001-fashion/archive" className="hover:text-black/40 transition-colors">Limited Drop</Link></li>
             </ul>
         </div>
 
         <div className="space-y-4 md:space-y-8">
             <h5 className="text-[13px] font-medium uppercase tracking-[0.4em] text-black/30">Assistance</h5>
             <ul className="space-y-3 md:space-y-4 text-[12px] font-medium uppercase tracking-widest">
-                <li><Link href="/en/templates/OHMT001-fashion/category/ss26" className="hover:text-black/40 transition-colors">Customer Care</Link></li>
+                <li><Link href="/en/templates/OHMT001-fashion/about" className="hover:text-black/40 transition-colors">Customer Care</Link></li>
             </ul>
         </div>
 

@@ -30,7 +30,7 @@ export const BlogSection = () => {
                 <img loading="lazy" src={imgs[i]} alt={p.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
               </div>
               <span className="text-[0.65rem] font-bold uppercase tracking-[0.15em] text-black/40 block mb-2">{p.category} · {p.date}</span>
-              <h3 className="text-[0.9rem] font-bold text-black leading-snug mb-3 group-hover:opacity-60 transition-opacity tracking-[-0.03em]">{p.title}</h3>
+              <h3 className="text-[0.9rem] font-bold text-black leading-[1.1] mb-3 group-hover:opacity-60 transition-opacity tracking-[-0.03em]">{p.title}</h3>
               <span className="inline-flex items-center gap-1.5 text-[0.75rem] font-bold uppercase tracking-[0.08em] text-black border-b border-black/30 pb-0.5">
                 더 읽기 <ArrowRight size={12} />
               </span>

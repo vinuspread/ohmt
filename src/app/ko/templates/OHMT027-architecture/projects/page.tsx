@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture/projects/page.tsx
+// src/app/ko/templates/OHMT027-architecture/projects/page.tsx
 import React from "react";
 import type { Metadata } from "next";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
@@ -8,18 +8,19 @@ import { Projects } from "../_components/sections/Projects";
 import { CustomCursor } from "../_components/ui/CustomCursor";
 
 export const metadata: Metadata = {
-  title: "Projects Portfolio - Architecture Portfolio - OHMT",
-  description: "Browse our selected residential, commercial, public, and interior architecture commissions.",
+  title: "프로젝트 - 건축 포트폴리오 - OHMT",
+  description: "주거, 상업, 공공, 인테리어 분야의 주요 건축 프로젝트를 살펴보세요.",
   openGraph: {
-    title: "Projects Portfolio - Architecture Portfolio - OHMT",
-    description: "Browse our selected residential, commercial, public, and interior architecture commissions.",
-    url: "https://ohmytemplate.com/en/templates/OHMT027-architecture/projects",
+    title: "프로젝트 - 건축 포트폴리오 - OHMT",
+    description: "주거, 상업, 공공, 인테리어 분야의 주요 건축 프로젝트를 살펴보세요.",
+    url: "https://ohmytemplate.com/ko/templates/OHMT027-architecture/projects",
     images: [{ url: "/templates/OHMT027-architecture/og-image.jpg" }],
   },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT027-architecture/projects",
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT027-architecture/projects",
     languages: {
       "en": "https://ohmytemplate.com/en/templates/OHMT027-architecture/projects",
+      "ko": "https://ohmytemplate.com/ko/templates/OHMT027-architecture/projects",
     },
   },
 };

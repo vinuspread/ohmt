@@ -23,10 +23,10 @@ export const CategoryBanners = () => {
 
             {/* Title Overlay */}
             <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-14 z-10 text-white">
-              <span className="text-[11px] uppercase tracking-[0.4em] font-medium opacity-60 mb-2">
+              <span className="text-[11px] uppercase tracking-[-0.03em] font-medium opacity-60 mb-2">
                 컬렉션
               </span>
-              <h4 className="text-xl md:text-3xl font-bold tracking-[0.1em] uppercase mb-4">
+              <h4 className="text-xl md:text-3xl font-bold tracking-[-0.03em] uppercase mb-4">
                 위민스웨어
               </h4>
               <div className="w-12 h-[1px] bg-white group-hover:w-20 transition-[width] duration-700 origin-left" />
@@ -46,10 +46,10 @@ export const CategoryBanners = () => {
 
             {/* Title Overlay */}
             <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-14 z-10 text-white">
-              <span className="text-[11px] uppercase tracking-[0.4em] font-medium opacity-60 mb-2">
+              <span className="text-[11px] uppercase tracking-[-0.03em] font-medium opacity-60 mb-2">
                 컬렉션
               </span>
-              <h4 className="text-xl md:text-3xl font-bold tracking-[0.1em] uppercase mb-4">
+              <h4 className="text-xl md:text-3xl font-bold tracking-[-0.03em] uppercase mb-4">
                 멘스웨어
               </h4>
               <div className="w-12 h-[1px] bg-white group-hover:w-20 transition-[width] duration-700 origin-left" />

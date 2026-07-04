@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
@@ -45,3 +45,4 @@ export default function StudioLayout({
     </>
   );
 }
+

@@ -25,9 +25,6 @@ export function Testimonials() {
         {/* Header */}
         <div className="flex items-end justify-between mb-12">
           <div>
-            <span className="text-[13px] font-medium text-[var(--accent)] tracking-widest uppercase mb-3 block">
-              GUEST STORIES
-            </span>
             <h2 className="text-[clamp(32px,3.5vw,52px)] font-semibold text-white leading-[1.1] tracking-[-0.02em]">
               What Our Guests Say
             </h2>

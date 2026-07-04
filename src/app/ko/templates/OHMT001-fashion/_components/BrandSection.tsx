@@ -24,9 +24,9 @@ export const BrandSection = () => {
             whileInView={{ opacity: 0.5, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1.2 }}
-            className="text-[11px] uppercase tracking-[0.6em] sm:tracking-[0.8em] pl-[0.6em] sm:pl-[0.8em] mb-4 sm:mb-8 font-medium opacity-50 font-sans"
+            className="text-[11px] uppercase tracking-[-0.03em] mb-4 sm:mb-8 font-medium opacity-50 font-sans"
           >
-            바이너스프레드의 철학
+            MAISON OHMT의 철학
           </motion.p>
          
           <motion.h2
@@ -34,11 +34,11 @@ export const BrandSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ delay: 0.2, duration: 1.5 }}
-            className="text-[13px] sm:text-[2.5vw] md:text-[1.6vw] lg:text-[1.3vw] font-normal tracking-[-0.03em] uppercase mb-6 sm:mb-12 leading-[1.3]"
+            className="text-[13px] sm:text-[2.5vw] md:text-[1.6vw] lg:text-[1.3vw] font-normal tracking-[-0.04em] uppercase mb-6 sm:mb-12 leading-[1.3]"
             style={{ fontFamily: "'Pretendard', sans-serif" }}
           >
             <span className="block">침묵 속에서 울려 퍼지는</span>
-            <span className="block text-white/20 font-normal tracking-[0.01em]">형태의 언어.</span>
+            <span className="block text-white/20 font-normal tracking-[-0.04em]">형태의 언어.</span>
           </motion.h2>
         
         <motion.div 
@@ -55,12 +55,12 @@ export const BrandSection = () => {
           viewport={{ once: true }}
           transition={{ delay: 0.6, duration: 1 }}
         >
-           <Link 
-             href="#" 
-             className="text-[13px] font-bold uppercase tracking-[0.3em] sm:tracking-[0.4em] mr-[-0.3em] sm:mr-[-0.4em] border-b border-white/40 pb-2 hover:border-white transition-colors inline-block hover:opacity-70"
-           >
-             더 알아보기
-           </Link>
+            <Link 
+              href="#" 
+              className="text-[13px] font-bold uppercase tracking-[-0.03em] border-b border-white/40 pb-2 hover:border-white transition-colors inline-block hover:opacity-70"
+            >
+              더 알아보기
+            </Link>
         </motion.div>
       </div>
     </section>

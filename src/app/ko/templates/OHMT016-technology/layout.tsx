@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+﻿import type { Metadata } from "next"
 import './theme.css'
 import { Inter, Inter_Tight, Noto_Sans_KR } from 'next/font/google'
 
@@ -59,3 +59,4 @@ export default function TechnologyLayout({
     </div>
   )
 }
+

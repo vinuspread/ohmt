@@ -6,50 +6,36 @@ import { Footer } from "../_components/layout/Footer";
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
-const colors = [
-  { name: "Obsidian Black", hex: "var(--color-bg-secondary)", price: 0 },
-  { name: "Arctic White",   hex: "#e8e8e8", price: 1200 },
-  { name: "Racing Red",     hex: "#8B0000", price: 1800 },
-  { name: "Silver Storm",   hex: "#708090", price: 900 },
-  { name: "Midnight Blue",  hex: "#1a2744", price: 1500 },
-];
-
 const wheels = [
-  { name: '20" Aero',        desc: "Optimised for range & efficiency", price: 0 },
-  { name: '21" Sport',       desc: "Wider stance, sharper cornering",  price: 2400 },
-  { name: '22" Performance', desc: "Track-tuned, zero compromise",     price: 4800 },
+  { name: '20" 에어로 (Aero)',        desc: "주행 거리 및 효율성 극대화", price: 0 },
+  { name: '21" 스포츠 (Sport)',       desc: "넓은 휠베이스, 민첩한 코너링",  price: 2400000 },
+  { name: '22" 퍼포먼스 (Performance)', desc: "트랙 성능 튜닝, 타협 없는 주행",     price: 4800000 },
 ];
 
 const interiors = [
-  { name: "Charcoal Suede", desc: "Modern & understated", price: 0 },
-  { name: "Ivory Leather",  desc: "Classic luxury finish", price: 1600 },
-  { name: "Saddle Brown",   desc: "Warm, rich character",  price: 1600 },
+  { name: "차콜 스웨이드 (Charcoal Suede)", desc: "모던하고 절제된 인테리어", price: 0 },
+  { name: "아이보리 가죽 (Ivory Leather)",  desc: "클래식하고 고급스러운 마감", price: 1600000 },
+  { name: "새들 브라운 (Saddle Brown)",   desc: "따뜻하고 중후한 풍미",  price: 1600000 },
 ];
 
-const views = ["Exterior", "Side", "Rear"];
+const views = ["외관", "측면", "후면"];
 const viewImgs = [
-  "/templates/OHMT009-car/car-3.jpg",
-  "/templates/OHMT009-car/car-1.jpg",
-  "/templates/OHMT009-car/car-5.jpg",
+  "/templates/OHMT009-car/configure-gt7-front.jpg",
+  "/templates/OHMT009-car/hero-2.jpg",
+  "/templates/OHMT009-car/configure-gt7-rear.jpg",
 ];
 
-const BASE_PRICE = 89400;
+const BASE_PRICE = 89400000;
 function fmt(n: number) {
-  return n === 0 ? "Included" : `+$${n.toLocaleString()}`;
+  return n === 0 ? "기본 포함" : `+${(n / 10000).toLocaleString("ko-KR")}만 원`;
 }
 
 function CarConfigurePageContent() {
-  const [color,    setColor]    = useState(0);
   const [wheel,    setWheel]    = useState(0);
   const [interior, setInterior] = useState(0);
   const [view,     setView]     = useState(0);
 
-  const total = BASE_PRICE + colors[color].price + wheels[wheel].price + interiors[interior].price;
-
-  /* multiply overlay intensity: white needs no tint, black is strong */
-  const overlayOpacity =
-    colors[color].hex === "#e8e8e8" ? 0 :
-    colors[color].hex === "var(--color-bg-secondary)" ? 0.55 : 0.45;
+  const total = BASE_PRICE + wheels[wheel].price + interiors[interior].price;
 
   return (
     <TemplateWrapper theme={theme}>
@@ -78,8 +64,8 @@ function CarConfigurePageContent() {
               ))}
             </div>
 
-            {/* Car render area - grayscale base + color overlay */}
-            <div className="flex-1 relative overflow-hidden flex items-center justify-center px-4">
+            {/* Car render area */}
+            <div className="flex-1 relative overflow-hidden">
               {viewImgs.map((src, i) => (
                 <img
                   key={src}
@@ -88,48 +74,9 @@ function CarConfigurePageContent() {
                   className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
                     i === view ? "opacity-100" : "opacity-0"
                   }`}
-                  style={{ filter: "grayscale(0.9) contrast(1.05) brightness(0.85)" }}
                 />
               ))}
-
-              {/* Color tint overlay via multiply */}
-              <div
-                className="absolute inset-0 transition-all duration-500 pointer-events-none"
-                style={{
-                  backgroundColor: colors[color].hex,
-                  mixBlendMode: "multiply",
-                  opacity: overlayOpacity,
-                }}
-              />
-
-              {/* Gradient mask bottom */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)] via-transparent to-[var(--color-primary)]/30 pointer-events-none" />
-
-              {/* 360 hint */}
-              <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex items-center gap-2 text-[0.62rem] font-bold uppercase tracking-widest text-white/30">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
-                  <path d="M12 7A5 5 0 112 7" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
-                  <path d="M12 7l-1.5-1.5M12 7l1.5-1.5" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round"/>
-                </svg>
-                Drag to rotate
-              </div>
-            </div>
-
-            {/* Color swatches bottom bar */}
-            <div className="px-8 py-6 border-t border-white/5 flex items-center gap-4">
-              <span className="text-[0.65rem] uppercase tracking-widest text-[var(--theme-text-muted)] mr-2">Color</span>
-              {colors.map((c, i) => (
-                <button
-                  key={c.name}
-                  onClick={() => setColor(i)}
-                  title={c.name}
-                  className={`w-5 h-5 rounded-full border-2 transition-all duration-200 ${
-                    i === color ? "border-white scale-125" : "border-white/20 hover:border-white/60"
-                  }`}
-                  style={{ backgroundColor: c.hex }}
-                />
-              ))}
-              <span className="ml-auto text-[0.78rem] font-medium text-white/70">{colors[color].name}</span>
+              <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)] via-transparent to-[var(--color-primary)]/20 pointer-events-none" />
             </div>
           </div>
 
@@ -137,14 +84,14 @@ function CarConfigurePageContent() {
           <div className="lg:w-[420px] xl:w-[460px] shrink-0 flex flex-col bg-[var(--color-primary)] overflow-y-auto pt-16">
 
             <div className="px-8 py-8 border-b border-white/5">
-              <p className="text-[0.6rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-2">Configure</p>
-              <h1 className="text-[1.6rem] font-bold tracking-[-0.03em] leading-tight">VINUS GT7</h1>
-              <p className="text-[0.78rem] text-[var(--theme-text-muted)] mt-1">Performance Sedan · From $89,400</p>
+              <p className="text-[0.6rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-2">옵션 설정</p>
+              <h1 className="text-[1.6rem] font-bold tracking-[-0.03em] leading-[1.1]">OHMT GT7</h1>
+              <p className="text-[0.78rem] text-[var(--theme-text-muted)] mt-1">퍼포먼스 세단 · 8,940만 원부터</p>
             </div>
 
             {/* Wheels */}
             <div className="px-8 py-8 border-b border-white/5">
-              <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-[var(--theme-text-muted)] mb-4">Wheels</p>
+              <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-[var(--theme-text-muted)] mb-4">휠 선택</p>
               <div className="space-y-2">
                 {wheels.map((w, i) => (
                   <button
@@ -171,7 +118,7 @@ function CarConfigurePageContent() {
 
             {/* Interior */}
             <div className="px-8 py-8 border-b border-white/5">
-              <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-[var(--theme-text-muted)] mb-4">Interior</p>
+              <p className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-[var(--theme-text-muted)] mb-4">인테리어 선택</p>
               <div className="space-y-2">
                 {interiors.map((item, i) => (
                   <button
@@ -200,8 +147,7 @@ function CarConfigurePageContent() {
             <div className="px-8 py-8 mt-auto">
               <div className="space-y-2.5 mb-6">
                 {[
-                  { k: "Base price", v: `$${BASE_PRICE.toLocaleString()}` },
-                  { k: colors[color].name, v: fmt(colors[color].price) },
+                  { k: "차량 기본 가격", v: `${(BASE_PRICE / 10000).toLocaleString("ko-KR")}만 원` },
                   { k: wheels[wheel].name, v: fmt(wheels[wheel].price) },
                   { k: interiors[interior].name, v: fmt(interiors[interior].price) },
                 ].map(({ k, v }) => (
@@ -214,19 +160,19 @@ function CarConfigurePageContent() {
 
               <div className="flex justify-between items-center border-t border-white/10 pt-5 mb-6">
                 <div>
-                  <p className="text-[0.6rem] uppercase tracking-widest text-[var(--theme-text-muted)]">Est. Total</p>
-                  <p className="text-[1.8rem] font-bold tracking-tight">${total.toLocaleString()}</p>
+                  <p className="text-[0.6rem] uppercase tracking-widest text-[var(--theme-text-muted)]">예상 총 가격</p>
+                  <p className="text-[1.8rem] font-bold tracking-tight">{(total / 10000).toLocaleString("ko-KR")}만 원</p>
                 </div>
                 <span className="text-[0.65rem] text-[var(--theme-text-muted)] text-right leading-relaxed max-w-[120px]">
-                  Before taxes & destination
+                  세금 및 탁송료 제외
                 </span>
               </div>
 
               <button className="w-full py-4 bg-[var(--theme-accent)] text-black font-bold text-[0.7rem] uppercase tracking-[0.18em] hover:brightness-110 transition-all mb-3">
-                Save Configuration
+                설정 내역 저장
               </button>
               <button className="w-full py-3.5 border border-white/15 text-white/70 text-[0.7rem] uppercase tracking-[0.15em] font-medium hover:border-white/40 hover:text-white transition-all">
-                Book a Test Drive
+                시승 예약하기
               </button>
             </div>
           </div>

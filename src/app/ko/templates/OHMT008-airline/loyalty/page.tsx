@@ -53,10 +53,8 @@ function LoyaltyPageContent() {
           imageSrc="/templates/OHMT008-airline/airline-loyalty-hero.png"
           imageAlt="VIP 공항 라운지"
           label="스카이라인 로열티 클럽"
-          title={<>모든 마일을 <br /><span className="text-[var(--color-accent)] font-serif normal-case font-normal">더 높이.</span></>}
-          description="비누스 스카이라인 클럽에 가입하세요. 초고급 스위트, 프라이빗 VIP 공항 라운지, 가속 마일리지 적립, 엘리트 수하물 우선 서비스를 누리세요."
-          align="center"
-          descMaxWidth="max-w-[660px]"
+          title={<>당신의 모든 여정을 <br /><span className="text-[var(--color-accent)] font-[family-name:var(--font-heading)] normal-case font-[var(--font-weight-heading)]">더 높은 가치로</span></>}
+          description="OHMT 스카이라인 클럽에 가입하세요. 초고급 스위트, 프라이빗 VIP 공항 라운지, 가속 마일리지 적립, 엘리트 수하물 우선 서비스를 누리세요."
         />
 
         {/* 1. Interactive Digital Skyline Pass Creator - Typography Focus */}
@@ -65,62 +63,11 @@ function LoyaltyPageContent() {
             
             <div className="grid lg:grid-cols-12 gap-10 md:gap-20 items-center">
               
-              {/* Left: Beautiful floating metallic pass (Clean, borderless card focus) */}
-              <div className="lg:col-span-5 flex flex-col items-center">
-                <div className="text-center pb-8 space-y-2">
-                  <span className="text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] block">
-                    인터랙티브 스카이라인 패스
-                  </span>
-                  <p className="text-[14px] text-[#7A7A7A] normal-case">
-                    오른쪽에서 등급을 선택하여 카드 디자인을 변경하세요.
-                  </p>
-                </div>
-
-                {/* Dynamic Pass Render */}
-                <AnimatePresence mode="wait">
-                  {tiersFull.map((t) => t.name === selectedTier && (
-                    <motion.div
-                      key={t.name}
-                      initial={{ opacity: 0, rotateY: -30, scale: 0.95 }}
-                      animate={{ opacity: 1, rotateY: 0, scale: 1 }}
-                      exit={{ opacity: 0, rotateY: 30, scale: 0.95 }}
-                      transition={{ duration: 0.3 }}
-                       className={`w-full max-w-[340px] h-[210px] bg-gradient-to-tr ${t.color} p-8 flex flex-col justify-between transition-all relative overflow-hidden group cursor-pointer rounded-3xl`}
-                    >
-                      <div className="absolute right-[-40px] top-[-40px] w-24 h-24 bg-white/10 rounded-full transition-transform duration-300" />
-                      
-                      <div className="flex justify-between items-start">
-                        <div>
-                          <p className="text-[13px] uppercase tracking-widest font-black opacity-45">비누스 스카이라인 클럽</p>
-                          <h4 className="text-[16px] font-black uppercase tracking-wider mt-1">{t.name} 패스</h4>
-                        </div>
-                        <Award size={22} className="opacity-70" />
-                      </div>
-
-                      <div className="normal-case">
-                        <p className="text-[13px] uppercase tracking-widest opacity-45">회원 ID</p>
-                        <p className="text-[14px] font-bold tracking-wider pt-0.5">SKY-5647-2026</p>
-                      </div>
-
-                      <div className="flex justify-between items-end border-t border-black/10 pt-4">
-                        <div>
-                          <p className="text-[13px] uppercase tracking-widest opacity-45">마일 가속</p>
-                          <p className="text-[14px] font-bold">{t.accel} 보너스</p>
-                        </div>
-                          <span className="text-[13px] uppercase font-bold tracking-widest border border-current px-3 py-1 rounded-full">
-                            엘리트 활성
-                        </span>
-                      </div>
-                    </motion.div>
-                  ))}
-                </AnimatePresence>
-              </div>
-
-              {/* Right: Modern Asymmetric Tier list (No Box Containers) */}
+              {/* Left: Modern Asymmetric Tier list (No Box Containers) */}
               <div className="lg:col-span-7 space-y-10">
                 <div className="space-y-4">
                   <span className="text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">클럽 등급</span>
-                  <h3 className="text-[clamp(1.5rem,4vw,3rem)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight leading-none">
+                  <h3 className="text-[clamp(1.5rem,4vw,3rem)] font-[family-name:var(--theme-font-heading)] font-[var(--font-weight-heading)] text-[var(--color-primary)] uppercase tracking-tight leading-[1.1]">
                     럭셔리 여정을 가속화하세요.
                   </h3>
                   <div className="h-[2px] bg-[var(--color-accent)] w-12" />
@@ -162,6 +109,57 @@ function LoyaltyPageContent() {
                 </div>
               </div>
 
+              {/* Right: Beautiful floating metallic pass (Clean, borderless card focus) */}
+              <div className="lg:col-span-5 flex flex-col items-center">
+                <div className="text-center pb-8 space-y-2">
+                  <span className="text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] block">
+                    인터랙티브 스카이라인 패스
+                  </span>
+                  <p className="text-[14px] text-[#7A7A7A] normal-case">
+                    왼쪽에서 등급을 선택하여 카드 디자인을 변경하세요.
+                  </p>
+                </div>
+
+                {/* Dynamic Pass Render */}
+                <AnimatePresence mode="wait">
+                  {tiersFull.map((t) => t.name === selectedTier && (
+                    <motion.div
+                      key={t.name}
+                      initial={{ opacity: 0, rotateY: -30, scale: 0.95 }}
+                      animate={{ opacity: 1, rotateY: 0, scale: 1 }}
+                      exit={{ opacity: 0, rotateY: 30, scale: 0.95 }}
+                      transition={{ duration: 0.3 }}
+                       className={`w-full max-w-[340px] h-[210px] bg-gradient-to-tr ${t.color} p-8 flex flex-col justify-between transition-all relative overflow-hidden group cursor-pointer rounded-3xl`}
+                    >
+                      <div className="absolute right-[-40px] top-[-40px] w-24 h-24 bg-white/10 rounded-full transition-transform duration-300" />
+                      
+                      <div className="flex justify-between items-start">
+                        <div>
+                          <p className="text-[13px] uppercase tracking-widest font-black opacity-45">OHMT 스카이라인 클럽</p>
+                          <h4 className="text-[16px] font-black uppercase tracking-wider mt-1">{t.name} 패스</h4>
+                        </div>
+                        <Award size={22} className="opacity-70" />
+                      </div>
+
+                      <div className="normal-case">
+                        <p className="text-[13px] uppercase tracking-widest opacity-45">회원 ID</p>
+                        <p className="text-[14px] font-bold tracking-wider pt-0.5">SKY-5647-2026</p>
+                      </div>
+
+                      <div className="flex justify-between items-end border-t border-black/10 pt-4">
+                        <div>
+                          <p className="text-[13px] uppercase tracking-widest opacity-45">마일 가속</p>
+                          <p className="text-[14px] font-bold">{t.accel} 보너스</p>
+                        </div>
+                          <span className="text-[13px] uppercase font-bold tracking-widest border border-current px-3 py-1 rounded-full">
+                            엘리트 활성
+                        </span>
+                      </div>
+                    </motion.div>
+                  ))}
+                </AnimatePresence>
+              </div>
+
             </div>
           </div>
         </section>
@@ -174,7 +172,7 @@ function LoyaltyPageContent() {
             <div className="lg:col-span-7 space-y-12">
               <div className="space-y-4">
                 <span className="text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">마일 계산기</span>
-                <h3 className="text-[clamp(1.5rem,4vw,3rem)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight leading-none">
+                <h3 className="text-[clamp(1.5rem,4vw,3rem)] font-[family-name:var(--theme-font-heading)] font-[var(--font-weight-heading)] text-[var(--color-primary)] uppercase tracking-tight leading-[1.1]">
                   보상 마일리지 계산
                 </h3>
                 <div className="h-[2px] bg-[var(--color-accent)] w-12" />
@@ -262,7 +260,7 @@ function LoyaltyPageContent() {
                 <span className="text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] block mb-2 mx-auto">
                   상세 혜택 매트릭스
                 </span>
-                <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight">
+                <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-[family-name:var(--theme-font-heading)] font-[var(--font-weight-heading)] text-[var(--color-primary)] uppercase tracking-tight">
                   스카이라인 멤버십 혜택 비교.
                 </h2>
             </div>
@@ -290,7 +288,7 @@ function LoyaltyPageContent() {
                   <tr className="hover:bg-[var(--color-bg-secondary)] transition-colors">
                     <td className="py-8 pr-6 font-bold text-[var(--color-primary)]">공항 라운지 VIP 이용</td>
                     <td className="py-8 px-6 text-center text-neutral-300">이용 불가</td>
-                    <td className="py-8 px-6 text-center text-[var(--color-accent)] font-extrabold bg-[var(--color-bg-secondary)]/30">비누스 비즈니스 라운지</td>
+                    <td className="py-8 px-6 text-center text-[var(--color-accent)] font-extrabold bg-[var(--color-bg-secondary)]/30">OHMT 비즈니스 라운지</td>
                     <td className="py-8 px-6 text-center">일등석 라운지</td>
                     <td className="py-8 pl-6 text-center">프라이빗 시그니처 VIP 라운지</td>
                   </tr>

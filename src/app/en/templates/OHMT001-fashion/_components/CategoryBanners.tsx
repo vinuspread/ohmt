@@ -22,9 +22,6 @@ return (
 
             {/* Title Overlay */}
             <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-14 z-10 text-white">
-              <span className="text-[11px] uppercase tracking-[0.4em] font-medium opacity-60 mb-2">
-                COLLECTION
-              </span>
               <h4 className="text-xl md:text-3xl font-bold tracking-[0.1em] uppercase mb-4">
                 WOMENSWEAR
               </h4>
@@ -38,16 +35,13 @@ return (
               <img
                 src="/templates/OHMT001-fashion/menswear-banner.png"
                 alt="MENSWEAR"
-                className="w-full h-full object-cover brightness-90 group-hover:scale-105 transition-all duration-[2s] ease-out-quint"
+                className="w-full h-full object-cover brightness-90 group-hover:scale-105 transition-all duration-[2s] ease-[cubic-bezier(0.22,1,0.36,1)]"
               />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/35 transition-colors duration-700" />
             </div>
 
             {/* Title Overlay */}
             <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-14 z-10 text-white">
-              <span className="text-[11px] uppercase tracking-[0.4em] font-medium opacity-60 mb-2">
-                COLLECTION
-              </span>
               <h4 className="text-xl md:text-3xl font-bold tracking-[0.1em] uppercase mb-4">
                 MENSWEAR
               </h4>

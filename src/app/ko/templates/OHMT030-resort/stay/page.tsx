@@ -5,10 +5,10 @@ import { Footer } from "../_components/Footer";
 const base = "/ko/templates/OHMT030-resort";
 
 const suites = [
-  { slug: "celestial", name: "셀레스티얼 스위트", price: "$480", img: "villa-bedroom-arch.jpg" },
-  { slug: "bellemont", name: "벨몬트 스위트", price: "$360", img: "villa-bedroom-seaview.jpg" },
-  { slug: "tofutalia", name: "토푸탈리아 스위트", price: "$320", img: "villa-bedroom-porthole.jpg" },
-  { slug: "zephyr", name: "제피르 로프트", price: "$290", img: "room-zephyr.jpg" },
+  { slug: "celestial", name: "셀레스티얼 스위트", price: "₩480,000", img: "villa-bedroom-arch.jpg" },
+  { slug: "bellemont", name: "벨몬트 스위트", price: "₩360,000", img: "villa-bedroom-seaview.jpg" },
+  { slug: "tofutalia", name: "토푸탈리아 스위트", price: "₩320,000", img: "villa-bedroom-porthole.jpg" },
+  { slug: "zephyr", name: "제피르 로프트", price: "₩290,000", img: "room-zephyr.jpg" },
 ];
 
 export default function StayPage() {
@@ -24,7 +24,7 @@ export default function StayPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-transparent" />
           <div className="relative z-10 max-w-[1440px] mx-auto w-full px-10">
-            <h1 className="text-white font-semibold tracking-[-0.04em] leading-[0.85] mb-4 uppercase"
+            <h1 className="text-white font-semibold tracking-[-0.04em] leading-[1.1] mb-4 uppercase"
                 style={{ fontSize: "clamp(60px, 10vw, 160px)" }}>
               더<br />빌라스
             </h1>

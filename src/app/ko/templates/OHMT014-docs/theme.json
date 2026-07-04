@@ -1,10 +1,10 @@
 {
-  "slug": "docs",
+  "slug": "OHMT014-docs",
   "name": "Docs Workspace",
   "name_ko": "문서 워크스페이스",
   "category": "corporate",
-  "description": "A clean Notion-style collaborative documentation workspace for modern teams.",
-  "description_ko": "모던 팀을 위한 깔끔한 Notion 스타일 협업 문서 워크스페이스.",
+  "description": "A collaborative documentation workspace template for teams that need clean navigation, structured content, searchable sections, and a Notion-like product feel.",
+  "description_ko": "깔끔한 탐색, 구조화된 콘텐츠, 검색 가능한 섹션, 노션에 가까운 사용감을 갖춘 팀 협업 문서 워크스페이스 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {

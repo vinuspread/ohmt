@@ -11,8 +11,7 @@ import MobileBottomTabBar from "./MobileBottomTabBar";
 
 // 밝은(흰색) 배경을 가진 페이지 경로 목록
 const LIGHT_BG_ROUTES = [
-  "/ko/templates/OHMT021-museum/souvenir",
-  "/ko/templates/OHMT021-museum/sacred-vatican",
+  "/ko/templates/OHMT021-museum/shop",
   "/ko/templates/OHMT021-museum/curator-note",
 ];
 
@@ -101,7 +100,7 @@ export default function Header() {
               {"티켓 예매"}
             </button>
             <Link
-              href="/ko/templates/OHMT021-museum/souvenir"
+              href="/ko/templates/OHMT021-museum/shop"
               className="hover:opacity-50 transition-opacity underline-offset-8 hover:underline"
             >
               {"기념품샵"}
@@ -144,8 +143,6 @@ export default function Header() {
     </>
   );
 }
-
-
 
 
 

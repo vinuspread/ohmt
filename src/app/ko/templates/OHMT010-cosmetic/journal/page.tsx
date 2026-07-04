@@ -53,7 +53,7 @@ function CosmeticJournalPageContent() {
           <div className="max-w-[1440px] mx-auto px-6 md:px-10">
             <div className="mb-16">
               <span className="text-[0.65rem] font-bold uppercase tracking-[0.3em] text-black/40 mb-4 block">저널</span>
-              <h1 className="text-[clamp(2rem,4vw,3.5rem)] font-normal tracking-tight leading-[1.5]">
+              <h1 className="text-[clamp(2rem,4vw,3.5rem)] font-normal tracking-tight leading-[1.1]">
                 피부와 환경을 위한 의식 있는 뷰티에 대한 사색.
               </h1>
             </div>

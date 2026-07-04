@@ -25,10 +25,10 @@ export default function Testimonials() {
           className="text-center mb-16"
         >
           <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">
-            Testimonials
+            고객 후기
           </span>
-          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[1.05]">
-            What our clients say
+          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[1.1]">
+            방문 후 달라진 이야기
           </h2>
         </motion.div>
 

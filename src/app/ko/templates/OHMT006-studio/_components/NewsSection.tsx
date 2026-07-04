@@ -49,7 +49,7 @@ export function NewsSection() {
                 >
                     <div className="flex flex-col gap-[32px] mb-[64px]">
                         <span className="text-[13px] font-normal tracking-[3px] uppercase text-[#090B19] opacity-60">저널</span>
-                        <h2 className="text-[26px] md:text-[48px] leading-[55px] font-semibold tracking-[-1.44px] text-[#090B19] break-keep">
+                        <h2 className="text-[26px] md:text-[48px] leading-[1.1] font-semibold tracking-[-1.44px] text-[#090B19] break-keep">
                             공간에 관한<br />새로운 기록.
                         </h2>
                     </div>

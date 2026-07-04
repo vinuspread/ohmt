@@ -32,7 +32,7 @@ export function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className={`text-[13px] font-medium transition-colors tracking-wide ${
+              className={`text-[13px] font-medium transition-colors tracking-wide focus-visible:outline-2 focus-visible:outline-[var(--accent)] focus-visible:outline-offset-2 ${
                 isLight ? "text-[var(--text-muted)] hover:text-[var(--accent)]" : "text-white/80 hover:text-white"
               }`}
             >
@@ -53,7 +53,7 @@ export function Navbar() {
         <div className="hidden md:flex items-center justify-end">
           <a
             href={`${base}/about#contact`}
-            className={`text-[12px] font-semibold px-5 py-2.5 rounded-lg transition-colors tracking-wide ${
+            className={`text-[12px] font-semibold px-5 py-2.5 rounded-lg transition-colors tracking-wide focus-visible:outline-2 focus-visible:outline-[var(--accent)] focus-visible:outline-offset-2 ${
               isLight
                 ? "bg-[var(--accent)] text-white hover:bg-[var(--accent-light)]"
                 : "border border-white/60 text-white hover:bg-white/10"
@@ -66,6 +66,7 @@ export function Navbar() {
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden flex flex-col gap-1.5 p-2 col-start-3 justify-self-end"
+          aria-label={mobileOpen ? "메뉴 닫기" : "메뉴 열기"}
         >
           <span className={`block w-5 h-[2px] transition-transform ${mobileOpen ? "rotate-45 translate-y-[4px]" : ""} ${isLight ? "bg-[var(--text)]" : "bg-white"}`} />
           <span className={`block w-5 h-[2px] transition-opacity ${mobileOpen ? "opacity-0" : ""} ${isLight ? "bg-[var(--text)]" : "bg-white"}`} />

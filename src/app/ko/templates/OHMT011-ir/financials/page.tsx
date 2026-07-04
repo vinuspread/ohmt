@@ -55,7 +55,7 @@ function IRFinancialsContent() {
                 <div className="w-6 h-[1px] bg-[var(--color-accent)]" />
                 재무 실적
               </div>
-              <h1 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold tracking-tight leading-[1.5] mb-6">
+              <h1 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold tracking-tight leading-[1.1] mb-6">
                 재무 정보
               </h1>
               <p className="text-[0.9rem] text-white/55 leading-[1.8] max-w-[520px] font-normal">
@@ -101,7 +101,7 @@ function IRFinancialsContent() {
               <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-5">
                 분기별 실적
               </span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.5] mb-6">
+              <h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.1] mb-6">
                 실적 요약
               </h2>
               <p className="text-[0.88rem] text-[#6B6B6B] leading-[1.82] font-normal">
@@ -160,8 +160,8 @@ function IRFinancialsContent() {
             <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-5">
               연례 보고서
             </span>
-            <h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-tight leading-[1.5] mb-6">
-              2025 연례 보고서
+<h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-tight leading-[1.1] mb-6">
+               2025 연례 보고서
             </h2>
             <p className="text-[0.88rem] text-white/55 leading-[1.82] max-w-[520px] mx-auto mb-10 font-normal">
               경영진 논평, 감사 재무제표 및 미래 전망 가이던스를 포함한 종합적인 연례 보고서를 확인하세요.

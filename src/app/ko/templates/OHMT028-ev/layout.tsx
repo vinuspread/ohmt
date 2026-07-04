@@ -1,6 +1,7 @@
-import { Michroma, Inter } from "next/font/google";
+﻿import { Michroma, Inter } from "next/font/google";
 import "./theme.css";
 import type { Metadata } from "next";
+import { TemplateWrapper } from "./_components/TemplateWrapper";
 
 export const metadata: Metadata = {
   title: "OHMT - NUBI 전기차",
@@ -47,7 +48,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className={`${michroma.variable} ${inter.variable}`}>
       <style>{`@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');`}</style>
-      {children}
+      <TemplateWrapper>{children}</TemplateWrapper>
     </div>
   );
 }
+

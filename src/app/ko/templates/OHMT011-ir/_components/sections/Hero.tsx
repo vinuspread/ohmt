@@ -4,6 +4,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+const HERO_VIDEO_SRC = "https://pub-10d6d534a06c495c8b45f39cfed47497.r2.dev/ir-hero-bg.mp4";
+
 export const Hero = () => {
   return (
     <motion.section
@@ -14,7 +16,7 @@ export const Hero = () => {
     >
       <video
         className="absolute inset-0 w-full h-full object-cover opacity-25"
-        src="/templates/OHMT011-ir/hero-bg.mp4"
+        src={HERO_VIDEO_SRC}
         autoPlay
         loop
         muted
@@ -27,7 +29,7 @@ export const Hero = () => {
             <div className="w-6 h-[1px] bg-[var(--color-accent)]" />
             투명성과 탁월함
           </div>
-          <h1 className="text-[clamp(2.2rem,3.8vw,3.8rem)] font-normal tracking-[-0.03em] leading-[1.0] mb-7 break-keep">
+          <h1 className="text-[clamp(2.2rem,3.8vw,3.8rem)] font-normal tracking-[-0.03em] leading-[1.1] mb-7 break-keep">
             <span className="font-semibold text-white">멈추지 않는 혁신</span>으로,<br />
             <span className="font-semibold text-[var(--color-accent)]">지속 가능한 미래 가치</span>를 설계합니다.
           </h1>

@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import "./theme.css";
 
 export const metadata: Metadata = {
@@ -9,3 +9,4 @@ export const metadata: Metadata = {
 export default function DocsLayout({ children }: { children: React.ReactNode }) {
   return <>{children}</>;
 }
+

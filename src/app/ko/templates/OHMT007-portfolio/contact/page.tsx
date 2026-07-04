@@ -141,7 +141,7 @@ function ContactPageContent() {
             <div className="grid md:grid-cols-2 gap-16">
               <div>
                 <span className="text-[13px] font-medium tracking-[0.3em] uppercase text-[var(--color-text-muted)] block mb-6">FAQ</span>
-                <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-black tracking-tighter leading-tight">자주 묻는 질문</h2>
+                <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-black tracking-tighter leading-[1.1]">자주 묻는 질문</h2>
               </div>
               <div className="border-t border-[var(--color-border)]">
                 {faqs.map((faq, i) => (

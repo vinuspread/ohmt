@@ -62,7 +62,7 @@ function IRNewsContent() {
                 <div className="w-6 h-[1px] bg-[var(--color-accent)]" />
                 미디어 및 공지사항
               </div>
-              <h1 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold tracking-tight leading-[1.5] mb-6">
+              <h1 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold tracking-tight leading-[1.1] mb-6">
                 뉴스
               </h1>
               <p className="text-[0.9rem] text-white/55 leading-[1.8] max-w-[520px] font-normal">
@@ -133,7 +133,7 @@ function IRNewsContent() {
                             {item.tag}
                           </span>
                         </div>
-                        <h3 className="text-[0.88rem] font-bold text-[var(--color-dark-bg)] leading-[1.5] mb-3 group-hover:text-[var(--color-accent)] transition-colors line-clamp-2">
+                        <h3 className="text-[0.88rem] font-bold text-[var(--color-dark-bg)] leading-[1.1] mb-3 group-hover:text-[var(--color-accent)] transition-colors line-clamp-2">
                           {item.title}
                         </h3>
                         <p className="text-[0.78rem] text-[#6B6B6B] leading-[1.82] font-normal line-clamp-3">

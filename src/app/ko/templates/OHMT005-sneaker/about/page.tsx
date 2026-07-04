@@ -32,7 +32,7 @@ function AboutPageContent() {
         <section className="pt-16 md:pt-32 pb-20 bg-black text-white">
           <div className="max-w-[1440px] mx-auto px-6">
             <span className="text-[0.7rem] font-bold uppercase tracking-[0.25em] text-white/40 block mb-6">스토리</span>
-            <h1 className="text-[clamp(3rem,7vw,6rem)] font-black tracking-[-0.03em] uppercase leading-[1.5] max-w-3xl">
+            <h1 className="text-[clamp(3rem,7vw,6rem)] font-black tracking-[-0.03em] uppercase leading-[1.1] max-w-3xl">
               프리미엄<br /><span className="text-red-600">신발.</span><br />진정한 가치.
             </h1>
             <p className="mt-8 text-[1rem] text-white/60 leading-relaxed max-w-[520px]">
@@ -46,7 +46,7 @@ function AboutPageContent() {
           <div className="max-w-[1440px] mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
             <div>
               <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-black/40 block mb-5">시작</span>
-              <h2 className="text-[2rem] font-black uppercase tracking-[-0.03em] leading-tight mb-6">작은 작업실에서<br />시작되었습니다.</h2>
+              <h2 className="text-[2rem] font-black uppercase tracking-[-0.03em] leading-[1.1] mb-6">작은 작업실에서<br />시작되었습니다.</h2>
               <p className="text-[0.9rem] text-black/60 leading-relaxed mb-4">
                 창립자 마르코는 전통 제화 기술을 익히며 3년을 보낸 후, 이 업계의 근본적인 문제를 깨달았습니다 - 품질과 윤리는 항상 맞바꿔야 하는 것처럼 여겨졌습니다.
               </p>
@@ -67,7 +67,7 @@ function AboutPageContent() {
         <section className="py-12 md:py-24 bg-[var(--color-bg-secondary)]">
           <div className="max-w-[1440px] mx-auto px-6">
             <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-black/40 block mb-4">우리의 신념</span>
-            <h2 className="text-[2rem] font-black uppercase tracking-[-0.03em] leading-tight mb-14">핵심 가치.</h2>
+            <h2 className="text-[2rem] font-black uppercase tracking-[-0.03em] leading-[1.1] mb-14">핵심 가치.</h2>
             <div className="grid md:grid-cols-4 gap-6">
               {values.map((v, i) => (
                 <div key={i} className="bg-white p-8 border border-black/5">
@@ -103,7 +103,7 @@ function AboutPageContent() {
         <section className="py-12 md:py-24 bg-white">
           <div className="max-w-[1440px] mx-auto px-6">
             <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-black/40 block mb-4">구성원</span>
-            <h2 className="text-[2rem] font-black uppercase tracking-[-0.03em] leading-tight mb-14">팀 소개.</h2>
+            <h2 className="text-[2rem] font-black uppercase tracking-[-0.03em] leading-[1.1] mb-14">팀 소개.</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {team.map((m, i) => (
                 <div key={i} className="group">

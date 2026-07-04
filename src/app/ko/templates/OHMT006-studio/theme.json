@@ -1,10 +1,10 @@
 {
-  "slug": "studio",
+  "slug": "OHMT006-studio",
   "name": "Studio Corporate",
   "name_ko": "스튜디오 코퍼레이트",
   "category": "portfolio",
-  "description": "Architecture studio portfolio template for design agencies",
-  "description_ko": "디자인 에이전시를 위한 건축 스튜디오 포트폴리오 템플릿",
+  "description": "A studio portfolio template for architecture and design practices, pairing project imagery, service pages, material details, and a measured editorial voice.",
+  "description_ko": "건축 및 디자인 스튜디오를 위한 포트폴리오 템플릿. 프로젝트 이미지, 서비스 페이지, 소재 디테일, 절제된 에디토리얼 톤을 담았습니다.",
   "mode": "light",
   "theme": {
     "palette": {

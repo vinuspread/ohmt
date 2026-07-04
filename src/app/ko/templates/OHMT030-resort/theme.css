@@ -8,10 +8,62 @@
     --text-dark: #0A0E0E;
     --border: rgba(255, 255, 255, 0.25);
     --border-dark: rgba(255, 255, 255, 0.15);
+    --accent-hover: #ffb37a;
+    --focus-ring: 2px solid var(--accent);
+    --focus-ring-offset: 2px;
   }
 
   .resort-template * {
     word-break: keep-all;
+  }
+
+  .resort-template {
+    overflow-x: clip;
+  }
+}
+
+@supports not (overflow: clip) {
+  .resort-template {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 767px) {
+  .resort-template [class*="px-10"],
+  .resort-template [class*="px-12"] {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  .resort-template h2 {
+    font-size: clamp(1.75rem, 8.8vw, 3.25rem) !important;
+    line-height: 1.12 !important;
+    text-wrap: balance;
+  }
+
+  .resort-template h1 {
+    font-size: clamp(3.7rem, 15vw, 4.8rem) !important;
+    line-height: 0.92 !important;
+    letter-spacing: -0.035em !important;
+  }
+
+  .resort-template h1 span {
+    max-width: calc(100vw - 2.5rem);
+    overflow-wrap: normal;
+  }
+
+  .resort-template p {
+    text-wrap: pretty;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .resort-template *,
+  .resort-template *::before,
+  .resort-template *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
   }
 }
 
@@ -21,13 +73,13 @@ body[lang="ko"], [lang="ko"], :root {
   letter-spacing: -0.025em;
 }
 
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
+h1, h2, h3, h4, h5, h6,
+.font-heading,
 [class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
   letter-spacing: -0.04em;
 }
 
-header a, header button, header span, header nav, 
+header a, header button, header span, header nav,
 nav a, nav button, nav span {
   letter-spacing: -0.03em;
 }

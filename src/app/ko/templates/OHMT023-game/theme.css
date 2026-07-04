@@ -12,10 +12,45 @@
   --color-border-bright: #333333;
   --font-heading: var(--font-orbitron), 'Space Grotesk', 'Pretendard', sans-serif;
   --font-body: 'Inter', 'Pretendard', sans-serif;
+
+  --focus-ring: 2px solid var(--color-primary);
+  --focus-ring-offset: 2px;
+
+  --space-container-x-mobile: 1.25rem;
+  --space-section-y-mobile: 5rem;
+  --type-display-mobile: clamp(2.5rem, 13vw, 4.25rem);
+  --type-section-title-mobile: clamp(2rem, 9vw, 2.5rem);
 }
 
 body, * { word-break: keep-all; }
+body { overflow-x: clip; }
+@supports not (overflow: clip) {
+  body { overflow-x: hidden; }
+}
 header a, header button, header nav { letter-spacing: -0.03em; }
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: var(--type-display-mobile);
+    text-wrap: balance;
+  }
+
+  h2 {
+    font-size: var(--type-section-title-mobile);
+    text-wrap: balance;
+  }
+
+  section {
+    overflow-x: clip;
+  }
+
+  [class*="px-8"],
+  [class*="px-10"],
+  [class*="px-12"] {
+    padding-left: var(--space-container-x-mobile);
+    padding-right: var(--space-container-x-mobile);
+  }
+}
 
 
 body[lang="ko"], [lang="ko"], :root {
@@ -49,4 +84,14 @@ h1, h2, h3, h4, h5, h6,
 header a, header button, header span, header nav, 
 nav a, nav button, nav span {
   letter-spacing: -0.03em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

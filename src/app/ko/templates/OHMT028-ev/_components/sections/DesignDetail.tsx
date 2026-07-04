@@ -44,11 +44,11 @@ export function DesignDetail() {
       <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20">
         <div className="mb-16">
           <SplitHeading
-            text="디테일에 담긴 설계"
+            text="디테일에 집착한 미니멀 엔지니어링"
             className="font-michroma text-[clamp(26px,3vw,44px)] text-[var(--text)] leading-[1.05] tracking-[-0.02em]"
           />
           <p className="font-inter text-[15px] text-[var(--text-muted)] mt-4 max-w-[500px]">
-            모든 곡선과 라인에는 이유가 있습니다.<br />형태는 언제나 기능을 따릅니다.
+            모든 곡선과 캐릭터 라인에는 기능적 이유가 있습니다.<br />형태는 언제나 기능을 따릅니다.
           </p>
         </div>
 

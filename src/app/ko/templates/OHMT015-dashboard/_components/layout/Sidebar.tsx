@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { LayoutDashboard, TrendingUp, FileText, Calendar, Package, ShoppingCart, Users, Settings, UserCircle, ChevronLeft, ChevronRight } from 'lucide-react'
+import { LayoutDashboard, TrendingUp, FileText, Calendar, Package, ShoppingCart, Users, Settings, UserCircle, ChevronLeft, ChevronRight, X } from 'lucide-react'
 import { Avatar } from '../common/Avatar'
 
 const menuGroups = [
@@ -31,27 +31,50 @@ const menuGroups = [
   },
 ]
 
-export function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle: () => void }) {
+export function Sidebar({
+  collapsed,
+  onToggle,
+  mobileOpen = false,
+  onMobileClose,
+}: {
+  collapsed: boolean
+  onToggle: () => void
+  mobileOpen?: boolean
+  onMobileClose?: () => void
+}) {
   const pathname = usePathname()
 
   return (
-    <aside
-      className={`fixed left-0 top-0 h-full bg-[var(--color-bg-elevated)] border-r border-[var(--color-border)] z-30 flex flex-col transition-all duration-300 ease-in-out ${
-        collapsed ? 'w-[56px]' : 'w-[220px]'
-      }`}
-    >
-      <div className="h-16 flex items-center px-4 border-b border-[var(--color-border)]">
+    <>
+      {mobileOpen && (
+        <div
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          onClick={onMobileClose}
+        />
+      )}
+      <aside
+        className={`fixed left-0 top-0 h-full bg-[var(--color-bg-elevated)] border-r border-[var(--color-border)] z-50 flex flex-col transition-all duration-300 ease-in-out w-[220px] ${
+          mobileOpen ? 'translate-x-0' : '-translate-x-full'
+        } lg:translate-x-0 ${collapsed ? 'lg:w-[56px]' : 'lg:w-[220px]'}`}
+      >
+      <div className="h-16 flex items-center justify-between px-4 border-b border-[var(--color-border)]">
         {!collapsed && (
           <span className="text-lg font-[var(--font-heading)] font-semibold text-[var(--color-primary)]">
             OHMT
           </span>
         )}
+        <button
+          onClick={onMobileClose}
+          className="p-1.5 -mr-1.5 rounded-[var(--radius-md)] text-[var(--color-text-muted)] hover:bg-[var(--color-bg-hover)] lg:hidden"
+        >
+          <X size={18} strokeWidth={1.5} />
+        </button>
       </div>
 
-      {/* Toggle button - floats on the right edge, vertically centered */}
+      {/* Toggle button - floats on the right edge, vertically centered (desktop only) */}
       <button
         onClick={onToggle}
-        className="absolute -right-3.5 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full flex items-center justify-center bg-[var(--color-bg-elevated)] text-[var(--color-primary)] border border-[var(--color-primary-border)] hover:bg-[var(--color-primary)] hover:text-white transition-all z-40"
+        className="hidden lg:flex absolute -right-3.5 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full items-center justify-center bg-[var(--color-bg-elevated)] text-[var(--color-primary)] border border-[var(--color-primary-border)] hover:bg-[var(--color-primary)] hover:text-white transition-all z-40"
       >
         {collapsed ? <ChevronRight size={13} strokeWidth={2} /> : <ChevronLeft size={13} strokeWidth={2} />}
       </button>
@@ -72,6 +95,7 @@ export function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle:
                   <li key={item.href}>
                     <Link
                       href={item.href}
+                      onClick={onMobileClose}
                       className={`flex items-center text-sm transition-colors ${
                         collapsed
                           ? 'justify-center mx-auto w-9 h-9 rounded-[var(--radius-md)]'
@@ -106,6 +130,7 @@ export function Sidebar({ collapsed, onToggle }: { collapsed: boolean; onToggle:
           </div>
         )}
       </div>
-    </aside>
+      </aside>
+    </>
   )
 }
