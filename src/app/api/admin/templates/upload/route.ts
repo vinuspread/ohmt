@@ -65,7 +65,7 @@ export async function POST(request: NextRequest) {
   const supabase = createAdminClient();
   const { data: existing, error: lookupError } = await supabase
     .from("templates")
-    .select("id")
+    .select("id, description")
     .eq("slug", slug)
     .eq("lang", lang)
     .maybeSingle();
@@ -90,12 +90,16 @@ export async function POST(request: NextRequest) {
   await pullLocalRepoIfDev();
 
   if (existing && overwrite) {
+    const finalDescription = existing.description && existing.description.trim().length > 0
+      ? existing.description
+      : description;
+
     const { error: updateError } = await supabase
       .from("templates")
       .update({
         name,
         category: themeJson.category ?? "uncategorized",
-        description,
+        description: finalDescription,
         thumbnail_url: `/templates/${slug}/og-image.jpg`,
         tags: themeJson.tags ?? [],
         ...(templateKey && { template_key: templateKey }),
