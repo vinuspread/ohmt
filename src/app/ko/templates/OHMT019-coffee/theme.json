@@ -1,5 +1,5 @@
 {
-  "slug": "coffee",
+  "slug": "OHMT019-coffee",
   "name": "Coffee",
   "name_ko": "커피",
   "category": "retail",
@@ -11,12 +11,26 @@
       "primary": "#FDFAF6",
       "secondary": "#1A1209",
       "accent": "#3B2314",
-      "text": { "main": "#1A1209", "muted": "#8A7A6E", "contrast": "#FFFFFF" },
-      "ui": { "border": "#E4DDD5", "hover": "#F2EDE6", "shadow": "none" }
+      "text": {
+        "main": "#1A1209",
+        "muted": "#8A7A6E",
+        "contrast": "#FFFFFF"
+      },
+      "ui": {
+        "border": "#E4DDD5",
+        "hover": "#F2EDE6",
+        "shadow": "none"
+      }
     },
     "typography": {
-      "heading": { "font": "Playfair Display, serif", "style": "font-bold" },
-      "body": { "font": "Inter, sans-serif", "style": "font-normal leading-relaxed" }
+      "heading": {
+        "font": "Playfair Display, serif",
+        "style": "font-bold"
+      },
+      "body": {
+        "font": "Inter, sans-serif",
+        "style": "font-normal leading-relaxed"
+      }
     },
     "spacing": {
       "page_pt": "80px",

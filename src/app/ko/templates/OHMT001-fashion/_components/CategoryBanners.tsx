@@ -14,7 +14,7 @@ export const CategoryBanners = () => {
           <Link href="#" className="relative block aspect-[16/10] overflow-hidden group cursor-pointer bg-gray-100">
             <div className="absolute inset-0 z-0">
               <img
-                src="/templates/fashion/womenswear-banner.png"
+                src="/templates/OHMT001-fashion/womenswear-banner.png"
                 alt="위민스웨어"
                 className="w-full h-full object-cover brightness-90 group-hover:scale-105 transition-transform duration-[2s] ease-out-quint"
               />
@@ -37,7 +37,7 @@ export const CategoryBanners = () => {
           <Link href="#" className="relative block aspect-[16/10] overflow-hidden group cursor-pointer bg-gray-100">
             <div className="absolute inset-0 z-0">
               <img
-                src="/templates/fashion/menswear-banner.png"
+                src="/templates/OHMT001-fashion/menswear-banner.png"
                 alt="멘스웨어"
                 className="w-full h-full object-cover brightness-90 group-hover:scale-105 transition-transform duration-[2s] ease-out-quint"
               />

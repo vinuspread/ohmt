@@ -8,19 +8,19 @@ const samples = [
     label: "컬러",
     title: "피부, 세라믹, 과일, 금속이 같은 빛 안에 머뭅니다.",
     text: "따뜻한 자연광은 살리고, 색을 프리셋처럼 한쪽으로 밀지 않습니다.",
-    image: "/templates/luma-camera/engine-color-grid.jpg?v=20260702f",
+    image: "/templates/OHMT031-luma-camera/engine-color-grid.jpg?v=20260702f",
   },
   {
     label: "저조도",
     title: "창밖의 푸른빛과 램프의 온도를 함께 둡니다.",
     text: "그림자는 보이게 두고, 장면에 어울리는 만큼의 입자만 남깁니다.",
-    image: "/templates/luma-camera/engine-lowlight-room.jpg?v=20260702f",
+    image: "/templates/OHMT031-luma-camera/engine-lowlight-room.jpg?v=20260702f",
   },
   {
     label: "디테일",
     title: "질감은 읽히고, 가장자리는 거칠지 않습니다.",
     text: "종이, 천, 브러시드 메탈, 세라믹 유약을 샤프닝 테스트처럼 만들지 않습니다.",
-    image: "/templates/luma-camera/engine-texture-close.jpg?v=20260702f",
+    image: "/templates/OHMT031-luma-camera/engine-texture-close.jpg?v=20260702f",
   },
 ];
 
@@ -61,7 +61,7 @@ export default function ImageEnginePage() {
               </p>
             </div>
             <div className="relative min-h-[520px] overflow-hidden bg-[var(--luma-dark)]">
-              <Image unoptimized src="/templates/luma-camera/sample-color.jpg?v=20260702e" alt="따뜻한 자연광의 LUMA 컬러 샘플" fill priority className="object-cover" sizes="(min-width: 1024px) 58vw, 100vw" />
+              <Image unoptimized src="/templates/OHMT031-luma-camera/sample-color.jpg?v=20260702e" alt="따뜻한 자연광의 LUMA 컬러 샘플" fill priority className="object-cover" sizes="(min-width: 1024px) 58vw, 100vw" />
             </div>
           </div>
         </section>
@@ -125,7 +125,7 @@ export default function ImageEnginePage() {
         <section className="px-4 pb-24 md:px-8 md:pb-32">
           <div className="mx-auto grid max-w-[1380px] gap-4 lg:grid-cols-[1.15fr_0.85fr]">
             <div className="relative min-h-[460px] overflow-hidden bg-[var(--luma-dark)]">
-              <Image unoptimized src="/templates/luma-camera/app-recipe-view.jpg?v=20260702f" alt="이미지 레시피와 노트를 저장하는 LUMA 앱" fill className="object-cover" sizes="(min-width: 1024px) 58vw, 100vw" />
+              <Image unoptimized src="/templates/OHMT031-luma-camera/app-recipe-view.jpg?v=20260702f" alt="이미지 레시피와 노트를 저장하는 LUMA 앱" fill className="object-cover" sizes="(min-width: 1024px) 58vw, 100vw" />
             </div>
             <div className="bg-white/55 p-7 md:p-10">
               <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--luma-muted)]">촬영 후</p>

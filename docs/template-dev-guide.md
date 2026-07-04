@@ -25,7 +25,7 @@
 public/
 └── templates/
     └── [slug]/
-        └── thumbnail.jpg     ← 반드시 있어야 함 (en zip에만 포함)
+        └── og-image.jpg     ← 반드시 있어야 함 (en zip에만 포함)
 ```
 
 ### ko 업로드 zip 필수 파일 목록
@@ -42,7 +42,7 @@ public/
 ※ ko zip에는 public/ 폴더를 포함하지 않는다 (이미지는 en과 공유)
 ```
 
-> **`thumbnail.jpg`는 파일명이 정확히 이 이름이어야 한다.** `thumb.jpg`, `preview.jpg` 등 다른 이름은 인식되지 않는다.
+> **`og-image.jpg`는 파일명이 정확히 이 이름이어야 한다.** `thumb.jpg`, `preview.jpg`, `thumbnail.jpg` 등 다른 이름은 인식되지 않는다.
 
 ---
 
@@ -51,7 +51,7 @@ public/
 | 오류 메시지 | 원인 | 해결 방법 |
 |------------|------|----------|
 | `필수 파일이 없습니다: _components/TemplateWrapper.tsx` | TemplateWrapper.tsx 누락 | `[slug]/_components/TemplateWrapper.tsx` 파일을 생성하고 zip에 포함 |
-| `필수 이미지 파일이 없습니다: public/templates/[slug]/thumbnail.jpg` | 썸네일 누락 또는 파일명 불일치 | 파일명을 정확히 `thumbnail.jpg`로 하여 `public/templates/[slug]/` 경로에 포함 |
+| `필수 이미지 파일이 없습니다: public/templates/[slug]/og-image.jpg` | 썸네일 누락 또는 파일명 불일치 | 파일명을 정확히 `og-image.jpg`로 하여 `public/templates/[slug]/` 경로에 포함 |
 | `zip 루트에 템플릿 폴더가 정확히 1개 있어야 합니다` | zip 압축 방식 오류 | `[slug]/` 폴더와 `public/` 폴더만 zip 루트에 위치해야 함. `src/app/...` 경로 포함 불가 |
 | `theme.json slug와 폴더명이 다릅니다` | theme.json의 slug 값 불일치 | theme.json의 `"slug"` 값이 폴더명과 정확히 일치해야 함 |
 | `금지된 경로가 포함되어 있습니다: src/` | src/ 경로가 zip에 포함됨 | zip 루트에 `[slug]/` 폴더를 직접 위치시켜야 함 |
@@ -118,7 +118,7 @@ public/
 └── theme.json                # 필수 - 메타데이터 + 테마 값
 
 public/templates/[slug]/
-└── thumbnail.jpg              # 필수 (800×600) - 누락 시 업로드 거부됨
+└── og-image.jpg              # 필수 (800×600) - 누락 시 업로드 거부됨
 ```
 
 ### 허용하지 않는 구조
@@ -428,7 +428,7 @@ export default function TemplatePage() {
 | 저장 위치 | `public/templates/[slug]/` |
 | 참조 경로 | `/templates/[slug]/filename.ext` |
 | hero 이미지 | 1600px 기준, jpg |
-| 썸네일 | 800px 기준, jpg, **파일명은 정확히 `thumbnail.jpg`** (관리자 시스템이 이 경로를 자동으로 등록하므로 다른 파일명 사용 시 랜딩페이지 썸네일이 깨짐) |
+| 썸네일 | 800px 기준, jpg, **파일명은 정확히 `og-image.jpg`** (관리자 시스템이 이 경로를 자동으로 등록하므로 다른 파일명 사용 시 랜딩페이지 썸네일이 깨짐) |
 | 아이콘/투명 | png 또는 svg |
 | 외부 URL | **금지** (unsplash, picsum 등 CDN 참조 불가) |
 | ko 템플릿 | en 폴더 공유, 별도 `/templates/[slug]-ko/` 폴더 생성 **금지** |
@@ -784,8 +784,7 @@ const faqJsonLd = {
 
 | 파일명 | 크기 | 용도 |
 |--------|------|------|
-| `og-image.jpg` | 1200 × 630px | 소셜 미리보기, AI 검색 |
-| `thumbnail.jpg` | 800 × 600px | 랜딩페이지 카드 |
+| `og-image.jpg` | 1200 × 630px 권장 | 소셜 미리보기, AI 검색, 랜딩페이지 카드 |
 
 저장 위치: `public/templates/[slug]/og-image.jpg`
 
@@ -818,8 +817,7 @@ const faqJsonLd = {
 ### 이미지
 - [ ] 모든 이미지가 `public/templates/[slug]/`에 있음
 - [ ] `public/templates/[slug]-ko/` 폴더 없음
-- [ ] `og-image.jpg` (1200×630) 존재
-- [ ] `thumbnail.jpg` (800×600) 존재
+- [ ] `og-image.jpg` 존재 (1200×630 권장)
 
 ### SEO / GEO
 - [ ] 모든 page.tsx에 `metadata` 또는 `generateMetadata()` 존재

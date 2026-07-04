@@ -18,7 +18,7 @@ function AboutContent() {
           eyebrow="EST. 2026"
           title="The Brand"
           description="A fashion laboratory built around restraint, material discipline, and pieces designed to outlast the season that introduced them."
-          image="/templates/fashion/about-hero-v2.png"
+          image="/templates/OHMT001-fashion/about-hero-v2.png"
           imageAlt="Fashion atelier brand story"
         />
 
@@ -44,7 +44,7 @@ function AboutContent() {
                 </p>
               </div>
               <div className="aspect-[4/5] overflow-hidden">
-                <img src="/templates/fashion/hero-custom.jpg" alt="" className="w-full h-full object-cover" />
+                <img src="/templates/OHMT001-fashion/hero-custom.jpg" alt="" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>

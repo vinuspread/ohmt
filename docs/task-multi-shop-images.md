@@ -52,4 +52,4 @@ team-02.jpg | Professional portrait of a man in his late 20s with a design-orien
 
 team-03.jpg | Professional portrait of a woman in her late 20s, brand strategist aesthetic — modern business casual outfit, warm smile. Soft neutral backdrop. Natural portrait lighting. Square crop.
 
-thumbnail.jpg | Composite hero thumbnail for multi-shop template preview — dark editorial fashion hero image with bold white heading "Style That Speaks for Itself", black navigation bar, product grid below. Clean UI mockup screenshot style.
+og-image.jpg | Composite hero thumbnail for multi-shop template preview — dark editorial fashion hero image with bold white heading "Style That Speaks for Itself", black navigation bar, product grid below. Clean UI mockup screenshot style.

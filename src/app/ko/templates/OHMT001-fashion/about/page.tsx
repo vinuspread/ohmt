@@ -15,7 +15,7 @@ function AboutContent() {
 
         <section className="relative h-[40vh] md:h-[50vh] overflow-hidden flex items-center justify-center pt-14 md:pt-20">
           <img
-            src="/templates/fashion/about-hero-v2.png"
+            src="/templates/OHMT001-fashion/about-hero-v2.png"
             alt="브랜드스토리"
             className="absolute inset-0 w-full h-full object-cover brightness-[0.35]"
           />
@@ -46,7 +46,7 @@ function AboutContent() {
                 </p>
               </div>
               <div className="aspect-[4/5] overflow-hidden">
-                <img src="/templates/fashion/hero-custom.jpg" alt="" className="w-full h-full object-cover" />
+                <img src="/templates/OHMT001-fashion/hero-custom.jpg" alt="" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>

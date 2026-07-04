@@ -9,7 +9,7 @@ const products = [
     price: "$1,890",
     note: "Everyday compact body",
     spec: "28mm fixed lens",
-    image: "/templates/luma-camera/shop-one-kit.jpg?v=20260702f",
+    image: "/templates/OHMT031-luma-camera/shop-one-kit.jpg?v=20260702f",
     details: ["Neutral / Warm profile", "Daily carry mode", "Companion notes"],
     bestFor: "Walks, meals, travel, and the camera that makes it into the bag.",
   },
@@ -18,7 +18,7 @@ const products = [
     price: "$2,460",
     note: "Creator field kit",
     spec: "28mm lens + grip",
-    image: "/templates/luma-camera/shop-pro-kit.jpg?v=20260702f",
+    image: "/templates/OHMT031-luma-camera/shop-pro-kit.jpg?v=20260702f",
     details: ["Grip + notes mode", "Extended recipe memory", "Creator field strap"],
     bestFor: "Editorial sets, product details, low-light interiors, and recipes you reuse.",
   },
@@ -132,7 +132,7 @@ export default function ShopPage() {
         <section className="px-4 pb-24 md:px-8 md:pb-32">
           <div className="mx-auto grid max-w-[1380px] gap-4 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="relative min-h-[460px] overflow-hidden">
-              <Image unoptimized src="/templates/luma-camera/product-pro.jpg?v=20260702e" alt="LUMA One Pro body detail on a fabric surface" fill className="object-cover" sizes="(min-width: 1024px) 55vw, 100vw" />
+              <Image unoptimized src="/templates/OHMT031-luma-camera/product-pro.jpg?v=20260702e" alt="LUMA One Pro body detail on a fabric surface" fill className="object-cover" sizes="(min-width: 1024px) 55vw, 100vw" />
             </div>
             <div className="bg-[var(--luma-dark)] p-8 text-white md:p-10">
               <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/50">Included</p>
@@ -159,7 +159,7 @@ export default function ShopPage() {
               </Link>
             </div>
             <div className="relative min-h-[360px] overflow-hidden">
-              <Image unoptimized src="/templates/luma-camera/quiet-dinner.jpg?v=20260702e" alt="LUMA camera at a quiet dinner" fill className="object-cover" sizes="(min-width: 1024px) 58vw, 100vw" />
+              <Image unoptimized src="/templates/OHMT031-luma-camera/quiet-dinner.jpg?v=20260702e" alt="LUMA camera at a quiet dinner" fill className="object-cover" sizes="(min-width: 1024px) 58vw, 100vw" />
             </div>
           </div>
         </section>

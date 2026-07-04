@@ -14,7 +14,7 @@ const ARTICLES = [
     category: "CAMPAIGN",
     title: "The Last Season",
     date: "June 15, 2026",
-    image: "/templates/fashion/journal-hero-v2.png",
+    image: "/templates/OHMT001-fashion/journal-hero-v2.png",
     content: `A visual meditation on endings and the quiet beauty of letting go. Shot over three days in the Venetian lagoon.
 
     The air is thick with saltwater and silence. We watch the tide recede, carrying with it the last remnants of a season that felt both infinite and brief. In this space, clothing ceases to be just fabric; it becomes a shield, a memory, a second skin.
@@ -26,7 +26,7 @@ const ARTICLES = [
     category: "MATERIALS",
     title: "On Japanese Denim",
     date: "May 28, 2026",
-    image: "/templates/fashion/hero-custom.jpg",
+    image: "/templates/OHMT001-fashion/hero-custom.jpg",
     content: `Selvedge, weight, and the obsessive pursuit of the perfect fade. We trace our denim to a single mill in Okayama.
 
     To understand the character of our denim is to understand the rhythm of old shuttle looms. Operating at a fraction of the speed of modern projectile looms, these vintage machines weave denim with a natural tension and structural variation that cannot be replicated. 
@@ -38,7 +38,7 @@ const ARTICLES = [
     category: "COLLECTION",
     title: "Quiet Craft",
     date: "May 10, 2026",
-    image: "/templates/fashion/exclusive-lifestyle.png",
+    image: "/templates/OHMT001-fashion/exclusive-lifestyle.png",
     content: `Behind the seams of our most technically demanding garment to date — the structured wool overcoat.
 
     We believe that true luxury lies in the details that remain unseen. The structured wool overcoat is a testament to this philosophy. Underneath the heavy double-faced wool outer layer lies a meticulously engineered internal structure of horsehair canvas, hand-stitched to the lapels to ensure they roll naturally rather than crease.
@@ -50,7 +50,7 @@ const ARTICLES = [
     category: "STYLE",
     title: "Dressing for the Season",
     date: "April 22, 2026",
-    image: "/templates/fashion/branding-custom.jpg",
+    image: "/templates/OHMT001-fashion/branding-custom.jpg",
     content: `A practical guide to building a capsule wardrobe that ages with you, not against you.
 
     The modern wardrobe is often cluttered with trends that lose relevance before the fabric begins to wear. We advocate for a different approach: a curated collection of foundational pieces that transition seamlessly through seasons and years.

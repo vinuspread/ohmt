@@ -14,7 +14,7 @@ return (
         className="absolute inset-0"
       >
         <img
-          src="/templates/fashion/branding-custom.jpg"
+          src="/templates/OHMT001-fashion/branding-custom.jpg"
           alt="Luxury Fashion Hero" 
           className="w-full h-full object-cover brightness-75"
           loading="eager"

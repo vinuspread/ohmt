@@ -40,7 +40,7 @@ export default function StoriesPage() {
               </p>
             </div>
             <div className="relative min-h-[520px] overflow-hidden bg-[var(--luma-ink)]">
-              <Image unoptimized src="/templates/luma-camera/app-collection-view.jpg?v=20260702f" alt="LUMA companion app and camera collection view" fill priority className="object-cover" sizes="(min-width: 1024px) 50vw, 100vw" />
+              <Image unoptimized src="/templates/OHMT031-luma-camera/app-collection-view.jpg?v=20260702f" alt="LUMA companion app and camera collection view" fill priority className="object-cover" sizes="(min-width: 1024px) 50vw, 100vw" />
             </div>
           </div>
         </section>
@@ -48,7 +48,7 @@ export default function StoriesPage() {
         <section className="px-4 py-24 md:px-8 md:py-32">
           <div className="mx-auto grid max-w-[1380px] gap-4 lg:grid-cols-[1.1fr_0.9fr]">
             <div className="relative min-h-[620px] overflow-hidden bg-[var(--luma-dark)]">
-              <Image unoptimized src="/templates/luma-camera/app-recipe-view.jpg?v=20260702f" alt="LUMA recipe view in the companion app" fill className="object-cover" sizes="(min-width: 1024px) 56vw, 100vw" />
+              <Image unoptimized src="/templates/OHMT031-luma-camera/app-recipe-view.jpg?v=20260702f" alt="LUMA recipe view in the companion app" fill className="object-cover" sizes="(min-width: 1024px) 56vw, 100vw" />
             </div>
             <div className="grid content-center gap-4">
               {notes.map((note, index) => (
@@ -84,7 +84,7 @@ export default function StoriesPage() {
               </p>
             </div>
             <div className="relative min-h-[360px] overflow-hidden">
-              <Image unoptimized src="/templates/luma-camera/app-insight.jpg?v=20260702e" alt="LUMA companion app beside the camera" fill className="object-cover" sizes="(min-width: 1024px) 58vw, 100vw" />
+              <Image unoptimized src="/templates/OHMT031-luma-camera/app-insight.jpg?v=20260702e" alt="LUMA companion app beside the camera" fill className="object-cover" sizes="(min-width: 1024px) 58vw, 100vw" />
             </div>
           </div>
         </section>

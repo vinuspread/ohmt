@@ -8,10 +8,10 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 const ARTICLES = [
-  { id: 1, category: "캠페인", title: "마지막 시즌", date: "2026년 6월 15일", excerpt: "베네치아 석호에서 3일간 촬영한, 끝과 그 조용한 아름다움에 대한 시각적 명상.", image: "/templates/fashion/journal-hero-v2.png", featured: true },
-  { id: 2, category: "소재", title: "일본 데님에 대하여", date: "2026년 5월 28일", excerpt: "셀비지, 무게, 그리고 완벽한 색바램에 대한 집착. 오카야마의 한 공장으로 거슬러 올라갑니다.", image: "/templates/fashion/hero-custom.jpg" },
-  { id: 3, category: "컬렉션", title: "조용한 장인정신", date: "2026년 5월 10일", excerpt: "지금까지 가장 기술적으로 까다로운 의복, 구조적 울 오버코트의 솔기 뒤 이야기.", image: "/templates/fashion/exclusive-lifestyle.png" },
-  { id: 4, category: "스타일", title: "계절을 위한 옷차림", date: "2026년 4월 22일", excerpt: "당신과 함께 나이 들어가는 캡슐 워드로브를 만들기 위한 실용적인 안내.", image: "/templates/fashion/branding-custom.jpg" },
+  { id: 1, category: "캠페인", title: "마지막 시즌", date: "2026년 6월 15일", excerpt: "베네치아 석호에서 3일간 촬영한, 끝과 그 조용한 아름다움에 대한 시각적 명상.", image: "/templates/OHMT001-fashion/journal-hero-v2.png", featured: true },
+  { id: 2, category: "소재", title: "일본 데님에 대하여", date: "2026년 5월 28일", excerpt: "셀비지, 무게, 그리고 완벽한 색바램에 대한 집착. 오카야마의 한 공장으로 거슬러 올라갑니다.", image: "/templates/OHMT001-fashion/hero-custom.jpg" },
+  { id: 3, category: "컬렉션", title: "조용한 장인정신", date: "2026년 5월 10일", excerpt: "지금까지 가장 기술적으로 까다로운 의복, 구조적 울 오버코트의 솔기 뒤 이야기.", image: "/templates/OHMT001-fashion/exclusive-lifestyle.png" },
+  { id: 4, category: "스타일", title: "계절을 위한 옷차림", date: "2026년 4월 22일", excerpt: "당신과 함께 나이 들어가는 캡슐 워드로브를 만들기 위한 실용적인 안내.", image: "/templates/OHMT001-fashion/branding-custom.jpg" },
 ];
 
 function JournalContent() {

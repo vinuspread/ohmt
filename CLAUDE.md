@@ -50,6 +50,7 @@
 - `design-technology.md` — technology 템플릿 Robotflow 디자인 가이드
 - `product.md` — 프로덕트 정의, 타겟 유저, 브랜드 퍼스낼리티
 - `landing-page-plan.md` — 랜딩페이지 기획안 (서비스 패키지 포함)
+- `admin-template-update-guide.md` — 관리자 화면에서 기존 템플릿 ZIP 업데이트 운영 지침
 - `plan-technology.md` — technology 템플릿 기획 및 콘텐츠 계획
 - `task-opencode.md` — 전체 템플릿 OpenCode 작업 지시서
 - `task-technology-opencode.md` — technology 템플릿 OpenCode 개발 지시서

@@ -30,7 +30,7 @@ function PageContent() {
           eyebrow="Collection"
           title="Current Season"
           description="Tailored essentials, limited objects, and permanent pieces edited into one concise wardrobe."
-          image="/templates/fashion/branding-custom.jpg"
+          image="/templates/OHMT001-fashion/branding-custom.jpg"
           imageAlt="Current season fashion campaign"
         />
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-24">

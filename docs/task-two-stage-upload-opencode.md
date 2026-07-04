@@ -45,7 +45,7 @@ const { error: insertError } = await supabase.from("templates").insert({
   category: themeJson.category ?? "uncategorized",
   description_en: themeJson.description ?? null,
   description_ko: themeJson.description_ko ?? null,
-  thumbnail_url: `/templates/${slug}/thumbnail.jpg`,
+  thumbnail_url: `/templates/${slug}/og-image.jpg`,
   price: 0,
   status: "uploaded",   // ← 변경
   sort_order: 999,

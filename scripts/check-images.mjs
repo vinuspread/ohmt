@@ -3,16 +3,16 @@ import { chromium } from 'playwright';
 
 const HOST = 'http://localhost:3000';
 const irPages = [
-  '/templates/ir',
-  '/templates/ir/financials',
-  '/templates/ir/governance',
-  '/templates/ir/news',
-  '/templates/ir/contact',
-  '/templates/ir-ko',
-  '/templates/ir-ko/financials',
-  '/templates/ir-ko/governance',
-  '/templates/ir-ko/news',
-  '/templates/ir-ko/contact',
+  '/templates/OHMT011-ir',
+  '/templates/OHMT011-ir/financials',
+  '/templates/OHMT011-ir/governance',
+  '/templates/OHMT011-ir/news',
+  '/templates/OHMT011-ir/contact',
+  '/templates/OHMT011-ir-ko',
+  '/templates/OHMT011-ir-ko/financials',
+  '/templates/OHMT011-ir-ko/governance',
+  '/templates/OHMT011-ir-ko/news',
+  '/templates/OHMT011-ir-ko/contact',
 ];
 
 async function run() {
@@ -43,11 +43,11 @@ async function run() {
       await page.goto(url, { waitUntil: 'networkidle', timeout: 15000 });
       
       // Take screenshots of the governance pages for visual multimodal verification
-      if (path === '/templates/ir/governance') {
+      if (path === '/templates/OHMT011-ir/governance') {
         await page.screenshot({ path: 'C:/Users/nonte/.gemini/antigravity-ide/brain/e6a49e41-9c61-468c-ba9c-ff400581bbdb/governance_en.png' });
         console.log('Saved Governance EN page screenshot!');
       }
-      if (path === '/templates/ir-ko/governance') {
+      if (path === '/templates/OHMT011-ir-ko/governance') {
         await page.screenshot({ path: 'C:/Users/nonte/.gemini/antigravity-ide/brain/e6a49e41-9c61-468c-ba9c-ff400581bbdb/governance_ko.png' });
         console.log('Saved Governance KO page screenshot!');
       }
