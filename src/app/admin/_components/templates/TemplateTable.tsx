@@ -19,7 +19,10 @@ type ToastState = { message: string; type: "success" | "error" };
 
 function keyNumber(template_key: string | null | undefined): number {
   if (!template_key) return Infinity;
-  return parseInt(/(\d+)$/.exec(template_key)?.[1] ?? "0", 10);
+  const m = /^[A-Za-z]+(\d+)/.exec(template_key);
+  if (m) return parseInt(m[1], 10);
+  const trailing = /(\d+)$/.exec(template_key);
+  return trailing ? parseInt(trailing[1], 10) : Infinity;
 }
 
 const filters: { value: TemplateFilter; label: string }[] = [
@@ -102,9 +105,10 @@ export function TemplateTable({ data }: { data: Template[] }) {
       if (sortField === "template_key") {
         const valA = keyNumber(a.template_key);
         const valB = keyNumber(b.template_key);
-        if (valA === valB) return 0;
         const diff = valA - valB;
-        return sortDirection === "asc" ? diff : -diff;
+        if (diff !== 0) return sortDirection === "asc" ? diff : -diff;
+        const nameComp = (a.name ?? "").localeCompare(b.name ?? "");
+        return sortDirection === "asc" ? nameComp : -nameComp;
       }
 
       if (sortField === "lang") {
