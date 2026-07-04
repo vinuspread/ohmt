@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { Navbar } from "../_components/Navbar";
 import { Footer } from "../_components/Footer";
+import { SubpageHero } from "../_components/SubpageHero";
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
@@ -13,19 +14,13 @@ function AboutContent() {
       <main className="antialiased min-h-screen bg-white">
         <Navbar />
 
-        <section className="relative h-[40vh] md:h-[50vh] overflow-hidden flex items-center justify-center pt-14 md:pt-20">
-          <img
-            src="/templates/OHMT001-fashion/about-hero-v2.png"
-            alt="브랜드스토리"
-            className="absolute inset-0 w-full h-full object-cover brightness-[0.35]"
-          />
-          <div className="absolute inset-0 bg-black/40" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60" />
-          <div className="relative z-10 text-center px-6 flex flex-col items-center">
-            <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/50 mb-3">EST. 2026</span>
-            <h1 className="font-[family-name:var(--font-bodoni)] text-[32px] md:text-[48px] text-white font-bold tracking-[-0.04em]">브랜드 스토리</h1>
-          </div>
-        </section>
+        <SubpageHero
+          eyebrow="EST. 2026"
+          title="브랜드 스토리"
+          description="절제와 소재에 대한 신뢰, 시즌을 넘어서도록 설계된 옷을 중심으로 만들어진 패션 랩입니다."
+          image="/templates/OHMT001-fashion/about-hero-v2.png"
+          imageAlt="패션 아틀리에 브랜드 스토리"
+        />
 
         <section className="bg-black py-24 md:py-32">
           <div className="max-w-3xl mx-auto px-6 text-center">

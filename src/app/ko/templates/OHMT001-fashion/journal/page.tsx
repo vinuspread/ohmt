@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { Navbar } from "../_components/Navbar";
 import { Footer } from "../_components/Footer";
+import { SubpageHero } from "../_components/SubpageHero";
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
@@ -23,18 +24,15 @@ function JournalContent() {
       <main className="antialiased min-h-screen bg-white">
         <Navbar />
         {featured && (
-          <section className="relative h-[40vh] md:h-[50vh] overflow-hidden pt-14 md:pt-20">
-            <Link href={`/ko/templates/OHMT001-fashion/journal/${featured.id}`} className="relative block w-full h-full overflow-hidden group flex items-center justify-center">
-              <img src={featured.image} alt={featured.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-[1.5s] group-hover:scale-[1.03] brightness-[0.35]" />
-              <div className="absolute inset-0 bg-black/40" />
-              <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60" />
-              <div className="relative z-10 text-center px-6 flex flex-col items-center">
-                <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/50 mb-3">{featured.category}</span>
-                <h1 className="font-[family-name:var(--font-bodoni)] text-[32px] md:text-[48px] text-white font-bold tracking-[-0.04em] leading-[1.1]">{featured.title}</h1>
-                <p className="text-[13px] text-white/60 font-light mt-4 tracking-[-0.025em] max-w-xl">{featured.date} — 에디토리얼 피처드</p>
-              </div>
-            </Link>
-          </section>
+          <Link href={`/ko/templates/OHMT001-fashion/journal/${featured.id}`} className="block">
+            <SubpageHero
+              eyebrow={featured.category}
+              title={featured.title}
+              description={`${featured.date} · 끝과 소재의 기억, 그리고 조용히 사라지는 아름다움에 대한 에디토리얼 노트.`}
+              image={featured.image}
+              imageAlt={featured.title}
+            />
+          </Link>
         )}
         <section className="max-w-[1440px] mx-auto px-6 md:px-12 pb-24">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 mt-16">

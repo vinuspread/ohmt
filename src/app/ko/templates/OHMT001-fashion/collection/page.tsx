@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Navbar } from "../_components/Navbar";
 import { Footer } from "../_components/Footer";
+import { SubpageHero } from "../_components/SubpageHero";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import { ArrowLeft } from "lucide-react";
 import theme from "../theme.json";
@@ -25,7 +26,14 @@ function PageContent() {
     <TemplateWrapper theme={theme}>
       <main className="min-h-screen bg-white antialiased selection:bg-black selection:text-white">
         <Navbar />
-        <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-[120px] md:pt-[160px] pb-24">
+        <SubpageHero
+          eyebrow="Collection"
+          title="이번 시즌"
+          description="테일러드 에센셜, 리미티드 오브젝트, 그리고 영구적인 피스를 하나의 간결한 옷장으로 엮었습니다."
+          image="/templates/OHMT001-fashion/branding-custom.jpg"
+          imageAlt="이번 시즌 패션 캠페인"
+        />
+        <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-24">
           <Link
             href="/ko/templates/OHMT001-fashion"
             className="group inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-black/40 hover:text-black transition-all mb-10 md:mb-16"
@@ -36,7 +44,12 @@ function PageContent() {
 
           <div className="mb-16 md:mb-24">
             <h1 className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/30 mb-3">{LABEL}</h1>
-            <p className="text-[28px] sm:text-[3.5vw] font-bold tracking-tighter uppercase leading-none">{filtered.length}개 상품</p>
+            <p
+              className="text-[36px] font-bold leading-none tracking-[-0.035em] sm:text-[4vw]"
+              style={{ fontFamily: "var(--font-bodoni)" }}
+            >
+              {filtered.length}개 상품
+            </p>
           </div>
 
           <motion.div 

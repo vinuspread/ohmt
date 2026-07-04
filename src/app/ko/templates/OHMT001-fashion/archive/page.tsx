@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Navbar } from "../_components/Navbar";
 import { Footer } from "../_components/Footer";
+import { SubpageHero } from "../_components/SubpageHero";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import { ArrowLeft } from "lucide-react";
 import theme from "../theme.json";
@@ -54,49 +55,13 @@ function PageContent() {
       <main className="min-h-screen bg-black antialiased selection:bg-white selection:text-black">
         <Navbar />
 
-        {/* Hero */}
-        <section className="relative h-[40vh] md:h-[50vh] overflow-hidden flex items-center justify-center pt-14 md:pt-20">
-          <img
-            src="/templates/OHMT001-fashion/archive-hero.jpg"
-            alt="아카이브"
-            className="absolute inset-0 w-full h-full object-cover brightness-[0.35]"
-          />
-          <div className="absolute inset-0 bg-black/40" />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-transparent to-black/60" />
-          <div className="relative z-10 text-center px-6 flex flex-col items-center">
-            <motion.span
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-[11px] font-bold uppercase tracking-[0.4em] text-white/50 mb-3"
-            >
-              ARCHIVE
-            </motion.span>
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="font-[family-name:var(--font-bodoni)] text-[32px] md:text-[48px] font-bold text-white tracking-[-0.04em]"
-            >
-              시즌의 발자취
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-[13px] text-white/60 font-light mt-4 tracking-[-0.025em] max-w-xl break-keep"
-            >
-              우리가 지나온 계절들, 그리고 그 속에 남겨진 영구적인 아카이브.
-            </motion.p>
-          </div>
-          <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
-            <motion.div
-              animate={{ y: [0, 8, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-              className="w-px h-12 bg-white/30"
-            />
-          </div>
-        </section>
+        <SubpageHero
+          eyebrow="ARCHIVE"
+          title="시즌의 발자취"
+          description="모든 컬렉션은 그 순간의 기록입니다. 다음 실루엣을 위한 참조로 이곳에 남아 있습니다."
+          image="/templates/OHMT001-fashion/archive-hero.jpg"
+          imageAlt="아카이브 에디토리얼 패션 캠페인"
+        />
 
         {/* Back link */}
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-12 md:pt-16">
