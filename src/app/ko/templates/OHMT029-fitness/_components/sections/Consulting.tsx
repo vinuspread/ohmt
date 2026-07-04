@@ -9,19 +9,19 @@ export function Consulting({ variant = "home" }: { variant?: "home" | "about" })
         {variant === "home" ? (
           <>
             <h2 className="font-['Montserrat'] font-bold text-[clamp(28px,4vw,48px)] text-white leading-[1.15] tracking-tight mb-4">
-              공간을 프리미엄 웰니스 공간으로 전환하세요.
+              당신의 공간에 맞는 웰니스 운영을 설계합니다.
             </h2>
             <p className="text-[15px] text-white/70 max-w-[560px] mx-auto mb-10 leading-relaxed">
-              컨셉부터 운영까지 — 모든 단계에서 함께하여&nbsp;<span className="whitespace-nowrap">월드클래스</span>&nbsp;웰니스 경험을 만들어갑니다.
+              컨셉, 동선, 인력, 프로그램까지 운영에 필요한 과정을 함께 정리합니다.
             </p>
           </>
         ) : (
           <>
             <h2 className="font-['Montserrat'] font-bold text-[clamp(28px,4vw,48px)] text-white leading-[1.15] tracking-tight mb-4">
-              웰니스의 새로운 장을 준비하셨나요?
+              웰니스 운영을 함께 준비할까요?
             </h2>
             <p className="text-[15px] text-white/70 max-w-[560px] mx-auto mb-10 leading-relaxed">
-              탁월한 웰니스 경험을 통해 브랜드를 한 단계 높이고자 하는 파트너와 함께합니다.
+              호텔, 레지던스, 기업 공간에 맞는 프로그램과 운영 방식을 제안합니다.
             </p>
           </>
         )}

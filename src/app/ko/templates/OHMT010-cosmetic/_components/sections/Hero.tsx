@@ -7,7 +7,7 @@ export const Hero = () => {
       <div className="max-w-[1440px] mx-auto px-6 md:px-10">
         <div className="flex flex-col md:flex-row justify-between items-center py-12 mt-20 gap-16">
           <div className="flex-1 max-w-[860px]">
-            <h1 className="text-[22px] md:text-[36px] md:text-[56px] font-normal leading-[1.0] mb-12">
+            <h1 className="text-[22px] md:text-[36px] md:text-[56px] font-normal leading-[1.1] mb-12">
               자연에 뿌리를 두고,<br />과학으로 정제한<br />고기능성 스킨케어.
             </h1>
             <div className="flex gap-6">
@@ -27,7 +27,7 @@ export const Hero = () => {
               alt="Featured product" 
             />
             <div className="text-[0.85rem] font-bold mb-1">리커버리 리스토러티브 세럼</div>
-            <div className="text-base font-bold mb-4">$85.00</div>
+            <div className="text-base font-bold mb-4">₩85,000</div>
             <button className="text-[0.75rem] font-bold uppercase border-b border-black/20 pb-0.5 hover:border-black transition-colors">
               빠른 추가
             </button>

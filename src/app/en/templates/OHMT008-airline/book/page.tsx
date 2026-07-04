@@ -77,7 +77,7 @@ function BookPageContent() {
           imageSrc="/templates/OHMT008-airline/airline-book-hero.png"
           imageAlt="Luxury flight silhouette"
           label="Book Premium Flight Suite"
-          title={<>Configure Your <br /><span className="text-[var(--color-accent)] font-serif normal-case font-normal">A380 Sanctuary.</span></>}
+          title={<>Configure Your <br /><span className="text-[var(--color-accent)] font-[family-name:var(--font-heading)] normal-case font-bold">A380 Sanctuary.</span></>}
           description="Tailor every dimension of your flight. Choose elite destinations, select your private structural suite, and pre-book Michelin dining elements."
         />
 
@@ -256,7 +256,7 @@ function BookPageContent() {
                               onClick={() => handleSeatClick(seat)}
                               className={`aspect-square flex flex-col items-center justify-center text-[14px] font-bold transition-colors duration-300 relative rounded-none cursor-pointer ${
                                 isOccupied
-                                  ? "bg-neutral-100 border border-neutral-200 text-neutral-400 cursor-not-allowed"
+                                  ? "bg-neutral-100 border border-neutral-200 text-neutral-500 cursor-not-allowed"
                                   : isSelected
                                     ? "bg-[var(--color-accent)] text-[var(--color-primary)]"
                                     : "bg-white border border-[var(--color-border)] text-[var(--color-primary)] hover:border-[var(--color-accent)]"
@@ -346,7 +346,7 @@ function BookPageContent() {
                       {/* Pass details */}
                       <div className="flex justify-between items-start border-b border-white/10 pb-6 mb-8">
                         <div>
-                          <p className="text-[14px] uppercase tracking-[0.3em] text-[var(--color-accent)] font-bold">Vinus Airlines Premium Pass</p>
+                          <p className="text-[14px] uppercase tracking-[0.3em] text-[var(--color-accent)] font-bold">OHMT Premium Pass</p>
                           <h3 className="font-[family-name:var(--theme-font-heading)] text-xl font-bold tracking-tight text-white mt-1">FIRST CLASS SUITE</h3>
                         </div>
                         <span className="text-[18px] text-[var(--color-accent)] font-black bg-[var(--color-accent)]/10 px-4 py-1.5 rounded-full">{selectedSeat?.id}</span>

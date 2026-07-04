@@ -23,7 +23,7 @@ function AboutPageContent() {
           <div className="absolute inset-0 bg-black/40" />
           <div className="relative z-10 text-center text-white px-6">
             <p className="text-xs uppercase tracking-[0.3em] text-white/60 mb-4">브랜드 소개</p>
-            <h1 className="text-5xl lg:text-7xl font-bold tracking-tight leading-[1.05]">
+            <h1 className="text-5xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
               브랜드 스토리
             </h1>
             <p className="text-base text-white/70 mt-5 max-w-lg mx-auto leading-relaxed tracking-wide">
@@ -37,7 +37,7 @@ function AboutPageContent() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
               <div className="flex flex-col justify-center">
                 <p className="text-xs uppercase tracking-[0.25em] text-[var(--color-text-muted)] mb-4">브랜드 철학</p>
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight leading-[1.15] mb-8">
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight leading-[1.1] mb-8">
                   과하지 않은<br />옷의 완성.
                 </h2>
                 <p className="text-base leading-relaxed text-[var(--color-text-muted)]">

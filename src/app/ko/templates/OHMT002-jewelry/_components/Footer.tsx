@@ -30,7 +30,7 @@ export default function Footer() {
 
         {/* Column 1 - Client Services */}
         <div className="space-y-6">
-          <h4 className="text-[13px] font-medium uppercase tracking-[0.2em] text-neutral-400">고객 지원</h4>
+          <h4 className="text-[13px] font-medium uppercase tracking-[0.2em] text-neutral-500">고객 지원</h4>
           <ul className="space-y-3 text-[13px] font-normal text-neutral-600">
             <li><Link href="#" className="hover:text-[var(--color-primary)] transition-colors">문의하기</Link></li>
             <li><Link href="#" className="hover:text-[var(--color-primary)] transition-colors">배송 및 반품 안내</Link></li>
@@ -41,7 +41,7 @@ export default function Footer() {
 
         {/* Column 2 - Legal & Philosophy */}
         <div className="space-y-6">
-          <h4 className="text-[13px] font-medium uppercase tracking-[0.2em] text-neutral-400">이용약관 및 개인정보</h4>
+          <h4 className="text-[13px] font-medium uppercase tracking-[0.2em] text-neutral-500">이용약관 및 개인정보</h4>
           <ul className="space-y-3 text-[13px] font-normal text-neutral-600">
             <li><Link href="#" className="hover:text-[var(--color-primary)] transition-colors">이용 약관</Link></li>
             <li><Link href="#" className="hover:text-[var(--color-primary)] transition-colors">개인정보 처리방침</Link></li>
@@ -52,7 +52,7 @@ export default function Footer() {
       </div>
 
       {/* Footer Bottom Bar */}
-      <div className="max-w-[1440px] mx-auto mt-20 pt-8 border-t border-neutral-200/30 flex flex-col md:flex-row justify-between items-center gap-6 text-[13px] font-medium text-neutral-400 uppercase tracking-widest">
+      <div className="max-w-[1440px] mx-auto mt-20 pt-8 border-t border-neutral-200/30 flex flex-col md:flex-row justify-between items-center gap-6 text-[13px] font-medium text-neutral-500 uppercase tracking-widest">
         <span>© 2026 OHMT.</span>
         <div className="flex gap-8">
           <a href="#" className="hover:text-[var(--color-primary)] transition-colors">Instagram</a>

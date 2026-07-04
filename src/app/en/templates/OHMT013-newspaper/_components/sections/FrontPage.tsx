@@ -4,9 +4,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 export const FrontPage = () => {
-  const searchParams = useSearchParams();
+  const base = "/en/templates/OHMT013-newspaper";
   const t = {
   "nav": {
     "breaking": `Breaking`,
@@ -48,7 +47,7 @@ return (
             alt="Hero story"
           />
           <h1 className="font-[family-name:var(--theme-font-heading)] text-[clamp(1.5rem,2.4vw,2.2rem)] font-bold leading-[1.0] mb-3 group">
-            <Link href="#" className="group-hover:text-[var(--color-primary)] transition-colors text-black">
+            <Link href={`${base}/world/global-crisis`} className="group-hover:text-[var(--color-primary)] transition-colors text-black">
               {t.hero.title1} {t.hero.title2}
             </Link>
           </h1>
@@ -63,19 +62,19 @@ return (
         <div className="md:pl-8 flex flex-col gap-8">
           <div className="border-b border-[var(--color-border)] pb-6">
             <h3 className="font-[family-name:var(--theme-font-heading)] text-[1.1rem] font-bold leading-tight mb-2 text-black">
-              <Link href="#" className="hover:text-[var(--color-primary)]">New evidence suggests shift in arctic current patterns.</Link>
+              <Link href={`${base}/science/arctic-current-patterns`} className="hover:text-[var(--color-primary)]">New evidence suggests shift in arctic current patterns.</Link>
             </h3>
             <p className="text-[0.85rem] text-[#555] leading-[1.4]">Researchers at the Polar Institute find "startling" data on ocean temperatures.</p>
           </div>
           <div className="border-b border-[var(--color-border)] pb-6">
             <h3 className="font-[family-name:var(--theme-font-heading)] text-[1.1rem] font-bold leading-tight mb-2 text-black">
-              <Link href="#" className="hover:text-[var(--color-primary)]">Elections in the East: A region at a political crossroads.</Link>
+              <Link href={`${base}/politics/eastern-elections`} className="hover:text-[var(--color-primary)]">Elections in the East: A region at a political crossroads.</Link>
             </h3>
             <p className="text-[0.85rem] text-[#555] leading-[1.4]">Voter turnout reaches record highs amidst calls for radical reform.</p>
           </div>
           <div>
             <h3 className="font-[family-name:var(--theme-font-heading)] text-[1.1rem] font-bold leading-tight mb-2 text-black">
-              <Link href="#" className="hover:text-[var(--color-primary)]">Tech giants face new antitrust scrutiny in Brussels.</Link>
+              <Link href={`${base}/tech/antitrust-scrutiny`} className="hover:text-[var(--color-primary)]">Tech giants face new antitrust scrutiny in Brussels.</Link>
             </h3>
             <p className="text-[0.85rem] text-[#555] leading-[1.4]">European commission opens investigation into AI data practices.</p>
           </div>
@@ -94,18 +93,21 @@ return (
           {
             label: "Culture",
             title: "The revival of classic cinema in a streaming age.",
+            href: `${base}/culture/classic-cinema-revival`,
             img: "/templates/OHMT013-newspaper/news-2.jpg",
             desc: "Independent theaters see resurgence as audiences crave physical experiences."
           },
           {
             label: "Science",
             title: "Breakthrough in fusion energy research reported.",
+            href: `${base}/science/fusion-energy-breakthrough`,
             img: "/templates/OHMT013-newspaper/news-3.jpg",
             desc: "California lab achieves net energy gain for the second time this year."
           },
           {
             label: "Society",
             title: "The urban migration: Why cities are still growing.",
+            href: `${base}/society/urban-migration`,
             img: "/templates/OHMT013-newspaper/news-4.jpg",
             desc: "Despite remote work trends, metropolitan hubs attract younger demographics."
           }
@@ -114,7 +116,7 @@ return (
             <span className="text-[0.65rem] font-bold uppercase tracking-widest text-[var(--color-primary)] block mb-2">{item.label}</span>
             <img loading="lazy" src={item.img} className="w-full h-48 object-cover mb-4" alt={item.title} />
             <h3 className="font-[family-name:var(--theme-font-heading)] text-[1.2rem] font-bold leading-snug mb-2 text-black">
-              <Link href="#" className="hover:text-[var(--color-primary)]">{item.title}</Link>
+              <Link href={item.href} className="hover:text-[var(--color-primary)]">{item.title}</Link>
             </h3>
             <p className="text-[0.88rem] text-[#555] leading-[1.4]">{item.desc}</p>
           </div>

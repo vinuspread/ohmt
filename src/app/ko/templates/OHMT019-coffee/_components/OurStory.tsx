@@ -40,7 +40,7 @@ export const OurStory = () => {
             <p className="text-xs tracking-[0.3em] text-white/50 mb-4">
               스토리
             </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading leading-[1.15] mb-8">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading leading-[1.1] mb-8">
               천천히 즐길 가치가 있는 커피.
             </h2>
             <p className="text-base leading-relaxed text-white/70 mb-4">
@@ -51,7 +51,7 @@ export const OurStory = () => {
             </p>
 
             <motion.div
-              className="absolute -bottom-6 -right-6 w-32 h-32 rounded-2xl overflow-hidden border-4 border-[var(--color-bg-dark)] shadow-lg"
+              className="absolute -bottom-6 right-0 md:-right-6 w-32 h-32 rounded-2xl overflow-hidden border-4 border-[var(--color-bg-dark)] shadow-lg"
               initial={{ opacity: 0, scale: 0.8, y: 15 }}
               whileInView={{ opacity: 1, scale: 1, y: 0 }}
               viewport={{ once: true }}

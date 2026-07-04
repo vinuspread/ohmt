@@ -79,7 +79,7 @@ function DestinationsPageContent() {
           imageSrc="/templates/OHMT008-airline/destination-main.jpg"
           imageAlt="글로벌 여행지"
           label="큐레이티드 스카이 여행"
-          title={<>우리의 <br /><span className="text-[var(--color-accent)] font-serif normal-case font-normal">정교한 세계를 탐험하세요.</span></>}
+          title={<>엄선하여 준비한 <br /><span className="text-[var(--color-accent)] font-[family-name:var(--font-heading)] normal-case font-[var(--font-weight-accent)]">특별한 여행지.</span></>}
           description="80개국 200개 이상의 여행지. 글로벌 네트워크가 전설적인 메트로폴리탄 명소, 역사적 문화 유산, 평화로운 열대 휴양지로 안내합니다 - 타협 없는 럭셔리와 함께."
         />
 
@@ -94,7 +94,7 @@ function DestinationsPageContent() {
                   <button
                     key={mood}
                     onClick={() => setSelectedMood(mood)}
-                    className={`px-4 md:px-6 py-2 md:py-2.5 text-[12px] md:text-[14px] font-bold uppercase tracking-[0.15em] transition-all duration-300 rounded-none cursor-pointer whitespace-nowrap ${
+                    className={`px-4 md:px-6 py-2 md:py-2.5 text-[12px] md:text-[14px] font-bold uppercase tracking-[0.15em] transition-all duration-[var(--transition-fast)] rounded-none cursor-pointer whitespace-nowrap active:scale-[0.97] ${
                       selectedMood === mood
                         ? "bg-[var(--color-primary)] text-[var(--color-accent)]"
                         : "bg-transparent text-[#7A7A7A] border border-[var(--color-border)] hover:text-[var(--color-primary)] hover:border-[var(--color-primary)]"
@@ -133,7 +133,7 @@ function DestinationsPageContent() {
                         <img
                           src={dest.img}
                           alt={dest.name}
-                          className="w-full h-full object-cover transition-transform duration-300 ease-out"
+                          className="w-full h-full object-cover transition-transform duration-[var(--transition-slow)] group-hover:scale-105"
                         />
                         <div className="absolute top-4 left-4 z-10">
                           <span className="text-[13px] font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] bg-[var(--color-primary)] px-3.5 py-1.5 border border-[var(--color-accent)]/25 rounded-full">
@@ -146,7 +146,7 @@ function DestinationsPageContent() {
                       <div className="space-y-4 pt-2">
                         <div className="space-y-1">
                           <div className="flex justify-between items-baseline">
-                            <h3 className="font-[family-name:var(--theme-font-heading)] text-2xl font-bold text-[var(--color-primary)] tracking-tight">
+                            <h3 className="font-[family-name:var(--theme-font-heading)] text-2xl font-[var(--font-weight-heading)] text-[var(--color-primary)] tracking-tight">
                               {dest.name}
                             </h3>
                             <span className="text-[12px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
@@ -159,7 +159,7 @@ function DestinationsPageContent() {
                         </div>
 
                         {/* Interactive text link with subtle motion */}
-                        <span className="text-[14px] font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] inline-flex items-center gap-2 transition-colors duration-300 group-hover:text-[var(--color-accent)]/80">
+                        <span className="text-[14px] font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] inline-flex items-center gap-2 transition-all duration-[var(--transition-fast)] group-hover:gap-3">
                           항공편 보기 <Plane size={14} />
                         </span>
                       </div>

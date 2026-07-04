@@ -11,9 +11,8 @@ import MobileBottomTabBar from "./MobileBottomTabBar";
 
 // Light background pages
 const LIGHT_BG_ROUTES = [
-  "/templates/OHMT021-museum/souvenir",
-  "/templates/OHMT021-museum/sacred-vatican",
-  "/templates/OHMT021-museum/curator-note",
+  "/en/templates/OHMT021-museum/shop",
+  "/en/templates/OHMT021-museum/curator-note",
 ];
 
 export default function Header() {
@@ -29,7 +28,7 @@ export default function Header() {
     "collections": `Collections`,
     "museumInfo": `Museum Info`,
     "tickets": `Tickets`,
-    "souvenirShop": `Souvenir Shop`
+    "souvenirShop": `Museum Shop`
   },
   "hero": {
     "badge": `Musei Vaticani - OHMT Curation`,
@@ -249,7 +248,7 @@ useMotionValueEvent(scrollY, "change", (latest) => {
               {t.nav.tickets}
             </button>
             <Link
-              href="/en/templates/OHMT021-museum/souvenir"
+              href="/en/templates/OHMT021-museum/shop"
               className="hover:opacity-50 transition-opacity underline-offset-8 hover:underline"
             >
               {t.nav.souvenirShop}
@@ -292,8 +291,6 @@ useMotionValueEvent(scrollY, "change", (latest) => {
     </>
   );
 }
-
-
 
 
 

@@ -3,8 +3,8 @@
   "name": "Editorial Magazine",
   "name_ko": "에디토리얼 매거진",
   "category": "media",
-  "description": "Editorial culture and lifestyle",
-  "description_ko": "에디토리얼 문화와 라이프스타일",
+  "description": "An editorial magazine template for culture, lifestyle, interviews, and visual essays, built with strong article hierarchy and flexible issue-style layouts.",
+  "description_ko": "문화, 라이프스타일, 인터뷰, 비주얼 에세이를 기사 위계와 이슈형 레이아웃으로 보여주는 에디토리얼 매거진 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {

@@ -17,36 +17,36 @@ function CosmeticAccountPageContent() {
         <section className="pt-48 pb-16 md:pb-32">
           <div className="max-w-[1440px] mx-auto px-6 md:px-10">
             <div className="mb-16">
-              <span className="text-[0.65rem] font-bold uppercase tracking-[0.3em] text-black/40 mb-4 block">Account</span>
-              <h1 className="text-[clamp(2rem,4vw,3.5rem)] font-normal tracking-tight leading-[1.5]">
-                Welcome back.
+              <span className="text-[0.65rem] font-bold uppercase tracking-[0.3em] text-black/40 mb-4 block">마이페이지</span>
+              <h1 className="text-[clamp(2rem,4vw,3.5rem)] font-normal tracking-tight leading-[1.1]">
+                다시 만나 반갑습니다.
               </h1>
             </div>
 
             <div className="grid md:grid-cols-2 gap-16 max-w-[800px]">
               <div className="space-y-8">
                 <div className="space-y-4">
-                  <label className="block text-[0.72rem] font-bold uppercase tracking-[0.15em]">Email</label>
+                  <label className="block text-[0.72rem] font-bold uppercase tracking-[0.15em]">이메일</label>
                   <input type="email" placeholder="your@email.com" className="w-full px-6 py-4 bg-white border border-black/10 outline-none focus:border-black transition-colors text-sm" />
                 </div>
                 <div className="space-y-4">
-                  <label className="block text-[0.72rem] font-bold uppercase tracking-[0.15em]">Password</label>
-                  <input type="password" placeholder="Enter password" className="w-full px-6 py-4 bg-white border border-black/10 outline-none focus:border-black transition-colors text-sm" />
+                  <label className="block text-[0.72rem] font-bold uppercase tracking-[0.15em]">비밀번호</label>
+                  <input type="password" placeholder="비밀번호를 입력하세요" className="w-full px-6 py-4 bg-white border border-black/10 outline-none focus:border-black transition-colors text-sm" />
                 </div>
                 <button className="w-full py-6 bg-black text-white text-[0.75rem] font-bold uppercase tracking-wider hover:opacity-80 transition-opacity">
-                  Sign In
+                  로그인
                 </button>
                 <div className="text-center">
                   <button className="text-[0.72rem] text-black/40 hover:text-black underline underline-offset-4 transition-colors">
-                    Create an account
+                    계정 만들기
                   </button>
                 </div>
               </div>
 
               <div className="border-l border-black/10 pl-16 space-y-8">
-                <h3 className="text-[0.72rem] font-bold uppercase tracking-[0.15em]">Member Benefits</h3>
-                <ul className="space-y-4 text-[0.9rem] text-black/60">
-                  {["Early access to new products", "Exclusive member pricing", "Free samples with every order", "Birthday reward"].map((benefit) => (
+                <h3 className="text-[0.72rem] font-bold uppercase tracking-[0.15em]">회원 혜택</h3>
+                <ul className="space-y-4 text-[0.9rem] text-black/60 break-keep">
+                  {["신제품 우선 구매 기회", "회원 전용 특별가", "매 주문마다 샘플 증정", "생일 특별 혜택"].map((benefit) => (
                     <li key={benefit} className="flex items-center gap-3">
                       <span className="w-1 h-1 bg-black rounded-full" />
                       {benefit}

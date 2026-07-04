@@ -28,7 +28,7 @@ function OrderDetailPanel({ order, onClose }: { order: Order; onClose: () => voi
       animate={{ x: 0 }}
       exit={{ x: 400 }}
       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-      className="fixed right-0 top-16 bottom-0 w-[360px] bg-[var(--color-bg-elevated)] border-l border-[var(--color-border)] z-20 shadow-elevated overflow-y-auto"
+      className="fixed right-0 top-16 bottom-0 w-full sm:w-[360px] bg-[var(--color-bg-elevated)] border-l border-[var(--color-border)] z-20 shadow-elevated overflow-y-auto"
       style={{ boxShadow: 'var(--shadow-elevated)' }}
     >
       <div className="p-6">
@@ -120,14 +120,14 @@ export default function OrdersPage() {
                   placeholder="Search orders..."
                   value={searchQuery}
                   onChange={(e) => { setSearchQuery(e.target.value); setPage(1) }}
-                  className="w-56 pl-9 pr-3 py-2 text-sm bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-[var(--radius-md)] text-[var(--color-text)] placeholder-[var(--color-text-muted)] focus:outline-none focus:border-[var(--color-primary-border)] transition-colors"
+                  className="w-full sm:w-56 pl-9 pr-3 py-2 text-sm bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-[var(--radius-md)] text-[var(--color-text)] placeholder-[var(--color-text-muted)] focus:outline-none focus:border-[var(--color-primary-border)] transition-colors"
                 />
               </div>
             </div>
           }
         />
 
-        <div className="grid grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
           {[
             { label: 'Total', value: orderStats.total, color: 'var(--color-text)' },
             { label: 'Pending', value: orderStats.pending, color: 'var(--color-warning)' },
@@ -142,7 +142,7 @@ export default function OrdersPage() {
         </div>
 
         <div className="bg-[var(--color-bg-elevated)] rounded-[var(--radius-lg)] border border-[var(--color-border)] overflow-hidden">
-          <div className="flex gap-1 p-3 border-b border-[var(--color-border)]">
+          <div className="flex gap-1 p-3 border-b border-[var(--color-border)] overflow-x-auto">
             {statusFilter.map((s) => (
               <button
                 key={s}
@@ -161,11 +161,11 @@ export default function OrdersPage() {
           <DataTable columns={columns} data={paginated} onRowClick={setSelectedOrder} />
 
           {totalPages > 1 && (
-            <div className="flex items-center justify-between px-4 py-3 border-t border-[var(--color-border)]">
+            <div className="flex flex-wrap items-center justify-between gap-2 px-4 py-3 border-t border-[var(--color-border)]">
               <span className="text-xs text-[var(--color-text-muted)]">
                 Page {page} of {totalPages}
               </span>
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-1 flex-wrap">
                 <button
                   onClick={() => setPage((p) => Math.max(1, p - 1))}
                   disabled={page === 1}

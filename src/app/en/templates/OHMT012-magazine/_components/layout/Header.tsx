@@ -38,7 +38,7 @@ export const Header = ({ light, t }: { light?: boolean; t: any }) => {
               scrolled ? "text-[var(--theme-text)]" : "text-white"
             )}
           >
-            VINUS
+            OHMT
           </Link>
 
           {/* Desktop GNB */}

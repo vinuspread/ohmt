@@ -15,11 +15,12 @@ export const Booking = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-[clamp(1.8rem,4vw,3.2rem)] font-[var(--font-heading)] font-bold text-[var(--color-primary)] leading-[1.2]">
-            투숙을 예약하세요
+          <h2 className="text-[clamp(1.8rem,4vw,3.2rem)] font-[var(--font-heading)] font-bold text-[var(--color-primary)] leading-[1.1]">
+            BOOK YOUR STAY
           </h2>
           <p className="text-sm md:text-base text-[var(--color-text-muted)] max-w-xl mx-auto mt-4 leading-relaxed">
-            당신의 여정을 지금 시작하세요. 정보를 남겨주시면 완벽한 경험을 준비해 드립니다.
+            오직 필요한 정보만 남겨주세요.
+            머무는 동안의 세부 경험은 저희가 정성껏 준비하겠습니다.
           </p>
         </motion.div>
 
@@ -72,7 +73,7 @@ export const Booking = () => {
           </div>
 
           <div className="mt-8 text-center">
-            <Button variant="primary" size="lg" className="text-[13px] tracking-tight px-12">예약 문의 보내기</Button>
+            <Button variant="primary" size="lg" className="text-[13px] tracking-tight px-12">예약 요청하기</Button>
           </div>
         </motion.div>
       </div>

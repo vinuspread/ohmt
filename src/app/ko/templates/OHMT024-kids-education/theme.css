@@ -30,7 +30,9 @@
   /* Fluid Spacing for responsive design */
   --space-section: clamp(3rem, 8vw, 6rem); /* 48px to 96px */
   --space-container-gap: clamp(1.5rem, 5vw, 5rem); /* 24px to 80px */
-}
+
+  --focus-ring: 2px solid var(--color-primary);
+  --focus-ring-offset: 2px;}
 
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -42,13 +44,13 @@
   }
 }
 
-/* Korean Kids Academy Typography Optimization (Overriding globals.css high-specificity selectors) */
+/* Korean Kids Academy Typography Optimization */
 [class*="-ko"].kids-education-ko {
   word-break: keep-all;
   overflow-wrap: break-word;
 }
 
-/* Jua font headings letter-spacing reset (Only widen headings to keep Jua font legible, keeping body text at default) */
+/* Jua ships as a single Korean display weight. Keep it at 400 to avoid browser faux-bold. */
 [class*="-ko"].kids-education-ko h1,
 [class*="-ko"].kids-education-ko h2,
 [class*="-ko"].kids-education-ko h3,
@@ -59,39 +61,23 @@
 .kids-education-ko h2,
 .kids-education-ko h3,
 .kids-education-ko h4 {
+  font-weight: 400 !important;
   letter-spacing: 0.04em !important;
 }
 
-
-body[lang="ko"], [lang="ko"], :root {
+.kids-education-ko,
+.kids-education-ko p,
+.kids-education-ko li {
   word-break: keep-all;
   letter-spacing: -0.025em;
 }
 
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav, 
-nav a, nav button, nav span {
-  letter-spacing: -0.03em;
-}
-
-/* Korean typography rules (Korean Kerning Rule) */
-body[lang="ko"], [lang="ko"], :root {
-  word-break: keep-all;
-  letter-spacing: -0.025em;
-}
-
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav, 
-nav a, nav button, nav span {
+.kids-education-ko header a,
+.kids-education-ko header button,
+.kids-education-ko header span,
+.kids-education-ko header nav,
+.kids-education-ko nav a,
+.kids-education-ko nav button,
+.kids-education-ko nav span {
   letter-spacing: -0.03em;
 }

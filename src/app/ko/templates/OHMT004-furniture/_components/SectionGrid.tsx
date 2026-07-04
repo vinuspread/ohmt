@@ -78,7 +78,7 @@ export const ProductGrid = () => {
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 md:mb-16 lg:mb-24 gap-4 md:gap-12 border-b border-black/5 pb-6 md:pb-12">
           <div className="max-w-2xl">
             <span className="text-[12px] md:text-[13px] font-bold text-[var(--color-primary)] uppercase mb-2 md:mb-6 block">{"컬렉션"}</span>
-            <h2 className="text-[24px] sm:text-[clamp(1.5rem,3.5vw,3.5rem)] font-bold text-[var(--color-text)] leading-[1.5] sm:leading-[1.5]">
+            <h2 className="text-[24px] sm:text-[clamp(1.5rem,3.5vw,3.5rem)] font-bold text-[var(--color-text)] leading-[1.1] sm:leading-[1.1]">
               {"삶의 격을 높이는"} <br />
               <span className="text-[var(--color-secondary)]">{"본질적인 오브제."}</span>
             </h2>

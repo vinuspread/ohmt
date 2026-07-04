@@ -72,7 +72,7 @@ export default function ReportsPage() {
           }
         />
 
-        <div className="flex gap-1 bg-[var(--color-bg-surface)] rounded-[var(--radius-md)] p-0.5 w-fit">
+        <div className="flex gap-1 bg-[var(--color-bg-surface)] rounded-[var(--radius-md)] p-0.5 w-fit overflow-x-auto max-w-full">
           {filterTabs.map((tab) => (
             <button
               key={tab}
@@ -89,7 +89,7 @@ export default function ReportsPage() {
           ))}
         </div>
 
-        <div className="grid grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
           <AnimatePresence mode="popLayout">
             {filteredReports.map((report, i) => (
               <motion.div

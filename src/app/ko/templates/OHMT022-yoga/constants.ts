@@ -21,7 +21,7 @@ export const CLASSES: YogaClass[] = [
     name: "빈야사 플로우",
     subtitle: "호흡과 연결된 역동적인 움직임",
     description: "호흡에 맞춰 자세를 연결하는 유동적인 시퀀스로 열기와 집중력을 높입니다.",
-    longDescription: "빈야사 플로우는 들숨과 날숨에 맞춰 동작을 연결해 내면의 열기를 만들고 유연성을 향상시키며 신체를 강화하는 움직이는 명상입니다.",
+    longDescription: "들숨과 날숨에 맞춰 자세를 이어갑니다. 몸에 열을 만들고 집중을 되찾는 수업입니다.",
     image: "/templates/OHMT022-yoga/class-vinyasa.jpg",
     duration: "60분",
     level: "중급",
@@ -33,7 +33,7 @@ export const CLASSES: YogaClass[] = [
     name: "하타 요가",
     subtitle: "전통 자세와 호흡 수련",
     description: "의식적인 호흡과 함께 기본 자세를 유지하는 부드러운 입문 수련입니다.",
-    longDescription: "하타는 자세를 오래 유지하며 정렬과 호흡에 집중하는 전통적인 방식입니다.",
+    longDescription: "기본 자세를 천천히 유지하며 정렬과 호흡을 살핍니다. 처음 시작하는 분에게도 편안합니다.",
     image: "/templates/OHMT022-yoga/class-hatha.jpg",
     duration: "75분",
     level: "전체 수준",
@@ -45,7 +45,7 @@ export const CLASSES: YogaClass[] = [
     name: "명상",
     subtitle: "내면의 고요를 찾는 수련",
     description: "마음을 가라앉히고 내면의 평화를 가꾸는 가이드 명상 수업입니다.",
-    longDescription: "명상 수업은 호흡 인식, 바디스캔, 가이드 시각화를 결합해 마음을 고요히 합니다.",
+    longDescription: "호흡 인식과 바디스캔을 통해 긴장을 내려놓습니다. 조용히 머무는 법을 연습합니다.",
     image: "/templates/OHMT022-yoga/class-meditation.jpg",
     duration: "45분",
     level: "전체 수준",
@@ -57,7 +57,7 @@ export const CLASSES: YogaClass[] = [
     name: "필라테스",
     subtitle: "코어 근력과 체형 교정",
     description: "코어를 강화하고 신체 정렬을 개선하는 집중 수련입니다.",
-    longDescription: "필라테스는 심부 코어 근육 강화, 척추 정렬 개선, 길고 탄탄한 근육 만들기에 집중합니다.",
+    longDescription: "심부 코어와 척추 정렬에 집중합니다. 몸의 중심을 안정적으로 쓰는 법을 익힙니다.",
     image: "/templates/OHMT022-yoga/class-pilates.jpg",
     duration: "50분",
     level: "전체 수준",
@@ -90,9 +90,9 @@ export const INSTRUCTORS: Instructor[] = [
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
-  { id: "1", name: "에마 R.", text: "이 스튜디오가 운동에 대한 제 인식을 바꿔놓았습니다. 강사들이 매우 세심하고 커뮤니티가 정말 따뜻합니다.", rating: 5 },
-  { id: "2", name: "제임스 K.", text: "완전 초보자로 시작했는데 매 단계마다 든든한 지원을 받았습니다. 명상 수업은 삶을 바꿔놓았어요.", rating: 5 },
-  { id: "3", name: "니나 P.", text: "필라테스 수업 덕분에 허리 통증이 완전히 나았습니다.", rating: 5 },
+  { id: "1", name: "에마 R.", text: "운동을 버티는 일이 아니라 돌보는 일로 느끼게 됐어요. 강사들이 세심합니다.", rating: 5 },
+  { id: "2", name: "제임스 K.", text: "완전 초보자로 시작했는데 매 단계마다 무리하지 않게 안내받았습니다.", rating: 5 },
+  { id: "3", name: "니나 P.", text: "필라테스를 꾸준히 들으며 허리 통증이 눈에 띄게 줄었습니다.", rating: 5 },
   { id: "4", name: "데이비드 L.", text: "도시 한복판에 있는 고요한 안식처입니다.", rating: 4 },
 ];
 

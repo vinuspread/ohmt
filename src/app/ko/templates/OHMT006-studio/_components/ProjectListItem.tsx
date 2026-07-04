@@ -43,7 +43,7 @@ export function ProjectListItem({ project }: ProjectListItemProps) {
                         <span>{project.location}</span>
                         <span>{project.year}</span>
                     </div>
-                    <h3 className="text-2xl md:text-3xl lg:text-[2.8rem] font-bold leading-[1.5] text-black transition-colors duration-500">
+                    <h3 className="text-2xl md:text-3xl lg:text-[2.8rem] font-bold leading-[1.1] text-black transition-colors duration-500">
                         {project.title}
                     </h3>
                 </div>

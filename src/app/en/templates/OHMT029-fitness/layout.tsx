@@ -1,4 +1,4 @@
-import "./theme.css";
+﻿import "./theme.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -32,3 +32,4 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     </>
   );
 }
+

@@ -41,9 +41,6 @@ export function Dining() {
         {/* Header */}
         <div className="flex items-end justify-between mb-12">
           <div>
-            <span className="text-[13px] font-medium text-[var(--accent)] tracking-widest uppercase mb-3 block">
-              DINING
-            </span>
             <h2 className="text-[clamp(36px,4vw,56px)] font-semibold text-white leading-[1.1] tracking-[-0.02em]">
               Taste the Coast
             </h2>
@@ -58,7 +55,9 @@ export function Dining() {
         <div className="flex gap-2 mb-10 flex-wrap">
           {tabs.map((t, i) => (
             <button key={t.label} onClick={() => setActive(i)}
-              className={`rounded-full px-5 py-2 text-[14px] transition-all duration-200 ${
+              role="tab"
+              aria-selected={i === active}
+              className={`rounded-full px-5 py-2 text-[14px] transition-all duration-200 focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)] ${
                 i === active
                   ? "bg-[var(--bg-dark)] text-white"
                   : "border border-white/40 text-white/70 hover:text-white hover:border-white/70"

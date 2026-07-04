@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import { motion } from 'motion/react';
 import { exhibitions } from './constants';
@@ -15,6 +15,16 @@ type Tab = 'on-show' | 'opening-soon' | 'permanent';
 
 const mosaicImages = Array.from({ length: 9 }, (_, i) => `/templates/OHMT003-exhibition/mosaic-0${i + 1}.jpg`);
 
+const mosaicArtworksKo = [
+  { title: '형태의 교차', artist: 'Sophie Laurent', year: '2024' },
+  { title: '시간의 무게', artist: 'Marc Debussy', year: '2023' },
+  { title: '빛의 환상곡', artist: 'Elena Rostova', year: '2025' },
+  { title: '침묵의 심연', artist: 'Jean-Luc Godard', year: '2022' },
+  { title: '기하학적 질서', artist: 'Anna K.', year: '2024' },
+  { title: '도시의 선율', artist: 'David Miller', year: '2023' },
+  { title: '해체된 공간', artist: 'Clara Oswald', year: '2025' },
+];
+
 const events = [
   { title: '작가 토크: Sophie Laurent', date: '2026년 6월 14일', time: '15:00', type: '작가 토크', ageRating: '18+', image: '/templates/OHMT003-exhibition/event-01.jpg' },
   { title: '드로잉 워크숍', date: '2026년 6월 21일', time: '10:00', type: '워크숍', ageRating: '12+', image: '/templates/OHMT003-exhibition/event-02.jpg' },
@@ -25,6 +35,38 @@ const events = [
 export default function HomePage() {
   const [activeTab, setActiveTab] = useState<Tab>('on-show');
   const sliderRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      const elementHeight = rect.height;
+      const windowHeight = window.innerHeight;
+      
+      const scrollRange = elementHeight - windowHeight;
+      if (scrollRange <= 0) return;
+      
+      const currentScroll = -rect.top;
+      const progress = Math.min(Math.max(currentScroll / scrollRange, 0), 1);
+      setScrollProgress(progress);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('resize', handleScroll);
+    handleScroll();
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleScroll);
+    };
+  }, []);
+
+  // Translate right image grid by up to -620px to perfectly dock with text bottom baseline
+  const y = scrollProgress <= 0.75 
+    ? `${(scrollProgress / 0.75) * -620}px` 
+    : '-620px';
 
   const filtered = exhibitions.filter((ex) => ex.status === activeTab);
 
@@ -40,7 +82,7 @@ export default function HomePage() {
       {/* Section 1 - Hero */}
       <section className="min-h-screen bg-[var(--color-bg)] flex flex-col justify-between">
         <div className="max-w-[1400px] mx-auto px-6 pt-32 flex-1 flex flex-col">
-          <h1 className="font-heading font-semibold uppercase leading-none text-black" style={{ fontSize: 'clamp(5rem, 10vw, 9rem)', letterSpacing: '-0.04em' }}>
+          <h1 className="font-heading font-semibold uppercase leading-[1.1] text-black" style={{ fontSize: 'clamp(5rem, 10vw, 9rem)', letterSpacing: '-0.04em' }}>
             OHMT
           </h1>
           <div className="flex-1 grid md:grid-cols-2 gap-12 mt-12">
@@ -52,32 +94,32 @@ export default function HomePage() {
                 <h2 className="font-heading font-semibold uppercase text-black" style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', letterSpacing: '-0.03em', lineHeight: '0.96' }}>
                   대담한 예술<br />새로운 시각
                 </h2>
-                <div className="mt-10 aspect-[3/4] overflow-hidden md:hidden">
-                  <img src="/templates/OHMT003-exhibition/hero-right.jpg" alt="" className="w-full h-full object-cover" />
+                 <div className="mt-10 aspect-[3/4] overflow-hidden md:hidden">
+                  <img src="/templates/OHMT003-exhibition/hero-right-sub.jpg" alt="" className="w-full h-full object-cover" />
                 </div>
-                <Link href="/ko/templates/OHMT003-exhibition/contact" className="relative overflow-hidden group inline-flex px-8 py-4 border border-black mt-10">
+                <Link href="/ko/templates/OHMT003-exhibition/contact" className="relative overflow-hidden group inline-flex px-8 py-4 border border-black mt-10 active:scale-[0.97] transition-transform duration-100">
                   <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
                   <span className="relative text-black group-hover:text-white text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-300">티켓 구매</span>
                 </Link>
               </div>
               <div className="hidden md:block w-[70%] aspect-[3/4] overflow-hidden self-end">
-                <img src="/templates/OHMT003-exhibition/hero-right.jpg" alt="" className="w-full h-full object-cover" />
+                <img src="/templates/OHMT003-exhibition/hero-right-sub.jpg" alt="" className="w-full h-full object-cover" />
               </div>
             </div>
           </div>
         </div>
 
-        <div className="max-w-[1400px] mx-auto px-6 pb-12 mt-[200px]">
+        <div className="w-full max-w-[1400px] mx-auto px-6 pb-12 mt-[200px] overflow-hidden">
           <div className="flex items-center justify-between mb-6">
             <span className="text-[10px] font-body font-semibold uppercase tracking-[0.1em] text-black/60">지금 주목받는 전시</span>
             <div className="flex gap-2">
-              <button onClick={() => scrollSlider('left')} className="w-8 h-8 border border-black flex items-center justify-center text-[12px] hover:bg-black hover:text-white transition-colors duration-200">&larr;</button>
-              <button onClick={() => scrollSlider('right')} className="w-8 h-8 border border-black flex items-center justify-center text-[12px] hover:bg-black hover:text-white transition-colors duration-200">&rarr;</button>
+              <button onClick={() => scrollSlider('left')} className="w-8 h-8 border border-black flex items-center justify-center text-[12px] hover:bg-black hover:text-white active:scale-[0.95] transition duration-200">&larr;</button>
+              <button onClick={() => scrollSlider('right')} className="w-8 h-8 border border-black flex items-center justify-center text-[12px] hover:bg-black hover:text-white active:scale-[0.95] transition duration-200">&rarr;</button>
             </div>
           </div>
-          <div ref={sliderRef} className="flex gap-10 overflow-x-auto" style={{ scrollbarWidth: 'none' }}>
+          <div ref={sliderRef} className="flex w-full max-w-full gap-6 md:gap-10 overflow-x-auto" style={{ scrollbarWidth: 'none' }}>
             {exhibitions.slice(0, 3).map((ex) => (
-              <div key={ex.slug} className="flex-none w-[340px]">
+              <div key={ex.slug} className="flex-none w-[min(340px,calc(100vw-48px))]">
                 <ExhibitionCard exhibition={ex} />
               </div>
             ))}
@@ -86,32 +128,88 @@ export default function HomePage() {
       </section>
 
       {/* Section 2 - Mosaic */}
-      <section className="relative bg-[var(--color-bg)]" style={{ height: '280vh' }}>
-        <div className="sticky top-[12%] z-10 pointer-events-none max-w-[1400px] mx-auto px-6 pt-24" style={{ mixBlendMode: 'difference' }}>
-          <h2 className="font-heading font-semibold uppercase text-white" style={{ fontSize: 'clamp(3rem, 5vw, 4.5rem)', letterSpacing: '-0.04em', lineHeight: '0.96' }}>
+      <section className="relative bg-[var(--color-bg)]" style={{ height: '230vh' }}>
+        {/* Sticky Overlay Text (Natural CSS sticky layout) */}
+        <div className="sticky z-10 pointer-events-none max-w-[1400px] mx-auto px-6 pt-24" style={{ top: '12vh' }}>
+          <h2 className="font-heading font-semibold uppercase text-black leading-none" style={{ fontSize: 'clamp(3rem, 5vw, 4.5rem)', letterSpacing: '-0.04em' }}>
             마음을 움직이는<br />컬렉션
           </h2>
-          <p className="mt-6 text-[18px] font-body text-white/70 leading-relaxed max-w-[36ch]">
+          <p className="mt-6 text-[18px] font-body text-black/60 leading-relaxed max-w-[36ch]">
             모든 작품은 자극하고, 위로하고, 도전합니다. 때로는 동시에.
           </p>
         </div>
-        <div className="max-w-[1400px] mx-auto px-6 pt-[40vh]">
+
+        {/* Mosaic Image Grid (Block level grid following natural scroll flow) */}
+        <div className="max-w-[1400px] mx-auto px-6 pt-[22vh] pb-[65vh]">
+          {/* Row 1: wide left + portrait right */}
           <div className="grid grid-cols-3 gap-6 mb-6">
-            <div className="col-span-2 aspect-[16/10] overflow-hidden"><img src={mosaicImages[0]} alt="" className="w-full h-full object-cover" /></div>
-            <div className="col-span-1 aspect-[16/10] overflow-hidden"><img src={mosaicImages[1]} alt="" className="w-full h-full object-cover" /></div>
+            <div className="col-span-2 aspect-[16/10] overflow-hidden group relative cursor-pointer">
+              <img src={mosaicImages[0]} alt={mosaicArtworksKo[0].title} className="w-full h-full object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+              <div className="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out flex flex-col justify-end p-6 z-10">
+                <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300 ease-out">
+                  <span className="text-[11px] text-white/60 tracking-[0.2em] uppercase font-bold">{mosaicArtworksKo[0].artist}</span>
+                  <h4 className="font-serif text-lg md:text-xl font-bold text-white mt-1">{mosaicArtworksKo[0].title}</h4>
+                  <p className="text-[11px] text-white/40 mt-1 font-body">{mosaicArtworksKo[0].year}</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-span-1 aspect-[16/10] overflow-hidden group relative cursor-pointer">
+              <img src={mosaicImages[1]} alt={mosaicArtworksKo[1].title} className="w-full h-full object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+              <div className="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out flex flex-col justify-end p-6 z-10">
+                <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300 ease-out">
+                  <span className="text-[11px] text-white/60 tracking-[0.2em] uppercase font-bold">{mosaicArtworksKo[1].artist}</span>
+                  <h4 className="font-serif text-lg md:text-xl font-bold text-white mt-1">{mosaicArtworksKo[1].title}</h4>
+                  <p className="text-[11px] text-white/40 mt-1 font-body">{mosaicArtworksKo[1].year}</p>
+                </div>
+              </div>
+            </div>
           </div>
+          {/* Row 2: 3 equal */}
           <div className="grid grid-cols-3 gap-6 mb-6">
-            {mosaicImages.slice(2, 5).map((src) => (<div key={src} className="aspect-[4/3] overflow-hidden"><img src={src} alt="" className="w-full h-full object-cover" /></div>))}
+            {mosaicImages.slice(2, 5).map((src, index) => {
+              const artwork = mosaicArtworksKo[index + 2];
+              return (
+                <div key={src} className="aspect-[4/3] overflow-hidden group relative cursor-pointer">
+                  <img src={src} alt={artwork.title} className="w-full h-full object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+                  <div className="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out flex flex-col justify-end p-6 z-10">
+                    <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300 ease-out">
+                      <span className="text-[11px] text-white/60 tracking-[0.2em] uppercase font-bold">{artwork.artist}</span>
+                      <h4 className="font-serif text-lg md:text-xl font-bold text-white mt-1">{artwork.title}</h4>
+                      <p className="text-[11px] text-white/40 mt-1 font-body">{artwork.year}</p>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
           </div>
+          {/* Row 3: portrait left + wide right */}
           <div className="grid grid-cols-3 gap-6">
-            <div className="col-span-1 aspect-[16/10] overflow-hidden"><img src={mosaicImages[5]} alt="" className="w-full h-full object-cover" /></div>
-            <div className="col-span-2 aspect-[16/10] overflow-hidden"><img src={mosaicImages[6]} alt="" className="w-full h-full object-cover" /></div>
+            <div className="col-span-1 aspect-[16/10] overflow-hidden group relative cursor-pointer">
+              <img src={mosaicImages[5]} alt={mosaicArtworksKo[5].title} className="w-full h-full object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+              <div className="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out flex flex-col justify-end p-6 z-10">
+                <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300 ease-out">
+                  <span className="text-[11px] text-white/60 tracking-[0.2em] uppercase font-bold">{mosaicArtworksKo[5].artist}</span>
+                  <h4 className="font-serif text-lg md:text-xl font-bold text-white mt-1">{mosaicArtworksKo[5].title}</h4>
+                  <p className="text-[11px] text-white/40 mt-1 font-body">{mosaicArtworksKo[5].year}</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-span-2 aspect-[16/10] overflow-hidden group relative cursor-pointer">
+              <img src={mosaicImages[6]} alt={mosaicArtworksKo[6].title} className="w-full h-full object-cover transition-transform duration-[1.5s] ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:scale-105" />
+              <div className="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out flex flex-col justify-end p-6 z-10">
+                <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300 ease-out">
+                  <span className="text-[11px] text-white/60 tracking-[0.2em] uppercase font-bold">{mosaicArtworksKo[6].artist}</span>
+                  <h4 className="font-serif text-lg md:text-xl font-bold text-white mt-1">{mosaicArtworksKo[6].title}</h4>
+                  <p className="text-[11px] text-white/40 mt-1 font-body">{mosaicArtworksKo[6].year}</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
       {/* Section 3 - Exhibition List */}
-      <section className="bg-[var(--color-bg)] py-32">
+      <section className="relative z-30 bg-[#FCFCFC] pt-28 pb-32" style={{ backgroundColor: 'var(--color-bg)' }}>
         <div className="max-w-[1400px] mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div>
@@ -130,7 +228,7 @@ export default function HomePage() {
 
           <div className="flex gap-10 mb-12 border-b border-[var(--color-border)]">
             {(['on-show', 'opening-soon', 'permanent'] as const).map((tab) => (
-              <button key={tab} onClick={() => setActiveTab(tab)} className="pb-3 text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-200"
+              <button key={tab} onClick={() => setActiveTab(tab)} className="pb-3 text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-200 active:scale-[0.97]"
                 style={{ color: activeTab === tab ? '#000000' : 'rgba(0,0,0,0.4)', borderBottom: activeTab === tab ? '2px solid #000000' : '2px solid transparent' }}>
                 {tab === 'on-show' ? '전시 중' : tab === 'opening-soon' ? '개막 예정' : '상설 전시'}
               </button>
@@ -172,17 +270,19 @@ export default function HomePage() {
             다가오는<br />이벤트
           </h2>
           <div className="grid md:grid-cols-2 gap-10">
-            {events.map((evt) => (
+            {events.slice(0, 2).map((evt) => (
               <div key={evt.title} className="group cursor-pointer">
                 <div className="aspect-[16/9] overflow-hidden">
-                  <img src={evt.image} alt={evt.title} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                  <img src={evt.image} alt={evt.title} className="w-full h-full object-cover transition-transform duration-300 ease-out group-hover:scale-105" />
                 </div>
                 <div className="flex items-center justify-between mt-6">
                   <p className="text-[11px] font-body text-black/50 tracking-[0.06em]">{evt.date} <span className="mx-1.5 opacity-40">·</span> {evt.time}</p>
-                  <span className="text-[10px] font-body font-semibold uppercase tracking-[0.1em] text-white bg-black px-2.5 py-1">{evt.ageRating}</span>
+                  <div className="flex gap-2">
+                    <span className="text-[10px] font-body font-semibold uppercase tracking-[0.1em] px-2.5 py-1 border border-black">{evt.type}</span>
+                    <span className="text-[10px] font-body font-semibold uppercase tracking-[0.1em] text-white bg-black px-2.5 py-1">{evt.ageRating}</span>
+                  </div>
                 </div>
-                <h3 className="mt-3 text-[1.25rem] font-heading font-semibold tracking-[-0.02em] text-black leading-tight">{evt.title}</h3>
-                <p className="mt-2 text-[11px] font-body text-black/40 tracking-[0.08em]">{evt.type}</p>
+                <h3 className="mt-3 text-[1.25rem] font-heading font-semibold tracking-[-0.02em] text-black leading-[1.1]">{evt.title}</h3>
               </div>
             ))}
           </div>

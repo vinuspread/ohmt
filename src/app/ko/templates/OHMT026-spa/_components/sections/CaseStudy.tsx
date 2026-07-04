@@ -14,7 +14,7 @@ export default function CaseStudy() {
       <div className="mx-auto max-w-4xl px-6">
         <div className="text-center mb-16">
           <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">케이스 스터디</span>
-          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[1.05]">실제 결과, 실제 이야기</h2>
+          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[1.1]">실제 결과, 실제 이야기</h2>
         </div>
         <div className="space-y-3">
           {caseStudies.map((cs, i) => {

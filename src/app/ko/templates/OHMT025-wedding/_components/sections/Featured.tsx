@@ -119,7 +119,7 @@ function GalleryItem({ project, className = "", aspectClass = "aspect-[3/4]" }: 
           animate={{ y: hovered ? "0%" : "100%" }}
           transition={{ duration: 0.5, ease: [0.22, 0.61, 0.36, 1] }}
         >
-          <h3 className="font-[family-name:var(--font-heading)] text-2xl font-light capitalize text-white leading-none">
+          <h3 className="font-[family-name:var(--font-heading)] text-2xl font-light capitalize text-white leading-[1.1]">
             {project.title}
           </h3>
           <p className="text-[0.65rem] uppercase tracking-[0.15em] text-white/60 mt-1">

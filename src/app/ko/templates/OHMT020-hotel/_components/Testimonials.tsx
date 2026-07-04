@@ -27,7 +27,7 @@ export const Testimonials = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-[clamp(1.8rem,4vw,3.2rem)] font-[var(--font-heading)] font-bold leading-[1.2]">
+          <h2 className="text-[clamp(1.8rem,4vw,3.2rem)] font-[var(--font-heading)] font-bold leading-[1.1]">
             고객님의 진솔한 이야기
           </h2>
         </motion.div>

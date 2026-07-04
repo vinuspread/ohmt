@@ -1,8 +1,8 @@
 "use client";
 import React, { useMemo } from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 export function TemplateWrapper({ theme, children }: { theme: any; children: React.ReactNode }) {
-  const [animationComplete, setAnimationComplete] = React.useState(false);
+  const prefersReducedMotion = useReducedMotion();
   React.useEffect(() => {
     if (typeof window !== "undefined") {
       if ("history" in window && "scrollRestoration" in window.history) window.history.scrollRestoration = "manual";
@@ -29,11 +29,9 @@ export function TemplateWrapper({ theme, children }: { theme: any; children: Rea
   return (
     <div style={cssVariables} className="min-h-screen bg-[var(--theme-primary)] text-[var(--theme-secondary)]">
       <motion.div
-        initial={{opacity:0}}
-        animate={{opacity:1}}
+        initial={prefersReducedMotion ? {} : {opacity:0}}
+        animate={prefersReducedMotion ? {} : {opacity:1}}
         transition={{duration:1.2, ease:"easeInOut"}}
-        onAnimationComplete={() => setAnimationComplete(true)}
-        style={animationComplete ? { transform: "none", filter: "none" } : {}}
       >
         {children}
       </motion.div>

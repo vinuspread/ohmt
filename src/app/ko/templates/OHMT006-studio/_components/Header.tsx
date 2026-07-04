@@ -35,7 +35,7 @@ export function Header() {
         { name: '어바웃', href: '/ko/templates/OHMT006-studio/about' },
     ];
 
-    const isMainPage = /^\/(en|ko)?\/?templates\/studio\/?$/.test(pathname);
+    const isMainPage = /^\/(?:en|ko)\/templates\/OHMT006-studio\/?$/.test(pathname);
     const isLight = scrolled || !isMainPage || (isProjectDetail && scrolled);
 
     return (

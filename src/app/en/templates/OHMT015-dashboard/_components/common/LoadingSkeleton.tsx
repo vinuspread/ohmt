@@ -1,10 +1,12 @@
 'use client'
 
+const SKELETON_WIDTHS = ['92%', '76%', '84%', '68%', '88%', '72%']
+
 export function LoadingSkeleton({ rows = 4 }: { rows?: number }) {
   return (
     <div className="space-y-4 animate-pulse">
       {Array.from({ length: rows }).map((_, i) => (
-        <div key={i} className="h-4 bg-[var(--color-bg-surface)] rounded-[var(--radius-sm)]" style={{ width: `${60 + Math.random() * 40}%` }} />
+        <div key={i} className="h-4 bg-[var(--color-bg-surface)] rounded-[var(--radius-sm)]" style={{ width: SKELETON_WIDTHS[i % SKELETON_WIDTHS.length] }} />
       ))}
     </div>
   )

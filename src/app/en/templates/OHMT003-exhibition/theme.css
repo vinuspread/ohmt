@@ -17,4 +17,54 @@
   --color-border-dark: rgba(252, 252, 252, 0.15);
   --font-heading: 'Inter', sans-serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
+
+  --focus-ring: 2px solid var(--color-primary);
+  --focus-ring-offset: 2px;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.exhibition-en {
+  overflow-x: clip;
+}
+
+.exhibition-en [class*="overflow-x-auto"] {
+  max-width: 100%;
+  overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+
+.exhibition-en [class*="overflow-x-auto"]::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+@supports not (overflow: clip) {
+  .exhibition-en {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 767px) {
+  .exhibition-en h1 {
+    font-size: clamp(4rem, 18vw, 5.5rem) !important;
+    line-height: 0.95 !important;
+  }
+
+  .exhibition-en h2 {
+    text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

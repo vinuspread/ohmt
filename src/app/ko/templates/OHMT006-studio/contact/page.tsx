@@ -40,7 +40,7 @@ function StudioContactPageContent() {
                                     <span className="text-[12px] md:text-[13px] text-black/40 font-bold block uppercase">
                                         {"연락하기"}
                                     </span>
-                                    <h2 className="text-[clamp(1.8rem,4.5vw,4.5rem)] font-bold leading-[1.5] text-black break-keep">
+                                    <h2 className="text-[clamp(1.8rem,4.5vw,4.5rem)] font-bold leading-[1.1] text-black break-keep">
                                         {"프로젝트 문의"}
                                     </h2>
                                     <p className="text-[14px] text-black/50 leading-relaxed font-normal break-keep max-w-[480px]">
@@ -62,7 +62,7 @@ function StudioContactPageContent() {
                                         <span className="text-[12px] md:text-[13px] font-bold text-black/50 flex items-center gap-2 uppercase">
                                             <MapPin size={12} /> {"루미나 스튜디오"}
                                         </span>
-                                        <h3 className="text-base md:text-lg lg:text-xl font-bold text-black leading-tight">
+                                        <h3 className="text-base md:text-lg lg:text-xl font-bold text-black leading-[1.1]">
                                             Austin, Texas // 308 Congress Ave.
                                         </h3>
                                     </div>

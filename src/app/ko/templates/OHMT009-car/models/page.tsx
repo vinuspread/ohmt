@@ -1,6 +1,5 @@
 "use client";
 
-import { Suspense } from "react";
 import React from "react";
 import Link from "next/link";
 import { Header } from "../_components/layout/Header";
@@ -9,10 +8,10 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 const models = [
-  { slug: "ev9",  name: "EV9", type: "All-Electric SUV",    range: "530km", power: "402hp", img: "/templates/OHMT009-car/hero-1.jpg" },
-  { slug: "gt7",  name: "GT7", type: "Performance Sedan",   range: "480km", power: "615hp", img: "/templates/OHMT009-car/hero-2.jpg" },
-  { slug: "x5",   name: "X5",  type: "Luxury SUV",          range: "510km", power: "355hp", img: "/templates/OHMT009-car/hero-3.jpg" },
-  { slug: "s3",   name: "S3",  type: "Compact Executive",   range: "460km", power: "295hp", img: "/templates/OHMT009-car/car-1.jpg" }
+  { slug: "ev9",  name: "EV9", type: "순수 전기 SUV",    range: "530km", power: "402hp", img: "/templates/OHMT009-car/ev9-model.png" },
+  { slug: "gt7",  name: "GT7", type: "퍼포먼스 세단",   range: "480km", power: "615hp", img: "/templates/OHMT009-car/hero-2.jpg" },
+  { slug: "x5",   name: "X5",  type: "럭셔리 SUV",          range: "510km", power: "355hp", img: "/templates/OHMT009-car/hero-3.jpg" },
+  { slug: "s3",   name: "S3",  type: "컴팩트 비즈니스 세단",   range: "460km", power: "295hp", img: "/templates/OHMT009-car/car-2.jpg" }
 ];
 
 function CarModelsPageContent() {
@@ -21,15 +20,15 @@ function CarModelsPageContent() {
       <main className="antialiased bg-black text-white selection:bg-[var(--theme-accent)] selection:text-black">
         <Header />
         
-        <section className="pt-14 md:pt-28 md:pt-44 pb-16 md:pb-28">
+        <section className="pt-24 md:pt-36 pb-20 md:pb-28">
           <div className="max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)]">
-            <div className="mb-12 md:mb-20">
-              <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-5 block">Our Lineup</span>
-              <h1 className="text-[clamp(2.5rem,5vw,4.5rem)] font-bold tracking-[-0.03em] leading-[1.5] mb-6">
-                Every model,<br />a masterpiece.
+            <div className="mb-10">
+              <span className="text-[0.68rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-4 block">우리의 라인업</span>
+              <h1 className="font-[family-name:var(--theme-font-heading)] text-[clamp(2.8rem,6vw,5.5rem)] font-bold tracking-[-0.03em] leading-[1.12] mb-8">
+                한 대 한 대,<br />기준을 새로 씁니다.
               </h1>
-              <p className="text-[0.9rem] text-[var(--theme-text-muted)] max-w-[600px] font-normal leading-relaxed">
-                From all-electric pioneers to high-performance icons - each VINUS is engineered with obsessive attention to detail.
+              <p className="text-[1.15rem] md:text-[1.25rem] text-white/70 font-normal leading-[1.6] max-w-[700px] break-keep">
+                순수 전기차의 선구자부터 고성능 아이콘에 이르기까지, 모든 OHMT 모델은 디테일에 대한 집착으로 완성됩니다.
               </p>
             </div>
 

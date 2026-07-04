@@ -36,7 +36,7 @@ export function StoryTimeline() {
         <p className="font-inter text-[11px] tracking-[0.15em] text-[var(--accent)] uppercase mb-6">
           연혁
         </p>
-        <h2 className="font-michroma text-[clamp(28px,3vw,44px)] text-[var(--text)] leading-[1.0] tracking-[-0.02em] mb-16 md:mb-20">
+        <h2 className="font-michroma text-[clamp(28px,3vw,44px)] text-[var(--text)] leading-[1.1] tracking-[-0.02em] mb-16 md:mb-20">
           이렇게 만들어졌습니다.
         </h2>
         <div className="space-y-0">

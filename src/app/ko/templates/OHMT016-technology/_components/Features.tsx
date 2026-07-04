@@ -12,7 +12,7 @@ export default function Features() {
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
               핵심 역량
             </span>
-            <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-none text-[var(--color-text)] font-heading break-keep">
+            <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.1] text-[var(--color-text)] font-heading break-keep">
               임팩트를 위한 핵심 기능
             </h2>
           </div>

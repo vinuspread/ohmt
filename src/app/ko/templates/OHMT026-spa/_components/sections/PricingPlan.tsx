@@ -12,7 +12,7 @@ export default function PricingPlan() {
       <div className="mx-auto max-w-7xl px-6">
         <motion.div initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6, ease: EASE_OUT }} className="text-center mb-16">
           <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">가격</span>
-          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[1.05]">간단하고 투명한 가격</h2>
+          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[1.1]">간단하고 투명한 가격</h2>
           <p className="mt-5 text-[0.95rem] text-[var(--color-text-muted)] leading-relaxed max-w-md mx-auto">숨은 수수료 없이. 당신의 라이프스타일에 맞는 플랜을 선택하세요.</p>
         </motion.div>
         <div className="grid gap-6 lg:grid-cols-3 items-start max-w-5xl mx-auto">

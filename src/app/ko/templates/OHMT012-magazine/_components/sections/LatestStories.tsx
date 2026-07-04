@@ -43,7 +43,7 @@ export const LatestStories = () => {
                 </div>
                 <div>
                   <span className="text-[0.875rem] font-bold uppercase tracking-tight text-[var(--theme-accent)] mb-2 block">{story.tag}</span>
-                  <h3 className="font-[family-name:var(--theme-font-heading)] text-[1rem] font-normal leading-[1.4] mb-2 tracking-[-0.02em]">
+                  <h3 className="font-[family-name:var(--theme-font-heading)] text-[1rem] font-normal leading-[1.1] mb-2 tracking-[-0.02em]">
                     <Link href={`/ko/templates/OHMT012-magazine/article/${story.slug}`} className="hover:text-[var(--theme-accent)] transition-colors">{story.title}</Link>
                   </h3>
                   <p className="text-[0.8rem] text-[var(--theme-text-muted)] leading-[1.6] font-normal">

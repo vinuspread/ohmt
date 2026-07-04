@@ -63,7 +63,7 @@ function CartPageContent() {
       <Navbar />
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         <div className="flex items-center justify-between mb-16">
-          <h1 className="text-[clamp(1.75rem,4vw,3.5rem)] font-bold text-[var(--color-text)] uppercase leading-none">
+          <h1 className="text-[clamp(1.75rem,4vw,3.5rem)] font-bold text-[var(--color-text)] uppercase leading-[1.1]">
             쇼핑백.
           </h1>
           <span className="text-[12px] font-bold text-[var(--color-secondary)] uppercase">

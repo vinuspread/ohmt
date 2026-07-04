@@ -10,7 +10,7 @@ export function Footer() {
         {/* Top bar */}
         <div className="flex items-center justify-between mb-16 pb-6 border-b border-[var(--color-border)]">
           <Link href="/en/templates/OHMT007-portfolio" className="text-[1.2rem] font-black tracking-tighter text-[var(--color-text)] hover:opacity-60 transition-opacity">
-            vinus.
+            OHMT.
           </Link>
           <div className="flex items-center gap-2 text-[13px] font-medium text-[var(--color-text-muted)]">
             <a href="#" className="hover:text-[var(--color-text)] transition-colors">BE</a>

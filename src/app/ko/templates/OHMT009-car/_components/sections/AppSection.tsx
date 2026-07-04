@@ -17,7 +17,7 @@ export const AppSection = () => {
         <div className="relative overflow-hidden min-h-[360px]">
           <img
             src="/templates/OHMT009-car/car-4.jpg"
-            alt="VINUSPREAD Interior"
+            alt="OHMT Interior"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[var(--color-primary)]" />
@@ -26,13 +26,13 @@ export const AppSection = () => {
         {/* Right: content */}
         <div className="flex flex-col justify-center px-6 md:pr-[max(60px,calc((100vw-1440px)/2+60px))] md:pl-16 py-14 md:py-20">
           <span className="block text-[0.65rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-text-muted)] mb-5">
-            VINUSPREAD 커넥티드
+            OHMT 커넥티드
           </span>
-          <h2 className="text-[clamp(2rem,3vw,2.8rem)] font-extrabold tracking-[-0.03em] leading-[1.2] mb-5 text-white break-keep whitespace-pre-line">
+          <h2 className="text-[clamp(2rem,3vw,2.8rem)] font-extrabold tracking-[-0.03em] leading-[1.1] mb-5 text-white break-keep whitespace-pre-line">
             {"완벽하게 조화되는\n듀얼 모터 드라이빙\n경험의 혁신."}
           </h2>
           <p className="text-[0.88rem] text-[var(--theme-text-muted)] leading-[1.8] font-normal mb-10 max-w-[380px] break-keep">
-            실시간 배터리 충전 모니터링, 차량 온도 원격 제어, 문 잠금 해제 및 주행 가능 거리 확인까지 - 이 모든 혁신을 VINUSPREAD 앱 하나로 편리하게 누릴 수 있습니다.
+            실시간 배터리 충전 모니터링, 차량 온도 원격 제어, 문 잠금 해제 및 주행 가능 거리 확인까지 - 이 모든 혁신을 OHMT 앱 하나로 편리하게 누릴 수 있습니다.
           </p>
 
            <div className="flex flex-col gap-6 mb-10">

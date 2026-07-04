@@ -35,7 +35,7 @@ export const products = [
       { id: "r3", reviewer: "Leo G.", rating: 4, date: "May 03, 2026", text: "Elevates my entire living room setup. The low profile is perfect for reclining comfortably. Definitely worth the price." },
       { id: "r4", reviewer: "Min-woo K.", rating: 5, date: "June 02, 2026", text: "Excellent packing and delivery service. The walnut grain is symmetrical and gorgeous, looks like a museum piece." }
     ],
-    gallery: ["/templates/OHMT004-furniture/chair.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/OHMT004-furniture/chair.png", "/templates/OHMT004-furniture/lifestyle-chair.jpg"]
   },
   {
     id: "2",
@@ -62,7 +62,7 @@ export const products = [
       { id: "r3", reviewer: "Emma C.", rating: 5, date: "May 27, 2026", text: "Just the right density - not too soft, feels very supportive. The armrests are wide enough to hold a plate or book easily." },
       { id: "r4", reviewer: "Lucas P.", rating: 5, date: "June 05, 2026", text: "Warm and cozy yet extremely breathable. Unlike synthetic velvet, this does not feel hot or sweaty in the summer." }
     ],
-    gallery: ["/templates/OHMT004-furniture/sofa.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/OHMT004-furniture/sofa.png", "/templates/OHMT004-furniture/lifestyle-sofa.jpg"]
   },
   {
     id: "3",
@@ -89,14 +89,14 @@ export const products = [
       { id: "r3", reviewer: "Isabella V.", rating: 5, date: "May 16, 2026", text: "Transforms the kitchen into a cozy cafe. The solid wood feel is reassuringly heavy and solid." },
       { id: "r4", reviewer: "Liam T.", rating: 4, date: "June 04, 2026", text: "Beautiful warm oak tone. Easy to clean. Be sure to use a humidifier in dry winters to protect the wood." }
     ],
-    gallery: ["/templates/OHMT004-furniture/table.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/OHMT004-furniture/table.png", "/templates/OHMT004-furniture/lifestyle-table.jpg"]
   },
   {
     id: "4",
     name: "Walnut Lounge Chair",
     category: "Lounge",
     price: "$2,850",
-    image: "/templates/OHMT004-furniture/chair.png",
+    image: "/templates/OHMT004-furniture/dining-chair.png",
     tag: "Iconic",
     desc: "A luxurious mid-century modern inspired lounger featuring a hand-molded walnut plywood frame and premium leather cushions.",
     longDesc: "Honoring the iconic designers of the mid-century modern era, the Walnut Lounge Chair features a curved plywood frame faced with premium American walnut veneer. The hand-sewn leather cushions are upholstered in semi-aniline leather for durability and softness. Set upon a high-precision cast aluminum swivel base with a durable powder coating, it offers a smooth, silent 360-degree rotation.\n\nThe chair is designed with a three-piece shell system matching the natural curve of the spine, distributing body weight across the head, back, and lumbar regions. The walnut veneers are hand-pressed in 7 layers for natural flexibility and strength.\n\nIt serves as a commanding statement piece in a reading corner or an executive office lounge.",
@@ -116,7 +116,7 @@ export const products = [
       { id: "r3", reviewer: "Henry M.", rating: 4, date: "May 20, 2026", text: "Very comfortable cushion density. Note that it has a large footprint, so check your space before ordering." },
       { id: "r4", reviewer: "Sophia E.", rating: 5, date: "June 08, 2026", text: "A great lounge chair. Reclines at a highly relaxing angle. Sits beautifully alongside modern furniture." }
     ],
-    gallery: ["/templates/OHMT004-furniture/chair.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/OHMT004-furniture/dining-chair.png", "/templates/OHMT004-furniture/lifestyle-chair.jpg"]
   },
   {
     id: "5",
@@ -143,7 +143,7 @@ export const products = [
       { id: "r3", reviewer: "Mimi L.", rating: 5, date: "May 28, 2026", text: "Exactly as pictured. The clay texture is beautifully matte. Adds a warm, rustic vibe to my kitchen." },
       { id: "r4", reviewer: "David F.", rating: 5, date: "June 06, 2026", text: "Stunning brass accents. The beige fabric cord hangs perfectly straight and looks highly clean." }
     ],
-    gallery: ["/templates/OHMT004-furniture/lamp.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/OHMT004-furniture/lamp.png", "/templates/OHMT004-furniture/lifestyle-lamp.jpg"]
   },
   {
     id: "6",
@@ -170,7 +170,7 @@ export const products = [
       { id: "r3", reviewer: "Marcus N.", rating: 4, date: "May 11, 2026", text: "Solid and doesn't tip. The concrete texture is smooth to the touch, not chalky or rough." },
       { id: "r4", reviewer: "Elena R.", rating: 5, date: "June 03, 2026", text: "Excellent minimalist table. Adds a clean architectural touch to my reading corner." }
     ],
-    gallery: ["/templates/OHMT004-furniture/sidetable.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/OHMT004-furniture/sidetable.png", "/templates/OHMT004-furniture/lifestyle-lamp.jpg"]
   },
   {
     id: "7",
@@ -197,7 +197,7 @@ export const products = [
       { id: "r3", reviewer: "Arvid K.", rating: 5, date: "May 29, 2026", text: "The soft-closing drawer has a premium, quiet slide. The natural oak wood tone is beautiful." },
       { id: "r4", reviewer: "Julia N.", rating: 5, date: "June 09, 2026", text: "Perfect for my home office setup. Highly recommended for minimalist workspaces." }
     ],
-    gallery: ["/templates/OHMT004-furniture/desk.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/OHMT004-furniture/desk.png", "/templates/OHMT004-furniture/lifestyle-chair.jpg"]
   },
   {
     id: "8",
@@ -224,7 +224,7 @@ export const products = [
       { id: "r3", reviewer: "Clara T.", rating: 4, date: "May 24, 2026", text: "The headboard padding is thick and comfortable to lean back on while watching TV. Beautiful fabric." },
       { id: "r4", reviewer: "Peter H.", rating: 5, date: "June 02, 2026", text: "Soft, breathable Belgian linen feels wonderful to touch. Does not shed fibers or dust. Ideal." }
     ],
-    gallery: ["/templates/OHMT004-furniture/bed.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/OHMT004-furniture/bed.png", "/templates/OHMT004-furniture/lifestyle-bed.jpg"]
   },
   {
     id: "9",
@@ -251,7 +251,7 @@ export const products = [
       { id: "r3", reviewer: "Silvia K.", rating: 5, date: "May 19, 2026", text: "The automatic LED lights make finding outfits at night highly convenient. Well-organized compartments." },
       { id: "r4", reviewer: "John S.", rating: 5, date: "June 05, 2026", text: "The hand-cast brass handles add a beautiful, subtle detail. Blends perfectly with the rich ash wood." }
     ],
-    gallery: ["/templates/OHMT004-furniture/wardrobe.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/OHMT004-furniture/wardrobe.png", "/templates/OHMT004-furniture/lifestyle-table.jpg"]
   }
 ];
 

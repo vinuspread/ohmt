@@ -3,8 +3,8 @@
   "name": "Coastal Luxury Resort",
   "name_ko": "해안 럭셔리 리조트",
   "category": "hospitality",
-  "description": "A seaside sanctuary of minimalist luxury.",
-  "description_ko": "미니멀리즘 럭셔리가 깃든 해안의 안식처.",
+  "description": "A coastal resort template for rooms, dining, experiences, booking prompts, and destination storytelling with a quiet luxury hospitality mood.",
+  "description_ko": "객실, 다이닝, 경험, 예약 유도, 여행지 스토리를 조용한 럭셔리 호스피탈리티 무드로 구성한 코스탈 리조트 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {

@@ -15,7 +15,7 @@ function JewelryCartPageContent() {
     {
       id: "1",
       name: "Tiffany-Blue Sapphire Bangle",
-      price: "$1,200",
+      price: "₩1,200,000",
       img: "/templates/OHMT002-jewelry/jewelry-hero-main.png",
       material: "18k White Gold"
     }
@@ -29,7 +29,7 @@ function JewelryCartPageContent() {
       {/* Header */}
       <header className="fixed top-0 w-full z-50 border-b border-neutral-100 bg-white">
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
-          <Link href="/ko/templates/OHMT002-jewelry" className="text-xs uppercase tracking-[0.4em] font-bold text-neutral-400 hover:text-[var(--color-primary)]">Back to Boutique</Link>
+          <Link href="/ko/templates/OHMT002-jewelry" className="text-xs uppercase tracking-[0.4em] font-bold text-neutral-500 hover:text-[var(--color-primary)]">Back to Boutique</Link>
           <div className="absolute left-1/2 -translate-x-1/2">
             <Link href="/ko/templates/OHMT002-jewelry" className="text-3xl font-serif tracking-[0.25em] font-normal uppercase text-neutral-900">OHMT</Link>
           </div>
@@ -54,7 +54,7 @@ function JewelryCartPageContent() {
                     <div className="flex justify-between items-start">
                       <div className="space-y-2">
                         <h2 className="text-2xl font-serif">{item.name}</h2>
-                        <p className="text-xs uppercase tracking-widest text-neutral-400 font-bold">{item.material}</p>
+                        <p className="text-xs uppercase tracking-widest text-neutral-500 font-bold">{item.material}</p>
                       </div>
                       <span className="text-lg font-serif">{item.price}</span>
                     </div>
@@ -84,7 +84,7 @@ function JewelryCartPageContent() {
               <div className="space-y-6 text-xs uppercase tracking-widest font-bold">
                 <div className="flex justify-between opacity-50">
                   <span>Subtotal</span>
-                  <span>$1,200.00</span>
+                  <span>₩1,200,000</span>
                 </div>
                 <div className="flex justify-between opacity-50">
                   <span>Standard Shipping</span>
@@ -92,14 +92,14 @@ function JewelryCartPageContent() {
                 </div>
                 <div className="flex justify-between border-t border-neutral-100 pt-8 text-lg font-serif normal-case tracking-tight">
                   <span>Estimated Total</span>
-                  <span>$1,200.00</span>
+                  <span>₩1,200,000</span>
                 </div>
               </div>
               <Button variant="dark" className="w-full py-8 text-[13px] font-bold uppercase tracking-[0.5em]">
                 Begin Checkout
               </Button>
               <div className="text-center">
-                 <p className="text-[15px] text-neutral-400">"Complimentary shipping and signature packaging on all orders."</p>
+                 <p className="text-[15px] text-neutral-500">"Complimentary shipping and signature packaging on all orders."</p>
               </div>
             </div>
           </div>

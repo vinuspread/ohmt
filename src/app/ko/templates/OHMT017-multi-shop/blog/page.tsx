@@ -57,7 +57,7 @@ function BlogPageContent() {
                     </div>
                     <div className="mt-5">
                       <span className="text-xs uppercase tracking-[0.2em] text-[var(--color-text-muted)]">{post.category}</span>
-                      <h2 className="text-lg font-bold mt-2 leading-snug group-hover:opacity-70 transition-opacity">{post.title}</h2>
+                      <h2 className="text-lg font-bold mt-2 leading-[1.1] group-hover:opacity-70 transition-opacity">{post.title}</h2>
                       <p className="text-sm text-[var(--color-text-muted)] mt-2 leading-relaxed">{post.excerpt}</p>
                       <div className="flex items-center gap-2 mt-4 text-xs text-[var(--color-text-muted)]">
                         <span>{post.date}</span>

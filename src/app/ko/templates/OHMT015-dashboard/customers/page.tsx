@@ -62,7 +62,7 @@ export default function CustomersPage() {
         <PageHeader
           title="Customers"
           action={
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3">
               <div className="relative">
                 <Search size={16} strokeWidth={1.5} className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--color-text-muted)]" />
                 <input
@@ -70,7 +70,7 @@ export default function CustomersPage() {
                   placeholder="고객 검색..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-52 pl-9 pr-3 py-2 text-sm bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-[var(--radius-md)] text-[var(--color-text)] placeholder-[var(--color-text-muted)] focus:outline-none focus:border-[var(--color-primary-border)] transition-colors"
+                  className="w-full sm:w-52 pl-9 pr-3 py-2 text-sm bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-[var(--radius-md)] text-[var(--color-text)] placeholder-[var(--color-text-muted)] focus:outline-none focus:border-[var(--color-primary-border)] transition-colors"
                 />
               </div>
               <div className="flex bg-[var(--color-bg-surface)] rounded-[var(--radius-md)] p-0.5 border border-[var(--color-border)]">
@@ -95,7 +95,7 @@ export default function CustomersPage() {
           }
         />
 
-        <div className="grid grid-cols-4 gap-3">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
           {[
             { label: '전체', value: customerStats.total, color: 'var(--color-text)' },
             { label: '활성', value: customerStats.active, color: 'var(--color-success)' },
@@ -117,7 +117,7 @@ export default function CustomersPage() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="grid grid-cols-4 gap-3"
+              className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4"
             >
               {filtered.map((customer) => (
                 <div

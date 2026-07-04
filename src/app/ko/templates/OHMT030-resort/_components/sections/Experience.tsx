@@ -46,7 +46,7 @@ export function Experience() {
               {`시간이 머무는 곳\n그곳이 기억이\n되는 순간`}
             </h2>
             <Link href={`${base}/#`}
-              className="inline-flex items-center gap-2 rounded-full border border-white/60 bg-white/10 px-6 py-3 text-white text-[15px] hover:bg-white/20 transition-all">
+              className="inline-flex items-center gap-2 rounded-full border border-white/60 bg-white/10 px-6 py-3 text-white text-[15px] hover:bg-white/20 transition-all focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]">
               모두 보기 <ArrowRight size={15} />
             </Link>
           </div>
@@ -54,14 +54,14 @@ export function Experience() {
           {/* Controls */}
           <div className="flex items-center gap-4 mt-16">
             <button onClick={prev}
-              className="w-11 h-11 rounded-full border border-white/40 flex items-center justify-center text-white hover:bg-white/10 transition-colors">
+              className="w-11 h-11 rounded-full border border-white/40 flex items-center justify-center text-white hover:bg-white/10 transition-colors focus-visible:ring-[var(--accent)] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" aria-label="이전">
               <ArrowLeft size={17} />
             </button>
             <span className="text-[13px] text-white/50 tabular-nums">
               {String(active + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
             </span>
             <button onClick={next}
-              className="w-11 h-11 rounded-full bg-white flex items-center justify-center text-[var(--bg-dark)] hover:opacity-85 transition-opacity">
+              className="w-11 h-11 rounded-full bg-white flex items-center justify-center text-[var(--bg-dark)] hover:opacity-85 transition-opacity focus-visible:ring-[var(--accent)] focus-visible:ring-2 focus-visible:ring-offset-2" aria-label="다음">
               <ArrowRight size={17} />
             </button>
           </div>

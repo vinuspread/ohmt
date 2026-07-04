@@ -3,8 +3,8 @@
   "name": "Lumen Wedding",
   "name_ko": "루멘 웨딩",
   "category": "portfolio",
-  "description": "Editorial light-mode portfolio template for fine art & documentary wedding photography",
-  "description_ko": "파인아트 & 다큐멘터리 웨딩 사진작가를 위한 에디토리얼 라이트 포트폴리오 템플릿",
+  "description": "A wedding photography portfolio template for galleries, packages, documentary stories, and inquiry flows with a refined editorial light-mode style.",
+  "description_ko": "갤러리, 패키지, 다큐멘터리형 스토리, 문의 흐름을 세련된 라이트 모드로 구성한 웨딩 사진 포트폴리오 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {

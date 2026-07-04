@@ -81,7 +81,7 @@ function MuseumInfoContent() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 0.8 }}
-            className="text-5xl md:text-8xl font-serif font-medium leading-none tracking-tighter break-keep"
+            className="text-5xl md:text-8xl font-serif font-medium leading-[1.1] tracking-tighter break-keep"
           >
             {"돌에 깃든 영혼"}
           </motion.h1>
@@ -99,7 +99,7 @@ function MuseumInfoContent() {
         >
           <motion.div variants={fadeIn} className="space-y-10">
             <span className="text-[13px] uppercase font-bold tracking-[0.5em] text-white/40">{"제1장"}</span>
-            <h2 className="text-5xl md:text-7xl font-serif leading-[1.5] tracking-tighter break-keep">
+            <h2 className="text-5xl md:text-7xl font-serif leading-[1.1] tracking-tighter break-keep">
               {"빛의 기초"}
             </h2>
             <p className="text-lg text-white/60 leading-relaxed font-normal break-keep">
@@ -135,7 +135,7 @@ function MuseumInfoContent() {
       <section className="max-w-[1440px] mx-auto px-8 md:px-16 py-10 md:py-20 md:py-32 lg:py-40 border-b border-white/5">
         <div className="mb-24">
           <span className="text-[13px] uppercase font-bold tracking-[0.5em] text-white/40 block mb-6">{"제2장"}</span>
-          <h2 className="text-5xl md:text-7xl font-serif tracking-tighter leading-[1.5] break-keep">
+          <h2 className="text-5xl md:text-7xl font-serif tracking-tighter leading-[1.1] break-keep">
             {"성 베드로 대성당"}
           </h2>
         </div>
@@ -146,7 +146,7 @@ function MuseumInfoContent() {
           </motion.div>
           <div className="space-y-10">
             <span className="text-[13px] uppercase font-bold tracking-[0.5em] text-white/40">{"교황 제단"}</span>
-            <h3 className="text-4xl md:text-6xl font-serif leading-[1.5] tracking-tighter break-keep">
+            <h3 className="text-4xl md:text-6xl font-serif leading-[1.1] tracking-tighter break-keep">
               {"베르니니의 천개 (Baldaquin)"}
             </h3>
             <p className="text-lg text-white/60 font-normal leading-relaxed break-keep">
@@ -160,7 +160,7 @@ function MuseumInfoContent() {
         <div className="border-t border-white/5 pt-12 md:pt-24">
           <div className="mb-16">
             <span className="text-[13px] uppercase font-bold tracking-[0.5em] text-white/40 block mb-6">{"고요한 바티칸의 기록"}</span>
-            <h3 className="text-4xl md:text-6xl font-serif tracking-tighter leading-[1.5] break-keep">
+            <h3 className="text-4xl md:text-6xl font-serif tracking-tighter leading-[1.1] break-keep">
               {"교황의 지하 묘소 (Grottoes)"}
             </h3>
           </div>

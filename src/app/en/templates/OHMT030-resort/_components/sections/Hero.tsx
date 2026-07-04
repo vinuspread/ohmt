@@ -40,7 +40,7 @@ export function Hero() {
             </p>
             <div className="flex gap-3">
               {[FacebookLogo, InstagramLogo, XLogo].map((Icon, i) => (
-                <a key={i} href="#" className="w-10 h-10 rounded-full border border-white/50 flex items-center justify-center text-white hover:bg-white/10 transition-all">
+                <a key={i} href="#" aria-label={`Social link ${i + 1}`} className="w-10 h-10 rounded-full border border-white/50 flex items-center justify-center text-white hover:bg-white/10 transition-all focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]">
                   <Icon size={16} weight="bold" />
                 </a>
               ))}

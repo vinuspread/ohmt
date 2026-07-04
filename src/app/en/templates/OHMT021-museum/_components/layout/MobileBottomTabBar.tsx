@@ -15,13 +15,13 @@ interface MobileBottomTabBarProps {
 const navItems = [
   {
     name: "Home",
-    href: "/exhibition",
+    href: "/en/templates/OHMT021-museum",
     icon: Home,
     activeIcon: Home,
   },
   {
     name: "Collections",
-    href: "/templates/OHMT021-museum/collections",
+    href: "/en/templates/OHMT021-museum/collections",
     icon: ChevronUp,
     activeIcon: ChevronUp,
   },
@@ -34,7 +34,7 @@ const navItems = [
   },
   {
     name: "Shop",
-    href: "/templates/OHMT021-museum/souvenir",
+    href: "/en/templates/OHMT021-museum/shop",
     icon: ShoppingBag,
     activeIcon: ShoppingBag,
   },
@@ -44,8 +44,8 @@ export default function MobileBottomTabBar({ isMenuOpen, onMenuToggle, onTicketC
   const pathname = usePathname();
 
   const isActive = (href: string) => {
-    if (href === "/exhibition" || href === "#") {
-      return pathname === "/exhibition" || pathname === "/";
+    if (href === "/en/templates/OHMT021-museum" || href === "#") {
+      return pathname === "/en/templates/OHMT021-museum";
     }
     return pathname.startsWith(href);
   };

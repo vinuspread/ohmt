@@ -12,7 +12,7 @@ const technologies = [
     title: "AI-Pilot 2.0",
     desc: "Neural network driving assistance that learns your habits and anticipates road conditions in real-time.",
     detail: "Processes 4,000 data points per second from 12 sensors. Reacts in 0.02 seconds - 10× faster than human reflex.",
-    img: "/templates/OHMT009-car/car-1.jpg",
+    img: "/templates/OHMT009-car/tech-battery.jpg",
   },
   {
     num: "02",
@@ -48,23 +48,23 @@ function CarTechnologyPageContent() {
         {/* Hero */}
         <section className="relative h-[70vh] min-h-[500px] overflow-hidden flex items-end">
           <img
-            src="/templates/OHMT009-car/car-3.jpg"
-            alt="VINUS Technology"
+            src="/templates/OHMT009-car/tech-hero-custom.png"
+            alt="OHMT Technology"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-          <div className="relative max-w-[var(--theme-container)] mx-auto px-6 md:px-[var(--theme-gutter)] pb-20 w-full">
+          <div className="relative max-w-[var(--theme-container)] mx-auto px-6 md:px-[var(--theme-gutter)] pb-12 w-full">
             <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-4 block">Technology</span>
-            <h1 className="font-[family-name:var(--theme-font-heading)] text-[clamp(2.8rem,6vw,5.5rem)] tracking-tight leading-[1.1]">
+            <h1 className="font-[family-name:var(--theme-font-heading)] text-[clamp(2.8rem,6vw,5.5rem)] font-bold tracking-tight leading-[1.12]">
               Innovation at<br />every level.
             </h1>
           </div>
         </section>
 
         {/* Intro */}
-        <section className="max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)] py-10 md:py-16 border-b border-[var(--theme-border)]">
-          <p className="text-[1rem] text-[var(--theme-text-muted)] font-normal leading-[1.4] max-w-[640px]">
-            Our engineering philosophy is simple: question everything. The result is a suite of technologies that redefine what a vehicle can do.
+        <section className="max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)] pt-8 pb-10 md:pb-12 border-b border-[var(--theme-border)]">
+          <p className="text-[1.15rem] md:text-[1.25rem] text-white/70 font-normal leading-[1.6] max-w-[750px] break-keep">
+            Our engineering philosophy is simple: question everything.<br className="hidden md:inline" />The result is a suite of technologies that redefine what a vehicle can do.
           </p>
         </section>
 

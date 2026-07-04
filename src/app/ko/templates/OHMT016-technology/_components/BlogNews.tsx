@@ -16,7 +16,7 @@ export default function BlogNews() {
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
               지식 허브
             </span>
-            <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.2] text-[var(--color-text)] font-heading break-keep">
+            <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.1] text-[var(--color-text)] font-heading break-keep">
               최신 소식
             </h2>
           </div>
@@ -50,7 +50,7 @@ export default function BlogNews() {
                     {featuredPost.date}
                   </span>
                 </div>
-                <h3 className="text-xl font-extrabold text-white font-heading leading-[1.2] tracking-tight">
+                <h3 className="text-xl font-extrabold text-white font-heading leading-[1.1] tracking-tight">
                   {featuredPost.title}
                 </h3>
               </div>
@@ -82,7 +82,7 @@ export default function BlogNews() {
                       {post.date}
                     </span>
                   </div>
-                  <h3 className="text-base font-bold text-[var(--color-text)] font-heading transition-colors group-hover:text-[var(--color-accent)] leading-snug tracking-tight">
+                  <h3 className="text-base font-bold text-[var(--color-text)] font-heading transition-colors group-hover:text-[var(--color-accent)] leading-[1.1] tracking-tight">
                     {post.title}
                   </h3>
                   <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[var(--color-text-muted)] group-hover:text-[var(--color-text)] transition-colors duration-200 mt-1">

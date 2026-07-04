@@ -43,7 +43,7 @@ export default function ExhibitionsPage() {
               <img
                 src={exhibitions[0].heroImage}
                 alt={exhibitions[0].name}
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 ease-out"
               />
               <span className="absolute top-8 left-8 text-[10px] font-body font-semibold uppercase tracking-[0.15em] text-white/70 bg-black/40 px-3 py-1.5">
                 Featured
@@ -80,7 +80,7 @@ export default function ExhibitionsPage() {
                 </div>
                 <Link
                   href={`/en/templates/OHMT003-exhibition/exhibitions/${exhibitions[0].slug}`}
-                  className="relative overflow-hidden group inline-flex px-8 py-4 border border-black"
+                  className="relative overflow-hidden group inline-flex px-8 py-4 border border-black active:scale-[0.97] transition-transform duration-100"
                 >
                   <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
                   <span className="relative text-black group-hover:text-white text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-300">
@@ -99,7 +99,7 @@ export default function ExhibitionsPage() {
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className="pb-3 text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-200"
+                  className="pb-3 text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-200 active:scale-[0.97]"
                   style={{
                     color: activeTab === tab ? '#000000' : 'rgba(0,0,0,0.4)',
                     borderBottom: activeTab === tab ? '2px solid #000000' : '2px solid transparent',

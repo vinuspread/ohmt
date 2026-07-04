@@ -27,7 +27,7 @@ export const Hero = () => {
         <span className="inline-block bg-white text-[var(--theme-accent)] text-[0.75rem] font-bold uppercase tracking-tight px-3 py-1 mb-6 antialiased">
           라이프스타일 & 컬처
         </span>
-        <h1 className="font-[family-name:var(--theme-font-heading)] text-[clamp(1.3rem,2.1vw,2.1rem)] font-normal leading-[1.2] text-white max-w-[850px] mb-6 tracking-[0.02em]">
+        <h1 className="font-[family-name:var(--theme-font-heading)] text-[clamp(1.3rem,2.1vw,2.1rem)] font-normal leading-[1.1] text-white max-w-[850px] mb-6 tracking-[0.02em]">
           <span className="block font-normal text-white">유행처럼 빠르게 스쳐 가는 트렌드의 범람 속에서도 결코 바래지 않을</span>
           <span className="block font-normal text-white/80 mt-2">시대를 깊이 관통하는 지적인 안목과 가치 있는 생각들의 감각적 큐레이션.</span>
         </h1>
@@ -83,7 +83,7 @@ export const Hero = () => {
                <p className="text-[0.65rem] font-bold uppercase tracking-tight text-white/45 mb-0.5 antialiased">
                                    지금 바로 구매 가능
                </p>
-                <h2 className="font-[family-name:var(--theme-font-heading)] text-[1rem] md:text-[1.25rem] font-normal text-white leading-[1.4] tracking-[-0.02em] antialiased">
+                <h2 className="font-[family-name:var(--theme-font-heading)] text-[1rem] md:text-[1.25rem] font-normal text-white leading-[1.1] tracking-[-0.02em] antialiased">
                                      2026 여름 프린트 에디션 출시.
                 </h2>
              </div>

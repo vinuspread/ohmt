@@ -3,8 +3,8 @@
   "name": "Multi-Shop",
   "name_ko": "멀티샵",
   "category": "retail",
-  "description": "Multi-brand retail concept store",
-  "description_ko": "멀티브랜드 리테일 컨셉 스토어",
+  "description": "A multi-brand retail template for category browsing, editorial product curation, promotions, and a flexible shop experience across mixed collections.",
+  "description_ko": "카테고리 탐색, 에디토리얼 상품 큐레이션, 프로모션, 다양한 컬렉션 판매에 맞춘 멀티브랜드 리테일 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {

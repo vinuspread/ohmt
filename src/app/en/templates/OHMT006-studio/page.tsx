@@ -85,7 +85,7 @@ function StudioHomeContent() {
   "aboutPage": {
     "category": `Architectural Core`,
     "title1": `ABOUT`,
-    "title2": `VINUSPREAD.`,
+    "title2": `OHMT.`,
     "philosophy": {
       "title": `Space as a canvas.`,
       "desc": `We operate at the convergence of architecture, spatial brand experience, and tactile interaction. Our design lab is dedicated to executing systems that evoke silence, celebrate material honesty, and command physical space with ultimate rigor.`
@@ -269,16 +269,9 @@ const fields = t.hero.fields.map((f: any, i: number) => ({
                             playsInline
                             className="w-full h-full object-cover brightness-[0.78] transition-opacity duration-1000"
                         >
-                            <source src="/templates/OHMT006-studio/hero-bg.mp4" type="video/mp4" />
+                            <source src="https://pub-10d6d534a06c495c8b45f39cfed47497.r2.dev/studio-hero-bg.mp4" type="video/mp4" />
                         </video>
                         <div className="absolute inset-0 bg-black/20 pointer-events-none z-10" />
-                    </div>
-
-                    {/* SNS */}
-                    <div className="absolute left-6 bottom-32 z-20 hidden md:flex flex-col items-center gap-6 bg-white/90 backdrop-blur-md py-6 px-4 border border-black/5">
-                        <a href="#" className="text-[13px] font-bold text-black/50 hover:text-black">Fb</a>
-                        <a href="#" className="text-[13px] font-bold text-black/50 hover:text-black">Tw</a>
-                        <a href="#" className="text-[13px] font-bold text-black/50 hover:text-black">Ig</a>
                     </div>
 
                     {/* Heading */}
@@ -389,7 +382,7 @@ const fields = t.hero.fields.map((f: any, i: number) => ({
                                 </p>
                             </div>
                             <div className="md:col-span-3 aspect-[1/1] overflow-hidden border border-black/10 self-end md:mb-12">
-                                <img loading="lazy" src="/templates/OHMT006-studio/project-1.jpg" alt="Material swatch" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]" />
+                                <img loading="lazy" src="/templates/OHMT006-studio/material-swatch.jpg" alt="Material swatch" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]" />
                             </div>
                         </div>
                     </div>

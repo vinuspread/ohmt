@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
@@ -36,7 +36,8 @@ export default function PortfolioLayout({
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
       `}</style>
-      {children}
+      <div className="portfolio-template">{children}</div>
     </>
   );
 }
+

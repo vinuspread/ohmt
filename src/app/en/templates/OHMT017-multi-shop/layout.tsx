@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import './theme.css';
 import { SmoothScroll } from "./_components/SmoothScroll";
 
@@ -49,3 +49,4 @@ export default function MultiShopLayout({
     </>
   );
 }
+

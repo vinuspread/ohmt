@@ -34,7 +34,7 @@ function ContactPageContent() {
               <span className="inline-flex items-center justify-center bg-[var(--color-primary)] text-[var(--color-text-main)] rounded-full px-5 py-2.5 text-xs font-bold uppercase tracking-wider leading-none mb-4">
                 문의하기
               </span>
-              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-none" style={{ fontFamily: "var(--font-heading)" }}>
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.1]" style={{ fontFamily: "var(--font-heading)" }}>
                 즐거운 배움의 모험을
                 <br />
                 <span className="text-[var(--color-primary)]">지금 시작해 보세요</span>

@@ -31,7 +31,7 @@ export function StoryCta() {
       <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)] via-[var(--bg)]/55 to-transparent" />
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 pb-16 md:pb-24">
         <div ref={ref}>
-          <h2 className="font-michroma text-[clamp(32px,4vw,60px)] text-[var(--text)] leading-[1.0] tracking-[-0.03em] mb-4">
+          <h2 className="font-michroma text-[clamp(32px,4vw,60px)] text-[var(--text)] leading-[1.1] tracking-[-0.03em] mb-4">
             당신의 도시가<br />기다리고 있습니다.
           </h2>
           <p className="font-inter text-[15px] text-[var(--text-muted)] mb-8 max-w-[380px] leading-relaxed">

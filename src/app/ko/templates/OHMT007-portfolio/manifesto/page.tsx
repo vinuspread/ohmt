@@ -18,12 +18,12 @@ function PortfolioManifestoPageContent() {
                 <div className="flex flex-col gap-24">
                     <div className="space-y-4 border-b border-black/10 pb-12">
                         <span className="text-[13px] font-black tracking-tight text-[var(--color-accent)] uppercase block">챕터 01</span>
-                        <h1 className="text-7xl md:text-[10vw] font-black tracking-tighter leading-[1.5] uppercase">매니페스토</h1>
+                        <h1 className="text-7xl md:text-[10vw] font-black tracking-tighter leading-[1.1] uppercase">매니페스토</h1>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-start">
                         <div className="lg:col-span-8 space-y-20">
-                            <h2 className="text-[4vw] font-black tracking-tighter leading-[1.5] uppercase">
+                            <h2 className="text-[4vw] font-black tracking-tighter leading-[1.1] uppercase">
                                 과감한 <span className="text-[var(--color-accent)]">단순화</span> <br /> 
                                 시각적 <br /> 
                                 <span>진실의 형태</span>.

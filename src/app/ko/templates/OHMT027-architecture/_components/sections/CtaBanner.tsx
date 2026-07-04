@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture/_components/sections/CtaBanner.tsx
+// src/app/ko/templates/OHMT027-architecture/_components/sections/CtaBanner.tsx
 "use client";
 import React from "react";
 import Image from "next/image";
@@ -13,7 +13,7 @@ export function CtaBanner() {
       {/* Background Image */}
       <Image
         src="/templates/OHMT027-architecture/project-3.jpg"
-        alt="Architectural facade night view"
+        alt="야간 건축 파사드"
         fill
         className="object-cover"
         sizes="100vw"
@@ -26,17 +26,17 @@ export function CtaBanner() {
       <div className="absolute inset-0 z-20 flex items-center justify-center text-center px-6">
         <ScrollReveal>
           <div className="space-y-8 max-w-2xl">
-            <h2 className="font-heading font-normal text-[42px] md:text-[56px] text-white leading-tight">
-              Let's Design Your
+            <h2 className="font-heading font-normal text-[42px] md:text-[56px] text-white leading-[1.1]">
+              당신의 공간을
               <br />
-              Space Together.
+              함께 설계합니다.
             </h2>
             <div>
               <Link
                 href={`${baseRoute}/contact`}
                 className="inline-block border-2 border-white text-white px-10 py-4 text-[14px] font-sans tracking-[0.08em] hover:bg-white hover:text-[#1A1A1A] transition-colors duration-300"
               >
-                START A PROJECT
+                프로젝트 문의
               </Link>
             </div>
           </div>

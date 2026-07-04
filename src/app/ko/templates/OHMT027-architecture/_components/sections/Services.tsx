@@ -1,4 +1,4 @@
-// src/app/en/templates/OHMT027-architecture/_components/sections/Services.tsx
+// src/app/ko/templates/OHMT027-architecture/_components/sections/Services.tsx
 "use client";
 import React from "react";
 import Image from "next/image";
@@ -16,7 +16,7 @@ export function Services() {
         <ScrollReveal>
           <div className="mb-20">
             <h2 className="font-heading font-normal text-[40px] md:text-[48px] text-[#1A1A1A]">
-              Our Services.
+              서비스.
             </h2>
           </div>
         </ScrollReveal>
@@ -45,7 +45,7 @@ export function Services() {
                     <span className="font-sans text-[11px] font-medium tracking-[0.15em] text-[#888888] uppercase block">
                       {service.label}
                     </span>
-                    <h3 className="font-heading font-normal text-[30px] md:text-[36px] text-[#1A1A1A] leading-tight">
+                    <h3 className="font-heading font-normal text-[30px] md:text-[36px] text-[#1A1A1A] leading-[1.1]">
                       {service.name}
                     </h3>
                     <div className="w-[60px] h-[1px] bg-[#E0E0E0]" />
@@ -57,7 +57,7 @@ export function Services() {
                         href={`${baseRoute}/services`}
                         className="font-sans text-[12px] font-medium tracking-[0.12em] text-[#1A1A1A] uppercase border-b border-[#1A1A1A] pb-1 hover:text-[#B07D4F] hover:border-[#B07D4F] transition-colors"
                       >
-                        Learn More →
+                        자세히 보기 →
                       </Link>
                     </div>
                   </div>

@@ -8,7 +8,7 @@ export default function InstructorsSection() {
            style={{ fontFamily: "var(--font-body)" }}>
           커뮤니티
         </p>
-        <h2 className="text-[clamp(2rem,4.5vw,4rem)] font-normal text-[var(--color-text)] leading-[1.05] tracking-[-0.02em] text-right"
+        <h2 className="text-[clamp(2rem,4.5vw,4rem)] font-normal text-[var(--color-text)] leading-[1.1] tracking-[-0.02em] text-right"
             style={{ fontFamily: "var(--font-heading)" }}>
           한 번에<br />하나씩 완성
         </h2>

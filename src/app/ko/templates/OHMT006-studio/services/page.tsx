@@ -45,7 +45,7 @@ const services = [
       { step: "03", title: "조명 시뮬레이션", desc: "빛을 공간의 중요 소재로 다루며, 시간대에 따른 마감 표면의 반사율을 시뮬레이션합니다." },
       { step: "04", title: "설치 관리", desc: "주요 패널 설치 및 마감 공정 시 자재 정렬 기준을 현장에서 직접 감리합니다." },
     ],
-    image: "/templates/OHMT006-studio/hero-2.jpg",
+    image: "/templates/OHMT006-studio/service-consulting.jpg",
   },
   {
     idx: "03",
@@ -130,7 +130,7 @@ function StudioServicesPageContent() {
                   {/* Content */}
                   <div className="flex flex-col justify-center space-y-8 md:space-y-10">
                     <div>
-                      <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold leading-[1.5] text-black mb-3">
+                      <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold leading-[1.1] text-black mb-3">
                         {s.title}
                       </h2>
                       <p className="text-[15px] text-black/40 font-normal">{s.tagline}</p>
@@ -174,7 +174,7 @@ function StudioServicesPageContent() {
         <section className="bg-[var(--color-bg-dark)] text-white py-16 md:py-24">
           <div className="max-w-[1720px] mx-auto px-8 md:px-16 lg:px-24 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
             <div>
-              <h3 className="text-[clamp(1.8rem,4vw,3.5rem)] font-bold leading-[1.5] mb-4">
+              <h3 className="text-[clamp(1.8rem,4vw,3.5rem)] font-bold leading-[1.1] mb-4">
                 공간 시스템을<br />구축할 준비가 되셨나요?
               </h3>
               <div className="flex flex-wrap gap-6 text-[12px] font-bold text-white/35">

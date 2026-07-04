@@ -16,7 +16,7 @@ export const BrandStory = () => {
             transition={{ duration: 0.35, ease: easeOut }}
           >
             <p className="text-xs uppercase tracking-[0.3em] text-white/40 mb-4">브랜드 스토리</p>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.05]">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]">
               우리가 늘 꿈꾸던<br />본질적인 버거.
             </h2>
           </motion.div>

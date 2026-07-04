@@ -33,7 +33,7 @@ function BlogPageContent() {
         <section className="pt-16 md:pt-32 pb-12 border-b border-black/10">
           <div className="max-w-[1440px] mx-auto px-6">
             <span className="text-[0.7rem] font-bold uppercase tracking-[0.25em] text-black/40 block mb-4">저널</span>
-            <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-black tracking-[-0.03em] uppercase leading-[1.5]">블로그</h1>
+            <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-black tracking-[-0.03em] uppercase leading-[1.1]">블로그</h1>
           </div>
         </section>
 
@@ -66,7 +66,7 @@ function BlogPageContent() {
                 </div>
                 <div>
                   <span className="text-[0.65rem] font-bold uppercase tracking-[0.2em] text-black/40 block mb-4">{filtered[0].category} · {filtered[0].date}</span>
-                  <h2 className="text-[2rem] font-black uppercase tracking-[-0.03em] leading-tight mb-6">{filtered[0].title}</h2>
+                  <h2 className="text-[2rem] font-black uppercase tracking-[-0.03em] leading-[1.1] mb-6">{filtered[0].title}</h2>
                   <p className="text-[0.9rem] text-black/60 leading-relaxed mb-8">{filtered[0].excerpt}</p>
                   <Link href="/ko/templates/OHMT005-sneaker/blog" className="inline-flex items-center gap-3 bg-black text-white text-[0.82rem] font-bold uppercase tracking-[0.08em] px-8 py-4 hover:bg-black/80 transition-colors">
                     기사 읽기 <ArrowRight size={16} />
@@ -87,7 +87,7 @@ function BlogPageContent() {
                     <img loading="lazy" src={p.img} alt={p.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                   </div>
                   <span className="text-[0.65rem] font-bold uppercase tracking-[0.15em] text-black/40 block mb-2">{p.category} · {p.date}</span>
-                  <h3 className="text-[1rem] font-black uppercase leading-snug mb-3 group-hover:opacity-60 transition-opacity tracking-[-0.03em]">{p.title}</h3>
+                  <h3 className="text-[1rem] font-black uppercase leading-[1.1] mb-3 group-hover:opacity-60 transition-opacity tracking-[-0.03em]">{p.title}</h3>
                   <p className="text-[0.82rem] text-black/60 leading-relaxed mb-4">{p.excerpt}</p>
                   <span className="inline-flex items-center gap-1.5 text-[0.75rem] font-bold uppercase tracking-[0.08em] text-black border-b border-black/30 pb-0.5">
                     더보기 <ArrowRight size={12} />

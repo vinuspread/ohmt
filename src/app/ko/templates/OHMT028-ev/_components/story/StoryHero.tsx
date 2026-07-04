@@ -24,13 +24,14 @@ export function StoryHero() {
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 min-h-[85vh] flex items-end pb-16 md:pb-28">
         <div ref={ref}>
           <p className="font-inter text-[11px] tracking-[0.15em] text-[var(--accent)] uppercase mb-4">
-            브랜드 스토리
+            BRAND STORY
           </p>
-          <h1 className="font-michroma text-[clamp(44px,6vw,88px)] text-[var(--text)] leading-[0.93] tracking-[-0.03em] mb-6">
-            작은 차.<br />큰 질문.
+          <h1 className="font-michroma text-[clamp(44px,6vw,88px)] text-[var(--text)] leading-[1.1] tracking-[-0.03em] mb-6">
+            작은 세그먼트 차체.<br />모빌리티를 향한<br />거대한 질문.
           </h1>
           <p className="font-inter text-[15px] text-[var(--text-muted)] max-w-[400px] leading-relaxed">
-            NUBI는 아주 단순한 질문 하나에서 시작됐습니다. 작다는 게 왜 재미없어야 하나요?
+            NUBI는 단순한 질문 하나에서 시작됐습니다.
+            작은 차도 왜 충분히 즐거울 수 없을까요?
           </p>
         </div>
       </div>

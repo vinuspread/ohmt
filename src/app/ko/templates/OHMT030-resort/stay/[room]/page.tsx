@@ -11,7 +11,7 @@ const rooms: Record<string, {
 }> = {
   celestial: {
     name: "셀레스티얼 스위트",
-    price: "$480",
+    price: "₩480,000",
     img: "villa-bedroom-arch.jpg",
     desc: "셀레스티얼 스위트는 리조트에서 가장 높은 곳에 자리 잡고 있습니다. 칼데라 가장자리에 새겨진 이 전망대에서는 하늘이 손에 닿을 듯 가깝게 느껴집니다. 침실과 거실을 감싸는 천장부터 바닥까지의 유리창은 에게해의 수평선 전체를 첫 빛부터 마지막 별자리까지 담아냅니다. 프라이빗 플런지 풀이 바다 위에 떠 있는 듯한 테라스로 이어집니다.",
     spec: [
@@ -25,7 +25,7 @@ const rooms: Record<string, {
   },
   bellemont: {
     name: "벨몬트 스위트",
-    price: "$360",
+    price: "₩360,000",
     img: "villa-bedroom-seaview.jpg",
     desc: "야생 정원과 건조석墙으로 둘러싸인 벨몬트 스위트는 부겐빌레아, 라벤더, 올리브 나무 사이에 자리 잡고 있습니다. 실내외가 연결된 레이아웃은 일광욕실이 있는 프라이빗 파티오로 열리며, 자스민 향기와 짭짤한 바다 공기가 어우러집니다. 느린 아침과 긴 오후를 책과 함께 보내기 위해 설계된 스위트입니다.",
     spec: [
@@ -39,7 +39,7 @@ const rooms: Record<string, {
   },
   tofutalia: {
     name: "토푸탈리아 스위트",
-    price: "$320",
+    price: "₩320,000",
     img: "villa-bedroom-porthole.jpg",
     desc: "절벽면에 직접 새겨진 토푸탈리아 스위트는 물에 최대한 가까이 다가갈 수 있는 아늑한 동굴형 은신처입니다. 침실에서 내려가면 현지 돌로 조각된 냉각욕조가 있는 보호된 테라스가 나오며, 파도 소리가 화산암에 울려 퍼집니다. 거친 질감과 부드러운 린넨이 인테리어를 정의합니다.",
     spec: [
@@ -53,7 +53,7 @@ const rooms: Record<string, {
   },
   zephyr: {
     name: "제피르 로프트",
-    price: "$290",
+    price: "₩290,000",
     img: "room-zephyr.jpg",
     desc: "메인 빌라 단지 위에 자리 잡은 오픈 플랜 로프트, 제피르 로프트는 빛의 볼륨감이 특징입니다. 이중 천장 높이와 창문 벽이 이름처럼 해안 바람을 닮은 공기감을 만들어냅니다. 미닫이식 침실 공간이 아래의 거실을 내려다보고, 컴팩트한 간이 주방이 프라이빗 다이닝을 가능하게 합니다.",
     spec: [
@@ -88,7 +88,7 @@ export default async function RoomPage({ params }: { params: Promise<{ room: str
             <p className="text-white/50 text-[12px] uppercase tracking-[0.18em] mb-3">
               OHMT 리조트 — 빌라
             </p>
-            <h1 className="text-white font-[300] tracking-[-0.04em] leading-none mb-3"
+            <h1 className="text-white font-[300] tracking-[-0.04em] leading-[1.1] mb-3"
                 style={{ fontSize: "clamp(42px, 6vw, 80px)" }}>
               {data.name}
             </h1>
@@ -147,7 +147,7 @@ export default async function RoomPage({ params }: { params: Promise<{ room: str
               <input type="date" lang="ko" placeholder="체크인"
                 className="flex-1 px-5 py-3 rounded-full border border-white/20 bg-transparent text-white text-[15px] outline-none focus:border-white/60 transition-all" />
             </div>
-            <button className="mt-6 rounded-full bg-[var(--accent)] px-8 py-3 text-[var(--text-dark)] text-[15px] font-medium hover:bg-[#ffb37a] transition-all">
+            <button className="mt-6 rounded-full bg-[var(--accent)] px-8 py-3 text-[var(--text-dark)] text-[15px] font-medium hover:bg-[var(--accent-hover)] transition-all">
               요청 제출
             </button>
           </div>

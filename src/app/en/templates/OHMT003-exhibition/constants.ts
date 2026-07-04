@@ -53,7 +53,7 @@ export const exhibitions: Exhibition[] = [
     showroom: 'Photography Wing',
     tags: { genre: 'Photography', theme: 'Society', ageRating: '14+' },
     image: '/templates/OHMT003-exhibition/exhibition-04.jpg',
-    heroImage: '/templates/OHMT003-exhibition/exhibition-hero-01.jpg',
+    heroImage: '/templates/OHMT003-exhibition/exhibition-hero-04.jpg',
     description:
       'Aria Novak\'s documentary photography examines communities living on the margins of rapidly changing urban landscapes. Over five years, Novak traveled to twenty cities across four continents, capturing intimate portraits of neighborhoods facing displacement and transformation. Her large-format prints reveal the dignity and resilience of individuals navigating uncertain futures. "Uncertain Ground" combines these photographic works with field recordings and written testimonies, creating a multi-layered portrait of contemporary urban life at a moment of profound transition.',
   },
@@ -67,7 +67,7 @@ export const exhibitions: Exhibition[] = [
     showroom: 'Garden Gallery',
     tags: { genre: 'Mixed Media', theme: 'Culture', ageRating: '12+' },
     image: '/templates/OHMT003-exhibition/exhibition-05.jpg',
-    heroImage: '/templates/OHMT003-exhibition/exhibition-hero-02.jpg',
+    heroImage: '/templates/OHMT003-exhibition/exhibition-hero-05.jpg',
     description:
       'Collective Studio brings together twelve emerging artists from six countries to explore the concept of a shared visual language for the twenty-first century. Working across sculpture, textile, digital media, and performance, the collective challenges traditional boundaries between art forms and cultural traditions. "New Primitives" presents a series of collaborative works created during an intensive six-month residency, alongside individual pieces that reflect each artist\'s unique perspective. The exhibition spills beyond the Garden Gallery into OHMT&apos;s outdoor spaces, activating the entire venue.',
   },
@@ -81,7 +81,7 @@ export const exhibitions: Exhibition[] = [
     showroom: 'Permanent Collection',
     tags: { genre: 'Conceptual', theme: 'Identity', ageRating: '18+' },
     image: '/templates/OHMT003-exhibition/exhibition-06.jpg',
-    heroImage: '/templates/OHMT003-exhibition/exhibition-hero-03.jpg',
+    heroImage: '/templates/OHMT003-exhibition/exhibition-hero-06.jpg',
     description:
       'Daniel Reeves\' seminal body of work, acquired by OHMT in 2024, spans three decades of conceptual practice that interrogates the nature of memory, documentation, and historical narrative. The permanent installation presents key works from each phase of Reeves\' career, from his early text-based pieces of the 1990s to his recent large-scale archival interventions. "After the Fact" is both a retrospective and a living archive, with selected works rotating periodically to reveal new connections and readings. The installation includes a dedicated research room where visitors can explore Reeves\' extensive archive of sketches, notes, and source materials.',
   },

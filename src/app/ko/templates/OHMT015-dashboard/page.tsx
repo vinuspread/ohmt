@@ -18,55 +18,55 @@ export default function DashboardPage() {
       <div className="space-y-3">
 
         {/* Row 1: Welcome + Stats */}
-        <div className="grid grid-cols-12 gap-3 items-stretch">
-          <div className="col-span-4 flex flex-col">
+        <div className="grid grid-cols-1 gap-3 items-stretch lg:grid-cols-12">
+          <div className="flex flex-col lg:col-span-4">
             <WelcomeCard />
           </div>
-          <div className="col-span-2 flex flex-col"><StatsCard label="매출" value={9280000} change="12.5%" positive={true} color="success" /></div>
-          <div className="col-span-2 flex flex-col"><StatsCard label="차량 주문" value={1284} change="3.2%" positive={false} color="danger" /></div>
-          <div className="col-span-2 flex flex-col"><StatsCard label="시승 문의" value={847} change="8.7%" positive={true} color="info" /></div>
-          <div className="col-span-2 flex flex-col"><StatsCard label="계약 전환율" value={4.2} suffix="%" change="0.8%" positive={true} color="primary" /></div>
+          <div className="flex flex-col lg:col-span-2"><StatsCard label="매출" value={9280000} change="12.5%" positive={true} color="success" /></div>
+          <div className="flex flex-col lg:col-span-2"><StatsCard label="차량 주문" value={1284} change="3.2%" positive={false} color="danger" /></div>
+          <div className="flex flex-col lg:col-span-2"><StatsCard label="시승 문의" value={847} change="8.7%" positive={true} color="info" /></div>
+          <div className="flex flex-col lg:col-span-2"><StatsCard label="계약 전환율" value={4.2} suffix="%" change="0.8%" positive={true} color="primary" /></div>
         </div>
 
         {/* Row 2: Revenue bar chart + Todo */}
-        <div className="grid grid-cols-12 gap-3 items-stretch">
-          <div className="col-span-8 flex flex-col">
+        <div className="grid grid-cols-1 gap-3 items-stretch lg:grid-cols-12">
+          <div className="flex flex-col lg:col-span-8">
             <RevenueBarChart />
           </div>
-          <div className="col-span-4 flex flex-col">
+          <div className="flex flex-col lg:col-span-4">
             <TodoList todos={todos} />
           </div>
         </div>
 
         {/* Row 3: Projects + Activity + Notes (equal height) */}
-        <div className="grid grid-cols-12 gap-3 items-stretch">
-          <div className="col-span-5 flex flex-col">
+        <div className="grid grid-cols-1 gap-3 items-stretch lg:grid-cols-12">
+          <div className="flex flex-col lg:col-span-5">
             <ProjectStatus className="flex-1" />
           </div>
-          <div className="col-span-4 flex flex-col">
+          <div className="flex flex-col lg:col-span-4">
             <ActivityFeed className="flex-1" />
           </div>
-          <div className="col-span-3 flex flex-col">
+          <div className="flex flex-col lg:col-span-3">
             <QuickNotes className="flex-1" />
           </div>
         </div>
 
         {/* Row 4: Line + Scatter (equal width) */}
-        <div className="grid grid-cols-12 gap-3">
-          <div className="col-span-6">
+        <div className="grid grid-cols-1 gap-3 lg:grid-cols-12">
+          <div className="lg:col-span-6">
             <ModelSalesLine />
           </div>
-          <div className="col-span-6">
+          <div className="lg:col-span-6">
             <DealerScatterChart />
           </div>
         </div>
 
         {/* Row 5: Radar + Donut + Donut + KPIs (4-col compact) */}
-        <div className="grid grid-cols-12 gap-3">
-          <div className="col-span-3">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-12">
+          <div className="lg:col-span-3">
             <CloudStorageRadar />
           </div>
-          <div className="col-span-3">
+          <div className="lg:col-span-3">
             <DonutChart
               percentage={78}
               label="EV9 납기 준수율"
@@ -75,7 +75,7 @@ export default function DashboardPage() {
               metrics={[{ label: '납기 완료', value: '1,092' }, { label: '대기', value: '308' }]}
             />
           </div>
-          <div className="col-span-3">
+          <div className="lg:col-span-3">
             <DonutChart
               percentage={62}
               label="시승 전환율"
@@ -84,7 +84,7 @@ export default function DashboardPage() {
               metrics={[{ label: '전환', value: '524' }, { label: '미방문', value: '98' }]}
             />
           </div>
-          <div className="col-span-3">
+          <div className="lg:col-span-3">
             <ActivityCards />
           </div>
         </div>

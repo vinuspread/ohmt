@@ -30,7 +30,7 @@ export default function Footer() {
 
         {/* Column 1 - Client Services */}
         <div className="space-y-6">
-          <h4 className="text-[13px] font-medium uppercase tracking-[0.2em] text-neutral-400">Client Service</h4>
+          <h4 className="text-[13px] font-medium uppercase tracking-[0.2em] text-neutral-500">Client Service</h4>
           <ul className="space-y-3 text-[13px] font-normal text-neutral-600">
             <li><Link href="#" className="hover:text-[var(--color-primary)] transition-colors">Contact Us</Link></li>
             <li><Link href="#" className="hover:text-[var(--color-primary)] transition-colors">Shipping & Returns</Link></li>
@@ -41,7 +41,7 @@ export default function Footer() {
 
         {/* Column 2 - Legal & Philosophy */}
         <div className="space-y-6">
-          <h4 className="text-[13px] font-medium uppercase tracking-[0.2em] text-neutral-400">Legal & Privacy</h4>
+          <h4 className="text-[13px] font-medium uppercase tracking-[0.2em] text-neutral-500">Legal & Privacy</h4>
           <ul className="space-y-3 text-[13px] font-normal text-neutral-600">
             <li><Link href="#" className="hover:text-[var(--color-primary)] transition-colors">Terms of Service</Link></li>
             <li><Link href="#" className="hover:text-[var(--color-primary)] transition-colors">Privacy Policy</Link></li>
@@ -52,7 +52,7 @@ export default function Footer() {
       </div>
 
       {/* Footer Bottom Bar */}
-      <div className="max-w-[1440px] mx-auto mt-20 pt-8 border-t border-neutral-200/30 flex flex-col md:flex-row justify-between items-center gap-6 text-[13px] font-medium text-neutral-400 uppercase tracking-widest">
+      <div className="max-w-[1440px] mx-auto mt-20 pt-8 border-t border-neutral-200/30 flex flex-col md:flex-row justify-between items-center gap-6 text-[13px] font-medium text-neutral-500 uppercase tracking-widest">
         <span>© 2026 OHMT.</span>
         <div className="flex gap-8">
           <a href="#" className="hover:text-[var(--color-primary)] transition-colors">Instagram</a>

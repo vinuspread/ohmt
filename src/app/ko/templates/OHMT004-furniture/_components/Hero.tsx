@@ -69,7 +69,7 @@ export const Hero = () => {
               className="flex flex-col"
             >
               <span className="text-[12px] font-bold text-[var(--color-secondary)] uppercase mb-4 lg:mb-8 block tracking-wider">{current.subtitle}</span>
-              <h1 className="text-[clamp(2.0rem,6.5vw,2.6rem)] lg:text-[clamp(3.8rem,5.2vw,5.5rem)] font-bold text-[var(--color-text)] leading-[1.05] mb-4 lg:mb-10 uppercase [text-wrap:balance] lg:[text-wrap:normal] break-keep [overflow-wrap:normal]">
+              <h1 className="text-[clamp(2.0rem,6.5vw,2.6rem)] lg:text-[clamp(3.8rem,5.2vw,5.5rem)] font-bold text-[var(--color-text)] leading-[1.1] mb-4 lg:mb-10 uppercase [text-wrap:balance] lg:[text-wrap:normal] break-keep [overflow-wrap:normal]">
                 {current.titleLine1}<br />{current.titleLine2}
               </h1>
               <p className="text-[14px] lg:text-[15px] text-[var(--color-secondary)] font-normal leading-relaxed max-w-sm mb-6 lg:mb-12">
@@ -113,7 +113,7 @@ export const Hero = () => {
       </div>
 
       {/* 모바일 버튼 */}
-      <div className="flex lg:hidden items-center justify-center gap-4 px-6 pt-6 pb-6 z-30">
+      <div className="flex lg:hidden items-center justify-start gap-4 px-6 pt-6 pb-6 z-30">
         <Button variant="primary" className="px-6 py-3 text-[13px] font-bold rounded-full flex items-center gap-2 whitespace-nowrap">
           {"구매하기"} <ArrowRight size={14} />
         </Button>

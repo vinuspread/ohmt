@@ -55,7 +55,7 @@ function CollectionsPageContent() {
         >
           <div>
             <span className="text-[13px] uppercase font-bold tracking-[0.5em] text-white/40 block mb-6 px-1">{"아카이브"}</span>
-            <h1 className="text-5xl md:text-8xl font-serif leading-[1.5] tracking-tighter break-keep">{"바티칸의 명작들"}</h1>
+            <h1 className="text-5xl md:text-8xl font-serif leading-[1.1] tracking-tighter break-keep">{"바티칸의 명작들"}</h1>
           </div>
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:gap-12 md:border-l md:border-white/10 md:pl-16 pt-4 md:pt-0 border-t border-white/10 md:border-t-0">
             <p className="text-sm md:text-base text-white/50 font-normal leading-relaxed max-w-sm flex-1 break-keep">

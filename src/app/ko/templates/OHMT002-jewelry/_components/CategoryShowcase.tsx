@@ -3,9 +3,9 @@
 import { motion } from "framer-motion";
 
 const categories = [
-  { name: "Ready-to-Wear", image: "/templates/OHMT002-jewelry/category-rtw.jpg" },
-  { name: "Accessories", image: "/templates/OHMT002-jewelry/category-accessories.jpg" },
-  { name: "Home Collection", image: "/templates/OHMT002-jewelry/category-home.jpg" }
+  { name: "High Jewelry", image: "/templates/OHMT002-jewelry/category-high-jewelry.png" },
+  { name: "Engagement", image: "/templates/OHMT002-jewelry/category-engagement.png" },
+  { name: "Atelier Craft", image: "/templates/OHMT002-jewelry/category-atelier.png" }
 ];
 
 export default function CategoryShowcase() {

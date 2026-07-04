@@ -25,11 +25,12 @@ export function Performance() {
       const obj = { val: 0 };
       gsap.to(obj, {
         val: stat.value,
+        duration: 1.5,
+        ease: "power2.out",
         scrollTrigger: {
           trigger: statRefs.current[i],
-          start: "top 70%",
-          end: "bottom 30%",
-          scrub: 1,
+          start: "top 75%",
+          once: true,
         },
         onUpdate: () => {
           el.textContent = stat.value % 1 === 0
@@ -83,22 +84,22 @@ export function Performance() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+        <div className="grid grid-cols-1 divide-y divide-[var(--border)] border-y border-[var(--border)] md:grid-cols-3 md:divide-x md:divide-y-0">
           {stats.map((stat, i) => (
             <div
               key={stat.label}
               ref={(el) => { statRefs.current[i] = el; }}
-              className="border border-[var(--border)] rounded-2xl p-8 md:p-10"
+              className="py-7 md:px-8 md:py-8"
             >
-              <div className="flex items-baseline gap-1.5">
-                <span className="stat-value font-michroma text-[clamp(40px,5vw,68px)] text-[var(--text)] leading-none">
+              <div className="flex items-baseline gap-2">
+                <span className="stat-value font-michroma text-[clamp(42px,8vw,64px)] text-[var(--text)] leading-none">
                   0
                 </span>
-                <span className="font-inter font-medium text-[20px] text-[var(--accent)]">
+                <span className="font-inter text-[16px] font-semibold text-[var(--accent)] md:text-[18px]">
                   {stat.unit}
                 </span>
               </div>
-              <p className="font-inter text-[13px] text-[var(--text-muted)] mt-3 tracking-[0.03em]">
+              <p className="mt-3 font-inter text-[13px] tracking-[0.03em] text-[var(--text-muted)]">
                 {stat.label}
               </p>
             </div>

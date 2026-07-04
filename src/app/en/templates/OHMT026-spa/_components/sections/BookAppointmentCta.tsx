@@ -1,6 +1,8 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 
@@ -9,11 +11,13 @@ export default function BookAppointmentCta() {
 
   return (
     <section className="relative overflow-hidden bg-[var(--color-secondary)] py-24 lg:py-32">
-      <img
+      <Image
         src="/templates/OHMT026-spa/cta-bg.jpg"
         alt=""
+        fill
         role="presentation"
-        className="absolute inset-0 h-full w-full object-cover opacity-30"
+        sizes="100vw"
+        className="absolute inset-0 object-cover opacity-30"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-secondary)] via-[var(--color-secondary)]/85 to-[var(--color-secondary)]/60" />
       <div className="relative z-10 mx-auto max-w-7xl px-6 text-center">
@@ -30,18 +34,18 @@ export default function BookAppointmentCta() {
             Book your first appointment today and experience the difference personalized care makes.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <Link
               href="/en/templates/OHMT026-spa/contact"
               className="inline-flex items-center rounded-full bg-[var(--color-primary)] text-[var(--color-text-contrast)] px-8 py-3.5 text-sm font-semibold hover:brightness-110 active:scale-[0.97] transition-all duration-150"
             >
               Book appointment
-            </a>
-            <a
+            </Link>
+            <Link
               href="/en/templates/OHMT026-spa/service#pricing"
               className="inline-flex items-center rounded-full border border-white/20 text-[var(--color-text-contrast)] px-8 py-3.5 text-sm font-semibold hover:bg-white/10 transition-all duration-150"
             >
               View pricing
-            </a>
+            </Link>
           </div>
         </motion.div>
       </div>

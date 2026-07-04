@@ -145,8 +145,8 @@ export default function CalendarPage() {
           }
         />
 
-        <div className="grid grid-cols-12 gap-3">
-          <div className="col-span-3 space-y-4">
+        <div className="grid grid-cols-1 gap-3 lg:grid-cols-12">
+          <div className="lg:col-span-3 space-y-4">
             <MiniCalendar year={viewYear} month={viewMonth} onNavigate={navigateMonth} />
 
             <div className="bg-[var(--color-bg-elevated)] rounded-[var(--radius-lg)] p-5 border border-[var(--color-border)]">
@@ -177,7 +177,7 @@ export default function CalendarPage() {
             </div>
           </div>
 
-          <div className="col-span-6">
+          <div className="lg:col-span-6">
             <div className="bg-[var(--color-bg-elevated)] rounded-[var(--radius-lg)] p-5 border border-[var(--color-border)]">
               <div className="flex items-center justify-between mb-4">
                 <button onClick={() => navigateMonth(-1)} className="p-1.5 rounded-[var(--radius-md)] text-[var(--color-text-muted)] hover:bg-[var(--color-bg-hover)] transition-colors">
@@ -210,7 +210,7 @@ export default function CalendarPage() {
                     <button
                       key={dateKey}
                       onClick={() => setSelectedDate(isSelected ? null : dateKey)}
-                      className={`min-h-[80px] p-1.5 border-b border-[var(--color-border)] text-left transition-colors relative ${
+                      className={`min-h-[52px] sm:min-h-[80px] p-1.5 border-b border-[var(--color-border)] text-left transition-colors relative ${
                         isWeekend ? 'bg-[var(--color-bg-hover)]' : ''
                       } ${isSelected ? 'bg-[var(--color-primary-muted)]' : 'hover:bg-[var(--color-bg-hover)]'}`}
                     >
@@ -240,7 +240,7 @@ export default function CalendarPage() {
             </div>
           </div>
 
-          <div className="col-span-3">
+          <div className="lg:col-span-3">
             <AnimatePresence mode="wait">
               {selectedDate ? (
                 <EventPanel key={selectedDate} date={selectedDate} events={selectedEvents} onClose={() => setSelectedDate(null)} />

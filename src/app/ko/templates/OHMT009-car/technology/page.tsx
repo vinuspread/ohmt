@@ -10,30 +10,30 @@ const technologies = [
   {
     num: "01",
     title: "AI-Pilot 2.0",
-    desc: "Neural network driving assistance that learns your habits and anticipates road conditions in real-time.",
-    detail: "Processes 4,000 data points per second from 12 sensors. Reacts in 0.02 seconds - 10× faster than human reflex.",
-    img: "/templates/OHMT009-car/car-1.jpg",
+    desc: "운전 습관을 학습하고 실시간으로 도로 상태를 예측하는 뉴럴 네트워크 기반 주행 보조 시스템.",
+    detail: "초당 4,000개 데이터 포인트를 12개 센서로 처리. 0.02초 반응 속도 — 인간 반사 신경보다 10배 빠름.",
+    img: "/templates/OHMT009-car/tech-battery.jpg",
   },
   {
     num: "02",
     title: "Quantum Battery",
-    desc: "Solid-state architecture delivering 530km range with 350kW ultra-fast charging capability.",
-    detail: "10% to 80% charge in 22 minutes. 100km of range added in under 5 minutes at high-speed stations.",
-    img: "/templates/OHMT009-car/hero-1.jpg",
+    desc: "530km 주행거리와 350kW 초고속 충전을 제공하는 솔리드 스테이트 아키텍처.",
+    detail: "22분 만에 10%에서 80% 충전. 고속 충전소에서 5분 이내에 100km 주행거리 확보.",
+    img: "/templates/OHMT009-car/homepage-charging.jpg",
   },
   {
     num: "03",
     title: "Adaptive Suspension",
-    desc: "Active damping system that reads road surfaces 1,000 times per second for unparalleled comfort.",
-    detail: "Each wheel adjusts independently in 2ms. The result: zero compromise between sport and comfort.",
-    img: "/templates/OHMT009-car/hero-3.jpg",
+    desc: "초당 1,000회 노면을 읽어 비교할 수 없는 승차감을 제공하는 액티브 댐핑 시스템.",
+    detail: "각 휠이 2ms 단위로 독립 조정. 스포츠와 컴포트 사이의 타협이 없는 결과.",
+    img: "/templates/OHMT009-car/configure-gt7-rear.jpg",
   },
   {
     num: "04",
     title: "Panoramic OS",
-    desc: "A 30-inch floating display with haptic feedback and voice-native AI interface.",
-    detail: "Learns your preferences within 3 drives. The interface disappears - only what you need, when you need it.",
-    img: "/templates/OHMT009-car/car-5.jpg",
+    desc: "햅틱 피드백과 음성 기반 AI 인터페이스를 갖춘 30인치 플로팅 디스플레이.",
+    detail: "3회 주행 내에 사용자 선호도를 학습. 인터페이스는 사라지고, 필요한 순간에 필요한 정보만.",
+    img: "/templates/OHMT009-car/tech-dashboard-custom.png",
   },
 ];
 
@@ -48,23 +48,23 @@ function CarTechnologyPageContent() {
         {/* Hero */}
         <section className="relative h-[70vh] min-h-[500px] overflow-hidden flex items-end">
           <img
-            src="/templates/OHMT009-car/car-3.jpg"
-            alt="VINUS Technology"
+            src="/templates/OHMT009-car/tech-hero-custom.png"
+            alt="OHMT Technology"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
-          <div className="relative max-w-[var(--theme-container)] mx-auto px-6 md:px-[var(--theme-gutter)] pb-20 w-full">
-            <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-4 block">Technology</span>
-            <h1 className="font-[family-name:var(--theme-font-heading)] text-[clamp(2.8rem,6vw,5.5rem)] tracking-[-0.03em] leading-[1.5]">
-              Innovation at<br />every level.
+          <div className="relative max-w-[var(--theme-container)] mx-auto px-6 md:px-[var(--theme-gutter)] pb-12 w-full">
+            <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-4 block">기술 혁신</span>
+            <h1 className="font-[family-name:var(--theme-font-heading)] text-[clamp(2.8rem,6vw,5.5rem)] font-bold tracking-[-0.03em] leading-[1.15]">
+              디테일이 만드는<br />주행의 진화.
             </h1>
           </div>
         </section>
 
         {/* Intro */}
-        <section className="max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)] py-10 md:py-16 border-b border-[var(--theme-border)]">
-          <p className="text-[1rem] text-[var(--theme-text-muted)] font-normal leading-relaxed max-w-[640px]">
-            Our engineering philosophy is simple: question everything. The result is a suite of technologies that redefine what a vehicle can do.
+        <section className="max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)] pt-8 pb-10 md:pb-12 border-b border-[var(--theme-border)]">
+          <p className="text-[1.15rem] md:text-[1.25rem] text-white/70 font-normal leading-[1.6] max-w-[750px] break-keep">
+            우리의 엔지니어링 철학은 단순합니다: 모든 것에 의문을 제기하라.<br className="hidden md:inline" />그 결과는 차량의 가능성을 재정의하는 기술의 집합체입니다.
           </p>
         </section>
 
@@ -129,10 +129,10 @@ function CarTechnologyPageContent() {
 
         {/* Full-bleed strip */}
         <div className="relative h-[50vh] overflow-hidden">
-          <img loading="lazy" src="/templates/OHMT009-car/hero-2.jpg" alt="" className="w-full h-full object-cover object-center" />
+          <img loading="lazy" src="/templates/OHMT009-car/tech-fullband.jpg" alt="" className="w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-            <p className="text-[clamp(1.5rem,4vw,3rem)] font-bold tracking-tight text-center max-w-[600px] px-6">
-              Every detail engineered to move you forward.
+            <p className="text-[clamp(1.5rem,4vw,3rem)] font-bold tracking-tight text-center max-w-[600px] px-6 leading-[1.4]">
+              모든 디테일은<br />완벽한 움직임을 위해 설계되었습니다.
             </p>
           </div>
         </div>

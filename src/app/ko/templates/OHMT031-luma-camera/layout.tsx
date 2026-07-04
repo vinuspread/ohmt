@@ -1,4 +1,4 @@
-import "./theme.css";
+﻿import "./theme.css";
 import type { Metadata } from "next";
 import { Geist } from "next/font/google";
 
@@ -44,3 +44,4 @@ export default function LumaCameraLayout({ children }: { children: React.ReactNo
     </div>
   );
 }
+

@@ -4,10 +4,10 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 const koNav = [
-  { num: '_01', name: 'Works', href: '/ko/templates/OHMT007-portfolio' },
-  { num: '_02', name: 'About', href: '/ko/templates/OHMT007-portfolio/about' },
-  { num: '_03', name: 'Journal', href: '/ko/templates/OHMT007-portfolio/journal' },
-  { num: '_04', name: 'Contact', href: '/ko/templates/OHMT007-portfolio/contact' },
+  { num: '_01', name: '작업', href: '/ko/templates/OHMT007-portfolio' },
+  { num: '_02', name: '소개', href: '/ko/templates/OHMT007-portfolio/about' },
+  { num: '_03', name: '저널', href: '/ko/templates/OHMT007-portfolio/journal' },
+  { num: '_04', name: '문의', href: '/ko/templates/OHMT007-portfolio/contact' },
 ];
 
 export function Header() {
@@ -55,7 +55,7 @@ export function Header() {
               onClick={() => setMenuOpen(!menuOpen)}
               className="md:hidden w-8 h-8 flex items-center justify-center text-[var(--color-text)] hover:opacity-60 transition-opacity text-2xl font-normal leading-none"
             >
-              {menuOpen ? '��' : '+'}
+              {menuOpen ? '×' : '+'}
             </button>
           </div>
         </div>
@@ -71,7 +71,7 @@ export function Header() {
             transition={{ duration: 0.25 }}
             className="fixed inset-0 z-40 bg-white flex flex-col justify-center px-10"
           >
-            <button onClick={() => setMenuOpen(false)} className="absolute top-5 right-6 text-3xl font-normal text-[var(--color-text)]">��</button>
+            <button onClick={() => setMenuOpen(false)} className="absolute top-5 right-6 text-3xl font-normal text-[var(--color-text)]">×</button>
             <nav className="space-y-2">
               {koNav.map((item, i) => (
                 <motion.div
@@ -101,4 +101,3 @@ export function Header() {
     </>
   );
 }
-

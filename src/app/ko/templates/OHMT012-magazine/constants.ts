@@ -50,14 +50,14 @@ export const editorsPicks: Article[] = [
     slug: "urban-gardening-vertical-revolution",
     title: "도시 원예: 수직 혁명.",
     desc: "콘크리트 공간을 reclaiming하여 도시에 지속 가능한 식량 생태계를 구축하다.",
-    img: "/templates/OHMT012-magazine/mag-6.jpg",
+    img: "/templates/OHMT012-magazine/mag-gardening.jpg",
     author: "Elena Rossi"
   },
   {
     slug: "slow-living-digital-world",
     title: "빠른 디지털 세상에서의 슬로우 리빙의 기술.",
     desc: "현대 미니멀리즘의 렌즈를 통해 디자인, 문화, 지속가능성의 교차점을 탐구합니다.",
-    img: "/templates/OHMT012-magazine/mag-1.jpg",
+    img: "/templates/OHMT012-magazine/mag-workspace.jpg",
     author: "Julian Vance",
     tag: "제42호 - 2026년 여름",
     content: "끊임없는 알림과 무한 스크롤의 시대에, 슬로우 리빙 운동은 급진적인 제안을 합니다: 우리의 삶을 진정으로 중요한 것을 중심으로 설계한다면? 이 철학은 개인의 습관을 넘어 디자인, 건축, 도시 계획의 영역으로 확장됩니다.\n\n일본의 와비-사비(불완전함에서 아름다움을 찾는 개념)에서 스칸디나비아의 휘게 전통에 이르기까지, 세계 각국의 문화는 의도적인 삶의 가치를 오랫동안 이해해 왔습니다. 오늘날 이러한 원칙들은 재발견되어 현대 생활에 맞게 조정되며, 홈 디자인에서 직장 문화에 이르기까지 모든 것에 영향을 미치고 있습니다."
@@ -66,7 +66,7 @@ export const editorsPicks: Article[] = [
     slug: "sustainable-fashion-circular",
     title: "지속 가능한 패션의 미래는 순환형이다.",
     desc: "순환 경제 원칙이 패션 산업을 근본적으로 변화시키는 방법.",
-    img: "/templates/OHMT012-magazine/mag-3.jpg",
+    img: "/templates/OHMT012-magazine/mag-fashion.jpg",
     author: "Clara Hoffmann",
     content: "패션 산업은 근본적인 변화를 겪고 있습니다. 소비자들이 패스트 패션의 환경적 영향을 점점 더 인식하게 되면서, 선형 소비가 아닌 순환성을 기반으로 한 새로운 모델이 등장하고 있습니다.\n\n순환형 패션은 의류 대여 서비스와 중고 플랫폼부터 의류를 구성 섬유로 분해하여 재사용하는 혁신적인 재활용 기술까지 모든 것을 포함합니다. 한때 계획적 노후화에 비즈니스 모델을 구축했던 브랜드들은 이제 회수 프로그램을 구현하고 분해 용이성을 위한 디자인을 채택하기 위해 경쟁하고 있습니다.\n\n이러한 전환은 도전이 없지는 않습니다. 진정한 순환 시스템을 구축하려면 공급망 재고, 새로운 기술에 대한 투자, 그리고 소비자들이 옷장과의 관계를 재정의하도록 설득하는 것이 필요합니다. 그러나 환경적, 경제적, 사회적 잠재적 보상은 엄청납니다."
   },

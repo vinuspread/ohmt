@@ -22,7 +22,7 @@ export const OurStory = () => {
   const [index, setIndex] = useState(0);
 
   return (
-    <section className="bg-[var(--color-bg-secondary)]">
+    <section className="overflow-hidden bg-[var(--color-bg-secondary)]">
       <div className="grid grid-cols-1 md:grid-cols-2 md:h-[520px]">
 
         {/* Left: image */}
@@ -47,8 +47,8 @@ export const OurStory = () => {
         {/* Right: testimonial */}
         <motion.div
           className="bg-[var(--color-accent)] text-white flex flex-col justify-between px-10 py-10 md:px-14 md:py-12"
-          initial={{ opacity: 0, x: 24 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.65, delay: 0.1, ease }}
         >

@@ -5,6 +5,7 @@ const sitemap = [
   { label: "홈", href: `${base}` },
   { label: "사양", href: `${base}/specs` },
   { label: "컬러", href: `${base}/specs#colors` },
+  { label: "하이라이트", href: `${base}/highlight` },
   { label: "스토리", href: `${base}/story` },
   { label: "예약", href: `${base}/order` },
 ];

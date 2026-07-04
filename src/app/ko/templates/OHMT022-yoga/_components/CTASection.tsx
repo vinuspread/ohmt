@@ -26,9 +26,9 @@ export default function CTASection() {
             className="text-[15px] text-[var(--color-text-muted)] leading-[1.9] font-normal"
             style={{ fontFamily: "var(--font-body)" }}
           >
-            비니아사, 하타, 명상, 필라테스.
+            빈야사, 하타, 명상, 필라테스.
             <br />
-            모든 레벨. 모든 몸.
+            처음부터 깊은 수련까지.
           </p>
           <Link
             href="/ko/templates/OHMT022-yoga/classes"

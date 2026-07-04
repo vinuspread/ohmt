@@ -13,18 +13,24 @@ export function DashboardLayout({
   title?: string
 }) {
   const [collapsed, setCollapsed] = useState(false)
+  const [mobileOpen, setMobileOpen] = useState(false)
 
   return (
     <ThemeProvider>
-      <div className="min-h-screen bg-[var(--color-bg)] text-[var(--color-text)]">
-        <Sidebar collapsed={collapsed} onToggle={() => setCollapsed((p) => !p)} />
-        <Header title={title} collapsed={collapsed} />
+      <div className="min-h-screen overflow-x-hidden bg-[var(--color-bg)] text-[var(--color-text)]">
+        <Sidebar
+          collapsed={collapsed}
+          onToggle={() => setCollapsed((p) => !p)}
+          mobileOpen={mobileOpen}
+          onMobileClose={() => setMobileOpen(false)}
+        />
+        <Header title={title} collapsed={collapsed} onMenuClick={() => setMobileOpen(true)} />
         <main
-          className={`pt-16 min-h-screen transition-all duration-300 ease-in-out ${
+          className={`pt-16 min-h-screen transition-all duration-300 ease-in-out max-lg:pl-0 ${
             collapsed ? 'pl-[56px]' : 'pl-[220px]'
           }`}
         >
-          <div className="p-6">{children}</div>
+          <div className="p-4 lg:p-6">{children}</div>
         </main>
       </div>
     </ThemeProvider>

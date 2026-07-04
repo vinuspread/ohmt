@@ -3,9 +3,10 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { useSearchParams } from "next/navigation";
+
+const HERO_VIDEO_SRC = "https://pub-10d6d534a06c495c8b45f39cfed47497.r2.dev/ir-hero-bg.mp4";
+
 export const Hero = () => {
-  const searchParams = useSearchParams();
   const t = {
   "nav": {
     "earnings": `New Report: Q1 2026 Earnings now available.`,
@@ -36,7 +37,7 @@ return (
     >
       <video
         className="absolute inset-0 w-full h-full object-cover opacity-25"
-        src="/templates/OHMT011-ir/hero-bg.mp4"
+        src={HERO_VIDEO_SRC}
         autoPlay
         loop
         muted

@@ -36,7 +36,7 @@ export function Booking() {
 
         <div className="text-center mt-10">
           <a href="#"
-            className="inline-block rounded-full border border-white bg-white px-8 py-3 text-[#7D99A9] text-[15px] font-medium hover:opacity-80 transition-opacity">
+            className="inline-block rounded-full border border-white bg-white px-8 py-3 text-[var(--bg)] text-[15px] font-medium hover:opacity-80 transition-opacity">
             예약 가능 여부 확인
           </a>
         </div>

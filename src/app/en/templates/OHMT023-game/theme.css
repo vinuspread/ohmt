@@ -12,4 +12,55 @@
   --color-border-bright: #333333;
   --font-heading: var(--font-orbitron), 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
+
+  --focus-ring: 2px solid var(--color-primary);
+  --focus-ring-offset: 2px;
+
+  --space-container-x-mobile: 1.25rem;
+  --space-section-y-mobile: 5rem;
+  --type-display-mobile: clamp(2.5rem, 13vw, 4.25rem);
+  --type-section-title-mobile: clamp(2rem, 9vw, 2.5rem);
+}
+
+body {
+  overflow-x: clip;
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: var(--type-display-mobile);
+    text-wrap: balance;
+  }
+
+  h2 {
+    font-size: var(--type-section-title-mobile);
+    text-wrap: balance;
+  }
+
+  section {
+    overflow-x: clip;
+  }
+
+  [class*="px-8"],
+  [class*="px-10"],
+  [class*="px-12"] {
+    padding-left: var(--space-container-x-mobile);
+    padding-right: var(--space-container-x-mobile);
+  }
+}
+
+@supports not (overflow: clip) {
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

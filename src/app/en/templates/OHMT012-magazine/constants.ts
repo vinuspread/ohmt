@@ -50,14 +50,14 @@ export const editorsPicks: Article[] = [
     slug: "urban-gardening-vertical-revolution",
     title: "Urban gardening: A vertical revolution.",
     desc: "Reclaiming concrete spaces to build sustainable food ecosystems in the city.",
-    img: "/templates/OHMT012-magazine/mag-6.jpg",
+    img: "/templates/OHMT012-magazine/mag-gardening.jpg",
     author: "Elena Rossi"
   },
   {
     slug: "slow-living-digital-world",
     title: "The art of slow living in a fast-paced digital world.",
     desc: "Exploring the intersections of design, culture, and sustainability through the lens of modern minimalism.",
-    img: "/templates/OHMT012-magazine/mag-1.jpg",
+    img: "/templates/OHMT012-magazine/mag-workspace.jpg",
     author: "Julian Vance",
     tag: "Issue No. 42 - Summer 2026",
     content: "In an era of constant notifications and infinite scroll, the slow living movement offers a radical proposition: what if we designed our lives around what matters most? This philosophy extends beyond personal habits into the realms of design, architecture, and urban planning.\n\nFrom the Japanese concept of wabi-sabi - finding beauty in imperfection - to the Scandinavian tradition of hygge, cultures around the world have long understood the value of intentional living. Today, these principles are being rediscovered and adapted for contemporary life, influencing everything from home design to workplace culture."
@@ -66,7 +66,7 @@ export const editorsPicks: Article[] = [
     slug: "sustainable-fashion-circular",
     title: "The future of sustainable fashion is circular.",
     desc: "How circular economy principles are transforming the fashion industry from the ground up.",
-    img: "/templates/OHMT012-magazine/mag-3.jpg",
+    img: "/templates/OHMT012-magazine/mag-fashion.jpg",
     author: "Clara Hoffmann",
     content: "The fashion industry is undergoing a fundamental transformation. As consumers become increasingly aware of the environmental impact of fast fashion, a new model is emerging - one based on circularity rather than linear consumption.\n\nCircular fashion encompasses everything from clothing rental services and resale platforms to innovative recycling technologies that can break down garments into their constituent fibers for reuse. Brands that once built their business models on planned obsolescence are now racing to implement take-back programs and design for disassembly.\n\nThe shift is not without challenges. Building a truly circular system requires rethinking supply chains, investing in new technologies, and convincing consumers to embrace a different relationship with their wardrobes. But the potential rewards - environmental, economic, and social - are immense."
   },

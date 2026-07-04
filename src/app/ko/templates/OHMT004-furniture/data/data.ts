@@ -14,7 +14,7 @@ export const products = [
     id: "1",
     name: "시에로 라운지 체어",
     category: "의자",
-    price: "$1,290",
+    price: "₩1,290,000",
     image: "/templates/OHMT004-furniture/chair.png",
     tag: "에센셜",
     desc: "안락함과 디자인적 절제미가 어우러진 시그니처 체어. 미니멀한 실루엣을 유지하며 이상적인 인간공학적 서포트를 보장합니다.",
@@ -35,13 +35,13 @@ export const products = [
       { id: "r3", reviewer: "이서율", rating: 4, date: "2026년 5월 03일", text: "디자인이 거실 분위기를 다 살렸습니다. 굽이 조금 낮아서 다리를 쭉 뻗고 앉기에 딱입니다. 가격은 비싸지만 그 값을 하네요." },
       { id: 'r4', reviewer: '황민규', rating: 5, date: '2026년 6월 02일', text: '포장부터 설치 배송까지 완벽했습니다. 월넛 원목의 나이테 무늬가 좌우 대칭이 잘 맞아 진짜 예술 작품 같습니다.' }
     ],
-    gallery: ["/templates/OHMT004-furniture/chair.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/OHMT004-furniture/chair.png", "/templates/OHMT004-furniture/lifestyle-chair.jpg"]
   },
   {
     id: "2",
     name: "벨벳 모노 소파",
     category: "소파",
-    price: "$3,400",
+    price: "₩3,400,000",
     image: "/templates/OHMT004-furniture/sofa.png",
     tag: "럭셔리",
     desc: "최상급 린넨과 거위털 패딩을 채워넣어 온전한 몰입과 안락을 선사하는 마스터피스 소파.",
@@ -62,13 +62,13 @@ export const products = [
       { id: "r3", reviewer: "최서우", rating: 5, date: "2026년 5월 27일", text: "쿠션이 물렁하지 않고 몸을 탄탄하면서도 부드럽게 받아주는 딱 좋은 밀도입니다. 팔걸이가 넓어서 책 얹어두기 편합니다." },
       { id: 'r4', reviewer: '한유현', rating: 5, date: '2026년 6월 05일', text: '벨벳 새틴 린넨이라 촉감이 보들보들하고 여름인데도 땀이 차거나 끈적거리지 않네요. 비싼 만큼 훌륭한 소파입니다.' }
     ],
-    gallery: ["/templates/OHMT004-furniture/sofa.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/OHMT004-furniture/sofa.png", "/templates/OHMT004-furniture/lifestyle-sofa.jpg"]
   },
   {
     id: "3",
     name: "오크 다이닝 테이블",
     category: "다이닝",
-    price: "$4,200",
+    price: "₩4,200,000",
     image: "/templates/OHMT004-furniture/table.png",
     tag: "에센셜",
     desc: "친환경 유기농 오크 원목으로 만들어져 현대적인 주방의 중심이자 만남의 광장이 되어줄 테이블.",
@@ -89,14 +89,14 @@ export const products = [
       { id: "r3", reviewer: "박은하", rating: 5, date: '2026년 5월 16일', text: '주방의 분위기를 완전 카페처럼 만들어 줬어요. 나무 두께도 두툼해서 안정감이 대단합니다. 돈 들인 보람이 있네요.' },
       { id: 'r4', reviewer: '윤건우', rating: 4, date: '2026년 6월 04일', text: '오크 고유의 따뜻하고 맑은 색상입니다. 원목이라 가습기나 온습도 조절 신경 쓰고 있는데 갈라짐 없이 깨끗하네요.' }
     ],
-    gallery: ["/templates/OHMT004-furniture/table.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/OHMT004-furniture/table.png", "/templates/OHMT004-furniture/lifestyle-table.jpg"]
   },
   {
     id: "4",
     name: "월넛 라운지 체어",
     category: "라운지",
-    price: "$2,850",
-    image: "/templates/OHMT004-furniture/chair.png",
+    price: "₩2,850,000",
+    image: "/templates/OHMT004-furniture/dining-chair.png",
     tag: "아이코닉",
     desc: "정교하게 손으로 다듬어진 아메리칸 월넛 바디와 조각 같은 디자인이 돋보이는 럭셔리 라운저.",
     longDesc: "미드센추리 모던 디자인의 거장들의 정신을 담은 월넛 라운지 체어는 열과 압력으로 구부린 몰드 합판(Plywood)에 엄선된 최고급 아메리칸 월넛 베니어를 접합해 제작했습니다. 수작업으로 제봉된 가죽 쿠션은 부드러운 질감과 내구성을 고루 갖춘 세미 애닐린 등급의 천연 가죽만을 고집했습니다. 고정밀 베어링 기반의 파우더 코팅 알루미늄 다리를 장착하여 매끄럽고 안정적인 회전 기능을 탑재했습니다.\n\n이 의자는 인체의 S라인 척추 곡선을 완벽히 모방한 3개 분할 셀 구조로 이루어져 있어, 눕듯이 기댔을 때 체중이 머리, 등, 허리로 완벽하게 분산됩니다. 또한 측면의 월넛 베니어는 숙련된 장인이 수작업으로 7층으로 겹쳐 프레스 가공하여 나무 고유의 탄성력을 살려냈습니다.\n\n라운지 룸뿐만 아니라 넓은 오피스의 대표실 안락의자로도 품격 높은 존재감을 발휘합니다.",
@@ -116,13 +116,13 @@ export const products = [
       { id: "r3", reviewer: "신동욱", rating: 4, date: "2026년 5월 20일", text: "집에 두고 책 읽을 때 매일 앉습니다. 쿠션이 빵빵하고 단단해서 엉덩이가 아프지 않습니다. 부피가 생각보다 크네요." },
       { id: 'r4', reviewer: '강소연', rating: 5, date: '2026년 6월 08일', text: '오토만 세트가 아니라서 아쉬웠는데 의자 단독으로도 충분히 편안하게 쉴 수 있는 훌륭한 리클라이너 대용입니다.' }
     ],
-    gallery: ["/templates/OHMT004-furniture/chair.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/OHMT004-furniture/dining-chair.png", "/templates/OHMT004-furniture/lifestyle-chair.jpg"]
   },
   {
     id: "5",
     name: "세라믹 펜던트 조명",
     category: "조명",
-    price: "$890",
+    price: "₩890,000",
     image: "/templates/OHMT004-furniture/lamp.png",
     tag: "앰비언트",
     desc: "거친 흙빛의 도자기 질감과 매끄러운 비례가 아름다운 공간의 은은한 조도를 연출해주는 조명.",
@@ -143,13 +143,13 @@ export const products = [
       { id: "r3", reviewer: "장수미", rating: 5, date: "2026년 5월 28일", text: "화질 좋은 사진 그대로의 오묘한 흙 질감입니다. 밤에 켜놓으면 주방 조도가 은은하게 내려와 분위기가 살아요." },
       { id: 'r4', reviewer: '배정우', rating: 5, date: '2026년 6월 06일', text: '황동 마감 브래킷이 진짜 고급스럽네요. 코드선이 정갈한 베이지 패브릭 끈이라 지저분하지 않고 이쁩니다.' }
     ],
-    gallery: ["/templates/OHMT004-furniture/lamp.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/OHMT004-furniture/lamp.png", "/templates/OHMT004-furniture/lifestyle-lamp.jpg"]
   },
   {
     id: "6",
     name: "브루탈리스트 사이드 테이블",
     category: "리빙",
-    price: "$1,150",
+    price: "₩1,150,000",
     image: "/templates/OHMT004-furniture/sidetable.png",
     tag: "로우",
     desc: "초경량 콘크리트로 캐스팅한 후 섬세한 오일 마감을 거쳐 소재 그대로의 성질을 부각한 가구.",
@@ -170,13 +170,13 @@ export const products = [
       { id: "r3", reviewer: "남궁민", rating: 4, date: "2026년 5월 11일", text: "묵직해서 흔들리지 않아 안정감이 있습니다. 콘크리트 질감이 거칠어 보이지만 실제 만져보면 매우 매끄럽게 마감되어 있네요." },
       { id: 'r4', reviewer: '소은혜', rating: 5, date: '2026년 6월 03일', text: '미니멀한 인테리어를 선호하신다면 무조건 마음에 드실 겁니다. 차가운 듯하면서도 정갈한 느낌을 주네요.' }
     ],
-    gallery: ["/templates/OHMT004-furniture/sidetable.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/OHMT004-furniture/sidetable.png", "/templates/OHMT004-furniture/lifestyle-lamp.jpg"]
   },
   {
     id: "7",
     name: "플로팅 월 데스크",
     category: "홈 오피스",
-    price: "$1,650",
+    price: "₩1,650,000",
     image: "/templates/OHMT004-furniture/desk.png",
     tag: "슬릭",
     desc: "공간 활용도가 극대화된 책상으로, 벽면에 깔끔하게 고정되어 세련된 작업실 분위기를 연출합니다.",
@@ -197,13 +197,13 @@ export const products = [
       { id: "r3", reviewer: "구태완", rating: 5, date: "2026년 5월 29일", text: "서랍 닫힐 때 쾅 안 닫히고 끝에서 스르륵 멈춰서 닫히는 서랍 댐퍼 느낌이 너무 고급스럽고 훌륭합니다. 오크 나무 색도 내추럴하네요." },
       { id: 'r4', reviewer: '배윤재', rating: 5, date: '2026년 6월 09일', text: '재택근무용 미니 서재에 설치했는데 인테리어 효과 만점입니다. 스위치 케이블 숨김 처리가 최고 장점이에요.' }
     ],
-    gallery: ["/templates/OHMT004-furniture/desk.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/OHMT004-furniture/desk.png", "/templates/OHMT004-furniture/lifestyle-chair.jpg"]
   },
   {
     id: "8",
     name: "린넨 플랫폼 베드",
     category: "침실",
-    price: "$5,400",
+    price: "₩5,400,000",
     image: "/templates/OHMT004-furniture/bed.png",
     tag: "서린",
     desc: "고급 벨기에산 린넨 헤드보드와 애쉬 원목 조합으로 안락함의 온전한 쉼터가 되어주는 프레임.",
@@ -224,13 +224,13 @@ export const products = [
       { id: "r3", reviewer: "오지연", rating: 4, date: "2026년 5월 24일", text: "헤드보드 등받이 두께감이 톡톡해서 기대 앉아 아이패드 보거나 책 읽기에 리클라이닝 소파 부럽지 않게 편하고 따뜻해요." },
       { id: 'r4', reviewer: '황성욱', rating: 5, date: '2026년 6월 02일', text: '린넨 원단이 엄청 촘촘하고 까슬거리지 않는 소프트 린넨이라 살에 닿을 때 기분이 좋습니다. 먼지도 덜 나네요.' }
     ],
-    gallery: ["/templates/OHMT004-furniture/bed.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/OHMT004-furniture/bed.png", "/templates/OHMT004-furniture/lifestyle-bed.jpg"]
   },
   {
     id: "9",
     name: "애쉬 원목 워드로브",
     category: "수납",
-    price: "$7,800",
+    price: "₩7,800,000",
     image: "/templates/OHMT004-furniture/wardrobe.png",
     tag: "그랜드",
     desc: "애쉬 원목의 자연스러운 결을 살린 모노리스적 존재감, 브래스 디테일이 돋보이는 대용량 수납장.",
@@ -251,7 +251,7 @@ export const products = [
       { id: "r3", reviewer: "심규선", rating: 5, date: "2026년 5월 19일", text: "내장 조명이 자동으로 켜져서 밤에 옷 찾기 너무 신기하고 편리합니다. 구획이 아주 알차게 나눠져 있어 옷 정리가 잘 돼요." },
       { id: 'r4', reviewer: '서지성', rating: 5, date: '2026년 6월 05일', text: '손잡이 부분의 통황동 디테일이 진짜 세련되었어요. 광택도 빈티지해서 옷장 원목 색과 조화가 완벽합니다.' }
     ],
-    gallery: ["/templates/OHMT004-furniture/wardrobe.png", "/templates/OHMT004-furniture/lifestyle-narrative.png"]
+    gallery: ["/templates/OHMT004-furniture/wardrobe.png", "/templates/OHMT004-furniture/lifestyle-table.jpg"]
   }
 ];
 

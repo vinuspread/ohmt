@@ -44,7 +44,7 @@ export const Header = () => {
       )}>
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 h-full flex items-center justify-between">
           <Link href="/ko/templates/OHMT010-cosmetic" className="text-[1rem] md:text-[1.15rem] font-black tracking-[0.12em] uppercase">
-            VINUSPREAD
+            OHMT
           </Link>
 
           {/* Desktop GNB */}
