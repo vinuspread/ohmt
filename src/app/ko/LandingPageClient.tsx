@@ -358,9 +358,6 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                   <div className="p-4 space-y-1">
                     <div className="flex justify-between items-center">
                       <span className="text-[0.6rem] font-bold text-zinc-400 uppercase tracking-widest dark:text-zinc-500">{template.category}</span>
-                      {template.isFeatured && (
-                        <span className="text-[0.55rem] font-bold text-orange-500 border border-orange-200/60 px-1 rounded bg-orange-50/50">Premium</span>
-                      )}
                     </div>
                     <h4 className="text-sm font-bold text-zinc-900 dark:text-zinc-100">{template.name}</h4>
                   </div>
@@ -543,11 +540,6 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                           <div className="space-y-1">
                             <div className="flex justify-between items-start">
                               <h4 className="text-base font-bold text-zinc-900 dark:text-zinc-100">{template.name}</h4>
-                              {template.isFeatured && (
-                                <span className="inline-block bg-zinc-100 text-zinc-600 text-[0.62rem] font-bold uppercase tracking-wider px-2 py-0.5 rounded dark:bg-zinc-700 dark:text-zinc-400">
-                                  Premium
-                                </span>
-                              )}
                             </div>
                             <p className="text-[0.65rem] text-zinc-400 font-bold uppercase tracking-wider dark:text-zinc-500">{template.category}</p>
                           </div>
