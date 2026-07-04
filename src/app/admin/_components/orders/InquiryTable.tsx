@@ -1,8 +1,9 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { Search } from "lucide-react";
+import { Search, Trash2 } from "lucide-react";
 import { Modal } from "../ui/Modal";
+import { Button } from "../ui/Button";
 import { Table, type Column } from "../ui/Table";
 import type { Inquiry, InquiryType } from "@/types/template";
 
@@ -37,7 +38,10 @@ function InfoRow({ label, value }: { label: string; value: string | null | undef
 
 export function InquiryTable({ data, templates }: { data: Inquiry[]; templates: TemplateInfo[] }) {
   const [search, setSearch] = useState("");
+  const [inquiries, setInquiries] = useState<Inquiry[]>(data);
   const [selectedInquiry, setSelectedInquiry] = useState<Inquiry | null>(null);
+  const [deleteTarget, setDeleteTarget] = useState<Inquiry | null>(null);
+  const [deleting, setDeleting] = useState(false);
 
   const templateMap = useMemo(() => {
     const map = new Map<string, TemplateInfo>();
@@ -52,16 +56,28 @@ export function InquiryTable({ data, templates }: { data: Inquiry[]; templates: 
     return templateMap.get(`${inquiry.lang}:${inquiry.template_name}`) ?? null;
   };
 
+  const handleDelete = async () => {
+    if (!deleteTarget || deleting) return;
+    setDeleting(true);
+    const res = await fetch(`/api/admin/inquiries/${deleteTarget.id}`, { method: "DELETE" });
+    setDeleting(false);
+    if (res.ok) {
+      setInquiries((prev) => prev.filter((i) => i.id !== deleteTarget.id));
+      if (selectedInquiry?.id === deleteTarget.id) setSelectedInquiry(null);
+    }
+    setDeleteTarget(null);
+  };
+
   const filteredData = useMemo(() => {
-    if (!search.trim()) return data;
+    if (!search.trim()) return inquiries;
     const q = search.toLowerCase();
-    return data.filter((inquiry) =>
+    return inquiries.filter((inquiry) =>
       inquiry.customer_name.toLowerCase().includes(q) ||
       inquiry.customer_email.toLowerCase().includes(q) ||
       (inquiry.message ?? "").toLowerCase().includes(q) ||
       (inquiry.company ?? "").toLowerCase().includes(q)
     );
-  }, [data, search]);
+  }, [inquiries, search]);
 
   const columns: Column<Inquiry>[] = [
     {
@@ -129,15 +145,25 @@ export function InquiryTable({ data, templates }: { data: Inquiry[]; templates: 
     {
       key: "detail",
       header: "",
-      width: "60px",
+      width: "100px",
       render: (inquiry) => (
-        <button
-          type="button"
-          onClick={() => setSelectedInquiry(inquiry)}
-          className="rounded-md border border-zinc-200 px-3 py-1.5 text-xs font-medium text-zinc-600 transition-colors hover:border-zinc-300 hover:text-zinc-900"
-        >
-          보기
-        </button>
+        <div className="flex items-center gap-1.5">
+          <button
+            type="button"
+            onClick={() => setSelectedInquiry(inquiry)}
+            className="rounded-md border border-zinc-200 px-3 py-1.5 text-xs font-medium text-zinc-600 transition-colors hover:border-zinc-300 hover:text-zinc-900"
+          >
+            보기
+          </button>
+          <button
+            type="button"
+            onClick={() => setDeleteTarget(inquiry)}
+            className="rounded-md border border-zinc-200 p-1.5 text-zinc-400 transition-colors hover:border-red-200 hover:bg-red-50 hover:text-red-600"
+            title="삭제"
+          >
+            <Trash2 className="h-3.5 w-3.5" />
+          </button>
+        </div>
       ),
     },
   ];
@@ -158,18 +184,51 @@ export function InquiryTable({ data, templates }: { data: Inquiry[]; templates: 
       <Table columns={columns} data={filteredData} emptyMessage="접수된 문의가 없습니다" />
 
       <Modal
+        open={deleteTarget !== null}
+        onClose={() => setDeleteTarget(null)}
+        title="문의 삭제"
+        footer={
+          <>
+            <Button variant="secondary" onClick={() => setDeleteTarget(null)}>취소</Button>
+            <Button variant="danger" loading={deleting} onClick={handleDelete}>삭제</Button>
+          </>
+        }
+      >
+        {deleteTarget && (
+          <div className="space-y-3">
+            <p className="text-sm text-zinc-700">아래 문의를 삭제하시겠습니까? <strong>삭제 후 복구가 불가능합니다.</strong></p>
+            <div className="rounded-lg bg-zinc-50 border border-zinc-200 px-4 py-3 space-y-1">
+              <p className="text-sm font-medium text-zinc-900">{deleteTarget.customer_name}</p>
+              <p className="text-xs text-zinc-500">{deleteTarget.customer_email}</p>
+              <p className="text-xs text-zinc-400">{new Date(deleteTarget.created_at).toLocaleString("ko-KR")}</p>
+            </div>
+          </div>
+        )}
+      </Modal>
+
+      <Modal
         open={selectedInquiry !== null}
         onClose={() => setSelectedInquiry(null)}
         title="문의 상세"
         size="xl"
         footer={
-          <button
-            type="button"
-            onClick={() => setSelectedInquiry(null)}
-            className="rounded-lg px-4 py-2 text-sm font-medium text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-900"
-          >
-            닫기
-          </button>
+          <div className="flex w-full items-center justify-between">
+            <button
+              type="button"
+              onClick={() => { setDeleteTarget(selectedInquiry); setSelectedInquiry(null); }}
+              className="flex items-center gap-1.5 rounded-lg px-3 py-2 text-sm font-medium text-red-600 transition-colors hover:bg-red-50"
+            >
+              <Trash2 className="h-3.5 w-3.5" />
+              삭제
+            </button>
+            <button
+              type="button"
+              onClick={() => setSelectedInquiry(null)}
+              className="rounded-lg px-4 py-2 text-sm font-medium text-zinc-600 transition-colors hover:bg-zinc-100 hover:text-zinc-900"
+            >
+              닫기
+            </button>
+          </div>
         }
       >
         {selectedInquiry && (() => {

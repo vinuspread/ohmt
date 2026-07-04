@@ -47,3 +47,11 @@ export async function PATCH(request: Request, context: { params: Promise<{ id: s
 
   return NextResponse.json(data);
 }
+
+export async function DELETE(_request: Request, context: { params: Promise<{ id: string }> }) {
+  const { id } = await context.params;
+  const supabase = createAdminClient();
+  const { error } = await supabase.from("inquiries").delete().eq("id", id);
+  if (error) return NextResponse.json({ error: "문의 삭제에 실패했습니다." }, { status: 500 });
+  return NextResponse.json({ success: true });
+}
