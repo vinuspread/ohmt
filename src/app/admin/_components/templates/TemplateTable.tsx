@@ -322,6 +322,19 @@ export function TemplateTable({ data }: { data: Template[] }) {
 
         {filteredData.length === 0 ? (
           <div className="px-4 py-16 text-center text-sm text-zinc-500">조건에 맞는 템플릿이 없습니다.</div>
+        ) : sortField !== null ? (
+          <div className="divide-y divide-zinc-100">
+            {filteredData.map((template) => (
+              <TemplateRow
+                key={template.id}
+                template={template}
+                onPreview={setPreviewUrl}
+                onDelete={setDeleteTarget}
+                onDragEnd={persistOrder}
+                sortActive={true}
+              />
+            ))}
+          </div>
         ) : (
           <Reorder.Group axis="y" values={filteredData} onReorder={handleReorder} className="divide-y divide-zinc-100" as="div">
             {filteredData.map((template) => (
@@ -331,7 +344,7 @@ export function TemplateTable({ data }: { data: Template[] }) {
                 onPreview={setPreviewUrl}
                 onDelete={setDeleteTarget}
                 onDragEnd={persistOrder}
-                sortActive={sortField !== null}
+                sortActive={false}
               />
             ))}
           </Reorder.Group>
