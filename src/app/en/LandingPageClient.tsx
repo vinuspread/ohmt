@@ -803,7 +803,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                       {descModalTemplate.desc}
                     </p>
                     {descModalTemplate.hashtags.length > 0 && (
-                      <p className="text-base text-zinc-400 dark:text-zinc-500">
+                      <p className="text-sm text-zinc-400 dark:text-zinc-500">
                         {descModalTemplate.hashtags.join(" ")}
                       </p>
                     )}
