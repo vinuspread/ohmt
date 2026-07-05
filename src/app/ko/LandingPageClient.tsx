@@ -270,7 +270,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             <Link
               href="/ko/contact"
               className="hidden sm:inline-flex items-center justify-center bg-zinc-900 hover:bg-zinc-800 text-white text-xs uppercase tracking-widest font-bold px-5 py-2.5 transition-colors duration-200 rounded-md dark:bg-zinc-700 dark:hover:bg-zinc-600"
-            >상담 시작하기</Link>
+            >상담하기</Link>
           </div>
         </header>
 
@@ -508,7 +508,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                                 onClick={() => goToContact('professional', featuredItem)}
                                 className="inline-flex items-center gap-1.5 bg-zinc-900 hover:bg-zinc-700 text-white text-xs font-bold uppercase tracking-wider px-4 py-2.5 rounded transition-colors dark:bg-zinc-700 dark:hover:bg-zinc-600"
                               >
-                                상담 시작하기
+                                상담하기
                               </button>
                             </div>
                           </div>
