@@ -16,6 +16,8 @@ export interface TemplateItem {
   name: string;
   slug: string;
   thumbnail_url: string | null;
+  applicable_industries?: string[];
+  description?: string | null;
 }
 
 const INQUIRY_TYPES = [
@@ -268,14 +270,29 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
                     <button type="button" onClick={() => setPickerOpen(true)} className="absolute top-3 right-3 bg-black/50 hover:bg-black/70 text-white text-[0.6rem] font-bold uppercase tracking-widest px-2.5 py-1.5 rounded-lg transition-all">변경</button>
                   )}
                 </div>
-                <div className="space-y-1.5 px-1">
-                  {["프리미엄 템플릿 포함", "디자인 커스터마이징", "24시간 내 응답 보장"].map((item) => (
-                    <div key={item} className="flex items-center gap-2 text-xs text-zinc-400 dark:text-zinc-500">
-                      <span className="w-1 h-1 rounded-full bg-[#F1B100] flex-shrink-0" />
-                      {item}
+                {(() => {
+                  const tpl = selectedTemplate ?? templateList.find((t) => t.name === templateParam);
+                  if (!tpl) return null;
+                  const industries = tpl.applicable_industries ?? [];
+                  const desc = tpl.description;
+                  if (industries.length === 0 && !desc) return null;
+                  return (
+                    <div className="space-y-3 px-1 pt-1">
+                      {industries.length > 0 && (
+                        <div className="space-y-1">
+                          <p className="text-[0.58rem] uppercase tracking-widest text-zinc-400 font-bold dark:text-zinc-500">적용 가능 업종</p>
+                          <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">{industries.join(", ")}</p>
+                        </div>
+                      )}
+                      {desc && (
+                        <div className="space-y-1">
+                          <p className="text-[0.58rem] uppercase tracking-widest text-zinc-400 font-bold dark:text-zinc-500">소개</p>
+                          <p className="text-xs text-zinc-500 dark:text-zinc-400 leading-relaxed">{desc}</p>
+                        </div>
+                      )}
                     </div>
-                  ))}
-                </div>
+                  );
+                })()}
               </>
             ) : (
               <div className="pt-2 space-y-5">

@@ -77,11 +77,17 @@ export default async function ContactPage({
 
   const { data: templateRows } = await supabase
     .from("templates")
-    .select("name, slug, thumbnail_url")
+    .select("name, slug, thumbnail_url, applicable_industries, description")
     .eq("lang", "ko")
     .eq("status", "published")
     .order("sort_order");
-  const templateList = (templateRows ?? []).map((t) => ({ name: t.name as string, slug: t.slug as string, thumbnail_url: t.thumbnail_url as string | null }));
+  const templateList = (templateRows ?? []).map((t) => ({
+    name: t.name as string,
+    slug: t.slug as string,
+    thumbnail_url: t.thumbnail_url as string | null,
+    applicable_industries: (t.applicable_industries as string[]) ?? [],
+    description: t.description as string | null,
+  }));
 
   return (
     <main className="min-h-screen bg-[#FCFCFD] text-zinc-900 font-sans antialiased dark:bg-zinc-950 dark:text-zinc-100">
