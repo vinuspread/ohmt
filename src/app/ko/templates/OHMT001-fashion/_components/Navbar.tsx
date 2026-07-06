@@ -20,7 +20,8 @@ export const Navbar = () => {
   }, []);
 
   const isHome = /^\/(en|ko)?\/?templates\/(OHMT001-)?fashion\/?$/.test(pathname);
-  const isTransparent = isHome && !scrolled && !mobileOpen;
+  const hasVisualHero = /^\/ko\/templates\/OHMT001-fashion\/(about|archive|journal|collection)\/?$/.test(pathname);
+  const isTransparent = (isHome || hasVisualHero) && !scrolled && !mobileOpen;
 
   return (
     <>

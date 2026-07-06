@@ -1,69 +1,32 @@
-/* fashion-ko Design Tokens */
+/* fashion Design Tokens */
 :root {
-  /* Color System */
+  /* Color System — Monochrome Minimalist Luxury */
   --color-bg: #FFFFFF;
   --color-bg-secondary: #F5F5F5;
   --color-text: #000000;
-  --color-text-secondary: #888888;
+  --color-text-secondary: #4D4D4D;
+  --color-text-muted: #737373;
+  --color-text-contrast: #FFFFFF;
   --color-accent: #000000;
-  --color-secondary: #C9A84C;
-  --color-muted: #888888;
-  --color-text-muted: #888888;
-  --color-border: #EEEEEE;
+  --color-primary: #000000;
+  --color-border: #E5E5E5;
   --color-overlay: rgba(0, 0, 0, 0.05);
 
-  /* Accents */
-  --color-primary: #000000;
-  --color-gold: #C9A84C;
-  --color-white: #FFFFFF;
-  --color-text-contrast: #FFFFFF;
-
   /* Typography */
-  --font-heading: 'Libre Bodoni', 'Nanum Myeongjo', 'Bodoni MT', 'Didot', serif;
+  --font-heading: 'Libre Bodoni', 'Bodoni MT', 'Didot', 'Nanum Myeongjo', serif;
   --font-bodoni: var(--font-heading);
-  --font-body: 'Pretendard', sans-serif;
-  --font-serif: 'Libre Bodoni', 'Nanum Myeongjo', serif;
+  --font-body: 'Inter', 'Pretendard', sans-serif;
+  --font-serif: 'Libre Bodoni', 'Bodoni MT', 'Didot', 'Nanum Myeongjo', serif;
   --font-sans-kr: 'Pretendard', sans-serif;
-
-  /* Typography Scale */
-  --text-xs: 0.75rem;
-  --text-sm: 0.875rem;
-  --text-base: 1rem;
-  --text-lg: 1.125rem;
-  --text-xl: 1.25rem;
-  --text-2xl: 1.5rem;
-  --text-3xl: 1.875rem;
-  --text-4xl: 2.25rem;
-  --text-5xl: 3rem;
-  --text-6xl: 3.75rem;
-
-  /* Spacing Scale */
-  --spacing-xs: 0.25rem;
-  --spacing-sm: 0.5rem;
-  --spacing-md: 1rem;
-  --spacing-lg: 1.5rem;
-  --spacing-xl: 2rem;
-  --spacing-2xl: 3rem;
-  --spacing-3xl: 4rem;
-  --spacing-4xl: 6rem;
 
   /* Transitions */
   --transition-duration: 300ms;
   --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
 
-  /* Interactive States */
+  /* Focus */
   --focus-outline: 2px solid var(--color-primary);
   --focus-outline-offset: 2px;
-
-  /* Border Radius */
-  --radius-none: 0;
-  --radius-sm: 0.25rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 1rem;
-  --radius-full: 9999px;
 }
-
-
 
 /* Accessibility: Respect motion preferences */
 @media (prefers-reduced-motion: reduce) {
@@ -74,38 +37,4 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
-
-
-body[lang="ko"], [lang="ko"], :root {
-  word-break: keep-all;
-  letter-spacing: -0.025em;
-}
-
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav, 
-nav a, nav button, nav span {
-  letter-spacing: -0.03em;
-}
-
-/* Korean typography rules (Korean Kerning Rule) */
-body[lang="ko"], [lang="ko"], :root {
-  word-break: keep-all;
-  letter-spacing: -0.025em;
-}
-
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav, 
-nav a, nav button, nav span {
-  letter-spacing: -0.03em;
 }
