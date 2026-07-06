@@ -3,12 +3,10 @@
   "name": "Jewelry Luxury",
   "name_ko": "주얼리 럭셔리",
   "category": "retail",
-  "description": "A refined jewelry boutique template for hero collections, product categories, bridal stories, and atelier trust signals with a polished luxury retail flow.",
-  "description_ko": "대표 컬렉션, 제품 카테고리, 브라이덜 스토리, 아틀리에 신뢰 요소를 고급 리테일 흐름으로 구성한 주얼리 부티크 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {
-      "primary": "#70C5BB",
+      "primary": "#F9F6F0",
       "secondary": "#171717",
       "accent": "#70C5BB",
       "text": {
@@ -18,7 +16,7 @@
       },
       "ui": {
         "border": "rgba(0,0,0,0.1)",
-        "hover": "#FBF9F6",
+        "hover": "#FFFFFF",
         "shadow": "0 10px 30px rgba(0,0,0,0.02)"
       }
     },
@@ -31,9 +29,13 @@
       },
       "body": {
         "font": "Inter, Pretendard, sans-serif",
-        "weight": "400",
+        "weight": "300",
         "leading": "1.6",
-        "style": "font-normal leading-relaxed"
+        "style": "font-light leading-relaxed"
+      },
+      "mono": {
+        "font": "JetBrains Mono",
+        "weight": "400"
       }
     },
     "spacing": {
@@ -49,5 +51,7 @@
       "transition_slow": "500ms",
       "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
     }
-  }
+  },
+  "thumbnail": "/templates/OHMT002-jewelry/og-image.jpg",
+  "ogImage": "/templates/OHMT002-jewelry/og-image.jpg"
 }

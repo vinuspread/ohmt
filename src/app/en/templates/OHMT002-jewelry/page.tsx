@@ -78,9 +78,9 @@ const { scrollYProgress } = useScroll({
 
   const filteredProducts = products.filter((product) => {
     if (activeTab === "All") return true;
-    if (activeTab === "Rings") return product.name.toLowerCase().includes("ring") || product.name.toLowerCase().includes("band") || product.name.toLowerCase().includes("반지");
-    if (activeTab === "Necklaces") return product.name.toLowerCase().includes("pendant") || product.name.toLowerCase().includes("bangle") || product.name.toLowerCase().includes("목걸이") || product.name.toLowerCase().includes("뱅글");
-    if (activeTab === "Earrings") return product.name.toLowerCase().includes("earring") || product.name.toLowerCase().includes("귀걸이");
+    if (activeTab === "Rings") return product.name.toLowerCase().includes("ring") || product.name.toLowerCase().includes("band");
+    if (activeTab === "Necklaces") return product.name.toLowerCase().includes("pendant") || product.name.toLowerCase().includes("bangle");
+    if (activeTab === "Earrings") return product.name.toLowerCase().includes("earring");
     return true;
   });
 
