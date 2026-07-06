@@ -548,17 +548,17 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                         </Link>
                         <div className="p-4 sm:p-5 lg:p-6 space-y-3 lg:space-y-4">
                           <div className="space-y-1">
-                            <div className="flex justify-between items-start">
-                              <div className="min-w-0">
-                                <h4 className="truncate text-sm sm:text-base font-bold text-zinc-900 dark:text-zinc-100">{template.name}</h4>
-                              </div>
-                              <span className="hidden sm:inline-block bg-zinc-100 text-zinc-600 text-[0.62rem] font-bold uppercase tracking-wider px-2 py-0.5 rounded dark:bg-zinc-700 dark:text-zinc-400 ml-2 flex-shrink-0">
-                                Premium
-                              </span>
-                            </div>
+                            <h4 className="truncate text-sm sm:text-base font-bold text-zinc-900 dark:text-zinc-100">{template.name}</h4>
                             <p className="text-[0.65rem] text-zinc-400 font-bold tracking-wider dark:text-zinc-500">{template.category}</p>
                           </div>
-                          <p className="text-xs sm:text-sm text-zinc-500 leading-relaxed font-normal dark:text-zinc-400 line-clamp-2">{template.desc}</p>
+                          <div className="space-y-1">
+                            <p className="text-xs sm:text-sm text-zinc-500 leading-relaxed font-normal dark:text-zinc-400 line-clamp-2">{template.desc}</p>
+                            {template.desc && (
+                              <button onClick={() => setDescModalTemplate(template)} className="text-[10px] font-bold text-zinc-400 hover:text-zinc-700 transition-colors dark:text-zinc-500 dark:hover:text-zinc-300">
+                                More
+                              </button>
+                            )}
+                          </div>
                           <div className="flex items-center justify-between gap-2 pt-2 sm:pt-4 border-t border-zinc-100 dark:border-zinc-700">
                             <Link
                               href={template.url}
@@ -604,7 +604,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             {packages.map((pkg) => (
               <div
                 key={pkg.id}
-                className={`bg-white rounded-xl p-6 border flex flex-col justify-between transition-all duration-300 dark:bg-zinc-800 dark:border-zinc-700 ${
+                className={`bg-white rounded-xl p-6 border transition-all duration-300 dark:bg-zinc-800 dark:border-zinc-700 ${
                   pkg.is_recommended ? 'border-[#F1B100]/50 dark:border-[#F1B100]/40' : 'border-zinc-200/60 hover:border-zinc-300 dark:hover:border-zinc-600'
                 }`}
               >
@@ -626,14 +626,6 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                     ))}
                   </ul>
                 </div>
-                <button
-                  onClick={() => goToContact(pkg.slug)}
-                  className={`w-full mt-8 py-3 text-xs uppercase tracking-widest font-bold transition-all duration-150 rounded-md ${
-                    pkg.is_recommended ? 'bg-[#F1B100] hover:bg-[#D9A000] text-zinc-900' : 'bg-zinc-900 hover:bg-zinc-800 text-white'
-                  }`}
-                >
-                  Select Plan
-                </button>
               </div>
             ))}
           </div>
