@@ -546,7 +546,11 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                         <div className="p-4 sm:p-5 lg:p-6 space-y-3 lg:space-y-4">
                           <div className="space-y-1">
                             <h4 className="truncate text-sm sm:text-base font-bold text-zinc-900 dark:text-zinc-100">{template.name}</h4>
-                            <p className="text-[0.65rem] text-zinc-400 font-bold tracking-wider dark:text-zinc-500">{template.category}</p>
+                            <p className="flex items-center gap-1.5 text-[0.65rem] text-zinc-400 font-bold tracking-wider dark:text-zinc-500">
+                              <span>{template.category}</span>
+                              <span className="text-zinc-300 dark:text-zinc-600">·</span>
+                              <span className="font-mono">{template.slug}</span>
+                            </p>
                           </div>
                           <div className="space-y-1">
                             <p className="text-xs sm:text-sm text-zinc-500 leading-relaxed font-normal dark:text-zinc-400 line-clamp-2">{template.desc}</p>
