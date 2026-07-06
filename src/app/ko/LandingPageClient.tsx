@@ -377,9 +377,9 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
               </div>
             ))}
           </div>
-          <div className="grid gap-4 rounded-xl border border-zinc-200/70 bg-white p-5 md:grid-cols-[220px_1fr] md:items-center md:p-6 dark:border-zinc-700 dark:bg-zinc-800">
-            <p className="text-sm font-extrabold text-zinc-950 dark:text-zinc-100">OHMT의 해결 방식</p>
-            <div className="grid gap-3 text-sm text-zinc-600 md:grid-cols-3 md:divide-x md:divide-zinc-200 dark:text-zinc-300 dark:md:divide-zinc-700">
+          <div className="grid gap-4 rounded-xl bg-zinc-950 p-5 md:grid-cols-[220px_1fr] md:items-center md:p-6">
+            <p className="text-sm font-extrabold text-white">Ohmytemplate의 해결방식</p>
+            <div className="grid gap-3 text-sm text-zinc-300 md:grid-cols-3 md:divide-x md:divide-zinc-700">
               {["제작 범위를 먼저 정리합니다.", "카피와 이미지를 실제 브랜드에 맞춥니다.", "오픈 후 수정과 운영 기준을 남깁니다."].map((text, idx) => (
                 <div key={text} className="flex items-start gap-3 md:px-5 first:md:pl-0 last:md:pr-0">
                   <span className="font-mono text-xs font-bold text-[#F1B100]">{String(idx + 1).padStart(2, "0")}</span>
