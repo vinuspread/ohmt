@@ -59,7 +59,10 @@ export function ZipUpdateModal({ slug, lang, onClose, onSuccess }: Props) {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ filename: file.name }),
       });
-      if (!presignRes.ok) throw new Error("presign 실패");
+      if (!presignRes.ok) {
+        const detail = await presignRes.json().catch(() => ({}));
+        throw new Error(detail.error ?? `Presign 실패 (HTTP ${presignRes.status})`);
+      }
       const { uploadUrl, key } = await presignRes.json();
       r2Key = key;
 
@@ -68,9 +71,9 @@ export function ZipUpdateModal({ slug, lang, onClose, onSuccess }: Props) {
         body: file,
         headers: { "Content-Type": "application/zip" },
       });
-      if (!r2Res.ok) throw new Error("R2 업로드 실패");
-    } catch {
-      setError("파일 업로드에 실패했습니다.");
+      if (!r2Res.ok) throw new Error(`R2 업로드 실패 (HTTP ${r2Res.status})`);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "파일 업로드에 실패했습니다.");
       setStatus("error");
       return;
     }
@@ -83,15 +86,15 @@ export function ZipUpdateModal({ slug, lang, onClose, onSuccess }: Props) {
       });
       const payload = await response.json();
       if (!response.ok) {
-        setError(payload.error ?? "업로드에 실패했습니다.");
+        setError(payload.error ?? `업로드에 실패했습니다 (HTTP ${response.status})`);
         setStatus("error");
         return;
       }
       setCommitSha(payload.githubCommitSha ?? "");
       setStatus("success");
       onSuccess?.(payload.templateKey ?? null);
-    } catch {
-      setError("네트워크 오류로 업로드에 실패했습니다.");
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "네트워크 오류로 업로드에 실패했습니다.");
       setStatus("error");
     }
   };
