@@ -522,27 +522,24 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
 
           {/* Grid */}
           <div className="space-y-6 md:space-y-8">
-            <AnimatePresence mode="popLayout">
-              {filteredTemplates.length === 0 ? (
-                <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="py-20 text-center space-y-4">
-                  <p className="text-zinc-400 font-medium dark:text-zinc-500">No templates match your search.</p>
-                  <button onClick={() => { setSearchTerm(""); setActiveCategory(ALL_LABEL); }} className="text-xs font-bold uppercase tracking-widest text-zinc-900 border-b border-zinc-900 pb-0.5 dark:text-zinc-100 dark:border-zinc-100">
-                    Reset Filters
-                  </button>
-                </motion.div>
-              ) : (
-                <div className="space-y-6 md:space-y-8">
-                  <motion.div layout className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-4 lg:gap-6">
-                    {(showAllTemplates ? filteredTemplates : filteredTemplates.slice(0, 8)).map((template) => (
-                      <motion.div
-                        key={template.id}
-                        layout
-                        initial={{ opacity: 0, y: 15 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="group bg-white border border-zinc-200/60 hover:border-zinc-300 transition-all duration-300 rounded-xl overflow-hidden dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600"
-                      >
+            {filteredTemplates.length === 0 ? (
+              <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="py-20 text-center space-y-4">
+                <p className="text-zinc-400 font-medium dark:text-zinc-500">No templates match your search.</p>
+                <button onClick={() => { setSearchTerm(""); setActiveCategory(ALL_LABEL); }} className="text-xs font-bold uppercase tracking-widest text-zinc-900 border-b border-zinc-900 pb-0.5 dark:text-zinc-100 dark:border-zinc-100">
+                  Reset Filters
+                </button>
+              </motion.div>
+            ) : (
+              <div className="space-y-6 md:space-y-8">
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-5 lg:grid-cols-4 lg:gap-6">
+                  {(showAllTemplates ? filteredTemplates : filteredTemplates.slice(0, 8)).map((template, idx) => (
+                    <motion.div
+                      key={template.id}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      transition={{ duration: 0.25, delay: showAllTemplates && idx >= 8 ? (idx - 8) * 0.04 : 0 }}
+                      className="group bg-white border border-zinc-200/60 hover:border-zinc-300 transition-all duration-300 rounded-xl overflow-hidden dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600"
+                    >
                         <Link href={template.url} target="_blank" rel="noopener noreferrer" className="relative aspect-[16/8] sm:aspect-[16/9] lg:aspect-[16/10] block overflow-hidden bg-zinc-50 dark:bg-zinc-700">
                           <img src={template.image} alt={template.name} className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out" />
                         </Link>
@@ -576,17 +573,16 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                             </button>
                           </div>
                         </div>
-                      </motion.div>
-                    ))}
-                  </motion.div>
-                  {!showAllTemplates && filteredTemplates.length > 8 && (
-                    <button onClick={() => setShowAllTemplates(true)} className="ohmt-show-more-btn">
-                      Show More Templates
-                    </button>
-                  )}
+                    </motion.div>
+                  ))}
                 </div>
-              )}
-            </AnimatePresence>
+                {!showAllTemplates && filteredTemplates.length > 8 && (
+                  <button onClick={() => setShowAllTemplates(true)} className="ohmt-show-more-btn">
+                    Show More Templates
+                  </button>
+                )}
+              </div>
+            )}
           </div>
         </div>
       </section>
