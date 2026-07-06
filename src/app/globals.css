@@ -217,3 +217,17 @@ select:focus-visible {
   -webkit-backface-visibility: hidden;
 }
 
+/* OHMT Landing Page Utilities */
+.ohmt-section-heading { @apply mx-auto max-w-3xl space-y-4 text-center; }
+.ohmt-section-label { @apply inline-flex items-center rounded-full border border-[#F1B100]/70 px-4 py-1.5 text-[0.65rem] font-extrabold uppercase tracking-widest text-[#F1B100]; }
+.ohmt-section-title { @apply text-2xl font-extrabold tracking-tighter leading-[1.18] text-zinc-900 text-balance sm:text-4xl md:text-5xl dark:text-zinc-100; }
+.ohmt-section-desc { @apply mx-auto max-w-5xl text-sm leading-relaxed font-normal text-zinc-500 sm:text-lg dark:text-zinc-400; }
+.ohmt-note-line { @apply mx-auto max-w-full overflow-hidden text-ellipsis whitespace-nowrap text-center text-xs leading-relaxed text-zinc-400 sm:text-sm dark:text-zinc-500; }
+.ohmt-final-cta { @apply relative overflow-hidden bg-zinc-950 bg-[url('/contact-hero.jpg')] bg-[length:auto_120%] bg-center px-5 py-12 before:absolute before:inset-0 before:bg-zinc-950/78 sm:bg-cover sm:px-6 sm:py-20 md:px-12 lg:px-20 dark:bg-black; }
+.ohmt-final-cta-inner { @apply relative z-10 mx-auto max-w-[1440px] text-center; }
+.ohmt-final-cta-title { @apply text-[1.375rem] font-extrabold tracking-tighter text-white text-balance sm:text-3xl md:text-5xl; }
+.ohmt-final-cta-desc { @apply mx-auto max-w-2xl text-[13px] leading-relaxed text-zinc-400 sm:text-base; }
+.ohmt-text-cta { @apply inline-flex items-center justify-center rounded-md border border-white/10 bg-[#222222] px-5 py-3 text-xs font-extrabold uppercase tracking-widest text-[#F1B100] no-underline transition-colors hover:bg-[#2B2B2B] hover:text-[#F1B100]; }
+.ohmt-consult-cta { @apply inline-flex items-center justify-center rounded-md bg-[#222222] px-5 py-2.5 text-xs font-extrabold uppercase tracking-widest text-[#F1B100] transition-colors hover:bg-[#2B2B2B] hover:text-[#F1B100]; }
+.ohmt-show-more-btn { @apply w-full bg-white text-center py-5 border border-zinc-200/60 rounded-xl text-xs font-bold uppercase tracking-widest text-zinc-500 hover:text-zinc-900 hover:border-zinc-300 transition-colors dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-100 dark:hover:border-zinc-600; }
+
