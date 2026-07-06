@@ -3,8 +3,6 @@
   "name": "Exhibition Gallery",
   "name_ko": "전시 갤러리",
   "category": "portfolio",
-  "description": "A contemporary exhibition template for museums, galleries, and cultural programs, with immersive artwork sections, event detail pages, and editorial navigation.",
-  "description_ko": "미술관, 갤러리, 문화 프로그램을 위한 전시 템플릿. 작품 섹션, 행사 상세 페이지, 에디토리얼 탐색 구조를 갖췄습니다.",
   "mode": "light",
   "theme": {
     "palette": {
@@ -53,5 +51,7 @@
       "transition_slow": "700ms",
       "easing": "cubic-bezier(0.23, 1, 0.32, 1)"
     }
-  }
+  },
+  "thumbnail": "/templates/OHMT003-exhibition/og-image.jpg",
+  "ogImage": "/templates/OHMT003-exhibition/og-image.jpg"
 }

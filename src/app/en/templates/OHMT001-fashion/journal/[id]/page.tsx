@@ -82,7 +82,7 @@ function JournalDetailContent() {
 
           <article className="max-w-3xl mx-auto">
             <span className="text-[11px] uppercase tracking-widest text-black/40">{article.category}</span>
-            <h1 className="font-[family-name:var(--font-bodoni)] text-[36px] md:text-[56px] text-black font-bold tracking-tight mt-4 leading-[1.1]">{article.title}</h1>
+            <h1 className="font-[family-name:var(--font-bodoni)] text-[36px] md:text-[56px] text-black font-normal tracking-tight mt-4 leading-[1.1]">{article.title}</h1>
             <p className="text-[12px] text-black/40 mt-3 pb-8 border-b border-black/10">{article.date}</p>
 
             <div className="mt-8 aspect-[21/9] overflow-hidden">

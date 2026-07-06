@@ -13,7 +13,7 @@
   --color-overlay: rgba(0, 0, 0, 0.05);
 
   /* Typography */
-  --font-heading: 'Libre Bodoni', 'Bodoni MT', 'Didot', 'Noto Serif KR', serif;
+  --font-heading: 'Libre Bodoni', 'Bodoni MT', 'Didot', serif;
   --font-bodoni: var(--font-heading);
   --font-body: 'Inter', 'Pretendard', sans-serif;
   --font-serif: 'Libre Bodoni', 'Bodoni MT', 'Didot', serif;

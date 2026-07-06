@@ -1,4 +1,4 @@
-/* furniture-ko Design Tokens */
+/* furniture Design Tokens */
 :root {
   /* Color System */
   --color-bg: #FFFFFF;
@@ -19,9 +19,9 @@
   --color-text-contrast: #FFFFFF;
 
   /* Typography */
-  --font-heading: Outfit, Pretendard, sans-serif;
-  --font-body: Inter, Pretendard, sans-serif;
-  --font-display: Outfit, Pretendard, sans-serif;
+  --font-heading: Outfit, sans-serif;
+  --font-body: Inter, sans-serif;
+  --font-display: Outfit, sans-serif;
 
   /* Typography Scale */
   --text-xs: 0.75rem;
@@ -61,8 +61,6 @@
   --radius-full: 9999px;
 }
 
-
-
 /* Accessibility: Respect motion preferences */
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -72,38 +70,4 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
-
-
-body[lang="ko"], [lang="ko"], :root {
-  word-break: keep-all;
-  letter-spacing: -0.025em;
-}
-
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav, 
-nav a, nav button, nav span {
-  letter-spacing: -0.03em;
-}
-
-/* Korean typography rules (Korean Kerning Rule) */
-body[lang="ko"], [lang="ko"], :root {
-  word-break: keep-all;
-  letter-spacing: -0.025em;
-}
-
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav, 
-nav a, nav button, nav span {
-  letter-spacing: -0.03em;
 }

@@ -57,7 +57,7 @@ function AboutContent() {
               ].map((item, i) => (
                 <div key={item.num} className={`py-12 md:py-0 ${i === 0 ? "md:pr-16 lg:pr-24" : i === 1 ? "md:px-16 lg:px-24" : "md:pl-16 lg:pl-24"}`}>
                   <span className="block text-[9px] font-mono tracking-[0.25em] text-black/30 mb-7">— {item.num}</span>
-                  <h3 className="font-[family-name:var(--font-bodoni)] text-[28px] md:text-[32px] font-bold tracking-[-0.04em] leading-[1.1]">{item.title}</h3>
+                  <h3 className="font-[family-name:var(--font-bodoni)] text-[28px] md:text-[32px] font-normal tracking-[-0.04em] leading-[1.1]">{item.title}</h3>
                   <div className="w-6 h-px bg-black/20 my-5" />
                   <p className="text-[14px] text-black/55 leading-relaxed break-keep tracking-[-0.025em]">{item.desc}</p>
                 </div>

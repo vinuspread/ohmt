@@ -3,8 +3,6 @@
   "name": "Sneaker Brutalist",
   "name_ko": "스니커 브루탈리스트",
   "category": "retail",
-  "description": "A bold footwear brand template with launch storytelling, product drops, campaign imagery, and a sharp brutalist rhythm for limited releases.",
-  "description_ko": "런칭 스토리, 제품 드롭, 캠페인 이미지, 강한 브루탈리스트 리듬으로 한정 발매 감도를 살린 풋웨어 브랜드 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {
@@ -53,5 +51,7 @@
       "transition_slow": "500ms",
       "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
     }
-  }
+  },
+  "thumbnail": "/templates/OHMT005-sneaker/og-image.jpg",
+  "ogImage": "/templates/OHMT005-sneaker/og-image.jpg"
 }

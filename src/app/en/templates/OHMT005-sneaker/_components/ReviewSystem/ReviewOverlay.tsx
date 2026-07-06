@@ -265,7 +265,7 @@ export const ReviewOverlay: React.FC = () => {
           <textarea 
             autoFocus
             className="w-full p-5 rounded-2xl border border-white/5 bg-white/5 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-pink-500/50 transition-all h-32 resize-none leading-[1.4]"
-            placeholder="마스터, 여기에 수정 지시를 남겨주세요..."
+            placeholder="Leave revision instructions here..."
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
           />

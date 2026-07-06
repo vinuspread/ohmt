@@ -3,8 +3,6 @@
   "name": "Fashion Laboratory",
   "name_ko": "패션 연구소",
   "category": "lifestyle",
-  "description": "An editorial fashion house template for collections, journals, archives, and brand stories, built around precise typography and quiet luxury imagery.",
-  "description_ko": "컬렉션, 저널, 아카이브, 브랜드 스토리를 차분한 럭셔리 톤으로 보여주는 에디토리얼 패션 하우스 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {
@@ -24,7 +22,7 @@
     },
     "typography": {
       "heading": {
-        "font": "Libre Bodoni, Bodoni MT, Didot, Noto Serif KR, serif",
+        "font": "Libre Bodoni, Nanum Myeongjo, Bodoni MT, Didot, serif",
         "weight": "700",
         "tracking": "-0.03em",
         "style": "font-bold tracking-tighter uppercase"
@@ -49,5 +47,7 @@
       "transition_slow": "500ms",
       "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
     }
-  }
+  },
+  "thumbnail": "/templates/OHMT001-fashion/og-image.jpg",
+  "ogImage": "/templates/OHMT001-fashion/og-image.jpg"
 }

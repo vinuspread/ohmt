@@ -42,7 +42,7 @@ function JournalContent() {
                   <img src={article.image} alt={article.title} className="w-full h-full object-cover group-hover:scale-[1.02] transition duration-700" />
                 </div>
                 <span className="block text-[11px] uppercase tracking-[-0.03em] text-[var(--color-text-muted)] mt-5 mb-2">{article.category}</span>
-                <h2 className="font-[family-name:var(--font-bodoni)] text-[20px] md:text-[24px] font-bold tracking-[-0.04em] leading-[1.1]">{article.title}</h2>
+                <h2 className="font-[family-name:var(--font-bodoni)] text-[20px] md:text-[24px] font-normal tracking-[-0.04em] leading-[1.1]">{article.title}</h2>
                 <p className="text-[12px] text-[var(--color-text-muted)] mt-1">{article.date}</p>
                 <p className="text-[14px] text-black/60 leading-relaxed mt-2 line-clamp-2 break-keep tracking-[-0.025em]">{article.excerpt}</p>
               </Link>
