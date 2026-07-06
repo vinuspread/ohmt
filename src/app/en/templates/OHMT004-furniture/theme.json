@@ -3,8 +3,6 @@
   "name": "Furniture Modern",
   "name_ko": "모던 가구",
   "category": "retail",
-  "description": "A furniture commerce template for curated rooms, product-focused grids, lifestyle imagery, and calm purchasing paths that keep materials and proportions visible.",
-  "description_ko": "공간 큐레이션, 제품 그리드, 라이프스타일 이미지, 구매 동선을 함께 담아 소재와 비례가 잘 보이는 가구 커머스 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {
@@ -13,7 +11,7 @@
       "accent": "#0071E3",
       "text": {
         "main": "#1D1D1F",
-        "muted": "#424245",
+        "muted": "#6E6E73",
         "contrast": "#FFFFFF"
       },
       "ui": {
@@ -57,5 +55,7 @@
       "card_hover": "scale(1.02) transition-transform duration-300",
       "button": "bg-[#1A1A1A] text-white hover:bg-black"
     }
-  }
+  },
+  "thumbnail": "/templates/OHMT004-furniture/og-image.jpg",
+  "ogImage": "/templates/OHMT004-furniture/og-image.jpg"
 }
