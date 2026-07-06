@@ -77,7 +77,7 @@ const carePlansKo = [
   { title: "Managed Care", price: "별도협의", desc: "운영 대행, SLA, 상시 응대가 필요한 팀용 플랜입니다." },
 ];
 
-function SectionHeadingKo({ label, title, desc }: { label?: string; title: React.ReactNode; desc?: string }) {
+function SectionHeadingKo({ label, title, desc }: { label?: string; title: React.ReactNode; desc?: React.ReactNode }) {
   return (
     <div className="ohmt-section-heading">
       {label && <span className="ohmt-section-label">{label}</span>}
@@ -396,7 +396,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
         <div className="max-w-[1440px] mx-auto space-y-9 md:space-y-12">
           <SectionHeadingKo
             title="OHMT는 템플릿 판매가 아니라, 템플릿 기반 제작 서비스입니다."
-            desc="완전히 빈 화면에서 시작하지 않습니다. 검증된 템플릿을 기준으로 방향을 고르고, 실제 브랜드에 맞게 완성합니다."
+            desc={<>완전히 빈 화면에서 시작하지 않습니다.<br />검증된 템플릿을 기준으로 방향을 고르고, 실제 브랜드에 맞게 완성합니다.</>}
           />
           <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-0 md:divide-x md:divide-zinc-200 dark:md:divide-zinc-700">
             {modelStepsKo.map((item) => (
