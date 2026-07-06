@@ -395,7 +395,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
       <section className="px-5 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16 md:py-28 bg-white border-b border-zinc-200/50 dark:bg-zinc-900 dark:border-zinc-800">
         <div className="max-w-[1440px] mx-auto space-y-9 md:space-y-12">
           <SectionHeadingKo
-            title={<>오마이템플릿은 템플릿 판매가 아닙니다.<br />템플릿을 기반으로한 맞춤 제작 서비스입니다.</>}
+            title={<>OHMT는 템플릿 판매 사이트가 아닙니다.<br />템플릿 기반의 맞춤 제작 서비스입니다.</>}
             desc={<>완전히 빈 화면에서 시작하지 않습니다.<br />검증된 템플릿을 기준으로 방향을 고르고, 실제 브랜드에 맞게 완성합니다.</>}
           />
           <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-0 md:divide-x md:divide-zinc-200 dark:md:divide-zinc-700">
