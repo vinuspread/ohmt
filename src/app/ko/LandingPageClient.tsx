@@ -333,6 +333,40 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           </div>
           </div>{/* /relative wrapper for arrows */}
 
+          {/* Search Input Bar */}
+          <div className="max-w-xl mx-auto px-6 mt-10">
+            <div className="relative">
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-400 dark:text-zinc-500" size={18} />
+              <input
+                type="text"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                placeholder="템플릿 검색 (예: 패션, 에이전시, 에디토리얼...)"
+                className="w-full pl-12 pr-10 py-3.5 bg-zinc-50 border border-zinc-200 focus:bg-white focus:border-zinc-900 outline-none text-zinc-900 placeholder:text-zinc-400 text-sm transition-all rounded-lg dark:bg-zinc-800 dark:border-zinc-700 dark:focus:bg-zinc-800 dark:focus:border-zinc-500 dark:text-zinc-100 dark:placeholder:text-zinc-500"
+              />
+              {searchTerm && (
+                <button
+                  onClick={() => setSearchTerm("")}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-900 transition-colors dark:text-zinc-500 dark:hover:text-zinc-100"
+                >
+                  <X size={16} />
+                </button>
+              )}
+            </div>
+            <div className="flex flex-wrap justify-center items-center gap-2 mt-4 text-xs">
+              <span className="text-zinc-400 font-medium dark:text-zinc-500">인기:</span>
+              {POPULAR_TAGS.map((tag) => (
+                <button
+                  key={tag}
+                  onClick={() => setSearchTerm(tag)}
+                  className="px-2.5 py-1 bg-zinc-100 hover:bg-zinc-200 text-zinc-600 transition-colors rounded dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:text-zinc-400"
+                >
+                  #{tag}
+                </button>
+              ))}
+            </div>
+          </div>
+
           {/* Infinite Horizontal Scroll Marquee */}
           <div className="relative mt-16 w-full overflow-hidden select-none pointer-events-auto">
             {/* Left/Right Vignette Shadows */}
@@ -369,40 +403,6 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
 
         {/* Templates Marketplace Section */}
         <section id="templates" className="px-6 md:px-12 lg:px-20 py-12 max-w-[1440px] mx-auto space-y-12">
-
-          {/* Search Input Bar */}
-          <div className="max-w-xl mx-auto">
-            <div className="relative">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-zinc-400 dark:text-zinc-500" size={18} />
-              <input
-                type="text"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder="원하는 키워드로 검색 (예: 패션, 에이전시, 에디토리얼...)"
-                className="w-full pl-12 pr-10 py-3.5 bg-zinc-50 border border-zinc-200 focus:bg-white focus:border-zinc-900 outline-none text-zinc-900 placeholder:text-zinc-400 text-sm transition-all rounded-lg dark:bg-zinc-800 dark:border-zinc-700 dark:focus:bg-zinc-800 dark:focus:border-zinc-500 dark:text-zinc-100 dark:placeholder:text-zinc-500"
-              />
-              {searchTerm && (
-                <button
-                  onClick={() => setSearchTerm("")}
-                  className="absolute right-4 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-zinc-900 transition-colors dark:text-zinc-500 dark:hover:text-zinc-100"
-                >
-                  <X size={16} />
-                </button>
-              )}
-            </div>
-            <div className="flex flex-wrap justify-center items-center gap-2 mt-4 text-xs">
-              <span className="text-zinc-400 font-medium dark:text-zinc-500">인기 검색어:</span>
-              {POPULAR_TAGS.map((tag) => (
-                <button
-                  key={tag}
-                  onClick={() => setSearchTerm(tag)}
-                  className="px-2.5 py-1 bg-zinc-100 hover:bg-zinc-200 text-zinc-600 transition-colors rounded dark:bg-zinc-800 dark:hover:bg-zinc-700 dark:text-zinc-400"
-                >
-                  #{tag}
-                </button>
-              ))}
-            </div>
-          </div>
 
           {/* Category Tabs */}
           <div className="flex gap-2 overflow-x-auto pb-2 border-b border-zinc-200/60 no-scrollbar dark:border-zinc-800">
