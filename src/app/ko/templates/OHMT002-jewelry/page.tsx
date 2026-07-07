@@ -64,10 +64,10 @@ function JewelryPageContent() {
               <span className="text-[13px] md:text-[15px] uppercase text-white mb-6 block tracking-tight font-bold opacity-80">
                 OHMT FINE JEWELRY
               </span>
-              <h2 className="text-white mb-12 flex flex-col items-center tracking-[0.05em] max-w-6xl mx-auto space-y-4">
-                <span className="block font-extralight text-white/90 text-center text-lg md:text-2xl tracking-tight" style={{ fontFamily: "'Nanum Myeongjo', serif" }}>시간이 흘러도 빛을 잃지 않는 고귀한 명작,</span>
+              <h2 className="text-white mb-12 flex flex-col items-center tracking-[0.05em] max-w-6xl mx-auto space-y-4 break-keep">
+                <span className="block font-extralight text-white/90 text-center text-lg md:text-2xl tracking-tight" style={{ fontFamily: "'Nanum Myeongjo', serif" }}>시간이 흘러도 변치 않는 고귀한 명작</span>
                 <span className="block font-serif font-normal text-[var(--color-primary)] text-center text-3xl md:text-6xl leading-[1.2] md:leading-[1.2]" style={{ fontFamily: "'Nanum Myeongjo', serif" }}>
-                  {"당신의 찬란한 모든 순간 위에"} <br /> {"가장 눈부신 영원의 광채를 바칩니다."}
+                  {"당신의 가장 찬란한 순간에"} <br /> {"영원의 광채를 바칩니다."}
                 </span>
               </h2>
               <div className="flex flex-col md:flex-row items-center justify-center gap-6">
