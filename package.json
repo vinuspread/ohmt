@@ -11,12 +11,16 @@
     "verify:source": "node scripts/verify-template-source.mjs",
     "deploy:check": "powershell -ExecutionPolicy Bypass -File scripts/check-vercel-target.ps1",
     "deploy:prod": "powershell -ExecutionPolicy Bypass -File scripts/deploy-ohmt-prod.ps1",
-    "verify:live": "powershell -ExecutionPolicy Bypass -File scripts/verify-live-template.ps1"
+    "verify:live": "powershell -ExecutionPolicy Bypass -File scripts/verify-live-template.ps1",
+    "medusa:dev": "cd apps/medusa && npm run dev",
+    "medusa:migrate": "cd apps/medusa && npx medusa db:migrate",
+    "medusa:seed": "cd apps/medusa && npx ts-node src/scripts/seed-korea.ts"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.1069.0",
     "@aws-sdk/s3-request-presigner": "^3.1069.0",
     "@gsap/react": "^2.1.2",
+    "@medusajs/js-sdk": "^2.17.2",
     "@octokit/rest": "^22.0.1",
     "@phosphor-icons/react": "^2.1.10",
     "@supabase/ssr": "^0.12.0",

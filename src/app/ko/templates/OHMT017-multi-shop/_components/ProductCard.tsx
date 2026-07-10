@@ -79,11 +79,11 @@ export const ProductCard = ({
 
         <div className="flex items-center gap-2 pt-0.5">
           <span className="text-base font-bold text-[var(--color-primary)]">
-            {(price * 1000).toLocaleString("ko-KR")}원
+            {price.toLocaleString("ko-KR")}원
           </span>
           {originalPrice && (
             <span className="text-sm text-[var(--color-text-muted)] line-through">
-              {(originalPrice * 1000).toLocaleString("ko-KR")}원
+              {originalPrice.toLocaleString("ko-KR")}원
             </span>
           )}
         </div>
