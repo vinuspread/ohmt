@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { ShoppingBag, Search, Menu, X } from "lucide-react";
-import { useCart } from "@/lib/cart-context";
 
 const YELLOW = "var(--color-frame)";
 
@@ -12,7 +11,6 @@ export const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
-  const { itemCount } = useCart();
 
   useEffect(() => {
     setMounted(true);
@@ -81,17 +79,12 @@ export const Header = () => {
               <Search size={18} strokeWidth={1.5} />
             </button>
             <Link
-              href="/ko/templates/OHMT017-multi-shop/cart"
-              className="relative transition-colors duration-300 hover:opacity-70"
+              href="/ko/templates/OHMT017-multi-shop/shop"
+              className="transition-colors duration-300 hover:opacity-70"
               style={{ color: transparent ? "rgba(255,255,255,0.7)" : "#0A0A0A" }}
               aria-label="장바구니"
             >
               <ShoppingBag size={18} strokeWidth={1.5} />
-              {itemCount > 0 && (
-                <span className="absolute -top-1.5 -right-1.5 w-4 h-4 rounded-full bg-[var(--color-primary)] text-white text-[9px] font-bold flex items-center justify-center">
-                  {itemCount > 9 ? "9+" : itemCount}
-                </span>
-              )}
             </Link>
             <button
               className="md:hidden p-1 transition-colors duration-300"

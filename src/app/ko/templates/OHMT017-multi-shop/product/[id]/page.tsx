@@ -1,45 +1,21 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { Star, ChevronLeft, Plus, Minus } from "lucide-react";
 import { Header } from "../../_components/Header";
 import { Footer } from "../../_components/Footer";
-import { getProduct, ProductItem } from "../../data/medusa-adapter";
-import { useCart } from "@/lib/cart-context";
+import { products } from "../../data/data";
 import theme from "../../theme.json";
 import { TemplateWrapper } from "../../_components/TemplateWrapper";
 
-const formatKRW = (val: number) => `${val.toLocaleString("ko-KR")}원`;
+const formatKRW = (val: number) => `${(val * 1000).toLocaleString("ko-KR")}원`;
 
 function ProductPageContent() {
   const params = useParams();
-  const [product, setProduct] = useState<ProductItem | null>(null);
-  const [isLoadingProduct, setIsLoadingProduct] = useState(true);
+  const product = products.find((p) => p.id === params.id);
   const [qty, setQty] = useState(1);
   const [activeTab, setActiveTab] = useState<"desc" | "specs" | "reviews">("desc");
-  const { addItem, isLoading: cartLoading } = useCart();
-
-  useEffect(() => {
-    setIsLoadingProduct(true);
-    getProduct(params.id as string).then((p) => {
-      setProduct(p);
-      setIsLoadingProduct(false);
-    });
-  }, [params.id]);
-
-  if (isLoadingProduct) {
-    return (
-      <>
-        <Header />
-        <TemplateWrapper theme={theme}>
-          <main className="min-h-screen pt-32 text-center text-[var(--color-text-muted)]">
-            <p>상품 정보를 불러오는 중...</p>
-          </main>
-        </TemplateWrapper>
-      </>
-    );
-  }
 
   if (!product) {
     return (
@@ -59,12 +35,6 @@ function ProductPageContent() {
     ? Math.round((1 - product.price / product.originalPrice) * 100)
     : null;
 
-  const handleAddToCart = async () => {
-    if (product.variantId) {
-      await addItem(product.variantId, qty);
-    }
-  };
-
   return (
     <>
       <Header />
@@ -77,7 +47,7 @@ function ProductPageContent() {
               </Link>
               <span>/</span>
               <Link href={`/ko/templates/OHMT017-multi-shop/shop/${product.category}`} className="hover:text-[var(--color-text)] transition-colors capitalize">
-                {product.categoryName ?? product.category}
+                {product.category}
               </Link>
               <span>/</span>
               <span className="text-[var(--color-text)]">{product.name}</span>
@@ -96,7 +66,7 @@ function ProductPageContent() {
               </div>
 
               <div className="md:sticky md:top-28">
-                <p className="text-[10px] uppercase tracking-[0.25em] text-[var(--color-text-muted)] mb-3">{product.categoryName ?? product.category}</p>
+                <p className="text-[10px] uppercase tracking-[0.25em] text-[var(--color-text-muted)] mb-3">{product.category}</p>
                 <h1 className="text-2xl md:text-3xl font-bold tracking-tight leading-tight mb-3">{product.name}</h1>
 
                 {product.rating && (
@@ -129,20 +99,13 @@ function ProductPageContent() {
                       <Plus size={14} />
                     </button>
                   </div>
-                  <button
-                    onClick={handleAddToCart}
-                    disabled={cartLoading || !product.variantId}
-                    className="flex-1 bg-[var(--color-primary)] text-white py-3 text-[12px] uppercase tracking-[0.2em] font-medium hover:opacity-85 transition-opacity disabled:opacity-40 disabled:cursor-not-allowed"
-                  >
-                    {cartLoading ? "추가 중..." : "장바구니 담기"}
+                  <button className="flex-1 bg-[var(--color-primary)] text-white py-3 text-[12px] uppercase tracking-[0.2em] font-medium hover:opacity-85 transition-opacity">
+                    장바구니 담기
                   </button>
                 </div>
-                <Link
-                  href="/ko/templates/OHMT017-multi-shop/cart"
-                  className="block w-full border border-[var(--color-primary)] text-[var(--color-primary)] py-3 text-center text-[12px] uppercase tracking-[0.2em] font-medium hover:bg-[var(--color-primary)] hover:text-white transition-colors"
-                >
+                <button className="w-full border border-[var(--color-primary)] text-[var(--color-primary)] py-3 text-[12px] uppercase tracking-[0.2em] font-medium hover:bg-[var(--color-primary)] hover:text-white transition-colors">
                   바로 구매
-                </Link>
+                </button>
               </div>
             </div>
           </section>

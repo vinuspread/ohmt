@@ -1,7 +1,6 @@
 ﻿import type { Metadata } from "next";
 import './theme.css';
 import { SmoothScroll } from "./_components/SmoothScroll";
-import { CartProvider } from "@/lib/cart-context";
 
 export const metadata: Metadata = {
   title: "OHMT - 멀티샵",
@@ -44,11 +43,9 @@ export default function MultiShopLayout({
       <div className="fixed bottom-0 left-0 right-0 z-[100] bg-[var(--color-frame)] h-[20px] md:h-[48px]" />
       <div className="fixed top-0 bottom-0 left-0 z-[100] bg-[var(--color-frame)] w-[20px] md:w-[48px]" />
       <div className="fixed top-0 bottom-0 right-0 z-[100] bg-[var(--color-frame)] w-[20px] md:w-[48px]" />
-      <CartProvider>
-        <div className="ko-multi-shop p-[20px] md:p-[48px]" style={{ backgroundColor: "var(--color-frame)" }}>
-          {children}
-        </div>
-      </CartProvider>
+      <div className="ko-multi-shop p-[20px] md:p-[48px]" style={{ backgroundColor: "var(--color-frame)" }}>
+        {children}
+      </div>
     </>
   );
 }

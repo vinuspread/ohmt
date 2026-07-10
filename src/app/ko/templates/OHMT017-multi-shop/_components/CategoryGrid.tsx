@@ -1,19 +1,14 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { useReducedMotion } from "motion/react";
-import { getCategories, CategoryItem } from "../data/medusa-adapter";
+import { categories } from "../data/data";
 
 const easeOut = [0.23, 1, 0.32, 1] as const;
 
 export const CategoryGrid = () => {
   const shouldReduce = useReducedMotion();
-  const [categories, setCategories] = useState<CategoryItem[]>([]);
-
-  useEffect(() => {
-    getCategories().then(setCategories);
-  }, []);
 
   return (
     <section className="bg-white py-16 md:py-20">
@@ -40,7 +35,7 @@ export const CategoryGrid = () => {
               transition={{ duration: 0.35, delay: index * 0.05, ease: easeOut }}
             >
               <Link
-                href={`/ko/templates/OHMT017-multi-shop/shop/${cat.handle}`}
+                href={`/ko/templates/OHMT017-multi-shop/shop/${cat.id}`}
                 className="group relative block overflow-hidden active:scale-[0.98] transition-transform duration-160 ease-out"
                 style={{ aspectRatio: "3/4" }}
               >

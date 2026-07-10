@@ -1,20 +1,15 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { useReducedMotion } from "motion/react";
-import { getBestSellers, ProductItem } from "../data/medusa-adapter";
+import { bestSellers } from "../data/data";
 import { ProductCard } from "./ProductCard";
 
 const easeOut = [0.23, 1, 0.32, 1] as const;
 
 export const BestSellers = () => {
   const shouldReduce = useReducedMotion();
-  const [products, setProducts] = useState<ProductItem[]>([]);
-
-  useEffect(() => {
-    getBestSellers().then(setProducts);
-  }, []);
 
   return (
     <section className="bg-white py-20 md:py-28">
@@ -30,7 +25,7 @@ export const BestSellers = () => {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
-          {products.slice(0, 4).map((product, index) => (
+          {bestSellers.slice(0, 4).map((product, index) => (
             <motion.div
               key={product.id}
               initial={shouldReduce ? {} : { opacity: 0, y: 16 }}
@@ -38,22 +33,13 @@ export const BestSellers = () => {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.35, delay: index * 0.05, ease: easeOut }}
             >
-              <ProductCard
-                id={product.id}
-                name={product.name}
-                price={product.price}
-                originalPrice={product.originalPrice}
-                rating={product.rating}
-                reviewCount={product.reviewCount}
-                category={product.categoryName ?? product.category}
-                image={product.image}
-              />
+              <ProductCard {...product} />
             </motion.div>
           ))}
         </div>
 
         <div className="hidden md:grid grid-cols-4 gap-6 mt-6">
-          {products.slice(4).map((product, index) => (
+          {bestSellers.slice(4).map((product, index) => (
             <motion.div
               key={product.id}
               initial={shouldReduce ? {} : { opacity: 0, y: 16 }}
@@ -61,16 +47,7 @@ export const BestSellers = () => {
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.35, delay: (index + 4) * 0.05, ease: easeOut }}
             >
-              <ProductCard
-                id={product.id}
-                name={product.name}
-                price={product.price}
-                originalPrice={product.originalPrice}
-                rating={product.rating}
-                reviewCount={product.reviewCount}
-                category={product.categoryName ?? product.category}
-                image={product.image}
-              />
+              <ProductCard {...product} />
             </motion.div>
           ))}
         </div>
