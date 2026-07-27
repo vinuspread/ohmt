@@ -1,12 +1,12 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import "./theme.css";
 
 export const metadata: Metadata = {
-  title: "OHMT - 요가",
-  description: "프리미엄 요가 및 웰니스 클래스로 일상의 균형을 되찾으세요",
+  title: "OHMT | 요가·필라테스 스튜디오",
+  description: "빈야사와 하타 요가, 명상, 필라테스 클래스와 주간 일정을 확인하고 예약할 수 있습니다.",
   openGraph: {
-    title: "OHMT - 요가",
-    description: "프리미엄 요가 및 웰니스 클래스로 일상의 균형을 되찾으세요",
+    title: "OHMT | 요가·필라테스 스튜디오",
+    description: "빈야사와 하타 요가, 명상, 필라테스 클래스와 주간 일정을 확인하고 예약할 수 있습니다.",
     url: "https://ohmytemplate.com/ko/templates/OHMT022-yoga",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT022-yoga/og-image.jpg", width: 1200, height: 630 }],
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - 요가",
-    description: "프리미엄 요가 및 웰니스 클래스로 일상의 균형을 되찾으세요",
+    title: "OHMT | 요가·필라테스 스튜디오",
+    description: "빈야사와 하타 요가, 명상, 필라테스 클래스와 주간 일정을 확인하고 예약할 수 있습니다.",
     images: ["/templates/OHMT022-yoga/og-image.jpg"],
   },
   robots: { index: true, follow: true },
@@ -40,8 +40,7 @@ export default function YogaLayout({
           --font-pretendard: 'Pretendard', sans-serif;
         }
       `}</style>
-      {children}
+      <div lang="ko" className="ohmt022-yoga">{children}</div>
     </div>
   );
 }
-

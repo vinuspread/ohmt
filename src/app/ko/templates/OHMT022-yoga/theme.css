@@ -1,4 +1,13 @@
 :root {
+  --text-display: clamp(3rem, 7vw, 5.5rem);
+  --text-h1: clamp(2.5rem, 5vw, 4rem);
+  --text-h2: clamp(2rem, 4vw, 3rem);
+  --text-h3: clamp(1.5rem, 3vw, 2rem);
+  --text-lead: clamp(1.125rem, 2vw, 1.5rem);
+  --leading-display: 0.95;
+  --leading-heading: 1.1;
+  --leading-body: 1.6;
+
   --color-primary: #9B8B7A;
   --color-secondary: #3A4050;
   --color-accent: #C4956A;
@@ -13,21 +22,38 @@
   --color-border: rgba(28, 28, 26, 0.12);
   --color-border-light: rgba(255, 255, 255, 1);
 
-  --font-heading: var(--font-pretendard);
-  --font-body: var(--font-pretendard);
+  --font-heading: var(--font-inter);
+  --font-body: var(--font-inter);
 
   --transition-base: 400ms ease-out;
 
   --focus-ring: 2px solid var(--color-primary);
-  --focus-ring-offset: 2px;}
+  --focus-ring-offset: 2px;
+}
 
-body, * { word-break: keep-all; }
-
-header a, header button, header nav { letter-spacing: -0.03em; }
+/* Global: Inter light as default */
+body {
+  font-family: var(--font-inter), sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
 
 .hero-bg-image {
   background-position: center top;
 }
+
+.ohmt022-yoga :where(h1, h2, h3, h4) {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+.ohmt022-yoga :where(p, blockquote, li, figcaption) {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
+
 @media (min-width: 768px) {
   .hero-bg-image {
     background-position: center -200px;
@@ -39,38 +65,4 @@ header a, header button, header nav { letter-spacing: -0.03em; }
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
-}
-
-
-body[lang="ko"], [lang="ko"], :root {
-  word-break: keep-all;
-  letter-spacing: -0.025em;
-}
-
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav, 
-nav a, nav button, nav span {
-  letter-spacing: -0.03em;
-}
-
-/* Korean typography rules (Korean Kerning Rule) */
-body[lang="ko"], [lang="ko"], :root {
-  word-break: keep-all;
-  letter-spacing: -0.025em;
-}
-
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav, 
-nav a, nav button, nav span {
-  letter-spacing: -0.03em;
 }

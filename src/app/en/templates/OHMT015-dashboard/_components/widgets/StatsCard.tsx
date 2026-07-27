@@ -1,7 +1,10 @@
 'use client'
 
-import { TrendingUp, TrendingDown, DollarSign, ShoppingCart, Navigation, Target } from 'lucide-react'
-import { Area, AreaChart, ResponsiveContainer } from 'recharts'
+import { SafeResponsiveContainer } from '../charts/SafeResponsiveContainer'
+import {
+  TrendingUp, TrendingDown, DollarSign, ShoppingCart, Navigation, Target } from 'lucide-react'
+import { Area, AreaChart
+} from 'recharts'
 
 function formatValue(value: number, suffix = '') {
   if (value >= 1000000) return `${(value / 1000000).toFixed(1)}M${suffix}`
@@ -55,7 +58,7 @@ export function StatsCard({
           <Icon size={17} style={{ color: accentColor }} strokeWidth={1.8} />
         </div>
         <div className="w-16 h-9">
-          <ResponsiveContainer width="100%" height="100%">
+          <SafeResponsiveContainer width="100%" height="100%">
             <AreaChart data={sparkData} style={{ background: 'transparent' }}>
               <defs>
                 <linearGradient id={`spark-${label}`} x1="0" y1="0" x2="0" y2="1">
@@ -65,7 +68,7 @@ export function StatsCard({
               </defs>
               <Area type="monotone" dataKey="v" stroke={accentColor} strokeWidth={1.5} strokeOpacity={0.5} fill={`url(#spark-${label})`} dot={false} isAnimationActive={false} />
             </AreaChart>
-          </ResponsiveContainer>
+          </SafeResponsiveContainer>
         </div>
       </div>
 

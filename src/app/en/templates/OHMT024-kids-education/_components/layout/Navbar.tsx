@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import Link from "next/link";
 
 const EASE_IOS = [0.32, 0.72, 0, 1] as const;
@@ -100,3 +100,4 @@ export default function Navbar() {
     </>
   );
 }
+

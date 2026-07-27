@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Menu, Ticket, X } from "lucide-react";
-import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import { usePathname } from "next/navigation";
 import ReservationDrawer from "../common/ReservationDrawer";
 import TotalMenu from "./TotalMenu";
@@ -58,10 +58,10 @@ export default function Header() {
         variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.35, ease: "easeInOut" }}
-        className={`fixed top-0 w-full z-50 px-6 h-14 md:h-20 flex items-center justify-between transition-[background,border-color] duration-500 ${bgStyle} ${textColor}`}
+        className={`fixed top-0 w-full z-50 px-6 h-14 lg:h-20 flex items-center justify-between transition-[background,border-color] duration-500 ${bgStyle} ${textColor}`}
       >
         {/* 좌측: Special Exhibition / Collections / Museum Info (데스크톱 전용) */}
-        <div className="flex items-center gap-8 text-[13px] tracking-tight font-bold hidden md:flex w-1/3">
+        <div className="flex items-center gap-8 text-xs tracking-tight font-bold hidden lg:flex w-1/3">
           <Link
             href="/ko/templates/OHMT021-museum/exhibitions"
             className="hover:opacity-50 transition-opacity underline-offset-8 hover:underline"
@@ -85,14 +85,14 @@ export default function Header() {
         {/* 중앙: 로고 */}
         <Link
           href="/ko/templates/OHMT021-museum"
-          className={`text-[15px] sm:text-[18px] md:text-2xl font-serif font-bold tracking-[0.2em] -mr-[0.2em] absolute left-1/2 -translate-x-1/2 cursor-pointer uppercase drop- transition-colors duration-500 ${logoColor}`}
+          className={`text-sm sm:text-lg lg:text-2xl font-serif font-bold tracking-[0.2em] -mr-[0.2em] absolute left-1/2 -translate-x-1/2 cursor-pointer uppercase drop- transition-colors duration-500 ${logoColor}`}
         >
           OHMT
         </Link>
 
         {/* 우측: Tickets / Souvenir Shop (데스크톱 전용) / 메뉴 버튼 */}
-        <div className="flex items-center justify-end gap-8 text-[13px] tracking-tight font-bold flex-1 md:flex-initial md:w-1/3">
-          <div className="hidden md:flex items-center gap-8">
+        <div className="flex items-center justify-end gap-8 text-xs tracking-tight font-bold flex-1 lg:flex-initial lg:w-1/3">
+          <div className="hidden lg:flex items-center gap-8">
             <button
               onClick={() => setIsReservationOpen(true)}
               className="hover:opacity-50 transition-opacity underline-offset-8 hover:underline"
@@ -123,7 +123,7 @@ export default function Header() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 2 }}
         onClick={() => setIsReservationOpen(true)}
-        className="fixed bottom-8 right-8 z-[90] w-16 h-16 rounded-full bg-[var(--color-primary)] text-[var(--color-accent)] hidden md:flex items-center justify-center hover:scale-110 active:scale-95 transition-transform"
+        className="fixed bottom-8 right-8 z-[90] w-16 h-16 rounded-full bg-[var(--color-primary)] text-[var(--color-accent)] hidden lg:flex items-center justify-center hover:scale-110 active:scale-95 transition-transform"
       >
         <Ticket size={24} />
       </motion.button>
@@ -133,7 +133,7 @@ export default function Header() {
         onClose={() => setIsReservationOpen(false)}
       />
 
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <MobileBottomTabBar 
           isMenuOpen={isMenuOpen} 
           onMenuToggle={() => setIsMenuOpen(!isMenuOpen)} 
@@ -143,6 +143,7 @@ export default function Header() {
     </>
   );
 }
+
 
 
 

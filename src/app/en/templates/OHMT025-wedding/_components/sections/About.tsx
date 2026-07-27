@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
+import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
 
 export default function About() {
   const ref = useRef<HTMLDivElement>(null);
@@ -12,7 +12,7 @@ export default function About() {
 
   return (
     <section id="about" ref={ref} className="relative overflow-hidden bg-[var(--color-bg)] py-16 lg:py-24">
-      <div className="w-full max-w-[1440px] mx-auto lg:grid lg:grid-cols-[55fr_45fr] items-center">
+      <div className="w-full max-w-[1440px] mx-auto lg:grid lg:grid-cols-2 items-center">
 
         {/* Image */}
         <div className="relative overflow-hidden aspect-[4/5] max-h-[80vh]">
@@ -39,13 +39,13 @@ export default function About() {
             </span>
 
             <h2
-              className="font-[family-name:var(--font-heading)] font-light capitalize text-[var(--color-text)] leading-[1.05] mb-8"
+              className="font-[family-name:var(--font-heading)] font-light capitalize text-[var(--color-text)] leading-[var(--leading-heading)] mb-8"
               style={{ fontSize: "clamp(3.5rem, 7vw, 6rem)" }}
             >
               Hi,<br />I'm Clara.
             </h2>
 
-            <div className="space-y-5 text-[0.9rem] text-[var(--color-text-muted)] leading-[1.75] max-w-[420px] font-[family-name:var(--font-body)]">
+            <div className="space-y-5 text-[0.9rem] text-[var(--color-text-muted)] leading-loose max-w-[420px] font-[family-name:var(--font-body)]">
               <p>
                 For over 8 years, I've been capturing weddings filled with laughter, intimacy, and timeless beauty. My goal is to create images that feel like your memories - warm, authentic, and everlasting.
               </p>
@@ -80,3 +80,4 @@ export default function About() {
     </section>
   );
 }
+

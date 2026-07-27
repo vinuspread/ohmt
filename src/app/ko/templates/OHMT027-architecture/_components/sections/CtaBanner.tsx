@@ -26,15 +26,13 @@ export function CtaBanner() {
       <div className="absolute inset-0 z-20 flex items-center justify-center text-center px-6">
         <ScrollReveal>
           <div className="space-y-8 max-w-2xl">
-            <h2 className="font-heading font-normal text-[42px] md:text-[56px] text-white leading-[1.1]">
-              당신의 공간을
-              <br />
-              함께 설계합니다.
-            </h2>
+            <h2 className="font-heading font-normal text-5xl md:text-6xl text-white leading-[var(--leading-heading)]">
+              준비 중인 공간을<br />
+              이야기해주세요.</h2>
             <div>
               <Link
                 href={`${baseRoute}/contact`}
-                className="inline-block border-2 border-white text-white px-10 py-4 text-[14px] font-sans tracking-[0.08em] hover:bg-white hover:text-[#1A1A1A] transition-colors duration-300"
+                className="inline-block border-2 border-white text-white px-10 py-4 text-sm font-sans tracking-[0.08em] hover:bg-white hover:text-[#1A1A1A] transition-colors duration-300"
               >
                 프로젝트 문의
               </Link>

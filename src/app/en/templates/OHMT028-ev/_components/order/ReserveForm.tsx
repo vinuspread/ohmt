@@ -10,12 +10,12 @@ export function ReserveForm() {
 
   return (
     <section>
-      <h2 className="font-michroma text-[clamp(18px,2vw,28px)] text-[var(--text)] leading-[1.0] tracking-[-0.02em] mb-6">
+      <h2 className="font-michroma text-[length:var(--text-lead)] text-[var(--text)] leading-[var(--leading-display)] tracking-[-0.02em] mb-6">
         Your details
       </h2>
       <div className="space-y-4">
         <div>
-          <label className="font-inter text-[11px] tracking-[0.08em] text-[var(--text-muted)] uppercase block mb-2">
+          <label className="font-inter text-xs tracking-[0.08em] text-[var(--text-muted)] uppercase block mb-2">
             Full Name
           </label>
           <input
@@ -23,11 +23,11 @@ export function ReserveForm() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Jane Smith"
-            className="w-full bg-[var(--bg-alt)] border border-[var(--border)] rounded-lg px-5 py-3.5 font-inter text-[14px] text-[var(--text)] placeholder:text-[var(--text-muted)] outline-none focus:border-[var(--accent)] transition-colors"
+            className="w-full bg-[var(--bg-alt)] border border-[var(--border)] rounded-lg px-5 py-3.5 font-inter text-sm text-[var(--text)] placeholder:text-[var(--text-muted)] outline-none focus:border-[var(--accent)] transition-colors"
           />
         </div>
         <div>
-          <label className="font-inter text-[11px] tracking-[0.08em] text-[var(--text-muted)] uppercase block mb-2">
+          <label className="font-inter text-xs tracking-[0.08em] text-[var(--text-muted)] uppercase block mb-2">
             Email
           </label>
           <input
@@ -35,11 +35,11 @@ export function ReserveForm() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="jane@example.com"
-            className="w-full bg-[var(--bg-alt)] border border-[var(--border)] rounded-lg px-5 py-3.5 font-inter text-[14px] text-[var(--text)] placeholder:text-[var(--text-muted)] outline-none focus:border-[var(--accent)] transition-colors"
+            className="w-full bg-[var(--bg-alt)] border border-[var(--border)] rounded-lg px-5 py-3.5 font-inter text-sm text-[var(--text)] placeholder:text-[var(--text-muted)] outline-none focus:border-[var(--accent)] transition-colors"
           />
         </div>
         <div>
-          <label className="font-inter text-[11px] tracking-[0.08em] text-[var(--text-muted)] uppercase block mb-2">
+          <label className="font-inter text-xs tracking-[0.08em] text-[var(--text-muted)] uppercase block mb-2">
             Phone
           </label>
           <input
@@ -47,13 +47,13 @@ export function ReserveForm() {
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
             placeholder="+1 (555) 000-0000"
-            className="w-full bg-[var(--bg-alt)] border border-[var(--border)] rounded-lg px-5 py-3.5 font-inter text-[14px] text-[var(--text)] placeholder:text-[var(--text-muted)] outline-none focus:border-[var(--accent)] transition-colors"
+            className="w-full bg-[var(--bg-alt)] border border-[var(--border)] rounded-lg px-5 py-3.5 font-inter text-sm text-[var(--text)] placeholder:text-[var(--text-muted)] outline-none focus:border-[var(--accent)] transition-colors"
           />
         </div>
         <div className="pt-2">
           <button
             disabled={!isValid}
-            className={`w-full py-4 rounded-full font-inter font-medium text-[13px] tracking-[0.03em] transition-all duration-200 ${
+            className={`w-full py-4 rounded-full font-inter font-medium text-xs tracking-[0.03em] transition-all duration-200 ${
               isValid
                 ? "bg-[var(--accent)] text-[var(--text-on-light)] hover:bg-[var(--accent-dark)]"
                 : "bg-[var(--border)] text-[var(--text-muted)] cursor-not-allowed"
@@ -61,7 +61,7 @@ export function ReserveForm() {
           >
             Reserve for $300 →
           </button>
-          <p className="font-inter text-[14px] text-[var(--text-muted)] text-center mt-3">
+          <p className="font-inter text-sm text-[var(--text-muted)] text-center mt-3">
             Fully refundable. No commitment required.
           </p>
         </div>

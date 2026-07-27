@@ -1,8 +1,13 @@
 // src/app/en/templates/OHMT027-architecture/page.tsx
+import type { Metadata } from "next";
 import React from "react";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
 import { Header } from "./_components/layout/Header";
 import { Footer } from "./_components/layout/Footer";
+
+export const metadata: Metadata = {
+  title: "OHMT Architecture - Home",
+};
 import { Hero } from "./_components/sections/Hero";
 import { About } from "./_components/sections/About";
 import { Services } from "./_components/sections/Services";

@@ -22,7 +22,7 @@ export const Reviews = () => {
               <Star key={i} size={16} fill="var(--color-star)" color="var(--color-star)" />
             ))}
             <span className="text-sm text-[var(--color-text-muted)] ml-2">
-              4.9 out of 5 ??500+ reviews
+              4.9 out of 5 from 500+ reviews
             </span>
           </div>
         </div>

@@ -1,6 +1,5 @@
 "use client";
 import React, { useState } from "react";
-import { useSearchParams } from "next/navigation";
 import { Header } from "../_components/Header";
 import { Footer } from "../_components/Footer";
 import { PageHeader } from "../_components/PageHeader";
@@ -10,7 +9,6 @@ import { ProjectListItem } from "../_components/ProjectListItem";
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 function StudioProjectsPageContent() {
-    const searchParams = useSearchParams();
     const t = {
   "hero": {
     "badge": `ARCHITECTURE STUDIO`,
@@ -257,12 +255,12 @@ const [filter, setFilter] = useState("all");
 
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-10 border-b border-black/5 pb-6 md:pb-10">
                         <div className="max-w-[680px]">
-                            <h2 className="text-[clamp(1.8rem,4.5vw,4.5rem)] font-bold leading-[1.1] text-black break-keep">
+                            <h2 className="text-[length:var(--text-h1)] font-bold leading-[var(--leading-heading)] text-black break-keep">
                                 {t.projectsPage.projectDesc}
                             </h2>
                         </div>
 
-                        <div className="flex gap-6 md:gap-8 text-[13px] font-bold mb-0 md:mb-2 overflow-x-auto pb-1" style={{ scrollbarWidth: "none" }}>
+                        <div className="flex gap-6 md:gap-8 text-xs font-bold mb-0 md:mb-2 overflow-x-auto pb-1" style={{ scrollbarWidth: "none" }}>
                             {[
                                 { key: "all", label: t.projectsPage.tagAll },
                                 { key: "corporate", label: t.projectsPage.tagArchitecture },
@@ -298,12 +296,12 @@ const [filter, setFilter] = useState("all");
                 imagePosition="right"
             >
                 <div className="space-y-4 max-w-[480px]">
-                    <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-[1.1] break-keep">
+                    <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-[var(--leading-heading)] break-keep">
                         {t.servicesPage.items[2].title} <br />
                         {t.servicesPage.items[2].category}
                     </h3>
                 </div>
-                <p className="text-[14px] text-white/50 leading-[1.4] font-normal max-w-[460px] break-keep">
+                <p className="text-sm text-white/50 leading-[var(--leading-body)] font-normal max-w-[460px] break-keep">
                     {t.servicesPage.items[2].desc}
                 </p>
             </SplitScreenSection>

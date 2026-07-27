@@ -4,10 +4,11 @@ import React, { useState } from "react";
 import { Navbar } from "../_components/Navbar";
 import { Footer } from "../_components/Footer";
 import { Button } from "../_components/ui/Button";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { CalendarDays, Users, BedDouble, CheckCircle2 } from "lucide-react";
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
+import TemplateSelect from '../_components/TemplateSelect'
 
 const EASE = [0.23, 1, 0.32, 1] as const;
 
@@ -38,7 +39,7 @@ function BookingPageContent() {
           </div>
           <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full pt-20">
             <motion.div initial={{ opacity: 0, y: 24, filter: "blur(6px)" }} animate={{ opacity: 1, y: 0, filter: "blur(0px)" }} transition={{ duration: 0.75, ease: EASE }}>
-              <span className="text-[11px] font-medium text-[var(--color-accent)] uppercase tracking-[0.25em] block mb-3">Plan Your Stay</span>
+              <span className="text-xs font-medium text-[var(--color-accent)] uppercase tracking-[0.25em] block mb-3">Plan Your Stay</span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-[var(--font-heading)] font-bold text-[var(--color-bg)]">Reservation</h1>
             </motion.div>
           </div>
@@ -50,7 +51,7 @@ function BookingPageContent() {
 
               <div className="lg:col-span-4 flex flex-col gap-8">
                 <div>
-                  <span className="text-[11px] font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] block mb-3">Select Room Type</span>
+                  <span className="text-xs font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] block mb-3">Select Room Type</span>
                   <h2 className="text-2xl font-[var(--font-heading)] font-bold text-[var(--color-primary)] mb-6">Choose Your Accommodation</h2>
                   <div className="flex flex-col gap-3">
                     {rooms.map((r) => (
@@ -95,7 +96,7 @@ function BookingPageContent() {
                         Thank you for choosing OHMT. Your reservation request has been received. Our team will contact you within 24 hours to confirm your booking details.
                       </p>
                     </div>
-                    <Button variant="primary" size="md" onClick={() => setSubmitted(false)} className="text-[11px] tracking-[0.2em] uppercase rounded-sm mt-2">Make Another Reservation</Button>
+                    <Button variant="primary" size="md" onClick={() => setSubmitted(false)} className="text-xs tracking-[0.2em] uppercase rounded-sm mt-2">Make Another Reservation</Button>
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="flex flex-col gap-6">
@@ -106,59 +107,59 @@ function BookingPageContent() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
-                        <label className="text-[10px] font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">First Name *</label>
+                        <label className="text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">First Name *</label>
                         <input required type="text" placeholder="John" className="w-full border border-[var(--color-border)] bg-transparent px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-accent)] transition-colors rounded-sm" />
                       </div>
                       <div>
-                        <label className="text-[10px] font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">Last Name *</label>
+                        <label className="text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">Last Name *</label>
                         <input required type="text" placeholder="Doe" className="w-full border border-[var(--color-border)] bg-transparent px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-accent)] transition-colors rounded-sm" />
                       </div>
                       <div>
-                        <label className="text-[10px] font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">Email Address *</label>
+                        <label className="text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">Email Address *</label>
                         <input required type="email" placeholder="john.doe@example.com" className="w-full border border-[var(--color-border)] bg-transparent px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-accent)] transition-colors rounded-sm" />
                       </div>
                       <div>
-                        <label className="text-[10px] font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">Phone Number</label>
+                        <label className="text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">Phone Number</label>
                         <input type="tel" placeholder="+1 234 567 890" className="w-full border border-[var(--color-border)] bg-transparent px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-accent)] transition-colors rounded-sm" />
                       </div>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                       <div>
-                        <label className="text-[10px] font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">
+                        <label className="text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">
                           <CalendarDays size={10} className="inline mr-1" />Check-In *
                         </label>
                         <input required type="date" className="w-full border border-[var(--color-border)] bg-transparent px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-accent)] transition-colors rounded-sm text-[var(--color-text)]" />
                       </div>
                       <div>
-                        <label className="text-[10px] font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">
+                        <label className="text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">
                           <CalendarDays size={10} className="inline mr-1" />Check-Out *
                         </label>
                         <input required type="date" className="w-full border border-[var(--color-border)] bg-transparent px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-accent)] transition-colors rounded-sm text-[var(--color-text)]" />
                       </div>
                       <div>
-                        <label className="text-[10px] font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">
+                        <label className="text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">
                           <Users size={10} className="inline mr-1" />Guests *
                         </label>
-                        <select required className="w-full border border-[var(--color-border)] bg-transparent px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-accent)] transition-colors rounded-sm appearance-none text-[var(--color-text)]">
+                        <TemplateSelect required className="w-full border border-[var(--color-border)] bg-transparent px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-accent)] transition-colors rounded-sm appearance-none text-[var(--color-text)]">
                           <option value="1">1 Adult</option>
                           <option value="2">2 Adults</option>
                           <option value="3">3 Adults</option>
                           <option value="4">4 Adults</option>
-                        </select>
+                        </TemplateSelect>
                       </div>
                     </div>
 
                     <div>
-                      <label className="text-[10px] font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">Special Requests</label>
+                      <label className="text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">Special Requests</label>
                       <textarea rows={4} placeholder="Dietary requirements, celebration arrangements, accessibility needs, etc." className="w-full border border-[var(--color-border)] bg-transparent px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-accent)] transition-colors resize-none rounded-sm" />
                     </div>
 
                     <div>
-                      <Button variant="primary" size="lg" className="w-full text-[11px] tracking-[0.2em] uppercase rounded-sm">
+                      <Button variant="primary" size="lg" className="w-full text-xs tracking-[0.2em] uppercase rounded-sm">
                         Request Reservation
                       </Button>
-                      <p className="text-[14px] text-[var(--color-text-muted)] text-center mt-3">No payment required at this stage. Our team will contact you to confirm.</p>
+                      <p className="text-sm text-[var(--color-text-muted)] text-center mt-3">No payment required at this stage. Our team will contact you to confirm.</p>
                     </div>
                   </form>
                 )}

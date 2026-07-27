@@ -5,23 +5,23 @@ import { Truck, RefreshCw, ShieldCheck, Headphones } from "lucide-react";
 const services = [
   {
     icon: Truck,
-    title: "무료배송",
-    description: "전 세계 10만 원 이상 주문 시 무료 배송.",
+    title: "무료 배송",
+    description: "10만 원 이상 구매 시 배송비가 무료입니다.",
   },
   {
     icon: RefreshCw,
     title: "간편 반품",
-    description: "마음에 들지 않으면 30일 이내에 무료 반품 가능.",
+    description: "수령 후 30일 이내에 무료로 반품할 수 있습니다.",
   },
   {
     icon: ShieldCheck,
     title: "안전한 결제",
-    description: "모든 거래는 종단 간 암호화로 안전하게 보호됩니다.",
+    description: "결제 정보는 암호화되어 안전하게 처리됩니다.",
   },
   {
     icon: Headphones,
-    title: "연중무휴 지원",
-    description: "저희 팀이 항상 대기 중입니다. 언제든 연락주세요.",
+    title: "고객 지원",
+    description: "상품과 주문에 관한 문의를 도와드립니다.",
   },
 ];
 
@@ -35,7 +35,7 @@ export const Services = () => {
               <s.icon strokeWidth={1.0} className="text-white/60 w-9 h-9 md:w-12 md:h-12" />
               <div>
                 <h4 className="text-sm font-semibold text-white tracking-wide">{s.title}</h4>
-                <p className="text-[14px] md:text-sm text-white/50 mt-1 md:mt-2 leading-relaxed max-w-full md:max-w-[200px]">{s.description}</p>
+                <p className="text-sm md:text-sm text-white/50 mt-1 md:mt-2 leading-relaxed max-w-full md:max-w-[200px]">{s.description}</p>
               </div>
             </div>
           ))}
@@ -44,4 +44,3 @@ export const Services = () => {
     </section>
   );
 };
-

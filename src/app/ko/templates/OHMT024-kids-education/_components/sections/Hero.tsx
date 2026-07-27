@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 const heroSlides = [
   { img: "/templates/OHMT024-kids-education/hero-slide-1.jpg", tag: "창작 미술", title: "모든 아이가 예술가가\n되는 아름다운 공간" },
   { img: "/templates/OHMT024-kids-education/hero-slide-2.jpg", tag: "STEM 교육", title: "코딩, 과학, 수학으로\n떠나는 즐거운 탐험" },
-  { img: "/templates/OHMT024-kids-education/hero-slide-3.jpg", tag: "사회성 & 놀이",  title: "놀이를 통해 함께\n배우고 자라나요" },
+  { img: "/templates/OHMT024-kids-education/hero-slide-3.jpg", tag: "사회성 & 놀이",  title: "놀이하며 함께\n배우고 자라나요" },
 ];
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
@@ -73,7 +73,7 @@ export default function Hero() {
             initial={shouldReduce ? { opacity: 0 } : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2, delay: 0.05, ease: EASE_OUT }}
-            className="text-4xl sm:text-6xl md:text-7xl font-bold leading-[1.12] tracking-tight mx-auto"
+            className="text-4xl sm:text-6xl md:text-7xl font-bold leading-[var(--leading-heading)] tracking-tight mx-auto"
             style={{ fontFamily: "var(--font-heading)", maxWidth: "24ch" }}
           >
             놀며 발견하는<br />
@@ -156,7 +156,7 @@ export default function Hero() {
               </AnimatePresence>
 
               {/* Now Enrolling badge */}
-              <div className="absolute top-3 right-3 sm:top-5 sm:right-5 z-10 inline-flex items-center justify-center bg-[var(--color-secondary)] text-white rounded-full px-3 py-1.5 sm:px-5 sm:py-2.5 text-[10px] sm:text-xs font-bold uppercase tracking-wide leading-none shadow-md">
+              <div className="absolute top-3 right-3 sm:top-5 sm:right-5 z-10 inline-flex items-center justify-center bg-[var(--color-secondary)] text-white rounded-full px-3 py-1.5 sm:px-5 sm:py-2.5 text-xs sm:text-xs font-bold uppercase tracking-wide leading-none shadow-md">
                 원생 모집 중
               </div>
 

@@ -20,11 +20,11 @@ export default function AboutFull() {
       <NavSpacer />
       <main>
         <section className="relative overflow-hidden bg-[var(--color-bg)] py-16 lg:py-24">
-          <div className="w-full max-w-[1440px] mx-auto lg:grid lg:grid-cols-[55fr_45fr] items-center">
+          <div className="w-full max-w-[1440px] mx-auto lg:grid lg:grid-cols-2 items-center">
             <div ref={imgRef} className="relative overflow-hidden aspect-[4/5] max-h-[80vh]">
               <motion.img
                 src="/templates/OHMT025-wedding/about-clara.jpg"
-                alt="클라라, 웨딩 포토그래퍼"
+                alt="OHMT 대표 포토그래퍼 클라라"
                 className="h-full w-full object-cover object-center"
                 style={{ y: imgY }}
               />
@@ -40,14 +40,14 @@ export default function AboutFull() {
                   {about.name} 소개
                 </span>
                 <h1
-                  className="font-[family-name:var(--font-heading)] font-light capitalize text-[var(--color-text)] leading-[1.05] mb-8"
+                  className="font-[family-name:var(--font-heading)] font-light capitalize text-[var(--color-text)] leading-[var(--leading-heading)] mb-8"
                   style={{ fontSize: "clamp(3.5rem, 7vw, 6rem)" }}
                 >
-                  안녕하세요,<br />{about.name}입니다.
+                  안녕하세요. 포토그래퍼<br />{about.name}입니다.
                 </h1>
-                <div className="space-y-5 text-[0.9rem] text-[var(--color-text-muted)] leading-[1.75] max-w-[420px] font-[family-name:var(--font-body)]">
+                <div className="space-y-5 text-[0.9rem] text-[var(--color-text-muted)] leading-loose max-w-[560px] font-[family-name:var(--font-body)]">
                   {about.bio.slice(0, 2).map((p, i) => (
-                    <p key={i}>{p}</p>
+                    <p key={i} className="whitespace-pre-line">{p}</p>
                   ))}
                 </div>
                 <div className="flex gap-10 mt-10 pt-10 border-t border-[var(--color-border)]">
@@ -82,10 +82,10 @@ export default function AboutFull() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: i * 0.15, ease: [0.22, 0.61, 0.36, 1] }}
-                  className="font-[family-name:var(--font-heading)] font-light text-[var(--color-text)] leading-[1.2] mb-6"
+                  className="font-[family-name:var(--font-heading)] font-light text-[var(--color-text)] leading-[var(--leading-heading)] mb-6"
                   style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)" }}
                 >
-                  {p}
+                  <span className="whitespace-pre-line">{p}</span>
                 </motion.p>
               ))}
             </div>
@@ -123,15 +123,13 @@ export default function AboutFull() {
 
         <section className="bg-[#2C241E] py-20">
           <div className="max-w-[1440px] mx-auto px-8 lg:px-16 text-center">
-            <h2 className="font-[family-name:var(--font-heading)] font-light text-4xl lg:text-6xl capitalize text-white leading-[1.1] mb-6">
-              여러분의 이야기를 들려주세요
-            </h2>
+            <h2 className="font-[family-name:var(--font-heading)] font-light text-4xl lg:text-6xl capitalize text-white leading-[var(--leading-heading)] mb-6">
+              결혼식 준비 이야기를 들려주세요</h2>
             <Link
               href="/ko/templates/OHMT025-wedding/contact"
               className="inline-flex items-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-white border-b border-white/40 pb-1 hover:border-white transition-colors duration-200"
             >
-              촬영 문의하기
-            </Link>
+              촬영 문의</Link>
           </div>
         </section>
       </main>

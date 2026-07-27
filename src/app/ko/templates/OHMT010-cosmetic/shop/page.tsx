@@ -27,7 +27,7 @@ function CosmeticShopPageContent() {
           <div className="max-w-[1440px] mx-auto px-6 md:px-10">
             <div className="mb-16">
               <span className="text-[0.65rem] font-bold uppercase tracking-[0.3em] text-black/40 mb-4 block">쇼핑하기</span>
-              <h1 className="text-[clamp(2rem,4vw,3.5rem)] font-normal tracking-tight leading-[1.1]">
+              <h1 className="text-[length:var(--text-h2)] font-normal tracking-tight leading-[var(--leading-heading)]">
                 순수한 성분 처방.<br />피부로 입증하는 변화.
               </h1>
             </div>
@@ -64,10 +64,10 @@ function CosmeticShopPageContent() {
 }
 
 
-export default function CosmeticShopPage(props: any) {
+export default function CosmeticShopPage() {
   return (
     <React.Suspense fallback={null}>
-      <CosmeticShopPageContent {...props} />
+      <CosmeticShopPageContent />
     </React.Suspense>
   );
 }

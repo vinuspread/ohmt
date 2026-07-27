@@ -18,11 +18,11 @@ export function Hero() {
                 <motion.span 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="block text-[12px] font-bold tracking-[0.5em] uppercase mb-8"
+                    className="block text-xs font-bold tracking-[0.5em] uppercase mb-8"
                 >
                     COMMERCIAL EST. 2024
                 </motion.span>
-                <h1 className="text-[12vw] md:text-[8vw] font-extrabold leading-[1.1] tracking-tighter uppercase mb-12">
+                <h1 className="text-[12vw] md:text-[8vw] font-extrabold leading-[var(--leading-heading)] md:leading-[var(--leading-heading)] tracking-tighter uppercase mb-12">
                     THE FUTURE <br /> OF FORM.
                 </h1>
             </div>

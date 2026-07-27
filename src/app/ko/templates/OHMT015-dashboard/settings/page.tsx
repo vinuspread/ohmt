@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Copy, Trash2, Plus, Eye, EyeOff } from 'lucide-react'
 import { DashboardLayout } from '../_components/layout/DashboardLayout'
 import { PageHeader } from '../_components/common/PageHeader'
+import TemplateSelect from '../_components/TemplateSelect'
 
 type SettingsTab = 'general' | 'notifications' | 'security' | 'api-keys'
 
@@ -66,14 +67,14 @@ function APIKeyRow({ name, keyValue, created }: { name: string; keyValue: string
             {visible ? <EyeOff size={14} strokeWidth={1.5} /> : <Eye size={14} strokeWidth={1.5} />}
           </button>
         </div>
-        <p className="text-[14px] text-[var(--color-text-muted)] mt-0.5">생성일 {created}</p>
+        <p className="text-sm text-[var(--color-text-muted)] mt-0.5">생성일 {created}</p>
       </div>
       <div className="flex items-center gap-1">
         <button
           onClick={() => { navigator.clipboard.writeText(keyValue); setCopied(true); setTimeout(() => setCopied(false), 1500) }}
           className="p-1.5 rounded-[var(--radius-sm)] text-[var(--color-text-muted)] hover:bg-[var(--color-bg-hover)] transition-colors"
         >
-          {copied ? <span className="text-[10px] text-[var(--color-success)]">복사됨</span> : <Copy size={14} strokeWidth={1.5} />}
+          {copied ? <span className="text-xs text-[var(--color-success)]">복사됨</span> : <Copy size={14} strokeWidth={1.5} />}
         </button>
         <button className="p-1.5 rounded-[var(--radius-sm)] text-[var(--color-danger)] hover:bg-[var(--color-danger-muted)] transition-colors">
           <Trash2 size={14} strokeWidth={1.5} />
@@ -108,13 +109,13 @@ function TabContent({ tab }: { tab: SettingsTab }) {
           <FormInput label="회사" value="OHMT" />
           <div>
             <label className="block text-xs font-medium text-[var(--color-text-muted)] mb-1.5">시간대</label>
-            <select className="w-full px-3 py-2 text-sm bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-[var(--radius-md)] text-[var(--color-text)] focus:outline-none focus:border-[var(--color-primary-border)] transition-colors">
+            <TemplateSelect className="w-full px-3 py-2 text-sm bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-[var(--radius-md)] text-[var(--color-text)] focus:outline-none focus:border-[var(--color-primary-border)] transition-colors">
               <option>UTC+9 (Seoul)</option>
               <option>UTC-8 (PST)</option>
               <option>UTC-5 (EST)</option>
               <option>UTC+0 (GMT)</option>
               <option>UTC+1 (CET)</option>
-            </select>
+            </TemplateSelect>
           </div>
           <div>
             <label className="block text-xs font-medium text-[var(--color-text-muted)] mb-2">테마</label>
@@ -194,7 +195,7 @@ function TabContent({ tab }: { tab: SettingsTab }) {
             <h4 className="text-sm font-medium text-[var(--color-text)] border-b border-[var(--color-border)] pb-2 mb-4">2단계 인증</h4>
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-sm text-[var(--color-text)]">인증 앱을 통한 2FA</p>
+                <p className="text-sm text-[var(--color-text)]">인증 앱으로 2FA 설정</p>
                 <p className="text-sm text-[var(--color-text-muted)]">추가 보안 계층 설정</p>
               </div>
               <ToggleSwitch checked={false} onChange={() => {}} />

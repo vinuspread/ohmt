@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "motion/react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -27,7 +27,7 @@ export default function BookAppointmentCta() {
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.6, ease: EASE_OUT }}
         >
-          <h2 className="font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[1.05]">
+          <h2 className="font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[var(--leading-heading)]">
             Ready to begin your journey?
           </h2>
           <p className="mt-5 text-[0.95rem] text-white/60 leading-relaxed max-w-lg mx-auto">
@@ -52,3 +52,4 @@ export default function BookAppointmentCta() {
     </section>
   );
 }
+

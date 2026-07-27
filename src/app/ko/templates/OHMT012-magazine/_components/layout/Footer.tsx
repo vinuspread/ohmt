@@ -17,7 +17,7 @@ export const Footer = () => {
               OHMT
             </Link>
             <p className="text-[0.85rem] text-[var(--theme-text-muted)] leading-relaxed font-normal">
-              디자인, 문화, 지속가능성의 교차점을 탐구하는 프리미엄 라이프스타일 에디토리얼.
+              디자인과 문화, 지속가능성이 만나는 지점을 기록하는 라이프스타일 매거진.
             </p>
           </div>
           
@@ -25,8 +25,13 @@ export const Footer = () => {
             <div>
               <h5 className="text-[0.7rem] font-medium uppercase tracking-[0.2em] text-[var(--theme-text)] mb-6">탐색</h5>
               <nav className="flex flex-col gap-3">
-                {["스토리", "아카이브", "이슈", "팟캐스트"].map(item => (
-                  <Link key={item} href="#" className="text-[0.8rem] text-[var(--theme-text-muted)] hover:text-[var(--theme-text)] transition-colors">{item}</Link>
+                {[
+                  { label: "기사", href: "/ko/templates/OHMT012-magazine" },
+                  { label: "아카이브", href: "/ko/templates/OHMT012-magazine/archive" },
+                  { label: "발행호", href: "/ko/templates/OHMT012-magazine/issues" },
+                  { label: "팟캐스트", href: "#" },
+                ].map(item => (
+                  <Link key={item.label} href={item.href} className="text-[0.8rem] text-[var(--theme-text-muted)] hover:text-[var(--theme-text)] transition-colors">{item.label}</Link>
                 ))}
               </nav>
             </div>
@@ -39,10 +44,15 @@ export const Footer = () => {
               </nav>
             </div>
             <div>
-              <h5 className="text-[0.7rem] font-medium uppercase tracking-[0.2em] text-[var(--theme-text)] mb-6">컴퍼니</h5>
+              <h5 className="text-[0.7rem] font-medium uppercase tracking-[0.2em] text-[var(--theme-text)] mb-6">회사</h5>
               <nav className="flex flex-col gap-3">
-                {["소개", "프레스", "광고", "채용"].map(item => (
-                  <Link key={item} href="#" className="text-[0.8rem] text-[var(--theme-text-muted)] hover:text-[var(--theme-text)] transition-colors">{item}</Link>
+                {[
+                  { label: "소개", href: "/ko/templates/OHMT012-magazine/about" },
+                  { label: "보도자료", href: "#" },
+                  { label: "광고", href: "#" },
+                  { label: "채용", href: "#" },
+                ].map(item => (
+                  <Link key={item.label} href={item.href} className="text-[0.8rem] text-[var(--theme-text-muted)] hover:text-[var(--theme-text)] transition-colors">{item.label}</Link>
                 ))}
               </nav>
             </div>
@@ -54,7 +64,7 @@ export const Footer = () => {
             © 2026 OHMT.
           </span>
           <div className="flex gap-8">
-            {["개인정보", "이용약관", "쿠키"].map(item => (
+            {["개인정보처리방침", "이용약관", "쿠키"].map(item => (
               <Link key={item} href="#" className="text-[0.7rem] text-[var(--theme-text-muted)] hover:text-[var(--theme-text)] uppercase tracking-widest transition-colors">{item}</Link>
             ))}
           </div>

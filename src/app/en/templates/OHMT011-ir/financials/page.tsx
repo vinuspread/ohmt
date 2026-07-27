@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
 import theme from "../theme.json";
@@ -55,10 +56,10 @@ function IRFinancialsContent() {
                 <div className="w-6 h-[1px] bg-[var(--color-accent)]" />
                 Financial Performance
               </div>
-              <h1 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold tracking-tight leading-[1.1] mb-6">
+              <h1 className="text-[length:var(--text-h1)] font-bold tracking-tight leading-[var(--leading-heading)] mb-6">
                 Financials
               </h1>
-              <p className="text-[0.9rem] text-white/55 leading-[1.4] max-w-[520px] font-normal">
+              <p className="text-[0.9rem] text-white/55 leading-[var(--leading-body)] max-w-[520px] font-normal">
                 A comprehensive overview of our financial performance, quarterly results, and key metrics.
               </p>
             </div>
@@ -71,14 +72,14 @@ function IRFinancialsContent() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7 }}
-          className="py-16 bg-[#F9F9F8] border-b border-[var(--color-border)]"
+          className="py-16 bg-[var(--color-bg-secondary)] border-b border-[var(--color-border)]"
         >
           <div className="max-w-[1280px] mx-auto px-6 md:px-10">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {metricsCards.map((card) => (
                 <div key={card.label} className="text-center">
-                  <span className="block text-[clamp(1.6rem,2.2vw,2.2rem)] font-bold text-[var(--color-dark-bg)] mb-1.5">{card.value}</span>
-                  <span className="block text-[0.62rem] font-bold uppercase tracking-[0.12em] text-[#6B6B6B] mb-1.5">{card.label}</span>
+                  <span className="block text-[length:var(--text-h3)] font-bold text-[var(--color-dark-bg)] mb-1.5">{card.value}</span>
+                  <span className="block text-[0.62rem] font-bold uppercase tracking-[0.12em] text-[var(--color-text-muted)] mb-1.5">{card.label}</span>
                   {card.change !== "-" && (
                     <span className="text-[0.72rem] text-green-600 font-medium">{card.change}</span>
                   )}
@@ -98,13 +99,13 @@ function IRFinancialsContent() {
         >
           <div className="max-w-[1280px] mx-auto px-6 md:px-10">
             <div className="mb-14 max-w-[640px]">
-              <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-5">
+              <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--color-text-muted)] mb-5">
                 Quarterly Results
               </span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.1] mb-6">
+              <h2 className="text-[length:var(--text-h3)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[var(--leading-heading)] mb-6">
                 Earnings Summary
               </h2>
-              <p className="text-[0.88rem] text-[#6B6B6B] leading-[1.82] font-normal">
+              <p className="text-[0.88rem] text-[var(--color-text-muted)] leading-loose font-normal">
                 All financial figures are reported in accordance with U.S. GAAP and are audited by Deloitte & Touche LLP.
               </p>
             </div>
@@ -122,7 +123,7 @@ function IRFinancialsContent() {
                 </thead>
                 <tbody>
                   {quarterlyData.map((q, i) => (
-                    <tr key={q.period} className={`border-b border-[var(--color-border)] ${i === 0 ? "bg-[#F9F9F8]" : ""} hover:bg-[#F9F9F8] transition-colors`}>
+                    <tr key={q.period} className={`border-b border-[var(--color-border)] ${i === 0 ? "bg-[var(--color-bg-secondary)]" : ""} hover:bg-[var(--color-bg-secondary)] transition-colors`}>
                       <td className="py-4 pr-6">
                         <span className={`text-[0.82rem] font-bold ${i === 0 ? "text-[var(--color-dark-bg)]" : "text-[var(--color-text)]"}`}>{q.period}</span>
                         {i === 0 && <span className="ml-2 text-[0.55rem] font-bold uppercase tracking-[0.12em] text-[var(--color-accent)]">Latest</span>}
@@ -142,7 +143,7 @@ function IRFinancialsContent() {
                 Download Full Report (PDF)
               </a>
               <a href="#" className="text-[0.72rem] font-bold uppercase tracking-[0.14em] text-[var(--color-dark-bg)] hover:text-[var(--color-accent)] transition-colors">
-                View SEC Filings →
+                View SEC Filings <ArrowRight size={14} className="inline" />
               </a>
             </div>
           </div>
@@ -160,10 +161,10 @@ function IRFinancialsContent() {
             <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-5">
               Annual Report
             </span>
-            <h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-tight leading-[1.1] mb-6">
+            <h2 className="text-[length:var(--text-h3)] font-bold tracking-tight leading-[var(--leading-heading)] mb-6">
               2025 Annual Report
             </h2>
-            <p className="text-[0.88rem] text-white/55 leading-[1.82] max-w-[520px] mx-auto mb-10 font-normal">
+            <p className="text-[0.88rem] text-white/55 leading-loose max-w-[520px] mx-auto mb-10 font-normal">
               Access our comprehensive annual report including management commentary, audited financial statements, and forward-looking guidance.
             </p>
             <div className="flex justify-center gap-4">
@@ -184,10 +185,10 @@ function IRFinancialsContent() {
 }
 
 
-export default function IRFinancials(props: any) {
+export default function IRFinancials() {
   return (
     <React.Suspense fallback={null}>
-      <IRFinancialsContent {...props} />
+      <IRFinancialsContent />
     </React.Suspense>
   );
 }

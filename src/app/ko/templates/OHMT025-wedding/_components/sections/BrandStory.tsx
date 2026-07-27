@@ -4,8 +4,8 @@ import { useRef } from "react";
 import { motion, useScroll, useTransform, useReducedMotion, useSpring } from "framer-motion";
 
 const phrases = [
-  "결혼식은 단순한 사진 촬영이 아닙니다.",
-  "평생 단 한 번뿐인 축제입니다.",
+  "결혼식의 하루는 사진보다 더 많은 것을 남깁니다.",
+  "두 사람과 소중한 사람들이 함께 만든 특별한 시간입니다.",
 ];
 
 export default function BrandStory() {
@@ -18,13 +18,13 @@ export default function BrandStory() {
   });
   const scrollYProgress = useSpring(rawProgress, { stiffness: 280, damping: 38, mass: 0.4 });
 
-  const x1 = useTransform(scrollYProgress, [0, 0.5], reduce ? ["0px", "0px"] : ["-40px", "0px"]);
-  const x2 = useTransform(scrollYProgress, [0, 0.5], reduce ? ["0px", "0px"] : ["40px", "0px"]);
-  const x3 = useTransform(scrollYProgress, [0, 0.6], reduce ? ["0px", "0px"] : ["-30px", "0px"]);
+  const x1 = useTransform(scrollYProgress, [0, 0.42], reduce ? ["0px", "0px"] : ["-40px", "0px"]);
+  const x2 = useTransform(scrollYProgress, [0, 0.42], reduce ? ["0px", "0px"] : ["40px", "0px"]);
+  const x3 = useTransform(scrollYProgress, [0, 0.5], reduce ? ["0px", "0px"] : ["-30px", "0px"]);
   const imgOpacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
 
-  const p0 = useTransform(scrollYProgress, [0.1, 0.32, 0.55, 0.7], [0, 1, 1, 0.3]);
-  const p1 = useTransform(scrollYProgress, [0.68, 0.85, 1, 1], [0, 1, 1, 1]);
+  const p0 = useTransform(scrollYProgress, [0.06, 0.18, 0.36, 0.48], [0, 1, 1, 0]);
+  const p1 = useTransform(scrollYProgress, [0.44, 0.58, 0.9, 1], [0, 1, 1, 1]);
 
   const phaseOpacities = [p0, p1];
 
@@ -33,7 +33,7 @@ export default function BrandStory() {
       <section
         ref={containerRef}
         className="relative hidden lg:block bg-[var(--color-bg-secondary)]"
-        style={{ height: "280vh" }}
+        style={{ height: "400vh" }}
       >
         <div className="sticky top-0 min-h-[100dvh] flex items-center justify-center overflow-hidden">
           <motion.div
@@ -64,14 +64,14 @@ export default function BrandStory() {
           >
             <img
               src="/templates/OHMT025-wedding/wedding-story-03.jpg"
-              alt="결혼식 예식"
+              alt="결혼식 장면"
               className="h-full w-full object-cover contrast-110 saturate-110 ring-1 ring-black/10"
             />
           </motion.div>
 
           <div className="relative z-10 text-center px-8 max-w-2xl mx-auto">
             <div
-              className="font-[family-name:var(--font-heading)] font-light normal-case text-[var(--color-text)] leading-[1.15] text-balance"
+              className="font-[family-name:var(--font-heading)] font-light normal-case text-[var(--color-text)] leading-[var(--leading-heading)] text-balance"
               style={{ fontSize: "clamp(2rem, 4.5vw, 3.8rem)" }}
             >
               {phrases.map((phrase, idx) => (
@@ -85,9 +85,10 @@ export default function BrandStory() {
             </div>
             <motion.p
               style={{ opacity: reduce ? 1 : p1 }}
-              className="mt-8 text-sm text-[var(--color-text-muted)] leading-relaxed max-w-md mx-auto font-[family-name:var(--font-body)]"
+              className="mt-8 text-sm text-[var(--color-text-muted)] leading-relaxed max-w-xl mx-auto font-[family-name:var(--font-body)]"
             >
-              다큐멘터리 스토리텔링과 파인아트 구성의 만남. 모든 프레임이 살아 숨쉬듯 자연스럽게.
+              <span className="md:block">연출을 줄이고 순간에 집중합니다.</span>{" "}
+              <span className="md:block">빛과 표정, 작은 움직임까지 자연스럽게 기록합니다.</span>
             </motion.p>
           </div>
         </div>
@@ -115,25 +116,23 @@ export default function BrandStory() {
           className="text-center max-w-md mx-auto"
         >
           <p
-            className="font-[family-name:var(--font-heading)] font-light normal-case text-[var(--color-text-muted)] leading-[1.2] text-balance"
+            className="font-[family-name:var(--font-heading)] font-light normal-case text-[var(--color-text-muted)] leading-[var(--leading-heading)] text-balance"
             style={{ fontSize: "clamp(1.8rem, 7vw, 2.4rem)" }}
           >
-            결혼식은 단순한 사진 촬영이 아닙니다.
-          </p>
+            결혼식의 하루는 사진보다 더 많은 것을 남깁니다.</p>
           <p
-            className="mt-2 font-[family-name:var(--font-heading)] font-light normal-case text-[var(--color-text)] leading-[1.2] text-balance"
+            className="mt-2 font-[family-name:var(--font-heading)] font-light normal-case text-[var(--color-text)] leading-[var(--leading-heading)] text-balance"
             style={{ fontSize: "clamp(1.8rem, 7vw, 2.4rem)" }}
           >
-            평생 단 한 번뿐인 축제입니다.
-          </p>
+            두 사람과 소중한 사람들이 함께 만든 특별한 시간입니다.</p>
           <p className="mt-6 text-sm text-[var(--color-text-muted)] leading-relaxed font-[family-name:var(--font-body)]">
-            다큐멘터리 스토리텔링과 파인아트 구성의 만남. 모든 프레임이 살아 숨쉬듯 자연스럽게.
+            연출을 줄이고 순간에 집중합니다. 빛과 표정, 작은 움직임까지 자연스럽게 기록합니다.
           </p>
         </motion.div>
 
         <img
           src="/templates/OHMT025-wedding/wedding-story-03.jpg"
-          alt="결혼식 예식"
+          alt="결혼식 장면"
           className="w-full max-w-xs mx-auto mt-12 aspect-[16/10] object-cover contrast-110 saturate-110 ring-1 ring-black/10"
         />
       </section>

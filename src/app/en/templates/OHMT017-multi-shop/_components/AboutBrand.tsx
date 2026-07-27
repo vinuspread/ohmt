@@ -37,7 +37,7 @@ export const AboutBrand = () => {
               Our Story
             </p>
             <h2
-              className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]"
+              className="text-4xl md:text-5xl font-bold tracking-tight leading-[var(--leading-heading)]"
               style={{ textWrap: "balance" } as React.CSSProperties}
             >
               Fashion With Intention

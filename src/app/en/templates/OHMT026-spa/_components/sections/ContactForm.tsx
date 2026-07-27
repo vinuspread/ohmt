@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import TemplateSelect from '../TemplateSelect'
 
 const basePath = "/en/templates/OHMT026-spa";
 
@@ -60,7 +61,7 @@ export default function ContactForm() {
         <label htmlFor="treatment" className="text-xs font-bold uppercase tracking-wider text-[var(--color-text-muted)] mb-2 block">
           Treatment interest
         </label>
-        <select
+        <TemplateSelect
           id="treatment"
           className="w-full bg-[var(--color-bg-secondary)] border border-[var(--color-border)] rounded-xl px-4 py-3 text-sm text-[var(--color-text)] focus:border-[var(--color-text)] focus:outline-none transition-colors"
         >
@@ -72,7 +73,7 @@ export default function ContactForm() {
           <option value="body-massage">Deep Tissue Massage</option>
           <option value="aromatherapy">Aromatherapy Ritual</option>
           <option value="consultation">General Consultation</option>
-        </select>
+        </TemplateSelect>
       </div>
 
       <div>

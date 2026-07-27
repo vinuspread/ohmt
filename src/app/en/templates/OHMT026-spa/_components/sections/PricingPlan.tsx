@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "motion/react";
 import { pricingPlans } from "../../data/data";
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
@@ -21,7 +21,7 @@ export default function PricingPlan() {
           <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">
             Pricing
           </span>
-          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[1.05]">
+          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[var(--leading-heading)]">
             Simple, transparent pricing
           </h2>
           <p className="mt-5 text-[0.95rem] text-[var(--color-text-muted)] leading-relaxed max-w-md mx-auto">
@@ -29,7 +29,7 @@ export default function PricingPlan() {
           </p>
         </motion.div>
 
-        <div className="grid gap-6 lg:grid-cols-3 items-start max-w-5xl mx-auto">
+        <div className="mx-auto grid max-w-5xl items-stretch gap-6 lg:grid-cols-3">
           {pricingPlans.map((plan, i) => (
             <motion.div
               key={plan.id}
@@ -37,7 +37,7 @@ export default function PricingPlan() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
               transition={{ duration: 0.5, delay: i * 0.1, ease: EASE_OUT }}
-              className={`rounded-2xl border p-8 lg:p-10 ${
+              className={`flex h-full flex-col rounded-2xl border p-8 lg:p-10 ${
                 plan.featured
                   ? "border-[var(--color-primary)] bg-[var(--color-primary)]/5 relative"
                   : "border-[var(--color-border)] bg-[var(--color-bg-secondary)]"
@@ -57,7 +57,7 @@ export default function PricingPlan() {
                 </span>
                 <span className="text-sm text-[var(--color-text-muted)]">{plan.period}</span>
               </div>
-              <ul className="mt-8 space-y-3">
+              <ul className="mb-8 mt-8 space-y-3">
                 {plan.features.map((f) => (
                   <li key={f} className="flex items-start gap-3 text-sm text-[var(--color-text-muted)]">
                     <span className="mt-0.5 w-1.5 h-1.5 rounded-full bg-[var(--color-primary)] shrink-0" />
@@ -67,7 +67,7 @@ export default function PricingPlan() {
               </ul>
               <a
                 href="/en/templates/OHMT026-spa/contact"
-                className={`mt-8 block w-full text-center rounded-full px-6 py-3 text-sm font-semibold transition-all duration-150 ${
+                className={`mt-auto block w-full rounded-full px-6 py-3 text-center text-sm font-semibold transition-all duration-150 ${
                   plan.featured
                     ? "bg-[var(--color-primary)] text-[var(--color-text-contrast)] hover:brightness-110"
                     : "border border-[var(--color-border)] text-[var(--color-text)] hover:border-[var(--color-text)]"

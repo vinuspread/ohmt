@@ -25,7 +25,7 @@ export function OptionsSelector({
 
   return (
     <section>
-      <h2 className="font-michroma text-[clamp(18px,2vw,28px)] text-[var(--text)] leading-[1.0] tracking-[-0.02em] mb-6">
+      <h2 className="font-michroma text-[length:var(--text-lead)] text-[var(--text)] leading-[var(--leading-display)] tracking-[-0.02em] mb-6">
         Add options
       </h2>
       <div className="space-y-0">
@@ -49,15 +49,15 @@ export function OptionsSelector({
               >
                 {isChecked && (
                   <svg width="11" height="11" viewBox="0 0 12 12" fill="none">
-                    <path d="M2 6L4.5 8.5L10 3" stroke="#0E1210" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <path d="M2 6L4.5 8.5L10 3" stroke="var(--text-on-light)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 )}
               </div>
               <div className="flex-1 min-w-0">
-                <p className="font-inter text-[14px] text-[var(--text)] mb-0.5">{opt.name}</p>
-                <p className="font-inter text-[14px] text-[var(--text-muted)]">{opt.desc}</p>
+                <p className="font-inter text-sm text-[var(--text)] mb-0.5">{opt.name}</p>
+                <p className="font-inter text-sm text-[var(--text-muted)]">{opt.desc}</p>
               </div>
-              <span className="font-michroma text-[13px] text-[var(--text)] flex-shrink-0">
+              <span className="font-michroma text-xs text-[var(--text)] flex-shrink-0">
                 +${opt.price.toLocaleString()}
               </span>
             </label>

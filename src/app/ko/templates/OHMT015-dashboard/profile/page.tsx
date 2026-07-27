@@ -116,7 +116,7 @@ export default function ProfilePage() {
             >
               <h3 className="text-sm font-semibold text-[var(--color-text)] mb-3">소개</h3>
               <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-                OHMT Motors에서 8년 이상 확장 가능한 웹 애플리케이션을 구축해온 풀스택 개발자입니다. 개발자 도구, 디자인 시스템, 성능 최적화에 열정을 가지고 있습니다.
+                OHMT Motors에서 8년 넘게 확장 가능한 웹 애플리케이션을 구축해온 풀스택 개발자입니다. 개발자 도구, 디자인 시스템, 성능 최적화에 관심이 많습니다.
               </p>
             </motion.div>
 
@@ -183,7 +183,7 @@ export default function ProfilePage() {
                         <p className="text-sm text-[var(--color-text-muted)] mt-0.5">{item.time}</p>
                       </div>
                       <span
-                        className="text-[10px] font-medium px-2 py-0.5 rounded-full shrink-0 capitalize"
+                        className="text-xs font-medium px-2 py-0.5 rounded-full shrink-0 capitalize"
                         style={{ color: item.color, background: `color-mix(in srgb, ${item.color} 14%, transparent)` }}
                       >
                         {item.category}
@@ -226,7 +226,7 @@ export default function ProfilePage() {
                       </div>
                       <div className="min-w-0 flex-1">
                         <p className="text-sm font-medium text-[var(--color-text)] truncate">{ev.title}</p>
-                        <p className="text-[14px] text-[var(--color-text-muted)] mt-0.5">
+                        <p className="text-sm text-[var(--color-text-muted)] mt-0.5">
                           {ev.date} · {ev.time}–{ev.end}
                         </p>
                       </div>

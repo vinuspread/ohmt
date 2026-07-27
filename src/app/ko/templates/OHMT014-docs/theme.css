@@ -1,4 +1,13 @@
 :root {
+  --text-display: clamp(3rem, 7vw, 5.5rem);
+  --text-h1: clamp(2.5rem, 5vw, 4rem);
+  --text-h2: clamp(2rem, 4vw, 3rem);
+  --text-h3: clamp(1.5rem, 3vw, 2rem);
+  --text-lead: clamp(1.125rem, 2vw, 1.5rem);
+  --leading-display: 0.95;
+  --leading-heading: 1.1;
+  --leading-body: 1.6;
+
   --color-primary: #1A1B1E;
   --color-accent: #1A1B1E;
   --color-accent-light: #F0F0F1;
@@ -17,11 +26,12 @@
   --color-success: #22C55E;
   --color-warning: #F59E0B;
 
-  --font-heading: 'Pretendard Variable', 'Pretendard', system-ui, -apple-system, sans-serif;
-  --font-body: 'Pretendard Variable', 'Pretendard', system-ui, -apple-system, sans-serif;
+  --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
 
   --focus-ring: 2px solid var(--color-primary);
-  --focus-ring-offset: 2px;}
+  --focus-ring-offset: 2px;
+}
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -45,48 +55,10 @@
   }
 }
 
-
-
-header a, header button, header nav { letter-spacing: -0.03em; }
-
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
-
-
-body[lang="ko"], [lang="ko"], :root {
-  word-break: keep-all;
-  letter-spacing: -0.025em;
-}
-
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav, 
-nav a, nav button, nav span {
-  letter-spacing: -0.03em;
-}
-
-/* Korean typography rules (Korean Kerning Rule) */
-body[lang="ko"], [lang="ko"], :root {
-  word-break: keep-all;
-  letter-spacing: -0.025em;
-}
-
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav, 
-nav a, nav button, nav span {
-  letter-spacing: -0.03em;
 }

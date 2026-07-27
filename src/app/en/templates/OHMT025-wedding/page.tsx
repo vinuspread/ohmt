@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
 import themeData from "./theme.json";
 
@@ -7,6 +8,10 @@ import BrandStory from "./_components/sections/BrandStory";
 import Featured from "./_components/sections/Featured";
 import HowItWorks from "./_components/sections/HowItWorks";
 import Footer from "./_components/layout/Footer";
+
+export const metadata: Metadata = {
+  title: "OHMT Wedding - Home",
+};
 
 export default function TemplatePage() {
   const jsonLd = {

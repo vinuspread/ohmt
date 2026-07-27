@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { useReducedMotion } from "motion/react";
+import { ArrowRight } from "lucide-react";
 import { blogPosts } from "../data/data";
 
 const easeOut = [0.23, 1, 0.32, 1] as const;
@@ -44,7 +45,7 @@ export const BlogPreview = () => {
                   />
                 </div>
                 <div className="mt-5">
-                  <div className="flex items-center gap-3 text-[10px] uppercase tracking-[0.2em] text-[var(--color-text-muted)]">
+                  <div className="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-[var(--color-text-muted)]">
                     <span>{post.category}</span>
                     <span>·</span>
                     <span>{post.readTime} read</span>
@@ -56,7 +57,7 @@ export const BlogPreview = () => {
                     {post.excerpt}
                   </p>
                   <span className="inline-block mt-4 text-xs uppercase tracking-[0.2em] text-[var(--color-primary)] font-medium motion-safe:group-hover:opacity-60 transition-opacity duration-200">
-                    Read More &rarr;
+                    Read More <ArrowRight size={12} className="inline" />
                   </span>
                 </div>
               </Link>

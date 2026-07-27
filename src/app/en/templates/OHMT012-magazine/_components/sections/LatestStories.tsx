@@ -4,34 +4,43 @@
 import React from "react";
 import Link from "next/link";
 
+interface MagazineT {
+  nav: { stories: string; archive: string; issues: string; about: string; subscribe: string };
+  hero: { badge: string; title1: string; title2: string; desc: string; cta: string; cta2: string; bannerTitle: string; issueBadge: string; issueNumber: string; bannerBadge: string; issueTopics: Array<{ tag: string; title: string }> };
+  featuredGrid: { label: string; items: Array<{ tag: string; title: string; desc: string }> };
+  editorsPicks: { label: string; items: Array<{ title: string; desc: string }> };
+  latestStories: { label: string; mostRead: string; stories: Array<{ tag: string; title: string; desc: string }>; mostReadItems: string[] };
+  newsletter: { label: string; title: string; desc: string; placeholder: string; submit: string };
+}
+
 const stories = [
   {
     slug: "brutalist-heart-london",
     tag: "Photography",
     title: "Light & Shadow: Capturing the brutalist heart of London.",
     desc: "A photographic journey through the city's most controversial concrete monuments.",
-    img: '/templates/OHMT012-magazine/mag-8.jpg'
+    img: '/templates/OHMT012-magazine/mag-article-brutalist-london-v2.jpg'
   },
   {
     slug: "hidden-teahouses-kyoto",
     tag: "Travel",
     title: "The hidden teahouses of Kyoto's outer districts.",
     desc: "Finding tradition and tranquility away from the tourist crowds.",
-    img: '/templates/OHMT012-magazine/mag-9.jpg'
+    img: '/templates/OHMT012-magazine/mag-article-kyoto-teahouse-v2.jpg'
   }
 ];
 
-export const LatestStories = ({ t }: { t: any }) => {
+export const LatestStories = ({ t }: { t: MagazineT }) => {
   return (
     <section className="py-12 md:py-24 bg-white">
       <div className="max-w-[var(--theme-container)] mx-auto px-6 md:px-[var(--theme-gutter)]">
-        <div className="grid md:grid-cols-[1fr_280px] gap-12 md:gap-16 items-start">
+        <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-start">
           <div>
             <div className="text-[0.875rem] font-bold uppercase tracking-[0.2em] text-[var(--theme-text-muted)] pb-4 border-b border-[var(--theme-text)] mb-8">
               {t.latestStories.label}
             </div>
             {stories.map((story, i) => (
-              <div key={i} className="grid grid-cols-[120px_1fr] md:grid-cols-[200px_1fr] gap-6 md:gap-8 py-8 border-b border-gray-100 group">
+              <div key={i} className="grid grid-cols-2 md:grid-cols-2 gap-6 md:gap-8 py-8 border-b border-gray-100 group">
                 <div className="overflow-hidden h-[135px]">
                   <img loading="lazy" src={story.img} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" alt={t.latestStories.stories[i].title} />
                 </div>
@@ -40,7 +49,7 @@ export const LatestStories = ({ t }: { t: any }) => {
                   <h3 className="font-[family-name:var(--theme-font-heading)] text-[1.15rem] font-normal leading-snug mb-2">
                     <Link href={`/en/templates/OHMT012-magazine/article/${story.slug}`} className="hover:text-[var(--theme-accent)] transition-colors">{t.latestStories.stories[i].title}</Link>
                   </h3>
-                  <p className="text-[0.875rem] text-[var(--theme-text-muted)] leading-[1.4] font-normal">
+                  <p className="text-[0.875rem] text-[var(--theme-text-muted)] leading-[var(--leading-body)] font-normal">
                     {t.latestStories.stories[i].desc}
                   </p>
                 </div>
@@ -78,10 +87,10 @@ export const LatestStories = ({ t }: { t: any }) => {
   );
 };
 
-export const NewsletterStrip = ({ t }: { t: any }) => (
+export const NewsletterStrip = ({ t }: { t: MagazineT }) => (
   <section className="bg-[var(--theme-text)] text-white py-10 md:py-20 text-center px-6">
     <div className="max-w-[var(--theme-container)] mx-auto">
-      <h2 className="font-[family-name:var(--theme-font-heading)] text-[clamp(1.8rem,3vw,2.8rem)] font-normal mb-3">
+      <h2 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-h2)] font-normal mb-3">
         {t.newsletter.title}
       </h2>
       <p className="text-[0.88rem] text-white/55 mb-8 tracking-wide font-normal">

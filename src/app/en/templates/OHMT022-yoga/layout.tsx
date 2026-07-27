@@ -1,11 +1,11 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import "./theme.css";
 
 export const metadata: Metadata = {
-  title: "OHMT - Yoga",
+  title: "OHMT - Yoga Wellness Studio Template",
   description: "Find your inner peace with premium yoga and wellness classes",
   openGraph: {
-    title: "OHMT - Yoga",
+    title: "OHMT - Yoga Wellness Studio Template",
     description: "Find your inner peace with premium yoga and wellness classes",
     url: "https://ohmytemplate.com/en/templates/OHMT022-yoga",
     siteName: "OHMT",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Yoga",
+    title: "OHMT - Yoga Wellness Studio Template",
     description: "Find your inner peace with premium yoga and wellness classes",
     images: ["/templates/OHMT022-yoga/og-image.jpg"],
   },
@@ -31,8 +31,19 @@ export default function YogaLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ExerciseGym",
+    name: "OHMT Yoga & Wellness",
+    description: "Find your inner peace with premium yoga and wellness classes",
+    url: "https://ohmytemplate.com/en/templates/OHMT022-yoga",
+  };
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&display=swap');
 
@@ -44,4 +55,3 @@ export default function YogaLayout({
     </>
   );
 }
-

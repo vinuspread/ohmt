@@ -3,8 +3,6 @@
   "name": "Burger",
   "name_ko": "버거",
   "category": "retail",
-  "description": "A modern burger restaurant template for menus, locations, brand story, ordering prompts, and bold food photography with a lively casual tone.",
-  "description_ko": "메뉴, 매장 위치, 브랜드 스토리, 주문 유도, 생동감 있는 푸드 이미지를 담은 모던 버거 레스토랑 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {
@@ -34,6 +32,14 @@
         "weight": "400",
         "leading": "1.6",
         "style": "font-normal leading-relaxed"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
       }
     },
     "spacing": {
@@ -49,5 +55,7 @@
       "transition_slow": "500ms",
       "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
     }
-  }
+  },
+  "thumbnail": "/templates/OHMT018-burger/og-image.jpg",
+  "ogImage": "/templates/OHMT018-burger/og-image.jpg"
 }

@@ -1,8 +1,13 @@
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import Link from "next/link";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 import Navbar from "../_components/Navbar";
+
+export const metadata: Metadata = {
+  title: "About - OHMT Yoga",
+};
 import PageHeader from "../_components/PageHeader";
 import InstructorCard from "../_components/InstructorCard";
 import CTASection from "../_components/CTASection";
@@ -30,13 +35,13 @@ function AboutContent() {
         {/* Right: text */}
         <div className="flex flex-col justify-end px-8 md:px-14 lg:px-20 py-16 md:py-24 bg-[var(--color-bg-alt)]">
           <p
-            className="text-[12px] tracking-[0.25em] uppercase text-[var(--color-text-muted)] mb-6"
+            className="text-xs tracking-[0.25em] uppercase text-[var(--color-text-muted)] mb-6"
             style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
           >
             Our Story
           </p>
           <h2
-            className="text-[clamp(2.2rem,3.8vw,4rem)] font-light text-[var(--color-text)] leading-[1.08] tracking-[-0.02em]"
+            className="text-[length:var(--text-h1)] font-light text-[var(--color-text)] leading-[var(--leading-heading)] tracking-[-0.02em]"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Movement as
@@ -44,7 +49,7 @@ function AboutContent() {
             Medicine
           </h2>
           <p
-            className="mt-8 text-[16px] text-[var(--color-text-muted)] leading-[1.9] max-w-[400px]"
+            className="mt-8 text-base text-[var(--color-text-muted)] leading-loose max-w-[400px]"
             style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
           >
             Founded in 2020, our studio was born from a simple belief: that
@@ -53,7 +58,7 @@ function AboutContent() {
             full-fledged wellness sanctuary.
           </p>
           <p
-            className="mt-5 text-[16px] text-[var(--color-text-muted)] leading-[1.9] max-w-[400px]"
+            className="mt-5 text-base text-[var(--color-text-muted)] leading-loose max-w-[400px]"
             style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
           >
             Natural light, warm wood floors, and an atmosphere of quiet
@@ -63,14 +68,14 @@ function AboutContent() {
           <div className="mt-10 pt-8 border-t border-[var(--color-border)] flex gap-8">
             <Link
               href="/en/templates/OHMT022-yoga/classes"
-              className="inline-flex items-center gap-2 text-[12px] tracking-[0.2em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] font-medium transition-colors"
+              className="inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] font-medium transition-colors"
               style={{ fontFamily: "var(--font-body)" }}
             >
               Explore Classes →
             </Link>
             <Link
               href="/en/templates/OHMT022-yoga/schedule"
-              className="inline-flex items-center gap-2 text-[12px] tracking-[0.2em] uppercase text-[var(--color-text-muted)] hover:text-[var(--color-text)] font-medium transition-colors"
+              className="inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-[var(--color-text-muted)] hover:text-[var(--color-text)] font-medium transition-colors"
               style={{ fontFamily: "var(--font-body)" }}
             >
               View Schedule →
@@ -84,13 +89,13 @@ function AboutContent() {
         {/* Header */}
         <div className="px-8 md:px-14 lg:px-20 pt-16 pb-12 border-b border-[var(--color-border)]">
           <p
-            className="text-[12px] tracking-[0.25em] uppercase text-[var(--color-text-muted)] mb-5"
+            className="text-xs tracking-[0.25em] uppercase text-[var(--color-text-muted)] mb-5"
             style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
           >
             Our Team
           </p>
           <h2
-            className="text-[clamp(2rem,4vw,3.8rem)] font-light text-[var(--color-text)] leading-[1.05] tracking-[-0.02em]"
+            className="text-[length:var(--text-h1)] font-light text-[var(--color-text)] leading-[var(--leading-heading)] tracking-[-0.02em]"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Meet Our Instructors
@@ -98,7 +103,7 @@ function AboutContent() {
         </div>
 
         {/* Instructor grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {INSTRUCTORS.map((instructor) => (
             <InstructorCard key={instructor.id} instructor={instructor} />
           ))}

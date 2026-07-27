@@ -1,13 +1,13 @@
-﻿import "./theme.css";
+import "./theme.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "OHMT - Kids Academy",
+  title: "OHMT - Kids Academy Education Template",
   description: "Where learning meets play. Discover 50+ fun and creative classes for kids, from coding to art and science experiments.",
   keywords: ["kids education", "children classes", "creative academy", "learning platform", "OHMT"],
   authors: [{ name: "OHMT", url: "https://ohmytemplate.com" }],
   openGraph: {
-    title: "OHMT - Kids Academy",
+    title: "OHMT - Kids Academy Education Template",
     description: "Where learning meets play. Discover 50+ fun and creative classes for kids, from coding to art and science experiments.",
     url: "https://ohmytemplate.com/en/templates/OHMT024-kids-education",
     siteName: "OHMT",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Kids Academy",
+    title: "OHMT - Kids Academy Education Template",
     description: "Where learning meets play. Discover 50+ fun and creative classes for kids, from coding to art and science experiments.",
     images: ["/templates/OHMT024-kids-education/og-image.jpg"],
   },
@@ -31,6 +31,17 @@ export const metadata: Metadata = {
 };
 
 export default function KidsEducationLayout({ children }: { children: React.ReactNode }) {
-  return <>{children}</>;
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    name: "OHMT Kids Academy",
+    description: "Where learning meets play. Discover 50+ fun and creative classes for kids, from coding to art and science experiments.",
+    url: "https://ohmytemplate.com/en/templates/OHMT024-kids-education",
+  };
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {children}
+    </>
+  );
 }
-

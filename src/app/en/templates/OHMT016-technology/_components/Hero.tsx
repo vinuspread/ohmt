@@ -13,13 +13,13 @@ export default function Hero() {
       >
         {/* Text area - solid bg, no overlap */}
         <div className="px-6 pt-10 pb-6 bg-[var(--color-bg)] flex-shrink-0">
-          <h1 className="text-[clamp(3rem,11vw,4rem)] font-extrabold tracking-[-0.04em] leading-[1.08] text-[var(--color-text)] font-heading mb-4">
+          <h1 className="text-[length:var(--text-h1)] font-extrabold tracking-[-0.04em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading mb-4">
             Autonomy<br />
             isn't the future -<br />
             <span className="text-[var(--color-accent)]">it's now.</span>
           </h1>
           <div className="mb-3 w-12 h-[3px] bg-[var(--color-accent)]" />
-          <p className="text-sm text-[var(--color-text-muted)] leading-[1.5]">
+          <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-body)]">
             Autonomous systems engineered for high-precision navigation, on-device AI computing, and fluid human-robot collaboration.
           </p>
         </div>
@@ -63,25 +63,25 @@ export default function Hero() {
         />
         <div className="relative z-10 mx-auto max-w-7xl px-6 w-full">
           <div className="w-1/2 flex flex-col items-start pr-8">
-            <h1 className="text-[clamp(2.5rem,5vw,4.5rem)] font-extrabold tracking-[-0.04em] leading-[1.08] text-[var(--color-text)] font-heading">
+            <h1 className="text-[length:var(--text-h1)] font-extrabold tracking-[-0.04em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading">
               Autonomy isn't<br />
               the future -<br />
               <span className="text-[var(--color-accent)]">it's now.</span>
             </h1>
             <div className="my-6 w-12 h-[3px] bg-[var(--color-accent)]" />
-            <p className="mb-10 text-base md:text-lg text-[var(--color-text-muted)] font-normal leading-[1.3] max-w-[480px]">
+            <p className="mb-10 text-base md:text-lg text-[var(--color-text-muted)] font-normal leading-[var(--leading-body)] max-w-[480px]">
               Autonomous systems engineered for high-precision navigation, on-device AI computing, and fluid human-robot collaboration.
             </p>
             <div className="flex flex-row items-start gap-4">
               <Link
                 href="#models"
-                className="inline-flex items-center justify-center px-8 py-4 bg-[var(--color-text)] text-white font-bold text-[13px] uppercase tracking-[0.15em] hover:bg-[var(--color-accent)] active:scale-95 transition-all duration-200 rounded-md"
+                className="inline-flex items-center justify-center px-8 py-4 bg-[var(--color-text)] text-white font-bold text-xs uppercase tracking-[0.15em] hover:bg-[var(--color-accent)] active:scale-95 transition-all duration-200 rounded-md"
               >
                 Reserve Now
               </Link>
               <Link
                 href="#models"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-[var(--color-border)] bg-white text-[var(--color-text)] font-bold text-[13px] uppercase tracking-[0.15em] hover:border-[var(--color-text)] active:scale-95 transition-all duration-200 rounded-md"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 border border-[var(--color-border)] bg-white text-[var(--color-text)] font-bold text-xs uppercase tracking-[0.15em] hover:border-[var(--color-text)] active:scale-95 transition-all duration-200 rounded-md"
               >
                 From $45,000 USD
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none">

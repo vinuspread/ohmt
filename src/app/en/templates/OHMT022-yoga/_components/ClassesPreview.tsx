@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import { INSTRUCTORS } from "../constants";
 
 export default function ClassesPreview() {
@@ -17,13 +18,13 @@ export default function ClassesPreview() {
         {/* Header */}
         <div className="px-8 md:px-14 lg:px-20 py-12 border-b border-[var(--color-border)]">
           <p
-            className="text-[13px] tracking-[0.22em] uppercase text-[var(--color-text-muted)] mb-3"
+            className="text-xs tracking-[0.22em] uppercase text-[var(--color-text-muted)] mb-3"
             style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
           >
             Meet the Team
           </p>
           <h2
-            className="text-[clamp(2.2rem,3vw,3.4rem)] font-normal text-[var(--color-text)] leading-[1.1] tracking-[-0.02em]"
+            className="text-[length:var(--text-h2)] font-normal text-[var(--color-text)] leading-[var(--leading-heading)] tracking-[-0.02em]"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             Our Instructors
@@ -40,13 +41,13 @@ export default function ClassesPreview() {
               />
               <div>
                 <p
-                  className="text-[18px] font-normal text-[var(--color-text)] tracking-[-0.01em]"
+                  className="text-lg font-normal text-[var(--color-text)] tracking-[-0.01em]"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
                   {instructor.name}
                 </p>
                 <p
-                  className="text-[14px] text-[var(--color-text-muted)] mt-1.5"
+                  className="text-sm text-[var(--color-text-muted)] mt-1.5"
                   style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
                 >
                   {instructor.role}
@@ -60,11 +61,11 @@ export default function ClassesPreview() {
         <div className="px-8 md:px-14 lg:px-20 py-8 border-t border-[var(--color-border)]">
           <Link
             href="/en/templates/OHMT022-yoga/about"
-            className="inline-flex items-center gap-2 text-[13px] tracking-[0.18em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] group transition-colors font-medium"
+            className="inline-flex items-center gap-2 text-xs tracking-[0.18em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] group transition-colors font-medium"
             style={{ fontFamily: "var(--font-body)" }}
           >
             Learn More
-            <span className="group-hover:translate-x-1 transition-all">&rarr;</span>
+            <span className="group-hover:translate-x-1 transition-all"><ArrowRight size={14} className="inline" /></span>
           </Link>
         </div>
       </div>

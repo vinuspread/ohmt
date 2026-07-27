@@ -61,13 +61,13 @@ export default function AboutPage() {
           <section className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 py-16">
             <ScrollReveal>
               <div className="space-y-6 max-w-4xl">
-                <span className="font-sans text-[11px] font-medium tracking-[0.15em] text-[var(--color-text-secondary)] uppercase block">
+                <span className="font-sans text-xs font-medium tracking-[0.15em] text-[var(--color-text-secondary)] uppercase block">
                   OUR CONTEXT
                 </span>
-                <h1 className="font-heading font-normal text-[48px] md:text-[64px] lg:text-[72px] leading-tight text-[var(--color-text)]">
+                <h1 className="font-heading font-normal text-5xl md:text-6xl lg:text-7xl leading-tight text-[var(--color-text)]">
                   About the Practice.
                 </h1>
-                <p className="font-heading font-normal text-[24px] md:text-[28px] leading-[1.5] text-[var(--color-text-secondary)] pt-4">
+                <p className="font-heading font-normal text-2xl md:text-3xl leading-[var(--leading-body)] text-[var(--color-text-secondary)] pt-4">
                   We believe that space has the power to transform the way people live. Our designs converge precision craftsmanship with organic spatial dialogue.
                 </p>
               </div>
@@ -90,11 +90,11 @@ export default function AboutPage() {
             <ScrollReveal>
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                 <div className="lg:col-span-4">
-                  <h2 className="font-heading font-normal text-[30px] md:text-[36px] text-[var(--color-text)]">
+                  <h2 className="font-heading font-normal text-3xl md:text-4xl text-[var(--color-text)]">
                     Silent Authority.
                   </h2>
                 </div>
-                <div className="lg:col-span-8 font-sans text-[16px] leading-[1.8] text-[var(--color-text-secondary)] space-y-6">
+                <div className="lg:col-span-8 font-sans text-base leading-loose text-[var(--color-text-secondary)] space-y-6">
                   <p>
                     Every corner, surface, and void we touch is calculated to evoke deep emotional resonance. Our architectural discipline ensures that massive spatial layouts retain microscopic structural detail and material excellence.
                   </p>
@@ -111,7 +111,7 @@ export default function AboutPage() {
             <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20">
               <ScrollReveal>
                 <div className="border-b border-[var(--color-border)] pb-8 mb-16">
-                  <h2 className="font-heading font-normal text-[30px] md:text-[36px] text-[var(--color-text)]">
+                  <h2 className="font-heading font-normal text-3xl md:text-4xl text-[var(--color-text)]">
                     Our History.
                   </h2>
                 </div>
@@ -121,13 +121,13 @@ export default function AboutPage() {
                 {timeline.map((item, idx) => (
                   <ScrollReveal key={idx} delay={idx * 0.1}>
                     <div className="space-y-4">
-                      <span className="font-heading font-normal text-[48px] text-[var(--color-accent)] leading-none block">
+                      <span className="font-heading font-normal text-5xl text-[var(--color-accent)] leading-none block">
                         {item.year}
                       </span>
-                      <h3 className="font-sans font-medium text-[16px] text-[var(--color-text)]">
+                      <h3 className="font-sans font-medium text-base text-[var(--color-text)]">
                         {item.title}
                       </h3>
-                      <p className="font-sans text-[14px] text-[var(--color-text-secondary)] leading-relaxed">
+                      <p className="font-sans text-sm text-[var(--color-text-secondary)] leading-relaxed">
                         {item.desc}
                       </p>
                     </div>
@@ -141,7 +141,7 @@ export default function AboutPage() {
           <section className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20">
             <ScrollReveal>
               <div className="border-b border-[var(--color-border)] pb-8 mb-16">
-                <h2 className="font-heading font-normal text-[30px] md:text-[36px] text-[var(--color-text)]">
+                <h2 className="font-heading font-normal text-3xl md:text-4xl text-[var(--color-text)]">
                   The Team.
                 </h2>
               </div>
@@ -161,10 +161,10 @@ export default function AboutPage() {
                       />
                     </div>
                     <div className="space-y-1">
-                      <h3 className="font-sans font-medium text-[16px] text-[var(--color-text)]">
+                      <h3 className="font-sans font-medium text-base text-[var(--color-text)]">
                         {member.name}
                       </h3>
-                      <p className="font-sans text-[12px] font-medium tracking-wider text-[var(--color-text-secondary)]">
+                      <p className="font-sans text-xs font-medium tracking-wider text-[var(--color-text-secondary)]">
                         {member.role}
                       </p>
                     </div>

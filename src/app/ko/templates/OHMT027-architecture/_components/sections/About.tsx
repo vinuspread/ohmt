@@ -5,9 +5,9 @@ import { ScrollReveal } from "../ui/ScrollReveal";
 
 export function About() {
   const stats = [
-    { value: "15+", label: "년의 설계 경험" },
-    { value: "120+", label: "완료 프로젝트" },
-    { value: "24", label: "국제 수상" },
+    { value: "15+", label: "년 이상 설계" },
+    { value: "120+", label: "완료한 프로젝트" },
+    { value: "24", label: "수상" },
   ];
 
   const brandLogos = [
@@ -26,10 +26,10 @@ export function About() {
             <div className="col-span-12 lg:col-span-4 flex flex-col gap-10">
               {stats.map((stat, index) => (
                 <div key={index} className="flex flex-col border-b border-[var(--color-border)] pb-6 last:border-b-0 last:pb-0">
-                  <span className="font-heading font-normal text-[64px] lg:text-[80px] leading-none text-[var(--color-text)]">
+                  <span className="font-heading font-normal text-6xl lg:text-8xl leading-none text-[var(--color-text)]">
                     {stat.value}
                   </span>
-                  <span className="font-sans text-[11px] font-medium tracking-[0.15em] text-[var(--color-text-secondary)] mt-2">
+                  <span className="font-sans text-xs font-medium tracking-[0.15em] text-[var(--color-text-secondary)] mt-2">
                     {stat.label}
                   </span>
                 </div>
@@ -38,11 +38,13 @@ export function About() {
 
             {/* Right: Brand Philosophy — col 5–12 */}
             <div className="col-span-12 lg:col-span-8 space-y-8 lg:pt-4">
-              <h2 className="font-heading font-normal text-[26px] md:text-[32px] lg:text-[36px] leading-[1.1] text-[var(--color-text)]">
-                공간은 사람들이 살아가는 방식을 바꿀 수 있다고 믿습니다. 우리의 작업은 정밀한 장인정신과 유기적인 공간의 대화를 하나로 엮습니다.
+              <h2 className="font-heading font-normal text-3xl md:text-4xl lg:text-4xl leading-[var(--leading-heading)] text-[var(--color-text)]">
+                <span className="md:block">공간은 사람의 일상과 관계를 바꿀 수 있습니다.</span>{" "}
+                <span className="md:block">OHMT는 구조와 재료, 동선을 세심하게 다듬어 오래 사용할 수 있는 공간을 설계합니다.</span>
               </h2>
-              <p className="font-sans text-[16px] leading-[1.8] text-[var(--color-text-secondary)] max-w-xl">
-                서울에서 출발한 우리의 스튜디오는 주거, 상업 공간, 공공 건축을 세계 곳곳에서 설계합니다. 모든 프로젝트는 재료의 정직함과 구조적 우아함을 조용하지만 분명하게 드러냅니다.
+              <p className="font-sans text-base leading-loose text-[var(--color-text-secondary)] max-w-xl">
+                <span className="md:block">서울을 기반으로 주거, 상업, 공공 건축과 인테리어 프로젝트를 진행합니다.</span>{" "}
+                <span className="md:block">대지와 사용자의 요구를 살피고, 구조와 재료가 자연스럽게 드러나는 공간을 만듭니다.</span>
               </p>
             </div>
           </div>
@@ -52,14 +54,13 @@ export function About() {
         <div className="border-t border-[var(--color-border)] mt-20 pt-10">
           <ScrollReveal delay={0.2}>
             <div className="flex flex-col sm:flex-row justify-between items-center gap-6 opacity-40 hover:opacity-60 transition-opacity duration-300">
-              <span className="font-sans text-[12px] tracking-[0.1em] text-[var(--color-text-secondary)] uppercase">
-                소개 매체
-              </span>
+              <span className="font-sans text-xs tracking-[0.1em] text-[var(--color-text-secondary)] uppercase">
+                주요 소개 매체</span>
               <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16">
                 {brandLogos.map((logo, index) => (
                   <span
                     key={index}
-                    className="font-heading text-[20px] md:text-[24px] text-[var(--color-text)] tracking-wide"
+                    className="font-heading text-xl md:text-2xl text-[var(--color-text)] tracking-wide"
                   >
                     {logo}
                   </span>

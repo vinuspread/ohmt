@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "motion/react";
 import Link from "next/link";
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
@@ -136,3 +136,4 @@ export default function Mission() {
     </section>
   );
 }
+

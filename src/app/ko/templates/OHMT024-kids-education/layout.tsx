@@ -1,13 +1,13 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import "./theme.css";
 
 export const metadata: Metadata = {
-  title: "OHMT - 키즈 아카데미",
-  description: "놀이로 시작하는 배움. 코딩부터 미술, 과학 실험까지 50가지 이상의 어린이 창의 클래스를 만나보세요.",
+  title: "OHMT - ?? ???? ?? ???",
+  description: "놀이로 시작하는 배움. 코딩부터 미술, 과학 실험까지 50가지 이상의 어린이 창의 클래스를 경험해보세요.",
   keywords: ["어린이 교육", "어린이 클래스", "창의 아카데미", "학습 플랫폼", "OHMT"],
   openGraph: {
-    title: "OHMT - 키즈 아카데미",
-    description: "놀이로 시작하는 배움. 코딩부터 미술, 과학 실험까지 50가지 이상의 어린이 창의 클래스를 만나보세요.",
+    title: "OHMT - ?? ???? ?? ???",
+    description: "놀이로 시작하는 배움. 코딩부터 미술, 과학 실험까지 50가지 이상의 어린이 창의 클래스를 경험해보세요.",
     url: "https://ohmytemplate.com/ko/templates/OHMT024-kids-education",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT024-kids-education/og-image.jpg", width: 1200, height: 630 }],
@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - 키즈 아카데미",
-    description: "놀이로 시작하는 배움. 코딩부터 미술, 과학 실험까지 50가지 이상의 어린이 창의 클래스를 만나보세요.",
+    title: "OHMT - ?? ???? ?? ???",
+    description: "놀이로 시작하는 배움. 코딩부터 미술, 과학 실험까지 50가지 이상의 어린이 창의 클래스를 경험해보세요.",
     images: ["/templates/OHMT024-kids-education/og-image.jpg"],
   },
   robots: { index: true, follow: true },
@@ -37,8 +37,7 @@ export default function KidsEducationLayout({ children }: { children: React.Reac
           --font-pretendard: 'Pretendard', sans-serif;
         }
       `}</style>
-      {children}
+      <div lang="ko" className="ohmt024-kids-education">{children}</div>
     </div>
   );
 }
-

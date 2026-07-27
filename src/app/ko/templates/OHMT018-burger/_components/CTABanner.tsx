@@ -17,7 +17,7 @@ export const CTABanner = () => {
       </div>
       <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 text-center">
         <motion.h2
-          className="text-4xl md:text-6xl font-bold text-white tracking-tight leading-[1.05]"
+          className="text-4xl md:text-6xl font-bold text-white tracking-tight leading-[var(--leading-heading)]"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}

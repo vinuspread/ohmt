@@ -16,9 +16,9 @@ export default function ServiceFull() {
         <section className="bg-[var(--color-secondary)] py-24 lg:py-32">
           <div className="mx-auto max-w-7xl px-6">
             <motion.div initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: EASE_OUT }} className="max-w-2xl">
-              <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">TREATMENTS</span>
-              <h1 className="mt-4 font-[family-name:var(--font-heading)] text-6xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[1.1]">맞춤형 트리트먼트</h1>
-              <p className="mt-4 text-[0.95rem] text-white/60 leading-relaxed max-w-lg">피부 컨디션, 회복 속도, 원하는 결과에 맞춰 필요한 케어만 조합합니다.</p>
+              <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">서비스</span>
+              <h1 className="mt-4 font-[family-name:var(--font-heading)] text-6xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[var(--leading-heading)]">맞춤형 케어</h1>
+              <p className="mt-4 text-[0.95rem] text-white/60 leading-relaxed max-w-lg">현재 피부 상태와 민감도, 원하는 관리 방향에 맞춰 필요한 케어를 구성합니다.</p>
             </motion.div>
           </div>
         </section>
@@ -31,7 +31,7 @@ export default function ServiceFull() {
                   <div className="p-6">
                     <h2 className="font-[family-name:var(--font-heading)] text-lg font-bold tracking-tight text-[var(--color-text)]">{service.title}</h2>
                     <p className="mt-2 text-sm text-[var(--color-text-muted)] leading-relaxed">{service.description}</p>
-                    <a href="/ko/templates/OHMT026-spa/contact" className="mt-5 inline-flex items-center text-sm font-semibold text-[var(--color-primary)] hover:underline">예약하기 →</a>
+                    <a href="/ko/templates/OHMT026-spa/contact" className="mt-5 inline-flex items-center text-sm font-semibold text-[var(--color-primary)] hover:underline">상담 예약 →</a>
                   </div>
                 </motion.div>
               ))}
@@ -41,9 +41,12 @@ export default function ServiceFull() {
         <section className="py-24 bg-[var(--color-bg-secondary)]">
           <div className="mx-auto max-w-4xl px-6">
             <motion.div initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6, ease: EASE_OUT }} className="text-center">
-              <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">SKIN FIRST</span>
-              <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[1.1]">모든 케어는 피부 컨디션에서 시작됩니다</h2>
-              <p className="mt-5 text-[0.95rem] text-[var(--color-text-muted)] leading-relaxed max-w-2xl mx-auto">상담과 피부 분석으로 현재 상태를 확인합니다. 이후 필요한 방식만 조합해 맞춤 프로토콜을 만들고, 사후 관리로 변화 과정을 함께 추적합니다.</p>
+              <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">피부 상태부터</span>
+              <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[var(--leading-heading)]">모든 케어는 현재 피부 상태에서 시작됩니다</h2>
+              <p className="mx-auto mt-5 max-w-3xl text-[0.95rem] leading-relaxed text-[var(--color-text-muted)]">
+                <span className="md:block">상담을 통해 현재 피부 상태를 확인한 뒤 필요한 관리만 구성합니다.</span>{" "}
+                <span className="md:block">관리 후에는 홈케어 방법과 다음 일정을 안내합니다.</span>
+              </p>
             </motion.div>
           </div>
         </section>

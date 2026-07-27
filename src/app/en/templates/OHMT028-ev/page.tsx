@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Navbar } from "./_components/Navbar";
 import { Hero } from "./_components/sections/Hero";
 import { Usp } from "./_components/sections/Usp";
@@ -6,6 +7,10 @@ import { Story } from "./_components/sections/Story";
 import { DesignDetail } from "./_components/sections/DesignDetail";
 import { Cta } from "./_components/sections/Cta";
 import { Footer } from "./_components/sections/Footer";
+
+export const metadata: Metadata = {
+  title: "OHMT EV - Home",
+};
 
 export default function HomePage() {
   return (

@@ -1,11 +1,11 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - Studio",
+  title: "OHMT - Corporate Studio Portfolio Template",
   description: "Architecture and spatial design studio",
   openGraph: {
-    title: "OHMT - Studio",
+    title: "OHMT - Corporate Studio Portfolio Template",
     description: "Architecture and spatial design studio",
     url: "https://ohmytemplate.com/en/templates/OHMT006-studio",
     siteName: "OHMT",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Studio",
+    title: "OHMT - Corporate Studio Portfolio Template",
     description: "Architecture and spatial design studio",
     images: ["/templates/OHMT006-studio/og-image.jpg"],
   },
@@ -45,4 +45,3 @@ export default function StudioLayout({
     </>
   );
 }
-

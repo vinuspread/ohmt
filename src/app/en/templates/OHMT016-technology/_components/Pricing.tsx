@@ -12,10 +12,10 @@ export default function Pricing() {
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
             Product Lineup
           </span>
-          <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.2] text-[var(--color-text)] font-heading">
+          <h2 className="text-[length:var(--text-h1)] font-bold tracking-[-0.02em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading">
             Models available
           </h2>
-          <p className="mt-4 mx-auto max-w-xl text-sm md:text-base text-[var(--color-text-muted)] leading-[1.2]">
+          <p className="mt-4 mx-auto max-w-xl text-sm md:text-base text-[var(--color-text-muted)] leading-[var(--leading-heading)]">
             Select the autonomous system that aligns best with your operations and scalability criteria.
           </p>
         </div>
@@ -33,7 +33,7 @@ export default function Pricing() {
                   <h3 className="text-xl font-bold text-[var(--color-text)] mb-2 font-heading transition-colors group-hover:text-[var(--color-accent)]">
                     {model.name}
                   </h3>
-                  <p className="text-sm text-[var(--color-text-muted)] leading-[1.2] mb-6">
+                  <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-heading)] mb-6">
                     {model.description}
                   </p>
                 </div>
@@ -46,12 +46,12 @@ export default function Pricing() {
                     <span className="text-sm text-[var(--color-text-muted)] line-through">
                       {model.slashedPrice}
                     </span>
-                    <span className="inline-block px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider bg-[var(--color-success)]/10 text-[var(--color-success)]">
+                    <span className="inline-block px-2.5 py-1 text-xs font-bold uppercase tracking-wider bg-[var(--color-success)]/10 text-[var(--color-success)]">
                       {model.saveAmount}
                     </span>
                   </div>
 
-                  <p className="text-[14px] text-[var(--color-text-muted)] mb-6">
+                  <p className="text-sm text-[var(--color-text-muted)] mb-6">
                     {model.financing}
                   </p>
 

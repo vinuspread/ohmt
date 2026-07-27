@@ -68,7 +68,7 @@ export function ProjectStatus({ className = '' }: { className?: string }) {
                   ))}
                 </div>
                 <span
-                  className="text-[10px] font-semibold px-2 py-0.5 rounded-full"
+                  className="text-xs font-semibold px-2 py-0.5 rounded-full"
                   style={{ color: p.statusColor, background: `color-mix(in srgb, ${p.statusColor} 15%, transparent)` }}
                 >
                   {p.status}
@@ -84,7 +84,7 @@ export function ProjectStatus({ className = '' }: { className?: string }) {
                 style={{ background: p.statusColor }}
               />
             </div>
-            <p className="text-[14px] text-[var(--color-text-muted)] text-right">완료 {p.progress}%</p>
+            <p className="text-sm text-[var(--color-text-muted)] text-right">완료 {p.progress}%</p>
           </div>
         ))}
       </div>

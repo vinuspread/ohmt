@@ -18,8 +18,8 @@ function CosmeticAccountPageContent() {
           <div className="max-w-[1440px] mx-auto px-6 md:px-10">
             <div className="mb-16">
               <span className="text-[0.65rem] font-bold uppercase tracking-[0.3em] text-black/40 mb-4 block">마이페이지</span>
-              <h1 className="text-[clamp(2rem,4vw,3.5rem)] font-normal tracking-tight leading-[1.1]">
-                다시 만나 반갑습니다.
+              <h1 className="text-[length:var(--text-h2)] font-normal tracking-tight leading-[var(--leading-heading)]">
+                로그인이 필요합니다.
               </h1>
             </div>
 
@@ -65,10 +65,10 @@ function CosmeticAccountPageContent() {
 }
 
 
-export default function CosmeticAccountPage(props: any) {
+export default function CosmeticAccountPage() {
   return (
     <React.Suspense fallback={null}>
-      <CosmeticAccountPageContent {...props} />
+      <CosmeticAccountPageContent />
     </React.Suspense>
   );
 }

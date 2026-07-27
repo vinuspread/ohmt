@@ -1,10 +1,9 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { ArrowRight, MousePointerClick, Headphones } from "lucide-react";
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { collections } from "./data/collections";
 import Header from "./_components/layout/Header";
 import Footer from "./_components/layout/Footer";
@@ -26,7 +25,6 @@ const stagger = {
 };
 
 function HomeContent() {
-  const searchParams = useSearchParams();
   const t = {
   "nav": {
     "specialExhibition": `Special Exhibition`,
@@ -36,7 +34,7 @@ function HomeContent() {
     "souvenirShop": `Souvenir Shop`
   },
   "hero": {
-    "badge": `Musei Vaticani · OHMT Curation`,
+    "badge": `Musei Vaticani - OHMT Curation`,
     "title1": `THE ETERNAL`,
     "title2": `Masterpieces`,
     "cta": `Begin Journey`
@@ -57,22 +55,22 @@ function HomeContent() {
     "editorial": `Editorial`,
     "title": `Divine Proportions`,
     "p1": `The Vatican Museums stand not only as a repository of historical objects, but as a monument to the relentless human pursuit of perfection. Walking through its halls is akin to walking through the physical manifestation of the Renaissance mind.`,
-    "p2": `Our curation seeks to extract the structural brilliance from the overwhelming ornamentation. By highlighting works like the Laocoön or the delicate Pietà in an isolated, digital space, we allow their raw theological and emotional gravity to echo without the noise of the physical gallery crowd.`,
+    "p2": `Our curation seeks to extract the structural brilliance from the overwhelming ornamentation. By highlighting works like the Laocoon or the delicate Pieta in an isolated, digital space, we allow their raw theological and emotional gravity to echo without the noise of the physical gallery crowd.`,
     "p3": `Every brushstroke captured by Raphael, every chisel strike endured by Michelangelo. These are not relics of the past. They are continuing dialogues on the nature of humanity, suffering, knowledge, and divinity.`,
     "curator": `Curator`,
     "curatorName": `OHMT Exhibition`
   },
   "ourStory": {
-    "heritage": `MUSEI VATICANI · 500 YEARS OF HERITAGE`,
+    "heritage": `MUSEI VATICANI - 500 YEARS OF HERITAGE`,
     "heroTitle": `The Soul of Stone`,
     "ch1": `Chapter I`,
     "ch1Title": `The Foundation of Light`,
-    "ch1Desc": `Founded in 1506 with the discovery of the Laocoön, the Vatican Museums encompass five centuries of papal patronage and the relentless pursuit of artistic perfection.`,
+    "ch1Desc": `Founded in 1506 with the discovery of the Laocoon, the Vatican Museums encompass five centuries of papal patronage and the relentless pursuit of artistic perfection.`,
     "timelineTitle": `A Line in Time.`,
     "timeline": [
       {
         "year": `1506`,
-        "title": `Discovery of Laocoön`,
+        "title": `Discovery of Laocoon`,
         "desc": `Pope Julius II purchasing the marble statue, which led to the foundation of the museum.`
       },
       {
@@ -135,7 +133,7 @@ function HomeContent() {
         "name": `Greek Brilliance: Classical Sculptures`,
         "period": `2026.05.20 - 10.15`,
         "venue": `Statue Hall, Clementine Wing`,
-        "desc": `Experience the tactile genius of ancient Greek masters, from the Laocoön to the Apollo Belvedere, in global resolution.`,
+        "desc": `Experience the tactile genius of ancient Greek masters, from the Laocoon to the Apollo Belvedere, in global resolution.`,
         "tag": `Classical Antiquity`
       }
     ],
@@ -180,15 +178,43 @@ function HomeContent() {
 
   const heroScale = useTransform(heroProgress, [0, 1], [1, 1.15]);
   const heroOpacity = useTransform(heroProgress, [0, 0.8], [1, 0]);
+  const horizontalRef = useRef<HTMLElement>(null);
+  const horizontalTrackRef = useRef<HTMLDivElement>(null);
+  const [horizontalTravel, setHorizontalTravel] = useState(0);
+  const [isDesktop, setIsDesktop] = useState(false);
+  const shouldReduceMotion = useReducedMotion();
 
-  // Horizontal Scroll Setup
-  const horizontalRef = useRef(null);
   const { scrollYProgress: horizontalProgress } = useScroll({
     target: horizontalRef,
     offset: ["start start", "end end"]
   });
-  
-  const x = useTransform(horizontalProgress, [0, 1], ["0%", "-55%"]);
+
+  const x = useTransform(horizontalProgress, [0, 1], [0, -horizontalTravel]);
+  const shouldPinGallery = isDesktop && !shouldReduceMotion && horizontalTravel > 0;
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+    const updateLayout = () => {
+      window.requestAnimationFrame(() => {
+        setIsDesktop(mediaQuery.matches);
+        const trackWidth = horizontalTrackRef.current?.scrollWidth ?? 0;
+        setHorizontalTravel(Math.max(0, trackWidth - window.innerWidth));
+      });
+    };
+
+    updateLayout();
+    mediaQuery.addEventListener("change", updateLayout);
+    window.addEventListener("resize", updateLayout);
+
+    const resizeObserver = new ResizeObserver(updateLayout);
+    if (horizontalTrackRef.current) resizeObserver.observe(horizontalTrackRef.current);
+
+    return () => {
+      mediaQuery.removeEventListener("change", updateLayout);
+      window.removeEventListener("resize", updateLayout);
+      resizeObserver.disconnect();
+    };
+  }, []);
 
   return (
 
@@ -218,19 +244,19 @@ function HomeContent() {
           variants={stagger}
           className="relative z-20 pointer-events-none mt-16 md:mt-20"
         >
-          <motion.span variants={fadeIn} className="inline-block text-[13px] md:text-xs uppercase tracking-[0.6em] font-medium mb-6 md:mb-8 text-[var(--color-accent)]/70">
+          <motion.span variants={fadeIn} className="inline-block text-xs md:text-xs uppercase tracking-[0.6em] font-medium mb-6 md:mb-8 text-[var(--color-accent)]/70">
             {t.hero.badge}
           </motion.span>
           <motion.h2
             variants={fadeIn}
-            className="text-5xl md:text-6xl lg:text-[8vw] font-serif font-medium leading-[0.9] tracking-tighter mb-8 md:mb-12 text-[var(--color-accent)]"
+            className="text-4xl md:text-5xl lg:text-[6.5vw] font-serif font-medium leading-[var(--leading-display)] tracking-tighter mb-8 md:mb-12 text-[var(--color-accent)]"
           >
             {t.hero.title1} <br />
             <span className="font-normal text-[var(--color-accent)]/80">{t.hero.title2}</span>
           </motion.h2>
           <motion.p
             variants={fadeIn}
-            className="text-[13px] md:text-[15px] text-[var(--color-accent)]/50 font-normal leading-[1.4] tracking-[0.01em] max-w-[360px] mx-auto mb-10 md:mb-14"
+            className="text-xs md:text-sm text-[var(--color-accent)]/50 font-normal leading-[var(--leading-body)] tracking-[0.01em] max-w-[620px] mx-auto mb-10 md:mb-14"
             style={{ textWrap: "pretty" } as React.CSSProperties}
           >
             From the whisper of ancient marble to the fire of the Sistine ceiling, an encounter that five centuries of patronage have been preparing for you.
@@ -252,9 +278,9 @@ function HomeContent() {
           className="max-w-[1440px] mx-auto px-6 py-4 md:py-10 flex flex-col md:flex-row items-center justify-between gap-6 md:gap-10"
         >
           <div className="flex-1 text-center md:text-left">
-            <span className="text-[8px] md:text-[13px] uppercase font-bold tracking-[0.5em] text-black/40 block mb-2 md:mb-4">{t.audioGuide.badge}</span>
+            <span className="text-xs md:text-xs uppercase font-bold tracking-[0.5em] text-black/40 block mb-2 md:mb-4">{t.audioGuide.badge}</span>
             <h3 className="text-lg md:text-3xl font-serif font-bold mb-3 md:mb-4">{t.audioGuide.title}</h3>
-            <p className="text-black/60 font-normal max-w-xs md:max-w-md text-sm md:text-sm leading-[1.4]">
+            <p className="text-black/60 font-normal max-w-xs md:max-w-md text-sm md:text-sm leading-[var(--leading-body)]">
               {t.audioGuide.desc}
             </p>
           </div>
@@ -263,31 +289,39 @@ function HomeContent() {
               <Headphones size={20} className="md:w-6 md:h-6" />
             </button>
             <div className="flex flex-col items-center md:items-start">
-              <span className="text-[8px] md:text-[13px] uppercase tracking-widest font-bold">{t.audioGuide.preview}</span>
-              <span className="text-[12px] md:text-xs text-black/40">0:00 / 1:45</span>
+              <span className="text-xs md:text-xs uppercase tracking-widest font-bold">{t.audioGuide.preview}</span>
+              <span className="text-xs md:text-xs text-black/40">0:00 / 1:45</span>
             </div>
           </div>
         </motion.div>
       </section>
 
       {/* Horizontal Scroll Gallery Section */}
-      <section ref={horizontalRef} className="relative bg-[var(--color-primary)]" style={{ height: "auto" }}>
-        <div className="sticky top-0 min-h-screen flex flex-col justify-center overflow-hidden py-6 md:py-16 lg:pt-16">
-
+      <section
+        ref={horizontalRef}
+        className="relative bg-[var(--color-primary)]"
+        style={{ height: shouldPinGallery ? `calc(100vh + ${horizontalTravel}px)` : "auto" }}
+      >
+        <div className={`${shouldPinGallery ? "sticky top-0 h-screen overflow-hidden" : "relative"} flex flex-col justify-center py-6 md:py-16 lg:pt-16`}>
           <div className="px-4 md:px-12 lg:px-24 mb-3 md:mb-8 lg:mb-12">
-            <span className="text-[8px] md:text-[13px] uppercase font-bold tracking-[0.5em] text-white/40 block mb-2 md:mb-4">{t.gallery.badge}</span>
-            <h3 className="text-xl md:text-4xl lg:text-6xl font-serif font-bold">{t.gallery.title}</h3>
+            <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/40 block mb-2 md:mb-4">{t.gallery.badge}</span>
+            <h3 className="text-xl md:text-4xl lg:text-6xl font-serif font-bold tracking-[-0.03em]">{t.gallery.title}</h3>
           </div>
 
-          <motion.div style={{ x }} className="flex gap-3 md:gap-6 lg:gap-16 lg:gap-24 px-4 md:px-12 lg:px-24 pb-6 md:pb-12 lg:pb-20 w-full md:w-[150vw] lg:w-[150vw] overflow-x-auto md:overflow-visible touch-pan-x">
-            {collections.map((item, i) => (
+          <div className={shouldPinGallery ? "overflow-hidden" : "overflow-x-auto no-scrollbar touch-pan-x"}>
+            <motion.div
+              ref={horizontalTrackRef}
+              style={{ x: shouldPinGallery ? x : 0 }}
+              className="flex w-max gap-3 px-4 pb-6 md:gap-6 md:px-12 md:pb-12 lg:gap-24 lg:px-24 lg:pb-20"
+            >
+            {collections.slice(0, 6).map((item, i) => (
               <motion.div
-                key={i}
+                key={item.id}
                 initial={{ opacity: 0, x: 80 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: "-60px" }}
                 transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: i * 0.08 }}
-                className="w-[85vw] sm:w-[80vw] md:w-[50vw] lg:w-[35vw] xl:w-[25vw] shrink-0"
+                className="w-[85vw] shrink-0 sm:w-[80vw] md:w-[50vw] lg:w-[35vw] xl:w-[25vw]"
               >
                 <Link href={`/en/templates/OHMT021-museum/collections/${item.slug}`} className="group relative cursor-pointer block">
                   <div className="relative aspect-[3/4] bg-[var(--color-bg-secondary)] overflow-hidden mb-8">
@@ -296,9 +330,9 @@ function HomeContent() {
                       alt={item.title}
                       className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-[1.5s] ease-out brightness-75 group-hover:brightness-100"
                     />
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300" />
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700" />
                     
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
                       <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/30 text-white">
                         <MousePointerClick size={20} />
                       </div>
@@ -308,7 +342,7 @@ function HomeContent() {
                   <div className="flex flex-col border-t border-white/10 pt-6 px-1">
                     <div className="flex justify-between items-start mb-4 gap-4">
                       <h4 className="text-xl md:text-2xl font-serif tracking-tight leading-snug break-words">{item.title}</h4>
-                      <span className="text-[12px] whitespace-nowrap uppercase tracking-widest text-white/50 bg-white/5 px-2 py-1 h-fit">{item.tag}</span>
+                      <span className="text-xs whitespace-nowrap uppercase tracking-widest text-white/50 bg-white/5 px-2 py-1 h-fit">{item.tag}</span>
                     </div>
                     <div className="flex justify-between text-xs font-normal tracking-widest text-white/60">
                       <span className="truncate pr-4">{item.artist}</span>
@@ -318,7 +352,8 @@ function HomeContent() {
                 </Link>
               </motion.div>
             ))}
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </section>
 
@@ -332,9 +367,9 @@ function HomeContent() {
             transition={{ duration: 1 }}
             className="order-2 md:order-1 max-w-lg"
           >
-            <span className="text-[12px] md:text-[13px] uppercase font-bold tracking-[0.5em] text-black/40 mb-4 md:mb-6 block">{t.curatorNote.editorial}</span>
-            <h3 className="text-4xl md:text-7xl font-serif font-bold mb-4 md:mb-10 leading-[1.1] tracking-tighter">{t.curatorNote.title}</h3>
-            <p className="text-base md:text-lg text-black/70 leading-[1.4] mb-4 md:mb-10 font-normal">
+            <span className="text-xs md:text-xs uppercase font-bold tracking-[0.5em] text-black/40 mb-4 md:mb-6 block">{t.curatorNote.editorial}</span>
+            <h3 className="text-4xl md:text-7xl font-serif font-bold mb-4 md:mb-10 leading-[var(--leading-heading)] tracking-tighter">{t.curatorNote.title}</h3>
+            <p className="text-base md:text-lg text-black/70 leading-[var(--leading-body)] mb-4 md:mb-10 font-normal">
               {t.curatorNote.p1}
               <br /><br />
               {t.curatorNote.p2}

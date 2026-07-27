@@ -30,7 +30,7 @@ export default function Navbar() {
       <nav className="px-8 md:px-14 lg:px-20 flex items-center justify-between h-16 md:h-[76px]">
         <Link
           href="/en/templates/OHMT022-yoga"
-          className={`text-[15px] tracking-[0.12em] uppercase font-medium transition-colors duration-300 ${
+          className={`text-sm tracking-[0.12em] uppercase font-medium transition-colors duration-300 ${
             isVisible ? "text-[var(--color-text)]" : "text-white/90"
           }`}
           style={{ fontFamily: "var(--font-body)" }}
@@ -43,7 +43,7 @@ export default function Navbar() {
             <li key={item.href}>
               <Link
                 href={item.href}
-                className={`text-[13px] tracking-[0.12em] uppercase transition-colors duration-300 font-normal ${
+                className={`text-xs tracking-[0.12em] uppercase transition-colors duration-300 font-normal ${
                   isVisible
                     ? "text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
                     : "text-white/60 hover:text-white/90"
@@ -73,7 +73,7 @@ export default function Navbar() {
                 <Link
                   href={item.href}
                   onClick={() => setMobileOpen(false)}
-                  className="text-[12px] tracking-[0.15em] uppercase text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors font-normal"
+                  className="text-xs tracking-[0.15em] uppercase text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors font-normal"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
                   {item.label}

@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Waves, Sparkles, Utensils, Dumbbell, ConciergeBell, Car } from "lucide-react";
 import { services } from "../data/data";
 
@@ -25,7 +25,7 @@ export const Services = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-[clamp(1.8rem,4vw,3.2rem)] font-[var(--font-heading)] font-bold text-[var(--color-primary)] leading-[1.15]">
+          <h2 className="text-[length:var(--text-h2)] font-[var(--font-heading)] font-bold text-[var(--color-primary)] leading-[var(--leading-heading)]">
             Exclusive Services & Amenities
           </h2>
         </motion.div>

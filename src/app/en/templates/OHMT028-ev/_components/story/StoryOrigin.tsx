@@ -28,7 +28,7 @@ export function StoryOrigin() {
       >
         {/* Year display */}
         <div className="reveal mb-16 md:mb-24">
-          <span className="font-michroma text-[clamp(72px,12vw,160px)] text-[var(--text)] leading-none opacity-[0.08] select-none">
+          <span className="font-michroma text-[length:var(--text-display)] text-[var(--text)] leading-none opacity-[0.08] select-none">
             2022
           </span>
         </div>
@@ -36,18 +36,18 @@ export function StoryOrigin() {
         {/* Two-col text */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20">
           <div className="reveal">
-            <h2 className="font-michroma text-[clamp(24px,3vw,40px)] text-[var(--text)] leading-[1.05] tracking-[-0.02em]">
+            <h2 className="font-michroma text-[length:var(--text-h3)] text-[var(--text)] leading-[var(--leading-heading)] tracking-[-0.02em]">
               Born in a garage.<br />Built for everyone.
             </h2>
           </div>
           <div className="reveal space-y-5">
-            <p className="font-inter text-[15px] text-[var(--text-muted)] leading-relaxed">
+            <p className="font-inter text-sm text-[var(--text-muted)] leading-relaxed">
               In 2022, three engineers in Valencia decided to rethink what a city car could be. No legacy systems, no corporate mandates, no excuses.
             </p>
-            <p className="font-inter text-[15px] text-[var(--text-muted)] leading-relaxed">
+            <p className="font-inter text-sm text-[var(--text-muted)] leading-relaxed">
               The brief was radical: make an electric car compact enough to park anywhere, affordable enough for anyone, and interesting enough that you actually want to drive it.
             </p>
-            <p className="font-inter text-[15px] text-[var(--text-muted)] leading-relaxed">
+            <p className="font-inter text-sm text-[var(--text-muted)] leading-relaxed">
               Three years later, that car is NUBI.
             </p>
           </div>

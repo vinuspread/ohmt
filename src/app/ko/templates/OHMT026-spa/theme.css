@@ -1,6 +1,15 @@
 /* spa/theme.css */
 
 :root {
+  --text-display: clamp(3rem, 7vw, 5.5rem);
+  --text-h1: clamp(2.5rem, 5vw, 4rem);
+  --text-h2: clamp(2rem, 4vw, 3rem);
+  --text-h3: clamp(1.5rem, 3vw, 2rem);
+  --text-lead: clamp(1.125rem, 2vw, 1.5rem);
+  --leading-display: 0.95;
+  --leading-heading: 1.1;
+  --leading-body: 1.6;
+
   --color-primary: #C46B3A;
   --color-secondary: #1D2D1F;
   --color-accent: #4A5240;
@@ -12,43 +21,10 @@
   --color-border: rgba(26, 26, 26, 0.1);
 
   --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-body: 'Pretendard Variable', Pretendard, 'Inter', sans-serif;
 
   --focus-ring: 2px solid var(--color-primary);
-  --focus-ring-offset: 2px;}
-
-
-body[lang="ko"], [lang="ko"], :root {
-  word-break: keep-all;
-  letter-spacing: -0.025em;
-}
-
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav, 
-nav a, nav button, nav span {
-  letter-spacing: -0.03em;
-}
-
-/* Korean typography rules (Korean Kerning Rule) */
-body[lang="ko"], [lang="ko"], :root {
-  word-break: keep-all;
-  letter-spacing: -0.025em;
-}
-
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav, 
-nav a, nav button, nav span {
-  letter-spacing: -0.03em;
+  --focus-ring-offset: 2px;
 }
 
 html,
@@ -68,6 +44,20 @@ body {
   overflow-x: clip;
 }
 
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+  word-break: keep-all;
+}
+
+p,
+li {
+  text-wrap: pretty;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
 @supports not (overflow: clip) {
   body {
     overflow-x: hidden;
@@ -75,11 +65,6 @@ body {
 }
 
 @media (max-width: 767px) {
-  h1,
-  h2 {
-    text-wrap: balance;
-  }
-
   [class*="overflow-x-auto"] {
     max-width: 100%;
     overscroll-behavior-x: contain;

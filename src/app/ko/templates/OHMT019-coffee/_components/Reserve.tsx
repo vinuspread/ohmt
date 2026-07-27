@@ -19,14 +19,13 @@ export const Reserve = () => {
 
       <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 text-center">
         <motion.h2
-          className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-white leading-[1.15] mb-10"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading text-white leading-[var(--leading-heading)] mb-10"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.35, ease: easeOut }}
         >
-          테이블 예약 또는
-          <br />
+          테이블 예약과<br />
           픽업 주문
         </motion.h2>
         <motion.div
@@ -41,8 +40,7 @@ export const Reserve = () => {
               href="/ko/templates/OHMT019-coffee/locations"
               className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-3 text-xs uppercase tracking-[0.2em] font-semibold rounded-none transition-[transform,colors] duration-160 ease-out active:scale-[0.97] hover:bg-white/10"
             >
-              예약하기
-            </Link>
+              테이블 예약</Link>
           </motion.div>
           <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
             <Link

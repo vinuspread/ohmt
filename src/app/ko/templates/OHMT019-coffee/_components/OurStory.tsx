@@ -38,17 +38,13 @@ export const OurStory = () => {
             transition={{ duration: 0.35, ease: easeOut }}
           >
             <p className="text-xs tracking-[0.3em] text-white/50 mb-4">
-              스토리
-            </p>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading leading-[1.1] mb-8">
-              천천히 즐길 가치가 있는 커피.
-            </h2>
+              브랜드 이야기</p>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold font-heading leading-[var(--leading-heading)] mb-8">
+              좋은 원두로 정직하게 내린 커피.</h2>
             <p className="text-base leading-relaxed text-white/70 mb-4">
-              에티오피아, 콜롬비아, 과테말라의 소규모 농장에서 직접 원두를 공급받습니다. 모든 배치는 각 산지의 고유한 풍미를 살리기 위해 소량으로 로스팅됩니다.
-            </p>
+              에티오피아와 콜롬비아, 과테말라의 생산자와 협력해 원두를 고릅니다. 산지마다 다른 향과 맛이 잘 드러나도록 필요한 만큼 나누어 로스팅합니다.</p>
             <p className="text-base leading-relaxed text-white/70 mb-8">
-              바리스타는 수개월간의 훈련을 거쳐 자신의 기술을 완성합니다. 그라인딩 조정부터 적절한 마이크로폼의 스팀 밀크까지 모든 디테일이 중요합니다. 좋은 커피는 특별한 관리가 필요하다고 믿습니다.
-            </p>
+              원두에 맞는 분쇄도와 추출 시간, 우유의 온도와 질감을 세심하게 조절합니다. 한 잔의 균형을 위해 작은 차이도 놓치지 않습니다.</p>
 
             <motion.div
               className="absolute -bottom-6 right-0 md:-right-6 w-32 h-32 rounded-2xl overflow-hidden border-4 border-[var(--color-bg-dark)] shadow-lg"
@@ -59,7 +55,7 @@ export const OurStory = () => {
             >
               <img
                 src="/templates/OHMT019-coffee/story-beans.jpg"
-                alt="Coffee beans"
+                alt="로스팅한 커피 원두"
                 className="w-full h-full object-cover"
               />
             </motion.div>
@@ -68,8 +64,7 @@ export const OurStory = () => {
               href="/ko/templates/OHMT019-coffee/about"
               className="inline-flex items-center text-sm font-semibold text-white/80 hover:text-white transition-colors"
             >
-              스토리 보기 &rarr;
-            </Link>
+              브랜드 이야기 &rarr;</Link>
           </motion.div>
         </div>
       </div>

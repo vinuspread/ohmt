@@ -24,19 +24,17 @@ export function Footer() {
 
         {/* 뉴스레터 */}
         <div className="border border-[var(--border)] rounded-2xl p-6 md:p-12 mb-10 md:mb-16 text-center">
-          <p className="font-michroma text-[clamp(17px,2vw,26px)] text-[var(--text)] mb-2 md:mb-3">
-            가장 먼저 소식을 받아보세요
-          </p>
-          <p className="font-inter text-[15px] text-[var(--text-muted)] mb-5 max-w-[560px] mx-auto">
-            NUBI의 출고 일정, 이벤트, 얼리버드 혜택을 누구보다 먼저 받아보실 수 있습니다.
-          </p>
+          <p className="font-michroma text-[length:var(--text-lead)] text-[var(--text)] mb-2 md:mb-3">
+            NUBI 소식을 먼저 받아보세요</p>
+          <p className="font-inter text-sm text-[var(--text-muted)] mb-5 max-w-[560px] mx-auto">
+            출시 일정과 전시·시승 행사, 사전 예약 관련 소식을 이메일로 보내드립니다.</p>
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-2 max-w-[440px] mx-auto w-full">
             <input
               type="email"
               placeholder="이메일을 입력하세요"
-              className="w-full bg-[var(--bg)] border border-[var(--border)] rounded-full px-5 py-3 font-inter text-[13px] text-[var(--text)] placeholder:text-[var(--text-muted)] outline-none focus:border-[var(--accent)] transition-colors"
+              className="w-full bg-[var(--bg)] border border-[var(--border)] rounded-full px-5 py-3 font-inter text-xs text-[var(--text)] placeholder:text-[var(--text-muted)] outline-none focus:border-[var(--accent)] transition-colors"
             />
-            <button className="bg-[var(--accent)] text-[var(--text-on-light)] px-6 py-3 rounded-full text-[12px] font-inter font-medium tracking-[0.03em] hover:bg-[var(--accent-dark)] transition-colors flex-shrink-0 w-full sm:w-auto">
+            <button className="bg-[var(--accent)] text-[var(--text-on-light)] px-6 py-3 rounded-full text-xs font-inter font-medium tracking-[0.03em] hover:bg-[var(--accent-dark)] transition-colors flex-shrink-0 w-full sm:w-auto">
               구독하기
             </button>
           </div>
@@ -46,13 +44,11 @@ export function Footer() {
         <div className="flex flex-col md:flex-row gap-8 md:gap-12 mb-8 md:mb-12">
           <div className="md:w-1/3">
             <p className="font-michroma text-xl text-[var(--text)] mb-2">NUBI</p>
-            <p className="font-inter text-[15px] text-[var(--text-muted)] mb-5 leading-relaxed">
-              작은 크기로 도시를 달립니다. 배출 없이, 재미는 그대로.
-            </p>
+            <p className="font-inter text-sm text-[var(--text-muted)] mb-5 leading-relaxed">
+              도시에 알맞은 크기와 민첩한 주행감으로 매일의 이동을 바꿉니다.</p>
             <a href={`${base}/order`}>
-              <button className="inline-flex items-center gap-2 bg-[var(--accent)] text-[var(--text-on-light)] px-5 py-2.5 rounded-full text-[12px] font-inter font-medium tracking-[0.04em] hover:bg-[var(--accent-dark)] transition-colors">
-                사전 예약하기 →
-              </button>
+              <button className="inline-flex items-center gap-2 bg-[var(--accent)] text-[var(--text-on-light)] px-5 py-2.5 rounded-full text-xs font-inter font-medium tracking-[0.04em] hover:bg-[var(--accent-dark)] transition-colors">
+                NUBI 사전 예약 →</button>
             </a>
           </div>
 
@@ -62,7 +58,7 @@ export function Footer() {
               <a
                 key={item.label}
                 href={item.href}
-                className="font-inter text-[13px] text-[var(--text)] hover:text-[var(--accent)] transition-colors"
+                className="font-inter text-xs text-[var(--text)] hover:text-[var(--accent)] transition-colors"
               >
                 {item.label}
               </a>
@@ -70,11 +66,11 @@ export function Footer() {
           </div>
 
           <div className="hidden md:block md:w-1/3">
-            <p className="font-inter text-[11px] font-medium tracking-[0.08em] text-[var(--text-muted)] uppercase mb-4">탐색</p>
+            <p className="font-inter text-xs font-medium tracking-[0.08em] text-[var(--text-muted)] uppercase mb-4">탐색</p>
             <ul className="space-y-3">
               {sitemap.map((link) => (
                 <li key={link.label}>
-                  <a href={link.href} className="font-inter text-[13px] text-[var(--text)] hover:text-[var(--accent)] transition-colors">
+                  <a href={link.href} className="font-inter text-xs text-[var(--text)] hover:text-[var(--accent)] transition-colors">
                     {link.label}
                   </a>
                 </li>
@@ -83,11 +79,11 @@ export function Footer() {
           </div>
 
           <div className="hidden md:block md:w-1/3">
-            <p className="font-inter text-[11px] font-medium tracking-[0.08em] text-[var(--text-muted)] uppercase mb-4">팔로우</p>
+            <p className="font-inter text-xs font-medium tracking-[0.08em] text-[var(--text-muted)] uppercase mb-4">팔로우</p>
             <ul className="space-y-3">
               {socials.map((s) => (
                 <li key={s.label}>
-                  <a href={s.href} className="font-inter text-[13px] text-[var(--text)] hover:text-[var(--accent)] transition-colors">
+                  <a href={s.href} className="font-inter text-xs text-[var(--text)] hover:text-[var(--accent)] transition-colors">
                     {s.label}
                   </a>
                 </li>
@@ -98,12 +94,12 @@ export function Footer() {
 
         {/* 하단 바 */}
         <div className="flex flex-row items-center justify-between gap-4 pt-6 border-t border-[var(--border)]">
-          <p className="font-inter text-[14px] text-[var(--text-muted)]">
+          <p className="font-inter text-sm text-[var(--text-muted)]">
             © 2026 OHMT.
           </p>
           <div className="flex items-center gap-4">
-            <a href="#" className="font-inter text-[11px] text-[var(--text-muted)] hover:text-[var(--text)] transition-colors">개인정보처리방침</a>
-            <a href="#" className="font-inter text-[11px] text-[var(--text-muted)] hover:text-[var(--text)] transition-colors">이용약관</a>
+            <a href={`${base}/info/privacy`} className="font-inter text-xs text-[var(--text-muted)] hover:text-[var(--text)] transition-colors">개인정보처리방침</a>
+            <a href={`${base}/info/terms`} className="font-inter text-xs text-[var(--text-muted)] hover:text-[var(--text)] transition-colors">이용약관</a>
           </div>
         </div>
       </div>

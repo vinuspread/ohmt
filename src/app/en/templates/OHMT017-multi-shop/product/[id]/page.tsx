@@ -39,7 +39,7 @@ function ProductPageContent() {
       <TemplateWrapper theme={theme}>
         <main className="antialiased min-h-screen bg-white text-[var(--color-text)]">
           <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-24 md:pt-28 pb-4">
-            <div className="flex items-center gap-2 text-[11px] uppercase tracking-[0.2em] text-[var(--color-text-muted)]">
+            <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[var(--color-text-muted)]">
               <Link href="/en/templates/OHMT017-multi-shop/shop" className="hover:text-[var(--color-text)] transition-colors flex items-center gap-1">
                 <ChevronLeft size={12} />Shop
               </Link>
@@ -57,21 +57,21 @@ function ProductPageContent() {
               <div className="relative bg-[var(--color-bg-secondary)] aspect-[3/4] overflow-hidden">
                 <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
                 {discount && (
-                  <span className="absolute top-4 left-4 bg-[var(--color-sale)] text-white text-[10px] font-bold px-2.5 py-1 tracking-wide">
+                  <span className="absolute top-4 left-4 bg-[var(--color-sale)] text-white text-xs font-bold px-2.5 py-1 tracking-wide">
                     -{discount}%
                   </span>
                 )}
               </div>
 
               <div className="md:sticky md:top-28">
-                <p className="text-[10px] uppercase tracking-[0.25em] text-[var(--color-text-muted)] mb-3">{product.category}</p>
+                <p className="text-xs uppercase tracking-[0.25em] text-[var(--color-text-muted)] mb-3">{product.category}</p>
                 <h1 className="text-2xl md:text-3xl font-bold tracking-tight leading-tight mb-3">{product.name}</h1>
 
                 {product.rating && (
                   <div className="flex items-center gap-2 mb-5">
                     <div className="flex gap-0.5">
                       {[1,2,3,4,5].map((i) => (
-                        <Star key={i} size={13} fill={i <= Math.round(product.rating!) ? "var(--color-star)" : "none"} color={i <= Math.round(product.rating!) ? "var(--color-star)" : "#D1D5DB"} strokeWidth={1.5} />
+                        <Star key={i} size={13} fill={i <= Math.round(product.rating!) ? "var(--color-star)" : "none"} color={i <= Math.round(product.rating!) ? "var(--color-star)" : "var(--color-star-empty)"} strokeWidth={1.5} />
                       ))}
                     </div>
                     <span className="text-xs text-[var(--color-text-muted)]">{product.rating} ({product.reviewCount} reviews)</span>
@@ -85,7 +85,7 @@ function ProductPageContent() {
                   )}
                 </div>
 
-                <p className="text-[14px] text-[var(--color-text-muted)] leading-relaxed mb-8">{product.description}</p>
+                <p className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-8">{product.description}</p>
 
                 <div className="flex items-center gap-4 mb-4">
                   <div className="flex items-center border border-[var(--color-border)]">
@@ -97,11 +97,11 @@ function ProductPageContent() {
                       <Plus size={14} />
                     </button>
                   </div>
-                  <button className="flex-1 bg-[var(--color-primary)] text-white py-3 text-[12px] uppercase tracking-[0.2em] font-medium hover:opacity-85 transition-opacity">
+                  <button className="flex-1 bg-[var(--color-primary)] text-white py-3 text-xs uppercase tracking-[0.2em] font-medium hover:opacity-85 transition-opacity">
                     Add to Cart
                   </button>
                 </div>
-                <button className="w-full border border-[var(--color-primary)] text-[var(--color-primary)] py-3 text-[12px] uppercase tracking-[0.2em] font-medium hover:bg-[var(--color-primary)] hover:text-white transition-colors">
+                <button className="w-full border border-[var(--color-primary)] text-[var(--color-primary)] py-3 text-xs uppercase tracking-[0.2em] font-medium hover:bg-[var(--color-primary)] hover:text-white transition-colors">
                   Buy Now
                 </button>
               </div>
@@ -114,7 +114,7 @@ function ProductPageContent() {
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`pb-3 text-[11px] uppercase tracking-[0.2em] font-medium transition-colors border-b-2 -mb-px ${
+                  className={`pb-3 text-xs uppercase tracking-[0.2em] font-medium transition-colors border-b-2 -mb-px ${
                     activeTab === tab ? "border-[var(--color-primary)] text-[var(--color-text)]" : "border-transparent text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
                   }`}
                 >
@@ -126,7 +126,7 @@ function ProductPageContent() {
             {activeTab === "desc" && (
               <div className="max-w-2xl">
                 {product.longDescription.split("\n\n").map((para, i) => (
-                  <p key={i} className="text-[15px] text-[var(--color-text-muted)] leading-relaxed mb-5">{para}</p>
+                  <p key={i} className="text-sm text-[var(--color-text-muted)] leading-relaxed mb-5">{para}</p>
                 ))}
               </div>
             )}
@@ -135,8 +135,8 @@ function ProductPageContent() {
               <div className="max-w-2xl divide-y divide-[var(--color-border)]">
                 {product.specs.map((spec) => (
                   <div key={spec.label} className="py-4 grid grid-cols-2 gap-4">
-                    <span className="text-[12px] uppercase tracking-[0.1em] text-[var(--color-text-muted)]">{spec.label}</span>
-                    <span className="text-[14px] text-[var(--color-text)]">{spec.value}</span>
+                    <span className="text-xs uppercase tracking-[0.1em] text-[var(--color-text-muted)]">{spec.label}</span>
+                    <span className="text-sm text-[var(--color-text)]">{spec.value}</span>
                   </div>
                 ))}
               </div>
@@ -148,14 +148,14 @@ function ProductPageContent() {
                   <div key={review.id} className="border-b border-[var(--color-border)] pb-8">
                     <div className="flex items-center justify-between mb-2">
                       <span className="text-sm font-medium">{review.reviewer}</span>
-                      <span className="text-[11px] text-[var(--color-text-muted)]">{review.date}</span>
+                      <span className="text-xs text-[var(--color-text-muted)]">{review.date}</span>
                     </div>
                     <div className="flex gap-0.5 mb-3">
                       {[1,2,3,4,5].map((i) => (
-                        <Star key={i} size={12} fill={i <= review.rating ? "var(--color-star)" : "none"} color={i <= review.rating ? "var(--color-star)" : "#D1D5DB"} strokeWidth={1.5} />
+                        <Star key={i} size={12} fill={i <= review.rating ? "var(--color-star)" : "none"} color={i <= review.rating ? "var(--color-star)" : "var(--color-star-empty)"} strokeWidth={1.5} />
                       ))}
                     </div>
-                    <p className="text-[14px] text-[var(--color-text-muted)] leading-relaxed">{review.text}</p>
+                    <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">{review.text}</p>
                   </div>
                 ))}
               </div>

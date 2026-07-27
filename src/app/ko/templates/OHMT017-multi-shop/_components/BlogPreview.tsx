@@ -14,13 +14,12 @@ export const BlogPreview = () => {
     <section className="bg-[var(--color-bg-secondary)] py-20 md:py-28">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         <div className="mb-10 flex items-end justify-between">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">매거진</h2>
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">저널</h2>
           <Link
             href="/ko/templates/OHMT017-multi-shop/blog"
             className="hidden md:inline-block text-xs uppercase tracking-[0.2em] text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors duration-200 border-b border-[var(--color-text-muted)] pb-0.5"
           >
-            전체보기
-          </Link>
+            전체 보기</Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -44,20 +43,19 @@ export const BlogPreview = () => {
                   />
                 </div>
                 <div className="mt-5">
-                  <div className="flex items-center gap-3 text-[10px] uppercase tracking-[0.2em] text-[var(--color-text-muted)]">
+                  <div className="flex items-center gap-3 text-xs uppercase tracking-[0.2em] text-[var(--color-text-muted)]">
                     <span>{post.category}</span>
                     <span>·</span>
-                    <span>{post.readTime} 소요</span>
+                    <span>{post.readTime} 읽기</span>
                   </div>
-                  <h3 className="text-base font-bold mt-2 leading-[1.1] motion-safe:group-hover:opacity-70 transition-opacity duration-200">
+                  <h3 className="text-base font-bold mt-2 leading-[var(--leading-heading)] motion-safe:group-hover:opacity-70 transition-opacity duration-200">
                     {post.title}
                   </h3>
                   <p className="text-sm text-[var(--color-text-muted)] mt-2 leading-relaxed">
                     {post.excerpt}
                   </p>
                   <span className="inline-block mt-4 text-xs uppercase tracking-[0.2em] text-[var(--color-primary)] font-medium motion-safe:group-hover:opacity-60 transition-opacity duration-200">
-                    더보기 &rarr;
-                  </span>
+                    글 보기 &rarr;</span>
                 </div>
               </Link>
             </motion.div>
@@ -67,4 +65,3 @@ export const BlogPreview = () => {
     </section>
   );
 };
-

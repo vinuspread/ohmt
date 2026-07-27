@@ -1,11 +1,11 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - Car Concept",
+  title: "OHMT - Automotive Concept Showcase Template",
   description: "Premium automotive concept showcase",
   openGraph: {
-    title: "OHMT - Car Concept",
+    title: "OHMT - Automotive Concept Showcase Template",
     description: "Premium automotive concept showcase",
     url: "https://ohmytemplate.com/en/templates/OHMT009-car",
     siteName: "OHMT",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Car Concept",
+    title: "OHMT - Automotive Concept Showcase Template",
     description: "Premium automotive concept showcase",
     images: ["/templates/OHMT009-car/og-image.jpg"],
   },
@@ -40,4 +40,3 @@ export default function CarLayout({
     </>
   );
 }
-

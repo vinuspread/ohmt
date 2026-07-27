@@ -24,11 +24,11 @@ function CarModelsPageContent() {
           <div className="max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)]">
             <div className="mb-10">
               <span className="text-[0.68rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-4 block">우리의 라인업</span>
-              <h1 className="font-[family-name:var(--theme-font-heading)] text-[clamp(2.8rem,6vw,5.5rem)] font-bold tracking-[-0.03em] leading-[1.12] mb-8">
+              <h1 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-display)] font-bold tracking-[-0.03em] leading-[var(--leading-heading)] mb-8">
                 한 대 한 대,<br />기준을 새로 씁니다.
               </h1>
-              <p className="text-[1.15rem] md:text-[1.25rem] text-white/70 font-normal leading-[1.6] max-w-[700px] break-keep">
-                순수 전기차의 선구자부터 고성능 아이콘에 이르기까지, 모든 OHMT 모델은 디테일에 대한 집착으로 완성됩니다.
+              <p className="text-[1.15rem] md:text-[1.25rem] text-white/70 font-normal leading-[var(--leading-body)] max-w-[700px] break-keep">
+                순수 전기차의 선구자부터 고성능 아이콘에 이르기까지, 모든 OHMT 모델은 디테일을 향한 집착으로 완성됩니다.
               </p>
             </div>
 
@@ -63,10 +63,10 @@ function CarModelsPageContent() {
 }
 
 
-export default function CarModelsPage(props: any) {
+export default function CarModelsPage() {
   return (
     <React.Suspense fallback={null}>
-      <CarModelsPageContent {...props} />
+      <CarModelsPageContent />
     </React.Suspense>
   );
 }

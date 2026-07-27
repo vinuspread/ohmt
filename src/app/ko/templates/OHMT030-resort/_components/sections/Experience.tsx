@@ -3,26 +3,28 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
+import { IconButton } from "../ui/IconButton";
+import { SectionEyebrow, SectionHeading } from "../ui/Typography";
 
 const base = "/ko/templates/OHMT030-resort";
 
 const slides = [
   {
     image: "/templates/OHMT030-resort/gallery-4.jpg",
-    label: "명상 & 웰니스",
-    location: "절벽 정상 파빌리온",
+    label: "명상과 웰니스",
+    location: "절벽 위 파빌리온",
     time: "오전 7시 – 오전 9시",
   },
   {
     image: "/templates/OHMT030-resort/gallery-5.jpg",
-    label: "해안 탐험",
-    location: "히든 코브 트레일",
+    label: "해안 트레킹",
+    location: "히든 코브 산책로",
     time: "오전 9시 – 오후 12시",
   },
   {
     image: "/templates/OHMT030-resort/gallery-6.jpg",
-    label: "선셋 세일링",
-    location: "프라이빗 마리나",
+    label: "선셋 세일링 투어",
+    location: "전용 선착장",
     time: "오후 5시 – 오후 7시 30분",
   },
 ];
@@ -33,37 +35,35 @@ export function Experience() {
   const next = () => setActive((i) => (i + 1) % slides.length);
 
   return (
-    <section className="py-[130px]">
-      <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 max-w-[1440px] mx-auto px-10">
+    <section className="py-16 md:py-32">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-[1440px] mx-auto px-6 md:px-12">
 
         {/* Left: Text */}
         <div className="flex flex-col justify-between">
           <div>
-            <span className="text-[13px] font-medium text-[var(--accent)] tracking-widest uppercase mb-6 block">
-              경험
-            </span>
-            <h2 className="text-[clamp(36px,4.5vw,64px)] font-semibold text-white leading-[1.1] tracking-[-0.04em] mb-10 whitespace-pre-line">
-              {`시간이 머무는 곳\n그곳이 기억이\n되는 순간`}
-            </h2>
+            <SectionEyebrow>
+              액티비티</SectionEyebrow>
+            <SectionHeading size="large" className="mb-12 whitespace-pre-line">
+              {`머무는 시간이
+여행의 기억이 됩니다`}
+            </SectionHeading>
             <Link href={`${base}/#`}
-              className="inline-flex items-center gap-2 rounded-full border border-white/60 bg-white/10 px-6 py-3 text-white text-[15px] hover:bg-white/20 transition-all focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]">
-              모두 보기 <ArrowRight size={15} />
+              className="inline-flex items-center gap-2 rounded-full border border-white/60 bg-white/10 px-6 py-3 text-white text-base hover:bg-white/20 transition-all focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]">
+              전체 프로그램 보기<ArrowRight size={15} />
             </Link>
           </div>
 
           {/* Controls */}
           <div className="flex items-center gap-4 mt-16">
-            <button onClick={prev}
-              className="w-11 h-11 rounded-full border border-white/40 flex items-center justify-center text-white hover:bg-white/10 transition-colors focus-visible:ring-[var(--accent)] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" aria-label="이전">
+            <IconButton onClick={prev} aria-label="이전">
               <ArrowLeft size={17} />
-            </button>
-            <span className="text-[13px] text-white/50 tabular-nums">
+            </IconButton>
+            <span className="text-sm text-white/50 tabular-nums">
               {String(active + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
             </span>
-            <button onClick={next}
-              className="w-11 h-11 rounded-full bg-white flex items-center justify-center text-[var(--bg-dark)] hover:opacity-85 transition-opacity focus-visible:ring-[var(--accent)] focus-visible:ring-2 focus-visible:ring-offset-2" aria-label="다음">
+            <IconButton onClick={next} tone="solid" aria-label="다음">
               <ArrowRight size={17} />
-            </button>
+            </IconButton>
           </div>
         </div>
 
@@ -75,9 +75,9 @@ export function Experience() {
               <img src={s.image} alt={s.label}
                 className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              <div className="absolute bottom-8 left-8 right-8">
-                <p className="text-[13px] font-medium text-white/60 uppercase tracking-widest mb-2">{s.location} · {s.time}</p>
-                <p className="text-[22px] font-semibold text-white leading-tight">{s.label}</p>
+              <div className="absolute bottom-9 left-9 right-9">
+                <p className="text-sm font-medium text-white/60 uppercase tracking-widest mb-2">{s.location} · {s.time}</p>
+                <p className="text-2xl font-semibold text-white leading-tight">{s.label}</p>
               </div>
             </div>
           ))}

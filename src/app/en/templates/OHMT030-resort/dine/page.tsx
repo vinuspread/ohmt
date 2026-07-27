@@ -1,5 +1,8 @@
 import { Navbar } from "../_components/Navbar";
 import { Footer } from "../_components/Footer";
+import { SubpageHero } from "../_components/SubpageHero";
+import { MenuCard } from "../_components/cards/MenuCard";
+import { IntroTextSection } from "../_components/sections/IntroTextSection";
 
 const menu = [
   { category: "Starters", tag: "Starters",
@@ -41,32 +44,21 @@ export default function DinePage() {
     <>
       <Navbar />
       <main className="min-h-screen" style={{ backgroundColor: "var(--bg)" }}>
-        <section className="relative h-[65vh] overflow-hidden flex items-end pb-14">
-          <img
-            src="/templates/OHMT030-resort/sub-hero-dine.jpg"
-            alt="OHMT Dining"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-transparent" />
-          <div className="relative z-10 max-w-[1440px] mx-auto w-full px-10">
-            <h1 className="text-white tracking-[-0.02em] leading-[0.85] mb-6 font-semibold uppercase"
-              style={{ fontSize: "clamp(60px, 10vw, 160px)" }}>
-            THE<br />CULINARY
-          </h1>
-            <p className="text-white/70 text-[19px] max-w-[520px] font-[300] leading-relaxed">
-              Michelin-starred cuisine prepared with the day&apos;s catch.<br />
-              Every dish written by the sea, not the menu.
-            </p>
-          </div>
-        </section>
+        <SubpageHero title={"THE\nCULINARY"} image="sub-hero-dine.jpg" alt="OHMT Dining">
+          <>
+            Michelin-starred cuisine prepared with the day&apos;s catch.<br />
+            Every dish written by the sea, not the menu.
+          </>
+        </SubpageHero>
 
-        <section className="max-w-[1440px] mx-auto px-10 py-16 border-b border-white/10 mb-16">
-          <p className="text-white/60 text-[15px] md:text-[17px] font-[300] leading-[1.85] max-w-[720px]">
-            Every dish begins before the kitchen opens. At dawn, our team meets the boats returning from the Aegean. By noon, the day&apos;s menu is written. By evening, the terrace is set — and the sea is always the backdrop.
-          </p>
-        </section>
+        <IntroTextSection paddedBottom>
+          Every dish begins before the kitchen opens. At dawn, our team meets
+          the boats returning from the Aegean. By noon, the day&apos;s menu is
+          written. By evening, the terrace is set - and the sea is always the
+          backdrop.
+        </IntroTextSection>
 
-        <section className="grid grid-cols-1 md:grid-cols-[0.8fr_1.2fr] gap-16 items-center max-w-[1440px] mx-auto px-10 mb-20">
+        <section className="resort-container grid grid-cols-1 items-center gap-16 pb-16 md:grid-cols-2 md:pb-32">
           <div className="aspect-[4/3] md:aspect-[3/4] rounded-2xl overflow-hidden">
             <img
               src="/templates/OHMT030-resort/restaurant-indoor.jpg"
@@ -75,53 +67,42 @@ export default function DinePage() {
             />
           </div>
           <div>
-            <p className="text-white/85 text-[17px] leading-[1.9] font-[300] mb-6">
+            <p className="resort-body mb-6 text-lg font-normal text-white/85">
               At OHMT, every meal is a conversation between land and sea. Our kitchen draws from the 
               coastal pantry of the Aegean: sun-ripened tomatoes, wild herbs gathered from the cliffs, 
               fish caught at dawn and served within hours. The Michelin-starred team works with 
               restraint and respect, letting each ingredient speak for itself against a backdrop of 
               panoramic ocean views.
             </p>
-            <p className="text-white/70 text-[15px] leading-[1.8] font-[300]">
+            <p className="resort-body text-base font-normal text-white/70">
               Head chef Elena Marchetti sources directly from local fishermen and small-batch 
               producers across the Cyclades. Every dish begins on the water or in the soil, 
               never on a plate. The menu changes with the seasons and the catch, guided by 
               what is freshest rather than what is expected.
             </p>
             <div className="mt-8 pl-6 border-l-2 border-[var(--accent)]">
-              <p className="text-white/60 text-[14px] leading-[1.7] font-[300] italic">
+              <p className="resort-body text-sm font-normal text-white/60">
                 &ldquo;We do not impose on the ingredients. We listen to them. The sea tells us 
                 what to cook each morning.&rdquo;
               </p>
-              <p className="text-[var(--accent)] text-[12px] font-medium mt-2 tracking-widest uppercase">
+              <p className="text-[var(--accent)] text-xs font-medium mt-2 tracking-widest uppercase">
                 Chef Elena Marchetti
               </p>
             </div>
           </div>
         </section>
 
-        <section className="pb-24 max-w-[1440px] mx-auto px-10">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+        <section className="resort-container pb-16 md:pb-32">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {allItems.map((item) => (
-              <div key={item.name} className="group rounded-2xl overflow-hidden bg-white/[0.04] hover:bg-white/[0.08] transition-all duration-300">
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
-                    src={`/templates/OHMT030-resort/${item.img}`}
-                    alt={item.name}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-                  />
-                </div>
-                <div className="p-4">
-                  <div className="flex items-center gap-2 mb-2">
-                    <span className="text-[11px] font-medium text-white/40 uppercase tracking-[0.1em] bg-white/10 rounded-full px-3 py-1">
-                      {item.category}
-                    </span>
-                    <span className="text-[var(--accent)] text-sm font-semibold ml-auto">{item.price}</span>
-                  </div>
-                  <h3 className="text-white text-[15px] font-medium leading-snug mb-1">{item.name}</h3>
-                  <p className="text-white/50 text-[14px] leading-relaxed">{item.desc}</p>
-                </div>
-              </div>
+              <MenuCard
+                key={item.name}
+                category={item.category}
+                name={item.name}
+                desc={item.desc}
+                price={item.price}
+                image={item.img}
+              />
             ))}
           </div>
         </section>

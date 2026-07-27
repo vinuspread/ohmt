@@ -35,21 +35,21 @@ export const Header = () => {
     <>
       {/* Nav */}
       <header
-        className={`fixed top-[20px] md:top-[48px] left-[20px] right-[20px] md:left-[48px] md:right-[48px] z-50 ${mounted ? "transition-colors duration-300" : ""}`}
-        style={{ backgroundColor: transparent ? "transparent" : "#ffffff" }}
+        className={`fixed top-5 md:top-12 left-[20px] right-[20px] md:left-[48px] md:right-[48px] z-50 ${mounted ? "transition-colors duration-300" : ""}`}
+        style={{ backgroundColor: transparent ? "transparent" : "var(--color-bg)" }}
       >
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between h-16 md:h-18">
           <Link
             href="/en/templates/OHMT017-multi-shop"
             className="text-xl md:text-2xl font-bold tracking-tight transition-colors duration-300"
-            style={{ color: transparent ? "#ffffff" : "#0A0A0A" }}
+            style={{ color: transparent ? "var(--color-bg)" : "var(--color-text)" }}
           >
             OHMT
           </Link>
 
           <nav
             className="hidden md:flex items-center gap-10 text-xs uppercase tracking-[0.15em] transition-colors duration-300"
-            style={{ color: transparent ? "rgba(255,255,255,0.7)" : "#0A0A0A" }}
+            style={{ color: transparent ? "rgba(255,255,255,0.7)" : "var(--color-text)" }}
           >
             {navLinks.map((link) => {
               const isActive =
@@ -73,7 +73,7 @@ export const Header = () => {
           <div className="flex items-center gap-5">
             <button
               className="hidden md:block transition-colors duration-300 hover:opacity-70"
-              style={{ color: transparent ? "rgba(255,255,255,0.7)" : "#0A0A0A" }}
+              style={{ color: transparent ? "rgba(255,255,255,0.7)" : "var(--color-text)" }}
               aria-label="Search"
             >
               <Search size={18} strokeWidth={1.5} />
@@ -81,14 +81,14 @@ export const Header = () => {
             <Link
               href="/en/templates/OHMT017-multi-shop/shop"
               className="transition-colors duration-300 hover:opacity-70"
-              style={{ color: transparent ? "rgba(255,255,255,0.7)" : "#0A0A0A" }}
+              style={{ color: transparent ? "rgba(255,255,255,0.7)" : "var(--color-text)" }}
               aria-label="Cart"
             >
               <ShoppingBag size={18} strokeWidth={1.5} />
             </Link>
             <button
               className="md:hidden p-1 transition-colors duration-300"
-              style={{ color: transparent ? "#ffffff" : "#0A0A0A" }}
+              style={{ color: transparent ? "var(--color-bg)" : "var(--color-text)" }}
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle menu"
             >
@@ -103,9 +103,9 @@ export const Header = () => {
         className={`fixed left-[20px] right-[20px] z-40 transition-all duration-300 md:hidden overflow-y-auto ${
           mobileOpen ? "h-[calc(100vh-104px)] opacity-100 visible" : "h-0 opacity-0 invisible"
         }`}
-        style={{ top: "84px", backgroundColor: "#ffffff" }}
+        style={{ top: "84px", backgroundColor: "var(--color-bg)" }}
       >
-        <div className="flex flex-col px-12 py-12 gap-6 text-2xl font-bold uppercase tracking-[0.08em]" style={{ color: "#0A0A0A" }}>
+        <div className="flex flex-col px-12 py-12 gap-6 text-2xl font-bold uppercase tracking-[0.08em]" style={{ color: "var(--color-text)" }}>
           {navLinks.map((link) => (
             <Link
               key={link.href}

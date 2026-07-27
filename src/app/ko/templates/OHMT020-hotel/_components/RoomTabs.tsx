@@ -20,10 +20,9 @@ export const RoomTabs = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-[clamp(1.8rem,4vw,3.2rem)] font-[var(--font-heading)] font-bold text-[var(--color-primary)] leading-[1.1]">
-            <span className="text-[12px] md:text-[13px] font-medium text-[var(--color-accent)] tracking-tight block mb-4">객실 안내</span>
-            객실 & 스위트
-          </h2>
+          <h2 className="text-[length:var(--text-h2)] font-[var(--font-heading)] font-bold text-[var(--color-primary)] leading-[var(--leading-heading)]">
+            <span className="text-xs md:text-xs font-medium text-[var(--color-accent)] tracking-tight block mb-4">객실 안내</span>
+            객실과 스위트</h2>
         </motion.div>
 
         <div className="flex justify-start md:justify-center gap-1 md:gap-2 mb-10 md:mb-14 overflow-x-auto no-scrollbar max-w-full pb-2 -mx-6 px-6 md:mx-0 md:px-0">
@@ -31,7 +30,7 @@ export const RoomTabs = () => {
             <button
               key={r.id}
               onClick={() => setActiveTab(i)}
-              className={`flex-shrink-0 px-5 md:px-8 py-3 text-[13px] md:text-[14px] font-medium transition-all duration-300 ${activeTab === i ? "bg-[var(--color-primary)] text-[var(--color-bg)]" : "bg-transparent text-[var(--color-text-muted)] border border-[var(--color-border)] hover:border-[var(--color-primary)]"}`}
+              className={`flex-shrink-0 px-5 md:px-8 py-3 text-xs md:text-sm font-medium transition-all duration-300 ${activeTab === i ? "bg-[var(--color-primary)] text-[var(--color-bg)]" : "bg-transparent text-[var(--color-text-muted)] border border-[var(--color-border)] hover:border-[var(--color-primary)]"}`}
             >
               {r.name}
             </button>
@@ -56,26 +55,33 @@ export const RoomTabs = () => {
             <div className="flex flex-col gap-6">
               <div>
                 <h3 className="text-2xl md:text-3xl font-[var(--font-heading)] font-bold text-[var(--color-primary)] mb-2">{room.name}</h3>
-                <p className="text-sm md:text-base text-[var(--color-text-muted)] leading-relaxed">{room.desc}</p>
+                <p className="text-sm md:text-base text-[var(--color-text-muted)] leading-relaxed break-keep [text-wrap:pretty] max-w-2xl">
+                  {room.desc.split(/(?<=\.)\s+/).map((sentence, index, sentences) => (
+                    <React.Fragment key={sentence}>
+                      {sentence}
+                      {index < sentences.length - 1 && <br />}
+                    </React.Fragment>
+                  ))}
+                </p>
               </div>
 
               <div className="grid grid-cols-3 gap-4 py-4 border-t border-b border-[var(--color-border)]">
                 <div>
-                  <span className="text-[11px] font-medium text-[var(--color-text-muted)] tracking-tight block">크기</span>
+                  <span className="text-xs font-medium text-[var(--color-text-muted)] tracking-tight block">크기</span>
                   <span className="text-sm font-semibold text-[var(--color-text)]">{room.size}</span>
                 </div>
                 <div>
-                  <span className="text-[11px] font-medium text-[var(--color-text-muted)] tracking-tight block">전망</span>
+                  <span className="text-xs font-medium text-[var(--color-text-muted)] tracking-tight block">전망</span>
                   <span className="text-sm font-semibold text-[var(--color-text)]">{room.view}</span>
                 </div>
                 <div>
-                  <span className="text-[11px] font-medium text-[var(--color-text-muted)] tracking-tight block">수용 인원</span>
+                  <span className="text-xs font-medium text-[var(--color-text-muted)] tracking-tight block">수용 인원</span>
                   <span className="text-sm font-semibold text-[var(--color-text)]">{room.capacity}</span>
                 </div>
               </div>
 
               <div>
-                <span className="text-[11px] font-medium text-[var(--color-text-muted)] tracking-tight block mb-3">어메니티</span>
+                <span className="text-xs font-medium text-[var(--color-text-muted)] tracking-tight block mb-3">편의시설</span>
                 <div className="grid grid-cols-2 gap-2">
                   {room.amenities.map((a) => (
                     <div key={a} className="flex items-center gap-2 text-sm text-[var(--color-text)]">
@@ -88,10 +94,10 @@ export const RoomTabs = () => {
 
               <div className="flex items-center justify-between pt-2">
                 <div>
-                  <span className="text-[11px] font-medium text-[var(--color-text-muted)] tracking-tight">1박 요금</span>
+                  <span className="text-xs font-medium text-[var(--color-text-muted)] tracking-tight">1박 기준</span>
                   <p className="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">{room.price}</p>
                 </div>
-                <Button variant="primary" size="md" className="text-[12px] tracking-tight">예약하기</Button>
+                <Button variant="primary" size="md" className="text-xs tracking-tight">예약하기</Button>
               </div>
             </div>
           </motion.div>

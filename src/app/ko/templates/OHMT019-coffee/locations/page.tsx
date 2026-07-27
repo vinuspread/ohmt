@@ -21,13 +21,12 @@ function LocationsPageContent() {
           />
           <div className="absolute inset-0 bg-black/70" />
           <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 text-center pt-12">
-            <p className="text-xs uppercase tracking-[0.3em] text-white/50 mb-3">지점 안내</p>
-            <h1 className="text-4xl md:text-5xl font-bold font-heading leading-[1.1] text-white mb-2">
+            <p className="text-xs uppercase tracking-[0.3em] text-white/50 mb-3">매장</p>
+            <h1 className="text-4xl md:text-5xl font-bold font-heading leading-[var(--leading-heading)] text-white mb-2">
               매장 안내
             </h1>
             <p className="text-sm text-white/60 max-w-md mx-auto">
-              서울 다섯 곳에서 만나보세요.
-            </p>
+              서울 다섯 곳에서 OHMT의 커피를 만나보세요.</p>
           </div>
         </section>
 
@@ -70,15 +69,15 @@ function LocationsPageContent() {
         <section className="py-20 bg-[var(--color-bg-secondary)] border-t border-[var(--color-ui-border)]">
           <div className="max-w-[800px] mx-auto px-6">
             <div className="text-center mb-12">
-              <p className="text-xs uppercase tracking-[0.3em] text-[var(--color-text-muted)] mb-3">파트너십</p>
-              <h2 className="text-3xl font-bold font-heading mb-4 text-[var(--color-text)]">가맹점 문의</h2>
-              <p className="text-sm text-[var(--color-text-muted)]">OHMT 브랜드와 함께 특별한 커피 문화를 만들어갈 파트너를 모십니다.</p>
+              <p className="text-xs uppercase tracking-[0.3em] text-[var(--color-text-muted)] mb-3">가맹 안내</p>
+              <h2 className="text-3xl font-bold font-heading mb-4 text-[var(--color-text)]">가맹 상담</h2>
+              <p className="text-sm text-[var(--color-text-muted)]">OHMT와 함께 새로운 매장을 준비할 파트너를 찾습니다. 희망 지역과 운영 계획을 알려주세요.</p>
             </div>
             <form onSubmit={(e) => { e.preventDefault(); alert("문의가 접수되었습니다. 담당자가 곧 연락드리겠습니다."); }} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-xs uppercase tracking-wider font-semibold text-[var(--color-text-muted)] mb-2">이름 / 회사명</label>
-                  <input required type="text" placeholder="홍길동" className="w-full bg-[var(--color-bg)] border border-[var(--color-ui-border)] text-[var(--color-text)] px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-text)]" />
+                  <label className="block text-xs uppercase tracking-wider font-semibold text-[var(--color-text-muted)] mb-2">이름 또는 회사명</label>
+                  <input required type="text" placeholder="이름 또는 회사명을 입력해 주세요" className="w-full bg-[var(--color-bg)] border border-[var(--color-ui-border)] text-[var(--color-text)] px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-text)]" />
                 </div>
                 <div>
                   <label className="block text-xs uppercase tracking-wider font-semibold text-[var(--color-text-muted)] mb-2">연락처</label>
@@ -90,17 +89,16 @@ function LocationsPageContent() {
                 <input required type="email" placeholder="example@email.com" className="w-full bg-[var(--color-bg)] border border-[var(--color-ui-border)] text-[var(--color-text)] px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-text)]" />
               </div>
               <div>
-                <label className="block text-xs uppercase tracking-wider font-semibold text-[var(--color-text-muted)] mb-2">희망 지역 및 예산</label>
-                <input required type="text" placeholder="서울 성수동 / 약 1억 원" className="w-full bg-[var(--color-bg)] border border-[var(--color-ui-border)] text-[var(--color-text)] px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-text)]" />
+                <label className="block text-xs uppercase tracking-wider font-semibold text-[var(--color-text-muted)] mb-2">희망 지역·예산</label>
+                <input required type="text" placeholder="예: 서울 성수동 / 약 1억 원" className="w-full bg-[var(--color-bg)] border border-[var(--color-ui-border)] text-[var(--color-text)] px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-text)]" />
               </div>
               <div>
                 <label className="block text-xs uppercase tracking-wider font-semibold text-[var(--color-text-muted)] mb-2">문의 내용</label>
-                <textarea rows={4} placeholder="개설 희망시기 및 기타 문의사항을 적어주세요." className="w-full bg-[var(--color-bg)] border border-[var(--color-ui-border)] text-[var(--color-text)] px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-text)] resize-none"></textarea>
+                <textarea rows={4} placeholder="개설 희망 시기와 운영 계획, 궁금한 점을 적어주세요." className="w-full bg-[var(--color-bg)] border border-[var(--color-ui-border)] text-[var(--color-text)] px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-text)] resize-none"></textarea>
               </div>
               <div className="text-center pt-4">
-                <button type="submit" className="bg-[var(--color-text)] text-[var(--color-text-contrast)] px-10 py-3 text-xs uppercase tracking-widest font-semibold hover:opacity-90 active:scale-95 transition-all">
-                  문의 등록하기
-                </button>
+                <button type="submit" className="bg-[var(--color-text)] text-white px-10 py-3 text-xs uppercase tracking-widest font-semibold hover:opacity-90 active:scale-95 transition-all">
+                  상담 신청하기</button>
               </div>
             </form>
           </div>

@@ -12,7 +12,7 @@ export default function TechDesign() {
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
               Aesthetic Engineering
             </span>
-            <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.03em] leading-[1.15] text-[var(--color-text)] font-heading">
+            <h2 className="text-[length:var(--text-h1)] font-bold tracking-[-0.03em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading">
               Where technology meets design
             </h2>
           </div>
@@ -44,7 +44,7 @@ export default function TechDesign() {
  
             {/* Left Column: Tech spec details & Play button */}
             <div className="relative z-20 w-full md:w-3/5 flex flex-col items-start gap-3 md:gap-4 pr-4">
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
                 system presentation v2
               </span>
               <h3 className="text-xl md:text-3xl font-extrabold text-white font-heading tracking-tight leading-snug">

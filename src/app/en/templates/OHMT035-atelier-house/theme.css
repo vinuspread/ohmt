@@ -1,0 +1,33 @@
+/* OHMT035-atelier-house/theme.css */
+
+:root {
+  --text-display: clamp(3rem, 7vw, 5.5rem);
+  --text-h1: clamp(2.5rem, 5vw, 4rem);
+  --text-h2: clamp(2rem, 4vw, 3rem);
+  --text-h3: clamp(1.5rem, 3vw, 2rem);
+  --text-lead: clamp(1.125rem, 2vw, 1.5rem);
+  --leading-display: 0.95;
+  --leading-heading: 1.1;
+  --leading-body: 1.6;
+
+  --color-primary: #FAFAF8;
+  --color-secondary: #1A1A1A;
+  --color-accent: #7C8570;
+  --color-bg: #FAFAF8;
+  --color-bg-secondary: #F4F4F4;
+  --color-text: #2A2A2A;
+  --color-text-muted: #6B6560;
+  --color-text-contrast: #F2F1EE;
+  --color-border: rgba(42, 42, 42, 0.1);
+
+  --font-heading: 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+
+  --focus-outline: 2px solid var(--color-accent);
+  --focus-outline-offset: 2px;
+}
+
+h1, h2, h3, h4, h5, h6, .font-display {
+  line-height: 1 !important;
+}
+

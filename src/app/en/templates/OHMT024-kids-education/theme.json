@@ -3,8 +3,6 @@
   "name": "Kids Education",
   "name_ko": "키즈 에듀케이션",
   "category": "lifestyle",
-  "description": "A children education template with playful sections, program details, parent trust signals, and bright pill-based UI for schools and learning brands.",
-  "description_ko": "경쾌한 섹션, 프로그램 안내, 학부모 신뢰 요소, 밝은 필형 UI를 갖춘 어린이 교육 및 러닝 브랜드 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {
@@ -24,16 +22,24 @@
     },
     "typography": {
       "heading": {
-        "font": "'Baloo Chettan 2', sans-serif",
-        "weight": "700",
-        "tracking": "-0.01em",
-        "style": "font-bold tracking-tight"
+        "font": "'Jua', sans-serif",
+        "weight": "400",
+        "tracking": "0.04em",
+        "style": "font-normal"
       },
       "body": {
-        "font": "'Inter', sans-serif",
+        "font": "'Pretendard', sans-serif",
         "weight": "500",
         "leading": "1.5",
         "style": "font-medium leading-relaxed"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
       }
     },
     "spacing": {
@@ -52,5 +58,7 @@
       "button": "bg-[var(--color-primary)] rounded-full font-bold hover:brightness-95 active:scale-[0.97] transition-all duration-150",
       "card_hover": "hover:bg-white hover:border-black/15 hover:shadow-md transition-all duration-200"
     }
-  }
+  },
+  "thumbnail": "/templates/OHMT024-kids-education/og-image.jpg",
+  "ogImage": "/templates/OHMT024-kids-education/og-image.jpg"
 }

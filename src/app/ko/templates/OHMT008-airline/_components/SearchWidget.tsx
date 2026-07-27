@@ -97,7 +97,7 @@ export const SearchWidget = () => {
 
         {/* Mobile: 2x2 grid / Desktop: single row */}
         {/* Mobile Layout */}
-        <div className="md:hidden grid grid-cols-[1fr_auto_1fr] gap-0 border-b border-[#eee]">
+        <div className="md:hidden grid grid-cols-3 gap-0 border-b border-[#eee]">
           {/* FROM */}
           <div className="group px-4 py-4 hover:bg-[#fafafa] cursor-pointer transition-colors border-r border-[#eee]">
             <span className="text-[0.6rem] font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] block mb-1">출발지</span>
@@ -127,7 +127,7 @@ export const SearchWidget = () => {
             <span className="text-[0.6rem] font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] block mb-1">출발일</span>
             <div className="text-[0.9rem] font-bold text-[var(--color-primary)] mb-0.5">2025년 5월 24일</div>
             <span className="text-[0.7rem] text-[var(--color-text-muted)]">
-              {tripType === "roundtrip" ? "복귀: 6월 2일" : "편도"}
+              {tripType === "roundtrip" ? "귀국일: 6월 2일" : "편도"}
             </span>
           </div>
 
@@ -137,12 +137,12 @@ export const SearchWidget = () => {
               onClick={() => setPaxOpen((v) => !v)}
               className={`w-full text-left px-4 py-4 hover:bg-[#fafafa] cursor-pointer transition-colors flex flex-col justify-center ${paxOpen ? "bg-[#fafafa]" : ""}`}
             >
-              <span className="text-[0.6rem] font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] block mb-1">탑승객</span>
+              <span className="text-[0.6rem] font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] block mb-1">승객</span>
               <div className="flex items-center gap-2">
                 <span className="text-[0.9rem] font-bold text-[var(--color-primary)]">{paxLabel}</span>
                 <ChevronDown size={13} className={`text-[var(--color-text-muted)] transition-transform duration-200 ${paxOpen ? "rotate-180" : ""}`} />
               </div>
-              <span className="text-[0.7rem] text-[var(--color-text-muted)] mt-0.5">{cabin === "Economy" ? "이코노미" : cabin === "Business" ? "비즈니스" : "퍼스트"}</span>
+              <span className="text-[0.7rem] text-[var(--color-text-muted)] mt-0.5">{cabin === "Economy" ? "이코노미" : cabin === "Business" ? "비즈니스" : "퍼스트 클래스"}</span>
             </button>
 
             {paxOpen && (
@@ -155,7 +155,7 @@ export const SearchWidget = () => {
                     {["Economy", "Business", "First"].map((c) => (
                       <button key={c} onClick={() => setCabin(c)}
                         className={`py-2 text-[0.68rem] font-bold uppercase tracking-[0.08em] transition-colors border ${cabin === c ? "bg-[var(--color-primary)] text-white border-[var(--color-primary)]" : "bg-white text-[var(--color-text-muted)] border-[#eee] hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"}`}>
-                        {c === "Economy" ? "이코노미" : c === "Business" ? "비즈니스" : "퍼스트"}
+                        {c === "Economy" ? "이코노미" : c === "Business" ? "비즈니스" : "퍼스트 클래스"}
                       </button>
                     ))}
                   </div>
@@ -203,7 +203,7 @@ export const SearchWidget = () => {
             <span className="text-[0.6rem] font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] block mb-2">출발일</span>
             <div className="text-[1rem] font-bold text-[var(--color-primary)] mb-1">2025년 5월 24일</div>
             <span className="text-[0.75rem] text-[var(--color-text-muted)]">
-              {tripType === "roundtrip" ? "복귀: 6월 2일" : "편도"}
+              {tripType === "roundtrip" ? "귀국일: 6월 2일" : "편도"}
             </span>
           </div>
 
@@ -213,12 +213,12 @@ export const SearchWidget = () => {
               onClick={() => setPaxOpen((v) => !v)}
               className={`text-left px-6 py-6 hover:bg-[#fafafa] cursor-pointer transition-colors ${paxOpen ? "bg-[#fafafa]" : ""}`}
             >
-              <span className="text-[0.6rem] font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] block mb-2">탑승객</span>
+              <span className="text-[0.6rem] font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] block mb-2">승객</span>
               <div className="flex items-center gap-2">
                 <span className="text-[1rem] font-bold text-[var(--color-primary)]">{paxLabel}</span>
                 <ChevronDown size={13} className={`text-[var(--color-text-muted)] transition-transform duration-200 ${paxOpen ? "rotate-180" : ""}`} />
               </div>
-              <span className="text-[0.75rem] text-[var(--color-text-muted)] mt-1">{cabin === "Economy" ? "이코노미" : cabin === "Business" ? "비즈니스" : "퍼스트"}</span>
+              <span className="text-[0.75rem] text-[var(--color-text-muted)] mt-1">{cabin === "Economy" ? "이코노미" : cabin === "Business" ? "비즈니스" : "퍼스트 클래스"}</span>
             </button>
 
             {paxOpen && (
@@ -231,7 +231,7 @@ export const SearchWidget = () => {
                     {["Economy", "Business", "First"].map((c) => (
                       <button key={c} onClick={() => setCabin(c)}
                         className={`py-2 text-[0.68rem] font-bold uppercase tracking-[0.08em] transition-colors border ${cabin === c ? "bg-[var(--color-primary)] text-white border-[var(--color-primary)]" : "bg-white text-[var(--color-text-muted)] border-[#eee] hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"}`}>
-                        {c === "Economy" ? "이코노미" : c === "Business" ? "비즈니스" : "퍼스트"}
+                        {c === "Economy" ? "이코노미" : c === "Business" ? "비즈니스" : "퍼스트 클래스"}
                       </button>
                     ))}
                   </div>

@@ -15,7 +15,7 @@ export function Services() {
         {/* Section Header */}
         <ScrollReveal>
           <div className="mb-20">
-            <h2 className="font-heading font-normal text-[40px] md:text-[48px] text-[var(--color-text)]">
+            <h2 className="font-heading font-normal text-4xl md:text-5xl text-[var(--color-text)]">
               Our Services.
             </h2>
           </div>
@@ -42,20 +42,20 @@ export function Services() {
 
                   {/* Text Block — col 8–12 or 1–5 */}
                   <div className={`col-span-12 lg:col-span-5 space-y-6 ${isEven ? "lg:order-first lg:pl-0 lg:pr-8" : "lg:pl-8"}`}>
-                    <span className="font-sans text-[11px] font-medium tracking-[0.15em] text-[var(--color-text-secondary)] uppercase block">
+                    <span className="font-sans text-xs font-medium tracking-[0.15em] text-[var(--color-text-secondary)] uppercase block">
                       {service.label}
                     </span>
-                    <h3 className="font-heading font-normal text-[30px] md:text-[36px] text-[var(--color-text)] leading-tight">
+                    <h3 className="font-heading font-normal text-3xl md:text-4xl text-[var(--color-text)] leading-tight">
                       {service.name}
                     </h3>
                     <div className="w-[60px] h-[1px] bg-[var(--color-border)]" />
-                    <p className="font-sans text-[15px] md:text-[16px] leading-[1.7] text-[var(--color-text-secondary)]">
+                    <p className="font-sans text-sm md:text-base leading-[var(--leading-body)] text-[var(--color-text-secondary)]">
                       {service.description}
                     </p>
                     <div className="pt-2">
                       <Link
                         href={`${baseRoute}/services`}
-                        className="font-sans text-[12px] font-medium tracking-[0.12em] text-[var(--color-text)] uppercase border-b border-[var(--color-text)] pb-1 hover:text-[var(--color-accent)] hover:border-[var(--color-accent)] transition-colors"
+                        className="font-sans text-xs font-medium tracking-[0.12em] text-[var(--color-text)] uppercase border-b border-[var(--color-text)] pb-1 hover:text-[var(--color-accent)] hover:border-[var(--color-accent)] transition-colors"
                       >
                         Learn More →
                       </Link>

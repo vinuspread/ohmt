@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Menu, Ticket, X } from "lucide-react";
-import { motion, useScroll, useMotionValueEvent } from "framer-motion";
+import { motion, useScroll, useMotionValueEvent } from "motion/react";
 import { usePathname } from "next/navigation";
 import ReservationDrawer from "../common/ReservationDrawer";
 import TotalMenu from "./TotalMenu";
@@ -52,7 +52,7 @@ export default function Header() {
     "editorial": `Editorial`,
     "title": `Divine Proportions`,
     "p1": `The Vatican Museums stand not only as a repository of historical objects, but as a monument to the relentless human pursuit of perfection. Walking through its halls is akin to walking through the physical manifestation of the Renaissance mind.`,
-    "p2": `Our curation seeks to extract the structural brilliance from the overwhelming ornamentation. By highlighting works like the Laocoön or the delicate Pietà in an isolated, digital space, we allow their raw theological and emotional gravity to echo without the noise of the physical gallery crowd.`,
+    "p2": `Our curation seeks to extract the structural brilliance from the overwhelming ornamentation. By highlighting works like the Laocoon or the delicate Pieta in an isolated, digital space, we allow their raw theological and emotional gravity to echo without the noise of the physical gallery crowd.`,
     "p3": `Every brushstroke captured by Raphael, every chisel strike endured by Michelangelo - these are not relics of the past. They are continuing dialogues on the nature of humanity, suffering, knowledge, and divinity.`,
     "curator": `Curator`,
     "curatorName": `OHMT Exhibition`
@@ -62,12 +62,12 @@ export default function Header() {
     "heroTitle": `The Soul of Stone`,
     "ch1": `Chapter I`,
     "ch1Title": `The Foundation of Light`,
-    "ch1Desc": `Founded in 1506 with the discovery of the Laocoön, the Vatican Museums encompass five centuries of papal patronage and the relentless pursuit of artistic perfection.`,
+    "ch1Desc": `Founded in 1506 with the discovery of the Laocoon, the Vatican Museums encompass five centuries of papal patronage and the relentless pursuit of artistic perfection.`,
     "timelineTitle": `A Line in Time.`,
     "timeline": [
       {
         "year": `1506`,
-        "title": `Discovery of Laocoön`,
+        "title": `Discovery of Laocoon`,
         "desc": `Pope Julius II purchasing the marble statue, which led to the foundation of the museum.`
       },
       {
@@ -130,7 +130,7 @@ export default function Header() {
         "name": `Greek Brilliance: Classical Sculptures`,
         "period": `2026.05.20 - 10.15`,
         "venue": `Statue Hall, Clementine Wing`,
-        "desc": `Experience the tactile genius of ancient Greek masters, from the Laocoön to the Apollo Belvedere, in global resolution.`,
+        "desc": `Experience the tactile genius of ancient Greek masters, from the Laocoon to the Apollo Belvedere, in global resolution.`,
         "tag": `Classical Antiquity`
       }
     ],
@@ -172,7 +172,7 @@ useMotionValueEvent(scrollY, "change", (latest) => {
     setHidden(latest > previous && latest > 150);
   });
 
-  // ?�재 ?�이지가 밝�? 배경?��? ?�단 (pathname???�요?��?�?hooks 추�?)
+  // Detect pages that use a light background.
   // But the goal is to remove lang logic. We still need pathname for LIGHT_BG_ROUTES.
   // Since I removed usePathname from imports earlier, I must add it back if it's used here.
   // Actually, I'll just hardcode or let the user know, but it's better to keep it working.
@@ -206,10 +206,10 @@ useMotionValueEvent(scrollY, "change", (latest) => {
         variants={{ visible: { y: 0 }, hidden: { y: "-100%" } }}
         animate={hidden ? "hidden" : "visible"}
         transition={{ duration: 0.35, ease: "easeInOut" }}
-        className={`fixed top-0 w-full z-50 px-6 h-14 md:h-20 flex items-center justify-between transition-all duration-300 ${bgStyle} ${textColor}`}
+        className={`fixed top-0 w-full z-50 px-6 h-14 lg:h-20 flex items-center justify-between transition-all duration-300 ${bgStyle} ${textColor}`}
       >
-        {/* 좌측: Special Exhibition / Collections / Museum Info (?�스?�톱 ?�용) */}
-        <div className="flex items-center gap-8 text-[13px] uppercase tracking-[0.3em] font-bold hidden md:flex w-1/3">
+        {/* Left: Special Exhibition / Collections / Museum Info (desktop only) */}
+        <div className="flex items-center gap-8 text-sm tracking-normal font-bold hidden lg:flex w-1/3">
           <Link
             href="/en/templates/OHMT021-museum/exhibitions"
             className="hover:opacity-50 transition-opacity underline-offset-8 hover:underline"
@@ -230,17 +230,17 @@ useMotionValueEvent(scrollY, "change", (latest) => {
           </Link>
         </div>
 
-        {/* 중앙: 로고 */}
+        {/* Center: logo */}
         <Link
           href="/en/templates/OHMT021-museum"
-          className={`text-[15px] sm:text-[18px] md:text-2xl font-serif font-bold tracking-[0.2em] -mr-[0.2em] absolute left-1/2 -translate-x-1/2 cursor-pointer uppercase transition-colors duration-300 ${logoColor}`}
+          className={`text-sm sm:text-lg lg:text-2xl font-serif font-bold tracking-[0.2em] -mr-[0.2em] absolute left-1/2 -translate-x-1/2 cursor-pointer uppercase transition-colors duration-300 ${logoColor}`}
         >
           OHMT
         </Link>
 
-        {/* ?�측: Tickets / Souvenir Shop (?�스?�톱 ?�용) / 메뉴 버튼 */}
-        <div className="flex items-center justify-end gap-8 text-[13px] uppercase tracking-[0.3em] font-bold flex-1 md:flex-initial md:w-1/3">
-          <div className="hidden md:flex items-center gap-8">
+        {/* Right: Tickets / Souvenir Shop (desktop only) / menu button */}
+        <div className="flex items-center justify-end gap-8 text-sm tracking-normal font-bold flex-1 lg:flex-initial lg:w-1/3">
+          <div className="hidden lg:flex items-center gap-8">
             <button
               onClick={() => setIsReservationOpen(true)}
               className="hover:opacity-50 transition-opacity underline-offset-8 hover:underline"
@@ -271,7 +271,7 @@ useMotionValueEvent(scrollY, "change", (latest) => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ delay: 2 }}
         onClick={() => setIsReservationOpen(true)}
-        className="fixed bottom-8 right-8 z-[90] w-16 h-16 rounded-full bg-[var(--color-primary)] text-[var(--color-accent)] hidden md:flex items-center justify-center hover:scale-110 active:scale-95 transition-transform"
+        className="fixed bottom-8 right-8 z-[90] w-16 h-16 rounded-full bg-[var(--color-primary)] text-[var(--color-accent)] hidden lg:flex items-center justify-center hover:scale-110 active:scale-95 transition-transform"
       >
         <Ticket size={24} />
       </motion.button>
@@ -281,7 +281,7 @@ useMotionValueEvent(scrollY, "change", (latest) => {
         onClose={() => setIsReservationOpen(false)}
       />
 
-      <div className="md:hidden">
+      <div className="lg:hidden">
         <MobileBottomTabBar 
           isMenuOpen={isMenuOpen} 
           onMenuToggle={() => setIsMenuOpen(!isMenuOpen)} 
@@ -291,7 +291,5 @@ useMotionValueEvent(scrollY, "change", (latest) => {
     </>
   );
 }
-
-
 
 

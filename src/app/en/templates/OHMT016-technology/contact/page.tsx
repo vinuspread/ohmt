@@ -4,6 +4,7 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 import Header from '../_components/Header'
 import Footer from '../_components/Footer'
+import FormSelect from '../_components/FormSelect'
 import { useState } from 'react'
 
 const officeData = [
@@ -33,7 +34,7 @@ export default function TechnologyContactPage() {
   })
   const [submitted, setSubmitted] = useState(false)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
@@ -53,10 +54,10 @@ export default function TechnologyContactPage() {
             <span className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] block">
               Get In Touch
             </span>
-            <h1 className="mb-6 text-[clamp(2.2rem,5vw,3.8rem)] font-bold tracking-[-0.03em] leading-[1.15] text-[var(--color-text)] font-heading">
+            <h1 className="mb-6 text-[length:var(--text-h1)] font-bold tracking-[-0.03em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading">
               Let&apos;s Build the Future Together
             </h1>
-            <p className="mx-auto max-w-2xl text-base md:text-lg text-[var(--color-text-muted)] leading-[1.2]">
+            <p className="mx-auto max-w-2xl text-base md:text-lg text-[var(--color-text-muted)] leading-[var(--leading-heading)]">
               Ready to deploy autonomous robotics in your operations? Reach out to our team for a consultation or demonstration.
             </p>
           </div>
@@ -71,7 +72,7 @@ export default function TechnologyContactPage() {
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
                   Inquiry Form
                 </span>
-                <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-bold tracking-[-0.02em] text-[var(--color-text)] font-heading mb-8">
+                <h2 className="text-[length:var(--text-lead)] font-bold tracking-[-0.02em] text-[var(--color-text)] font-heading mb-8">
                   Request a Consultation
                 </h2>
 
@@ -83,7 +84,7 @@ export default function TechnologyContactPage() {
                     <h3 className="text-lg font-bold text-[var(--color-text)] mb-2 font-heading">
                       Thank You
                     </h3>
-                    <p className="text-sm text-[var(--color-text-muted)] leading-[1.2] max-w-md mx-auto">
+                    <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-heading)] max-w-md mx-auto">
                       Your inquiry has been received. Our team will get back to you within 24 business hours.
                     </p>
                   </div>
@@ -142,19 +143,19 @@ export default function TechnologyContactPage() {
                       <label htmlFor="model" className="block text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text)] mb-2">
                          Interested Model
                       </label>
-                      <select
+                      <FormSelect
                         id="model"
                         name="model"
                         value={form.model}
-                        onChange={handleChange}
+                        onChange={(model) => setForm((current) => ({ ...current, model }))}
                         required
-                        className="w-full border border-[var(--color-border)] bg-[var(--color-bg-secondary)] px-4 py-3 text-sm text-[var(--color-text)] outline-none focus:border-[var(--color-accent)] transition-colors duration-200 rounded-md"
-                      >
-                        <option value="">Select a model</option>
-                        <option value="gen2">OmniBot Gen 2</option>
-                        <option value="prime">OmniBot Prime</option>
-                        <option value="both">Both / Not Sure</option>
-                      </select>
+                        placeholder="Select a model"
+                        options={[
+                          { value: 'gen2', label: 'OmniBot Gen 2' },
+                          { value: 'prime', label: 'OmniBot Prime' },
+                          { value: 'both', label: 'Both / Not Sure' },
+                        ]}
+                      />
                     </div>
 
                     <div>
@@ -188,7 +189,7 @@ export default function TechnologyContactPage() {
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
                   Global Offices
                 </span>
-                <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-bold tracking-[-0.02em] text-[var(--color-text)] font-heading mb-8">
+                <h2 className="text-[length:var(--text-lead)] font-bold tracking-[-0.02em] text-[var(--color-text)] font-heading mb-8">
                   Our Locations
                 </h2>
                 <div className="space-y-8">
@@ -205,12 +206,12 @@ export default function TechnologyContactPage() {
                           <h3 className="text-base font-bold text-[var(--color-text)] font-heading">
                             {office.city}
                           </h3>
-                          <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-[var(--color-accent)]">
+                          <span className="text-xs font-bold uppercase tracking-[0.15em] text-[var(--color-accent)]">
                             {office.role}
                           </span>
                         </div>
                       </div>
-                      <p className="text-sm text-[var(--color-text-muted)] leading-[1.2] mb-1">
+                      <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-heading)] mb-1">
                         {office.address}
                       </p>
                       <p className="text-sm text-[var(--color-text-muted)]">{office.email}</p>

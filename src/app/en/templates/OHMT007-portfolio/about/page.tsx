@@ -34,19 +34,19 @@ function AboutPageContent() {
         <section className="pt-40 pb-14 md:pb-28 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto px-6 grid md:grid-cols-2 gap-20 items-end">
             <div>
-              <span className="text-[13px] font-bold tracking-[0.4em] uppercase text-[var(--color-text-muted)] block mb-6">About the Studio</span>
-              <h1 className="text-[clamp(3rem,8vw,7rem)] font-medium uppercase tracking-tighter leading-[1.1]">
+              <span className="text-xs font-bold tracking-[0.4em] uppercase text-[var(--color-text-muted)] block mb-6">About the Studio</span>
+              <h1 className="text-[length:var(--text-display)] font-medium uppercase tracking-tighter leading-[var(--leading-heading)]">
                 We make<br />the bold<br /><span className="text-[var(--color-text)]">visible.</span>
               </h1>
             </div>
             <div className="space-y-6">
-              <p className="text-[1rem] text-[var(--color-text-muted)] leading-[1.4]">
+              <p className="text-[1rem] text-[var(--color-text-muted)] leading-[var(--leading-body)]">
                 Founded in Seoul in 2019, OHMT is a creative studio that partners with brands and founders who have something real to say - and want the world to hear it.
               </p>
-              <p className="text-[1rem] text-[var(--color-text-muted)] leading-[1.4]">
+              <p className="text-[1rem] text-[var(--color-text-muted)] leading-[var(--leading-body)]">
                 We believe great design is never decoration. It's a strategic act that changes how people feel about a product before they've used it.
               </p>
-              <Link href="/en/templates/OHMT007-portfolio/contact" className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-widest text-[var(--color-text)] border-b border-[var(--color-accent)]/30 pb-0.5 hover:border-[var(--color-accent)] transition-colors">
+              <Link href="/en/templates/OHMT007-portfolio/contact" className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[var(--color-text)] border-b border-[var(--color-accent)]/30 pb-0.5 hover:border-[var(--color-accent)] transition-colors">
                 Work With Us <ArrowUpRight size={12} />
               </Link>
             </div>
@@ -78,8 +78,8 @@ function AboutPageContent() {
         <section className="py-14 md:py-28 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto px-6">
             <div className="mb-16">
-              <span className="text-[13px] font-bold tracking-[0.3em] uppercase text-[var(--color-text-muted)] block mb-4">How We Work</span>
-              <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-medium uppercase tracking-tighter leading-none">Our Process</h2>
+              <span className="text-xs font-bold tracking-[0.3em] uppercase text-[var(--color-text-muted)] block mb-4">How We Work</span>
+              <h2 className="text-[length:var(--text-h2)] font-medium uppercase tracking-tighter leading-none">Our Process</h2>
             </div>
             <div className="grid md:grid-cols-4 gap-0 divide-x divide-white/10 border-x border-[var(--color-border)]">
               {process.map((step, i) => (
@@ -93,7 +93,7 @@ function AboutPageContent() {
                 >
                   <span className="text-[2.5rem] font-black text-[var(--color-text)]/15 group-hover:text-[var(--color-text)]/40 transition-colors block mb-6 leading-none">{step.num}</span>
                   <h3 className="text-[1rem] font-medium uppercase tracking-tight mb-4 group-hover:text-[var(--color-text)] transition-colors">{step.title}</h3>
-                  <p className="text-[0.82rem] text-[var(--color-text-muted)] leading-[1.4]">{step.desc}</p>
+                  <p className="text-[0.82rem] text-[var(--color-text-muted)] leading-[var(--leading-body)]">{step.desc}</p>
                 </motion.div>
               ))}
             </div>
@@ -104,8 +104,8 @@ function AboutPageContent() {
         <section className="py-14 md:py-28">
           <div className="max-w-[1440px] mx-auto px-6">
             <div className="mb-16">
-              <span className="text-[13px] font-bold tracking-[0.3em] uppercase text-[var(--color-text-muted)] block mb-4">The People</span>
-              <h2 className="text-[clamp(2rem,5vw,3.5rem)] font-medium uppercase tracking-tighter leading-none">Meet the Team</h2>
+              <span className="text-xs font-bold tracking-[0.3em] uppercase text-[var(--color-text-muted)] block mb-4">The People</span>
+              <h2 className="text-[length:var(--text-h2)] font-medium uppercase tracking-tighter leading-none">Meet the Team</h2>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {team.map((m, i) => (
@@ -135,10 +135,10 @@ function AboutPageContent() {
 }
 
 
-export default function AboutPage(props: any) {
+export default function AboutPage() {
   return (
     <React.Suspense fallback={null}>
-      <AboutPageContent {...props} />
+      <AboutPageContent />
     </React.Suspense>
   );
 }

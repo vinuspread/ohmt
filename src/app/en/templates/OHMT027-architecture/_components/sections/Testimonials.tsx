@@ -9,12 +9,12 @@ import "swiper/css";
 
 export function Testimonials() {
   return (
-    <section className="bg-[#F5F5F5] py-20 lg:py-24">
+    <section className="bg-[var(--color-bg-secondary)] py-20 lg:py-24">
       <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20">
         {/* Section Header */}
         <ScrollReveal>
           <div className="mb-16">
-            <h2 className="font-heading font-normal text-[36px] md:text-[40px] text-[var(--color-text)]">
+            <h2 className="font-heading font-normal text-4xl md:text-4xl text-[var(--color-text)]">
               What Our Clients Say.
             </h2>
           </div>
@@ -36,16 +36,16 @@ export function Testimonials() {
               <SwiperSlide key={index} className="!h-auto flex">
                 <div className="bg-white p-8 md:p-10 w-full flex flex-col justify-between shadow-sm border border-black/5">
                   <div className="space-y-4">
-                    <p className="font-heading font-normal text-[15px] md:text-[16px] leading-[1.6] text-[var(--color-text)] relative z-10">
+                    <p className="font-heading font-normal text-sm md:text-base leading-[var(--leading-body)] text-[var(--color-text)] relative z-10">
                       {t.quote}
                     </p>
                   </div>
                   <div className="mt-8">
                     <div className="w-10 h-[1px] bg-[var(--color-border)] mb-4" />
-                    <h4 className="font-sans font-medium text-[14px] text-[var(--color-text)]">
+                    <h4 className="font-sans font-medium text-sm text-[var(--color-text)]">
                       {t.client}
                     </h4>
-                    <p className="font-sans text-[15px] text-[var(--color-text-secondary)] mt-1">
+                    <p className="font-sans text-sm text-[var(--color-text-secondary)] mt-1">
                       {t.company}
                     </p>
                   </div>

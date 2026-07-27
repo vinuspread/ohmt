@@ -1,9 +1,9 @@
 "use client";
 
 const trims = [
-  { id: "standard",    name: "Standard Range",  range: "280 km", power: "215 kW", price: "2,890만 원", tag: "" },
-  { id: "longrange",   name: "Long Range",       range: "380 km", power: "260 kW", price: "3,350만 원", tag: "가장 많이 선택" },
-  { id: "performance", name: "Performance",      range: "340 km", power: "320 kW", price: "4,050만 원", tag: "" },
+  { id: "standard",    name: "스탠더드",  range: "280 km", power: "215 kW", price: "2,890만 원", tag: "" },
+  { id: "longrange",   name: "롱 레인지",       range: "380 km", power: "260 kW", price: "3,350만 원", tag: "가장 많이 선택" },
+  { id: "performance", name: "퍼포먼스",      range: "340 km", power: "320 kW", price: "4,050만 원", tag: "" },
 ] as const;
 
 export type TrimId = (typeof trims)[number]["id"];
@@ -17,9 +17,8 @@ export function TrimSelector({
 }) {
   return (
     <section>
-      <h2 className="font-michroma text-[clamp(18px,2vw,28px)] text-[var(--text)] leading-[1.1] tracking-[-0.02em] mb-6">
-        트림 선택
-      </h2>
+      <h2 className="font-michroma text-[length:var(--text-lead)] text-[var(--text)] leading-[var(--leading-heading)] tracking-[-0.02em] mb-6">
+        모델 선택</h2>
       <div className="space-y-0">
         {trims.map((trim) => {
           const isActive = selected === trim.id;
@@ -37,22 +36,22 @@ export function TrimSelector({
                 }`} />
                 <div>
                   <div className="flex items-center gap-3 mb-1">
-                    <span className={`font-michroma text-[15px] leading-none ${isActive ? "text-[var(--accent)]" : "text-[var(--text)]"}`}>
+                    <span className={`font-michroma text-sm leading-none ${isActive ? "text-[var(--accent)]" : "text-[var(--text)]"}`}>
                       {trim.name}
                     </span>
                     {trim.tag && (
-                      <span className="font-inter text-[10px] tracking-[0.06em] text-[var(--accent)] border border-[var(--accent)] rounded-full px-2 py-0.5">
+                      <span className="font-inter text-xs tracking-[0.06em] text-[var(--accent)] border border-[var(--accent)] rounded-full px-2 py-0.5">
                         {trim.tag}
                       </span>
                     )}
                   </div>
                   <div className="flex gap-4">
-                    <span className="font-inter text-[12px] text-[var(--text-muted)]">{trim.range}</span>
-                    <span className="font-inter text-[12px] text-[var(--text-muted)]">{trim.power}</span>
+                    <span className="font-inter text-xs text-[var(--text-muted)]">{trim.range}</span>
+                    <span className="font-inter text-xs text-[var(--text-muted)]">{trim.power}</span>
                   </div>
                 </div>
               </div>
-              <span className="font-michroma text-[16px] text-[var(--text)] flex-shrink-0">{trim.price}</span>
+              <span className="font-michroma text-base text-[var(--text)] flex-shrink-0">{trim.price}</span>
             </button>
           );
         })}

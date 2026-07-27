@@ -11,7 +11,7 @@ export const TeamSection = () => {
           <h2 className="text-4xl lg:text-5xl font-bold tracking-tight">Meet the Minds</h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">
           {teamMembers.map((member) => (
             <div key={member.id} className="group">
               <div className="aspect-[3/4] overflow-hidden bg-[var(--color-bg-secondary)]">

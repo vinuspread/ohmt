@@ -1,9 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { SafeResponsiveContainer } from './SafeResponsiveContainer'
+import {
+  useState } from 'react'
 import { motion, AnimatePresence, useReducedMotion } from 'framer-motion'
 import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
+  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip
 } from 'recharts'
 import { saleReports } from '../../data/dashboard-data'
 import { chartDefaults, formatAxis } from '../../data/chart-theme'
@@ -53,7 +55,7 @@ export function SaleReportChart() {
             transition={{ duration: 0.25 }}
             style={{ width: '100%', height: '100%' }}
           >
-            <ResponsiveContainer width="100%" height="100%">
+            <SafeResponsiveContainer width="100%" height="100%">
               <LineChart data={data}>
                 <CartesianGrid {...chartDefaults.cartesianGrid} />
                 <XAxis dataKey="month" tick={{ fill: 'var(--color-text-muted)', fontSize: 12 }} axisLine={false} tickLine={false} />
@@ -62,7 +64,7 @@ export function SaleReportChart() {
                 <Line type="monotone" dataKey="revenue" name="Revenue" stroke="var(--color-primary)" strokeWidth={2} dot={false} activeDot={{ r: 4 }} isAnimationActive={false} animationDuration={1000} animationEasing="ease-in-out" />
                 <Line type="monotone" dataKey="profit" name="Profit" stroke="var(--color-success)" strokeWidth={2} dot={false} activeDot={{ r: 4 }} isAnimationActive={false} animationDuration={1000} animationEasing="ease-in-out" />
               </LineChart>
-            </ResponsiveContainer>
+            </SafeResponsiveContainer>
           </motion.div>
         </AnimatePresence>
       </div>

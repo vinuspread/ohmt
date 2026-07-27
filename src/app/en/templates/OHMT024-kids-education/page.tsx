@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
 import themeData from "./theme.json";
 import Navbar from "./_components/layout/Navbar";
@@ -15,6 +16,10 @@ const jsonLd = {
   "name": "OHMT - Creative Academy",
   "description": "Playful and colorful children education platform with creative classes",
   "url": "https://ohmytemplate.com/en/templates/OHMT024-kids-education",
+};
+
+export const metadata: Metadata = {
+  title: "OHMT Kids Academy - Home",
 };
 
 export default function KidsEducationPage() {

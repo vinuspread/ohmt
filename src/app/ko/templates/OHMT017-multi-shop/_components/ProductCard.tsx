@@ -38,23 +38,22 @@ export const ProductCard = ({
         />
 
         {discount && (
-          <span className="absolute top-3 left-3 bg-[var(--color-sale)] text-white text-[10px] font-bold px-2 py-1 tracking-wide">
+          <span className="absolute top-3 left-3 bg-[var(--color-sale)] text-white text-xs font-bold px-2 py-1 tracking-wide">
             -{discount}%
           </span>
         )}
 
         <div className="absolute inset-x-0 bottom-0 bg-[var(--color-primary)] py-3 text-center translate-y-full motion-safe:group-hover:translate-y-0 transition-transform duration-300 ease-out">
-          <span className="text-white text-[11px] uppercase tracking-[0.2em] font-medium">
-            빠른보기
-          </span>
+          <span className="text-white text-xs uppercase tracking-[0.2em] font-medium">
+            빠른 보기</span>
         </div>
       </div>
 
       <div className="mt-3 space-y-1">
-        <span className="text-[10px] uppercase tracking-[0.2em] text-[var(--color-text-muted)]">
+        <span className="text-xs uppercase tracking-[0.2em] text-[var(--color-text-muted)]">
           {category}
         </span>
-        <h3 className="text-sm font-medium text-[var(--color-text)] leading-[1.1]">
+        <h3 className="text-sm font-medium text-[var(--color-text)] leading-[var(--leading-heading)]">
           {name}
         </h3>
 
@@ -71,7 +70,7 @@ export const ProductCard = ({
                 />
               ))}
             </div>
-            <span className="text-[10px] text-[var(--color-text-muted)]">
+            <span className="text-xs text-[var(--color-text-muted)]">
               ({reviewCount})
             </span>
           </div>
@@ -91,4 +90,3 @@ export const ProductCard = ({
     </Link>
   );
 };
-

@@ -44,15 +44,15 @@ export default function AboutContent() {
             initial={shouldReduce ? { opacity: 0 } : { opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2, ease: EASE_OUT }}
-            className="max-w-2xl"
+            className="max-w-4xl"
           >
             <span className="inline-flex items-center justify-center bg-[var(--color-accent)] text-white rounded-full px-5 py-2.5 text-xs font-bold uppercase tracking-wider leading-none mb-4">
               아카데미 소개
             </span>
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[1.1]" style={{ fontFamily: "var(--font-heading)" }}>
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[var(--leading-heading)]" style={{ fontFamily: "var(--font-heading)" }}>
               모든 아이가 스스로의
               <br />
-              <span className="text-[var(--color-accent)]">특별한 불꽃을 발견하는 곳</span>
+              <span className="text-[var(--color-accent)] sm:whitespace-nowrap">특별한 불꽃을 발견하는 곳</span>
             </h1>
           </motion.div>
 
@@ -62,7 +62,7 @@ export default function AboutContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.2, delay: 0.1, ease: EASE_OUT }}
             >
-              <h2 className="text-2xl font-bold tracking-tight mb-4 leading-[1.1]" style={{ fontFamily: "var(--font-heading)" }}>
+              <h2 className="text-2xl font-bold tracking-tight mb-4 leading-[var(--leading-heading)]" style={{ fontFamily: "var(--font-heading)" }}>
                 교육 이사회의 미션
               </h2>
               <p className="text-base text-[var(--color-text-muted)] leading-relaxed">
@@ -74,7 +74,7 @@ export default function AboutContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.2, delay: 0.12, ease: EASE_OUT }}
             >
-              <h2 className="text-2xl font-bold tracking-tight mb-4 leading-[1.1]" style={{ fontFamily: "var(--font-heading)" }}>
+              <h2 className="text-2xl font-bold tracking-tight mb-4 leading-[var(--leading-heading)]" style={{ fontFamily: "var(--font-heading)" }}>
                 창의적인 교육 환경
               </h2>
               <p className="text-base text-[var(--color-text-muted)] leading-relaxed">
@@ -126,7 +126,7 @@ export default function AboutContent() {
             <span className="inline-flex items-center justify-center bg-[var(--color-secondary)] text-white rounded-full px-5 py-2.5 text-xs font-bold uppercase tracking-wider leading-none mb-4">
               아카데미의 가치
             </span>
-            <h2 className="text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1]" style={{ fontFamily: "var(--font-heading)" }}>
+            <h2 className="text-4xl sm:text-5xl font-bold tracking-tight leading-[var(--leading-heading)]" style={{ fontFamily: "var(--font-heading)" }}>
               우리가 지켜나가는 가치
             </h2>
           </motion.div>
@@ -142,7 +142,7 @@ export default function AboutContent() {
                 className="bg-white rounded-2xl border border-black/8 p-6 hover:bg-white hover:border-black/15 hover:shadow-md transition-all duration-200"
               >
                 <span className="text-3xl block mb-3">{v.emoji}</span>
-                <h3 className="text-lg font-bold tracking-tight leading-[1.1] mb-2" style={{ fontFamily: "var(--font-heading)" }}>
+                <h3 className="text-lg font-bold tracking-tight leading-[var(--leading-heading)] mb-2" style={{ fontFamily: "var(--font-heading)" }}>
                   {v.title}
                 </h3>
                 <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">{v.description}</p>
@@ -165,12 +165,12 @@ export default function AboutContent() {
             <span className="inline-flex items-center justify-center bg-[var(--color-red)] text-white rounded-full px-5 py-2.5 text-xs font-bold uppercase tracking-wider leading-none mb-4">
               선생님 소개
             </span>
-            <h2 className="text-4xl sm:text-5xl font-bold tracking-tight leading-[1.1]" style={{ fontFamily: "var(--font-heading)" }}>
+            <h2 className="text-4xl sm:text-5xl font-bold tracking-tight leading-[var(--leading-heading)]" style={{ fontFamily: "var(--font-heading)" }}>
               함께하는 파트너를 소개합니다
             </h2>
           </motion.div>
 
-          <div className="grid sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="mx-auto grid max-w-6xl gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {teachers.map((teacher, idx) => (
               <motion.div
                 key={teacher.id}
@@ -206,11 +206,11 @@ export default function AboutContent() {
             transition={{ duration: 0.2, ease: EASE_OUT }}
           >
             <p className="text-white/80 text-xs font-bold tracking-wider mb-3">Ready to start?</p>
-            <h2 className="text-4xl sm:text-5xl font-bold text-white leading-[1.1]" style={{ fontFamily: "var(--font-heading)" }}>
+            <h2 className="text-4xl sm:text-5xl font-bold text-white leading-[var(--leading-heading)]" style={{ fontFamily: "var(--font-heading)" }}>
               배움이 곧 즐거운 놀이가 되는 곳
             </h2>
             <p className="mt-4 text-white/70 text-base max-w-2xl mx-auto leading-relaxed">
-              놀이를 통해 아이 스스로 원리를 깨우치는 기쁨을 맛보여 주세요.<br />우리 소중한 아이의 첫걸음에 창의력의 날개를 달아 드립니다.
+              놀이 속에서 아이 스스로 원리를 깨우치는 기쁨을 느끼게 해주세요.<br />우리 소중한 아이의 첫걸음에 창의력의 날개를 달아 드립니다.
             </p>
             <div className="flex flex-wrap justify-center gap-3 mt-8">
               <Link

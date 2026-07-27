@@ -217,7 +217,7 @@ function CarConfigurePageContent() {
                   <p className="text-[0.6rem] uppercase tracking-widest text-[var(--theme-text-muted)]">Est. Total</p>
                   <p className="text-[1.8rem] font-bold tracking-tight">${total.toLocaleString()}</p>
                 </div>
-                <span className="text-[0.65rem] text-[var(--theme-text-muted)] text-right leading-[1.4] max-w-[120px]">
+                <span className="text-[0.65rem] text-[var(--theme-text-muted)] text-right leading-[var(--leading-body)] max-w-[120px]">
                   Before taxes & destination
                 </span>
               </div>
@@ -239,10 +239,10 @@ function CarConfigurePageContent() {
 }
 
 
-export default function CarConfigurePage(props: any) {
+export default function CarConfigurePage() {
   return (
     <React.Suspense fallback={null}>
-      <CarConfigurePageContent {...props} />
+      <CarConfigurePageContent />
     </React.Suspense>
   );
 }

@@ -1,11 +1,11 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "Car Concept - OHMT (KO)",
+  title: "OHMT - ??? ??? ???? ???",
   description: "프리미엄 자동차 컨셉 쇼케이스",
   openGraph: {
-    title: "Car Concept - OHMT (KO)",
+    title: "OHMT - ??? ??? ???? ???",
     description: "프리미엄 자동차 컨셉 쇼케이스",
     url: "https://ohmytemplate.com/ko/templates/OHMT009-car",
     siteName: "OHMT",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Car Concept - OHMT (KO)",
+    title: "OHMT - ??? ??? ???? ???",
     description: "프리미엄 자동차 컨셉 쇼케이스",
     images: ["/templates/OHMT009-car/og-image.jpg"],
   },
@@ -33,11 +33,11 @@ export default function CarLayout({
 }) {
   return (
     <>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" crossOrigin="anonymous" />
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;700;800;900&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;700;800;900&display=swap');
       `}</style>
-      {children}
+      <div lang="ko" className="ohmt009-car">{children}</div>
     </>
   );
 }
-

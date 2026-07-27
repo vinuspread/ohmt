@@ -15,7 +15,7 @@ function ClassesContent() {
       <Navbar />
       <PageHeader
         title="클래스"
-        subtitle="당신의 마음에 울리는 수련을 찾아보세요. 다이내믹한 플로우부터 고요한 명상까지, 모든 레벨을 위한 다양한 클래스를 제공합니다."
+        subtitle={"당신의 마음에 울리는 수련을 찾아보세요.\n다이내믹한 플로우부터 고요한 명상까지, 모든 레벨을 위한 다양한 클래스를 선보입니다."}
         image="/templates/OHMT022-yoga/subpage-classes.jpg"
       />
 
@@ -23,18 +23,17 @@ function ClassesContent() {
         {/* 헤더 row */}
         <div className="flex items-end justify-between px-8 md:px-14 lg:px-20 pt-12 pb-10 border-b border-[var(--color-border)]">
           <h2
-            className="text-[clamp(1.6rem,3.5vw,3rem)] font-light text-[var(--color-text)] leading-[1.05] tracking-[-0.02em]"
+            className="text-[length:var(--text-h2)] font-light text-[var(--color-text)] leading-[var(--leading-heading)] tracking-[-0.02em]"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             {CLASSES.length}개 클래스
           </h2>
           <Link
             href="/ko/templates/OHMT022-yoga/schedule"
-            className="hidden md:inline-flex items-center gap-2 text-[12px] tracking-[0.2em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] font-medium transition-colors"
+            className="hidden md:inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] font-medium transition-colors"
             style={{ fontFamily: "var(--font-body)" }}
           >
-            스케줄 보기 →
-          </Link>
+            주간 일정 보기 →</Link>
         </div>
 
         {/* 클래스 그리드 */}

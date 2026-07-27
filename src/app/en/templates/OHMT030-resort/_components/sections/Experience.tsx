@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
+import { IconButton } from "../ui/IconButton";
+import { SectionEyebrow, SectionHeading } from "../ui/Typography";
 
 const base = "/en/templates/OHMT030-resort";
 
@@ -33,37 +35,35 @@ export function Experience() {
   const next = () => setActive((i) => (i + 1) % slides.length);
 
   return (
-    <section className="py-[130px]">
-      <div className="grid grid-cols-1 md:grid-cols-[2fr_3fr] gap-12 max-w-[1440px] mx-auto px-10">
+    <section className="py-16 md:py-32">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-[1440px] mx-auto px-6 md:px-12">
 
         {/* Left: Text */}
         <div className="flex flex-col justify-between">
           <div>
-            <span className="text-[13px] font-medium text-[var(--accent)] tracking-widest uppercase mb-6 block">
+            <SectionEyebrow>
               EXPERIENCE
-            </span>
-            <h2 className="text-[clamp(48px,5.5vw,80px)] font-semibold text-white leading-[1.1] tracking-[-0.02em] mb-10 whitespace-pre-line">
+            </SectionEyebrow>
+            <SectionHeading size="large" className="mb-12 whitespace-pre-line">
               {`Where Time\nBecomes\nMemory`}
-            </h2>
+            </SectionHeading>
             <Link href={`${base}/#`}
-              className="inline-flex items-center gap-2 rounded-full border border-white/60 bg-white/10 px-6 py-3 text-white text-[15px] hover:bg-white/20 transition-all">
+              className="inline-flex items-center gap-2 rounded-full border border-white/60 bg-white/10 px-6 py-3 text-white text-base hover:bg-white/20 transition-all">
               Discover All <ArrowRight size={15} />
             </Link>
           </div>
 
           {/* Controls */}
           <div className="flex items-center gap-4 mt-16">
-            <button onClick={prev}
-              className="w-11 h-11 rounded-full border border-white/40 flex items-center justify-center text-white hover:bg-white/10 transition-colors focus-visible:ring-[var(--accent)] focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-transparent" aria-label="Previous">
+            <IconButton onClick={prev} aria-label="Previous">
               <ArrowLeft size={17} />
-            </button>
-            <span className="text-[13px] text-white/50 tabular-nums">
+            </IconButton>
+            <span className="text-sm text-white/50 tabular-nums">
               {String(active + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
             </span>
-            <button onClick={next}
-              className="w-11 h-11 rounded-full bg-white flex items-center justify-center text-[var(--bg-dark)] hover:opacity-85 transition-opacity focus-visible:ring-[var(--accent)] focus-visible:ring-2 focus-visible:ring-offset-2" aria-label="Next">
+            <IconButton onClick={next} tone="solid" aria-label="Next">
               <ArrowRight size={17} />
-            </button>
+            </IconButton>
           </div>
         </div>
 
@@ -75,9 +75,9 @@ export function Experience() {
               <img src={s.image} alt={s.label}
                 className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
-              <div className="absolute bottom-8 left-8 right-8">
-                <p className="text-[13px] font-medium text-white/60 uppercase tracking-widest mb-2">{s.location} · {s.time}</p>
-                <p className="text-[22px] font-semibold text-white leading-tight">{s.label}</p>
+              <div className="absolute bottom-9 left-9 right-9">
+                <p className="text-sm font-medium text-white/60 uppercase tracking-widest mb-2">{s.location} · {s.time}</p>
+                <p className="text-2xl font-semibold text-white leading-tight">{s.label}</p>
               </div>
             </div>
           ))}

@@ -10,14 +10,14 @@ export default function Features() {
         <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="max-w-xl">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
-              핵심 역량
+              핵심 기술
             </span>
-            <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.1] text-[var(--color-text)] font-heading break-keep">
-              임팩트를 위한 핵심 기능
+            <h2 className="text-[length:var(--text-h1)] font-bold tracking-[-0.02em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading break-keep">
+              현장에서 검증된 기술
             </h2>
           </div>
-          <p className="max-w-md text-sm md:text-base text-[var(--color-text-muted)] leading-[1.2]">
-            모든 서브시스템은 최고의 신뢰성과 차세대 기계 지능을 결합하여 실제 성능을 구현하도록 설계되었습니다.
+          <p className="max-w-md text-sm md:text-base text-[var(--color-text-muted)] leading-[var(--leading-heading)]">
+            각 시스템은 높은 신뢰성과 온디바이스 지능을 바탕으로 실제 작업 환경에서 안정적으로 작동합니다.
           </p>
         </div>
 
@@ -42,7 +42,7 @@ export default function Features() {
                 <h3 className="text-lg font-bold text-[var(--color-text)] mb-3 font-heading transition-colors group-hover:text-[var(--color-accent)]">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-[var(--color-text-muted)] leading-[1.2] mb-6 flex-grow">
+                <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-heading)] mb-6 flex-grow">
                   {feature.description}
                 </p>
 

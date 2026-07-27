@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 const koNav = [
-  { num: '_01', name: '작업', href: '/ko/templates/OHMT007-portfolio' },
+  { num: '_01', name: '프로젝트', href: '/ko/templates/OHMT007-portfolio' },
   { num: '_02', name: '소개', href: '/ko/templates/OHMT007-portfolio/about' },
   { num: '_03', name: '저널', href: '/ko/templates/OHMT007-portfolio/journal' },
   { num: '_04', name: '문의', href: '/ko/templates/OHMT007-portfolio/contact' },
@@ -43,7 +43,7 @@ export function Header() {
               ))}
             </nav>
             
-            <div className="hidden md:flex items-center gap-2 text-[13px] font-medium text-[var(--color-text-muted)]">
+            <div className="hidden md:flex items-center gap-2 text-xs font-medium text-[var(--color-text-muted)]">
               <a href="#" className="hover:text-[var(--color-text)] transition-colors">BE</a>
               <span>/</span>
               <a href="#" className="hover:text-[var(--color-text)] transition-colors">DR</a>
@@ -83,14 +83,14 @@ export function Header() {
                   <Link
                     href={item.href}
                     onClick={() => setMenuOpen(false)}
-                    className="block text-[clamp(2.5rem,8vw,6rem)] font-black tracking-tighter text-[var(--color-text)] leading-none hover:text-[var(--color-accent)] transition-colors"
+                    className="block text-[length:var(--text-display)] font-black tracking-tighter text-[var(--color-text)] leading-none hover:text-[var(--color-accent)] transition-colors"
                   >
                     {item.name}
                   </Link>
                 </motion.div>
               ))}
             </nav>
-            <div className="absolute bottom-10 left-10 flex gap-6 text-[13px] text-[var(--color-text-muted)]">
+            <div className="absolute bottom-10 left-10 flex gap-6 text-xs text-[var(--color-text-muted)]">
               <a href="#" className="hover:text-[var(--color-accent)] transition-colors font-bold">BE</a>
               <a href="#" className="hover:text-[var(--color-accent)] transition-colors font-bold">DR</a>
               <a href="#" className="hover:text-[var(--color-accent)] transition-colors font-bold">X</a>

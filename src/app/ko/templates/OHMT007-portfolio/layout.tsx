@@ -1,12 +1,12 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - 포트폴리오",
-  description: "개인 브랜딩 및 크리에이티브 포트폴리오",
+  title: "OHMT | 크리에이티브 스튜디오 포트폴리오",
+  description: "브랜드 디자인과 웹사이트, 캠페인 프로젝트를 소개하는 크리에이티브 스튜디오 포트폴리오 템플릿입니다.",
   openGraph: {
-    title: "OHMT - 포트폴리오",
-    description: "개인 브랜딩 및 크리에이티브 포트폴리오",
+    title: "OHMT | 크리에이티브 스튜디오 포트폴리오",
+    description: "브랜드 디자인과 웹사이트, 캠페인 프로젝트를 소개하는 크리에이티브 스튜디오 포트폴리오 템플릿입니다.",
     url: "https://ohmytemplate.com/ko/templates/OHMT007-portfolio",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT007-portfolio/og-image.jpg", width: 1200, height: 630 }],
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - 포트폴리오",
-    description: "개인 브랜딩 및 크리에이티브 포트폴리오",
+    title: "OHMT | 크리에이티브 스튜디오 포트폴리오",
+    description: "브랜드 디자인과 웹사이트, 캠페인 프로젝트를 소개하는 크리에이티브 스튜디오 포트폴리오 템플릿입니다.",
     images: ["/templates/OHMT007-portfolio/og-image.jpg"],
   },
   robots: { index: true, follow: true },
@@ -37,8 +37,9 @@ export default function PortfolioLayout({
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap');
         @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
       `}</style>
-      <div className="portfolio-template">{children}</div>
+      <div className="portfolio-template">
+        <div lang="ko" className="ohmt007-portfolio">{children}</div>
+      </div>
     </>
   );
 }
-

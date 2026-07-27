@@ -7,6 +7,8 @@ export const navLinks: NavLink[] = [
   { label: "Home", href: "/en/templates/OHMT026-spa" },
   { label: "About", href: "/en/templates/OHMT026-spa/about" },
   { label: "Service", href: "/en/templates/OHMT026-spa/service" },
+  { label: "Pricing", href: "/en/templates/OHMT026-spa/pricing" },
+  { label: "Therapists", href: "/en/templates/OHMT026-spa/therapists" },
   { label: "Blog", href: "/en/templates/OHMT026-spa/blog" },
   { label: "Contact", href: "/en/templates/OHMT026-spa/contact" },
 ];

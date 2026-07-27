@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "motion/react";
 
 export default function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -15,7 +15,7 @@ export default function ContactForm() {
   return (
     <div className="max-w-[480px]">
       <h1
-        className="font-[family-name:var(--font-heading)] font-light capitalize text-[var(--color-text)] leading-[1.05] mb-4"
+        className="font-[family-name:var(--font-heading)] font-light capitalize text-[var(--color-text)] leading-[var(--leading-heading)] mb-4"
         style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)" }}
       >
         Book Your Date
@@ -86,3 +86,4 @@ function Field({ id, label, type, required }: { id: string; label: string; type:
     </div>
   );
 }
+

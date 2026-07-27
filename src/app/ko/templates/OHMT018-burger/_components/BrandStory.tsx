@@ -16,7 +16,7 @@ export const BrandStory = () => {
             transition={{ duration: 0.35, ease: easeOut }}
           >
             <p className="text-xs uppercase tracking-[0.3em] text-white/40 mb-4">브랜드 스토리</p>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-[var(--leading-heading)]">
               우리가 늘 꿈꾸던<br />본질적인 버거.
             </h2>
           </motion.div>
@@ -28,8 +28,11 @@ export const BrandStory = () => {
             transition={{ duration: 0.35, ease: easeOut }}
           >
             <p className="text-base leading-relaxed text-white/70">
-              훌륭한 버거에는 화려한 장식이 필요치 않다는 단순한 믿음에서 출발했습니다. 
-              최고의 프리미엄 소고기 패티, 완벽하게 토스트된 번, 그리고 만드는 이의 숙련된 정성이면 충분합니다.
+              훌륭한 버거에는 화려한 장식이 필요치 않다는 단순한 믿음에서 출발했습니다.
+              <br className="hidden md:block" />
+              최고의 프리미엄 소고기 패티, 완벽하게 토스트된 번,
+              <br className="hidden md:block" />
+              그리고 만드는 이의 숙련된 정성이면 충분합니다.
             </p>
             <p className="text-base leading-relaxed text-white/70">
               엄선된 친환경 목장의 소고기, 매일 아침 매장에서 갓 구워내는 향긋한 브리오슈 번, 

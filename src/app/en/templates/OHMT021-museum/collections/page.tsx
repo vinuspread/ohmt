@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { useSearchParams } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import Link from "next/link";
 import { collections } from "../data/collections";
 import { Plus } from "lucide-react";
@@ -13,7 +12,6 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 const LIMIT_PER_PAGE = 10;
 
 function CollectionsPageContent() {
-  const searchParams = useSearchParams();
   const t = {
   "nav": {
     "specialExhibition": `Special Exhibition`,
@@ -44,7 +42,7 @@ function CollectionsPageContent() {
     "editorial": `Editorial`,
     "title": `Divine Proportions`,
     "p1": `The Vatican Museums stand not only as a repository of historical objects, but as a monument to the relentless human pursuit of perfection. Walking through its halls is akin to walking through the physical manifestation of the Renaissance mind.`,
-    "p2": `Our curation seeks to extract the structural brilliance from the overwhelming ornamentation. By highlighting works like the Laocoön or the delicate Pietà in an isolated, digital space, we allow their raw theological and emotional gravity to echo without the noise of the physical gallery crowd.`,
+    "p2": `Our curation seeks to extract the structural brilliance from the overwhelming ornamentation. By highlighting works like the Laocoon or the delicate Pieta in an isolated, digital space, we allow their raw theological and emotional gravity to echo without the noise of the physical gallery crowd.`,
     "p3": `Every brushstroke captured by Raphael, every chisel strike endured by Michelangelo - these are not relics of the past. They are continuing dialogues on the nature of humanity, suffering, knowledge, and divinity.`,
     "curator": `Curator`,
     "curatorName": `OHMT Exhibition`
@@ -54,12 +52,12 @@ function CollectionsPageContent() {
     "heroTitle": `The Soul of Stone`,
     "ch1": `Chapter I`,
     "ch1Title": `The Foundation of Light`,
-    "ch1Desc": `Founded in 1506 with the discovery of the Laocoön, the Vatican Museums encompass five centuries of papal patronage and the relentless pursuit of artistic perfection.`,
+    "ch1Desc": `Founded in 1506 with the discovery of the Laocoon, the Vatican Museums encompass five centuries of papal patronage and the relentless pursuit of artistic perfection.`,
     "timelineTitle": `A Line in Time.`,
     "timeline": [
       {
         "year": `1506`,
-        "title": `Discovery of Laocoön`,
+        "title": `Discovery of Laocoon`,
         "desc": `Pope Julius II purchasing the marble statue, which led to the foundation of the museum.`
       },
       {
@@ -122,7 +120,7 @@ function CollectionsPageContent() {
         "name": `Greek Brilliance: Classical Sculptures`,
         "period": `2026.05.20 - 10.15`,
         "venue": `Statue Hall, Clementine Wing`,
-        "desc": `Experience the tactile genius of ancient Greek masters, from the Laocoön to the Apollo Belvedere, in global resolution.`,
+        "desc": `Experience the tactile genius of ancient Greek masters, from the Laocoon to the Apollo Belvedere, in global resolution.`,
         "tag": `Classical Antiquity`
       }
     ],
@@ -203,21 +201,21 @@ const CATEGORIES = ["All", "Sculpture", "Fresco", "Marble"] as const;
           className="grid md:grid-cols-2 gap-6 items-end"
         >
           <div>
-            <span className="text-[13px] uppercase font-bold tracking-[0.5em] text-white/40 block mb-6 px-1">{t.collectionsPage.category}</span>
-            <h1 className="text-5xl md:text-8xl font-serif leading-[1.1] tracking-tighter break-keep">{t.collectionsPage.title}</h1>
+            <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/40 block mb-6 px-1">{t.collectionsPage.category}</span>
+            <h1 className="text-5xl md:text-8xl font-serif leading-[var(--leading-heading)] tracking-tighter break-keep">{t.collectionsPage.title}</h1>
           </div>
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:gap-12 md:border-l md:border-white/10 md:pl-16 pt-4 md:pt-0 border-t border-white/10 md:border-t-0">
-            <p className="text-sm md:text-base text-white/50 font-normal leading-[1.4] max-w-sm flex-1 break-keep">
+            <p className="text-sm md:text-base text-white/50 font-normal leading-[var(--leading-body)] max-w-sm flex-1 break-keep">
               {t.collectionsPage.desc}
             </p>
             <div className="flex gap-8 md:gap-12 shrink-0">
               <div className="flex flex-col">
                 <span className="text-5xl md:text-8xl font-serif leading-none">{collections.length}</span>
-                <span className="text-[8px] uppercase tracking-widest text-white/30 mt-2">{t.collectionsPage.totalExhibits}</span>
+                <span className="text-xs uppercase tracking-widest text-white/30 mt-2">{t.collectionsPage.totalExhibits}</span>
               </div>
               <div className="flex flex-col">
                 <span className="text-5xl md:text-8xl font-serif leading-none">54</span>
-                <span className="text-[8px] uppercase tracking-widest text-white/30 mt-2">{t.collectionsPage.galleries}</span>
+                <span className="text-xs uppercase tracking-widest text-white/30 mt-2">{t.collectionsPage.galleries}</span>
               </div>
             </div>
           </div>
@@ -231,7 +229,7 @@ const CATEGORIES = ["All", "Sculpture", "Fresco", "Marble"] as const;
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-1.5 rounded-full text-[13px] uppercase font-medium tracking-normal transition-all border whitespace-nowrap ${
+                className={`px-4 py-1.5 rounded-full text-xs uppercase font-medium tracking-normal transition-all border whitespace-nowrap ${
                   activeCategory === cat 
                   ? "bg-[var(--color-accent)] text-[var(--color-primary)] border-[var(--color-accent)]" 
                   : "text-white/40 border-white/10 hover:border-white/40"
@@ -243,7 +241,7 @@ const CATEGORIES = ["All", "Sculpture", "Fresco", "Marble"] as const;
           </div>
         </div>
         <div className="border-b border-white/10 pb-3">
-          <span className="text-[13px] uppercase tracking-widest text-white/30 font-medium break-keep">
+          <span className="text-xs uppercase tracking-widest text-white/30 font-medium break-keep">
             {t.collectionsPage.showing.replace('{count}', displayedItems.length.toString()).replace('{total}', filteredItems.length.toString())}
           </span>
         </div>
@@ -273,14 +271,10 @@ const CATEGORIES = ["All", "Sculpture", "Fresco", "Marble"] as const;
                     />
                     
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 md:p-12">
-                         <span className="text-[12px] uppercase tracking-[0.4em] text-white/50 mb-3 block">{item.tag}</span>
+                         <span className="text-xs uppercase tracking-[0.4em] text-white/50 mb-3 block">{item.tag}</span>
                          <h3 className="text-2xl md:text-4xl font-serif break-keep">
                             {item.title}
                          </h3>
-                    </div>
-
-                    <div className="absolute top-8 left-8 mix-blend-difference overflow-hidden">
-                       <span className="text-[13px] opacity-50 block group-hover:-translate-y-full transition-transform duration-300">{t.collectionsPage.exhibit}</span>
                     </div>
                   </Link>
                 </motion.div>
@@ -302,7 +296,7 @@ const CATEGORIES = ["All", "Sculpture", "Fresco", "Marble"] as const;
               <div className="w-16 h-16 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-[var(--color-accent)] group-hover:text-[var(--color-primary)] transition-all duration-300">
                 <Plus size={24} className="group-hover:rotate-90 transition-transform duration-300" />
               </div>
-              <span className="text-[13px] uppercase font-medium tracking-normal text-white/40 group-hover:text-white transition-colors break-keep">
+              <span className="text-xs uppercase font-medium tracking-normal text-white/40 group-hover:text-white transition-colors break-keep">
                 {t.collectionsPage.loadMore}
               </span>
             </button>
@@ -332,3 +326,4 @@ export default function CollectionsPage() {
     </React.Suspense>
   );
 }
+

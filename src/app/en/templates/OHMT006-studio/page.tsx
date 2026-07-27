@@ -29,19 +29,22 @@ function StudioHomeContent() {
         "title": `Spatial Curation`,
         "subTitle": `Geometric Silence`,
         "location": `Austin, Texas`,
-        "desc": `Redefining raw structural boundaries through silent geometric density and material rigor. Every surface is calculated to evoke deep spatial presence, where form follows a discipline of restraint and tactile honesty.`
+        "desc": `Redefining raw structural boundaries through silent geometric density and material rigor.
+Every surface is calculated to evoke deep spatial presence, where form follows a discipline of restraint and tactile honesty.`
       },
       {
         "title": `Bespoke Interior`,
         "subTitle": `Organic Light`,
         "location": `Kyoto, Japan`,
-        "desc": `A flawless symphony of customized tactile textures and high-end material alignments. Custom travertine panels meet soft ambient luminance, composing an interior language that breathes with quiet sophistication.`
+        "desc": `A flawless symphony of customized tactile textures and high-end material alignments.
+Custom travertine panels meet soft ambient luminance, composing an interior language that breathes with quiet sophistication.`
       },
       {
         "title": `Object Curation`,
         "subTitle": `Sculpted Objects`,
         "location": `Oslo, Norway`,
-        "desc": `Precision-crafted functional sculptures designed to command absolute architectural light. Each object is shaped through rigorous material study, existing at the threshold between furniture and spatial art.`
+        "desc": `Precision-crafted functional sculptures designed to command absolute architectural light.
+Each object is shaped through rigorous material study, existing at the threshold between furniture and spatial art.`
       }
     ]
   },
@@ -49,7 +52,8 @@ function StudioHomeContent() {
     "label": `Spatial Manifesto`,
     "titlePart1": `We speak through`,
     "titlePart2": `tactile shadows.`,
-    "desc": `Every corner, surface, and void we touch is calculated to evoke deep emotional resonance. Our architectural discipline ensures that massive spatial layouts retain microscopic structural detail and material excellence.`,
+    "desc": `Every corner, surface, and void we touch is calculated to evoke deep emotional resonance.
+Our architectural discipline ensures that massive spatial layouts retain microscopic structural detail and material excellence.`,
     "stats": {
       "precision": `Precision`,
       "spaces": `Spaces`,
@@ -211,7 +215,14 @@ function StudioHomeContent() {
     "designCasingLab": `Design Casing Lab`
   }
 };
-const fields = t.hero.fields.map((f: any, i: number) => ({
+interface HeroField {
+  title: string;
+  subTitle: string;
+  location: string;
+  desc: string;
+}
+
+const fields = t.hero.fields.map((f: HeroField, i: number) => ({
         ...f,
         idx: `0${i + 1}`,
         image: `/templates/OHMT006-studio/hero-${i + 1}.jpg`
@@ -248,14 +259,14 @@ const fields = t.hero.fields.map((f: any, i: number) => ({
 
                 {/* Side Tickers - xl only */}
                 <div className="hidden xl:flex fixed left-10 top-1/2 -translate-y-1/2 flex-col items-center gap-4 z-40 pointer-events-none mix-blend-difference">
-                    <span className="text-[12px] text-white/40 font-bold whitespace-nowrap [writing-mode:vertical-rl] rotate-180">{t.common.established}</span>
+                    <span className="text-xs text-white/40 font-bold whitespace-nowrap [writing-mode:vertical-rl] rotate-180">{t.common.established}</span>
                     <div className="w-[1px] h-16 bg-white/25" />
-                    <span className="text-[12px] text-white/80 font-bold whitespace-nowrap [writing-mode:vertical-rl] rotate-180">{t.common.spatialRigor}</span>
+                    <span className="text-xs text-white/80 font-bold whitespace-nowrap [writing-mode:vertical-rl] rotate-180">{t.common.spatialRigor}</span>
                 </div>
                 <div className="hidden xl:flex fixed right-10 top-1/2 -translate-y-1/2 flex-col items-center gap-4 z-40 pointer-events-none mix-blend-difference">
-                    <span className="text-[12px] text-white/40 font-bold whitespace-nowrap [writing-mode:vertical-rl]">{t.common.minimalArch}</span>
+                    <span className="text-xs text-white/40 font-bold whitespace-nowrap [writing-mode:vertical-rl]">{t.common.minimalArch}</span>
                     <div className="w-[1px] h-16 bg-white/25" />
-                    <span className="text-[12px] text-white/60 font-bold whitespace-nowrap [writing-mode:vertical-rl]">{t.common.scrollSense}</span>
+                    <span className="text-xs text-white/60 font-bold whitespace-nowrap [writing-mode:vertical-rl]">{t.common.scrollSense}</span>
                 </div>
 
                 {/* 1. Hero */}
@@ -277,14 +288,14 @@ const fields = t.hero.fields.map((f: any, i: number) => ({
                     {/* Heading */}
                     <div className="relative z-20 max-w-[1720px] mx-auto w-full px-6 md:px-16 lg:px-24 h-full flex flex-col justify-center">
                         <div className="space-y-5 md:space-y-8 max-w-5xl">
-                            <span className="text-[13px] font-bold text-white/60 block">{t.hero.badge}</span>
-                            <h1 className="text-[clamp(3rem,8.5vw,7.5rem)] font-bold leading-[1.0] text-white">
+                            <span className="text-xs font-bold text-white/60 block">{t.hero.badge}</span>
+                            <h1 className="text-[length:var(--text-display)] font-bold leading-[var(--leading-display)] text-white">
                                 {t.hero.title1}<br /><span className="font-serif not-italic font-normal lowercase text-white">{t.hero.title2}</span>
                             </h1>
                             <div className="pt-2 md:pt-4">
                                 <Link
                                     href="/en/templates/OHMT006-studio/contact"
-                                    className="inline-flex items-center gap-4 border border-white bg-white/10 hover:bg-white hover:text-black text-white px-6 md:px-8 py-3 md:py-4 text-[13px] font-bold backdrop-blur-md transition-all duration-300 rounded-none"
+                                    className="inline-flex items-center gap-4 border border-white bg-white/10 hover:bg-white hover:text-black text-white px-6 md:px-8 py-3 md:py-4 text-xs font-bold backdrop-blur-md transition-all duration-300 rounded-none"
                                 >
                                     {t.hero.cta}
                                 </Link>
@@ -312,10 +323,10 @@ const fields = t.hero.fields.map((f: any, i: number) => ({
                                 <div className="flex-1 min-w-0 flex flex-col justify-center gap-3 px-6 md:px-10 py-6 md:py-0 md:h-[240px]">
                                     <div className="flex flex-col gap-1.5">
                                         <div className="flex flex-wrap items-center gap-2 md:gap-4">
-                                            <h3 className="text-[16px] md:text-[20px] font-bold text-white">{activeHeroField.subTitle}</h3>
-                                            <span className="text-[13px] font-mono text-white/40">- {activeHeroField.location}</span>
+                                            <h3 className="text-base md:text-xl font-bold text-white">{activeHeroField.subTitle}</h3>
+                                            <span className="text-xs font-mono text-white/40">- {activeHeroField.location}</span>
                                         </div>
-                                        <p className="text-[15px] md:text-[14px] text-white/50 font-normal leading-[1.4] line-clamp-3 md:line-clamp-none">{activeHeroField.desc}</p>
+                                        <p className="whitespace-pre-line text-sm text-white/50 font-normal leading-[var(--leading-body)] line-clamp-3 md:line-clamp-none">{activeHeroField.desc}</p>
                                     </div>
                                     <div className="flex items-center gap-3">
                                         <button onClick={handlePrev} className="w-7 h-7 md:w-8 md:h-8 rounded-full border border-white/20 hover:border-white text-white flex items-center justify-center transition-colors">
@@ -324,7 +335,7 @@ const fields = t.hero.fields.map((f: any, i: number) => ({
                                         <button onClick={handleNext} className="w-7 h-7 md:w-8 md:h-8 rounded-full border border-white/20 hover:border-white text-white flex items-center justify-center transition-colors">
                                             <ChevronRight size={13} />
                                         </button>
-                                        <span className="text-[13px] text-white/40 ml-1">0{activeHeroIndex + 1} / 03</span>
+                                        <span className="text-xs text-white/40 ml-1">0{activeHeroIndex + 1} / 03</span>
                                     </div>
                                 </div>
                             </div>
@@ -337,27 +348,27 @@ const fields = t.hero.fields.map((f: any, i: number) => ({
                     <div className="max-w-[1720px] mx-auto px-6 md:px-16 lg:px-24">
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-start">
                             <div className="lg:col-span-5 space-y-3 md:space-y-4">
-                                <span className="text-[13px] text-white/40 font-bold block">{t.manifesto.label}</span>
-                                <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold leading-[1.1] text-white">
+                                <span className="text-xs text-white/40 font-bold block">{t.manifesto.label}</span>
+                                <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold leading-[var(--leading-heading)] text-white">
                                     {t.manifesto.titlePart1} <br />{t.manifesto.titlePart2}
                                 </h2>
                             </div>
                             <div className="lg:col-span-7 space-y-10 md:space-y-16">
-                                <p className="text-[15px] md:text-[16px] lg:text-[18px] text-white/60 leading-[1.4] font-normal">
+                                <p className="whitespace-pre-line text-sm font-normal leading-[var(--leading-body)] text-white/60 md:text-base lg:text-lg">
                                     {t.manifesto.desc}
                                 </p>
                                 <div className="grid grid-cols-3 gap-4 md:gap-8 border-t border-white/10 pt-8 md:pt-12">
                                     <div className="space-y-2">
                                         <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-white">98.69%</div>
-                                        <span className="text-[13px] font-bold text-white/40 block">{t.manifesto.stats.precision}</span>
+                                        <span className="text-xs font-bold text-white/40 block">{t.manifesto.stats.precision}</span>
                                     </div>
                                     <div className="space-y-2">
                                         <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-white">450+</div>
-                                        <span className="text-[13px] font-bold text-white/40 block">{t.manifesto.stats.spaces}</span>
+                                        <span className="text-xs font-bold text-white/40 block">{t.manifesto.stats.spaces}</span>
                                     </div>
                                     <div className="space-y-2">
                                         <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-white">25+</div>
-                                        <span className="text-[13px] font-bold text-white/40 block">{t.manifesto.stats.years}</span>
+                                        <span className="text-xs font-bold text-white/40 block">{t.manifesto.stats.years}</span>
                                     </div>
                                 </div>
                             </div>
@@ -373,11 +384,11 @@ const fields = t.hero.fields.map((f: any, i: number) => ({
                                 <img loading="lazy" src="/templates/OHMT006-studio/hero-2.jpg" alt={t.rhythm.title} className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]" />
                             </div>
                             <div className="md:col-span-5 space-y-5 md:space-y-6 lg:px-12">
-                                <span className="text-[13px] font-mono text-black/40 font-bold block">{t.rhythm.label}</span>
-                                <h3 className="text-2xl md:text-3xl lg:text-5xl font-bold text-black leading-[1.1]">
+                                <span className="text-xs font-mono text-black/40 font-bold block">{t.rhythm.label}</span>
+                                <h3 className="text-2xl md:text-3xl lg:text-5xl font-bold text-black leading-[var(--leading-heading)]">
                                     {t.rhythm.title}
                                 </h3>
-                                <p className="text-[15px] md:text-[16px] lg:text-[18px] text-black/50 leading-[1.4] font-normal">
+                                <p className="text-sm md:text-base lg:text-lg text-black/50 leading-[var(--leading-body)] font-normal">
                                     {t.rhythm.desc}
                                 </p>
                             </div>
@@ -393,7 +404,7 @@ const fields = t.hero.fields.map((f: any, i: number) => ({
                     <div className="max-w-[1720px] mx-auto px-6 md:px-16 lg:px-24">
                         <div className="flex justify-between items-baseline pb-8 md:pb-12 border-b border-black/10 mb-10 md:mb-20">
                             <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-black">{t.portfolio.title}</h2>
-                            <Link href="/en/templates/OHMT006-studio/projects" className="text-[13px] font-bold border-b-2 border-black pb-1 hover:opacity-60 transition-all shrink-0 ml-4 whitespace-nowrap">
+                            <Link href="/en/templates/OHMT006-studio/projects" className="text-xs font-bold border-b-2 border-black pb-1 hover:opacity-60 transition-all shrink-0 ml-4 whitespace-nowrap">
                                 {t.portfolio.viewAll}
                             </Link>
                         </div>
@@ -407,7 +418,7 @@ const fields = t.hero.fields.map((f: any, i: number) => ({
                                     <div className="relative aspect-[16/10] w-full overflow-hidden border border-black/10">
                                         <img loading="lazy" src={project.image} alt={project.title} className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105" />
                                         <div className="absolute top-4 left-4 md:top-6 md:left-6">
-                                            <span className="bg-white px-3 py-1 md:px-3.5 md:py-1.5 text-[12px] font-bold border border-black/10 text-black">
+                                            <span className="bg-white px-3 py-1 md:px-3.5 md:py-1.5 text-xs font-bold border border-black/10 text-black">
                                                 {project.category}
                                             </span>
                                         </div>
@@ -415,9 +426,9 @@ const fields = t.hero.fields.map((f: any, i: number) => ({
                                     <div className="mt-5 md:mt-8 flex justify-between items-start border-b border-black/5 pb-5 md:pb-6">
                                         <div className="space-y-1">
                                             <h3 className="text-xl md:text-2xl font-bold text-black">{project.title}</h3>
-                                            <p className="text-[14px] text-black/40">{project.location}</p>
+                                            <p className="text-sm text-black/40">{project.location}</p>
                                         </div>
-                                        <span className="text-[14px] text-black/40">{project.year}</span>
+                                        <span className="text-sm text-black/40">{project.year}</span>
                                     </div>
                                 </Link>
                             ))}

@@ -1,11 +1,11 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - Burger",
+  title: "OHMT - Fast Casual Restaurant Ordering Template",
   description: "Premium burger restaurant experience",
   openGraph: {
-    title: "OHMT - Burger",
+    title: "OHMT - Fast Casual Restaurant Ordering Template",
     description: "Premium burger restaurant experience",
     url: "https://ohmytemplate.com/en/templates/OHMT018-burger",
     siteName: "OHMT",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Burger",
+    title: "OHMT - Fast Casual Restaurant Ordering Template",
     description: "Premium burger restaurant experience",
     images: ["/templates/OHMT018-burger/og-image.jpg"],
   },
@@ -31,8 +31,20 @@ export default function BurgerLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    name: "OHMT Burger",
+    description: "Premium burger restaurant experience",
+    url: "https://ohmytemplate.com/en/templates/OHMT018-burger",
+    servesCuisine: "American",
+  };
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=Inter:wght@400;500;600&display=swap');
       `}</style>
@@ -40,4 +52,3 @@ export default function BurgerLayout({
     </>
   );
 }
-

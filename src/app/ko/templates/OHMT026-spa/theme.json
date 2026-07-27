@@ -3,8 +3,6 @@
   "name": "Spa Wellness",
   "name_ko": "스파 웰니스",
   "category": "lifestyle",
-  "description": "A spa and wellness shop template for treatments, booking-first sections, product moments, and large lifestyle imagery in a calm dark-green palette.",
-  "description_ko": "트리트먼트, 예약 중심 섹션, 제품 순간, 대형 라이프스타일 이미지를 차분한 다크 그린 팔레트로 담은 스파 웰니스 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {
@@ -34,6 +32,14 @@
         "weight": "400",
         "leading": "1.6",
         "style": "leading-relaxed"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
       }
     },
     "spacing": {
@@ -52,5 +58,7 @@
       "button": "bg-[var(--color-primary)] text-[var(--color-text-contrast)] hover:brightness-110",
       "card_hover": "hover:-translate-y-1 transition-transform duration-300"
     }
-  }
+  },
+  "thumbnail": "/templates/OHMT026-spa/og-image.jpg",
+  "ogImage": "/templates/OHMT026-spa/og-image.jpg"
 }

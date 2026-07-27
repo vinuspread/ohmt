@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion, useInView } from "framer-motion";
+import { motion, useReducedMotion, useInView } from "motion/react";
 import { useRef } from "react";
 import { stats } from "../../data/data";
 
@@ -34,7 +34,7 @@ export default function WhoWeAre() {
             <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">
               Who we are
             </span>
-            <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[1.05]">
+            <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[var(--leading-heading)]">
               Your skin is in expert hands
             </h2>
             <p className="mt-5 text-[0.95rem] text-white/60 leading-relaxed max-w-md">
@@ -71,3 +71,4 @@ export default function WhoWeAre() {
     </section>
   );
 }
+

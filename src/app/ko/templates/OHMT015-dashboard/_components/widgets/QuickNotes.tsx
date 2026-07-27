@@ -54,11 +54,11 @@ export function QuickNotes({ className = '' }: { className?: string }) {
               </p>
               <div className="flex items-center gap-2 mt-1.5 flex-wrap">
                 {note.tags.map(tag => (
-                  <span key={tag} className={`text-[10px] font-medium px-2 py-0.5 rounded-full ${tagColor[tag] ?? 'bg-[var(--color-bg-hover)] text-[var(--color-text-muted)]'}`}>
+                  <span key={tag} className={`text-xs font-medium px-2 py-0.5 rounded-full ${tagColor[tag] ?? 'bg-[var(--color-bg-hover)] text-[var(--color-text-muted)]'}`}>
                     {tag}
                   </span>
                 ))}
-                <span className="text-[10px] text-[var(--color-text-muted)] ml-auto">{note.date}</span>
+                <span className="text-xs text-[var(--color-text-muted)] ml-auto">{note.date}</span>
               </div>
             </div>
           </li>

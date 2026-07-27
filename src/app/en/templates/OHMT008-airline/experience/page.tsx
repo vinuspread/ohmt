@@ -22,7 +22,7 @@ function ExperiencePageContent() {
       desc: "Seared French Caviar with fresh blinis, paired with Krug Clos d'Ambonnay vintage champagne.",
       detail: "Crafted by Chef Antoine Dubois, 3-Michelin-star alumnus of Le Bernardin. The set opens with a cold amuse-bouche of oscietra caviar on buckwheat blini, followed by a main of pan-seared Brittany turbot with champagne beurre blanc, and closes with a dark chocolate mille-feuille. Wine pairing includes Krug Clos d'Ambonnay 2002 and a 15-year Armagnac digestif.",
       tags: ["3-Course", "Champagne Pairing", "First Class Only"],
-      img: "/templates/OHMT008-airline/michelin-dining.jpg"
+      img: "/templates/OHMT008-airline/french-course-menu.png"
     },
     {
       id: "Korean",
@@ -63,7 +63,7 @@ function ExperiencePageContent() {
           imageAlt="Premium Cabin Detail"
           label="The Cabin Experience"
           title={<>Crafted Beyond <br /><span className="text-[var(--color-accent)] font-[family-name:var(--font-heading)] normal-case font-bold">Expectations.</span></>}
-          description="We redefine every detail of transcontinental flight. Pre-book your signature Michelin-starred menus and compute elite baggage limits prior to boarding."
+          description={"We redefine every detail of transcontinental flight.\nPre-book your signature Michelin-starred menus and compute elite baggage limits prior to boarding."}
           descMaxWidth="max-w-[680px]"
         />
 
@@ -73,12 +73,12 @@ function ExperiencePageContent() {
             
             {/* Header section with clean vertical layout */}
             <div className="mb-10 md:mb-20 space-y-4 max-w-[800px]">
-              <span className="text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">Gourmet Curation</span>
-              <h2 className="text-[clamp(1.2rem,3.5vw,3rem)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight leading-none">
+              <span className="text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">Gourmet Curation</span>
+              <h2 className="text-[length:var(--text-h2)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight leading-none">
                 Pre-book Signature Sky Dining
               </h2>
               <div className="h-[2px] bg-[var(--color-accent)] w-12" />
-              <p className="text-[16px] text-[#7A7A7A] normal-case leading-[1.4] font-normal pt-2">
+              <p className="text-base text-[#7A7A7A] normal-case leading-[var(--leading-body)] font-normal pt-2">
                 First Class passengers enjoy custom chef-curated dining sets. Browse the culinary courses below to review detailed ingredients and secure your dining pass.
               </p>
             </div>
@@ -105,7 +105,7 @@ function ExperiencePageContent() {
                           <span className="font-[family-name:var(--font-heading)] text-xl md:text-2xl font-normal text-[var(--color-border)] group-hover:text-[var(--color-accent)]/40 transition-colors duration-300 w-7 md:w-8 shrink-0">
                             0{index + 1}
                           </span>
-                          <h4 className={`font-bold text-[15px] md:text-[18px] uppercase tracking-wider transition-colors duration-300 ${isOpen ? "text-[var(--color-accent)]" : "text-[var(--color-primary)] group-hover:text-[var(--color-accent)]"}`}>
+                          <h4 className={`font-bold text-sm md:text-lg uppercase tracking-wider transition-colors duration-300 ${isOpen ? "text-[var(--color-accent)]" : "text-[var(--color-primary)] group-hover:text-[var(--color-accent)]"}`}>
                             {meal.name}
                           </h4>
                         </div>
@@ -130,11 +130,11 @@ function ExperiencePageContent() {
                               </div>
                               <div className="flex flex-wrap gap-2">
                                 {meal.tags.map((tag) => (
-                                  <span key={tag} className="text-[11px] font-bold uppercase tracking-[0.15em] px-3 py-1 border border-[var(--color-accent)]/40 text-[var(--color-accent)]">{tag}</span>
+                                  <span key={tag} className="text-xs font-bold uppercase tracking-[0.15em] px-3 py-1 border border-[var(--color-accent)]/40 text-[var(--color-accent)]">{tag}</span>
                                 ))}
                               </div>
-                              <p className="text-[14px] text-[#7A7A7A] leading-[1.4] font-normal normal-case">{meal.desc}</p>
-                              <p className="text-[15px] text-[#7A7A7A]/80 leading-[1.85] font-normal normal-case border-l-2 border-[var(--color-accent)]/30 pl-4">{meal.detail}</p>
+                              <p className="text-sm text-[#7A7A7A] leading-[var(--leading-body)] font-normal normal-case">{meal.desc}</p>
+                              <p className="text-sm text-[#7A7A7A]/80 leading-loose font-normal normal-case border-l-2 border-[var(--color-accent)]/30 pl-4">{meal.detail}</p>
                             </div>
                           </motion.div>
                         )}
@@ -161,10 +161,10 @@ function ExperiencePageContent() {
                         <div className="absolute bottom-6 left-6 right-6 space-y-2">
                           <div className="flex flex-wrap gap-1.5 mb-2">
                             {meal.tags.map((tag) => (
-                              <span key={tag} className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 bg-[var(--color-accent)]/20 text-[var(--color-accent)] border border-[var(--color-accent)]/30">{tag}</span>
+                              <span key={tag} className="text-xs font-bold uppercase tracking-wider px-2 py-0.5 bg-[var(--color-accent)]/20 text-[var(--color-accent)] border border-[var(--color-accent)]/30">{tag}</span>
                             ))}
                           </div>
-                          <span className="text-[12px] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)] block">Dining Pass</span>
+                          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-accent)] block">Dining Pass</span>
                           <h3 className="font-[family-name:var(--theme-font-heading)] text-xl font-bold text-white">{meal.name}</h3>
                         </div>
                       </div>
@@ -183,12 +183,12 @@ function ExperiencePageContent() {
             
             {/* Header */}
             <div className="mb-10 md:mb-20 space-y-4 max-w-[800px]">
-              <span className="text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">Luggage Precheck</span>
-              <h2 className="text-[clamp(1.2rem,3.5vw,3rem)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight leading-none">
+              <span className="text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">Luggage Precheck</span>
+              <h2 className="text-[length:var(--text-h2)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight leading-none">
                 Smart Baggage Surcharge Calculator
               </h2>
               <div className="h-[2px] bg-[var(--color-accent)] w-12" />
-              <p className="text-[14px] text-[#7A7A7A] normal-case leading-[1.4] font-normal pt-2">
+              <p className="text-sm text-[#7A7A7A] normal-case leading-[var(--leading-body)] font-normal pt-2">
                 First Class tickets include a generous <strong className="text-[var(--color-primary)]">2 Pieces (32kg each)</strong> allowance. Slide the inputs below to calculate real-time excess luggage surcharge fees prior to check-in.
               </p>
             </div>
@@ -201,7 +201,7 @@ function ExperiencePageContent() {
                 
                 {/* Luggage pieces counter */}
                 <div className="space-y-4">
-                  <div className="flex justify-between items-baseline text-[14px] font-bold uppercase tracking-wider text-[var(--color-primary)]">
+                  <div className="flex justify-between items-baseline text-sm font-bold uppercase tracking-wider text-[var(--color-primary)]">
                     <span className="text-sm font-semibold text-[#7A7A7A]">Luggage Pieces Count</span>
                     <span className="text-xl font-bold">{baggageCount} Bag(s)</span>
                   </div>
@@ -213,7 +213,7 @@ function ExperiencePageContent() {
                     onChange={(e) => setBaggageCount(parseInt(e.target.value))}
                     className="w-full h-[1px] bg-[var(--color-border)] accent-[var(--color-accent)] cursor-pointer appearance-none outline-none"
                   />
-                  <div className="flex justify-between text-[13px] text-[#7A7A7A]">
+                  <div className="flex justify-between text-xs text-[#7A7A7A]">
                     <span>1 Bag</span>
                     <span>5 Bags</span>
                   </div>
@@ -221,7 +221,7 @@ function ExperiencePageContent() {
 
                 {/* Luggage weight slider */}
                 <div className="space-y-4">
-                  <div className="flex justify-between items-baseline text-[14px] font-bold uppercase tracking-wider text-[var(--color-primary)]">
+                  <div className="flex justify-between items-baseline text-sm font-bold uppercase tracking-wider text-[var(--color-primary)]">
                     <span className="text-sm font-semibold text-[#7A7A7A]">Max Piece Weight</span>
                     <span className="text-xl font-bold">{baggageWeight} kg</span>
                   </div>
@@ -233,7 +233,7 @@ function ExperiencePageContent() {
                     onChange={(e) => setBaggageWeight(parseInt(e.target.value))}
                     className="w-full h-[1px] bg-[var(--color-border)] accent-[var(--color-accent)] cursor-pointer appearance-none outline-none"
                   />
-                  <div className="flex justify-between text-[13px] text-[#7A7A7A]">
+                  <div className="flex justify-between text-xs text-[#7A7A7A]">
                     <span>15 kg</span>
                     <span>50 kg</span>
                   </div>
@@ -243,12 +243,12 @@ function ExperiencePageContent() {
 
               {/* Right Side: Editorial Statement Layout (No Border Boxes) */}
               <div className="lg:col-span-6 space-y-8 lg:pl-10">
-                <span className="text-[14px] font-bold uppercase tracking-widest text-[#7A7A7A] block">
+                <span className="text-sm font-bold uppercase tracking-widest text-[#7A7A7A] block">
                   Assessment Statement
                 </span>
 
                 {/* Typography alignment list */}
-                <div className="space-y-4 text-[14px] font-bold normal-case text-[#7A7A7A] pb-6 border-b border-[var(--color-border)]">
+                <div className="space-y-4 text-sm font-bold normal-case text-[#7A7A7A] pb-6 border-b border-[var(--color-border)]">
                   <div className="flex justify-between items-baseline py-2">
                     <span className="font-normal">Elite Allowance Limit</span>
                     <span className="text-[var(--color-primary)] font-semibold">2 Bags (Up to 32kg each)</span>
@@ -265,18 +265,18 @@ function ExperiencePageContent() {
 
                 {/* Surcharge result statement */}
                 <div className="pt-4 flex flex-col gap-3">
-                  <span className="text-[14px] uppercase font-bold tracking-widest text-[var(--color-primary)]">
+                  <span className="text-sm uppercase font-bold tracking-widest text-[var(--color-primary)]">
                     Baggage Fee Due
                   </span>
                   
                   {/* Huge bold editorial number display */}
                   <div className="space-y-2">
-                    <span className={`text-[clamp(2rem,5vw,3.5rem)] font-extrabold leading-none block ${
+                    <span className={`text-[length:var(--text-h2)] font-extrabold leading-none block ${
                       totalBaggageSurcharge > 0 ? "text-rose-600" : "text-[var(--color-accent)]"
                     }`}>
                       {totalBaggageSurcharge > 0 ? `$${totalBaggageSurcharge.toLocaleString()} USD` : "FREE OF CHARGE"}
                     </span>
-                    <p className="text-[14px] text-[#7A7A7A] normal-case leading-[1.4] font-normal">
+                    <p className="text-sm text-[#7A7A7A] normal-case leading-[var(--leading-body)] font-normal">
                       *Allowance status calculations are generated in real-time according to premier IATA weight standards and OHMT structural parameters.
                     </p>
                   </div>
@@ -290,10 +290,10 @@ function ExperiencePageContent() {
         {/* 3. Global Sanctuary Services - Spacious Editorial Column Layout */}
         <section className="py-14 md:py-32 bg-white">
           <div className="max-w-[1320px] mx-auto px-6 md:px-10">
-            <span className="block text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-4">
+            <span className="block text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-4">
               Elite Lounge & Spa
             </span>
-            <h2 className="font-[family-name:var(--theme-font-heading)] text-[clamp(1.5rem,5vw,3.8rem)] font-bold tracking-tight text-[var(--color-primary)] leading-tight mb-20 uppercase">
+            <h2 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-h1)] font-bold tracking-tight text-[var(--color-primary)] leading-tight mb-20 uppercase">
               Sky Sanctuary Services.
             </h2>
 
@@ -314,13 +314,13 @@ function ExperiencePageContent() {
                   className="space-y-6 text-left normal-case relative pl-8 border-l-2 border-[var(--color-accent)] hover:border-l-[var(--color-accent-light)] transition-colors duration-[var(--transition-base)]"
                 >
                   {/* Subtle index tag */}
-                  <span className="text-[14px] font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] block">
+                  <span className="text-sm font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] block">
                     ZONE 0{i + 1}
                   </span>
                   <h3 className="font-[family-name:var(--theme-font-heading)] text-2xl font-bold text-[var(--color-primary)] tracking-tight">
                     {f.title}
                   </h3>
-                  <p className="text-[14px] text-[#7A7A7A] leading-[1.4] font-normal">
+                  <p className="text-sm text-[#7A7A7A] leading-[var(--leading-body)] font-normal">
                     {f.desc}
                   </p>
                 </motion.div>
@@ -336,10 +336,10 @@ function ExperiencePageContent() {
 }
 
 
-export default function ExperiencePage(props: any) {
+export default function ExperiencePage() {
   return (
     <React.Suspense fallback={null}>
-      <ExperiencePageContent {...props} />
+      <ExperiencePageContent />
     </React.Suspense>
   );
 }

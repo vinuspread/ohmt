@@ -21,7 +21,7 @@ export function ColorSelector({
 
   return (
     <section>
-      <h2 className="font-michroma font-bold text-[20px] text-[var(--text)] mb-6">
+      <h2 className="font-michroma font-bold text-xl text-[var(--text)] mb-6">
         2. 색상 선택
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -44,7 +44,7 @@ export function ColorSelector({
               );
             })}
           </div>
-          <p className="font-michroma font-bold text-[18px] text-[var(--text)]">
+          <p className="font-michroma font-bold text-lg text-[var(--text)]">
             {activeColor.name}
           </p>
         </div>

@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { projects } from "../../data/projects";
 import { ScrollReveal } from "../ui/ScrollReveal";
 
@@ -43,10 +43,10 @@ export function Projects() {
         {/* Section Header */}
         <ScrollReveal>
           <div className="flex flex-col sm:flex-row justify-between items-baseline gap-4 border-b border-[var(--color-border)] pb-8 mb-12">
-            <h2 className="font-heading font-normal text-[40px] md:text-[48px] text-[var(--color-text)]">
+            <h2 className="font-heading font-normal text-4xl md:text-5xl text-[var(--color-text)]">
               Selected Projects.
             </h2>
-            <span className="font-sans text-[13px] text-[var(--color-text-secondary)] tracking-wider uppercase">
+            <span className="font-sans text-xs text-[var(--color-text-secondary)] tracking-wider uppercase">
               {projects.length} Projects
             </span>
           </div>
@@ -61,7 +61,7 @@ export function Projects() {
                 <button
                   key={cat}
                   onClick={() => setFilter(cat)}
-                  className={`font-sans text-[13px] tracking-[0.05em] py-1.5 px-0 mr-6 transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-full after:bg-[var(--color-text)] after:transition-transform after:duration-300 after:origin-left ${
+                  className={`font-sans text-xs tracking-[0.05em] py-1.5 px-0 mr-6 transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-full after:bg-[var(--color-text)] after:transition-transform after:duration-300 after:origin-left ${
                     active
                       ? "text-[var(--color-text)] after:scale-x-100"
                       : "text-[var(--color-text-secondary)] hover:text-[var(--color-text)] after:scale-x-0 hover:after:scale-x-100"
@@ -104,10 +104,10 @@ export function Projects() {
                     {/* Hover Overlay */}
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-300 flex flex-col justify-end p-8 z-10">
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 space-y-2">
-                        <span className="font-sans text-[11px] font-medium tracking-[0.15em] text-[var(--color-accent)] uppercase block">
+                        <span className="font-sans text-xs font-medium tracking-[0.15em] text-[var(--color-accent)] uppercase block">
                           {project.category}
                         </span>
-                        <h3 className="font-heading font-normal text-[24px] text-white leading-none">
+                        <h3 className="font-heading font-normal text-2xl text-white leading-none">
                           {project.title}
                         </h3>
                       </div>
@@ -116,10 +116,10 @@ export function Projects() {
 
                   {/* Caption */}
                   <div className="mt-4 flex justify-between items-baseline">
-                    <span className="font-sans text-[14px] font-medium text-[var(--color-text)]">
+                    <span className="font-sans text-sm font-medium text-[var(--color-text)]">
                       {project.title}
                     </span>
-                    <span className="font-sans text-[12px] text-[var(--color-text-secondary)]">
+                    <span className="font-sans text-xs text-[var(--color-text-secondary)]">
                       {project.location}
                     </span>
                   </div>
@@ -132,3 +132,4 @@ export function Projects() {
     </section>
   );
 }
+

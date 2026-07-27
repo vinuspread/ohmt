@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "./ui/Button";
+import TemplateSelect from './TemplateSelect'
 
 export const Hero = () => {
   return (
@@ -14,40 +15,37 @@ export const Hero = () => {
 
       <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full pt-28 md:pt-36 pb-16 md:pb-24">
         <motion.div initial={{ opacity: 0, y: 40 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }} className="max-w-3xl">
-          <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.6 }} className="text-[12px] md:text-[13px] font-medium text-[var(--color-accent)] tracking-tight block mb-6 md:mb-10">
-            조용한 럭셔리, 시간이 부드럽게 멈추는 곳
-          </motion.span>
-          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8 }} className="text-[clamp(2.5rem,7vw,6rem)] font-[var(--font-heading)] font-bold text-[var(--color-bg)] leading-[1.1] mb-6 md:mb-10 break-keep [overflow-wrap:normal]" style={{ textWrap: "balance" } as React.CSSProperties}>
-            완전한 고요함이<br />우아한 휴식을 마주할 때.
-          </motion.h1>
-          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.6 }} className="text-base md:text-lg text-[var(--color-bg)]/80 font-[var(--font-body)] max-w-xl mb-10 md:mb-14 leading-relaxed">
-            수백 년 된 원시림과 푸른 해안선 사이에 자리한 럭스 헤이븐.
-            모든 디테일은 깊은 휴식과 온전한 회복을 위해 설계되었습니다.
-          </motion.p>
+          <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2, duration: 0.6 }} className="text-xs md:text-xs font-medium text-[var(--color-accent)] tracking-tight block mb-6 md:mb-10">
+            코사무이의 바다와 숲 사이</motion.span>
+          <motion.h1 initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.8 }} className="text-[length:var(--text-display)] font-[var(--font-heading)] font-bold text-[var(--color-bg)] leading-[var(--leading-heading)] mb-6 md:mb-10 break-keep [overflow-wrap:normal]" style={{ textWrap: "balance" } as React.CSSProperties}>
+            일상을 잠시 내려놓고<br />온전히 쉬어가는 시간.</motion.h1>
+          <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.6 }} className="text-base md:text-lg text-[var(--color-bg)]/80 font-[var(--font-body)] max-w-2xl mb-10 md:mb-14 leading-relaxed break-keep [text-wrap:pretty]">
+            코사무이의 숲과 바다 사이에 자리한 럭스 헤이븐.<br className="hidden md:block" />
+            객실과 서비스의 모든 요소를 편안한 휴식을 위해 세심하게 준비했습니다.</motion.p>
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.6, duration: 0.8, ease: [0.23, 1, 0.32, 1] }} className="bg-[var(--color-bg)]/10 backdrop-blur-xl border border-[var(--color-bg)]/20 p-6 md:p-8 max-w-4xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
             <div>
-              <label className="text-[11px] md:text-[12px] font-medium text-[var(--color-bg)]/60 tracking-tight block mb-2">체크인</label>
+              <label className="text-xs md:text-xs font-medium text-[var(--color-bg)]/60 tracking-tight block mb-2">체크인</label>
               <input type="text" placeholder="YYYY / MM / DD" className="w-full bg-transparent border border-[var(--color-bg)]/20 px-3 py-2.5 text-sm text-[var(--color-bg)] placeholder:text-[var(--color-bg)]/40 focus:outline-none focus:border-[var(--color-accent)] transition-colors" />
             </div>
             <div>
-              <label className="text-[11px] md:text-[12px] font-medium text-[var(--color-bg)]/60 tracking-tight block mb-2">체크아웃</label>
+              <label className="text-xs md:text-xs font-medium text-[var(--color-bg)]/60 tracking-tight block mb-2">체크아웃</label>
               <input type="text" placeholder="YYYY / MM / DD" className="w-full bg-transparent border border-[var(--color-bg)]/20 px-3 py-2.5 text-sm text-[var(--color-bg)] placeholder:text-[var(--color-bg)]/40 focus:outline-none focus:border-[var(--color-accent)] transition-colors" />
             </div>
             <div>
-              <label className="text-[11px] md:text-[12px] font-medium text-[var(--color-bg)]/60 tracking-tight block mb-2">인원</label>
-              <select className="w-full bg-transparent border border-[var(--color-bg)]/20 px-3 py-2.5 text-sm text-[var(--color-bg)] focus:outline-none focus:border-[var(--color-accent)] transition-colors appearance-none">
+              <label className="text-xs md:text-xs font-medium text-[var(--color-bg)]/60 tracking-tight block mb-2">인원</label>
+              <TemplateSelect className="w-full bg-transparent border border-[var(--color-bg)]/20 px-3 py-2.5 text-sm text-[var(--color-bg)] focus:outline-none focus:border-[var(--color-accent)] transition-colors appearance-none">
                 <option className="bg-[var(--color-primary)] text-[var(--color-bg)]">성인 1명</option>
                 <option className="bg-[var(--color-primary)] text-[var(--color-bg)]">성인 2명</option>
                 <option className="bg-[var(--color-primary)] text-[var(--color-bg)]">성인 3명</option>
                 <option className="bg-[var(--color-primary)] text-[var(--color-bg)]">성인 4명</option>
-              </select>
+              </TemplateSelect>
             </div>
             <div>
-              <label className="hidden md:block text-[11px] md:text-[12px] font-medium text-transparent mb-2 select-none">_</label>
-              <Button variant="secondary" size="md" className="w-full text-[12px] tracking-tight">예약 가능 확인</Button>
+              <label className="hidden md:block text-xs md:text-xs font-medium text-transparent mb-2 select-none">_</label>
+              <Button variant="secondary" size="md" className="w-full text-xs tracking-tight">예약 가능 확인</Button>
             </div>
           </div>
         </motion.div>

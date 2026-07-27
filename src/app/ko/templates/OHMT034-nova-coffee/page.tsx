@@ -1,0 +1,48 @@
+import type { Metadata } from 'next'
+import { Hero } from './_components/sections/Hero'
+import { PrecisionEngineering } from './_components/sections/PrecisionEngineering'
+import { MachineAnatomy } from './_components/sections/MachineAnatomy'
+import { ProductSpotlight } from './_components/sections/ProductSpotlight'
+import { BuyerQuestions } from './_components/sections/BuyerQuestions'
+import { BrandStory } from './_components/sections/BrandStory'
+import { ClosingCTABand } from './_components/sections/ClosingCTABand'
+
+export const metadata: Metadata = {
+  title: 'NOVA - 정밀 듀얼 보일러 에스프레소 머신',
+  description:
+    'NOVA는 ±0.5°C PID 온도 제어, 58mm 상업용 규격 그룹 헤드, 프로그래머블 프리인퓨전을 갖춘 듀얼 보일러 에스프레소 머신입니다.',
+}
+
+const productJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'NOVA 듀얼 보일러 에스프레소 머신',
+  description:
+    '±0.5°C PID 온도 제어, 58mm 상업용 규격 그룹 헤드, 프로그래머블 프리인퓨전을 갖춘 듀얼 보일러 에스프레소 머신입니다.',
+  brand: {
+    '@type': 'Brand',
+    name: 'NOVA',
+  },
+  offers: {
+    '@type': 'Offer',
+    availability: 'https://schema.org/InStock',
+    priceCurrency: 'USD',
+    price: '3499.00',
+  },
+}
+
+export default function NovaHomePage() {
+  return (
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }} />
+      <Hero />
+      <PrecisionEngineering />
+      <MachineAnatomy />
+      <ProductSpotlight />
+      <BuyerQuestions />
+      <BrandStory />
+      <ClosingCTABand />
+    </>
+  )
+}
+

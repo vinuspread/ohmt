@@ -2,11 +2,12 @@
 "use client";
 
 import React from "react";
+import { ArrowRight } from "lucide-react";
 
 const features = [
-  { t: "실시간 원격 모니터링", d: "배터리 잔량, 주행 가능 거리, 충전 상태를 한눈에 확인합니다." },
-  { t: "차량 내부 온도 사전 조절", d: "탑승 전 차량 내부 온도를 최적의 상태로 맞춤 제어합니다." },
-  { t: "무선 소프트웨어 업데이트 (OTA)", d: "주무시는 동안 차량이 스스로 진화하여 매일 새로운 성능을 선사합니다." },
+  { t: "원격 차량 제어", d: "배터리 상태, 남은 주행 거리 및 충전 현황을 한눈에 모니터링합니다." },
+  { t: "실내 온도 원격 조절", d: "차량에 탑승하기 전, 실내 온도를 원하는 상태로 쾌적하게 설정할 수 있습니다." },
+  { t: "무선 OTA 업데이트", d: "새로운 스마트 기능과 편의 사양이 잠든 사이 자동으로 업데이트됩니다." },
 ];
 
 export const AppSection = () => {
@@ -28,10 +29,10 @@ export const AppSection = () => {
           <span className="block text-[0.65rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-text-muted)] mb-5">
             OHMT 커넥티드
           </span>
-          <h2 className="text-[clamp(2rem,3vw,2.8rem)] font-extrabold tracking-[-0.03em] leading-[1.1] mb-5 text-white break-keep whitespace-pre-line">
-            {"완벽하게 조화되는\n듀얼 모터 드라이빙\n경험의 혁신."}
+          <h2 className="text-[length:var(--text-h2)] font-extrabold tracking-[-0.03em] leading-[var(--leading-heading)] mb-5 text-white break-keep whitespace-pre-line">
+            {"듀얼 모터가 완벽하게\n조화를 이루는 드라이빙\n경험의 혁신."}
           </h2>
-          <p className="text-[0.88rem] text-[var(--theme-text-muted)] leading-[1.8] font-normal mb-10 max-w-[380px] break-keep">
+          <p className="text-[0.88rem] text-[var(--theme-text-muted)] leading-loose font-normal mb-10 max-w-[380px] break-keep">
             실시간 배터리 충전 모니터링, 차량 온도 원격 제어, 문 잠금 해제 및 주행 가능 거리 확인까지 - 이 모든 혁신을 OHMT 앱 하나로 편리하게 누릴 수 있습니다.
           </p>
 
@@ -48,7 +49,7 @@ export const AppSection = () => {
            </div>
 
           <button className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-white hover:translate-x-1.5 transition-all duration-500 w-fit">
-            앱 다운로드 <span className="text-[1.2em]">→</span>
+            앱 다운로드 <ArrowRight size={16} />
           </button>
         </div>
       </div>

@@ -3,6 +3,8 @@
 
 import React from "react";
 
+import { ArrowRight } from "lucide-react";
+
 const news = [
   {
     tag: "Electric",
@@ -29,15 +31,15 @@ export const NewsSection = () => {
     <section className="py-12 md:py-24 border-t border-[var(--theme-border)] bg-black">
       <div className="max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)]">
         <div className="flex justify-between items-end mb-12">
-          <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-extrabold tracking-tight text-white">
+          <h2 className="text-[length:var(--text-h3)] font-extrabold tracking-tight text-white">
             Our latest news
           </h2>
           <button className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-white hover:translate-x-1.5 transition-all duration-300">
-            All News <span className="text-[1.2em]">→</span>
+            All News <ArrowRight size={16} />
           </button>
         </div>
         
-         <div className="grid md:grid-cols-3 gap-[1px] bg-[var(--theme-border)] overflow-hidden">
+         <div className="grid md:grid-cols-3 gap-px bg-[var(--theme-border)] overflow-hidden">
            {news.map((item) => (
              <div key={item.title} className="bg-black group">
                <div className="h-[220px] overflow-hidden">

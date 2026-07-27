@@ -10,8 +10,8 @@ export const Testimonials = () => {
     <section className="bg-white py-24 md:py-32">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         <div className="text-center mb-16">
-          <p className="text-xs uppercase tracking-[0.3em] text-[var(--color-text-muted)] mb-4">怨좉컼 ?꾧린</p>
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">怨좉컼???뚮━</h2>
+          <p className="text-xs uppercase tracking-[0.3em] text-[var(--color-text-muted)] mb-4">고객 후기</p>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">고객들의 목소리</h2>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">

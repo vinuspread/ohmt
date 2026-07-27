@@ -36,7 +36,7 @@ export function Avatar({
     .toUpperCase()
     .slice(0, 2)
   const colorClass = bgPalette[hashColor(name)]
-  const sizeClass = size === 'xs' ? 'w-6 h-6 text-[10px]' : size === 'sm' ? 'w-8 h-8 text-xs' : size === 'lg' ? 'w-16 h-16 text-xl' : 'w-10 h-10 text-sm'
+  const sizeClass = size === 'xs' ? 'w-6 h-6 text-xs' : size === 'sm' ? 'w-8 h-8 text-xs' : size === 'lg' ? 'w-16 h-16 text-xl' : 'w-10 h-10 text-sm'
 
   if (src) {
     return (

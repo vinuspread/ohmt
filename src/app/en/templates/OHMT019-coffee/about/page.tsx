@@ -19,7 +19,7 @@ function AboutPageContent() {
         <section className="bg-[var(--color-bg-dark)] pt-32 pb-0 overflow-hidden">
           <div className="max-w-[1440px] mx-auto px-6 md:px-12 pb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <motion.h1
-              className="font-heading text-[clamp(3rem,6vw,6rem)] font-bold text-white leading-[1.02]"
+              className="font-heading text-[length:var(--text-display)] font-bold text-white leading-[var(--leading-display)]"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease }}
@@ -50,18 +50,18 @@ function AboutPageContent() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.6, ease }}
           >
-            <p className="text-[11px] uppercase tracking-[0.25em] text-[var(--color-text-muted)] mb-4">Our Story</p>
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-[var(--color-text)] leading-[1.25] mb-8">
+            <p className="text-xs uppercase tracking-[0.25em] text-[var(--color-text-muted)] mb-4">Our Story</p>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-[var(--color-text)] leading-[var(--leading-heading)] mb-8">
               Brewing with purpose,<br />serving with care.
             </h2>
-            <p className="text-base leading-[1.8] text-[var(--color-text-muted)]">
+            <p className="text-base leading-loose text-[var(--color-text-muted)]">
               OHMT started as a small coffee cart in Seongsu-dong.
               What began as a weekend passion project grew into a neighborhood
               staple. Our founders spent years traveling through coffee regions
               in Ethiopia and Colombia, building relationships with farmers who
               share our commitment to quality.
             </p>
-            <p className="text-base leading-[1.8] text-[var(--color-text-muted)] mt-4">
+            <p className="text-base leading-loose text-[var(--color-text-muted)] mt-4">
               Today, we roast our own beans in small batches and serve coffee
               that reflects the care put into every step of the process. From
               seed to cup, we believe in doing things the right way.
@@ -102,7 +102,7 @@ function AboutPageContent() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: i * 0.1, ease }}
                 >
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-[var(--color-accent)] mb-4 block">0{i + 1}</span>
+                  <span className="text-xs uppercase tracking-[0.2em] text-[var(--color-accent)] mb-4 block">0{i + 1}</span>
                   <h3 className="font-heading text-xl font-bold text-white mb-4">{item.title}</h3>
                   <p className="text-sm text-white/50 leading-relaxed">{item.body}</p>
                 </motion.div>

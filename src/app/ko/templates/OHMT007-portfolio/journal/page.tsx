@@ -8,13 +8,13 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
-import { blogPosts } from "@/lib/portfolio-data";
+import { blogPosts } from "../_data/portfolio-data";
 
 const allPosts = [
   ...blogPosts,
-  { slug: 'ethics-minimalism', title: '브랜드 디자인에서 미니멀리즘을 쓰는 법', date: '2026. 3. 24.', category: '에세이', img: '/templates/OHMT007-portfolio/portfolio-1.jpg' },
-  { slug: 'recapturing-focus', title: '디지털 환경에서 집중을 되찾는 인터페이스', date: '2026. 2. 12.', category: '인사이트', img: '/templates/OHMT007-portfolio/portfolio-2.jpg' },
-  { slug: 'radical-honesty', title: '2026 디자인 트렌드: 더 솔직한 브랜드 언어', date: '2026. 1. 5.', category: '미래', img: '/templates/OHMT007-portfolio/portfolio-3.png' },
+  { slug: 'ethics-minimalism', title: '브랜드 디자인에서 미니멀리즘을 활용하는 법', date: '2026. 3. 24.', category: '에세이', img: '/templates/OHMT007-portfolio/portfolio-1.jpg' },
+  { slug: 'recapturing-focus', title: '집중을 돕는 디지털 인터페이스 설계', date: '2026. 2. 12.', category: '인사이트', img: '/templates/OHMT007-portfolio/portfolio-2.jpg' },
+  { slug: 'radical-honesty', title: '2026 디자인 트렌드: 과장하지 않는 브랜드 언어', date: '2026. 1. 5.', category: '트렌드', img: '/templates/OHMT007-portfolio/portfolio-3.png' },
 ];
 
 function JournalPageContent() {
@@ -26,8 +26,8 @@ function JournalPageContent() {
         {/* Header */}
         <section className="pt-40 pb-16 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto px-6">
-            <span className="text-[13px] font-bold tracking-[0.4em] uppercase text-[var(--color-text-muted)] block mb-6">크리에이티브 디스패치</span>
-            <h1 className="text-[clamp(4rem,10vw,9rem)] font-medium uppercase tracking-tighter leading-[1.1]">저널</h1>
+            <span className="text-xs font-bold tracking-[0.4em] uppercase text-[var(--color-text-muted)] block mb-6">디자인과 브랜드에 관한 기록</span>
+            <h1 className="text-[length:var(--text-display)] font-medium uppercase tracking-tighter leading-[var(--leading-heading)]">저널</h1>
           </div>
         </section>
 
@@ -41,14 +41,14 @@ function JournalPageContent() {
               </div>
               <div>
                 <div className="flex items-center gap-3 mb-6">
-                  <span className="text-[13px] font-medium uppercase tracking-widest text-[var(--color-text)] bg-[var(--color-primary)]/10 px-2 py-1">{allPosts[0].category}</span>
-                  <span className="text-[13px] text-[var(--color-text-muted)]/60">{allPosts[0].date}</span>
+                  <span className="text-xs font-medium uppercase tracking-widest text-[var(--color-text)] bg-[var(--color-primary)]/10 px-2 py-1">{allPosts[0].category}</span>
+                  <span className="text-xs text-[var(--color-text-muted)]/60">{allPosts[0].date}</span>
                 </div>
-                <h2 className="text-[2rem] font-medium uppercase tracking-tighter leading-[1.1] mb-6 group-hover:text-[var(--color-text)] transition-colors">
+                <h2 className="text-[2rem] font-medium uppercase tracking-tighter leading-[var(--leading-heading)] mb-6 group-hover:text-[var(--color-text)] transition-colors">
                   {allPosts[0].title}
                 </h2>
-                <span className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-widest text-[var(--color-text-muted)]/60 group-hover:text-[var(--color-text)] transition-colors">
-                  기사 읽기 <ArrowUpRight size={12} />
+                <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[var(--color-text-muted)]/60 group-hover:text-[var(--color-text)] transition-colors">
+                  글 읽기 <ArrowUpRight size={12} />
                 </span>
               </div>
             </Link>
@@ -68,12 +68,12 @@ function JournalPageContent() {
               >
                 <Link href="/ko/templates/OHMT007-portfolio/journal"
                   className="group grid md:grid-cols-12 py-10 border-b border-[var(--color-border)] items-center hover:bg-[var(--color-bg-secondary)] transition-colors px-2 gap-6">
-                  <div className="md:col-span-2 text-[13px] font-bold tracking-widest text-[var(--color-text-muted)] uppercase">{post.date}</div>
+                  <div className="md:col-span-2 text-xs font-bold tracking-widest text-[var(--color-text-muted)] uppercase">{post.date}</div>
                   <div className="md:col-span-7">
                     <h2 className="text-[1.1rem] font-medium uppercase tracking-tight group-hover:text-[var(--color-text)] transition-colors">{post.title}</h2>
                   </div>
                   <div className="md:col-span-2 text-right">
-                    <span className="text-[13px] font-medium uppercase tracking-widest border border-white/20 px-3 py-1.5 group-hover:border-[var(--color-accent)] group-hover:text-[var(--color-text)] transition-all">
+                    <span className="text-xs font-medium uppercase tracking-widest border border-white/20 px-3 py-1.5 group-hover:border-[var(--color-accent)] group-hover:text-[var(--color-text)] transition-all">
                       {post.category}
                     </span>
                   </div>
@@ -94,10 +94,10 @@ function JournalPageContent() {
 }
 
 
-export default function JournalPage(props: any) {
+export default function JournalPage() {
   return (
     <React.Suspense fallback={null}>
-      <JournalPageContent {...props} />
+      <JournalPageContent />
     </React.Suspense>
   );
 }

@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-12 pb-12 border-b border-white/10">
           <h2
-            className="font-[family-name:var(--font-heading)] font-light capitalize text-white leading-[1.05]"
+            className="font-[family-name:var(--font-heading)] font-light capitalize text-white leading-[var(--leading-heading)]"
             style={{ fontSize: "clamp(3rem, 8vw, 6rem)" }}
           >
             OHMT

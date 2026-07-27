@@ -30,7 +30,7 @@ export function ProgramList() {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`px-5 py-3 text-[13px] font-medium transition-colors border-b-2 -mb-[1px] whitespace-nowrap ${
+              className={`px-5 py-3 text-xs font-medium transition-colors border-b-2 -mb-px whitespace-nowrap ${
                 activeTab === tab
                   ? "text-[var(--accent)] border-[var(--accent)]"
                   : "text-[var(--text-muted)] border-transparent hover:text-[var(--text)]"
@@ -52,14 +52,14 @@ export function ProgramList() {
                 style={{ backgroundImage: `url('/templates/OHMT029-fitness/${p.image}')` }}
               />
               <div className="p-6 md:p-8">
-                <h3 className="font-['Montserrat'] font-semibold text-[22px] text-[var(--text)] tracking-tight">{p.title}</h3>
-                <p className="text-[15px] text-[var(--text-muted)] mt-3 leading-relaxed">{p.desc}</p>
-                <div className="flex flex-wrap gap-4 mt-5 text-[12px]">
+                <h3 className="font-['Montserrat'] font-semibold text-2xl text-[var(--text)] tracking-tight">{p.title}</h3>
+                <p className="text-sm text-[var(--text-muted)] mt-3 leading-relaxed">{p.desc}</p>
+                <div className="flex flex-wrap gap-4 mt-5 text-xs">
                   <span className="text-[var(--text-muted)]">Duration: <span className="text-[var(--text)] font-medium">{p.duration}</span></span>
                   <span className="text-[var(--text-muted)]">Level: <span className="text-[var(--text)] font-medium">{p.level}</span></span>
                   <span className="text-[var(--text-muted)]">Frequency: <span className="text-[var(--text)] font-medium">{p.frequency}</span></span>
                 </div>
-                <button className="mt-6 border border-[var(--border)] text-[var(--text)] text-[12px] font-semibold px-5 py-2.5 rounded-lg hover:bg-[var(--accent)] hover:border-[var(--accent)] hover:text-white transition-all tracking-wide">
+                <button className="mt-6 border border-[var(--border)] text-[var(--text)] text-xs font-semibold px-5 py-2.5 rounded-lg hover:bg-[var(--accent)] hover:border-[var(--accent)] hover:text-white transition-all tracking-wide">
                   Book a session →
                 </button>
               </div>

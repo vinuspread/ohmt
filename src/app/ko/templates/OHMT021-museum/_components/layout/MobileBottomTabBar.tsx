@@ -4,7 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, Ticket, ShoppingBag, Menu, ChevronUp } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 interface MobileBottomTabBarProps {
   isMenuOpen: boolean;
@@ -14,26 +14,26 @@ interface MobileBottomTabBarProps {
 
 const navItems = [
   {
-    name: "Home",
+    name: "홈",
     href: "/ko/templates/OHMT021-museum",
     icon: Home,
     activeIcon: Home,
   },
   {
-    name: "Collections",
+    name: "소장품",
     href: "/ko/templates/OHMT021-museum/collections",
     icon: ChevronUp,
     activeIcon: ChevronUp,
   },
   {
-    name: "Tickets",
+    name: "티켓",
     href: "#",
     icon: Ticket,
     activeIcon: Ticket,
     isAction: true,
   },
   {
-    name: "Shop",
+    name: "뮤지엄 숍",
     href: "/ko/templates/OHMT021-museum/shop",
     icon: ShoppingBag,
     activeIcon: ShoppingBag,
@@ -80,7 +80,7 @@ export default function MobileBottomTabBar({ isMenuOpen, onMenuToggle, onTicketC
                }`}
              >
                <Icon size={18} className="mb-2" />
-               <span className="text-[7px] uppercase tracking-[0.15em] font-medium leading-[1.0]">
+               <span className="text-xs uppercase tracking-[0.15em] font-medium leading-[var(--leading-display)]">
                  {item.name}
                </span>
              </Link>
@@ -97,9 +97,8 @@ export default function MobileBottomTabBar({ isMenuOpen, onMenuToggle, onTicketC
            }`}
         >
           <Menu size={18} className="mb-2" />
-          <span className="text-[7px] uppercase tracking-[0.15em] font-medium leading-[1.0]">
-            Menu
-          </span>
+          <span className="text-xs uppercase tracking-[0.15em] font-medium leading-[var(--leading-display)]">
+            메뉴</span>
         </button>
       </div>
     </motion.div>

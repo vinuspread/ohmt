@@ -78,7 +78,7 @@ function PageTreeItem({ node, depth, onNavigate }: { node: TreeNode; depth: numb
         href={`/en/templates/OHMT014-docs/${slug}`}
         onClick={onNavigate}
         className={`flex items-center gap-1.5 px-2 py-2 rounded-md transition-colors duration-150 relative ${
-          isRoot ? "text-sm" : "text-[13px]"
+          isRoot ? "text-sm" : "text-xs"
         } ${
           isActive
             ? "text-[var(--color-text)] font-semibold"

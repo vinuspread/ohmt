@@ -20,8 +20,7 @@ export const BestSellers = () => {
             href="/ko/templates/OHMT017-multi-shop/shop"
             className="hidden md:inline-block text-xs uppercase tracking-[0.2em] text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors duration-200 border-b border-[var(--color-text-muted)] pb-0.5"
           >
-            전체보기
-          </Link>
+            전체 보기</Link>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
@@ -57,11 +56,9 @@ export const BestSellers = () => {
             href="/ko/templates/OHMT017-multi-shop/shop"
             className="inline-block bg-[var(--color-primary)] text-white px-10 py-3.5 text-xs uppercase tracking-[0.2em] font-medium hover:bg-black/80 transition-[transform,colors] duration-160 ease-out active:scale-[0.97]"
           >
-            전체보기
-          </Link>
+            전체 보기</Link>
         </div>
       </div>
     </section>
   );
 };
-

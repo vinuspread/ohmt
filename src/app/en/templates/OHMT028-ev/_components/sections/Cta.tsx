@@ -82,23 +82,23 @@ export function Cta() {
                 className="w-[20px] h-[2px] bg-[var(--border)] transition-colors duration-200"
               />
             ))}
-            <span ref={counterRef} className="font-inter text-[10px] tracking-[0.12em] text-[var(--text-muted)] mt-3">
+            <span ref={counterRef} className="font-inter text-xs tracking-[0.12em] text-[var(--text-muted)] mt-3">
               00/{String(totalLines).padStart(2, "0")}
             </span>
           </div>
 
           <div className="w-full max-w-[500px]">
-            <p className="font-inter font-medium text-[11px] tracking-[0.15em] text-[var(--accent)] uppercase mb-5">
+            <p className="font-inter font-medium text-xs tracking-[0.15em] text-[var(--accent)] uppercase mb-5">
               Early Access
             </p>
-            <h2 className="font-michroma text-[clamp(30px,4vw,54px)] text-[var(--text)] leading-[0.93] tracking-[-0.03em] mb-6">
+            <h2 className="font-michroma text-[length:var(--text-h2)] text-[var(--text)] leading-[var(--leading-display)] tracking-[-0.03em] mb-6">
               <span className="whitespace-nowrap">Reserve your</span><br />
               <span className="whitespace-nowrap">NUBI today</span>
             </h2>
-            <p className="font-inter text-[14px] text-[var(--text-muted)] mb-10">
+            <p className="font-inter text-sm text-[var(--text-muted)] mb-10">
               Starting from $24,900. First deliveries Q1 2026. Reserve with $300 fully refundable.
             </p>
-            <button className="inline-flex items-center gap-2.5 bg-[var(--accent)] text-[var(--text-on-light)] px-8 py-4 rounded-full text-[13px] font-inter font-medium tracking-[0.03em] hover:bg-[var(--accent-dark)] transition-colors duration-300">
+            <button className="inline-flex items-center gap-2.5 bg-[var(--accent)] text-[var(--text-on-light)] px-8 py-4 rounded-full text-xs font-inter font-medium tracking-[0.03em] hover:bg-[var(--accent-dark)] transition-colors duration-300">
               Pre-Order Now →
             </button>
           </div>

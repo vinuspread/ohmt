@@ -4,9 +4,10 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 
 const team = [
-    { name: '제시카 포인트', role: '대표 건축 디렉터', image: '/templates/OHMT006-studio/team-1.jpg' },
-    { name: '라이언 베이저', role: '오브제 & 가구 큐레이터', image: '/templates/OHMT006-studio/team-2.jpg' },
-    { name: '캐리 배스', role: '수석 인테리어 디자이너', image: '/templates/OHMT006-studio/team-3.jpg' },
+    { name: 'Elena Moreau', role: '건축·공간 디렉터', image: '/templates/OHMT006-studio/team-1.jpg' },
+    { name: 'Daniel Foster', role: '가구·오브제 디렉터', image: '/templates/OHMT006-studio/team-2.jpg' },
+    { name: 'Claire Bennett', role: '수석 인테리어 디자이너', image: '/templates/OHMT006-studio/team-3.jpg' },
+    { name: 'Marcus Reed', role: '프로젝트 디렉터', image: '/templates/OHMT006-studio/team-4.png' },
 ];
 
 const containerVariants = {
@@ -43,15 +44,15 @@ export function TeamSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.65, ease: [0.23, 1, 0.32, 1] }}
                     viewport={{ once: true, margin: '-50px' }}
-                    className="flex flex-col gap-[20px] mb-[64px] border-b border-black/10 pb-[40px]"
+                    className="flex flex-col gap-5 mb-16 border-b border-black/10 pb-10"
                 >
-                    <span className="text-[13px] font-normal tracking-[3px] uppercase text-black/60">Team</span>
+                    <span className="text-xs font-normal tracking-[3px] uppercase text-black/60">Team</span>
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-                        <h2 className="text-[30px] md:text-[48px] leading-[1.1] font-semibold tracking-[-1.44px] text-black break-keep [overflow-wrap:normal]">
-                            디자인 너머의 주역들.
+                        <h2 className="text-3xl md:text-5xl leading-[var(--leading-heading)] font-semibold tracking-[-1.44px] text-black break-keep [overflow-wrap:normal]">
+                            프로젝트를 함께 만드는 팀.
                         </h2>
-                        <a href="/ko/templates/OHMT006-studio/about" className="h-[40px] px-[24px] border border-black rounded-[100px] flex items-center justify-center text-[12px] font-bold tracking-[2px] uppercase text-black hover:bg-black hover:text-white transition-colors shrink-0">
-                            소개 더보기
+                        <a href="/ko/templates/OHMT006-studio/about" className="h-[40px] px-6 border border-black rounded-[100px] flex items-center justify-center text-xs font-bold tracking-[2px] uppercase text-black hover:bg-black hover:text-white transition-colors shrink-0">
+                            팀 소개 보기
                         </a>
                     </div>
                 </motion.div>
@@ -62,17 +63,16 @@ export function TeamSection() {
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, margin: '-50px' }}
-                    className="grid grid-cols-1 md:grid-cols-3 gap-[64px]"
+                    className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4"
                 >
                     {team.map((member) => (
                         <motion.div key={member.name} variants={itemVariants} className="group">
                             <motion.div
-                                whileHover={{ y: -16, transition: { duration: 0.25, ease: [0.23, 1, 0.32, 1] } }}
-                                className="aspect-[3/4] bg-gray-300 mb-[32px] overflow-hidden relative cursor-pointer"
+                                className="relative mb-6 aspect-[4/5] cursor-pointer overflow-hidden bg-gray-300"
                             >
                                 <motion.div
-                                    whileHover={{ scale: 1.12 }}
-                                    transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
+                                    whileHover={{ scale: 1.05 }}
+                                    transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
                                     className="w-full h-full"
                                 >
                                     <Image
@@ -90,10 +90,10 @@ export function TeamSection() {
                                 viewport={{ once: true, margin: '-50px' }}
                                 className="flex flex-col items-center text-center"
                             >
-                                <h3 className="text-[24px] leading-[1.1] font-bold tracking-[-0.72px] text-black mb-[8px]">
+                                <h3 className="mb-2 text-xl font-bold leading-[var(--leading-heading)] tracking-[-0.6px] text-black">
                                     {member.name}
                                 </h3>
-                                <span className="text-[13px] font-normal tracking-0 uppercase text-black/60">
+                                <span className="text-xs font-normal tracking-0 uppercase text-black/60">
                                     {member.role}
                                 </span>
                             </motion.div>

@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { ArrowRight, Calendar, MapPin } from "lucide-react";
 import Header from "../_components/layout/Header";
 import Footer from "../_components/layout/Footer";
@@ -10,7 +9,6 @@ import Footer from "../_components/layout/Footer";
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 function SpecialExhibitionsContent() {
-  const searchParams = useSearchParams();
   const t = {
   "nav": {
     "specialExhibition": `Special Exhibition`,
@@ -20,7 +18,7 @@ function SpecialExhibitionsContent() {
     "souvenirShop": `Souvenir Shop`
   },
   "hero": {
-    "badge": `Musei Vaticani ??OHMT Curation`,
+    "badge": `Musei Vaticani - OHMT Curation`,
     "title1": `THE ETERNAL`,
     "title2": `Masterpieces`,
     "cta": `Begin Journey`
@@ -41,22 +39,22 @@ function SpecialExhibitionsContent() {
     "editorial": `Editorial`,
     "title": `Divine Proportions`,
     "p1": `The Vatican Museums stand not only as a repository of historical objects, but as a monument to the relentless human pursuit of perfection. Walking through its halls is akin to walking through the physical manifestation of the Renaissance mind.`,
-    "p2": `Our curation seeks to extract the structural brilliance from the overwhelming ornamentation. By highlighting works like the Laocoön or the delicate Pietà in an isolated, digital space, we allow their raw theological and emotional gravity to echo without the noise of the physical gallery crowd.`,
-    "p3": `Every brushstroke captured by Raphael, every chisel strike endured by Michelangelo ??these are not relics of the past. They are continuing dialogues on the nature of humanity, suffering, knowledge, and divinity.`,
+    "p2": `Our curation seeks to extract the structural brilliance from the overwhelming ornamentation. By highlighting works like the Laocoon or the delicate Pieta in an isolated, digital space, we allow their raw theological and emotional gravity to echo without the noise of the physical gallery crowd.`,
+    "p3": `Every brushstroke captured by Raphael, every chisel strike endured by Michelangelo - these are not relics of the past. They are continuing dialogues on the nature of humanity, suffering, knowledge, and divinity.`,
     "curator": `Curator`,
     "curatorName": `OHMT Exhibition`
   },
   "ourStory": {
-    "heritage": `MUSEI VATICANI ??500 YEARS OF HERITAGE`,
+    "heritage": `MUSEI VATICANI - 500 YEARS OF HERITAGE`,
     "heroTitle": `The Soul of Stone`,
     "ch1": `Chapter I`,
     "ch1Title": `The Foundation of Light`,
-    "ch1Desc": `Founded in 1506 with the discovery of the Laocoön, the Vatican Museums encompass five centuries of papal patronage and the relentless pursuit of artistic perfection.`,
+    "ch1Desc": `Founded in 1506 with the discovery of the Laocoon, the Vatican Museums encompass five centuries of papal patronage and the relentless pursuit of artistic perfection.`,
     "timelineTitle": `A Line in Time.`,
     "timeline": [
       {
         "year": `1506`,
-        "title": `Discovery of Laocoön`,
+        "title": `Discovery of Laocoon`,
         "desc": `Pope Julius II purchasing the marble statue, which led to the foundation of the museum.`
       },
       {
@@ -80,7 +78,7 @@ function SpecialExhibitionsContent() {
     "altar": `The High Altar`,
     "altarTitle": `Bernini's Masterpiece`,
     "altarDesc": `Stand directly under Michelangelo's dome. Gian Lorenzo Bernini's bronze Baldaquin marks the burial site of Saint Peter. This monumental structure, 29 meters tall, is the defining center-point of the basilica.`,
-    "altarDate": `Construction: 1623 ??1634`,
+    "altarDate": `Construction: 1623 - 1634`,
     "silentVatican": `The Silent Vatican`,
     "grottoesTitle": `Papal Grottoes`,
     "grottoes": [
@@ -119,7 +117,7 @@ function SpecialExhibitionsContent() {
         "name": `Greek Brilliance: Classical Sculptures`,
         "period": `2026.05.20 - 10.15`,
         "venue": `Statue Hall, Clementine Wing`,
-        "desc": `Experience the tactile genius of ancient Greek masters, from the Laocoön to the Apollo Belvedere, in global resolution.`,
+        "desc": `Experience the tactile genius of ancient Greek masters, from the Laocoon to the Apollo Belvedere, in global resolution.`,
         "tag": `Classical Antiquity`
       }
     ],
@@ -163,7 +161,7 @@ const specialExhibitionsData = t.exhibitionsPage.specialExhibitions;
 
   const permanentGalleriesData = t.exhibitionsPage.permanentGalleries;
   const permanentGalleries = [
-    { ...permanentGalleriesData[0], img: "/templates/OHMT021-museum/hero-bg.png" },
+    { ...permanentGalleriesData[0], img: "/templates/OHMT021-museum/permanent-sistine-chapel.webp" },
     { ...permanentGalleriesData[1], img: "/templates/OHMT021-museum/vatican-hallway.png" }
   ];
 
@@ -178,14 +176,14 @@ const specialExhibitionsData = t.exhibitionsPage.specialExhibitions;
       {/* Intro Section */}
       <section className="px-6 md:px-12 mb-20 md:mb-32 lg:mb-40 text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-          <span className="text-[13px] uppercase font-bold tracking-[0.5em] text-white/40 mb-8 block font-sans">{t.exhibitionsPage.currentFeature}</span>
+          <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/40 mb-8 block font-sans">{t.exhibitionsPage.currentFeature}</span>
           <h2 className="text-5xl md:text-[7vw] font-serif leading-none tracking-tighter mb-12 break-keep">{t.exhibitionsPage.title}</h2>
         </motion.div>
       </section>
 
       {/* Poster Style Special Exhibitions */}
       <section className="max-w-[1440px] mx-auto px-6 space-y-20 md:space-y-32 lg:space-y-40 mb-32 md:mb-48 lg:mb-60">
-        {specialExhibitions.map((exhib: any, i: number) => (
+        {specialExhibitions.map((exhib, i: number) => (
           <motion.div 
             key={i}
             initial={{ opacity: 0, scale: 0.98 }}
@@ -210,7 +208,7 @@ const specialExhibitionsData = t.exhibitionsPage.specialExhibitions;
             </motion.div>
             
             <div className={`space-y-6 ${i % 2 === 1 ? 'lg:order-1 lg:text-right' : ''}`}>
-              <span className="text-[12px] uppercase font-bold tracking-[0.6em] text-white/30 block mb-4 font-sans">{exhib.tag}</span>
+              <span className="text-xs uppercase font-bold tracking-[0.6em] text-white/30 block mb-4 font-sans">{exhib.tag}</span>
               <h3 className="text-4xl md:text-6xl font-serif tracking-tighter leading-none mb-6 break-keep">{exhib.name}</h3>
               
               <div className={`flex flex-col gap-3 text-xs font-medium uppercase tracking-normal text-white/40 font-sans ${i % 2 === 1 ? 'lg:items-end' : ''}`}>
@@ -218,7 +216,7 @@ const specialExhibitionsData = t.exhibitionsPage.specialExhibitions;
                  <div className="flex items-center gap-3"><MapPin size={14} strokeWidth={1.5} /> {exhib.venue}</div>
               </div>
 
-              <p className={`text-base md:text-lg text-white/60 font-normal leading-[1.4] max-w-md font-serif break-keep ${i % 2 === 1 ? 'lg:ml-auto' : ''}`}>
+              <p className={`text-base md:text-lg text-white/60 font-normal leading-[var(--leading-body)] max-w-md font-serif break-keep ${i % 2 === 1 ? 'lg:ml-auto' : ''}`}>
                 "{exhib.desc}"
               </p>
 
@@ -236,11 +234,11 @@ const specialExhibitionsData = t.exhibitionsPage.specialExhibitions;
       <section className="py-10 md:py-20 md:py-32 lg:py-40 border-t border-white/5 px-6">
         <div className="max-w-[1440px] mx-auto px-6">
           <div className="mb-20">
-            <span className="text-[13px] uppercase font-bold tracking-[0.5em] text-white/40 block mb-6">{t.exhibitionsPage.discovery}</span>
+            <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/40 block mb-6">{t.exhibitionsPage.discovery}</span>
             <h3 className="text-4xl font-serif break-keep">{t.exhibitionsPage.permanentTitle}</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-             {permanentGalleries.map((item: any, i: number) => (
+             {permanentGalleries.map((item, i: number) => (
                 <div key={i} className="group cursor-pointer">
                    <div className="aspect-[21/9] overflow-hidden mb-8 bg-white/5 relative">
                       <img loading="lazy" src={item.img} alt={item.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300 brightness-50 group-hover:brightness-100" />

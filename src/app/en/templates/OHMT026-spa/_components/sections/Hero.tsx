@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "motion/react";
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 
@@ -30,7 +30,7 @@ export default function Hero() {
             className="max-w-xl"
           >
             <h1
-              className="font-[family-name:var(--font-heading)] font-bold tracking-tight text-[var(--color-text-contrast)] leading-[1.05] mb-6"
+              className="font-[family-name:var(--font-heading)] font-bold tracking-tight text-[var(--color-text-contrast)] leading-[var(--leading-heading)] mb-6"
               style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)" }}
             >
               Professional spa treatment
@@ -66,3 +66,4 @@ export default function Hero() {
     </section>
   );
 }
+

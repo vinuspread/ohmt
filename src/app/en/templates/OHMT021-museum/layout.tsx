@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import './theme.css';
 
@@ -13,10 +13,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "OHMT - Museum",
+  title: "OHMT - Museum Exhibition Website Template",
   description: "Experience the epitome of elegance and durability.",
   openGraph: {
-    title: "OHMT - Museum",
+    title: "OHMT - Museum Exhibition Website Template",
     description: "Experience the epitome of elegance and durability.",
     url: "https://ohmytemplate.com/en/templates/OHMT021-museum",
     siteName: "OHMT",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Museum",
+    title: "OHMT - Museum Exhibition Website Template",
     description: "Experience the epitome of elegance and durability.",
     images: ["/templates/OHMT021-museum/og-image.jpg"],
   },
@@ -42,10 +42,22 @@ export default function ExhibitionLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Museum",
+    name: "OHMT Museum",
+    description: "Experience the epitome of elegance and durability.",
+    url: "https://ohmytemplate.com/en/templates/OHMT021-museum",
+  };
   return (
-    <div className={`${playfair.variable} ${inter.variable} font-sans bg-[var(--color-primary)] text-[var(--color-accent)] selection:bg-[var(--color-accent)] selection:text-[var(--color-primary)]`}>
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <div className={`${playfair.variable} ${inter.variable} font-sans bg-[var(--color-primary)] text-[var(--color-accent)] selection:bg-[var(--color-accent)] selection:text-[var(--color-primary)]`}>
       {children}
     </div>
+    </>
   );
 }
-

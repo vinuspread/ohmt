@@ -1,8 +1,13 @@
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import Link from "next/link";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 import Navbar from "../_components/Navbar";
+
+export const metadata: Metadata = {
+  title: "Schedule - OHMT Yoga",
+};
 import PageHeader from "../_components/PageHeader";
 import CTASection from "../_components/CTASection";
 import Footer from "../_components/Footer";
@@ -22,14 +27,14 @@ function ScheduleContent() {
         {/* Header row */}
         <div className="flex items-end justify-between px-8 md:px-14 lg:px-20 pt-12 pb-10 border-b border-[var(--color-border)]">
           <h2
-            className="text-[clamp(1.4rem,3vw,2.6rem)] font-light text-[var(--color-text)] leading-[1.05] tracking-[-0.02em]"
+            className="text-[length:var(--text-h3)] font-light text-[var(--color-text)] leading-[var(--leading-heading)] tracking-[-0.02em]"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             {SCHEDULE.length} Days &middot;{" "}
             {SCHEDULE.reduce((acc, d) => acc + d.classes.length, 0)} Classes
           </h2>
           <p
-            className="hidden md:block text-[14px] text-[var(--color-text-muted)]"
+            className="hidden md:block text-sm text-[var(--color-text-muted)]"
             style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
           >
             Schedule subject to change
@@ -43,13 +48,13 @@ function ScheduleContent() {
               {/* Day label */}
               <div className="px-6 py-5 border-b border-[var(--color-border)] bg-[var(--color-bg-alt)]">
                 <p
-                  className="text-[13px] font-medium text-[var(--color-text)] tracking-[-0.01em]"
+                  className="text-xs font-medium text-[var(--color-text)] tracking-[-0.01em]"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
                   {day.day}
                 </p>
                 <p
-                  className="text-[11px] tracking-[0.12em] uppercase text-[var(--color-text-muted)] mt-1"
+                  className="text-xs tracking-[0.12em] uppercase text-[var(--color-text-muted)] mt-1"
                   style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
                 >
                   {day.classes.length} classes
@@ -65,25 +70,25 @@ function ScheduleContent() {
                     className="group flex flex-col px-6 py-6 hover:bg-[var(--color-bg-alt)] transition-colors"
                   >
                     <p
-                      className="text-[11px] tracking-[0.15em] uppercase text-[var(--color-text-muted)] mb-2"
+                      className="text-xs tracking-[0.15em] uppercase text-[var(--color-text-muted)] mb-2"
                       style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
                     >
                       {cls.time}
                     </p>
                     <p
-                      className="text-[15px] font-light text-[var(--color-text)] leading-[1.3] tracking-[-0.01em] group-hover:text-[var(--color-text-muted)] transition-colors"
+                      className="text-sm font-light text-[var(--color-text)] leading-[var(--leading-body)] tracking-[-0.01em] group-hover:text-[var(--color-text-muted)] transition-colors"
                       style={{ fontFamily: "var(--font-body)" }}
                     >
                       {cls.name}
                     </p>
                     <p
-                      className="mt-1.5 text-[14px] text-[var(--color-text-muted)]"
+                      className="mt-1.5 text-sm text-[var(--color-text-muted)]"
                       style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
                     >
                       {cls.instructor}
                     </p>
                     <span
-                      className="mt-4 text-[10px] tracking-[0.18em] uppercase text-[var(--color-text)] font-medium opacity-0 group-hover:opacity-100 transition-opacity"
+                      className="mt-4 text-xs tracking-[0.18em] uppercase text-[var(--color-text)] font-medium opacity-0 group-hover:opacity-100 transition-opacity"
                       style={{ fontFamily: "var(--font-body)" }}
                     >
                       Reserve →

@@ -1,8 +1,10 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { SafeResponsiveContainer } from './SafeResponsiveContainer'
 import {
-  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend,
+  motion } from 'framer-motion'
+import {
+  BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend
 } from 'recharts'
 import { monthlyRevenue } from '../../data/dashboard-data'
 import { chartDefaults, formatAxis } from '../../data/chart-theme'
@@ -25,7 +27,7 @@ export function RevenueBarChart() {
       </div>
 
       <div style={{ height: 300 }}>
-        <ResponsiveContainer width="100%" height="100%">
+        <SafeResponsiveContainer width="100%" height="100%">
           <BarChart data={monthlyRevenue} barGap={6} barCategoryGap="35%">
             <CartesianGrid {...chartDefaults.cartesianGrid} />
             <XAxis dataKey="month" tick={{ fill: 'var(--color-text-muted)', fontSize: 12 }} axisLine={false} tickLine={false} />
@@ -36,7 +38,7 @@ export function RevenueBarChart() {
             <Bar dataKey="revenue" name="Revenue" fill="var(--color-success)" radius={[4, 4, 0, 0]} barSize={10} isAnimationActive={false} animationDuration={800} animationEasing="ease-out" />
             <Bar dataKey="cashflow" name="Cashflow" fill="var(--color-info)" radius={[4, 4, 0, 0]} barSize={10} isAnimationActive={false} animationDuration={800} animationEasing="ease-out" />
           </BarChart>
-        </ResponsiveContainer>
+        </SafeResponsiveContainer>
       </div>
     </motion.div>
   )

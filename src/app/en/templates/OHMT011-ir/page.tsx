@@ -3,6 +3,7 @@
 
 import React, { Suspense } from "react";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import { Header } from "./_components/layout/Header";
 import { Footer } from "./_components/layout/Footer";
 import { Hero } from "./_components/sections/Hero";
@@ -37,20 +38,20 @@ function IRTemplateContent() {
                   className="w-full h-[500px] object-cover"
                   alt="Financial overview"
                 />
-                <p className="text-[0.68rem] text-[#6B6B6B] mt-3 tracking-wide">Our 2026 Strategy Focus: Operational Efficiency and Sustainable Growth.</p>
+                <p className="text-[0.68rem] text-[var(--color-text-muted)] mt-3 tracking-wide">Our 2026 Strategy Focus: Operational Efficiency and Sustainable Growth.</p>
               </div>
               <div className="order-1 md:order-2">
-                <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-5">
+                <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--color-text-muted)] mb-5">
                   Executive Message
                 </span>
-                <h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.1] mb-6">
+                <h2 className="text-[length:var(--text-h3)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[var(--leading-heading)] mb-6">
                   Driving value in a changing world.
                 </h2>
-                <p className="text-[0.88rem] text-[#6B6B6B] leading-[1.82] mb-8 font-normal">
+                <p className="text-[0.88rem] text-[var(--color-text-muted)] leading-loose mb-8 font-normal">
                   Our commitment to shareholders remains steadfast. By focusing on high-growth sectors and maintaining a disciplined approach to capital allocation, we are well-positioned to navigate market volatility and capture emerging opportunities.
                 </p>
                 <button className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-[var(--color-dark-bg)] hover:translate-x-1.5 transition-all duration-300">
-                  Read CEO's Letter <span className="text-[1.2em]">→</span>
+                  Read CEO's Letter <ArrowRight size={14} className="inline" />
                 </button>
               </div>
             </div>

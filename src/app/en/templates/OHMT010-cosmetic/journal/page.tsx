@@ -1,12 +1,23 @@
-"use client";
-
-import { Suspense } from "react";
-import React from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
+
+export const metadata: Metadata = {
+  title: "Journal - OHMT Cosmetic",
+  description: "Thoughts on conscious beauty — skincare tips, ingredient science, and sustainability stories.",
+  openGraph: {
+    title: "Journal - OHMT Cosmetic",
+    description: "Thoughts on conscious beauty.",
+    url: "https://ohmytemplate.com/en/templates/OHMT010-cosmetic/journal",
+    siteName: "OHMT",
+    images: [{ url: "/templates/OHMT010-cosmetic/og-image.jpg", width: 1200, height: 630 }],
+    locale: "en_US",
+    type: "website",
+  },
+};
 
 const entries = [
   {
@@ -43,7 +54,7 @@ const entries = [
   }
 ];
 
-function CosmeticJournalPageContent() {
+export default function CosmeticJournalPage() {
   return (
     <TemplateWrapper theme={theme}>
       <main className="antialiased bg-[var(--color-bg)] text-black selection:bg-black selection:text-white">
@@ -53,7 +64,7 @@ function CosmeticJournalPageContent() {
           <div className="max-w-[1440px] mx-auto px-6 md:px-10">
             <div className="mb-16">
               <span className="text-[0.65rem] font-bold uppercase tracking-[0.3em] text-black/40 mb-4 block">Journal</span>
-              <h1 className="text-[clamp(2rem,4vw,3.5rem)] font-normal tracking-tight leading-[1.1]">
+              <h1 className="text-[length:var(--text-h2)] font-normal tracking-tight leading-[var(--leading-heading)]">
                 Thoughts on conscious beauty.
               </h1>
             </div>
@@ -61,7 +72,7 @@ function CosmeticJournalPageContent() {
             <div className="border-t border-black/10">
               {entries.map((entry) => (
                 <Link key={entry.slug} href={`/en/templates/OHMT010-cosmetic/journal/${entry.slug}`}>
-                  <div className="py-10 px-6 grid md:grid-cols-[1fr_auto] gap-6 items-center group hover:bg-white transition-colors cursor-pointer border-b border-black/10">
+                  <div className="py-10 px-6 grid md:grid-cols-2 gap-6 items-center group hover:bg-white transition-colors cursor-pointer border-b border-black/10">
                     <div>
                       <h3 className="text-[1.2rem] font-medium tracking-tight mb-2 group-hover:opacity-60 transition-opacity">{entry.title}</h3>
                       <div className="flex gap-6 text-[0.72rem] text-black/40 uppercase tracking-wider">
@@ -80,14 +91,5 @@ function CosmeticJournalPageContent() {
         <Footer />
       </main>
     </TemplateWrapper>
-  );
-}
-
-
-export default function CosmeticJournalPage(props: any) {
-  return (
-    <React.Suspense fallback={null}>
-      <CosmeticJournalPageContent {...props} />
-    </React.Suspense>
   );
 }

@@ -7,9 +7,9 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { MOTION_CONSTANTS } from './motion-constants';
 
 const heroSlides = [
-  { id: 1, image: '/templates/OHMT006-studio/hero-1.jpg', title: '공간의 본질', subtitle: '삶을 짓는 디자인.' },
-  { id: 2, image: '/templates/OHMT006-studio/hero-2.jpg', title: '사적인 여백', subtitle: '영감을 깨우는 시퀀스.' },
-  { id: 3, image: '/templates/OHMT006-studio/hero-3.jpg', title: '시간의 영속성', subtitle: '시대를 관통하는 건축적 미학.' },
+  { id: 1, image: '/templates/OHMT006-studio/hero-1.jpg', title: '생활을 이해하는 설계', subtitle: '매일 편안한 공간.' },
+  { id: 2, image: '/templates/OHMT006-studio/hero-2.jpg', title: '일과 휴식의 균형', subtitle: '집중하기 좋은 공간.' },
+  { id: 3, image: '/templates/OHMT006-studio/hero-3.jpg', title: '오래 사용할 수 있는', subtitle: '소재와 구조.' },
 ];
 
 export function Hero() {
@@ -69,7 +69,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30, scale: MOTION_CONSTANTS.scales.enter }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: MOTION_CONSTANTS.durations.max - 0.1, ease: MOTION_CONSTANTS.easings.easeOut }}
-            className="text-white font-semibold text-[78px] leading-[1.35] tracking-[-3.9px] m-0 p-0"
+            className="text-white font-semibold text-8xl leading-[var(--leading-body)] tracking-[-3.9px] m-0 p-0"
           >
             {heroSlides[current].title}
             <br />
@@ -77,7 +77,7 @@ export function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 0.7 }}
               transition={{ duration: MOTION_CONSTANTS.durations.ui, delay: 0.15 }}
-              className="text-white/70 text-[32px] block mt-4"
+              className="text-white/70 text-4xl block mt-4"
             >
               {heroSlides[current].subtitle}
             </motion.span>
@@ -93,7 +93,7 @@ export function Hero() {
         >
           <a
             href="/ko/templates/OHMT006-studio/contact"
-            className="inline-flex items-center justify-center h-[54px] px-12 border border-white/75 rounded-none text-white text-[13px] font-normal tracking-[3px] uppercase hover:bg-white hover:text-black transition-colors duration-200"
+            className="inline-flex items-center justify-center h-[54px] px-12 border border-white/75 rounded-none text-white text-xs font-normal tracking-[3px] uppercase hover:bg-white hover:text-black transition-colors duration-200"
           >
             상담 및 문의
           </a>
@@ -103,18 +103,18 @@ export function Hero() {
           initial={{ opacity: 0, scaleY: 0 }}
           animate={{ opacity: 1, scaleY: 1 }}
           transition={{ duration: MOTION_CONSTANTS.durations.ui, delay: 0.35, ease: MOTION_CONSTANTS.easings.easeOut }}
-          className="w-[1px] h-[100px] bg-white/40 mt-[60px]"
+          className="w-[1px] h-[100px] bg-white/40 mt-14"
           style={{ originY: 0 }}
         />
       </div>
 
       {/* Slider Controls */}
-      <div className="absolute bottom-[48px] left-0 right-0 px-[64px] flex justify-between items-end z-20 text-white">
+      <div className="absolute bottom-12 left-0 right-0 px-16 flex justify-between items-end z-20 text-white">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: MOTION_CONSTANTS.durations.max, delay: 0.4, ease: MOTION_CONSTANTS.easings.easeOut }}
-          className="flex gap-[48px] text-[13px] font-normal tracking-[3px] uppercase"
+          className="flex gap-12 text-xs font-normal tracking-[3px] uppercase"
         >
           <div className="flex flex-col gap-1">
             <span className="opacity-60">Est.</span>
@@ -130,10 +130,10 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: MOTION_CONSTANTS.durations.max, delay: 0.35, ease: MOTION_CONSTANTS.easings.easeOut }}
-          className="flex items-center gap-[32px]"
+          className="flex items-center gap-8"
         >
           {/* Page Indicators */}
-          <div className="flex gap-[8px]">
+          <div className="flex gap-2">
             {heroSlides.map((_, idx) => (
               <motion.button
                 key={idx}
@@ -152,7 +152,7 @@ export function Hero() {
           </div>
 
           {/* Navigation Buttons */}
-          <div className="flex gap-[12px]">
+          <div className="flex gap-3">
             <motion.button
               onClick={prev}
               whileHover={{ scale: 1.1 }}
@@ -176,11 +176,11 @@ export function Hero() {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-[48px] left-0 right-0 px-[64px] flex justify-center z-20">
+      <div className="absolute bottom-12 left-0 right-0 px-16 flex justify-center z-20">
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-          className="flex flex-col items-center gap-2 text-white text-[13px] font-normal tracking-[3px] uppercase opacity-60"
+          className="flex flex-col items-center gap-2 text-white text-xs font-normal tracking-[3px] uppercase opacity-60"
         >
           <span>Scroll</span>
           <div className="w-[1px] h-[24px] bg-white/40" />

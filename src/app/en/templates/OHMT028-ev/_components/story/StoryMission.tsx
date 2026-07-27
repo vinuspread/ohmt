@@ -38,10 +38,10 @@ export function StoryMission() {
   return (
     <section ref={ref} className="bg-[var(--light-bg)]">
       <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 py-24 md:py-32">
-        <p className="font-inter text-[11px] tracking-[0.15em] text-[var(--accent)] uppercase mb-6">
+        <p className="font-inter text-xs tracking-[0.15em] text-[var(--accent)] uppercase mb-6">
           What we stand for
         </p>
-        <h2 className="font-michroma text-[clamp(28px,3vw,44px)] text-[var(--text-on-light)] leading-[1.0] tracking-[-0.02em] mb-16 md:mb-20">
+        <h2 className="font-michroma text-[length:var(--text-h3)] text-[var(--text-on-light)] leading-[var(--leading-display)] tracking-[-0.02em] mb-16 md:mb-20">
           Three principles.<br />No compromise.
         </h2>
 
@@ -49,10 +49,10 @@ export function StoryMission() {
           {values.map((v) => (
             <div key={v.title} className="value-item py-10 md:py-0 md:px-10 first:md:pl-0 last:md:pr-0">
               <div className="w-6 h-[2px] bg-[var(--accent)] mb-6" />
-              <h3 className="font-michroma text-[17px] text-[var(--text-on-light)] mb-4 leading-snug">
+              <h3 className="font-michroma text-base text-[var(--text-on-light)] mb-4 leading-snug">
                 {v.title}
               </h3>
-              <p className="font-inter text-[14px] text-[var(--text-muted-light)] leading-relaxed">
+              <p className="font-inter text-sm text-[var(--text-muted-light)] leading-relaxed">
                 {v.body}
               </p>
             </div>

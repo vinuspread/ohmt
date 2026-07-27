@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 export function TemplateWrapper({ children }: { children: React.ReactNode }) {
   const [animationComplete, setAnimationComplete] = React.useState(false);
@@ -15,7 +15,7 @@ export function TemplateWrapper({ children }: { children: React.ReactNode }) {
   }, []);
 
   return (
-    <div style={{ background: "#111111", minHeight: "100vh" }}>
+    <div style={{ background: "var(--color-frame-bg)", minHeight: "100vh" }}>
       <motion.div
         initial={{ opacity: 0, filter: "blur(4px)" }}
         animate={{ opacity: 1, filter: "blur(0px)" }}
@@ -23,8 +23,8 @@ export function TemplateWrapper({ children }: { children: React.ReactNode }) {
         onAnimationComplete={() => setAnimationComplete(true)}
         style={
           animationComplete
-            ? { background: "#FFFFFF", maxWidth: "1440px", margin: "0 auto", minHeight: "100vh" }
-            : { background: "#FFFFFF", maxWidth: "1440px", margin: "0 auto", minHeight: "100vh", transform: "none", filter: "none" }
+            ? { background: "var(--color-bg)", maxWidth: "1440px", margin: "0 auto", minHeight: "100vh" }
+            : { background: "var(--color-bg)", maxWidth: "1440px", margin: "0 auto", minHeight: "100vh", transform: "none", filter: "none" }
         }
       >
         {children}
@@ -32,3 +32,4 @@ export function TemplateWrapper({ children }: { children: React.ReactNode }) {
     </div>
   );
 }
+

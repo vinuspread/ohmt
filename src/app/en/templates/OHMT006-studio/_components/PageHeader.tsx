@@ -19,14 +19,14 @@ export function PageHeader({ category, title, breadcrumb, isBadgeCategory = fals
                         {isBadgeCategory ? (
                             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/5">
                                 <span className="w-1.5 h-1.5 rounded-full bg-black animate-pulse" />
-                                <span className="text-[12px] md:text-[13px] font-bold text-black uppercase">{category}</span>
+                                <span className="text-xs md:text-xs font-bold text-black uppercase">{category}</span>
                             </div>
                         ) : (
-                            <span className="text-[12px] md:text-[13px] font-bold text-black/40 block uppercase">
+                            <span className="text-xs md:text-xs font-bold text-black/40 block uppercase">
                                 {category}
                             </span>
                         )}
-                        <h1 className="text-[clamp(1.8rem,7vw,6.5rem)] font-bold leading-[1.1] text-black">
+                        <h1 className="text-[length:var(--text-display)] font-bold leading-[var(--leading-heading)] text-black">
                             {title}
                         </h1>
                     </div>
@@ -34,7 +34,7 @@ export function PageHeader({ category, title, breadcrumb, isBadgeCategory = fals
                     {/* Right breadcrumb */}
                     {breadcrumb && breadcrumb.length > 0 && (
                         <div className="lg:col-span-4 lg:text-right">
-                            <div className="flex lg:justify-end items-center gap-3 text-[12px] md:text-[13px] text-black/40 font-bold uppercase">
+                            <div className="flex lg:justify-end items-center gap-3 text-xs md:text-xs text-black/40 font-bold uppercase">
                                 {breadcrumb.map((crumb, index) => (
                                     <React.Fragment key={crumb}>
                                         <span className={index === breadcrumb.length - 1 ? "text-black" : "text-black/40"}>

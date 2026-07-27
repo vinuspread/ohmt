@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform, useReducedMotion, useSpring } from "framer-motion";
+import { motion, useScroll, useTransform, useReducedMotion, useSpring } from "motion/react";
 import { steps } from "../../data/data";
 
 export default function HowItWorks() {
@@ -93,12 +93,12 @@ export default function HowItWorks() {
                     {step.number} / 0{steps.length}
                   </p>
                   <h3
-                    className="font-[family-name:var(--font-heading)] font-light capitalize text-white leading-[1.05] mb-5"
+                    className="font-[family-name:var(--font-heading)] font-light capitalize text-white leading-[var(--leading-heading)] mb-5"
                     style={{ fontSize: "clamp(2.8rem, 6vw, 5rem)" }}
                   >
                     {step.title}
                   </h3>
-                  <p className="text-[0.9rem] text-white/65 leading-[1.8] max-w-[400px] font-[family-name:var(--font-body)]">
+                  <p className="text-[0.9rem] text-white/65 leading-loose max-w-[400px] font-[family-name:var(--font-body)]">
                     {step.description}
                   </p>
                 </div>
@@ -158,12 +158,12 @@ export default function HowItWorks() {
                   {step.number} / 0{steps.length}
                 </p>
                 <h3
-                  className="font-[family-name:var(--font-heading)] font-light capitalize text-white leading-[1.05] mb-3"
+                  className="font-[family-name:var(--font-heading)] font-light capitalize text-white leading-[var(--leading-heading)] mb-3"
                   style={{ fontSize: "clamp(2rem, 8vw, 2.8rem)" }}
                 >
                   {step.title}
                 </h3>
-                <p className="text-[0.85rem] text-white/65 leading-[1.7] font-[family-name:var(--font-body)]">
+                <p className="text-[0.85rem] text-white/65 leading-[var(--leading-body)] font-[family-name:var(--font-body)]">
                   {step.description}
                 </p>
               </div>
@@ -174,3 +174,4 @@ export default function HowItWorks() {
     </>
   );
 }
+

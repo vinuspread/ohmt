@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform, useReducedMotion, useSpring } from "framer-motion";
+import { motion, useScroll, useTransform, useReducedMotion, useSpring } from "motion/react";
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -20,7 +20,7 @@ export default function Hero() {
   const titleLines = [["Every", "Love,"], ["Captured", "Forever."]];
 
   return (
-    <section ref={containerRef} className="relative min-h-[100dvh] w-full overflow-hidden bg-[#12110F]">
+    <section ref={containerRef} className="relative min-h-[100dvh] w-full overflow-hidden bg-[var(--color-hero-bg)]">
       {/* Full-bleed image */}
       <motion.div
         className="absolute inset-0"
@@ -37,7 +37,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Bottom gradient */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#100F0D] via-[#100F0D]/20 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-hero-gradient)] via-[var(--color-hero-gradient)]/20 to-transparent pointer-events-none" />
 
       {/* Editorial bottom strip */}
       <motion.div
@@ -58,7 +58,7 @@ export default function Hero() {
             </div>
             
             <h1
-              className="font-[family-name:var(--font-heading)] font-light capitalize text-white leading-[1.05]"
+              className="font-[family-name:var(--font-heading)] font-light capitalize text-white leading-[var(--leading-heading)]"
               style={{ fontSize: "clamp(3.5rem, 10vw, 8.5rem)" }}
             >
               {titleLines.map((line, lineIndex) => (
@@ -104,3 +104,4 @@ export default function Hero() {
     </section>
   );
 }
+

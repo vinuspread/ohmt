@@ -18,7 +18,7 @@ const tagColor: Record<string, string> = {
   'Meeting': 'bg-[var(--color-info-muted,rgba(99,179,237,0.12))] text-[var(--color-info)]',
   'Logistics': 'bg-[var(--color-bg-hover)] text-[var(--color-text-muted)]',
   'PR': 'bg-[var(--color-bg-hover)] text-[var(--color-text-muted)]',
-  'Strategy': 'bg-[var(--color-warning-muted,rgba(234,179,8,0.12))] text-yellow-400',
+  'Strategy': 'bg-[var(--color-warning-muted,rgba(234,179,8,0.12))] text-[var(--color-warning)]',
 }
 
 export function QuickNotes({ className = '' }: { className?: string }) {
@@ -54,11 +54,11 @@ export function QuickNotes({ className = '' }: { className?: string }) {
               </p>
               <div className="flex items-center gap-2 mt-1.5 flex-wrap">
                 {note.tags.map(tag => (
-                  <span key={tag} className={`text-[10px] font-medium px-2 py-0.5 rounded-full ${tagColor[tag] ?? 'bg-[var(--color-bg-hover)] text-[var(--color-text-muted)]'}`}>
+                  <span key={tag} className={`text-xs font-medium px-2 py-0.5 rounded-full ${tagColor[tag] ?? 'bg-[var(--color-bg-hover)] text-[var(--color-text-muted)]'}`}>
                     {tag}
                   </span>
                 ))}
-                <span className="text-[10px] text-[var(--color-text-muted)] ml-auto">{note.date}</span>
+                <span className="text-xs text-[var(--color-text-muted)] ml-auto">{note.date}</span>
               </div>
             </div>
           </li>

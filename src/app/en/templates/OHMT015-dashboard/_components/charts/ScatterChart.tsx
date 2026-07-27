@@ -1,9 +1,10 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { SafeResponsiveContainer } from './SafeResponsiveContainer'
 import {
-  ScatterChart as RechartsScatter, Scatter, XAxis, YAxis, CartesianGrid,
-  Tooltip, ResponsiveContainer, ZAxis, Label,
+  motion } from 'framer-motion'
+import {
+  ScatterChart as RechartsScatter, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ZAxis, Label
 } from 'recharts'
 import { chartDefaults } from '../../data/chart-theme'
 
@@ -19,7 +20,7 @@ const dealerData = Array.from({ length: 120 }, (_, i) => {
   return { x, y, z }
 })
 
-const CustomTooltip = ({ active, payload }: any) => {
+const CustomTooltip = ({ active, payload }: { active?: boolean; payload?: Array<{ payload: { x: number; y: number; z: number } }> }) => {
   if (!active || !payload?.length) return null
   const d = payload[0].payload
   return (
@@ -46,7 +47,7 @@ export function DealerScatterChart() {
         </div>
       </div>
       <div style={{ height: 280 }}>
-        <ResponsiveContainer width="100%" height="100%">
+        <SafeResponsiveContainer width="100%" height="100%">
           <RechartsScatter>
             <CartesianGrid {...chartDefaults.cartesianGrid} />
             <XAxis
@@ -80,7 +81,7 @@ export function DealerScatterChart() {
               animationDuration={800}
             />
           </RechartsScatter>
-        </ResponsiveContainer>
+        </SafeResponsiveContainer>
       </div>
     </motion.div>
   )

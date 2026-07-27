@@ -7,6 +7,16 @@ import { classes } from "../../data/data";
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 const basePath = "/ko/templates/OHMT024-kids-education";
 
+function getDescriptionLines(description?: string) {
+  if (!description) return [];
+
+  const [firstSentence, ...remainingSentences] = description.split(". ");
+  const firstLine = firstSentence.endsWith(".") ? firstSentence : `${firstSentence}.`;
+  const secondLine = remainingSentences.join(". ");
+
+  return [firstLine, secondLine].filter(Boolean);
+}
+
 export default function Classes() {
   const shouldReduce = useReducedMotion();
 
@@ -82,8 +92,12 @@ export default function Classes() {
                   >
                     {item.title}
                   </h3>
-                  <p className="text-sm text-[var(--color-text-muted)] mt-1 line-clamp-1 hidden sm:block">
-                    {item.description}
+                  <p className="mt-1 hidden min-h-10 max-w-3xl text-sm leading-5 text-[var(--color-text-muted)] sm:block">
+                    {getDescriptionLines(item.description).map((line) => (
+                      <span key={line} className="block truncate">
+                        {line}
+                      </span>
+                    ))}
                   </p>
                 </div>
 

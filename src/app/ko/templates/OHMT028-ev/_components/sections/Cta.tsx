@@ -82,25 +82,22 @@ export function Cta() {
                 className="w-[20px] h-[2px] bg-[var(--border)] transition-colors duration-200"
               />
             ))}
-            <span ref={counterRef} className="font-inter text-[10px] tracking-[0.12em] text-[var(--text-muted)] mt-3">
+            <span ref={counterRef} className="font-inter text-xs tracking-[0.12em] text-[var(--text-muted)] mt-3">
               00/{String(totalLines).padStart(2, "0")}
             </span>
           </div>
 
           <div className="w-full max-w-[500px] pt-8">
-            <p className="font-inter font-medium text-[11px] tracking-[0.15em] text-[var(--accent)] uppercase mb-5">
-              얼리 액세스
-            </p>
-            <h2 className="font-michroma text-[clamp(30px,4vw,54px)] text-[var(--text)] leading-[1.1] tracking-[-0.03em] mb-6">
-              오늘부터 도시의<br />모든 드라이빙 루트는<br />당신의 것이 됩니다.
-            </h2>
-            <p className="font-inter text-[14px] text-[var(--text-muted)] mb-10">
-              2,890만 원부터 시작. 2026년 1분기 첫 인도 예정입니다.
-              예약금 35만 원은 전액 환불됩니다.
-            </p>
-            <button className="inline-flex items-center gap-2.5 bg-[var(--accent)] text-[var(--text-on-light)] px-8 py-4 rounded-full text-[13px] font-inter font-medium tracking-[0.03em] hover:bg-[var(--accent-dark)] transition-colors duration-300">
-              사전 예약하기 →
-            </button>
+            <p className="font-inter font-medium text-xs tracking-[0.15em] text-[var(--accent)] uppercase mb-5">
+              사전 예약</p>
+            <h2 className="font-michroma text-[length:var(--text-h2)] text-[var(--text)] leading-[var(--leading-heading)] tracking-[-0.03em] mb-6">
+              도시의 새로운<br />이동을 NUBI와<br />시작해보세요.</h2>
+            <p className="font-inter text-sm text-[var(--text-muted)] mb-10">
+              2,890만 원부터 시작합니다.
+              <br className="hidden md:block" />{" "}
+              예약금 35만 원은 취소 시 전액 환불됩니다.</p>
+            <button className="inline-flex items-center gap-2.5 bg-[var(--accent)] text-[var(--text-on-light)] px-8 py-4 rounded-full text-xs font-inter font-medium tracking-[0.03em] hover:bg-[var(--accent-dark)] transition-colors duration-300">
+              NUBI 사전 예약 →</button>
           </div>
         </div>
       </div>

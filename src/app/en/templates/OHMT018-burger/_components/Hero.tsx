@@ -16,7 +16,7 @@ export const Hero = () => {
         animate={{ scale: 1 }}
         transition={{ duration: 1.2, ease: easeOut }}
       />
-      <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/50 to-[#3A7D44]/30" />
+      <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-black/50 to-[var(--color-primary)]/30" />
 
       <div className="relative z-10 text-center text-white px-6 max-w-4xl mx-auto">
         <motion.p
@@ -28,7 +28,7 @@ export const Hero = () => {
           Open since 2020
         </motion.p>
         <motion.h1
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-[-0.02em]"
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[var(--leading-heading)] tracking-[-0.02em]"
           style={{ textWrap: "balance" } as React.CSSProperties}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

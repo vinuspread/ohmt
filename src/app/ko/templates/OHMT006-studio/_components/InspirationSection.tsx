@@ -19,13 +19,13 @@ const serviceVariants = {
 
 export function InspirationSection() {
     const services = [
-        { id: '01', title: '스페이스 플래닝', description: '동선과 공간 배치를 정교하게 조율하여, 머무는 이들의 일상에 최적의 편리함과 영감을 선사합니다.', icon: Layout },
-        { id: '02', title: '가구 & 마감 큐레이션', description: '공간의 철학과 사용자 고유의 미적 취향을 투영하는 유일무이한 마감재와 오브제를 엄선합니다.', icon: Palette },
-        { id: '03', title: '감도 높은 스타일링', description: '조명의 세심한 배치와 감각적인 오브제 레이어링을 통해, 공간의 완성도를 극대화합니다.', icon: Lightbulb },
+        { id: '01', title: '공간 계획', description: '공간의 용도와 사용 인원을 살펴 동선과 수납, 가구 배치를 효율적으로 계획합니다.', icon: Layout },
+        { id: '02', title: '가구·마감재 선정', description: '예산과 관리 방법, 원하는 분위기에 맞춰 마감재와 가구, 조명을 함께 제안합니다.', icon: Palette },
+        { id: '03', title: '조명과 스타일링', description: '조명의 밝기와 위치를 조정하고 패브릭과 소품을 더해 공간의 분위기를 마무리합니다.', icon: Lightbulb },
     ];
 
     return (
-        <section className="bg-white py-[120px] px-[64px]">
+        <section className="bg-white py-30 px-16">
             <div className="max-w-full mx-auto">
                 {/* Header */}
                 <motion.div
@@ -33,16 +33,16 @@ export function InspirationSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.65, ease: [0.23, 1, 0.32, 1] }}
                     viewport={{ once: true, margin: '-50px' }}
-                    className="flex flex-col gap-[32px] mb-[120px] border-b border-[#F3F6FC] pb-[64px]"
+                    className="flex flex-col gap-8 mb-30 border-b border-[#F3F6FC] pb-16"
                 >
-                    <span className="text-[13px] font-normal tracking-[3px] uppercase text-[#090B19] opacity-60">우리의 전문성</span>
-                    <h2 className="text-[26px] md:text-[48px] leading-[1.1] font-semibold tracking-[-1.44px] text-[#090B19] break-keep">
-                        정교한 디테일로 만드는 최상의 공간.
+                    <span className="text-xs font-normal tracking-[3px] uppercase text-[#090B19] opacity-60">우리의 전문성</span>
+                    <h2 className="text-3xl md:text-5xl leading-[var(--leading-heading)] font-semibold tracking-[-1.44px] text-[#090B19] break-keep">
+                        계획부터 마감까지 세심하게 확인합니다.
                     </h2>
                 </motion.div>
 
                 {/* Services Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-[64px] mb-[160px]">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-40">
                     {services.map((service, idx) => {
                         const Icon = service.icon;
                         return (
@@ -55,21 +55,21 @@ export function InspirationSection() {
                                 whileHover={{ y: -8 }}
                                 transition={{ duration: 0.25, ease: [0.23, 1, 0.32, 1] }}
                                 viewport={{ once: true, margin: '-50px' }}
-                                className="flex flex-col gap-[32px] border-t border-[#F3F6FC] pt-[48px]"
+                                className="flex flex-col gap-8 border-t border-[#F3F6FC] pt-12"
                             >
                                 <motion.div
                                     whileHover={{ scale: 1.1 }}
                                     transition={{ duration: 0.2, ease: [0.23, 1, 0.32, 1] }}
-                                    className="flex items-center gap-[16px]"
+                                    className="flex items-center gap-4"
                                 >
-                                    <span className="text-[13px] font-bold tracking-[3px] uppercase text-[#090B19]">{service.id}</span>
+                                    <span className="text-xs font-bold tracking-[3px] uppercase text-[#090B19]">{service.id}</span>
                                     <Icon size={24} className="text-[#090B19]" strokeWidth={1.5} />
                                 </motion.div>
                                 <div>
-                                    <h3 className="text-[24px] leading-[1.1] font-bold tracking-[-0.72px] text-[#090B19] mb-[16px]">
+                                    <h3 className="text-2xl leading-[var(--leading-heading)] font-bold tracking-[-0.72px] text-[#090B19] mb-4">
                                         {service.title}
                                     </h3>
-                                    <p className="text-[16px] leading-[26px] font-normal text-[var(--color-text-muted)] break-keep">
+                                    <p className="text-base leading-[var(--leading-heading)] font-normal text-[var(--color-text-muted)] break-keep">
                                         {service.description}
                                     </p>
                                 </div>
@@ -98,8 +98,8 @@ export function InspirationSection() {
                         viewport={{ once: true, margin: '-50px' }}
                         className="relative z-10 max-w-4xl px-4"
                     >
-                        <h2 className="text-[26px] md:text-[48px] leading-[1.1] font-semibold tracking-[-1.44px] mb-[48px] break-keep">
-                            공간이 지닌 가치를 재발견하고, 이를 시대를 초월한 감각적인 경험으로 혁신합니다.
+                        <h2 className="text-3xl md:text-5xl leading-[var(--leading-heading)] font-semibold tracking-[-1.44px] mb-12 break-keep">
+                            현재 공간의 장점은 살리고 불편한 부분은 개선해 생활과 업무에 잘 맞는 환경을 만듭니다.
                         </h2>
                         <motion.div
                             initial={{ opacity: 0, scaleY: 0 }}

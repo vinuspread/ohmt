@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "motion/react";
 import Navbar from "../_components/layout/Navbar";
 import Footer from "../_components/layout/Footer";
 import { stats, team } from "../data/data";
@@ -29,7 +29,7 @@ export default function AboutFull() {
               className="max-w-2xl"
             >
               <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">About</span>
-              <h1 className="mt-4 font-[family-name:var(--font-heading)] text-6xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[1.05]">
+              <h1 className="mt-4 font-[family-name:var(--font-heading)] text-6xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[var(--leading-heading)]">
                 About us
               </h1>
               <p className="mt-4 text-[0.95rem] text-white/60 leading-relaxed max-w-lg">
@@ -49,7 +49,7 @@ export default function AboutFull() {
                 transition={{ duration: 0.6, ease: EASE_OUT }}
               >
                 <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">Who we are</span>
-                <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[1.05]">Your skin is in expert hands</h2>
+                <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[var(--leading-heading)]">Your skin is in expert hands</h2>
                 <p className="mt-5 text-[0.95rem] text-[var(--color-text-muted)] leading-relaxed">
                   Founded in 2010, our clinic has grown from a single treatment room into a trusted wellness destination. We combine
                   clinical expertise with genuine care - every treatment is personalized, every therapist is certified, and every
@@ -90,7 +90,7 @@ export default function AboutFull() {
               className="text-center mb-12"
             >
               <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">Our space</span>
-              <h2 className="mt-4 font-[family-name:var(--font-heading)] text-4xl font-bold tracking-tight text-[var(--color-text)] leading-[1.05]">
+              <h2 className="mt-4 font-[family-name:var(--font-heading)] text-4xl font-bold tracking-tight text-[var(--color-text)] leading-[var(--leading-heading)]">
                 Inside our clinic
               </h2>
             </motion.div>
@@ -120,7 +120,7 @@ export default function AboutFull() {
               transition={{ duration: 0.6, ease: EASE_OUT }}
             >
               <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">Why our team</span>
-              <h2 className="mt-4 font-[family-name:var(--font-heading)] text-4xl font-bold tracking-tight text-[var(--color-text)] leading-[1.05]">
+              <h2 className="mt-4 font-[family-name:var(--font-heading)] text-4xl font-bold tracking-tight text-[var(--color-text)] leading-[var(--leading-heading)]">
                 Trained, certified, and genuinely invested in your results
               </h2>
               <p className="mt-5 text-[0.95rem] text-[var(--color-text-muted)] leading-relaxed max-w-2xl mx-auto">
@@ -141,7 +141,7 @@ export default function AboutFull() {
               className="text-center mb-16"
             >
               <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">Our team</span>
-              <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[1.05]">Meet your therapists</h2>
+              <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[var(--leading-heading)]">Meet your therapists</h2>
             </motion.div>
             <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
               {team.map((member, i) => (
@@ -177,3 +177,4 @@ export default function AboutFull() {
     </>
   );
 }
+

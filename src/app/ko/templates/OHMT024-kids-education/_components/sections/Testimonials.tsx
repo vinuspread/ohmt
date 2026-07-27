@@ -74,7 +74,7 @@ export default function Testimonials() {
               500명이 넘는 학부모님들이<br />직접 경험을 전해 주셨습니다.
             </p>
             <p className="mt-2 text-sm text-[var(--color-text-muted)]">
-              참여 학생의 98%가 매 수업 시간에 높은 만족도를 나타냈습니다.
+              참여 학생의 98%가 매 수업에서 높은 만족도를 보였습니다.
             </p>
           </div>
 

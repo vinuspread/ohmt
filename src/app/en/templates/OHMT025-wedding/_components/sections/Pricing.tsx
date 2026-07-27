@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { packages } from "../../data/data";
 
 export default function Pricing() {
@@ -11,11 +11,11 @@ export default function Pricing() {
   return (
     <section id="pricing" className="bg-[var(--color-bg-secondary)] py-24 lg:py-32">
       <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
-        <div className="lg:grid lg:grid-cols-[1fr_2fr] gap-24">
+        <div className="lg:grid lg:grid-cols-2 gap-24">
           {/* Left header */}
           <div className="mb-16 lg:mb-0">
             <h2
-              className="font-[family-name:var(--font-heading)] font-light capitalize text-[var(--color-text)] leading-[1.05]"
+              className="font-[family-name:var(--font-heading)] font-light capitalize text-[var(--color-text)] leading-[var(--leading-heading)]"
               style={{ fontSize: "clamp(3rem, 6vw, 4.5rem)" }}
             >
               Collections
@@ -119,3 +119,4 @@ export default function Pricing() {
     </section>
   );
 }
+

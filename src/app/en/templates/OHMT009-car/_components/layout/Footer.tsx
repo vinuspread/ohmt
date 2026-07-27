@@ -13,7 +13,7 @@ export const Footer = () => {
             <span className="text-[0.95rem] md:text-[1.2rem] font-medium md:font-bold tracking-[0.25em] uppercase text-white mb-3 block">
               OHMT<span className="text-[var(--theme-accent)]">.</span>
             </span>
-            <p className="hidden md:block text-[0.85rem] text-[var(--theme-text-muted)] leading-[1.4] max-w-[280px]">
+            <p className="hidden md:block text-[0.85rem] text-[var(--theme-text-muted)] leading-[var(--leading-body)] max-w-[280px]">
               Engineering excellence for those who demand more from every journey.
             </p>
           </div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { faqs } from "../../data/data";
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
@@ -13,7 +13,7 @@ export default function Faq() {
   return (
     <section className="relative overflow-hidden bg-[var(--color-bg-secondary)] py-24 lg:py-32">
       <div className="mx-auto max-w-6xl px-6">
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,380px)_1fr] lg:gap-16 items-start">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
           <motion.div
             initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -37,7 +37,7 @@ export default function Faq() {
               <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">
                 FAQ
               </span>
-              <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[1.05]">
+              <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[var(--leading-heading)]">
                 Frequently asked questions
               </h2>
             </motion.div>
@@ -108,3 +108,4 @@ export default function Faq() {
     </section>
   );
 }
+

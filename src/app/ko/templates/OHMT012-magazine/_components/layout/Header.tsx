@@ -11,10 +11,10 @@ export const Header = ({ light }: { light?: boolean }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navItems = [
-    { label: "스토리", href: "#" },
-    { label: "아카이브", href: "#" },
-    { label: "이슈", href: "#" },
-    { label: "어바웃", href: "#" }
+    { label: "기사", href: "/ko/templates/OHMT012-magazine" },
+    { label: "아카이브", href: "/ko/templates/OHMT012-magazine/archive" },
+    { label: "발행호", href: "/ko/templates/OHMT012-magazine/issues" },
+    { label: "소개", href: "/ko/templates/OHMT012-magazine/about" }
   ];
 
   useEffect(() => {
@@ -47,7 +47,7 @@ export const Header = ({ light }: { light?: boolean }) => {
             {navItems.map((item) => (
               <Link
                 key={item.label}
-                href="#"
+                href={item.href}
                 className={clsx(
                   "text-[0.72rem] font-bold uppercase tracking-[0.12em] transition-colors duration-300 hover:opacity-100",
                   scrolled ? "text-[var(--theme-text-muted)] hover:text-[var(--theme-text)]" : "text-white/85 hover:text-white"
@@ -71,7 +71,7 @@ export const Header = ({ light }: { light?: boolean }) => {
           <button
             className="md:hidden flex items-center justify-center w-10 h-10"
             onClick={() => setMobileOpen((v) => !v)}
-            aria-label="Toggle menu"
+            aria-label="메뉴 열기 또는 닫기"
           >
             {mobileOpen
               ? <X size={22} className="text-[var(--theme-text)]" />
@@ -84,21 +84,21 @@ export const Header = ({ light }: { light?: boolean }) => {
       {/* Mobile backdrop */}
       {mobileOpen && (
         <div
-          className="fixed inset-0 top-[52px] z-[190] bg-black/40 md:hidden"
+          className="fixed inset-0 top-12 z-[190] bg-black/40 md:hidden"
           onClick={() => setMobileOpen(false)}
         />
       )}
 
       {/* Mobile drawer */}
       <div className={clsx(
-        "fixed top-[52px] left-0 right-0 z-[195] bg-[var(--color-bg)] border-t border-[var(--theme-border)] transition-[max-height,opacity] duration-300 md:hidden overflow-hidden",
+        "fixed top-12 left-0 right-0 z-[195] bg-[var(--color-bg)] border-t border-[var(--theme-border)] transition-[max-height,opacity] duration-300 md:hidden overflow-hidden",
         mobileOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
       )}>
         <div className="flex flex-col px-6 py-6 gap-1">
           {navItems.map((item) => (
             <Link
               key={item.label}
-              href="#"
+              href={item.href}
               onClick={() => setMobileOpen(false)}
               className="text-[0.9rem] font-bold uppercase tracking-[0.14em] text-[var(--theme-text-muted)] hover:text-[var(--theme-text)] py-4 border-b border-[var(--theme-border)] transition-colors"
             >

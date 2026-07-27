@@ -8,8 +8,8 @@ import { SplitHeading } from "../ui/SplitHeading";
 gsap.registerPlugin(ScrollTrigger);
 
 const stats = [
-  { value: 280, unit: "km", label: "도시 주행거리" },
-  { value: 30, unit: "분", label: "급속 충전 0→80%" },
+  { value: 280, unit: "km", label: "도심 주행거리" },
+  { value: 30, unit: "분", label: "급속 충전 10→80%" },
   { value: 7, unit: "색상", label: "선택 가능 컬러" },
 ];
 
@@ -76,13 +76,13 @@ export function Performance() {
       <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 relative z-10">
         <div className="mb-16">
           <SplitHeading
-            text="도시에서 태어나, 도시를 사랑하게 됩니다"
-            className="font-michroma text-[clamp(26px,3vw,44px)] text-[var(--text)] leading-[1.05] tracking-[-0.02em]"
+            text="도시의 일상을 위해 설계했습니다"
+            className="font-michroma text-[length:var(--text-h3)] text-[var(--text)] leading-[var(--leading-heading)] tracking-[-0.02em]"
           />
-          <p className="font-inter text-[15px] text-[var(--text-muted)] mt-4 max-w-[500px]">
-            좁은 골목도, 까다로운 주차도 NUBI에겐 일상입니다.<br />
-            도시 어디든 자연스럽게 어울리고, 한 번 타면 매일 기다려지는 차가 됩니다.
-          </p>
+          <p className="font-inter text-sm text-[var(--text-muted)] mt-4 max-w-[500px]">
+            좁은 골목과 복잡한 주차 공간에서도 부담 없이 움직일 수 있습니다.
+            <br className="hidden md:block" />{" "}
+            작은 차체와 민첩한 조향으로 출퇴근부터 주말 이동까지 편안하게 이어갑니다.</p>
         </div>
 
         <div className="grid grid-cols-1 divide-y divide-[var(--border)] border-y border-[var(--border)] md:grid-cols-3 md:divide-x md:divide-y-0">
@@ -93,14 +93,14 @@ export function Performance() {
               className="py-7 md:px-8 md:py-8"
             >
               <div className="flex items-baseline gap-2">
-                <span className="stat-value font-michroma text-[clamp(42px,8vw,64px)] text-[var(--text)] leading-none">
+                <span className="stat-value font-michroma text-[length:var(--text-h1)] text-[var(--text)] leading-none">
                   0
                 </span>
-                <span className="font-inter text-[16px] font-semibold text-[var(--accent)] md:text-[18px]">
+                <span className="font-inter text-base font-semibold text-[var(--accent)] md:text-lg">
                   {stat.unit}
                 </span>
               </div>
-              <p className="mt-3 font-inter text-[13px] tracking-[0.03em] text-[var(--text-muted)]">
+              <p className="mt-3 font-inter text-xs tracking-[0.03em] text-[var(--text-muted)]">
                 {stat.label}
               </p>
             </div>

@@ -36,7 +36,7 @@ export const FeaturedDrinks = () => {
     <section className="bg-[var(--color-bg-secondary)] py-14 md:py-20">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         <motion.p
-          className="text-right text-[11px] uppercase tracking-[0.22em] text-[var(--color-text-muted)] font-semibold mb-8"
+          className="text-right text-xs uppercase tracking-[0.22em] text-[var(--color-text-muted)] font-semibold mb-8"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
@@ -61,7 +61,7 @@ export const FeaturedDrinks = () => {
                   alt={item.label}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
-                <span className="absolute top-3 left-3 bg-[var(--color-accent)] text-white text-[9px] uppercase tracking-[0.15em] px-2.5 py-1 font-semibold">
+                <span className="absolute top-3 left-3 bg-[var(--color-accent)] text-white text-xs uppercase tracking-[0.15em] px-2.5 py-1 font-semibold">
                   {item.badge}
                 </span>
               </div>

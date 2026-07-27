@@ -95,7 +95,7 @@ export default function Mission() {
               키즈 아카데미는 아이들이 다채로운 창의 클래스를 경험하고, 소중한 사람들과 소통하도록 돕습니다. 매 수업 시간은 배움과 성장, 그리고 평생 기억에 남을 즐거운 추억이 됩니다.
             </p>
             <p className="mt-4 text-base text-[var(--color-text-muted)] leading-relaxed">
-              우리의 미션은 놀이 기반 교육을 통해 호기심의 불씨를 지피는 것입니다. 아이들이 공부하고 있다는 사실조차 잊은 채 몰입할 때, 가장 훌륭한 학습이 일어나기 때문입니다.
+              우리는 놀이 기반 교육으로 호기심의 불씨를 지핍니다. 아이들이 공부하고 있다는 사실조차 잊은 채 몰입할 때, 가장 훌륭한 학습이 일어나기 때문입니다.
             </p>
             <Link
               href="/ko/templates/OHMT024-kids-education/classes"

@@ -1,9 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { SafeResponsiveContainer } from '../_components/charts/SafeResponsiveContainer'
+import {
+  useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
+  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip
 } from 'recharts'
 import { DashboardLayout } from '../_components/layout/DashboardLayout'
 import { PageHeader } from '../_components/common/PageHeader'
@@ -132,7 +134,7 @@ export default function ReportsPage() {
         >
           <h3 className="text-base font-[var(--font-heading)] font-semibold text-[var(--color-text)] mb-4">연간 매출 추이</h3>
           <div style={{ height: 300 }}>
-            <ResponsiveContainer width="100%" height="100%">
+            <SafeResponsiveContainer width="100%" height="100%">
               <LineChart data={annualRevenueData}>
                 <CartesianGrid {...chartDefaults.cartesianGrid} />
                 <XAxis dataKey="month" tick={{ fill: 'var(--color-text-muted)', fontSize: 12 }} axisLine={false} tickLine={false} />
@@ -141,7 +143,7 @@ export default function ReportsPage() {
                 <Line type="monotone" dataKey="revenue" name="Revenue" stroke="var(--color-primary)" strokeWidth={2} dot={false} activeDot={{ r: 4 }} isAnimationActive={false} animationDuration={1000} animationEasing="ease-in-out" />
                 <Line type="monotone" dataKey="profit" name="Profit" stroke="var(--color-success)" strokeWidth={2} dot={false} activeDot={{ r: 4 }} isAnimationActive={false} animationDuration={1000} animationEasing="ease-in-out" />
               </LineChart>
-            </ResponsiveContainer>
+            </SafeResponsiveContainer>
           </div>
         </motion.div>
       </motion.div>

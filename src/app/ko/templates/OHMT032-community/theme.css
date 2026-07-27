@@ -1,0 +1,110 @@
+:root {
+  --text-display: clamp(3rem, 7vw, 5.5rem);
+  --text-h1: clamp(2.5rem, 5vw, 4rem);
+  --text-h2: clamp(2rem, 4vw, 3rem);
+  --text-h3: clamp(1.5rem, 3vw, 2rem);
+  --text-lead: clamp(1.125rem, 2vw, 1.5rem);
+  --leading-display: 0.95;
+  --leading-heading: 1.1;
+  --leading-body: 1.6;
+
+  --color-primary: #FFFFFF;
+  --color-secondary: #1D1D1F;
+  --color-accent: #0A66E8;
+  --color-accent-hover: #0757C8;
+  --color-accent-soft: #EAF3FF;
+  --color-bg: #F7F7F8;
+  --color-bg-secondary: #EEEFF1;
+  --color-bg-elevated: #FFFFFF;
+  --color-bg-hover: #E7E9EC;
+  --color-text: #1D1D1F;
+  --color-text-secondary: #333336;
+  --color-text-muted: #6E6E73;
+  --color-text-contrast: #FFFFFF;
+  --color-border: rgba(29, 29, 31, 0.1);
+  --color-border-strong: rgba(10, 102, 232, 0.24);
+  --color-success: #1D8F43;
+  --color-warning: #B86E00;
+  --color-danger: #C92A2A;
+
+  --font-heading: 'Pretendard Variable', 'Pretendard', system-ui, -apple-system, sans-serif;
+  --font-body: 'Pretendard Variable', 'Pretendard', system-ui, -apple-system, sans-serif;
+
+  --radius-sm: 5px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+  --shadow-card: 0 18px 48px rgba(29, 29, 31, 0.1);
+}
+
+body {
+  background: var(--color-bg);
+}
+
+.ohmt032-community {
+  min-height: 100dvh;
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  letter-spacing: 0;
+}
+
+.ohmt032-community *,
+.ohmt032-community *::before,
+.ohmt032-community *::after {
+  box-sizing: border-box;
+}
+
+.ohmt032-community h1,
+.ohmt032-community h2,
+.ohmt032-community h3,
+.ohmt032-community h4,
+.ohmt032-community h5,
+.ohmt032-community h6 {
+  font-family: var(--font-heading);
+  letter-spacing: 0;
+}
+
+.ohmt032-community header a,
+.ohmt032-community header button,
+.ohmt032-community nav a,
+.ohmt032-community nav button {
+  letter-spacing: 0;
+}
+
+.ohmt032-community a,
+.ohmt032-community button,
+.ohmt032-community input,
+.ohmt032-community textarea,
+.ohmt032-community select {
+  font-family: inherit;
+}
+
+.ohmt032-community a:focus-visible,
+.ohmt032-community button:focus-visible,
+.ohmt032-community input:focus-visible,
+.ohmt032-community textarea:focus-visible,
+.ohmt032-community select:focus-visible {
+  outline: 3px solid rgba(10, 102, 232, 0.32);
+  outline-offset: 2px;
+}
+
+.ohmt032-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ohmt032-community *,
+  .ohmt032-community *::before,
+  .ohmt032-community *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}

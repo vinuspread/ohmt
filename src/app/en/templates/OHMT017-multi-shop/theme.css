@@ -1,10 +1,20 @@
 /* multi-shop Design Tokens — Zinzira */
 :root {
-  --color-primary: #0A0A0A;
+  --text-display: clamp(3rem, 7vw, 5.5rem);
+  --text-h1: clamp(2.5rem, 5vw, 4rem);
+  --text-h2: clamp(2rem, 4vw, 3rem);
+  --text-h3: clamp(1.5rem, 3vw, 2rem);
+  --text-lead: clamp(1.125rem, 2vw, 1.5rem);
+  --leading-display: 0.95;
+  --leading-heading: 1.1;
+  --leading-body: 1.6;
+
+  --color-primary: #FCDF00;
   --color-secondary: #0A0A0A;
   --color-accent: #C9A97A;
   --color-sale: #DC2626;
   --color-star: #F59E0B;
+  --color-star-empty: #D1D5DB;
   --color-bg: #FFFFFF;
   --color-bg-secondary: #F2F2F2;
   --color-bg-dark: #0A0A0A;

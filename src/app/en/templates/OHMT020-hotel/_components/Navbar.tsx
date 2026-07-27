@@ -30,7 +30,7 @@ export const Navbar = () => {
             OHMT
           </Link>
 
-          <div className={`hidden md:flex items-center gap-10 text-[13px] font-medium uppercase tracking-[0.15em] transition-colors duration-300 ${scrolled ? "text-[var(--color-text-muted)]" : "text-white/80"}`}>
+          <div className={`hidden md:flex items-center gap-10 text-xs font-medium uppercase tracking-[0.15em] transition-colors duration-300 ${scrolled ? "text-[var(--color-text-muted)]" : "text-white/80"}`}>
             {navItems.map((item) => (
               <Link key={item.name} href={item.href} className={`transition-colors ${scrolled ? "hover:text-[var(--color-primary)]" : "hover:text-white"}`}>
                 {item.name}
@@ -40,7 +40,7 @@ export const Navbar = () => {
 
           <div className="flex items-center gap-4">
             <Link href="/en/templates/OHMT020-hotel/booking" className="hidden md:inline-flex">
-              <Button variant="primary" size="sm" className="text-[11px] tracking-[0.2em] uppercase">
+              <Button variant="primary" size="sm" className="text-xs tracking-[0.2em] uppercase">
                 Book A Room
               </Button>
             </Link>
@@ -54,13 +54,13 @@ export const Navbar = () => {
       <div className={`fixed inset-x-0 top-16 z-40 bg-[var(--color-bg)] border-b border-[var(--color-border)] transition-all duration-300 md:hidden overflow-hidden ${mobileOpen ? "max-h-[400px] opacity-100 py-8" : "max-h-0 opacity-0 py-0"}`}>
         <div className="flex flex-col px-6 gap-2">
           {navItems.map((item) => (
-            <Link key={item.name} href={item.href} onClick={() => setMobileOpen(false)} className="text-[14px] font-medium text-[var(--color-text-muted)] hover:text-[var(--color-primary)] py-2 transition-colors uppercase tracking-[0.15em]">
+            <Link key={item.name} href={item.href} onClick={() => setMobileOpen(false)} className="text-sm font-medium text-[var(--color-text-muted)] hover:text-[var(--color-primary)] py-2 transition-colors uppercase tracking-[0.15em]">
               {item.name}
             </Link>
           ))}
           <div className="mt-4 pt-4 border-t border-[var(--color-border)]">
             <Link href="/en/templates/OHMT020-hotel/booking" onClick={() => setMobileOpen(false)} className="w-full block">
-              <Button variant="primary" size="md" className="w-full text-[12px] tracking-[0.2em] uppercase">Book A Room</Button>
+              <Button variant="primary" size="md" className="w-full text-xs tracking-[0.2em] uppercase">Book A Room</Button>
             </Link>
           </div>
         </div>

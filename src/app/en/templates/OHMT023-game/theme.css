@@ -1,4 +1,13 @@
 :root {
+  --text-display: clamp(3rem, 7vw, 5.5rem);
+  --text-h1: clamp(2.5rem, 5vw, 4rem);
+  --text-h2: clamp(2rem, 4vw, 3rem);
+  --text-h3: clamp(1.5rem, 3vw, 2rem);
+  --text-lead: clamp(1.125rem, 2vw, 1.5rem);
+  --leading-display: 0.95;
+  --leading-heading: 1.1;
+  --leading-body: 1.6;
+
   --color-primary: #7C3AED;
   --color-secondary: #F5F5F5;
   --color-accent: #06B6D4;
@@ -10,6 +19,10 @@
   --color-text-contrast: #FFFFFF;
   --color-border: #222222;
   --color-border-bright: #333333;
+  --color-primary-glow-subtle: rgba(124, 58, 237, 0.15);
+  --color-primary-glow-medium: rgba(124, 58, 237, 0.25);
+  --color-primary-glow-strong: rgba(124, 58, 237, 0.4);
+  --color-primary-glow-intense: rgba(124, 58, 237, 0.6);
   --font-heading: var(--font-orbitron), 'Space Grotesk', sans-serif;
   --font-body: 'Inter', sans-serif;
 
@@ -26,15 +39,23 @@ body {
   overflow-x: clip;
 }
 
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
 @media (max-width: 640px) {
   h1 {
     font-size: var(--type-display-mobile);
-    text-wrap: balance;
   }
 
   h2 {
     font-size: var(--type-section-title-mobile);
-    text-wrap: balance;
   }
 
   section {

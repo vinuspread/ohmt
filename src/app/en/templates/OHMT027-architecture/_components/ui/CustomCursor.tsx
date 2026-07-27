@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion, useMotionValue, useSpring } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "motion/react";
 
 export function CustomCursor() {
   const cursorX = useMotionValue(-100);
@@ -63,10 +63,11 @@ export function CustomCursor() {
         }}
         transition={{ duration: 0.2 }}
         style={{
-          border: "1.5px solid #1A1A1A",
+          border: "1.5px solid var(--color-secondary)",
           borderRadius: "50%",
         }}
       />
     </motion.div>
   );
 }
+

@@ -87,6 +87,13 @@ export const INSTRUCTORS: Instructor[] = [
     bio: "A former dancer turned Pilates specialist, Lena focuses on alignment, core strength, and graceful movement.",
     image: "/templates/OHMT022-yoga/instructor-3.jpg",
   },
+  {
+    id: "4",
+    name: "Daniel Foster",
+    role: "Restorative Yoga & Mobility Instructor",
+    bio: "Daniel focuses on joint mobility and recovery, guiding sustainable practices that students can maintain without strain.",
+    image: "/templates/OHMT022-yoga/instructor-4.jpg",
+  },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
@@ -173,7 +180,7 @@ export const SCHEDULE: ScheduleItem[] = [
   {
     day: "Sunday",
     classes: [
-      { time: "09:00", name: "Restorative Hatha", instructor: "Sofia Chen", slug: "hatha-yoga" },
+      { time: "09:00", name: "Restorative Hatha", instructor: "Daniel Foster", slug: "hatha-yoga" },
       { time: "11:00", name: "Meditation", instructor: "Marcus Webb", slug: "meditation" },
     ],
   },

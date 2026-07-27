@@ -1,11 +1,11 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - Magazine",
+  title: "OHMT - Independent Publishing Layout Template",
   description: "Editorial culture and lifestyle",
   openGraph: {
-    title: "OHMT - Magazine",
+    title: "OHMT - Independent Publishing Layout Template",
     description: "Editorial culture and lifestyle",
     url: "https://ohmytemplate.com/en/templates/OHMT012-magazine",
     siteName: "OHMT",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Magazine",
+    title: "OHMT - Independent Publishing Layout Template",
     description: "Editorial culture and lifestyle",
     images: ["/templates/OHMT012-magazine/og-image.jpg"],
   },
@@ -36,8 +36,23 @@ export default function MagazineLayout({
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:wght@400&family=Inter:wght@300;400;500;600&display=swap');
       `}</style>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "MagazineSeries",
+            name: "OHMT Magazine",
+            url: "https://ohmytemplate.com/en/templates/OHMT012-magazine",
+            description: "Editorial culture and lifestyle — A quarterly record of how design, culture, and sustainability actually intersect.",
+            about: {
+              "@type": "Thing",
+              name: "Design, Culture, Sustainability",
+            },
+          }),
+        }}
+      />
       {children}
     </>
   );
 }
-

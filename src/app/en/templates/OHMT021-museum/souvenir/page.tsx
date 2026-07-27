@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { ArrowLeft, ShoppingBag, ChevronRight, ChevronLeft } from "lucide-react";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -13,9 +13,9 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 const products = [
   {
     id: 1,
-    name: "Laocoön Scale Replica",
+    name: "Laocoon Scale Replica",
     category: "Artifact Replicas",
-    price: "??40.00",
+    price: "EUR 40.00",
     img: "/templates/OHMT021-museum/museum-replica-laocoon.png",
     desc: "A hand-finished resin replica of the Trojan priest, capturing every sinew in 1/8 scale."
   },
@@ -23,7 +23,7 @@ const products = [
     id: 2,
     name: "Vatican Archives: 500 Years",
     category: "Exhibition Catalogs",
-    price: "??5.00",
+    price: "EUR 55.00",
     img: "/templates/OHMT021-museum/museum-catalog-vatican.png",
     desc: "The definitive monograph of the museum's history, bound in premium linen."
   },
@@ -31,15 +31,15 @@ const products = [
     id: 3,
     name: "St. Peter's Nocturnal Print",
     category: "Fine Art Prints",
-    price: "??20.00",
+    price: "EUR 120.00",
     img: "/templates/OHMT021-museum/museum-print-st-peters.png",
-    desc: "Limited edition Giclée print on 300gsm Hahnemühle paper."
+    desc: "Limited edition Giclee print on 300gsm Hahnemuhle paper."
   },
   {
     id: 4,
-    name: "Pietà Silver Pendant",
+    name: "Pieta Silver Pendant",
     category: "Jewelry",
-    price: "??5.00",
+    price: "EUR 95.00",
     img: "/templates/OHMT021-museum/museum-jewelry-pieta.png",
     desc: "Sterling silver commemorative medal featuring Michelangelo's masterpiece."
   },
@@ -47,7 +47,7 @@ const products = [
     id: 5,
     name: "Apollo Belvedere Bust",
     category: "Artifact Replicas",
-    price: "??80.00",
+    price: "EUR 180.00",
     img: "/templates/OHMT021-museum/museum-apollo-bust.png",
     desc: "A bronze-casted miniature bust of the Apollo Belvedere, reflecting classical perfection."
   },
@@ -55,7 +55,7 @@ const products = [
     id: 6,
     name: "Renaissance Sketchbook",
     category: "Stationery",
-    price: "??2.00",
+    price: "EUR 32.00",
     img: "/templates/OHMT021-museum/museum-sketchbook.png",
     desc: "Hand-stitched leather sketchbook with archival-grade paper for artists."
   },
@@ -63,7 +63,7 @@ const products = [
     id: 7,
     name: "Papal Seal Wax Set",
     category: "Stationery",
-    price: "??5.00",
+    price: "EUR 65.00",
     img: "/templates/OHMT021-museum/museum-wax-seal.png",
     desc: "Authentic brass seal with three sticks of crimson Vatican wax."
   },
@@ -71,7 +71,7 @@ const products = [
     id: 8,
     name: "Raphael's Angels Silk Scarf",
     category: "Lifestyle",
-    price: "??10.00",
+    price: "EUR 110.00",
     img: "/templates/OHMT021-museum/museum-silk-scarf.png",
     desc: "100% silk scarf featuring detail from the Sistine Madonna."
   },
@@ -79,7 +79,7 @@ const products = [
     id: 9,
     name: "Augustus of Prima Porta Bust",
     category: "Artifact Replicas",
-    price: "??20.00",
+    price: "EUR 120.00",
     img: "/templates/OHMT021-museum/museum-replica-laocoon.png",
     desc: "Full-scale replica of the head of Augustus, the first Roman Emperor."
   },
@@ -87,7 +87,7 @@ const products = [
     id: 10,
     name: "Archival Ink Fountain Pen",
     category: "Stationery",
-    price: "??45.00",
+    price: "EUR 245.00",
     img: "/templates/OHMT021-museum/museum-fountain-pen.png",
     desc: "Handcrafted ebony fountain pen with a 14k gold nib."
   },
@@ -95,7 +95,7 @@ const products = [
     id: 11,
     name: "The Sistine Chapel Blueprint",
     category: "Fine Art Prints",
-    price: "??5.00",
+    price: "EUR 45.00",
     img: "/templates/OHMT021-museum/museum-blueprint.png",
     desc: "Architectural blueprint print showing the structural genius of the chapel."
   },
@@ -103,7 +103,7 @@ const products = [
     id: 12,
     name: "Romanesque Bronze Candle",
     category: "Lifestyle",
-    price: "??5.00",
+    price: "EUR 75.00",
     img: "/templates/OHMT021-museum/museum-bronze-candle.png",
     desc: "Hand-poured beeswax candle in a cast bronze vessel."
   },
@@ -111,7 +111,7 @@ const products = [
     id: 13,
     name: "Vatican Museum Tote Bag",
     category: "Lifestyle",
-    price: "??5.00",
+    price: "EUR 35.00",
     img: "/templates/OHMT021-museum/museum-catalog-vatican.png",
     desc: "Premium heavyweight cotton tote with minimalist typography."
   }
@@ -141,9 +141,9 @@ function SouvenirShopContent() {
           animate={{ opacity: 1, y: 0 }}
           className="mb-20 text-center"
         >
-          <span className="text-[13px] uppercase font-bold tracking-[0.5em] text-black/40 block mb-6">The Museum Store</span>
+          <span className="text-xs uppercase font-bold tracking-[0.5em] text-black/40 block mb-6">The Museum Store</span>
           <h1 className="text-5xl md:text-8xl font-serif tracking-tighter leading-none mb-8">Echos of History</h1>
-          <p className="max-w-2xl mx-auto text-black/60 font-serif text-lg leading-[1.4]">
+          <p className="max-w-2xl mx-auto text-black/60 font-serif text-lg leading-[var(--leading-body)]">
             Curated objects that transmit the legacy of the Vatican Museums into the modern home. 
             Each piece is selected for its material integrity and theological depth.
           </p>
@@ -168,15 +168,15 @@ function SouvenirShopContent() {
                     className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-300"
                   />
                   <div className="absolute top-6 left-6">
-                    <span className="text-[8px] uppercase tracking-[0.2em] bg-white text-black px-3 py-1.5 font-bold">{product.category}</span>
+                    <span className="text-xs uppercase tracking-[0.2em] bg-white text-black px-3 py-1.5 font-bold">{product.category}</span>
                   </div>
                 </div>
                 <div className="space-y-3 px-2">
                   <h3 className="font-serif text-xl tracking-tight leading-tight">{product.name}</h3>
-                  <p className="text-sm text-black/70 line-clamp-2 font-sans leading-[1.4]">{product.desc}</p>
+                  <p className="text-sm text-black/70 line-clamp-2 font-sans leading-[var(--leading-body)]">{product.desc}</p>
                   <div className="flex items-center justify-between pt-6 border-t border-black/5">
                     <span className="text-sm font-bold tracking-[0.1em]">{product.price}</span>
-                    <button className="text-[12px] uppercase tracking-[0.2em] font-bold border-b border-black/20 hover:border-black transition-colors pb-1">
+                    <button className="text-xs uppercase tracking-[0.2em] font-bold border-b border-black/20 hover:border-black transition-colors pb-1">
                       Inquire
                     </button>
                   </div>
@@ -192,7 +192,7 @@ function SouvenirShopContent() {
             <button 
               onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
               disabled={currentPage === 1}
-              className={`flex items-center gap-2 text-[13px] uppercase tracking-widest font-bold transition-all ${currentPage === 1 ? 'opacity-20 cursor-not-allowed' : 'hover:-translate-x-2'}`}
+              className={`flex items-center gap-2 text-xs uppercase tracking-widest font-bold transition-all ${currentPage === 1 ? 'opacity-20 cursor-not-allowed' : 'hover:-translate-x-2'}`}
             >
               <ChevronLeft size={16} /> Previous
             </button>
@@ -201,7 +201,7 @@ function SouvenirShopContent() {
                  <button 
                    key={i}
                    onClick={() => setCurrentPage(i + 1)}
-                   className={`text-[13px] uppercase font-bold tracking-widest ${currentPage === i + 1 ? 'text-black underline underline-offset-8' : 'text-black/30 hover:text-black'}`}
+                   className={`text-xs uppercase font-bold tracking-widest ${currentPage === i + 1 ? 'text-black underline underline-offset-8' : 'text-black/30 hover:text-black'}`}
                  >
                    0{i + 1}
                  </button>
@@ -210,7 +210,7 @@ function SouvenirShopContent() {
             <button 
               onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
               disabled={currentPage === totalPages}
-              className={`flex items-center gap-2 text-[13px] uppercase tracking-widest font-bold transition-all ${currentPage === totalPages ? 'opacity-20 cursor-not-allowed' : 'hover:translate-x-2'}`}
+              className={`flex items-center gap-2 text-xs uppercase tracking-widest font-bold transition-all ${currentPage === totalPages ? 'opacity-20 cursor-not-allowed' : 'hover:translate-x-2'}`}
             >
               Next <ChevronRight size={16} />
             </button>
@@ -225,7 +225,7 @@ function SouvenirShopContent() {
         >
           <div className="max-w-xl">
              <h2 className="text-4xl font-serif mb-6 text-black tracking-tighter">Authentic Reproductions.</h2>
-             <p className="text-black/60 font-serif leading-[1.4] text-lg">
+             <p className="text-black/60 font-serif leading-[var(--leading-body)] text-lg">
                All artifact replicas are produced in collaboration with the Vatican Pontifical Academy, 
                using high-precision 3D scans of the original works to ensure absolute fidelity to the source.
              </p>
@@ -244,10 +244,11 @@ function SouvenirShopContent() {
 }
 
 
-export default function SouvenirShop(props: any) {
+export default function SouvenirShop(props: Record<string, unknown>) {
   return (
     <React.Suspense fallback={null}>
       <SouvenirShopContent {...props} />
     </React.Suspense>
   );
 }
+

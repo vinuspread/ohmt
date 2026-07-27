@@ -1,0 +1,59 @@
+{
+  "slug": "OHMT032-community",
+  "name": "Community Forum Platform",
+  "name_ko": "커뮤니티 포럼 플랫폼",
+  "category": "service",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#FFFFFF",
+      "secondary": "#1D1D1F",
+      "accent": "#0071E3",
+      "text": {
+        "main": "#1D1D1F",
+        "muted": "#6E6E73",
+        "contrast": "#FFFFFF"
+      },
+      "ui": {
+        "border": "rgba(29, 29, 31, 0.08)",
+        "hover": "#EFEFF2",
+        "shadow": "0 18px 48px rgba(0, 0, 0, 0.08)"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Pretendard Variable, Pretendard, system-ui, -apple-system, sans-serif",
+        "weight": "600",
+        "tracking": "-0.04em",
+        "style": "font-semibold"
+      },
+      "body": {
+        "font": "Pretendard Variable, Pretendard, system-ui, -apple-system, sans-serif",
+        "weight": "400",
+        "leading": "1.65",
+        "style": "font-normal"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
+      }
+    },
+    "spacing": {
+      "container": "1280px",
+      "gutter": "24px",
+      "card_p": "24px",
+      "gap": "20px"
+    },
+    "motion": {
+      "transition_fast": "160ms",
+      "transition_normal": "240ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+    }
+  },
+  "thumbnail": "/templates/OHMT032-community/og-image.jpg",
+  "ogImage": "/templates/OHMT032-community/og-image.jpg"
+}

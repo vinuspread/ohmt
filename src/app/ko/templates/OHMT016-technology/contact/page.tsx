@@ -4,19 +4,20 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 import Header from '../_components/Header'
 import Footer from '../_components/Footer'
+import FormSelect from '../_components/FormSelect'
 import { useState } from 'react'
 
 const officeData = [
   {
-    city: 'San Francisco',
+    city: '샌프란시스코',
     role: '글로벌 본사',
     address: '388 Market Street, Suite 1200, San Francisco, CA 94111',
     email: 'info@robotflow.net',
     phone: '+1 (415) 555-0192',
   },
   {
-    city: 'Seoul',
-    role: 'R&D 센터',
+    city: '서울',
+    role: '연구개발센터',
     address: '서울특별시 강남구 테헤란로 2길 45 06236',
     email: 'rd.seoul@robotflow.net',
     phone: '+82 (2) 555-0193',
@@ -33,7 +34,7 @@ export default function TechnologyContactPage() {
   })
   const [submitted, setSubmitted] = useState(false)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
@@ -53,11 +54,11 @@ export default function TechnologyContactPage() {
             <span className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] block">
               연락처
             </span>
-            <h1 className="mb-6 text-[clamp(2.2rem,5vw,3.8rem)] font-bold tracking-[-0.03em] leading-[1.1] text-[var(--color-text)] font-heading break-keep">
-              함께 미래를 만들어갑시다
+            <h1 className="mb-6 text-[length:var(--text-h1)] font-bold tracking-[-0.03em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading break-keep">
+              현장에 필요한 자동화를 함께 설계합니다
             </h1>
-            <p className="mx-auto max-w-2xl text-base md:text-lg text-[var(--color-text-muted)] leading-[1.2]">
-              운영에 자율 로보틱스를 도입할 준비가 되셨나요? 컨설팅이나 데모를 위해 팀에 문의하세요.
+            <p className="mx-auto max-w-2xl text-base md:text-lg text-[var(--color-text-muted)] leading-[var(--leading-heading)]">
+              자율 로봇 도입을 검토하고 있다면 운영 환경과 필요한 작업을 알려주세요. 상담과 제품 시연을 안내해 드립니다.
             </p>
           </div>
         </section>
@@ -69,10 +70,10 @@ export default function TechnologyContactPage() {
               {/* Form */}
               <div className="lg:col-span-7">
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
-                  문의 양식
+                  프로젝트 문의
                 </span>
-                <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-bold tracking-[-0.02em] text-[var(--color-text)] font-heading mb-8">
-                  컨설팅 요청
+                <h2 className="text-[length:var(--text-lead)] font-bold tracking-[-0.02em] text-[var(--color-text)] font-heading mb-8">
+                  상담 요청
                 </h2>
 
                 {submitted ? (
@@ -81,10 +82,10 @@ export default function TechnologyContactPage() {
                       ✓
                     </div>
                     <h3 className="text-lg font-bold text-[var(--color-text)] mb-2 font-heading">
-                      감사합니다
+                      문의가 접수되었습니다
                     </h3>
-                    <p className="text-sm text-[var(--color-text-muted)] leading-[1.2] max-w-md mx-auto">
-                      문의가 접수되었습니다. 24시간 이내에 담당 팀이 연락드릴 예정입니다.
+                    <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-heading)] max-w-md mx-auto">
+                      내용을 확인한 뒤 24시간 이내에 담당자가 연락드리겠습니다.
                     </p>
                   </div>
                 ) : (
@@ -102,7 +103,7 @@ export default function TechnologyContactPage() {
                           onChange={handleChange}
                           required
                           className="w-full border border-[var(--color-border)] bg-[var(--color-bg-secondary)] px-4 py-3 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-muted)] outline-none focus:border-[var(--color-accent)] transition-colors duration-200 rounded-md"
-                          placeholder="(주) 로보틱스"
+                          placeholder="회사명을 입력해 주세요"
                         />
                       </div>
                       <div>
@@ -117,7 +118,7 @@ export default function TechnologyContactPage() {
                           onChange={handleChange}
                           required
                           className="w-full border border-[var(--color-border)] bg-[var(--color-bg-secondary)] px-4 py-3 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-muted)] outline-none focus:border-[var(--color-accent)] transition-colors duration-200 rounded-md"
-                          placeholder="홍길동"
+                          placeholder="담당자명을 입력해 주세요"
                         />
                       </div>
                     </div>
@@ -142,19 +143,19 @@ export default function TechnologyContactPage() {
                       <label htmlFor="model" className="block text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text)] mb-2">
                         관심 모델
                       </label>
-                      <select
+                      <FormSelect
                         id="model"
                         name="model"
                         value={form.model}
-                        onChange={handleChange}
+                        onChange={(model) => setForm((current) => ({ ...current, model }))}
                         required
-                        className="w-full border border-[var(--color-border)] bg-[var(--color-bg-secondary)] px-4 py-3 text-sm text-[var(--color-text)] outline-none focus:border-[var(--color-accent)] transition-colors duration-200 rounded-md"
-                      >
-                        <option value="">모델 선택</option>
-                        <option value="gen2">OmniBot Gen 2</option>
-                        <option value="prime">OmniBot Prime</option>
-                        <option value="both">둘 다 / 잘 모르겠음</option>
-                      </select>
+                        placeholder="모델 선택"
+                        options={[
+                          { value: 'gen2', label: 'OmniBot Gen 2' },
+                          { value: 'prime', label: 'OmniBot Prime' },
+                          { value: 'both', label: '모델 상담 필요' },
+                        ]}
+                      />
                     </div>
 
                     <div>
@@ -169,7 +170,7 @@ export default function TechnologyContactPage() {
                         onChange={handleChange}
                         required
                         className="w-full border border-[var(--color-border)] bg-[var(--color-bg-secondary)] px-4 py-3 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-muted)] outline-none focus:border-[var(--color-accent)] transition-colors duration-200 resize-none rounded-md"
-                        placeholder="프로젝트와 자동화 목표에 대해 알려주세요..."
+                        placeholder="운영 환경과 자동화하려는 작업, 예상 도입 시기를 알려주세요."
                       />
                     </div>
 
@@ -177,7 +178,7 @@ export default function TechnologyContactPage() {
                       type="submit"
                       className="inline-flex items-center justify-center px-8 py-4 bg-[var(--color-accent)] text-white font-bold text-sm uppercase tracking-widest hover:opacity-90 active:scale-95 transition-all duration-300 rounded-md"
                     >
-                      문의 제출
+                      문의 보내기
                     </button>
                   </form>
                 )}
@@ -186,10 +187,10 @@ export default function TechnologyContactPage() {
               {/* Offices */}
               <div className="lg:col-span-5">
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
-                  글로벌 오피스
+                  오피스
                 </span>
-                <h2 className="text-[clamp(1.5rem,3vw,2rem)] font-bold tracking-[-0.02em] text-[var(--color-text)] font-heading mb-8">
-                  우리의 위치
+                <h2 className="text-[length:var(--text-lead)] font-bold tracking-[-0.02em] text-[var(--color-text)] font-heading mb-8">
+                  Robotflow 오피스
                 </h2>
                 <div className="space-y-8">
                   {officeData.map((office) => (
@@ -199,18 +200,18 @@ export default function TechnologyContactPage() {
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <div className="flex h-8 w-8 items-center justify-center text-[var(--color-accent)] font-mono text-xs font-bold">
-                          {office.city === 'San Francisco' ? 'SF' : 'SL'}
+                          {office.city === 'San Francisco' ? 'SF' : 'SEL'}
                         </div>
                         <div>
                           <h3 className="text-base font-bold text-[var(--color-text)] font-heading">
                             {office.city}
                           </h3>
-                          <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-[var(--color-accent)]">
+                          <span className="text-xs font-bold uppercase tracking-[0.15em] text-[var(--color-accent)]">
                             {office.role}
                           </span>
                         </div>
                       </div>
-                      <p className="text-sm text-[var(--color-text-muted)] leading-[1.2] mb-1">
+                      <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-heading)] mb-1">
                         {office.address}
                       </p>
                       <p className="text-sm text-[var(--color-text-muted)]">{office.email}</p>

@@ -48,16 +48,16 @@ export const BusinessSegments = () => {
             <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-3 md:mb-5">
               전략적 포트폴리오
             </span>
-            <h2 className="text-[clamp(1.9rem,3.2vw,2.8rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.1] max-w-[560px] break-keep">
+            <h2 className="text-[length:var(--text-h2)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[var(--leading-heading)] max-w-[560px] break-keep">
               핵심 분야의 다각화된 성장
             </h2>
           </div>
-          <p className="text-[0.9rem] text-[#6B6B6B] leading-[1.78] max-w-[440px] font-normal break-keep">
+          <p className="text-[0.9rem] text-[#6B6B6B] leading-loose max-w-[440px] font-normal break-keep">
             디지털 전환, 지속가능성, 글로벌 연결성이라는 장기 테마를 기반으로 구축된 포트폴리오입니다.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-[1px] bg-transparent md:bg-[var(--color-border)]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-px bg-transparent md:bg-[var(--color-border)]">
           {segments.map((s, i) => (
             <div key={i} className="bg-[var(--color-light-bg)] overflow-hidden group/card border border-[var(--color-border)] md:border-none">
               <div className="h-[220px] sm:h-[260px] md:h-[180px] lg:h-[220px] overflow-hidden">
@@ -66,8 +66,8 @@ export const BusinessSegments = () => {
               <div className="p-6 sm:p-8 md:p-6 lg:p-8 xl:p-10">
                 <span className="text-[0.7rem] font-bold tracking-[0.25em] text-[var(--color-border)] block mb-2 md:mb-4">{s.num}</span>
                 <span className="text-[0.85rem] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-2 md:mb-4 block">{s.icon}</span>
-                <h3 className="text-[1.25rem] font-bold text-[var(--color-dark-bg)] mb-2 md:mb-3 leading-[1.1]">{s.title}</h3>
-                <p className="text-[0.93rem] text-[#6B6B6B] leading-[1.72] mb-6 md:mb-8 break-keep">{s.desc}</p>
+                <h3 className="text-[1.25rem] font-bold text-[var(--color-dark-bg)] mb-2 md:mb-3 leading-[var(--leading-heading)]">{s.title}</h3>
+                <p className="text-[0.93rem] text-[#6B6B6B] leading-[var(--leading-body)] mb-6 md:mb-8 break-keep">{s.desc}</p>
                 <div className="pt-4 md:pt-5 border-t border-[var(--color-border)] flex flex-col gap-1">
                   <span className="text-[0.7rem] font-bold uppercase tracking-[0.14em] text-[#6B6B6B]">{s.stat}</span>
                   <strong className="text-2xl font-bold text-[var(--color-dark-bg)] tracking-tight">{s.val}</strong>

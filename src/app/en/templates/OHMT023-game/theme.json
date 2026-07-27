@@ -3,8 +3,6 @@
   "name": "Game Studio",
   "name_ko": "게임 스튜디오",
   "category": "portfolio",
-  "description": "A game studio showcase template for trailers, screenshots, news, awards, and team storytelling, built for launches and portfolio credibility.",
-  "description_ko": "트레일러, 스크린샷, 뉴스, 수상 내역, 팀 스토리를 담아 출시와 포트폴리오 신뢰를 함께 만드는 게임 스튜디오 템플릿.",
   "mode": "dark",
   "theme": {
     "palette": {
@@ -34,6 +32,14 @@
         "weight": "400",
         "leading": "1.6",
         "style": "font-normal leading-relaxed"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
       }
     },
     "spacing": {
@@ -48,5 +54,7 @@
       "transition_slow": "500ms",
       "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
     }
-  }
+  },
+  "thumbnail": "/templates/OHMT023-game/og-image.jpg",
+  "ogImage": "/templates/OHMT023-game/og-image.jpg"
 }

@@ -1,11 +1,11 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - Hotel",
+  title: "OHMT - Boutique Hotel Booking Template",
   description: "Premium luxury hotel & resort experience",
   openGraph: {
-    title: "OHMT - Hotel",
+    title: "OHMT - Boutique Hotel Booking Template",
     description: "Premium luxury hotel & resort experience",
     url: "https://ohmytemplate.com/en/templates/OHMT020-hotel",
     siteName: "OHMT",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Hotel",
+    title: "OHMT - Boutique Hotel Booking Template",
     description: "Premium luxury hotel & resort experience",
     images: ["/templates/OHMT020-hotel/og-image.jpg"],
   },
@@ -31,8 +31,19 @@ export default function HotelLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Hotel",
+    name: "Luxe Haven Hotel",
+    description: "Premium luxury hotel & resort experience",
+    url: "https://ohmytemplate.com/en/templates/OHMT020-hotel",
+  };
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@400;500;600&display=swap');
       `}</style>
@@ -40,4 +51,3 @@ export default function HotelLayout({
     </>
   );
 }
-

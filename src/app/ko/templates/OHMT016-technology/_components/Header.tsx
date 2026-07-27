@@ -20,7 +20,7 @@ export default function Header() {
             <circle cx="12" cy="12" r="2" fill="currentColor"/>
           </svg>
           <span className="text-xl font-bold tracking-tight text-[var(--color-text)] font-heading">
-            OHMT
+            Robotflow
           </span>
         </Link>
 
@@ -43,7 +43,7 @@ export default function Header() {
             href="#models"
             className="inline-flex items-center justify-center px-6 py-2.5 bg-[var(--color-accent)] text-white font-bold text-xs uppercase tracking-widest hover:opacity-90 active:scale-95 transition-all duration-300 rounded-md"
           >
-            지금 예약하기
+            사전 예약
           </Link>
         </div>
 
@@ -75,7 +75,7 @@ export default function Header() {
                 <rect x="15" y="15" width="6" height="6" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" rx="1"/>
                 <circle cx="12" cy="12" r="2" fill="currentColor"/>
               </svg>
-              <span className="text-xl font-bold tracking-tight text-[var(--color-text)] font-heading">OHMT</span>
+              <span className="text-xl font-bold tracking-tight text-[var(--color-text)] font-heading">Robotflow</span>
             </Link>
             <button onClick={() => setMobileMenuOpen(false)} className="p-1 text-[var(--color-text)]">
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -93,7 +93,7 @@ export default function Header() {
                 key={item.label}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-[clamp(2.5rem,12vw,4rem)] font-extrabold tracking-[-0.03em] text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors duration-200 leading-[1.1] border-b border-[var(--color-border)]/40 py-4"
+                className="text-[length:var(--text-h1)] font-extrabold tracking-[-0.03em] text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors duration-200 leading-[var(--leading-heading)] border-b border-[var(--color-border)]/40 py-4"
               >
                 {item.label}
               </Link>
@@ -105,7 +105,7 @@ export default function Header() {
               onClick={() => setMobileMenuOpen(false)}
               className="w-full inline-flex items-center justify-center py-4 bg-[var(--color-accent)] text-white font-bold text-sm uppercase tracking-widest hover:opacity-90 active:scale-95 transition-all duration-300 rounded-md"
             >
-              지금 예약하기
+              사전 예약
             </Link>
           </div>
         </div>

@@ -1,0 +1,133 @@
+export interface MuseumProduct {
+  id: number;
+  name: string;
+  price: string;
+  img: string;
+  category: string;
+  description: string;
+  material: string;
+  edition: string;
+}
+
+export const products: MuseumProduct[] = [
+  {
+    id: 1,
+    name: "Laocoon Scale Replica",
+    price: "EUR 40.00",
+    img: "/templates/OHMT021-museum/museum-replica-laocoon.png",
+    category: "Artifact Replicas",
+    description: "A compact hand-finished replica inspired by the Laocoon group, sized for shelves, desks, and study corners.",
+    material: "Cast resin with stone-touch finish",
+    edition: "Museum store edition",
+  },
+  {
+    id: 2,
+    name: "Vatican Archives Catalog",
+    price: "EUR 55.00",
+    img: "/templates/OHMT021-museum/museum-catalog-vatican.png",
+    category: "Exhibition Catalogs",
+    description: "A linen-bound catalog featuring highlights from the museum archive, with essays, plates, and installation notes.",
+    material: "Linen hardcover, coated archival pages",
+    edition: "First printing",
+  },
+  {
+    id: 3,
+    name: "St. Peter's Night Print",
+    price: "EUR 120.00",
+    img: "/templates/OHMT021-museum/museum-print-st-peters.png",
+    category: "Fine Art Prints",
+    description: "A limited art print of St. Peter's Basilica at night, produced on heavyweight museum paper.",
+    material: "300gsm matte cotton paper",
+    edition: "Numbered edition of 250",
+  },
+  {
+    id: 4,
+    name: "Pieta Silver Pendant",
+    price: "EUR 95.00",
+    img: "/templates/OHMT021-museum/museum-jewelry-pieta.png",
+    category: "Jewelry",
+    description: "A sterling silver pendant inspired by Michelangelo's Pieta, made as a small keepsake from the museum visit.",
+    material: "Sterling silver",
+    edition: "Museum jewelry line",
+  },
+  {
+    id: 5,
+    name: "Apollo Belvedere Bust",
+    price: "EUR 180.00",
+    img: "/templates/OHMT021-museum/museum-apollo-bust.png",
+    category: "Artifact Replicas",
+    description: "A bronze-toned miniature bust of Apollo Belvedere, made for desks, bookshelves, and display trays.",
+    material: "Bronze-finished composite",
+    edition: "Collector object",
+  },
+  {
+    id: 6,
+    name: "Renaissance Sketchbook",
+    price: "EUR 32.00",
+    img: "/templates/OHMT021-museum/museum-sketchbook.png",
+    category: "Stationery",
+    description: "A hand-stitched sketchbook with smooth archival paper for drawing, notes, and gallery observations.",
+    material: "Leather-touch cover, acid-free paper",
+    edition: "Open edition",
+  },
+  {
+    id: 7,
+    name: "Papal Seal Wax Set",
+    price: "EUR 65.00",
+    img: "/templates/OHMT021-museum/museum-wax-seal.png",
+    category: "Stationery",
+    description: "A brass seal and crimson wax set inspired by archival letters and old-world stationery rituals.",
+    material: "Brass stamp, sealing wax",
+    edition: "Gift set",
+  },
+  {
+    id: 8,
+    name: "Raphael Angels Silk Scarf",
+    price: "EUR 110.00",
+    img: "/templates/OHMT021-museum/museum-silk-scarf.png",
+    category: "Lifestyle",
+    description: "A silk scarf printed with a delicate Renaissance angel motif and finished with hand-rolled edges.",
+    material: "100% silk twill",
+    edition: "Seasonal textile edition",
+  },
+  {
+    id: 9,
+    name: "Archival Ink Fountain Pen",
+    price: "EUR 245.00",
+    img: "/templates/OHMT021-museum/museum-fountain-pen.png",
+    category: "Stationery",
+    description: "An ebony fountain pen with a gold-tone nib, made for letters, notes, and everyday desk rituals.",
+    material: "Ebony body, metal nib",
+    edition: "Writing instrument line",
+  },
+  {
+    id: 10,
+    name: "The Sistine Chapel Blueprint",
+    price: "EUR 45.00",
+    img: "/templates/OHMT021-museum/museum-blueprint.png",
+    category: "Fine Art Prints",
+    description: "A clean architectural print showing the structure and proportions of the Sistine Chapel.",
+    material: "Matte blueprint paper",
+    edition: "Open edition",
+  },
+  {
+    id: 11,
+    name: "Romanesque Bronze Candle",
+    price: "EUR 75.00",
+    img: "/templates/OHMT021-museum/museum-bronze-candle.png",
+    category: "Lifestyle",
+    description: "A beeswax candle poured into a bronze-toned vessel with a restrained architectural silhouette.",
+    material: "Beeswax blend, metal vessel",
+    edition: "Home fragrance line",
+  },
+  {
+    id: 12,
+    name: "Vatican Museum Tote Bag",
+    price: "EUR 35.00",
+    img: "/templates/OHMT021-museum/museum-catalog-vatican.png",
+    category: "Lifestyle",
+    description: "A heavyweight cotton tote sized for catalogs, notebooks, and daily essentials.",
+    material: "Heavy cotton canvas",
+    edition: "Museum store essential",
+  },
+];

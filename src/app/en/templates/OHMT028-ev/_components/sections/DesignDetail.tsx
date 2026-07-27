@@ -45,9 +45,9 @@ export function DesignDetail() {
         <div className="mb-16">
           <SplitHeading
             text="Designed in detail"
-            className="font-michroma text-[clamp(26px,3vw,44px)] text-[var(--text)] leading-[1.05] tracking-[-0.02em]"
+            className="font-michroma text-[length:var(--text-h3)] text-[var(--text)] leading-[var(--leading-heading)] tracking-[-0.02em]"
           />
-          <p className="font-inter text-[15px] text-[var(--text-muted)] mt-4 max-w-[500px]">
+          <p className="font-inter text-sm text-[var(--text-muted)] mt-4 max-w-[500px]">
             Every curve, every line serves a purpose. Form follows performance.
           </p>
         </div>
@@ -63,7 +63,7 @@ export function DesignDetail() {
                 style={{ backgroundImage: `url('/templates/OHMT028-ev/${d.image}')` }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80 group-hover:opacity-90 transition-opacity duration-300" />
-              <div className="absolute bottom-5 left-5 font-inter text-[11px] font-medium tracking-[0.12em] text-white/90 uppercase transition-colors duration-300 group-hover:text-[var(--accent)]">
+              <div className="absolute bottom-5 left-5 font-inter text-xs font-medium tracking-[0.12em] text-white/90 uppercase transition-colors duration-300 group-hover:text-[var(--accent)]">
                 {d.label}
               </div>
             </div>

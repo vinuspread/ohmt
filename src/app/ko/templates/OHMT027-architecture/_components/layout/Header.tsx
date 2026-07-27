@@ -49,7 +49,7 @@ export function Header() {
       <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 flex justify-between items-center">
         {/* Logo */}
         <Link href={baseRoute} className="flex items-center group">
-          <span className="font-sans font-bold text-[18px] tracking-[0.06em] text-[#1A1A1A]">
+          <span className="font-sans font-bold text-lg tracking-[0.06em] text-[#1A1A1A]">
             OHMT
           </span>
         </Link>
@@ -62,7 +62,7 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className={`font-sans text-[13px] tracking-[0.05em] transition-all duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-full after:bg-[#1A1A1A] after:transition-transform after:duration-300 after:origin-left ${
+                className={`font-sans text-xs tracking-[0.05em] transition-all duration-200 relative py-1 after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-full after:bg-[#1A1A1A] after:transition-transform after:duration-300 after:origin-left ${
                   active
                     ? "text-[#1A1A1A] after:scale-x-100"
                     : "text-[#888888] hover:text-[#1A1A1A] after:scale-x-0 hover:after:scale-x-100"
@@ -78,10 +78,9 @@ export function Header() {
         <div className="hidden md:block">
           <Link
             href={`${baseRoute}/contact`}
-            className="bg-[#0A0A0A] text-white px-6 py-2.5 text-[13px] font-sans tracking-[0.08em] transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98] block"
+            className="bg-[#0A0A0A] text-white px-6 py-2.5 text-xs font-sans tracking-[0.08em] transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98] block"
           >
-            문의하기
-          </Link>
+            프로젝트 문의</Link>
         </div>
 
         {/* Mobile menu button */}
@@ -96,7 +95,7 @@ export function Header() {
 
       {/* Mobile Screen Overlay Menu */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 top-[60px] bg-white z-40 flex flex-col px-8 py-12 md:hidden">
+        <div className="fixed inset-0 top-14 bg-white z-40 flex flex-col px-8 py-12 md:hidden">
           <nav className="flex flex-col gap-6 mb-8">
             {navItems.map((item) => {
               const active = isActive(item.href);
@@ -105,7 +104,7 @@ export function Header() {
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`text-[18px] font-sans font-medium tracking-[0.05em] py-2 border-b border-[#F5F5F5] ${
+                  className={`text-lg font-sans font-medium tracking-[0.05em] py-2 border-b border-[#F5F5F5] ${
                     active ? "text-[#B07D4F]" : "text-[#1A1A1A]"
                   }`}
                 >
@@ -117,10 +116,9 @@ export function Header() {
           <Link
             href={`${baseRoute}/contact`}
             onClick={() => setIsMobileMenuOpen(false)}
-            className="bg-[#0A0A0A] text-white py-3 text-center text-[14px] font-sans tracking-[0.08em]"
+            className="bg-[#0A0A0A] text-white py-3 text-center text-sm font-sans tracking-[0.08em]"
           >
-            문의하기
-          </Link>
+            프로젝트 문의</Link>
         </div>
       )}
     </header>

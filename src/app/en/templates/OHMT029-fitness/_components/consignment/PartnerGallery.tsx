@@ -11,7 +11,7 @@ export function PartnerGallery() {
   return (
     <section className="bg-[var(--bg-alt)] py-24 md:py-32">
       <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12">
-        <h2 className="font-['Montserrat'] font-bold text-[clamp(28px,4vw,48px)] text-[var(--text)] leading-[1.15] tracking-tight mb-16">
+        <h2 className="font-['Montserrat'] font-bold text-[length:var(--text-h2)] text-[var(--text)] leading-[var(--leading-heading)] tracking-tight mb-16">
           Partner locations
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -26,7 +26,7 @@ export function PartnerGallery() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-6">
-                <p className="text-white font-['Montserrat'] font-semibold text-[16px]">{p.name}</p>
+                <p className="text-white font-['Montserrat'] font-semibold text-base">{p.name}</p>
               </div>
             </div>
           ))}

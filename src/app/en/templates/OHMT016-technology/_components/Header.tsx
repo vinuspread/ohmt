@@ -94,7 +94,7 @@ export default function Header() {
                 key={item.label}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-[clamp(2.5rem,12vw,4rem)] font-extrabold tracking-[-0.03em] text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors duration-200 leading-[1.1] border-b border-[var(--color-border)]/40 py-4"
+                className="text-[length:var(--text-h1)] font-extrabold tracking-[-0.03em] text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors duration-200 leading-[var(--leading-heading)] border-b border-[var(--color-border)]/40 py-4"
               >
                 {item.label}
               </Link>

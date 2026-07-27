@@ -3,6 +3,8 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
+import { BodyText, SectionEyebrow, SectionHeading } from "../ui/Typography";
+import { IconButton } from "../ui/IconButton";
 
 const base = "/en/templates/OHMT030-resort";
 
@@ -34,50 +36,48 @@ export function Concept() {
   const slide = slides[active];
 
   return (
-    <section className="pb-[130px]">
+    <section className="pb-16 md:pb-32">
       <div>
         <div className="grid grid-cols-1 md:grid-cols-2 overflow-hidden min-h-[520px]">
 
           {/* Left: Text panel */}
-          <div className="flex flex-col justify-between bg-white/8 px-12 py-14">
+          <div className="flex flex-col justify-between bg-white/8 px-12 py-16">
             <div>
-              <span className="text-[13px] font-medium text-[var(--accent)] tracking-widest uppercase mb-8 block">
+              <SectionEyebrow className="mb-8">
                 {slide.eyebrow}
-              </span>
-              <h2 className="text-[clamp(24px,3.5vw,52px)] font-semibold text-white leading-[1.1] tracking-[-0.02em] mb-6 whitespace-pre-line">
+              </SectionEyebrow>
+              <SectionHeading size="compact" className="mb-6 whitespace-pre-line">
                 {slide.heading}
-              </h2>
-              <p className="text-[15px] text-white/70 leading-relaxed max-w-[400px]">
+              </SectionHeading>
+              <BodyText className="max-w-[400px]">
                 {slide.body}
-              </p>
+              </BodyText>
             </div>
 
             <div className="flex items-center justify-between mt-12">
               <Link
                 href={`${base}/#`}
-                className="inline-flex items-center gap-2 rounded-full border border-white/60 px-6 py-3 text-white text-[14px] hover:bg-white/10 transition-colors focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]"
+                className="inline-flex items-center gap-2 rounded-full border border-white/60 px-6 py-3 text-white text-sm hover:bg-white/10 transition-colors focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]"
               >
                 Find Out More <ArrowRight size={15} />
               </Link>
 
               <div className="flex items-center gap-3">
-                <button
+                <IconButton
                   onClick={prev}
-                  className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center text-white hover:bg-white/15 transition-colors focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]"
                   aria-label="Previous"
                 >
                   <ArrowLeft size={16} />
-                </button>
-                <span className="text-[13px] text-white/50 tabular-nums w-12 text-center">
+                </IconButton>
+                <span className="text-sm text-white/50 tabular-nums w-12 text-center">
                   {String(active + 1).padStart(2, "0")} / {String(slides.length).padStart(2, "0")}
                 </span>
-                <button
+                <IconButton
                   onClick={next}
-                  className="w-10 h-10 rounded-full border border-white/40 flex items-center justify-center text-white hover:bg-white/15 transition-colors focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]"
                   aria-label="Next"
                 >
                   <ArrowRight size={16} />
-                </button>
+                </IconButton>
               </div>
             </div>
           </div>
@@ -94,7 +94,7 @@ export function Concept() {
                 }`}
               />
             ))}
-            <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+            <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-2 z-10">
               {slides.map((_, i) => (
                 <button
                   key={i}

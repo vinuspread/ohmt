@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
+import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
 import Link from "next/link";
 import { about } from "../data/data";
 import Navbar from "../_components/layout/Navbar";
@@ -21,7 +21,7 @@ export default function AboutFull() {
       <main>
         {/* Hero section */}
         <section className="relative overflow-hidden bg-[var(--color-bg)] py-16 lg:py-24">
-          <div className="w-full max-w-[1440px] mx-auto lg:grid lg:grid-cols-[55fr_45fr] items-center">
+          <div className="w-full max-w-[1440px] mx-auto lg:grid lg:grid-cols-2 items-center">
             <div ref={imgRef} className="relative overflow-hidden aspect-[4/5] max-h-[80vh]">
               <motion.img
                 src="/templates/OHMT025-wedding/about-clara.jpg"
@@ -41,12 +41,12 @@ export default function AboutFull() {
                   Meet {about.name}
                 </span>
                 <h1
-                  className="font-[family-name:var(--font-heading)] font-light capitalize text-[var(--color-text)] leading-[1.05] mb-8"
+                  className="font-[family-name:var(--font-heading)] font-light capitalize text-[var(--color-text)] leading-[var(--leading-heading)] mb-8"
                   style={{ fontSize: "clamp(3.5rem, 7vw, 6rem)" }}
                 >
                   Hi,<br />I'm {about.name}.
                 </h1>
-                <div className="space-y-5 text-[0.9rem] text-[var(--color-text-muted)] leading-[1.75] max-w-[420px] font-[family-name:var(--font-body)]">
+                <div className="space-y-5 text-[0.9rem] text-[var(--color-text-muted)] leading-loose max-w-[420px] font-[family-name:var(--font-body)]">
                   {about.bio.slice(0, 2).map((p, i) => (
                     <p key={i}>{p}</p>
                   ))}
@@ -84,7 +84,7 @@ export default function AboutFull() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: i * 0.15, ease: [0.22, 0.61, 0.36, 1] }}
-                  className="font-[family-name:var(--font-heading)] font-light text-[var(--color-text)] leading-[1.2] mb-6"
+                  className="font-[family-name:var(--font-heading)] font-light text-[var(--color-text)] leading-[var(--leading-heading)] mb-6"
                   style={{ fontSize: "clamp(1.5rem, 3vw, 2rem)" }}
                 >
                   {p}
@@ -125,9 +125,9 @@ export default function AboutFull() {
         </section>
 
         {/* CTA */}
-        <section className="bg-[#2C241E] py-20">
+        <section className="bg-[var(--color-cta-bg)] py-20">
           <div className="max-w-[1440px] mx-auto px-8 lg:px-16 text-center">
-            <h2 className="font-[family-name:var(--font-heading)] font-light text-4xl lg:text-6xl capitalize text-white leading-[1.1] mb-6">
+            <h2 className="font-[family-name:var(--font-heading)] font-light text-4xl lg:text-6xl capitalize text-white leading-[var(--leading-heading)] mb-6">
               Let's Tell Your Story
             </h2>
             <Link
@@ -147,3 +147,4 @@ export default function AboutFull() {
 function NavSpacer() {
   return <div className="h-[72px]" />;
 }
+

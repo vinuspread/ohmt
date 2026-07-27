@@ -3,8 +3,17 @@
 
 import React from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
-export const Hero = ({ t }: { t: any }) => {
+
+interface MagazineT {
+  nav: { stories: string; archive: string; issues: string; about: string; subscribe: string };
+  hero: { badge: string; title1: string; title2: string; desc: string; cta: string; cta2: string; bannerTitle: string; issueBadge: string; issueNumber: string; bannerBadge: string; issueTopics: Array<{ tag: string; title: string }> };
+  featuredGrid: { label: string; items: Array<{ tag: string; title: string; desc: string }> };
+  editorsPicks: { label: string; items: Array<{ title: string; desc: string }> };
+  latestStories: { label: string; mostRead: string; stories: Array<{ tag: string; title: string; desc: string }>; mostReadItems: string[] };
+  newsletter: { label: string; title: string; desc: string; placeholder: string; submit: string };
+}
+
+export const Hero = ({ t }: { t: MagazineT }) => {
   return (
     <section className="relative h-screen min-h-[700px] overflow-hidden">
       <img
@@ -19,11 +28,11 @@ export const Hero = ({ t }: { t: any }) => {
         <span className="inline-block bg-white text-[var(--theme-accent)] text-[0.75rem] font-bold uppercase tracking-[0.2em] px-3 py-1 mb-6">
           {t.hero.badge}
         </span>
-        <h1 className="font-[family-name:var(--theme-font-heading)] text-[clamp(2.4rem,4.5vw,4.5rem)] font-normal leading-[1.0] text-white max-w-[720px] mb-4">
+        <h1 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-h1)] font-normal leading-[var(--leading-display)] text-white max-w-[720px] mb-4">
           {t.hero.title1} <br />
           <span className="font-normal text-white/80">{t.hero.title2}</span>
         </h1>
-        <p className="text-[0.875rem] text-white/75 max-w-[480px] leading-[1.65] mb-5 font-normal">
+        <p className="text-[0.875rem] text-white/75 max-w-[480px] leading-[var(--leading-body)] mb-5 font-normal">
           {t.hero.desc}
         </p>
         <div className="flex flex-col gap-4">
@@ -39,8 +48,8 @@ export const Hero = ({ t }: { t: any }) => {
         </div>
       </div>
 
-       {/* ?�슈 ?�머�?- ?�단?�서 120px ??(배너 ?�이) */}
-       <div className="absolute bottom-[120px] left-0 right-0 hidden md:block">
+       {/* Issue summary banner */}
+       <div className="absolute bottom-30 left-0 right-0 hidden md:block">
          <div className="max-w-[calc(var(--theme-container)+5rem)] mx-auto w-full px-6 md:px-[4rem]">
            <div className="border-t border-white/25 py-6 md:py-8 flex items-start gap-8 md:gap-12 overflow-x-auto" style={{ scrollbarWidth: "none" }}>
              <div className="shrink-0 min-w-[90px]">
@@ -52,7 +61,7 @@ export const Hero = ({ t }: { t: any }) => {
                </span>
              </div>
              <div className="w-px self-stretch bg-white/20 shrink-0" />
-             {t.hero.issueTopics.map((item: any, i: number) => (
+              {t.hero.issueTopics.map((item, i: number) => (
                <div key={i} className="shrink-0 group cursor-pointer">
                  <span className="text-[0.7rem] font-bold uppercase tracking-[0.18em] text-[var(--theme-accent)] block mb-2">
                    {item.tag}
@@ -67,9 +76,9 @@ export const Hero = ({ t }: { t: any }) => {
        </div>
 
 
-        {/* ?�단 ?�디??배너 */}
+        {/* Issue summary banner */}
         <div className="absolute bottom-0 left-0 right-0 bg-[var(--color-banner-bg)]">
-          <div className="max-w-[calc(var(--theme-container)+5rem)] mx-auto px-6 md:px-[4rem] py-6 md:py-0 h-[120px] flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="max-w-[calc(var(--theme-container)+5rem)] mx-auto px-6 md:px-[4rem] py-6 md:py-0 min-h-[120px] md:h-[120px] flex flex-col md:flex-row md:items-center justify-between gap-4">
            <div className="flex items-center gap-6 md:gap-10">
              <div>
                <p className="text-[0.65rem] font-bold uppercase tracking-[0.3em] text-white/45 mb-0.5">
@@ -83,9 +92,9 @@ export const Hero = ({ t }: { t: any }) => {
 
           <Link
             href="/en/templates/OHMT012-magazine"
-            className="shrink-0 self-start md:self-auto text-[0.72rem] font-bold uppercase tracking-[0.18em] text-white border border-white/40 px-6 py-2.5 hover:bg-white hover:text-[var(--color-banner-bg)]"
+            className="shrink-0 self-start md:self-auto text-[0.72rem] font-bold uppercase tracking-[0.18em] text-white border border-white/40 px-6 py-2.5 hover:bg-white hover:text-[var(--color-banner-bg)] transition-colors duration-300"
           >
-            {t.hero.cta2} ??
+            {t.hero.cta2}
           </Link>
         </div>
       </div>

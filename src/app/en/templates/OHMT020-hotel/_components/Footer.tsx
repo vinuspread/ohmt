@@ -17,7 +17,7 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-[11px] font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] mb-5">Contact</h4>
+            <h4 className="text-xs font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] mb-5">Contact</h4>
             <div className="flex flex-col gap-3 text-sm text-[var(--color-bg)]/70">
               <div className="flex items-center gap-3">
                 <MapPin size={14} strokeWidth={1.2} className="text-[var(--color-accent)] flex-shrink-0" />
@@ -35,7 +35,7 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-[11px] font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] mb-5">Links</h4>
+            <h4 className="text-xs font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] mb-5">Links</h4>
             <div className="flex flex-col gap-2">
               <Link href="#" className="text-sm text-[var(--color-bg)]/70 hover:text-[var(--color-accent)] transition-colors">Privacy Policy</Link>
               <Link href="#" className="text-sm text-[var(--color-bg)]/70 hover:text-[var(--color-accent)] transition-colors">Terms of Service</Link>

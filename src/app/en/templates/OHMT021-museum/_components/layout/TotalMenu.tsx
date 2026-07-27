@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { X } from "lucide-react";
 import Link from "next/link";
 
@@ -54,7 +54,7 @@ export default function TotalMenu({ isOpen, onClose }: TotalMenuProps) {
                   <h2 className="text-4xl md:text-7xl font-serif tracking-tighter group-hover:opacity-50 transition-opacity duration-300">
                     {item.name}
                   </h2>
-                  <p className="text-[13px] md:text-sm uppercase tracking-[0.4em] font-normal text-[var(--color-accent)]/40 group-hover:text-[var(--color-accent)] transition-colors">
+                  <p className="text-xs md:text-sm uppercase tracking-[0.4em] font-normal text-[var(--color-accent)]/40 group-hover:text-[var(--color-accent)] transition-colors">
                     {item.desc}
                   </p>
                 </Link>
@@ -69,10 +69,10 @@ export default function TotalMenu({ isOpen, onClose }: TotalMenuProps) {
             transition={{ delay: 1 }}
             className="max-w-[1440px] mx-auto w-full border-t border-[var(--color-accent)]/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6"
           >
-            <div className="text-[13px] uppercase font-bold tracking-widest text-[var(--color-accent)]/30">
+            <div className="text-xs uppercase font-bold tracking-widest text-[var(--color-accent)]/30">
               © 2026 OHMT.
             </div>
-            <div className="flex gap-8 text-[13px] uppercase font-bold tracking-widest">
+            <div className="flex gap-8 text-xs uppercase font-bold tracking-widest">
               <a href="#" className="hover:opacity-50">Instagram</a>
               <a href="#" className="hover:opacity-50">Twitter</a>
               <a href="#" className="hover:opacity-50">Vatican City, Rome</a>
@@ -83,3 +83,4 @@ export default function TotalMenu({ isOpen, onClose }: TotalMenuProps) {
     </AnimatePresence>
   );
 }
+

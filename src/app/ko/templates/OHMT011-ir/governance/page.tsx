@@ -14,7 +14,7 @@ const boardMembers = [
   { name: "Elena M. Santos", role: "선임 독립 이사", initials: "ES", bio: "Pacific Advisors Group 사장으로, 5개 상장 기업 이사회에서 활동 중.", image: "/templates/OHMT011-ir/member-es.png" },
   { name: "David K. Park", role: "감사 위원회 위원장", initials: "DP", bio: "Deloitte LLP 전 파트너, CPA, 재무 보고 및 내부 통제 전문가.", image: "/templates/OHMT011-ir/member-dp.png" },
   { name: "Sarah L. Thornton", role: "보상 위원회 위원장", initials: "ST", bio: "GlobalTech Industries 전 CHRO, 임원 보상 및 인재 전략 전문가.", image: "/templates/OHMT011-ir/member-st.png" },
-  { name: "Robert M. Chen", role: "이사", initials: "RC", bio: "Crestview Capital 창립자 겸 대표 파트너, 42억 달러 규모 사모펀드 운용.", image: "/templates/OHMT011-ir/member-rc.png" },
+  { name: "Robert M. Chen", role: "이사", initials: "RC", bio: "Crestview Capital 창립자 겸 대표 파트너, 5조 8,800억 원 규모 사모펀드 운용.", image: "/templates/OHMT011-ir/member-rc.png" },
   { name: "Maria V. Gonzalez", role: "이사", initials: "MG", bio: "Horizon Renewables CEO, 지속가능 에너지 전환 분야의 선도적 리더.", image: "/templates/OHMT011-ir/member-mg.png" },
   { name: "Thomas W. Hayes", role: "이사", initials: "TH", bio: "전 미국 재무차관보, 규제 업무 및 공공 정책 전문가.", image: "/templates/OHMT011-ir/member-th.png" },
   { name: "Catherine N. Adebayo", role: "이사", initials: "CA", bio: "Sterling Bank COO, 기업 지배구조 및 리스크 관리 분야에서 풍부한 경험 보유.", image: "/templates/OHMT011-ir/member-ca.png" },
@@ -83,11 +83,11 @@ function IRGovernanceContent() {
                 <div className="w-6 h-[1px] bg-[var(--color-accent)]" />
                 기업 지배구조
               </div>
-              <h1 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold tracking-tight leading-[1.1] mb-6">
+              <h1 className="text-[length:var(--text-h1)] font-bold tracking-tight leading-[var(--leading-heading)] mb-6">
                 지배구조
               </h1>
-              <p className="text-[0.9rem] text-white/55 leading-[1.8] max-w-[520px] font-normal">
-                투명하고 책임 있는 기업 지배구조에 대한 우리의 약속은 모든 의사 결정의 기준이 됩니다.
+              <p className="text-[0.9rem] text-white/55 leading-loose max-w-[520px] font-normal">
+                투명하고 책임 있는 기업 지배구조를 향한 우리의 약속은 모든 의사 결정의 기준이 됩니다.
               </p>
             </div>
           </div>
@@ -106,10 +106,10 @@ function IRGovernanceContent() {
               <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-5">
                 리더십
               </span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.1] mb-6">
+              <h2 className="text-[length:var(--text-h3)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[var(--leading-heading)] mb-6">
                 이사회
               </h2>
-              <p className="text-[0.88rem] text-[#6B6B6B] leading-[1.82] font-normal">
+              <p className="text-[0.88rem] text-[#6B6B6B] leading-loose font-normal">
                 에너지, 금융, 기술 및 공공 정책 분야에서 깊은 전문성을 갖춘 저명한 리더들로 구성된 이사회입니다.
               </p>
             </div>
@@ -137,7 +137,7 @@ function IRGovernanceContent() {
                   </div>
                   <h3 className="text-[0.82rem] font-bold text-[var(--color-dark-bg)] mb-0.5">{member.name}</h3>
                   <p className="text-[0.65rem] font-bold uppercase tracking-[0.12em] text-[var(--color-accent)] mb-2.5">{member.role}</p>
-                  <p className="text-[0.75rem] text-[#6B6B6B] leading-[1.7] font-normal">{member.bio}</p>
+                  <p className="text-[0.75rem] text-[#6B6B6B] leading-[var(--leading-body)] font-normal">{member.bio}</p>
                 </motion.div>
               ))}
             </div>
@@ -157,7 +157,7 @@ function IRGovernanceContent() {
               <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-5">
                 이사회 감독
               </span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.1] mb-6">
+              <h2 className="text-[length:var(--text-h3)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[var(--leading-heading)] mb-6">
                 위원회
               </h2>
             </div>
@@ -172,7 +172,7 @@ function IRGovernanceContent() {
                 >
                   <h3 className="text-[0.82rem] font-bold text-[var(--color-dark-bg)] mb-2">{c.name}</h3>
                   <p className="text-[0.65rem] font-medium uppercase tracking-[0.08em] text-[var(--color-accent)] mb-3.5">{c.members}</p>
-                  <p className="text-[0.78rem] text-[#6B6B6B] leading-[1.82] font-normal">{c.charter}</p>
+                  <p className="text-[0.78rem] text-[#6B6B6B] leading-loose font-normal">{c.charter}</p>
                 </motion.div>
               ))}
             </div>
@@ -192,7 +192,7 @@ function IRGovernanceContent() {
               <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-5">
                 자료
               </span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.1] mb-6">
+              <h2 className="text-[length:var(--text-h3)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[var(--leading-heading)] mb-6">
                 지배구조 문서
               </h2>
             </div>

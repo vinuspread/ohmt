@@ -1,10 +1,11 @@
 'use client'
 
-import { useState } from 'react'
+import { SafeResponsiveContainer } from '../_components/charts/SafeResponsiveContainer'
+import {
+  useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import {
-  AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer,
-  PieChart, Pie, Cell,
+  AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, PieChart, Pie, Cell
 } from 'recharts'
 import { DashboardLayout } from '../_components/layout/DashboardLayout'
 import { PageHeader } from '../_components/common/PageHeader'
@@ -120,7 +121,7 @@ export default function AnalyticsPage() {
         <div className="bg-[var(--color-bg-elevated)] rounded-[var(--radius-lg)] p-5 border border-[var(--color-border)]">
           <h3 className="text-base font-[var(--font-heading)] font-semibold text-[var(--color-text)] mb-4">Traffic Overview</h3>
           <div style={{ height: 300 }}>
-            <ResponsiveContainer width="100%" height="100%">
+            <SafeResponsiveContainer width="100%" height="100%">
               <AreaChart data={trafficData}>
                 <defs>
                   <linearGradient id="sessionsGrad" x1="0" y1="0" x2="0" y2="1">
@@ -144,7 +145,7 @@ export default function AnalyticsPage() {
                 <Area type="monotone" dataKey="uniqueUsers" name="Unique Users" stroke="var(--color-success)" strokeWidth={2} fill="url(#usersGrad)" dot={false} isAnimationActive={false} animationDuration={1000} />
                 <Area type="monotone" dataKey="pageviews" name="Pageviews" stroke="var(--color-info)" strokeWidth={2} fill="url(#pageviewsGrad)" dot={false} isAnimationActive={false} animationDuration={1000} />
               </AreaChart>
-            </ResponsiveContainer>
+            </SafeResponsiveContainer>
           </div>
         </div>
 
@@ -159,7 +160,7 @@ export default function AnalyticsPage() {
               <h3 className="text-base font-[var(--font-heading)] font-semibold text-[var(--color-text)] mb-4">Traffic Sources</h3>
               <div className="flex items-center gap-6">
                 <div style={{ width: 160, height: 160 }}>
-                  <ResponsiveContainer width="100%" height="100%">
+                  <SafeResponsiveContainer width="100%" height="100%">
                     <PieChart>
                       <Pie data={trafficSources} cx="50%" cy="50%" innerRadius={45} outerRadius={70} paddingAngle={3} dataKey="value" isAnimationActive={false} animationDuration={800}>
                         {trafficSources.map((entry) => (
@@ -168,7 +169,7 @@ export default function AnalyticsPage() {
                       </Pie>
                       <Tooltip {...chartDefaults.tooltip} />
                     </PieChart>
-                  </ResponsiveContainer>
+                  </SafeResponsiveContainer>
                 </div>
                 <div className="flex-1 space-y-3">
                   {trafficSources.map((src) => (
@@ -197,9 +198,9 @@ export default function AnalyticsPage() {
               <table className="w-full text-sm">
                 <thead>
                   <tr className="border-b border-[var(--color-border)]">
-                    <th className="text-left text-[11px] uppercase tracking-[0.08em] text-[var(--color-text-muted)] font-medium px-3 py-2.5">Page URL</th>
-                    <th className="text-right text-[11px] uppercase tracking-[0.08em] text-[var(--color-text-muted)] font-medium px-3 py-2.5">Views</th>
-                    <th className="text-right text-[11px] uppercase tracking-[0.08em] text-[var(--color-text-muted)] font-medium px-3 py-2.5">Bounce Rate</th>
+                    <th className="text-left text-xs uppercase tracking-[0.08em] text-[var(--color-text-muted)] font-medium px-3 py-2.5">Page URL</th>
+                    <th className="text-right text-xs uppercase tracking-[0.08em] text-[var(--color-text-muted)] font-medium px-3 py-2.5">Views</th>
+                    <th className="text-right text-xs uppercase tracking-[0.08em] text-[var(--color-text-muted)] font-medium px-3 py-2.5">Bounce Rate</th>
                   </tr>
                 </thead>
                 <tbody>

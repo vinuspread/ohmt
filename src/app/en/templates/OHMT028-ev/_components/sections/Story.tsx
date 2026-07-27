@@ -56,16 +56,16 @@ export function Story() {
         <div className="w-full flex flex-col justify-center py-10 md:py-32 md:pl-16 lg:pl-20 pointer-events-auto">
           <SplitHeading
             text="City is yours. Every single day."
-            className="font-michroma text-[clamp(24px,3vw,40px)] text-[var(--text-on-light)] leading-[1.05] tracking-[-0.02em] mb-6"
+            className="font-michroma text-[length:var(--text-h3)] text-[var(--text-on-light)] leading-[var(--leading-heading)] tracking-[-0.02em] mb-6"
           />
-          <p className="font-inter text-[15px] text-[var(--text-muted-light)] leading-relaxed max-w-[480px] mb-8">
+          <p className="font-inter text-sm text-[var(--text-muted-light)] leading-relaxed max-w-[480px] mb-8">
             NUBI was made for urban life — tight streets,
             quick errands, weekend adventures. Small on the outside,
             surprisingly spacious inside. Zero emissions, all smiles.
           </p>
           <a
             href="/en/templates/OHMT028-ev/story"
-            className="font-inter text-[12px] font-medium tracking-[0.06em] uppercase text-[var(--text-on-light)] hover:opacity-60 transition-opacity inline-flex items-center gap-2"
+            className="font-inter text-xs font-medium tracking-[0.06em] uppercase text-[var(--text-on-light)] hover:opacity-60 transition-opacity inline-flex items-center gap-2"
           >
             Our story →
           </a>

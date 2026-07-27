@@ -1,0 +1,64 @@
+{
+  "slug": "OHMT035-atelier-house",
+  "name": "Atelier House",
+  "name_ko": "아틀리에 하우스",
+  "category": "retail",
+  "description": "A warm-minimal furniture and home goods DTC storefront with a category grid, product showcase cards, and an editorial journal.",
+  "description_ko": "카테고리 그리드, 제품 쇼케이스 카드, 에디토리얼 저널을 갖춘 웜 미니멀 가구 및 홈굿즈 DTC 스토어 템플릿",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#FAFAF8",
+      "secondary": "#1A1A1A",
+      "accent": "#7C8570",
+      "text": {
+        "main": "#2A2A2A",
+        "muted": "#6B6560",
+        "contrast": "#F2F1EE"
+      },
+      "ui": {
+        "border": "rgba(42, 42, 42, 0.1)",
+        "hover": "#F5F2ED",
+        "shadow": "0 2px 8px rgba(0,0,0,0.08)"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Inter, system-ui, sans-serif",
+        "weight": "500-700",
+        "tracking": "-0.01em",
+        "style": "font-display tracking-tight"
+      },
+      "body": {
+        "font": "Inter, system-ui, sans-serif",
+        "weight": "400-500",
+        "leading": "1.6",
+        "style": "leading-relaxed"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
+      }
+    },
+    "spacing": {
+      "page_pt": "0px",
+      "container": "1440px",
+      "gutter": "40px",
+      "card_gap": "24px"
+    },
+    "motion": {
+      "transition_fast": "200ms",
+      "transition_normal": "300ms",
+      "transition_slow": "500ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+    },
+    "interaction": {
+      "button": "bg-[var(--color-secondary)] text-[var(--color-text-contrast)] hover:opacity-90",
+      "card_hover": "hover:scale-[1.02] transition-transform duration-300"
+    }
+  }
+}

@@ -1,7 +1,6 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { motion, AnimatePresence, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion";
 import { ChevronDown } from "lucide-react";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
@@ -93,7 +92,7 @@ function ServiceCarousel() {
               className="shrink-0 p-8 flex flex-col justify-between"
               style={{ width: 'min(300px, 78vw)', height: '360px', backgroundColor: serviceColors[i % serviceColors.length] }}
             >
-              <div className="text-[13px] text-[var(--color-text)]/50">( {s.num} )</div>
+              <div className="text-xs text-[var(--color-text)]/50">( {s.num} )</div>
               <div className="flex justify-center items-center flex-1">
                 {s.name.toLowerCase().includes("brand") && (
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" className="text-[var(--color-text)]/70"><path d="M12 3v18M3 12h18"/></svg>
@@ -109,8 +108,8 @@ function ServiceCarousel() {
                 )}
               </div>
               <div>
-                <p className="text-[13px] font-medium uppercase tracking-widest text-[var(--color-text)] mb-2">{s.name}</p>
-                <p className="text-[0.85rem] text-[var(--color-text)]/70 leading-[1.4]">{s.desc}</p>
+                <p className="text-xs font-medium uppercase tracking-widest text-[var(--color-text)] mb-2">{s.name}</p>
+                <p className="text-[0.85rem] text-[var(--color-text)]/70 leading-[var(--leading-body)]">{s.desc}</p>
               </div>
             </div>
           ))}
@@ -147,7 +146,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
             transition={{ duration: 0.25 }}
             className="overflow-hidden"
           >
-            <p className="pb-5 text-[0.88rem] text-[var(--color-text-muted)] leading-[1.4]">{a}</p>
+            <p className="pb-5 text-[0.88rem] text-[var(--color-text-muted)] leading-[var(--leading-body)]">{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -174,7 +173,7 @@ function TestimonialSlider() {
             <img loading="lazy" src={t.img} alt={t.name} className="w-full h-full object-cover" style={{ minHeight: 380 }} />
           </div>
           <div className="bg-[var(--color-bg-secondary)] p-10 md:p-14 flex flex-col justify-center">
-            <p className="text-[1.15rem] font-medium text-[var(--color-text)] leading-[1.4] mb-10">{t.text}</p>
+            <p className="text-[1.15rem] font-medium text-[var(--color-text)] leading-[var(--leading-body)] mb-10">{t.text}</p>
             <div>
               <p className="text-[0.88rem] font-medium text-[var(--color-text)]">{t.name}</p>
               <p className="text-[0.82rem] text-[var(--color-text-muted)]">{t.role}</p>
@@ -241,7 +240,7 @@ function CustomCursor() {
       transition={{ duration: 0.2 }}
     >
       {label && (
-        <span className="text-white text-[13px] font-bold uppercase tracking-widest select-none">
+        <span className="text-white text-xs font-bold uppercase tracking-widest select-none">
           {label}
         </span>
       )}
@@ -251,7 +250,6 @@ function CustomCursor() {
 
 /* === Main Page === */
 function PortfolioHomeContent() {
-  const searchParams = useSearchParams();
   const t = {
   "hero": {
     "badge": `CREATIVE JOURNAL`,
@@ -299,7 +297,7 @@ const heroRef = useRef<HTMLElement>(null);
               <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-4">
                 OHMT<span className="text-[var(--color-accent)]">.</span>
               </h2>
-              <p className="text-[13px] tracking-[0.3em] uppercase text-white/40">Creative Studio / Seoul</p>
+              <p className="text-xs tracking-[0.3em] uppercase text-white/40">Creative Studio / Seoul</p>
             </motion.div>
           </motion.div>
         )}
@@ -313,13 +311,13 @@ const heroRef = useRef<HTMLElement>(null);
         <section ref={heroRef} className="relative overflow-hidden" style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
           {/* Side labels */}
           <div className="absolute left-5 bottom-[45vh] hidden md:block">
-            <p className="text-[13px] text-[var(--color-text-muted)] tracking-widest uppercase"
+            <p className="text-xs text-[var(--color-text-muted)] tracking-widest uppercase"
               style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
               ( {t.hero.badge} )
             </p>
           </div>
           <div className="absolute right-5 bottom-[45vh] hidden md:block">
-            <p className="text-[13px] text-[var(--color-text-muted)] tracking-widest uppercase"
+            <p className="text-xs text-[var(--color-text-muted)] tracking-widest uppercase"
               style={{ writingMode: 'vertical-rl', transform: 'rotate(180deg)' }}>
               BE / DR / X
             </p>
@@ -334,7 +332,7 @@ const heroRef = useRef<HTMLElement>(null);
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="text-[clamp(3.5rem,10vw,8rem)] tracking-tighter leading-[1.0] text-[var(--color-text)] mb-6"
+              className="text-[length:var(--text-display)] tracking-tighter leading-[var(--leading-display)] text-[var(--color-text)] mb-6"
             >
               <span className="font-bold">{t.hero.title1}</span><br />
               <span className="font-black">{t.hero.title2}</span>
@@ -366,7 +364,7 @@ const heroRef = useRef<HTMLElement>(null);
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-[clamp(1.5rem,3.5vw,2.5rem)] font-bold text-[var(--color-text)] leading-snug mb-12"
+              className="text-[length:var(--text-h3)] font-bold text-[var(--color-text)] leading-snug mb-12"
             >
               We're OHMT - a creative studio cultivating bold brands, beautiful websites,
               and ideas that refuse to be ordinary.
@@ -396,7 +394,7 @@ const heroRef = useRef<HTMLElement>(null);
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`px-6 py-2 text-[13px] font-black uppercase tracking-wider transition-all duration-300 inline-block whitespace-nowrap ${
+                  className={`px-6 py-2 text-xs font-black uppercase tracking-wider transition-all duration-300 inline-block whitespace-nowrap ${
                     activeCategory === cat
                       ? "bg-[var(--color-primary)] border border-[var(--color-primary)] text-white"
                       : "border border-black/10 text-[var(--color-text-muted)] hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
@@ -427,9 +425,9 @@ const heroRef = useRef<HTMLElement>(null);
                       <div className="absolute bottom-0 left-0 right-0 p-6 flex items-end justify-between bg-gradient-to-t from-black/70 via-black/30 to-transparent text-white">
                         <div>
                           <p className="text-2xl font-black tracking-tighter uppercase">{p.title}</p>
-                          <p className="text-[13px] font-black uppercase tracking-widest text-white/70">{p.category}</p>
+                          <p className="text-xs font-black uppercase tracking-widest text-white/70">{p.category}</p>
                         </div>
-                        <span className="text-[13px] text-white/60 border border-white/20 rounded-full px-3 py-1 uppercase">{p.date}</span>
+                        <span className="text-xs text-white/60 border border-white/20 rounded-full px-3 py-1 uppercase">{p.date}</span>
                       </div>
                     </Link>
                   </motion.div>
@@ -466,7 +464,7 @@ const heroRef = useRef<HTMLElement>(null);
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-[clamp(1.8rem,4vw,3.2rem)] font-bold text-[var(--color-text)] leading-snug mb-16 max-w-3xl"
+              className="text-[length:var(--text-h2)] font-bold text-[var(--color-text)] leading-snug mb-16 max-w-3xl"
             >
               OHMT is a creative studio shaping bold brands and daring ideas.
             </motion.p>
@@ -492,7 +490,7 @@ const heroRef = useRef<HTMLElement>(null);
         <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto">
             <div className="text-center mb-12">
-              <p className="text-[13px] font-black uppercase tracking-tight text-[var(--color-accent)] mb-4">TESTIMONIALS</p>
+              <p className="text-xs font-black uppercase tracking-tight text-[var(--color-accent)] mb-4">TESTIMONIALS</p>
               <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none text-[var(--color-text)]">
                 Trusted by brands who<br />aren't afraid to stand out.
               </h2>

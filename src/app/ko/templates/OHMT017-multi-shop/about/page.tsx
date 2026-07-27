@@ -23,12 +23,11 @@ function AboutPageContent() {
           <div className="absolute inset-0 bg-black/40" />
           <div className="relative z-10 text-center text-white px-6">
             <p className="text-xs uppercase tracking-[0.3em] text-white/60 mb-4">브랜드 소개</p>
-            <h1 className="text-5xl lg:text-7xl font-bold tracking-tight leading-[1.1]">
+            <h1 className="text-5xl lg:text-7xl font-bold tracking-tight leading-[var(--leading-heading)]">
               브랜드 스토리
             </h1>
             <p className="text-base text-white/70 mt-5 max-w-lg mx-auto leading-relaxed tracking-wide">
-              모든 조각은 의도로 완성됩니다.<br />모든 스타일은 담담한 자신감으로 빛납니다.
-            </p>
+              모든 제품은 분명한 이유로 완성됩니다.<br />오래 입을수록 자연스럽게 드러나는 자신감을 담습니다.</p>
           </div>
         </section>
 
@@ -37,19 +36,21 @@ function AboutPageContent() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-start">
               <div className="flex flex-col justify-center">
                 <p className="text-xs uppercase tracking-[0.25em] text-[var(--color-text-muted)] mb-4">브랜드 철학</p>
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight leading-[1.1] mb-8">
-                  과하지 않은<br />옷의 완성.
-                </h2>
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight leading-[var(--leading-heading)] mb-8">
+                  덜어낼수록<br />오래 남는 옷.</h2>
                 <p className="text-base leading-relaxed text-[var(--color-text-muted)]">
-                  OHMT는 과하지 않은 옷을 만들고 싶다는 마음에서 시작되었습니다.
-                  정성을 느끼게 하면서도 부담스럽지 않고, 날카롭지만 차갑지 않은.
-                  생각할 것 없이 손이 가는 옷장, 그 안의 모든 것이 그냥 잘 맞아떨어지는.
+                  OHMT는 매일 자연스럽게 손이 가는 옷을 만들고자 시작했습니다.
+                  <br className="hidden md:block" />
+                  세심하게 만들되 부담스럽지 않고, 선명한 인상을 주되 차갑지 않은 옷.
+                  <br className="hidden md:block" />
+                  유행보다 오래 입을 수 있는 균형 잡힌 디자인을 추구합니다.
                 </p>
                 <p className="text-base leading-relaxed text-[var(--color-text-muted)] mt-4">
-                  우리의 스튜디오는 서울에 있지만, 우리의 접근법은 국경을 넘습니다.
-                  시간을 들이는 소규모 공방과 협업하며, 우리 자신이 입고 싶은 원단을 사용합니다.
-                  대량 생산은 없습니다. 모든 드롭은 의도적이며, 품절되면 그게 끝입니다.
-                  그것이 핵심입니다.
+                  서울의 스튜디오에서 디자인하고, 각 분야에 전문성을 가진 소규모 공방과 함께 제작합니다.
+                  <br className="hidden md:block" />
+                  직접 입고 싶은 원단과 오래 사용할 수 있는 부자재를 고릅니다.
+                  <br className="hidden md:block" />
+                  필요한 수량만 생산하며, 모든 컬렉션을 신중하게 선보입니다.
                 </p>
               </div>
               <div className="aspect-[3/4] overflow-hidden">
@@ -78,7 +79,7 @@ function AboutPageContent() {
               </div>
               <div>
                 <h3 className="text-5xl font-bold tracking-tight">10K+</h3>
-                <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-text-muted)] mt-2">고객만족</p>
+                <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-text-muted)] mt-2">누적 고객</p>
               </div>
             </div>
           </div>
@@ -99,4 +100,3 @@ export default function AboutPage() {
     </React.Suspense>
   );
 }
-

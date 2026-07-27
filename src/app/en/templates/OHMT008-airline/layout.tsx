@@ -1,11 +1,11 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - Airline",
+  title: "OHMT - Airline Booking Experience Template",
   description: "Premium aviation experience",
   openGraph: {
-    title: "OHMT - Airline",
+    title: "OHMT - Airline Booking Experience Template",
     description: "Premium aviation experience",
     url: "https://ohmytemplate.com/en/templates/OHMT008-airline",
     siteName: "OHMT",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Airline",
+    title: "OHMT - Airline Booking Experience Template",
     description: "Premium aviation experience",
     images: ["/templates/OHMT008-airline/og-image.jpg"],
   },
@@ -40,4 +40,3 @@ export default function AirlineLayout({
     </>
   );
 }
-

@@ -19,18 +19,15 @@ export default function LatestNews() {
         >
           <div>
             <span className="text-sm font-medium tracking-[0.2em] text-[var(--color-primary)] uppercase">
-              DEV LOG & UPDATES
-            </span>
+              개발 소식</span>
             <h2 className="mt-2 font-[var(--font-heading)] text-4xl font-bold md:text-5xl">
-              최신 개발 소식
-            </h2>
+              최근 소식</h2>
           </div>
           <Link
             href="/ko/templates/OHMT023-game/news"
             className="group hidden items-center gap-2 text-sm font-medium text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-primary)] md:flex"
           >
-            전체 소식
-            <ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
+            모든 소식 보기<ArrowRight size={16} className="transition-transform group-hover:translate-x-1" />
           </Link>
         </motion.div>
 
@@ -45,8 +42,7 @@ export default function LatestNews() {
             href="/ko/templates/OHMT023-game/news"
             className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-primary)]"
           >
-            전체 소식
-            <ArrowRight size={16} />
+            모든 소식 보기<ArrowRight size={16} />
           </Link>
         </div>
       </div>

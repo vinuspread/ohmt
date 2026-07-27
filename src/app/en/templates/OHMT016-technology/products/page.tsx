@@ -4,6 +4,7 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 import Header from '../_components/Header'
 import Footer from '../_components/Footer'
+import FormSelect from '../_components/FormSelect'
 import { modelData, featuresData } from '../data/data'
 import { useState } from 'react'
 
@@ -23,7 +24,7 @@ export default function TechnologyProductsPage() {
   const [form, setForm] = useState({ name: '', company: '', email: '', model: '', quantity: '1', message: '' })
   const [submitted, setSubmitted] = useState(false)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
@@ -44,10 +45,10 @@ export default function TechnologyProductsPage() {
             <span className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] block">
               Our Lineup
             </span>
-            <h1 className="mb-6 text-[clamp(2.2rem,5vw,3.8rem)] font-bold tracking-[-0.03em] leading-[1.15] text-[var(--color-text)] font-heading">
+            <h1 className="mb-6 text-[length:var(--text-h1)] font-bold tracking-[-0.03em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading">
               Built for every scale of operation
             </h1>
-            <p className="mx-auto max-w-2xl text-base md:text-lg text-[var(--color-text-muted)] leading-[1.2]">
+            <p className="mx-auto max-w-2xl text-base md:text-lg text-[var(--color-text-muted)] leading-[var(--leading-heading)]">
               Two purpose-built autonomous systems engineered for different deployment environments, payload requirements, and operational scales.
             </p>
           </div>
@@ -60,7 +61,7 @@ export default function TechnologyProductsPage() {
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
                 Models
               </span>
-              <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.2] text-[var(--color-text)] font-heading">
+              <h2 className="text-[length:var(--text-h1)] font-bold tracking-[-0.02em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading">
                 Choose your system
               </h2>
             </div>
@@ -81,7 +82,7 @@ export default function TechnologyProductsPage() {
                     <h3 className="text-2xl font-bold text-[var(--color-text)] font-heading tracking-tight">
                       {model.name}
                     </h3>
-                    <p className="text-sm text-[var(--color-text-muted)] leading-[1.6]">
+                    <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-body)]">
                       {model.description}
                     </p>
                     <div className="flex items-baseline gap-3 pt-2">
@@ -91,11 +92,11 @@ export default function TechnologyProductsPage() {
                       <span className="text-sm text-[var(--color-text-muted)] line-through">
                         {model.slashedPrice}
                       </span>
-                      <span className="inline-block px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider bg-[var(--color-success)]/10 text-[var(--color-success)] rounded-sm">
+                      <span className="inline-block px-2.5 py-1 text-xs font-bold uppercase tracking-wider bg-[var(--color-success)]/10 text-[var(--color-success)] rounded-sm">
                         {model.saveAmount}
                       </span>
                     </div>
-                    <p className="text-[14px] text-[var(--color-text-muted)]">{model.financing}</p>
+                    <p className="text-sm text-[var(--color-text-muted)]">{model.financing}</p>
                     <div className="pt-2">
                       <a
                         href="#reserve"
@@ -118,10 +119,10 @@ export default function TechnologyProductsPage() {
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
                 Capabilities
               </span>
-              <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.2] text-[var(--color-text)] font-heading">
+              <h2 className="text-[length:var(--text-h1)] font-bold tracking-[-0.02em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading">
                 Core features
               </h2>
-              <p className="mt-4 mx-auto max-w-xl text-sm md:text-base text-[var(--color-text-muted)] leading-[1.2]">
+              <p className="mt-4 mx-auto max-w-xl text-sm md:text-base text-[var(--color-text-muted)] leading-[var(--leading-heading)]">
                 Every subsystem is engineered to combine reliability with next-generation machine intelligence.
               </p>
             </div>
@@ -140,7 +141,7 @@ export default function TechnologyProductsPage() {
                   <h3 className="text-lg font-bold text-[var(--color-text)] mb-3 font-heading transition-colors group-hover:text-[var(--color-accent)]">
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-[var(--color-text-muted)] leading-[1.2]">
+                  <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-heading)]">
                     {feature.description}
                   </p>
                 </div>
@@ -156,7 +157,7 @@ export default function TechnologyProductsPage() {
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
                 Specifications
               </span>
-              <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.2] text-[var(--color-text)] font-heading">
+              <h2 className="text-[length:var(--text-h1)] font-bold tracking-[-0.02em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading">
                 Compare models
               </h2>
             </div>
@@ -206,16 +207,16 @@ export default function TechnologyProductsPage() {
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
                   Reserve
                 </span>
-                <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.2] text-[var(--color-text)] font-heading mb-6">
+                <h2 className="text-[length:var(--text-h1)] font-bold tracking-[-0.02em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading mb-6">
                   Secure your unit today
                 </h2>
-                <p className="text-sm text-[var(--color-text-muted)] leading-[1.6] max-w-sm">
+                <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-body)] max-w-sm">
                   Reserve a unit now and lock in the early-access price. Our team will follow up within 24 hours to confirm availability and delivery timeline.
                 </p>
                 <ul className="mt-8 space-y-3">
                   {['No payment required to reserve', '24-hour confirmation from our team', 'Flexible delivery scheduling'].map((item) => (
                     <li key={item} className="flex items-center gap-3 text-sm text-[var(--color-text-muted)]">
-                      <span className="w-5 h-5 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)] flex items-center justify-center flex-shrink-0 text-[10px] font-bold">✓</span>
+                      <span className="w-5 h-5 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)] flex items-center justify-center flex-shrink-0 text-xs font-bold">✓</span>
                       {item}
                     </li>
                   ))}
@@ -232,7 +233,7 @@ export default function TechnologyProductsPage() {
                     <h3 className="text-lg font-bold text-[var(--color-text)] mb-2 font-heading">
                       Reservation received
                     </h3>
-                    <p className="text-sm text-[var(--color-text-muted)] leading-[1.6] max-w-md mx-auto">
+                    <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-body)] max-w-md mx-auto">
                       We will get back to you within 24 business hours to confirm your reservation and discuss next steps.
                     </p>
                   </div>
@@ -277,27 +278,34 @@ export default function TechnologyProductsPage() {
                         <label htmlFor="model" className="block text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text)] mb-2">
                           Model
                         </label>
-                        <select
-                          id="model" name="model" value={form.model} onChange={handleChange} required
-                          className="w-full border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-3 text-sm text-[var(--color-text)] outline-none focus:border-[var(--color-accent)] transition-colors duration-200 rounded-md"
-                        >
-                          <option value="">Select a model</option>
-                          <option value="gen2">OmniBot Gen 2 - $20K</option>
-                          <option value="prime">OmniBot Prime - $25K</option>
-                        </select>
+                        <FormSelect
+                          id="model"
+                          name="model"
+                          value={form.model}
+                          onChange={(model) => setForm((current) => ({ ...current, model }))}
+                          required
+                          placeholder="Select a model"
+                          options={[
+                            { value: 'gen2', label: 'OmniBot Gen 2 - $20K' },
+                            { value: 'prime', label: 'OmniBot Prime - $25K' },
+                          ]}
+                        />
                       </div>
                       <div>
                         <label htmlFor="quantity" className="block text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text)] mb-2">
                           Quantity
                         </label>
-                        <select
-                          id="quantity" name="quantity" value={form.quantity} onChange={handleChange}
-                          className="w-full border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-3 text-sm text-[var(--color-text)] outline-none focus:border-[var(--color-accent)] transition-colors duration-200 rounded-md"
-                        >
-                          {['1', '2', '3', '4', '5', '6-10', '10+'].map((q) => (
-                            <option key={q} value={q}>{q} unit{q === '1' ? '' : 's'}</option>
-                          ))}
-                        </select>
+                        <FormSelect
+                          id="quantity"
+                          name="quantity"
+                          value={form.quantity}
+                          onChange={(quantity) => setForm((current) => ({ ...current, quantity }))}
+                          placeholder="Select quantity"
+                          options={['1', '2', '3', '4', '5', '6-10', '10+'].map((quantity) => ({
+                            value: quantity,
+                            label: `${quantity} unit${quantity === '1' ? '' : 's'}`,
+                          }))}
+                        />
                       </div>
                     </div>
 

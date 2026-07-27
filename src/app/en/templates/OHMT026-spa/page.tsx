@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
 import Navbar from "./_components/layout/Navbar";
 import Footer from "./_components/layout/Footer";
@@ -17,6 +18,10 @@ import PricingPlan from "./_components/sections/PricingPlan";
 import BookAppointmentCta from "./_components/sections/BookAppointmentCta";
 import Faq from "./_components/sections/Faq";
 import theme from "./theme.json";
+
+export const metadata: Metadata = {
+  title: "OHMT Spa - Home",
+};
 
 export default function SpaPage() {
   const jsonLd = {

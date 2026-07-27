@@ -20,9 +20,8 @@ function AboutPageContent() {
           <div className="absolute inset-0 bg-black/50" />
           <div className="relative z-10 text-center text-white px-6">
             <p className="text-xs uppercase tracking-[0.3em] text-white/60 mb-4">소개</p>
-            <h1 className="text-5xl lg:text-7xl font-bold font-heading leading-[1.1]">
-              스토리
-            </h1>
+            <h1 className="text-5xl lg:text-7xl font-bold font-heading leading-[var(--leading-heading)]">
+              브랜드 이야기</h1>
           </div>
         </section>
 
@@ -31,22 +30,18 @@ function AboutPageContent() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
               <div>
                 <p className="text-xs uppercase tracking-[0.25em] text-[var(--color-text-muted)] mb-4">
-                  철학
-                </p>
-                <h2 className="text-3xl md:text-4xl font-bold font-heading leading-[1.1] mb-8">
-                  천천히 즐길<br />가치가 있는 커피.
-                </h2>
+                  커피에 대한 생각</p>
+                <h2 className="text-3xl md:text-4xl font-bold font-heading leading-[var(--leading-heading)] mb-8">
+                  좋은 원두로<br />정직하게 내린 커피.</h2>
                 <p className="text-base leading-relaxed text-[var(--color-text-muted)]">
-                  OHMT은 성수동의 작은 커피 카트에서 시작했습니다. 주말 취미 프로젝트로 시작된 이곳은 어느덧 동네의 핫플레이스로 자리잡았습니다. 창립자들은 에티오피아와 콜롬비아의 커피 산지를 수년간 여행하며 품질에 대한 열정을 공유하는 농부들과 관계를 구축했습니다.
-                </p>
+                  OHMT는 성수동에서 주말마다 운영하던 작은 커피 카트로 시작했습니다. 한 잔씩 정성껏 내린 커피가 입소문을 타면서 동네 사람들이 편하게 찾는 카페로 성장했습니다. 이후 에티오피아와 콜롬비아의 산지를 찾아 생산자를 만나고, 좋은 원두를 꾸준히 소개할 수 있는 관계를 만들어 왔습니다.</p>
                 <p className="text-base leading-relaxed text-[var(--color-text-muted)] mt-4">
-                  오늘날 우리는 소량 배치로 직접 원두를 로스팅하고, 모든 과정에 담긴 정성이 반영된 커피를 제공합니다. 씨앗에서 한 잔까지, 올바른 방식으로 하는 것이 우리의 신념입니다.
-                </p>
+                  지금도 필요한 만큼 원두를 소량으로 로스팅합니다. 산지와 원두를 고르는 일부터 로스팅과 추출까지, 한 잔의 맛을 좌우하는 모든 과정을 세심하게 관리합니다.</p>
               </div>
               <div className="aspect-[4/3] rounded-2xl overflow-hidden">
                 <img
                   src="/templates/OHMT019-coffee/hero-drink.jpg"
-                  alt="Espresso bar"
+                  alt="에스프레소 바"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -57,29 +52,24 @@ function AboutPageContent() {
         <section className="py-20 md:py-28 bg-[var(--color-bg-dark)] text-white">
           <div className="max-w-[1440px] mx-auto px-6 md:px-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold font-heading mb-4">
-              원두 철학
-            </h2>
+              원두를 고르는 기준</h2>
             <p className="text-sm text-white/60 mb-16 max-w-lg mx-auto">
-              우리의 모든 것을 이끄는 세 가지 원칙.
-            </p>
+              OHMT가 원두를 고르고 커피를 만드는 세 가지 기준입니다.</p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               <div className="text-center">
                 <h3 className="text-lg font-bold font-heading mb-3">싱글 오리진</h3>
                 <p className="text-sm text-white/60 leading-relaxed">
-                  블렌드가 아닌 단일 농장에서 원두를 공급받습니다. 각 산지는 탐험할 가치가 있는 독특한 풍미를 제공합니다.
-                </p>
+                  생산지와 농장이 분명한 원두를 선택합니다. 각 지역이 가진 향과 맛을 온전히 전할 수 있도록 원두마다 다른 방식으로 로스팅합니다.</p>
               </div>
               <div className="text-center">
-                <h3 className="text-lg font-bold font-heading mb-3">다이렉트 트레이드</h3>
+                <h3 className="text-lg font-bold font-heading mb-3">생산자와의 관계</h3>
                 <p className="text-sm text-white/60 leading-relaxed">
-                  농부들과 직접 파트너십을 맺고, 탁월한 품질에 대해 공정 무역 가격 이상을 지불합니다.
-                </p>
+                  생산자와 꾸준히 소통하며 품질과 노력에 맞는 가격을 협의합니다. 한 번의 거래보다 오래 이어지는 관계를 중요하게 생각합니다.</p>
               </div>
               <div className="text-center">
-                <h3 className="text-lg font-bold font-heading mb-3">프레시 로스트</h3>
+                <h3 className="text-lg font-bold font-heading mb-3">소량 로스팅</h3>
                 <p className="text-sm text-white/60 leading-relaxed">
-                  모든 배치는 방문 48시간 이내에 로스팅됩니다. 신선함은 타협할 수 없는 기준입니다.
-                </p>
+                  필요한 수량만 나누어 볶고 로스팅 날짜를 분명하게 안내합니다. 원두가 가장 좋은 상태일 때 즐길 수 있도록 신선도를 관리합니다.</p>
               </div>
             </div>
           </div>
@@ -91,14 +81,14 @@ function AboutPageContent() {
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <img
                   src="/templates/OHMT019-coffee/story-beans.jpg"
-                  alt="Coffee beans"
+                  alt="로스팅한 커피 원두"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="aspect-square rounded-2xl overflow-hidden">
                 <img
                   src="/templates/OHMT019-coffee/story-brewing.jpg"
-                  alt="Coffee brewing"
+                  alt="핸드드립 커피 추출"
                   className="w-full h-full object-cover"
                 />
               </div>

@@ -30,8 +30,8 @@ export const menuItems = [
   { id: '27', name: '더블 세트', category: 'sets', description: '더블 스택 + 트러플 파마산 프라이 + 쉐이크 또는 음료 선택.', price: 21.90, image: '/templates/OHMT018-burger/set-smash.png', calories: 1420 },
   // 사이드
   { id: '13', name: '트러플 파마산 프라이', category: 'sides', description: '바삭한 프라이에 트러플 오일, 파마산 치즈, 신선한 허브.', price: 6.90, image: '/templates/OHMT018-burger/menu-side-01.png', calories: 450 },
-  { id: '14', name: '크리스피 어니언 링', category: 'sides', description: '맥주 반죽 어니언 링과 스모키 치폴레 딥 소스.', price: 5.90, image: '/templates/OHMT018-burger/menu-side-01.png', calories: 380 },
-  { id: '15', name: '고구마 프라이', category: 'sides', description: '바삭한 고구마 프라이와 허니 스리라차 딥.', price: 6.50, image: '/templates/OHMT018-burger/menu-side-01.png', calories: 410 },
+  { id: '14', name: '크리스피 어니언 링', category: 'sides', description: '맥주 반죽 어니언 링과 스모키 치폴레 딥 소스.', price: 5.90, image: '/templates/OHMT018-burger/menu-side-02.png', calories: 380 },
+  { id: '15', name: '고구마 프라이', category: 'sides', description: '바삭한 고구마 프라이와 허니 스리라차 딥.', price: 6.50, image: '/templates/OHMT018-burger/menu-side-03.png', calories: 410 },
   // 디저트
   { id: '16', name: '바닐라 소프트아이스크림', category: 'desserts', description: '크리미한 소프트 바닐라 아이스크림, 와플콘에 담아.', price: 3.90, image: '/templates/OHMT018-burger/menu-dessert-01.png', calories: 280 },
   { id: '17', name: '초콜릿 브라우니 선데', category: 'desserts', description: '따뜻한 초콜릿 브라우니, 소프트 아이스크림, 핫 퍼지, 휘핑크림.', price: 6.50, image: '/templates/OHMT018-burger/menu-dessert-02.png', calories: 520 },

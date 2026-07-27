@@ -9,6 +9,7 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 import { Plane, Compass, User, Armchair, ChevronRight, Check } from "lucide-react";
 import { PageHero } from "../_components/PageHero";
 import { motion, AnimatePresence } from "framer-motion";
+import TemplateSelect from '../_components/TemplateSelect'
 
 interface Seat {
   id: string;
@@ -18,6 +19,8 @@ interface Seat {
   extraPrice: number;
 }
 
+const formatWon = (amount: number) => `${amount.toLocaleString("ko-KR")}원`;
+
 function BookPageContent() {
   const [step, setStep] = useState(1); // 1: Search, 2: Seat Map, 3: Success
   const [destination, setDestination] = useState("Paris");
@@ -26,21 +29,21 @@ function BookPageContent() {
   
   // Dummy flight base prices matching destinationData
   const basePrices: Record<string, number> = {
-    Paris: 6900,
-    Tokyo: 2800,
-    "New York": 8500,
-    Dubai: 7200,
+    Paris: 6_900_000,
+    Tokyo: 2_800_000,
+    "New York": 8_500_000,
+    Dubai: 7_200_000,
   };
 
   const initialSeats: Seat[] = [
-    { id: "1A", type: "Suite", status: "Available", perk: "울트라 프라이빗 윈도우 스위트 및 돔 페리뇽 서비스", extraPrice: 500 },
-    { id: "1B", type: "Suite", status: "Occupied", perk: "센터 더블 스위트 (커플에게 이상적)", extraPrice: 450 },
-    { id: "1C", type: "Suite", status: "Available", perk: "센터 더블 스위트 및 개인 옷장", extraPrice: 450 },
-    { id: "1D", type: "Suite", status: "Available", perk: "캐비아 바 이용이 가능한 울트라 프라이빗 윈도우 스위트", extraPrice: 500 },
-    { id: "2A", type: "Suite", status: "Available", perk: "윈도우 스위트 및 통합 앰비언트 라이트 컨트롤", extraPrice: 400 },
-    { id: "2B", type: "Suite", status: "Occupied", perk: "센터 프라이빗 스위트", extraPrice: 350 },
-    { id: "2C", type: "Suite", status: "Available", perk: "센터 프라이빗 스위트", extraPrice: 350 },
-    { id: "2D", type: "Suite", status: "Available", perk: "강화된 32인치 4K 스크린이 구비된 윈도우 스위트", extraPrice: 400 },
+    { id: "1A", type: "Suite", status: "Available", perk: "창가형 독립 스위트 · 프리미엄 샴페인 서비스", extraPrice: 500_000 },
+    { id: "1B", type: "Suite", status: "Occupied", perk: "두 좌석을 연결할 수 있는 중앙 더블 스위트", extraPrice: 450_000 },
+    { id: "1C", type: "Suite", status: "Available", perk: "중앙 더블 스위트 · 개인 수납장", extraPrice: 450_000 },
+    { id: "1D", type: "Suite", status: "Available", perk: "창가형 독립 스위트 · 기내 다이닝 바 이용", extraPrice: 500_000 },
+    { id: "2A", type: "Suite", status: "Available", perk: "창가형 스위트 · 개인 조명 조절", extraPrice: 400_000 },
+    { id: "2B", type: "Suite", status: "Occupied", perk: "중앙 독립 스위트", extraPrice: 350_000 },
+    { id: "2C", type: "Suite", status: "Available", perk: "중앙 독립 스위트", extraPrice: 350_000 },
+    { id: "2D", type: "Suite", status: "Available", perk: "창가형 스위트 · 32인치 4K 스크린", extraPrice: 400_000 },
   ];
 
   const [seats, setSeats] = useState<Seat[]>(initialSeats);
@@ -62,7 +65,7 @@ function BookPageContent() {
     setSelectedSeat(prev => prev?.id === seat.id ? null : seat);
   };
 
-  const basePrice = basePrices[destination] || 5000;
+  const basePrice = basePrices[destination] || 5_000_000;
   const extraSeatPrice = selectedSeat ? selectedSeat.extraPrice : 0;
   const luxuryTax = Math.round(basePrice * 0.05);
   const totalAmount = basePrice + extraSeatPrice + luxuryTax;
@@ -75,10 +78,10 @@ function BookPageContent() {
         {/* Global Cover Header */}
         <PageHero
           imageSrc="/templates/OHMT008-airline/airline-book-hero.png"
-          imageAlt="럭셔리 항공 실루엣"
-          label="프리미엄 항공권 예약"
-          title={<>당신만의 <br /><span className="text-[var(--color-accent)] font-[family-name:var(--font-heading)] normal-case font-[var(--font-weight-accent)]">A380 생추어리.</span></>}
-          description="비행의 모든 요소를 맞춤 설정하세요. 엘리트 목적지를 선택하고, 프라이빗 스위트를 고르며, 미쉐린 다이닝을 사전 예약하세요."
+          imageAlt="OHMT 항공기"
+          label="항공권 예약"
+          title={<>나에게 맞는 <br /><span className="text-[var(--color-accent)] font-[family-name:var(--font-heading)] normal-case font-[var(--font-weight-accent)]">A380 스위트.</span></>}
+          description={"출발지와 목적지, 객실 등급과 좌석을 순서대로 선택하세요.\n원하는 기내식과 추가 서비스도 예약 단계에서 확인할 수 있습니다."}
         />
 
         {/* Interactive Booking Steps Grid */}
@@ -86,8 +89,8 @@ function BookPageContent() {
           {/* Mobile price summary bar */}
           <div className="lg:hidden bg-[var(--color-primary)] text-white px-6 py-4 mb-0 flex justify-between items-center">
             <div>
-              <p className="text-[0.65rem] uppercase tracking-widest text-white/40 font-bold">총 운임</p>
-              <p className="text-[1.4rem] font-extrabold text-[var(--color-accent)] leading-none">${totalAmount.toLocaleString()} USD</p>
+              <p className="text-[0.65rem] uppercase tracking-widest text-white/40 font-bold">예상 총액</p>
+              <p className="text-[1.4rem] font-extrabold text-[var(--color-accent)] leading-none">{formatWon(totalAmount)}</p>
             </div>
             <div className="text-right">
               <p className="text-[0.65rem] uppercase tracking-widest text-white/40 font-bold">목적지</p>
@@ -103,9 +106,9 @@ function BookPageContent() {
               {/* Step Progress indicators - Editorial Clean timeline */}
               <div className="flex items-center justify-between border-b border-[var(--color-border)] pb-8">
                 {[
-                  { num: 1, label: "경로 선택" },
+                  { num: 1, label: "여정 선택" },
                   { num: 2, label: "프라이빗 스위트" },
-                  { num: 3, label: "탑승권 발급" }
+                  { num: 3, label: "예약 확인" }
                 ].map((s) => (
                   <div key={s.num} className="flex items-center gap-4 select-none">
                     <span className={` text-xl font-bold transition-colors duration-300 ${
@@ -113,7 +116,7 @@ function BookPageContent() {
                     }`}>
                       0{s.num}
                     </span>
-                    <span className={`text-[14px] font-bold uppercase tracking-widest hidden sm:inline ${
+                    <span className={`text-sm font-bold uppercase tracking-widest hidden sm:inline ${
                       step >= s.num ? "text-[var(--color-primary)]" : "text-[#7A7A7A]"
                     }`}>{s.label}</span>
                   </div>
@@ -132,9 +135,9 @@ function BookPageContent() {
                     className="space-y-8 md:space-y-12 text-left"
                   >
                     <div className="space-y-4">
-                      <span className="text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">Step 01</span>
-                      <h2 className="text-[clamp(1.3rem,3vw,2.5rem)] font-[family-name:var(--theme-font-heading)] font-[var(--font-weight-heading)] text-[var(--color-primary)] uppercase tracking-tight leading-[1.1]">
-                        경로 및 객실 등급 선택.
+                      <span className="text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">Step 01</span>
+                      <h2 className="text-[length:var(--text-h3)] font-[family-name:var(--theme-font-heading)] font-[var(--font-weight-heading)] text-[var(--color-primary)] uppercase tracking-tight leading-[var(--leading-heading)]">
+                        여정과 객실 등급을 선택하세요.
                       </h2>
                       <div className="h-[2px] bg-[var(--color-accent)] w-12" />
                     </div>
@@ -142,36 +145,36 @@ function BookPageContent() {
                     <div className="grid md:grid-cols-2 gap-12">
                       {/* From Field (Read-only underline input) */}
                       <div className="space-y-3">
-                        <label className="text-[14px] font-bold uppercase tracking-widest text-[#7A7A7A]">출발지</label>
-                        <div className="w-full border-b border-[var(--color-border)] py-3 bg-transparent font-bold text-[18px] text-[var(--color-primary)] flex items-center justify-between">
-                          <span>서울 CDG (대한민국)</span>
+                        <label className="text-sm font-bold uppercase tracking-widest text-[#7A7A7A]">출발지</label>
+                        <div className="w-full border-b border-[var(--color-border)] py-3 bg-transparent font-bold text-lg text-[var(--color-primary)] flex items-center justify-between">
+                          <span>서울 ICN (대한민국)</span>
                           <Plane size={16} className="text-[var(--color-accent)]" />
                         </div>
                       </div>
 
                       {/* To Field (Interactive underline input) */}
                       <div className="space-y-3">
-                        <label className="text-[14px] font-bold uppercase tracking-widest text-[#7A7A7A]">도착지</label>
-                        <select 
+                        <label className="text-sm font-bold uppercase tracking-widest text-[#7A7A7A]">도착지</label>
+                        <TemplateSelect
                           value={destination}
                           onChange={(e) => setDestination(e.target.value)}
-                          className="w-full border-b border-[var(--color-border)] py-3 bg-transparent font-bold text-[18px] text-[var(--color-primary)] rounded-none focus:outline-none focus:border-[var(--color-accent)] cursor-pointer"
+                          className="w-full border-b border-[var(--color-border)] py-3 bg-transparent font-bold text-lg text-[var(--color-primary)] rounded-none focus:outline-none focus:border-[var(--color-accent)] cursor-pointer"
                         >
-                          <option value="Paris">파리 CDG (프랑스) - $6,900</option>
-                          <option value="Tokyo">도쿄 NRT (일본) - $2,800</option>
-                          <option value="New York">뉴욕 JFK (미국) - $8,500</option>
-                          <option value="Dubai">두바이 DXB (UAE) - $7,200</option>
-                        </select>
+                          <option value="Paris">파리 CDG (프랑스) - 6,900,000원</option>
+                          <option value="Tokyo">도쿄 NRT (일본) - 2,800,000원</option>
+                          <option value="New York">뉴욕 JFK (미국) - 8,500,000원</option>
+                          <option value="Dubai">두바이 DXB (UAE) - 7,200,000원</option>
+                        </TemplateSelect>
                       </div>
                     </div>
 
                     {/* Cabin Class Selection Typographic list (No boxes) */}
                     <div className="space-y-6 pt-4">
-                      <label className="text-[14px] font-bold uppercase tracking-widest text-[#7A7A7A] block">프리미엄 객실 등급</label>
+                      <label className="text-sm font-bold uppercase tracking-widest text-[#7A7A7A] block">객실 등급</label>
                       <div className="space-y-0 divide-y divide-[var(--color-border)]">
                         {[
-                          { id: "First", name: "플래그십 프라이빗 스위트", desc: "밀폐된 구조적 공간, 미쉐린 코스 다이닝 & 180° 플랫베드." },
-                          { id: "Business", name: "로얄 비즈니스 클래스", desc: "향상된 쉘 프라이버시, Krug 와인 플라이트 & 직통 통로." }
+                          { id: "First", name: "퍼스트 클래스 스위트", desc: "슬라이딩 도어와 180° 플랫베드, 코스형 기내식이 제공됩니다." },
+                          { id: "Business", name: "비즈니스 클래스", desc: "칸막이형 좌석과 전 좌석 통로 접근, 와인 페어링 서비스가 제공됩니다." }
                         ].map((c) => {
                           const isSelected = cabinClass === c.id;
                           return (
@@ -182,7 +185,7 @@ function BookPageContent() {
                             >
                               <div className="space-y-1 flex-1">
                                 <div className="flex items-center gap-3">
-                                  <h4 className={`font-bold text-[16px] uppercase tracking-wider transition-colors duration-300 ${
+                                  <h4 className={`font-bold text-base uppercase tracking-wider transition-colors duration-300 ${
                                     isSelected ? "text-[var(--color-accent)]" : "text-[var(--color-primary)]"
                                   }`}>
                                     {c.name}
@@ -191,7 +194,7 @@ function BookPageContent() {
                     <span className="w-2 h-2 bg-[var(--color-accent)] rounded-full inline-block" />
                   )}
                                 </div>
-                                <p className="text-[14px] text-[#7A7A7A] normal-case leading-relaxed font-normal">
+                                <p className="text-sm text-[#7A7A7A] normal-case leading-relaxed font-normal">
                                   {c.desc}
                                 </p>
                               </div>
@@ -211,9 +214,9 @@ function BookPageContent() {
 
                     <button 
                       onClick={() => setStep(2)}
-                      className="w-full sm:w-fit px-12 py-4 bg-[var(--color-primary)] text-[var(--color-accent)] text-[14px] font-bold uppercase tracking-[0.25em] flex items-center justify-center gap-3 hover:bg-[var(--color-primary)]/90 transition-colors duration-300 cursor-pointer rounded-none"
+                      className="w-full sm:w-fit px-12 py-4 bg-[var(--color-primary)] text-[var(--color-accent)] text-sm font-bold uppercase tracking-[0.25em] flex items-center justify-center gap-3 hover:bg-[var(--color-primary)]/90 transition-colors duration-300 cursor-pointer rounded-none"
                     >
-                      좌석 선택하기 <ChevronRight size={14} />
+                      좌석 선택 <ChevronRight size={14} />
                     </button>
                   </motion.div>
                 )}
@@ -228,20 +231,20 @@ function BookPageContent() {
                     className="space-y-8 md:space-y-12 text-left"
                   >
                     <div className="space-y-4">
-                      <span className="text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">Step 02</span>
-                      <h2 className="text-[clamp(1.3rem,3vw,2.5rem)] font-[family-name:var(--theme-font-heading)] font-[var(--font-weight-heading)] text-[var(--color-primary)] uppercase tracking-tight leading-[1.1]">
-                        A380 객실 스위트 맵.
+                      <span className="text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">Step 02</span>
+                      <h2 className="text-[length:var(--text-h3)] font-[family-name:var(--theme-font-heading)] font-[var(--font-weight-heading)] text-[var(--color-primary)] uppercase tracking-tight leading-[var(--leading-heading)]">
+                        A380 좌석 배치도
                       </h2>
                       <div className="h-[2px] bg-[var(--color-accent)] w-12" />
-                      <p className="text-[14px] text-[#7A7A7A] leading-relaxed normal-case">
-                        원하는 공간을 선택하세요. 아래 이용 가능한 좌석을 클릭하여 맞춤 물리적 특전을 확인하고 선택하세요.
+                      <p className="text-sm text-[#7A7A7A] leading-relaxed normal-case">
+                        예약 가능한 좌석을 선택하면 위치와 좌석별 편의 기능, 추가 요금을 확인할 수 있습니다.
                       </p>
                     </div>
 
                     {/* A380 Suite Layout grid mapping (Keep matrix strictly for alignment, but styling is extremely lightweight) */}
                     <div className="p-8 space-y-8 max-w-lg mx-auto bg-[var(--color-bg-secondary)] rounded-3xl">
                       <div className="text-center pb-4 border-b border-[var(--color-border)]">
-                        <span className="text-[14px] uppercase font-bold tracking-[0.4em] text-[#7A7A7A]">A380 상부 데크 전방</span>
+                        <span className="text-sm uppercase font-bold tracking-[0.4em] text-[#7A7A7A]">A380 상부 데크 앞쪽</span>
                       </div>
 
                       {/* Map rows */}
@@ -254,7 +257,7 @@ function BookPageContent() {
                               key={seat.id}
                               disabled={isOccupied}
                               onClick={() => handleSeatClick(seat)}
-                              className={`aspect-square flex flex-col items-center justify-center text-[14px] font-bold transition-colors duration-300 relative rounded-none cursor-pointer ${
+                              className={`aspect-square flex flex-col items-center justify-center text-sm font-bold transition-colors duration-300 relative rounded-none cursor-pointer ${
                                 isOccupied
                                   ? "bg-neutral-100 border border-neutral-200 text-neutral-500 cursor-not-allowed"
                                   : isSelected
@@ -267,9 +270,9 @@ function BookPageContent() {
                               
                               {/* Extra price mini tag */}
                               {!isOccupied && (
-                                <span className={`absolute bottom-2 text-[13px] font-bold ${
+                                <span className={`absolute bottom-2 text-xs font-bold ${
                                   isSelected ? "text-[var(--color-primary)]/80" : "text-[#7A7A7A]"
-                                }`}>+${seat.extraPrice}</span>
+                                }`}>+{formatWon(seat.extraPrice)}</span>
                               )}
                             </button>
                           );
@@ -277,7 +280,7 @@ function BookPageContent() {
                       </div>
 
                       {/* Map Legend */}
-                      <div className="flex justify-center gap-6 pt-4 border-t border-[var(--color-border)] text-[14px] font-bold uppercase tracking-wider text-[#7A7A7A]">
+                      <div className="flex justify-center gap-6 pt-4 border-t border-[var(--color-border)] text-sm font-bold uppercase tracking-wider text-[#7A7A7A]">
                         <div className="flex items-center gap-2">
                           <span className="w-4 h-4 bg-white border border-[var(--color-border)] block rounded-md" /> 예약 가능
                         </div>
@@ -285,7 +288,7 @@ function BookPageContent() {
                           <span className="w-4 h-4 bg-[var(--color-accent)] block rounded-md" /> 선택됨
                         </div>
                         <div className="flex items-center gap-2">
-                          <span className="w-4 h-4 bg-neutral-200 block rounded-md" /> 선점됨
+                          <span className="w-4 h-4 bg-neutral-200 block rounded-md" /> 예약 완료
                         </div>
                       </div>
                     </div>
@@ -297,25 +300,25 @@ function BookPageContent() {
                         animate={{ opacity: 1, y: 0 }}
                         className="py-6 border-t-2 border-[var(--color-accent)] normal-case"
                       >
-                        <h4 className="font-bold text-[16px] uppercase tracking-wider text-[var(--color-accent)] mb-2">스위트 {selectedSeat.id} 하이라이트</h4>
-                        <p className="text-[14px] text-[#7A7A7A] leading-relaxed font-normal mb-2">{selectedSeat.perk}</p>
-                        <p className="text-[16px] font-bold text-[var(--color-primary)]">객실 추가 요금: +${selectedSeat.extraPrice} USD</p>
+                        <h4 className="font-bold text-base uppercase tracking-wider text-[var(--color-accent)] mb-2">스위트 {selectedSeat.id} 주요 특징</h4>
+                        <p className="text-sm text-[#7A7A7A] leading-relaxed font-normal mb-2">{selectedSeat.perk}</p>
+                        <p className="text-base font-bold text-[var(--color-primary)]">좌석 추가 요금: +{formatWon(selectedSeat.extraPrice)}</p>
                       </motion.div>
                     )}
 
                     <div className="flex gap-4">
                       <button 
                         onClick={() => setStep(1)}
-                        className="px-10 py-4 border border-[var(--color-border)] text-[var(--color-primary)] text-[14px] font-bold uppercase tracking-wider hover:border-[var(--color-primary)] transition-all cursor-pointer rounded-none"
+                        className="px-10 py-4 border border-[var(--color-border)] text-[var(--color-primary)] text-sm font-bold uppercase tracking-wider hover:border-[var(--color-primary)] transition-all cursor-pointer rounded-none"
                       >
-                        경로로 돌아가기
+                        여정 선택으로 돌아가기
                       </button>
                       <button
                         onClick={() => setStep(3)}
                         disabled={!selectedSeat}
-                        className="px-12 py-4 bg-[var(--color-primary)] text-[var(--color-accent)] text-[14px] font-bold uppercase tracking-[0.2em] hover:bg-[var(--color-primary)]/90 transition-colors duration-300 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed rounded-none"
+                        className="px-12 py-4 bg-[var(--color-primary)] text-[var(--color-accent)] text-sm font-bold uppercase tracking-[0.2em] hover:bg-[var(--color-primary)]/90 transition-colors duration-300 cursor-pointer disabled:opacity-30 disabled:cursor-not-allowed rounded-none"
                       >
-                        탑승권 확정
+                        예약 확정
                       </button>
                     </div>
                   </motion.div>
@@ -333,9 +336,9 @@ function BookPageContent() {
                       <div className="w-16 h-16 bg-[var(--color-accent)] flex items-center justify-center mx-auto mb-6 rounded-full">
                         <Check size={28} className="text-[var(--color-primary)] font-bold" />
                       </div>
-                      <h2 className="text-3xl font-[family-name:var(--theme-font-heading)] font-[var(--font-weight-heading)] text-[var(--color-primary)]">맞춤 탑승권이 생성되었습니다.</h2>
-                      <p className="text-[14px] text-[#7A7A7A] max-w-md mx-auto leading-relaxed normal-case">
-                        프라이빗 생추어리가 예약되었습니다. 럭셔리 스카이라인 티켓 인보이스 요약을 확인하세요.
+                      <h2 className="text-3xl font-[family-name:var(--theme-font-heading)] font-[var(--font-weight-heading)] text-[var(--color-primary)]">예약이 완료되었습니다.</h2>
+                      <p className="text-sm text-[#7A7A7A] max-w-md mx-auto leading-relaxed normal-case">
+                        선택한 여정과 좌석이 예약되었습니다. 아래에서 예약 정보와 결제 금액을 확인하세요.
                       </p>
                     </div>
 
@@ -346,38 +349,38 @@ function BookPageContent() {
                       {/* Pass details */}
                       <div className="flex justify-between items-start border-b border-white/10 pb-6 mb-8">
                         <div>
-                          <p className="text-[14px] uppercase tracking-[0.3em] text-[var(--color-accent)] font-bold">OHMT 프리미엄 패스</p>
-                          <h3 className="font-[family-name:var(--theme-font-heading)] text-xl font-[var(--font-weight-heading)] tracking-tight text-white mt-1">일등석 스위트</h3>
+                          <p className="text-sm uppercase tracking-[0.3em] text-[var(--color-accent)] font-bold">OHMT 탑승권</p>
+                          <h3 className="font-[family-name:var(--theme-font-heading)] text-xl font-[var(--font-weight-heading)] tracking-tight text-white mt-1">퍼스트 클래스 스위트</h3>
                         </div>
-                        <span className="text-[18px] text-[var(--color-accent)] font-black bg-[var(--color-accent)]/10 px-4 py-1.5 rounded-full">{selectedSeat?.id}</span>
+                        <span className="text-lg text-[var(--color-accent)] font-black bg-[var(--color-accent)]/10 px-4 py-1.5 rounded-full">{selectedSeat?.id}</span>
                       </div>
 
                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-left normal-case mb-8">
                         <div>
-                          <p className="text-[14px] uppercase tracking-[0.2em] text-white/30 font-bold">승객</p>
-                          <p className="text-[14px] font-bold text-white pt-1">맞춤 고객</p>
+                          <p className="text-sm uppercase tracking-[0.2em] text-white/30 font-bold">승객</p>
+                          <p className="text-sm font-bold text-white pt-1">예약 승객</p>
                         </div>
                         <div>
-                          <p className="text-[14px] uppercase tracking-[0.2em] text-white/30 font-bold">경로</p>
-                          <p className="text-[14px] font-bold text-white pt-1">ICN → CDG</p>
+                          <p className="text-sm uppercase tracking-[0.2em] text-white/30 font-bold">경로</p>
+                          <p className="text-sm font-bold text-white pt-1">ICN → CDG</p>
                         </div>
                         <div>
-                          <p className="text-[14px] uppercase tracking-[0.2em] text-white/30 font-bold">날짜</p>
-                          <p className="text-[14px] font-bold text-white pt-1">26 MAY 2026</p>
+                          <p className="text-sm uppercase tracking-[0.2em] text-white/30 font-bold">날짜</p>
+                          <p className="text-sm font-bold text-white pt-1">26 MAY 2026</p>
                         </div>
                         <div>
-                          <p className="text-[14px] uppercase tracking-[0.2em] text-white/30 font-bold">생추어리</p>
-                          <p className="text-[14px] font-bold text-[var(--color-accent)] pt-1">Suite {selectedSeat?.id}</p>
+                          <p className="text-sm uppercase tracking-[0.2em] text-white/30 font-bold">좌석</p>
+                          <p className="text-sm font-bold text-[var(--color-accent)] pt-1">Suite {selectedSeat?.id}</p>
                         </div>
                       </div>
 
                       <div className="border-t border-dashed border-white/20 pt-6 flex flex-col sm:flex-row justify-between items-center gap-6">
                         <div className="text-left">
-                          <p className="text-[14px] uppercase tracking-[0.2em] text-white/30 font-bold">총 운임 청구액</p>
-                          <p className="text-[22px] font-extrabold text-[var(--color-accent)]">${totalAmount.toLocaleString()} USD</p>
+                          <p className="text-sm uppercase tracking-[0.2em] text-white/30 font-bold">최종 결제 금액</p>
+                          <p className="text-2xl font-extrabold text-[var(--color-accent)]">{formatWon(totalAmount)}</p>
                         </div>
-                          <span className="text-[14px] uppercase font-bold tracking-widest border border-[var(--color-accent)]/45 px-6 py-2.5 rounded-full">
-                            스카이패스 활성화
+                          <span className="text-sm uppercase font-bold tracking-widest border border-[var(--color-accent)]/45 px-6 py-2.5 rounded-full">
+                            탑승권 확인
                         </span>
                       </div>
                     </div>
@@ -388,7 +391,7 @@ function BookPageContent() {
                           setStep(1);
                           setSelectedSeat(null);
                         }}
-                        className="px-12 py-4 bg-[var(--color-primary)] text-[var(--color-accent)] text-[14px] font-bold uppercase tracking-[0.2em] hover:bg-[var(--color-primary)]/90 transition-colors duration-300 cursor-pointer rounded-none"
+                        className="px-12 py-4 bg-[var(--color-primary)] text-[var(--color-accent)] text-sm font-bold uppercase tracking-[0.2em] hover:bg-[var(--color-primary)]/90 transition-colors duration-300 cursor-pointer rounded-none"
                       >
                         다른 항공편 예약
                       </button>
@@ -406,32 +409,32 @@ function BookPageContent() {
                 요금 요약
               </h3>
 
-              <div className="space-y-4 text-[14px] font-bold normal-case text-[#7A7A7A] pb-6 border-b border-[var(--color-border)]">
+              <div className="space-y-4 text-sm font-bold normal-case text-[#7A7A7A] pb-6 border-b border-[var(--color-border)]">
                 <div className="flex justify-between items-baseline py-1">
-                  <span className="font-normal">기본 객실 운임 ({destination})</span>
-                  <span className="text-[var(--color-primary)]">${basePrice.toLocaleString()} USD</span>
+                  <span className="font-normal">기본 항공 운임 ({destination})</span>
+                  <span className="text-[var(--color-primary)]">{formatWon(basePrice)}</span>
                 </div>
                 <div className="flex justify-between items-baseline py-1">
                   <span className="font-normal">스위트 추가 요금 ({selectedSeat ? selectedSeat.id : "없음"})</span>
-                  <span className="text-[var(--color-primary)]">+${extraSeatPrice} USD</span>
+                  <span className="text-[var(--color-primary)]">+{formatWon(extraSeatPrice)}</span>
                 </div>
                 <div className="flex justify-between items-baseline py-1">
-                  <span className="font-normal">엘리트 서비스 세금 (5%)</span>
-                  <span className="text-[var(--color-primary)]">${luxuryTax} USD</span>
+                  <span className="font-normal">세금 및 수수료 (5%)</span>
+                  <span className="text-[var(--color-primary)]">{formatWon(luxuryTax)}</span>
                 </div>
               </div>
 
               {/* Total Row */}
               <div className="pt-4 flex flex-col gap-3">
-                <span className="text-[14px] uppercase font-bold tracking-widest text-[var(--color-primary)]">
+                <span className="text-sm uppercase font-bold tracking-widest text-[var(--color-primary)]">
                   총 금액
                 </span>
                 <div>
-                  <span className="text-[32px] font-extrabold text-[var(--color-accent)] leading-none block">
-                    ${totalAmount.toLocaleString()} USD
+                  <span className="text-4xl font-extrabold text-[var(--color-accent)] leading-none block">
+                    {formatWon(totalAmount)}
                   </span>
-                  <p className="text-[14px] text-[#7A7A7A] normal-case leading-relaxed font-normal mt-3">
-                    *세금, 럭셔리 공항 라운지 이용, 샴페인, 미쉐린 스타일 식사 세트가 최종 프리미엄 스카이패스 요금에 모두 포함됩니다.
+                  <p className="text-sm text-[#7A7A7A] normal-case leading-relaxed font-normal mt-3">
+                    *표시된 금액에는 세금과 공항 라운지, 기본 기내식 및 객실별 제공 서비스가 포함됩니다.
                   </p>
                 </div>
               </div>
@@ -447,10 +450,10 @@ function BookPageContent() {
 }
 
 
-export default function BookPage(props: any) {
+export default function BookPage() {
   return (
     <React.Suspense fallback={null}>
-      <BookPageContent {...props} />
+      <BookPageContent />
     </React.Suspense>
   );
 }

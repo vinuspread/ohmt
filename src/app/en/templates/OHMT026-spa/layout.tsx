@@ -1,13 +1,13 @@
-﻿import "./theme.css";
+import "./theme.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "OHMT - Spa Wellness",
+  title: "OHMT - Retreat Booking Experience Template",
   description: "Premium spa and wellness shop template with a calming dark-green and cream palette, large lifestyle imagery, and a booking-first layout.",
   keywords: ["spa template", "wellness website", "spa booking", "Next.js template", "OHMT"],
   authors: [{ name: "OHMT", url: "https://ohmytemplate.com" }],
   openGraph: {
-    title: "OHMT - Spa Wellness",
+    title: "OHMT - Retreat Booking Experience Template",
     description: "Premium spa and wellness shop template with a calming dark-green and cream palette, large lifestyle imagery, and a booking-first layout.",
     url: "https://ohmytemplate.com/en/templates/OHMT026-spa",
     siteName: "OHMT",
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Spa Wellness",
+    title: "OHMT - Retreat Booking Experience Template",
     description: "Premium spa and wellness shop template with a calming dark-green and cream palette, large lifestyle imagery, and a booking-first layout.",
     images: ["/templates/OHMT026-spa/og-image.jpg"],
   },
@@ -32,8 +32,16 @@ export const metadata: Metadata = {
 };
 
 export default function SpaLayout({ children }: { children: React.ReactNode }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "HealthAndBeautyBusiness",
+    name: "OHMT Spa Wellness",
+    description: "Premium spa and wellness shop template with a calming dark-green and cream palette, large lifestyle imagery, and a booking-first layout.",
+    url: "https://ohmytemplate.com/en/templates/OHMT026-spa",
+  };
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
       `}</style>
@@ -41,4 +49,3 @@ export default function SpaLayout({ children }: { children: React.ReactNode }) {
     </>
   );
 }
-

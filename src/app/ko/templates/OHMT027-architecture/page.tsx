@@ -15,10 +15,10 @@ export default function ArchitectureHome() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ArchitecturalFirm",
-    "name": "OHMT - 건축 포트폴리오",
+    "name": "OHMT 건축 스튜디오",
     "url": "https://ohmytemplate.com/ko/templates/OHMT027-architecture",
     "image": "https://ohmytemplate.com/templates/OHMT027-architecture/og-image.jpg",
-    "description": "에디토리얼 타이포그래피와 몰입감 있는 비주얼 스토리텔링을 갖춘 건축 포트폴리오 템플릿입니다.",
+    "description": "주거, 상업, 공공, 인테리어 프로젝트를 설계하는 서울 기반 건축 스튜디오입니다.",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "서울",

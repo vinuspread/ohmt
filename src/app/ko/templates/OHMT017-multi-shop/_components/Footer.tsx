@@ -6,14 +6,13 @@ export const Footer = () => {
   return (
     <footer className="bg-[var(--color-bg-dark)] text-white border-t border-white/5">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-16 pb-8 md:pt-20 md:pb-10">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-10 md:gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
           <div className="col-span-2 md:col-span-2">
             <Link href="/ko/templates/OHMT017-multi-shop" className="text-2xl font-bold tracking-tight text-white">
               OHMT
             </Link>
             <p className="text-sm text-white/50 mt-4 leading-relaxed max-w-[260px]">
-              모던 미니멀리스트를 위한 큐레이티드 패션. 계절을 초월하는 섬세한 디자인.
-            </p>
+              유행보다 오래 입을 수 있는 옷과 액세서리를 선보입니다.</p>
             <div className="flex gap-5 mt-8 text-sm">
               {["인스타그램", "트위터", "핀터레스트", "틱톡"].map((s) => (
                 <Link key={s} href="#" className="text-white/30 hover:text-white transition-colors duration-200 text-xs uppercase tracking-[0.1em]">
@@ -24,7 +23,7 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h5 className="text-[11px] uppercase tracking-[0.2em] text-white/30 mb-5">쇼핑</h5>
+            <h5 className="text-xs uppercase tracking-[0.2em] text-white/30 mb-5">스토어</h5>
             <ul className="space-y-3 text-sm text-white/60">
               {[
                 { label: "신상품", href: "/ko/templates/OHMT017-multi-shop/shop" },
@@ -42,11 +41,11 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h5 className="text-[11px] uppercase tracking-[0.2em] text-white/30 mb-5">회사</h5>
+            <h5 className="text-xs uppercase tracking-[0.2em] text-white/30 mb-5">회사</h5>
             <ul className="space-y-3 text-sm text-white/60">
               {[
-                { label: "스토리", href: "/ko/templates/OHMT017-multi-shop/about" },
-                { label: "매거진", href: "/ko/templates/OHMT017-multi-shop/blog" },
+                { label: "브랜드 이야기", href: "/ko/templates/OHMT017-multi-shop/about" },
+                { label: "저널", href: "/ko/templates/OHMT017-multi-shop/blog" },
                 { label: "문의하기", href: "/ko/templates/OHMT017-multi-shop/contact" },
               ].map((l) => (
                 <li key={l.label}>
@@ -57,7 +56,7 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h5 className="text-[11px] uppercase tracking-[0.2em] text-white/30 mb-5">고객지원</h5>
+            <h5 className="text-xs uppercase tracking-[0.2em] text-white/30 mb-5">고객지원</h5>
             <ul className="space-y-3 text-sm text-white/60">
               {["자주 묻는 질문", "교환 및 반품", "배송", "사이즈 가이드"].map((l) => (
                 <li key={l}>
@@ -68,7 +67,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-16 pt-6 border-t border-white/8 flex flex-col md:flex-row justify-between items-center gap-3 text-[11px] text-white/25">
+        <div className="mt-16 pt-6 border-t border-white/8 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-white/25">
           <p>&copy; 2026 OHMT.</p>
           <div className="flex gap-6">
             <Link href="#" className="hover:text-white/50 transition-colors duration-200">개인정보처리방침</Link>
@@ -79,4 +78,3 @@ export const Footer = () => {
     </footer>
   );
 };
-

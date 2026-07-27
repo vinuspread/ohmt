@@ -1,9 +1,10 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { SafeResponsiveContainer } from './SafeResponsiveContainer'
 import {
-  RadarChart as RechartsRadar, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, Tooltip, ResponsiveContainer, Legend,
-  BarChart, Bar, XAxis, YAxis, CartesianGrid,
+  motion } from 'framer-motion'
+import {
+  RadarChart as RechartsRadar, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, Tooltip, Legend, BarChart, Bar, XAxis, YAxis, CartesianGrid
 } from 'recharts'
 import { radarData } from '../../data/dashboard-data'
 import { chartDefaults, formatAxis } from '../../data/chart-theme'
@@ -20,7 +21,7 @@ export function CloudStorageRadar() {
         Model Performance Radar
       </h3>
       <div style={{ height: 200 }}>
-        <ResponsiveContainer width="100%" height="100%">
+        <SafeResponsiveContainer width="100%" height="100%">
           <RechartsRadar data={radarData}>
             <PolarGrid stroke="var(--chart-grid)" />
             <PolarAngleAxis dataKey="axis" tick={{ fill: 'var(--color-text-muted)', fontSize: 11 }} />
@@ -31,7 +32,7 @@ export function CloudStorageRadar() {
             <Radar name="2024" dataKey="2024" stroke="var(--color-info)" fill="var(--color-info)" fillOpacity={0.2} isAnimationActive={false} animationDuration={800} />
             <Radar name="2026" dataKey="2026" stroke="var(--color-primary)" fill="var(--color-primary)" fillOpacity={0.3} isAnimationActive={false} animationDuration={800} />
           </RechartsRadar>
-        </ResponsiveContainer>
+        </SafeResponsiveContainer>
       </div>
       <button className="mt-4 w-full py-2 rounded-[var(--radius-md)] text-sm font-medium text-white bg-[var(--color-primary)] hover:bg-[var(--color-primary-hover)] transition-colors">
         View Full Report
@@ -127,7 +128,7 @@ export function AnalyticsBar() {
         5-Year Revenue vs. Net Profit
       </h3>
       <div style={{ height: 250 }}>
-        <ResponsiveContainer width="100%" height="100%">
+        <SafeResponsiveContainer width="100%" height="100%">
           <BarChart data={analyticsBarData} layout="vertical" barGap={4}>
             <CartesianGrid {...chartDefaults.cartesianGrid} />
             <XAxis type="number" tickFormatter={formatAxis} tick={{ fill: 'var(--color-text-muted)', fontSize: 12 }} axisLine={false} tickLine={false} />
@@ -137,7 +138,7 @@ export function AnalyticsBar() {
             <Bar dataKey="profit" name="Net Profit" fill="var(--color-primary)" radius={[0, 4, 4, 0]} isAnimationActive={false} animationDuration={800} />
             <Bar dataKey="revenue" name="Revenue" fill="var(--color-success)" radius={[0, 4, 4, 0]} isAnimationActive={false} animationDuration={800} />
           </BarChart>
-        </ResponsiveContainer>
+        </SafeResponsiveContainer>
       </div>
     </motion.div>
   )

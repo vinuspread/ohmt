@@ -1,0 +1,64 @@
+{
+  "slug": "OHMT036-amber-grove",
+  "name": "Amber Grove",
+  "name_ko": "앰버 그로브",
+  "category": "food-hospitality",
+  "description": "A third-generation organic orchard brand: seasonal fruit, direct-trade storytelling, and a dark showcase for the harvest catalog.",
+  "description_ko": "3대째 이어온 유기농 과수원 브랜드. 제철 과일 direct-trade 스토리텔링과 다크 쇼케이스 카탈로그를 갖춘 템플릿",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#FAF6EC",
+      "secondary": "#1C2318",
+      "accent": "#3F5B3B",
+      "text": {
+        "main": "#23241E",
+        "muted": "#6E6A5C",
+        "contrast": "#F5F1E4"
+      },
+      "ui": {
+        "border": "rgba(35, 36, 30, 0.1)",
+        "hover": "#F1ECDD",
+        "shadow": "0 2px 8px rgba(0,0,0,0.08)"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Newsreader, serif",
+        "weight": "500-600",
+        "tracking": "-0.01em",
+        "style": "font-display tracking-tight"
+      },
+      "body": {
+        "font": "Work Sans, system-ui, sans-serif",
+        "weight": "400-500",
+        "leading": "1.6",
+        "style": "leading-relaxed"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
+      }
+    },
+    "spacing": {
+      "page_pt": "0px",
+      "container": "1440px",
+      "gutter": "40px",
+      "card_gap": "24px"
+    },
+    "motion": {
+      "transition_fast": "200ms",
+      "transition_normal": "300ms",
+      "transition_slow": "500ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+    },
+    "interaction": {
+      "button": "rounded bg-[var(--color-accent)] text-[var(--color-text-contrast)] hover:opacity-90",
+      "card_hover": "hover:border-[var(--color-accent)] transition-colors duration-200"
+    }
+  }
+}

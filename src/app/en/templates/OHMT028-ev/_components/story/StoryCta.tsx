@@ -29,20 +29,20 @@ export function StoryCta() {
       <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)] via-[var(--bg)]/55 to-transparent" />
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 pb-16 md:pb-24">
         <div ref={ref}>
-          <h2 className="font-michroma text-[clamp(32px,4vw,60px)] text-[var(--text)] leading-[1.0] tracking-[-0.03em] mb-4">
+          <h2 className="font-michroma text-[length:var(--text-h1)] text-[var(--text)] leading-[var(--leading-display)] tracking-[-0.03em] mb-4">
             The city is waiting.
           </h2>
-          <p className="font-inter text-[15px] text-[var(--text-muted)] mb-8 max-w-[380px]">
+          <p className="font-inter text-sm text-[var(--text-muted)] mb-8 max-w-[380px]">
             Join the first wave of NUBI drivers. Reserve with a fully refundable $300 deposit.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="/en/templates/OHMT028-ev/order">
-              <button className="inline-flex items-center gap-2 bg-[var(--accent)] text-[var(--text-on-light)] px-8 py-4 rounded-full font-inter font-medium text-[13px] tracking-[0.03em] hover:bg-[var(--accent-dark)] transition-colors">
+              <button className="inline-flex items-center gap-2 bg-[var(--accent)] text-[var(--text-on-light)] px-8 py-4 rounded-full font-inter font-medium text-xs tracking-[0.03em] hover:bg-[var(--accent-dark)] transition-colors">
                 Reserve now →
               </button>
             </a>
             <a href="/en/templates/OHMT028-ev/specs">
-              <button className="inline-flex items-center gap-2 border border-[var(--border)] text-[var(--text)] px-8 py-4 rounded-full font-inter text-[13px] tracking-[0.03em] hover:border-[var(--text-muted)] transition-colors">
+              <button className="inline-flex items-center gap-2 border border-[var(--border)] text-[var(--text)] px-8 py-4 rounded-full font-inter text-xs tracking-[0.03em] hover:border-[var(--text-muted)] transition-colors">
                 See full specs
               </button>
             </a>

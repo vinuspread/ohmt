@@ -2,6 +2,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { menuItems } from "../data/data";
+import { formatWon } from "../_utils/currency";
 
 const easeOut = [0.23, 1, 0.32, 1] as const;
 
@@ -18,8 +19,7 @@ export const FeaturedDrinks = () => {
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.35, ease: easeOut }}
         >
-          시그니처 음료
-        </motion.h2>
+          OHMT 시그니처</motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {signatureItems.slice(0, 3).map((item, i) => (
@@ -42,7 +42,7 @@ export const FeaturedDrinks = () => {
                 <div className="flex items-start justify-between gap-2 mb-1">
                   <h3 className="text-lg font-bold font-heading">{item.name}</h3>
                   <span className="text-base font-semibold text-[var(--color-primary)] shrink-0">
-                    ${item.price}
+                    {formatWon(item.price)}
                   </span>
                 </div>
                 <p className="text-sm text-[var(--color-text-muted)] leading-relaxed line-clamp-2 mb-3">
@@ -53,7 +53,7 @@ export const FeaturedDrinks = () => {
                     {item.options.map((opt) => (
                       <span
                         key={opt}
-                        className="text-[10px] rounded-full px-2 py-0.5 bg-[var(--color-bg-secondary)] text-[var(--color-text-muted)] capitalize"
+                        className="text-xs rounded-full px-2 py-0.5 bg-[var(--color-bg-secondary)] text-[var(--color-text-muted)] capitalize"
                       >
                         {opt === 'hot' ? '핫' : '아이스'}
                       </span>

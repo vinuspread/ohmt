@@ -1,8 +1,13 @@
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import Link from "next/link";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 import Navbar from "../_components/Navbar";
+
+export const metadata: Metadata = {
+  title: "Classes - OHMT Yoga",
+};
 import PageHeader from "../_components/PageHeader";
 import ClassCard from "../_components/ClassCard";
 import CTASection from "../_components/CTASection";
@@ -23,14 +28,14 @@ function ClassesContent() {
         {/* Header row */}
         <div className="flex items-end justify-between px-8 md:px-14 lg:px-20 pt-12 pb-10 border-b border-[var(--color-border)]">
           <h2
-            className="text-[clamp(1.6rem,3.5vw,3rem)] font-light text-[var(--color-text)] leading-[1.05] tracking-[-0.02em]"
+            className="text-[length:var(--text-h2)] font-light text-[var(--color-text)] leading-[var(--leading-heading)] tracking-[-0.02em]"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             {CLASSES.length} Classes Available
           </h2>
           <Link
             href="/en/templates/OHMT022-yoga/schedule"
-            className="hidden md:inline-flex items-center gap-2 text-[12px] tracking-[0.2em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] font-medium transition-colors"
+            className="hidden md:inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] font-medium transition-colors"
             style={{ fontFamily: "var(--font-body)" }}
           >
             View Schedule →

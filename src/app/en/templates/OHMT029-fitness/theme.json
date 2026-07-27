@@ -3,8 +3,6 @@
   "name": "Fitness Studio",
   "name_ko": "피트니스 스튜디오",
   "category": "lifestyle",
-  "description": "A premium fitness and wellness studio template for classes, coaches, B2B operations, boutique memberships, and conversion-focused program pages.",
-  "description_ko": "클래스, 코치, B2B 운영, 부티크 멤버십, 전환 중심 프로그램 페이지를 갖춘 프리미엄 피트니스 웰니스 스튜디오 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {
@@ -34,6 +32,14 @@
         "weight": "400",
         "leading": "1.6",
         "style": "leading-relaxed"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
       }
     },
     "spacing": {
@@ -52,5 +58,7 @@
       "button": "bg-[var(--accent)] text-[var(--text-on-accent)] hover:bg-[var(--accent-light)]",
       "card_hover": "hover:-translate-y-1 hover:shadow-md transition-all"
     }
-  }
+  },
+  "thumbnail": "/templates/OHMT029-fitness/og-image.jpg",
+  "ogImage": "/templates/OHMT029-fitness/og-image.jpg"
 }

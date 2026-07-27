@@ -49,7 +49,7 @@ export const ProductGrid = () => {
       <div className="max-w-[1440px] mx-auto px-6 md:px-10">
         <div className="text-center mb-16">
           <span className="text-[0.75rem] uppercase tracking-[0.15em] font-bold text-[var(--color-text-muted)] mb-4 block">에센셜 라인</span>
-          <h2 className="text-[1.7rem] md:text-[3rem] font-normal mt-2 leading-[1.1]">스킨케어 에디션</h2>
+          <h2 className="text-[1.7rem] md:text-[3rem] font-normal mt-2 leading-[var(--leading-heading)]">스킨케어 에디션</h2>
         </div>
         
         <motion.div 
@@ -67,7 +67,7 @@ export const ProductGrid = () => {
             >
               <div className="relative overflow-hidden h-[480px]">
                 <img loading="lazy" src={p.img} className="w-full h-full object-cover group-hover:scale-105 transition-all duration-[1s] ease-out" alt={p.name} />
-                <span className={`absolute top-6 left-6 text-[10px] font-semibold tracking-wider px-2.5 py-1 rounded-[2px] backdrop-blur-sm ${getBadgeStyle(p.tag)}`}>
+                <span className={`absolute top-6 left-6 text-xs font-semibold tracking-wider px-2.5 py-1 rounded-[2px] backdrop-blur-sm ${getBadgeStyle(p.tag)}`}>
                   {p.tagLabel}
                 </span>
               </div>

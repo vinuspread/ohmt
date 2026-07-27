@@ -6,6 +6,7 @@ import { Footer } from "../_components/Footer";
 import { blogPosts as allPosts } from "../data/data";
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
+import { ArrowRight } from "lucide-react";
 
 const categories = ["All", "Style Guide", "Brand Story", "Men's Guide"];
 
@@ -65,7 +66,7 @@ function BlogPageContent() {
                         <span>{post.readTime}</span>
                       </div>
                       <span className="inline-block mt-4 text-xs uppercase tracking-[0.2em] text-[var(--color-primary)] font-medium group-hover:opacity-60 transition-opacity">
-                        Read More &rarr;
+                        Read More <ArrowRight size={12} className="inline" />
                       </span>
                     </div>
                   </Link>

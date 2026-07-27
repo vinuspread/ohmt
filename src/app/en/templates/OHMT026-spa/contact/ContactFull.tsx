@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "motion/react";
 import Navbar from "../_components/layout/Navbar";
 import Footer from "../_components/layout/Footer";
 import ContactForm from "../_components/sections/ContactForm";
@@ -29,7 +29,7 @@ export default function ContactFull() {
               className="max-w-2xl"
             >
               <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">Contact</span>
-              <h1 className="mt-4 font-[family-name:var(--font-heading)] text-6xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[1.05]">
+              <h1 className="mt-4 font-[family-name:var(--font-heading)] text-6xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[var(--leading-heading)]">
                 Book your appointment
               </h1>
               <p className="mt-4 text-[0.95rem] text-white/60 leading-relaxed max-w-lg">
@@ -82,3 +82,4 @@ export default function ContactFull() {
     </>
   );
 }
+

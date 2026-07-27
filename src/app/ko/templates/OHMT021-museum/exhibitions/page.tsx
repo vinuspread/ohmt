@@ -2,7 +2,7 @@
 import { Suspense } from "react";
 import React from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { ArrowRight, Calendar, MapPin } from "lucide-react";
 import Header from "../_components/layout/Header";
 import Footer from "../_components/layout/Footer";
@@ -14,18 +14,18 @@ function SpecialExhibitionsContent() {
 
   const specialExhibitionsData = [
   {
-    name: "레오나르도 다 빈치: 신성한 화가",
+    name: "레오나르도 다 빈치: 거장의 시선",
     period: "2026.04.12 - 08.31",
-    venue: "라파엘로 회랑, 메인 갤러리",
-    desc: "거장의 가장 정교한 회화 작품들을 최첨단 인터랙티브 디지털 기술로 복원하여 독창적인 공간에서 선보입니다.",
-    tag: "성기 르네상스"
+    venue: "라파엘로 회랑 · 메인 갤러리",
+    desc: "레오나르도의 회화와 드로잉을 고해상도 이미지와 인터랙티브 콘텐츠로 살펴보는 전시입니다.",
+    tag: "르네상스 전성기"
   },
   {
-    name: "그리스의 눈부심: 고전 조각전",
+    name: "고대 그리스 조각전",
     period: "2026.05.20 - 10.15",
-    venue: "클레멘스 회랑, 조각상 홀",
-    desc: "라오콘 군상부터 아폴로 벨베데레에 이르기까지 고대 그리스 거장들이 대리석에 불어넣은 촉각적 천재성을 압도적인 화질로 만나보세요.",
-    tag: "고전 고대 예술"
+    venue: "클레멘스 회랑 · 조각상 홀",
+    desc: "라오콘 군상과 벨베데레의 아폴론을 중심으로 고대 조각의 비례와 움직임을 살펴봅니다.",
+    tag: "고대 그리스"
   }
 ];
   const specialExhibitions = [
@@ -34,12 +34,12 @@ function SpecialExhibitionsContent() {
   ];
 
   const permanentGalleriesData = [
-  { name: "시스티나 성당", desc: "미켈랑젤로 예술의 절정." },
-  { name: "지도 갤러리", desc: "이탈리아의 지형학적 유산." }
-];
+  { name: "시스티나 성당", desc: "미켈란젤로 예술의 정점을 보여주는 공간." },
+  { name: "지도 갤러리", desc: "이탈리아의 지리와 역사를 담은 회랑." }
+  ];
   const permanentGalleries = [
-    { ...permanentGalleriesData[0], img: "/templates/OHMT021-museum/hero-bg.png" },
-    { ...permanentGalleriesData[1], img: "/templates/OHMT021-museum/vatican-hallway.png" }
+    { ...permanentGalleriesData[0], img: "/templates/OHMT021-museum/permanent-sistine-chapel.webp" },
+    { ...permanentGalleriesData[1], img: "/templates/OHMT021-museum/hero-bg.png" }
   ];
 
   return (
@@ -53,14 +53,14 @@ function SpecialExhibitionsContent() {
       {/* Intro Section */}
       <section className="px-6 md:px-12 mb-20 md:mb-32 lg:mb-40 text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
-          <span className="text-[13px] uppercase font-bold tracking-[0.5em] text-white/40 mb-8 block font-sans">{"현재 진행 중인 전시"}</span>
-          <h2 className="text-5xl md:text-[7vw] font-serif leading-[1.1] tracking-tighter mb-12 break-keep">{"특별 전시."}</h2>
+          <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/40 mb-8 block font-sans">{"현재 전시"}</span>
+          <h2 className="text-5xl md:text-[7vw] font-serif leading-[var(--leading-heading)] tracking-tighter mb-12 break-keep">{"특별 전시"}</h2>
         </motion.div>
       </section>
 
       {/* Poster Style Special Exhibitions */}
       <section className="max-w-[1440px] mx-auto px-6 space-y-20 md:space-y-32 lg:space-y-40 mb-32 md:mb-48 lg:mb-60">
-        {specialExhibitions.map((exhib: any, i: number) => (
+        {specialExhibitions.map((exhib, i: number) => (
           <motion.div 
             key={i}
             initial={{ opacity: 0, scale: 0.98 }}
@@ -85,8 +85,8 @@ function SpecialExhibitionsContent() {
             </motion.div>
             
             <div className={`space-y-6 ${i % 2 === 1 ? 'lg:order-1 lg:text-right' : ''}`}>
-              <span className="text-[12px] uppercase font-bold tracking-[0.6em] text-white/30 block mb-4 font-sans">{exhib.tag}</span>
-              <h3 className="text-4xl md:text-6xl font-serif tracking-tighter leading-[1.1] mb-6 break-keep">{exhib.name}</h3>
+              <span className="text-xs uppercase font-bold tracking-[0.6em] text-white/30 block mb-4 font-sans">{exhib.tag}</span>
+              <h3 className="text-4xl md:text-6xl font-serif tracking-tighter leading-[var(--leading-heading)] mb-6 break-keep">{exhib.name}</h3>
               
               <div className={`flex flex-col gap-3 text-xs font-medium uppercase tracking-normal text-white/40 font-sans ${i % 2 === 1 ? 'lg:items-end' : ''}`}>
                  <div className="flex items-center gap-3"><Calendar size={14} strokeWidth={1.5} /> {exhib.period}</div>
@@ -99,7 +99,7 @@ function SpecialExhibitionsContent() {
 
               <div className={`pt-6 ${i % 2 === 1 ? 'lg:flex lg:justify-end' : ''}`}>
                 <Link href="/ko/templates/OHMT021-museum/collections" className="inline-flex items-center gap-3 text-xs font-medium uppercase tracking-normal group/btn px-8 py-3 border border-white/20 hover:bg-white hover:text-black transition-[color,background]">
-                   {"도록 보기"} <ArrowRight size={13} className="group-hover/btn:translate-x-2 transition-transform" />
+                   {"전시 도록 보기"} <ArrowRight size={13} className="group-hover/btn:translate-x-2 transition-transform" />
                 </Link>
               </div>
             </div>
@@ -111,11 +111,11 @@ function SpecialExhibitionsContent() {
       <section className="py-10 md:py-20 md:py-32 lg:py-40 border-t border-white/5 px-6">
         <div className="max-w-[1440px] mx-auto px-6">
           <div className="mb-20">
-            <span className="text-[13px] uppercase font-bold tracking-[0.5em] text-white/40 block mb-6">{"미술관의 상설 유산"}</span>
-            <h3 className="text-4xl font-serif break-keep">{"상설 컬렉션"}</h3>
+            <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/40 block mb-6">{"언제나 만날 수 있는 작품"}</span>
+            <h3 className="text-4xl font-serif break-keep">{"상설 전시"}</h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-             {permanentGalleries.map((item: any, i: number) => (
+             {permanentGalleries.map((item, i: number) => (
                 <div key={i} className="group cursor-pointer">
                    <div className="aspect-[21/9] overflow-hidden mb-8 bg-white/5 relative">
                       <img loading="lazy" src={item.img} alt={item.name} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-[filter] duration-700 brightness-50 group-hover:brightness-100" />
@@ -137,7 +137,7 @@ function SpecialExhibitionsContent() {
 }
 
 
-export default function SpecialExhibitions(props: any) {
+export default function SpecialExhibitions(props: Record<string, unknown>) {
   return (
     <React.Suspense fallback={null}>
       <SpecialExhibitionsContent {...props} />

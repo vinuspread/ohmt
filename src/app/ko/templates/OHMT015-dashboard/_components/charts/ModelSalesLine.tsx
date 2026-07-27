@@ -1,9 +1,10 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { SafeResponsiveContainer } from './SafeResponsiveContainer'
 import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip,
-  ResponsiveContainer, Legend,
+  motion } from 'framer-motion'
+import {
+  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend
 } from 'recharts'
 import { chartDefaults, formatAxis } from '../../data/chart-theme'
 
@@ -35,7 +36,7 @@ export function ModelSalesLine() {
         <p className="text-sm text-[var(--color-text-muted)] mt-0.5">Monthly unit sales - EV9 · GT7 · X5 · S3</p>
       </div>
       <div style={{ height: 280 }}>
-        <ResponsiveContainer width="100%" height="100%">
+        <SafeResponsiveContainer width="100%" height="100%">
           <LineChart data={modelData}>
             <CartesianGrid {...chartDefaults.cartesianGrid} />
             <XAxis dataKey="month" tick={{ fill: 'var(--color-text-muted)', fontSize: 12 }} axisLine={false} tickLine={false} />
@@ -47,7 +48,7 @@ export function ModelSalesLine() {
             <Line type="linear" dataKey="X5" stroke="var(--color-success)" strokeWidth={2} dot={false} activeDot={{ r: 4 }} isAnimationActive={false} animationDuration={900} animationEasing="ease-in-out" />
             <Line type="linear" dataKey="S3" stroke="var(--color-info)" strokeWidth={2} dot={false} activeDot={{ r: 4 }} isAnimationActive={false} animationDuration={900} animationEasing="ease-in-out" />
           </LineChart>
-        </ResponsiveContainer>
+        </SafeResponsiveContainer>
       </div>
     </motion.div>
   )

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import './theme.css';
 
@@ -15,11 +15,11 @@ const inter = Inter({
 // Noto Serif KR is loaded via @import for Korean character fallback
 
 export const metadata: Metadata = {
-  title: "OHMT - Exhibition Website",
-  description: "Experience the epitome of elegance and durability.",
+  title: "OHMT | 바티칸 미술관 소장품과 전시",
+  description: "바티칸 미술관의 대표 소장품과 전시, 오디오 가이드와 뮤지엄 숍을 소개합니다.",
   openGraph: {
-    title: "OHMT - Exhibition Website",
-    description: "Experience the epitome of elegance and durability.",
+    title: "OHMT | 바티칸 미술관 소장품과 전시",
+    description: "바티칸 미술관의 대표 소장품과 전시, 오디오 가이드와 뮤지엄 숍을 소개합니다.",
     url: "https://ohmytemplate.com/ko/templates/OHMT021-museum",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT021-museum/og-image.jpg", width: 1200, height: 630 }],
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Exhibition Website",
-    description: "Experience the epitome of elegance and durability.",
+    title: "OHMT | 바티칸 미술관 소장품과 전시",
+    description: "바티칸 미술관의 대표 소장품과 전시, 오디오 가이드와 뮤지엄 숍을 소개합니다.",
     images: ["/templates/OHMT021-museum/og-image.jpg"],
   },
   robots: { index: true, follow: true },
@@ -44,17 +44,27 @@ export default function ExhibitionLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Museum",
+    name: "OHMT 미술관",
+    description: "바티칸 미술관의 대표 소장품과 전시, 오디오 가이드와 뮤지엄 숍을 소개합니다.",
+    url: "https://ohmytemplate.com/ko/templates/OHMT021-museum",
+  };
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
         @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
       `}</style>
       <div className={`${playfair.variable} ${inter.variable} font-sans bg-[var(--color-primary)] text-[var(--color-accent)] selection:bg-[var(--color-accent)] selection:text-[var(--color-primary)]`}>
-        {children}
+        <div lang="ko" className="ohmt021-museum">{children}</div>
       </div>
     </>
   );
 }
-

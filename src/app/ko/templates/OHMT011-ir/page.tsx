@@ -43,11 +43,11 @@ function IRTemplateContent() {
                 <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-5">
                   경영진 메시지
                 </span>
-                <h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.1] mb-6">
+                <h2 className="text-[length:var(--text-h3)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[var(--leading-heading)] mb-6">
                   변화하는 시대의 가치 창출
                 </h2>
-                <p className="text-[0.88rem] text-[#6B6B6B] leading-[1.82] mb-8 font-normal">
-                  주주에 대한 우리의 약속은 변함없습니다. 고성장 부문에 집중하고 자본 배분에 있어 규율 있는 접근 방식을 유지함으로써 시장 변동성을 헤쳐 나가고 새로운 기회를 포착할 수 있는 확고한 입지를 구축하고 있습니다.
+                <p className="text-[0.88rem] text-[#6B6B6B] leading-loose mb-8 font-normal">
+                  주주를 향한 우리의 약속은 변함없습니다. 고성장 부문에 집중하고 자본 배분에 규율 있는 원칙을 지켜, 시장 변동성을 헤쳐 나가고 새로운 기회를 포착할 확고한 입지를 다지고 있습니다.
                 </p>
                 <button className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-[var(--color-dark-bg)] hover:translate-x-1.5 transition-all duration-300">
                   CEO 서한 읽기 <span className="text-[1.2em]">→</span>

@@ -2,12 +2,13 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { ArrowRight } from 'lucide-react';
 
 const news = [
-    { date: 'jan 24, 2026', title: '오픈 오피스 공간 레이아웃의 새로운 가능성', image: '/templates/OHMT006-studio/blog-1.jpg' },
-    { date: 'dec 12, 2025', title: '상업 공간에 녹아든 미니멀리즘의 가치', image: '/templates/OHMT006-studio/blog-2.jpg' },
-    { date: 'nov 08, 2025', title: '2026 지속 가능한 공간 마감 및 소재 큐레이션', image: '/templates/OHMT006-studio/blog-3.jpg' },
-    { date: 'oct 21, 2025', title: '조명과 빛이 업무 몰입에 미치는 공간 분석', image: '/templates/OHMT006-studio/blog-4.jpg' },
+    { date: 'jan 24, 2026', title: '오픈 오피스의 소음과 집중 공간을 함께 해결하는 법', image: '/templates/OHMT006-studio/blog-1.jpg' },
+    { date: 'dec 12, 2025', title: '상업 공간에서 장식을 덜어낼 때 확인할 것', image: '/templates/OHMT006-studio/blog-2.jpg' },
+    { date: 'nov 08, 2025', title: '오래 사용하기 좋은 친환경 마감재 고르기', image: '/templates/OHMT006-studio/blog-3.jpg' },
+    { date: 'oct 21, 2025', title: '업무 공간의 조명 밝기와 색온도 정하기', image: '/templates/OHMT006-studio/blog-4.jpg' },
 ];
 
 const listVariants = {
@@ -36,9 +37,9 @@ const rowVariants = {
 
 export function NewsSection() {
     return (
-        <section className="bg-white py-[120px] px-[64px]">
+        <section className="bg-white py-30 px-16">
             {/* Grid Layout */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-[64px] lg:gap-[120px]">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-30">
                 {/* Left Column: Header & Action */}
                 <motion.div
                     initial={{ opacity: 0, y: 40 }}
@@ -47,13 +48,13 @@ export function NewsSection() {
                     viewport={{ once: true, margin: '-50px' }}
                     className="lg:col-span-4 flex flex-col items-start h-full"
                 >
-                    <div className="flex flex-col gap-[32px] mb-[64px]">
-                        <span className="text-[13px] font-normal tracking-[3px] uppercase text-[#090B19] opacity-60">저널</span>
-                        <h2 className="text-[26px] md:text-[48px] leading-[1.1] font-semibold tracking-[-1.44px] text-[#090B19] break-keep">
-                            공간에 관한<br />새로운 기록.
+                    <div className="flex flex-col gap-8 mb-16">
+                        <span className="text-xs font-normal tracking-[3px] uppercase text-[#090B19] opacity-60">저널</span>
+                        <h2 className="text-3xl md:text-5xl leading-[var(--leading-heading)] font-semibold tracking-[-1.44px] text-[#090B19] break-keep">
+                            공간을 설계하고<br />완성하는 과정.
                         </h2>
                     </div>
-                    <a href="#" className="h-[54px] px-[40px] border border-[#090B19] rounded-[100px] flex items-center justify-center text-[13px] font-bold tracking-[3px] uppercase text-[#090B19] hover:bg-[#090B19] hover:text-white transition-colors">
+                    <a href="#" className="h-[54px] px-10 border border-[#090B19] rounded-[100px] flex items-center justify-center text-xs font-bold tracking-[3px] uppercase text-[#090B19] hover:bg-[#090B19] hover:text-white transition-colors">
                         저널 읽기
                     </a>
                 </motion.div>
@@ -73,21 +74,21 @@ export function NewsSection() {
                             whileHover={{ x: 8 }}
                             transition={{ duration: 0.25, ease: [0.23, 1, 0.32, 1] }}
                             href="#"
-                            className="group flex flex-col md:flex-row gap-[32px] justify-between items-start md:items-center py-[48px] border-b border-[#F3F6FC] first:border-t hover:bg-neutral-50 transition-colors duration-200"
+                            className="group flex flex-col md:flex-row gap-8 justify-between items-start md:items-center py-12 border-b border-[#F3F6FC] first:border-t hover:bg-neutral-50 transition-colors duration-200"
                         >
-                            <div className="flex-1 flex flex-col gap-[16px]">
+                            <div className="flex-1 flex flex-col gap-4">
                                 <motion.h3
                                     whileHover={{ x: 4 }}
                                     transition={{ duration: 0.25, ease: [0.23, 1, 0.32, 1] }}
-                                    className="text-[24px] leading-[30px] font-bold tracking-[-0.72px] text-[#090B19] group-hover:opacity-60 transition-opacity"
+                                    className="text-2xl leading-[var(--leading-heading)] font-bold tracking-[-0.72px] text-[#090B19] group-hover:opacity-60 transition-opacity"
                                 >
                                     {item.title}
                                 </motion.h3>
-                                <span className="text-[13px] font-normal tracking-[3px] uppercase text-[#090B19] opacity-40">
+                                <span className="text-xs font-normal tracking-[3px] uppercase text-[#090B19] opacity-40">
                                     {item.date}
                                 </span>
                             </div>
-                            <div className="hidden md:flex items-center gap-[32px]">
+                            <div className="hidden md:flex items-center gap-8">
                                 <motion.div
                                     whileHover={{ scale: 1.05 }}
                                     transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
@@ -104,9 +105,9 @@ export function NewsSection() {
                                     initial={{ opacity: 0, x: -10 }}
                                     whileHover={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.2, ease: [0.23, 1, 0.32, 1] }}
-                                    className="text-[24px] flex-shrink-0"
+                                    className="text-2xl flex-shrink-0 flex items-center justify-center"
                                 >
-                                    →
+                                    <ArrowRight size={24} strokeWidth={1.5} />
                                 </motion.span>
                             </div>
                         </motion.a>

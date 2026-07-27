@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { menuItems } from "../data/data";
+import { formatWon } from "../_utils/currency";
 
 const easeOut = [0.23, 1, 0.32, 1] as const;
 
@@ -37,7 +38,7 @@ export const SignatureMenu = () => {
               <div className="p-6">
                 <div className="flex items-center justify-between mb-2">
                   <h3 className="text-lg font-bold">{item.name}</h3>
-                  <span className="text-lg font-bold text-[var(--color-accent)]">${item.price}</span>
+                  <span className="text-lg font-bold text-[var(--color-accent)]">{formatWon(item.price)}</span>
                 </div>
                 <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">{item.description}</p>
                 {item.calories && (

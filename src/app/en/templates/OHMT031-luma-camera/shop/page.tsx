@@ -65,46 +65,42 @@ export default function ShopPage() {
   return (
     <LumaChrome>
       <main className="overflow-hidden pt-16">
-        <section className="px-4 py-16 md:px-8 md:py-24">
-          <div className="mx-auto flex max-w-[1380px] flex-col justify-between gap-8 md:flex-row md:items-end">
+        <section className="px-4 py-16 md:px-9 md:py-24">
+          <div className="mx-auto flex max-w-[1380px] flex-col justify-between gap-9 md:flex-row md:items-end">
             <div>
               <Sparkles size={28} strokeWidth={1.5} />
-              <h1 className="mt-6 max-w-4xl text-[clamp(2.35rem,5vw,5.4rem)] font-bold leading-[1.02] tracking-[-0.04em]">
+              <h1 className="luma-h1 mt-6 max-w-4xl">
                 Choose the camera that stays out of the way.
               </h1>
             </div>
-            <p className="max-w-sm text-lg leading-8 text-[var(--luma-muted)]">
+            <p className="luma-body max-w-sm">
               Two compact bodies, one quiet system. Pick the version that fits the way you move and make.
             </p>
           </div>
         </section>
 
-        <section className="px-4 pb-24 md:px-8 md:pb-32">
+        <section className="px-4 pb-24 md:px-9 md:pb-32">
           <div className="mx-auto grid max-w-[1380px] gap-4 md:grid-cols-2">
             {products.map((product) => (
-              <article key={product.name} className="bg-white/55">
+              <article key={product.name} className="luma-card !p-0 overflow-hidden">
                 <div className="relative aspect-[4/3] overflow-hidden bg-[var(--luma-soft)]">
                   <Image unoptimized src={product.image} alt={`${product.name} camera`} fill className="object-cover" sizes="(min-width: 768px) 50vw, 100vw" />
                 </div>
-                <div className="p-7 md:p-8">
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--luma-muted)]">{product.spec}</p>
-                      <h2 className="mt-3 text-2xl font-semibold tracking-[-0.035em] md:text-3xl">{product.name}</h2>
-                      <p className="mt-2 text-sm text-[var(--luma-muted)]">{product.note}</p>
-                    </div>
-                    <p className="text-xl font-semibold tracking-[-0.035em]">{product.price}</p>
-                  </div>
-                  <p className="mt-7 text-sm leading-6 text-[var(--luma-muted)]">{product.bestFor}</p>
-                  <div className="mt-8 grid gap-2 text-sm text-[var(--luma-muted)]">
+                <div className="p-6 md:p-9">
+                  <p className="luma-label text-[var(--luma-muted)]">{product.spec}</p>
+                  <h2 className="mt-3 text-2xl font-bold tracking-[-0.035em]">{product.name}</h2>
+                  <p className="mt-2 text-sm text-[var(--luma-muted)]">{product.note}</p>
+                  <p className="mt-3 text-lg font-bold tracking-[-0.035em]">{product.price}</p>
+                  <p className="mt-6 text-sm leading-6 text-[var(--luma-muted)]">{product.bestFor}</p>
+                  <div className="mt-9 grid gap-2 text-sm text-[var(--luma-muted)]">
                     {product.details.map((detail) => (
                       <div key={detail} className="flex items-center gap-3 bg-[var(--luma-soft)] px-4 py-3">
-                        <Check size={15} strokeWidth={1.8} className="text-[var(--luma-lime)]" />
+                        <Check size={16} strokeWidth={1.8} className="text-[var(--luma-accent)]" />
                         <span className="font-semibold text-[var(--luma-ink)]">{detail}</span>
                       </div>
                     ))}
                   </div>
-                  <button className="mt-8 inline-flex items-center gap-2 bg-[var(--luma-dark)] px-6 py-3 text-sm font-bold text-white">
+                  <button className="mt-9 inline-flex items-center gap-2 bg-[var(--luma-dark)] px-6 py-3 text-sm font-bold text-white">
                     Reserve {product.name} <ArrowRight size={16} />
                   </button>
                 </div>
@@ -113,15 +109,15 @@ export default function ShopPage() {
           </div>
         </section>
 
-        <section className="px-4 pb-24 md:px-8 md:pb-32">
-          <div className="mx-auto grid max-w-[1380px] gap-12 lg:grid-cols-[0.86fr_1.14fr]">
+        <section className="px-4 pb-24 md:px-9 md:pb-32">
+          <div className="mx-auto grid max-w-[1380px] gap-12 lg:grid-cols-2">
             <div>
-              <h2 className="text-[clamp(1.8rem,3vw,3.35rem)] font-bold leading-[1.08] tracking-[-0.035em]">A simple choice, based on how often you stage the shot.</h2>
+              <h2 className="luma-h2">A simple choice, based on how often you stage the shot.</h2>
             </div>
             <div className="grid gap-4">
               {guide.map((item) => (
-                <article key={item.title} className="bg-white/55 p-7 md:p-8">
-                  <h3 className="text-2xl font-semibold tracking-[-0.04em]">{item.title}</h3>
+                <article key={item.title} className="luma-card">
+                  <h3 className="luma-h3">{item.title}</h3>
                   <p className="mt-3 text-sm leading-6 text-[var(--luma-muted)]">{item.text}</p>
                 </article>
               ))}
@@ -129,18 +125,18 @@ export default function ShopPage() {
           </div>
         </section>
 
-        <section className="px-4 pb-24 md:px-8 md:pb-32">
-          <div className="mx-auto grid max-w-[1380px] gap-4 lg:grid-cols-[1.1fr_0.9fr]">
+        <section className="px-4 pb-24 md:px-9 md:pb-32">
+          <div className="mx-auto grid max-w-[1380px] gap-4 lg:grid-cols-2">
             <div className="relative min-h-[460px] overflow-hidden">
               <Image unoptimized src="/templates/OHMT031-luma-camera/product-pro.jpg?v=20260702e" alt="LUMA One Pro body detail on a fabric surface" fill className="object-cover" sizes="(min-width: 1024px) 55vw, 100vw" />
             </div>
-            <div className="bg-[var(--luma-dark)] p-8 text-white md:p-10">
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-white/50">Included</p>
-              <h2 className="mt-5 text-3xl font-semibold leading-[1.08] tracking-[-0.035em]">Enough kit for the first week, nothing extra.</h2>
-              <div className="mt-8 grid gap-4">
+            <div className="luma-card-dark">
+              <p className="luma-label text-white/60">Included</p>
+              <h2 className="luma-h2-sm mt-4">Enough kit for the first week, nothing extra.</h2>
+              <div className="mt-9 grid gap-4">
                 {kit.map((item) => (
                   <div key={item} className="flex items-start gap-3">
-                    <Check size={16} strokeWidth={1.8} className="mt-1 text-[var(--luma-lime)]" />
+                    <Check size={16} strokeWidth={1.8} className="mt-1 text-[var(--luma-accent)]" />
                     <p className="text-sm leading-6 text-white/70">{item}</p>
                   </div>
                 ))}
@@ -149,12 +145,12 @@ export default function ShopPage() {
           </div>
         </section>
 
-        <section className="px-4 pb-24 md:px-8 md:pb-32">
-          <div className="mx-auto grid max-w-[1380px] gap-4 lg:grid-cols-[0.8fr_1.2fr]">
-            <div className="bg-white/55 p-8 md:p-10">
-              <h2 className="text-3xl font-semibold leading-[1.08] tracking-[-0.035em]">Not sure yet?</h2>
-              <p className="mt-5 text-sm leading-6 text-[var(--luma-muted)]">Start with the scenes you actually shoot, then choose the body that fits them.</p>
-              <Link href="/en/templates/OHMT031-luma-camera/scenes" className="mt-8 inline-flex items-center gap-2 bg-[var(--luma-dark)] px-6 py-3 text-sm font-bold text-white">
+        <section className="px-4 pb-24 md:px-9 md:pb-32">
+          <div className="mx-auto grid max-w-[1380px] gap-4 lg:grid-cols-2">
+            <div className="luma-card">
+              <h2 className="luma-h2-sm">Not sure yet?</h2>
+              <p className="mt-4 text-sm leading-6 text-[var(--luma-muted)]">Start with the scenes you actually shoot, then choose the body that fits them.</p>
+              <Link href="/en/templates/OHMT031-luma-camera/scenes" className="mt-9 inline-flex items-center gap-2 bg-[var(--luma-dark)] px-6 py-3 text-sm font-bold text-white">
                 Compare scenes <ArrowRight size={16} />
               </Link>
             </div>
@@ -164,12 +160,12 @@ export default function ShopPage() {
           </div>
         </section>
 
-        <section className="px-4 pb-24 md:px-8 md:pb-32">
+        <section className="px-4 pb-24 md:px-9 md:pb-32">
           <div className="mx-auto grid max-w-[1380px] gap-4 md:grid-cols-3">
             {questions.map((item) => (
-              <article key={item.q} className="bg-white/55 p-7 md:p-8">
-                <h3 className="text-xl font-semibold tracking-[-0.035em]">{item.q}</h3>
-                <p className="mt-4 text-sm leading-6 text-[var(--luma-muted)]">{item.a}</p>
+              <article key={item.q} className="luma-card">
+                <h3 className="luma-h3">{item.q}</h3>
+                <p className="mt-3 text-sm leading-6 text-[var(--luma-muted)]">{item.a}</p>
               </article>
             ))}
           </div>

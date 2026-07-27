@@ -2,9 +2,8 @@
 "use client";
 
 import React from "react";
-import { useSearchParams } from "next/navigation";
+import { ArrowRight } from "lucide-react";
 export const Hero = () => {
-  const searchParams = useSearchParams();
   const t = {
   "nav": {
     "models": `Models`,
@@ -63,14 +62,14 @@ return (
       </video>
       <div className="absolute inset-0 bg-[linear-gradient(105deg,rgba(10,10,10,0.75)_0%,rgba(10,10,10,0.2)_60%,transparent_100%)]"></div>
       
-      <div className="absolute bottom-[42vh] left-0 right-0 max-w-[var(--theme-container)] mx-auto px-6 md:px-[var(--theme-gutter)]">
+      <div className="absolute top-[52%] -translate-y-1/2 left-0 right-0 max-w-[var(--theme-container)] mx-auto px-6 md:px-[var(--theme-gutter)] w-full">
         <span className="block text-[0.65rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-[1.2rem]">
           {t.hero.badge}
         </span>
-        <h1 className="text-[clamp(3.5rem,6.5vw,7rem)] font-bold tracking-[-0.03em] leading-[1.2] mb-[1.8rem] max-w-[1000px] text-white">
-          The electric car<br />Era is <span className="text-[var(--theme-accent)]/80">upon us.</span>
+        <h1 className="text-[length:var(--text-display)] font-bold tracking-[-0.03em] leading-[var(--leading-heading)] mb-[1.8rem] max-w-[1000px] text-white break-words">
+          The electric<br />car Era is<br /><span className="text-[var(--theme-accent)]/80">upon us.</span>
         </h1>
-        <p className="text-[1.05rem] text-[var(--theme-text-muted)] leading-[1.6] max-w-[440px] mb-[2.5rem] font-normal">
+        <p className="text-[1.05rem] text-[var(--theme-text-muted)] leading-[var(--leading-body)] max-w-[440px] mb-[2.5rem] font-normal">
           {t.hero.desc}
         </p>
         
@@ -79,7 +78,7 @@ return (
             {t.hero.explore}
           </button>
           <button className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-white hover:gap-4 transition-all duration-300">
-            {t.hero.allModels} <span className="text-[1.2em] transition-transform duration-300">→</span>
+            {t.hero.allModels} <ArrowRight size={16} className="transition-transform duration-300" />
           </button>
         </div>
         

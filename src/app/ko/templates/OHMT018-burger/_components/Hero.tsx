@@ -28,7 +28,7 @@ export const Hero = () => {
           EST. 2020 &middot; CRAFT BURGER
         </motion.p>
         <motion.h1
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[1.1] tracking-[-0.04em]"
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-[var(--leading-heading)] tracking-[-0.04em]"
           style={{ textWrap: "balance" } as React.CSSProperties}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}

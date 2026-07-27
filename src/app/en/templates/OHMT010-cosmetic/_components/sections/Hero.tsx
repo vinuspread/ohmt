@@ -66,7 +66,7 @@ return (
       <div className="max-w-[1440px] mx-auto px-6 md:px-10">
         <div className="flex flex-col md:flex-row justify-between items-center py-12 mt-20 gap-16">
           <div className="flex-1 max-w-[860px]">
-            <h1 className="text-[22px] md:text-[36px] md:text-[56px] font-normal leading-[1.0] mb-12 [text-wrap:balance] break-keep [overflow-wrap:normal]">
+            <h1 className="text-2xl md:text-4xl md:text-6xl font-normal leading-[var(--leading-display)] mb-12 [text-wrap:balance] break-keep [overflow-wrap:normal]">
               {`${t.hero.title1} ${t.hero.title2} ${t.hero.title3}`}
             </h1>
             <div className="flex gap-5">

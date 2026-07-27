@@ -13,11 +13,11 @@ export const Header = () => {
   const t = {
   "nav": {
     "book": `예약`,
-    "experience": `익스피리언스`,
+    "experience": `기내 경험`,
     "destinations": `취항지`,
-    "loyalty": `로열티`,
+    "loyalty": `멤버십`,
     "login": `로그인`,
-    "bookTrip": `여정 예약`
+    "bookTrip": `항공권 예약`
   }
 };
 const navItems = [
@@ -125,7 +125,7 @@ const navItems = [
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 top-[72px] z-[840] bg-black/60 lg:hidden"
+            className="fixed inset-0 top-16 z-[840] bg-black/60 lg:hidden"
             onClick={() => setMobileOpen(false)}
           />
         )}
@@ -133,7 +133,7 @@ const navItems = [
 
       {/* Mobile drawer */}
       <div className={clsx(
-        "fixed top-[72px] left-0 right-0 z-[850] bg-[var(--color-primary)] border-t border-white/10 transition-[max-height,opacity] duration-[var(--transition-base)] lg:hidden overflow-hidden",
+        "fixed top-16 left-0 right-0 z-[850] bg-[var(--color-primary)] border-t border-white/10 transition-[max-height,opacity] duration-[var(--transition-base)] lg:hidden overflow-hidden",
         mobileOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
       )}>
         <div className="flex flex-col px-6 py-8 gap-1">

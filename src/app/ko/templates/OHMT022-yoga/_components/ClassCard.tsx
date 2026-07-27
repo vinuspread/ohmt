@@ -22,25 +22,25 @@ export default function ClassCard({ yogaClass, textClassName = "px-6 py-8" }: Cl
 
       <div className={`${textClassName} bg-[var(--color-bg)]`}>
         <p
-          className="text-[11px] tracking-[0.08em] uppercase text-[var(--color-text-muted)] mb-3"
+          className="text-xs tracking-[0.08em] uppercase text-[var(--color-text-muted)] mb-3"
           style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
         >
           {yogaClass.level} · {yogaClass.duration}
         </p>
         <h3
-          className="text-[18px] font-normal text-[var(--color-text)] leading-[1.2] tracking-[-0.01em]"
+          className="text-lg font-normal text-[var(--color-text)] leading-[var(--leading-heading)] tracking-[-0.01em]"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           {yogaClass.name}
         </h3>
         <p
-          className="mt-3 text-[15px] text-[var(--color-text-muted)] leading-[1.75]"
+          className="mt-3 text-sm text-[var(--color-text-muted)] leading-loose"
           style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
         >
           {yogaClass.description}
         </p>
         <span
-          className="inline-block mt-5 text-[11px] tracking-[0.08em] uppercase text-[var(--color-text)] font-medium border-b border-[var(--color-text)] pb-0.5 group-hover:opacity-60 transition-opacity"
+          className="inline-block mt-5 text-xs tracking-[0.08em] uppercase text-[var(--color-text)] font-medium border-b border-[var(--color-text)] pb-0.5 group-hover:opacity-60 transition-opacity"
           style={{ fontFamily: "var(--font-body)" }}
         >
           자세히 보기 &rarr;

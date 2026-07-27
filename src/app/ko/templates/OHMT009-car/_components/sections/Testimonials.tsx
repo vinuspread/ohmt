@@ -31,12 +31,12 @@ export const Testimonials = () => {
           </span>
         </div>
         
-         <div className="grid md:grid-cols-3 gap-[1px] bg-[var(--theme-border)] overflow-hidden">
+         <div className="grid md:grid-cols-3 gap-px bg-[var(--theme-border)] overflow-hidden">
            {testimonials.map((t) => (
              <div key={t.name} className="bg-black px-6 py-6 md:p-10 flex flex-col justify-between gap-4 md:gap-6">
                <div>
                  <div className="text-[0.65rem] tracking-[0.2em] text-[var(--theme-accent)] mb-5">★★★★★</div>
-                 <p className="text-[0.88rem] text-white/65 leading-[1.75] font-normal mb-3 break-keep">
+                 <p className="text-[0.88rem] text-white/65 leading-loose font-normal mb-3 break-keep">
                    {t.text}
                  </p>
                </div>

@@ -23,10 +23,10 @@ export const Features = () => {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.55, ease }}
           >
-            <p className="text-[11px] uppercase tracking-[0.2em] text-[var(--color-text-muted)] font-semibold border-b border-[var(--color-text-muted)]/30 pb-2 inline-block mb-6">
+            <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-text-muted)] font-semibold border-b border-[var(--color-text-muted)]/30 pb-2 inline-block mb-6">
               Who We Are
             </p>
-            <p className="font-heading text-[var(--color-text)] text-2xl md:text-[1.85rem] font-bold leading-[1.22] mb-5 max-w-[22ch]">
+            <p className="font-heading text-[var(--color-text)] text-2xl md:text-[1.85rem] font-bold leading-[var(--leading-heading)] mb-5 max-w-[22ch]">
               Every guest deserves to leave<br className="hidden md:block" /> better than they arrived.
             </p>
             <p className="text-[var(--color-text-muted)] text-base leading-relaxed mb-12 max-w-[40ch]">
@@ -41,10 +41,10 @@ export const Features = () => {
                   whileHover={{ scale: 1.06, borderColor: "rgba(17,17,24,0.7)" }}
                   transition={{ duration: 0.25, ease: "easeOut" }}
                 >
-                  <span className="text-[9px] md:text-[12px] font-bold text-[var(--color-text)] uppercase leading-tight">
+                  <span className="text-xs md:text-xs font-bold text-[var(--color-text)] uppercase leading-tight">
                     {b.top}<br />{b.bottom}
                   </span>
-                  <span className="text-[8px] md:text-[10px] text-[var(--color-text-muted)] leading-tight">{b.sub}</span>
+                  <span className="text-xs md:text-xs text-[var(--color-text-muted)] leading-tight">{b.sub}</span>
                 </motion.div>
               ))}
             </div>
@@ -66,8 +66,8 @@ export const Features = () => {
               />
             </div>
             <div className="absolute bottom-0 right-0 bg-[var(--color-bg-dark)] text-white p-6 w-[200px]">
-              <p className="text-[9px] uppercase tracking-[0.2em] text-white/45 mb-2">Our Mission</p>
-              <p className="text-[15px] leading-relaxed text-white/75">
+              <p className="text-xs uppercase tracking-[0.2em] text-white/45 mb-2">Our Mission</p>
+              <p className="text-sm leading-relaxed text-white/75">
                 To serve coffee as an experience - not a transaction.
               </p>
             </div>

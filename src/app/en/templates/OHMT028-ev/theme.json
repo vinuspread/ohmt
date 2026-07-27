@@ -3,8 +3,6 @@
   "name": "EV Concept",
   "name_ko": "전기차 컨셉",
   "category": "retail",
-  "description": "An electric vehicle brand template with cinematic product sections, performance storytelling, specification pages, and an immersive configuration flow.",
-  "description_ko": "시네마틱 제품 섹션, 퍼포먼스 스토리, 사양 페이지, 몰입형 구성 흐름을 갖춘 전기차 브랜드 템플릿.",
   "mode": "dark",
   "theme": {
     "palette": {
@@ -34,6 +32,14 @@
         "weight": "400",
         "leading": "1.6",
         "style": "leading-relaxed"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
       }
     },
     "spacing": {
@@ -52,5 +58,7 @@
       "button": "bg-[var(--accent)] text-[var(--text-on-accent)] hover:brightness-110",
       "card_hover": "hover:scale-[1.02] transition-transform"
     }
-  }
+  },
+  "thumbnail": "/templates/OHMT028-ev/og-image.jpg",
+  "ogImage": "/templates/OHMT028-ev/og-image.jpg"
 }

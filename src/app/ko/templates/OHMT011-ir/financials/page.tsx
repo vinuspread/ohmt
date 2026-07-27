@@ -10,16 +10,16 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 const quarterlyData = [
-  { period: "Q1 2026", revenue: "$14,632M", netIncome: "$2,847M", eps: "$4.21", margin: "19.5%" },
-  { period: "Q4 2025", revenue: "$13,891M", netIncome: "$2,511M", eps: "$3.72", margin: "18.1%" },
-  { period: "Q3 2025", revenue: "$13,245M", netIncome: "$2,308M", eps: "$3.43", margin: "17.4%" },
-  { period: "Q2 2025", revenue: "$12,978M", netIncome: "$2,194M", eps: "$3.26", margin: "16.9%" },
-  { period: "Q1 2025", revenue: "$12,420M", netIncome: "$2,043M", eps: "$3.04", margin: "16.4%" },
+  { period: "Q1 2026", revenue: "20조 4,848억 원", netIncome: "3조 9,858억 원", eps: "5,894원", margin: "19.5%" },
+  { period: "Q4 2025", revenue: "19조 4,474억 원", netIncome: "3조 5,154억 원", eps: "5,208원", margin: "18.1%" },
+  { period: "Q3 2025", revenue: "18조 5,430억 원", netIncome: "3조 2,312억 원", eps: "4,802원", margin: "17.4%" },
+  { period: "Q2 2025", revenue: "18조 1,692억 원", netIncome: "3조 716억 원", eps: "4,564원", margin: "16.9%" },
+  { period: "Q1 2025", revenue: "17조 3,880억 원", netIncome: "2조 8,602억 원", eps: "4,256원", margin: "16.4%" },
 ];
 
 const metricsCards = [
-  { label: "시가총액", value: "$287.6B", change: "+12.3%" },
-  { label: "기업 가치", value: "$312.4B", change: "+9.8%" },
+  { label: "시가총액", value: "402조 6,400억 원", change: "+12.3%" },
+  { label: "기업 가치", value: "437조 3,600억 원", change: "+9.8%" },
   { label: "PER", value: "24.8x", change: "-" },
   { label: "배당 수익률", value: "2.40%", change: "+0.05pp" },
 ];
@@ -55,11 +55,11 @@ function IRFinancialsContent() {
                 <div className="w-6 h-[1px] bg-[var(--color-accent)]" />
                 재무 실적
               </div>
-              <h1 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold tracking-tight leading-[1.1] mb-6">
+              <h1 className="text-[length:var(--text-h1)] font-bold tracking-tight leading-[var(--leading-heading)] mb-6">
                 재무 정보
               </h1>
-              <p className="text-[0.9rem] text-white/55 leading-[1.8] max-w-[520px] font-normal">
-                재무 실적, 분기별 결과 및 주요 지표에 대한 종합적인 개요를 제공합니다.
+              <p className="text-[0.9rem] text-white/55 leading-loose max-w-[520px] font-normal">
+                재무 실적, 분기별 결과와 주요 지표를 한눈에 확인할 수 있습니다.
               </p>
             </div>
           </div>
@@ -77,7 +77,7 @@ function IRFinancialsContent() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {metricsCards.map((card) => (
                 <div key={card.label} className="text-center">
-                  <span className="block text-[clamp(1.6rem,2.2vw,2.2rem)] font-bold text-[var(--color-dark-bg)] mb-1.5">{card.value}</span>
+                  <span className="block text-[length:var(--text-h3)] font-bold text-[var(--color-dark-bg)] mb-1.5">{card.value}</span>
                   <span className="block text-[0.62rem] font-bold uppercase tracking-[0.12em] text-[#6B6B6B] mb-1.5">{card.label}</span>
                   {card.change !== "-" && (
                     <span className="text-[0.72rem] text-green-600 font-medium">{card.change}</span>
@@ -101,10 +101,10 @@ function IRFinancialsContent() {
               <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-5">
                 분기별 실적
               </span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.1] mb-6">
+              <h2 className="text-[length:var(--text-h3)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[var(--leading-heading)] mb-6">
                 실적 요약
               </h2>
-              <p className="text-[0.88rem] text-[#6B6B6B] leading-[1.82] font-normal">
+              <p className="text-[0.88rem] text-[#6B6B6B] leading-loose font-normal">
                 모든 재무 수치는 미국 GAAP 기준에 따라 보고되며 Deloitte & Touche LLP의 감사를 받았습니다.
               </p>
             </div>
@@ -160,10 +160,10 @@ function IRFinancialsContent() {
             <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-5">
               연례 보고서
             </span>
-<h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-tight leading-[1.1] mb-6">
+<h2 className="text-[length:var(--text-h3)] font-bold tracking-tight leading-[var(--leading-heading)] mb-6">
                2025 연례 보고서
             </h2>
-            <p className="text-[0.88rem] text-white/55 leading-[1.82] max-w-[520px] mx-auto mb-10 font-normal">
+            <p className="text-[0.88rem] text-white/55 leading-loose max-w-[520px] mx-auto mb-10 font-normal">
               경영진 논평, 감사 재무제표 및 미래 전망 가이던스를 포함한 종합적인 연례 보고서를 확인하세요.
             </p>
             <div className="flex justify-center gap-4">

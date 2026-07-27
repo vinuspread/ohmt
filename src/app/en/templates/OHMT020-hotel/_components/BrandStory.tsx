@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 const EASE = [0.23, 1, 0.32, 1] as const;
 
@@ -41,10 +41,10 @@ export const BrandStory = () => {
             whileInView="show"
             viewport={{ once: true, margin: "-80px" }}
           >
-            <motion.span variants={textItem} className="text-[11px] md:text-[12px] font-medium text-[var(--color-accent)] uppercase tracking-[0.25em] block mb-6 md:mb-8">
+            <motion.span variants={textItem} className="text-xs md:text-xs font-medium text-[var(--color-accent)] uppercase tracking-[0.25em] block mb-6 md:mb-8">
               Our Story
             </motion.span>
-            <motion.h2 variants={textItem} className="text-[clamp(1.8rem,4vw,3.5rem)] font-[var(--font-heading)] font-bold text-[var(--color-primary)] leading-[1.15] mb-6 md:mb-8">
+            <motion.h2 variants={textItem} className="text-[length:var(--text-h2)] font-[var(--font-heading)] font-bold text-[var(--color-primary)] leading-[var(--leading-heading)] mb-6 md:mb-8">
               A Sanctuary <br />Carved by Nature.
             </motion.h2>
             <motion.div

@@ -44,7 +44,7 @@ export default function DocsHomePage() {
               <div className="w-12 h-12 rounded-xl bg-[var(--color-accent-light)] flex items-center justify-center mb-4">
                 <BookOpen size={24} className="text-[var(--color-accent)]" />
               </div>
-              <h1 className="text-4xl font-bold text-[var(--color-text)] leading-[1.1] mb-3" style={{ fontFamily: "var(--font-heading)" }}>
+              <h1 className="text-4xl font-bold text-[var(--color-text)] leading-[var(--leading-heading)] mb-3" style={{ fontFamily: "var(--font-heading)" }}>
                 문서 워크스페이스
               </h1>
               <p className="text-base text-[var(--color-text-muted)] leading-relaxed max-w-xl">

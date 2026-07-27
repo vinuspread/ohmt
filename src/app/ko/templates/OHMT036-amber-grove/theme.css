@@ -1,0 +1,45 @@
+@import url('../../../en/templates/OHMT036-amber-grove/theme.css');
+
+:root {
+  --text-display: clamp(3rem, 7vw, 5.5rem);
+  --text-h1: clamp(2.5rem, 5vw, 4rem);
+  --text-h2: clamp(2rem, 4vw, 3rem);
+  --text-h3: clamp(1.5rem, 3vw, 2rem);
+  --text-lead: clamp(1.125rem, 2vw, 1.5rem);
+  --leading-display: 0.95;
+  --leading-heading: 1.1;
+  --leading-body: 1.6;
+
+  --font-heading: 'Noto Serif KR', 'Newsreader', serif;
+  --font-body: 'Pretendard Variable', Pretendard, 'Work Sans', system-ui, sans-serif;
+}
+
+body {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  word-break: keep-all;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+
+.ohmt036-amber-grove .copy-heading {
+  white-space: pre-line;
+  text-wrap: balance;
+}
+
+.ohmt036-amber-grove .copy-body {
+  white-space: pre-line;
+  text-wrap: pretty;
+}
+
+.ohmt036-amber-grove p,
+.ohmt036-amber-grove blockquote,
+.ohmt036-amber-grove li {
+  overflow-wrap: break-word;
+}

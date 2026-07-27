@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import ContactForm from "../_components/sections/ContactForm";
 import Navbar from "../_components/layout/Navbar";
 import Footer from "../_components/layout/Footer";
@@ -20,9 +20,9 @@ export default function ContactFull() {
                   alt="Wedding ceremony"
                   className="h-full w-full object-cover"
                 />
-                <div className="absolute inset-0 bg-[#1A1816]/30" />
+                <div className="absolute inset-0 bg-[var(--color-overlay)]/30" />
                 <div className="absolute bottom-12 left-12 right-12">
-                  <p className="font-[family-name:var(--font-heading)] text-4xl font-light normal-case text-white leading-[1.1]">
+                  <p className="font-[family-name:var(--font-heading)] text-4xl font-light normal-case text-white leading-[var(--leading-heading)]">
                     Every love story deserves to be told beautifully.
                   </p>
                 </div>
@@ -51,3 +51,4 @@ export default function ContactFull() {
 function NavSpacer() {
   return <div className="h-[72px]" />;
 }
+

@@ -20,7 +20,7 @@ export const ReviewToggle: React.FC = () => {
         <MousePointer2 size={20} />
       </div>
       <span className="font-bold text-sm">
-        {isReviewMode ? '리뷰 닫기' : '리뷰 모드'}
+        {isReviewMode ? '검토 모드 닫기' : '검토 모드'}
       </span>
       <Settings2 size={16} className={isReviewMode ? 'animate-spin-slow' : ''} />
     </button>

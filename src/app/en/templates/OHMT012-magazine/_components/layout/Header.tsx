@@ -5,15 +5,25 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { clsx } from "clsx";
 import { Menu, X } from "lucide-react";
-export const Header = ({ light, t }: { light?: boolean; t: any }) => {
+
+interface MagazineT {
+  nav: { stories: string; archive: string; issues: string; about: string; subscribe: string };
+  hero: { badge: string; title1: string; title2: string; desc: string; cta: string; cta2: string; bannerTitle: string; issueBadge: string; issueNumber: string; bannerBadge: string; issueTopics: Array<{ tag: string; title: string }> };
+  featuredGrid: { label: string; items: Array<{ tag: string; title: string; desc: string }> };
+  editorsPicks: { label: string; items: Array<{ title: string; desc: string }> };
+  latestStories: { label: string; mostRead: string; stories: Array<{ tag: string; title: string; desc: string }>; mostReadItems: string[] };
+  newsletter: { label: string; title: string; desc: string; placeholder: string; submit: string };
+}
+
+export const Header = ({ light, t }: { light?: boolean; t: { nav: MagazineT['nav'] } }) => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navItems = [
-    { label: t.nav.stories, href: "#" },
-    { label: t.nav.archive, href: "#" },
-    { label: t.nav.issues, href: "#" },
-    { label: t.nav.about, href: "#" }
+    { label: t.nav.stories, href: "/en/templates/OHMT012-magazine" },
+    { label: t.nav.archive, href: "/en/templates/OHMT012-magazine/archive" },
+    { label: t.nav.issues, href: "/en/templates/OHMT012-magazine/issues" },
+    { label: t.nav.about, href: "/en/templates/OHMT012-magazine/about" }
   ];
 
   useEffect(() => {
@@ -46,7 +56,7 @@ export const Header = ({ light, t }: { light?: boolean; t: any }) => {
             {navItems.map((item) => (
               <Link
                 key={item.label}
-                href="#"
+                href={item.href}
                 className={clsx(
                   "text-[0.72rem] font-bold uppercase tracking-[0.12em] transition-all duration-300 hover:opacity-100",
                   scrolled ? "text-[var(--theme-text-muted)] hover:text-[var(--theme-text)]" : "text-white/85 hover:text-white"
@@ -83,21 +93,21 @@ export const Header = ({ light, t }: { light?: boolean; t: any }) => {
       {/* Mobile backdrop */}
       {mobileOpen && (
         <div
-          className="fixed inset-0 top-[52px] z-[190] bg-black/40 md:hidden"
+          className="fixed inset-0 top-12 z-[190] bg-black/40 md:hidden"
           onClick={() => setMobileOpen(false)}
         />
       )}
 
       {/* Mobile drawer */}
       <div className={clsx(
-        "fixed top-[52px] left-0 right-0 z-[195] bg-[var(--color-bg)] border-t border-[var(--theme-border)] transition-all duration-300 md:hidden overflow-hidden",
+        "fixed top-12 left-0 right-0 z-[195] bg-[var(--color-bg)] border-t border-[var(--theme-border)] transition-all duration-300 md:hidden overflow-hidden",
         mobileOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
       )}>
         <div className="flex flex-col px-6 py-6 gap-1">
           {navItems.map((item) => (
             <Link
               key={item.label}
-              href="#"
+              href={item.href}
               onClick={() => setMobileOpen(false)}
               className="text-[0.9rem] font-bold uppercase tracking-[0.14em] text-[var(--theme-text-muted)] hover:text-[var(--theme-text)] py-4 border-b border-[var(--theme-border)] transition-colors"
             >

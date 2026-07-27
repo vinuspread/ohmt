@@ -27,7 +27,7 @@ export function DashboardLayout({
         <Header title={title} collapsed={collapsed} onMenuClick={() => setMobileOpen(true)} />
         <main
           className={`pt-16 min-h-screen transition-all duration-300 ease-in-out max-lg:pl-0 ${
-            collapsed ? 'pl-[56px]' : 'pl-[220px]'
+            collapsed ? 'pl-14' : 'pl-56'
           }`}
         >
           <div className="p-4 lg:p-6">{children}</div>

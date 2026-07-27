@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './theme.css'
 
@@ -21,8 +21,24 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'OHMT - 대시보드',
+  title: 'OHMT - ?? ??? ?? ????? ???',
   description: 'OHMT 비즈니스 분석 대시보드 템플릿',
+  openGraph: {
+    title: 'OHMT - ?? ??? ?? ????? ???',
+    description: 'OHMT 비즈니스 분석 대시보드 템플릿',
+    url: 'https://ohmytemplate.com/ko/templates/OHMT015-dashboard',
+    siteName: 'OHMT',
+    images: [{ url: '/templates/OHMT015-dashboard/og-image.jpg', width: 1200, height: 630 }],
+    locale: 'ko_KR',
+    alternateLocale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'OHMT - ?? ??? ?? ????? ???',
+    description: 'OHMT 비즈니스 분석 대시보드 템플릿',
+    images: ['/templates/OHMT015-dashboard/og-image.jpg'],
+  },
 }
 
 export default function DashboardRootLayout({
@@ -32,11 +48,10 @@ export default function DashboardRootLayout({
 }) {
   return (
     <section className={`${geist.variable} ${geistBody.variable} ${geistMono.variable}`} data-theme="dark">
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap');
-      `}</style>
-      <div className="-ko">{children}</div>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" crossOrigin="anonymous" />
+      <div className="-ko">
+        <div lang="ko" className="ohmt015-dashboard">{children}</div>
+      </div>
     </section>
   )
 }
-

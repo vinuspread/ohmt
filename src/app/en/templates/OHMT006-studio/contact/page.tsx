@@ -4,12 +4,10 @@ import { Header } from "../_components/Header";
 import { Footer } from "../_components/Footer";
 import { PageHeader } from "../_components/PageHeader";
 import { ArrowUpRight, Mail, MapPin } from "lucide-react";
-import { useSearchParams } from "next/navigation";
 
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 function StudioContactPageContent() {
-    const searchParams = useSearchParams();
     const t = {
   "hero": {
     "badge": `ARCHITECTURE STUDIO`,
@@ -232,20 +230,20 @@ const [submitted, setSubmitted] = useState(false);
                         <div className="lg:col-span-6 flex flex-col justify-between gap-8 md:gap-0">
                             <div className="space-y-8 md:space-y-16">
                                 <div className="space-y-4 md:space-y-6">
-                                    <span className="text-[12px] md:text-[13px] text-black/40 font-bold block uppercase">
+                                    <span className="text-xs md:text-xs text-black/40 font-bold block uppercase">
                                         {t.contactPage.globalChannels}
                                     </span>
-                                    <h2 className="text-[clamp(1.8rem,4.5vw,4.5rem)] font-bold leading-[1.1] text-black break-keep">
+                                    <h2 className="text-[length:var(--text-h1)] font-bold leading-[var(--leading-heading)] text-black break-keep">
                                         {t.contactPage.formTitle}
                                     </h2>
-                                    <p className="text-[14px] text-black/50 leading-[1.4] font-normal break-keep max-w-[480px]">
+                                    <p className="text-sm text-black/50 leading-[var(--leading-body)] font-normal break-keep max-w-[480px]">
                                         {t.contactPage.formDesc}
                                     </p>
                                 </div>
 
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 border-t border-black/5 pt-8 md:pt-12">
                                     <div className="space-y-2 group cursor-pointer">
-                                        <span className="text-[12px] md:text-[13px] font-bold text-black/50 flex items-center gap-2 uppercase">
+                                        <span className="text-xs md:text-xs font-bold text-black/50 flex items-center gap-2 uppercase">
                                             <Mail size={12} /> {t.contactPage.directContact}
                                         </span>
                                         <h3 className="text-base md:text-lg lg:text-xl font-bold text-black hover:opacity-60 transition-opacity duration-300">
@@ -254,7 +252,7 @@ const [submitted, setSubmitted] = useState(false);
                                     </div>
 
                                     <div className="space-y-2 group">
-                                        <span className="text-[12px] md:text-[13px] font-bold text-black/50 flex items-center gap-2 uppercase">
+                                        <span className="text-xs md:text-xs font-bold text-black/50 flex items-center gap-2 uppercase">
                                             <MapPin size={12} /> {t.contactPage.designCasingLab || "Design Casing Lab"}
                                         </span>
                                         <h3 className="text-base md:text-lg lg:text-xl font-bold text-black leading-tight">
@@ -284,13 +282,13 @@ const [submitted, setSubmitted] = useState(false);
                                         <h3 className="text-2xl font-bold tracking-tight text-white break-keep">
                                             {t.contactPage.success}
                                         </h3>
-                                        <p className="text-[14px] text-white/50 font-normal break-keep">
+                                        <p className="text-sm text-white/50 font-normal break-keep">
                                             {t.contactPage.successDesc}
                                         </p>
                                     </div>
                                     <button 
                                         onClick={() => setSubmitted(false)}
-                                        className="text-[12px] font-bold uppercase tracking-widest text-white/40 hover:text-white transition-colors"
+                                        className="text-xs font-bold uppercase tracking-widest text-white/40 hover:text-white transition-colors"
                                     >
                                         {t.contactPage.close}
                                     </button>
@@ -298,31 +296,31 @@ const [submitted, setSubmitted] = useState(false);
                             ) : (
                                 <form className="space-y-8 md:space-y-12 w-full" onSubmit={handleSubmit}>
                                     <div className="space-y-3 border-b border-white/5 pb-4 focus-within:border-white transition-colors duration-300">
-                                        <label className="text-[12px] md:text-[13px] font-bold text-white/40 block uppercase">
+                                        <label className="text-xs md:text-xs font-bold text-white/40 block uppercase">
                                             {t.contactPage.name}
                                         </label>
                                         <input
                                             type="text"
-                                            className="w-full bg-transparent outline-none text-[15px] font-bold text-white placeholder-white/25 placeholder:text-white/20"
+                                            className="w-full bg-transparent outline-none text-sm font-bold text-white placeholder-white/25 placeholder:text-white/20"
                                             placeholder={t.contactPage.namePlaceholder}
                                             required
                                         />
                                     </div>
 
                                     <div className="space-y-3 border-b border-white/5 pb-4 focus-within:border-white transition-colors duration-300">
-                                        <label className="text-[12px] md:text-[13px] font-bold text-white/40 block uppercase">
+                                        <label className="text-xs md:text-xs font-bold text-white/40 block uppercase">
                                             {t.contactPage.email}
                                         </label>
                                         <input
                                             type="email"
-                                            className="w-full bg-transparent outline-none text-[15px] font-bold text-white placeholder-white/25 placeholder:text-white/20"
+                                            className="w-full bg-transparent outline-none text-sm font-bold text-white placeholder-white/25 placeholder:text-white/20"
                                             placeholder={t.contactPage.emailPlaceholder}
                                             required
                                         />
                                     </div>
 
                                     <div className="space-y-3 border-b border-white/5 pb-4 focus-within:border-white transition-colors duration-300">
-                                        <label className="text-[12px] md:text-[13px] font-bold text-white/40 block uppercase">
+                                        <label className="text-xs md:text-xs font-bold text-white/40 block uppercase">
                                             {t.contactPage.message}
                                         </label>
                                         <textarea
@@ -335,9 +333,9 @@ const [submitted, setSubmitted] = useState(false);
                                     <div className="pt-2 md:pt-4">
                                         <button
                                             type="submit"
-                                            className="w-full h-[56px] md:h-[64px] bg-white hover:bg-neutral-200 text-black font-bold text-[13px] transition-all duration-300 flex items-center justify-center gap-4 group/btn"
+                                            className="w-full h-[56px] md:h-[64px] bg-white hover:bg-neutral-200 text-black font-bold text-xs transition-all duration-300 flex items-center justify-center gap-4 group/btn"
                                         >
-                                            <span className="font-bold uppercase tracking-widest text-[13px]">
+                                            <span className="font-bold uppercase tracking-widest text-xs">
                                                 {t.contactPage.submit}
                                             </span>
                                             <ArrowUpRight size={14} className="text-black transition-colors duration-300" />

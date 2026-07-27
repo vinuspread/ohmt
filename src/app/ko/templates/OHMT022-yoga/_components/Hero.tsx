@@ -31,34 +31,31 @@ export default function Hero() {
       />
       <div className="absolute inset-0 bg-black/25" />
 
-      <div className="absolute top-[76px] left-0 right-0 h-[1px] bg-white/20 z-10" />
+      <div className="absolute top-20 left-0 right-0 h-[1px] bg-white/20 z-10" />
 
       <div className="absolute bottom-0 left-0 right-0 z-10 border-t border-white/25">
         <div className="flex items-end justify-between px-8 md:px-14 py-10 gap-8">
           <div>
-            <p className="text-[12px] tracking-[0.3em] text-white/40 mb-5 font-normal"
+            <p className="text-xs tracking-[0.3em] text-white/40 mb-5 font-normal"
                style={{ fontFamily: "var(--font-body)" }}>
               {BRAND.tagline}
             </p>
-            <h1 className="text-[clamp(3.5rem,8vw,7.5rem)] font-normal text-white leading-[1.1] tracking-[-0.03em]"
+            <h1 className="text-[length:var(--text-display)] font-normal text-white leading-[var(--leading-heading)] tracking-[-0.03em]"
                 style={{ fontFamily: "var(--font-heading)" }}>
-              모든 호흡과
-              <br />
-              움직임의 고요
-            </h1>
+              호흡을 따라<br />
+              몸을 움직입니다.</h1>
           </div>
 
           <div className="hidden md:flex flex-col items-end gap-4 flex-shrink-0 pb-1">
             <Link href="/ko/templates/OHMT022-yoga/classes"
-              className="text-[12px] tracking-[0.2em] text-white hover:text-white/70 transition-colors border-b border-white/40 pb-1 font-medium whitespace-nowrap"
+              className="text-xs tracking-[0.2em] text-white hover:text-white/70 transition-colors border-b border-white/40 pb-1 font-medium whitespace-nowrap"
               style={{ fontFamily: "var(--font-body)" }}>
               클래스 보기
             </Link>
             <Link href="/ko/templates/OHMT022-yoga/schedule"
-              className="text-[12px] tracking-[0.2em] text-white/60 hover:text-white transition-colors font-medium whitespace-nowrap"
+              className="text-xs tracking-[0.2em] text-white/60 hover:text-white transition-colors font-medium whitespace-nowrap"
               style={{ fontFamily: "var(--font-body)" }}>
-              일정 확인
-            </Link>
+              주간 일정</Link>
           </div>
         </div>
       </div>

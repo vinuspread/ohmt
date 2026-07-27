@@ -2,25 +2,23 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { useSearchParams } from "next/navigation";
 import { Button } from "./ui/Button";
 export const Hero = () => {
-  const searchParams = useSearchParams();
   const t = {
   "nav": {
     "book": `예약`,
-    "experience": `익스피리언스`,
+    "experience": `기내 경험`,
     "destinations": `취항지`,
-    "loyalty": `로열티`,
+    "loyalty": `멤버십`,
     "login": `로그인`,
-    "bookTrip": `여정 예약`
+    "bookTrip": `항공권 예약`
   },
   "hero": {
-    "badge": `퍼스트 클래스 경험`,
-    "title1": `구름 위, 빛나는 도약`,
-    "title2": `당신을 위한 특별함.`,
-    "desc": `구름 위의 순수한 고요함. 하늘 위의 프라이빗 성역에서 비행의 본질적 기쁨을 되찾으세요.`,
-    "cta": `취항지 발견하기`,
+    "badge": `퍼스트 클래스`,
+    "title1": `긴 비행도 편안하게`,
+    "title2": `나에게 맞는 여정.`,
+    "desc": `독립형 좌석과 코스형 기내식, 우선 수속 서비스로 장거리 비행을 더 편안하게 이용하세요.`,
+    "cta": `취항지 보기`,
     "cta2": `가상 투어`
   }
 };
@@ -55,15 +53,15 @@ return (
         className="relative z-10 max-w-[1320px] mx-auto px-6 md:px-10 w-full"
       >
         <div className="max-w-[700px] mb-8">
-          <motion.div variants={fadeUp} className="flex items-center gap-3 text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-6">
+          <motion.div variants={fadeUp} className="flex items-center gap-3 text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-6">
             <div className="w-6 h-[1px] bg-[var(--color-accent)]" />
             {t.hero.badge}
           </motion.div>
-          <motion.h1 variants={fadeUp} className="font-[family-name:var(--font-heading)] text-[clamp(2.1rem,4vw,3.8rem)] font-[var(--font-weight-heading)] tracking-tight leading-[1.1] text-white mb-7">
+          <motion.h1 variants={fadeUp} className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-h1)] font-[var(--font-weight-heading)] tracking-tight leading-[var(--leading-heading)] text-white mb-7">
             {t.hero.title1} <br />
             <span className="font-[var(--font-weight-accent)] text-[var(--color-accent)]">{t.hero.title2}</span>
           </motion.h1>
-          <motion.p variants={fadeUp} className="text-[1.05rem] font-normal text-white/65 leading-[1.7] max-w-[600px] mb-10">
+          <motion.p variants={fadeUp} className="text-[1.05rem] font-normal text-white/65 leading-[var(--leading-body)] max-w-[600px] mb-10">
             {t.hero.desc}
           </motion.p>
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-3 md:gap-4">

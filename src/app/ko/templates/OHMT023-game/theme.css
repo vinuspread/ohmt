@@ -1,4 +1,13 @@
 :root {
+  --text-display: clamp(3rem, 7vw, 5.5rem);
+  --text-h1: clamp(2.5rem, 5vw, 4rem);
+  --text-h2: clamp(2rem, 4vw, 3rem);
+  --text-h3: clamp(1.5rem, 3vw, 2rem);
+  --text-lead: clamp(1.125rem, 2vw, 1.5rem);
+  --leading-display: 0.95;
+  --leading-heading: 1.1;
+  --leading-body: 1.6;
+
   --color-primary: #7C3AED;
   --color-secondary: #F5F5F5;
   --color-accent: #06B6D4;
@@ -10,8 +19,8 @@
   --color-text-contrast: #FFFFFF;
   --color-border: #222222;
   --color-border-bright: #333333;
-  --font-heading: var(--font-orbitron), 'Space Grotesk', 'Pretendard', sans-serif;
-  --font-body: 'Inter', 'Pretendard', sans-serif;
+  --font-heading: var(--font-orbitron), 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
 
   --focus-ring: 2px solid var(--color-primary);
   --focus-ring-offset: 2px;
@@ -22,22 +31,27 @@
   --type-section-title-mobile: clamp(2rem, 9vw, 2.5rem);
 }
 
-body, * { word-break: keep-all; }
-body { overflow-x: clip; }
-@supports not (overflow: clip) {
-  body { overflow-x: hidden; }
+body {
+  overflow-x: clip;
 }
-header a, header button, header nav { letter-spacing: -0.03em; }
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
 
 @media (max-width: 640px) {
   h1 {
     font-size: var(--type-display-mobile);
-    text-wrap: balance;
   }
 
   h2 {
     font-size: var(--type-section-title-mobile);
-    text-wrap: balance;
   }
 
   section {
@@ -52,38 +66,10 @@ header a, header button, header nav { letter-spacing: -0.03em; }
   }
 }
 
-
-body[lang="ko"], [lang="ko"], :root {
-  word-break: keep-all;
-  letter-spacing: -0.025em;
-}
-
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav, 
-nav a, nav button, nav span {
-  letter-spacing: -0.03em;
-}
-
-/* Korean typography rules (Korean Kerning Rule) */
-body[lang="ko"], [lang="ko"], :root {
-  word-break: keep-all;
-  letter-spacing: -0.025em;
-}
-
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav, 
-nav a, nav button, nav span {
-  letter-spacing: -0.03em;
+@supports not (overflow: clip) {
+  body {
+    overflow-x: hidden;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

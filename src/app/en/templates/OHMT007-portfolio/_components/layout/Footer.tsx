@@ -12,7 +12,7 @@ export function Footer() {
           <Link href="/en/templates/OHMT007-portfolio" className="text-[1.2rem] font-black tracking-tighter text-[var(--color-text)] hover:opacity-60 transition-opacity">
             OHMT.
           </Link>
-          <div className="flex items-center gap-2 text-[13px] font-medium text-[var(--color-text-muted)]">
+          <div className="flex items-center gap-2 text-xs font-medium text-[var(--color-text-muted)]">
             <a href="#" className="hover:text-[var(--color-text)] transition-colors">BE</a>
             <span>/</span>
             <a href="#" className="hover:text-[var(--color-text)] transition-colors">DR</a>
@@ -22,10 +22,10 @@ export function Footer() {
         </div>
 
         {/* Main content */}
-        <div className="grid md:grid-cols-5 gap-12 mb-16">
+        <div className="grid md:grid-cols-4 gap-12 mb-16">
           {/* Left: CTA */}
           <div className="md:col-span-3">
-            <p className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-bold text-[var(--color-text)] leading-snug mb-6">
+            <p className="text-[length:var(--text-h2)] font-bold text-[var(--color-text)] leading-snug mb-6">
               We'd love to hear from you
               <br />
               <span className="text-[var(--color-text-muted)] font-normal">whether you have a project in mind, or just want to say hi.</span>
@@ -60,7 +60,7 @@ export function Footer() {
               { name: 'Manifesto', href: '/en/templates/OHMT007-portfolio/manifesto' }
             ].map(item => (
               <Link key={item.name} href={item.href}
-                className="text-[12px] text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors">
+                className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors">
                 {item.name}
               </Link>
             ))}

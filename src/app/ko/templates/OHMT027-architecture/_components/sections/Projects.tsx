@@ -42,10 +42,9 @@ export function Projects() {
         {/* Section Header */}
         <ScrollReveal>
           <div className="flex flex-col sm:flex-row justify-between items-baseline gap-4 border-b border-[#E0E0E0] pb-8 mb-12">
-            <h2 className="font-heading font-normal text-[40px] md:text-[48px] text-[#1A1A1A]">
-              주요 프로젝트.
-            </h2>
-            <span className="font-sans text-[13px] text-[#888888] tracking-wider uppercase">
+            <h2 className="font-heading font-normal text-4xl md:text-5xl text-[#1A1A1A]">
+              주요 프로젝트</h2>
+            <span className="font-sans text-xs text-[#888888] tracking-wider uppercase">
               {projects.length}개 프로젝트
             </span>
           </div>
@@ -60,7 +59,7 @@ export function Projects() {
                 <button
                   key={cat}
                   onClick={() => setFilter(cat)}
-                  className={`font-sans text-[13px] tracking-[0.05em] py-1.5 px-0 mr-6 transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-full after:bg-[#1A1A1A] after:transition-transform after:duration-300 after:origin-left ${
+                  className={`font-sans text-xs tracking-[0.05em] py-1.5 px-0 mr-6 transition-all duration-300 relative after:absolute after:bottom-0 after:left-0 after:h-[1.5px] after:w-full after:bg-[#1A1A1A] after:transition-transform after:duration-300 after:origin-left ${
                     active
                       ? "text-[#1A1A1A] after:scale-x-100"
                       : "text-[#888888] hover:text-[#1A1A1A] after:scale-x-0 hover:after:scale-x-100"
@@ -103,10 +102,10 @@ export function Projects() {
                     {/* Hover Overlay */}
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 transition-colors duration-300 flex flex-col justify-end p-8 z-10">
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 space-y-2">
-                        <span className="font-sans text-[11px] font-medium tracking-[0.15em] text-[#B07D4F] uppercase block">
+                        <span className="font-sans text-xs font-medium tracking-[0.15em] text-[#B07D4F] uppercase block">
                           {project.category}
                         </span>
-                        <h3 className="font-heading font-normal text-[24px] text-white leading-[1.1]">
+                        <h3 className="font-heading font-normal text-2xl text-white leading-[var(--leading-heading)]">
                           {project.title}
                         </h3>
                       </div>
@@ -115,10 +114,10 @@ export function Projects() {
 
                   {/* Caption */}
                   <div className="mt-4 flex justify-between items-baseline">
-                    <span className="font-sans text-[14px] font-medium text-[#1A1A1A]">
+                    <span className="font-sans text-sm font-medium text-[#1A1A1A]">
                       {project.title}
                     </span>
-                    <span className="font-sans text-[12px] text-[#888888]">
+                    <span className="font-sans text-xs text-[#888888]">
                       {project.location}
                     </span>
                   </div>

@@ -14,7 +14,7 @@ export const Footer = () => {
               <span className="text-sm md:text-base font-bold tracking-[0.15em] uppercase text-[var(--color-primary)] leading-none">OHMT</span>
             </Link>
             <p className="text-[0.85rem] text-[var(--color-primary)]/70 leading-relaxed max-w-[280px]">
-              럭셔리 여행의 글로벌 스탠다드를 선도합니다. 모든 대륙에서 최상의 경험을 누려보세요.
+              주요 도시와 휴양지를 연결하는 노선과 객실별 서비스를 확인하세요.
             </p>
           </div>
 
@@ -30,14 +30,14 @@ export const Footer = () => {
           <div>
             <h5 className="text-[0.7rem] font-medium uppercase tracking-[0.2em] text-white mb-5">기내 서비스</h5>
             <nav className="flex flex-col gap-3">
-              {["퍼스트 클래스", "비즈니스 클래스", "다이닝 & 와인", "엔터테인먼트"].map(item => (
+              {["퍼스트 클래스", "비즈니스 클래스", "기내식·음료", "엔터테인먼트"].map(item => (
                 <Link key={item} href="/ko/templates/OHMT008-airline/experience" className="text-[0.8rem] text-[var(--color-primary)]/70 hover:text-[var(--color-primary)] transition-colors">{item}</Link>
               ))}
             </nav>
           </div>
 
           <div>
-            <h5 className="text-[0.7rem] font-medium uppercase tracking-[0.2em] text-white mb-5">로열티</h5>
+            <h5 className="text-[0.7rem] font-medium uppercase tracking-[0.2em] text-white mb-5">멤버십</h5>
             <nav className="flex flex-col gap-3">
               {["회원 혜택", "마일리지 적립", "마일리지 사용", "제휴사"].map(item => (
                 <Link key={item} href="/ko/templates/OHMT008-airline/loyalty" className="text-[0.8rem] text-[var(--color-primary)]/70 hover:text-[var(--color-primary)] transition-colors">{item}</Link>

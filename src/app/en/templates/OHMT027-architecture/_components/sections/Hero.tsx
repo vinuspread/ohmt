@@ -41,7 +41,7 @@ export function Hero() {
       {/* Top Content Area */}
       <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 pt-16 pb-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <h1 className="font-heading font-normal text-[48px] md:text-[64px] lg:text-[72px] leading-[1.05] tracking-[-0.02em] text-[var(--color-text)] max-w-3xl">
+          <h1 className="font-heading font-normal text-5xl md:text-6xl lg:text-7xl leading-[var(--leading-heading)] tracking-[-0.02em] text-[var(--color-text)] max-w-3xl">
             Designing Architecture
             <br />
             That Speaks for Itself.
@@ -49,7 +49,7 @@ export function Hero() {
           <div className="pb-2">
             <Link
               href="/en/templates/OHMT027-architecture/projects"
-              className="font-sans text-[12px] font-medium tracking-[0.12em] text-[var(--color-text)] uppercase border-b border-[var(--color-text)] pb-1 hover:text-[var(--color-accent)] hover:border-[var(--color-accent)] transition-colors"
+              className="font-sans text-xs font-medium tracking-[0.12em] text-[var(--color-text)] uppercase border-b border-[var(--color-text)] pb-1 hover:text-[var(--color-accent)] hover:border-[var(--color-accent)] transition-colors"
             >
               VIEW PROJECTS →
             </Link>
@@ -107,15 +107,15 @@ export function Hero() {
       {/* Below-image: Caption + Navigation */}
       <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 pt-5 flex justify-between items-center">
         <div className="flex flex-col gap-0.5">
-          <span className="font-sans text-[12px] font-semibold tracking-[0.12em] text-[var(--color-text)] uppercase">
+          <span className="font-sans text-xs font-semibold tracking-[0.12em] text-[var(--color-text)] uppercase">
             {slides[activeIndex].title}
           </span>
-          <span className="font-sans text-[11px] tracking-[0.1em] text-[var(--color-text-secondary)] uppercase">
+          <span className="font-sans text-xs tracking-[0.1em] text-[var(--color-text-secondary)] uppercase">
             {slides[activeIndex].location}
           </span>
         </div>
         <div className="flex items-center gap-6">
-          <span className="font-sans text-[13px] text-[var(--color-text-secondary)] tracking-[0.05em]">
+          <span className="font-sans text-xs text-[var(--color-text-secondary)] tracking-[0.05em]">
             0{activeIndex + 1} / 0{slides.length}
           </span>
           <div className="flex gap-2">

@@ -1,20 +1,29 @@
 :root {
-  --color-primary: #3B2314;
-  --color-secondary: #1C110A;
-  --color-primary-dark: #2A1A0E;
-  --color-accent: #3B2314;
-  --color-accent-hover: #2A1A0E;
-  --color-accent-light: #7B4F2E;
-  --color-bg: #FDFAF6;
-  --color-bg-secondary: #F2EDE6;
-  --color-bg-dark: #1C110A;
-  --color-text: #1A1209;
-  --color-text-muted: #8A7A6E;
-  --color-text-contrast: #1C1C1A;
-  --color-border: #E4DDD5;
+  --text-display: clamp(3rem, 7vw, 5.5rem);
+  --text-h1: clamp(2.5rem, 5vw, 4rem);
+  --text-h2: clamp(2rem, 4vw, 3rem);
+  --text-h3: clamp(1.5rem, 3vw, 2rem);
+  --text-lead: clamp(1.125rem, 2vw, 1.5rem);
+  --leading-display: 0.95;
+  --leading-heading: 1.1;
+  --leading-body: 1.6;
 
-  --font-heading: 'Playfair Display', 'Pretendard', serif;
-  --font-body: 'Inter', 'Pretendard', sans-serif;
+  --color-primary: #111118;
+  --color-secondary: #0C0C14;
+  --color-primary-dark: #0C0C14;
+  --color-accent: #3D4A5C;
+  --color-accent-hover: #2E3A4C;
+  --color-accent-light: #6B7A8E;
+  --color-bg: #FAFAFA;
+  --color-bg-secondary: #E2E2E0;
+  --color-bg-dark: #0C0C14;
+  --color-text: #111118;
+  --color-text-muted: #6B6B78;
+  --color-text-contrast: #1C1C1A;
+  --color-border: #DCDCDC;
+
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Inter', sans-serif;
 
   --focus-ring: 2px solid var(--color-primary);
   --focus-ring-offset: 2px;
@@ -28,7 +37,6 @@
 body {
   font-family: var(--font-body);
   color: var(--color-text);
-  word-break: keep-all;
   overflow-x: clip;
 }
 
@@ -63,42 +71,6 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
-}
-
-header a, header button, header nav { letter-spacing: -0.03em; }
-
-
-body[lang="ko"], [lang="ko"], :root {
-  word-break: keep-all;
-  letter-spacing: -0.025em;
-}
-
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav, 
-nav a, nav button, nav span {
-  letter-spacing: -0.03em;
-}
-
-/* Korean typography rules (Korean Kerning Rule) */
-body[lang="ko"], [lang="ko"], :root {
-  word-break: keep-all;
-  letter-spacing: -0.025em;
-}
-
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav, 
-nav a, nav button, nav span {
-  letter-spacing: -0.03em;
 }
 
 @media (prefers-reduced-motion: reduce) {

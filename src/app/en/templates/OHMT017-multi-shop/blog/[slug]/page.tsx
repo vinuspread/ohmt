@@ -2,6 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
+import { ArrowLeft } from "lucide-react";
 import { Header } from "../../_components/Header";
 import { Footer } from "../../_components/Footer";
 import { blogPosts } from "../../data/data";
@@ -56,7 +57,7 @@ function BlogDetailPageContent({ params }: { params: { slug: string } }) {
       <TemplateWrapper theme={theme}>
         <main className="antialiased min-h-screen pt-24 bg-white text-[var(--color-text)]">
           {/* Breadcrumbs */}
-          <div className="max-w-[800px] mx-auto px-6 mb-8 text-[11px] uppercase tracking-[0.2em] text-[var(--color-text-muted)]">
+          <div className="max-w-[800px] mx-auto px-6 mb-8 text-xs uppercase tracking-[0.2em] text-[var(--color-text-muted)]">
             <Link href="/en/templates/OHMT017-multi-shop" className="hover:text-[var(--color-text)]">Home</Link>
             <span className="mx-2">/</span>
             <Link href="/en/templates/OHMT017-multi-shop/blog" className="hover:text-[var(--color-text)]">Magazine</Link>
@@ -86,7 +87,7 @@ function BlogDetailPageContent({ params }: { params: { slug: string } }) {
 
             <div className="mt-16 pt-8 border-t border-black/5 flex justify-between items-center">
               <Link href="/en/templates/OHMT017-multi-shop/blog" className="text-xs uppercase tracking-[0.2em] text-[var(--color-primary)] font-medium hover:opacity-60 transition-opacity">
-                &larr; Back to Magazine
+                <ArrowLeft size={14} className="inline" /> Back to Magazine
               </Link>
             </div>
           </article>

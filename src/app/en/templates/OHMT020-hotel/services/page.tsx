@@ -5,7 +5,7 @@ import { Navbar } from "../_components/Navbar";
 import { Footer } from "../_components/Footer";
 import { services } from "../data/data";
 import { Button } from "../_components/ui/Button";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Waves, Sparkles, Utensils, Heart, ShieldAlert, Award } from "lucide-react";
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
@@ -33,7 +33,7 @@ function ServicesPageContent() {
           </div>
           <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full pt-20">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-              <span className="text-[11px] font-medium text-[var(--color-accent)] uppercase tracking-[0.25em] block mb-3">Resort Experiences</span>
+              <span className="text-xs font-medium text-[var(--color-accent)] uppercase tracking-[0.25em] block mb-3">Resort Experiences</span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-[var(--font-heading)] font-bold text-[var(--color-bg)]">Resort Services & Amenities</h1>
             </motion.div>
           </div>
@@ -43,7 +43,7 @@ function ServicesPageContent() {
         <section className="py-20 bg-white">
           <div className="max-w-[1440px] mx-auto px-6 md:px-12 text-center">
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="max-w-2xl mx-auto">
-              <span className="text-[11px] font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] block mb-3">Wellness & Leisure</span>
+              <span className="text-xs font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] block mb-3">Wellness & Leisure</span>
               <h2 className="text-3xl md:text-4xl font-[var(--font-heading)] font-bold text-[var(--color-primary)] mb-6">Designed For Your Well-being</h2>
               <p className="text-base text-[var(--color-text-muted)] leading-relaxed">
                 At OHMT, we curate services that speak to the soul. From Michelin-starred culinary journeys and restorative therapies to customized local itineraries, every detail is engineered to ensure absolute tranquility.
@@ -86,7 +86,7 @@ function ServicesPageContent() {
                 <img src="/templates/OHMT020-hotel/story-01.jpg" alt="Aman Spa" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]" />
               </div>
               <div className="w-full lg:w-1/2 flex flex-col gap-6">
-                <span className="text-[11px] font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] block">Signature Program</span>
+                <span className="text-xs font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] block">Signature Program</span>
                 <h3 className="text-3xl md:text-4xl font-[var(--font-heading)] font-bold text-[var(--color-primary)]">The Aman Spa Experience</h3>
                 <p className="text-base text-[var(--color-text-muted)] leading-relaxed">
                   Align your energies with nature's rhythm. The Aman Spa uses hand-harvested organic island flora, mineral-rich muds, and custom essential oils.
@@ -106,7 +106,7 @@ function ServicesPageContent() {
                   </div>
                 </div>
                 <div className="pt-4">
-                  <Button variant="primary" size="md" className="text-[11px] tracking-[0.2em] uppercase rounded-sm">Download Spa Menu</Button>
+                  <Button variant="primary" size="md" className="text-xs tracking-[0.2em] uppercase rounded-sm">Download Spa Menu</Button>
                 </div>
               </div>
             </div>

@@ -14,9 +14,8 @@ export function Testimonials() {
         {/* Section Header */}
         <ScrollReveal>
           <div className="mb-16">
-            <h2 className="font-heading font-normal text-[36px] md:text-[40px] text-[#1A1A1A]">
-              클라이언트의 말.
-            </h2>
+            <h2 className="font-heading font-normal text-4xl md:text-4xl text-[#1A1A1A]">
+              클라이언트 후기</h2>
           </div>
         </ScrollReveal>
 
@@ -36,16 +35,16 @@ export function Testimonials() {
               <SwiperSlide key={index} className="!h-auto flex">
                 <div className="bg-white p-8 md:p-10 w-full flex flex-col justify-between shadow-sm border border-black/5">
                   <div className="space-y-4">
-                    <p className="font-heading font-normal text-[15px] md:text-[16px] leading-[1.6] text-[#1A1A1A] relative z-10">
+                    <p className="font-heading font-normal text-sm md:text-base leading-[var(--leading-body)] text-[#1A1A1A] relative z-10">
                       {t.quote}
                     </p>
                   </div>
                   <div className="mt-8">
                     <div className="w-10 h-[1px] bg-[#E0E0E0] mb-4" />
-                    <h4 className="font-sans font-medium text-[14px] text-[#1A1A1A]">
+                    <h4 className="font-sans font-medium text-sm text-[#1A1A1A]">
                       {t.client}
                     </h4>
-                    <p className="font-sans text-[15px] text-[#888888] mt-1">
+                    <p className="font-sans text-sm text-[#888888] mt-1">
                       {t.company}
                     </p>
                   </div>

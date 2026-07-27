@@ -23,13 +23,13 @@ export function StoryHero() {
       <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)] via-[var(--bg)]/45 to-[var(--bg)]/5" />
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 min-h-[85vh] flex items-end pb-16 md:pb-28">
         <div ref={ref}>
-          <p className="font-inter text-[11px] tracking-[0.15em] text-[var(--accent)] uppercase mb-4">
+          <p className="font-inter text-xs tracking-[0.15em] text-[var(--accent)] uppercase mb-4">
             Our Story
           </p>
-          <h1 className="font-michroma text-[clamp(44px,6vw,88px)] text-[var(--text)] leading-[0.93] tracking-[-0.03em] mb-6">
+          <h1 className="font-michroma text-[length:var(--text-display)] text-[var(--text)] leading-[var(--leading-display)] tracking-[-0.03em] mb-6">
             Small car.<br />Big idea.
           </h1>
-          <p className="font-inter text-[15px] text-[var(--text-muted)] max-w-[400px] leading-relaxed">
+          <p className="font-inter text-sm text-[var(--text-muted)] max-w-[400px] leading-relaxed">
             NUBI started with a simple question: why should small mean boring?
           </p>
         </div>

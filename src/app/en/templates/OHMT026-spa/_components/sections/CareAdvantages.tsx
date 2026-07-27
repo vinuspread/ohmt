@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "motion/react";
 import { advantages } from "../../data/data";
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
@@ -20,7 +20,7 @@ export default function CareAdvantages() {
   return (
     <section className="relative overflow-hidden bg-[var(--color-accent)] py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="grid gap-12 lg:grid-cols-[minmax(0,420px)_1fr] lg:gap-16 items-start">
+        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
           <motion.div
             initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -33,7 +33,7 @@ export default function CareAdvantages() {
             <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">
               Care advantages
             </span>
-            <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[1.05]">
+            <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[var(--leading-heading)]">
               Why our clients stay with us
             </h2>
           </motion.div>
@@ -61,3 +61,4 @@ export default function CareAdvantages() {
     </section>
   );
 }
+

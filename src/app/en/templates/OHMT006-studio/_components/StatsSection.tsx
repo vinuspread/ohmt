@@ -35,7 +35,7 @@ function Counter({ value, unit }: { value: number; unit: string }) {
   }, [inView, value]);
 
   return (
-    <span ref={ref} className="text-[64px] font-bold tracking-[-1.92px]">
+    <span ref={ref} className="text-6xl font-bold tracking-[-1.92px]">
       {count}
       {unit}
     </span>
@@ -44,7 +44,7 @@ function Counter({ value, unit }: { value: number; unit: string }) {
 
 export function StatsSection() {
   return (
-    <section className="bg-white py-[120px] px-[64px]">
+    <section className="bg-white py-30 px-16">
       <div className="max-w-full mx-auto">
         {/* Header */}
         <motion.div
@@ -52,18 +52,18 @@ export function StatsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, ease: [0.23, 1, 0.32, 1] }}
           viewport={{ once: true, margin: '-50px' }}
-          className="flex flex-col gap-[32px] mb-[120px] text-center"
+          className="flex flex-col gap-8 mb-30 text-center"
         >
-          <h2 className="text-[26px] md:text-[48px] leading-[55px] font-semibold tracking-[-1.44px] text-[#090B19] max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-5xl leading-[var(--leading-heading)] font-semibold tracking-[-1.44px] text-[#090B19] max-w-2xl mx-auto">
             By the numbers
           </h2>
-          <p className="text-[16px] leading-[26px] text-[var(--color-text-muted)] max-w-xl mx-auto">
+          <p className="text-base leading-[var(--leading-heading)] text-[var(--color-text-muted)] max-w-xl mx-auto">
             Our track record speaks for itself. We deliver measurable results for every client.
           </p>
         </motion.div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-[80px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
           {stats.map((stat, idx) => {
             const Icon = stat.icon;
             return (
@@ -83,7 +83,7 @@ export function StatsSection() {
                 <motion.div
                   whileHover={{ scale: 1.2, rotate: 6 }}
                   transition={{ duration: 0.25, ease: [0.23, 1, 0.32, 1] }}
-                  className="mb-[32px]"
+                  className="mb-8"
                 >
                   <Icon size={48} className="text-[#1e3a8a] group-hover:text-[#1f5a3a] transition-colors duration-300" />
                 </motion.div>
@@ -97,7 +97,7 @@ export function StatsSection() {
                     ease: [0.23, 1, 0.32, 1]
                   }}
                   viewport={{ once: true, margin: '-50px' }}
-                  className="mb-[16px]"
+                  className="mb-4"
                 >
                   <Counter value={stat.value} unit={stat.unit} />
                 </motion.div>
@@ -110,7 +110,7 @@ export function StatsSection() {
                     delay: idx * 0.15 + 0.3
                   }}
                   viewport={{ once: true, margin: '-50px' }}
-                  className="text-[16px] leading-[26px] text-[var(--color-text-muted)] font-normal"
+                  className="text-base leading-[var(--leading-heading)] text-[var(--color-text-muted)] font-normal"
                 >
                   {stat.label}
                 </motion.p>

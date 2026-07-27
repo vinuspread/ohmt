@@ -15,9 +15,8 @@ export function Services() {
         {/* Section Header */}
         <ScrollReveal>
           <div className="mb-20">
-            <h2 className="font-heading font-normal text-[40px] md:text-[48px] text-[#1A1A1A]">
-              서비스.
-            </h2>
+            <h2 className="font-heading font-normal text-4xl md:text-5xl text-[#1A1A1A]">
+              서비스</h2>
           </div>
         </ScrollReveal>
 
@@ -42,23 +41,22 @@ export function Services() {
 
                   {/* Text Block — col 8–12 or 1–5 */}
                   <div className={`col-span-12 lg:col-span-5 space-y-6 ${isEven ? "lg:order-first lg:pl-0 lg:pr-8" : "lg:pl-8"}`}>
-                    <span className="font-sans text-[11px] font-medium tracking-[0.15em] text-[#888888] uppercase block">
+                    <span className="font-sans text-xs font-medium tracking-[0.15em] text-[#888888] uppercase block">
                       {service.label}
                     </span>
-                    <h3 className="font-heading font-normal text-[30px] md:text-[36px] text-[#1A1A1A] leading-[1.1]">
+                    <h3 className="font-heading font-normal text-3xl md:text-4xl text-[#1A1A1A] leading-[var(--leading-heading)]">
                       {service.name}
                     </h3>
                     <div className="w-[60px] h-[1px] bg-[#E0E0E0]" />
-                    <p className="font-sans text-[15px] md:text-[16px] leading-[1.7] text-[#888888]">
+                    <p className="font-sans text-sm md:text-base leading-[var(--leading-body)] text-[#888888]">
                       {service.description}
                     </p>
                     <div className="pt-2">
                       <Link
                         href={`${baseRoute}/services`}
-                        className="font-sans text-[12px] font-medium tracking-[0.12em] text-[#1A1A1A] uppercase border-b border-[#1A1A1A] pb-1 hover:text-[#B07D4F] hover:border-[#B07D4F] transition-colors"
+                        className="font-sans text-xs font-medium tracking-[0.12em] text-[#1A1A1A] uppercase border-b border-[#1A1A1A] pb-1 hover:text-[#B07D4F] hover:border-[#B07D4F] transition-colors"
                       >
-                        자세히 보기 →
-                      </Link>
+                        서비스 보기 →</Link>
                     </div>
                   </div>
                 </div>

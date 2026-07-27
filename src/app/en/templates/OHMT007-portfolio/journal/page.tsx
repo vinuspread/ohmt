@@ -26,8 +26,8 @@ function JournalPageContent() {
         {/* Header */}
         <section className="pt-40 pb-16 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto px-6">
-            <span className="text-[13px] font-bold tracking-[0.4em] uppercase text-[var(--color-text-muted)] block mb-6">Creative Dispatch</span>
-            <h1 className="text-[clamp(4rem,10vw,9rem)] font-medium uppercase tracking-tighter leading-[1.1]">Journal</h1>
+            <span className="text-xs font-bold tracking-[0.4em] uppercase text-[var(--color-text-muted)] block mb-6">Creative Dispatch</span>
+            <h1 className="text-[length:var(--text-display)] font-medium uppercase tracking-tighter leading-[var(--leading-heading)]">Journal</h1>
           </div>
         </section>
 
@@ -41,13 +41,13 @@ function JournalPageContent() {
               </div>
               <div>
                 <div className="flex items-center gap-3 mb-6">
-                  <span className="text-[13px] font-medium uppercase tracking-widest text-[var(--color-text)] bg-[var(--color-primary)]/10 px-2 py-1">{allPosts[0].category}</span>
-                  <span className="text-[13px] text-[var(--color-text-muted)]/60">{allPosts[0].date}</span>
+                  <span className="text-xs font-medium uppercase tracking-widest text-[var(--color-text)] bg-[var(--color-primary)]/10 px-2 py-1">{allPosts[0].category}</span>
+                  <span className="text-xs text-[var(--color-text-muted)]/60">{allPosts[0].date}</span>
                 </div>
                 <h2 className="text-[2rem] font-medium uppercase tracking-tighter leading-tight mb-6 group-hover:text-[var(--color-text)] transition-colors">
                   {allPosts[0].title}
                 </h2>
-                <span className="inline-flex items-center gap-2 text-[13px] font-bold uppercase tracking-widest text-[var(--color-text-muted)]/60 group-hover:text-[var(--color-text)] transition-colors">
+                <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[var(--color-text-muted)]/60 group-hover:text-[var(--color-text)] transition-colors">
                   Read Article <ArrowUpRight size={12} />
                 </span>
               </div>
@@ -68,12 +68,12 @@ function JournalPageContent() {
               >
                 <Link href="/en/templates/OHMT007-portfolio/journal"
                   className="group grid md:grid-cols-12 py-10 border-b border-[var(--color-border)] items-center hover:bg-[var(--color-bg-secondary)] transition-colors px-2 gap-6">
-                  <div className="md:col-span-2 text-[13px] font-bold tracking-widest text-[var(--color-text-muted)] uppercase">{post.date}</div>
+                  <div className="md:col-span-2 text-xs font-bold tracking-widest text-[var(--color-text-muted)] uppercase">{post.date}</div>
                   <div className="md:col-span-7">
                     <h2 className="text-[1.1rem] font-medium uppercase tracking-tight group-hover:text-[var(--color-text)] transition-colors">{post.title}</h2>
                   </div>
                   <div className="md:col-span-2 text-right">
-                    <span className="text-[13px] font-medium uppercase tracking-widest border border-white/20 px-3 py-1.5 group-hover:border-[var(--color-accent)] group-hover:text-[var(--color-text)] transition-all">
+                    <span className="text-xs font-medium uppercase tracking-widest border border-white/20 px-3 py-1.5 group-hover:border-[var(--color-accent)] group-hover:text-[var(--color-text)] transition-all">
                       {post.category}
                     </span>
                   </div>
@@ -94,10 +94,10 @@ function JournalPageContent() {
 }
 
 
-export default function JournalPage(props: any) {
+export default function JournalPage() {
   return (
     <React.Suspense fallback={null}>
-      <JournalPageContent {...props} />
+      <JournalPageContent />
     </React.Suspense>
   );
 }

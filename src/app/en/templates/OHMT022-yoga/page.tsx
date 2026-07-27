@@ -1,8 +1,13 @@
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
 import theme from "./theme.json";
 import Navbar from "./_components/Navbar";
 import Hero from "./_components/Hero";
+
+export const metadata: Metadata = {
+  title: "OHMT Yoga - Home",
+};
 import IntroSection from "./_components/IntroSection";
 import BenefitsSection from "./_components/BenefitsSection";
 import ClassesPreview from "./_components/ClassesPreview";

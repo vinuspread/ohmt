@@ -80,7 +80,7 @@ function DestinationsPageContent() {
           imageAlt="Global destinations"
           label="Curated Sky Escapes"
           title={<>Explore Our <br /><span className="text-[var(--color-accent)] font-[family-name:var(--font-heading)] normal-case font-bold">Refined World.</span></>}
-          description="Over 200 destinations across 80 countries. Our global network connects you with legendary metropolitan wonders, historical cultural heritages, and tranquil tropical sanctuaries - always with uncompromised luxury."
+          description={"Over 200 destinations across 80 countries.\nOur global network connects you with legendary metropolitan wonders, historical cultural heritages, and tranquil tropical sanctuaries - always with uncompromised luxury."}
         />
 
         {/* Dynamic Catalog Section */}
@@ -94,7 +94,7 @@ function DestinationsPageContent() {
                   <button
                     key={mood}
                     onClick={() => setSelectedMood(mood)}
-                    className={`px-4 md:px-6 py-2 md:py-2.5 text-[12px] md:text-[14px] font-bold uppercase tracking-[0.15em] transition-all duration-300 rounded-none cursor-pointer whitespace-nowrap ${
+                    className={`px-4 md:px-6 py-2 md:py-2.5 text-xs md:text-sm font-bold uppercase tracking-[0.15em] transition-all duration-300 rounded-none cursor-pointer whitespace-nowrap ${
                       selectedMood === mood
                         ? "bg-[var(--color-primary)] text-[var(--color-accent)]"
                         : "bg-transparent text-[#7A7A7A] border border-[var(--color-border)] hover:text-[var(--color-primary)] hover:border-[var(--color-primary)]"
@@ -104,7 +104,7 @@ function DestinationsPageContent() {
                   </button>
                 ))}
               </div>
-              <span className="text-[14px] font-bold uppercase tracking-widest text-[#7A7A7A]">
+              <span className="text-sm font-bold uppercase tracking-widest text-[#7A7A7A]">
                 Showing {filteredDestinations.length} Active Escapes
               </span>
             </div>
@@ -136,7 +136,7 @@ function DestinationsPageContent() {
                           className="w-full h-full object-cover transition-transform duration-[var(--transition-slow)] group-hover:scale-105"
                         />
                         <div className="absolute top-4 left-4 z-10">
-                          <span className="text-[13px] font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] bg-[var(--color-primary)] px-3.5 py-1.5 border border-[var(--color-accent)]/25 rounded-full">
+                          <span className="text-xs font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] bg-[var(--color-primary)] px-3.5 py-1.5 border border-[var(--color-accent)]/25 rounded-full">
                             {dest.mood}
                           </span>
                         </div>
@@ -149,17 +149,17 @@ function DestinationsPageContent() {
                             <h3 className="font-[family-name:var(--theme-font-heading)] text-2xl font-bold text-[var(--color-primary)] tracking-tight">
                               {dest.name}
                             </h3>
-                            <span className="text-[12px] font-bold uppercase tracking-wider text-[var(--color-accent)]">
+                            <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-accent)]">
                               {dest.country}
                             </span>
                           </div>
-                          <p className="text-[14px] text-[#7A7A7A] leading-[1.4] font-normal line-clamp-2 normal-case">
+                          <p className="text-sm text-[#7A7A7A] leading-[var(--leading-body)] font-normal line-clamp-2 normal-case">
                             {dest.desc}
                           </p>
                         </div>
 
                         {/* Interactive text link with subtle motion */}
-                        <span className="text-[14px] font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] inline-flex items-center gap-2 transition-all duration-[var(--transition-fast)] group-hover:gap-3">
+                        <span className="text-sm font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] inline-flex items-center gap-2 transition-all duration-[var(--transition-fast)] group-hover:gap-3">
                           DISCOVER FLIGHTS <Plane size={14} />
                         </span>
                       </div>
@@ -179,10 +179,10 @@ function DestinationsPageContent() {
 }
 
 
-export default function DestinationsPage(props: any) {
+export default function DestinationsPage() {
   return (
     <React.Suspense fallback={null}>
-      <DestinationsPageContent {...props} />
+      <DestinationsPageContent />
     </React.Suspense>
   );
 }

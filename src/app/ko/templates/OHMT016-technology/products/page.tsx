@@ -4,26 +4,27 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 import Header from '../_components/Header'
 import Footer from '../_components/Footer'
+import FormSelect from '../_components/FormSelect'
 import { modelData, featuresData } from '../data/data'
 import { useState } from 'react'
 
 const comparisonRows = [
   { spec: '크기', gen2: '45 x 38 x 52 cm', prime: '58 x 48 x 68 cm' },
   { spec: '무게', gen2: '18 kg', prime: '32 kg' },
-  { spec: '배터리 수명', gen2: '24시간', prime: '18시간 (확장팩: 30시간)' },
-  { spec: '최대 탑재량', gen2: '8 kg', prime: '22 kg' },
-  { spec: '카메라', gen2: '4K RGB (듀얼)', prime: '4K RGB + 열화상 (트리플)' },
-  { spec: 'AI 처리', gen2: '온디바이스 NPU 40 TOPS', prime: '온디바이스 NPU 80 TOPS' },
+  { spec: '연속 운용 시간', gen2: '24시간', prime: '18시간 (확장 배터리 30시간)' },
+  { spec: '최대 적재 하중', gen2: '8 kg', prime: '22 kg' },
+  { spec: '카메라', gen2: '4K RGB 카메라 2대', prime: '4K RGB·열화상 카메라 3대' },
+  { spec: 'AI 연산 성능', gen2: '온디바이스 NPU 40 TOPS', prime: '온디바이스 NPU 80 TOPS' },
   { spec: '센서', gen2: 'LiDAR, IMU, 초음파', prime: 'LiDAR, IMU, 초음파, 레이저 거리측정기' },
-  { spec: '내비게이션', gen2: '실내 V-SLAM', prime: '실내/실외 RTK-GPS + V-SLAM' },
-  { spec: '방진방수', gen2: 'IP54', prime: 'IP67' },
+  { spec: '내비게이션', gen2: '실내 V-SLAM', prime: '실내·실외 RTK-GPS + V-SLAM' },
+  { spec: '방진·방수', gen2: 'IP54', prime: 'IP67' },
 ]
 
 export default function TechnologyProductsPage() {
   const [form, setForm] = useState({ name: '', company: '', email: '', model: '', quantity: '1', message: '' })
   const [submitted, setSubmitted] = useState(false)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
@@ -44,11 +45,13 @@ export default function TechnologyProductsPage() {
             <span className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] block">
               제품 라인업
             </span>
-            <h1 className="mb-6 text-[clamp(2.2rem,5vw,3.8rem)] font-bold tracking-[-0.03em] leading-[1.1] text-[var(--color-text)] font-heading break-keep">
-              모든 운영 규모에 맞춰 설계되다
+            <h1 className="mb-6 text-[length:var(--text-h1)] font-bold tracking-[-0.03em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading break-keep">
+              현장 규모에 맞는 두 가지 모델
             </h1>
-            <p className="mx-auto max-w-2xl text-base md:text-lg text-[var(--color-text-muted)] leading-[1.2]">
-              다양한 배포 환경, 탑재 요구 사항 및 운영 규모에 맞게 설계된 두 가지 목적 기반 자율 시스템.
+            <p className="mx-auto max-w-2xl text-base md:text-lg text-[var(--color-text-muted)] leading-[var(--leading-heading)]">
+              실내 자동화부터 산업 현장까지
+              <br />
+              작업 환경과 적재 하중에 맞춰 선택할 수 있는 두 가지 자율 로봇입니다.
             </p>
           </div>
         </section>
@@ -60,8 +63,8 @@ export default function TechnologyProductsPage() {
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
                 모델
               </span>
-              <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.1] text-[var(--color-text)] font-heading break-keep">
-                시스템 선택
+              <h2 className="text-[length:var(--text-h1)] font-bold tracking-[-0.02em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading break-keep">
+                모델 선택
               </h2>
             </div>
 
@@ -81,27 +84,27 @@ export default function TechnologyProductsPage() {
                     <h3 className="text-2xl font-bold text-[var(--color-text)] font-heading tracking-tight">
                       {model.name}
                     </h3>
-                    <p className="text-sm text-[var(--color-text-muted)] leading-[1.6]">
+                    <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-body)]">
                       {model.description}
                     </p>
                     <div className="flex items-baseline gap-3 pt-2">
                       <span className="text-3xl font-bold text-[var(--color-text)] font-heading">
-                        {model.id === 'gen2' ? '$20K' : '$25K'}
+                        {model.id === 'gen2' ? '28,000,000원' : '35,000,000원'}
                       </span>
                       <span className="text-sm text-[var(--color-text-muted)] line-through">
                         {model.slashedPrice}
                       </span>
-                      <span className="inline-block px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider bg-[var(--color-success)]/10 text-[var(--color-success)] rounded-sm">
+                      <span className="inline-block px-2.5 py-1 text-xs font-bold uppercase tracking-wider bg-[var(--color-success)]/10 text-[var(--color-success)] rounded-sm">
                         {model.saveAmount}
                       </span>
                     </div>
-                    <p className="text-[14px] text-[var(--color-text-muted)]">{model.financing}</p>
+                    <p className="text-sm text-[var(--color-text-muted)]">{model.financing}</p>
                     <div className="pt-2">
                       <a
                         href="#reserve"
                         className="inline-flex items-center justify-center px-6 py-2.5 bg-[var(--color-accent)] text-white font-bold text-xs uppercase tracking-widest hover:opacity-90 active:scale-95 transition-all duration-300 rounded-md"
                       >
-                        지금 예약하기
+                        사전 예약
                       </a>
                     </div>
                   </div>
@@ -116,13 +119,13 @@ export default function TechnologyProductsPage() {
           <div className="mx-auto max-w-7xl px-6">
             <div className="mb-16 text-center">
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
-                핵심 기능
+                핵심 기술
               </span>
-              <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.1] text-[var(--color-text)] font-heading break-keep">
+              <h2 className="text-[length:var(--text-h1)] font-bold tracking-[-0.02em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading break-keep">
                 주요 기능
               </h2>
-              <p className="mt-4 mx-auto max-w-xl text-sm md:text-base text-[var(--color-text-muted)] leading-[1.2]">
-                모든 서브시스템은 신뢰성과 차세대 기계 지능을 결합하도록 설계되었습니다.
+              <p className="mt-4 mx-auto max-w-xl text-sm md:text-base text-[var(--color-text-muted)] leading-[var(--leading-heading)]">
+                각 구성 요소는 실제 작업 환경에서 안정적으로 작동하도록 설계했습니다.
               </p>
             </div>
 
@@ -140,7 +143,7 @@ export default function TechnologyProductsPage() {
                   <h3 className="text-lg font-bold text-[var(--color-text)] mb-3 font-heading transition-colors group-hover:text-[var(--color-accent)]">
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-[var(--color-text-muted)] leading-[1.2]">
+                  <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-heading)]">
                     {feature.description}
                   </p>
                 </div>
@@ -156,7 +159,7 @@ export default function TechnologyProductsPage() {
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
                 사양
               </span>
-              <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.1] text-[var(--color-text)] font-heading break-keep">
+              <h2 className="text-[length:var(--text-h1)] font-bold tracking-[-0.02em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading break-keep">
                 모델 비교
               </h2>
             </div>
@@ -206,16 +209,16 @@ export default function TechnologyProductsPage() {
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
                   예약
                 </span>
-                <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.1] text-[var(--color-text)] font-heading mb-6 break-keep">
-                  오늘 유닛을 확보하세요
+                <h2 className="text-[length:var(--text-h1)] font-bold tracking-[-0.02em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading mb-6 break-keep">
+                  제품을 먼저 만나보세요
                 </h2>
-                <p className="text-sm text-[var(--color-text-muted)] leading-[1.6] max-w-sm">
-                  지금 유닛을 예약하고 얼리 액세스 가격을 확정하세요. 24시간 이내에 담당 팀이 가용성 및 배송 일정을 확인해 드립니다.
+                <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-body)] max-w-sm">
+                  제품을 사전 예약하면 현재 가격과 예상 공급 일정을 안내해 드립니다. 신청 후 24시간 이내에 담당자가 연락드립니다.
                 </p>
                 <ul className="mt-8 space-y-3">
-                  {['예약에 결제 불필요', '24시간 내 팀 확인', '유연한 배송 일정'].map((item) => (
+                  {['예약 시 결제 없음', '24시간 이내 담당자 확인', '유연한 배송 일정'].map((item) => (
                     <li key={item} className="flex items-center gap-3 text-sm text-[var(--color-text-muted)]">
-                      <span className="w-5 h-5 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)] flex items-center justify-center flex-shrink-0 text-[10px] font-bold">✓</span>
+                      <span className="w-5 h-5 rounded-full bg-[var(--color-accent)]/10 text-[var(--color-accent)] flex items-center justify-center flex-shrink-0 text-xs font-bold">✓</span>
                       {item}
                     </li>
                   ))}
@@ -230,10 +233,10 @@ export default function TechnologyProductsPage() {
                       ✓
                     </div>
                     <h3 className="text-lg font-bold text-[var(--color-text)] mb-2 font-heading">
-                      예약이 접수되었습니다
+                      사전 예약이 접수되었습니다
                     </h3>
-                    <p className="text-sm text-[var(--color-text-muted)] leading-[1.6] max-w-md mx-auto">
-                      24시간 이내에 예약 확인 및 다음 단계 논의를 위해 연락드리겠습니다.
+                    <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-body)] max-w-md mx-auto">
+                      24시간 이내에 예약 내용과 다음 절차를 안내해 드리겠습니다.
                     </p>
                   </div>
                 ) : (
@@ -251,11 +254,11 @@ export default function TechnologyProductsPage() {
                       </div>
                       <div>
                         <label htmlFor="company" className="block text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text)] mb-2">
-                          회사
+                          회사명
                         </label>
                         <input
                           type="text" id="company" name="company" value={form.company} onChange={handleChange} required
-                          placeholder="(주) 로보틱스"
+                          placeholder="회사명을 입력해 주세요"
                           className="w-full border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-3 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-muted)] outline-none focus:border-[var(--color-accent)] transition-colors duration-200 rounded-md"
                         />
                       </div>
@@ -277,37 +280,44 @@ export default function TechnologyProductsPage() {
                         <label htmlFor="model" className="block text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text)] mb-2">
                           모델
                         </label>
-                        <select
-                          id="model" name="model" value={form.model} onChange={handleChange} required
-                          className="w-full border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-3 text-sm text-[var(--color-text)] outline-none focus:border-[var(--color-accent)] transition-colors duration-200 rounded-md"
-                        >
-                          <option value="">모델 선택</option>
-                          <option value="gen2">OmniBot Gen 2 - $20K</option>
-                          <option value="prime">OmniBot Prime - $25K</option>
-                        </select>
+                        <FormSelect
+                          id="model"
+                          name="model"
+                          value={form.model}
+                          onChange={(model) => setForm((current) => ({ ...current, model }))}
+                          required
+                          placeholder="모델 선택"
+                          options={[
+                            { value: 'gen2', label: 'OmniBot Gen 2 · 28,000,000원' },
+                            { value: 'prime', label: 'OmniBot Prime · 35,000,000원' },
+                          ]}
+                        />
                       </div>
                       <div>
                         <label htmlFor="quantity" className="block text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text)] mb-2">
                           수량
                         </label>
-                        <select
-                          id="quantity" name="quantity" value={form.quantity} onChange={handleChange}
-                          className="w-full border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-3 text-sm text-[var(--color-text)] outline-none focus:border-[var(--color-accent)] transition-colors duration-200 rounded-md"
-                        >
-                          {['1', '2', '3', '4', '5', '6-10', '10+'].map((q) => (
-                            <option key={q} value={q}>{q}개</option>
-                          ))}
-                        </select>
+                        <FormSelect
+                          id="quantity"
+                          name="quantity"
+                          value={form.quantity}
+                          onChange={(quantity) => setForm((current) => ({ ...current, quantity }))}
+                          placeholder="수량 선택"
+                          options={['1', '2', '3', '4', '5', '6-10', '10+'].map((quantity) => ({
+                            value: quantity,
+                            label: `${quantity}개`,
+                          }))}
+                        />
                       </div>
                     </div>
 
                     <div>
                       <label htmlFor="message" className="block text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text)] mb-2">
-                        메시지 (선택 사항)
+                        추가 요청 사항
                       </label>
                       <textarea
                         id="message" name="message" rows={4} value={form.message} onChange={handleChange}
-                        placeholder="배포 환경이나 문의사항에 대해 알려주세요..."
+                        placeholder="사용할 장소와 필요한 작업, 도입 일정을 알려주세요."
                         className="w-full border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-3 text-sm text-[var(--color-text)] placeholder:text-[var(--color-text-muted)] outline-none focus:border-[var(--color-accent)] transition-colors duration-200 resize-none rounded-md"
                       />
                     </div>
@@ -316,7 +326,7 @@ export default function TechnologyProductsPage() {
                       type="submit"
                       className="inline-flex items-center justify-center px-8 py-4 bg-[var(--color-accent)] text-white font-bold text-sm uppercase tracking-widest hover:opacity-90 active:scale-95 transition-all duration-300 rounded-md"
                     >
-                      예약 제출
+                      예약 신청
                     </button>
                   </form>
                 )}

@@ -26,10 +26,10 @@ export function About() {
             <div className="col-span-12 lg:col-span-4 flex flex-col gap-10">
               {stats.map((stat, index) => (
                 <div key={index} className="flex flex-col border-b border-[var(--color-border)] pb-6 last:border-b-0 last:pb-0">
-                  <span className="font-heading font-normal text-[64px] lg:text-[80px] leading-none text-[var(--color-text)]">
+                  <span className="font-heading font-normal text-6xl lg:text-8xl leading-none text-[var(--color-text)]">
                     {stat.value}
                   </span>
-                  <span className="font-sans text-[11px] font-medium tracking-[0.15em] text-[var(--color-text-secondary)] mt-2">
+                  <span className="font-sans text-xs font-medium tracking-[0.15em] text-[var(--color-text-secondary)] mt-2">
                     {stat.label}
                   </span>
                 </div>
@@ -38,10 +38,10 @@ export function About() {
 
             {/* Right: Brand Philosophy — col 5–12 */}
             <div className="col-span-12 lg:col-span-8 space-y-8 lg:pt-4">
-              <h2 className="font-heading font-normal text-[26px] md:text-[32px] lg:text-[36px] leading-[1.4] text-[var(--color-text)]">
+              <h2 className="font-heading font-normal text-3xl md:text-4xl lg:text-4xl leading-[var(--leading-body)] text-[var(--color-text)]">
                 We believe that space has the power to transform the way people live. Our work converges precision craftsmanship with organic spatial dialogue.
               </h2>
-              <p className="font-sans text-[16px] leading-[1.8] text-[var(--color-text-secondary)] max-w-xl">
+              <p className="font-sans text-base leading-loose text-[var(--color-text-secondary)] max-w-xl">
                 Founded in Seoul, our practice operates globally to curate bespoke residences, commercial workspaces, and public structures that honor materiality and structural elegance. Every project is a testament to silent authority and tactile integrity.
               </p>
             </div>
@@ -52,14 +52,14 @@ export function About() {
         <div className="border-t border-[var(--color-border)] mt-20 pt-10">
           <ScrollReveal delay={0.2}>
             <div className="flex flex-col sm:flex-row justify-between items-center gap-6 opacity-40 hover:opacity-60 transition-opacity duration-300">
-              <span className="font-sans text-[12px] tracking-[0.1em] text-[var(--color-text-secondary)] uppercase">
+              <span className="font-sans text-xs tracking-[0.1em] text-[var(--color-text-secondary)] uppercase">
                 Featured In:
               </span>
               <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 lg:gap-16">
                 {brandLogos.map((logo, index) => (
                   <span
                     key={index}
-                    className="font-heading text-[20px] md:text-[24px] text-[var(--color-text)] tracking-wide"
+                    className="font-heading text-xl md:text-2xl text-[var(--color-text)] tracking-wide"
                   >
                     {logo}
                   </span>

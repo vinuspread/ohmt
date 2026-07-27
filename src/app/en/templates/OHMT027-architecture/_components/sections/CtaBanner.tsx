@@ -26,7 +26,7 @@ export function CtaBanner() {
       <div className="absolute inset-0 z-20 flex items-center justify-center text-center px-6">
         <ScrollReveal>
           <div className="space-y-8 max-w-2xl">
-            <h2 className="font-heading font-normal text-[42px] md:text-[56px] text-white leading-tight">
+            <h2 className="font-heading font-normal text-5xl md:text-6xl text-white leading-tight">
               Let's Design Your
               <br />
               Space Together.
@@ -34,7 +34,7 @@ export function CtaBanner() {
             <div>
               <Link
                 href={`${baseRoute}/contact`}
-                className="inline-block border-2 border-white text-white px-10 py-4 text-[14px] font-sans tracking-[0.08em] hover:bg-white hover:text-[var(--color-text)] transition-colors duration-300"
+                className="inline-block border-2 border-white text-white px-10 py-4 text-sm font-sans tracking-[0.08em] hover:bg-white hover:text-[var(--color-text)] transition-colors duration-300"
               >
                 START A PROJECT
               </Link>

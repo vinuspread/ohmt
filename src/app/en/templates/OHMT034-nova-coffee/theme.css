@@ -1,0 +1,73 @@
+:root {
+  --text-display: clamp(3rem, 7vw, 5.5rem);
+  --text-h1: clamp(2.5rem, 5vw, 4rem);
+  --text-h2: clamp(2rem, 4vw, 3rem);
+  --text-h3: clamp(1.5rem, 3vw, 2rem);
+  --text-lead: clamp(1.125rem, 2vw, 1.5rem);
+  --leading-display: 0.95;
+  --leading-heading: 1.1;
+  --leading-body: 1.6;
+
+  --color-primary: #FFFFFF;
+  --color-secondary: #1B1C1E;
+  --color-accent: #3F82A6;
+  --color-accent-strong: #244B63;
+  --color-accent-soft: #DCEAF1;
+  --color-bg: #FFFFFF;
+  --color-bg-secondary: #EEF0F1;
+  --color-text: #17181A;
+  --color-text-muted: #6B6F73;
+  --color-text-contrast: #F4F5F6;
+  --color-text-muted-on-dark: rgba(244, 245, 246, 0.62);
+  --color-border: rgba(23, 24, 26, 0.1);
+
+  --font-display: 'Montserrat', system-ui, sans-serif;
+  --font-body: 'Montserrat', system-ui, sans-serif;
+  --font-mono: 'Montserrat', ui-sans-serif, system-ui, sans-serif;
+
+  --focus-outline: 2px solid var(--color-accent);
+  --focus-outline-offset: 2px;
+}
+
+html {
+  font-family: var(--font-body);
+}
+
+.font-display {
+  font-family: var(--font-display) !important;
+}
+
+.font-body {
+  font-family: var(--font-body) !important;
+}
+
+.font-mono {
+  font-family: var(--font-mono) !important;
+}
+
+.nova-spec-value {
+  font-family: var(--font-mono);
+  letter-spacing: -0.02em;
+}
+
+.nova-gradient-hero {
+  background: linear-gradient(135deg, #1B1C1E 0%, #2A2C2E 40%, #3A3C3E 100%);
+}
+
+.nova-gradient-precision {
+  background: linear-gradient(135deg, #223846 0%, #31566D 100%);
+}
+
+.nova-gradient-closing {
+  background: linear-gradient(0deg, rgba(23, 24, 26, 0.52) 0%, rgba(23, 24, 26, 0.14) 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

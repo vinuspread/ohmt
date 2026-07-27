@@ -37,21 +37,18 @@ export const AboutBrand = () => {
               브랜드 스토리
             </p>
             <h2
-              className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.1]"
+              className="text-4xl md:text-5xl font-bold tracking-tight leading-[var(--leading-heading)]"
               style={{ textWrap: "balance" } as React.CSSProperties}
             >
-              의도를 담은 패션
-            </h2>
+              오래 입을 수 있는 옷</h2>
             <p className="text-base leading-relaxed text-[var(--color-text-muted)] mt-6">
-              저희는 트렌드를 따르지 않습니다. 본능을 따릅니다. 모든 제품은 단순한 질문에서 시작됩니다.
-              '내가 정말 이것을 입을까?' 즉시 '예'라는 답이 나오지 않는다면,
-              그 제품은 만들어지지 않습니다.
-            </p>
+              유행을 그대로 따르기보다 실제로 자주 입게 될 옷인지 먼저 생각합니다.
+              디자인을 시작할 때마다 묻습니다. ‘우리도 계속 입고 싶은가?’
+              답이 분명하지 않은 제품은 만들지 않습니다.</p>
             <p className="text-base leading-relaxed text-[var(--color-text-muted)] mt-4">
-              그래서 저희 컬렉션은 반복적이지 않으면서도 조화롭습니다. 깔끔한 실루엣,
-              피부에 닿는 감촉을 고려해 선택한 원단, 그리고 목적을 가진 모든 디테일.
-              장식을 위해 더해지는 것은 없습니다.
-            </p>
+              각 컬렉션은 서로 다른 분위기를 가지면서도 자연스럽게 어울립니다.
+              단정한 실루엣과 편안한 촉감, 쓰임이 분명한 디테일에 집중합니다.
+              불필요한 장식은 덜어냅니다.</p>
             <div className="grid grid-cols-3 gap-6 mt-10 pt-10 border-t border-[var(--color-border)]">
               {[
                 { value: "200+", label: "제품" },
@@ -70,12 +67,10 @@ export const AboutBrand = () => {
               href="/ko/templates/OHMT017-multi-shop/about"
               className="inline-block mt-10 bg-[var(--color-primary)] text-white px-8 py-3 text-xs uppercase tracking-[0.2em] hover:bg-black/80 transition-[transform,colors] duration-160 ease-out active:scale-[0.97]"
             >
-              더 알아보기
-            </Link>
+              브랜드 이야기 보기</Link>
           </motion.div>
         </div>
       </div>
     </section>
   );
 };
-

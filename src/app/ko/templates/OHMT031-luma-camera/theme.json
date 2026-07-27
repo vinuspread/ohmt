@@ -3,8 +3,6 @@
   "name": "LUMA Camera",
   "name_ko": "루마 카메라",
   "category": "retail",
-  "description": "A premium compact camera template for product storytelling, everyday shooting scenes, image-quality samples, app notes, and creator-focused shop pages.",
-  "description_ko": "제품 스토리, 일상 촬영 장면, 이미지 품질 샘플, 앱 노트, 크리에이터 중심 구매 흐름을 갖춘 프리미엄 컴팩트 카메라 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {
@@ -34,6 +32,14 @@
         "weight": "400",
         "leading": "1.7",
         "style": "font-normal leading-relaxed"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
       }
     },
     "spacing": {
@@ -48,5 +54,7 @@
       "transition_slow": "420ms",
       "easing": "cubic-bezier(0.23, 1, 0.32, 1)"
     }
-  }
+  },
+  "thumbnail": "/templates/OHMT031-luma-camera/og-image.jpg",
+  "ogImage": "/templates/OHMT031-luma-camera/og-image.jpg"
 }

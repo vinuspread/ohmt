@@ -1,7 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap');
-
 /* Technology Design Tokens */
 :root {
+  --text-display: clamp(3rem, 7vw, 5.5rem);
+  --text-h1: clamp(2.5rem, 5vw, 4rem);
+  --text-h2: clamp(2rem, 4vw, 3rem);
+  --text-h3: clamp(1.5rem, 3vw, 2rem);
+  --text-lead: clamp(1.125rem, 2vw, 1.5rem);
+  --leading-display: 0.95;
+  --leading-heading: 1.1;
+  --leading-body: 1.6;
+
   /* Color System */
   --color-bg: #ffffff;
   --color-bg-secondary: #f8f9fc;
@@ -15,8 +22,8 @@
   --color-border: #e2e8f0;
 
   /* Typography */
-  --font-heading: 'Inter Tight', 'Pretendard', 'Inter', system-ui, -apple-system, sans-serif;
-  --font-body: 'Inter', Pretendard, system-ui, -apple-system, sans-serif;
+  --font-heading: 'Inter Tight', 'Inter', system-ui, -apple-system, sans-serif;
+  --font-body: 'Pretendard Variable', Pretendard, 'Inter', system-ui, -apple-system, sans-serif;
 
   /* Transitions */
   --transition-fast: 200ms;
@@ -25,11 +32,8 @@
   --transition-easing: cubic-bezier(0.16, 1, 0.3, 1);
 
   --focus-ring: 2px solid var(--color-primary);
-  --focus-ring-offset: 2px;}
-
-/* Korean typography */
-body, * { word-break: keep-all; }
-header a, header button, header nav { letter-spacing: -0.03em; }
+  --focus-ring-offset: 2px;
+}
 
 /* Accessibility: Respect motion preferences */
 @media (prefers-reduced-motion: reduce) {
@@ -40,38 +44,4 @@ header a, header button, header nav { letter-spacing: -0.03em; }
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
-
-
-body[lang="ko"], [lang="ko"], :root {
-  word-break: keep-all;
-  letter-spacing: -0.025em;
-}
-
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav, 
-nav a, nav button, nav span {
-  letter-spacing: -0.03em;
-}
-
-/* Korean typography rules (Korean Kerning Rule) */
-body[lang="ko"], [lang="ko"], :root {
-  word-break: keep-all;
-  letter-spacing: -0.025em;
-}
-
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav, 
-nav a, nav button, nav span {
-  letter-spacing: -0.03em;
 }

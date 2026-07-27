@@ -3,8 +3,10 @@
 
 import React from "react";
 import Link from "next/link";
+import { Menu, X } from "lucide-react";
 
 export const Header = () => {
+  const [mobileOpen, setMobileOpen] = React.useState(false);
   const navItems = [
     { label: "개요", href: "/ko/templates/OHMT011-ir" },
     { label: "재무 정보", href: "/ko/templates/OHMT011-ir/financials" },
@@ -37,7 +39,7 @@ export const Header = () => {
             ))}
           </div>
         
-          <div className="flex items-center gap-6">
+          <div className="hidden items-center gap-6 md:flex">
             <div className="hidden lg:flex flex-col text-right leading-tight pr-4 border-r border-[var(--color-border)]">
               <span className="text-[0.7rem] font-bold text-[var(--color-dark-bg)] block">NAS: VINU</span>
               <span className="text-[0.7rem] font-semibold block text-[var(--color-success)]">142.85 +1.24%</span>
@@ -46,8 +48,36 @@ export const Header = () => {
               투자자 키트
             </button>
           </div>
+          <button
+            type="button"
+            onClick={() => setMobileOpen((open) => !open)}
+            className="inline-flex h-10 w-10 items-center justify-center border border-[var(--color-border)] text-[var(--color-dark-bg)] md:hidden"
+            aria-label={mobileOpen ? "메뉴 닫기" : "메뉴 열기"}
+            aria-expanded={mobileOpen}
+          >
+            {mobileOpen ? <X size={19} strokeWidth={1.8} /> : <Menu size={19} strokeWidth={1.8} />}
+          </button>
         </div>
       </nav>
+      {mobileOpen && (
+        <div className="sticky top-16 z-[890] border-b border-[var(--color-border)] bg-white md:hidden">
+          <div className="mx-auto flex max-w-[1280px] flex-col px-6 py-5">
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                onClick={() => setMobileOpen(false)}
+                className="border-b border-[var(--color-border)] py-3 text-sm font-bold uppercase tracking-[0.12em] text-[var(--color-dark-bg)] last:border-b-0"
+              >
+                {item.label}
+              </Link>
+            ))}
+            <button className="mt-5 w-full border border-[var(--color-dark-bg)] px-5 py-3 text-xs font-bold uppercase tracking-[0.14em] text-[var(--color-dark-bg)]">
+              투자자 키트
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 };

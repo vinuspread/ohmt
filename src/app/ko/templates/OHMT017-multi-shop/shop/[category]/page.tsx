@@ -23,7 +23,7 @@ function CategoryPageContent() {
           <section className="bg-[var(--color-bg-secondary)] py-16">
             <div className="max-w-[1440px] mx-auto px-6 md:px-12 text-center">
               <p className="text-xs uppercase tracking-[0.25em] text-[var(--color-text-muted)] mb-3">
-                <Link href="/ko/templates/OHMT017-multi-shop/shop" className="hover:text-[var(--color-text)] transition-colors">쇼핑</Link>
+                <Link href="/ko/templates/OHMT017-multi-shop/shop" className="hover:text-[var(--color-text)] transition-colors">스토어</Link>
                 {" / "}
                 {category?.name ?? categoryId}
               </p>
@@ -64,7 +64,7 @@ function CategoryPageContent() {
                   </div>
                 </>
               ) : (
-                <p className="text-center text-[var(--color-text-muted)] py-20">상품이 없습니다.</p>
+                <p className="text-center text-[var(--color-text-muted)] py-20">이 카테고리에 등록된 상품이 없습니다.</p>
               )}
             </div>
           </section>

@@ -23,7 +23,7 @@ export default function NewsCard({ item }: { item: NewsItem }) {
         <span className="inline-block rounded-full bg-[var(--color-primary)]/10 px-3 py-1 text-xs font-medium text-[var(--color-primary)]">
           {item.category}
         </span>
-        <h3 className="mt-3 font-[var(--font-heading)] text-lg font-bold leading-[1.1] text-[var(--color-text)] group-hover:text-[var(--color-primary)] transition-colors">
+        <h3 className="mt-3 font-[var(--font-heading)] text-lg font-bold leading-[var(--leading-heading)] text-[var(--color-text)] group-hover:text-[var(--color-primary)] transition-colors">
           {item.title}
         </h3>
         <p className="mt-2 line-clamp-2 text-sm text-[var(--color-text-muted)]">

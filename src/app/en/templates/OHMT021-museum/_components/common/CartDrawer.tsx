@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { X, ShoppingBag, ArrowRight } from "lucide-react";
 import React from "react";
 
@@ -42,8 +42,8 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
             {/* Content */}
             <div className="flex-1 overflow-y-auto p-8 space-y-8">
               {[
-                { name: "Unicorn Limited Edition", price: "$4,200", img: "/templates/OHMT021-museum/gundam-unicorn.jpg", size: "M" },
-                { name: "Sazabi Executive Piece", price: "$5,850", img: "/templates/OHMT021-museum/gundam-sazabi.jpg", size: "L" },
+                { name: "Laocoon Replica (Medium Edition)", price: "$850", img: "/templates/OHMT021-museum/laocoon-sculpture.png", size: "Standard" },
+                { name: "The School of Athens Art Print", price: "$320", img: "/templates/OHMT021-museum/school-of-athens.png", size: "Framed" },
               ].map((item, i) => (
                 <div key={i} className="flex gap-6 group">
                   <div className="w-24 aspect-[3/4] bg-luxury-beige overflow-hidden">
@@ -52,7 +52,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                   <div className="flex-1 flex flex-col justify-between py-1">
                     <div>
                       <h4 className="font-serif text-lg mb-1">{item.name}</h4>
-                      <p className="text-[13px] uppercase tracking-widest text-luxury-gray">Size: {item.size}</p>
+                      <p className="text-xs uppercase tracking-widest text-luxury-gray">Size: {item.size}</p>
                     </div>
                     <div className="flex justify-between items-end">
                       <div className="flex items-center gap-4 text-xs">
@@ -70,10 +70,10 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
             {/* Footer */}
             <div className="p-8 bg-luxury-cream border-t border-luxury-border">
               <div className="flex justify-between items-center mb-8">
-                <span className="text-[13px] uppercase font-bold tracking-[0.3em] text-luxury-gray">Subtotal</span>
-                <span className="text-2xl font-serif tracking-tighter">$10,050.00</span>
+                <span className="text-xs uppercase font-bold tracking-[0.3em] text-luxury-gray">Subtotal</span>
+                <span className="text-2xl font-serif tracking-tighter">$1,170.00</span>
               </div>
-              <button className="w-full py-6 bg-luxury-black text-white text-[13px] uppercase font-bold tracking-[0.4em] flex items-center justify-center gap-4 hover:bg-opacity-90 transition-all active:scale-95">
+              <button className="w-full py-6 bg-luxury-black text-white text-xs uppercase font-bold tracking-[0.4em] flex items-center justify-center gap-4 hover:bg-opacity-90 transition-all active:scale-95">
                 Checkout Now <ArrowRight size={16} />
               </button>
             </div>
@@ -83,3 +83,4 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
     </AnimatePresence>
   );
 }
+

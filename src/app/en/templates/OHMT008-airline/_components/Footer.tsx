@@ -13,7 +13,7 @@ export const Footer = () => {
             <Link href="/en/templates/OHMT008-airline" className="inline-block mb-5">
               <span className="text-sm md:text-base font-bold tracking-[0.15em] uppercase text-[var(--color-primary)] leading-none">OHMT</span>
             </Link>
-            <p className="text-[0.85rem] text-[var(--color-primary)]/70 leading-[1.4] max-w-[280px]">
+            <p className="text-[0.85rem] text-[var(--color-primary)]/70 leading-[var(--leading-body)] max-w-[280px]">
               Setting the global standard for luxury travel. Experience excellence across all continents.
             </p>
           </div>

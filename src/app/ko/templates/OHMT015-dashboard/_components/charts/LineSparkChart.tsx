@@ -1,8 +1,10 @@
 'use client'
 
-import { motion } from 'framer-motion'
+import { SafeResponsiveContainer } from './SafeResponsiveContainer'
 import {
-  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Area, AreaChart,
+  motion } from 'framer-motion'
+import {
+  LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Area, AreaChart
 } from 'recharts'
 import { monthlyRevenue, companyGrowthData } from '../../data/dashboard-data'
 import { chartDefaults, formatAxis } from '../../data/chart-theme'
@@ -20,7 +22,7 @@ export function WebsiteAnalyticsLine() {
         Monthly Sales Trend
       </h3>
       <div style={{ height: 250 }}>
-        <ResponsiveContainer width="100%" height="100%">
+        <SafeResponsiveContainer width="100%" height="100%">
           <LineChart data={monthlyRevenue}>
             <CartesianGrid {...chartDefaults.cartesianGrid} />
             <XAxis dataKey="month" tick={{ fill: 'var(--color-text-muted)', fontSize: 12 }} axisLine={false} tickLine={false} />
@@ -30,7 +32,7 @@ export function WebsiteAnalyticsLine() {
             <Line type="monotone" dataKey="revenue" name="Revenue" stroke="var(--color-success)" strokeWidth={2} dot={false} activeDot={{ r: 4, fill: 'var(--color-success)' }} isAnimationActive={false} animationDuration={1000} animationEasing="ease-in-out" />
             <Line type="monotone" dataKey="cashflow" name="Cashflow" stroke="var(--color-info)" strokeWidth={2} dot={false} activeDot={{ r: 4, fill: 'var(--color-info)' }} isAnimationActive={false} animationDuration={1000} animationEasing="ease-in-out" />
           </LineChart>
-        </ResponsiveContainer>
+        </SafeResponsiveContainer>
       </div>
     </motion.div>
   )
@@ -54,7 +56,7 @@ export function CompanyGrowth() {
         </span>
       </div>
       <div style={{ height: 250 }}>
-        <ResponsiveContainer width="100%" height="100%">
+        <SafeResponsiveContainer width="100%" height="100%">
           <AreaChart data={companyGrowthData}>
             <defs>
               <linearGradient id="growthGrad" x1="0" y1="0" x2="0" y2="1">
@@ -68,7 +70,7 @@ export function CompanyGrowth() {
             <Tooltip {...chartDefaults.tooltip} cursor={{ stroke: 'rgba(255,255,255,0.1)', strokeWidth: 1 }} />
             <Area type="monotone" dataKey="value" stroke="var(--color-primary)" strokeWidth={2} fill="url(#growthGrad)" dot={false} isAnimationActive={false} animationDuration={1000} animationEasing="ease-in-out" />
           </AreaChart>
-        </ResponsiveContainer>
+        </SafeResponsiveContainer>
       </div>
     </motion.div>
   )

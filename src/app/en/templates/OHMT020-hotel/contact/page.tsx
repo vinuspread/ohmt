@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import { Navbar } from "../_components/Navbar";
 import { Footer } from "../_components/Footer";
 import { Button } from "../_components/ui/Button";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { MapPin, Phone, Mail, Clock, MessageSquare, Send } from "lucide-react";
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
@@ -30,7 +30,7 @@ function ContactPageContent() {
           </div>
           <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full pt-20">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-              <span className="text-[11px] font-medium text-[var(--color-accent)] uppercase tracking-[0.25em] block mb-3">Connect With Us</span>
+              <span className="text-xs font-medium text-[var(--color-accent)] uppercase tracking-[0.25em] block mb-3">Connect With Us</span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-[var(--font-heading)] font-bold text-[var(--color-bg)]">Contact & Location</h1>
             </motion.div>
           </div>
@@ -43,10 +43,10 @@ function ContactPageContent() {
               {/* Left Column: Contact details & Map */}
               <div className="lg:col-span-5 flex flex-col gap-10">
                 <div>
-                  <span className="text-[11px] font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] block mb-3">Reach Out</span>
+                  <span className="text-xs font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] block mb-3">Reach Out</span>
                   <h2 className="text-3xl font-[var(--font-heading)] font-bold text-[var(--color-primary)] mb-6">Our Resort Location</h2>
                   <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-                    Set on a secluded hillside dropping into a private bay, OHMT is situated on Koh Samui?셲 pristine north-eastern coast.
+                    Set on a secluded hillside dropping into a private bay, OHMT is situated on Koh Samui's pristine north-eastern coast.
                   </p>
                 </div>
 
@@ -99,7 +99,7 @@ function ContactPageContent() {
                         Your message has been delivered to our guest relations desk. We will review your inquiry and get back to you shortly.
                       </p>
                     </div>
-                    <Button variant="primary" size="md" onClick={() => setSubmitted(false)} className="text-[11px] tracking-[0.2em] uppercase rounded-sm mt-4">Send Another Message</Button>
+                    <Button variant="primary" size="md" onClick={() => setSubmitted(false)} className="text-xs tracking-[0.2em] uppercase rounded-sm mt-4">Send Another Message</Button>
                   </motion.div>
                 ) : (
                   <form onSubmit={handleSend} className="flex flex-col gap-6">
@@ -110,25 +110,25 @@ function ContactPageContent() {
 
                     <div className="flex flex-col gap-4">
                       <div>
-                        <label className="text-[10px] font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">Full Name *</label>
+                        <label className="text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">Full Name *</label>
                         <input required type="text" placeholder="John Doe" className="w-full border border-[var(--color-border)] bg-transparent px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-accent)] transition-colors rounded-sm" />
                       </div>
                       <div>
-                        <label className="text-[10px] font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">Email Address *</label>
+                        <label className="text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">Email Address *</label>
                         <input required type="email" placeholder="john.doe@example.com" className="w-full border border-[var(--color-border)] bg-transparent px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-accent)] transition-colors rounded-sm" />
                       </div>
                       <div>
-                        <label className="text-[10px] font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">Subject</label>
+                        <label className="text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">Subject</label>
                         <input type="text" placeholder="Spa booking, Group events, Airport shuttle etc." className="w-full border border-[var(--color-border)] bg-transparent px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-accent)] transition-colors rounded-sm" />
                       </div>
                       <div>
-                        <label className="text-[10px] font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">Your Message *</label>
+                        <label className="text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">Your Message *</label>
                         <textarea required rows={5} placeholder="Write your message here..." className="w-full border border-[var(--color-border)] bg-transparent px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-accent)] transition-colors resize-none rounded-sm" />
                       </div>
                     </div>
 
                     <div>
-                      <Button variant="primary" size="lg" className="w-full text-[11px] tracking-[0.2em] uppercase rounded-sm flex items-center justify-center gap-2">
+                      <Button variant="primary" size="lg" className="w-full text-xs tracking-[0.2em] uppercase rounded-sm flex items-center justify-center gap-2">
                         <Send size={14} /> Send Message
                       </Button>
                     </div>
@@ -152,4 +152,3 @@ export default function ContactPage() {
     </React.Suspense>
   );
 }
-

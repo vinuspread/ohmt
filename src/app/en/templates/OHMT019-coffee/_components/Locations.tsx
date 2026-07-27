@@ -2,6 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
+import { ArrowRight } from "lucide-react";
 import { locations } from "../data/data";
 
 const easeOut = [0.23, 1, 0.32, 1] as const;
@@ -42,7 +43,7 @@ export const Locations = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-xs font-semibold uppercase tracking-[0.1em] text-[var(--color-primary)] hover:opacity-80 transition-opacity"
               >
-                Get Directions &rarr;
+                Get Directions <ArrowRight size={14} className="inline" />
               </Link>
             </motion.div>
           ))}

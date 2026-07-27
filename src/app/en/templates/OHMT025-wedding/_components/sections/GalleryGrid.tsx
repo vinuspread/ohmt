@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "motion/react";
 import { projects } from "../../data/data";
 
 export default function GalleryGrid() {
@@ -42,7 +42,7 @@ function GalleryCard({ project, index, reduce }: {
           transition={{ duration: 0.9, ease: [0.22, 0.61, 0.36, 1] }}
         />
         <motion.div
-          className="absolute inset-x-0 bottom-0 px-6 py-5 bg-gradient-to-t from-[#1A1816]/90 to-transparent"
+          className="absolute inset-x-0 bottom-0 px-6 py-5 bg-gradient-to-t from-[var(--color-overlay)]/90 to-transparent"
           initial={{ y: "100%" }}
           animate={{ y: hovered ? "0%" : "100%" }}
           transition={{ duration: 0.5, ease: [0.22, 0.61, 0.36, 1] }}
@@ -58,3 +58,4 @@ function GalleryCard({ project, index, reduce }: {
     </motion.div>
   );
 }
+

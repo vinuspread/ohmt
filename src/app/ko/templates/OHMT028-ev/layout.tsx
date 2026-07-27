@@ -1,16 +1,16 @@
-﻿import { Michroma, Inter } from "next/font/google";
+import { Michroma, Inter } from "next/font/google";
 import "./theme.css";
 import type { Metadata } from "next";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
 
 export const metadata: Metadata = {
-  title: "OHMT - NUBI 전기차",
-  description: "미니멀한 어반 EV 브랜드 NUBI — 작은 차, 큰 재미. 제로 배출, 올 캐릭터.",
+  title: "OHMT | NUBI 도심형 전기차",
+  description: "도심 주행에 알맞은 크기와 민첩한 움직임, 실용적인 주행거리를 갖춘 전기차 NUBI를 소개합니다.",
   keywords: ["전기차 템플릿", "EV 랜딩페이지", "NUBI", "OHMT"],
   authors: [{ name: "OHMT", url: "https://ohmytemplate.com" }],
   openGraph: {
-    title: "OHMT - NUBI 전기차",
-    description: "미니멀한 어반 EV 브랜드 NUBI — 작은 차, 큰 재미. 제로 배출, 올 캐릭터.",
+    title: "OHMT | NUBI 도심형 전기차",
+    description: "도심 주행에 알맞은 크기와 민첩한 움직임, 실용적인 주행거리를 갖춘 전기차 NUBI를 소개합니다.",
     url: "https://ohmytemplate.com/ko/templates/OHMT028-ev",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT028-ev/og-image.jpg", width: 1200, height: 630 }],
@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - NUBI 전기차",
-    description: "미니멀한 어반 EV 브랜드 NUBI — 작은 차, 큰 재미. 제로 배출, 올 캐릭터.",
+    title: "OHMT | NUBI 도심형 전기차",
+    description: "도심 주행에 알맞은 크기와 민첩한 움직임, 실용적인 주행거리를 갖춘 전기차 NUBI를 소개합니다.",
     images: ["/templates/OHMT028-ev/og-image.jpg"],
   },
   robots: { index: true, follow: true },
@@ -46,10 +46,11 @@ const inter = Inter({
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className={`${michroma.variable} ${inter.variable}`}>
-      <style>{`@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');`}</style>
-      <TemplateWrapper>{children}</TemplateWrapper>
+    <div className={`${michroma.variable} ${inter.variable}`} style={{ fontFamily: "'Pretendard Variable', Pretendard, var(--font-inter), sans-serif" }}>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" crossOrigin="anonymous" />
+      <TemplateWrapper>
+          <div lang="ko" className="ohmt028-ev">{children}</div>
+        </TemplateWrapper>
     </div>
   );
 }
-

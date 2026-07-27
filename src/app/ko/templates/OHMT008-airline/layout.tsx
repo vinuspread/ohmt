@@ -1,12 +1,12 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - 항공사",
-  description: "프리미엄 항공 경험",
+  title: "OHMT - ?? ?? ?? ???",
+  description: "항공권 예약과 취항지, 객실 서비스와 멤버십 혜택을 소개하는 프리미엄 항공사 웹사이트 템플릿입니다.",
   openGraph: {
-    title: "OHMT - 항공사",
-    description: "프리미엄 항공 경험",
+    title: "OHMT - ?? ?? ?? ???",
+    description: "항공권 예약과 취항지, 객실 서비스와 멤버십 혜택을 소개하는 프리미엄 항공사 웹사이트 템플릿입니다.",
     url: "https://ohmytemplate.com/ko/templates/OHMT008-airline",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT008-airline/og-image.jpg", width: 1200, height: 630 }],
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - 항공사",
-    description: "프리미엄 항공 경험",
+    title: "OHMT - ?? ?? ?? ???",
+    description: "항공권 예약과 취항지, 객실 서비스와 멤버십 혜택을 소개하는 프리미엄 항공사 웹사이트 템플릿입니다.",
     images: ["/templates/OHMT008-airline/og-image.jpg"],
   },
   robots: { index: true, follow: true },
@@ -36,8 +36,7 @@ export default function AirlineLayout({
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500;700;900&display=swap');
       `}</style>
-      {children}
+      <div lang="ko" className="ohmt008-airline">{children}</div>
     </>
   );
 }
-

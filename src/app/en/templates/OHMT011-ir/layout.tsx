@@ -1,11 +1,11 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - Investor Relations",
+  title: "OHMT - Investor Relations Website Template",
   description: "Corporate strategy and financial performance",
   openGraph: {
-    title: "OHMT - Investor Relations",
+    title: "OHMT - Investor Relations Website Template",
     description: "Corporate strategy and financial performance",
     url: "https://ohmytemplate.com/en/templates/OHMT011-ir",
     siteName: "OHMT",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Investor Relations",
+    title: "OHMT - Investor Relations Website Template",
     description: "Corporate strategy and financial performance",
     images: ["/templates/OHMT011-ir/og-image.jpg"],
   },
@@ -36,8 +36,20 @@ export default function IRLayout({
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
       `}</style>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "OHMT Global Holdings",
+            url: "https://ohmytemplate.com/en/templates/OHMT011-ir",
+            description: "Investor Relations - Corporate strategy and financial performance",
+            foundingDate: "2020",
+          }),
+        }}
+      />
       {children}
     </>
   );
 }
-

@@ -1,26 +1,91 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;600&display=swap");
-
 @layer base {
   .resort-template {
-    --bg: #7C9BAB;
-    --bg-dark: #0A0E0E;
-    --accent: #FFC392;
-    --text: #FFFFFF;
+    --color-primary: #7c9bab;
+    --color-secondary: #0a0e0e;
+    --color-accent: #ffc392;
+    --color-bg: #7c9bab;
+    --color-bg-dark: #0a0e0e;
+    --color-text: #ffffff;
+    --color-text-muted: rgba(255, 255, 255, 0.6);
+    --color-text-contrast: #0a0e0e;
+    --color-border: rgba(255, 255, 255, 0.25);
+    --color-border-subtle: rgba(255, 255, 255, 0.15);
+    --color-accent-hover: #ffb37a;
+    --font-heading: "Pretendard Variable", Pretendard, var(--font-instrument-sans), sans-serif;
+    --font-body: "Pretendard Variable", Pretendard, var(--font-instrument-sans), sans-serif;
+    --text-display: clamp(3rem, 7vw, 5.5rem);
+    --text-h1: clamp(2.5rem, 5vw, 4rem);
+    --text-h2: clamp(2rem, 4vw, 3rem);
+    --text-h3: clamp(1.5rem, 3vw, 2rem);
+    --text-lead: clamp(1.125rem, 2vw, 1.5rem);
+    --leading-display: 1.1;
+    --leading-heading: 1.1;
+    --leading-body: 1.4;
+    --line-logo: 1;
+    --line-heading: 1.2;
+    --line-body: 1.4;
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-6: 24px;
+    --space-9: 36px;
+    --space-12: 48px;
+    --space-16: 64px;
+    --space-24: 96px;
+    --space-32: 128px;
+    --container: 1440px;
+    --gutter-mobile: 24px;
+    --gutter-desktop: 48px;
+    --section-py-mobile: 64px;
+    --section-py-desktop: 128px;
+    --subpage-hero-height: 600px;
+    --subpage-detail-hero-height-mobile: 600px;
+    --subpage-detail-hero-height-desktop: 800px;
+    --subpage-hero-heading-leading-mobile: 0.9;
+    --subpage-hero-heading-leading-desktop: 0.9;
+    --bg: var(--color-bg);
+    --bg-dark: var(--color-bg-dark);
+    --accent: var(--color-accent);
+    --text: var(--color-text);
     --text-muted: rgba(255, 255, 255, 0.6);
-    --text-dark: #0A0E0E;
-    --border: rgba(255, 255, 255, 0.25);
-    --border-dark: rgba(255, 255, 255, 0.15);
-    --accent-hover: #ffb37a;
+    --text-dark: var(--color-text-contrast);
+    --text-contrast: var(--color-text-contrast);
+    --border: var(--color-border);
+    --border-dark: var(--color-border-subtle);
+    --accent-hover: var(--color-accent-hover);
     --focus-ring: 2px solid var(--accent);
     --focus-ring-offset: 2px;
-  }
-
-  .resort-template * {
-    word-break: keep-all;
-  }
-
-  .resort-template {
     overflow-x: clip;
+  }
+
+  .resort-container {
+    width: 100%;
+    max-width: var(--container);
+    margin-inline: auto;
+    padding-inline: var(--gutter-mobile);
+  }
+
+  .resort-section-y {
+    padding-block: var(--section-py-mobile);
+  }
+
+  .resort-heading {
+    line-height: var(--line-heading);
+  }
+
+  .resort-body {
+    line-height: var(--line-body);
+  }
+
+  @media (min-width: 768px) {
+    .resort-container {
+      padding-inline: var(--gutter-desktop);
+    }
+
+    .resort-section-y {
+      padding-block: var(--section-py-desktop);
+    }
   }
 }
 
@@ -31,22 +96,21 @@
 }
 
 @media (max-width: 767px) {
-  .resort-template [class*="px-10"],
   .resort-template [class*="px-12"] {
-    padding-left: 1.25rem !important;
-    padding-right: 1.25rem !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
   }
 
   .resort-template h2 {
-    font-size: clamp(1.75rem, 8.8vw, 3.25rem) !important;
-    line-height: 1.12 !important;
+    font-size: 36px !important;
+    line-height: 1.08 !important;
     text-wrap: balance;
   }
 
   .resort-template h1 {
-    font-size: clamp(3.7rem, 15vw, 4.8rem) !important;
-    line-height: 0.92 !important;
-    letter-spacing: -0.035em !important;
+    font-size: 56px !important;
+    line-height: 1 !important;
+    letter-spacing: -0.025em !important;
   }
 
   .resort-template h1 span {
@@ -67,21 +131,4 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
-
-/* Korean typography rules (Korean Kerning Rule) */
-body[lang="ko"], [lang="ko"], :root {
-  word-break: keep-all;
-  letter-spacing: -0.025em;
-}
-
-h1, h2, h3, h4, h5, h6,
-.font-heading,
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav,
-nav a, nav button, nav span {
-  letter-spacing: -0.03em;
 }

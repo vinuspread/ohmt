@@ -17,7 +17,7 @@ export function Values() {
   return (
     <section className="bg-[var(--bg-alt)] py-24 md:py-32">
       <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12">
-        <h2 className="font-['Montserrat'] font-bold text-[clamp(28px,4vw,48px)] text-[var(--text)] leading-[1.15] tracking-tight mb-16">
+        <h2 className="font-['Montserrat'] font-bold text-[length:var(--text-h2)] text-[var(--text)] leading-[var(--leading-heading)] tracking-tight mb-16">
           차별성
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -26,8 +26,8 @@ export function Values() {
               key={v.title}
               className="bg-white rounded-lg p-8 border border-[var(--border)] hover:-translate-y-1 hover:shadow-md transition-all"
             >
-              <h3 className="font-['Montserrat'] font-semibold text-[18px] text-[var(--text)] mb-3">{v.title}</h3>
-              <p className="text-[14px] text-[var(--text-muted)] leading-relaxed">{v.desc}</p>
+              <h3 className="font-['Montserrat'] font-semibold text-lg text-[var(--text)] mb-3">{v.title}</h3>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed">{v.desc}</p>
             </div>
           ))}
         </div>

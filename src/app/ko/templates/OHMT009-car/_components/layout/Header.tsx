@@ -69,7 +69,7 @@ export const Header = () => {
 
       {/* Mobile drawer */}
       <div className={clsx(
-        "fixed top-[68px] left-0 right-0 z-[850] bg-black border-t border-white/[0.08] transition-all duration-300 md:hidden overflow-hidden",
+        "fixed top-16 left-0 right-0 z-[850] bg-black border-t border-white/[0.08] transition-all duration-300 md:hidden overflow-hidden",
         mobileOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
       )}>
         <div className="flex flex-col px-8 py-6 gap-1">

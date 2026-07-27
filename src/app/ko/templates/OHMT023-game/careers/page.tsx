@@ -22,17 +22,15 @@ export default function CareersPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
-            className="mb-16 max-w-3xl"
+            className="mb-16 max-w-4xl"
           >
             <span className="text-sm font-medium tracking-[0.2em] text-[var(--color-primary)] uppercase">
-              Careers
-            </span>
+              채용</span>
             <h1 className="mt-2 font-[var(--font-heading)] text-5xl font-bold md:text-6xl">
-              팀에 합류하세요
-            </h1>
-            <p className="mt-6 text-base leading-relaxed text-[var(--color-text-muted)]">
-              우리는 뛰어난 게임 경험을 창조하는 열정을 공유할 재능 있는 인재를 항상 찾고 있습니다.
-              아래 현재 열려 있는 포지션을 확인하세요.
+              함께할 동료를 찾습니다</h1>
+            <p className="mt-6 max-w-3xl text-base leading-relaxed text-[var(--color-text-muted)]">
+              <span className="sm:block">좋은 게임을 함께 만들 개발자와 디자이너, 아티스트를 찾고 있습니다.</span>{" "}
+              <span className="sm:block">현재 모집 중인 포지션과 팀별 업무를 확인해 보세요.</span>
             </p>
           </motion.div>
 
@@ -77,10 +75,10 @@ export default function CareersPage() {
 
           {careers.length === 0 && (
             <div className="rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] p-12 text-center">
-              <h3 className="font-[var(--font-heading)] text-2xl font-bold">현재 열린 포지션이 없습니다</h3>
+              <h3 className="font-[var(--font-heading)] text-2xl font-bold">현재 모집 중인 포지션이 없습니다</h3>
               <p className="mt-2 text-[var(--color-text-muted)]">
-                현재 열린 포지션은 없지만, 항상 인재를 찾고 있습니다.
-                contact@ohmt.site으로 이력서를 보내주세요.
+                <span className="sm:block">현재 채용 공고는 없지만 지원서는 언제든 검토합니다.</span>{" "}
+                <span className="sm:block">contact@ohmt.site로 이력서를 보내주세요.</span>
               </p>
             </div>
           )}
@@ -90,4 +88,3 @@ export default function CareersPage() {
     </TemplateWrapper>
   );
 }
-

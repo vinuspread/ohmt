@@ -41,19 +41,17 @@ export default function Hero() {
           className="bg-gradient-to-r from-white via-[var(--color-accent)] to-[var(--color-primary)] bg-clip-text text-transparent"
           style={{ fontSize: "clamp(3rem, 8vw, 7rem)", lineHeight: 1.05 }}
         >
-          상상력을 넘어,
-          <br />
-          새로운 현실을 조각하다.
-        </motion.h1>
+          상상을<br />
+          플레이할 수 있는 세계로.</motion.h1>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: [0.23, 1, 0.32, 1], delay: 0.3 }}
-          className="mx-auto mt-6 max-w-2xl text-lg text-[var(--color-text-muted)]"
+          className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-[var(--color-text-muted)]"
         >
-          우리는 인터랙티브 엔터테인먼트의 경계를 끊임없이 확장합니다.
-          완전히 몰입할 수 있는 차세대 게임 에픽을 설계합니다.
+          <span className="sm:block">강렬한 세계관과 완성도 높은 플레이로</span>{" "}
+          <span className="sm:block">오래 기억되는 게임을 만듭니다.</span>
         </motion.p>
 
         <motion.div
@@ -69,8 +67,7 @@ export default function Hero() {
           </Link>
           <Link href="/ko/templates/OHMT023-game/careers">
             <Button variant="outline" className="text-base px-8 py-4">
-              팀 합류하기
-            </Button>
+              채용 공고 보기</Button>
           </Link>
         </motion.div>
       </div>

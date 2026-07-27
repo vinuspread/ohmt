@@ -3,17 +3,15 @@
   "name": "Portfolio Brutalist",
   "name_ko": "포트폴리오 브루탈리스트",
   "category": "portfolio",
-  "description": "A personal portfolio template for independent creatives, with profile storytelling, selected work, journal entries, and a clean structure for building credibility.",
-  "description_ko": "독립 크리에이터를 위한 개인 포트폴리오 템플릿. 프로필 스토리, 선별 작업, 저널, 신뢰를 만드는 간결한 구조를 갖췄습니다.",
   "mode": "light",
   "theme": {
     "palette": {
       "primary": "#FFFFFF",
       "secondary": "#000000",
-      "accent": "#ED008C",
+      "accent": "#000000",
       "text": {
         "main": "#000000",
-        "muted": "#4A4A4A",
+        "muted": "#707070",
         "contrast": "#FFFFFF"
       },
       "ui": {
@@ -38,6 +36,14 @@
       "mono": {
         "font": "JetBrains Mono",
         "weight": "400"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
       }
     },
     "spacing": {
@@ -53,5 +59,7 @@
       "transition_slow": "500ms",
       "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
     }
-  }
+  },
+  "thumbnail": "/templates/OHMT007-portfolio/og-image.jpg",
+  "ogImage": "/templates/OHMT007-portfolio/og-image.jpg"
 }

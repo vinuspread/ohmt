@@ -1,10 +1,8 @@
 {
   "slug": "OHMT027-architecture",
-  "name": "Architecture Portfolio",
+  "name": "건축 포트폴리오",
   "name_ko": "건축 포트폴리오",
   "category": "creative",
-  "description": "An architecture portfolio template for project archives, spatial stories, studio positioning, and immersive imagery with strong editorial typography.",
-  "description_ko": "프로젝트 아카이브, 공간 스토리, 스튜디오 포지셔닝, 몰입감 있는 이미지를 강한 에디토리얼 타이포그래피로 담은 건축 포트폴리오 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {
@@ -34,6 +32,14 @@
         "weight": "400",
         "leading": "1.6",
         "style": "leading-relaxed"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
       }
     },
     "spacing": {
@@ -52,5 +58,7 @@
       "button": "bg-[#1A1A1A] text-white hover:bg-[#333333]",
       "card_hover": "hover:scale-[1.02] transition-transform duration-500 ease-out"
     }
-  }
+  },
+  "thumbnail": "/templates/OHMT027-architecture/og-image.jpg",
+  "ogImage": "/templates/OHMT027-architecture/og-image.jpg"
 }

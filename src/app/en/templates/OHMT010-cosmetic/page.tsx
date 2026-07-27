@@ -2,7 +2,6 @@
 "use client";
 
 import React from "react";
-import { useSearchParams } from "next/navigation";
 import { Header } from "./_components/layout/Header";
 import { Footer } from "./_components/layout/Footer";
 import { Hero } from "./_components/sections/Hero";
@@ -10,7 +9,6 @@ import { ProductGrid } from "./_components/sections/ProductGrid";
 import theme from "./theme.json";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
 function CosmeticTemplateContent() {
-  const searchParams = useSearchParams();
   const t = {
   "nav": {
     "shop": `Shop`,
@@ -90,10 +88,10 @@ return (
                 />
               </div>
               <div className="order-1 md:order-2">
-                <h2 className="text-[1.6rem] md:text-[2.8rem] font-normal leading-[1.1] mb-8">
+                <h2 className="text-[1.6rem] md:text-[2.8rem] font-normal leading-[var(--leading-heading)] mb-8">
                   {t.story.title}
                 </h2>
-                <p className="text-[0.95rem] text-[var(--color-text-muted)] leading-[1.4] mb-12 max-w-[480px]">
+                <p className="text-[0.95rem] text-[var(--color-text-muted)] leading-[var(--leading-body)] mb-12 max-w-[480px]">
                   {t.story.desc}
                 </p>
                 <button className="px-10 py-4 bg-black text-white text-[0.85rem] font-bold uppercase tracking-wider hover:opacity-80 transition-all">
@@ -110,10 +108,22 @@ return (
   );
 }
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Store",
+  name: "OHMT Cosmetic",
+  description: "Premium beauty and cosmetic brand showcase featuring advanced skincare rooted in nature and refined by science.",
+  url: "https://ohmytemplate.com/en/templates/OHMT010-cosmetic",
+  logo: "/templates/OHMT010-cosmetic/og-image.jpg",
+};
+
 export default function CosmeticTemplate() {
   return (
-    <React.Suspense fallback={null}>
-      <CosmeticTemplateContent />
-    </React.Suspense>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <React.Suspense fallback={null}>
+        <CosmeticTemplateContent />
+      </React.Suspense>
+    </>
   );
 }

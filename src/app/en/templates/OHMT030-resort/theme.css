@@ -1,17 +1,83 @@
 @layer base {
   .resort-template {
-    --bg: #7C9BAB;
-    --bg-dark: #0A0E0E;
-    --accent: #FFC392;
-    --text: #FFFFFF;
+    --color-primary: #7c9bab;
+    --color-secondary: #0a0e0e;
+    --color-accent: #ffc392;
+    --color-bg: #7c9bab;
+    --color-bg-dark: #0a0e0e;
+    --color-text: #ffffff;
+    --color-text-muted: rgba(255, 255, 255, 0.6);
+    --color-text-contrast: #0a0e0e;
+    --color-border: rgba(255, 255, 255, 0.25);
+    --color-border-subtle: rgba(255, 255, 255, 0.15);
+    --color-accent-hover: #ffb37a;
+    --font-heading: var(--font-instrument-sans), "Instrument Sans", sans-serif;
+    --font-body: var(--font-instrument-sans), "Instrument Sans", sans-serif;
+    --line-logo: 1;
+    --line-heading: 1.2;
+    --line-body: 1.4;
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-6: 24px;
+    --space-9: 36px;
+    --space-12: 48px;
+    --space-16: 64px;
+    --space-24: 96px;
+    --space-32: 128px;
+    --container: 1440px;
+    --gutter-mobile: 24px;
+    --gutter-desktop: 48px;
+    --section-py-mobile: 64px;
+    --section-py-desktop: 128px;
+    --subpage-hero-height: 600px;
+    --subpage-detail-hero-height-mobile: 600px;
+    --subpage-detail-hero-height-desktop: 800px;
+    --subpage-hero-heading-leading-mobile: 0.9;
+    --subpage-hero-heading-leading-desktop: 0.9;
+    --bg: var(--color-bg);
+    --bg-dark: var(--color-bg-dark);
+    --accent: var(--color-accent);
+    --text: var(--color-text);
     --text-muted: rgba(255, 255, 255, 0.6);
-    --text-dark: #0A0E0E;
-    --border: rgba(255, 255, 255, 0.25);
-    --border-dark: rgba(255, 255, 255, 0.15);
-    --accent-hover: #ffb37a;
+    --text-dark: var(--color-text-contrast);
+    --text-contrast: var(--color-text-contrast);
+    --border: var(--color-border);
+    --border-dark: var(--color-border-subtle);
+    --accent-hover: var(--color-accent-hover);
     --focus-ring: 2px solid var(--accent);
     --focus-ring-offset: 2px;
     overflow-x: clip;
+  }
+
+  .resort-container {
+    width: 100%;
+    max-width: var(--container);
+    margin-inline: auto;
+    padding-inline: var(--gutter-mobile);
+  }
+
+  .resort-section-y {
+    padding-block: var(--section-py-mobile);
+  }
+
+  .resort-heading {
+    line-height: var(--line-heading);
+  }
+
+  .resort-body {
+    line-height: var(--line-body);
+  }
+
+  @media (min-width: 768px) {
+    .resort-container {
+      padding-inline: var(--gutter-desktop);
+    }
+
+    .resort-section-y {
+      padding-block: var(--section-py-desktop);
+    }
   }
 }
 
@@ -22,27 +88,32 @@
 }
 
 @media (max-width: 767px) {
-  .resort-template [class*="px-10"],
   .resort-template [class*="px-12"] {
-    padding-left: 1.25rem !important;
-    padding-right: 1.25rem !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
   }
 
   .resort-template h2 {
-    font-size: clamp(1.875rem, 9.5vw, 3.5rem) !important;
+    font-size: 36px !important;
     line-height: 1.08 !important;
     text-wrap: balance;
   }
 
   .resort-template h1 {
-    font-size: clamp(3.5rem, 14vw, 4.6rem) !important;
-    line-height: 0.88 !important;
+    font-size: 56px !important;
+    line-height: 1 !important;
     letter-spacing: -0.025em !important;
   }
 
   .resort-template h1 span {
     max-width: calc(100vw - 2.5rem);
     overflow-wrap: normal;
+  }
+
+  .resort-template .room-detail-hero-title {
+    font-size: 3rem !important;
+    line-height: 3rem !important;
+    white-space: nowrap;
   }
 
   .resort-template p {

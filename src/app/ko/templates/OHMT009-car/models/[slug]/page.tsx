@@ -87,7 +87,7 @@ function CarModelDetailContent({ params }: { params: { slug: string } }) {
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
             <div className="absolute bottom-8 left-0 right-0 max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)]">
               <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-3 block">우리의 라인업</span>
-              <h1 className="text-[clamp(3rem,8vw,7rem)] font-bold tracking-[-0.04em] leading-none mb-2">{model.name}</h1>
+              <h1 className="text-[length:var(--text-display)] font-bold tracking-[-0.04em] leading-none mb-2">{model.name}</h1>
               <p className="text-[0.8rem] uppercase tracking-[0.2em] text-white/50">{model.type}</p>
             </div>
           </div>
@@ -109,7 +109,7 @@ function CarModelDetailContent({ params }: { params: { slug: string } }) {
                 { label: "최고속도", value: model.topSpeed },
               ].map((stat) => (
                 <div key={stat.label} className="bg-black p-8 md:p-12">
-                  <div className="text-[clamp(1.8rem,3vw,2.8rem)] font-bold text-[var(--theme-accent)] mb-2">{stat.value}</div>
+                  <div className="text-[length:var(--text-h2)] font-bold text-[var(--theme-accent)] mb-2">{stat.value}</div>
                   <div className="text-[0.68rem] uppercase tracking-[0.2em] text-white/40">{stat.label}</div>
                 </div>
               ))}
@@ -120,7 +120,7 @@ function CarModelDetailContent({ params }: { params: { slug: string } }) {
           <section className="max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)] pb-24 grid md:grid-cols-2 gap-16 md:gap-24">
             <div>
               <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-5 block">모델 소개</span>
-              <p className="text-[1rem] text-white/70 leading-[1.9] break-keep">{model.description}</p>
+              <p className="text-[1rem] text-white/70 leading-loose break-keep">{model.description}</p>
             </div>
             <div>
               <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-5 block">주요 기능</span>

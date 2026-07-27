@@ -33,10 +33,10 @@ export function StoryTimeline() {
   return (
     <section className="bg-[var(--bg)]">
       <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 py-24 md:py-32">
-        <p className="font-inter text-[11px] tracking-[0.15em] text-[var(--accent)] uppercase mb-6">
+        <p className="font-inter text-xs tracking-[0.15em] text-[var(--accent)] uppercase mb-6">
           The journey
         </p>
-        <h2 className="font-michroma text-[clamp(28px,3vw,44px)] text-[var(--text)] leading-[1.0] tracking-[-0.02em] mb-16 md:mb-20">
+        <h2 className="font-michroma text-[length:var(--text-h3)] text-[var(--text)] leading-[var(--leading-display)] tracking-[-0.02em] mb-16 md:mb-20">
           How we got here.
         </h2>
 
@@ -45,16 +45,16 @@ export function StoryTimeline() {
             <div
               key={m.year}
               ref={(el) => { itemsRef.current[i] = el; }}
-              className="grid grid-cols-[80px_1fr] md:grid-cols-[160px_1fr] gap-6 md:gap-12 border-t border-[var(--border)] py-8 md:py-10"
+              className="grid grid-cols-2 md:grid-cols-2 gap-6 md:gap-12 border-t border-[var(--border)] py-8 md:py-10"
             >
-              <span className="font-michroma text-[clamp(22px,2.5vw,32px)] text-[var(--accent)] leading-none pt-1">
+              <span className="font-michroma text-[length:var(--text-lead)] text-[var(--accent)] leading-none pt-1">
                 {m.year}
               </span>
               <div>
-                <h3 className="font-michroma text-[16px] text-[var(--text)] mb-3">
+                <h3 className="font-michroma text-base text-[var(--text)] mb-3">
                   {m.title}
                 </h3>
-                <p className="font-inter text-[14px] text-[var(--text-muted)] leading-relaxed max-w-[560px]">
+                <p className="font-inter text-sm text-[var(--text-muted)] leading-relaxed max-w-[560px]">
                   {m.body}
                 </p>
               </div>

@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
 import { Navbar } from "./_components/Navbar";
 import { Hero } from "./_components/sections/Hero";
@@ -7,6 +8,10 @@ import { Expertise } from "./_components/sections/Expertise";
 import { Consulting } from "./_components/sections/Consulting";
 import { Cta } from "./_components/sections/Cta";
 import { Footer } from "./_components/sections/Footer";
+
+export const metadata: Metadata = {
+  title: "홈 - OHMT 프리미엄 피트니스 스튜디오",
+};
 
 export default function HomePage() {
   return (

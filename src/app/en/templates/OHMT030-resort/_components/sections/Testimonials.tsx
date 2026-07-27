@@ -1,7 +1,5 @@
-"use client";
-
-import { useState, useRef } from "react";
-import { ArrowLeft, ArrowRight } from "@phosphor-icons/react";
+import { TestimonialCard } from "../cards/TestimonialCard";
+import { SectionHeading } from "../ui/Typography";
 
 const testimonials = [
   { name: "The Lee Family", role: "Guests, Villa Solaya", quote: "Staying at OHMT was like stepping into another world. Each villa tells its own story, and the location by the sea is beyond breathtaking.", rating: "9.3" },
@@ -11,52 +9,23 @@ const testimonials = [
 ];
 
 export function Testimonials() {
-  const [offset, setOffset] = useState(0);
-  const visible = 4;
-  const max = testimonials.length - visible;
-
-  const prev = () => setOffset((o) => Math.max(0, o - 1));
-  const next = () => setOffset((o) => Math.min(max, o + 1));
-
   return (
-    <section className="pb-[130px]">
-      <div className="max-w-[1440px] mx-auto px-10">
+    <section className="pb-16 md:pb-32">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12">
 
         {/* Header */}
         <div className="flex items-end justify-between mb-12">
           <div>
-            <h2 className="text-[clamp(32px,3.5vw,52px)] font-semibold text-white leading-[1.1] tracking-[-0.02em]">
-              What Our Guests Say
-            </h2>
-          </div>
-          <div className="hidden">
-            <button onClick={prev} disabled={offset === 0} aria-label="prev">
-              <ArrowLeft size={17} />
-            </button>
-            <button onClick={next} disabled={offset >= max} aria-label="next">
-              <ArrowRight size={17} />
-            </button>
+            <SectionHeading>
+              Guest Notes
+            </SectionHeading>
           </div>
         </div>
 
         {/* Cards track */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {testimonials.map((t, i) => (
-            <div key={i}
-              className="rounded-2xl bg-white p-7 flex flex-col justify-between min-h-[220px]">
-              <div>
-                <p className="text-[14px] text-[var(--text-dark)] leading-[1.6]">{t.quote}</p>
-              </div>
-              <div className="flex items-end justify-between mt-6 pt-5 border-t border-black/10">
-                <div>
-                  <p className="text-[13px] font-semibold text-[var(--text-dark)]">{t.name}</p>
-                  <p className="text-[12px] text-[var(--text-dark)]/60 mt-0.5">{t.role}</p>
-                </div>
-                <p className="text-[22px] font-semibold text-[var(--text-dark)] leading-none">
-                  {t.rating}<span className="text-[12px] font-normal text-[var(--text-dark)]/50">/10</span>
-                </p>
-              </div>
-            </div>
+            <TestimonialCard key={i} {...t} />
           ))}
         </div>
 

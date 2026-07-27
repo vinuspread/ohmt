@@ -1,6 +1,15 @@
 /* architecture/theme.css */
 
 :root {
+  --text-display: clamp(3rem, 7vw, 5.5rem);
+  --text-h1: clamp(2.5rem, 5vw, 4rem);
+  --text-h2: clamp(2rem, 4vw, 3rem);
+  --text-h3: clamp(1.5rem, 3vw, 2rem);
+  --text-lead: clamp(1.125rem, 2vw, 1.5rem);
+  --leading-display: 0.95;
+  --leading-heading: 1.1;
+  --leading-body: 1.6;
+
   --color-primary: #B07D4F;
   --color-secondary: #1A1A1A;
   --color-accent: #888888;
@@ -11,6 +20,7 @@
   --color-text-contrast: #FFFFFF;
   --color-border: #E0E0E0;
   --color-footer-bg: #0F0F0F;
+  --color-frame-bg: #111111;
   --color-text-secondary: #888888;
 
   --font-heading: 'Cormorant Garamond', serif;

@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { designerInfo } from '@/lib/portfolio-data';
+import { designerInfo } from '../../_data/portfolio-data';
 
 export function Footer() {
   return (
@@ -12,7 +12,7 @@ export function Footer() {
           <Link href="/ko/templates/OHMT007-portfolio" className="text-[1.2rem] font-black tracking-tighter text-[var(--color-text)] hover:opacity-60 transition-opacity">
             OHMT.
           </Link>
-          <div className="flex items-center gap-2 text-[13px] font-medium text-[var(--color-text-muted)]">
+          <div className="flex items-center gap-2 text-xs font-medium text-[var(--color-text-muted)]">
             <a href="#" className="hover:text-[var(--color-text)] transition-colors">BE</a>
             <span>/</span>
             <a href="#" className="hover:text-[var(--color-text)] transition-colors">DR</a>
@@ -22,13 +22,13 @@ export function Footer() {
         </div>
 
         {/* Main content */}
-        <div className="grid md:grid-cols-5 gap-12 mb-16">
+        <div className="grid md:grid-cols-4 gap-12 mb-16">
           {/* Left: CTA */}
           <div className="md:col-span-3">
-            <p className="text-[clamp(1.8rem,3.5vw,2.8rem)] font-bold text-[var(--color-text)] leading-snug mb-6">
-              프로젝트 이야기를 듣고 싶습니다
+            <p className="text-[length:var(--text-h2)] font-bold text-[var(--color-text)] leading-snug mb-6">
+              프로젝트 의뢰 시
               <br />
-              <span className="text-[var(--color-text-muted)] font-normal">짧은 문의도, 가벼운 인사도 좋아요.</span>
+              <span className="text-[var(--color-text-muted)] font-normal">배경과 원하시는 범위를 보내주세요.</span>
             </p>
             <Link href={`mailto:${designerInfo.contact.email}`}
               className="inline-block text-[1.3rem] font-bold text-[var(--color-text)] border-b-2 border-[var(--color-primary)] pb-0.5 hover:opacity-60 transition-opacity">
@@ -39,7 +39,7 @@ export function Footer() {
           {/* Right: Newsletter */}
           <div className="md:col-span-2">
             <h3 className="text-[1.6rem] font-bold text-[var(--color-text)] mb-2">뉴스레터 구독</h3>
-            <p className="text-[0.82rem] text-[var(--color-text-muted)] mb-6">가끔 보내는 작업 노트와 소식.</p>
+            <p className="text-[0.82rem] text-[var(--color-text-muted)] mb-6">새 작업과 디자인 노트를 가끔 보내드립니다.</p>
             <form className="space-y-3" onSubmit={e => e.preventDefault()}>
               <input type="text" placeholder="이름"
                 className="w-full border-b border-[var(--color-border)] bg-transparent py-3 text-[0.88rem] text-[var(--color-text)] placeholder:text-[var(--color-text-muted)] outline-none focus:border-[var(--color-primary)] transition-colors" />
@@ -57,10 +57,10 @@ export function Footer() {
         <div className="flex flex-wrap items-center justify-between gap-4 pt-6 border-t border-[var(--color-border)]">
           <div className="flex flex-wrap gap-6">
             {[...designerInfo.nav.map(n => ({ name: n.name, href: n.href })),
-              { name: 'Manifesto', href: '/ko/templates/OHMT007-portfolio/manifesto' }
+              { name: '스튜디오 선언', href: '/ko/templates/OHMT007-portfolio/manifesto' }
             ].map(item => (
               <Link key={item.name} href={item.href}
-                className="text-[12px] text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors">
+                className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors">
                 {item.name}
               </Link>
             ))}

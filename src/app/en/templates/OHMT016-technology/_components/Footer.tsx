@@ -21,7 +21,7 @@ export default function Footer() {
                 OHMT
               </span>
             </Link>
-            <p className="text-sm text-[var(--color-text-muted)] leading-[1.2] max-w-sm">
+            <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-heading)] max-w-sm">
               Empowering next generation engineering startups and autonomous creators with modular hardware ecosystems.
             </p>
           </div>

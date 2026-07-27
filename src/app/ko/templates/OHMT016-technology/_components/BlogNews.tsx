@@ -14,9 +14,9 @@ export default function BlogNews() {
         <div className="mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="max-w-xl">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
-              지식 허브
+              인사이트
             </span>
-            <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.1] text-[var(--color-text)] font-heading break-keep">
+            <h2 className="text-[length:var(--text-h1)] font-bold tracking-[-0.02em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading break-keep">
               최신 소식
             </h2>
           </div>
@@ -24,7 +24,7 @@ export default function BlogNews() {
             href="#news"
             className="inline-flex items-center justify-center px-6 py-2.5 bg-[var(--color-accent)] text-white font-bold text-xs uppercase tracking-widest hover:opacity-90 active:scale-95 transition-all duration-300 rounded-md"
           >
-            모든 아티클 보기
+            모든 글 보기
           </Link>
         </div>
 
@@ -43,14 +43,14 @@ export default function BlogNews() {
               {/* Text at bottom */}
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <div className="flex items-center gap-3 mb-2">
-                  <span className="inline-block px-2.5 py-0.5 text-[9px] font-bold uppercase tracking-wider bg-white/20 text-white rounded-sm">
+                  <span className="inline-block px-2.5 py-0.5 text-xs font-bold uppercase tracking-wider bg-white/20 text-white rounded-sm">
                     {featuredPost.category}
                   </span>
                   <span className="text-xs text-white/70">
                     {featuredPost.date}
                   </span>
                 </div>
-                <h3 className="text-xl font-extrabold text-white font-heading leading-[1.1] tracking-tight">
+                <h3 className="text-xl font-extrabold text-white font-heading leading-[var(--leading-heading)] tracking-tight">
                   {featuredPost.title}
                 </h3>
               </div>
@@ -75,14 +75,14 @@ export default function BlogNews() {
 
                 <div className="flex-1 flex flex-col gap-2">
                   <div className="flex items-center gap-3">
-                    <span className="inline-block px-2 py-0.5 text-[9px] font-bold uppercase tracking-wider bg-[var(--color-accent)]/10 text-[var(--color-accent)] rounded-sm">
+                    <span className="inline-block px-2 py-0.5 text-xs font-bold uppercase tracking-wider bg-[var(--color-accent)]/10 text-[var(--color-accent)] rounded-sm">
                       {post.category}
                     </span>
-                    <span className="text-[11px] text-[var(--color-text-muted)]">
+                    <span className="text-xs text-[var(--color-text-muted)]">
                       {post.date}
                     </span>
                   </div>
-                  <h3 className="text-base font-bold text-[var(--color-text)] font-heading transition-colors group-hover:text-[var(--color-accent)] leading-[1.1] tracking-tight">
+                  <h3 className="text-base font-bold text-[var(--color-text)] font-heading transition-colors group-hover:text-[var(--color-accent)] leading-[var(--leading-heading)] tracking-tight">
                     {post.title}
                   </h3>
                   <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[var(--color-text-muted)] group-hover:text-[var(--color-text)] transition-colors duration-200 mt-1">

@@ -4,6 +4,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { clsx } from "clsx";
+import { ArrowRight } from "lucide-react";
 
 const newsItems = [
   {
@@ -37,18 +38,18 @@ export const RecentNews = () => {
     >
       <div className="max-w-[1280px] mx-auto px-6 md:px-10">
         <div className="flex justify-between items-end mb-12">
-          <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold tracking-tight text-[var(--color-dark-bg)]">
+          <h2 className="text-[length:var(--text-h3)] font-bold tracking-tight text-[var(--color-dark-bg)]">
             Recent News & Announcements
           </h2>
           <button className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-[var(--color-dark-bg)] hover:gap-4 transition-all duration-300">
-            View All News <span className="text-[1.2em]">→</span>
+            View All News <ArrowRight size={14} className="inline" />
           </button>
         </div>
         
         <div className="flex flex-col border-t border-[var(--color-border)]">
           {newsItems.map((item, i) => (
-            <div key={i} className="grid grid-cols-[110px_1fr_auto] gap-8 py-7 border-b border-[var(--color-border)] group cursor-pointer hover:bg-white/40 hover:pl-2 transition-all duration-300">
-              <div className="text-[0.68rem] font-bold uppercase tracking-tight text-[#6B6B6B] leading-[1.4] pt-1">
+            <div key={i} className="grid grid-cols-3 gap-8 py-7 border-b border-[var(--color-border)] group cursor-pointer hover:bg-white/40 hover:pl-2 transition-all duration-300">
+              <div className="text-[0.68rem] font-bold uppercase tracking-tight text-[var(--color-text-muted)] leading-[var(--leading-body)] pt-1">
                 {item.date}
               </div>
               <div>
@@ -60,7 +61,7 @@ export const RecentNews = () => {
                 </h3>
               </div>
               <div className="text-[0.85rem] text-[var(--color-border)] font-bold pt-1 group-hover:text-[var(--color-dark-bg)] group-hover:translate-x-1 transition-all">
-                →
+                <ArrowRight size={14} />
               </div>
             </div>
           ))}

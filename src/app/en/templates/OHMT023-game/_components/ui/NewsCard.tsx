@@ -10,7 +10,7 @@ export default function NewsCard({ item }: { item: NewsItem }) {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
-      className="group cursor-pointer overflow-hidden rounded-2xl bg-[var(--color-bg-secondary)] border border-[var(--color-border)] transition-all duration-500 hover:border-[var(--color-primary)] hover:shadow-[0_0_20px_rgba(124,58,237,0.15)]"
+      className="group cursor-pointer overflow-hidden rounded-2xl bg-[var(--color-bg-secondary)] border border-[var(--color-border)] transition-all duration-500 hover:border-[var(--color-primary)] hover:shadow-[0_0_20px_var(--color-primary-glow-subtle)]"
     >
       <div className="relative aspect-[16/10] overflow-hidden">
         <img

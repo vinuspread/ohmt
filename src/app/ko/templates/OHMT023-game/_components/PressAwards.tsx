@@ -25,11 +25,9 @@ export default function PressAwards() {
           className="mb-14 text-center"
         >
           <span className="text-sm font-medium tracking-[0.2em] text-[var(--color-accent)] uppercase">
-            Recognition
-          </span>
+            수상</span>
           <h2 className="mt-2 font-[var(--font-heading)] text-4xl font-bold md:text-5xl">
-            언론 및 수상
-          </h2>
+            언론이 주목한 게임</h2>
         </motion.div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
@@ -61,11 +59,13 @@ export default function PressAwards() {
         >
           <Quote size={32} className="mx-auto mb-4 text-[var(--color-primary)]" />
           <blockquote className="text-lg leading-relaxed text-[var(--color-text)] md:text-xl">
-            "OHMT은 인디 스튜디오가 이룰 수 있는 기준을 새로 썼습니다. <span className="text-[var(--color-accent)]">섀도우 렐름</span>은 세계관 구축과 기술적 야망의 걸작입니다."
+            <span className="sm:block">&ldquo;OHMT는 인디 게임의 새로운 기준을 세웠습니다.</span>{" "}
+            <span className="sm:block">
+              <span className="text-[var(--color-accent)]">섀도우 렐름</span>은 뛰어난 세계관과 기술력을 보여주는 작품입니다.&rdquo;
+            </span>
           </blockquote>
           <p className="mt-4 text-sm text-[var(--color-text-muted)]">
-            - Game Informer, 에디터스 초이스
-          </p>
+            — Game Informer, 에디터스 초이스</p>
         </motion.div>
       </div>
     </section>

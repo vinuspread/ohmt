@@ -2,9 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { useSearchParams } from 'next/navigation';
 export function Footer() {
-    const searchParams = useSearchParams();
     const t = {
   "hero": {
     "badge": `ARCHITECTURE STUDIO`,
@@ -216,7 +214,7 @@ const navItems = [
         <footer className="bg-[var(--color-bg-dark)] text-white px-6 md:px-16 lg:px-24 py-10 md:py-12 border-t border-white/10 relative z-30 font-sans">
             <div className="max-w-[1720px] mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 pb-8 border-b border-white/10">
-                    <Link href="/en/templates/OHMT006-studio" className="text-[20px] font-black tracking-[-1px] uppercase text-white">
+                    <Link href="/en/templates/OHMT006-studio" className="text-xl font-black tracking-[-1px] uppercase text-white">
                         OHMT<span className="font-normal">.</span>
                     </Link>
 
@@ -225,7 +223,7 @@ const navItems = [
                             <Link
                                 key={item.name}
                                 href={item.href}
-                                className="text-[12px] font-bold uppercase text-white/50 hover:text-white transition-colors"
+                                className="text-xs font-bold uppercase text-white/50 hover:text-white transition-colors"
                             >
                                 {item.name}
                             </Link>
@@ -237,7 +235,7 @@ const navItems = [
                             <a
                                 key={item.name}
                                 href={item.href}
-                                className="text-[12px] font-bold uppercase text-white/50 hover:text-white transition-colors"
+                                className="text-xs font-bold uppercase text-white/50 hover:text-white transition-colors"
                             >
                                 {item.name}
                             </a>
@@ -246,10 +244,10 @@ const navItems = [
                 </div>
 
                 <div className="pt-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-3">
-                    <span className="text-[11px] uppercase text-white/30 font-bold">
+                    <span className="text-xs uppercase text-white/30 font-bold">
                         {t.footer.copyright}
                     </span>
-                    <span className="text-[11px] uppercase text-white/30 font-bold">
+                    <span className="text-xs uppercase text-white/30 font-bold">
                         {t.footer.contact}
                     </span>
                 </div>

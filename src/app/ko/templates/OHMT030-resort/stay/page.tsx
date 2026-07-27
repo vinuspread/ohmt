@@ -1,6 +1,8 @@
-import Link from "next/link";
 import { Navbar } from "../_components/Navbar";
 import { Footer } from "../_components/Footer";
+import { SubpageHero } from "../_components/SubpageHero";
+import { SuiteCard } from "../_components/cards/SuiteCard";
+import { IntroTextSection } from "../_components/sections/IntroTextSection";
 
 const base = "/ko/templates/OHMT030-resort";
 
@@ -15,47 +17,29 @@ export default function StayPage() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen pb-24" style={{ backgroundColor: "var(--bg)" }}>
-        <section className="relative h-[65vh] overflow-hidden flex items-end pb-14 mb-16">
-          <img
-            src="/templates/OHMT030-resort/sub-hero-stay.jpg"
-            alt="더 빌라스"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/30 to-transparent" />
-          <div className="relative z-10 max-w-[1440px] mx-auto w-full px-10">
-            <h1 className="text-white font-semibold tracking-[-0.04em] leading-[1.1] mb-4 uppercase"
-                style={{ fontSize: "clamp(60px, 10vw, 160px)" }}>
-              더<br />빌라스
-            </h1>
-            <p className="text-white/70 text-[19px] max-w-[520px] font-[300] leading-relaxed">
-              에게해의 전망을 품은 4개의 럭셔리 스위트. 완전한 고요와 아늑한 해안의 온기가 머무는 곳.
-            </p>
-          </div>
-        </section>
+      <main className="min-h-screen" style={{ backgroundColor: "var(--bg)" }}>
+        <SubpageHero title={"THE\nVILLAS"} image="sub-hero-stay.jpg" alt="OHMT 스위트">
+          <>
+            에게해와 칼데라를 바라보는 네 개의 스위트.<br />
+            서로 다른 전망과 구조로 편안한 머무름을 제공합니다.
+          </>
+        </SubpageHero>
 
-        <section className="max-w-[1440px] mx-auto px-10 pb-16 border-b border-white/10 mb-16">
-          <p className="text-white/60 text-[15px] md:text-[17px] font-[300] leading-[1.85] max-w-[720px]">
-            네 개의 스위트, 각각 절벽 위의 위치에 따라 그 형태가 달라집니다. 어떤 스위트는 칼데라의 전체 아치를 마주하고, 다른 스위트는 고요한 바다를 향합니다. 모든 공간은 하나의 원칙을 따릅니다: 당신은 결코 갇혀 있다고 느껴서는 안 된다는 것.
-          </p>
-        </section>
+        <IntroTextSection>
+          네 개의 스위트는 절벽 위 위치와 전망에 따라 서로 다른 구조를 갖습니다.<br />
+          칼데라를 정면으로 바라보는 객실부터 정원과 바다를 함께 품은 객실까지,<br />
+          모든 공간은 자연광과 개방감을 중심으로 설계했습니다.
+        </IntroTextSection>
 
-        <section className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-16 max-w-[1440px] mx-auto px-10">
+        <section className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-16 max-w-[1440px] mx-auto px-6 pb-16 md:px-12 md:pb-32">
           {suites.map((s) => (
-            <Link key={s.slug} href={`${base}/stay/${s.slug}`} className="group block">
-              <div className="aspect-[3/4] rounded-2xl overflow-hidden">
-                <img
-                  src={`/templates/OHMT030-resort/${s.img}`}
-                  alt={s.name}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-                />
-              </div>
-              <h2 className="text-xl text-white mt-4 font-[400]">{s.name}</h2>
-              <p className="text-[14px] text-white/60 mt-1">{s.price} / 1박</p>
-              <div className="inline-block rounded-full border border-white/40 px-4 py-2 text-[13px] text-white hover:bg-white/10 transition-all mt-3">
-                스위트 둘러보기 &rarr;
-              </div>
-            </Link>
+            <SuiteCard
+              key={s.slug}
+              href={`${base}/stay/${s.slug}`}
+              name={s.name}
+              price={s.price}
+              image={s.img}
+            />
           ))}
         </section>
 

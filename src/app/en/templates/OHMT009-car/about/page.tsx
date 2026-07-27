@@ -38,7 +38,7 @@ function CarAboutPageContent() {
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
           <div className="relative max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)] pb-8 md:pb-12 w-full">
             <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-4 block">About OHMT</span>
-            <h1 className="font-[family-name:var(--theme-font-heading)] text-[clamp(2.8rem,6vw,5.5rem)] font-bold tracking-tight leading-[1.02] max-w-[680px]">
+            <h1 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-display)] font-bold tracking-tight leading-[var(--leading-display)] max-w-[680px]">
               Engineered for<br />extraordinary driving.
             </h1>
           </div>
@@ -47,10 +47,10 @@ function CarAboutPageContent() {
         {/* Mission */}
         <section className="border-b border-[var(--theme-border)]">
           <div className="max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)] py-10 md:py-14 grid md:grid-cols-2 gap-10 md:gap-20 items-center">
-            <p className="text-[clamp(1.2rem,2.2vw,1.55rem)] text-white font-normal leading-[1.5] break-keep">
+            <p className="text-[length:var(--text-lead)] text-white font-normal leading-[var(--leading-body)] break-keep">
               Founded in 2018, OHMT Motors set out to build vehicles that inspire. Not just modes of transport, but objects of desire - where cutting-edge technology meets uncompromising design.
             </p>
-            <p className="text-[1.02rem] text-white/50 leading-[1.6] font-normal break-keep">
+            <p className="text-[1.02rem] text-white/50 leading-[var(--leading-body)] font-normal break-keep">
               Today, we employ over 12,000 people across three continents, with a network of 200+ showrooms worldwide. Our commitment to sustainable luxury drives every decision we make. We don't just build cars. We build the future of personal movement.
             </p>
           </div>
@@ -62,7 +62,7 @@ function CarAboutPageContent() {
             <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-[var(--theme-border)]">
               {stats.map((stat) => (
                 <div key={stat.label} className="py-10 md:py-16 px-4 md:px-8 text-center">
-                  <div className="text-[clamp(2.2rem,4vw,3.5rem)] font-bold text-white mb-2 tracking-tight">{stat.value}</div>
+                  <div className="text-[length:var(--text-h2)] font-bold text-white mb-2 tracking-tight">{stat.value}</div>
                   <div className="text-[0.72rem] text-[var(--theme-text-muted)] uppercase tracking-[0.15em]">{stat.label}</div>
                 </div>
               ))}
@@ -75,7 +75,7 @@ function CarAboutPageContent() {
           <img loading="lazy" src="/templates/OHMT009-car/about-factory.jpg" alt="" className="w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-black/40" />
           <div className="absolute inset-0 flex items-center justify-center">
-            <p className="text-[clamp(1.2rem,3vw,2.2rem)] font-bold tracking-tight text-white text-center max-w-[560px] px-6 leading-tight">
+            <p className="text-[length:var(--text-h3)] font-bold tracking-tight text-white text-center max-w-[560px] px-6 leading-tight">
               "We build for drivers who refuse to accept that performance and responsibility are opposites."
             </p>
           </div>
@@ -84,15 +84,15 @@ function CarAboutPageContent() {
         {/* Values */}
         <section className="max-w-[var(--theme-container)] mx-auto px-6 md:px-[var(--theme-gutter)] py-12 md:py-20">
           <div className="flex items-end justify-between mb-10 border-b border-[var(--theme-border)] pb-6">
-            <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-bold tracking-tight">Our Principles</h2>
+            <h2 className="text-[length:var(--text-h2)] font-bold tracking-tight">Our Principles</h2>
             <span className="text-[0.72rem] text-[var(--theme-text-muted)] uppercase tracking-widest hidden md:block">What drives us</span>
           </div>
-          <div className="grid md:grid-cols-2 gap-[1px] bg-[var(--theme-border)]">
+          <div className="grid md:grid-cols-2 gap-px bg-[var(--theme-border)]">
             {values.map((v) => (
               <div key={v.num} className="bg-black p-6 md:p-12 group hover:bg-[var(--color-primary)] transition-colors">
                 <span className="text-[0.7rem] text-[var(--theme-accent)]/50 block mb-6">{v.num}</span>
                 <h3 className="text-[1.2rem] font-bold tracking-tight mb-4 group-hover:text-[var(--theme-accent)] transition-colors">{v.title}</h3>
-                <p className="text-[0.85rem] text-[var(--theme-text-muted)] leading-[1.4] font-normal">{v.desc}</p>
+                <p className="text-[0.85rem] text-[var(--theme-text-muted)] leading-[var(--leading-body)] font-normal">{v.desc}</p>
               </div>
             ))}
           </div>
@@ -103,7 +103,7 @@ function CarAboutPageContent() {
           <img loading="lazy" src="/templates/OHMT009-car/about-closing.jpg" alt="" className="w-full h-[420px] object-cover object-center" />
           <div className="absolute inset-0 bg-black/65 flex flex-col items-center justify-center text-center px-6">
             <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-4 block">Ready?</span>
-            <h2 className="text-[clamp(2rem,5vw,4rem)] font-bold tracking-tight mb-8">Experience it yourself.</h2>
+            <h2 className="text-[length:var(--text-h1)] font-bold tracking-tight mb-8">Experience it yourself.</h2>
             <Link
               href="/en/templates/OHMT009-car/configure"
               className="text-[0.72rem] font-bold uppercase tracking-[0.16em] px-8 py-3.5 bg-[var(--theme-accent)] text-black hover:opacity-85 transition-opacity"
@@ -120,10 +120,10 @@ function CarAboutPageContent() {
 }
 
 
-export default function CarAboutPage(props: any) {
+export default function CarAboutPage() {
   return (
     <React.Suspense fallback={null}>
-      <CarAboutPageContent {...props} />
+      <CarAboutPageContent />
     </React.Suspense>
   );
 }

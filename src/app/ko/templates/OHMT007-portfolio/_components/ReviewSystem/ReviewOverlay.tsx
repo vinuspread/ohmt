@@ -75,7 +75,7 @@ export const ReviewOverlay: React.FC = () => {
     }
   };
 
-  const statusIcons: Record<Annotation['status'], any> = {
+  const statusIcons: Record<Annotation['status'], React.ReactNode> = {
     pending: <Clock className="text-amber-500" size={12} />,
     'in-progress': <PlayCircle className="text-blue-500" size={12} />,
     done: <CheckCircle className="text-emerald-500" size={12} />,
@@ -86,7 +86,7 @@ export const ReviewOverlay: React.FC = () => {
     pending: '대기',
     'in-progress': '진행 중',
     done: '완료',
-    rejected: '반려'
+    rejected: '재검토'
   };
 
   return (
@@ -105,9 +105,9 @@ export const ReviewOverlay: React.FC = () => {
           <div>
             <h2 className="text-white font-black text-xl tracking-tighter flex items-center gap-2">
               <div className="w-2 h-2 bg-pink-500 rounded-full animate-pulse" />
-              디자인 리뷰
+              디자인 검토
             </h2>
-            <p className="text-[13px] text-gray-500 font-bold uppercase tracking-[0.2em] mt-1">피드백 센터</p>
+            <p className="text-xs text-gray-500 font-bold uppercase tracking-[0.2em] mt-1">피드백 관리</p>
           </div>
           <button onClick={() => setShowSidebar(false)} className="text-gray-500 hover:text-white transition-colors">
             <X size={20} />
@@ -120,7 +120,7 @@ export const ReviewOverlay: React.FC = () => {
                <div className="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center">
                   <Filter size={24} />
                </div>
-               <p className="text-sm">아직 등록된 메모가 없습니다.<br/>화면을 클릭해 첫 피드백을 남겨보세요.</p>
+               <p className="text-sm">아직 등록된 메모가 없습니다.<br/>화면에서 수정할 위치를 선택해 피드백을 남겨주세요.</p>
             </div>
           ) : (
             annotations.map((a, idx) => (
@@ -137,10 +137,10 @@ export const ReviewOverlay: React.FC = () => {
               >
                 <div className="flex justify-between items-start mb-3">
                   <div className="flex items-center gap-2">
-                    <span className="text-[13px] font-black text-pink-500 bg-pink-500/10 px-2 py-0.5 rounded-md">#{idx + 1}</span>
+                    <span className="text-xs font-black text-pink-500 bg-pink-500/10 px-2 py-0.5 rounded-md">#{idx + 1}</span>
                     <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-white/5 border border-white/5">
                       {statusIcons[a.status]}
-                      <span className="text-[12px] font-bold text-gray-400 uppercase tracking-wider">{statusLabels[a.status]}</span>
+                      <span className="text-xs font-bold text-gray-400 uppercase tracking-wider">{statusLabels[a.status]}</span>
                     </div>
                   </div>
                   <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -154,7 +154,7 @@ export const ReviewOverlay: React.FC = () => {
                 </div>
                 <p className="text-sm text-gray-200 font-medium leading-relaxed mb-4">{a.text}</p>
                 <div className="flex items-center justify-between pt-4 border-t border-white/5">
-                  <div className="flex items-center gap-3 text-[13px] text-gray-500">
+                  <div className="flex items-center gap-3 text-xs text-gray-500">
                     <span className="flex items-center gap-1"><Clock size={10} /> {new Date(a.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
                     {a.filePath && (
                       <span className="flex items-center gap-1 text-blue-400"><FileCode size={10} /> {a.filePath.split('/').pop()}:{a.line}</span>
@@ -254,9 +254,9 @@ export const ReviewOverlay: React.FC = () => {
             <div>
               <h3 className="text-white font-black text-lg tracking-tight flex items-center gap-2">
                 <MessageSquarePlus size={18} className="text-pink-500" />
-                새 피드백
+                새 피드백 작성
               </h3>
-              <p className="text-[13px] text-gray-500 font-bold uppercase tracking-widest">검토 메모</p>
+              <p className="text-xs text-gray-500 font-bold uppercase tracking-widest">피드백 내용</p>
             </div>
             <button onClick={() => setTempPin(null)} className="text-gray-500 hover:text-white transition-colors">
               <X size={20} />
@@ -265,7 +265,7 @@ export const ReviewOverlay: React.FC = () => {
           <textarea 
             autoFocus
             className="w-full p-6 rounded-2xl border border-white/5 bg-white/5 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-pink-500/50 transition-all h-32 resize-none leading-relaxed"
-            placeholder="수정이 필요한 부분과 원하는 방향을 남겨주세요."
+            placeholder="수정할 내용과 원하는 방향을 구체적으로 입력해 주세요."
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
           />
@@ -274,7 +274,7 @@ export const ReviewOverlay: React.FC = () => {
               onClick={handleAdd}
               className="flex-1 bg-pink-500 text-white py-4 rounded-2xl text-sm font-black uppercase tracking-widest hover:bg-pink-400 transition-all active:scale-[0.98]"
             >
-              메모 추가
+              피드백 등록
             </button>
           </div>
         </div>

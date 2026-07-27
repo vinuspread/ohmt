@@ -20,7 +20,7 @@ export const Hero = () => {
 
       <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-3xl mx-auto">
         <motion.h1
-          className="font-heading text-[clamp(2.4rem,4.5vw,4.8rem)] font-bold text-white leading-[1.08] tracking-[-0.01em] mb-7 whitespace-nowrap"
+          className="font-heading text-[length:var(--text-h1)] font-bold text-white leading-[var(--leading-heading)] tracking-[-0.01em] mb-7 whitespace-nowrap"
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.95, ease: [0.215, 0.61, 0.355, 1] }}
@@ -46,7 +46,7 @@ export const Hero = () => {
         >
           <Link
             href="/en/templates/OHMT019-coffee/menu"
-            className="inline-flex items-center justify-center border border-white/50 text-white px-10 py-3 text-[11px] uppercase tracking-[0.25em] font-semibold hover:bg-white hover:text-[var(--color-primary-dark)] transition-colors duration-300"
+            className="inline-flex items-center justify-center border border-white/50 text-white px-10 py-3 text-xs uppercase tracking-[0.25em] font-semibold hover:bg-white hover:text-[var(--color-primary-dark)] transition-colors duration-300"
           >
             Reservation
           </Link>

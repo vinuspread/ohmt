@@ -5,6 +5,7 @@ import { Footer } from "../_components/Footer";
 import { menuItems, menuCategories, type MenuCategory } from "../data/data";
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
+import { formatWon } from "../_utils/currency";
 
 function MenuPageContent() {
   const [active, setActive] = useState<MenuCategory>(menuCategories[0].id);
@@ -53,8 +54,8 @@ function MenuPageContent() {
                   </div>
                   <div className="p-4 md:p-5">
                     <div className="flex items-start justify-between gap-2 mb-2">
-                      <h3 className="text-base md:text-lg font-bold leading-[1.1]">{item.name}</h3>
-                      <span className="text-base md:text-lg font-bold text-[var(--color-accent)] shrink-0">${item.price}</span>
+                      <h3 className="text-base md:text-lg font-bold leading-[var(--leading-heading)]">{item.name}</h3>
+                      <span className="text-base md:text-lg font-bold text-[var(--color-accent)] shrink-0">{formatWon(item.price)}</span>
                     </div>
                     <p className="text-sm text-[var(--color-text-muted)] leading-relaxed line-clamp-2">{item.description}</p>
                     {item.calories && (

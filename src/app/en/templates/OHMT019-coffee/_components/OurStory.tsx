@@ -57,7 +57,7 @@ export const OurStory = () => {
             <AnimatePresence mode="wait">
               <motion.p
                 key={index}
-                className="text-[17px] md:text-[19px] leading-[1.75] text-white/85 max-w-[38ch]"
+                className="text-base md:text-lg leading-loose text-white/85 max-w-[38ch]"
                 style={{ textWrap: "pretty" } as React.CSSProperties}
                 initial={{ opacity: 0, y: 8 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -79,8 +79,8 @@ export const OurStory = () => {
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
               >
-                <p className="text-[12px] font-semibold tracking-[0.18em] text-white/90">{testimonials[index].name}</p>
-                <p className="text-[14px] text-white/45 mt-1">{testimonials[index].source}</p>
+                <p className="text-xs font-semibold tracking-[0.18em] text-white/90">{testimonials[index].name}</p>
+                <p className="text-sm text-white/45 mt-1">{testimonials[index].source}</p>
               </motion.div>
             </AnimatePresence>
 

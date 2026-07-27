@@ -30,8 +30,8 @@ export const menuItems = [
   { id: '27', name: 'Double Set', category: 'sets', description: 'Double Stack + truffle parmesan fries + shake or drink.', price: 21.90, image: '/templates/OHMT018-burger/set-smash.png', calories: 1420 },
   // Sides
   { id: '13', name: 'Truffle Parmesan Fries', category: 'sides', description: 'Crispy fries tossed in truffle oil, parmesan, fresh herbs.', price: 6.90, image: '/templates/OHMT018-burger/menu-side-01.png', calories: 450 },
-  { id: '14', name: 'Crispy Onion Rings', category: 'sides', description: 'Beer-battered onion rings with smokey chipotle dipping sauce.', price: 5.90, image: '/templates/OHMT018-burger/menu-side-01.png', calories: 380 },
-  { id: '15', name: 'Sweet Potato Fries', category: 'sides', description: 'Crispy sweet potato fries with honey sriracha dip.', price: 6.50, image: '/templates/OHMT018-burger/menu-side-01.png', calories: 410 },
+  { id: '14', name: 'Crispy Onion Rings', category: 'sides', description: 'Beer-battered onion rings with smokey chipotle dipping sauce.', price: 5.90, image: '/templates/OHMT018-burger/menu-side-02.png', calories: 380 },
+  { id: '15', name: 'Sweet Potato Fries', category: 'sides', description: 'Crispy sweet potato fries with honey sriracha dip.', price: 6.50, image: '/templates/OHMT018-burger/menu-side-03.png', calories: 410 },
   // Desserts
   { id: '16', name: 'Vanilla Soft Serve', category: 'desserts', description: 'Creamy soft-serve vanilla ice cream in a crispy waffle cone.', price: 3.90, image: '/templates/OHMT018-burger/menu-dessert-01.png', calories: 280 },
   { id: '17', name: 'Chocolate Brownie Sundae', category: 'desserts', description: 'Warm chocolate brownie, vanilla soft serve, hot fudge sauce, whipped cream.', price: 6.50, image: '/templates/OHMT018-burger/menu-dessert-02.png', calories: 520 },

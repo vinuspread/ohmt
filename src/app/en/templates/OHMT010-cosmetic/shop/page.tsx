@@ -1,12 +1,22 @@
-"use client";
-
-import { Suspense } from "react";
-import React from "react";
-import Link from "next/link";
+import type { Metadata } from "next";
 import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
+
+export const metadata: Metadata = {
+  title: "Shop - OHMT Cosmetic",
+  description: "Browse our collection of clean, effective skincare products. Cruelty-free and sustainably sourced.",
+  openGraph: {
+    title: "Shop - OHMT Cosmetic",
+    description: "Browse our collection of clean, effective skincare products.",
+    url: "https://ohmytemplate.com/en/templates/OHMT010-cosmetic/shop",
+    siteName: "OHMT",
+    images: [{ url: "/templates/OHMT010-cosmetic/og-image.jpg", width: 1200, height: 630 }],
+    locale: "en_US",
+    type: "website",
+  },
+};
 
 const products = [
   { name: "Daily Radiance Serum", price: "$78", tag: "Best Seller", image: "/templates/OHMT010-cosmetic/serum-product.png" },
@@ -17,7 +27,7 @@ const products = [
   { name: "Overnight Recovery Mask", price: "$72", tag: "Popular", image: "/templates/OHMT010-cosmetic/mask-product.png" }
 ];
 
-function CosmeticShopPageContent() {
+export default function CosmeticShopPage() {
   return (
     <TemplateWrapper theme={theme}>
       <main className="antialiased bg-[var(--color-bg)] text-black selection:bg-black selection:text-white">
@@ -27,7 +37,7 @@ function CosmeticShopPageContent() {
           <div className="max-w-[1440px] mx-auto px-6 md:px-10">
             <div className="mb-16">
               <span className="text-[0.65rem] font-bold uppercase tracking-[0.3em] text-black/40 mb-4 block">Shop All</span>
-              <h1 className="text-[clamp(2rem,4vw,3.5rem)] font-normal tracking-tight leading-[1.1]">
+              <h1 className="text-[length:var(--text-h2)] font-normal tracking-tight leading-[var(--leading-heading)]">
                 Clean formulations.<br />Visible results.
               </h1>
             </div>
@@ -60,14 +70,5 @@ function CosmeticShopPageContent() {
         <Footer />
       </main>
     </TemplateWrapper>
-  );
-}
-
-
-export default function CosmeticShopPage(props: any) {
-  return (
-    <React.Suspense fallback={null}>
-      <CosmeticShopPageContent {...props} />
-    </React.Suspense>
   );
 }

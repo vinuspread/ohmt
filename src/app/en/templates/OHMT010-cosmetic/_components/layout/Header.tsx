@@ -83,19 +83,30 @@ const NAV_ITEMS = [
 
   return (
     <>
-      {/* Marquee banner - 25s */}
-      <div className="bg-black text-white h-[38px] fixed top-0 left-0 w-full z-[1000] flex items-center overflow-hidden">
-        <div className="flex whitespace-nowrap animate-marquee-cosmetic">
-          {[1, 2, 3, 4].map((i) => (
-            <p key={i} className="px-16 text-[0.72rem] font-medium tracking-[0.05em] uppercase">
-              {t.nav.banner}
-            </p>
+      {/* Marquee banner */}
+      <div
+        className="fixed left-0 top-0 z-[1000] flex h-[38px] w-full items-center overflow-hidden bg-black text-white"
+        role="note"
+        aria-label={t.nav.banner}
+      >
+        <div className="cosmetic-marquee-track" aria-hidden="true">
+          {[0, 1].map((group) => (
+            <div key={group} className="cosmetic-marquee-group">
+              {[0, 1, 2].map((item) => (
+                <span
+                  key={item}
+                  className="shrink-0 px-8 text-[0.72rem] font-medium uppercase tracking-[0.05em] md:px-16"
+                >
+                  {t.nav.banner}
+                </span>
+              ))}
+            </div>
           ))}
         </div>
       </div>
 
       <nav className={clsx(
-        "fixed top-[38px] left-0 w-full h-[60px] md:h-[80px] z-[900] transition-all duration-400",
+        "fixed top-9 left-0 w-full h-[60px] md:h-[80px] z-[900] transition-all duration-400",
         isScrolled || mobileOpen
           ? "bg-[var(--color-bg)]/95 backdrop-blur-md border-b border-black/10"
           : "bg-transparent"
@@ -140,7 +151,7 @@ const NAV_ITEMS = [
 
       {/* Mobile drawer */}
       <div className={clsx(
-        "fixed top-[98px] left-0 right-0 z-[850] bg-[var(--color-bg)] border-t border-black/10 transition-all duration-300 md:hidden overflow-hidden",
+        "fixed top-24 left-0 right-0 z-[850] bg-[var(--color-bg)] border-t border-black/10 transition-all duration-300 md:hidden overflow-hidden",
         mobileOpen ? "max-h-screen opacity-100" : "max-h-0 opacity-0"
       )}>
         <div className="flex flex-col px-10 py-6 gap-1">
@@ -165,12 +176,28 @@ const NAV_ITEMS = [
       </div>
 
       <style>{`
-        @keyframes marquee-cosmetic {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
+        @keyframes cosmetic-marquee {
+          from { transform: translate3d(0, 0, 0); }
+          to { transform: translate3d(-50%, 0, 0); }
         }
-        .animate-marquee-cosmetic {
-          animation: marquee-cosmetic 25s linear infinite;
+        .cosmetic-marquee-track {
+          display: flex;
+          width: max-content;
+          white-space: nowrap;
+          animation: cosmetic-marquee 32s linear infinite;
+          will-change: transform;
+        }
+        .cosmetic-marquee-group {
+          display: flex;
+          flex-shrink: 0;
+          align-items: center;
+          white-space: nowrap;
+        }
+        @media (prefers-reduced-motion: reduce) {
+          .cosmetic-marquee-track {
+            animation: none;
+            transform: none;
+          }
         }
       `}</style>
     </>

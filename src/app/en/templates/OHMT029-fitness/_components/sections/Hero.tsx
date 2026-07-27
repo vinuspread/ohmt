@@ -44,23 +44,23 @@ export function Hero() {
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 h-full flex flex-col items-center justify-center text-center">
         <h1
           key={current}
-          className="font-['Montserrat'] font-bold text-[clamp(40px,6vw,80px)] text-white leading-[1.1] tracking-tight max-w-[800px] animate-fade-in"
+          className="font-['Montserrat'] font-bold text-[length:var(--text-h1)] text-white leading-[var(--leading-heading)] tracking-tight max-w-[800px] animate-fade-in"
         >
           <span dangerouslySetInnerHTML={{ __html: slides[current].headline }} />
         </h1>
-        <p className="text-[15px] text-white/70 mt-6 max-w-[440px] leading-relaxed">
+        <p className="text-sm text-white/70 mt-6 max-w-[440px] leading-relaxed">
           Premium wellness, thoughtfully designed for those who expect more.
         </p>
         <div className="flex items-center gap-4 mt-10">
           <a
             href="/en/templates/OHMT029-fitness/programs"
-            className="bg-white text-[var(--accent)] text-[13px] font-semibold px-7 py-3.5 rounded-lg hover:bg-white/90 transition-colors tracking-wide focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
+            className="bg-white text-[var(--accent)] text-xs font-semibold px-7 py-3.5 rounded-lg hover:bg-white/90 transition-colors tracking-wide focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
           >
             Explore programs →
           </a>
           <a
             href="/en/templates/OHMT029-fitness/about#contact"
-            className="border border-white/30 text-white text-[13px] font-semibold px-7 py-3.5 rounded-lg hover:border-white/60 transition-colors tracking-wide focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
+            className="border border-white/30 text-white text-xs font-semibold px-7 py-3.5 rounded-lg hover:border-white/60 transition-colors tracking-wide focus-visible:outline-2 focus-visible:outline-white focus-visible:outline-offset-2"
           >
             Contact us
           </a>

@@ -43,7 +43,7 @@ export default function Footer() {
 
       {/* Main footer */}
       <div className="mx-auto max-w-6xl px-6 py-14">
-        <div className="grid gap-12 md:grid-cols-[2fr_1fr_1fr_1fr]">
+        <div className="grid gap-12 md:grid-cols-4">
 
           {/* Brand */}
           <div>
@@ -56,7 +56,7 @@ export default function Footer() {
               </h3>
             </a>
             <p className="text-sm text-white/50 leading-relaxed max-w-xs">
-              놀이가 곧 배움이 되는 곳. 즐겁고 창의적인 교육을 통해 다음 세대의 크리에이터, 사상가, 탐험가들에게 영감을 불어넣습니다.
+              놀이가 곧 배움이 되는 곳. 즐겁고 창의적인 교육으로 다음 세대 크리에이터, 사상가, 탐험가에게 영감을 불어넣습니다.
             </p>
             <div className="flex gap-3 mt-6">
               {["IG", "YT", "TK"].map((s) => (

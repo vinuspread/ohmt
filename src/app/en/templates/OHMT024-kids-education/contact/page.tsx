@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "motion/react";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import themeData from "../theme.json";
 import Navbar from "../_components/layout/Navbar";
@@ -74,3 +74,4 @@ export default function ContactPage() {
     </TemplateWrapper>
   );
 }
+

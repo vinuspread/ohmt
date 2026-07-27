@@ -3,8 +3,6 @@
   "name": "Automotive Car",
   "name_ko": "오토모티브 카",
   "category": "corporate",
-  "description": "An automotive concept template for model showcases, technology pages, heritage storytelling, and high-impact product imagery with a premium showroom feel.",
-  "description_ko": "차량 모델, 기술 페이지, 브랜드 헤리티지, 임팩트 있는 제품 이미지를 프리미엄 쇼룸 감도로 구성한 자동차 컨셉 템플릿.",
   "mode": "dark",
   "theme": {
     "palette": {
@@ -38,6 +36,14 @@
       "mono": {
         "font": "JetBrains Mono",
         "weight": "400"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
       }
     },
     "spacing": {
@@ -53,5 +59,7 @@
       "transition_slow": "500ms",
       "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
     }
-  }
+  },
+  "thumbnail": "/templates/OHMT009-car/og-image.jpg",
+  "ogImage": "/templates/OHMT009-car/og-image.jpg"
 }

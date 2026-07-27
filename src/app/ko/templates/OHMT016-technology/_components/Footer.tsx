@@ -21,15 +21,15 @@ export default function Footer() {
                 Robotflow
               </span>
             </Link>
-            <p className="text-sm text-[var(--color-text-muted)] leading-[1.2] max-w-sm">
-              차세대 엔지니어링 스타트업과 자율 창작자에게 모듈형 하드웨어 생태계를 제공합니다.
+            <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-heading)] max-w-sm">
+              다양한 작업 환경에 적용할 수 있는 모듈형 자율 로봇 시스템을 개발합니다.
             </p>
           </div>
 
           {/* Quick links */}
           <div className="md:col-span-3">
             <h4 className="text-xs font-bold uppercase tracking-[0.15em] text-[var(--color-text)] mb-4">
-              리소스
+              제품 정보
             </h4>
             <ul className="space-y-3">
               <li>
@@ -58,12 +58,12 @@ export default function Footer() {
             <ul className="space-y-3">
               <li>
                 <Link href="#models" className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors">
-                  라이선스 가이드
+                  라이선스 안내
                 </Link>
               </li>
               <li>
                 <Link href="#news" className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-accent)] transition-colors">
-                  이용 약관
+                  이용약관
                 </Link>
               </li>
               <li>
@@ -78,14 +78,14 @@ export default function Footer() {
         {/* Bottom copyright */}
         <div className="pt-8 border-t border-[var(--color-border)] flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-[var(--color-text-muted)]">
-            © 2026 OHMT.
+            © 2026 Robotflow.
           </p>
           <div className="flex gap-4">
             <span className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-accent)] cursor-pointer transition-colors">
-              개인정보 처리방침
+              개인정보처리방침
             </span>
             <span className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-accent)] cursor-pointer transition-colors">
-              변경 사항
+              업데이트
             </span>
           </div>
         </div>

@@ -13,8 +13,8 @@ export default function CaseStudy() {
     <section className="relative overflow-hidden bg-[var(--color-bg-secondary)] py-24 lg:py-32">
       <div className="mx-auto max-w-4xl px-6">
         <div className="text-center mb-16">
-          <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">케이스 스터디</span>
-          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[1.1]">실제 결과, 실제 이야기</h2>
+          <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">관리 사례</span>
+          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[var(--leading-heading)]">관리 과정과 변화</h2>
         </div>
         <div className="space-y-3">
           {caseStudies.map((cs, i) => {
@@ -37,7 +37,7 @@ export default function CaseStudy() {
                       <div className="px-6 lg:px-8 pb-8 space-y-4">
                         <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">{cs.detail}</p>
                         <div className="rounded-xl bg-[var(--color-primary)]/5 border border-[var(--color-primary)]/20 p-4">
-                          <span className="text-[0.65rem] font-bold uppercase tracking-[0.15em] text-[var(--color-primary)]">결과</span>
+                          <span className="text-[0.65rem] font-bold uppercase tracking-[0.15em] text-[var(--color-primary)]">관리 후</span>
                           <p className="mt-1 text-sm text-[var(--color-text)] leading-relaxed">{cs.result}</p>
                         </div>
                       </div>

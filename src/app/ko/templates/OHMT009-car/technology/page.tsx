@@ -1,6 +1,6 @@
 "use client";
-
 import React, { useState } from "react";
+import { ChevronRight } from "lucide-react";
 import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
 import theme from "../theme.json";
@@ -55,7 +55,7 @@ function CarTechnologyPageContent() {
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
           <div className="relative max-w-[var(--theme-container)] mx-auto px-6 md:px-[var(--theme-gutter)] pb-12 w-full">
             <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-4 block">기술 혁신</span>
-            <h1 className="font-[family-name:var(--theme-font-heading)] text-[clamp(2.8rem,6vw,5.5rem)] font-bold tracking-[-0.03em] leading-[1.15]">
+            <h1 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-display)] font-bold tracking-[-0.03em] leading-[var(--leading-heading)]">
               디테일이 만드는<br />주행의 진화.
             </h1>
           </div>
@@ -63,8 +63,9 @@ function CarTechnologyPageContent() {
 
         {/* Intro */}
         <section className="max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)] pt-8 pb-10 md:pb-12 border-b border-[var(--theme-border)]">
-          <p className="text-[1.15rem] md:text-[1.25rem] text-white/70 font-normal leading-[1.6] max-w-[750px] break-keep">
-            우리의 엔지니어링 철학은 단순합니다: 모든 것에 의문을 제기하라.<br className="hidden md:inline" />그 결과는 차량의 가능성을 재정의하는 기술의 집합체입니다.
+          <p className="text-[1.15rem] md:text-[1.25rem] text-white/70 font-normal leading-[var(--leading-body)] max-w-[750px] break-keep">
+            우리의 엔지니어링 철학은 단순합니다. 모든 것에 의문을 제기하라.<br />
+            그 결과는 차량의 가능성을 재정의하는 기술의 집합체를 탄생입니다.
           </p>
         </section>
 
@@ -91,7 +92,7 @@ function CarTechnologyPageContent() {
                         <p className="text-[0.78rem] text-[var(--theme-accent)]/70 mt-3 leading-relaxed">{tech.detail}</p>
                       )}
                     </div>
-                    <span className={`text-lg transition-transform duration-300 ${active === i ? 'rotate-90 text-[var(--theme-accent)]' : 'text-[var(--theme-text-muted)]'}`}>→</span>
+                    <ChevronRight size={18} className={`transition-transform duration-300 ${active === i ? 'rotate-90 text-[var(--theme-accent)]' : 'text-[var(--theme-text-muted)]'}`} />
                   </div>
                 </button>
               ))}
@@ -131,7 +132,7 @@ function CarTechnologyPageContent() {
         <div className="relative h-[50vh] overflow-hidden">
           <img loading="lazy" src="/templates/OHMT009-car/tech-fullband.jpg" alt="" className="w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-            <p className="text-[clamp(1.5rem,4vw,3rem)] font-bold tracking-tight text-center max-w-[600px] px-6 leading-[1.4]">
+            <p className="text-[length:var(--text-h2)] font-bold tracking-tight text-center max-w-[600px] px-6 leading-[var(--leading-body)]">
               모든 디테일은<br />완벽한 움직임을 위해 설계되었습니다.
             </p>
           </div>
@@ -144,10 +145,10 @@ function CarTechnologyPageContent() {
 }
 
 
-export default function CarTechnologyPage(props: any) {
+export default function CarTechnologyPage() {
   return (
     <React.Suspense fallback={null}>
-      <CarTechnologyPageContent {...props} />
+      <CarTechnologyPageContent />
     </React.Suspense>
   );
 }

@@ -26,13 +26,13 @@ function RoomsPageContent() {
         {/* Hero Section */}
         <section className="relative h-[40vh] md:h-[50vh] flex items-center bg-[var(--color-primary)] overflow-hidden">
           <div className="absolute inset-0">
-            <img src="/templates/OHMT020-hotel/hero-main.jpg" alt="Rooms & Suites" className="w-full h-full object-cover opacity-50" />
+            <img src="/templates/OHMT020-hotel/hero-main.jpg" alt="객실과 스위트" className="w-full h-full object-cover opacity-50" />
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)] via-[var(--color-primary)]/40 to-transparent" />
           </div>
           <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full pt-20">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-              <span className="text-[12px] font-medium text-[var(--color-accent)] tracking-tight block mb-3">객실 안내</span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-[var(--font-heading)] font-bold text-[var(--color-bg)]">객실 & 스위트</h1>
+              <span className="text-xs font-medium text-[var(--color-accent)] tracking-tight block mb-3">객실 안내</span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-[var(--font-heading)] font-bold text-[var(--color-bg)]">객실과 스위트</h1>
             </motion.div>
           </div>
         </section>
@@ -40,7 +40,7 @@ function RoomsPageContent() {
         {/* Filter Section */}
         <section className="py-8 border-b border-[var(--color-border)] bg-[var(--color-bg-secondary)]">
           <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <span className="text-sm font-medium text-[var(--color-text-muted)] tracking-tight">전망별 필터:</span>
+            <span className="text-sm font-medium text-[var(--color-text-muted)] tracking-tight">전망으로 보기</span>
             <div className="flex gap-2 overflow-x-auto no-scrollbar max-w-full pb-1">
               {["all", "garden", "ocean", "pool"].map((view) => (
                 <button
@@ -77,26 +77,33 @@ function RoomsPageContent() {
                   <div className="w-full lg:w-1/2 flex flex-col gap-6">
                     <div>
                       <h2 className="text-3xl md:text-4xl font-[var(--font-heading)] font-bold text-[var(--color-primary)] mb-3">{room.name}</h2>
-                      <p className="text-base text-[var(--color-text-muted)] leading-relaxed">{room.desc}</p>
+                      <p className="text-base text-[var(--color-text-muted)] leading-relaxed break-keep [text-wrap:pretty] max-w-2xl">
+                        {room.desc.split(/(?<=\.)\s+/).map((sentence, sentenceIndex, sentences) => (
+                          <React.Fragment key={sentence}>
+                            {sentence}
+                            {sentenceIndex < sentences.length - 1 && <br />}
+                          </React.Fragment>
+                        ))}
+                      </p>
                     </div>
 
                     <div className="grid grid-cols-3 gap-4 py-4 border-t border-b border-[var(--color-border)]">
                       <div>
-                        <span className="text-[11px] font-medium text-[var(--color-text-muted)] tracking-tight block">크기</span>
+                        <span className="text-xs font-medium text-[var(--color-text-muted)] tracking-tight block">크기</span>
                         <span className="text-sm font-semibold text-[var(--color-text)]">{room.size}</span>
                       </div>
                       <div>
-                        <span className="text-[11px] font-medium text-[var(--color-text-muted)] tracking-tight block">전망</span>
+                        <span className="text-xs font-medium text-[var(--color-text-muted)] tracking-tight block">전망</span>
                         <span className="text-sm font-semibold text-[var(--color-text)]">{room.view}</span>
                       </div>
                       <div>
-                        <span className="text-[11px] font-medium text-[var(--color-text-muted)] tracking-tight block">수용 인원</span>
+                        <span className="text-xs font-medium text-[var(--color-text-muted)] tracking-tight block">수용 인원</span>
                         <span className="text-sm font-semibold text-[var(--color-text)]">{room.capacity}</span>
                       </div>
                     </div>
 
                     <div>
-                      <span className="text-[11px] font-medium text-[var(--color-text-muted)] tracking-tight block mb-3">객실 어메니티</span>
+                      <span className="text-xs font-medium text-[var(--color-text-muted)] tracking-tight block mb-3">객실 편의시설</span>
                       <div className="grid grid-cols-2 gap-2">
                         {room.amenities.map((a) => (
                           <div key={a} className="flex items-center gap-2 text-sm text-[var(--color-text)]">
@@ -109,15 +116,15 @@ function RoomsPageContent() {
 
                     <div className="flex items-center justify-between pt-4 border-t border-[var(--color-border)]">
                       <div>
-                        <span className="text-[11px] font-medium text-[var(--color-text-muted)] tracking-tight">1박 요금</span>
+                        <span className="text-xs font-medium text-[var(--color-text-muted)] tracking-tight">1박 기준</span>
                         <p className="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">{room.price}</p>
                       </div>
                       <div className="flex gap-4">
                         <Link href={`/ko/templates/OHMT020-hotel/rooms/${room.id}`}>
-                          <Button variant="secondary" size="md" className="text-[12px] tracking-tight">상세 정보</Button>
+                          <Button variant="secondary" size="md" className="text-xs tracking-tight">상세 정보</Button>
                         </Link>
                         <Link href="/ko/templates/OHMT020-hotel/booking">
-                          <Button variant="primary" size="md" className="text-[12px] tracking-tight">예약하기</Button>
+                          <Button variant="primary" size="md" className="text-xs tracking-tight">예약하기</Button>
                         </Link>
                       </div>
                     </div>
@@ -135,16 +142,16 @@ function RoomsPageContent() {
 }
 
 const viewKoMap: Record<string, string> = {
-  garden: "가든",
-  ocean: "오션",
-  pool: "풀",
+  garden: "정원",
+  ocean: "바다",
+  pool: "수영장",
 };
 
 const viewLabelKo: Record<string, string> = {
   all: "전체 보기",
-  garden: "가든 뷰",
-  ocean: "오션 뷰",
-  pool: "풀 & 가든",
+  garden: "정원 전망",
+  ocean: "바다 전망",
+  pool: "수영장과 정원",
 };
 
 export default function RoomsPage() {

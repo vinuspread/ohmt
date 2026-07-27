@@ -77,9 +77,9 @@ export function Performance() {
         <div className="mb-16">
           <SplitHeading
             text="Built for the city. Made to love."
-            className="font-michroma text-[clamp(26px,3vw,44px)] text-[var(--text)] leading-[1.05] tracking-[-0.02em]"
+            className="font-michroma text-[length:var(--text-h3)] text-[var(--text)] leading-[var(--leading-heading)] tracking-[-0.02em]"
           />
-          <p className="font-inter text-[15px] text-[var(--text-muted)] mt-4 max-w-[500px]">
+          <p className="font-inter text-sm text-[var(--text-muted)] mt-4 max-w-[500px]">
             NUBI fits your life — compact enough to park anywhere, fun enough to make you smile every day.
           </p>
         </div>
@@ -92,14 +92,14 @@ export function Performance() {
               className="py-7 md:px-8 md:py-8"
             >
               <div className="flex items-baseline gap-2">
-                <span className="stat-value font-michroma text-[clamp(42px,8vw,64px)] text-[var(--text)] leading-none">
+                <span className="stat-value font-michroma text-[length:var(--text-h1)] text-[var(--text)] leading-none">
                   0
                 </span>
-                <span className="font-inter text-[16px] font-semibold text-[var(--accent)] md:text-[18px]">
+                <span className="font-inter text-base font-semibold text-[var(--accent)] md:text-lg">
                   {stat.unit}
                 </span>
               </div>
-              <p className="mt-3 font-inter text-[13px] tracking-[0.03em] text-[var(--text-muted)]">
+              <p className="mt-3 font-inter text-xs tracking-[0.03em] text-[var(--text-muted)]">
                 {stat.label}
               </p>
             </div>

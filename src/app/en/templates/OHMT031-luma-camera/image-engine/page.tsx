@@ -49,14 +49,14 @@ export default function ImageEnginePage() {
   return (
     <LumaChrome>
       <main className="overflow-hidden pt-16">
-        <section className="px-4 py-16 md:px-8 md:py-24">
-          <div className="mx-auto grid max-w-[1380px] gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+        <section className="px-4 py-16 md:px-9 md:py-24">
+          <div className="mx-auto grid max-w-[1380px] gap-12 lg:grid-cols-2 lg:items-end">
             <div>
               <Focus size={28} strokeWidth={1.5} />
-              <h1 className="mt-6 max-w-3xl text-[clamp(2.35rem,5vw,5.4rem)] font-bold leading-[1.02] tracking-[-0.04em]">
+              <h1 className="luma-h1 mt-6 max-w-3xl">
                 Files worth keeping after the moment passes.
               </h1>
-              <p className="mt-6 max-w-xl text-lg leading-8 text-[var(--luma-muted)]">
+              <p className="luma-body mt-6 max-w-xl">
                 LUMA keeps color, grain, and surface detail close to the scene you saw.
               </p>
             </div>
@@ -66,32 +66,32 @@ export default function ImageEnginePage() {
           </div>
         </section>
 
-        <section className="px-4 pb-24 md:px-8 md:pb-32">
+        <section className="px-4 pb-24 md:px-9 md:pb-32">
           <div className="mx-auto grid max-w-[1380px] gap-4 md:grid-cols-3">
             {samples.map((sample) => (
-              <article key={sample.label} className="bg-white/50">
+              <article key={sample.label} className="luma-card !p-0 overflow-hidden">
                 <div className="relative aspect-[7/5] overflow-hidden">
                   <Image unoptimized src={sample.image} alt={`${sample.label} sample from LUMA`} fill className="object-cover" sizes="(min-width: 768px) 33vw, 100vw" />
                 </div>
-                <div className="p-6 md:p-7">
-                  <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--luma-muted)]">{sample.label}</p>
-                  <h2 className="mt-4 text-2xl font-bold leading-[1.05] tracking-[-0.04em]">{sample.title}</h2>
-                  <p className="mt-4 text-sm leading-6 text-[var(--luma-muted)]">{sample.text}</p>
+                <div className="p-6 md:p-9">
+                  <p className="luma-label text-[var(--luma-muted)]">{sample.label}</p>
+                  <h2 className="luma-h3 mt-4">{sample.title}</h2>
+                  <p className="mt-3 text-sm leading-6 text-[var(--luma-muted)]">{sample.text}</p>
                 </div>
               </article>
             ))}
           </div>
         </section>
 
-        <section className="bg-[var(--luma-dark)] px-4 py-24 text-white md:px-8 md:py-32">
+        <section className="bg-[var(--luma-dark)] px-4 py-24 text-white md:px-9 md:py-32">
           <div className="mx-auto grid max-w-[1380px] gap-12 lg:grid-cols-3">
             <div>
               <Moon size={26} strokeWidth={1.5} />
-              <h2 className="mt-5 text-3xl font-bold leading-[1.08] tracking-[-0.035em]">ISO 12800, still quiet.</h2>
+              <h2 className="luma-h2-sm mt-6">ISO 12800, still quiet.</h2>
             </div>
             <div>
               <Smartphone size={26} strokeWidth={1.5} />
-              <h2 className="mt-5 text-3xl font-bold leading-[1.08] tracking-[-0.035em]">The recipe stays attached.</h2>
+              <h2 className="luma-h2-sm mt-6">The recipe stays attached.</h2>
             </div>
             <div className="flex items-end">
               <Link href="/en/templates/OHMT031-luma-camera/shop" className="inline-flex items-center gap-2 bg-white px-6 py-3 text-sm font-bold text-[var(--luma-ink)]">
@@ -101,20 +101,20 @@ export default function ImageEnginePage() {
           </div>
         </section>
 
-        <section className="px-4 py-24 md:px-8 md:py-32">
-          <div className="mx-auto grid max-w-[1380px] gap-12 lg:grid-cols-[0.85fr_1.15fr]">
+        <section className="px-4 py-24 md:px-9 md:py-32">
+          <div className="mx-auto grid max-w-[1380px] gap-12 lg:grid-cols-2">
             <div>
-              <h2 className="text-[clamp(1.8rem,3vw,3.35rem)] font-bold leading-[1.08] tracking-[-0.035em]">
+              <h2 className="luma-h2">
                 Three profiles. One restrained color language.
               </h2>
-              <p className="mt-6 max-w-lg text-lg leading-8 text-[var(--luma-muted)]">
+              <p className="luma-body mt-6 max-w-lg">
                 These are not filters. They are starting points that keep the file calm before editing begins.
               </p>
             </div>
             <div className="grid gap-4">
               {profileNotes.map((item) => (
-                <article key={item.title} className="bg-white/55 p-7 md:p-8">
-                  <h3 className="text-2xl font-bold tracking-[-0.04em]">{item.title}</h3>
+                <article key={item.title} className="luma-card">
+                  <h3 className="luma-h3">{item.title}</h3>
                   <p className="mt-3 text-sm leading-6 text-[var(--luma-muted)]">{item.text}</p>
                 </article>
               ))}
@@ -122,15 +122,15 @@ export default function ImageEnginePage() {
           </div>
         </section>
 
-        <section className="px-4 pb-24 md:px-8 md:pb-32">
-          <div className="mx-auto grid max-w-[1380px] gap-4 lg:grid-cols-[1.15fr_0.85fr]">
+        <section className="px-4 pb-24 md:px-9 md:pb-32">
+          <div className="mx-auto grid max-w-[1380px] gap-4 lg:grid-cols-2">
             <div className="relative min-h-[460px] overflow-hidden bg-[var(--luma-dark)]">
               <Image unoptimized src="/templates/OHMT031-luma-camera/app-recipe-view.jpg?v=20260702f" alt="LUMA app storing image recipes and notes" fill className="object-cover" sizes="(min-width: 1024px) 58vw, 100vw" />
             </div>
-            <div className="bg-white/55 p-7 md:p-10">
-              <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--luma-muted)]">After capture</p>
-              <h2 className="mt-5 text-3xl font-bold leading-[1.08] tracking-[-0.035em]">The file remembers how it was made.</h2>
-              <div className="mt-8 grid gap-4">
+            <div className="bg-white/55 p-6 md:p-9">
+              <p className="luma-label text-[var(--luma-muted)]">After capture</p>
+              <h2 className="luma-h2-sm mt-4">The file remembers how it was made.</h2>
+              <div className="mt-9 grid gap-4">
                 {workflow.map((item, index) => (
                   <div key={item} className="flex gap-4">
                     <span className="text-sm font-bold text-[var(--luma-muted)]">0{index + 1}</span>

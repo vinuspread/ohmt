@@ -47,7 +47,7 @@ export const classes: ClassItem[] = [
     price: "120,000원",
     image: "/templates/OHMT024-kids-education/class-coding.jpg",
     color: "var(--color-primary)",
-    description: "재미있고 직관적인 프로젝트를 통해 소프트웨어 프로그래밍의 세계를 접합니다. 게임, 애니메이션, 앱을 직접 개발하며 자연스럽게 컴퓨팅 사고력과 문제 해결 능력을 기릅니다.",
+    description: "재미있고 직관적인 프로젝트로 소프트웨어 프로그래밍의 세계를 만납니다. 게임, 애니메이션, 앱을 직접 개발하며 자연스럽게 컴퓨팅 사고력과 문제 해결 능력을 기릅니다.",
     schedule: "화 / 목 오후 4:00 - 5:30",
     teacherId: "mike",
     materials: ["개인 노트북 또는 태블릿", "헤드폰", "가득한 호기심과 상상력"],
@@ -61,7 +61,7 @@ export const classes: ClassItem[] = [
     highlights: [
       { emoji: "💻", title: "프로젝트 중심", description: "첫날부터 직접 간단한 게임과 앱을 만듭니다." },
       { emoji: "🌟", title: "문제 해결력", description: "다양한 도전을 풀며 논리적인 사고를 발달시킵니다." },
-      { emoji: "👥", title: "협동 학습", description: "페어 프로그래밍을 통해 협업 능력을 배웁니다." },
+      { emoji: "👥", title: "협동 학습", description: "페어 프로그래밍으로 협업하는 법을 배웁니다." },
     ],
   },
   {
@@ -86,7 +86,7 @@ export const classes: ClassItem[] = [
     highlights: [
       { emoji: "🎨", title: "표현의 자유", description: "아이들 저마다의 독창적인 표현 방식을 존중합니다." },
       { emoji: "🧡", title: "감각 발달", description: "다양한 재료를 손으로 만지고 조작하며 촉각을 깨웁니다." },
-      { emoji: "🌈", title: "소근육 단련", description: "미세한 미술 손동작을 통해 신체 조절 능력을 기릅니다." },
+      { emoji: "🌈", title: "소근육 단련", description: "정교한 손동작으로 신체 조절 능력을 기릅니다." },
     ],
   },
   {
@@ -97,7 +97,7 @@ export const classes: ClassItem[] = [
     price: "110,000원",
     image: "/templates/OHMT024-kids-education/hero-kids-science.jpg",
     color: "var(--color-secondary)",
-    description: "눈앞에서 펼쳐지는 재미있는 실험을 통해 과학의 기초 원리를 탐색합니다. 화산 폭발부터 슬라임 제작까지, 신비롭고 재미있는 실험이 매주 찾아옵니다.",
+    description: "눈앞에서 펼쳐지는 실험으로 과학의 기초 원리를 탐색합니다. 화산 폭발부터 슬라임 제작까지, 신비롭고 재미있는 실험이 매주 찾아옵니다.",
     schedule: "수 / 금 오후 4:00 - 5:30",
     teacherId: "mike",
     materials: ["실험용 보안경 (원내 제공)", "개인 실험 노트와 연필"],
@@ -109,8 +109,8 @@ export const classes: ClassItem[] = [
       "지구와 우주 천체 관찰 입문",
     ],
     highlights: [
-      { emoji: "🔬", title: "직접 실험", description: "직접 결과를 이끌어내는 신나는 과학 실험을 수행합니다." },
-      { emoji: "🌀", title: "STEM 기반", description: "물리, 화학, 공학 영역에 관한 열린 흥미를 유발합니다." },
+      { emoji: "🔬", title: "직접 실험", description: "직접 손으로 결과를 만들어내는 신나는 과학 실험을 진행합니다." },
+      { emoji: "🌀", title: "STEM 기반", description: "물리, 화학, 공학을 향한 호기심을 열어줍니다." },
       { emoji: "📊", title: "탐색 데이터", description: "현상을 관찰하고 기록하며 기초 과학적 통찰력을 배웁니다." },
     ],
   },
@@ -122,7 +122,7 @@ export const classes: ClassItem[] = [
     price: "95,000원",
     image: "/templates/OHMT024-kids-education/class-math.jpg",
     color: "var(--color-red)",
-    description: "다채로운 교구와 수학 퍼즐 게임을 활용하여 수학을 재미있게 정복합니다. 숫자에 관한 자신감을 가지며 논리력을 키울 수 있는 신나는 보드게임 수학 놀이입니다.",
+    description: "다채로운 교구와 수학 퍼즐 게임으로 수학을 재미있게 정복합니다. 숫자와 친해지고 논리력도 키우는 신나는 보드게임 수학 놀이입니다.",
     schedule: "월 / 금 오후 3:30 - 5:00",
     teacherId: "sarah",
     materials: ["연필과 지우개", "수학 수 모형 교구 (원내 제공)"],
@@ -142,9 +142,10 @@ export const classes: ClassItem[] = [
 ];
 
 export const teachers: Teacher[] = [
-  { id: "sarah", name: "김사라", role: "교육 디렉터", image: "/templates/OHMT024-kids-education/teacher-01.png", color: "var(--color-primary)" },
-  { id: "mike", name: "마이크 첸", role: "STEM 교육 총괄", image: "/templates/OHMT024-kids-education/teacher-02.png", color: "var(--color-secondary)" },
-  { id: "emma", name: "엠마 데이비스", role: "미술 수석 강사", image: "/templates/OHMT024-kids-education/teacher-03.png", color: "var(--color-accent)" },
+  { id: "sarah", name: "Sarah Kim", role: "교육 디렉터", image: "/templates/OHMT024-kids-education/teacher-01.png", color: "var(--color-primary)" },
+  { id: "mike", name: "Mike Chen", role: "STEM 교육 총괄", image: "/templates/OHMT024-kids-education/teacher-02.png", color: "var(--color-secondary)" },
+  { id: "emma", name: "Emma Davis", role: "미술 수석 강사", image: "/templates/OHMT024-kids-education/teacher-03.png", color: "var(--color-accent)" },
+  { id: "luca", name: "Luca Moreno", role: "음악·움직임 강사", image: "/templates/OHMT024-kids-education/teacher-04.png", color: "var(--color-red)" },
 ];
 
 export const homeClasses: ClassItem[] = classes.slice(0, 3);

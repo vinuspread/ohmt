@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { Header } from "../_components/Header";
 import { Footer } from "../_components/Footer";
 import { PageHeader } from "../_components/PageHeader";
@@ -11,7 +10,6 @@ import { ArrowUpRight, Award } from "lucide-react";
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 function StudioAboutPageContent() {
-    const searchParams = useSearchParams();
     const t = {
   "hero": {
     "badge": `ARCHITECTURE STUDIO`,
@@ -233,22 +231,22 @@ const stats = t.aboutPage.stats;
                 <div className="max-w-[1720px] mx-auto px-6 md:px-16 lg:px-24">
                     <div className="grid lg:grid-cols-12 gap-8 md:gap-20 items-start">
                         <div className="lg:col-span-5 space-y-3 md:space-y-4">
-                            <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold leading-[1.1] text-black break-keep">
+                            <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold leading-[var(--leading-heading)] text-black break-keep">
                                 {t.aboutPage.philosophy.title}
                             </h2>
                         </div>
                         <div className="lg:col-span-7 space-y-8 md:space-y-20">
-                            <p className="text-[15px] md:text-[16px] lg:text-[18px] text-black/50 leading-[1.4] font-normal break-keep">
+                            <p className="text-sm md:text-base lg:text-lg text-black/50 leading-[var(--leading-body)] font-normal break-keep">
                                 {t.aboutPage.philosophy.desc}
                             </p>
-                            {/* Stats - 모바일 1열 */}
+                            {/* Stats - single column on mobile */}
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 border-t border-black/5 pt-8 md:pt-12">
                                 {stats.map((s: any, idx: number) => (
                                     <div key={idx} className="flex sm:flex-col gap-4 sm:gap-0 items-center sm:items-start sm:space-y-4">
                                         <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-black shrink-0">{s.value}</div>
                                         <div className="space-y-1 sm:space-y-2">
-                                            <h4 className="text-[13px] font-bold text-black/50 uppercase">{s.label}</h4>
-                                            <p className="text-[15px] md:text-[14px] text-black/60 leading-[1.4] font-normal break-keep">{s.desc}</p>
+                                            <h4 className="text-xs font-bold text-black/50 uppercase">{s.label}</h4>
+                                            <p className="text-sm md:text-sm text-black/60 leading-[var(--leading-body)] font-normal break-keep">{s.desc}</p>
                                         </div>
                                     </div>
                                 ))}
@@ -261,15 +259,15 @@ const stats = t.aboutPage.stats;
             {/* 3. Split Screen */}
             <SplitScreenSection bgClass="bg-white" textColorClass="text-black" borderColorClass="border-transparent" imageSrc="/templates/OHMT006-studio/hero-2.jpg" imageAlt="Studio interior showcase" imagePosition="left">
                 <div className="space-y-3 md:space-y-4">
-                    <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-[1.1] text-black break-keep">
+                    <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-[var(--leading-heading)] text-black break-keep">
                         {t.aboutPage.splitTitle1} <br />{t.aboutPage.splitTitle2}
                     </h3>
                 </div>
-                <p className="text-[14px] md:text-[15px] text-black/50 leading-[1.4] font-normal break-keep">
+                <p className="text-sm md:text-sm text-black/50 leading-[var(--leading-body)] font-normal break-keep">
                     {t.aboutPage.splitDesc}
                 </p>
                 <div className="pt-2 md:pt-4">
-                    <Link href={`/en/templates/OHMT006-studio/contact`} className="group inline-flex items-center gap-4 border-b-2 border-black pb-2 text-[13px] font-bold text-black transition-opacity hover:opacity-60 uppercase">
+                    <Link href={`/en/templates/OHMT006-studio/contact`} className="group inline-flex items-center gap-4 border-b-2 border-black pb-2 text-xs font-bold text-black transition-opacity hover:opacity-60 uppercase">
                         {t.aboutPage.splitCta} <ArrowUpRight size={14} />
                     </Link>
                 </div>
@@ -284,9 +282,9 @@ const stats = t.aboutPage.stats;
                     <div className="border-t border-white/5 divide-y divide-white/5">
                         {history.map((h: any, idx: number) => (
                             <div key={idx} className="grid grid-cols-1 sm:grid-cols-12 gap-2 md:gap-6 py-6 md:py-10 items-start group hover:bg-white/5 px-2 md:px-4 transition-colors duration-300">
-                                <div className="sm:col-span-2 text-[13px] text-white/40 font-bold">{h.year}</div>
+                                <div className="sm:col-span-2 text-xs text-white/40 font-bold">{h.year}</div>
                                 <div className="sm:col-span-6 text-base md:text-xl font-bold text-white">{h.title}</div>
-                                <div className="sm:col-span-3 text-[12px] md:text-[13px] font-bold text-white/40 uppercase">{h.category}</div>
+                                <div className="sm:col-span-3 text-xs md:text-xs font-bold text-white/40 uppercase">{h.category}</div>
                                 <div className="sm:col-span-1 text-right hidden sm:block opacity-0 group-hover:opacity-100 transition-opacity">
                                     <Award size={18} className="text-white ml-auto" />
                                 </div>
@@ -326,7 +324,7 @@ const stats = t.aboutPage.stats;
                                 </div>
                                 <div className="py-6 md:p-8 space-y-1 md:space-y-1.5 bg-white relative z-10">
                                     <h4 className="text-xl md:text-2xl font-bold text-black">{t.name}</h4>
-                                    <p className="text-[13px] font-bold text-black/50 uppercase">{t.role}</p>
+                                    <p className="text-xs font-bold text-black/50 uppercase">{t.role}</p>
                                 </div>
                             </div>
                         ))}

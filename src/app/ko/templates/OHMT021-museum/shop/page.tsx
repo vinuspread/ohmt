@@ -1,7 +1,7 @@
 "use client";
 
 import { Suspense } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Filter, ChevronDown, ShoppingBag, Heart, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -12,12 +12,12 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 const products = [
-  { id: 1, name: "Unicorn Limited Edition", price: "$4,200", img: "/templates/OHMT021-museum/gundam-unicorn.jpg", category: "Nano Series" },
-  { id: 2, name: "Sazabi Executive Piece", price: "$5,850", img: "/templates/OHMT021-museum/gundam-sazabi.jpg", category: "Elite" },
-  { id: 3, name: "Nu-Gundam Classic", price: "$3,400", img: "/templates/OHMT021-museum/gundam-nu.jpg", category: "Icons" },
-  { id: 4, name: "Project-01 Prototype", price: "$2,900", img: "/templates/OHMT021-museum/project-1.jpg", category: "Prototype" },
-  { id: 5, name: "Project-02 Advanced", price: "$3,100", img: "/templates/OHMT021-museum/project-2.jpg", category: "Advanced" },
-  { id: 6, name: "Project-03 Ultimate", price: "$6,500", img: "/templates/OHMT021-museum/project-3.jpg", category: "Ultimate" },
+  { id: 1, name: "라오콘 군상 중형 복제품", price: "$850", img: "/templates/OHMT021-museum/laocoon-sculpture.png", category: "조각품" },
+  { id: 2, name: "〈아테네 학당〉 아트 프린트", price: "$320", img: "/templates/OHMT021-museum/school-of-athens.png", category: "아트 프린트" },
+  { id: 3, name: "〈아담의 창조〉 캔버스 프린트", price: "$480", img: "/templates/OHMT021-museum/creation-of-adam.png", category: "아트 프린트" },
+  { id: 4, name: "피에타 조각 복제품", price: "$1,200", img: "/templates/OHMT021-museum/pieta-sculpture.png", category: "조각품" },
+  { id: 5, name: "벨베데레의 아폴론 석고상", price: "$950", img: "/templates/OHMT021-museum/apollo-belvedere.png", category: "조각품" },
+  { id: 6, name: "〈그리스도의 변형〉 한정판 포스터", price: "$75", img: "/templates/OHMT021-museum/transfiguration.png", category: "아트 프린트" },
 ];
 
 function ShopPageContent() {
@@ -25,24 +25,24 @@ function ShopPageContent() {
     <TemplateWrapper theme={theme}>
       <>
       <Header />
-      <main className="antialiased pt-16 md:pt-32 pb-12 md:pb-24 bg-white min-h-screen">
+      <main className="antialiased pt-16 md:pt-32 pb-12 md:pb-24 bg-white text-[var(--color-primary)] min-h-screen">
       {/* Header Space */}
       <div className="max-w-7xl mx-auto px-6 mb-16">
-        <h1 className="text-5xl md:text-7xl font-serif mb-8 tracking-tighter">The Collection</h1>
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 border-b border-luxury-black/10 pb-8">
-          <div className="flex gap-8 text-[13px] uppercase font-bold tracking-widest text-luxury-gray">
-            <span className="text-luxury-black cursor-pointer">All (24)</span>
-            <span className="cursor-pointer hover:text-luxury-black transition-colors">Nano Series</span>
-            <span className="cursor-pointer hover:text-luxury-black transition-colors">Elite</span>
-            <span className="cursor-pointer hover:text-luxury-black transition-colors">Icons</span>
+        <h1 className="text-5xl md:text-7xl font-serif mb-8 tracking-tighter">뮤지엄 숍</h1>
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 border-b border-black/10 pb-8">
+          <div className="flex gap-8 text-xs font-bold tracking-widest text-black/60 overflow-x-auto scrollbar-none whitespace-nowrap w-full md:w-auto pb-4 md:pb-0">
+            <span className="text-black cursor-pointer">전체 (6)</span>
+            <span className="cursor-pointer hover:text-black transition-colors">조각품</span>
+            <span className="cursor-pointer hover:text-black transition-colors">아트 프린트</span>
+            <span className="cursor-pointer hover:text-black transition-colors">도서·도록</span>
           </div>
           
           <div className="flex items-center gap-6">
-            <button className="flex items-center gap-2 text-[13px] uppercase font-bold tracking-widest">
-              Filter <Filter size={14} />
+            <button className="flex items-center gap-2 text-xs font-bold tracking-widest">
+              필터 <Filter size={14} />
             </button>
-            <button className="flex items-center gap-2 text-[13px] uppercase font-bold tracking-widest">
-              Sort by <ChevronDown size={14} />
+            <button className="flex items-center gap-2 text-xs font-bold tracking-widest">
+              정렬 <ChevronDown size={14} />
             </button>
           </div>
         </div>
@@ -60,7 +60,7 @@ function ShopPageContent() {
               whileHover={{ y: -10 }}
               className="group cursor-pointer"
             >
-              <div className="relative aspect-[3/4] bg-luxury-cream mb-6 overflow-hidden">
+              <div className="relative aspect-[3/4] bg-black/5 mb-6 overflow-hidden">
                 <Link href={`/ko/templates/OHMT021-museum/product/${product.id}`} className="block h-full">
                   <img
                     src={product.img}
@@ -74,15 +74,15 @@ function ShopPageContent() {
                   </button>
                 </div>
                 <div className="absolute bottom-4 left-4 right-4 z-10 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                  <button className="w-full py-3 bg-white text-[13px] uppercase font-bold tracking-[0.3em] flex items-center justify-center gap-2">
-                    Quick Add <ShoppingBag size={14} />
+                  <button className="w-full py-3 bg-white text-xs font-bold tracking-[0.3em] flex items-center justify-center gap-2">
+                    바로 담기<ShoppingBag size={14} />
                   </button>
                 </div>
               </div>
               <div className="flex justify-between items-start">
                 <div>
-                  <p className="text-[12px] uppercase tracking-widest text-luxury-gray mb-1">{product.category}</p>
-                  <Link href={`/ko/templates/OHMT021-museum/product/${product.id}`} className="hover:text-luxury-gray transition-colors">
+                  <p className="text-xs tracking-widest text-black/60 mb-1">{product.category}</p>
+                  <Link href={`/ko/templates/OHMT021-museum/product/${product.id}`} className="hover:text-black/60 transition-colors">
                     <h4 className="text-xl font-serif tracking-tight transition-[font-style]">{product.name}</h4>
                   </Link>
                 </div>
@@ -94,12 +94,12 @@ function ShopPageContent() {
       </div>
 
       {/* Pagination Placeholder */}
-      <div className="mt-40 flex justify-center gap-4 text-[13px] uppercase font-bold tracking-widest">
-        <span className="text-luxury-black border-b border-black pb-1">01</span>
-        <span className="text-luxury-gray hover:text-luxury-black cursor-pointer transition-colors">02</span>
-        <span className="text-luxury-gray hover:text-luxury-black cursor-pointer transition-colors">03</span>
-        <span className="ml-4 text-luxury-gray hover:text-luxury-black cursor-pointer transition-colors flex items-center gap-2">
-          Next <ArrowRight size={14} />
+      <div className="mt-40 flex justify-center gap-4 text-xs font-bold tracking-widest">
+        <span className="text-black border-b border-black pb-1">01</span>
+        <span className="text-black/50 hover:text-black cursor-pointer transition-colors">02</span>
+        <span className="text-black/50 hover:text-black cursor-pointer transition-colors">03</span>
+        <span className="ml-4 text-black/50 hover:text-black cursor-pointer transition-colors flex items-center gap-2">
+          다음 <ArrowRight size={14} />
         </span>
       </div>
       </main>
@@ -110,7 +110,7 @@ function ShopPageContent() {
 }
 
 
-export default function ShopPage(props: any) {
+export default function ShopPage(props: Record<string, unknown>) {
   return (
     <React.Suspense fallback={null}>
       <ShopPageContent {...props} />

@@ -4,15 +4,15 @@ export function Cta() {
       <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="font-['Montserrat'] font-bold text-[clamp(28px,4vw,48px)] text-[var(--text)] leading-[1.15] tracking-tight mb-4">
+            <h2 className="font-['Montserrat'] font-bold text-[length:var(--text-h2)] text-[var(--text)] leading-[var(--leading-heading)] tracking-tight mb-4">
               Vitalis 경험하기
             </h2>
-            <p className="text-[15px] text-[var(--text-muted)] leading-relaxed mb-8 max-w-[420px]">
+            <p className="text-sm text-[var(--text-muted)] leading-relaxed mb-8 max-w-[420px]">
               플래그십 스튜디오에서 무료 체험 세션을 예약하고 프리미엄 웰니스를 직접 경험해보세요.
             </p>
             <a
               href="/ko/templates/OHMT029-fitness/programs"
-              className="inline-block bg-[var(--accent)] text-white text-[13px] font-semibold px-8 py-4 rounded-lg hover:bg-[var(--accent-light)] transition-colors tracking-wide"
+              className="inline-block bg-[var(--accent)] text-white text-xs font-semibold px-8 py-4 rounded-lg hover:bg-[var(--accent-light)] transition-colors tracking-wide"
             >
               체험 예약하기 →
             </a>

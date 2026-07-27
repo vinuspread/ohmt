@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "motion/react";
 
 const navLinks = [
   { href: "/en/templates/OHMT025-wedding/about", label: "About" },
@@ -118,3 +118,4 @@ export default function Navbar({ solid }: { solid?: boolean }) {
     </>
   );
 }
+

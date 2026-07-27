@@ -17,13 +17,14 @@ export default function ContactFull() {
               <div className="sticky top-0 h-screen">
                 <img
                   src="/templates/OHMT025-wedding/wedding-story-01.jpg"
-                  alt="웨딩 ceremony"
+                  alt="결혼식 장면"
                   className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-[#1A1816]/30" />
                 <div className="absolute bottom-12 left-12 right-12">
-                  <p className="font-[family-name:var(--font-heading)] text-4xl font-light normal-case text-white leading-[1.1]">
-                    모든 사랑 이야기는 아름답게 기록될 자격이 있습니다.
+                  <p className="max-w-xl font-[family-name:var(--font-heading)] text-4xl font-light normal-case text-white leading-[var(--leading-heading)]">
+                    <span className="xl:block">두 사람의 결혼식을</span>{" "}
+                    <span className="xl:block">가장 자연스러운 모습으로 기록합니다.</span>
                   </p>
                 </div>
               </div>
@@ -35,8 +36,7 @@ export default function ContactFull() {
                 transition={{ duration: 0.8, ease: [0.22, 0.61, 0.36, 1] }}
               >
                 <span className="text-[0.65rem] font-bold uppercase tracking-[0.28em] text-[var(--color-primary)] block mb-4">
-                  문의하기
-                </span>
+                  촬영 문의</span>
               </motion.div>
               <ContactForm />
         </div>

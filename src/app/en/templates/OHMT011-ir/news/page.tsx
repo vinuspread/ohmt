@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
 import theme from "../theme.json";
@@ -11,18 +12,18 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 type Tag = "Press Release" | "Financial" | "ESG" | "Events";
 
 const allNews = [
-  { date: "May 15, 2026", tag: "Press Release" as Tag, title: "IRG announces $2.8B strategic expansion into Southeast Asian markets", excerpt: "The investment will establish three new regional headquarters and a logistics hub in Singapore over the next 18 months.", tagColor: "var(--color-dark-bg)", image: "/templates/OHMT011-ir/news-press.png" },
+  { date: "May 15, 2026", tag: "Press Release" as Tag, title: "IRG announces $2.8B strategic expansion into Southeast Asian markets", excerpt: "The investment will establish three new regional headquarters and a logistics hub in Singapore over the next 18 months.", tagColor: "var(--color-dark-bg)", image: "/templates/OHMT011-ir/ir-build.jpg" },
   { date: "April 28, 2026", tag: "Financial" as Tag, title: "Q1 2026 earnings results: Record revenue of $14.6B, up 12% YoY", excerpt: "Strong performance across all business segments driven by robust demand in energy and infrastructure.", tagColor: "var(--color-accent)", image: "/templates/OHMT011-ir/news-financial.png" },
   { date: "April 10, 2026", tag: "ESG" as Tag, title: "Sustainability Report 2025: 34% reduction in Scope 1 & 2 emissions", excerpt: "IRG accelerates its net-zero commitment with a comprehensive roadmap for decarbonization across operations.", tagColor: "#0D7C3E", image: "/templates/OHMT011-ir/news-esg.png" },
-  { date: "March 22, 2026", tag: "Press Release" as Tag, title: "IRG Board appoints Catherine N. Adebayo as new independent director", excerpt: "Ms. Adebayo brings extensive experience in corporate governance and risk management from her role as COO of Sterling Bank.", tagColor: "var(--color-dark-bg)", image: "/templates/OHMT011-ir/news-press.png" },
+  { date: "March 22, 2026", tag: "Press Release" as Tag, title: "IRG Board appoints Catherine N. Adebayo as new independent director", excerpt: "Ms. Adebayo brings extensive experience in corporate governance and risk management from her role as COO of Sterling Bank.", tagColor: "var(--color-dark-bg)", image: "/templates/OHMT011-ir/member-ca.png" },
   { date: "March 12, 2026", tag: "Events" as Tag, title: "Save the Date: 2026 Annual Shareholder Meeting - June 18", excerpt: "The meeting will be held in a hybrid format with in-person attendance at our New York headquarters.", tagColor: "#6B6B6B", image: "/templates/OHMT011-ir/news-event.png" },
-  { date: "February 28, 2026", tag: "Financial" as Tag, title: "IRG Board declares quarterly dividend of $0.48 per share", excerpt: "The dividend is payable on March 25, 2026 to shareholders of record as of March 10, 2026.", tagColor: "var(--color-accent)", image: "/templates/OHMT011-ir/news-financial.png" },
-  { date: "February 14, 2026", tag: "ESG" as Tag, title: "IRG Foundation commits $150M to STEM education initiatives globally", excerpt: "The 10-year commitment will fund scholarships, research programs, and infrastructure at 50+ universities.", tagColor: "#0D7C3E", image: "/templates/OHMT011-ir/news-esg.png" },
-  { date: "January 30, 2026", tag: "Press Release" as Tag, title: "IRG closes acquisition of Atlas Energy Solutions for $4.1B", excerpt: "The transaction strengthens IRG's renewable energy portfolio and expands operational capacity in the Americas.", tagColor: "var(--color-dark-bg)", image: "/templates/OHMT011-ir/news-press.png" },
-  { date: "January 12, 2026", tag: "Financial" as Tag, title: "Full Year 2025 results: Revenue surpasses $52B milestone", excerpt: "Annual net income of $8.9B represents a 15.2% net margin, the highest in company history.", tagColor: "var(--color-accent)", image: "/templates/OHMT011-ir/news-financial.png" },
-  { date: "December 18, 2025", tag: "Events" as Tag, title: "2026 Investor Day - Save the Date: March 12, 2026", excerpt: "Management will provide an in-depth review of IRG's strategic plan, capital allocation, and long-term financial outlook.", tagColor: "#6B6B6B", image: "/templates/OHMT011-ir/news-event.png" },
-  { date: "December 5, 2025", tag: "ESG" as Tag, title: "IRG achieves carbon-neutral certification for North American operations", excerpt: "Third-party verification confirms IRG's commitment to environmental stewardship and operational sustainability.", tagColor: "#0D7C3E", image: "/templates/OHMT011-ir/news-esg.png" },
-  { date: "November 19, 2025", tag: "Press Release" as Tag, title: "IRG launches $1.5B share repurchase program", excerpt: "The program authorizes the repurchase of up to $1.5B of IRG common stock over the next 24 months.", tagColor: "var(--color-dark-bg)", image: "/templates/OHMT011-ir/news-press.png" },
+  { date: "February 28, 2026", tag: "Financial" as Tag, title: "IRG Board declares quarterly dividend of $0.48 per share", excerpt: "The dividend is payable on March 25, 2026 to shareholders of record as of March 10, 2026.", tagColor: "var(--color-accent)", image: "/templates/OHMT011-ir/news-dividend.jpg" },
+  { date: "February 14, 2026", tag: "ESG" as Tag, title: "IRG Foundation commits $150M to STEM education initiatives globally", excerpt: "The 10-year commitment will fund scholarships, research programs, and infrastructure at 50+ universities.", tagColor: "#0D7C3E", image: "/templates/OHMT011-ir/news-stem-education.jpg" },
+  { date: "January 30, 2026", tag: "Press Release" as Tag, title: "IRG closes acquisition of Atlas Energy Solutions for $4.1B", excerpt: "The transaction strengthens IRG's renewable energy portfolio and expands operational capacity in the Americas.", tagColor: "var(--color-dark-bg)", image: "/templates/OHMT011-ir/ir-energy.jpg" },
+  { date: "January 12, 2026", tag: "Financial" as Tag, title: "Full Year 2025 results: Revenue surpasses $52B milestone", excerpt: "Annual net income of $8.9B represents a 15.2% net margin, the highest in company history.", tagColor: "var(--color-accent)", image: "/templates/OHMT011-ir/news-annual-results.jpg" },
+  { date: "December 18, 2025", tag: "Events" as Tag, title: "2026 Investor Day - Save the Date: March 12, 2026", excerpt: "Management will provide an in-depth review of IRG's strategic plan, capital allocation, and long-term financial outlook.", tagColor: "#6B6B6B", image: "/templates/OHMT011-ir/news-investor-day.jpg" },
+  { date: "December 5, 2025", tag: "ESG" as Tag, title: "IRG achieves carbon-neutral certification for North American operations", excerpt: "Third-party verification confirms IRG's commitment to environmental stewardship and operational sustainability.", tagColor: "#0D7C3E", image: "/templates/OHMT011-ir/news-carbon-neutral.jpg" },
+  { date: "November 19, 2025", tag: "Press Release" as Tag, title: "IRG launches $1.5B share repurchase program", excerpt: "The program authorizes the repurchase of up to $1.5B of IRG common stock over the next 24 months.", tagColor: "var(--color-dark-bg)", image: "/templates/OHMT011-ir/news-share-repurchase.jpg" },
 ];
 
 const tags = ["All", "Press Release", "Financial", "ESG", "Events"];
@@ -62,10 +63,10 @@ function IRNewsContent() {
                 <div className="w-6 h-[1px] bg-[var(--color-accent)]" />
                 Media & Announcements
               </div>
-              <h1 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold tracking-tight leading-[1.1] mb-6">
+              <h1 className="text-[length:var(--text-h1)] font-bold tracking-tight leading-[var(--leading-heading)] mb-6">
                 News
               </h1>
-              <p className="text-[0.9rem] text-white/55 leading-[1.4] max-w-[520px] font-normal">
+              <p className="text-[0.9rem] text-white/55 leading-[var(--leading-body)] max-w-[520px] font-normal">
                 The latest press releases, financial announcements, and corporate updates from IRG.
               </p>
             </div>
@@ -90,7 +91,7 @@ function IRNewsContent() {
                   className={`text-[0.62rem] font-bold uppercase tracking-[0.12em] px-6 py-2.5 transition-all duration-300 ${
                     activeTag === tag
                       ? "bg-[var(--color-dark-bg)] text-white"
-                      : "bg-transparent text-[#6B6B6B] border border-[var(--color-border)] hover:border-[var(--color-dark-bg)]"
+                      : "bg-transparent text-[var(--color-text-muted)] border border-[var(--color-border)] hover:border-[var(--color-dark-bg)]"
                   }`}
                 >
                   {tag}
@@ -111,7 +112,7 @@ function IRNewsContent() {
                 >
                   <div className="border border-[var(--color-border)] hover:border-[var(--color-accent)] transition-all duration-300 hover:shadow-md h-full flex flex-col sm:flex-row overflow-hidden bg-white">
                     {item.image && (
-                      <div className="w-full sm:w-[180px] shrink-0 aspect-[4/3] sm:aspect-auto bg-[#F9F9F8] relative overflow-hidden border-b sm:border-b-0 sm:border-r border-[var(--color-border)]">
+                      <div className="w-full sm:w-[180px] shrink-0 aspect-[4/3] sm:aspect-auto bg-[var(--color-bg-secondary)] relative overflow-hidden border-b sm:border-b-0 sm:border-r border-[var(--color-border)]">
                         <Image
                           src={item.image}
                           alt={item.title}
@@ -124,8 +125,8 @@ function IRNewsContent() {
                     <div className="p-8 flex-1 flex flex-col justify-between">
                       <div>
                         <div className="flex items-center gap-3 mb-4">
-                          <span className="text-[0.6rem] text-[#6B6B6B] font-medium">{item.date}</span>
-                          <span className="w-1 h-1 rounded-full bg-[#6B6B6B]" />
+                          <span className="text-[0.6rem] text-[var(--color-text-muted)] font-medium">{item.date}</span>
+                          <span className="w-1 h-1 rounded-full bg-[var(--color-text-muted)]" />
                           <span
                             className="text-[0.55rem] font-bold uppercase tracking-[0.12em] px-2.5 py-1 text-white"
                             style={{ backgroundColor: item.tagColor }}
@@ -133,16 +134,16 @@ function IRNewsContent() {
                             {item.tag}
                           </span>
                         </div>
-                        <h3 className="text-[0.88rem] font-bold text-[var(--color-dark-bg)] leading-[1.45] mb-3 group-hover:text-[var(--color-accent)] transition-colors line-clamp-2">
+                        <h3 className="text-[0.88rem] font-bold text-[var(--color-dark-bg)] leading-[var(--leading-body)] mb-3 group-hover:text-[var(--color-accent)] transition-colors line-clamp-2">
                           {item.title}
                         </h3>
-                        <p className="text-[0.78rem] text-[#6B6B6B] leading-[1.82] font-normal line-clamp-3">
+                        <p className="text-[0.78rem] text-[var(--color-text-muted)] leading-loose font-normal line-clamp-3">
                           {item.excerpt}
                         </p>
                       </div>
                       <div className="mt-5 pt-4 border-t border-[var(--color-border)] flex items-center justify-between">
                         <span className="text-[0.6rem] font-bold uppercase tracking-[0.14em] text-[var(--color-accent)] group-hover:text-[var(--color-dark-bg)] transition-colors">
-                          Read More →
+                          Read More <ArrowRight size={14} className="inline-block" />
                         </span>
                       </div>
                     </div>
@@ -166,12 +167,12 @@ function IRNewsContent() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7 }}
-          className="py-10 md:py-20 bg-[#F9F9F8] border-t border-[var(--color-border)]"
+          className="py-10 md:py-20 bg-[var(--color-bg-secondary)] border-t border-[var(--color-border)]"
         >
           <div className="max-w-[1280px] mx-auto px-6 md:px-10 flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
               <h2 className="text-[1.2rem] font-bold text-[var(--color-dark-bg)] mb-2">Press Release Archive</h2>
-              <p className="text-[0.82rem] text-[#6B6B6B] font-normal">Access all press releases organized by year and category.</p>
+              <p className="text-[0.82rem] text-[var(--color-text-muted)] font-normal">Access all press releases organized by year and category.</p>
             </div>
             <div className="flex gap-3">
               <a href="#" className="text-[0.72rem] font-bold uppercase tracking-[0.14em] px-8 py-3 bg-[var(--color-dark-bg)] text-white hover:bg-[var(--color-accent)] transition-all duration-300">
@@ -191,10 +192,10 @@ function IRNewsContent() {
 }
 
 
-export default function IRNews(props: any) {
+export default function IRNews() {
   return (
     <React.Suspense fallback={null}>
-      <IRNewsContent {...props} />
+      <IRNewsContent />
     </React.Suspense>
   );
 }

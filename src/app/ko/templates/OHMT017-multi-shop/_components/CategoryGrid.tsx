@@ -15,14 +15,12 @@ export const CategoryGrid = () => {
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         <div className="mb-10 flex items-end justify-between">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-            카테고리별 쇼핑
-          </h2>
+            카테고리별 상품</h2>
           <Link
             href="/ko/templates/OHMT017-multi-shop/shop"
             className="hidden md:inline-block text-xs uppercase tracking-[0.2em] text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors duration-200 border-b border-[var(--color-text-muted)] pb-0.5"
           >
-            전체보기
-          </Link>
+            전체 보기</Link>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
@@ -49,9 +47,8 @@ export const CategoryGrid = () => {
                   <h3 className="text-white text-xl font-bold tracking-tight">
                     {cat.name}
                   </h3>
-                  <span className="inline-block mt-1 text-[11px] uppercase tracking-[0.2em] text-white/70 motion-safe:group-hover:text-white transition-colors duration-200">
-                    쇼핑하기 &rarr;
-                  </span>
+                  <span className="inline-block mt-1 text-xs uppercase tracking-[0.2em] text-white/70 motion-safe:group-hover:text-white transition-colors duration-200">
+                    상품 보기 &rarr;</span>
                 </div>
               </Link>
             </motion.div>
@@ -61,4 +58,3 @@ export const CategoryGrid = () => {
     </section>
   );
 };
-

@@ -16,14 +16,14 @@ export const collections: CollectionItem[] = [
   { 
     id: "vatican-laocoon",
     slug: "laocoon-and-his-sons",
-    title: "Laocoön and His Sons", 
+    title: "Laocoon and His Sons", 
     artist: "Agesander, Athenodoros",
     year: 'c. 30 BC',
     img: "/templates/OHMT021-museum/laocoon-sculpture.png", 
     images: ["/templates/OHMT021-museum/laocoon-sculpture.png", "/templates/OHMT021-museum/laocoon-detail-1.png", "/templates/OHMT021-museum/laocoon-detail-2.png"],
     tag: "Sculpture",
     category: "Sculpture",
-    description: "One of the most famous ancient sculptures, depicting the Trojan priest Laocoön and his sons entangled by sea serpents.",
+    description: "One of the most famous ancient sculptures, depicting the Trojan priest Laocoon and his sons entangled by sea serpents.",
     audioDuration: "2:15"
   },
   { 
@@ -31,7 +31,7 @@ export const collections: CollectionItem[] = [
     slug: "school-of-athens",
     title: "The School of Athens", 
     artist: "Raphael",
-    year: '1509??511',
+    year: '1509-1511',
     img: "/templates/OHMT021-museum/school-of-athens.png", 
     images: ["/templates/OHMT021-museum/school-of-athens.png"],
     tag: "Fresco",
@@ -44,7 +44,7 @@ export const collections: CollectionItem[] = [
     slug: "creation-of-adam",
     title: "The Creation of Adam", 
     artist: "Michelangelo",
-    year: '1508??512',
+    year: '1508-1512',
     img: "/templates/OHMT021-museum/creation-of-adam.png", 
     images: ["/templates/OHMT021-museum/creation-of-adam.png"],
     tag: "Fresco",
@@ -55,9 +55,9 @@ export const collections: CollectionItem[] = [
   { 
     id: "vatican-pieta",
     slug: "pieta",
-    title: "Pietà", 
+    title: "Pieta", 
     artist: "Michelangelo",
-    year: '1498??499',
+    year: '1498-1499',
     img: "/templates/OHMT021-museum/pieta-sculpture.png", 
     images: ["/templates/OHMT021-museum/pieta-sculpture.png"],
     tag: "Marble",
@@ -82,7 +82,7 @@ export const collections: CollectionItem[] = [
     slug: "transfiguration-raphael",
     title: "The Transfiguration", 
     artist: "Raphael",
-    year: '1516??520',
+    year: '1516-1520',
     img: "/templates/OHMT021-museum/transfiguration.png", 
     tag: "Fresco",
     category: "Fresco",
@@ -96,12 +96,18 @@ export const collections: CollectionItem[] = [
     title: `Masterpiece Archive 0${i + 7}`,
     artist: "Unknown Master",
     year: "Early Century",
-    img: i % 2 === 0 ? "/templates/OHMT021-museum/hero-bg.png" : "/templates/OHMT021-museum/curator.png",
+    img: [
+      "/templates/OHMT021-museum/laocoon-sculpture.png",
+      "/templates/OHMT021-museum/school-of-athens.png",
+      "/templates/OHMT021-museum/creation-of-adam.png",
+      "/templates/OHMT021-museum/pieta-sculpture.png",
+      "/templates/OHMT021-museum/apollo-belvedere.png",
+      "/templates/OHMT021-museum/transfiguration.png"
+    ][i % 6],
     tag: i % 3 === 0 ? "Fresco" : "Sculpture",
-    category: (i % 3 === 0 ? "Fresco" : (i % 3 === 1 ? "Sculpture" : "Marble")) as any,
+    category: (i % 3 === 0 ? "Fresco" : (i % 3 === 1 ? "Sculpture" : "Marble")) as "Fresco" | "Sculpture" | "Marble",
     description: "An exceptional piece of Vatican history preserved for centuries.",
     audioDuration: "1:45"
   }))
 ];
-
 

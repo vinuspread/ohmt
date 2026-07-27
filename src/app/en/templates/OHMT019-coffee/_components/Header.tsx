@@ -54,7 +54,7 @@ export const Header = () => {
           ))}
           <Link
             href="/en/templates/OHMT019-coffee/menu"
-            className="border border-white/40 text-white/80 px-6 py-2 text-[11px] uppercase tracking-[0.2em] font-semibold hover:bg-white hover:text-[var(--color-primary-dark)] transition-colors duration-200"
+            className="border border-white/40 text-white/80 px-6 py-2 text-xs uppercase tracking-[0.2em] font-semibold hover:bg-white hover:text-[var(--color-primary-dark)] transition-colors duration-200"
           >
             Order Now
           </Link>

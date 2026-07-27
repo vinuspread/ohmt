@@ -3,6 +3,7 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
 import { useReducedMotion } from "motion/react";
+import { ArrowRight } from "lucide-react";
 import { categories } from "../data/data";
 
 const easeOut = [0.23, 1, 0.32, 1] as const;
@@ -49,8 +50,8 @@ export const CategoryGrid = () => {
                   <h3 className="text-white text-xl font-bold tracking-tight">
                     {cat.name}
                   </h3>
-                  <span className="inline-block mt-1 text-[11px] uppercase tracking-[0.2em] text-white/70 motion-safe:group-hover:text-white transition-colors duration-200">
-                    Shop &rarr;
+                  <span className="inline-block mt-1 text-xs uppercase tracking-[0.2em] text-white/70 motion-safe:group-hover:text-white transition-colors duration-200">
+                    Shop <ArrowRight size={12} className="inline" />
                   </span>
                 </div>
               </Link>

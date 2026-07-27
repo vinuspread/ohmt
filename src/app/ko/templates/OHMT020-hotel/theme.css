@@ -1,5 +1,15 @@
-/* hotel-ko Design Tokens - Luxe Haven */
+/* hotel Design Tokens - Luxe Haven */
 :root {
+  --text-display: clamp(3rem, 7vw, 5.5rem);
+  --text-h1: clamp(2.5rem, 5vw, 4rem);
+  --text-h2: clamp(2rem, 4vw, 3rem);
+  --text-h3: clamp(1.5rem, 3vw, 2rem);
+  --text-lead: clamp(1.125rem, 2vw, 1.5rem);
+  --leading-display: 0.95;
+  --leading-heading: 1.1;
+  --leading-body: 1.6;
+
+  /* Brand Colors */
   --color-primary: #1C2B24;
   --color-secondary: #2A2A2A;
   --color-accent: #C5A880;
@@ -10,9 +20,10 @@
   --color-text-contrast: #1C1C1A;
   --color-border: rgba(28, 43, 36, 0.1);
 
+  /* Typography */
   --font-heading: 'Playfair Display', 'Noto Serif KR', serif;
-  --font-body: 'Inter', Pretendard, sans-serif;
-  --font-display: 'Playfair Display', 'Noto Serif KR', serif;
+  --font-body: 'Pretendard Variable', Pretendard, 'Inter', sans-serif;
+  --font-display: 'Playfair Display', serif;
 
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
@@ -36,17 +47,16 @@
 
   --transition-duration: 300ms;
   --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+
   --focus-outline: 2px solid var(--color-accent);
   --focus-outline-offset: 2px;
+
   --radius-none: 0;
   --radius-sm: 0.25rem;
   --radius-md: 0.5rem;
   --radius-lg: 1rem;
   --radius-full: 9999px;
 }
-
-body, * { word-break: keep-all; }
-header a, header button, header nav { letter-spacing: -0.03em; }
 
 @media (prefers-reduced-motion: reduce) {
   *,
@@ -56,38 +66,4 @@ header a, header button, header nav { letter-spacing: -0.03em; }
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
-
-
-body[lang="ko"], [lang="ko"], :root {
-  word-break: keep-all;
-  letter-spacing: -0.025em;
-}
-
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav, 
-nav a, nav button, nav span {
-  letter-spacing: -0.03em;
-}
-
-/* Korean typography rules (Korean Kerning Rule) */
-body[lang="ko"], [lang="ko"], :root {
-  word-break: keep-all;
-  letter-spacing: -0.025em;
-}
-
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav, 
-nav a, nav button, nav span {
-  letter-spacing: -0.03em;
 }

@@ -62,8 +62,7 @@ export const Header = () => {
                 : "bg-white text-[var(--color-primary)]"
             }`}
           >
-            주문하기
-          </Link>
+            픽업 주문</Link>
         </nav>
 
         <button
@@ -124,8 +123,7 @@ export const Header = () => {
                   onClick={() => setMobileOpen(false)}
                   className="bg-[var(--color-primary)] text-white text-center px-6 py-3 text-xs uppercase tracking-[0.2em] font-semibold rounded-none block"
                 >
-                  주문하기
-                </Link>
+                  픽업 주문</Link>
               </motion.div>
             </motion.div>
           </motion.div>

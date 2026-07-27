@@ -3,7 +3,7 @@
 import { useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 import { useGSAP } from "@gsap/react";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -118,10 +118,10 @@ export function Usp() {
                         }`}
                       />
                       <span className="min-w-0 flex-1">
-                        <span className="block font-michroma text-[clamp(21px,5.8vw,30px)] leading-tight text-[var(--text-on-light)] md:text-[clamp(24px,3.4vw,32px)]">
+                        <span className="block font-michroma text-[length:var(--text-lead)] leading-tight text-[var(--text-on-light)] md:text-[length:var(--text-lead)]">
                           {usp.label}
                         </span>
-                        <span className="mt-2 block font-inter text-[14px] leading-relaxed text-[var(--text-muted-light)] md:text-[15px]">
+                        <span className="mt-2 block font-inter text-sm leading-relaxed text-[var(--text-muted-light)] md:text-sm">
                           {usp.sub}
                         </span>
                       </span>
@@ -139,7 +139,7 @@ export function Usp() {
                           className="overflow-hidden"
                         >
                           <div className="pb-6 pl-6 md:pl-7 lg:pb-7">
-                            <p className="max-w-[440px] font-inter text-[15px] leading-7 text-[var(--text-on-light)]/72">
+                            <p className="max-w-[440px] font-inter text-sm leading-7 text-[var(--text-on-light)]/72">
                               {usp.detail}
                             </p>
                             <div
@@ -172,3 +172,4 @@ export function Usp() {
     </section>
   );
 }
+

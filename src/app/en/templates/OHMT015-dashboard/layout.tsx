@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './theme.css'
 
@@ -21,8 +21,23 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'OHMT - Dashboard',
+  title: 'OHMT - Analytics Command Center Interface Template',
   description: 'OHMT admin dashboard template',
+  openGraph: {
+    title: 'OHMT - Analytics Command Center Interface Template',
+    description: 'OHMT admin dashboard template',
+    url: 'https://ohmytemplate.com/en/templates/OHMT015-dashboard',
+    siteName: 'OHMT',
+    images: [{ url: '/templates/OHMT015-dashboard/og-image.jpg', width: 1200, height: 630 }],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'OHMT - Analytics Command Center Interface Template',
+    description: 'OHMT admin dashboard template',
+    images: ['/templates/OHMT015-dashboard/og-image.jpg'],
+  },
 }
 
 export default function DashboardRootLayout({
@@ -36,4 +51,3 @@ export default function DashboardRootLayout({
     </section>
   )
 }
-

@@ -5,6 +5,7 @@ import { Footer } from "../_components/Footer";
 import { menuItems, menuCategories } from "../data/data";
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
+import { formatWon } from "../_utils/currency";
 
 function MenuPageContent() {
   const [active, setActive] = useState<string>(menuCategories[0].id);
@@ -25,10 +26,9 @@ function MenuPageContent() {
           />
           <div className="absolute inset-0 bg-black/70" />
           <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 text-center pt-12">
-            <p className="text-xs uppercase tracking-[0.3em] text-white/50 mb-3">Menu</p>
-            <h1 className="text-4xl md:text-5xl font-bold font-heading leading-[1.1] text-white">
-              메뉴 소개
-            </h1>
+            <p className="text-xs uppercase tracking-[0.3em] text-white/50 mb-3">메뉴</p>
+            <h1 className="text-4xl md:text-5xl font-bold font-heading leading-[var(--leading-heading)] text-white">
+              전체 메뉴</h1>
           </div>
         </section>
 
@@ -63,7 +63,7 @@ function MenuPageContent() {
                   <div className="p-4 md:p-5 flex flex-col h-[calc(100%-aspect-square)]">
                     <div className="flex items-start justify-between gap-2 mb-1">
                       <h3 className="text-base md:text-lg font-bold font-heading">{item.name}</h3>
-                      <span className="text-base font-semibold text-[var(--color-primary)] shrink-0">${item.price}</span>
+                      <span className="text-base font-semibold text-[var(--color-primary)] shrink-0">{formatWon(item.price)}</span>
                     </div>
                     <p className="text-sm text-[var(--color-text-muted)] leading-relaxed line-clamp-2 mb-3 flex-grow">{item.description}</p>
                     <div className="flex items-center justify-between gap-2 mt-2 pt-2 border-t border-[var(--color-ui-border)]">
@@ -72,14 +72,14 @@ function MenuPageContent() {
                           {item.options.map((opt) => (
                             <span
                               key={opt}
-                              className="text-[10px] rounded-full px-2 py-0.5 bg-[var(--color-bg-secondary)] text-[var(--color-text-muted)] capitalize font-medium"
+                              className="text-xs rounded-full px-2 py-0.5 bg-[var(--color-bg-secondary)] text-[var(--color-text-muted)] capitalize font-medium"
                             >
                               {opt === 'hot' ? '핫' : '아이스'}
                             </span>
                           ))}
                         </div>
                       ) : (
-                        <span className="text-[10px] text-[var(--color-text-muted)]">기본 옵션</span>
+                        <span className="text-xs text-[var(--color-text-muted)]">기본 옵션</span>
                       )}
                       <button
                         onClick={() => alert(`"${item.name}" 주문이 완료되었습니다. 카운터에서 수령해 주세요.`)}

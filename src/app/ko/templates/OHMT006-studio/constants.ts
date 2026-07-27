@@ -8,7 +8,7 @@ export const STUDIO_ROUTES = {
 
 export const STUDIO_BRAND = {
   NAME: 'OHMT.',
-  TAGLINE: '감각적인 공간 설계로 삶의 질을 높입니다.',
+  TAGLINE: '생활과 업무 방식에 맞는 공간을 설계합니다.',
   EMAIL: 'hello@ohmytemplate.design',
   PHONE: '+82 (2) 6123-4567',
   ADDRESS: {

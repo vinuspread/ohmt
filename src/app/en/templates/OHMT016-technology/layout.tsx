@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next"
+import type { Metadata } from "next"
 import './theme.css'
 import { Inter, Inter_Tight } from 'next/font/google'
 
@@ -15,10 +15,10 @@ const interTight = Inter_Tight({
 })
 
 export const metadata: Metadata = {
-  title: 'OHMT - Technology',
+  title: 'OHMT - Robotics Technology Landing Template',
   description: 'Empower machine learning and robotics startups with a professional, dynamic platform.',
   openGraph: {
-    title: 'OHMT - Technology',
+    title: 'OHMT - Robotics Technology Landing Template',
     description: 'Empower machine learning and robotics startups with a professional, dynamic platform.',
     url: 'https://ohmytemplate.com/en/templates/OHMT016-technology',
     siteName: 'OHMT',
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'OHMT - Technology',
+    title: 'OHMT - Robotics Technology Landing Template',
     description: 'Empower machine learning and robotics startups with a professional, dynamic platform.',
     images: ['/templates/OHMT016-technology/og-image.jpg'],
   },
@@ -46,8 +46,19 @@ export default function TechnologyLayout({
 }) {
   return (
     <div className={`${inter.variable} ${interTight.variable} min-h-screen bg-[var(--color-bg)] text-[var(--color-text)] selection:bg-[var(--color-accent)] selection:text-[var(--color-bg)] antialiased`}>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "OHMT Technology",
+            url: "https://ohmytemplate.com/en/templates/OHMT016-technology",
+            description: "Empower machine learning and robotics startups.",
+          }),
+        }}
+      />
       {children}
     </div>
   )
 }
-

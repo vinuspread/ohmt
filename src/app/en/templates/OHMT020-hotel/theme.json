@@ -3,8 +3,6 @@
   "name": "Luxe Haven Hotel",
   "name_ko": "럭스 헤이븐 호텔",
   "category": "hospitality",
-  "description": "A luxury hotel booking template for room showcases, amenities, reservation flows, and destination storytelling with an elegant hospitality tone.",
-  "description_ko": "객실 쇼케이스, 어메니티, 예약 흐름, 여행지 스토리를 우아한 호스피탈리티 톤으로 구성한 럭셔리 호텔 예약 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {
@@ -24,13 +22,13 @@
     },
     "typography": {
       "heading": {
-        "font": "Playfair Display, serif",
+        "font": "Playfair Display, Noto Serif KR, serif",
         "weight": "700",
-        "tracking": "0",
+        "tracking": "-0.02em",
         "style": "font-bold"
       },
       "body": {
-        "font": "Inter, sans-serif",
+        "font": "Inter, Noto Sans KR, sans-serif",
         "weight": "400",
         "leading": "1.6",
         "style": "leading-relaxed"
@@ -38,6 +36,14 @@
       "mono": {
         "font": "JetBrains Mono",
         "weight": "400"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
       }
     },
     "spacing": {
@@ -57,5 +63,7 @@
       "card_hover": "scale-105 transition-transform duration-700",
       "button": "bg-[var(--color-primary)] text-[var(--color-bg)] hover:bg-[var(--color-accent)]"
     }
-  }
+  },
+  "thumbnail": "/templates/OHMT020-hotel/og-image.jpg",
+  "ogImage": "/templates/OHMT020-hotel/og-image.jpg"
 }

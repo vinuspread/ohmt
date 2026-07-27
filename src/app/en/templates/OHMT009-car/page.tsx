@@ -2,7 +2,6 @@
 "use client";
 
 import React from "react";
-import { useSearchParams } from "next/navigation";
 import { Header } from "./_components/layout/Header";
 import { Footer } from "./_components/layout/Footer";
 import { Hero } from "./_components/sections/Hero";
@@ -14,7 +13,6 @@ import { NewsSection } from "./_components/sections/NewsSection";
 import theme from "./theme.json";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
 function CarTemplateContent() {
-  const searchParams = useSearchParams();
   const t = {
   "nav": {
     "models": `Models`,

@@ -3,9 +3,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 export const Footer = () => {
-  const searchParams = useSearchParams();
   const t = {
   "nav": {
     "shop": `Shop`,
@@ -39,7 +37,7 @@ export const Footer = () => {
     }
   },
   "footer": {
-    "brandDesc": `We believe in conscious beauty. Formulated without compromise, designed for results. All products are cruelty-free and vegan.`,
+    "brandDesc": `We believe in conscious beauty.\nUncompromising formulas. Proven results.\nEvery product is cruelty-free and vegan.`,
     "shopTitle": `Shop`,
     "aboutTitle": `About`,
     "supportTitle": `Support`,
@@ -87,12 +85,12 @@ const shopLinks = [
   return (
     <footer className="bg-black text-white py-12 md:py-24">
       <div className="max-w-[1440px] mx-auto px-6 md:px-10">
-        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-20 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-20 mb-20">
           <div>
             <Link href="/en/templates/OHMT010-cosmetic" className="text-[1rem] md:text-[1.15rem] font-medium md:font-black tracking-[0.12em] uppercase mb-8 block">
               OHMT
             </Link>
-            <p className="text-[0.85rem] opacity-70 leading-[1.4] max-w-[320px]">
+            <p className="max-w-[320px] whitespace-pre-line text-[0.85rem] leading-[var(--leading-body)] opacity-70">
               {t.footer.brandDesc}
             </p>
           </div>

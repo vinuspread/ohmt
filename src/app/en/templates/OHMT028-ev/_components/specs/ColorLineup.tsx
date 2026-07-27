@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 
 const colors = [
   { id: "black",  name: "Midnight Black", hex: "#1C1C1E", image: "color-black.jpg" },
@@ -18,7 +18,7 @@ export function ColorLineup() {
   return (
     <section id="colors" className="bg-[var(--bg)]">
       <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 py-24 md:py-32">
-        <h2 className="font-michroma text-[clamp(28px,3vw,48px)] text-[var(--text)] leading-[0.93] tracking-[-0.03em] mb-16">
+        <h2 className="font-michroma text-[length:var(--text-h2)] text-[var(--text)] leading-[var(--leading-display)] tracking-[-0.03em] mb-16">
           7 ways to be you
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -36,7 +36,7 @@ export function ColorLineup() {
                     }`}
                     style={{ backgroundColor: c.hex }}
                   />
-                  <span className={`font-inter text-[13px] transition-colors duration-300 ${
+                  <span className={`font-inter text-xs transition-colors duration-300 ${
                     active === i ? "text-[var(--text)]" : "text-[var(--text-muted)]"
                   }`}>
                     {c.name}
@@ -63,3 +63,4 @@ export function ColorLineup() {
     </section>
   );
 }
+

@@ -60,7 +60,7 @@ export const StatsRow = () => {
     <div className="grid grid-cols-2 md:grid-cols-4 border-y border-[var(--theme-border)] bg-black">
       {stats.map((s) => (
         <div key={s.label} className="py-12 text-center border-r border-[var(--theme-border)] last:border-r-0">
-          <span className="block text-[clamp(2rem,3.5vw,3.5rem)] font-bold tracking-[-0.03em] leading-none mb-2 text-white">
+          <span className="block text-[length:var(--text-h2)] font-bold tracking-[-0.03em] leading-none mb-2 text-white">
             <CountUp value={s.val} />
             <span className="text-[0.6em] text-[var(--theme-accent)] font-bold ml-1">{s.unit}</span>
           </span>

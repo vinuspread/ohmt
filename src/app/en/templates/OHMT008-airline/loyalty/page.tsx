@@ -9,6 +9,7 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 import { Gift, Calculator, Award, ShieldAlert, Check } from "lucide-react";
 import { PageHero } from "../_components/PageHero";
 import { motion, AnimatePresence } from "framer-motion";
+import TemplateSelect from '../_components/TemplateSelect'
 
 function LoyaltyPageContent() {
   const [selectedTier, setSelectedTier] = useState("Gold");
@@ -54,7 +55,7 @@ function LoyaltyPageContent() {
           imageAlt="VIP Airport Lounge"
           label="Skyline Loyalty Club"
           title={<>Elevate Your <br /><span className="text-[var(--color-accent)] font-[family-name:var(--font-heading)] normal-case font-bold">Every Mile.</span></>}
-          description="Join OHMT Skyline Club. Access ultra-exclusive suites, private VIP airport lounges, accelerated miles earning, and elite priority luggage."
+          description={"Join OHMT Skyline Club.\nAccess ultra-exclusive suites, private VIP airport lounges, accelerated miles earning, and elite priority luggage."}
           descMaxWidth="max-w-[660px]"
         />
 
@@ -67,10 +68,10 @@ function LoyaltyPageContent() {
               {/* Left: Beautiful floating metallic pass (Clean, borderless card focus) */}
               <div className="lg:col-span-5 flex flex-col items-center">
                 <div className="text-center pb-8 space-y-2">
-                  <span className="text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] block">
+                  <span className="text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] block">
                     Interactive Skyline Pass
                   </span>
-                  <p className="text-[14px] text-[#7A7A7A] normal-case">
+                  <p className="text-sm text-[#7A7A7A] normal-case">
                     Select elite tier tiers on the right to morph card skins.
                   </p>
                 </div>
@@ -90,23 +91,23 @@ function LoyaltyPageContent() {
                       
                       <div className="flex justify-between items-start">
                         <div>
-                          <p className="text-[13px] uppercase tracking-widest font-black opacity-45">OHMT Skyline Club</p>
-                          <h4 className="text-[16px] font-black uppercase tracking-wider mt-1">{t.name} Pass</h4>
+                          <p className="text-xs uppercase tracking-widest font-black opacity-45">OHMT Skyline Club</p>
+                          <h4 className="text-base font-black uppercase tracking-wider mt-1">{t.name} Pass</h4>
                         </div>
                         <Award size={22} className="opacity-70" />
                       </div>
 
                       <div className="normal-case">
-                        <p className="text-[13px] uppercase tracking-widest opacity-45">MEMBER ID</p>
-                        <p className="text-[14px] font-bold tracking-wider pt-0.5">SKY-5647-2026</p>
+                        <p className="text-xs uppercase tracking-widest opacity-45">MEMBER ID</p>
+                        <p className="text-sm font-bold tracking-wider pt-0.5">SKY-5647-2026</p>
                       </div>
 
                       <div className="flex justify-between items-end border-t border-black/10 pt-4">
                         <div>
-                          <p className="text-[13px] uppercase tracking-widest opacity-45">Miles Accel</p>
-                          <p className="text-[14px] font-bold">{t.accel} Bonus</p>
+                          <p className="text-xs uppercase tracking-widest opacity-45">Miles Accel</p>
+                          <p className="text-sm font-bold">{t.accel} Bonus</p>
                         </div>
-                        <span className="text-[13px] uppercase font-bold tracking-widest border border-current px-3 py-1 rounded-full">
+                        <span className="text-xs uppercase font-bold tracking-widest border border-current px-3 py-1 rounded-full">
                           ACTIVE ELITE
                         </span>
                       </div>
@@ -118,8 +119,8 @@ function LoyaltyPageContent() {
               {/* Right: Modern Asymmetric Tier list (No Box Containers) */}
               <div className="lg:col-span-7 space-y-10">
                 <div className="space-y-4">
-                  <span className="text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">Club Tiers</span>
-                  <h3 className="text-[clamp(1.5rem,4vw,3rem)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight leading-none">
+                  <span className="text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">Club Tiers</span>
+                  <h3 className="text-[length:var(--text-h2)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight leading-none">
                     Accelerate your luxury journey.
                   </h3>
                   <div className="h-[2px] bg-[var(--color-accent)] w-12" />
@@ -136,14 +137,14 @@ function LoyaltyPageContent() {
                       >
                         <div className="space-y-2 flex-1">
                           <div className="flex items-center gap-3">
-                            <h4 className={`font-bold text-[18px] uppercase tracking-wider transition-colors duration-300 ${
+                            <h4 className={`font-bold text-lg uppercase tracking-wider transition-colors duration-300 ${
                               isSelected ? "text-[var(--color-accent)]" : "text-[var(--color-primary)]"
                             }`}>
                               {t.name} Tier
                             </h4>
-                            <span className="text-[14px] text-[var(--color-accent)]">{t.miles} Mi</span>
+                            <span className="text-sm text-[var(--color-accent)]">{t.miles} Mi</span>
                           </div>
-                          <p className="text-[14px] text-[#7A7A7A] normal-case leading-[1.4] font-normal">
+                          <p className="text-sm text-[#7A7A7A] normal-case leading-[var(--leading-body)] font-normal">
                             Enjoy <strong className="text-[var(--color-primary)] font-semibold">{t.luggage}</strong> baggage priority and a <strong className="text-[var(--color-primary)] font-semibold">{t.accel}</strong> mileage acceleration bonus.
                           </p>
                         </div>
@@ -172,12 +173,12 @@ function LoyaltyPageContent() {
             {/* Left Selector Deck (Typographic Underlines instead of box selectors) */}
             <div className="lg:col-span-7 space-y-12">
               <div className="space-y-4">
-                <span className="text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">Miles Simulator</span>
-                <h3 className="text-[clamp(1.5rem,4vw,3rem)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight leading-none">
+                <span className="text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">Miles Simulator</span>
+                <h3 className="text-[length:var(--text-h2)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight leading-none">
                   Calculate Your Reward Skyline Miles
                 </h3>
                 <div className="h-[2px] bg-[var(--color-accent)] w-12" />
-                <p className="text-[14px] text-[#7A7A7A] normal-case leading-[1.4] font-normal pt-2">
+                <p className="text-sm text-[#7A7A7A] normal-case leading-[var(--leading-body)] font-normal pt-2">
                   Select your targeted premier flight route and cabin suite class. Our system dynamically computes your Skyline earnings based on elite club tier multipliers.
                 </p>
               </div>
@@ -185,42 +186,42 @@ function LoyaltyPageContent() {
               <div className="grid md:grid-cols-2 gap-10">
                 {/* Route Selector (Modern elegant select) */}
                 <div className="space-y-3">
-                  <label className="text-[14px] font-bold uppercase tracking-widest text-[#7A7A7A]">Curated Route</label>
-                  <select
+                  <label className="text-sm font-bold uppercase tracking-widest text-[#7A7A7A]">Curated Route</label>
+                  <TemplateSelect
                     value={route}
                     onChange={(e) => setRoute(e.target.value)}
-                    className="w-full border-b border-[var(--color-border)] py-3 bg-transparent font-bold text-[16px] text-[var(--color-primary)] rounded-none focus:outline-none focus:border-[var(--color-accent)] cursor-pointer"
+                    className="w-full border-b border-[var(--color-border)] py-3 bg-transparent font-bold text-base text-[var(--color-primary)] rounded-none focus:outline-none focus:border-[var(--color-accent)] cursor-pointer"
                   >
                     <option value="Paris">Seoul CDG ({routeMiles.Paris} Mi)</option>
                     <option value="Tokyo">Seoul NRT ({routeMiles.Tokyo} Mi)</option>
                     <option value="New York">Seoul JFK ({routeMiles["New York"]} Mi)</option>
                     <option value="Dubai">Seoul DXB ({routeMiles.Dubai} Mi)</option>
-                  </select>
+                  </TemplateSelect>
                 </div>
 
                 {/* Cabin Class Selector */}
                 <div className="space-y-3">
-                  <label className="text-[14px] font-bold uppercase tracking-widest text-[#7A7A7A]">Flight Cabin Class</label>
-                  <select
+                  <label className="text-sm font-bold uppercase tracking-widest text-[#7A7A7A]">Flight Cabin Class</label>
+                  <TemplateSelect
                     value={cabinClass}
                     onChange={(e) => setCabinClass(e.target.value)}
-                    className="w-full border-b border-[var(--color-border)] py-3 bg-transparent font-bold text-[16px] text-[var(--color-primary)] rounded-none focus:outline-none focus:border-[var(--color-accent)] cursor-pointer"
+                    className="w-full border-b border-[var(--color-border)] py-3 bg-transparent font-bold text-base text-[var(--color-primary)] rounded-none focus:outline-none focus:border-[var(--color-accent)] cursor-pointer"
                   >
                     <option value="First">First Class Suite (2.0x Multiplier)</option>
                     <option value="Business">Business Class (1.5x Multiplier)</option>
                     <option value="Economy">Economy Class (1.0x Multiplier)</option>
-                  </select>
+                  </TemplateSelect>
                 </div>
               </div>
             </div>
 
             {/* Right Side: Earning Statement Display (Clean Typographic list) */}
             <div className="lg:col-span-5 space-y-8 lg:pl-10">
-              <span className="text-[14px] font-bold uppercase tracking-widest text-[#7A7A7A] block">
+              <span className="text-sm font-bold uppercase tracking-widest text-[#7A7A7A] block">
                 Earning Statement
               </span>
 
-              <div className="space-y-4 text-[14px] font-bold normal-case text-[#7A7A7A] pb-6 border-b border-[var(--color-border)]">
+              <div className="space-y-4 text-sm font-bold normal-case text-[#7A7A7A] pb-6 border-b border-[var(--color-border)]">
                 <div className="flex justify-between items-baseline py-2">
                   <span className="font-normal">Base Distance Miles</span>
                   <span className="text-[var(--color-primary)] font-semibold">{baseMiles} Miles</span>
@@ -237,14 +238,14 @@ function LoyaltyPageContent() {
 
               {/* Total Earned Skyline Miles */}
               <div className="pt-4 flex flex-col gap-3">
-                <span className="text-[14px] uppercase font-bold tracking-widest text-[var(--color-primary)]">
+                <span className="text-sm uppercase font-bold tracking-widest text-[var(--color-primary)]">
                   Total Earned Miles
                 </span>
                 <div>
-                  <span className="text-[clamp(2.2rem,5vw,3.5rem)] font-extrabold text-[var(--color-accent)] leading-none block">
+                  <span className="text-[length:var(--text-h2)] font-extrabold text-[var(--color-accent)] leading-none block">
                     {totalEarned.toLocaleString()} Miles
                   </span>
-                  <p className="text-[14px] text-[#7A7A7A] normal-case leading-[1.4] font-normal mt-2">
+                  <p className="text-sm text-[#7A7A7A] normal-case leading-[var(--leading-body)] font-normal mt-2">
                     *Mileage calculations are processed securely according to the Skyline premium tier index and distance matrix rules.
                   </p>
                 </div>
@@ -258,19 +259,19 @@ function LoyaltyPageContent() {
         <section className="py-14 md:py-32 bg-white">
           <div className="max-w-[1320px] mx-auto px-6 md:px-10 space-y-20">
             <div className="text-center space-y-4">
-              <span className="text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] block mb-2 mx-auto">
+              <span className="text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] block mb-2 mx-auto">
                 Detailed perks matrix
               </span>
-              <h2 className="text-[clamp(2rem,4vw,3.2rem)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight">
+              <h2 className="text-[length:var(--text-h2)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight">
                 Compare Skyline Membership Benefits.
               </h2>
             </div>
 
             {/* Completely borderless typographic comparison list */}
             <div className="overflow-x-auto -mx-6 md:mx-0 px-6 md:px-0" style={{ scrollbarWidth: "none" }}>
-              <table className="w-full min-w-[640px] text-left border-collapse text-[13px] md:text-[14px] normal-case">
+              <table className="w-full min-w-[640px] text-left border-collapse text-xs md:text-sm normal-case">
                 <thead>
-                  <tr className="border-b border-[var(--color-primary)] text-[var(--color-primary)] font-bold uppercase tracking-wider text-[14px]">
+                  <tr className="border-b border-[var(--color-primary)] text-[var(--color-primary)] font-bold uppercase tracking-wider text-sm">
                     <th className="py-6 pr-6">Club Benefits</th>
                     <th className="py-6 px-6 text-center">Silver</th>
                     <th className="py-6 px-6 text-center text-[var(--color-accent)]">Gold</th>
@@ -320,10 +321,10 @@ function LoyaltyPageContent() {
 }
 
 
-export default function LoyaltyPage(props: any) {
+export default function LoyaltyPage() {
   return (
     <React.Suspense fallback={null}>
-      <LoyaltyPageContent {...props} />
+      <LoyaltyPageContent />
     </React.Suspense>
   );
 }

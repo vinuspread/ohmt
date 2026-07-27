@@ -6,7 +6,7 @@ import { Footer } from "../_components/Footer";
 import { rooms } from "../data/data";
 import { Button } from "../_components/ui/Button";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { Check } from "lucide-react";
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
@@ -31,7 +31,7 @@ function RoomsPageContent() {
           </div>
           <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full pt-20">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-              <span className="text-[11px] font-medium text-[var(--color-accent)] uppercase tracking-[0.25em] block mb-3">Accommodations</span>
+              <span className="text-xs font-medium text-[var(--color-accent)] uppercase tracking-[0.25em] block mb-3">Accommodations</span>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-[var(--font-heading)] font-bold text-[var(--color-bg)]">Our Rooms & Suites</h1>
             </motion.div>
           </div>
@@ -82,21 +82,21 @@ function RoomsPageContent() {
 
                     <div className="grid grid-cols-3 gap-4 py-4 border-t border-b border-[var(--color-border)]">
                       <div>
-                        <span className="text-[10px] font-medium text-[var(--color-text-muted)] uppercase tracking-[0.1em] block">Size</span>
+                        <span className="text-xs font-medium text-[var(--color-text-muted)] uppercase tracking-[0.1em] block">Size</span>
                         <span className="text-sm font-semibold text-[var(--color-text)]">{room.size}</span>
                       </div>
                       <div>
-                        <span className="text-[10px] font-medium text-[var(--color-text-muted)] uppercase tracking-[0.1em] block">View</span>
+                        <span className="text-xs font-medium text-[var(--color-text-muted)] uppercase tracking-[0.1em] block">View</span>
                         <span className="text-sm font-semibold text-[var(--color-text)]">{room.view}</span>
                       </div>
                       <div>
-                        <span className="text-[10px] font-medium text-[var(--color-text-muted)] uppercase tracking-[0.1em] block">Capacity</span>
+                        <span className="text-xs font-medium text-[var(--color-text-muted)] uppercase tracking-[0.1em] block">Capacity</span>
                         <span className="text-sm font-semibold text-[var(--color-text)]">{room.capacity}</span>
                       </div>
                     </div>
 
                     <div>
-                      <span className="text-[11px] font-medium text-[var(--color-text-muted)] uppercase tracking-[0.15em] block mb-3">Room Amenities</span>
+                      <span className="text-xs font-medium text-[var(--color-text-muted)] uppercase tracking-[0.15em] block mb-3">Room Amenities</span>
                       <div className="grid grid-cols-2 gap-2">
                         {room.amenities.map((a) => (
                           <div key={a} className="flex items-center gap-2 text-sm text-[var(--color-text)]">
@@ -109,15 +109,15 @@ function RoomsPageContent() {
 
                     <div className="flex items-center justify-between pt-4 border-t border-[var(--color-border)]">
                       <div>
-                        <span className="text-[11px] font-medium text-[var(--color-text-muted)] uppercase tracking-[0.15em]">Per Night</span>
+                        <span className="text-xs font-medium text-[var(--color-text-muted)] uppercase tracking-[0.15em]">Per Night</span>
                         <p className="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">{room.price}</p>
                       </div>
                       <div className="flex gap-4">
                         <Link href={`/en/templates/OHMT020-hotel/rooms/${room.id}`}>
-                          <Button variant="secondary" size="md" className="text-[11px] tracking-[0.2em] uppercase rounded-sm">Details</Button>
+                          <Button variant="secondary" size="md" className="text-xs tracking-[0.2em] uppercase rounded-sm">Details</Button>
                         </Link>
                         <Link href="/en/templates/OHMT020-hotel/booking">
-                          <Button variant="primary" size="md" className="text-[11px] tracking-[0.2em] uppercase rounded-sm">Book Now</Button>
+                          <Button variant="primary" size="md" className="text-xs tracking-[0.2em] uppercase rounded-sm">Book Now</Button>
                         </Link>
                       </div>
                     </div>

@@ -74,7 +74,7 @@ export const ReviewOverlay: React.FC = () => {
     }
   };
 
-  const statusIcons: Record<Annotation['status'], any> = {
+  const statusIcons: Record<Annotation['status'], React.ReactNode> = {
     pending: <Clock className="text-amber-500" size={12} />,
     'in-progress': <PlayCircle className="text-blue-500" size={12} />,
     done: <CheckCircle className="text-emerald-500" size={12} />,
@@ -106,7 +106,7 @@ export const ReviewOverlay: React.FC = () => {
               <div className="w-2 h-2 bg-pink-500 rounded-full animate-pulse" />
               DesignReview
             </h2>
-            <p className="text-[13px] text-gray-500 font-bold uppercase mt-1">Master's Command Center</p>
+            <p className="text-xs text-gray-500 font-bold uppercase mt-1">Master's Command Center</p>
           </div>
           <button onClick={() => setShowSidebar(false)} className="text-gray-500 hover:text-white transition-colors">
             <X size={20} />
@@ -136,10 +136,10 @@ export const ReviewOverlay: React.FC = () => {
               >
                 <div className="flex justify-between items-start mb-3">
                   <div className="flex items-center gap-2">
-                    <span className="text-[13px] font-black text-pink-500 bg-pink-500/10 px-2 py-0.5 rounded-md">#{idx + 1}</span>
+                    <span className="text-xs font-black text-pink-500 bg-pink-500/10 px-2 py-0.5 rounded-md">#{idx + 1}</span>
                     <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-white/5 border border-white/5">
                       {statusIcons[a.status]}
-                      <span className="text-[12px] font-bold text-gray-400 uppercase">{statusLabels[a.status]}</span>
+                      <span className="text-xs font-bold text-gray-400 uppercase">{statusLabels[a.status]}</span>
                     </div>
                   </div>
                   <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
@@ -153,7 +153,7 @@ export const ReviewOverlay: React.FC = () => {
                 </div>
                 <p className="text-sm text-gray-200 font-medium leading-relaxed mb-4">{a.text}</p>
                 <div className="flex items-center justify-between pt-4 border-t border-white/5">
-                  <div className="flex items-center gap-3 text-[13px] text-gray-500">
+                  <div className="flex items-center gap-3 text-xs text-gray-500">
                     <span className="flex items-center gap-1"><Clock size={10} /> {new Date(a.timestamp).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
                     {a.filePath && (
                       <span className="flex items-center gap-1 text-blue-400"><FileCode size={10} /> {a.filePath.split('/').pop()}:{a.line}</span>
@@ -255,7 +255,7 @@ export const ReviewOverlay: React.FC = () => {
                 <MessageSquarePlus size={18} className="text-pink-500" />
                 New Instruction
               </h3>
-              <p className="text-[13px] text-gray-500 font-bold uppercase">Master's Insight</p>
+              <p className="text-xs text-gray-500 font-bold uppercase">Master's Insight</p>
             </div>
             <button onClick={() => setTempPin(null)} className="text-gray-500 hover:text-white transition-colors">
               <X size={20} />
@@ -264,7 +264,7 @@ export const ReviewOverlay: React.FC = () => {
           <textarea
             autoFocus
             className="w-full p-6 rounded-2xl border border-white/5 bg-white/5 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-pink-500/50 transition-all h-32 resize-none leading-relaxed"
-            placeholder="마스터, 여기에 수정 지시를 남겨주세요..."
+            placeholder="수정할 내용을 입력해 주세요..."
             value={inputText}
             onChange={(e) => setInputText(e.target.value)}
           />

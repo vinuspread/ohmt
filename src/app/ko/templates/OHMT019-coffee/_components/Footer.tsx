@@ -12,12 +12,11 @@ export const Footer = () => {
               OHMT
             </Link>
                         <p className="text-sm text-white/50 mt-4 leading-relaxed max-w-[220px]">
-              산지에서 직접 공들여 만든 최고의 콜드브루.
-            </p>
+              좋은 원두를 고르고, 매일 정성껏 내립니다.</p>
           </div>
 
           <div>
-            <h4 className="text-xs uppercase tracking-[0.15em] text-white/40 mb-4">Menu</h4>
+            <h4 className="text-xs uppercase tracking-[0.15em] text-white/40 mb-4">메뉴</h4>
             <div className="flex flex-col gap-2.5">
               <Link href="/ko/templates/OHMT019-coffee/menu" className="text-sm text-white/60 hover:text-white transition-colors">콜드브루</Link>
               <Link href="/ko/templates/OHMT019-coffee/menu" className="text-sm text-white/60 hover:text-white transition-colors">라떼</Link>
@@ -26,11 +25,11 @@ export const Footer = () => {
           </div>
 
           <div>
-            <h4 className="text-xs uppercase tracking-[0.15em] text-white/40 mb-4">留ㅼ옣 ?덈궡</h4>
+            <h4 className="text-xs uppercase tracking-[0.15em] text-white/40 mb-4">매장 안내</h4>
             <div className="flex flex-col gap-2.5">
+              <Link href="/ko/templates/OHMT019-coffee/locations" className="text-sm text-white/60 hover:text-white transition-colors">성수점</Link>
+              <Link href="/ko/templates/OHMT019-coffee/locations" className="text-sm text-white/60 hover:text-white transition-colors">이태원점</Link>
               <Link href="/ko/templates/OHMT019-coffee/locations" className="text-sm text-white/60 hover:text-white transition-colors">강남점</Link>
-              <Link href="/ko/templates/OHMT019-coffee/locations" className="text-sm text-white/60 hover:text-white transition-colors">홍대점</Link>
-              <Link href="/ko/templates/OHMT019-coffee/locations" className="text-sm text-white/60 hover:text-white transition-colors">부산점</Link>
             </div>
           </div>
 
@@ -49,10 +48,9 @@ export const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/30">
-          <p>&copy; 2026 OHMT. All rights reserved.</p>
+          <p>&copy; 2026 OHMT. 모든 권리 보유.</p>
         </div>
       </div>
     </footer>
   );
 };
-

@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 type PageProps = {
   params: Promise<{ id: string }>;
 };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { id } = await params;
+  return { title: `Class ${id} - OHMT Kids Academy` };
+}
 
 export default async function Page({ params }: PageProps) {
   const resolvedParams = await params;

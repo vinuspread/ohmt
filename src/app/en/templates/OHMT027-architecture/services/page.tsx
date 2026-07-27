@@ -47,13 +47,13 @@ export default function ServicesPage() {
           <section className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 py-16">
             <ScrollReveal>
               <div className="space-y-6 max-w-4xl">
-                <span className="font-sans text-[11px] font-medium tracking-[0.15em] text-[var(--color-text-secondary)] uppercase block">
+                <span className="font-sans text-xs font-medium tracking-[0.15em] text-[var(--color-text-secondary)] uppercase block">
                   CAPABILITIES
                 </span>
-                <h1 className="font-heading font-normal text-[48px] md:text-[64px] lg:text-[72px] leading-tight text-[var(--color-text)]">
+                <h1 className="font-heading font-normal text-5xl md:text-6xl lg:text-7xl leading-tight text-[var(--color-text)]">
                   Our Services.
                 </h1>
-                <p className="font-heading font-normal text-[24px] md:text-[28px] leading-[1.5] text-[var(--color-text-secondary)] pt-4">
+                <p className="font-heading font-normal text-2xl md:text-3xl leading-[var(--leading-body)] text-[var(--color-text-secondary)] pt-4">
                   We offer a complete suite of architectural services, shaped around structural excellence and premium materiality.
                 </p>
               </div>
@@ -78,22 +78,22 @@ export default function ServicesPage() {
                     </div>
                     {/* Right: Copy & Features (col 7) */}
                     <div className="lg:col-span-7 space-y-6 lg:pl-8">
-                      <span className="font-sans text-[11px] font-medium tracking-[0.15em] text-[var(--color-accent)] uppercase block">
+                      <span className="font-sans text-xs font-medium tracking-[0.15em] text-[var(--color-accent)] uppercase block">
                         {service.label}
                       </span>
-                      <h2 className="font-heading font-normal text-[32px] md:text-[36px] text-[var(--color-text)] leading-tight">
+                      <h2 className="font-heading font-normal text-4xl md:text-4xl text-[var(--color-text)] leading-tight">
                         {service.name}
                       </h2>
-                      <p className="font-sans text-[16px] leading-[1.7] text-[var(--color-text-secondary)]">
+                      <p className="font-sans text-base leading-[var(--leading-body)] text-[var(--color-text-secondary)]">
                         {service.description}
                       </p>
                       
                       {/* Features List */}
                       <div className="pt-4">
-                        <h4 className="font-sans text-[12px] font-semibold text-[var(--color-text)] tracking-wider uppercase mb-4">
+                        <h4 className="font-sans text-xs font-semibold text-[var(--color-text)] tracking-wider uppercase mb-4">
                           Core Features:
                         </h4>
-                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-[14px] text-[var(--color-text-secondary)] font-sans">
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-[var(--color-text-secondary)] font-sans">
                           {service.features.map((f, i) => (
                             <li key={i} className="flex items-center gap-2">
                               <span className="w-1.5 h-1.5 bg-[var(--color-accent)] rounded-full" />
@@ -114,7 +114,7 @@ export default function ServicesPage() {
             <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20">
               <ScrollReveal>
                 <div className="border-b border-[var(--color-border)] pb-8 mb-16">
-                  <h2 className="font-heading font-normal text-[30px] md:text-[36px] text-[var(--color-text)]">
+                  <h2 className="font-heading font-normal text-3xl md:text-4xl text-[var(--color-text)]">
                     Working Process.
                   </h2>
                 </div>
@@ -124,13 +124,13 @@ export default function ServicesPage() {
                 {processes.map((p, idx) => (
                   <ScrollReveal key={idx} delay={idx * 0.1}>
                     <div className="space-y-4 bg-white p-8 border border-black/5 shadow-sm">
-                      <span className="font-heading font-normal text-[36px] text-[var(--color-accent)] leading-none block">
+                      <span className="font-heading font-normal text-4xl text-[var(--color-accent)] leading-none block">
                         {p.step}
                       </span>
-                      <h3 className="font-sans font-medium text-[16px] text-[var(--color-text)]">
+                      <h3 className="font-sans font-medium text-base text-[var(--color-text)]">
                         {p.name}
                       </h3>
-                      <p className="font-sans text-[14px] text-[var(--color-text-secondary)] leading-relaxed">
+                      <p className="font-sans text-sm text-[var(--color-text-secondary)] leading-relaxed">
                         {p.desc}
                       </p>
                     </div>
@@ -144,16 +144,16 @@ export default function ServicesPage() {
           <section className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 text-center">
             <ScrollReveal>
               <div className="max-w-2xl mx-auto space-y-6">
-                <h2 className="font-heading font-normal text-[32px] md:text-[38px] text-[var(--color-text)] leading-tight">
+                <h2 className="font-heading font-normal text-4xl md:text-4xl text-[var(--color-text)] leading-tight">
                   Ready to collaborate on your next space?
                 </h2>
-                <p className="font-sans text-[15px] text-[var(--color-text-secondary)] leading-relaxed max-w-md mx-auto">
+                <p className="font-sans text-sm text-[var(--color-text-secondary)] leading-relaxed max-w-md mx-auto">
                   Let's discuss how we can bring your architectural visions into reality.
                 </p>
                 <div className="pt-4">
                   <Link
                     href={`${baseRoute}/contact`}
-                    className="inline-block bg-[var(--color-text)] text-white px-8 py-3.5 text-[14px] font-sans tracking-[0.08em] hover:bg-zinc-800 transition-colors"
+                    className="inline-block bg-[var(--color-text)] text-white px-8 py-3.5 text-sm font-sans tracking-[0.08em] hover:bg-zinc-800 transition-colors"
                   >
                     GET IN TOUCH
                   </Link>

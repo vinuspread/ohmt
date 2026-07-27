@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "motion/react";
 import { team } from "../../data/data";
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
@@ -21,7 +21,7 @@ export default function MeetOurTeam() {
           <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">
             Meet our team
           </span>
-          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[1.05]">
+          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[var(--leading-heading)]">
             Experts who care
           </h2>
           <p className="mt-5 text-[0.95rem] text-[var(--color-text-muted)] leading-relaxed max-w-md">
@@ -60,3 +60,4 @@ export default function MeetOurTeam() {
     </section>
   );
 }
+

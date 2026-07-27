@@ -6,7 +6,7 @@ import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-
 const navLinks = [
   { href: "/ko/templates/OHMT025-wedding/about", label: "소개" },
   { href: "/ko/templates/OHMT025-wedding/gallery", label: "갤러리" },
-  { href: "/ko/templates/OHMT025-wedding/pricing", label: "가격" },
+  { href: "/ko/templates/OHMT025-wedding/pricing", label: "패키지" },
   { href: "/ko/templates/OHMT025-wedding/contact", label: "문의" },
 ];
 
@@ -63,8 +63,7 @@ export default function Navbar({ solid }: { solid?: boolean }) {
                   : "border-white text-white hover:bg-white hover:text-[var(--color-text)]"
               }`}
             >
-              예약 문의
-            </a>
+              촬영 문의</a>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden flex flex-col gap-1.5 p-1"
@@ -109,8 +108,7 @@ export default function Navbar({ solid }: { solid?: boolean }) {
                 onClick={() => setIsOpen(false)}
                 className="mt-4 inline-block bg-[var(--color-text)] px-10 py-4 text-sm font-bold uppercase tracking-[0.2em] text-white"
               >
-                예약 문의
-              </motion.a>
+                촬영 문의</motion.a>
             </div>
           </motion.div>
         )}

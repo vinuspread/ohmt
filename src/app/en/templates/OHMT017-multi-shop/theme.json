@@ -3,8 +3,6 @@
   "name": "Multi-Shop",
   "name_ko": "멀티샵",
   "category": "retail",
-  "description": "A multi-brand retail template for category browsing, editorial product curation, promotions, and a flexible shop experience across mixed collections.",
-  "description_ko": "카테고리 탐색, 에디토리얼 상품 큐레이션, 프로모션, 다양한 컬렉션 판매에 맞춘 멀티브랜드 리테일 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {
@@ -34,6 +32,14 @@
         "weight": "400",
         "leading": "1.6",
         "style": "font-normal leading-relaxed"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
       }
     },
     "spacing": {
@@ -49,5 +55,7 @@
       "transition_slow": "500ms",
       "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
     }
-  }
+  },
+  "thumbnail": "/templates/OHMT017-multi-shop/og-image.jpg",
+  "ogImage": "/templates/OHMT017-multi-shop/og-image.jpg"
 }

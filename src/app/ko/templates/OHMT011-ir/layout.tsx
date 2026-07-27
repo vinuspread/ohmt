@@ -1,11 +1,11 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - 투자자 관계",
+  title: "OHMT - ??? ?? ???? ???",
   description: "기업 전략 및 재무 성과",
   openGraph: {
-    title: "OHMT - 투자자 관계",
+    title: "OHMT - ??? ?? ???? ???",
     description: "기업 전략 및 재무 성과",
     url: "https://ohmytemplate.com/ko/templates/OHMT011-ir",
     siteName: "OHMT",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - 투자자 관계",
+    title: "OHMT - ??? ?? ???? ???",
     description: "기업 전략 및 재무 성과",
     images: ["/templates/OHMT011-ir/og-image.jpg"],
   },
@@ -33,11 +33,11 @@ export default function IRLayout({
 }) {
   return (
     <>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" crossOrigin="anonymous" />
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=family=Inter:wght@300;400;500;600;700&display=swap');
       `}</style>
-      {children}
+      <div lang="ko" className="ohmt011-ir">{children}</div>
     </>
   );
 }
-

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
+import TemplateSelect from '../TemplateSelect'
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 
@@ -27,7 +28,7 @@ export default function EnrollmentForm() {
           <span className="inline-flex items-center justify-center bg-[var(--color-red)] text-white rounded-full px-5 py-2.5 text-xs font-bold uppercase tracking-wider leading-none mb-4">
             수강 신청
           </span>
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[1.1] mt-3" style={{ fontFamily: "var(--font-heading)" }}>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight leading-[var(--leading-heading)] mt-3" style={{ fontFamily: "var(--font-heading)" }}>
             함께 시작해요
           </h2>
           <p className="mt-4 text-base text-[var(--color-text-muted)] max-w-md mx-auto">
@@ -52,7 +53,7 @@ export default function EnrollmentForm() {
               <div className="w-20 h-20 bg-[var(--color-secondary)] rounded-2xl flex items-center justify-center text-4xl mx-auto mb-6 text-white">
                 ★
               </div>
-              <h3 className="text-3xl font-bold tracking-tight leading-[1.1]" style={{ fontFamily: "var(--font-heading)" }}>
+              <h3 className="text-3xl font-bold tracking-tight leading-[var(--leading-heading)]" style={{ fontFamily: "var(--font-heading)" }}>
                 신청해 주셔서 감사합니다!
               </h3>
               <p className="mt-4 text-sm text-[var(--color-text-muted)] max-w-sm mx-auto">
@@ -78,7 +79,7 @@ export default function EnrollmentForm() {
                   <label htmlFor="age" className="block text-xs font-bold uppercase tracking-wider mb-2">
                     나이 *
                   </label>
-                  <select
+                  <TemplateSelect
                     id="age"
                     required
                     defaultValue=""
@@ -90,7 +91,7 @@ export default function EnrollmentForm() {
                     <option value="7-8">7 - 8 세</option>
                     <option value="9-10">9 - 10 세</option>
                     <option value="11-12">11 - 12 세</option>
-                  </select>
+                  </TemplateSelect>
                 </div>
               </div>
 
@@ -125,7 +126,7 @@ export default function EnrollmentForm() {
                 <label htmlFor="interest" className="block text-xs font-bold uppercase tracking-wider mb-2">
                   관심 있는 클래스 *
                 </label>
-                <select
+                <TemplateSelect
                   id="interest"
                   required
                   defaultValue=""
@@ -136,7 +137,7 @@ export default function EnrollmentForm() {
                   <option value="art">창작 미술 스튜디오</option>
                   <option value="science">창의 과학 실험실</option>
                   <option value="math">수학 퍼즐 모험</option>
-                </select>
+                </TemplateSelect>
               </div>
 
               <div>

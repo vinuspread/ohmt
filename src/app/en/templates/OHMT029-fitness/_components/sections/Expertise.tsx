@@ -22,7 +22,7 @@ export function Expertise() {
   return (
     <section className="bg-[var(--bg-alt)] py-24 md:py-32">
       <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12">
-        <h2 className="font-['Montserrat'] font-bold text-[clamp(28px,4vw,48px)] text-[var(--text)] leading-[1.15] tracking-tight mb-16">
+        <h2 className="font-['Montserrat'] font-bold text-[length:var(--text-h2)] text-[var(--text)] leading-[var(--leading-heading)] tracking-tight mb-16">
           Our Expertise
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-[var(--border)] border border-[var(--border)] rounded-lg overflow-hidden">
@@ -31,11 +31,11 @@ export function Expertise() {
               key={block.title}
               className="bg-white p-10 flex flex-col hover:bg-[var(--bg-alt)] transition-colors"
             >
-              <h3 className="font-['Montserrat'] font-semibold text-[18px] text-[var(--text)] mb-3">{block.title}</h3>
-              <p className="text-[14px] text-[var(--text-muted)] leading-relaxed flex-1">{block.desc}</p>
+              <h3 className="font-['Montserrat'] font-semibold text-lg text-[var(--text)] mb-3">{block.title}</h3>
+              <p className="text-sm text-[var(--text-muted)] leading-relaxed flex-1">{block.desc}</p>
               <a
                 href={block.href}
-                className="inline-block mt-6 text-[13px] font-medium text-[var(--accent)] hover:underline tracking-wide"
+                className="inline-block mt-6 text-xs font-medium text-[var(--accent)] hover:underline tracking-wide"
               >
                 Learn more →
               </a>

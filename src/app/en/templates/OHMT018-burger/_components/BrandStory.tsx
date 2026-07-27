@@ -16,7 +16,7 @@ export const BrandStory = () => {
             transition={{ duration: 0.35, ease: easeOut }}
           >
             <p className="text-xs uppercase tracking-[0.3em] text-white/40 mb-4">Our Story</p>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-[1.05]">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight leading-[var(--leading-heading)]">
               Burgers Worth<br />Traveling For.
             </h2>
           </motion.div>

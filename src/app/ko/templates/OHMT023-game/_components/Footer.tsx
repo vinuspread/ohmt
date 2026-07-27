@@ -2,7 +2,7 @@ import Link from "next/link";
 import { games } from "../data/data";
 
 const companyLinks = [
-  { href: "/ko/templates/OHMT023-game/about", label: "스튜디오 소개" },
+  { href: "/ko/templates/OHMT023-game/about", label: "소개" },
   { href: "/ko/templates/OHMT023-game/news", label: "소식" },
   { href: "/ko/templates/OHMT023-game/careers", label: "채용" },
   { href: "/ko/templates/OHMT023-game/games", label: "게임" },
@@ -21,8 +21,7 @@ export default function Footer() {
               OHMT
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-[var(--color-text-muted)]">
-              상상력을 플레이 가능한 세계로 만들고, 장르의 경계를 다시 정의합니다.
-            </p>
+              상상을 플레이할 수 있는 세계로 만들고, 오래 기억되는 게임을 만듭니다.</p>
           </div>
 
           <div>
@@ -63,8 +62,7 @@ export default function Footer() {
 
           <div>
             <h4 className="mb-4 text-sm font-semibold tracking-[0.1em] text-[var(--color-text)] uppercase">
-              채널
-            </h4>
+              소셜</h4>
             <ul className="space-y-3">
               <li>
                 <span className="text-sm text-[var(--color-text-muted)]">Twitter / X</span>
@@ -83,7 +81,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 border-t border-[var(--color-border)] pt-8 text-center text-sm text-[var(--color-text-muted)]">
-          <p>&copy; 2026 OHMT. Contact: contact@ohmt.site</p>
+          <p>© 2026 OHMT. 문의: contact@ohmt.site</p>
         </div>
       </div>
     </footer>

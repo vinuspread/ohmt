@@ -10,39 +10,39 @@ gsap.registerPlugin(ScrollTrigger);
 
 const usps = [
   {
-    label: "280km 도심 주행",
-    sub: "매일의 이동에 충분한 도시형 주행거리",
-    detail: "가벼운 배터리 설계로 민첩한 움직임을 유지하면서, 출퇴근과 주말 이동까지 여유 있게 대응합니다.",
+    label: "도심 주행거리 280km",
+    sub: "출퇴근과 일상 이동을 위한 주행거리",
+    detail: "배터리와 차체 무게를 균형 있게 설계해 민첩한 주행감과 실용적인 이동 거리를 함께 확보했습니다.",
     image: "usp-range.jpg",
   },
   {
     label: "스마트 주차 보조",
-    sub: "좁은 골목과 복잡한 주차장에서도 편안하게",
+    sub: "좁은 골목과 주차 공간에서도 부담 없이",
     detail: "저속 조향 보조와 센서 기반 안내로, 협소한 도심 주차 공간에서도 부담을 줄여줍니다.",
     image: "usp-acceleration.jpg",
   },
   {
     label: "30분 급속 충전",
-    sub: "커피 한 잔 사이 80%까지 충전",
+    sub: "짧은 휴식 동안 80%까지 충전",
     detail: "짧은 휴식 시간에도 하루 이동에 필요한 전력을 빠르게 채워, 충전 대기 시간을 줄입니다.",
     image: "usp-charging.jpg",
   },
   {
     label: "7가지 컬러",
-    sub: "오늘의 기분과 나의 취향을 담는 색",
+    sub: "취향에 맞춰 고르는 일곱 가지 색상",
     detail: "선명한 옐로우부터 차분한 블루까지, 작은 차체가 거리에서 또렷하게 보이도록 조율했습니다.",
     image: "usp-power.jpg",
   },
   {
     label: "무선 업데이트",
-    sub: "잠든 사이 새로워지는 기능",
+    sub: "무선으로 업데이트되는 차량 기능",
     detail: "서비스센터 방문 없이 인터페이스 개선, 주행 보조, 배터리 최적화 업데이트를 받을 수 있습니다.",
     image: "usp-software.jpg",
   },
   {
     label: "파노라마 루프",
-    sub: "하늘까지 열린 듯한 밝은 실내",
-    detail: "전면 글라스 루프가 콤팩트한 실내를 한층 넓게 느껴지게 하고, 도시 풍경을 드라이브 안으로 들입니다.",
+    sub: "개방감을 높이는 넓은 글라스 루프",
+    detail: "넓은 글라스 루프가 실내에 자연광을 들이고 작은 차체에서도 시원한 개방감을 만듭니다.",
     image: "usp-suspension.jpg",
   },
 ];
@@ -118,10 +118,10 @@ export function Usp() {
                         }`}
                       />
                       <span className="min-w-0 flex-1">
-                        <span className="block font-michroma text-[clamp(21px,5.8vw,30px)] leading-tight text-[var(--text-on-light)] md:text-[clamp(24px,3.4vw,32px)]">
+                        <span className="block font-michroma text-[length:var(--text-lead)] leading-tight text-[var(--text-on-light)] md:text-[length:var(--text-lead)]">
                           {usp.label}
                         </span>
-                        <span className="mt-2 block font-inter text-[14px] leading-relaxed text-[var(--text-muted-light)] md:text-[15px]">
+                        <span className="mt-2 block font-inter text-sm leading-relaxed text-[var(--text-muted-light)] md:text-sm">
                           {usp.sub}
                         </span>
                       </span>
@@ -139,7 +139,7 @@ export function Usp() {
                           className="overflow-hidden"
                         >
                           <div className="pb-6 pl-6 md:pl-7 lg:pb-7">
-                            <p className="max-w-[440px] font-inter text-[15px] leading-7 text-[var(--text-on-light)]/72">
+                            <p className="max-w-[440px] font-inter text-sm leading-7 text-[var(--text-on-light)]/72">
                               {usp.detail}
                             </p>
                             <div

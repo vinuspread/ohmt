@@ -25,7 +25,7 @@ export function InspirationSection() {
     ];
 
     return (
-        <section className="bg-white py-[120px] px-[64px]">
+        <section className="bg-white py-30 px-16">
             <div className="max-w-full mx-auto">
                 {/* Header */}
                 <motion.div
@@ -33,16 +33,16 @@ export function InspirationSection() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.65, ease: [0.23, 1, 0.32, 1] }}
                     viewport={{ once: true, margin: '-50px' }}
-                    className="flex flex-col gap-[32px] mb-[120px] border-b border-[#F3F6FC] pb-[64px]"
+                    className="flex flex-col gap-8 mb-30 border-b border-[#F3F6FC] pb-16"
                 >
-                    <span className="text-[13px] font-normal tracking-[3px] uppercase text-[#090B19] opacity-60">Services</span>
-                    <h2 className="text-[26px] md:text-[48px] leading-[55px] font-semibold tracking-[-1.44px] text-[#090B19]">
+                    <span className="text-xs font-normal tracking-[3px] uppercase text-[#090B19] opacity-60">Services</span>
+                    <h2 className="text-3xl md:text-5xl leading-[var(--leading-heading)] font-semibold tracking-[-1.44px] text-[#090B19]">
                         We do it best.
                     </h2>
                 </motion.div>
 
                 {/* Services Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-[64px] mb-[160px]">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-40">
                     {services.map((service, idx) => {
                         const Icon = service.icon;
                         return (
@@ -55,21 +55,21 @@ export function InspirationSection() {
                                 whileHover={{ y: -8 }}
                                 transition={{ duration: 0.25, ease: [0.23, 1, 0.32, 1] }}
                                 viewport={{ once: true, margin: '-50px' }}
-                                className="flex flex-col gap-[32px] border-t border-[#F3F6FC] pt-[48px]"
+                                className="flex flex-col gap-8 border-t border-[#F3F6FC] pt-12"
                             >
                                 <motion.div
                                     whileHover={{ scale: 1.1 }}
                                     transition={{ duration: 0.2, ease: [0.23, 1, 0.32, 1] }}
-                                    className="flex items-center gap-[16px]"
+                                    className="flex items-center gap-4"
                                 >
-                                    <span className="text-[13px] font-bold tracking-[3px] uppercase text-[#090B19]">{service.id}</span>
+                                    <span className="text-xs font-bold tracking-[3px] uppercase text-[#090B19]">{service.id}</span>
                                     <Icon size={24} className="text-[#090B19]" strokeWidth={1.5} />
                                 </motion.div>
                                 <div>
-                                    <h3 className="text-[24px] leading-[30px] font-bold tracking-[-0.72px] text-[#090B19] mb-[16px]">
+                                    <h3 className="text-2xl leading-[var(--leading-heading)] font-bold tracking-[-0.72px] text-[#090B19] mb-4">
                                         {service.title}
                                     </h3>
-                                    <p className="text-[16px] leading-[26px] font-normal text-[var(--color-text-muted)]">
+                                    <p className="text-base leading-[var(--leading-heading)] font-normal text-[var(--color-text-muted)]">
                                         {service.description}
                                     </p>
                                 </div>
@@ -98,7 +98,7 @@ export function InspirationSection() {
                         viewport={{ once: true, margin: '-50px' }}
                         className="relative z-10 max-w-4xl px-4"
                     >
-                        <h2 className="text-[26px] md:text-[48px] leading-[55px] font-semibold tracking-[-1.44px] mb-[48px]">
+                        <h2 className="text-3xl md:text-5xl leading-[var(--leading-heading)] font-semibold tracking-[-1.44px] mb-12">
                             We are innovating the way companies reinvent their office spaces.
                         </h2>
                         <motion.div

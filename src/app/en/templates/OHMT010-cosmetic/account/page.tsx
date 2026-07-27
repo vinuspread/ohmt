@@ -1,14 +1,24 @@
-"use client";
-
-import { Suspense } from "react";
-import React from "react";
-import Link from "next/link";
+import type { Metadata } from "next";
 import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
-function CosmeticAccountPageContent() {
+export const metadata: Metadata = {
+  title: "Account - OHMT Cosmetic",
+  description: "Sign in to your OHMT account for exclusive member benefits and early access.",
+  openGraph: {
+    title: "Account - OHMT Cosmetic",
+    description: "Sign in to your OHMT account for exclusive member benefits.",
+    url: "https://ohmytemplate.com/en/templates/OHMT010-cosmetic/account",
+    siteName: "OHMT",
+    images: [{ url: "/templates/OHMT010-cosmetic/og-image.jpg", width: 1200, height: 630 }],
+    locale: "en_US",
+    type: "website",
+  },
+};
+
+export default function CosmeticAccountPage() {
   return (
     <TemplateWrapper theme={theme}>
       <main className="antialiased bg-[var(--color-bg)] text-black selection:bg-black selection:text-white">
@@ -18,8 +28,8 @@ function CosmeticAccountPageContent() {
           <div className="max-w-[1440px] mx-auto px-6 md:px-10">
             <div className="mb-16">
               <span className="text-[0.65rem] font-bold uppercase tracking-[0.3em] text-black/40 mb-4 block">Account</span>
-              <h1 className="text-[clamp(2rem,4vw,3.5rem)] font-normal tracking-tight leading-[1.1]">
-                Welcome back.
+              <h1 className="text-[length:var(--text-h2)] font-normal tracking-tight leading-[var(--leading-heading)]">
+                Sign in required.
               </h1>
             </div>
 
@@ -61,14 +71,5 @@ function CosmeticAccountPageContent() {
         <Footer />
       </main>
     </TemplateWrapper>
-  );
-}
-
-
-export default function CosmeticAccountPage(props: any) {
-  return (
-    <React.Suspense fallback={null}>
-      <CosmeticAccountPageContent {...props} />
-    </React.Suspense>
   );
 }

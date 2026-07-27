@@ -8,11 +8,11 @@ import { Projects } from "../_components/sections/Projects";
 import { CustomCursor } from "../_components/ui/CustomCursor";
 
 export const metadata: Metadata = {
-  title: "프로젝트 - 건축 포트폴리오 - OHMT",
-  description: "주거, 상업, 공공, 인테리어 분야의 주요 건축 프로젝트를 살펴보세요.",
+  title: "프로젝트 | OHMT 건축 스튜디오",
+  description: "주거, 상업, 공공, 인테리어 분야에서 진행한 주요 프로젝트를 살펴보세요.",
   openGraph: {
-    title: "프로젝트 - 건축 포트폴리오 - OHMT",
-    description: "주거, 상업, 공공, 인테리어 분야의 주요 건축 프로젝트를 살펴보세요.",
+    title: "프로젝트 | OHMT 건축 스튜디오",
+    description: "주거, 상업, 공공, 인테리어 분야에서 진행한 주요 프로젝트를 살펴보세요.",
     url: "https://ohmytemplate.com/ko/templates/OHMT027-architecture/projects",
     images: [{ url: "/templates/OHMT027-architecture/og-image.jpg" }],
   },

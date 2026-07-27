@@ -2,6 +2,7 @@
 import React, { useRef, useState } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
+import { ArrowRight } from "lucide-react";
 
 const ease = [0.23, 1, 0.32, 1] as const;
 
@@ -86,8 +87,8 @@ export const MenuPreview = () => {
               <button
                 key={cat}
                 onClick={() => setActive(cat)}
-                className="relative pb-1 text-[11px] uppercase tracking-[0.15em] font-semibold transition-colors duration-200"
-                style={{ color: active === cat ? "var(--color-text)" : "#90909A" }}
+                className="relative pb-1 text-xs uppercase tracking-[0.15em] font-semibold transition-colors duration-200"
+                style={{ color: active === cat ? "var(--color-text)" : "var(--color-text-muted)" }}
               >
                 {cat}
                 {active === cat && (
@@ -131,8 +132,8 @@ export const MenuPreview = () => {
                 />
               </div>
               <div className="text-center">
-                <p className="font-heading text-[var(--color-text)] text-[14px] font-bold leading-snug">{item.name}</p>
-                <span className="text-[var(--color-text-muted)] text-[12px] font-semibold">{item.price}</span>
+                <p className="font-heading text-[var(--color-text)] text-sm font-bold leading-snug">{item.name}</p>
+                <span className="text-[var(--color-text-muted)] text-xs font-semibold">{item.price}</span>
               </div>
             </motion.div>
           ))}
@@ -143,9 +144,9 @@ export const MenuPreview = () => {
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 mt-10 flex justify-center">
         <Link
           href="/en/templates/OHMT019-coffee/menu"
-          className="inline-flex items-center justify-center border border-[var(--color-text)] text-[var(--color-text)] px-10 py-3 text-[11px] uppercase tracking-[0.2em] font-semibold hover:bg-[var(--color-text)] hover:text-white transition-colors duration-300"
+          className="inline-flex items-center justify-center border border-[var(--color-text)] text-[var(--color-text)] px-10 py-3 text-xs uppercase tracking-[0.2em] font-semibold hover:bg-[var(--color-text)] hover:text-white transition-colors duration-300"
         >
-          View Full Menu &nbsp;&rarr;
+          View Full Menu <ArrowRight size={14} className="inline" />
         </Link>
       </div>
     </section>

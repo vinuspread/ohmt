@@ -27,7 +27,7 @@ export const Footer = () => {
             <Link
               key={link.label}
               href={link.href}
-              className="text-[12px] uppercase tracking-[0.15em] text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors duration-200"
+              className="text-xs uppercase tracking-[0.15em] text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors duration-200"
             >
               {link.label}
             </Link>
@@ -42,7 +42,7 @@ export const Footer = () => {
               className="w-8 h-8 rounded-full border border-[var(--color-text-muted)]/30 flex items-center justify-center hover:border-[var(--color-text)] transition-colors duration-200"
               aria-label={s}
             >
-              <span className="text-[9px] font-bold text-[var(--color-text-muted)]">
+              <span className="text-xs font-bold text-[var(--color-text-muted)]">
                 {s[0]}
               </span>
             </Link>
@@ -51,7 +51,7 @@ export const Footer = () => {
 
         <div className="w-full h-px bg-[var(--color-text-muted)]/15" />
 
-        <div className="flex flex-col md:flex-row items-center justify-between w-full gap-2 text-[11px] text-[var(--color-text-muted)]">
+        <div className="flex flex-col md:flex-row items-center justify-between w-full gap-2 text-xs text-[var(--color-text-muted)]">
           <p>&copy; 2026 OHMT. All rights reserved.</p>
           <Link href="#" className="hover:text-[var(--color-text)] transition-colors">Privacy Policy</Link>
         </div>

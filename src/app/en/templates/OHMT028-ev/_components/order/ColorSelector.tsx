@@ -21,8 +21,8 @@ export function ColorSelector({
 
   return (
     <section>
-      <p className="font-inter text-[11px] tracking-[0.12em] text-[var(--text-muted)] uppercase mb-2">Step 02</p>
-      <h2 className="font-michroma text-[clamp(20px,2.5vw,32px)] text-[var(--text)] leading-[1.0] tracking-[-0.02em] mb-8">
+      <p className="font-inter text-xs tracking-[0.12em] text-[var(--text-muted)] uppercase mb-2">Step 02</p>
+      <h2 className="font-michroma text-[length:var(--text-lead)] text-[var(--text)] leading-[var(--leading-display)] tracking-[-0.02em] mb-8">
         Pick your color
       </h2>
 
@@ -52,7 +52,7 @@ export function ColorSelector({
             );
           })}
         </div>
-        <p className="font-michroma text-[14px] text-[var(--text)] whitespace-nowrap">
+        <p className="font-michroma text-sm text-[var(--text)] whitespace-nowrap">
           {activeColor.name}
         </p>
       </div>

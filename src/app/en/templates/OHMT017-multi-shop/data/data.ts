@@ -319,7 +319,8 @@ export const bestSellers = products.filter(p => p.tag === 'Best')
 export const teamMembers = [
   { id: '1', name: 'Sofia Laurent', role: 'Creative Director', image: '/templates/OHMT017-multi-shop/team-01.jpg', instagram: '#', linkedin: '#' },
   { id: '2', name: 'James Avery', role: 'Head of Design', image: '/templates/OHMT017-multi-shop/team-02.jpg', instagram: '#', linkedin: '#' },
-  { id: '3', name: 'Mia Chen', role: 'Brand Strategist', image: '/templates/OHMT017-multi-shop/team-03.jpg', instagram: '#', linkedin: '#' },
+  { id: '3', name: 'Mia Chen', role: 'Brand Strategist', image: '/templates/OHMT017-multi-shop/team-03-v2.jpg', instagram: '#', linkedin: '#' },
+  { id: '4', name: 'Elijah Brooks', role: 'Merchandising Director', image: '/templates/OHMT017-multi-shop/team-04.jpg', instagram: '#', linkedin: '#' },
 ]
 
 export const reviews = [

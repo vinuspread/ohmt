@@ -1,0 +1,64 @@
+{
+  "slug": "OHMT034-nova-coffee",
+  "name": "Nova Coffee",
+  "name_ko": "노바 커피",
+  "category": "retail",
+  "description": "A single-product showcase template for NOVA, a premium dual-boiler espresso machine brand. Combines precision engineering positioning with object-driven product photography.",
+  "description_ko": "프리미엄 듀얼보일러 에스프레소 머신 브랜드 NOVA의 단일 제품 쇼케이스 템플릿. 정밀 엔지니어링 포지셔닝과 오브제 중심 제품 사진을 결합합니다.",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#FFFFFF",
+      "secondary": "#1B1C1E",
+      "accent": "#3F82A6",
+      "text": {
+        "main": "#17181A",
+        "muted": "#6B6F73",
+        "contrast": "#F4F5F6"
+      },
+      "ui": {
+        "border": "rgba(23, 24, 26, 0.1)",
+        "hover": "#EEF0F1",
+        "shadow": "none"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Montserrat, system-ui, sans-serif",
+        "weight": "600-800",
+        "tracking": "-0.03em",
+        "style": "font-display tracking-tight"
+      },
+      "body": {
+        "font": "Montserrat, system-ui, sans-serif",
+        "weight": "400-500",
+        "leading": "1.6",
+        "style": "leading-relaxed"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
+      }
+    },
+    "spacing": {
+      "page_pt": "0px",
+      "container": "1440px",
+      "gutter": "48px",
+      "card_gap": "24px"
+    },
+    "motion": {
+      "transition_fast": "250ms",
+      "transition_normal": "400ms",
+      "transition_slow": "600ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
+    },
+    "interaction": {
+      "button": "bg-[var(--color-secondary)] text-[var(--color-text-contrast)] hover:opacity-90",
+      "card_hover": "hover:scale-[1.02] transition-transform duration-400"
+    }
+  }
+}

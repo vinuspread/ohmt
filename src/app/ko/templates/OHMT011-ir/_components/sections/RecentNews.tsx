@@ -15,7 +15,7 @@ const newsItems = [
     date: "2026년 4월 28일",
     tag: "분기 배당",
     tagColor: "bg-[#F5EDD5] text-[#7a5a10]",
-    title: "이사회, 주당 0.65달러 분기 현금 배당 승인"
+    title: "이사회, 주당 910원 분기 현금 배당 승인"
   },
   {
     date: "2026년 4월 15일",
@@ -36,7 +36,7 @@ export const RecentNews = () => {
     >
       <div className="max-w-[1280px] mx-auto px-6 md:px-10">
         <div className="flex justify-between items-end mb-12">
-          <h2 className="text-[clamp(1.8rem,3vw,2.5rem)] font-bold tracking-tight text-[var(--color-dark-bg)]">
+          <h2 className="text-[length:var(--text-h3)] font-bold tracking-tight text-[var(--color-dark-bg)]">
             최신 뉴스 및 공지사항
           </h2>
           <button className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.14em] text-[var(--color-dark-bg)] hover:translate-x-1.5 transition-all duration-300">
@@ -46,7 +46,7 @@ export const RecentNews = () => {
         
         <div className="flex flex-col border-t border-[var(--color-border)]">
           {newsItems.map((item, i) => (
-            <div key={i} className="grid grid-cols-[110px_1fr_auto] gap-8 py-8 border-b border-[var(--color-border)] group cursor-pointer hover:pl-2 transition-all duration-300">
+            <div key={i} className="grid grid-cols-3 gap-8 py-8 border-b border-[var(--color-border)] group cursor-pointer hover:pl-2 transition-all duration-300">
               <div className="text-[0.68rem] font-bold uppercase tracking-tight text-[#6B6B6B] leading-relaxed pt-1">
                 {item.date}
               </div>
@@ -54,7 +54,7 @@ export const RecentNews = () => {
                 <span className={clsx("inline-block text-[0.58rem] font-bold uppercase tracking-[0.16em] px-2 py-0.5 rounded-[2px] mb-2", item.tagColor)}>
                   {item.tag}
                 </span>
-                <h3 className="text-base font-bold text-black leading-[1.1] group-hover:text-[var(--color-dark-bg)] transition-colors">
+                <h3 className="text-base font-bold text-black leading-[var(--leading-heading)] group-hover:text-[var(--color-dark-bg)] transition-colors">
                   {item.title}
                 </h3>
               </div>

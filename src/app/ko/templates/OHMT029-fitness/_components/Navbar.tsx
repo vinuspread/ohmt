@@ -32,7 +32,7 @@ export function Navbar() {
             <a
               key={link.label}
               href={link.href}
-              className={`text-[13px] font-medium transition-colors tracking-wide focus-visible:outline-2 focus-visible:outline-[var(--accent)] focus-visible:outline-offset-2 ${
+              className={`text-xs font-medium transition-colors tracking-wide focus-visible:outline-2 focus-visible:outline-[var(--accent)] focus-visible:outline-offset-2 ${
                 isLight ? "text-[var(--text-muted)] hover:text-[var(--accent)]" : "text-white/80 hover:text-white"
               }`}
             >
@@ -53,7 +53,7 @@ export function Navbar() {
         <div className="hidden md:flex items-center justify-end">
           <a
             href={`${base}/about#contact`}
-            className={`text-[12px] font-semibold px-5 py-2.5 rounded-lg transition-colors tracking-wide focus-visible:outline-2 focus-visible:outline-[var(--accent)] focus-visible:outline-offset-2 ${
+            className={`text-xs font-semibold px-5 py-2.5 rounded-lg transition-colors tracking-wide focus-visible:outline-2 focus-visible:outline-[var(--accent)] focus-visible:outline-offset-2 ${
               isLight
                 ? "bg-[var(--accent)] text-white hover:bg-[var(--accent-light)]"
                 : "border border-white/60 text-white hover:bg-white/10"
@@ -82,7 +82,7 @@ export function Navbar() {
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="text-[14px] text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
+                className="text-sm text-[var(--text-muted)] hover:text-[var(--accent)] transition-colors"
               >
                 {link.label}
               </a>
@@ -90,7 +90,7 @@ export function Navbar() {
             <a
               href={`${base}/about#contact`}
               onClick={() => setMobileOpen(false)}
-              className="bg-[var(--accent)] text-white text-[12px] font-semibold px-5 py-2.5 rounded-lg transition-colors tracking-wide w-fit"
+              className="bg-[var(--accent)] text-white text-xs font-semibold px-5 py-2.5 rounded-lg transition-colors tracking-wide w-fit"
             >
               문의하기 →
             </a>

@@ -1,11 +1,11 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - Studio",
+  title: "OHMT - ????? ???? ????? ???",
   description: "Architecture and spatial design studio",
   openGraph: {
-    title: "OHMT - Studio",
+    title: "OHMT - ????? ???? ????? ???",
     description: "Architecture and spatial design studio",
     url: "https://ohmytemplate.com/ko/templates/OHMT006-studio",
     siteName: "OHMT",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Studio",
+    title: "OHMT - ????? ???? ????? ???",
     description: "Architecture and spatial design studio",
     images: ["/templates/OHMT006-studio/og-image.jpg"],
   },
@@ -33,16 +33,16 @@ export default function StudioLayout({
 }) {
   return (
     <>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" crossOrigin="anonymous" />
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Noto+Sans+KR:wght@300;400;500;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
         :root {
           --font-outfit: 'Outfit', sans-serif;
           --font-inter: 'Inter', sans-serif;
         }
       `}</style>
-      {children}
+      <div lang="ko" className="ohmt006-studio">{children}</div>
     </>
   );
 }
-

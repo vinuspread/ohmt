@@ -24,13 +24,13 @@ export default function GalleryFull() {
                 포트폴리오
               </span>
               <h1
-                className="font-[family-name:var(--font-heading)] font-light capitalize text-[var(--color-text)] leading-[1.05]"
+                className="font-[family-name:var(--font-heading)] font-light capitalize text-[var(--color-text)] leading-[var(--leading-heading)]"
                 style={{ fontSize: "clamp(3rem, 7vw, 5.5rem)" }}
               >
-                사랑의 이야기
-              </h1>
-              <p className="mt-6 text-[0.85rem] text-[var(--color-text-muted)] leading-relaxed max-w-md font-[family-name:var(--font-body)]">
-                모든 웨딩은 특별한 이야기입니다. 저희가 기록한 사랑의 순간들을 만나보세요.
+                웨딩 스토리</h1>
+              <p className="mt-6 max-w-2xl text-[0.85rem] leading-relaxed text-[var(--color-text-muted)] font-[family-name:var(--font-body)]">
+                <span className="md:block">서로 다른 장소와 분위기 속에서 자연스럽게 기록한</span>{" "}
+                <span className="md:block">결혼식의 순간들을 살펴보세요.</span>
               </p>
             </motion.div>
 
@@ -40,18 +40,17 @@ export default function GalleryFull() {
 
         <section className="bg-[#2C241E] py-20">
           <div className="max-w-[1440px] mx-auto px-8 lg:px-16 text-center">
-            <h2 className="font-[family-name:var(--font-heading)] font-light text-4xl lg:text-6xl capitalize text-white leading-[1.1] mb-6">
-              지금 시작해보세요
-            </h2>
+            <h2 className="font-[family-name:var(--font-heading)] font-light text-4xl lg:text-6xl capitalize text-white leading-[var(--leading-heading)] mb-6">
+              촬영을 준비하고 계신가요?</h2>
             <p className="text-sm text-white/60 mb-8 font-[family-name:var(--font-body)]">
-              여러분의 사랑 이야기도 아름답게 기록될 자격이 있습니다.
+              <span className="md:block">예식 날짜와 장소를 알려주시면</span>{" "}
+              <span className="md:block">촬영 가능 여부를 확인해드립니다.</span>
             </p>
             <Link
               href="/ko/templates/OHMT025-wedding/contact"
               className="inline-flex items-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-white border-b border-white/40 pb-1 hover:border-white transition-colors duration-200"
             >
-              촬영 문의하기
-            </Link>
+              촬영 문의</Link>
           </div>
         </section>
       </main>

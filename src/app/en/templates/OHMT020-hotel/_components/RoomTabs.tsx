@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { Check } from "lucide-react";
 import { rooms } from "../data/data";
 import { Button } from "./ui/Button";
@@ -20,8 +20,8 @@ export const RoomTabs = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-[clamp(1.8rem,4vw,3.2rem)] font-[var(--font-heading)] font-bold text-[var(--color-primary)] leading-[1.15]">
-            <span className="text-[11px] md:text-[12px] font-medium text-[var(--color-accent)] uppercase tracking-[0.25em] block mb-4">Accommodations</span>
+          <h2 className="text-[length:var(--text-h2)] font-[var(--font-heading)] font-bold text-[var(--color-primary)] leading-[var(--leading-heading)]">
+            <span className="text-xs md:text-xs font-medium text-[var(--color-accent)] uppercase tracking-[0.25em] block mb-4">Accommodations</span>
             Rooms & Suites
           </h2>
         </motion.div>
@@ -31,7 +31,7 @@ export const RoomTabs = () => {
             <button
               key={r.id}
               onClick={() => setActiveTab(i)}
-              className={`flex-shrink-0 px-5 md:px-8 py-3 text-[12px] md:text-[13px] font-medium uppercase tracking-[0.15em] transition-all duration-300 ${activeTab === i ? "bg-[var(--color-primary)] text-[var(--color-bg)]" : "bg-transparent text-[var(--color-text-muted)] border border-[var(--color-border)] hover:border-[var(--color-primary)]"}`}
+              className={`flex-shrink-0 px-5 md:px-8 py-3 text-xs md:text-xs font-medium uppercase tracking-[0.15em] transition-all duration-300 ${activeTab === i ? "bg-[var(--color-primary)] text-[var(--color-bg)]" : "bg-transparent text-[var(--color-text-muted)] border border-[var(--color-border)] hover:border-[var(--color-primary)]"}`}
             >
               {r.name}
             </button>
@@ -61,21 +61,21 @@ export const RoomTabs = () => {
 
               <div className="grid grid-cols-3 gap-4 py-4 border-t border-b border-[var(--color-border)]">
                 <div>
-                  <span className="text-[10px] font-medium text-[var(--color-text-muted)] uppercase tracking-[0.1em] block">Size</span>
+                  <span className="text-xs font-medium text-[var(--color-text-muted)] uppercase tracking-[0.1em] block">Size</span>
                   <span className="text-sm font-semibold text-[var(--color-text)]">{room.size}</span>
                 </div>
                 <div>
-                  <span className="text-[10px] font-medium text-[var(--color-text-muted)] uppercase tracking-[0.1em] block">View</span>
+                  <span className="text-xs font-medium text-[var(--color-text-muted)] uppercase tracking-[0.1em] block">View</span>
                   <span className="text-sm font-semibold text-[var(--color-text)]">{room.view}</span>
                 </div>
                 <div>
-                  <span className="text-[10px] font-medium text-[var(--color-text-muted)] uppercase tracking-[0.1em] block">Capacity</span>
+                  <span className="text-xs font-medium text-[var(--color-text-muted)] uppercase tracking-[0.1em] block">Capacity</span>
                   <span className="text-sm font-semibold text-[var(--color-text)]">{room.capacity}</span>
                 </div>
               </div>
 
               <div>
-                <span className="text-[11px] font-medium text-[var(--color-text-muted)] uppercase tracking-[0.15em] block mb-3">Amenities</span>
+                <span className="text-xs font-medium text-[var(--color-text-muted)] uppercase tracking-[0.15em] block mb-3">Amenities</span>
                 <div className="grid grid-cols-2 gap-2">
                   {room.amenities.map((a) => (
                     <div key={a} className="flex items-center gap-2 text-sm text-[var(--color-text)]">
@@ -88,10 +88,10 @@ export const RoomTabs = () => {
 
               <div className="flex items-center justify-between pt-2">
                 <div>
-                  <span className="text-[11px] font-medium text-[var(--color-text-muted)] uppercase tracking-[0.15em]">Per Night</span>
+                  <span className="text-xs font-medium text-[var(--color-text-muted)] uppercase tracking-[0.15em]">Per Night</span>
                   <p className="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">{room.price}</p>
                 </div>
-                <Button variant="primary" size="md" className="text-[11px] tracking-[0.2em] uppercase rounded-sm">Book Now</Button>
+                <Button variant="primary" size="md" className="text-xs tracking-[0.2em] uppercase rounded-sm">Book Now</Button>
               </div>
             </div>
           </motion.div>

@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Link from "next/link";
 import GalleryGrid from "../_components/sections/GalleryGrid";
 import Navbar from "../_components/layout/Navbar";
@@ -24,7 +24,7 @@ export default function GalleryFull() {
                 Portfolio
               </span>
               <h1
-                className="font-[family-name:var(--font-heading)] font-light capitalize text-[var(--color-text)] leading-[1.05]"
+                className="font-[family-name:var(--font-heading)] font-light capitalize text-[var(--color-text)] leading-[var(--leading-heading)]"
                 style={{ fontSize: "clamp(3rem, 7vw, 5.5rem)" }}
               >
                 Love Stories
@@ -38,9 +38,9 @@ export default function GalleryFull() {
           </div>
         </section>
 
-        <section className="bg-[#2C241E] py-20">
+        <section className="bg-[var(--color-cta-bg)] py-20">
           <div className="max-w-[1440px] mx-auto px-8 lg:px-16 text-center">
-            <h2 className="font-[family-name:var(--font-heading)] font-light text-4xl lg:text-6xl capitalize text-white leading-[1.1] mb-6">
+            <h2 className="font-[family-name:var(--font-heading)] font-light text-4xl lg:text-6xl capitalize text-white leading-[var(--leading-heading)] mb-6">
               Ready to Begin?
             </h2>
             <p className="text-sm text-white/60 mb-8 font-[family-name:var(--font-body)]">
@@ -63,3 +63,4 @@ export default function GalleryFull() {
 function NavSpacer() {
   return <div className="h-[72px]" />;
 }
+

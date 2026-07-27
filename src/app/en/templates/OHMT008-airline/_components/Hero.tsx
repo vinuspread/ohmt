@@ -2,10 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { useSearchParams } from "next/navigation";
 import { Button } from "./ui/Button";
 export const Hero = () => {
-  const searchParams = useSearchParams();
   const t = {
   "nav": {
     "book": `Book`,
@@ -55,15 +53,15 @@ return (
         className="relative z-10 max-w-[1320px] mx-auto px-6 md:px-10 w-full"
       >
         <div className="max-w-[700px] mb-8">
-          <motion.div variants={fadeUp} className="flex items-center gap-3 text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-6">
+          <motion.div variants={fadeUp} className="flex items-center gap-3 text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-6">
             <div className="w-6 h-[1px] bg-[var(--color-accent)]" />
             {t.hero.badge}
           </motion.div>
-          <motion.h1 variants={fadeUp} className="font-[family-name:var(--theme-font-heading)] text-[clamp(2.1rem,4vw,3.8rem)] font-bold tracking-tight leading-[1.0] text-white mb-8">
+          <motion.h1 variants={fadeUp} className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-h1)] font-bold tracking-tight leading-[var(--leading-display)] text-white mb-8">
             {t.hero.title1} <br />
             <span className="font-normal text-[var(--color-accent)]">{t.hero.title2}</span>
           </motion.h1>
-          <motion.p variants={fadeUp} className="text-[1.05rem] font-normal text-white/65 leading-[1.4] max-w-[600px] mb-10">
+          <motion.p variants={fadeUp} className="text-[1.05rem] font-normal text-white/65 leading-[var(--leading-body)] max-w-[600px] mb-10">
             {t.hero.desc}
           </motion.p>
           <motion.div variants={fadeUp} className="flex flex-col sm:flex-row gap-3 md:gap-4">

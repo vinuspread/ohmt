@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
-import { motion, useMotionValue, useSpring, useReducedMotion } from "framer-motion";
+import { motion, useMotionValue, useSpring, useReducedMotion } from "motion/react";
 import { projects } from "../../data/data";
 
 export default function Featured() {
@@ -43,7 +43,7 @@ export default function Featured() {
       <div className="max-w-[1440px] mx-auto px-8 lg:px-16">
         <div className="flex items-end justify-between mb-16">
           <h2
-            className="font-[family-name:var(--font-heading)] font-light capitalize text-[var(--color-text)] leading-[1.05]"
+            className="font-[family-name:var(--font-heading)] font-light capitalize text-[var(--color-text)] leading-[var(--leading-heading)]"
             style={{ fontSize: "clamp(3rem, 7vw, 5.5rem)" }}
           >
             Selected<br />Work
@@ -142,3 +142,4 @@ function GalleryItem({ project, className = "", aspectClass = "aspect-[3/4]" }: 
     </motion.div>
   );
 }
+

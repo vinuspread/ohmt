@@ -41,18 +41,15 @@ export function Hero() {
       {/* Top Content Area */}
       <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 pt-16 pb-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
-          <h1 className="font-heading font-normal text-[48px] md:text-[64px] lg:text-[72px] leading-[1.1] tracking-[-0.02em] text-[#1A1A1A] max-w-3xl">
-            공간의 언어를
-            <br />
-            설계합니다.
-          </h1>
+          <h1 className="font-heading font-normal text-5xl md:text-6xl lg:text-7xl leading-[var(--leading-heading)] tracking-[-0.02em] text-[#1A1A1A] max-w-3xl">
+            삶과 장소에 맞는<br />
+            공간을 설계합니다.</h1>
           <div className="pb-2">
             <Link
               href="/ko/templates/OHMT027-architecture/projects"
-              className="font-sans text-[12px] font-medium tracking-[0.12em] text-[#1A1A1A] uppercase border-b border-[#1A1A1A] pb-1 hover:text-[#B07D4F] hover:border-[#B07D4F] transition-colors"
+              className="font-sans text-xs font-medium tracking-[0.12em] text-[#1A1A1A] uppercase border-b border-[#1A1A1A] pb-1 hover:text-[#B07D4F] hover:border-[#B07D4F] transition-colors"
             >
-              프로젝트 보기 →
-            </Link>
+              프로젝트 살펴보기 →</Link>
           </div>
         </div>
       </div>
@@ -107,29 +104,29 @@ export function Hero() {
       {/* Below-image: Caption + Navigation */}
       <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 pt-5 flex justify-between items-center">
         <div className="flex flex-col gap-0.5">
-          <span className="font-sans text-[12px] font-semibold tracking-[0.12em] text-[#1A1A1A] uppercase">
+          <span className="font-sans text-xs font-semibold tracking-[0.12em] text-[#1A1A1A] uppercase">
             {slides[activeIndex].title}
           </span>
-          <span className="font-sans text-[11px] tracking-[0.1em] text-[#888888] uppercase">
+          <span className="font-sans text-xs tracking-[0.1em] text-[#888888] uppercase">
             {slides[activeIndex].location}
           </span>
         </div>
         <div className="flex items-center gap-6">
-          <span className="font-sans text-[13px] text-[#888888] tracking-[0.05em]">
+          <span className="font-sans text-xs text-[#888888] tracking-[0.05em]">
             0{activeIndex + 1} / 0{slides.length}
           </span>
           <div className="flex gap-2">
             <button
               onClick={() => swiperRef.current?.slidePrev()}
               className="w-[36px] h-[36px] border border-[#E0E0E0] hover:border-[#1A1A1A] text-[#1A1A1A] flex items-center justify-center transition-colors duration-200"
-              aria-label="Previous Slide"
+              aria-label="이전 슬라이드"
             >
               <ArrowLeft size={15} />
             </button>
             <button
               onClick={() => swiperRef.current?.slideNext()}
               className="w-[36px] h-[36px] border border-[#E0E0E0] hover:border-[#1A1A1A] text-[#1A1A1A] flex items-center justify-center transition-colors duration-200"
-              aria-label="Next Slide"
+              aria-label="다음 슬라이드"
             >
               <ArrowRight size={15} />
             </button>

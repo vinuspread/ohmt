@@ -1,4 +1,13 @@
 :root {
+  --text-display: clamp(3rem, 7vw, 5.5rem);
+  --text-h1: clamp(2.5rem, 5vw, 4rem);
+  --text-h2: clamp(2rem, 4vw, 3rem);
+  --text-h3: clamp(1.5rem, 3vw, 2rem);
+  --text-lead: clamp(1.125rem, 2vw, 1.5rem);
+  --leading-display: 0.95;
+  --leading-heading: 1.1;
+  --leading-body: 1.6;
+
   --color-primary: var(--theme-primary, #9B8670);
   --color-accent: var(--theme-accent, #6B7B5E);
   --color-bg: var(--theme-secondary, #FFFFFF);
@@ -8,6 +17,10 @@
   --color-text-muted: var(--theme-text-muted, #7A786E);
   --color-text-contrast: var(--theme-text-contrast, #FFFFFF);
   --color-border: var(--theme-border, rgba(24, 23, 20, 0.10));
+  --color-hero-bg: #12110F;
+  --color-hero-gradient: #100F0D;
+  --color-overlay: #1A1816;
+  --color-cta-bg: #2C241E;
 
   --font-heading: var(--theme-font-heading, 'Elms Sans'), sans-serif;
   --font-body: var(--theme-font-body, 'Inter Tight'), sans-serif;

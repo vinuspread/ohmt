@@ -28,7 +28,7 @@ export const Hero = () => {
           Collection 2026
         </motion.p>
         <motion.h1
-          className="text-5xl md:text-7xl font-bold leading-[1.0] tracking-[-0.02em]"
+          className="text-5xl md:text-7xl font-bold leading-[var(--leading-display)] tracking-[-0.02em]"
           style={{ textWrap: "balance" } as React.CSSProperties}
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -67,7 +67,7 @@ export const Hero = () => {
       </div>
 
       <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-white/40">
-        <span className="text-[10px] uppercase tracking-[0.3em]">Scroll</span>
+        <span className="text-xs uppercase tracking-[0.3em]">Scroll</span>
         <span className="w-px h-10 bg-white/20" />
       </div>
     </section>

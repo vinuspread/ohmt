@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { X } from "lucide-react";
 import Link from "next/link";
 
@@ -11,12 +11,12 @@ interface TotalMenuProps {
 }
 
 const menuItems = [
-  { name: "Home", href: "/ko/templates/OHMT021-museum", desc: "Experience the Sanctuary" },
-  { name: "Museum Info", href: "/ko/templates/OHMT021-museum/our-story", desc: "Our 500-Year Legacy" },
-  { name: "Collections", href: "/ko/templates/OHMT021-museum/collections", desc: "Explore the Archive" },
-  { name: "Exhibitions", href: "/ko/templates/OHMT021-museum/exhibitions", desc: "Current & Special Showings" },
-  { name: "Museum Shop", href: "/ko/templates/OHMT021-museum/shop", desc: "Editions & Collectibles" },
-  { name: "Curator Note", href: "/ko/templates/OHMT021-museum/curator-note", desc: "Theological Insights" },
+  { name: "홈", href: "/ko/templates/OHMT021-museum", desc: "Experience the Sanctuary" },
+  { name: "미술관 안내", href: "/ko/templates/OHMT021-museum/our-story", desc: "Our 500-Year Legacy" },
+  { name: "소장품", href: "/ko/templates/OHMT021-museum/collections", desc: "Explore the Archive" },
+  { name: "전시", href: "/ko/templates/OHMT021-museum/exhibitions", desc: "현재 전시와 특별 전시" },
+  { name: "뮤지엄 숍", href: "/ko/templates/OHMT021-museum/shop", desc: "도록과 기념품" },
+  { name: "큐레이터 노트", href: "/ko/templates/OHMT021-museum/curator-note", desc: "작품과 시대를 읽는 글" },
 ];
 
 export default function TotalMenu({ isOpen, onClose }: TotalMenuProps) {
@@ -54,7 +54,7 @@ export default function TotalMenu({ isOpen, onClose }: TotalMenuProps) {
                   <h2 className="text-4xl md:text-7xl font-serif tracking-tighter group-hover:opacity-50 transition-opacity duration-500">
                     {item.name}
                   </h2>
-                  <p className="text-[13px] md:text-sm uppercase tracking-[0.4em] font-normal text-[var(--color-accent)]/40 group-hover:text-[var(--color-accent)] transition-colors">
+                  <p className="text-xs md:text-sm uppercase tracking-[0.4em] font-normal text-[var(--color-accent)]/40 group-hover:text-[var(--color-accent)] transition-colors">
                     {item.desc}
                   </p>
                 </Link>
@@ -69,13 +69,13 @@ export default function TotalMenu({ isOpen, onClose }: TotalMenuProps) {
             transition={{ delay: 1 }}
             className="max-w-[1440px] mx-auto w-full border-t border-[var(--color-accent)]/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6"
           >
-            <div className="text-[13px] uppercase font-bold tracking-widest text-[var(--color-accent)]/30">
+            <div className="text-xs uppercase font-bold tracking-widest text-[var(--color-accent)]/30">
               © 2026 OHMT.
             </div>
-            <div className="flex gap-8 text-[13px] uppercase font-bold tracking-widest">
+            <div className="flex gap-8 text-xs uppercase font-bold tracking-widest">
               <a href="#" className="hover:opacity-50">Instagram</a>
               <a href="#" className="hover:opacity-50">Twitter</a>
-              <a href="#" className="hover:opacity-50">Vatican City, Rome</a>
+              <a href="#" className="hover:opacity-50">바티칸 시국 · 로마</a>
             </div>
           </motion.div>
         </motion.div>

@@ -13,7 +13,7 @@ export const Newsletter = () => {
           Get Early Access
         </h2>
         <p className="text-base text-white/50 mt-4 max-w-sm mx-auto leading-relaxed">
-          New arrivals, exclusive offers, and style guides ??delivered to your inbox first.
+          New arrivals, exclusive offers, and style guides delivered to your inbox first.
         </p>
 
         <div className="max-w-md mx-auto mt-10 flex">
@@ -26,7 +26,7 @@ export const Newsletter = () => {
             Subscribe
           </button>
         </div>
-        <p className="text-[14px] text-white/25 mt-4">
+        <p className="text-sm text-white/25 mt-4">
           No spam. Unsubscribe anytime.
         </p>
       </div>

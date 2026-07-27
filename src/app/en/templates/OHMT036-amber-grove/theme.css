@@ -1,0 +1,58 @@
+/* OHMT036-amber-grove/theme.css */
+
+:root {
+  --text-display: clamp(3rem, 7vw, 5.5rem);
+  --text-h1: clamp(2.5rem, 5vw, 4rem);
+  --text-h2: clamp(2rem, 4vw, 3rem);
+  --text-h3: clamp(1.5rem, 3vw, 2rem);
+  --text-lead: clamp(1.125rem, 2vw, 1.5rem);
+  --leading-display: 0.95;
+  --leading-heading: 1.1;
+  --leading-body: 1.6;
+
+  --color-primary: #FFFFFF;
+  --color-secondary: #1C2318;
+  --color-accent: #3F5B3B;
+  --color-accent-light: #A8C48A;
+  --color-secondary-accent: #D97F3D;
+  --color-bg: #FFFFFF;
+  --color-bg-secondary: #FFFFFF;
+  --color-bg-dark: #1C2318;
+  --color-text: #111111;
+  --color-text-muted: #555555;
+  --color-text-contrast: #F5F1E4;
+  --color-text-muted-contrast: rgba(245, 241, 228, 0.6);
+  --color-border: rgba(0, 0, 0, 0.08);
+  --color-border-dark: rgba(245, 241, 228, 0.14);
+  --color-page-bg: #EFEFEC;
+
+  --font-heading: 'Newsreader', serif;
+  --font-body: 'Work Sans', system-ui, sans-serif;
+}
+
+body {
+  background-image: url('/templates/OHMT036-amber-grove/farm-bg-v5.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  overflow-wrap: break-word;
+}
+
+.ledger-num {
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  font-feature-settings: "tnum" 1;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --mobile-page-gutter: 1rem;
+  }
+
+  body {
+    word-break: keep-all;
+  }
+}
+
+

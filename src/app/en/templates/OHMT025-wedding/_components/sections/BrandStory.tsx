@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef } from "react";
-import { motion, useScroll, useTransform, useReducedMotion, useSpring } from "framer-motion";
+import { motion, useScroll, useTransform, useReducedMotion, useSpring } from "motion/react";
 
 const phrases = [
   "Your wedding is not a photoshoot.",
@@ -76,7 +76,7 @@ export default function BrandStory() {
           {/* Centered text */}
           <div className="relative z-10 text-center px-8 max-w-2xl mx-auto">
             <div
-              className="font-[family-name:var(--font-heading)] font-light normal-case text-[var(--color-text)] leading-[1.15] text-balance"
+              className="font-[family-name:var(--font-heading)] font-light normal-case text-[var(--color-text)] leading-[var(--leading-heading)] text-balance"
               style={{ fontSize: "clamp(2rem, 4.5vw, 3.8rem)" }}
             >
               {phrases.map((phrase, idx) => (
@@ -123,13 +123,13 @@ export default function BrandStory() {
           className="text-center max-w-md mx-auto"
         >
           <p
-            className="font-[family-name:var(--font-heading)] font-light normal-case text-[var(--color-text-muted)] leading-[1.2] text-balance"
+            className="font-[family-name:var(--font-heading)] font-light normal-case text-[var(--color-text-muted)] leading-[var(--leading-heading)] text-balance"
             style={{ fontSize: "clamp(1.8rem, 7vw, 2.4rem)" }}
           >
             Your wedding is not a photoshoot.
           </p>
           <p
-            className="mt-2 font-[family-name:var(--font-heading)] font-light normal-case text-[var(--color-text)] leading-[1.2] text-balance"
+            className="mt-2 font-[family-name:var(--font-heading)] font-light normal-case text-[var(--color-text)] leading-[var(--leading-heading)] text-balance"
             style={{ fontSize: "clamp(1.8rem, 7vw, 2.4rem)" }}
           >
             It&apos;s a <span className="whitespace-nowrap">once-in-a-lifetime</span> celebration.
@@ -148,3 +148,4 @@ export default function BrandStory() {
     </>
   );
 }
+

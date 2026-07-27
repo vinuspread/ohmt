@@ -10,10 +10,10 @@ export default function TechDesign() {
         <div className="mb-12 flex flex-col md:flex-row md:items-end justify-between gap-6">
           <div className="max-w-xl">
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
-              미적 공학
+              기술과 형태
             </span>
-            <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.03em] leading-[1.1] text-[var(--color-text)] font-heading break-keep">
-              기술과 디자인의 만남
+            <h2 className="text-[length:var(--text-h1)] font-bold tracking-[-0.03em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading break-keep">
+              기술을 담은 디자인
             </h2>
           </div>
           <Link
@@ -44,11 +44,11 @@ export default function TechDesign() {
  
             {/* Left Column: Tech spec details & Play button */}
             <div className="relative z-20 w-full md:w-3/5 flex flex-col items-start gap-3 md:gap-4 pr-4">
-              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
-                system presentation v2
+              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
+                시스템 소개 v2
               </span>
-              <h3 className="text-xl md:text-3xl font-extrabold text-white font-heading tracking-tight leading-[1.1] break-keep">
-                OmniBot Gen 2: 자율 주행 데모 및 하드웨어 레이아웃 리뷰
+              <h3 className="text-xl md:text-3xl font-extrabold text-white font-heading tracking-tight leading-[var(--leading-heading)] break-keep">
+                OmniBot Gen 2 자율주행 시연과 하드웨어 구성 소개
               </h3>
               
               {/* Play Button */}
@@ -58,7 +58,7 @@ export default function TechDesign() {
                     <path d="M8 5v14l11-7z" />
                   </svg>
                 </button>
-                <span className="text-xs font-bold uppercase tracking-wider text-white">쇼케이스 보기 (2:45)</span>
+                <span className="text-xs font-bold uppercase tracking-wider text-white">영상 보기 (2:45)</span>
               </div>
             </div>
           </div>

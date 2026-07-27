@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "motion/react";
+import TemplateSelect from '../TemplateSelect'
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 
@@ -78,7 +79,7 @@ export default function EnrollmentForm() {
                   <label htmlFor="age" className="block text-xs font-bold uppercase tracking-wider mb-2">
                     Age *
                   </label>
-                  <select
+                  <TemplateSelect
                     id="age"
                     required
                     defaultValue=""
@@ -90,7 +91,7 @@ export default function EnrollmentForm() {
                     <option value="7-8">7 - 8 years</option>
                     <option value="9-10">9 - 10 years</option>
                     <option value="11-12">11 - 12 years</option>
-                  </select>
+                  </TemplateSelect>
                 </div>
               </div>
 
@@ -125,7 +126,7 @@ export default function EnrollmentForm() {
                 <label htmlFor="interest" className="block text-xs font-bold uppercase tracking-wider mb-2">
                   Interested Class *
                 </label>
-                <select
+                <TemplateSelect
                   id="interest"
                   required
                   defaultValue=""
@@ -136,7 +137,7 @@ export default function EnrollmentForm() {
                   <option value="art">Art Studio</option>
                   <option value="science">Science Lab</option>
                   <option value="math">Math Adventures</option>
-                </select>
+                </TemplateSelect>
               </div>
 
               <div>

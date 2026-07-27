@@ -37,15 +37,15 @@ export const PageHero = ({
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-[var(--color-accent)]/10 rounded-full blur-[120px] pointer-events-none" />
 
       <div className={`max-w-[1320px] mx-auto px-6 md:px-10 relative z-10 ${isCenter ? "text-center" : "text-left"}`}>
-        <span className={`inline-flex items-center gap-3 text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-6 ${isCenter ? "justify-center" : ""}`}>
+        <span className={`inline-flex items-center gap-3 text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-6 ${isCenter ? "justify-center" : ""}`}>
           {labelIcon}
           {label}
         </span>
-        <h1 className="font-[family-name:var(--theme-font-heading)] text-[clamp(2rem,4vw,3.5rem)] font-bold tracking-tight text-white leading-[1.1] mb-8 uppercase">
+        <h1 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-h2)] font-bold tracking-tight text-white leading-[var(--leading-heading)] mb-8 uppercase">
           {title}
         </h1>
         <div className={`h-[1px] bg-white/20 w-32 mb-8 ${isCenter ? "mx-auto" : ""}`} />
-        <p className={`text-[16px] text-white/60 leading-[1.4] font-normal normal-case ${descMaxWidth} ${isCenter ? "mx-auto" : ""}`}>
+        <p className={`whitespace-pre-line text-base text-white/60 leading-[var(--leading-body)] font-normal normal-case ${descMaxWidth} ${isCenter ? "mx-auto" : ""}`}>
           {description}
         </p>
       </div>

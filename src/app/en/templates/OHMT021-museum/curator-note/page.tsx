@@ -1,14 +1,12 @@
 "use client";
 import React from "react";
-import { useSearchParams } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import Header from "../_components/layout/Header";
 import Footer from "../_components/layout/Footer";
 
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 function CuratorNotePageContent() {
-  const searchParams = useSearchParams();
   const t = {
   "nav": {
     "specialExhibition": `Special Exhibition`,
@@ -39,7 +37,7 @@ function CuratorNotePageContent() {
     "editorial": `Editorial`,
     "title": `Divine Proportions`,
     "p1": `The Vatican Museums stand not only as a repository of historical objects, but as a monument to the relentless human pursuit of perfection. Walking through its halls is akin to walking through the physical manifestation of the Renaissance mind.`,
-    "p2": `Our curation seeks to extract the structural brilliance from the overwhelming ornamentation. By highlighting works like the Laocoön or the delicate Pietà in an isolated, digital space, we allow their raw theological and emotional gravity to echo without the noise of the physical gallery crowd.`,
+    "p2": `Our curation seeks to extract the structural brilliance from the overwhelming ornamentation. By highlighting works like the Laocoon or the delicate Pieta in an isolated, digital space, we allow their raw theological and emotional gravity to echo without the noise of the physical gallery crowd.`,
     "p3": `Every brushstroke captured by Raphael, every chisel strike endured by Michelangelo - these are not relics of the past. They are continuing dialogues on the nature of humanity, suffering, knowledge, and divinity.`,
     "curator": `Curator`,
     "curatorName": `OHMT Exhibition`
@@ -49,12 +47,12 @@ function CuratorNotePageContent() {
     "heroTitle": `The Soul of Stone`,
     "ch1": `Chapter I`,
     "ch1Title": `The Foundation of Light`,
-    "ch1Desc": `Founded in 1506 with the discovery of the Laocoön, the Vatican Museums encompass five centuries of papal patronage and the relentless pursuit of artistic perfection.`,
+    "ch1Desc": `Founded in 1506 with the discovery of the Laocoon, the Vatican Museums encompass five centuries of papal patronage and the relentless pursuit of artistic perfection.`,
     "timelineTitle": `A Line in Time.`,
     "timeline": [
       {
         "year": `1506`,
-        "title": `Discovery of Laocoön`,
+        "title": `Discovery of Laocoon`,
         "desc": `Pope Julius II purchasing the marble statue, which led to the foundation of the museum.`
       },
       {
@@ -117,7 +115,7 @@ function CuratorNotePageContent() {
         "name": `Greek Brilliance: Classical Sculptures`,
         "period": `2026.05.20 - 10.15`,
         "venue": `Statue Hall, Clementine Wing`,
-        "desc": `Experience the tactile genius of ancient Greek masters, from the Laocoön to the Apollo Belvedere, in global resolution.`,
+        "desc": `Experience the tactile genius of ancient Greek masters, from the Laocoon to the Apollo Belvedere, in global resolution.`,
         "tag": `Classical Antiquity`
       }
     ],
@@ -166,8 +164,8 @@ return (
           transition={{ duration: 0.8 }}
           className="mb-20 text-center"
         >
-          <span className="text-[10px] uppercase font-bold tracking-[0.5em] text-black/40 block mb-6">{t.curatorNote.editorial}</span>
-          <h1 className="text-5xl md:text-8xl font-serif leading-[1.1] tracking-tighter break-keep">{t.curatorNote.title}</h1>
+          <span className="text-xs uppercase font-bold tracking-[0.5em] text-black/40 block mb-6">{t.curatorNote.editorial}</span>
+          <h1 className="text-5xl md:text-8xl font-serif leading-[var(--leading-heading)] tracking-tighter break-keep">{t.curatorNote.title}</h1>
         </motion.div>
 
         <motion.div 
@@ -187,7 +185,7 @@ return (
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 1 }}
-          className="prose prose-lg md:prose-xl font-serif mx-auto text-black/80 leading-[1.4]"
+          className="prose prose-lg md:prose-xl font-serif mx-auto text-black/80 leading-[var(--leading-body)]"
         >
           <p className="first-letter:text-7xl first-letter:font-bold first-letter:float-left first-letter:mr-4 first-letter:mt-2 break-keep">
             {t.curatorNote.p1}
@@ -221,3 +219,4 @@ export default function CuratorNotePage() {
     </React.Suspense>
   );
 }
+

@@ -1,6 +1,6 @@
 "use client";
-
 import React, { useState } from "react";
+import { ChevronRight } from "lucide-react";
 import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
 import theme from "../theme.json";
@@ -55,7 +55,7 @@ function CarTechnologyPageContent() {
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />
           <div className="relative max-w-[var(--theme-container)] mx-auto px-6 md:px-[var(--theme-gutter)] pb-12 w-full">
             <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-4 block">Technology</span>
-            <h1 className="font-[family-name:var(--theme-font-heading)] text-[clamp(2.8rem,6vw,5.5rem)] font-bold tracking-tight leading-[1.12]">
+            <h1 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-display)] font-bold tracking-tight leading-[var(--leading-heading)]">
               Innovation at<br />every level.
             </h1>
           </div>
@@ -63,7 +63,7 @@ function CarTechnologyPageContent() {
 
         {/* Intro */}
         <section className="max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)] pt-8 pb-10 md:pb-12 border-b border-[var(--theme-border)]">
-          <p className="text-[1.15rem] md:text-[1.25rem] text-white/70 font-normal leading-[1.6] max-w-[750px] break-keep">
+          <p className="text-[1.15rem] md:text-[1.25rem] text-white/70 font-normal leading-[var(--leading-body)] max-w-[750px] break-keep">
             Our engineering philosophy is simple: question everything.<br className="hidden md:inline" />The result is a suite of technologies that redefine what a vehicle can do.
           </p>
         </section>
@@ -86,12 +86,12 @@ function CarTechnologyPageContent() {
                     </span>
                     <div className="flex-1">
                       <h3 className="text-[1.15rem] font-bold tracking-tight mb-2">{tech.title}</h3>
-                      <p className="text-[0.82rem] text-[var(--theme-text-muted)] leading-[1.4] font-normal">{tech.desc}</p>
+                      <p className="text-[0.82rem] text-[var(--theme-text-muted)] leading-[var(--leading-body)] font-normal">{tech.desc}</p>
                       {active === i && (
-                        <p className="text-[0.78rem] text-[var(--theme-accent)]/70 mt-3 leading-[1.4]">{tech.detail}</p>
+                        <p className="text-[0.78rem] text-[var(--theme-accent)]/70 mt-3 leading-[var(--leading-body)]">{tech.detail}</p>
                       )}
                     </div>
-                    <span className={`text-lg transition-transform duration-300 ${active === i ? 'rotate-90 text-[var(--theme-accent)]' : 'text-[var(--theme-text-muted)]'}`}>→</span>
+                    <ChevronRight size={18} className={`transition-transform duration-300 ${active === i ? 'rotate-90 text-[var(--theme-accent)]' : 'text-[var(--theme-text-muted)]'}`} />
                   </div>
                 </button>
               ))}
@@ -131,7 +131,7 @@ function CarTechnologyPageContent() {
         <div className="relative h-[50vh] overflow-hidden">
           <img loading="lazy" src="/templates/OHMT009-car/hero-2.jpg" alt="" className="w-full h-full object-cover object-center" />
           <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-            <p className="text-[clamp(1.5rem,4vw,3rem)] font-bold tracking-tight text-center max-w-[600px] px-6">
+            <p className="text-[length:var(--text-h2)] font-bold tracking-tight text-center max-w-[600px] px-6">
               Every detail engineered to move you forward.
             </p>
           </div>
@@ -144,10 +144,10 @@ function CarTechnologyPageContent() {
 }
 
 
-export default function CarTechnologyPage(props: any) {
+export default function CarTechnologyPage() {
   return (
     <React.Suspense fallback={null}>
-      <CarTechnologyPageContent {...props} />
+      <CarTechnologyPageContent />
     </React.Suspense>
   );
 }

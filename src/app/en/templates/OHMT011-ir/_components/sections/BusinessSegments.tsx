@@ -46,19 +46,19 @@ export const BusinessSegments = () => {
       <div className="max-w-[1280px] mx-auto px-6 md:px-10">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
           <div>
-            <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-5">
+            <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--color-text-muted)] mb-5">
               Strategic Portfolio
             </span>
-            <h2 className="text-[clamp(1.9rem,3.2vw,2.8rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.1] max-w-[560px]">
+            <h2 className="text-[length:var(--text-h2)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[var(--leading-heading)] max-w-[560px]">
               Diversified growth across critical sectors.
             </h2>
           </div>
-          <p className="text-[0.9rem] text-[#6B6B6B] leading-[1.78] max-w-[440px] font-normal">
+          <p className="text-[0.9rem] text-[var(--color-text-muted)] leading-loose max-w-[440px] font-normal">
             Our portfolio is built on long-term themes of digital transformation, sustainability, and global connectivity.
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-[1px] bg-[var(--color-border)]">
+        <div className="grid md:grid-cols-3 gap-px bg-[var(--color-border)]">
           {segments.map((s, i) => (
             <div key={i} className="bg-[var(--color-light-bg)] overflow-hidden group/card">
               <div className="h-[180px] overflow-hidden">
@@ -68,9 +68,9 @@ export const BusinessSegments = () => {
                 <span className="text-[0.7rem] font-bold tracking-[0.25em] text-[var(--color-border)] block mb-4">{s.num}</span>
                 <span className="text-[0.85rem] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-4 block">{s.icon}</span>
                 <h3 className="text-[1.25rem] font-bold text-[var(--color-dark-bg)] mb-3 leading-snug">{s.title}</h3>
-                <p className="text-[0.93rem] text-[#6B6B6B] leading-[1.72] mb-8">{s.desc}</p>
+                <p className="text-[0.93rem] text-[var(--color-text-muted)] leading-[var(--leading-body)] mb-8">{s.desc}</p>
                 <div className="pt-5 border-t border-[var(--color-border)] flex flex-col gap-1">
-                  <span className="text-[0.7rem] font-bold uppercase tracking-[0.14em] text-[#6B6B6B]">{s.stat}</span>
+                  <span className="text-[0.7rem] font-bold uppercase tracking-[0.14em] text-[var(--color-text-muted)]">{s.stat}</span>
                   <strong className="text-2xl font-bold text-[var(--color-dark-bg)] tracking-tight">{s.val}</strong>
                 </div>
               </div>

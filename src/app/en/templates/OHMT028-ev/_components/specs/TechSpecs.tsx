@@ -30,20 +30,20 @@ export function TechSpecs() {
   return (
     <section className="bg-[var(--light-bg)]">
       <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 py-24 md:py-32">
-        <h2 className="font-michroma text-[clamp(28px,3vw,48px)] text-[var(--text-on-light)] leading-[0.93] tracking-[-0.03em] mb-16">
+        <h2 className="font-michroma text-[length:var(--text-h2)] text-[var(--text-on-light)] leading-[var(--leading-display)] tracking-[-0.03em] mb-16">
           Detailed Specs
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {specCategories.map((cat) => (
             <div key={cat.category}>
-              <h3 className="font-inter text-[11px] font-medium tracking-[0.08em] text-[var(--text-muted-light)] uppercase mb-6">
+              <h3 className="font-inter text-xs font-medium tracking-[0.08em] text-[var(--text-muted-light)] uppercase mb-6">
                 {cat.category}
               </h3>
               <div>
                 {cat.specs.map((spec) => (
                   <div key={spec.label} className="flex justify-between border-b border-[var(--border-light)] py-3.5">
-                    <span className="font-inter text-[13px] text-[var(--text-muted-light)]">{spec.label}</span>
-                    <span className="font-inter font-medium text-[13px] text-[var(--text-on-light)]">{spec.value}</span>
+                    <span className="font-inter text-xs text-[var(--text-muted-light)]">{spec.label}</span>
+                    <span className="font-inter font-medium text-xs text-[var(--text-on-light)]">{spec.value}</span>
                   </div>
                 ))}
               </div>

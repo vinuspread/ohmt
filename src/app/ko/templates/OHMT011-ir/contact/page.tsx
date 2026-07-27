@@ -8,6 +8,7 @@ import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
+import TemplateSelect from '../_components/TemplateSelect'
 
 const teamMembers = [
   { name: "Sarah Chen", title: "Vice President, Investor Relations", phone: "+1 (212) 555-0198", email: "schen@ohmytemplate.com", image: "/templates/OHMT011-ir/member-st.png" },
@@ -47,11 +48,13 @@ function IRContactContent() {
                 <div className="w-6 h-[1px] bg-[var(--color-accent)]" />
                 투자자 관계
               </div>
-              <h1 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold tracking-tight leading-[1.1] mb-6">
+              <h1 className="text-[length:var(--text-h1)] font-bold tracking-tight leading-[var(--leading-heading)] mb-6">
                 문의하기
               </h1>
-              <p className="text-[0.9rem] text-white/55 leading-[1.8] max-w-[520px] font-normal">
-                투자자 관계 팀은 적시에 투명한 커뮤니케이션을 제공하기 위해 최선을 다하고 있습니다. 문의 사항을 환영합니다.
+              <p className="max-w-[680px] break-keep text-[0.9rem] font-normal leading-loose text-white/55">
+                투자자 관계 팀은 적시에 투명한 커뮤니케이션을 제공하기 위해 최선을 다하고 있습니다.
+                <br />
+                문의 사항을 환영합니다.
               </p>
             </div>
           </div>
@@ -70,10 +73,10 @@ function IRContactContent() {
               <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-5">
                 팀 소개
               </span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.1] mb-6">
+              <h2 className="text-[length:var(--text-h3)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[var(--leading-heading)] mb-6">
                 IR 팀 소개
               </h2>
-              <p className="text-[0.88rem] text-[#6B6B6B] leading-[1.82] font-normal">
+              <p className="text-[0.88rem] text-[#6B6B6B] leading-loose font-normal">
                 전문 투자자 관계 담당자가 재무 문의, 주주 서비스 및 기업 액세스를 지원해 드립니다.
               </p>
             </div>
@@ -135,10 +138,10 @@ function IRContactContent() {
                 <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-5">
                   메시지 보내기
                 </span>
-                <h2 className="text-[clamp(1.5rem,2.5vw,2.2rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.1] mb-6">
+                <h2 className="text-[length:var(--text-h3)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[var(--leading-heading)] mb-6">
                   문의 제출
                 </h2>
-                <p className="text-[0.88rem] text-[#6B6B6B] leading-[1.82] font-normal mb-8">
+                <p className="text-[0.88rem] text-[#6B6B6B] leading-loose font-normal mb-8">
                   투자 관련 문의는 양식을 작성해 주시면 영업일 기준 1일 이내에 답변드리겠습니다.
                 </p>
 
@@ -178,13 +181,13 @@ function IRContactContent() {
                   </div>
                   <div className="col-span-2">
                     <label className="block text-[0.62rem] font-bold uppercase tracking-[0.12em] text-[var(--color-dark-bg)] mb-2">제목</label>
-                    <select className="w-full border border-[var(--color-border)] px-4 py-2.5 text-[0.82rem] text-[#6B6B6B] outline-none focus:border-[var(--color-accent)] transition-colors bg-white">
+                    <TemplateSelect className="w-full border border-[var(--color-border)] px-4 py-2.5 text-[0.82rem] text-[#6B6B6B] outline-none focus:border-[var(--color-accent)] transition-colors bg-white">
                       <option>일반 문의</option>
                       <option>주주 서비스</option>
                       <option>재무 정보</option>
                       <option>미디어 / 언론</option>
                       <option>기타</option>
-                    </select>
+                    </TemplateSelect>
                   </div>
                   <div className="col-span-2">
                     <label className="block text-[0.62rem] font-bold uppercase tracking-[0.12em] text-[var(--color-dark-bg)] mb-2">메시지</label>

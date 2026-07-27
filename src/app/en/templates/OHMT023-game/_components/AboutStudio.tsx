@@ -4,7 +4,7 @@ import { motion } from "motion/react";
 
 const stats = [
   { value: "5", label: "Games Released" },
-  { value: "12M+", label: "Players Worldwide" },
+  { value: "3.4M+", label: "Players Worldwide" },
   { value: "18", label: "Industry Awards" },
   { value: "2018", label: "Founded" },
 ];
@@ -38,10 +38,13 @@ export default function AboutStudio() {
               and a deep respect for the art of gaming.
             </p>
 
-            <div className="mt-10 grid grid-cols-2 gap-8 sm:grid-cols-4">
+            <div className="mt-10 flex flex-wrap gap-x-10 gap-y-8 sm:flex-nowrap">
               {stats.map((stat) => (
-                <div key={stat.label}>
-                  <div className="font-[var(--font-heading)] text-3xl font-bold text-[var(--color-primary)] md:text-4xl">
+                <div
+                  key={stat.label}
+                  className="shrink-0 text-center"
+                >
+                  <div className="whitespace-nowrap font-[var(--font-heading)] text-3xl font-bold text-[var(--color-primary)] md:text-4xl">
                     {stat.value}
                   </div>
                   <div className="mt-1 text-sm text-[var(--color-text-muted)]">{stat.label}</div>

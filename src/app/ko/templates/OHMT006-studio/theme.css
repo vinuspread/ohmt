@@ -1,5 +1,14 @@
-/* studio-ko Design Tokens */
+/* studio Design Tokens */
 :root {
+  --text-display: clamp(3rem, 7vw, 5.5rem);
+  --text-h1: clamp(2.5rem, 5vw, 4rem);
+  --text-h2: clamp(2rem, 4vw, 3rem);
+  --text-h3: clamp(1.5rem, 3vw, 2rem);
+  --text-lead: clamp(1.125rem, 2vw, 1.5rem);
+  --leading-display: 0.95;
+  --leading-heading: 1.1;
+  --leading-body: 1.6;
+
   --color-primary: #1A1A1A;
   --color-secondary: #18181B;
   --color-accent: #1A1A1A;
@@ -13,8 +22,8 @@
   --color-border: rgba(0,0,0,0.05);
   --color-border-light: rgba(0,0,0,0.08);
 
-  --font-heading: var(--font-outfit), Pretendard, sans-serif;
-  --font-body: var(--font-inter), Pretendard, sans-serif;
+  --font-heading: var(--font-outfit);
+  --font-body: 'Pretendard Variable', Pretendard, var(--font-inter), sans-serif;
 
   --font-size-h1: clamp(2.4rem, 5vw, 4rem);
   --font-size-h2: clamp(1.8rem, 3.5vw, 3rem);
@@ -33,12 +42,12 @@
   --transition-base: 300ms ease-out;
   --transition-slow: 500ms ease-out;
 
+  /* Interactive States */
   --focus-outline: 2px solid var(--color-primary);
   --focus-outline-offset: 2px;
 }
 
-
-
+/* Accessibility: Respect motion preferences */
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -47,38 +56,4 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
-
-
-body[lang="ko"], [lang="ko"], :root {
-  word-break: keep-all;
-  letter-spacing: -0.025em;
-}
-
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav, 
-nav a, nav button, nav span {
-  letter-spacing: -0.03em;
-}
-
-/* Korean typography rules (Korean Kerning Rule) */
-body[lang="ko"], [lang="ko"], :root {
-  word-break: keep-all;
-  letter-spacing: -0.025em;
-}
-
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav, 
-nav a, nav button, nav span {
-  letter-spacing: -0.03em;
 }

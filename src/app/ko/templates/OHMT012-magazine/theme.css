@@ -1,5 +1,14 @@
-/* magazine-ko Design Tokens */
+/* magazine Design Tokens */
 :root {
+  --text-display: clamp(3rem, 7vw, 5.5rem);
+  --text-h1: clamp(2.5rem, 5vw, 4rem);
+  --text-h2: clamp(2rem, 4vw, 3rem);
+  --text-h3: clamp(1.5rem, 3vw, 2rem);
+  --text-lead: clamp(1.125rem, 2vw, 1.5rem);
+  --leading-display: 0.95;
+  --leading-heading: 1.1;
+  --leading-body: 1.6;
+
   /* Colors */
   --color-primary: #8C6D3F;
   --color-secondary: #0D0D0D;
@@ -7,15 +16,15 @@
   --color-bg-secondary: #F2F2EE;
   --color-text: #0D0D0D;
   --color-accent: #8C6D3F;
-  --color-muted: #6B6B6B;
-  --color-text-muted: #6B6B6B;
+  --color-muted: #4A4A4A;
+  --color-text-muted: #4A4A4A;
   --color-text-contrast: #1C1C1A;
   --color-border: #E2DDD8;
   --color-banner-bg: #6B1F2D;
 
   /* Typography */
-  --font-heading: 'DM Serif Display', 'Noto Serif KR', Georgia, serif;
-  --font-body: 'Inter', Pretendard, sans-serif;
+  --font-heading: 'DM Serif Display', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-size-heading-lg: 3.5vw;
   --font-size-heading-md: 2rem;
   --font-size-heading-sm: 1.5rem;
@@ -58,38 +67,4 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
   }
-}
-
-
-body[lang="ko"], [lang="ko"], :root {
-  word-break: keep-all;
-  letter-spacing: -0.025em;
-}
-
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav, 
-nav a, nav button, nav span {
-  letter-spacing: -0.03em;
-}
-
-/* Korean typography rules (Korean Kerning Rule) */
-body[lang="ko"], [lang="ko"], :root {
-  word-break: keep-all;
-  letter-spacing: -0.025em;
-}
-
-h1, h2, h3, h4, h5, h6, 
-.font-heading, 
-[class*="text-2xl"], [class*="text-3xl"], [class*="text-4xl"], [class*="text-5xl"], [class*="text-6xl"] {
-  letter-spacing: -0.04em;
-}
-
-header a, header button, header span, header nav, 
-nav a, nav button, nav span {
-  letter-spacing: -0.03em;
 }

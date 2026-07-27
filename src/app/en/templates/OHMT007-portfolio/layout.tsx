@@ -1,11 +1,11 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - Portfolio",
+  title: "OHMT - Brutalist Creative Portfolio Template",
   description: "Personal branding and creative portfolio",
   openGraph: {
-    title: "OHMT - Portfolio",
+    title: "OHMT - Brutalist Creative Portfolio Template",
     description: "Personal branding and creative portfolio",
     url: "https://ohmytemplate.com/en/templates/OHMT007-portfolio",
     siteName: "OHMT",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Portfolio",
+    title: "OHMT - Brutalist Creative Portfolio Template",
     description: "Personal branding and creative portfolio",
     images: ["/templates/OHMT007-portfolio/og-image.jpg"],
   },
@@ -40,4 +40,3 @@ export default function PortfolioLayout({
     </>
   );
 }
-

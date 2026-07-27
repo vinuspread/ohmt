@@ -30,8 +30,8 @@ function MenuPageContent() {
           <div className="absolute inset-0 bg-[var(--color-bg-dark)]/75" />
           <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6 pt-16">
             <div>
-              <p className="text-[10px] uppercase tracking-[0.25em] text-white/50 mb-3">Menu</p>
-              <h1 className="font-heading text-[clamp(2.8rem,5vw,5rem)] font-bold text-white leading-[1.05]">
+              <p className="text-xs uppercase tracking-[0.25em] text-white/50 mb-3">Menu</p>
+              <h1 className="font-heading text-[length:var(--text-h1)] font-bold text-white leading-[var(--leading-heading)]">
                 What We Serve
               </h1>
             </div>
@@ -49,8 +49,8 @@ function MenuPageContent() {
                 <button
                   key={cat.id}
                   onClick={() => setActive(cat.id)}
-                  className="relative pt-10 pb-5 text-[11px] uppercase tracking-[0.18em] font-semibold whitespace-nowrap transition-colors duration-200 shrink-0"
-                  style={{ color: active === cat.id ? "var(--color-text)" : "#90909A" }}
+                  className="relative pt-10 pb-5 text-xs uppercase tracking-[0.18em] font-semibold whitespace-nowrap transition-colors duration-200 shrink-0"
+                  style={{ color: active === cat.id ? "var(--color-text)" : "var(--color-text-muted)" }}
                 >
                   {cat.label}
                   {active === cat.id && (
@@ -102,7 +102,7 @@ function MenuPageContent() {
                         {item.options.map((opt) => (
                           <span
                             key={opt}
-                            className="text-[10px] px-2 py-0.5 border border-[var(--color-border)] text-[var(--color-text-muted)] capitalize font-medium"
+                            className="text-xs px-2 py-0.5 border border-[var(--color-border)] text-[var(--color-text-muted)] capitalize font-medium"
                           >
                             {opt}
                           </span>

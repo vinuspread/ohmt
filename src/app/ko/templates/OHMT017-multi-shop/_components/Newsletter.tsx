@@ -10,11 +10,9 @@ export const Newsletter = () => {
 
       <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 text-center">
         <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
-          소식을 가장 먼저 받아보세요
-        </h2>
+          새로운 소식을 먼저 받아보세요</h2>
         <p className="text-base text-white/50 mt-4 max-w-sm mx-auto leading-relaxed">
-          신상품, 단독 혜택, 스타일 가이드를 이메일로 가장 먼저 만나보세요.
-        </p>
+          새로운 컬렉션과 단독 혜택, 스타일 이야기를 이메일로 보내드립니다.</p>
 
         <div className="max-w-md mx-auto mt-10 flex">
           <input
@@ -26,11 +24,9 @@ export const Newsletter = () => {
             구독하기
           </button>
         </div>
-        <p className="text-[14px] text-white/25 mt-4">
-          스팸 없음. 언제든 구독 취소 가능.
-        </p>
+        <p className="text-sm text-white/25 mt-4">
+          필요할 때 언제든 구독을 취소할 수 있습니다.</p>
       </div>
     </section>
   );
 };
-

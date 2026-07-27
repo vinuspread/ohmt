@@ -45,14 +45,14 @@ export function TrimCompare() {
                 <th key={t.id} className="text-left pb-6 pr-4 align-bottom">
                   <div className="flex flex-col gap-1.5">
                     {t.isPopular && (
-                      <span className="font-inter text-[10px] tracking-[0.08em] text-[var(--accent)] uppercase">
+                      <span className="font-inter text-xs tracking-[0.08em] text-[var(--accent)] uppercase">
                         Most popular
                       </span>
                     )}
-                    <span className="font-michroma text-[clamp(18px,2vw,28px)] text-[var(--text)] leading-none tracking-[-0.02em]">
+                    <span className="font-michroma text-[length:var(--text-lead)] text-[var(--text)] leading-none tracking-[-0.02em]">
                       {t.name}
                     </span>
-                    <span className="font-michroma text-[clamp(20px,2.5vw,36px)] text-[var(--text)] leading-none mt-2">
+                    <span className="font-michroma text-[length:var(--text-h3)] text-[var(--text)] leading-none mt-2">
                       {t.price}
                     </span>
                   </div>
@@ -66,14 +66,14 @@ export function TrimCompare() {
             {rows.map((row) => (
               <tr key={row.key} className="border-b border-[var(--border)]">
                 <td className="py-5 pr-4">
-                  <span className="font-inter text-[12px] tracking-[0.04em] text-[var(--text-muted)] uppercase">
+                  <span className="font-inter text-xs tracking-[0.04em] text-[var(--text-muted)] uppercase">
                     {row.label}
                   </span>
                 </td>
                 {trims.map((t) => (
                   <td key={t.id} className="py-5 pr-4">
                     <span
-                      className={`font-inter text-[14px] font-medium ${
+                      className={`font-inter text-sm font-medium ${
                         t.isPopular ? "text-[var(--accent)]" : "text-[var(--text)]"
                       }`}
                     >
@@ -93,7 +93,7 @@ export function TrimCompare() {
                 <td key={t.id} className="pt-8 pr-4">
                   <a href="/en/templates/OHMT028-ev/order">
                     <button
-                      className={`w-full py-3 rounded-full font-inter text-[12px] font-medium tracking-[0.03em] transition-colors ${
+                      className={`w-full py-3 rounded-full font-inter text-xs font-medium tracking-[0.03em] transition-colors ${
                         t.isPopular
                           ? "bg-[var(--accent)] text-[var(--text-on-light)] hover:bg-[var(--accent-dark)]"
                           : "border border-[var(--border)] text-[var(--text)] hover:border-[var(--text-muted)]"

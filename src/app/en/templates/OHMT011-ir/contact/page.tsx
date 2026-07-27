@@ -8,6 +8,7 @@ import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
+import TemplateSelect from '../_components/TemplateSelect'
 
 const teamMembers = [
   { name: "Sarah Chen", title: "Vice President, Investor Relations", phone: "+1 (212) 555-0198", email: "schen@ohmytemplate.com", image: "/templates/OHMT011-ir/member-st.png" },
@@ -47,11 +48,13 @@ function IRContactContent() {
                 <div className="w-6 h-[1px] bg-[var(--color-accent)]" />
                 Investor Relations
               </div>
-              <h1 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold tracking-tight leading-[1.1] mb-6">
+              <h1 className="text-[length:var(--text-h1)] font-bold tracking-tight leading-[var(--leading-heading)] mb-6">
                 Get in Touch
               </h1>
-              <p className="text-[0.9rem] text-white/55 leading-[1.4] max-w-[520px] font-normal">
-                Our investor relations team is dedicated to providing timely and transparent communication. We welcome your inquiries.
+              <p className="max-w-[680px] text-[0.9rem] font-normal leading-[var(--leading-body)] text-white/55">
+                Our investor relations team is dedicated to providing timely and transparent communication.
+                <br />
+                We welcome your inquiries.
               </p>
             </div>
           </div>
@@ -67,13 +70,13 @@ function IRContactContent() {
         >
           <div className="max-w-[1280px] mx-auto px-6 md:px-10">
             <div className="mb-16 max-w-[640px]">
-              <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-5">
+              <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--color-text-muted)] mb-5">
                 Our Team
               </span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.1] mb-6">
+              <h2 className="text-[length:var(--text-h3)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[var(--leading-heading)] mb-6">
                 Meet the IR Team
               </h2>
-              <p className="text-[0.88rem] text-[#6B6B6B] leading-[1.82] font-normal">
+              <p className="text-[0.88rem] text-[var(--color-text-muted)] leading-loose font-normal">
                 Our dedicated investor relations professionals are here to assist you with financial inquiries, shareholder services, and corporate access.
               </p>
             </div>
@@ -104,10 +107,10 @@ function IRContactContent() {
                     </div>
                     <div>
                       <h3 className="text-base font-bold text-[var(--color-dark-bg)]">{member.name}</h3>
-                      <p className="text-[0.75rem] text-[#6B6B6B]">{member.title}</p>
+                      <p className="text-[0.75rem] text-[var(--color-text-muted)]">{member.title}</p>
                     </div>
                   </div>
-                  <div className="flex flex-wrap gap-x-8 gap-y-1 text-[0.82rem] text-[#6B6B6B]">
+                  <div className="flex flex-wrap gap-x-8 gap-y-1 text-[0.82rem] text-[var(--color-text-muted)]">
                     <span className="flex items-center gap-2">
                       <span className="text-[var(--color-accent)] text-[0.65rem]">●</span> {member.phone}
                     </span>
@@ -127,22 +130,22 @@ function IRContactContent() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7 }}
-          className="py-14 bg-[#F9F9F8] border-y border-[var(--color-border)]"
+          className="py-14 bg-[var(--color-bg-secondary)] border-y border-[var(--color-border)]"
         >
           <div className="max-w-[1280px] mx-auto px-6 md:px-10">
             <div className="grid md:grid-cols-2 gap-20">
               <div>
-                <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-5">
+                <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--color-text-muted)] mb-5">
                   Send a Message
                 </span>
-                <h2 className="text-[clamp(1.5rem,2.5vw,2.2rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.1] mb-6">
+                <h2 className="text-[length:var(--text-h3)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[var(--leading-heading)] mb-6">
                   Submit an Inquiry
                 </h2>
-                <p className="text-[0.88rem] text-[#6B6B6B] leading-[1.82] font-normal mb-8">
+                <p className="text-[0.88rem] text-[var(--color-text-muted)] leading-loose font-normal mb-8">
                   For investor-related inquiries, please fill out the form and our team will respond within one business day.
                 </p>
 
-                <div className="flex flex-col gap-2 text-[0.82rem] text-[#6B6B6B]">
+                <div className="flex flex-col gap-2 text-[0.82rem] text-[var(--color-text-muted)]">
                   <div className="flex items-center gap-3">
                     <span className="w-20 text-[0.62rem] font-bold uppercase tracking-[0.12em] text-[var(--color-dark-bg)]">Address</span>
                     <span>200 Liberty Street, 45th Floor, New York, NY 10281</span>
@@ -178,13 +181,13 @@ function IRContactContent() {
                   </div>
                   <div className="col-span-2">
                     <label className="block text-[0.62rem] font-bold uppercase tracking-[0.12em] text-[var(--color-dark-bg)] mb-2">Subject</label>
-                    <select className="w-full border border-[var(--color-border)] px-4 py-2.5 text-[0.82rem] text-[#6B6B6B] outline-none focus:border-[var(--color-accent)] transition-colors bg-white">
+                    <TemplateSelect className="w-full border border-[var(--color-border)] px-4 py-2.5 text-[0.82rem] text-[var(--color-text-muted)] outline-none focus:border-[var(--color-accent)] transition-colors bg-white">
                       <option>General Inquiry</option>
                       <option>Shareholder Services</option>
                       <option>Financial Information</option>
                       <option>Media / Press</option>
                       <option>Other</option>
-                    </select>
+                    </TemplateSelect>
                   </div>
                   <div className="col-span-2">
                     <label className="block text-[0.62rem] font-bold uppercase tracking-[0.12em] text-[var(--color-dark-bg)] mb-2">Message</label>
@@ -208,10 +211,10 @@ function IRContactContent() {
 }
 
 
-export default function IRContact(props: any) {
+export default function IRContact() {
   return (
     <React.Suspense fallback={null}>
-      <IRContactContent {...props} />
+      <IRContactContent />
     </React.Suspense>
   );
 }

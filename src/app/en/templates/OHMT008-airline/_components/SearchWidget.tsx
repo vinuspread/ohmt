@@ -97,7 +97,7 @@ export const SearchWidget = () => {
 
         {/* Mobile: 2x2 grid / Desktop: single row */}
         {/* Mobile Layout */}
-        <div className="md:hidden grid grid-cols-[1fr_auto_1fr] gap-0 border-b border-[#eee]">
+        <div className="md:hidden grid grid-cols-3 gap-0 border-b border-[#eee]">
           {/* FROM */}
           <div className="group px-4 py-4 hover:bg-[#fafafa] cursor-pointer transition-colors border-r border-[#eee]">
             <span className="text-[0.6rem] font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] block mb-1">From</span>

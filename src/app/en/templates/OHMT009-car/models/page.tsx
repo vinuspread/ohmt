@@ -25,10 +25,10 @@ function CarModelsPageContent() {
           <div className="max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)]">
             <div className="mb-10">
               <span className="text-[0.68rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-4 block">Our Lineup</span>
-              <h1 className="font-[family-name:var(--theme-font-heading)] text-[clamp(2.8rem,6vw,5.5rem)] font-bold tracking-tight leading-[1.1] mb-8">
+              <h1 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-display)] font-bold tracking-tight leading-[var(--leading-heading)] mb-8">
                 Every model,<br />a masterpiece.
               </h1>
-              <p className="text-[1.15rem] md:text-[1.25rem] text-white/70 font-normal leading-[1.6] max-w-[700px] break-keep">
+              <p className="text-[1.15rem] md:text-[1.25rem] text-white/70 font-normal leading-[var(--leading-body)] max-w-[700px] break-keep">
                 From all-electric pioneers to high-performance icons - each OHMT is engineered with obsessive attention to detail.
               </p>
             </div>
@@ -64,10 +64,10 @@ function CarModelsPageContent() {
 }
 
 
-export default function CarModelsPage(props: any) {
+export default function CarModelsPage() {
   return (
     <React.Suspense fallback={null}>
-      <CarModelsPageContent {...props} />
+      <CarModelsPageContent />
     </React.Suspense>
   );
 }

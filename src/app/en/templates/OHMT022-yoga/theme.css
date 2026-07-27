@@ -1,4 +1,13 @@
 :root {
+  --text-display: clamp(3rem, 7vw, 5.5rem);
+  --text-h1: clamp(2.5rem, 5vw, 4rem);
+  --text-h2: clamp(2rem, 4vw, 3rem);
+  --text-h3: clamp(1.5rem, 3vw, 2rem);
+  --text-lead: clamp(1.125rem, 2vw, 1.5rem);
+  --leading-display: 0.95;
+  --leading-heading: 1.1;
+  --leading-body: 1.6;
+
   --color-primary: #9B8B7A;
   --color-secondary: #3A4050;
   --color-accent: #C4956A;
@@ -32,6 +41,17 @@ body {
 .hero-bg-image {
   background-position: center top;
 }
+
+.ohmt022-yoga :where(h1, h2, h3, h4) {
+  overflow-wrap: break-word;
+  text-wrap: balance;
+}
+
+.ohmt022-yoga :where(p, blockquote, li, figcaption) {
+  overflow-wrap: break-word;
+  text-wrap: pretty;
+}
+
 @media (min-width: 768px) {
   .hero-bg-image {
     background-position: center -200px;

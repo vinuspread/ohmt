@@ -3,8 +3,6 @@
   "name": "Lumen Wedding",
   "name_ko": "루멘 웨딩",
   "category": "portfolio",
-  "description": "A wedding photography portfolio template for galleries, packages, documentary stories, and inquiry flows with a refined editorial light-mode style.",
-  "description_ko": "갤러리, 패키지, 다큐멘터리형 스토리, 문의 흐름을 세련된 라이트 모드로 구성한 웨딩 사진 포트폴리오 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {
@@ -34,6 +32,14 @@
         "weight": "400",
         "leading": "1.6",
         "style": "leading-relaxed"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
       }
     },
     "spacing": {
@@ -52,5 +58,7 @@
       "button": "bg-[var(--color-primary)] text-[var(--color-bg)] hover:opacity-95",
       "card_hover": "hover:scale-[1.01] transition-all duration-300"
     }
-  }
+  },
+  "thumbnail": "/templates/OHMT025-wedding/og-image.jpg",
+  "ogImage": "/templates/OHMT025-wedding/og-image.jpg"
 }

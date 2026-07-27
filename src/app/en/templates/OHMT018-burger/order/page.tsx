@@ -210,7 +210,7 @@ function OrderPageContent() {
                               key={opt.key}
                               onClick={() => setOrder(prev => ({
                                 ...prev,
-                                options: { ...prev.options, patty: opt.key as any }
+                                options: { ...prev.options, patty: opt.key as "single" | "double" | "triple" }
                               }))}
                               className={`border px-4 py-3 text-center transition-all rounded-full ${
                                 order.options.patty === opt.key
@@ -238,7 +238,7 @@ function OrderPageContent() {
                               key={opt.key}
                               onClick={() => setOrder(prev => ({
                                 ...prev,
-                                options: { ...prev.options, sauce: opt.key as any }
+                                options: { ...prev.options, sauce: opt.key as "default" | "extra" | "none" }
                               }))}
                               className={`border px-4 py-3 text-center transition-all rounded-full ${
                                 order.options.sauce === opt.key

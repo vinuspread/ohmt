@@ -1,0 +1,104 @@
+/* foundation Design Tokens */
+:root {
+  --text-display: clamp(3rem, 7vw, 5.5rem);
+  --text-h1: clamp(2.5rem, 5vw, 4rem);
+  --text-h2: clamp(2rem, 4vw, 3rem);
+  --text-h3: clamp(1.5rem, 3vw, 2rem);
+  --text-lead: clamp(1.125rem, 2vw, 1.5rem);
+  --leading-display: 0.95;
+  --leading-heading: 1.1;
+  --leading-body: 1.6;
+
+  --color-primary: #1D4ED8;
+  --color-secondary: #111827;
+  --color-bg: #F8FAFC;
+  --color-bg-secondary: #FFFFFF;
+  --color-text: #101412;
+  --color-text-muted: #5F6B75;
+  --color-text-contrast: #F5F7FA;
+  --color-border: rgba(17, 24, 39, 0.11);
+  --color-accent: #1D4ED8;
+  --color-primary-hover: #1E40AF;
+  --color-ink: #111827;
+  --color-field: #E2E8F0;
+  --color-hero-dark: #080D18;
+  --color-media-dark: #0E141D;
+  --color-media-accent: #9DBBFF;
+  --color-section-muted: #F4F5F6;
+
+  --container-width: 1440px;
+  --gutter-mobile: 24px;
+  --gutter-desktop: 48px;
+  --section-y-mobile: 64px;
+  --section-y-desktop: 128px;
+
+  --font-heading: var(--ohmt033-sans), Inter, Arial, sans-serif;
+  --font-body: var(--ohmt033-sans), Inter, Arial, sans-serif;
+
+  --focus-outline: 2px solid var(--color-primary);
+  --focus-outline-offset: 2px;
+}
+
+.ohmt033-foundation {
+  --font-heading: var(--ohmt033-sans), Inter, Arial, sans-serif;
+  --font-body: var(--ohmt033-sans), Inter, Arial, sans-serif;
+  font-family: var(--font-body);
+}
+
+.ohmt033-foundation .font-heading {
+  font-family: var(--font-heading) !important;
+}
+
+.ohmt033-foundation .font-body {
+  font-family: var(--font-body) !important;
+}
+
+.ohmt033-photo-frame {
+  position: relative;
+  isolation: isolate;
+}
+
+.ohmt033-photo-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  /* Disable heavy blue multiply overlay */
+  background: transparent;
+}
+
+.ohmt033-photo-cool {
+  /* Disable desaturated cool filter to preserve authentic image colors */
+  filter: none;
+}
+
+.ohmt033-mono-label {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  letter-spacing: 0.08em;
+}
+
+.ohmt033-contact-input {
+  height: 48px !important;
+  min-height: 48px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  box-sizing: border-box !important;
+}
+
+.ohmt033-fine-surface {
+  background-image:
+    linear-gradient(rgba(17, 24, 39, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(17, 24, 39, 0.035) 1px, transparent 1px);
+  background-size: 100% 72px, 72px 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

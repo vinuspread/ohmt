@@ -1,10 +1,8 @@
 {
   "slug": "OHMT008-airline",
   "name": "Travel Airline",
-  "name_ko": "트래블 항공",
+  "name_ko": "프리미엄 항공사",
   "category": "hospitality",
-  "description": "A premium airline template for destination discovery, flight booking, membership moments, and luxury travel storytelling across polished marketing pages.",
-  "description_ko": "목적지 탐색, 항공권 예약, 멤버십 경험, 럭셔리 여행 스토리를 세련된 마케팅 페이지로 엮은 프리미엄 항공 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {
@@ -38,6 +36,14 @@
       "mono": {
         "font": "JetBrains Mono",
         "weight": "400"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
       }
     },
     "spacing": {
@@ -53,5 +59,7 @@
       "transition_slow": "500ms",
       "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
     }
-  }
+  },
+  "thumbnail": "/templates/OHMT008-airline/og-image.jpg",
+  "ogImage": "/templates/OHMT008-airline/og-image.jpg"
 }

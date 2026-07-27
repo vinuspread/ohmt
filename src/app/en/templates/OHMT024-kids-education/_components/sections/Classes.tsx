@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "motion/react";
 import Link from "next/link";
 import { classes } from "../../data/data";
 
@@ -67,7 +67,7 @@ export default function Classes() {
                 <div className="w-20 h-20 shrink-0 rounded-2xl overflow-hidden shadow-sm">
                   <div
                     className="w-full h-full bg-cover bg-center group-hover:scale-110 transition-transform duration-300 ease-out"
-                    style={{ backgroundImage: `url(${item.image})`, backgroundColor: "#E8E3D9" }}
+                    style={{ backgroundImage: `url(${item.image})`, backgroundColor: "var(--color-bg-secondary)" }}
                   />
                 </div>
 
@@ -106,3 +106,4 @@ export default function Classes() {
     </section>
   );
 }
+

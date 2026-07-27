@@ -3,8 +3,6 @@
   "name": "Docs Workspace",
   "name_ko": "문서 워크스페이스",
   "category": "corporate",
-  "description": "A collaborative documentation workspace template for teams that need clean navigation, structured content, searchable sections, and a Notion-like product feel.",
-  "description_ko": "깔끔한 탐색, 구조화된 콘텐츠, 검색 가능한 섹션, 노션에 가까운 사용감을 갖춘 팀 협업 문서 워크스페이스 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {
@@ -38,6 +36,14 @@
       "mono": {
         "font": "JetBrains Mono, monospace",
         "weight": "400"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
       }
     },
     "spacing": {
@@ -53,5 +59,7 @@
       "transition_slow": "300ms",
       "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
     }
-  }
+  },
+  "thumbnail": "/templates/OHMT014-docs/og-image.jpg",
+  "ogImage": "/templates/OHMT014-docs/og-image.jpg"
 }

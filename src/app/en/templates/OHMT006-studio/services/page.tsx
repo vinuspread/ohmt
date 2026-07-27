@@ -107,10 +107,10 @@ function StudioServicesPageContent() {
 
                 {/* Top: index + category */}
                 <div className="flex items-baseline justify-between mb-10 md:mb-14">
-                  <span className="text-[clamp(3.5rem,8vw,7rem)] font-bold text-black/6 leading-none select-none">
+                  <span className="text-[length:var(--text-display)] font-bold text-black/6 leading-none select-none">
                     {s.idx}
                   </span>
-                  <span className="text-[12px] text-black/35 uppercase tracking-[0.2em]">
+                  <span className="text-xs text-black/35 uppercase tracking-[0.2em]">
                     {s.category}
                   </span>
                 </div>
@@ -130,13 +130,13 @@ function StudioServicesPageContent() {
                   {/* Content */}
                   <div className="flex flex-col justify-center space-y-8 md:space-y-10">
                     <div>
-                      <h2 className="text-[clamp(2rem,4vw,3.5rem)] font-bold leading-[1.1] text-black mb-3">
+                      <h2 className="text-[length:var(--text-h2)] font-bold leading-[var(--leading-heading)] text-black mb-3">
                         {s.title}
                       </h2>
-                      <p className="text-[15px] text-black/40 font-normal">{s.tagline}</p>
+                      <p className="text-sm text-black/40 font-normal">{s.tagline}</p>
                     </div>
 
-                    <p className="text-[16px] md:text-[17px] text-black/65 leading-[1.75] font-normal max-w-[520px]">
+                    <p className="text-base md:text-base text-black/65 leading-loose font-normal max-w-[520px]">
                       {s.desc}
                     </p>
 
@@ -145,7 +145,7 @@ function StudioServicesPageContent() {
                       {s.stats.map((stat, j) => (
                         <div key={j} className="px-6 py-4 text-center">
                           <p className="text-[1.1rem] md:text-[1.3rem] font-bold text-black leading-none mb-1">{stat.value}</p>
-                          <p className="text-[11px] text-black/35 uppercase tracking-wider">{stat.label}</p>
+                          <p className="text-xs text-black/35 uppercase tracking-wider">{stat.label}</p>
                         </div>
                       ))}
                     </div>
@@ -154,10 +154,10 @@ function StudioServicesPageContent() {
                     <div className="space-y-0 divide-y divide-black/8 border-t border-black/8" spellCheck={false}>
                       {s.process.map((phase) => (
                         <div key={phase.step} className="flex gap-6 py-4">
-                          <span className="text-[11px] text-black/25 shrink-0 pt-1">{phase.step}</span>
+                          <span className="text-xs text-black/25 shrink-0 pt-1">{phase.step}</span>
                           <div className="space-y-0.5">
-                            <p className="text-[14px] font-semibold text-black leading-snug">{phase.title}</p>
-                            <p className="text-[15px] text-black/45 font-normal leading-[1.4]">{phase.desc}</p>
+                            <p className="text-sm font-semibold text-black leading-snug">{phase.title}</p>
+                            <p className="text-sm text-black/45 font-normal leading-[var(--leading-body)]">{phase.desc}</p>
                           </div>
                         </div>
                       ))}
@@ -174,10 +174,10 @@ function StudioServicesPageContent() {
         <section className="bg-[var(--color-bg-dark)] text-white py-16 md:py-24">
           <div className="max-w-[1720px] mx-auto px-8 md:px-16 lg:px-24 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
             <div>
-              <h3 className="text-[clamp(1.8rem,4vw,3.5rem)] font-bold leading-[1.1] mb-4">
+              <h3 className="text-[length:var(--text-h2)] font-bold leading-[var(--leading-heading)] mb-4">
                 Ready to build your<br />spatial system?
               </h3>
-              <div className="flex flex-wrap gap-6 text-[12px] font-bold text-white/35">
+              <div className="flex flex-wrap gap-6 text-xs font-bold text-white/35">
                 <span>??98.6% Precision</span>
                 <span>??Zero Compromised Completions</span>
                 <span>??450+ Spaces Globally</span>
@@ -185,7 +185,7 @@ function StudioServicesPageContent() {
             </div>
             <Link
               href="/en/templates/OHMT006-studio/contact"
-              className="group shrink-0 flex items-center gap-4 px-8 py-4 border border-white bg-white text-black text-[13px] font-bold uppercase tracking-widest hover:bg-transparent hover:text-white transition-all duration-300"
+              className="group shrink-0 flex items-center gap-4 px-8 py-4 border border-white bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-transparent hover:text-white transition-all duration-300"
             >
               Start Project
               <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -199,10 +199,10 @@ function StudioServicesPageContent() {
   );
 }
 
-export default function StudioServicesPage(props: any) {
+export default function StudioServicesPage() {
   return (
     <React.Suspense fallback={null}>
-      <StudioServicesPageContent {...props} />
+      <StudioServicesPageContent />
     </React.Suspense>
   );
 }

@@ -24,7 +24,7 @@ function ShopPageContent() {
       <main className="antialiased min-h-screen pt-16 md:pt-20 bg-[var(--color-bg-secondary)] text-[var(--color-text)]">
         <section className="bg-[var(--color-bg-secondary)] py-16">
           <div className="max-w-[1440px] mx-auto px-6 md:px-12 text-center">
-            <h1 className="text-4xl lg:text-5xl font-bold tracking-tight">쇼핑</h1>
+            <h1 className="text-4xl lg:text-5xl font-bold tracking-tight">스토어</h1>
             <div className="flex flex-wrap justify-center gap-4 mt-8">
               <Link
                 href="/ko/templates/OHMT017-multi-shop/shop"
@@ -63,8 +63,7 @@ function ShopPageContent() {
               </div>
             ) : (
               <p className="text-center text-[var(--color-text-muted)] py-20">
-                상품이 없습니다.
-              </p>
+                현재 등록된 상품이 없습니다.</p>
             )}
           </div>
         </section>
@@ -83,4 +82,3 @@ export default function ShopPage() {
     </React.Suspense>
   );
 }
-

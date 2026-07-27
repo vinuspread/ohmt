@@ -15,10 +15,10 @@ export default function SpecShowcase() {
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
             System Specifications
           </span>
-          <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.2] text-[var(--color-text)] font-heading">
+          <h2 className="text-[length:var(--text-h1)] font-bold tracking-[-0.02em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading">
             Introducing OmniBot Gen 2
           </h2>
-          <p className="mt-4 mx-auto max-w-xl text-sm md:text-base text-[var(--color-text-muted)] leading-[1.2]">
+          <p className="mt-4 mx-auto max-w-xl text-sm md:text-base text-[var(--color-text-muted)] leading-[var(--leading-heading)]">
             Modular engineering meets next-generation micro-controllers. Engineered to integrate seamlessly into modern workspaces.
           </p>
         </div>
@@ -35,7 +35,7 @@ export default function SpecShowcase() {
                 <h3 className="text-lg font-bold text-[var(--color-text)] mb-2 font-heading transition-colors group-hover:text-[var(--color-accent)]">
                   {spec.title}
                 </h3>
-                <p className="text-sm text-[var(--color-text-muted)] leading-[1.2]">
+                <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-heading)]">
                   {spec.description}
                 </p>
                 {/* Pointer Line Element for desktop */}
@@ -65,7 +65,7 @@ export default function SpecShowcase() {
                 <h3 className="text-lg font-bold text-[var(--color-text)] mb-2 font-heading transition-colors group-hover:text-[var(--color-accent)]">
                   {spec.title}
                 </h3>
-                <p className="text-sm text-[var(--color-text-muted)] leading-[1.2]">
+                <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-heading)]">
                   {spec.description}
                 </p>
                 {/* Pointer Line Element for desktop */}
@@ -81,7 +81,7 @@ export default function SpecShowcase() {
             <h3 className="text-xl md:text-2xl font-bold text-white mb-2 font-heading">
               Real robotics. Real impact.
             </h3>
-            <p className="text-sm text-white/70 leading-[1.2]">
+            <p className="text-sm text-white/70 leading-[var(--leading-heading)]">
               Experience the capability of fully autonomous automation designed for real-world scaling and business optimization.
             </p>
           </div>

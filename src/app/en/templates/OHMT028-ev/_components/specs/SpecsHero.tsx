@@ -23,13 +23,13 @@ export function SpecsHero() {
       <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)] via-[var(--bg)]/40 to-[var(--bg)]/10" />
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 pb-16 md:pb-24">
         <div ref={ref}>
-          <p className="font-inter text-[11px] tracking-[0.15em] text-[var(--accent)] uppercase mb-4">
+          <p className="font-inter text-xs tracking-[0.15em] text-[var(--accent)] uppercase mb-4">
             Technical Specifications
           </p>
-          <h1 className="font-michroma text-[clamp(36px,4.5vw,64px)] text-[var(--text)] leading-[0.93] tracking-[-0.03em] mb-4">
+          <h1 className="font-michroma text-[length:var(--text-h1)] text-[var(--text)] leading-[var(--leading-display)] tracking-[-0.03em] mb-4">
             Built to spec.<br />Designed to last.
           </h1>
-          <p className="font-inter text-[15px] text-[var(--text-muted)] max-w-[440px] leading-relaxed">
+          <p className="font-inter text-sm text-[var(--text-muted)] max-w-[440px] leading-relaxed">
             Every number has a story. Here are all of them.
           </p>
         </div>

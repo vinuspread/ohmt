@@ -1,4 +1,4 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import { Instrument_Sans } from "next/font/google";
 import "./theme.css";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
@@ -10,10 +10,16 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "OHMT - 시그니처 코스탈 리조트",
-  description: "미니멀리즘 럭셔리가 깃든 해변의 은신처.",
+  title: "OHMT | 산토리니 해안 리조트",
+  description: "에게해의 절벽과 바다 사이에 자리한 스위트, 다이닝, 웰니스 중심의 해안 리조트입니다.",
+  twitter: {
+    card: "summary_large_image",
+    title: "OHMT | 산토리니 해안 리조트",
+    description: "에게해의 절벽과 바다 사이에 자리한 스위트, 다이닝, 웰니스 중심의 해안 리조트입니다.",
+    images: ["/templates/OHMT030-resort/og-image.jpg"],
+  },
   openGraph: {
-    title: "OHMT - 시그니처 코스탈 리조트",
+    title: "OHMT | 산토리니 해안 리조트",
     siteName: "OHMT",
     images: ["/templates/OHMT030-resort/og-image.jpg"],
   },
@@ -21,12 +27,16 @@ export const metadata: Metadata = {
 
 export default function ResortLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div
+    <>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" crossOrigin="anonymous" />
+      <div
       className={`resort-template ${instrumentSans.variable}`}
-      style={{ fontFamily: "'Noto Sans KR', var(--font-instrument-sans), sans-serif", backgroundColor: "var(--bg)" }}
+      style={{ fontFamily: "var(--font-body)", backgroundColor: "var(--bg)" }}
     >
-      <TemplateWrapper>{children}</TemplateWrapper>
+      <TemplateWrapper>
+          <div lang="ko" className="ohmt030-resort">{children}</div>
+        </TemplateWrapper>
     </div>
+    </>
   );
 }
-

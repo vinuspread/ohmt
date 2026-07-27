@@ -3,8 +3,6 @@
   "name": "Studio Corporate",
   "name_ko": "스튜디오 코퍼레이트",
   "category": "portfolio",
-  "description": "A studio portfolio template for architecture and design practices, pairing project imagery, service pages, material details, and a measured editorial voice.",
-  "description_ko": "건축 및 디자인 스튜디오를 위한 포트폴리오 템플릿. 프로젝트 이미지, 서비스 페이지, 소재 디테일, 절제된 에디토리얼 톤을 담았습니다.",
   "mode": "light",
   "theme": {
     "palette": {
@@ -13,7 +11,7 @@
       "accent": "#1A1A1A",
       "text": {
         "main": "#1A1A1A",
-        "muted": "#4A4A4A",
+        "muted": "#6E7488",
         "contrast": "#FFFFFF"
       },
       "ui": {
@@ -38,6 +36,14 @@
       "mono": {
         "font": "JetBrains Mono",
         "weight": "400"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
       }
     },
     "spacing": {
@@ -53,5 +59,7 @@
       "transition_slow": "500ms",
       "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
     }
-  }
+  },
+  "thumbnail": "/templates/OHMT006-studio/og-image.jpg",
+  "ogImage": "/templates/OHMT006-studio/og-image.jpg"
 }

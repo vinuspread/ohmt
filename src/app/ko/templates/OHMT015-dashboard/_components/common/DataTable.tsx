@@ -27,7 +27,7 @@ export function DataTable<T extends { id: string | number }>({
               {columns.map((col) => (
                 <th
                   key={col.key}
-                  className={`text-left text-[11px] uppercase tracking-[0.08em] text-[var(--color-text-muted)] font-medium px-4 py-3 ${col.className || ''}`}
+                  className={`text-left text-xs uppercase tracking-[0.08em] text-[var(--color-text-muted)] font-medium px-4 py-3 ${col.className || ''}`}
                 >
                   {col.label}
                 </th>
@@ -69,7 +69,7 @@ export function DataTable<T extends { id: string | number }>({
             <dl className="space-y-3">
               {columns.map((col) => (
                 <div key={col.key} className="flex min-w-0 items-start justify-between gap-3">
-                  <dt className="shrink-0 text-[11px] font-medium uppercase tracking-[0.08em] text-[var(--color-text-muted)]">
+                  <dt className="shrink-0 text-xs font-medium uppercase tracking-[0.08em] text-[var(--color-text-muted)]">
                     {col.label}
                   </dt>
                   <dd className="min-w-0 text-right text-sm text-[var(--color-text)]">

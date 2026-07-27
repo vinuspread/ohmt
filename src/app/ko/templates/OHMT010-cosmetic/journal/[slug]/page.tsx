@@ -14,7 +14,7 @@ const entries = [
     title: "스킨케어 속 비타민 C에 담긴 과학적 메커니즘.",
     date: "2026년 5월 20일",
     read: "5분",
-    excerpt: "빛나는 피부를 선사하는 비타민 C의 분자 구조적 이점과 필수성을 알아봅니다.",
+    excerpt: "빛나는 피부를 만드는 비타민 C의 과학적 원리와 그 중요성을 알아봅니다.",
     content: "비타민 C는 스킨케어에서 가장 강력한 항산화 성분 중 하나입니다. 활성산소를 억제하고 콜라겐 합성을 촉진하며 맑은 안색을 선사하는 효능 덕분에 필수적인 원료로 꼽힙니다.\n\n피부 장벽을 안전하고 효과적으로 통과하기 위해서는 성분의 안정성이 핵심입니다. 일반 아스코르브산은 산화되기 쉬워 효능이 빠르게 저하되는 반면, 메종이 개발한 안정화 공법은 활성 상태를 오랫동안 유지하며 피부 깊숙이 전달합니다.\n\n꾸준한 사용으로 색소 침착이 옅어지고, 피부 톤이 균일해지며, 탄력 있는 결이 서서히 형성됩니다. 비타민 C가 당신의 루틴에서 어떤 역할을 할 수 있는지, 지금부터 과학적으로 살펴보겠습니다."
   },
   {
@@ -23,14 +23,14 @@ const entries = [
     date: "2026년 5월 15일",
     read: "4분",
     excerpt: "지속 가능성은 단순한 구호가 아닌, 지구를 향한 우리의 변치 않는 약속입니다.",
-    content: "모든 제품은 그 내면의 숭고한 퀄리티를 대변할 수 있는 옷을 입어야 합니다. 유리는 원료 본연의 활성 상태와 온전함을 안전하게 보존하고, 탄소 발자국을 줄이며, 선물과도 같은 프리미엄 언박싱 경험을 완성합니다.\n\n플라스틱은 편리하지만 미세 플라스틱 용출과 재활용의 한계로 환경에 오랜 부담을 줍니다. 반면 유리는 내용물과 화학적으로 반응하지 않아 포뮬러의 순수성을 끝까지 지켜냅니다.\n\n메종의 모든 용기는 재사용 및 재활용을 전제로 설계되었습니다. 용기를 다시 채워 쓰는 리필 프로그램에 참여해 함께 지구를 지켜주세요."
+    content: "모든 제품에는 그 안에 담긴 품격에 어울리는 옷이 필요합니다. 유리는 원료 본연의 활성 상태와 온전함을 안전하게 보존하고, 탄소 발자국을 줄이며, 선물과도 같은 프리미엄 언박싱 경험을 완성합니다.\n\n플라스틱은 편리하지만 미세 플라스틱 용출과 재활용의 한계로 환경에 오랜 부담을 줍니다. 반면 유리는 내용물과 화학적으로 반응하지 않아 포뮬러의 순수성을 끝까지 지켜냅니다.\n\n메종의 모든 용기는 재사용 및 재활용을 전제로 설계되었습니다. 용기를 다시 채워 쓰는 리필 프로그램에 참여해 함께 지구를 지켜주세요."
   },
   {
     slug: "morning-routine-guide",
     title: "눈부신 아침 피부를 위한 완벽한 모닝 케어 가이드.",
     date: "2026년 5월 10일",
     read: "8분",
-    excerpt: "매일 찬란하게 빛나는 결을 가꾸기 위한 가장 기본적인 첫 단계를 마스터해보세요.",
+    excerpt: "매일 빛나는 피부결을 위한, 가장 기본적인 첫걸음을 배워보세요.",
     content: "일관된 아침 스킨 루틴은 건강한 피부의 기초를 다집니다. 순한 클렌징부터 철저한 자외선 차단까지, 각 단계가 지닌 고유한 중요성을 설명해 드립니다.\n\n1단계: 순한 젤 클렌저로 야간 피지와 잔여 제품을 부드럽게 제거합니다. 과도한 마찰은 피부 장벽을 손상시킬 수 있으니 손바닥으로 가볍게 거품을 낸 뒤 씻어냅니다.\n\n2단계: 비타민 C 세럼을 2~3방울 덜어 얼굴 전체에 얇게 펴 바릅니다. 흡수될 때까지 1분간 기다립니다.\n\n3단계: 보습제로 수분 장벽을 강화하고 피부를 촉촉하게 마무리합니다.\n\n4단계: 자외선 차단제는 생략할 수 없는 마지막 단계입니다. SPF 50 이상을 충분한 양으로 도포해야 합니다. 당신의 라이프스타일과 고유한 피부 타입에 꼭 맞는 솔루션을 처방해보세요."
   },
   {
@@ -76,23 +76,23 @@ function JournalDetailContent({ params }: { params: { slug: string } }) {
                 <span>읽는 시간 {entry.read}</span>
               </div>
 
-              <h1 className="text-[clamp(1.8rem,4vw,3rem)] font-normal tracking-tight leading-[1.15] mb-8 break-keep">
+              <h1 className="text-[length:var(--text-h2)] font-normal tracking-tight leading-[var(--leading-heading)] mb-8 break-keep">
                 {entry.title}
               </h1>
 
-              <p className="text-[1rem] text-black/50 leading-[1.9] mb-12 break-keep border-l-2 border-black/10 pl-6">
+              <p className="text-[1rem] text-black/50 leading-loose mb-12 break-keep border-l-2 border-black/10 pl-6">
                 {entry.excerpt}
               </p>
 
               <div className="border-t border-black/10 pt-12 space-y-6">
                 {entry.content.split("\n\n").map((para, i) => (
-                  <p key={i} className="text-[0.95rem] text-black/70 leading-[1.9] break-keep">{para}</p>
+                  <p key={i} className="text-[0.95rem] text-black/70 leading-loose break-keep">{para}</p>
                 ))}
               </div>
 
               <div className="mt-16 pt-8 border-t border-black/10">
-                <Link href="/ko/templates/OHMT010-cosmetic/journal" className="text-[0.75rem] font-bold uppercase tracking-[0.2em] text-black/40 hover:text-black transition-colors">
-                  ← 저널 목록으로
+                <Link href="/ko/templates/OHMT010-cosmetic/journal" className="inline-flex items-center gap-1.5 text-[0.75rem] font-bold uppercase tracking-[0.2em] text-black/40 hover:text-black transition-colors">
+                  <ChevronLeft size={14} /> 저널 목록으로
                 </Link>
               </div>
             </div>

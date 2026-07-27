@@ -1,0 +1,76 @@
+{
+  "slug": "OHMT033-foundation",
+  "name": "Foundation Impact",
+  "name_ko": "파운데이션 임팩트",
+  "category": "corporate",
+  "description": "A white-based CSR and foundation template that proves impact through restrained typography, documentary imagery, and verified data.",
+  "description_ko": "절제된 타이포그래피, 다큐멘터리 이미지, 검증 가능한 데이터로 사회적 임팩트를 보여주는 CSR 및 재단 템플릿.",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#1D4ED8",
+      "secondary": "#111827",
+      "accent": "#1D4ED8",
+      "background": "#F8FAFC",
+      "surface": "#FFFFFF",
+      "field": "#E2E8F0",
+      "heroDark": "#080D18",
+      "mediaDark": "#0E141D",
+      "mediaAccent": "#9DBBFF",
+      "sectionMuted": "#F4F5F6",
+      "text": {
+        "main": "#101412",
+        "muted": "#5F6B75",
+        "contrast": "#F5F7FA"
+      },
+      "ui": {
+        "border": "rgba(17, 24, 39, 0.11)",
+        "hover": "#EAF0FF",
+        "shadow": "none"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Pretendard, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+        "weight": "600-800",
+        "tracking": "tight",
+        "style": "font-semibold tracking-tight"
+      },
+      "body": {
+        "font": "Pretendard, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+        "weight": "400-600",
+        "leading": "1.6-1.7",
+        "style": "font-normal leading-relaxed"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
+      }
+    },
+    "spacing": {
+      "container": "1440px",
+      "gutter_mobile": "24px",
+      "gutter_desktop": "48px",
+      "section_y_mobile": "64px",
+      "section_y_desktop": "128px"
+    },
+    "shape": {
+      "image_radius": "0px",
+      "card_radius": "0px",
+      "button_radius": "0px"
+    },
+    "motion": {
+      "transition_fast": "250ms",
+      "transition_normal": "350ms-600ms",
+      "transition_slow": "900ms",
+      "easing": "cubic-bezier(0.16, 1, 0.3, 1)",
+      "reduced_motion": true
+    }
+  },
+  "thumbnail": "/templates/OHMT033-foundation/og-image.jpg",
+  "ogImage": "/templates/OHMT033-foundation/og-image.jpg"
+}

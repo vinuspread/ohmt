@@ -1,0 +1,66 @@
+{
+  "slug": "OHMT037-figure-shop",
+  "name": "Forma Figures",
+  "name_ko": "포르마 피규어",
+  "category": "retail",
+  "description": "An edition-catalog webshop for collectible designer figures: seasonal drops, line explorer, spec-driven product pages, and a light cart.",
+  "description_ko": "컬렉터블 피규어 판매에 맞춘 카탈로그형 쇼핑몰 템플릿입니다. 신규 발매, 제품 라인별 탐색, 상세 사양, 장바구니 기능을 포함합니다.",
+  "mode": "light",
+  "theme": {
+    "palette": {
+      "primary": "#FFFFFF",
+      "secondary": "#1B1B18",
+      "accent": "#E8501E",
+      "text": {
+        "main": "#1B1B18",
+        "muted": "rgba(27, 27, 24, 0.6)",
+        "contrast": "#F2F1EC"
+      },
+      "ui": {
+        "border": "rgba(27, 27, 24, 0.1)",
+        "hover": "#F3F3F3",
+        "shadow": "none"
+      }
+    },
+    "typography": {
+      "heading": {
+        "font": "Pretendard, Pretendard Variable, system-ui, sans-serif",
+        "weight": "650",
+        "tracking": "0",
+        "leading": "1.1",
+        "style": "font-semibold tracking-normal"
+      },
+      "body": {
+        "font": "Pretendard, Pretendard Variable, system-ui, sans-serif",
+        "weight": "400",
+        "tracking": "0",
+        "leading": "1.6",
+        "style": "leading-relaxed"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
+      }
+    },
+    "spacing": {
+      "page_pt": "0px",
+      "container": "1440px",
+      "gutter": "24px",
+      "card_gap": "1px"
+    },
+    "motion": {
+      "transition_fast": "160ms",
+      "transition_normal": "240ms",
+      "transition_slow": "400ms",
+      "easing": "cubic-bezier(0.23, 1, 0.32, 1)"
+    },
+    "interaction": {
+      "button": "rounded-full border border-[var(--color-ink)] text-[var(--color-ink)] hover:bg-[var(--color-ink)] hover:text-white",
+      "card_hover": "hover:bg-[var(--color-bg-tile-deep)] transition-colors duration-200"
+    }
+  }
+}

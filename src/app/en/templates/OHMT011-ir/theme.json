@@ -3,8 +3,6 @@
   "name": "Corporate IR",
   "name_ko": "기업 IR",
   "category": "corporate",
-  "description": "An investor relations template for financial highlights, governance, filings, news, and shareholder communication with a clear corporate information structure.",
-  "description_ko": "재무 하이라이트, 지배구조, 공시, 뉴스, 주주 커뮤니케이션을 명확한 기업 정보 구조로 정리한 IR 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {
@@ -13,7 +11,7 @@
       "accent": "#B8962E",
       "text": {
         "main": "#111111",
-        "muted": "#4A4A4A",
+        "muted": "#6B6B6B",
         "contrast": "#FFFFFF"
       },
       "ui": {
@@ -38,6 +36,14 @@
       "mono": {
         "font": "JetBrains Mono",
         "weight": "400"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
       }
     },
     "spacing": {
@@ -53,5 +59,7 @@
       "transition_slow": "500ms",
       "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
     }
-  }
+  },
+  "thumbnail": "/templates/OHMT011-ir/og-image.jpg",
+  "ogImage": "/templates/OHMT011-ir/og-image.jpg"
 }

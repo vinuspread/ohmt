@@ -31,7 +31,7 @@ export function DesignGallery() {
 
         {/* Header */}
         <div className="flex items-center justify-between mb-10">
-          <h2 className="font-michroma text-[clamp(24px,2.5vw,40px)] text-[var(--text)] leading-[1.0] tracking-[-0.02em]">
+          <h2 className="font-michroma text-[length:var(--text-h3)] text-[var(--text)] leading-[var(--leading-display)] tracking-[-0.02em]">
             Design in detail
           </h2>
           <div className="flex gap-1 border border-[var(--border)] rounded-full p-1">
@@ -39,7 +39,7 @@ export function DesignGallery() {
               <button
                 key={t}
                 onClick={() => handleTab(t)}
-                className={`px-5 py-2 rounded-full font-inter text-[12px] tracking-[0.04em] transition-all duration-200 capitalize ${
+                className={`px-5 py-2 rounded-full font-inter text-xs tracking-[0.04em] transition-all duration-200 capitalize ${
                   tab === t
                     ? "bg-[var(--text)] text-[var(--bg)]"
                     : "text-[var(--text-muted)] hover:text-[var(--text)]"
@@ -64,13 +64,13 @@ export function DesignGallery() {
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
           {/* Left: label + title + desc */}
           <div className="max-w-[480px]">
-            <p className="font-inter text-[11px] tracking-[0.12em] text-[var(--accent)] uppercase mb-2 capitalize">
+            <p className="font-inter text-xs tracking-[0.12em] text-[var(--accent)] uppercase mb-2 capitalize">
               {tab}
             </p>
-            <h3 className="font-michroma text-[clamp(20px,2vw,30px)] text-[var(--text)] leading-[1.05] tracking-[-0.02em] mb-3">
+            <h3 className="font-michroma text-[length:var(--text-lead)] text-[var(--text)] leading-[var(--leading-heading)] tracking-[-0.02em] mb-3">
               {featured.title}
             </h3>
-            <p className="font-inter text-[14px] text-[var(--text-muted)] leading-relaxed">
+            <p className="font-inter text-sm text-[var(--text-muted)] leading-relaxed">
               {featured.desc}
             </p>
           </div>

@@ -12,11 +12,11 @@ export default function Features() {
             <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
               Core Capabilities
             </span>
-            <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-none text-[var(--color-text)] font-heading">
+            <h2 className="text-[length:var(--text-h1)] font-bold tracking-[-0.02em] leading-none text-[var(--color-text)] font-heading">
               Key features engineered for impact
             </h2>
           </div>
-          <p className="max-w-md text-sm md:text-base text-[var(--color-text-muted)] leading-[1.2]">
+          <p className="max-w-md text-sm md:text-base text-[var(--color-text-muted)] leading-[var(--leading-heading)]">
             Every subsystem is crafted to combine maximum reliability with next-generation machine intelligence to drive actual performance.
           </p>
         </div>
@@ -42,7 +42,7 @@ export default function Features() {
                 <h3 className="text-lg font-bold text-[var(--color-text)] mb-3 font-heading transition-colors group-hover:text-[var(--color-accent)]">
                   {feature.title}
                 </h3>
-                <p className="text-sm text-[var(--color-text-muted)] leading-[1.2] mb-6 flex-grow">
+                <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-heading)] mb-6 flex-grow">
                   {feature.description}
                 </p>
 

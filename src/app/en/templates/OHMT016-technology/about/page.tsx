@@ -1,9 +1,13 @@
-"use client"
-
+import type { Metadata } from "next";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 import Header from '../_components/Header'
 import Footer from '../_components/Footer'
+
+export const metadata: Metadata = {
+  title: "About - OHMT Technology",
+  description: "Company founded with a vision to democratize advanced robotics and autonomous hardware systems.",
+};
 
 const timeline = [
   { year: '2024', event: 'Company founded with a vision to democratize advanced robotics and autonomous hardware systems.' },
@@ -54,10 +58,10 @@ export default function TechnologyAboutPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
           <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
-            <h1 className="mb-4 text-[clamp(2.2rem,5vw,3.8rem)] font-bold tracking-[-0.03em] leading-[1.15] text-white font-heading">
+            <h1 className="mb-4 text-[length:var(--text-h1)] font-bold tracking-[-0.03em] leading-[var(--leading-heading)] text-white font-heading">
               Architecting the Physical Future
             </h1>
-            <p className="mx-auto max-w-2xl text-base md:text-lg text-white/70 leading-[1.2]">
+            <p className="mx-auto max-w-2xl text-base md:text-lg text-white/70 leading-[var(--leading-heading)]">
               We build intelligent hardware systems that bridge the gap between artificial intelligence and the physical world, enabling autonomous capabilities at scale.
             </p>
           </div>
@@ -72,18 +76,18 @@ export default function TechnologyAboutPage() {
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
                   Who We Are
                 </span>
-                <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.2] text-[var(--color-text)] font-heading">
+                <h2 className="text-[length:var(--text-h1)] font-bold tracking-[-0.02em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading">
                   Built on the belief that machines should work for people
                 </h2>
               </div>
               <div className="flex flex-col gap-6 pt-2">
-                <p className="text-base text-[var(--color-text-muted)] leading-[1.8]">
+                <p className="text-base text-[var(--color-text-muted)] leading-loose">
                   Robotflow was founded by a team of engineers and researchers who believed that the next leap in productivity would come not from software alone, but from machines that could understand and navigate the physical world with human-level intelligence.
                 </p>
-                <p className="text-base text-[var(--color-text-muted)] leading-[1.8]">
+                <p className="text-base text-[var(--color-text-muted)] leading-loose">
                   Our systems are built from the ground up with autonomy in mind - combining on-device AI, advanced sensor fusion, and modular hardware to create robots that adapt to real environments, not just controlled demos.
                 </p>
-                <p className="text-base text-[var(--color-text-muted)] leading-[1.8]">
+                <p className="text-base text-[var(--color-text-muted)] leading-loose">
                   Today, Robotflow operates across logistics, manufacturing, and research sectors, with offices in San Francisco and Seoul. We remain committed to one principle: that intelligent automation should be accessible, reliable, and built to last.
                 </p>
               </div>
@@ -100,7 +104,7 @@ export default function TechnologyAboutPage() {
                 <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
                   Milestones
                 </span>
-                <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.2] text-[var(--color-text)] font-heading mb-6">
+                <h2 className="text-[length:var(--text-h1)] font-bold tracking-[-0.02em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading mb-6">
                   Our Journey
                 </h2>
               </div>
@@ -120,7 +124,7 @@ export default function TechnologyAboutPage() {
                       <span className="text-xs font-bold uppercase tracking-[0.15em] text-[var(--color-accent)] block mb-2">
                         {item.year}
                       </span>
-                      <p className="text-sm text-[var(--color-text-muted)] leading-[1.6]">
+                      <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-body)]">
                         {item.event}
                       </p>
                     </div>
@@ -138,7 +142,7 @@ export default function TechnologyAboutPage() {
               <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
                 Leadership
               </span>
-              <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.2] text-[var(--color-text)] font-heading">
+              <h2 className="text-[length:var(--text-h1)] font-bold tracking-[-0.02em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading">
                 Meet Our Team
               </h2>
             </div>
@@ -159,7 +163,7 @@ export default function TechnologyAboutPage() {
                   <span className="text-xs font-semibold uppercase tracking-[0.1em] text-[var(--color-accent)] mb-3 block">
                     {member.role}
                   </span>
-                  <p className="text-sm text-[var(--color-text-muted)] leading-[1.2]">
+                  <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-heading)]">
                     {member.bio}
                   </p>
                 </div>

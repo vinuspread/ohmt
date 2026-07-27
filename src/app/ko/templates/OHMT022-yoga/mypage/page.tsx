@@ -7,17 +7,17 @@ import PageHeader from "../_components/PageHeader";
 import Footer from "../_components/Footer";
 
 const MY_SCHEDULE = [
-  { date: "6월 16일 (월)", time: "오전 7:00", name: "비니야사 플로우", instructor: "소피아 첸", status: "예정" },
-  { date: "6월 18일 (수)", time: "오후 6:30", name: "하타 요가",      instructor: "레나 박",   status: "예정" },
-  { date: "6월 20일 (금)", time: "오전 8:00", name: "명상",           instructor: "마커스 웹", status: "예정" },
-  { date: "6월 9일 (월)",  time: "오전 7:00", name: "비니야사 플로우", instructor: "소피아 첸", status: "완료" },
-  { date: "6월 6일 (금)",  time: "오후 6:30", name: "필라테스",       instructor: "레나 박",   status: "완료" },
+  { date: "6월 16일", time: "오전 7:00", name: "빈야사 플로우", instructor: "소피아 첸", status: "예정" },
+  { date: "6월 18일", time: "오후 6:30", name: "하타 요가",      instructor: "레나 박",   status: "예정" },
+  { date: "6월 20일", time: "오전 8:00", name: "명상",           instructor: "마커스 웹", status: "예정" },
+  { date: "6월 9일",  time: "오전 7:00", name: "빈야사 플로우", instructor: "소피아 첸", status: "완료" },
+  { date: "6월 6일",  time: "오후 6:30", name: "필라테스",       instructor: "레나 박",   status: "완료" },
 ];
 
 const PAYMENT_HISTORY = [
-  { date: "2026. 6. 1",  desc: "월 정기권",  amount: "89,000원",  status: "결제완료" },
-  { date: "2026. 5. 1",  desc: "월 정기권",  amount: "89,000원",  status: "결제완료" },
-  { date: "2026. 4. 1",  desc: "월 정기권",  amount: "89,000원",  status: "결제완료" },
+  { date: "2026. 6. 1",  desc: "월 정기권",  amount: "89,000원",  status: "결제 완료" },
+  { date: "2026. 5. 1",  desc: "월 정기권",  amount: "89,000원",  status: "결제 완료" },
+  { date: "2026. 4. 1",  desc: "월 정기권",  amount: "89,000원",  status: "결제 완료" },
 ];
 
 function MyPageContent() {
@@ -41,19 +41,19 @@ function MyPageContent() {
             />
             <div>
               <p
-                className="text-[12px] tracking-[0.22em] uppercase text-[var(--color-text-muted)] mb-1"
+                className="text-xs tracking-[0.22em] uppercase text-[var(--color-text-muted)] mb-1"
                 style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
               >
                 2024년 가입
               </p>
               <h2
-                className="text-[20px] font-light text-[var(--color-text)] tracking-[-0.01em]"
+                className="text-xl font-light text-[var(--color-text)] tracking-[-0.01em]"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 김지수
               </h2>
               <p
-                className="mt-0.5 text-[15px] text-[var(--color-text-muted)]"
+                className="mt-0.5 text-sm text-[var(--color-text-muted)]"
                 style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
               >
                 jisoo.kim@email.com
@@ -62,27 +62,25 @@ function MyPageContent() {
           </div>
           <div className="pt-6 border-t border-[var(--color-border)]">
             <p
-              className="text-[12px] tracking-[0.22em] uppercase text-[var(--color-text-muted)] mb-2"
+              className="text-xs tracking-[0.22em] uppercase text-[var(--color-text-muted)] mb-2"
               style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
             >
-              현재 플랜
-            </p>
+              이용 중인 정기권</p>
             <p
-              className="text-[16px] font-light text-[var(--color-text)]"
+              className="text-base font-light text-[var(--color-text)]"
               style={{ fontFamily: "var(--font-body)" }}
             >
               월 정기권
             </p>
             <p
-              className="mt-1 text-[15px] text-[var(--color-text-muted)]"
+              className="mt-1 text-sm text-[var(--color-text-muted)]"
               style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
             >
-              2026. 7. 1 갱신 · 89,000원/월
-            </p>
+              매월 1일 갱신 · 월 89,000원</p>
           </div>
           <Link
             href="/ko/templates/OHMT022-yoga/schedule"
-            className="mt-2 inline-flex items-center gap-2 text-[11px] tracking-[0.2em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] font-medium transition-colors"
+            className="mt-2 inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] font-medium transition-colors"
             style={{ fontFamily: "var(--font-body)" }}
           >
             클래스 예약 →
@@ -92,19 +90,19 @@ function MyPageContent() {
         {/* 스탯 */}
         <div className="col-span-1 lg:col-span-3 grid grid-cols-3 divide-x divide-[var(--color-border)]">
           {[
-            { value: "48",    label: "수강 횟수" },
-            { value: "12",    label: "이번 달" },
-            { value: "6개월", label: "연속 수강" },
+            { value: "48",    label: "누적 수강" },
+            { value: "12",    label: "이번 달 수강" },
+            { value: "6개월", label: "연속 이용" },
           ].map((stat) => (
             <div key={stat.label} className="flex flex-col justify-center px-8 py-8 border-b lg:border-b-0 border-[var(--color-border)]">
               <p
-                className="text-[clamp(2rem,4vw,3rem)] font-light text-[var(--color-text)] tracking-[-0.02em] whitespace-nowrap"
+                className="text-[length:var(--text-h2)] font-light text-[var(--color-text)] tracking-[-0.02em] whitespace-nowrap"
                 style={{ fontFamily: "var(--font-heading)" }}
               >
                 {stat.value}
               </p>
               <p
-                className="mt-2 text-[11px] tracking-[0.08em] uppercase text-[var(--color-text-muted)] whitespace-nowrap"
+                className="mt-2 text-xs tracking-[0.08em] uppercase text-[var(--color-text-muted)] whitespace-nowrap"
                 style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
               >
                 {stat.label}
@@ -118,34 +116,32 @@ function MyPageContent() {
       <section className="bg-[var(--color-bg)] border-b border-[var(--color-border)]">
         <div className="px-8 md:px-14 lg:px-20 pt-20 pb-14 border-b border-[var(--color-border)]">
           <p
-            className="text-[12px] tracking-[0.25em] uppercase text-[var(--color-text-muted)] mb-4"
+            className="text-xs tracking-[0.25em] uppercase text-[var(--color-text-muted)] mb-4"
             style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
           >
-            예약 내역
-          </p>
+            클래스 예약</p>
           <h2
-            className="text-[clamp(1.6rem,3vw,2.8rem)] font-light text-[var(--color-text)] leading-[1.05] tracking-[-0.02em]"
+            className="text-[length:var(--text-h2)] font-light text-[var(--color-text)] leading-[var(--leading-heading)] tracking-[-0.02em]"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            나의 스케줄
-          </h2>
+            예약한 클래스</h2>
         </div>
 
         <div className="divide-y divide-[var(--color-border)]">
           {MY_SCHEDULE.map((item, i) => (
             <div
               key={i}
-              className="grid grid-cols-[5rem_1fr] md:grid-cols-[8rem_1fr_auto] items-center gap-x-6 md:gap-x-10 px-8 md:px-14 lg:px-20 py-6"
+              className="grid grid-cols-2 md:grid-cols-3 items-center gap-x-6 md:gap-x-10 px-8 md:px-14 lg:px-20 py-6"
             >
               <div>
                 <p
-                  className="text-[11px] tracking-[0.08em] uppercase text-[var(--color-text-muted)]"
+                  className="text-xs tracking-[0.08em] uppercase text-[var(--color-text-muted)]"
                   style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
                 >
                   {item.date}
                 </p>
                 <p
-                  className="mt-0.5 text-[14px] text-[var(--color-text-muted)]"
+                  className="mt-0.5 text-sm text-[var(--color-text-muted)]"
                   style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
                 >
                   {item.time}
@@ -153,13 +149,13 @@ function MyPageContent() {
               </div>
               <div className="min-w-0">
                 <p
-                  className="text-[15px] font-light text-[var(--color-text)] tracking-[-0.01em]"
+                  className="text-sm font-light text-[var(--color-text)] tracking-[-0.01em]"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
                   {item.name}
                 </p>
                 <p
-                  className="mt-0.5 text-[14px] text-[var(--color-text-muted)]"
+                  className="mt-0.5 text-sm text-[var(--color-text-muted)]"
                   style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
                 >
                   {item.instructor}
@@ -167,7 +163,7 @@ function MyPageContent() {
               </div>
               <div className="hidden md:flex items-center gap-4">
                 <span
-                  className={`text-[10px] tracking-[0.15em] uppercase ${
+                  className={`text-xs tracking-[0.15em] uppercase ${
                     item.status === "완료" ? "text-[var(--color-text-muted)]" : "text-[var(--color-text)]"
                   }`}
                   style={{ fontFamily: "var(--font-body)", fontWeight: item.status === "예정" ? 500 : 300 }}
@@ -176,7 +172,7 @@ function MyPageContent() {
                 </span>
                 {item.status === "예정" && (
                   <button
-                    className="text-[10px] tracking-[0.15em] uppercase text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
+                    className="text-xs tracking-[0.15em] uppercase text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
                     style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
                   >
                     취소
@@ -195,13 +191,12 @@ function MyPageContent() {
         <div className="border-b md:border-b-0 md:border-r border-[var(--color-border)] bg-[var(--color-bg-alt)]">
           <div className="px-8 md:px-14 lg:px-20 pt-14 pb-8 border-b border-[var(--color-border)]">
             <p
-              className="text-[11px] tracking-[0.25em] uppercase text-[var(--color-text-muted)] mb-3"
+              className="text-xs tracking-[0.25em] uppercase text-[var(--color-text-muted)] mb-3"
               style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
             >
-              청구
-            </p>
+              결제</p>
             <h2
-              className="text-[clamp(1.4rem,2vw,2rem)] font-light text-[var(--color-text)] leading-[1.05] tracking-[-0.02em]"
+              className="text-[length:var(--text-lead)] font-light text-[var(--color-text)] leading-[var(--leading-heading)] tracking-[-0.02em]"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               결제 내역
@@ -209,28 +204,28 @@ function MyPageContent() {
           </div>
           <div className="divide-y divide-[var(--color-border)]">
             {PAYMENT_HISTORY.map((item, i) => (
-              <div key={i} className="grid grid-cols-[5rem_1fr_auto] md:grid-cols-[8rem_1fr_auto] items-center gap-x-6 md:gap-x-10 px-8 md:px-14 lg:px-20 py-5">
+              <div key={i} className="grid grid-cols-3 md:grid-cols-3 items-center gap-x-6 md:gap-x-10 px-8 md:px-14 lg:px-20 py-5">
                 <p
-                  className="text-[14px] text-[var(--color-text-muted)]"
+                  className="text-sm text-[var(--color-text-muted)]"
                   style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
                 >
                   {item.date}
                 </p>
                 <p
-                  className="text-[14px] font-light text-[var(--color-text)] truncate"
+                  className="text-sm font-light text-[var(--color-text)] truncate"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
                   {item.desc}
                 </p>
                 <div className="flex items-center gap-4">
                   <p
-                    className="text-[14px] font-light text-[var(--color-text)]"
+                    className="text-sm font-light text-[var(--color-text)]"
                     style={{ fontFamily: "var(--font-body)" }}
                   >
                     {item.amount}
                   </p>
                   <span
-                    className="text-[10px] tracking-[0.15em] uppercase text-[var(--color-text-muted)]"
+                    className="text-xs tracking-[0.15em] uppercase text-[var(--color-text-muted)]"
                     style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
                   >
                     {item.status}
@@ -245,13 +240,13 @@ function MyPageContent() {
         <div className="bg-[var(--color-bg)]">
           <div className="px-8 md:px-14 lg:px-20 pt-14 pb-8 border-b border-[var(--color-border)]">
             <p
-              className="text-[11px] tracking-[0.25em] uppercase text-[var(--color-text-muted)] mb-3"
+              className="text-xs tracking-[0.25em] uppercase text-[var(--color-text-muted)] mb-3"
               style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
             >
               프로필
             </p>
             <h2
-              className="text-[clamp(1.4rem,2vw,2rem)] font-light text-[var(--color-text)] leading-[1.05] tracking-[-0.02em]"
+              className="text-[length:var(--text-lead)] font-light text-[var(--color-text)] leading-[var(--leading-heading)] tracking-[-0.02em]"
               style={{ fontFamily: "var(--font-heading)" }}
             >
               계정 설정
@@ -271,24 +266,23 @@ function MyPageContent() {
               >
                 <div className="flex items-center gap-6 min-w-0">
                   <p
-                    className="text-[11px] tracking-[0.18em] uppercase text-[var(--color-text-muted)] w-24 flex-shrink-0"
+                    className="text-xs tracking-[0.18em] uppercase text-[var(--color-text-muted)] w-24 flex-shrink-0"
                     style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
                   >
                     {field.label}
                   </p>
                   <p
-                    className="text-[14px] font-light text-[var(--color-text)] truncate"
+                    className="text-sm font-light text-[var(--color-text)] truncate"
                     style={{ fontFamily: "var(--font-body)" }}
                   >
                     {field.value}
                   </p>
                 </div>
                 <button
-                  className="text-[10px] tracking-[0.18em] uppercase text-[var(--color-text-muted)] hover:text-[var(--color-text)] font-medium transition-colors opacity-0 group-hover:opacity-100 flex-shrink-0 ml-4"
+                  className="text-xs tracking-[0.18em] uppercase text-[var(--color-text-muted)] hover:text-[var(--color-text)] font-medium transition-colors opacity-0 group-hover:opacity-100 flex-shrink-0 ml-4"
                   style={{ fontFamily: "var(--font-body)" }}
                 >
-                  수정 →
-                </button>
+                  변경 →</button>
               </div>
             ))}
           </div>

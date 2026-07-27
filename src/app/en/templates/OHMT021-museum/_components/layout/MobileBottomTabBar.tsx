@@ -1,10 +1,9 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Home, Ticket, ShoppingBag, Menu, ChevronUp } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 
 interface MobileBottomTabBarProps {
   isMenuOpen: boolean;
@@ -50,58 +49,64 @@ export default function MobileBottomTabBar({ isMenuOpen, onMenuToggle, onTicketC
     return pathname.startsWith(href);
   };
 
-  const handleTicketClick = () => {
-    // This will be handled by the parent component
-    onMenuToggle();
-  };
-
   return (
     <motion.div
       initial={{ y: 100 }}
       animate={{ y: 0 }}
       transition={{ type: "spring", damping: 25, stiffness: 200 }}
-      className="fixed bottom-0 left-0 right-0 z-[80] bg-[var(--color-primary)] border-t border-[var(--color-accent)]/10"
+      className="fixed inset-x-0 bottom-0 z-[80] w-full max-w-full overflow-x-clip border-t border-[var(--color-accent)]/10 bg-[var(--color-primary)] pb-[env(safe-area-inset-bottom)]"
     >
-      <div className="flex justify-around items-center py-3 px-2">
+      <nav className="grid w-full max-w-full grid-cols-4 items-center gap-1 px-2 py-3">
         {navItems.map((item) => {
           const isActiveItem = isActive(item.href);
           const Icon = isActiveItem ? item.activeIcon : item.icon;
-          const handleClick = item.isAction ? onTicketClick : undefined;
-
-          return (
-            <Link
-              key={item.name}
-              href={item.href}
-              onClick={handleClick}
-              className={`flex flex-col items-center justify-center w-14 h-14 rounded-xl transition-all duration-300 ${
-                isActiveItem
-                  ? "text-[var(--color-accent)] bg-[var(--color-accent)]/10"
-                  : "text-[var(--color-accent)]/50 hover:text-[var(--color-accent)] hover:bg-[var(--color-accent)]/5"
-              }`}
-            >
-              <Icon size={18} className="mb-2" />
-              <span className="text-[7px] uppercase tracking-[0.15em] font-medium leading-[1.0]">
+          const content = (
+            <>
+              <Icon size={18} className="mb-1.5 shrink-0" />
+              <span className="block max-w-full overflow-hidden text-ellipsis whitespace-nowrap text-xs font-medium uppercase leading-none tracking-[0.06em]">
                 {item.name}
               </span>
-            </Link>
+            </>
+          );
+
+          const className = `mx-auto flex h-14 w-full min-w-0 max-w-[76px] flex-col items-center justify-center rounded-xl px-1 transition-all duration-300 ${
+            isActiveItem
+              ? "bg-[var(--color-accent)]/10 text-[var(--color-accent)]"
+              : "text-[var(--color-accent)]/50 hover:bg-[var(--color-accent)]/5 hover:text-[var(--color-accent)]"
+          }`;
+
+          return item.isAction ? (
+            <button
+              key={item.name}
+              type="button"
+              onClick={onTicketClick}
+              className={className}
+            >
+              {content}
+            </button>
+          ) : (
+            <a key={item.name} href={item.href} className={className}>
+              {content}
+            </a>
           );
         })}
 
         {/* Menu Button */}
         <button
           onClick={onMenuToggle}
-          className={`flex flex-col items-center justify-center w-14 h-14 rounded-xl transition-all duration-300 ${
+          className={`mx-auto flex h-14 w-full min-w-0 max-w-[76px] flex-col items-center justify-center rounded-xl px-1 transition-all duration-300 ${
             isMenuOpen
-              ? "text-[var(--color-accent)] bg-[var(--color-accent)]/10"
-              : "text-[var(--color-accent)]/50 hover:text-[var(--color-accent)] hover:bg-[var(--color-accent)]/5"
+              ? "bg-[var(--color-accent)]/10 text-[var(--color-accent)]"
+              : "text-[var(--color-accent)]/50 hover:bg-[var(--color-accent)]/5 hover:text-[var(--color-accent)]"
           }`}
         >
-          <Menu size={18} className="mb-2" />
-          <span className="text-[7px] uppercase tracking-[0.15em] font-medium leading-[1.0]">
+          <Menu size={18} className="mb-1.5 shrink-0" />
+          <span className="block max-w-full overflow-hidden text-ellipsis whitespace-nowrap text-xs font-medium uppercase leading-none tracking-[0.06em]">
             Menu
           </span>
         </button>
-      </div>
+      </nav>
     </motion.div>
   );
 }
+

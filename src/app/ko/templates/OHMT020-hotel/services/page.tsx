@@ -28,13 +28,13 @@ function ServicesPageContent() {
         {/* Hero Section */}
         <section className="relative h-[40vh] md:h-[50vh] flex items-center bg-[var(--color-primary)] overflow-hidden">
           <div className="absolute inset-0">
-            <img src="/templates/OHMT020-hotel/hero-main.jpg" alt="Services" className="w-full h-full object-cover opacity-50" />
+            <img src="/templates/OHMT020-hotel/hero-main.jpg" alt="서비스와 부대시설" className="w-full h-full object-cover opacity-50" />
             <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)] via-[var(--color-primary)]/40 to-transparent" />
           </div>
           <div className="relative z-10 max-w-[1440px] mx-auto px-6 md:px-12 w-full pt-20">
             <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-              <span className="text-[12px] font-medium text-[var(--color-accent)] tracking-tight block mb-3">리조트 경험</span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-[var(--font-heading)] font-bold text-[var(--color-bg)]">서비스 & 부대시설</h1>
+              <span className="text-xs font-medium text-[var(--color-accent)] tracking-tight block mb-3">리조트 경험</span>
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-[var(--font-heading)] font-bold text-[var(--color-bg)]">서비스와 부대시설</h1>
             </motion.div>
           </div>
         </section>
@@ -42,12 +42,12 @@ function ServicesPageContent() {
         {/* Introduction Section */}
         <section className="py-20 bg-white">
           <div className="max-w-[1440px] mx-auto px-6 md:px-12 text-center">
-            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="max-w-2xl mx-auto">
-              <span className="text-[12px] font-semibold text-[var(--color-accent)] tracking-tight block mb-3">웰니스 & 레저</span>
-              <h2 className="text-3xl md:text-4xl font-[var(--font-heading)] font-bold text-[var(--color-primary)] mb-6">당신의 웰빙을 위한 설계</h2>
-              <p className="text-base text-[var(--color-text-muted)] leading-relaxed">
-                럭스 헤이븐에서는 영혼에 울림을 주는 서비스를 엄선하여 제안합니다. 미쉐린 셰프의 미식 여정부터 몸과 마음을 치유하는 스파 리추얼, 맞춤형 아일랜드 투어에 이르기까지 모든 과정이 온전한 평온을 위해 준비되었습니다.
-              </p>
+            <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="max-w-3xl mx-auto">
+              <span className="text-xs font-semibold text-[var(--color-accent)] tracking-tight block mb-3">웰니스와 레저</span>
+              <h2 className="text-3xl md:text-4xl font-[var(--font-heading)] font-bold text-[var(--color-primary)] mb-6">몸과 마음을 위한 시간</h2>
+              <p className="text-base text-[var(--color-text-muted)] leading-relaxed break-keep [text-wrap:pretty]">
+                현지 식재료를 활용한 다이닝과 스파 프로그램,<br className="hidden md:block" />
+                요가와 섬 투어까지 머무는 동안 필요한 경험을 세심하게 준비합니다.</p>
             </motion.div>
           </div>
         </section>
@@ -70,7 +70,7 @@ function ServicesPageContent() {
                   </div>
                   <div>
                     <h3 className="text-xl font-[var(--font-heading)] font-bold text-[var(--color-primary)] mb-3">{srv.title}</h3>
-                    <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">{srv.desc}</p>
+                    <p className="text-sm text-[var(--color-text-muted)] leading-relaxed break-keep [text-wrap:pretty]">{srv.desc}</p>
                   </div>
                 </motion.div>
               ))}
@@ -83,30 +83,29 @@ function ServicesPageContent() {
           <div className="max-w-[1440px] mx-auto px-6 md:px-12">
             <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
               <div className="w-full lg:w-1/2 overflow-hidden aspect-[16/10] border border-[var(--color-border)]">
-                <img src="/templates/OHMT020-hotel/story-01.jpg" alt="Aman Spa" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]" />
+                <img src="/templates/OHMT020-hotel/story-01.jpg" alt="럭스 헤이븐 스파" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]" />
               </div>
               <div className="w-full lg:w-1/2 flex flex-col gap-6">
-                <span className="text-[12px] font-semibold text-[var(--color-accent)] tracking-tight block">시그니처 프로그램</span>
-                <h3 className="text-3xl md:text-4xl font-[var(--font-heading)] font-bold text-[var(--color-primary)]">아만 스파 리추얼</h3>
-                <p className="text-base text-[var(--color-text-muted)] leading-relaxed font-light">
-                  자연의 리듬과 온전한 에너지를 조율해 보세요. 아만 스파에서는 직접 손으로 채취한 섬의 오가닉 야생 꽃과 에센셜 오일, 그리고 미네랄이 풍부한 머드를 사용합니다.
-                </p>
+                <span className="text-xs font-semibold text-[var(--color-accent)] tracking-tight block">시그니처 프로그램</span>
+                <h3 className="text-3xl md:text-4xl font-[var(--font-heading)] font-bold text-[var(--color-primary)]">시그니처 스파 프로그램</h3>
+                <p className="text-base text-[var(--color-text-muted)] leading-relaxed font-light break-keep [text-wrap:pretty] max-w-2xl">
+                  섬에서 얻은 허브와 에센셜 오일, 미네랄 머드를 활용해 몸의 긴장을 풀고 편안한 휴식을 돕습니다.</p>
                 <div className="flex flex-col gap-3 text-sm text-[var(--color-text-muted)]">
                   <div className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 bg-[var(--color-accent)] rounded-full" />
-                    <span>싱잉볼 사운드 배스 & 명상 세션 - 오전 8:00</span>
+                    <span>싱잉볼 명상 · 오전 8시</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 bg-[var(--color-accent)] rounded-full" />
-                    <span>전통 허벌 마사지 케어 - 90분</span>
+                    <span>허브 마사지 · 90분</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-1.5 h-1.5 bg-[var(--color-accent)] rounded-full" />
-                    <span>오션뷰 요가 파빌리온 - 24시간 개방</span>
+                    <span>바다 전망 요가 파빌리온 · 24시간 이용</span>
                   </div>
                 </div>
                 <div className="pt-4">
-                  <Button variant="primary" size="md" className="text-[12px] tracking-tight">스파 프로그램 안내 책자 다운로드</Button>
+                  <Button variant="primary" size="md" className="text-xs tracking-tight">스파 프로그램 안내서 다운로드</Button>
                 </div>
               </div>
             </div>

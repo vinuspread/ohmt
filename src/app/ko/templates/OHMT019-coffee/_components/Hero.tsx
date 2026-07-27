@@ -17,26 +17,22 @@ export const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.2, ease: easeOut }}
             >
-              시즌 스페셜
-            </motion.p>
+              여름 한정 메뉴</motion.p>
             <motion.h1
-              className="text-5xl lg:text-7xl font-bold leading-[1.1]"
+              className="text-5xl lg:text-7xl font-bold leading-[var(--leading-heading)]"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3, ease: easeOut }}
             >
-              새로운
-              <br />
-              <span className="text-[var(--color-primary)]">여름</span> 커피.
-            </motion.h1>
+              이번 여름,<br />
+              <span className="text-[var(--color-primary)]">새롭게</span> 즐기는 커피.</motion.h1>
             <motion.p
               className="text-base md:text-lg text-[var(--color-text-muted)] mt-6 max-w-md leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, delay: 0.45, ease: easeOut }}
             >
-              콜드브루, 아이스 라떼, 시즌 스페셜까지. 매일 아침 신선하게 만듭니다.
-            </motion.p>
+              천천히 내린 콜드브루부터 시원한 라떼와 계절 음료까지, 매일 신선하게 준비합니다.</motion.p>
             <motion.div
               className="flex items-center gap-4 mt-10"
               initial={{ opacity: 0, y: 20 }}
@@ -56,8 +52,7 @@ export const Hero = () => {
                   href="/ko/templates/OHMT019-coffee/about"
                   className="inline-flex items-center justify-center border-2 border-[var(--color-primary)] text-[var(--color-primary)] px-8 py-3 text-xs uppercase tracking-[0.2em] font-semibold rounded-none transition-[transform,colors] duration-160 ease-out active:scale-[0.97] w-full"
                 >
-                  스토리
-                </Link>
+                  브랜드 이야기</Link>
               </motion.div>
             </motion.div>
           </div>

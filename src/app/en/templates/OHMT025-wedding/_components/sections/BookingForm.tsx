@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "motion/react";
 
 export default function BookingForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -24,9 +24,9 @@ export default function BookingForm() {
               alt="Wedding ceremony"
               className="h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-[#1A1816]/30" />
+            <div className="absolute inset-0 bg-[var(--color-overlay)]/30" />
             <div className="absolute bottom-12 left-12 right-12">
-              <p className="font-[family-name:var(--font-heading)] text-4xl font-light normal-case text-white leading-[1.1]">
+              <p className="font-[family-name:var(--font-heading)] text-4xl font-light normal-case text-white leading-[var(--leading-heading)]">
                 Every love story deserves to be told beautifully.
               </p>
             </div>
@@ -37,7 +37,7 @@ export default function BookingForm() {
         <div className="px-8 lg:px-16 xl:px-20 py-24 flex flex-col justify-center">
           <div className="max-w-[480px]">
             <h2
-              className="font-[family-name:var(--font-heading)] font-light capitalize text-[var(--color-text)] leading-[1.05] mb-4"
+              className="font-[family-name:var(--font-heading)] font-light capitalize text-[var(--color-text)] leading-[var(--leading-heading)] mb-4"
               style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)" }}
             >
               Book Your Date
@@ -111,3 +111,4 @@ function Field({ id, label, type, required }: { id: string; label: string; type:
     </div>
   );
 }
+

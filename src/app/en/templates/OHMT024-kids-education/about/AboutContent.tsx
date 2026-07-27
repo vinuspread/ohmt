@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "motion/react";
 import Link from "next/link";
 import { teachers } from "../data/data";
 
@@ -232,3 +232,4 @@ export default function AboutContent() {
     </div>
   );
 }
+

@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { VillaRow } from "../cards/VillaRow";
+import { BodyText, SectionHeading } from "../ui/Typography";
 
 const base = "/en/templates/OHMT030-resort";
 
@@ -11,41 +13,34 @@ const villas = [
 
 export function Villas() {
   return (
-    <section className="bg-[var(--bg-dark)] py-16 md:py-[130px]">
-      <div className="max-w-[1440px] mx-auto px-6 md:px-10">
+    <section className="bg-[var(--bg-dark)] py-16 md:py-32">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 lg:gap-24 items-start">
           
           {/* Left: Text Area (Vertical layout) */}
           <div className="flex flex-col items-start max-w-[580px]">
-            <h2 className="text-[clamp(40px,5.5vw,80px)] font-semibold text-white leading-[1.1] tracking-[-0.04em] mb-6 md:mb-10">
+            <SectionHeading size="large" className="mb-6 tracking-[-0.04em] md:mb-12">
               Life Along<br />The Coast
-            </h2>
-            <p className="text-base text-white/60 leading-relaxed mb-8 md:mb-10">
+            </SectionHeading>
+            <BodyText className="mb-9 text-white/60 md:mb-12">
               Each villa is a private world carved into the coastal landscape.
               Designed for rest, connection, and the quiet rhythm of the sea.
-            </p>
+            </BodyText>
             <Link href={`${base}/#contact`}
-              className="inline-block rounded-full border border-white/50 px-6 py-3 text-white text-[15px] hover:bg-white/10 transition-all focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]">
+              className="inline-block rounded-full border border-white/50 px-6 py-3 text-white text-base hover:bg-white/10 transition-all focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]">
               Contact Us
             </Link>
           </div>
 
           {/* Right: List Area (Width 1/2 of container) */}
           <div className="flex flex-col w-full">
-            {villas.map((v, i) => (
-              <div key={v.name}
-                className="py-7 border-t border-white/20 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-                <div className="flex-1 min-w-0 pr-4">
-                  <h3 className="text-xl font-medium text-white mb-2">{v.name}</h3>
-                  <p className="text-base text-white/60 leading-relaxed">{v.desc}</p>
-                </div>
-                <div className="flex-shrink-0">
-                  <Link href={`${base}/#`}
-                    className="inline-flex items-center text-[var(--accent)] text-base hover:opacity-70 transition-opacity focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]">
-                    See More &rarr;
-                  </Link>
-                </div>
-              </div>
+            {villas.map((v) => (
+              <VillaRow
+                key={v.name}
+                name={v.name}
+                description={v.desc}
+                href={`${base}/#`}
+              />
             ))}
             <div className="border-b border-white/20" />
           </div>

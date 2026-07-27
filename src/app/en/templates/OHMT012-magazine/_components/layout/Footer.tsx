@@ -16,7 +16,7 @@ export const Footer = () => {
             >
               OHMT
             </Link>
-            <p className="text-[0.85rem] text-[var(--theme-text-muted)] leading-[1.4] font-normal">
+            <p className="text-[0.85rem] text-[var(--theme-text-muted)] leading-[var(--leading-body)] font-normal">
               A premium lifestyle editorial exploring the intersections of design, culture, and sustainability.
             </p>
           </div>
@@ -25,8 +25,13 @@ export const Footer = () => {
             <div>
               <h5 className="text-[0.7rem] font-medium uppercase tracking-[0.2em] text-[var(--theme-text)] mb-6">Explore</h5>
               <nav className="flex flex-col gap-3">
-                {["Stories", "Archive", "Issues", "Podcasts"].map(item => (
-                  <Link key={item} href="#" className="text-[0.8rem] text-[var(--theme-text-muted)] hover:text-[var(--theme-text)] transition-colors">{item}</Link>
+                {[
+                  { label: "Stories", href: "/en/templates/OHMT012-magazine" },
+                  { label: "Archive", href: "/en/templates/OHMT012-magazine/archive" },
+                  { label: "Issues", href: "/en/templates/OHMT012-magazine/issues" },
+                  { label: "Podcasts", href: "#" },
+                ].map(item => (
+                  <Link key={item.label} href={item.href} className="text-[0.8rem] text-[var(--theme-text-muted)] hover:text-[var(--theme-text)] transition-colors">{item.label}</Link>
                 ))}
               </nav>
             </div>
@@ -41,8 +46,13 @@ export const Footer = () => {
             <div>
               <h5 className="text-[0.7rem] font-medium uppercase tracking-[0.2em] text-[var(--theme-text)] mb-6">Company</h5>
               <nav className="flex flex-col gap-3">
-                {["About", "Press", "Advertising", "Careers"].map(item => (
-                  <Link key={item} href="#" className="text-[0.8rem] text-[var(--theme-text-muted)] hover:text-[var(--theme-text)] transition-colors">{item}</Link>
+                {[
+                  { label: "About", href: "/en/templates/OHMT012-magazine/about" },
+                  { label: "Press", href: "#" },
+                  { label: "Advertising", href: "#" },
+                  { label: "Careers", href: "#" },
+                ].map(item => (
+                  <Link key={item.label} href={item.href} className="text-[0.8rem] text-[var(--theme-text-muted)] hover:text-[var(--theme-text)] transition-colors">{item.label}</Link>
                 ))}
               </nav>
             </div>

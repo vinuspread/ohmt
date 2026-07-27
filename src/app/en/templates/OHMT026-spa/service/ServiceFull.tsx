@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion } from "motion/react";
 import Navbar from "../_components/layout/Navbar";
 import Footer from "../_components/layout/Footer";
 import { services, stats, pricingPlans } from "../data/data";
@@ -30,7 +30,7 @@ export default function ServiceFull() {
               className="max-w-2xl"
             >
               <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">Services</span>
-              <h1 className="mt-4 font-[family-name:var(--font-heading)] text-6xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[1.05]">
+              <h1 className="mt-4 font-[family-name:var(--font-heading)] text-6xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[var(--leading-heading)]">
                 Our treatments
               </h1>
               <p className="mt-4 text-[0.95rem] text-white/60 leading-relaxed max-w-lg">
@@ -98,7 +98,7 @@ export default function ServiceFull() {
               className="text-center"
             >
               <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">Our approach</span>
-              <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[1.05]">
+              <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[var(--leading-heading)]">
                 Every treatment starts with you
               </h2>
               <p className="mt-5 text-[0.95rem] text-[var(--color-text-muted)] leading-relaxed max-w-2xl mx-auto">
@@ -131,7 +131,7 @@ export default function ServiceFull() {
               className="text-center mb-16"
             >
               <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">Pricing</span>
-              <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[1.05]">
+              <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[var(--leading-heading)]">
                 Pricing plans
               </h2>
               <p className="mt-4 text-[0.95rem] text-[var(--color-text-muted)] leading-relaxed max-w-md mx-auto">
@@ -196,7 +196,7 @@ export default function ServiceFull() {
               transition={{ duration: 0.6, ease: EASE_OUT }}
             >
               <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">Why membership</span>
-              <h2 className="mt-4 font-[family-name:var(--font-heading)] text-4xl font-bold tracking-tight text-[var(--color-text)] leading-[1.05]">
+              <h2 className="mt-4 font-[family-name:var(--font-heading)] text-4xl font-bold tracking-tight text-[var(--color-text)] leading-[var(--leading-heading)]">
                 Consistent care, predictable cost
               </h2>
               <p className="mt-5 text-[0.95rem] text-[var(--color-text-muted)] leading-relaxed max-w-2xl mx-auto">
@@ -225,3 +225,4 @@ export default function ServiceFull() {
     </>
   );
 }
+

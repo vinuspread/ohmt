@@ -2,6 +2,7 @@
 "use client";
 
 import React from "react";
+import { ArrowRight } from "lucide-react";
 
 const features = [
   { t: "Remote Monitoring", d: "Battery, range, and charging status at a glance." },
@@ -28,10 +29,10 @@ export const AppSection = () => {
           <span className="block text-[0.65rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-text-muted)] mb-5">
             OHMT Connected
           </span>
-          <h2 className="text-[clamp(2rem,3vw,2.8rem)] font-extrabold tracking-tight leading-[1.1] mb-5 text-white">
+          <h2 className="text-[length:var(--text-h2)] font-extrabold tracking-tight leading-[var(--leading-heading)] mb-5 text-white">
             Seamless dual<br />motor driving<br />experience.
           </h2>
-          <p className="text-[0.88rem] text-[var(--theme-text-muted)] leading-[1.4] font-normal mb-10 max-w-[380px]">
+          <p className="text-[0.88rem] text-[var(--theme-text-muted)] leading-[var(--leading-body)] font-normal mb-10 max-w-[380px]">
             Monitor charging, pre-condition the cabin, unlock remotely, and track your range in real time - all from the OHMT app.
           </p>
 
@@ -41,14 +42,14 @@ export const AppSection = () => {
                  <div className="w-px self-stretch bg-[var(--theme-accent)] opacity-40 mt-1 shrink-0" />
                  <div>
                    <strong className="text-white text-[0.82rem] block mb-0.5">{f.t}</strong>
-                   <p className="text-[0.78rem] text-[var(--theme-text-muted)] leading-[1.4]">{f.d}</p>
+                   <p className="text-[0.78rem] text-[var(--theme-text-muted)] leading-[var(--leading-body)]">{f.d}</p>
                  </div>
                </div>
              ))}
            </div>
 
           <button className="inline-flex items-center gap-3 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-white hover:translate-x-1.5 transition-all duration-300 w-fit">
-            Download App <span className="text-[1.2em]">→</span>
+            Download App <ArrowRight size={16} />
           </button>
         </div>
       </div>

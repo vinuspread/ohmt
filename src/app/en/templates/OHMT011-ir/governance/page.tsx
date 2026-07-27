@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { ArrowRight } from "lucide-react";
 import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
 import theme from "../theme.json";
@@ -83,10 +84,10 @@ function IRGovernanceContent() {
                 <div className="w-6 h-[1px] bg-[var(--color-accent)]" />
                 Corporate Governance
               </div>
-              <h1 className="text-[clamp(2.2rem,4vw,3.8rem)] font-bold tracking-tight leading-[1.1] mb-6">
+              <h1 className="text-[length:var(--text-h1)] font-bold tracking-tight leading-[var(--leading-heading)] mb-6">
                 Governance
               </h1>
-              <p className="text-[0.9rem] text-white/55 leading-[1.4] max-w-[520px] font-normal">
+              <p className="text-[0.9rem] text-white/55 leading-[var(--leading-body)] max-w-[520px] font-normal">
                 Our commitment to transparent, accountable, and responsible corporate governance guides every decision we make.
               </p>
             </div>
@@ -103,13 +104,13 @@ function IRGovernanceContent() {
         >
           <div className="max-w-[1280px] mx-auto px-6 md:px-10">
             <div className="mb-14 max-w-[640px]">
-              <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-5">
+              <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--color-text-muted)] mb-5">
                 Leadership
               </span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.1] mb-6">
+              <h2 className="text-[length:var(--text-h3)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[var(--leading-heading)] mb-6">
                 Board of Directors
               </h2>
-              <p className="text-[0.88rem] text-[#6B6B6B] leading-[1.82] font-normal">
+              <p className="text-[0.88rem] text-[var(--color-text-muted)] leading-loose font-normal">
                 Our board comprises distinguished leaders with deep expertise across energy, finance, technology, and public policy.
               </p>
             </div>
@@ -122,7 +123,7 @@ function IRGovernanceContent() {
                   transition={{ duration: 0.3 }}
                   className="group"
                 >
-                  <div className="w-full aspect-[4/5] bg-[#F9F9F8] relative overflow-hidden mb-4 border border-[var(--color-border)] group-hover:border-[var(--color-accent)] transition-colors">
+                  <div className="w-full aspect-[4/5] bg-[var(--color-bg-secondary)] relative overflow-hidden mb-4 border border-[var(--color-border)] group-hover:border-[var(--color-accent)] transition-colors">
                     {member.image ? (
                       <img
                         src={member.image}
@@ -137,7 +138,7 @@ function IRGovernanceContent() {
                   </div>
                   <h3 className="text-[0.82rem] font-bold text-[var(--color-dark-bg)] mb-0.5">{member.name}</h3>
                   <p className="text-[0.65rem] font-bold uppercase tracking-[0.12em] text-[var(--color-accent)] mb-2.5">{member.role}</p>
-                  <p className="text-[0.75rem] text-[#6B6B6B] leading-[1.4] font-normal">{member.bio}</p>
+                  <p className="text-[0.75rem] text-[var(--color-text-muted)] leading-[var(--leading-body)] font-normal">{member.bio}</p>
                 </motion.div>
               ))}
             </div>
@@ -150,14 +151,14 @@ function IRGovernanceContent() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
           transition={{ duration: 0.7 }}
-          className="py-14 bg-[#F9F9F8]"
+          className="py-14 bg-[var(--color-bg-secondary)]"
         >
           <div className="max-w-[1280px] mx-auto px-6 md:px-10">
             <div className="mb-14 max-w-[640px]">
-              <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-5">
+              <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--color-text-muted)] mb-5">
                 Board Oversight
               </span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.1] mb-6">
+              <h2 className="text-[length:var(--text-h3)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[var(--leading-heading)] mb-6">
                 Committees
               </h2>
             </div>
@@ -172,7 +173,7 @@ function IRGovernanceContent() {
                 >
                   <h3 className="text-[0.82rem] font-bold text-[var(--color-dark-bg)] mb-2">{c.name}</h3>
                   <p className="text-[0.65rem] font-medium uppercase tracking-[0.08em] text-[var(--color-accent)] mb-3.5">{c.members}</p>
-                  <p className="text-[0.78rem] text-[#6B6B6B] leading-[1.82] font-normal">{c.charter}</p>
+                  <p className="text-[0.78rem] text-[var(--color-text-muted)] leading-loose font-normal">{c.charter}</p>
                 </motion.div>
               ))}
             </div>
@@ -189,23 +190,23 @@ function IRGovernanceContent() {
         >
           <div className="max-w-[1280px] mx-auto px-6 md:px-10">
             <div className="mb-14 max-w-[640px]">
-              <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[#6B6B6B] mb-5">
+              <span className="block text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--color-text-muted)] mb-5">
                 Resources
               </span>
-              <h2 className="text-[clamp(1.8rem,3vw,2.6rem)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[1.1] mb-6">
+              <h2 className="text-[length:var(--text-h3)] font-bold tracking-tight text-[var(--color-dark-bg)] leading-[var(--leading-heading)] mb-6">
                 Governance Documents
               </h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-[var(--color-border)]">
               {documents.map((doc) => (
-                <div key={doc.title} className="bg-white p-6 flex items-center justify-between group hover:bg-[#F9F9F8] transition-colors">
+                <div key={doc.title} className="bg-white p-6 flex items-center justify-between group hover:bg-[var(--color-bg-secondary)] transition-colors">
                   <div>
                     <h3 className="text-[0.82rem] font-bold text-[var(--color-dark-bg)] mb-0.5">{doc.title}</h3>
-                    <p className="text-[0.62rem] font-medium uppercase tracking-[0.08em] text-[#6B6B6B]">{doc.type} - {doc.size}</p>
+                    <p className="text-[0.62rem] font-medium uppercase tracking-[0.08em] text-[var(--color-text-muted)]">{doc.type} - {doc.size}</p>
                   </div>
                   <a href="#" className="text-[0.62rem] font-bold uppercase tracking-[0.12em] text-[var(--color-accent)] hover:text-[var(--color-dark-bg)] transition-colors whitespace-nowrap ml-4">
-                    Download →
+                    Download <ArrowRight size={12} className="inline" />
                   </a>
                 </div>
               ))}
@@ -220,10 +221,10 @@ function IRGovernanceContent() {
 }
 
 
-export default function IRGovernance(props: any) {
+export default function IRGovernance() {
   return (
     <React.Suspense fallback={null}>
-      <IRGovernanceContent {...props} />
+      <IRGovernanceContent />
     </React.Suspense>
   );
 }

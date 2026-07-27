@@ -83,7 +83,7 @@ export function Sidebar({
         {menuGroups.map((group) => (
           <div key={group.label}>
             {!collapsed && (
-              <p className="text-[10px] uppercase tracking-[0.12em] text-[var(--color-text-muted)] font-medium px-3 mb-2">
+              <p className="text-xs uppercase tracking-[0.12em] text-[var(--color-text-muted)] font-medium px-3 mb-2">
                 {group.label}
               </p>
             )}

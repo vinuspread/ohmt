@@ -183,7 +183,7 @@ export default function ProfilePage() {
                         <p className="text-sm text-[var(--color-text-muted)] mt-0.5">{item.time}</p>
                       </div>
                       <span
-                        className="text-[10px] font-medium px-2 py-0.5 rounded-full shrink-0 capitalize"
+                        className="text-xs font-medium px-2 py-0.5 rounded-full shrink-0 capitalize"
                         style={{ color: item.color, background: `color-mix(in srgb, ${item.color} 14%, transparent)` }}
                       >
                         {item.category}
@@ -226,7 +226,7 @@ export default function ProfilePage() {
                       </div>
                       <div className="min-w-0 flex-1">
                         <p className="text-sm font-medium text-[var(--color-text)] truncate">{ev.title}</p>
-                        <p className="text-[14px] text-[var(--color-text-muted)] mt-0.5">
+                        <p className="text-sm text-[var(--color-text-muted)] mt-0.5">
                           {ev.date} · {ev.time}–{ev.end}
                         </p>
                       </div>

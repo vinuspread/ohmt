@@ -20,7 +20,7 @@ function AboutPageContent() {
           <div className="absolute inset-0 bg-black/50" />
           <div className="relative z-10 text-center text-white px-6">
             <p className="text-xs uppercase tracking-[0.3em] text-white/60 mb-4">About Us</p>
-            <h1 className="text-5xl lg:text-7xl font-bold tracking-tight leading-[1.05]">
+            <h1 className="text-5xl lg:text-7xl font-bold tracking-tight leading-[var(--leading-heading)]">
               Our Story
             </h1>
           </div>
@@ -31,7 +31,7 @@ function AboutPageContent() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
               <div>
                 <p className="text-xs uppercase tracking-[0.25em] text-[var(--color-text-muted)] mb-4">Our Philosophy</p>
-                <h2 className="text-3xl md:text-4xl font-bold tracking-tight leading-[1.15] mb-8">
+                <h2 className="text-3xl md:text-4xl font-bold tracking-tight leading-[var(--leading-heading)] mb-8">
                   Quality Over<br />Everything.
                 </h2>
                 <p className="text-base leading-relaxed text-[var(--color-text-muted)]">

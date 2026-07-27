@@ -22,10 +22,10 @@ export const Header = () => {
 
   const navLinks = [
     { name: "홈", href: "/ko/templates/OHMT017-multi-shop" },
-    { name: "쇼핑", href: "/ko/templates/OHMT017-multi-shop/shop" },
-    { name: "스토리", href: "/ko/templates/OHMT017-multi-shop/about" },
-    { name: "매거진", href: "/ko/templates/OHMT017-multi-shop/blog" },
-    { name: "문의", href: "/ko/templates/OHMT017-multi-shop/contact" },
+    { name: "스토어", href: "/ko/templates/OHMT017-multi-shop/shop" },
+    { name: "브랜드", href: "/ko/templates/OHMT017-multi-shop/about" },
+    { name: "저널", href: "/ko/templates/OHMT017-multi-shop/blog" },
+    { name: "문의하기", href: "/ko/templates/OHMT017-multi-shop/contact" },
   ];
 
   const isHome = pathname === "/ko/templates/OHMT017-multi-shop";
@@ -35,7 +35,7 @@ export const Header = () => {
     <>
       {/* Nav */}
       <header
-        className={`fixed top-[20px] md:top-[48px] left-[20px] right-[20px] md:left-[48px] md:right-[48px] z-50 ${mounted ? "transition-colors duration-300" : ""}`}
+        className={`fixed top-5 md:top-12 left-[20px] right-[20px] md:left-[48px] md:right-[48px] z-50 ${mounted ? "transition-colors duration-300" : ""}`}
         style={{ backgroundColor: transparent ? "transparent" : "#ffffff" }}
       >
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between h-16 md:h-18">
@@ -121,4 +121,3 @@ export const Header = () => {
     </>
   );
 };
-

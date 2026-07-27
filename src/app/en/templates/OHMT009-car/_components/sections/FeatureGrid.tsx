@@ -4,6 +4,8 @@
 import React from "react";
 import { clsx } from "clsx";
 
+import { ArrowRight } from "lucide-react";
+
 interface SplitProps {
   eyebrow: string;
   title: string;
@@ -23,14 +25,14 @@ export const SplitSection = ({ eyebrow, title, desc, img, reverse }: SplitProps)
       <span className="block text-[0.68rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-5">
         {eyebrow}
       </span>
-      <h2 className="text-[clamp(2.2rem,3.8vw,3.5rem)] font-extrabold tracking-[-0.04em] leading-[1.15] mb-6 text-white whitespace-pre-line">
+      <h2 className="text-[length:var(--text-h2)] font-extrabold tracking-[-0.04em] leading-[var(--leading-heading)] mb-6 text-white whitespace-pre-line">
         {title}
       </h2>
-      <p className="text-[0.92rem] md:text-[0.98rem] text-white/60 leading-[1.8] font-normal mb-10 max-w-[420px]">
+      <p className="text-[0.92rem] md:text-[0.98rem] text-white/60 leading-loose font-normal mb-10 max-w-[420px]">
         {desc}
       </p>
       <button type="button" className="inline-flex items-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.16em] text-white border-b border-white/20 pb-1 hover:border-[var(--theme-accent)] hover:text-[var(--theme-accent)] transition-all duration-300 w-fit text-left">
-        Discover More <span className="text-[1.2em]">&rarr;</span>
+        Discover More <ArrowRight size={14} />
       </button>
     </div>
     <div className="overflow-hidden group [direction:ltr]">
@@ -47,14 +49,14 @@ export const FullBleedSection = ({ eyebrow, title, desc, img }: Omit<SplitProps,
       <span className="block text-[0.68rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-5">
         {eyebrow}
       </span>
-      <h2 className="text-[clamp(2.2rem,4.2vw,4.2rem)] font-bold tracking-[-0.04em] leading-[1.15] mb-5 max-w-[700px] text-white whitespace-pre-line">
+      <h2 className="text-[length:var(--text-h1)] font-bold tracking-[-0.04em] leading-[var(--leading-heading)] mb-5 max-w-[700px] text-white whitespace-pre-line">
         {title}
       </h2>
       <p className="text-[0.92rem] md:text-[0.98rem] text-white/60 font-normal mb-8 max-w-[460px]">
         {desc}
       </p>
       <button type="button" className="inline-flex items-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.16em] text-white border-b border-white/20 pb-1 hover:border-[var(--theme-accent)] hover:text-[var(--theme-accent)] transition-all duration-300 w-fit">
-        View Specs <span className="text-[1.2em]">&rarr;</span>
+        View Specs <ArrowRight size={14} />
       </button>
     </div>
   </div>

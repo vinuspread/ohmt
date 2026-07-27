@@ -3,8 +3,6 @@
   "name": "Exhibition Musei Vaticani",
   "name_ko": "전시 뮤지 바티카니",
   "category": "portfolio",
-  "description": "A museum and gallery template for exhibitions, collection highlights, visiting information, and cultural storytelling with a calm institutional presence.",
-  "description_ko": "전시, 소장품 하이라이트, 방문 정보, 문화적 스토리를 차분한 기관형 톤으로 보여주는 뮤지엄 및 갤러리 템플릿.",
   "mode": "dark",
   "theme": {
     "palette": {
@@ -38,6 +36,14 @@
       "mono": {
         "font": "JetBrains Mono",
         "weight": "400"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
       }
     },
     "spacing": {
@@ -53,5 +59,7 @@
       "transition_slow": "500ms",
       "easing": "cubic-bezier(0.16, 1, 0.3, 1)"
     }
-  }
+  },
+  "thumbnail": "/templates/OHMT021-museum/og-image.jpg",
+  "ogImage": "/templates/OHMT021-museum/og-image.jpg"
 }

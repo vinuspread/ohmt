@@ -44,23 +44,23 @@ return (
         playsInline
       />
       
-      <div className="relative flex-1 flex items-center px-10 max-w-[1280px] mx-auto w-full py-12 md:py-24">
+      <div className="relative flex-1 flex items-center px-6 md:px-10 max-w-[1280px] mx-auto w-full py-12 md:py-24">
         <div className="max-w-[760px]">
           <div className="flex items-center gap-3 text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-8">
             <div className="w-6 h-[1px] bg-[var(--color-accent)]" />
             {t.hero.badgeText}
           </div>
-          <h1 className="text-[clamp(2.1rem,4.5vw,4.5rem)] font-bold tracking-tight leading-[1.0] mb-7">
+          <h1 className="text-[length:var(--text-h1)] font-bold tracking-tight leading-[var(--leading-display)] mb-7">
             {t.hero.title1}<br />{t.hero.title2}
           </h1>
-          <p className="text-[0.95rem] text-white/50 leading-[1.4] max-w-[480px] mb-10 font-normal">
+          <p className="text-[0.95rem] text-white/50 leading-[var(--leading-body)] max-w-[480px] mb-10 font-normal">
             {t.hero.desc}
           </p>
-          <div className="flex gap-4 items-center">
-            <button className="text-[0.72rem] font-bold uppercase tracking-[0.14em] px-8 py-3.5 bg-white text-[var(--color-dark-bg)] hover:bg-transparent hover:text-white border border-white transition-all duration-300">
+          <div className="grid w-full max-w-[460px] grid-cols-1 gap-3 min-[420px]:grid-cols-2 md:flex md:max-w-none md:items-center md:gap-4">
+            <button className="inline-flex min-h-14 w-full items-center justify-center text-center text-[0.68rem] font-bold uppercase tracking-[0.12em] px-4 py-3 bg-white text-[var(--color-dark-bg)] hover:bg-transparent hover:text-white border border-white transition-all duration-300 md:min-h-0 md:w-auto md:px-8 md:py-3.5 md:text-[0.72rem] md:tracking-[0.14em]">
               {t.hero.cta}
             </button>
-            <button className="text-[0.72rem] font-semibold uppercase tracking-[0.14em] px-8 py-3.5 border border-white/25 text-white/75 hover:border-white/60 hover:text-white transition-all duration-300">
+            <button className="inline-flex min-h-14 w-full items-center justify-center text-center text-[0.68rem] font-semibold uppercase tracking-[0.12em] px-4 py-3 border border-white/30 text-white/80 hover:border-white/60 hover:text-white transition-all duration-300 md:min-h-0 md:w-auto md:px-8 md:py-3.5 md:text-[0.72rem] md:tracking-[0.14em]">
               {t.hero.cta2}
             </button>
           </div>
@@ -74,9 +74,9 @@ return (
           { label: "EPS (LTM)", val: "4.12", unit: "USD", change: "-0.4%", up: false },
           { label: "Dividend Yield", val: "2.85", unit: "%", change: "+0.1%", up: true }
         ].map((kpi, i) => (
-          <div key={i} className="p-8 border-r border-white/10 last:border-r-0">
+          <div key={i} className="flex flex-col items-center justify-center border-r border-white/10 p-8 text-center last:border-r-0">
             <span className="text-[0.62rem] font-bold uppercase tracking-[0.18em] text-white/35 block mb-1">{kpi.label}</span>
-            <span className="text-[clamp(1.5rem,2.2vw,2rem)] font-extrabold text-white leading-none block mb-1">
+            <span className="text-[length:var(--text-lead)] font-extrabold text-white leading-none block mb-1">
               {kpi.val}<span className="text-[0.55em] text-white/40 font-medium ml-1">{kpi.unit}</span>
             </span>
             <span className={`text-[0.65rem] font-bold ${kpi.up ? "text-[var(--color-success)]" : "text-[var(--color-alert)]"}`}>

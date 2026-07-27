@@ -22,8 +22,8 @@ export default function SpaPage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "HealthClub",
-    "name": "Spa Wellness",
-    "description": "Premium spa and wellness shop offering personalized skin and body treatments by certified therapists.",
+    "name": "OHMT 스파 & 웰니스",
+    "description": "피부 상태와 컨디션에 맞춘 페이셜·바디 케어를 제공하는 스파 & 웰니스 공간입니다.",
     "url": "https://ohmytemplate.com/ko/templates/OHMT026-spa",
     "logo": "/templates/OHMT026-spa/logo.png",
   };
@@ -37,7 +37,7 @@ export default function SpaPage() {
       <TemplateWrapper theme={theme}>
         <Navbar />
         <main>
-          <h1 className="sr-only">스파 웰니스 - 프리미엄 스파 웰니스 샵</h1>
+          <h1 className="sr-only">OHMT 스파 & 웰니스</h1>
           <Hero />
           <WhatWeSolve />
           <BookConsultation />

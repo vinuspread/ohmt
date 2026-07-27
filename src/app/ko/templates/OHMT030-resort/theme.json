@@ -3,8 +3,6 @@
   "name": "Coastal Luxury Resort",
   "name_ko": "해안 럭셔리 리조트",
   "category": "hospitality",
-  "description": "A coastal resort template for rooms, dining, experiences, booking prompts, and destination storytelling with a quiet luxury hospitality mood.",
-  "description_ko": "객실, 다이닝, 경험, 예약 유도, 여행지 스토리를 조용한 럭셔리 호스피탈리티 무드로 구성한 코스탈 리조트 템플릿.",
   "mode": "light",
   "theme": {
     "palette": {
@@ -24,23 +22,40 @@
     },
     "typography": {
       "heading": {
-        "font": "Noto Sans KR, Instrument Sans, sans-serif",
+        "font": "Pretendard Variable, Pretendard, Instrument Sans, sans-serif",
         "weight": "600",
+        "leading": "1.2",
         "tracking": "-0.025em",
-        "style": "tracking-tight"
+        "style": "tracking-tight leading-[1.2]"
       },
       "body": {
-        "font": "Noto Sans KR, Instrument Sans, sans-serif",
+        "font": "Pretendard Variable, Pretendard, Instrument Sans, sans-serif",
         "weight": "400",
-        "leading": "1.8",
-        "style": "leading-relaxed"
+        "leading": "1.4",
+        "style": "leading-[1.4]"
+      },
+      "type_scale": {
+        "display": "clamp(3rem, 7vw, 5.5rem)",
+        "h1": "clamp(2.5rem, 5vw, 4rem)",
+        "h2": "clamp(2rem, 4vw, 3rem)",
+        "h3": "clamp(1.5rem, 3vw, 2rem)",
+        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "body": "Tailwind text-base / text-sm / text-xs"
       }
     },
     "spacing": {
-      "page_pt": "100px",
+      "page_pt": "128px",
       "container": "1440px",
       "gutter": "48px",
-      "card_gap": "24px"
+      "gutter_mobile": "24px",
+      "card_gap": "24px",
+      "section_py_mobile": "64px",
+      "section_py_desktop": "128px",
+      "subpage_hero_height": "600px",
+      "subpage_detail_hero_height_mobile": "600px",
+      "subpage_detail_hero_height_desktop": "800px",
+      "subpage_hero_heading_leading_mobile": "90%",
+      "subpage_hero_heading_leading_desktop": "90%"
     },
     "motion": {
       "transition_fast": "200ms",
@@ -52,5 +67,7 @@
       "button": "bg-[var(--accent)] text-[var(--text-contrast)] hover:brightness-110",
       "card_hover": "hover:scale-[1.02] transition-transform"
     }
-  }
+  },
+  "thumbnail": "/templates/OHMT030-resort/og-image.jpg",
+  "ogImage": "/templates/OHMT030-resort/og-image.jpg"
 }

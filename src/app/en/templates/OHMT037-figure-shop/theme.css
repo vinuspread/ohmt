@@ -1,0 +1,103 @@
+/* OHMT037-figure-shop/theme.css — mirrors docs/templates/OHMT037-figure-shop/design-tokens.json */
+
+:root {
+  --text-display: clamp(3rem, 7vw, 5.5rem);
+  --text-h1: clamp(2.5rem, 5vw, 4rem);
+  --text-h2: clamp(2rem, 4vw, 3rem);
+  --text-h3: clamp(1.5rem, 3vw, 2rem);
+  --text-lead: clamp(1.125rem, 2vw, 1.5rem);
+  --leading-display: 0.95;
+  --leading-heading: 1.1;
+  --leading-body: 1.6;
+
+  --color-bg: #FFFFFF;
+  --color-bg-tile: #FFFFFF;
+  --color-bg-tile-deep: #F3F3F3;
+  --color-ink: #1B1B18;
+  --color-ink-muted: rgba(27, 27, 24, 0.6);
+  --color-ink-faint: rgba(27, 27, 24, 0.35);
+  --color-dark: #191B18;
+  --color-on-dark: #F2F1EC;
+  --color-on-dark-muted: rgba(242, 241, 236, 0.6);
+  --color-accent: #E8501E;
+  --color-border: rgba(27, 27, 24, 0.1);
+  --color-border-dark: rgba(242, 241, 236, 0.14);
+
+  /* aliases used by shared registration tooling */
+  --color-primary: #FFFFFF;
+  --color-secondary: #1B1B18;
+  --color-text: #1B1B18;
+  --color-text-muted: rgba(27, 27, 24, 0.6);
+  --color-text-contrast: #F2F1EC;
+  --color-bg-secondary: #FFFFFF;
+
+  --font-heading: 'Google Sans', system-ui, sans-serif;
+  --font-body: 'Google Sans', system-ui, sans-serif;
+
+
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.ohmt037fs {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  overflow-wrap: break-word;
+}
+
+.ohmt037fs,
+.ohmt037fs * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
+}
+
+.ohmt037fs ::selection {
+  background: var(--color-accent);
+  color: #FFFFFF;
+}
+
+.ohmt037fs :focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.ohmt037fs .meta-label {
+  font-family: var(--font-body);
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.ohmt037fs .ui-label {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.ohmt037fs .value-text {
+  font-family: var(--font-body);
+  font-size: 14px;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+}
+
+.ohmt037fs .rail-scroll {
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+}
+
+.ohmt037fs .rail-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.ohmt037fs .rail-scroll > * {
+  scroll-snap-align: start;
+}

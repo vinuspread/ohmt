@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 
 type PageProps = {
   params: Promise<{ slug: string }>;
 };
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  return { title: `${slug.replace(/-/g, " ")} - OHMT Spa` };
+}
 
 export default async function Page({ params }: PageProps) {
   const resolvedParams = await params;

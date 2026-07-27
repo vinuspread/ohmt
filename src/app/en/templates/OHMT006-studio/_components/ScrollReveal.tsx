@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { ReactNode, useEffect, useState } from 'react';
 import { MOTION_CONSTANTS } from './motion-constants';
 
@@ -24,7 +24,7 @@ export function ScrollReveal({
         setPrefersReducedMotion(mediaQuery.matches);
     }, []);
 
-    const variants: any = {
+    const variants: Variants = {
         hidden: {
             opacity: 0,
             y: direction === 'up' ? 30 : direction === 'down' ? -30 : 0,

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import { ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { testimonials } from "../data/data";
 
@@ -35,7 +35,7 @@ export const Testimonials = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12 md:mb-16"
         >
-          <h2 className="text-[clamp(1.8rem,4vw,3.2rem)] font-[var(--font-heading)] font-bold leading-[1.15]">
+          <h2 className="text-[length:var(--text-h2)] font-[var(--font-heading)] font-bold leading-[var(--leading-heading)]">
             Words from Our Guests
           </h2>
         </motion.div>

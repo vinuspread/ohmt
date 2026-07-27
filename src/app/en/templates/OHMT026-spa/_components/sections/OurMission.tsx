@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 
@@ -35,7 +35,7 @@ export default function OurMission() {
             <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">
               Our mission
             </span>
-            <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[1.05]">
+            <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[var(--leading-heading)]">
               A philosophy of care
             </h2>
             <p className="mt-5 text-[0.95rem] text-[var(--color-text-muted)] leading-relaxed max-w-md mb-10">
@@ -121,3 +121,4 @@ export default function OurMission() {
     </section>
   );
 }
+

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence, useReducedMotion } from "framer-motion";
+import { motion, AnimatePresence, useReducedMotion } from "motion/react";
 import { classes, classCategories } from "../data/data";
 import Link from "next/link";
 
@@ -83,7 +83,7 @@ export default function ClassesContent() {
                     <div className="aspect-[4/3] overflow-hidden">
                       <div
                         className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
-                        style={{ backgroundImage: `url(${item.image})`, backgroundColor: "#E8E3D9" }}
+                        style={{ backgroundImage: `url(${item.image})`, backgroundColor: "var(--color-bg-secondary)" }}
                       />
                     </div>
                     <div className="p-5">
@@ -110,3 +110,4 @@ export default function ClassesContent() {
     </div>
   );
 }
+

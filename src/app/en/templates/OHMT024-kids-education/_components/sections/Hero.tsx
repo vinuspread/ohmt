@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion, useInView, useMotionValue, animate, AnimatePresence } from "framer-motion";
+import { motion, useReducedMotion, useInView, useMotionValue, animate, AnimatePresence } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
 const heroSlides = [
@@ -73,7 +73,7 @@ export default function Hero() {
             initial={shouldReduce ? { opacity: 0 } : { opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2, delay: 0.05, ease: EASE_OUT }}
-            className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[1.12] tracking-tight mx-auto"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold leading-[var(--leading-heading)] tracking-tight mx-auto"
             style={{ fontFamily: "var(--font-heading)", maxWidth: "28ch" }}
           >
             <span className="block whitespace-nowrap">Discover the World of</span>
@@ -156,7 +156,7 @@ export default function Hero() {
               </AnimatePresence>
 
               {/* Now Enrolling badge */}
-              <div className="absolute top-3 right-3 sm:top-5 sm:right-5 z-10 inline-flex items-center justify-center bg-[var(--color-secondary)] text-white rounded-full px-3 py-1.5 sm:px-5 sm:py-2.5 text-[10px] sm:text-xs font-bold uppercase tracking-wide leading-none shadow-md">
+              <div className="absolute top-3 right-3 sm:top-5 sm:right-5 z-10 inline-flex items-center justify-center bg-[var(--color-secondary)] text-white rounded-full px-3 py-1.5 sm:px-5 sm:py-2.5 text-xs sm:text-xs font-bold uppercase tracking-wide leading-none shadow-md">
                 Now Enrolling
               </div>
 
@@ -198,3 +198,4 @@ export default function Hero() {
     </>
   );
 }
+

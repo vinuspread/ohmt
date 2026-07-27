@@ -20,10 +20,10 @@ export default function OrderPage() {
         <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)] via-[var(--bg)]/30 to-transparent" />
         <div className="absolute inset-0 flex items-end">
           <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 pb-12 md:pb-16">
-            <p className="font-inter font-medium text-[11px] tracking-[0.15em] text-[var(--accent)] uppercase mb-3">
+            <p className="font-inter font-medium text-xs tracking-[0.15em] text-[var(--accent)] uppercase mb-3">
               Early Access
             </p>
-            <h1 className="font-michroma text-[clamp(36px,4.5vw,64px)] text-[var(--text)] leading-[0.95] tracking-[-0.03em]">
+            <h1 className="font-michroma text-[length:var(--text-h1)] text-[var(--text)] leading-[var(--leading-display)] tracking-[-0.03em]">
               Configure your NUBI
             </h1>
           </div>

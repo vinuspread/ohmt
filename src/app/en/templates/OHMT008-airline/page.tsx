@@ -65,13 +65,13 @@ function AirlineTemplateContent() {
           <div className="max-w-[1320px] mx-auto px-6 md:px-10">
             <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center">
               <motion.div variants={staggerChildren}>
-                <span className="block text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-5">
+                <span className="block text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-5">
                   The Experience
                 </span>
-                <h2 className="font-[family-name:var(--theme-font-heading)] text-[clamp(2rem,3.5vw,3rem)] font-bold tracking-tight text-[var(--color-primary)] leading-[1.1] mb-6">
+                <h2 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-h2)] font-bold tracking-tight text-[var(--color-primary)] leading-[var(--leading-heading)] mb-6">
                   Uncompromising luxury in every detail.
                 </h2>
-                <p className="text-[0.95rem] text-[var(--color-text-muted)] leading-[1.82] mb-8 md:mb-10 font-normal">
+                <p className="text-[0.95rem] text-[var(--color-text-muted)] leading-loose mb-8 md:mb-10 font-normal">
                   From our signature caviar service to the quietest cabins in the sky, we redefine what it means to travel. Our fleet is equipped with the latest technology to ensure your journey is as smooth as it is memorable.
                 </p>
                 <div className="grid grid-cols-2 gap-6 md:gap-8 mb-8 md:mb-10">
@@ -85,7 +85,7 @@ function AirlineTemplateContent() {
                   </div>
                 </div>
                 <Link href="/en/templates/OHMT008-airline/experience" className="inline-flex items-center gap-3 text-sm font-semibold uppercase tracking-[-0.02em] text-[var(--color-primary)] group transition-[gap] duration-[var(--transition-fast)] hover:gap-4">
-                  Explore First Class <span className="text-[1.2em] transition-transform duration-[var(--transition-fast)] group-hover:translate-x-1">→</span>
+                  Explore First Class <ArrowRight size={16} className="transition-transform duration-[var(--transition-fast)] group-hover:translate-x-1" />
                 </Link>
               </motion.div>
               <div className="relative h-[320px] md:h-[480px] overflow-hidden">
@@ -129,15 +129,15 @@ function AirlineTemplateContent() {
               </motion.div>
               <div className="order-1 md:order-2 space-y-8 md:space-y-10">
                 <motion.div variants={staggerChildren}>
-                  <span className="block text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-5">
+                  <span className="block text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-5">
                     White Glove Service
                   </span>
-                  <h2 className="font-[family-name:var(--theme-font-heading)] text-[clamp(1.8rem,3.5vw,3rem)] font-bold tracking-tight text-white leading-[1.1]">
+                  <h2 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-h2)] font-bold tracking-tight text-white leading-[var(--leading-heading)]">
                     Every moment attended, <br />
                     <span className="font-normal text-[var(--color-accent)]">with precision.</span>
                   </h2>
                 </motion.div>
-                <motion.p variants={staggerChildren} className="text-[0.95rem] text-white/60 leading-[1.82] font-normal">
+                <motion.p variants={staggerChildren} className="text-[0.95rem] text-white/60 leading-loose font-normal">
                   Our cabin crew are trained at the world's premier hospitality institutes. From the moment you board to your final destination, every request is met with grace, discretion, and expertise.
                 </motion.p>
                 <motion.div variants={staggerChildren} className="grid grid-cols-3 gap-6 border-t border-white/10 pt-8 md:pt-10">
@@ -167,10 +167,10 @@ function AirlineTemplateContent() {
         >
           <div className="max-w-[1320px] mx-auto px-6 md:px-10">
             <motion.div variants={staggerChildren} className="mb-10 md:mb-14">
-              <span className="block text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-4">
+              <span className="block text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-4">
                 Our Services
               </span>
-              <h2 className="font-[family-name:var(--theme-font-heading)] text-[clamp(1.8rem,3.5vw,3rem)] font-bold tracking-tight text-[var(--color-primary)] leading-[1.1]">
+              <h2 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-h2)] font-bold tracking-tight text-[var(--color-primary)] leading-[var(--leading-heading)]">
                 Crafted for those who <br className="hidden md:block" />expect the extraordinary.
               </h2>
             </motion.div>
@@ -194,7 +194,7 @@ function AirlineTemplateContent() {
                     <h3 className="text-[0.92rem] font-bold text-[var(--color-primary)] leading-tight uppercase tracking-wide">
                       {s.title}
                     </h3>
-                    <p className="text-[0.82rem] text-[var(--color-text-muted)] leading-[1.4] font-normal">
+                    <p className="text-[0.82rem] text-[var(--color-text-muted)] leading-[var(--leading-body)] font-normal">
                       {s.desc}
                     </p>
                   </motion.div>

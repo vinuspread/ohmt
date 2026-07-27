@@ -6,7 +6,7 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
-import { designerInfo, faqs } from "@/lib/portfolio-data";
+import { designerInfo, faqs } from "../_data/portfolio-data";
 
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
@@ -30,7 +30,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
             transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
             className="overflow-hidden"
           >
-            <p className="text-[0.88rem] text-[var(--color-text-muted)] leading-[1.4] pb-6 pr-8">{a}</p>
+            <p className="text-[0.88rem] text-[var(--color-text-muted)] leading-[var(--leading-body)] pb-6 pr-8">{a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -56,9 +56,10 @@ function ContactPageContent() {
           <div className="max-w-[1440px] mx-auto px-8 md:px-10">
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
               <div>
-                <span className="text-[13px] font-medium tracking-[0.3em] uppercase text-[var(--color-text-muted)] block mb-6">연락하기</span>
-                <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-black tracking-tighter leading-[1.1] max-w-[700px]">
-                  새로운 프로젝트를 고민 중이신가요? 함께 이야기하고 실현해 보세요.
+                <span className="text-xs font-medium tracking-[0.3em] uppercase text-[var(--color-text-muted)] block mb-6">연락하기</span>
+                <h1 className="text-[length:var(--text-h1)] font-black tracking-tighter leading-[var(--leading-heading)] max-w-[700px]">
+                  새 프로젝트를 준비 중인가요?<br />
+                  이야기를 들려주세요.
                 </h1>
                 <a
                   href={`mailto:${designerInfo.contact.email}`}
@@ -74,7 +75,7 @@ function ContactPageContent() {
                   { label: 'X', href: designerInfo.social.twitter },
                 ].map(s => (
                   <a key={s.label} href={s.href}
-                    className="text-[13px] font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors">
+                    className="text-xs font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors">
                     {s.label}
                   </a>
                 ))}
@@ -93,8 +94,8 @@ function ContactPageContent() {
                   animate={{ opacity: 1, y: 0 }}
                   className="py-16"
                 >
-                  <h2 className="text-[2rem] font-black uppercase tracking-tighter mb-3">메시지 전송 완료</h2>
-                  <p className="text-[var(--color-text-muted)] text-[0.9rem]">영업일 기준 1일 이내에 회신해 드리겠습니다.</p>
+                  <h2 className="text-[2rem] font-black uppercase tracking-tighter mb-3">문의가 접수되었습니다</h2>
+                  <p className="text-[var(--color-text-muted)] text-[0.9rem]">내용을 확인한 뒤 영업일 기준 1일 이내에 답변드리겠습니다.</p>
                 </motion.div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-0">
@@ -103,7 +104,7 @@ function ContactPageContent() {
                     { label: '이메일 주소', type: 'email', placeholder: 'you@company.com' },
                   ].map(field => (
                     <div key={field.label} className="border-b border-[var(--color-border)] py-6">
-                      <label className="block text-[13px] font-medium uppercase tracking-widest text-[var(--color-text-muted)] mb-2">{field.label}</label>
+                      <label className="block text-xs font-medium uppercase tracking-widest text-[var(--color-text-muted)] mb-2">{field.label}</label>
                       <input
                         required
                         type={field.type}
@@ -113,11 +114,11 @@ function ContactPageContent() {
                     </div>
                   ))}
                   <div className="border-b border-[var(--color-border)] py-6">
-                    <label className="block text-[13px] font-medium uppercase tracking-widest text-[var(--color-text-muted)] mb-2">메시지</label>
+                    <label className="block text-xs font-medium uppercase tracking-widest text-[var(--color-text-muted)] mb-2">메시지</label>
                     <textarea
                       required
                       rows={4}
-                      placeholder="프로젝트에 대해 설명해 주세요..."
+                      placeholder="프로젝트의 목적과 필요한 작업, 예상 일정과 예산을 적어주세요."
                       className="w-full bg-transparent py-1 text-[0.95rem] text-[var(--color-text)] placeholder:text-[var(--color-text-muted)] outline-none resize-none"
                     />
                   </div>
@@ -126,7 +127,7 @@ function ContactPageContent() {
                       type="submit"
                       className="bg-[var(--color-primary)] text-white text-[0.78rem] font-bold uppercase tracking-widest px-10 py-4 hover:bg-black transition-colors"
                     >
-                      보내기
+                      문의 보내기
                     </button>
                   </div>
                 </form>
@@ -140,8 +141,8 @@ function ContactPageContent() {
           <div className="max-w-[1440px] mx-auto px-8 md:px-10">
             <div className="grid md:grid-cols-2 gap-16">
               <div>
-                <span className="text-[13px] font-medium tracking-[0.3em] uppercase text-[var(--color-text-muted)] block mb-6">FAQ</span>
-                <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-black tracking-tighter leading-[1.1]">자주 묻는 질문</h2>
+                <span className="text-xs font-medium tracking-[0.3em] uppercase text-[var(--color-text-muted)] block mb-6">FAQ</span>
+                <h2 className="text-[length:var(--text-h2)] font-black tracking-tighter leading-[var(--leading-heading)]">자주 묻는 질문</h2>
               </div>
               <div className="border-t border-[var(--color-border)]">
                 {faqs.map((faq, i) => (
@@ -158,10 +159,10 @@ function ContactPageContent() {
   );
 }
 
-export default function ContactPage(props: any) {
+export default function ContactPage() {
   return (
     <React.Suspense fallback={null}>
-      <ContactPageContent {...props} />
+      <ContactPageContent />
     </React.Suspense>
   );
 }

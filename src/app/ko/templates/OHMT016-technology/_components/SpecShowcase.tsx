@@ -15,11 +15,11 @@ export default function SpecShowcase() {
           <span className="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-3 block">
             시스템 사양
           </span>
-          <h2 className="text-[clamp(2.5rem,5vw,4rem)] font-bold tracking-[-0.02em] leading-[1.1] text-[var(--color-text)] font-heading break-keep">
-            OmniBot Gen 2 소개
+          <h2 className="text-[length:var(--text-h1)] font-bold tracking-[-0.02em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading break-keep">
+            OmniBot Gen 2
           </h2>
-          <p className="mt-4 mx-auto max-w-xl text-sm md:text-base text-[var(--color-text-muted)] leading-[1.2]">
-            모듈형 엔지니어링과 차세대 마이크로컨트롤러의 만남. 현대 작업 공간에 완벽하게 통합되도록 설계되었습니다.
+          <p className="mt-4 mx-auto max-w-xl text-sm md:text-base text-[var(--color-text-muted)] leading-[var(--leading-heading)]">
+            모듈형 하드웨어와 온디바이스 제어 기술을 결합해 다양한 작업 환경에 유연하게 적용할 수 있습니다.
           </p>
         </div>
 
@@ -35,7 +35,7 @@ export default function SpecShowcase() {
                 <h3 className="text-lg font-bold text-[var(--color-text)] mb-2 font-heading transition-colors group-hover:text-[var(--color-accent)]">
                   {spec.title}
                 </h3>
-                <p className="text-sm text-[var(--color-text-muted)] leading-[1.2]">
+                <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-heading)]">
                   {spec.description}
                 </p>
                 {/* Pointer Line Element for desktop */}
@@ -49,7 +49,7 @@ export default function SpecShowcase() {
             <div className="relative w-full max-w-[680px] flex items-end justify-center">
               <img
                 src="/templates/OHMT016-technology/omnibot-mockup-nuki.png"
-                alt="OmniBot Gen 2 목업 구조"
+                alt="OmniBot Gen 2 하드웨어 구조"
                 className="w-full h-auto"
               />
             </div>
@@ -65,7 +65,7 @@ export default function SpecShowcase() {
                 <h3 className="text-lg font-bold text-[var(--color-text)] mb-2 font-heading transition-colors group-hover:text-[var(--color-accent)]">
                   {spec.title}
                 </h3>
-                <p className="text-sm text-[var(--color-text-muted)] leading-[1.2]">
+                <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-heading)]">
                   {spec.description}
                 </p>
                 {/* Pointer Line Element for desktop */}
@@ -79,10 +79,10 @@ export default function SpecShowcase() {
         <div className="mt-0 bg-[var(--color-accent)] px-8 md:px-12 py-10 md:py-14 flex flex-col md:flex-row md:items-center justify-between gap-6 rounded-2xl">
           <div className="max-w-xl">
             <h3 className="text-xl md:text-2xl font-bold text-white mb-2 font-heading">
-              진짜 로보틱스. 진짜 임팩트.
+              현장에서 작동하는 로보틱스.
             </h3>
-            <p className="text-sm text-white/70 leading-[1.2]">
-              실제 비즈니스 확장과 운영 최적화를 위해 설계된 완전 자율 자동화의 성능을 경험하세요.
+            <p className="text-sm text-white/70 leading-[var(--leading-heading)]">
+              반복 작업을 자동화하고 운영 효율을 높이는 자율 시스템을 직접 확인해 보세요.
             </p>
           </div>
           <div className="flex items-center gap-4">
@@ -90,7 +90,7 @@ export default function SpecShowcase() {
               href="#models"
               className="inline-flex items-center justify-center px-6 py-2.5 bg-white text-[var(--color-accent)] font-bold text-xs uppercase tracking-widest hover:opacity-90 active:scale-95 transition-all duration-300 rounded-md"
             >
-              지금 예약하기
+              사전 예약
             </Link>
           </div>
         </div>

@@ -72,7 +72,7 @@ export default function CareersPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: i * 0.06, ease: EASE_OUT }}
-                className="group cursor-pointer overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] transition-all duration-500 hover:border-[var(--color-primary)] hover:shadow-[0_0_20px_rgba(124,58,237,0.15)]"
+                className="group cursor-pointer overflow-hidden rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg-secondary)] transition-all duration-500 hover:border-[var(--color-primary)] hover:shadow-[0_0_20px_var(--color-primary-glow-subtle)]"
               >
                 {/* Image */}
                 <div className="relative aspect-[16/10] overflow-hidden">

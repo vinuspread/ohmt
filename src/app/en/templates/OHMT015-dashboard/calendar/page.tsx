@@ -43,9 +43,9 @@ function MiniCalendar({ year, month, onNavigate }: { year: number; month: number
           <ChevronRight size={16} strokeWidth={1.5} />
         </button>
       </div>
-      <div className="grid grid-cols-7 gap-0.5">
+      <div className="grid grid-cols-6 gap-0.5">
         {DAYS.map((d) => (
-          <div key={d} className="text-center text-[10px] text-[var(--color-text-muted)] font-medium py-1">{d.slice(0, 2)}</div>
+          <div key={d} className="text-center text-xs text-[var(--color-text-muted)] font-medium py-1">{d.slice(0, 2)}</div>
         ))}
         {days.map((day, i) => {
           const dateKey = day ? formatDateKey(year, month, day) : ''
@@ -157,7 +157,7 @@ export default function CalendarPage() {
                     <div className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ backgroundColor: eventCategoryMeta[ev.category].color }} />
                     <div className="min-w-0">
                       <p className="text-sm font-medium text-[var(--color-text)] truncate">{ev.title}</p>
-                      <p className="text-[14px] text-[var(--color-text-muted)]">{ev.date} {ev.time}</p>
+                      <p className="text-sm text-[var(--color-text-muted)]">{ev.date} {ev.time}</p>
                     </div>
                   </div>
                 ))}
@@ -191,9 +191,9 @@ export default function CalendarPage() {
                 </button>
               </div>
 
-              <div className="grid grid-cols-7 gap-0">
+              <div className="grid grid-cols-6 gap-0">
                 {DAYS.map((d) => (
-                  <div key={d} className="text-center text-[11px] uppercase tracking-[0.08em] text-[var(--color-text-muted)] font-medium py-2 border-b border-[var(--color-border)]">
+                  <div key={d} className="text-center text-xs uppercase tracking-[0.08em] text-[var(--color-text-muted)] font-medium py-2 border-b border-[var(--color-border)]">
                     {d}
                   </div>
                 ))}
@@ -223,14 +223,14 @@ export default function CalendarPage() {
                         {dayEvents.slice(0, 3).map((ev) => (
                           <div
                             key={ev.id}
-                            className="text-[10px] px-1 py-0.5 rounded-sm truncate font-medium"
+                            className="text-xs px-1 py-0.5 rounded-sm truncate font-medium"
                             style={{ backgroundColor: `${eventCategoryMeta[ev.category].color}20`, color: eventCategoryMeta[ev.category].color }}
                           >
                             {ev.title}
                           </div>
                         ))}
                         {dayEvents.length > 3 && (
-                          <span className="text-[10px] text-[var(--color-text-muted)]">+{dayEvents.length - 3} more</span>
+                          <span className="text-xs text-[var(--color-text-muted)]">+{dayEvents.length - 3} more</span>
                         )}
                       </div>
                     </button>

@@ -45,16 +45,16 @@ export function Story() {
         <div className="w-full md:block hidden" />
         <div className="w-full flex flex-col justify-center py-20 md:py-32 px-0 md:pl-16 lg:pl-20 pointer-events-auto">
           <SplitHeading
-            text="복잡한 도시의 모든 도로가 마침내 당신의 편이 됩니다."
-            className="font-michroma text-[clamp(24px,3vw,40px)] text-[var(--text-on-light)] leading-[1.05] tracking-[-0.02em] mb-6"
+            text="복잡한 도시에서도 이동은 더 단순해질 수 있습니다."
+            className="font-michroma text-[length:var(--text-h3)] text-[var(--text-on-light)] leading-[var(--leading-heading)] tracking-[-0.02em] mb-6"
           />
-          <p className="font-inter text-[15px] text-[var(--text-muted-light)] leading-relaxed max-w-[480px] mb-8">
-            퇴근길 가벼운 러닝부터 주말의 야간 드라이브까지.
-            NUBI는 당신의 어떤 하루 속 동선에도 자연스럽게 녹아듭니다.
-          </p>
+          <p className="font-inter text-sm text-[var(--text-muted-light)] leading-relaxed max-w-[480px] mb-8">
+            출퇴근과 장보기, 주말의 짧은 드라이브까지.
+            <br className="hidden md:block" />{" "}
+            NUBI는 매일의 이동에 자연스럽게 어울립니다.</p>
           <a
             href="/ko/templates/OHMT028-ev/story"
-            className="font-inter text-[12px] font-medium tracking-[0.06em] uppercase text-[var(--text-on-light)] hover:opacity-60 transition-opacity inline-flex items-center gap-2"
+            className="font-inter text-xs font-medium tracking-[0.06em] uppercase text-[var(--text-on-light)] hover:opacity-60 transition-opacity inline-flex items-center gap-2"
           >
             스토리 보기
           </a>

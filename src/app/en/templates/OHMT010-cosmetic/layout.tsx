@@ -1,11 +1,11 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - Cosmetic",
+  title: "OHMT - Wellness Cosmetic Brand Template",
   description: "Premium beauty & cosmetic brand showcase",
   openGraph: {
-    title: "OHMT - Cosmetic",
+    title: "OHMT - Wellness Cosmetic Brand Template",
     description: "Premium beauty & cosmetic brand showcase",
     url: "https://ohmytemplate.com/en/templates/OHMT010-cosmetic",
     siteName: "OHMT",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Cosmetic",
+    title: "OHMT - Wellness Cosmetic Brand Template",
     description: "Premium beauty & cosmetic brand showcase",
     images: ["/templates/OHMT010-cosmetic/og-image.jpg"],
   },
@@ -40,4 +40,3 @@ export default function CosmeticLayout({
     </>
   );
 }
-

@@ -2,74 +2,78 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, Focus, Moon, Smartphone, Sparkles } from "lucide-react";
+import { ArrowRight, Focus, Menu, Moon, Smartphone, Sparkles, X } from "lucide-react";
+import { ResponsiveText } from "./_components/ResponsiveText";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
 
 const moments = [
-  { label: "아침 거리", value: "1/500", detail: "손이 올라가기도 전에 켜지고, 셔터음은 짧게 사라집니다." },
-  { label: "스튜디오", value: "45 MP", detail: "작은 오브젝트를 잘라 써도 표면과 색이 무너지지 않습니다." },
-  { label: "블루아워", value: "ISO 12800", detail: "노이즈를 지우기보다 그 시간의 빛을 남깁니다." },
+  { label: "아침 거리", value: "1/500", detail: "전원을 빠르게 켜고 조용한 셔터로 순간을 놓치지 않습니다." },
+  { label: "스튜디오", value: "45 MP", detail: "45MP 해상도로 작은 부분을 잘라 사용해도 질감과 색을 유지합니다." },
+  { label: "블루아워", value: "ISO 12800", detail: "노이즈를 과도하게 지우지 않고 저녁의 빛과 분위기를 남깁니다." },
 ];
 
 const products = [
   {
+    slug: "luma-one",
     name: "LUMA One",
-    price: "$1,890",
-    note: "가방에 넣을지 고민하지 않는 기본 바디",
-    spec: "28mm 고정 렌즈",
+    price: "₩2,490,000",
+    note: "매일 가볍게 들고 다니는 기본 모델",
+    spec: "28mm 고정식 렌즈",
     image: "/templates/OHMT031-luma-camera/product-one.jpg?v=20260702e",
   },
   {
+    slug: "luma-one-pro",
     name: "LUMA One Pro",
-    price: "$2,460",
-    note: "작업대와 여행에서 손에 안정적으로 걸리는 필드 키트",
-    spec: "28mm 렌즈 + 그립",
+    price: "₩3,190,000",
+    note: "촬영 작업과 여행에 알맞은 확장 모델",
+    spec: "28mm 렌즈·전용 그립",
     image: "/templates/OHMT031-luma-camera/product-pro.jpg?v=20260702e",
   },
 ];
 
-const scenes = [
+const photoSamples = [
   {
-    title: "아침 거리",
-    text: "코트 소매 밖으로 꺼내는 시간이 짧고, 셔터 소리는 길 위의 흐름을 깨지 않습니다.",
-    image: "/templates/OHMT031-luma-camera/morning-street.jpg?v=20260702e",
+    title: "창가 인물",
+    text: "피부톤을 자연스럽게 유지하면서 니트와 세라믹의 색도 균형 있게 표현합니다.",
+    image: "/templates/OHMT031-luma-camera/sample-portrait.png?v=20260703a",
   },
   {
-    title: "스튜디오 테이블",
-    text: "세라믹, 과일, 종이 패키지가 한 테이블에 있어도 색이 따로 떠 보이지 않습니다.",
-    image: "/templates/OHMT031-luma-camera/studio-table.jpg?v=20260702e",
+    title: "블루아워 풍경",
+    text: "과도한 HDR 효과 없이 푸른 하늘과 도시의 작은 불빛을 구분해 담습니다.",
+    image: "/templates/OHMT031-luma-camera/sample-landscape.png?v=20260703a",
   },
   {
-    title: "블루아워",
-    text: "창밖의 푸른빛과 실내 조명의 온기를 한 색으로 뭉개지 않습니다.",
-    image: "/templates/OHMT031-luma-camera/blue-hour.jpg?v=20260702e",
+    title: "생활 정물",
+    text: "컵과 과일, 천처럼 익숙한 소재의 색을 과장 없이 자연스럽게 표현합니다.",
+    image: "/templates/OHMT031-luma-camera/sample-color.jpg?v=20260702e",
   },
   {
-    title: "조용한 저녁",
-    text: "큰 장비가 들어오면 달라지는 식탁의 공기를 작게 건드립니다.",
-    image: "/templates/OHMT031-luma-camera/quiet-dinner.jpg?v=20260702e",
+    title: "실내 저조도",
+    text: "푸른 창밖과 따뜻한 실내 조명이 한 화면에서도 서로 다른 색감을 유지합니다.",
+    image: "/templates/OHMT031-luma-camera/sample-lowlight.jpg?v=20260702e",
   },
 ];
 
 const imageQuality = [
   {
     label: "컬러",
-    title: "보정이 덜 필요한 색",
-    text: "피부, 세라믹, 과일, 천이 같은 빛 안에 있을 때 서로의 색을 밀어내지 않습니다.",
-    image: "/templates/OHMT031-luma-camera/sample-color.jpg?v=20260702e",
+    title: "바로 사용할 수 있는 자연스러운 색",
+    text: "인물과 세라믹, 과일, 천이 한 화면에 있어도 각 소재의 색을 자연스럽게 구분합니다.",
+    image: "/templates/OHMT031-luma-camera/engine-color-grid.jpg?v=20260702f",
   },
   {
     label: "저조도",
-    title: "어두워도 방의 온도는 남게",
-    text: "블루아워와 실내 조명에서 입자를 조금 남기고, 그림자를 검게 눌러버리지 않습니다.",
-    image: "/templates/OHMT031-luma-camera/sample-lowlight.jpg?v=20260702e",
+    title: "어두운 장면에서도 조명의 분위기를 그대로",
+    text: "저녁과 실내 촬영에서 과도한 노이즈 제거를 줄이고 어두운 영역의 디테일을 유지합니다.",
+    image: "/templates/OHMT031-luma-camera/engine-lowlight-room.jpg?v=20260702f",
   },
   {
     label: "디테일",
-    title: "질감은 또렷하게, 가장자리는 차분하게",
-    text: "천, 세라믹, 종이, 금속의 표면을 과한 샤픈 효과 없이 읽히게 둡니다.",
-    image: "/templates/OHMT031-luma-camera/sample-detail.jpg?v=20260702e",
+    title: "표면은 선명하게, 윤곽은 자연스럽게",
+    text: "천과 세라믹, 종이, 금속의 질감을 과도한 선명도 효과 없이 표현합니다.",
+    image: "/templates/OHMT031-luma-camera/engine-texture-close.jpg?v=20260702f",
   },
 ];
 
@@ -91,11 +95,18 @@ function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 }
 
 export default function LumaCameraPage() {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const navItems = [
+    { label: "이미지 엔진", href: "/ko/templates/OHMT031-luma-camera/image-engine" },
+    { label: "촬영 장면", href: "/ko/templates/OHMT031-luma-camera/scenes" },
+    { label: "촬영 노트", href: "/ko/templates/OHMT031-luma-camera/stories" },
+    { label: "제품", href: "/ko/templates/OHMT031-luma-camera/shop" },
+  ];
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "OnlineStore",
     name: "LUMA Camera",
-    description: "작은 바디와 자연스러운 색, 촬영 노트까지 함께 남기는 컴팩트 카메라 템플릿.",
+    description: "작은 바디와 자연스러운 색 표현, 촬영 노트 기능을 갖춘 컴팩트 카메라입니다.",
     url: "https://ohmytemplate.com/ko/templates/OHMT031-luma-camera",
     image: "https://ohmytemplate.com/templates/OHMT031-luma-camera/og-image.jpg?v=20260702e",
     brand: {
@@ -105,8 +116,8 @@ export default function LumaCameraPage() {
     makesOffer: products.map((product) => ({
       "@type": "Offer",
       name: product.name,
-      price: product.price.replace("$", "").replace(",", ""),
-      priceCurrency: "USD",
+      price: product.price.replace("₩", "").replace(",", ""),
+      priceCurrency: "KRW",
       itemOffered: {
         "@type": "Product",
         name: product.name,
@@ -122,54 +133,76 @@ export default function LumaCameraPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <header className="fixed left-0 right-0 top-0 z-40 bg-[#222222] px-4 md:px-8">
+      <header className="fixed left-0 right-0 top-0 z-40 bg-[var(--luma-dark)] px-4 md:px-9">
         <nav className="mx-auto flex h-16 max-w-[1380px] items-center justify-between text-white">
-          <Link href="/ko/templates/OHMT031-luma-camera" className="inline-flex min-h-11 items-center text-sm font-black tracking-[0.14em] text-white">
+          <Link href="/ko/templates/OHMT031-luma-camera" className="inline-flex min-h-12 items-center text-sm font-black tracking-[0.14em] text-white">
             OHMT
           </Link>
-          <div className="hidden items-center gap-3 text-xs font-semibold text-white/70 md:flex lg:gap-7">
-            <Link href="/ko/templates/OHMT031-luma-camera/image-engine" className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 transition-colors hover:text-white">이미지</Link>
-            <Link href="/ko/templates/OHMT031-luma-camera/scenes" className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 transition-colors hover:text-white">장면</Link>
-            <Link href="/ko/templates/OHMT031-luma-camera/stories" className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 transition-colors hover:text-white">스토리</Link>
-            <Link href="/ko/templates/OHMT031-luma-camera/shop" className="inline-flex min-h-11 min-w-11 items-center justify-center px-2 transition-colors hover:text-white">구매</Link>
+          <div className="hidden items-center gap-3 text-xs font-semibold text-white/70 md:flex lg:gap-6">
+            {navItems.map((item) => (
+              <Link key={item.href} href={item.href} className="inline-flex min-h-12 min-w-12 items-center justify-center px-2 transition-colors hover:text-white">
+                {item.label}
+              </Link>
+            ))}
           </div>
-          <Link href="/ko/templates/OHMT031-luma-camera/shop" className="inline-flex min-h-11 items-center justify-center bg-white/10 px-4 text-xs font-bold text-white transition-colors hover:bg-white hover:text-[#222222]">
-            예약하기
-          </Link>
+          <Link href="/ko/templates/OHMT031-luma-camera/shop" className="hidden min-h-12 items-center justify-center bg-white/10 px-4 text-xs font-bold text-white transition-colors hover:bg-white hover:text-[var(--luma-dark)] md:inline-flex">
+            구매하기</Link>
+          <button
+            type="button"
+            onClick={() => setMobileOpen((open) => !open)}
+            className="inline-flex h-12 w-12 items-center justify-center border border-white/20 text-white md:hidden"
+            aria-label={mobileOpen ? "메뉴 닫기" : "메뉴 열기"}
+            aria-expanded={mobileOpen}
+          >
+            {mobileOpen ? <X size={19} strokeWidth={1.8} /> : <Menu size={19} strokeWidth={1.8} />}
+          </button>
         </nav>
+        {mobileOpen && (
+          <div className="mx-auto max-w-[1380px] border-t border-white/10 py-4 md:hidden">
+            <div className="grid gap-1">
+              {navItems.map((item) => (
+                <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="px-1 py-3 text-sm font-semibold text-white/80">
+                  {item.label}
+                </Link>
+              ))}
+              <Link href="/ko/templates/OHMT031-luma-camera/shop" onClick={() => setMobileOpen(false)} className="mt-2 inline-flex min-h-12 items-center justify-center bg-white text-xs font-bold text-[var(--luma-dark)]">
+                구매하기</Link>
+            </div>
+          </div>
+        )}
       </header>
 
       <main className="overflow-hidden">
-        <section className="luma-grain px-4 pb-16 pt-24 md:px-8 md:pb-24">
+        <section className="luma-grain px-4 pb-16 pt-24 md:px-9 md:pb-24">
           <motion.div
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.75, ease: EASE }}
-            className="relative mx-auto min-h-[76dvh] max-w-[1380px] overflow-hidden bg-[var(--luma-dark)] shadow-2xl shadow-black/12"
+            className="relative mx-auto min-h-[76dvh] max-w-[1380px] overflow-hidden bg-[var(--luma-dark)] shadow-2xl shadow-black/10"
           >
             <Image unoptimized src="/templates/OHMT031-luma-camera/hero-camera.jpg?v=20260702e" alt="LUMA 컴팩트 카메라 제품 이미지" fill priority className="object-cover" sizes="100vw" />
-            <div className="absolute inset-0 bg-gradient-to-br from-black/76 via-black/30 to-black/5" />
-            <div className="absolute left-0 top-0 p-6 text-white md:p-10 lg:p-14">
-              <p className="mb-5 text-xs font-bold uppercase tracking-[0.22em] text-white/62">Compact image system</p>
-              <h1 className="max-w-[720px] text-[clamp(2.6rem,5vw,5.4rem)] font-bold leading-[1.02] tracking-[-0.04em]">
-                작은 바디.<br />오래 남는 장면.
-              </h1>
-              <p className="mt-6 max-w-[560px] text-base leading-7 text-white/72 md:text-lg">
-                주머니에 들어가는 바디로 아침 거리, 작업대, 저녁 식탁까지 자연스럽게 기록합니다. 색은 덜 만지고, 촬영 메모는 사진 곁에 남깁니다.
+            <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/30 to-black/5" />
+            <div className="absolute left-0 top-0 p-6 text-white md:p-9 lg:p-12">
+              <p className="luma-label mb-4 text-white/60">컴팩트 이미지 시스템</p>
+              <h1 className="luma-h1 max-w-[560px]" style={{ textWrap: "pretty" } as React.CSSProperties}>
+                작은 바디로 더 자주 기록합니다.</h1>
+              <p className="luma-body mt-6 max-w-[560px] !text-white/70">
+                <ResponsiveText>
+                  {"휴대하기 좋은 작은 바디로 거리와 작업실, 식탁의 순간을 자연스럽게 기록합니다.\n촬영 정보와 컬러 설정은 사진과 함께 저장됩니다."}
+                </ResponsiveText>
               </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <div className="mt-9 flex flex-row gap-3">
                 <Link href="/ko/templates/OHMT031-luma-camera/shop" className="inline-flex items-center justify-center gap-2 bg-white px-6 py-3 text-sm font-bold text-[var(--luma-ink)] transition-transform duration-200 ease-out active:scale-[0.97]">
-                  카메라 보기 <ArrowRight size={16} />
+                  제품 보기<ArrowRight size={16} />
                 </Link>
                 <Link href="/ko/templates/OHMT031-luma-camera/image-engine" className="inline-flex items-center justify-center bg-white/12 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-white/20">
-                  이미지 엔진 보기
-                </Link>
+                  이미지 엔진 알아보기</Link>
               </div>
             </div>
           </motion.div>
         </section>
 
-        <section className="px-4 pb-24 md:px-8 md:pb-32">
+        <section className="px-4 pb-24 md:px-9 md:pb-32">
           <div className="mx-auto grid max-w-[1380px] gap-4 md:grid-cols-2">
             {products.map((product) => (
               <Reveal key={product.name}>
@@ -177,17 +210,18 @@ export default function LumaCameraPage() {
                   <div className="relative aspect-[4/3] overflow-hidden bg-[var(--luma-soft)]">
                     <Image unoptimized src={product.image} alt={`${product.name} 제품 이미지`} fill className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" sizes="(min-width: 768px) 50vw, 100vw" />
                   </div>
-                  <div className="flex flex-col gap-5 p-6 md:flex-row md:items-end md:justify-between md:p-7">
+                  <div className="flex flex-col gap-6 p-6 md:flex-row md:items-end md:justify-between md:p-9">
                     <div>
-                      <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--luma-muted)]">{product.spec}</p>
-                      <h2 className="mt-3 text-2xl font-bold tracking-[-0.04em]">{product.name}</h2>
-                      <p className="mt-2 text-sm leading-6 text-[var(--luma-muted)]">{product.note}</p>
+                      <p className="luma-label text-[var(--luma-muted)]">{product.spec}</p>
+                      <h2 className="mt-3 text-2xl font-bold tracking-[-0.035em]">{product.name}</h2>
+                      <p className="mt-3 text-sm leading-6 text-[var(--luma-muted)]">{product.note}</p>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Link href="/ko/templates/OHMT031-luma-camera/image-engine" className="inline-flex min-h-11 min-w-11 items-center text-sm font-bold text-[var(--luma-ink)]">자세히 보기</Link>
-                      <Link href="/ko/templates/OHMT031-luma-camera/shop" className="inline-flex min-h-11 items-center bg-[var(--luma-dark)] px-5 text-sm font-bold text-white transition-transform duration-200 ease-out active:scale-[0.97]">
-                        예약하기
+                      <Link href={`/ko/templates/OHMT031-luma-camera/product/${product.slug}`} className="inline-flex min-h-12 items-center justify-center border border-[var(--luma-dark)]/15 px-6 text-sm font-bold text-[var(--luma-ink)] hover:bg-[var(--luma-dark)]/5 transition-colors">
+                        자세히 보기
                       </Link>
+                      <Link href={`/ko/templates/OHMT031-luma-camera/product/${product.slug}`} className="inline-flex min-h-12 items-center bg-[var(--luma-dark)] px-6 text-sm font-bold text-white transition-transform duration-200 ease-out active:scale-[0.97]">
+                        구매하기</Link>
                     </div>
                   </div>
                 </div>
@@ -196,50 +230,50 @@ export default function LumaCameraPage() {
           </div>
         </section>
 
-        <section id="image-engine" className="px-4 pb-24 md:px-8 md:pb-32">
-          <div className="mx-auto grid max-w-[1380px] gap-12 lg:grid-cols-[0.82fr_1.18fr]">
+        <section id="image-engine" className="px-4 pb-24 md:px-9 md:pb-32">
+          <div className="mx-auto grid max-w-[1380px] gap-12 lg:grid-cols-2">
             <Reveal>
               <div className="max-w-2xl">
                 <Focus size={25} strokeWidth={1.5} />
-                <h2 className="mt-6 text-[clamp(1.8rem,3vw,3.35rem)] font-bold leading-[1.08] tracking-[-0.035em]">
-                  큰 카메라 없이도 오래 쓰는 파일.
-                </h2>
-                <p className="mt-6 text-lg leading-8 text-[var(--luma-muted)]">
-                  색, 저조도, 디테일을 따로 과장하지 않습니다. 찍은 뒤 바로 고를 수 있는 기준을 맞추고, 왜 찍었는지는 사진 곁에 남깁니다.
+                <h2 className="luma-h2 mt-6">
+                  작은 카메라로도 오래 활용할 수 있는 결과물.</h2>
+                <p className="luma-body mt-6" style={{ textWrap: "pretty" } as React.CSSProperties}>
+                  <ResponsiveText>
+                    {"색과 저조도, 디테일을 과장하지 않고 촬영 직후 바로 활용할 수 있는 결과를 제공합니다.\n촬영 메모와 설정도 사진과 함께 저장됩니다."}
+                  </ResponsiveText>
                 </p>
               </div>
             </Reveal>
 
             <Reveal delay={0.08}>
-              <div className="space-y-8">
-                <div className="grid gap-5 md:grid-cols-3">
+              <div className="space-y-9">
+                <div className="grid gap-4 md:grid-cols-3">
                   {imageQuality.map((item) => (
-                    <article key={item.label} className="overflow-hidden bg-white/45 shadow-lg shadow-black/[0.025]">
+                    <article key={item.label} className="overflow-hidden bg-white/55 shadow-lg shadow-black/[0.04]">
                       <div className="relative aspect-[7/5] overflow-hidden">
                         <Image unoptimized src={item.image} alt={`LUMA ${item.label} 촬영 결과 샘플`} fill className="object-cover" sizes="(min-width: 768px) 28vw, 100vw" />
                       </div>
-                      <div className="px-5 py-6">
-                        <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--luma-muted)]">{item.label}</p>
-                        <h3 className="mt-4 text-xl font-bold leading-[1.08] tracking-[-0.04em]">{item.title}</h3>
+                      <div className="p-6">
+                        <p className="luma-label text-[var(--luma-muted)]">{item.label}</p>
+                        <h3 className="luma-h3 mt-4 break-keep">{item.title}</h3>
                         <p className="mt-3 text-sm leading-6 text-[var(--luma-muted)]">{item.text}</p>
                       </div>
                     </article>
                   ))}
                 </div>
 
-                <div className="grid gap-5 lg:grid-cols-[1.08fr_0.92fr]">
-                  <div className="bg-[var(--luma-dark)] p-6 text-white md:p-8">
+                <div className="grid gap-4 lg:grid-cols-2">
+                  <div className="luma-card-dark">
                     <Smartphone size={22} strokeWidth={1.5} />
-                    <h3 className="mt-5 text-2xl font-bold leading-[1.08] tracking-[-0.04em]">사진 곁에 메모가 남습니다.</h3>
-                    <p className="mt-4 max-w-xl text-sm leading-6 text-white/68">
-                      렌즈, 색 조합, 장소, 묶어둘 컬렉션을 한 번에 남깁니다. 나중에 파일명만 뒤지는 시간을 줄입니다.
-                    </p>
+                    <h3 className="luma-h3 mt-6">촬영 메모를 사진과 함께 저장합니다.</h3>
+                    <p className="mt-4 max-w-xl text-sm leading-6 text-white/70">
+                      렌즈와 컬러 설정, 촬영 장소, 컬렉션 정보를 한 번에 기록해 원하는 사진을 쉽게 다시 찾을 수 있습니다.</p>
                   </div>
                   <div className="grid bg-[var(--luma-bg)] sm:grid-cols-3 lg:grid-cols-1">
                     {moments.map((item) => (
-                      <div key={item.label} className="bg-white/55 p-5">
-                        <p className="text-[0.65rem] font-bold uppercase tracking-[0.14em] text-[var(--luma-muted)]">{item.label}</p>
-                        <p className="mt-2 text-2xl font-bold tracking-[-0.04em]">{item.value}</p>
+                      <div key={item.label} className="luma-card !p-6">
+                        <p className="luma-label text-[var(--luma-muted)]">{item.label}</p>
+                        <p className="mt-2 text-2xl font-bold tracking-[-0.035em]">{item.value}</p>
                         <p className="mt-2 text-sm leading-6 text-[var(--luma-muted)]">{item.detail}</p>
                       </div>
                     ))}
@@ -250,30 +284,31 @@ export default function LumaCameraPage() {
           </div>
         </section>
 
-        <section id="scenes" className="px-4 py-24 md:px-8 md:py-32">
+        <section id="scenes" className="px-4 pb-24 md:px-9 md:pb-32">
           <div className="mx-auto max-w-[1380px]">
             <Reveal>
               <div className="max-w-3xl">
-                <h2 className="text-[clamp(1.8rem,3vw,3.35rem)] font-bold leading-[1.08] tracking-[-0.035em]">
-                  장면이 카메라를 의식하기 전에.
-                </h2>
-                <p className="mt-6 max-w-2xl text-lg leading-8 text-[var(--luma-muted)]">
-                  꺼내는 시간이 짧고, 바디가 작아 방의 분위기를 덜 건드립니다. 사진은 장면이 흐트러지기 전에 남습니다.
+                <h2 className="luma-h2">
+                  카메라가 남기는 결과부터 확인하세요.</h2>
+                <p className="luma-body mt-6 max-w-2xl">
+                  <ResponsiveText>
+                    {"인물의 피부톤과 풍경의 원경, 실내의 어두운 영역,\n가까운 소재의 질감을 직접 확인해보세요."}
+                  </ResponsiveText>
                 </p>
               </div>
             </Reveal>
 
-            <div className="mt-14 grid gap-4 md:grid-cols-2">
-              {scenes.map((scene, index) => (
-                <Reveal key={scene.title} delay={index * 0.05}>
-                  <article className="group relative aspect-[7/5] overflow-hidden bg-[var(--luma-dark)] shadow-xl shadow-black/[0.06]">
+            <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+              {photoSamples.map((sample, index) => (
+                <Reveal key={sample.title} delay={index * 0.05}>
+                  <article className="group relative aspect-[3/4] overflow-hidden bg-[var(--luma-dark)] shadow-xl shadow-black/[0.06]">
                     <div className="absolute inset-0">
-                      <Image unoptimized src={scene.image} alt={`${scene.title} 촬영 장면의 LUMA 카메라`} fill className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" sizes="(min-width: 768px) 50vw, 100vw" />
+                      <Image unoptimized src={sample.image} alt={`LUMA로 촬영한 ${sample.title} 샘플`} fill className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" sizes="(min-width: 1024px) 33vw, 100vw" />
                     </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/72 via-black/16 to-transparent" />
-                    <div className="absolute bottom-0 left-0 max-w-xl p-6 text-white md:p-8">
-                      <h3 className="text-2xl font-bold tracking-[-0.04em]">{scene.title}</h3>
-                      <p className="mt-3 text-sm leading-6 text-white/72">{scene.text}</p>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/24 to-transparent" />
+                    <div className="absolute bottom-0 left-0 max-w-xl p-6 text-white">
+                      <h3 className="text-lg font-bold tracking-[-0.035em]">{sample.title}</h3>
+                      <p className="mt-2 text-xs leading-relaxed text-white/80">{sample.text}</p>
                     </div>
                   </article>
                 </Reveal>
@@ -282,15 +317,15 @@ export default function LumaCameraPage() {
           </div>
         </section>
 
-        <section id="stories" className="px-4 pb-24 md:px-8 md:pb-32">
-          <div className="mx-auto grid max-w-[1380px] gap-4 lg:grid-cols-[1fr_0.78fr]">
+        <section id="stories" className="px-4 pb-24 md:px-9 md:pb-32">
+          <div className="mx-auto grid max-w-[1380px] gap-4 lg:grid-cols-2">
             <Reveal>
               <div className="group relative min-h-[620px] overflow-hidden bg-[var(--luma-dark)]">
                 <Image unoptimized src="/templates/OHMT031-luma-camera/engine-lowlight-room.jpg?v=20260702f" alt="따뜻한 실내 조명과 푸른 창밖 빛의 LUMA 저조도 샘플" fill className="object-cover transition-transform duration-700 ease-out group-hover:scale-105" sizes="(min-width: 1024px) 58vw, 100vw" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                <div className="absolute bottom-0 max-w-xl p-7 text-white md:p-10">
+                <div className="absolute bottom-0 max-w-xl p-6 text-white md:p-9">
                   <Moon size={24} strokeWidth={1.5} />
-                  <h2 className="mt-5 text-2xl font-bold leading-[1.08] tracking-[-0.035em] md:text-4xl">밤을 밝히기보다, 밤답게 남깁니다.</h2>
+                  <h2 className="luma-h2 mt-6">밤의 밝기와 색을 자연스럽게 남깁니다.</h2>
                 </div>
               </div>
             </Reveal>
@@ -310,16 +345,17 @@ export default function LumaCameraPage() {
           </div>
         </section>
 
-        <section className="bg-[var(--luma-dark)] px-4 py-24 text-white md:px-8 md:py-32">
+        <section className="bg-[var(--luma-dark)] px-4 py-24 text-white md:px-9 md:py-32">
           <div className="mx-auto grid max-w-[1380px] items-center gap-12 lg:grid-cols-2">
             <Reveal>
               <div>
                 <Smartphone size={26} strokeWidth={1.5} />
-                <h2 className="mt-6 text-[clamp(1.8rem,3vw,3.35rem)] font-bold leading-[1.08] tracking-[-0.035em]">
-                  앱은 사진 옆에 이유를 남깁니다.
-                </h2>
-                <p className="mt-6 max-w-xl text-lg leading-8 text-white/62">
-                  렌즈 메모, 컬러 레시피, 위치, 컬렉션을 사진과 함께 둡니다. 한 달 뒤에도 어떤 빛에서 찍었는지 바로 떠올릴 수 있습니다.
+                <h2 className="luma-h2 mt-6">
+                  앱에 촬영 정보와 메모를 함께 기록합니다.</h2>
+                <p className="luma-body mt-6 max-w-xl !text-white/70">
+                  <ResponsiveText>
+                    {"렌즈와 컬러 설정, 위치, 컬렉션 정보를 사진과 함께 저장합니다.\n시간이 지나도 촬영 환경과 의도를 쉽게 확인할 수 있습니다."}
+                  </ResponsiveText>
                 </p>
               </div>
             </Reveal>
@@ -331,18 +367,19 @@ export default function LumaCameraPage() {
           </div>
         </section>
 
-        <section id="shop" className="px-4 py-24 md:px-8 md:py-32">
+        <section id="shop" className="px-4 pb-24 md:px-9 md:pb-32">
           <div className="mx-auto max-w-[1380px]">
             <Reveal>
               <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
                 <div>
                   <Sparkles size={24} strokeWidth={1.5} />
-                  <h2 className="mt-5 max-w-3xl text-[clamp(1.8rem,3vw,3.35rem)] font-bold leading-[1.08] tracking-[-0.035em]">
-                    자주 들고 나갈 쪽을 고르세요.
-                  </h2>
+                  <h2 className="luma-h2 mt-6 max-w-3xl">
+                    촬영 방식에 맞는 모델을 선택하세요.</h2>
                 </div>
                 <p className="max-w-sm text-sm leading-6 text-[var(--luma-muted)]">
-                  One은 매일 들기 좋고, Pro는 작업대에서 안정적입니다. 색과 노트 흐름은 두 바디 모두 같습니다.
+                  <ResponsiveText>
+                    {"One은 일상과 여행에 적합하고, Pro는 그립과 확장 구성으로 반복 촬영에 유리합니다.\n이미지 프로파일과 앱 기능은 동일합니다."}
+                  </ResponsiveText>
                 </p>
               </div>
             </Reveal>
@@ -350,29 +387,28 @@ export default function LumaCameraPage() {
             <div className="mt-12 grid gap-4 md:grid-cols-2">
               {products.map((product) => (
                 <Reveal key={product.name}>
-                  <div className="bg-white/55 p-7 shadow-xl shadow-black/[0.035]">
-                    <div className="flex items-start justify-between gap-4">
-                      <div>
-                        <h3 className="text-2xl font-bold tracking-[-0.04em]">{product.name}</h3>
-                        <p className="mt-2 text-sm text-[var(--luma-muted)]">{product.note}</p>
-                      </div>
-                      <p className="text-lg font-bold tracking-[-0.035em]">{product.price}</p>
-                    </div>
-                    <div className="mt-10 grid gap-3 text-sm text-[var(--luma-muted)]">
+                  <div className="luma-card shadow-xl shadow-black/[0.04]">
+                    <h3 className="text-2xl font-bold tracking-[-0.035em]">{product.name}</h3>
+                    <p className="mt-2 text-sm text-[var(--luma-muted)]">{product.note}</p>
+                    <p className="mt-3 text-lg font-bold tracking-[-0.035em]">{product.price}</p>
+                    <div className="mt-6 grid gap-3 text-sm text-[var(--luma-muted)]">
                       <div className="flex items-center justify-between bg-[var(--luma-soft)] px-4 py-3">
                         <span>컬러 프로파일</span>
-                        <span className="font-bold text-[var(--luma-ink)]">Neutral / Warm</span>
+                        <span className="font-bold text-[var(--luma-ink)]">중립 / 따뜻함</span>
                       </div>
                       <div className="flex items-center justify-between bg-[var(--luma-soft)] px-4 py-3">
-                        <span>필드 모드</span>
-                        <span className="font-bold text-[var(--luma-ink)]">{product.name.includes("Pro") ? "Grip + notes" : "Daily carry"}</span>
+                        <span>촬영 모드</span>
+                        <span className="font-bold text-[var(--luma-ink)]">{product.name.includes("Pro") ? "그립·노트" : "일상 휴대"}</span>
                       </div>
                     </div>
-                    <div className="mt-8 flex items-center justify-between">
+                    <div className="mt-6 flex items-center justify-between">
                       <span className="text-sm font-semibold text-[var(--luma-muted)]">{product.spec}</span>
-                      <button className="bg-[var(--luma-dark)] px-5 py-3 text-sm font-bold text-white transition-transform duration-200 ease-out active:scale-[0.97]">
-                        예약하기
-                      </button>
+                      <Link
+                        href={`/ko/templates/OHMT031-luma-camera/product/${product.slug}`}
+                        className="inline-flex min-h-11 items-center bg-[var(--luma-dark)] px-6 py-3 text-sm font-bold text-white transition-transform duration-200 ease-out active:scale-[0.97]"
+                      >
+                        구매하기
+                      </Link>
                     </div>
                   </div>
                 </Reveal>
@@ -382,10 +418,10 @@ export default function LumaCameraPage() {
         </section>
       </main>
 
-      <footer className="px-4 py-10 md:px-8">
+      <footer className="px-4 py-12 md:px-9">
         <div className="mx-auto flex max-w-[1380px] flex-col gap-4 text-sm text-[var(--luma-muted)] md:flex-row md:items-center md:justify-between">
-          <p className="font-bold text-[var(--luma-ink)]">LUMA by OHMT</p>
-          <p>© 2026 OHMT. 카메라 커머스 템플릿.</p>
+          <p className="font-bold text-[var(--luma-ink)]">OHMT LUMA</p>
+          <p>© 2026 OHMT. LUMA Camera.</p>
         </div>
       </footer>
     </TemplateWrapper>

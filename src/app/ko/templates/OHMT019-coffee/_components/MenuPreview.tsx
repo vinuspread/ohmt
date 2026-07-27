@@ -2,7 +2,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
-import { menuItems, menuCategories, type MenuCategory } from "../data/data";
+import { menuItems, menuCategories } from "../data/data";
+import { formatWon } from "../_utils/currency";
 
 const easeOut = [0.23, 1, 0.32, 1] as const;
 
@@ -23,8 +24,7 @@ export const MenuPreview = () => {
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.35, ease: easeOut }}
         >
-          메뉴 소개
-        </motion.h2>
+          메뉴</motion.h2>
 
         <div className="flex flex-wrap justify-center gap-3 mb-12">
           {menuCategories.map((cat) => (
@@ -69,7 +69,7 @@ export const MenuPreview = () => {
                     {item.name}
                   </h3>
                   <span className="text-base font-semibold text-[var(--color-primary)] shrink-0">
-                    ${item.price}
+                    {formatWon(item.price)}
                   </span>
                 </div>
                 <p className="text-sm text-[var(--color-text-muted)] leading-relaxed line-clamp-2 mb-3">
@@ -80,7 +80,7 @@ export const MenuPreview = () => {
                     {item.options.map((opt) => (
                       <span
                         key={opt}
-                        className="text-[10px] rounded-full px-2 py-0.5 bg-[var(--color-bg-secondary)] text-[var(--color-text-muted)] capitalize"
+                        className="text-xs rounded-full px-2 py-0.5 bg-[var(--color-bg-secondary)] text-[var(--color-text-muted)] capitalize"
                       >
                         {opt === 'hot' ? '핫' : '아이스'}
                       </span>

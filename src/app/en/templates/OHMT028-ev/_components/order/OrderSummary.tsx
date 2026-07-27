@@ -29,19 +29,19 @@ export function OrderSummary({
 
   return (
     <section className="border-t border-[var(--border)] pt-10">
-      <p className="font-michroma text-[16px] text-[var(--text)] mb-8">Order summary</p>
+      <p className="font-michroma text-base text-[var(--text)] mb-8">Order summary</p>
 
       <div className="space-y-4 mb-8">
         <div className="flex justify-between items-baseline gap-4">
-          <span className="font-inter text-[13px] text-[var(--text-muted)]">NUBI {trim.name}</span>
-          <span className="font-inter text-[13px] text-[var(--text)]">${trim.price.toLocaleString()}</span>
+          <span className="font-inter text-xs text-[var(--text-muted)]">NUBI {trim.name}</span>
+          <span className="font-inter text-xs text-[var(--text)]">${trim.price.toLocaleString()}</span>
         </div>
         {selectedOptions.map((id) => {
           const opt = options.find((o) => o.id === id)!;
           return (
             <div key={id} className="flex justify-between items-baseline gap-4">
-              <span className="font-inter text-[13px] text-[var(--text-muted)]">{opt.name}</span>
-              <span className="font-inter text-[13px] text-[var(--text)]">+${opt.price.toLocaleString()}</span>
+              <span className="font-inter text-xs text-[var(--text-muted)]">{opt.name}</span>
+              <span className="font-inter text-xs text-[var(--text)]">+${opt.price.toLocaleString()}</span>
             </div>
           );
         })}
@@ -49,16 +49,16 @@ export function OrderSummary({
 
       <div className="border-t border-[var(--border)] pt-6 space-y-3">
         <div className="flex justify-between items-baseline gap-4">
-          <span className="font-inter text-[13px] text-[var(--text-muted)]">Vehicle total</span>
-          <span className="font-michroma text-[24px] text-[var(--text)]">
+          <span className="font-inter text-xs text-[var(--text-muted)]">Vehicle total</span>
+          <span className="font-michroma text-2xl text-[var(--text)]">
             ${vehicleTotal.toLocaleString()}
           </span>
         </div>
         <div className="flex justify-between items-center gap-4">
-          <span className="font-inter text-[13px] text-[var(--text-muted)]">Reservation deposit</span>
-          <span className="font-inter text-[13px] text-[var(--accent)]">${deposit}</span>
+          <span className="font-inter text-xs text-[var(--text-muted)]">Reservation deposit</span>
+          <span className="font-inter text-xs text-[var(--accent)]">${deposit}</span>
         </div>
-        <p className="font-inter text-[14px] text-[var(--text-muted)] leading-relaxed pt-1">
+        <p className="font-inter text-sm text-[var(--text-muted)] leading-relaxed pt-1">
           Deposit is fully refundable and applied toward the final purchase price.
         </p>
       </div>

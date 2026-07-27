@@ -1,12 +1,34 @@
-"use client";
-import React from "react";
+import type { Metadata } from "next";
 import Link from "next/link";
-import { useParams } from "next/navigation";
 import { ChevronLeft } from "lucide-react";
 import { Header } from "../../_components/layout/Header";
 import { Footer } from "../../_components/layout/Footer";
 import theme from "../../theme.json";
 import { TemplateWrapper } from "../../_components/TemplateWrapper";
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const titles: Record<string, string> = {
+    "vitamin-c-science": "The Science of Vitamin C in Skincare",
+    "packaging-philosophy": "Why We Choose Glass Over Plastic",
+    "morning-routine-guide": "A Complete Morning Skincare Guide",
+    "sustainable-sourcing": "Our Journey to Sourcing Premium Organic Ingredients",
+  };
+
+  return {
+    title: `${titles[slug] || slug} - OHMT Cosmetic Journal`,
+    description: "Read the latest from OHMT Cosmetic — skincare insights, ingredient science, and conscious beauty stories.",
+    openGraph: {
+      title: `${titles[slug] || slug} - OHMT Cosmetic Journal`,
+      description: "Read the latest from OHMT Cosmetic.",
+      url: `https://ohmytemplate.com/en/templates/OHMT010-cosmetic/journal/${slug}`,
+      siteName: "OHMT",
+      images: [{ url: "/templates/OHMT010-cosmetic/og-image.jpg", width: 1200, height: 630 }],
+      locale: "en_US",
+      type: "article",
+    },
+  };
+}
 
 const entries = [
   {
@@ -43,8 +65,9 @@ const entries = [
   }
 ];
 
-function JournalDetailContent({ params }: { params: { slug: string } }) {
-  const entry = entries.find((e) => e.slug === params.slug);
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const entry = entries.find((e) => e.slug === slug);
 
   if (!entry) {
     return (
@@ -78,23 +101,23 @@ function JournalDetailContent({ params }: { params: { slug: string } }) {
                 <span>{entry.read} read</span>
               </div>
 
-              <h1 className="text-[clamp(1.8rem,4vw,3rem)] font-normal tracking-tight leading-[1.15] mb-8">
+              <h1 className="text-[length:var(--text-h2)] font-normal tracking-tight leading-[var(--leading-heading)] mb-8">
                 {entry.title}
               </h1>
 
-              <p className="text-[1rem] text-black/50 leading-[1.9] mb-12 border-l-2 border-black/10 pl-6">
+              <p className="text-[1rem] text-black/50 leading-loose mb-12 border-l-2 border-black/10 pl-6">
                 {entry.excerpt}
               </p>
 
               <div className="border-t border-black/10 pt-12 space-y-6">
                 {entry.content.split("\n\n").map((para, i) => (
-                  <p key={i} className="text-[0.95rem] text-black/70 leading-[1.9]">{para}</p>
+                  <p key={i} className="text-[0.95rem] text-black/70 leading-loose">{para}</p>
                 ))}
               </div>
 
               <div className="mt-16 pt-8 border-t border-black/10">
-                <Link href="/en/templates/OHMT010-cosmetic/journal" className="text-[0.75rem] font-bold uppercase tracking-[0.2em] text-black/40 hover:text-black transition-colors">
-                  &larr; Back to Journal
+                <Link href="/en/templates/OHMT010-cosmetic/journal" className="inline-flex items-center gap-1.5 text-[0.75rem] font-bold uppercase tracking-[0.2em] text-black/40 hover:text-black transition-colors">
+                  <ChevronLeft size={13} />Back to Journal
                 </Link>
               </div>
             </div>
@@ -105,10 +128,4 @@ function JournalDetailContent({ params }: { params: { slug: string } }) {
       </TemplateWrapper>
     </>
   );
-}
-
-export default function Page() {
-  const routerParams = useParams();
-  const slug = (routerParams?.slug || "") as string;
-  return <JournalDetailContent params={{ slug }} />;
 }

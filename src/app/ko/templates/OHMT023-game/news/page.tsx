@@ -24,10 +24,9 @@ export default function NewsPage() {
       <main className="min-h-screen pt-24 pb-24">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-12">
-            <h1 className="font-[var(--font-heading)] text-5xl font-bold">소식 및 업데이트</h1>
+            <h1 className="font-[var(--font-heading)] text-5xl font-bold">뉴스</h1>
             <p className="mt-3 text-[var(--color-text-muted)]">
-              OHMT의 최신 소식
-            </p>
+              OHMT 소식</p>
           </div>
 
           <div className="mb-10 flex flex-wrap gap-2">
@@ -64,8 +63,7 @@ export default function NewsPage() {
 
           {filtered.length === 0 && (
             <p className="py-20 text-center text-[var(--color-text-muted)]">
-              소식이 없습니다.
-            </p>
+              등록된 소식이 없습니다.</p>
           )}
         </div>
       </main>
