@@ -17,7 +17,7 @@ export default function EventsPage() {
             >
               Programs &<br />Events
             </h1>
-            <p className="text-[14px] font-body text-black/50 leading-relaxed max-w-[32ch] md:text-right">
+            <p className="text-sm font-body text-black/50 leading-relaxed max-w-[32ch] md:text-right">
               Talks, workshops, performances, and guided tours - designed to deepen your connection with contemporary art.
             </p>
           </div>
@@ -36,14 +36,14 @@ export default function EventsPage() {
                     />
                   </div>
                   <div className="flex items-center justify-between mt-6">
-                    <p className="text-[11px] font-body text-black/50 tracking-[0.06em]">
+                    <p className="text-xs font-body text-black/50 tracking-[0.06em]">
                       {evt.date} <span className="mx-1.5 opacity-40">·</span> {evt.time}
                     </p>
                     <div className="flex gap-2">
-                      <span className="text-[10px] font-body font-semibold uppercase tracking-[0.1em] px-2.5 py-1 border border-black">
+                      <span className="text-xs font-body font-semibold uppercase tracking-[0.1em] px-2.5 py-1 border border-black">
                         {evt.type}
                       </span>
-                      <span className="text-[10px] font-body font-semibold uppercase tracking-[0.1em] text-white bg-black px-2.5 py-1">
+                      <span className="text-xs font-body font-semibold uppercase tracking-[0.1em] text-white bg-black px-2.5 py-1">
                         {evt.ageRating}
                       </span>
                     </div>

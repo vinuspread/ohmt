@@ -16,7 +16,7 @@ export const Footer = () => {
             <Link
               key={link.href}
               href={link.href}
-              className="text-[12px] font-body font-semibold uppercase tracking-[0.12em] text-white/60 hover:text-white transition-colors duration-200"
+              className="text-xs font-body font-semibold uppercase tracking-[0.12em] text-white/60 hover:text-white transition-colors duration-200"
             >
               {link.label}
             </Link>
@@ -26,7 +26,7 @@ export const Footer = () => {
         <div className="border-t border-white/15 mt-12" />
 
         <div className="flex justify-between items-center mt-8">
-          <p className="text-[14px] text-white/40">&copy; 2026 OHMT.</p>
+          <p className="text-sm text-white/40">&copy; 2026 OHMT.</p>
           <div className="flex items-center gap-4">
             <a href="#" className="text-white/40 hover:text-white transition-colors" aria-label="Instagram">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">

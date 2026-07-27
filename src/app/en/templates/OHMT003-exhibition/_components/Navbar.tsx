@@ -31,7 +31,7 @@ export const Navbar = () => {
           </Link>
 
           <div className="flex items-center gap-6">
-            <span className="hidden md:block text-[10px] font-body font-semibold uppercase tracking-[0.08em] text-white/70">
+            <span className="hidden md:block text-xs font-body font-semibold uppercase tracking-[0.08em] text-white/70">
               123 West 25th St, New York · Tue-Sun 10am-6pm
             </span>
             <button
@@ -96,16 +96,16 @@ export const Navbar = () => {
             </div>
 
             <div className="hidden md:block absolute bottom-12 right-12 text-right">
-              <p className="text-[12px] font-body text-white/60 uppercase tracking-[0.08em] mb-2">
+              <p className="text-xs font-body text-white/60 uppercase tracking-[0.08em] mb-2">
                 123 West 25th Street<br />New York, NY 10001
               </p>
-              <p className="text-[12px] font-body text-white/60 uppercase tracking-[0.08em] mb-4">
+              <p className="text-xs font-body text-white/60 uppercase tracking-[0.08em] mb-4">
                 info@formagallery.com<br />+1 (212) 555-0147
               </p>
               <Link
                 href="/en/templates/OHMT003-exhibition/contact"
                 onClick={() => setMenuOpen(false)}
-                className="inline-block px-6 py-3 bg-white/60 text-black text-[11px] font-body font-semibold uppercase tracking-[0.12em] hover:bg-white transition-colors duration-200"
+                className="inline-block px-6 py-3 bg-white/60 text-black text-xs font-body font-semibold uppercase tracking-[0.12em] hover:bg-white transition-colors duration-200"
               >
                 Get Tickets
               </Link>

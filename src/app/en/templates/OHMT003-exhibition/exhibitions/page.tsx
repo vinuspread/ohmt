@@ -29,7 +29,7 @@ export default function ExhibitionsPage() {
             >
               Exhibitions
             </h1>
-            <p className="text-[14px] font-body text-black/50 leading-relaxed max-w-[32ch] md:text-right">
+            <p className="text-sm font-body text-black/50 leading-relaxed max-w-[32ch] md:text-right">
               Every work tells a story. Explore our current, upcoming, and permanent exhibitions.
             </p>
           </div>
@@ -37,7 +37,7 @@ export default function ExhibitionsPage() {
 
         {/* Featured Exhibition */}
         <section className="border-b border-[var(--color-border)]">
-          <div className="grid md:grid-cols-[3fr_2fr] h-[75vh]">
+          <div className="grid md:grid-cols-2 h-[75vh]">
             {/* Image */}
             <div className="relative overflow-hidden">
               <img
@@ -45,23 +45,23 @@ export default function ExhibitionsPage() {
                 alt={exhibitions[0].name}
                 className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 ease-out"
               />
-              <span className="absolute top-8 left-8 text-[10px] font-body font-semibold uppercase tracking-[0.15em] text-white/70 bg-black/40 px-3 py-1.5">
+              <span className="absolute top-8 left-8 text-xs font-body font-semibold uppercase tracking-[0.15em] text-white/70 bg-black/40 px-3 py-1.5">
                 Featured
               </span>
             </div>
             {/* Info */}
             <div className="flex flex-col justify-between p-12 md:p-16 border-l border-[var(--color-border)]">
               <div>
-                <p className="text-[10px] font-body font-semibold uppercase tracking-[0.12em] text-black/35 mb-8">
+                <p className="text-xs font-body font-semibold uppercase tracking-[0.12em] text-black/35 mb-8">
                   {exhibitions[0].tags.genre} <span className="mx-1">·</span> {exhibitions[0].tags.theme}
                 </p>
                 <h2
-                  className="font-heading font-semibold uppercase text-black leading-[0.95]"
+                  className="font-heading font-semibold uppercase text-black leading-[var(--leading-display)]"
                   style={{ fontSize: 'clamp(2rem, 3.5vw, 3.5rem)', letterSpacing: '-0.04em' }}
                 >
                   {exhibitions[0].name}
                 </h2>
-                <p className="mt-6 text-[14px] font-body text-black/55 leading-[1.7]">
+                <p className="mt-6 text-sm font-body text-black/55 leading-[var(--leading-body)]">
                   {exhibitions[0].description.slice(0, 160)}...
                 </p>
               </div>
@@ -73,8 +73,8 @@ export default function ExhibitionsPage() {
                     { label: 'Venue', value: exhibitions[0].showroom },
                   ].map((item) => (
                     <div key={item.label} className="flex justify-between items-baseline py-4 border-b border-[var(--color-border)]">
-                      <p className="text-[10px] font-body font-semibold uppercase tracking-[0.1em] text-black/35">{item.label}</p>
-                      <p className="text-[15px] font-body font-semibold text-black">{item.value}</p>
+                      <p className="text-xs font-body font-semibold uppercase tracking-[0.1em] text-black/35">{item.label}</p>
+                      <p className="text-sm font-body font-semibold text-black">{item.value}</p>
                     </div>
                   ))}
                 </div>
@@ -83,7 +83,7 @@ export default function ExhibitionsPage() {
                   className="relative overflow-hidden group inline-flex px-8 py-4 border border-black active:scale-[0.97] transition-transform duration-100"
                 >
                   <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-                  <span className="relative text-black group-hover:text-white text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-300">
+                  <span className="relative text-black group-hover:text-white text-xs font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-300">
                     View Exhibition
                   </span>
                 </Link>
@@ -99,7 +99,7 @@ export default function ExhibitionsPage() {
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className="pb-3 text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-200 active:scale-[0.97]"
+                  className="pb-3 text-xs font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-200 active:scale-[0.97]"
                   style={{
                     color: activeTab === tab ? '#000000' : 'rgba(0,0,0,0.4)',
                     borderBottom: activeTab === tab ? '2px solid #000000' : '2px solid transparent',

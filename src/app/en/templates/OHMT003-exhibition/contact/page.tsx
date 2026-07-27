@@ -23,7 +23,7 @@ export default function ContactPage() {
             >
               Get in<br />Touch
             </h1>
-            <p className="text-[14px] font-body text-black/50 leading-relaxed max-w-[32ch] md:text-right">
+            <p className="max-w-[58ch] text-pretty text-sm font-body text-black/50 leading-relaxed md:text-right">
               We'd love to hear from you - whether you have a question about an exhibition, a booking enquiry, or just want to say hello.
             </p>
           </div>
@@ -36,7 +36,7 @@ export default function ContactPage() {
               className="relative overflow-hidden group px-8 py-4 border border-black"
             >
               <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-              <span className="relative text-black group-hover:text-white text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-300">
+              <span className="relative text-black group-hover:text-white text-xs font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-300">
                 Call Us: +1 (212) 555-0147
               </span>
             </a>
@@ -45,7 +45,7 @@ export default function ContactPage() {
               className="relative overflow-hidden group px-8 py-4 border border-black"
             >
               <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-              <span className="relative text-black group-hover:text-white text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-300">
+              <span className="relative text-black group-hover:text-white text-xs font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-300">
                 Email Us
               </span>
             </a>
@@ -57,7 +57,7 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-[var(--color-border)]">
               {infoBlocks.map((info) => (
                 <div key={info.label} className="bg-[var(--color-bg)] p-8 md:p-10">
-                  <p className="text-[10px] font-body font-semibold uppercase tracking-[0.1em] text-black/50 mb-2">
+                  <p className="text-xs font-body font-semibold uppercase tracking-[0.1em] text-black/50 mb-2">
                     {info.label}
                   </p>
                   <p
@@ -77,40 +77,40 @@ export default function ContactPage() {
             <form className="max-w-[640px]">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label className="text-[10px] font-body font-semibold uppercase tracking-[0.1em] text-black/50 block mb-2">
+                  <label className="text-xs font-body font-semibold uppercase tracking-[0.1em] text-black/50 block mb-2">
                     Full Name
                   </label>
                   <input
                     type="text"
-                    className="w-full border border-[var(--color-border)] px-4 py-3 text-[14px] font-body text-black bg-transparent outline-none focus:border-black transition-colors"
+                    className="w-full border border-[var(--color-border)] px-4 py-3 text-sm font-body text-black bg-transparent outline-none focus:border-black transition-colors"
                   />
                 </div>
                 <div>
-                  <label className="text-[10px] font-body font-semibold uppercase tracking-[0.1em] text-black/50 block mb-2">
+                  <label className="text-xs font-body font-semibold uppercase tracking-[0.1em] text-black/50 block mb-2">
                     Email
                   </label>
                   <input
                     type="email"
-                    className="w-full border border-[var(--color-border)] px-4 py-3 text-[14px] font-body text-black bg-transparent outline-none focus:border-black transition-colors"
+                    className="w-full border border-[var(--color-border)] px-4 py-3 text-sm font-body text-black bg-transparent outline-none focus:border-black transition-colors"
                   />
                 </div>
               </div>
               <div className="mt-6">
-                <label className="text-[10px] font-body font-semibold uppercase tracking-[0.1em] text-black/50 block mb-2">
+                <label className="text-xs font-body font-semibold uppercase tracking-[0.1em] text-black/50 block mb-2">
                   Phone
                 </label>
                 <input
                   type="tel"
-                  className="w-full border border-[var(--color-border)] px-4 py-3 text-[14px] font-body text-black bg-transparent outline-none focus:border-black transition-colors"
+                  className="w-full border border-[var(--color-border)] px-4 py-3 text-sm font-body text-black bg-transparent outline-none focus:border-black transition-colors"
                 />
               </div>
               <div className="mt-6">
-                <label className="text-[10px] font-body font-semibold uppercase tracking-[0.1em] text-black/50 block mb-2">
+                <label className="text-xs font-body font-semibold uppercase tracking-[0.1em] text-black/50 block mb-2">
                   Message
                 </label>
                 <textarea
                   rows={5}
-                  className="w-full border border-[var(--color-border)] px-4 py-3 text-[14px] font-body text-black bg-transparent outline-none focus:border-black transition-colors resize-none"
+                  className="w-full border border-[var(--color-border)] px-4 py-3 text-sm font-body text-black bg-transparent outline-none focus:border-black transition-colors resize-none"
                 />
               </div>
               <button
@@ -118,7 +118,7 @@ export default function ContactPage() {
                   className="relative overflow-hidden group mt-8 px-8 py-4 border border-black"
               >
                 <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-                <span className="relative text-black group-hover:text-white text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-300">
+                <span className="relative text-black group-hover:text-white text-xs font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-300">
                   Send Message
                 </span>
               </button>

@@ -1,11 +1,11 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - Exhibition",
+  title: "OHMT - Gallery Exhibition Website Template",
   description: "Premium exhibition & event experience",
   openGraph: {
-    title: "OHMT - Exhibition",
+    title: "OHMT - Gallery Exhibition Website Template",
     description: "Premium exhibition & event experience",
     url: "https://ohmytemplate.com/en/templates/OHMT003-exhibition",
     siteName: "OHMT",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Exhibition",
+    title: "OHMT - Gallery Exhibition Website Template",
     description: "Premium exhibition & event experience",
     images: ["/templates/OHMT003-exhibition/og-image.jpg"],
   },
@@ -29,4 +29,3 @@ export const metadata: Metadata = {
 export default function Layout({ children }: { children: React.ReactNode }) {
   return <div className="exhibition-en">{children}</div>;
 }
-

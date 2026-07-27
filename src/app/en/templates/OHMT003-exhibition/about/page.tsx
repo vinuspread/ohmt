@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { ArrowRight } from 'lucide-react';
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 import { Navbar } from '../_components/Navbar';
@@ -31,7 +32,7 @@ export default function AboutPage() {
             <div className="absolute inset-0 bg-black/25" />
             <div className="absolute top-24 left-0 right-0 max-w-[1400px] mx-auto px-6">
               <p
-                className="font-heading font-semibold uppercase text-white leading-[0.95]"
+                className="font-heading font-semibold uppercase text-white leading-[var(--leading-display)]"
                 style={{
                   fontSize: 'clamp(4rem, 8vw, 9rem)',
                   letterSpacing: '-0.04em',
@@ -39,7 +40,7 @@ export default function AboutPage() {
               >
                 Art That<br />Moves the World
               </p>
-              <p className="mt-8 text-[22px] font-body text-white/65 leading-relaxed max-w-[40ch]">
+              <p className="mt-8 max-w-[820px] text-2xl font-body text-white/65 leading-relaxed">
                 Founded to bridge the gap between artists and audiences - we believe every work of art holds a conversation waiting to begin.
               </p>
             </div>
@@ -50,7 +51,7 @@ export default function AboutPage() {
           <div className="max-w-[1400px] mx-auto px-6">
             <div className="lg:grid lg:grid-cols-2 gap-20">
               <div>
-                <p className="text-[10px] font-body font-semibold uppercase tracking-[0.1em] text-black/60 mb-4">
+                <p className="text-xs font-body font-semibold uppercase tracking-[0.1em] text-black/60 mb-4">
                   About
                 </p>
                 <h2
@@ -65,29 +66,30 @@ export default function AboutPage() {
                 </h2>
               </div>
               <div className="mt-8 lg:mt-0">
-                <p className="text-[16px] leading-relaxed text-black/80 mb-6" style={{ fontFamily: 'var(--font-body)' }}>
+                <p className="text-base leading-relaxed text-black/80 mb-6" style={{ fontFamily: 'var(--font-body)' }}>
                   OHMT Gallery was founded in 2018 with a singular mission: to create a space where
                   contemporary art challenges, inspires, and transforms. Housed in a converted
                   industrial building in Chelsea, OHMT has quickly established itself as a
                   destination for groundbreaking exhibitions that push the boundaries of artistic
                   practice.
                 </p>
-                <p className="text-[16px] leading-relaxed text-black/80 mb-6" style={{ fontFamily: 'var(--font-body)' }}>
+                <p className="text-base leading-relaxed text-black/80 mb-6" style={{ fontFamily: 'var(--font-body)' }}>
                   Our program spans painting, sculpture, installation, photography, and new media,
                   with a focus on artists who engage critically with the social and material
                   conditions of our time. We believe in the power of art to provoke dialogue,
                   challenge assumptions, and open new ways of seeing the world.
                 </p>
-                <p className="text-[16px] leading-relaxed text-black/80 mb-8" style={{ fontFamily: 'var(--font-body)' }}>
+                <p className="text-base leading-relaxed text-black/80 mb-8" style={{ fontFamily: 'var(--font-body)' }}>
                   Beyond our exhibition program, OHMT is committed to education and community
                   engagement through artist talks, workshops, and collaborative projects that make
                   contemporary art accessible to diverse audiences.
                 </p>
                 <Link
                   href="/en/templates/OHMT003-exhibition/contact"
-                  className="text-[11px] font-body font-semibold uppercase tracking-[0.12em] text-black border-b border-black pb-0.5 hover:opacity-60 transition-opacity"
+                  className="inline-flex items-center gap-2 text-xs font-body font-semibold uppercase tracking-[0.12em] text-black border-b border-black pb-0.5 hover:opacity-60 transition-opacity"
                 >
-                  Contact Us &rarr;
+                  <span>Contact Us</span>
+                  <ArrowRight size={12} />
                 </Link>
               </div>
             </div>
