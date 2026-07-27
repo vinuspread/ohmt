@@ -80,7 +80,17 @@ export async function POST(request: NextRequest) {
 
   let commitSha: string;
   try {
-    commitSha = await pushFilesToGitHub(files, `feat: add ${slug} template (${lang})`);
+    const replacePrefixes = existing && overwrite
+      ? [
+          `src/app/${lang}/templates/${slug}`,
+          ...(lang === "en" ? [`public/templates/${slug}`] : []),
+        ]
+      : [];
+    commitSha = await pushFilesToGitHub(
+      files,
+      `feat: add ${slug} template (${lang})`,
+      replacePrefixes
+    );
   } catch (error) {
     console.error("GitHub push 실패:", error);
     return NextResponse.json({ error: "GitHub push에 실패했습니다." }, { status: 502 });

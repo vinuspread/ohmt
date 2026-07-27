@@ -7,7 +7,11 @@ export interface GitHubFileEntry {
 
 const textExtensions = [".ts", ".tsx", ".js", ".jsx", ".css", ".json", ".md", ".txt", ".svg"];
 
-export async function pushFilesToGitHub(files: GitHubFileEntry[], commitMessage: string): Promise<string> {
+export async function pushFilesToGitHub(
+  files: GitHubFileEntry[],
+  commitMessage: string,
+  replacePrefixes: string[] = []
+): Promise<string> {
   const token = process.env.GITHUB_TOKEN;
   const owner = process.env.GITHUB_OWNER;
   const repo = process.env.GITHUB_REPO;
@@ -24,7 +28,44 @@ export async function pushFilesToGitHub(files: GitHubFileEntry[], commitMessage:
   const { data: commit } = await octokit.git.getCommit({ owner, repo, commit_sha: latestCommitSha });
   const baseTreeSha = commit.tree.sha;
 
-  const tree = await Promise.all(
+  const normalizedPrefixes = replacePrefixes.map((prefix) => prefix.replace(/\/+$/, ""));
+  const incomingPaths = new Set(files.map((file) => file.path));
+  const deletions: Array<{
+    path: string;
+    mode: "100644";
+    type: "blob";
+    sha: null;
+  }> = [];
+
+  if (normalizedPrefixes.length > 0) {
+    const { data: existingTree } = await octokit.git.getTree({
+      owner,
+      repo,
+      tree_sha: baseTreeSha,
+      recursive: "true",
+    });
+
+    if (existingTree.truncated) {
+      throw new Error("GitHub 트리 조회 결과가 잘려 안전하게 템플릿을 교체할 수 없습니다.");
+    }
+
+    for (const item of existingTree.tree) {
+      if (item.type !== "blob" || !item.path) continue;
+      const isInReplacementScope = normalizedPrefixes.some(
+        (prefix) => item.path === prefix || item.path.startsWith(`${prefix}/`)
+      );
+      if (!isInReplacementScope || incomingPaths.has(item.path)) continue;
+
+      deletions.push({
+        path: item.path,
+        mode: "100644",
+        type: "blob",
+        sha: null,
+      });
+    }
+  }
+
+  const additions = await Promise.all(
     files.map(async (file) => {
       const isText = isTextFile(file.path);
       const { data: blob } = await octokit.git.createBlob({
@@ -42,6 +83,7 @@ export async function pushFilesToGitHub(files: GitHubFileEntry[], commitMessage:
       };
     })
   );
+  const tree = [...deletions, ...additions];
 
   const { data: newTree } = await octokit.git.createTree({
     owner,
