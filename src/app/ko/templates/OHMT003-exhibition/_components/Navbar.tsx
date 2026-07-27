@@ -5,10 +5,10 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
 const menuLinks = [
-  { href: '/ko/templates/OHMT003-exhibition/about', label: '소개' },
+  { href: '/ko/templates/OHMT003-exhibition/about', label: '갤러리 소개' },
   { href: '/ko/templates/OHMT003-exhibition/exhibitions', label: '전시' },
-  { href: '/ko/templates/OHMT003-exhibition/events', label: '이벤트' },
-  { href: '/ko/templates/OHMT003-exhibition/contact', label: '문의' },
+  { href: '/ko/templates/OHMT003-exhibition/events', label: '프로그램' },
+  { href: '/ko/templates/OHMT003-exhibition/contact', label: '방문·문의' },
 ];
 
 const easeOut = [0.23, 1, 0.32, 1] as const;
@@ -27,8 +27,8 @@ export const Navbar = () => {
             OHMT
           </Link>
           <div className="flex items-center gap-6">
-            <span className="hidden md:block text-[10px] font-body font-semibold uppercase tracking-[0.08em] text-white/70">
-              123 West 25th St, New York · 화-일 10:00-18:00
+            <span className="hidden md:block text-xs font-body font-semibold uppercase tracking-[0.08em] text-white/70">
+              123 West 25th St, New York · 화–일 10:00–18:00 · 월요일 휴관
             </span>
             <button
               onClick={() => setMenuOpen(!menuOpen)}
@@ -66,10 +66,10 @@ export const Navbar = () => {
               </ul>
             </div>
             <div className="hidden md:block absolute bottom-12 right-12 text-right">
-              <p className="text-[14px] font-body text-white/60 mb-2">123 West 25th Street, New York, NY 10001</p>
-              <p className="text-[14px] font-body text-white/60 mb-4">info@formagallery.com · +1 (212) 555-0147</p>
-              <Link href="/ko/templates/OHMT003-exhibition/contact" onClick={() => setMenuOpen(false)} className="inline-block px-6 py-3 bg-white/60 text-black text-[11px] font-body font-semibold uppercase tracking-[0.12em] hover:bg-white transition-colors duration-200">
-                티켓 구매
+              <p className="text-sm font-body text-white/60 mb-2">123 West 25th Street, New York, NY 10001</p>
+              <p className="text-sm font-body text-white/60 mb-4">info@formagallery.com · +1 (212) 555-0147</p>
+              <Link href="/ko/templates/OHMT003-exhibition/contact" onClick={() => setMenuOpen(false)} className="inline-block px-6 py-3 bg-white/60 text-black text-xs font-body font-semibold uppercase tracking-[0.12em] hover:bg-white transition-colors duration-200">
+                전시 관람권 예매
               </Link>
             </div>
           </motion.div>

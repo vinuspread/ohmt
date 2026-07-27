@@ -22,31 +22,31 @@ export default function ExhibitionsPage() {
       <main>
         <section className="bg-[var(--color-bg)] pt-40 pb-16 border-b border-[var(--color-border)]">
           <div className="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-            <h1 className="font-heading font-semibold uppercase text-black leading-[1.1]" style={{ fontSize: 'clamp(4rem, 7vw, 7rem)', letterSpacing: '-0.04em' }}>
+            <h1 className="font-heading font-semibold uppercase text-black leading-[var(--leading-heading)]" style={{ fontSize: 'clamp(4rem, 7vw, 7rem)', letterSpacing: '-0.04em' }}>
               전시
             </h1>
-            <p className="text-[14px] font-body text-black/50 leading-relaxed max-w-[32ch] md:text-right">
-              모든 작품은 이야기를 담고 있습니다. 현재 및 예정된 전시를 만나보세요.
+            <p className="text-sm font-body text-black/50 leading-relaxed max-w-[32ch] md:text-right">
+              현재 진행 중인 전시와 개막 예정 전시, 상설 소장품을 한곳에서 살펴보세요.
             </p>
           </div>
         </section>
 
         {/* Featured */}
         <section className="border-b border-[var(--color-border)]">
-          <div className="grid md:grid-cols-[3fr_2fr] h-[75vh]">
+          <div className="grid md:grid-cols-2 h-[75vh]">
             <div className="relative overflow-hidden">
               <img src={exhibitions[0].heroImage} alt={exhibitions[0].name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-300 ease-out" />
-              <span className="absolute top-8 left-8 text-[10px] font-body font-semibold uppercase tracking-[0.15em] text-white/70 bg-black/40 px-3 py-1.5">주목 전시</span>
+              <span className="absolute top-8 left-8 text-xs font-body font-semibold uppercase tracking-[0.15em] text-white/70 bg-black/40 px-3 py-1.5">주요 전시</span>
             </div>
             <div className="flex flex-col justify-between p-12 md:p-16 border-l border-[var(--color-border)]">
               <div>
-                <p className="text-[10px] font-body font-semibold uppercase tracking-[0.12em] text-black/35 mb-8">
+                <p className="text-xs font-body font-semibold uppercase tracking-[0.12em] text-black/35 mb-8">
                   {exhibitions[0].tags.genre} <span className="mx-1">·</span> {exhibitions[0].tags.theme}
                 </p>
-                <h2 className="font-heading font-semibold uppercase text-black leading-[1.1]" style={{ fontSize: 'clamp(2rem, 3.5vw, 3.5rem)', letterSpacing: '-0.04em' }}>
+                <h2 className="font-heading font-semibold uppercase text-black leading-[var(--leading-heading)]" style={{ fontSize: 'clamp(2rem, 3.5vw, 3.5rem)', letterSpacing: '-0.04em' }}>
                   {exhibitions[0].name}
                 </h2>
-                <p className="mt-6 text-[14px] font-body text-black/55 leading-[1.7]">
+                <p className="mt-6 text-sm font-body text-black/55 leading-[var(--leading-body)]">
                   {exhibitions[0].description.slice(0, 120)}...
                 </p>
               </div>
@@ -54,18 +54,18 @@ export default function ExhibitionsPage() {
                 <div className="flex flex-col gap-0 mb-10">
                   {[
                     { label: '작가', value: exhibitions[0].artist },
-                    { label: '기간', value: `${exhibitions[0].dateFrom} - ${exhibitions[0].dateTo}` },
+                    { label: '기간', value: `${exhibitions[0].dateFrom} – ${exhibitions[0].dateTo}` },
                     { label: '전시장', value: exhibitions[0].showroom },
                   ].map((item) => (
                     <div key={item.label} className="flex justify-between items-baseline py-4 border-b border-[var(--color-border)]">
-                      <p className="text-[10px] font-body font-semibold uppercase tracking-[0.1em] text-black/35">{item.label}</p>
-                      <p className="text-[15px] font-body font-semibold text-black">{item.value}</p>
+                      <p className="text-xs font-body font-semibold uppercase tracking-[0.1em] text-black/35">{item.label}</p>
+                      <p className="text-sm font-body font-semibold text-black">{item.value}</p>
                     </div>
                   ))}
                 </div>
                 <Link href={`/ko/templates/OHMT003-exhibition/exhibitions/${exhibitions[0].slug}`} className="relative overflow-hidden group inline-flex px-8 py-4 border border-black active:scale-[0.97] transition-transform duration-100">
                   <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-                  <span className="relative text-black group-hover:text-white text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-300">전시 보기</span>
+                  <span className="relative text-black group-hover:text-white text-xs font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-300">전시 상세 보기</span>
                 </Link>
               </div>
             </div>
@@ -76,9 +76,9 @@ export default function ExhibitionsPage() {
           <div className="max-w-[1400px] mx-auto px-6">
             <div className="flex gap-10 mb-12 border-b border-[var(--color-border)]">
               {(['on-show', 'opening-soon', 'permanent'] as const).map((tab) => (
-                <button key={tab} onClick={() => setActiveTab(tab)} className="pb-3 text-[11px] font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-200 active:scale-[0.97]"
+                <button key={tab} onClick={() => setActiveTab(tab)} className="pb-3 text-xs font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-200 active:scale-[0.97]"
                   style={{ color: activeTab === tab ? '#000000' : 'rgba(0,0,0,0.4)', borderBottom: activeTab === tab ? '2px solid #000000' : '2px solid transparent' }}>
-                  {tab === 'on-show' ? '전시 중' : tab === 'opening-soon' ? '개막 예정' : '상설 전시'}
+                  {tab === 'on-show' ? '현재 전시' : tab === 'opening-soon' ? '개막 예정' : '상설 전시'}
                 </button>
               ))}
             </div>

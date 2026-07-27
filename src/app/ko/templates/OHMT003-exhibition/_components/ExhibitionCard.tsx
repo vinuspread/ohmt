@@ -9,19 +9,19 @@ export default function ExhibitionCard({ exhibition }: { exhibition: Exhibition 
       </div>
 
       <div className="flex items-center justify-between mt-8">
-        <p className="text-[10px] font-semibold uppercase tracking-[0.08em] text-[var(--color-text-muted)]" style={{ fontFamily: 'var(--font-body)' }}>
+        <p className="text-xs font-semibold uppercase tracking-[0.08em] text-[var(--color-text-muted)]" style={{ fontFamily: 'var(--font-body)' }}>
           {exhibition.tags.genre} <span className="mx-1.5 opacity-40">·</span> {exhibition.tags.theme}
         </p>
-        <span className="text-[10px] font-semibold uppercase tracking-[0.08em] px-2 py-0.5 bg-black text-white" style={{ fontFamily: 'var(--font-body)' }}>
+        <span className="text-xs font-semibold uppercase tracking-[0.08em] px-2 py-0.5 bg-black text-white" style={{ fontFamily: 'var(--font-body)' }}>
           {exhibition.tags.ageRating}
         </span>
       </div>
 
-      <p className="mt-4 text-[14px] font-semibold uppercase tracking-[0.06em] text-[var(--color-text)]" style={{ fontFamily: 'var(--font-body)' }}>
+      <p className="mt-4 text-sm font-semibold uppercase tracking-[0.06em] text-[var(--color-text)]" style={{ fontFamily: 'var(--font-body)' }}>
         {exhibition.name}
       </p>
-      <p className="mt-2 text-[11px] uppercase tracking-[0.06em] text-[var(--color-text-muted)]" style={{ fontFamily: 'var(--font-body)' }}>
-        {exhibition.dateFrom} - {exhibition.dateTo}
+      <p className="mt-2 text-xs uppercase tracking-[0.06em] text-[var(--color-text-muted)]" style={{ fontFamily: 'var(--font-body)' }}>
+        {exhibition.dateFrom} – {exhibition.dateTo}
       </p>
     </Link>
   );
