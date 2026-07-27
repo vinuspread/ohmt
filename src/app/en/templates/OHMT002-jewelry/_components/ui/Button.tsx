@@ -13,14 +13,14 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   href?: string;
 }
 
-const Button = React.forwardRef<any, ButtonProps>(
+const Button = React.forwardRef<HTMLButtonElement | HTMLAnchorElement, ButtonProps>(
   ({ variant = 'primary', size, className, href, children, ...rest }, ref) => {
     const variantMap: Record<Variant, string> = {
-      primary: 'flex-1 py-4 bg-[var(--color-primary)] text-white text-[13px] uppercase tracking-[0.3em] font-bold hover:bg-[var(--color-primary-hover)] transition-all',
-      white: 'px-10 py-4 bg-white text-neutral-900 text-[13px] font-bold uppercase tracking-[0.3em] hover:bg-[var(--color-primary)] hover:text-white transition-all',
+      primary: 'flex-1 py-4 bg-[var(--color-primary)] text-white text-xs uppercase tracking-[0.3em] font-bold hover:bg-[var(--color-primary-hover)] transition-all',
+      white: 'px-10 py-4 bg-white text-neutral-900 text-xs font-bold uppercase tracking-[0.3em] hover:bg-[var(--color-primary)] hover:text-white transition-all',
       ghost: 'px-6 py-4 border border-neutral-300 text-neutral-600 hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-all',
-      dark: 'w-full py-8 bg-neutral-900 text-white text-[13px] font-bold uppercase tracking-[0.5em] hover:bg-[var(--color-primary)] transition-all',
-      bordered: 'px-12 py-5 border border-[var(--color-primary)] text-[14px] font-bold uppercase tracking-[0.3em] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white transition-all duration-300'
+      dark: 'w-full py-8 bg-neutral-900 text-white text-xs font-bold uppercase tracking-[0.5em] hover:bg-[var(--color-primary)] transition-all',
+      bordered: 'px-12 py-5 border border-[var(--color-primary)] text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-white transition-all duration-300'
     };
 
     const sizeMap: Record<Size, string> = {
@@ -37,8 +37,9 @@ const Button = React.forwardRef<any, ButtonProps>(
     );
 
     if (href) {
+      const { type, ...anchorProps } = rest as any;
       return (
-        <Link href={href} ref={ref as React.Ref<HTMLAnchorElement>} className={baseClasses} {...(rest as any)}>
+        <Link href={href} ref={ref as React.Ref<HTMLAnchorElement>} className={baseClasses} {...anchorProps}>
           {children}
         </Link>
       );

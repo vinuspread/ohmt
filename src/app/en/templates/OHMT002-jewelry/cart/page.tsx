@@ -9,6 +9,7 @@ import { Search, Heart, User, ShoppingBag, Menu, ArrowRight } from "lucide-react
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import Button from "../_components/ui/Button";
+import TemplateSelect from '../_components/TemplateSelect'
 
 function JewelryCartPageContent() {
   const cartItems = [
@@ -59,16 +60,16 @@ function JewelryCartPageContent() {
                       <span className="text-lg font-serif">{item.price}</span>
                     </div>
                     <div className="flex justify-between items-end">
-                      <div className="flex items-center gap-8 text-[13px] uppercase font-bold tracking-widest text-[var(--color-primary)]">
+                      <div className="flex items-center gap-8 text-xs uppercase font-bold tracking-widest text-[var(--color-primary)]">
                         <button className="border-b border-[var(--color-primary)]">Remove</button>
                         <button className="border-b border-transparent hover:border-neutral-900 text-neutral-300 hover:text-neutral-900">Move to Wishlist</button>
                       </div>
                       <div className="flex items-center gap-4 text-xs">
                         <span className="opacity-40">Qty:</span>
-                        <select className="bg-transparent font-bold outline-none">
+                        <TemplateSelect className="bg-transparent font-bold outline-none">
                           <option>1</option>
                           <option>2</option>
-                        </select>
+                        </TemplateSelect>
                       </div>
                     </div>
                   </div>
@@ -95,11 +96,11 @@ function JewelryCartPageContent() {
                   <span>$1,200.00</span>
                 </div>
               </div>
-              <Button variant="dark" className="w-full py-8 text-[13px] font-bold uppercase tracking-[0.5em]">
+              <Button variant="dark" className="w-full py-8 text-xs font-bold uppercase tracking-[0.5em]">
                 Begin Checkout
               </Button>
               <div className="text-center">
-                 <p className="text-[15px] text-neutral-500">"Complimentary shipping and signature packaging on all orders."</p>
+                 <p className="text-sm text-neutral-500">"Complimentary shipping and signature packaging on all orders."</p>
               </div>
             </div>
           </div>
@@ -112,10 +113,10 @@ function JewelryCartPageContent() {
 }
 
 
-export default function JewelryCartPage(props: any) {
+export default function JewelryCartPage() {
   return (
     <React.Suspense fallback={null}>
-      <JewelryCartPageContent {...props} />
+      <JewelryCartPageContent />
     </React.Suspense>
   );
 }

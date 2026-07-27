@@ -147,7 +147,7 @@ export default function ProductDetailPage() {
 
             {/* Right: Scrolling Detail Panel */}
             <div className="flex flex-col">
-              <h1 className="font-[family-name:var(--theme-font-heading)] text-[clamp(2.2rem,4vw,3.8rem)] leading-[1.1] mb-4 font-bold tracking-tight">
+              <h1 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-h1)] leading-[var(--leading-heading)] mb-4 font-bold tracking-tight">
                 {product.name}
               </h1>
               

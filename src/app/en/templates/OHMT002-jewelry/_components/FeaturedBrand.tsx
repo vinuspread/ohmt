@@ -40,7 +40,7 @@ export default function FeaturedBrand({ reverse, brandName, title, description, 
         >
           <span className="label-ui text-gold-600 mb-4 block tracking-[0.2em]">{brandName}</span>
           <h2 className="display-xl mb-8 leading-tight">{title}</h2>
-          <p className="text-neutral-600 body-default max-w-md mb-10 leading-[1.4] font-normal">
+          <p className="text-neutral-600 body-default max-w-md mb-10 leading-[var(--leading-body)] font-normal">
             {description}
           </p>
           <Button variant="ghost" className="label-ui border-b border-neutral-900 pb-1">

@@ -71,13 +71,13 @@ function CategoryContent() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/10 to-black/45" />
           <div className="relative z-10 text-center px-6">
-            <span className="text-[13px] text-white/80 mb-3 block tracking-[0.3em] font-bold uppercase">
+            <span className="text-xs text-white/80 mb-3 block tracking-[0.3em] font-bold uppercase">
               {asset.eyebrow}
             </span>
-            <h1 className="font-serif text-[clamp(2rem,4vw,4rem)] font-bold text-white leading-[1.1] tracking-tight">
+            <h1 className="font-serif text-[length:var(--text-h1)] font-bold text-white leading-[var(--leading-heading)] tracking-tight">
               {getCategoryTitle()}
             </h1>
-            <p className="text-[15px] text-white/70 max-w-xl mx-auto mt-4 leading-relaxed">
+            <p className="text-sm text-white/70 max-w-xl mx-auto mt-4 leading-relaxed">
               {getCategoryDesc()}
             </p>
           </div>
@@ -94,12 +94,12 @@ function CategoryContent() {
                     <img src="/templates/OHMT002-jewelry/jewelry-visual-detail.png" alt="Craftsmanship" className="w-full h-full object-cover" />
                   </div>
                   <div className="space-y-6">
-                    <span className="text-[13px] uppercase tracking-[0.3em] text-neutral-500 font-bold">Artisan Technique</span>
-                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-neutral-900 leading-[1.1]">Hand-Finished with Passion</h2>
-                    <p className="text-[15px] text-neutral-600 leading-relaxed">
+                    <span className="text-xs uppercase tracking-[0.3em] text-neutral-500 font-bold">Artisan Technique</span>
+                    <h2 className="text-3xl md:text-5xl font-serif font-bold text-neutral-900 leading-[var(--leading-heading)]">Hand-Finished with Passion</h2>
+                    <p className="text-sm text-neutral-600 leading-relaxed">
                       Founded with a dedication to preserving the pristine elegance of gemstones, OHMT Fine Jewelry is a bridge between nature's raw beauty and exceptional design. Every single facet is hand-set and hand-polished by our master artisans who spend hundreds of hours to bring out the fire in each stone.
                     </p>
-                    <p className="text-[15px] text-neutral-600 leading-relaxed">
+                    <p className="text-sm text-neutral-600 leading-relaxed">
                       We seek permanence. In a world of fast-moving trends, our jewelry is designed to be passed down through generations, holding memories and whispered promises of forever.
                     </p>
                   </div>
@@ -111,28 +111,28 @@ function CategoryContent() {
             <section className="py-20 md:py-28 px-6 md:px-12 bg-[#FAF9F6] border-y border-neutral-200/50">
               <div className="max-w-[1440px] mx-auto">
                 <div className="text-center mb-16">
-                  <span className="text-[12px] uppercase tracking-[0.3em] text-neutral-400 font-bold">Brand Philosophy</span>
+                  <span className="text-xs uppercase tracking-[0.3em] text-neutral-400 font-bold">Brand Philosophy</span>
                   <h3 className="text-2xl md:text-4xl font-serif font-bold text-neutral-900 mt-2">The Three Pillars of OHMT</h3>
                 </div>
                 <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
                   <div className="bg-white p-8 md:p-10 border border-neutral-200/50 shadow-[0_4px_20px_rgba(0,0,0,0.01)] space-y-4 text-center">
-                    <div className="w-12 h-12 rounded-full bg-[var(--color-primary)] flex items-center justify-center mx-auto text-[18px] font-serif text-white font-bold">I</div>
+                    <div className="w-12 h-12 rounded-full bg-[var(--color-primary)] flex items-center justify-center mx-auto text-lg font-serif text-white font-bold">I</div>
                     <h4 className="text-lg font-serif font-bold text-neutral-800">Ethical Sourcing</h4>
-                    <p className="text-[14px] text-neutral-500 leading-relaxed max-w-xs mx-auto">
+                    <p className="text-sm text-neutral-500 leading-relaxed max-w-xs mx-auto">
                       We trace every gemstone from its origin to ensure conflict-free, responsible, and ethical mining practices.
                     </p>
                   </div>
                   <div className="bg-white p-8 md:p-10 border border-neutral-200/50 shadow-[0_4px_20px_rgba(0,0,0,0.01)] space-y-4 text-center">
-                    <div className="w-12 h-12 rounded-full bg-[var(--color-primary)] flex items-center justify-center mx-auto text-[18px] font-serif text-white font-bold">II</div>
+                    <div className="w-12 h-12 rounded-full bg-[var(--color-primary)] flex items-center justify-center mx-auto text-lg font-serif text-white font-bold">II</div>
                     <h4 className="text-lg font-serif font-bold text-neutral-800">Masterful Cut</h4>
-                    <p className="text-[14px] text-neutral-500 leading-relaxed max-w-xs mx-auto">
+                    <p className="text-sm text-neutral-500 leading-relaxed max-w-xs mx-auto">
                       Our master lapidaries cut and polish each gem to maximize its refractive index, creating signature brilliance.
                     </p>
                   </div>
                   <div className="bg-white p-8 md:p-10 border border-neutral-200/50 shadow-[0_4px_20px_rgba(0,0,0,0.01)] space-y-4 text-center">
-                    <div className="w-12 h-12 rounded-full bg-[var(--color-primary)] flex items-center justify-center mx-auto text-[18px] font-serif text-white font-bold">III</div>
+                    <div className="w-12 h-12 rounded-full bg-[var(--color-primary)] flex items-center justify-center mx-auto text-lg font-serif text-white font-bold">III</div>
                     <h4 className="text-lg font-serif font-bold text-neutral-800">Timeless Heirloom</h4>
-                    <p className="text-[14px] text-neutral-500 leading-relaxed max-w-xs mx-auto">
+                    <p className="text-sm text-neutral-500 leading-relaxed max-w-xs mx-auto">
                       Designed with balance and weight that stands the test of time, built to be passed down through generations.
                     </p>
                   </div>
@@ -144,7 +144,7 @@ function CategoryContent() {
             <section className="py-16 md:py-24 px-6 md:px-12 bg-white">
               <div className="max-w-[1440px] mx-auto">
                 <div className="text-center mb-12">
-                  <span className="text-[12px] uppercase tracking-[0.3em] text-neutral-400 font-bold">Our Legacy</span>
+                  <span className="text-xs uppercase tracking-[0.3em] text-neutral-400 font-bold">Our Legacy</span>
                   <h3 className="text-2xl md:text-4xl font-serif font-bold text-neutral-900 mt-2">Chronicles of Splendor</h3>
                 </div>
                 <div className="max-w-5xl mx-auto space-y-8 relative before:absolute before:inset-y-0 before:left-4 md:before:left-1/2 before:w-[1px] before:bg-neutral-200">
@@ -154,9 +154,9 @@ function CategoryContent() {
                     <div className="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-[var(--color-primary)] border-4 border-white -translate-x-[7px] md:-translate-x-2 z-10" />
                     <div className="w-full md:w-[47%] pl-10 md:pl-0 md:pr-10 md:text-right">
                       <div className="bg-white p-6 md:p-8 border border-neutral-100 shadow-[0_4px_20px_rgba(0,0,0,0.01)] transition-transform hover:-translate-y-1 inline-block text-left w-full">
-                        <span className="text-[20px] md:text-[22px] font-serif font-bold text-[var(--color-primary)]">1924</span>
-                        <h4 className="text-[16px] md:text-[17px] font-serif font-bold text-neutral-800 mt-1">The First Atelier</h4>
-                        <p className="text-[14px] text-neutral-500 mt-2 leading-relaxed">
+                        <span className="text-xl md:text-2xl font-serif font-bold text-[var(--color-primary)]">1924</span>
+                        <h4 className="text-base md:text-base font-serif font-bold text-neutral-800 mt-1">The First Atelier</h4>
+                        <p className="text-sm text-neutral-500 mt-2 leading-relaxed">
                           Our founder opened the first small boutique in Paris, dedicating his life to creating high-jewelry using raw, uncut diamonds.
                         </p>
                       </div>
@@ -170,9 +170,9 @@ function CategoryContent() {
                     <div className="hidden md:block w-[47%]" />
                     <div className="w-full md:w-[47%] pl-10 md:pl-10">
                       <div className="bg-white p-6 md:p-8 border border-neutral-100 shadow-[0_4px_20px_rgba(0,0,0,0.01)] transition-transform hover:-translate-y-1 inline-block w-full">
-                        <span className="text-[20px] md:text-[22px] font-serif font-bold text-[var(--color-primary)]">1968</span>
-                        <h4 className="text-[16px] md:text-[17px] font-serif font-bold text-neutral-800 mt-1">Royal Appointment</h4>
-                        <p className="text-[14px] text-neutral-500 mt-2 leading-relaxed">
+                        <span className="text-xl md:text-2xl font-serif font-bold text-[var(--color-primary)]">1968</span>
+                        <h4 className="text-base md:text-base font-serif font-bold text-neutral-800 mt-1">Royal Appointment</h4>
+                        <p className="text-sm text-neutral-500 mt-2 leading-relaxed">
                           The House of OHMT received the prestigious appointment of supplying unique custom gems to royal families across Europe.
                         </p>
                       </div>
@@ -184,9 +184,9 @@ function CategoryContent() {
                     <div className="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-[var(--color-primary)] border-4 border-white -translate-x-[7px] md:-translate-x-2 z-10" />
                     <div className="w-full md:w-[47%] pl-10 md:pl-0 md:pr-10 md:text-right">
                       <div className="bg-white p-6 md:p-8 border border-neutral-100 shadow-[0_4px_20px_rgba(0,0,0,0.01)] transition-transform hover:-translate-y-1 inline-block text-left w-full">
-                        <span className="text-[20px] md:text-[22px] font-serif font-bold text-[var(--color-primary)]">2002</span>
-                        <h4 className="text-[16px] md:text-[17px] font-serif font-bold text-neutral-800 mt-1">The Global Expansion</h4>
-                        <p className="text-[14px] text-neutral-500 mt-2 leading-relaxed">
+                        <span className="text-xl md:text-2xl font-serif font-bold text-[var(--color-primary)]">2002</span>
+                        <h4 className="text-base md:text-base font-serif font-bold text-neutral-800 mt-1">The Global Expansion</h4>
+                        <p className="text-sm text-neutral-500 mt-2 leading-relaxed">
                           Opening of our flagship salon in New York and Tokyo, establishing our unique diamond cutting signature worldwide.
                         </p>
                       </div>
@@ -200,9 +200,9 @@ function CategoryContent() {
                     <div className="hidden md:block w-[47%]" />
                     <div className="w-full md:w-[47%] pl-10 md:pl-10">
                       <div className="bg-white p-6 md:p-8 border border-neutral-100 shadow-[0_4px_20px_rgba(0,0,0,0.01)] transition-transform hover:-translate-y-1 inline-block w-full">
-                        <span className="text-[20px] md:text-[22px] font-serif font-bold text-[var(--color-primary)]">2026</span>
-                        <h4 className="text-[16px] md:text-[17px] font-serif font-bold text-neutral-800 mt-1">The House Heritage Redefined</h4>
-                        <p className="text-[14px] text-neutral-500 mt-2 leading-relaxed">
+                        <span className="text-xl md:text-2xl font-serif font-bold text-[var(--color-primary)]">2026</span>
+                        <h4 className="text-base md:text-base font-serif font-bold text-neutral-800 mt-1">The House Heritage Redefined</h4>
+                        <p className="text-sm text-neutral-500 mt-2 leading-relaxed">
                           Launching our ethical eternity campaign, ensuring all gemstones are sourced with net-zero carbon impact and blockchain tracking.
                         </p>
                       </div>
@@ -217,9 +217,9 @@ function CategoryContent() {
             <section className="pb-24 px-6 md:px-12 bg-white">
               <div className="max-w-[1440px] mx-auto">
                 <div className="bg-[#1C1C1A] border-t-2 border-t-[var(--color-primary)] border-x border-b border-neutral-800 p-10 md:p-16 text-center max-w-5xl mx-auto shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
-                  <span className="text-[11px] tracking-[0.3em] text-[var(--color-primary)] font-bold uppercase block mb-3">Our Promise</span>
+                  <span className="text-xs tracking-[0.3em] text-[var(--color-primary)] font-bold uppercase block mb-3">Our Promise</span>
                   <h3 className="font-serif text-2xl md:text-3xl font-bold text-white mb-6">The OHMT Pledge</h3>
-                  <p className="text-[16px] md:text-[18px] text-neutral-300 leading-relaxed max-w-2xl mx-auto font-light">
+                  <p className="text-base md:text-lg text-neutral-300 leading-relaxed max-w-2xl mx-auto font-light">
                     Every purchase is accompanied by a certificate of authenticity, a lifetime craftsmanship warranty,<br className="hidden md:block" /> and complimentary resizing and cleaning for the life of the piece.
                   </p>
                 </div>
@@ -237,13 +237,13 @@ function CategoryContent() {
                       <img src={item.img} alt={item.name} className="w-full h-full object-cover scale-[1.06] group-hover:scale-[1.12] transition-transform duration-[2.5s] ease-out" />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500" />
                       <div className="absolute bottom-0 left-0 right-0 translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out z-20">
-                        <button className="w-full py-4 bg-[var(--color-primary)] text-white text-[12px] font-bold uppercase tracking-[0.15em] hover:bg-neutral-900 transition-colors rounded-none">
+                        <button className="w-full py-4 bg-[var(--color-primary)] text-white text-xs font-bold uppercase tracking-[0.15em] hover:bg-neutral-900 transition-colors rounded-none">
                           Request Appointment
                         </button>
                       </div>
                     </div>
                     <div className="space-y-1 text-center">
-                      <h4 className="text-sm md:text-base font-serif font-bold text-neutral-800 group-hover:text-[var(--color-primary)] transition-colors leading-[1.1] truncate">
+                      <h4 className="text-sm md:text-base font-serif font-bold text-neutral-800 group-hover:text-[var(--color-primary)] transition-colors leading-[var(--leading-heading)] truncate">
                         {item.name}
                       </h4>
                       <p className="text-sm text-neutral-500 font-bold">{item.price}</p>
