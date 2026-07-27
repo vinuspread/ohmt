@@ -56,13 +56,13 @@ export default function ProductPage() {
         <section className="max-w-[1440px] mx-auto px-6 md:px-12 pt-28 md:pt-36 pb-16 md:pb-24">
           <Link
             href={`/en/templates/OHMT004-furniture/category/${categorySlug}`}
-            className="inline-flex items-center gap-2 text-[13px] font-semibold uppercase text-[var(--color-secondary)] hover:text-[var(--color-primary)] transition-colors"
+            className="inline-flex items-center gap-2 text-xs font-semibold uppercase text-[var(--color-secondary)] hover:text-[var(--color-primary)] transition-colors"
           >
             <ArrowLeft size={16} strokeWidth={1.6} />
             {product.category}
           </Link>
 
-          <div className="mt-8 grid grid-cols-1 lg:grid-cols-[minmax(0,1.05fr)_minmax(360px,0.95fr)] gap-10 lg:gap-16">
+          <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16">
             <div>
               <div className="aspect-[4/5] bg-[var(--color-light-bg)] rounded-md overflow-hidden">
                 <img src={gallery[0]} alt={product.name} className="w-full h-full object-contain p-8 md:p-12" />
@@ -79,7 +79,7 @@ export default function ProductPage() {
             </div>
 
             <div className="lg:sticky lg:top-28 self-start">
-              <p className="text-[13px] font-bold uppercase tracking-[0.18em] text-[var(--color-secondary)] mb-4">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--color-secondary)] mb-4">
                 {product.tag} / {product.category}
               </p>
               <h1 className="text-4xl md:text-6xl font-black leading-none">{product.name}</h1>
@@ -105,7 +105,7 @@ export default function ProductPage() {
                 <h2 className="text-xl font-black mb-4">Product details</h2>
                 <div className="grid grid-cols-1 gap-3">
                   {Object.entries(product.details).map(([key, value]) => (
-                    <div key={key} className="grid grid-cols-[120px_1fr] gap-4 text-sm border-b border-black/5 pb-3">
+                    <div key={key} className="grid grid-cols-2 gap-4 text-sm border-b border-black/5 pb-3">
                       <span className="font-bold capitalize text-[var(--color-secondary)]">{key}</span>
                       <span className="font-medium">{value}</span>
                     </div>

@@ -53,7 +53,7 @@ export default function CategoryPage() {
         <section className="max-w-[1440px] mx-auto px-6 md:px-12 pt-28 md:pt-36 pb-16 md:pb-24">
           <Link
             href="/en/templates/OHMT004-furniture"
-            className="inline-flex items-center gap-2 text-[13px] font-semibold uppercase text-[var(--color-secondary)] hover:text-[var(--color-primary)] transition-colors"
+            className="inline-flex items-center gap-2 text-xs font-semibold uppercase text-[var(--color-secondary)] hover:text-[var(--color-primary)] transition-colors"
           >
             <ArrowLeft size={16} strokeWidth={1.6} />
             Collection
@@ -61,7 +61,7 @@ export default function CategoryPage() {
 
           <div className="mt-8 mb-10 md:mb-14 flex flex-col md:flex-row md:items-end md:justify-between gap-4">
             <div>
-              <p className="text-[13px] font-bold uppercase tracking-[0.18em] text-[var(--color-secondary)] mb-3">
+              <p className="text-xs font-bold uppercase tracking-[0.18em] text-[var(--color-secondary)] mb-3">
                 Furniture Archive
               </p>
               <h1 className="text-4xl md:text-7xl font-black capitalize leading-none">{title}</h1>

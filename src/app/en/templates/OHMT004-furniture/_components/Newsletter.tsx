@@ -20,7 +20,7 @@ export const Newsletter = () => {
             initial={{ opacity: 0, y: 12 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1, duration: 0.5 }}
-            className="text-[12px] font-bold text-[var(--color-secondary)] uppercase mb-8 block"
+            className="text-xs font-bold text-[var(--color-secondary)] uppercase mb-8 block"
           >
             Stay in the Loop
           </motion.span>
@@ -28,7 +28,7 @@ export const Newsletter = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.6 }}
-            className="text-[clamp(2rem,7vw,5rem)] md:text-[clamp(3rem,8vw,6rem)] font-bold text-[var(--color-text)] leading-[1.05] mb-12 uppercase"
+            className="text-[length:var(--text-h1)] md:text-[length:var(--text-display)] font-bold text-[var(--color-text)] leading-[var(--leading-heading)] mb-12 uppercase"
           >
             Curated Insights. <br /> In Your Inbox.
           </motion.h2>
@@ -36,7 +36,7 @@ export const Newsletter = () => {
             initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-xl text-[var(--color-secondary)] font-medium leading-[1.4] mb-16 max-w-lg mx-auto uppercase"
+            className="text-xl text-[var(--color-secondary)] font-medium leading-[var(--leading-body)] mb-16 max-w-lg mx-auto uppercase"
           >
             Subscribe to receive our latest collections, stories, and exclusive event invitations.
           </motion.p>
@@ -50,7 +50,7 @@ export const Newsletter = () => {
             <motion.input
               type="email"
               placeholder="Email Address"
-              className="w-full bg-[var(--color-light-bg)] border-none px-10 py-6 pr-20 rounded-full text-[15px] font-bold text-[var(--color-text)] placeholder:text-black/30 focus:ring-2 focus:ring-black outline-none transition-all"
+              className="w-full bg-[var(--color-light-bg)] border-none px-10 py-6 pr-20 rounded-full text-sm font-bold text-[var(--color-text)] placeholder:text-black/30 focus:ring-2 focus:ring-black outline-none transition-all"
               whileFocus={{ boxShadow: "0 0 0 2px rgba(0,0,0,0.1)" }}
             />
             <motion.button
@@ -69,7 +69,7 @@ export const Newsletter = () => {
             transition={{ delay: 0.3, duration: 0.5 }}
             className="mt-12"
           >
-            <p className="text-[13px] font-bold text-[var(--color-secondary)] uppercase">Privacy First. Unsubscribe Anytime.</p>
+            <p className="text-xs font-bold text-[var(--color-secondary)] uppercase">Privacy First. Unsubscribe Anytime.</p>
           </motion.div>
         </motion.div>
       </div>

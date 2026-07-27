@@ -1,11 +1,11 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - Furniture",
+  title: "OHMT - Modern Furniture Store Template",
   description: "Premium furniture & interior design showcase",
   openGraph: {
-    title: "OHMT - Furniture",
+    title: "OHMT - Modern Furniture Store Template",
     description: "Premium furniture & interior design showcase",
     url: "https://ohmytemplate.com/en/templates/OHMT004-furniture",
     siteName: "OHMT",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Furniture",
+    title: "OHMT - Modern Furniture Store Template",
     description: "Premium furniture & interior design showcase",
     images: ["/templates/OHMT004-furniture/og-image.jpg"],
   },
@@ -40,4 +40,3 @@ export default function FurnitureLayout({
     </>
   );
 }
-

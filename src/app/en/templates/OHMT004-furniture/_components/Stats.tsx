@@ -22,14 +22,14 @@ export const Stats = () => {
               transition={{ delay: i * 0.1, duration: 1, ease: [0.22, 1, 0.36, 1] }}
               className="text-center md:text-left flex flex-col gap-2"
             >
-              <h3 className="text-[clamp(2.5rem,8vw,5rem)] md:text-[clamp(3rem,10vw,6rem)] font-bold text-[var(--color-text)] leading-none mb-4">
+              <h3 className="text-[length:var(--text-h1)] md:text-[length:var(--text-display)] font-bold text-[var(--color-text)] leading-none mb-4">
                 {item.value}
               </h3>
               <div className="h-[2px] w-12 bg-black mb-6 mx-auto md:mx-0" />
-              <p className="text-[14px] font-bold text-[var(--color-text)] uppercase mb-1">
+              <p className="text-sm font-bold text-[var(--color-text)] uppercase mb-1">
                 {item.label}
               </p>
-              <p className="text-[13px] text-[var(--color-secondary)] font-medium uppercase">
+              <p className="text-xs text-[var(--color-secondary)] font-medium uppercase">
                 {item.detail}
               </p>
             </motion.div>

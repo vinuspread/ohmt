@@ -1,9 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { useSearchParams } from "next/navigation";
 export const BrandStory = () => {
-  const searchParams = useSearchParams();
   const t = {
   "nav": {
     "living": `Living Room`,
@@ -134,7 +132,7 @@ return (
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15, duration: 0.5 }}
-              className="text-[13px] md:text-[12px] font-bold text-[var(--color-secondary)] uppercase mb-6 md:mb-10 block"
+              className="text-xs md:text-xs font-bold text-[var(--color-secondary)] uppercase mb-6 md:mb-10 block"
             >
               {t.story.badge}
             </motion.span>
@@ -142,7 +140,7 @@ return (
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-[clamp(1.5rem,4vw,4rem)] font-bold text-[var(--color-text)] leading-[1.05] mb-8 md:mb-12 uppercase"
+              className="text-[length:var(--text-h1)] font-bold text-[var(--color-text)] leading-[var(--leading-heading)] mb-8 md:mb-12 uppercase"
             >
               {t.story.title1} <br /> {t.story.title2}
             </motion.h2>
@@ -157,7 +155,7 @@ return (
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="text-base md:text-lg lg:text-xl text-[var(--color-text)] font-bold leading-[1.4] mb-6 md:mb-10 uppercase"
+              className="text-base md:text-lg lg:text-xl text-[var(--color-text)] font-bold leading-[var(--leading-body)] mb-6 md:mb-10 uppercase"
             >
               {t.story.sub}
             </motion.p>
@@ -165,7 +163,7 @@ return (
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.35, duration: 0.6 }}
-              className="text-sm md:text-base lg:text-lg text-[var(--color-secondary)] font-medium leading-[1.4] mb-10 md:mb-16 uppercase"
+              className="text-sm md:text-base lg:text-lg text-[var(--color-secondary)] font-medium leading-[var(--leading-body)] mb-10 md:mb-16 uppercase"
             >
               {t.story.desc}
             </motion.p>
@@ -175,7 +173,7 @@ return (
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               transition={{ delay: 0.4, duration: 0.5 }}
-              className="text-[14px] font-bold text-[var(--color-text)] border-b-2 border-black pb-2 hover:opacity-50 transition-all uppercase"
+              className="text-sm font-bold text-[var(--color-text)] border-b-2 border-black pb-2 hover:opacity-50 transition-all uppercase"
             >
               {t.story.journal}
             </motion.button>

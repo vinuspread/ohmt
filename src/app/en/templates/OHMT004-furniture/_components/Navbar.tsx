@@ -114,7 +114,7 @@ export const Navbar = () => {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-10 text-[13px] font-medium text-[var(--color-secondary)]">
+          <div className="hidden md:flex items-center gap-10 text-xs font-medium text-[var(--color-secondary)]">
             <Link href={`/en/templates/OHMT004-furniture/category/living`} className="hover:text-[var(--color-primary)] transition-colors uppercase">{t.nav.living}</Link>
             <Link href={`/en/templates/OHMT004-furniture/category/bedroom`} className="hover:text-[var(--color-primary)] transition-colors uppercase">{t.nav.bedroom}</Link>
             <Link href={`/en/templates/OHMT004-furniture/category/dining`} className="hover:text-[var(--color-primary)] transition-colors uppercase">{t.nav.dining}</Link>
@@ -146,10 +146,10 @@ export const Navbar = () => {
           mobileOpen ? "max-h-[500px] opacity-100 py-6" : "max-h-0 opacity-0 py-0"
         }`}
       >
-        <div className="flex flex-col px-6 text-[14px] font-medium text-[var(--color-secondary)]">
+        <div className="flex flex-col px-6 text-sm font-medium text-[var(--color-secondary)]">
           {/* Categories */}
           <div className="flex flex-col gap-1 border-b border-black/5 pb-4 mb-4">
-            <span className="text-[13px] font-bold tracking-[0.2em] text-[var(--color-text)]/40 mb-2 uppercase">{t.nav.categories}</span>
+            <span className="text-xs font-bold tracking-[0.2em] text-[var(--color-text)]/40 mb-2 uppercase">{t.nav.categories}</span>
             <Link 
               href={`/en/templates/OHMT004-furniture/category/living`} 
               onClick={() => setMobileOpen(false)}
@@ -182,7 +182,7 @@ export const Navbar = () => {
  
           {/* Account & Shop Utilities */}
           <div className="flex flex-col gap-1">
-            <span className="text-[13px] font-bold tracking-[0.2em] text-[var(--color-text)]/40 mb-2 uppercase">{t.nav.menu}</span>
+            <span className="text-xs font-bold tracking-[0.2em] text-[var(--color-text)]/40 mb-2 uppercase">{t.nav.menu}</span>
             <Link 
               href={`/en/templates/OHMT004-furniture/cart`} 
               onClick={() => setMobileOpen(false)}
