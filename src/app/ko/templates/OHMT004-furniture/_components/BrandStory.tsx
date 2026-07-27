@@ -48,15 +48,15 @@ export const BrandStory = () => {
               initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.15, duration: 0.5 }}
-              className="text-[13px] md:text-[12px] font-bold text-[var(--color-secondary)] uppercase mb-6 md:mb-10 block"
+              className="text-xs md:text-xs font-bold text-[var(--color-secondary)] uppercase mb-6 md:mb-10 block"
             >
-              {"브랜드 네러티브"}
+              {"브랜드 내러티브"}
             </motion.span>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-[clamp(1.5rem,4vw,4rem)] font-bold text-[var(--color-text)] leading-[1.05] mb-8 md:mb-12 uppercase"
+              className="text-[length:var(--text-h1)] font-bold text-[var(--color-text)] leading-[var(--leading-heading)] mb-8 md:mb-12 uppercase"
             >
               {"소재와 공간"} <br /> {"그 너머의 대화."}
             </motion.h2>
@@ -73,7 +73,7 @@ export const BrandStory = () => {
               transition={{ delay: 0.3, duration: 0.6 }}
               className="text-base md:text-lg lg:text-xl text-[var(--color-text)] font-bold leading-relaxed mb-6 md:mb-10 uppercase"
             >
-              {"비움과 정밀함을 철학으로 삼아, OHMT는 삶의 가장 본질적인 인테리어를 아카이빙합니다."}
+              {"비움과 정밀함을 철학으로 삼아, OHMT는 삶의 가장 본질적인 인테리어를 선보입니다."}
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
@@ -89,7 +89,7 @@ export const BrandStory = () => {
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               transition={{ delay: 0.4, duration: 0.5 }}
-              className="text-[14px] font-bold text-[var(--color-text)] border-b-2 border-black pb-2 hover:opacity-50 transition-opacity uppercase"
+              className="text-sm font-bold text-[var(--color-text)] border-b-2 border-black pb-2 hover:opacity-50 transition-opacity uppercase"
             >
               {"브랜드 스토리 읽기"}
             </motion.button>

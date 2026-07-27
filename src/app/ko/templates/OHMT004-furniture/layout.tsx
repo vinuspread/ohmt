@@ -1,11 +1,11 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - Furniture",
+  title: "OHMT - ?? ?? ??? ???",
   description: "프리미엄 가구 & 인테리어 디자인 쇼케이스",
   openGraph: {
-    title: "OHMT - Furniture",
+    title: "OHMT - ?? ?? ??? ???",
     description: "프리미엄 가구 & 인테리어 디자인 쇼케이스",
     url: "https://ohmytemplate.com/ko/templates/OHMT004-furniture",
     siteName: "OHMT",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Furniture",
+    title: "OHMT - ?? ?? ??? ???",
     description: "프리미엄 가구 & 인테리어 디자인 쇼케이스",
     images: ["/templates/OHMT004-furniture/og-image.jpg"],
   },
@@ -36,8 +36,7 @@ export default function FurnitureLayout({
       <style>{`
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Inter:wght@400;500;600&family=Noto+Sans+KR:wght@400;600;700;900&display=swap&subset=korean');
       `}</style>
-      {children}
+      <div lang="ko" className="ohmt004-furniture">{children}</div>
     </>
   );
 }
-

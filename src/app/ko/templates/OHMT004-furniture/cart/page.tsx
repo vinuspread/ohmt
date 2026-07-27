@@ -43,7 +43,7 @@ function CartPageContent() {
         <div className="flex flex-col items-center justify-center min-h-[60vh]">
           <div className="text-center">
           <ShoppingBag size={48} className="mx-auto mb-8 opacity-10 text-black" />
-          <h1 className="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-[var(--color-text)] uppercase mb-6">장바구니가 비어 있습니다.</h1>
+          <h1 className="text-[length:var(--text-h3)] font-bold text-[var(--color-text)] uppercase mb-6">장바구니가 비어 있습니다.</h1>
           <p className="text-[var(--color-secondary)] mb-12">컬렉션을 둘러보고 마음에 드는 작품을 찾아보세요.</p>
           <Link href="/ko/templates/OHMT004-furniture">
             <Button variant="primary" className="px-12 py-6 rounded-full font-bold uppercase">
@@ -63,10 +63,10 @@ function CartPageContent() {
       <Navbar />
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         <div className="flex items-center justify-between mb-16">
-          <h1 className="text-[clamp(1.75rem,4vw,3.5rem)] font-bold text-[var(--color-text)] uppercase leading-[1.1]">
+          <h1 className="text-[length:var(--text-h2)] font-bold text-[var(--color-text)] uppercase leading-[var(--leading-heading)]">
             쇼핑백.
           </h1>
-          <span className="text-[12px] font-bold text-[var(--color-secondary)] uppercase">
+          <span className="text-xs font-bold text-[var(--color-secondary)] uppercase">
             {cartItems.length}개 상품
           </span>
         </div>
@@ -84,32 +84,40 @@ function CartPageContent() {
                   transition={{ duration: 0.5 }}
                   className="flex flex-col md:flex-row gap-10 items-center md:items-start group border-b border-black/5 pb-12"
                 >
-                  <div className="w-48 h-48 bg-white flex items-center justify-center p-4">
-                    <img loading="lazy" src={item.image} alt={item.name} className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700" />
-                  </div>
+                  <Link
+                    href={`/ko/templates/OHMT004-furniture/product/${item.id}`}
+                    aria-label={`${item.name} 상세 보기`}
+                    className="group/product-image flex h-48 w-48 shrink-0 items-center justify-center bg-white p-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black"
+                  >
+                    <img loading="lazy" src={item.image} alt={item.name} className="w-full h-full object-contain transition-transform duration-700 group-hover/product-image:scale-110" />
+                  </Link>
                   
                   <div className="flex-1 flex flex-col pt-4">
-                    <div className="flex justify-between items-start mb-4">
-                      <div>
-                        <h3 className="text-[14px] font-bold text-[var(--color-text)] uppercase mb-1">{item.name}</h3>
-                        <p className="text-[12px] font-medium text-[var(--color-secondary)] uppercase">{item.category}</p>
+                    <Link
+                      href={`/ko/templates/OHMT004-furniture/product/${item.id}`}
+                      className="group/product-info block rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black"
+                    >
+                      <div className="flex justify-between items-start mb-4">
+                        <div>
+                          <h3 className="text-sm font-bold text-[var(--color-text)] uppercase mb-1 group-hover/product-info:underline underline-offset-4">{item.name}</h3>
+                          <p className="text-xs font-medium text-[var(--color-secondary)] uppercase">{item.category}</p>
+                        </div>
+                        <span className="text-base font-bold text-[var(--color-text)]">{item.price}</span>
                       </div>
-                      <span className="text-[16px] font-bold text-[var(--color-text)]">{item.price}</span>
-                    </div>
-                    
-                    <p className="text-[15px] text-[var(--color-secondary)] mb-8 max-w-sm">{item.desc}</p>
+                      <p className="text-sm text-[var(--color-secondary)] mb-8 max-w-sm">{item.desc}</p>
+                    </Link>
                     
                     <div className="flex items-center justify-between mt-auto">
                       <div className="flex items-center gap-6 border border-black/10 rounded-full px-4 py-2">
                         <button onClick={() => updateQuantity(item.id, -1)} className="hover:opacity-50 transition-opacity">
                           <Minus size={14} />
                         </button>
-                        <span className="text-[13px] font-bold w-4 text-center">{item.quantity}</span>
+                        <span className="text-xs font-bold w-4 text-center">{item.quantity}</span>
                         <button onClick={() => updateQuantity(item.id, 1)} className="hover:opacity-50 transition-opacity">
                           <Plus size={14} />
                         </button>
                       </div>
-                      <button onClick={() => removeItem(item.id)} className="text-[13px] font-bold uppercase text-red-500 hover:text-red-700 transition-colors flex items-center gap-2">
+                      <button onClick={() => removeItem(item.id)} className="text-xs font-bold uppercase text-red-500 hover:text-red-700 transition-colors flex items-center gap-2">
                         <Trash2 size={14} /> 삭제
                       </button>
                     </div>
@@ -121,30 +129,30 @@ function CartPageContent() {
 
           {/* Right: Summary Box */}
           <div className="bg-zinc-50 p-10 lg:sticky lg:top-40">
-            <h2 className="text-[13px] font-bold uppercase mb-10 text-black/40">장바구니 요약</h2>
+            <h2 className="text-xs font-bold uppercase mb-10 text-black/40">장바구니 요약</h2>
             
             <div className="space-y-6 mb-12">
-              <div className="flex justify-between text-[13px] font-medium text-[var(--color-secondary)]">
+              <div className="flex justify-between text-xs font-medium text-[var(--color-secondary)]">
                 <span>멤버 배송비</span>
                 <span>무료</span>
               </div>
-              <div className="flex justify-between text-[13px] font-medium text-[var(--color-secondary)]">
+              <div className="flex justify-between text-xs font-medium text-[var(--color-secondary)]">
                 <span>예상 세금</span>
                 <span>₩0</span>
               </div>
               <div className="h-[1px] w-full bg-black/5" />
-              <div className="flex justify-between text-[16px] font-bold text-[var(--color-text)] uppercase">
+              <div className="flex justify-between text-base font-bold text-[var(--color-text)] uppercase">
                 <span>합계</span>
                 <span>${subtotal.toLocaleString()}</span>
               </div>
             </div>
 
-            <Button variant="primary" className="w-full py-6 rounded-full font-bold text-[13px] uppercase active:scale-95 flex items-center justify-center gap-3">
+            <Button variant="primary" className="w-full py-6 rounded-full font-bold text-xs uppercase active:scale-95 flex items-center justify-center gap-3">
               결제하기 <ArrowRight size={16} />
             </Button>
             
             <div className="mt-10 flex flex-col gap-4">
-              <p className="text-[15px] text-center text-[var(--color-secondary)] font-medium">Stripe 기반 안전 결제. 전 세계 배송 가능.</p>
+              <p className="text-sm text-center text-[var(--color-secondary)] font-medium">Stripe 기반 안전 결제. 전 세계 배송 가능.</p>
             </div>
           </div>
         </div>
@@ -155,10 +163,10 @@ function CartPageContent() {
 }
 
 
-export default function CartPage(props: any) {
+export default function CartPage() {
   return (
     <React.Suspense fallback={null}>
-      <CartPageContent {...props} />
+      <CartPageContent />
     </React.Suspense>
   );
 }
