@@ -31,26 +31,24 @@ export const Hero = () => {
            transition={{ delay: 0.8, duration: 1 }}
            className="max-w-5xl"
         >
-          <span className="text-[13px] md:text-[12px] uppercase tracking-[0.3em] sm:tracking-[0.5em] font-bold mb-3 sm:mb-4 block opacity-60" style={{ fontFamily: "'Pretendard', sans-serif" }}>
+          <span className="text-xs uppercase tracking-[0.3em] sm:tracking-[0.5em] font-bold mb-4 block opacity-60" style={{ fontFamily: "'Pretendard', sans-serif" }}>
             2026년 설립
           </span>
-          <h1 className="text-2xl sm:text-[3vw] md:text-[2.4vw] font-normal tracking-[-0.04em] leading-[0.94] mb-4 sm:mb-5 drop-shadow-2xl" style={{ fontFamily: "var(--font-bodoni)" }}>
-            <span className="block sm:whitespace-nowrap font-normal">처음 입는 순간부터 온전히 당신의 것</span>
-            <span className="block sm:whitespace-nowrap font-normal">완벽함을 완성하는 디테일</span>
+          <h1 className="w-full max-w-4xl mx-auto text-center text-3xl sm:text-4xl md:text-5xl font-normal tracking-[-0.04em] leading-[var(--leading-body)] mb-6 drop-shadow-2xl break-keep text-balance" style={{ fontFamily: "var(--font-bodoni)" }}>
+            언제나 편하게 다시 꺼내 입을 수 있는 실용적인 일상속 베이직웨어를 꿈꿉니다.
           </h1>
 
-          <p className="text-[1rem] sm:text-[1.1rem] text-white/75 max-w-[580px] mx-auto text-center leading-[1.42] mb-7 sm:mb-9 font-normal drop-shadow-lg" style={{ fontFamily: "'Pretendard', sans-serif" }}>
-            일시적인 트렌드를 따르기보다 당신의 감성과 개성을 온전히 표현하는 패션.
-            <br />
-            세련되고 개인적인 스타일을 추구하는 사람들을 위한 컬렉션입니다.
+          <p className="text-sm sm:text-base text-white/75 max-w-[600px] mx-auto text-center leading-relaxed mb-8 font-normal drop-shadow-lg break-keep text-pretty" style={{ fontFamily: "'Pretendard', sans-serif" }}>
+            <span className="block">유행을 앞세우기보다 소재와 재단, 편안한 착용감을 먼저 생각합니다.</span>
+            <span className="block">매일 입기 좋은 기본부터 특별한 날을 위한 의상을 한 컬렉션에 담았습니다.</span>
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
-             <button className="relative px-8 py-3.5 sm:px-12 sm:py-4.5 bg-white text-black text-[13px] sm:text-[12px] font-bold tracking-[0.15em] sm:tracking-[0.2em] overflow-hidden group" style={{ fontFamily: "'Pretendard', sans-serif" }}>
-              <span className="relative z-10 group-hover:text-white transition-colors duration-500">컬렉션 탐색</span>
+             <button className="relative px-8 py-3.5 sm:px-12 sm:py-4.5 bg-white text-black text-xs sm:text-xs font-bold tracking-[0.15em] sm:tracking-[0.2em] overflow-hidden group" style={{ fontFamily: "'Pretendard', sans-serif" }}>
+              <span className="relative z-10 group-hover:text-white transition-colors duration-500">컬렉션 보기</span>
               <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-[0.6s] ease-[0.16,1,0.3,1] origin-bottom" />
             </button>
-            <Button variant="ghost" className="text-[13px] sm:text-[12px] font-bold tracking-[0.15em] sm:tracking-[0.2em] border border-white hover:opacity-60 transition-opacity duration-300 px-8 py-3.5 sm:px-12 sm:py-4">
+            <Button variant="ghost" className="text-xs sm:text-xs font-bold tracking-[0.15em] sm:tracking-[0.2em] border border-white hover:opacity-60 transition-opacity duration-300 px-8 py-3.5 sm:px-12 sm:py-4">
               캠페인 보기
             </Button>
           </div>

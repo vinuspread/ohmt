@@ -16,16 +16,16 @@ function AboutContent() {
 
         <SubpageHero
           eyebrow="EST. 2026"
-          title="브랜드 스토리"
-          description="절제와 소재에 대한 신뢰, 시즌을 넘어서도록 설계된 옷을 중심으로 만들어진 패션 랩입니다."
+          title="브랜드 소개"
+          description="좋은 원단과 유행을 타지 않는 디자인을 바탕으로 옷을 만듭니다. 시간이 지나도 자연스럽게 꺼내 입을 수 있도록 소재와 재단을 세심하게 다듬습니다."
           image="/templates/OHMT001-fashion/about-hero-v2.png"
-          imageAlt="패션 아틀리에 브랜드 스토리"
+          imageAlt="MAISON OHMT 작업실과 제작 과정"
         />
 
         <section className="bg-black py-24 md:py-32">
           <div className="max-w-3xl mx-auto px-6 text-center">
-            <p className="font-[family-name:var(--font-bodoni)] italic text-[28px] md:text-[40px] text-white leading-[1.3]">
-              &ldquo;우리는 시즌을 따르지 않습니다.<br />시즌을 넘어서는 것을 만듭니다.&rdquo;
+            <p className="font-[family-name:var(--font-bodoni)] italic text-3xl md:text-4xl text-white leading-[var(--leading-body)]">
+              &ldquo;편하게 오래 입을 수 있는 옷을,<br />한 벌씩 제대로 만듭니다.&rdquo;
             </p>
             <div className="border-t border-white/20 w-16 mx-auto mt-12" />
           </div>
@@ -35,9 +35,9 @@ function AboutContent() {
           <div className="max-w-[1440px] mx-auto px-6 md:px-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
               <div>
-                <span className="text-[11px] uppercase tracking-[-0.03em] text-[var(--color-text-muted)]">브랜드 스토리</span>
-                <p className="text-[16px] text-black/70 leading-relaxed mt-6 break-keep tracking-[-0.025em]">
-                  2026년, 우리는 옷이 만들어진 순간을 넘어 더 오랜 시간 지속되어야 한다는 확신 하나로 시작했습니다. 소재 본연의 가치를 깊이 신뢰하는 소수의 장인 공방들과 긴밀히 협력합니다. 모든 의복은 수작업으로 패턴을 재단하고, 오랜 시간을 들여 정성껏 봉제하며, 그 어떤 지름길도 없이 정직하게 완성합니다.
+                <span className="text-xs uppercase tracking-[-0.03em] text-[var(--color-text-muted)]">브랜드 스토리</span>
+                <p className="text-base text-black/70 leading-relaxed mt-6 break-keep tracking-[-0.025em]">
+                  MAISON OHMT는 오래 입을수록 편안해지고 자연스럽게 몸에 익는 옷을 만들기 위해 시작했습니다. 소재의 촉감과 내구성을 먼저 살피고, 여러 차례의 피팅을 거쳐 움직임이 편한 실루엣을 완성합니다. 재단과 봉제, 마감까지 각 과정을 꼼꼼하게 확인하며 눈에 잘 띄지 않는 부분까지도 신경써서 제작합니다.
                 </p>
               </div>
               <div className="aspect-[4/5] overflow-hidden">
@@ -51,15 +51,15 @@ function AboutContent() {
           <div className="max-w-[1440px] mx-auto px-6 md:px-12">
             <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-black/[0.08]">
               {[
-                { num: "01", title: "품질", desc: "모든 소재는 비용이 아닌 내구성을 위해 선택됩니다." },
-                { num: "02", title: "장인정신", desc: "기계가 따라할 수 없는 손마감 디테일." },
-                { num: "03", title: "시대를 초월한 가치", desc: "지금으로부터 수십 년 후에도 입을 수 있도록 디자인되었습니다." },
+                { num: "01", title: "소재", desc: "촉감과 내구성, 관리 방법까지 확인해 실제로 오래 입기 좋은 소재를 선택합니다." },
+                { num: "02", title: "재단과 봉제", desc: "여러 차례 입어 보며 핏과 움직임을 확인하고, 필요한 부분은 손으로 세심하게 마감합니다." },
+                { num: "03", title: "내구성", desc: "잘 늘어나지 않고, 변색에 강한 옷을 만듭니다. 시간이 지나도 부담 없이 입을 수 있는 제품을 고집합니다." },
               ].map((item, i) => (
                 <div key={item.num} className={`py-12 md:py-0 ${i === 0 ? "md:pr-16 lg:pr-24" : i === 1 ? "md:px-16 lg:px-24" : "md:pl-16 lg:pl-24"}`}>
-                  <span className="block text-[9px] font-mono tracking-[0.25em] text-black/30 mb-7">— {item.num}</span>
-                  <h3 className="font-[family-name:var(--font-bodoni)] text-[28px] md:text-[32px] font-normal tracking-[-0.04em] leading-[1.1]">{item.title}</h3>
+                  <span className="block text-xs font-mono tracking-[0.25em] text-black/30 mb-7">· {item.num}</span>
+                  <h3 className="font-[family-name:var(--font-bodoni)] text-3xl md:text-4xl font-normal tracking-[-0.04em] leading-[var(--leading-heading)]">{item.title}</h3>
                   <div className="w-6 h-px bg-black/20 my-5" />
-                  <p className="text-[14px] text-black/55 leading-relaxed break-keep tracking-[-0.025em]">{item.desc}</p>
+                  <p className="text-sm text-black/55 leading-relaxed break-keep tracking-[-0.025em]">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -67,10 +67,10 @@ function AboutContent() {
         </section>
 
         <section className="bg-white py-20 text-center">
-          <p className="text-[20px] text-black/50">오래 지속되는 옷을 찾고 계신가요?</p>
+          <p className="text-xl text-black/50">오래 두고 편하게 입을 수 있는 옷을 찾고 계신가요?</p>
           <Link
             href="/ko/templates/OHMT001-fashion/collection"
-            className="inline-block bg-black text-white px-10 py-4 mt-8 text-[12px] uppercase tracking-[0.3em] hover:opacity-70 transition-opacity"
+            className="inline-block bg-black text-white px-10 py-4 mt-8 text-xs uppercase tracking-[0.3em] hover:opacity-70 transition-opacity"
           >
             컬렉션 보기
           </Link>

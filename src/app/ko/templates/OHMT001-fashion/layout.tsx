@@ -1,12 +1,12 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - Fashion",
-  description: "프리미엄 패션 브랜드 & 에디토리얼 쇼케이스",
+  title: "OHMT - ????? ?? ?? ???",
+  description: "좋은 소재와 편안한 실루엣을 바탕으로 오래 입을 수 있는 옷을 선보이는 패션 브랜드입니다.",
   openGraph: {
-    title: "OHMT - Fashion",
-    description: "프리미엄 패션 브랜드 & 에디토리얼 쇼케이스",
+    title: "OHMT - ????? ?? ?? ???",
+    description: "좋은 소재와 편안한 실루엣을 바탕으로 오래 입을 수 있는 옷을 선보이는 패션 브랜드입니다.",
     url: "https://ohmytemplate.com/ko/templates/OHMT001-fashion",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT001-fashion/og-image.jpg", width: 1200, height: 630 }],
@@ -15,8 +15,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Fashion",
-    description: "프리미엄 패션 브랜드 & 에디토리얼 쇼케이스",
+    title: "OHMT - ????? ?? ?? ???",
+    description: "좋은 소재와 편안한 실루엣을 바탕으로 오래 입을 수 있는 옷을 선보이는 패션 브랜드입니다.",
     images: ["/templates/OHMT001-fashion/og-image.jpg"],
   },
   robots: { index: true, follow: true },
@@ -39,8 +39,7 @@ export default function FashionLayout({
 
         @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo:wght@400;700;800&display=swap');
       `}</style>
-      {children}
+      <div lang="ko" className="ohmt001-fashion">{children}</div>
     </>
   );
 }
-

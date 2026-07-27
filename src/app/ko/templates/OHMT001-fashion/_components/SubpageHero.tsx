@@ -33,18 +33,22 @@ export function SubpageHero({
           isLeft ? "items-start text-left" : "items-center text-center"
         }`}
       >
-        <span className="mb-4 text-[10px] font-bold uppercase tracking-[0.32em] text-white/62">
+        <span className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-white/62">
           {eyebrow}
         </span>
         <h1
-          className="max-w-full whitespace-nowrap text-[32px] font-bold leading-[0.94] tracking-[-0.035em] text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.25)] break-keep sm:text-[46px] md:text-[58px] lg:text-[72px]"
+          className="max-w-full whitespace-nowrap text-4xl font-bold leading-[var(--leading-heading)] tracking-[-0.035em] text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.25)] break-keep sm:text-5xl md:text-6xl lg:text-7xl"
           style={{ fontFamily: "var(--font-bodoni)" }}
         >
           {title}
         </h1>
         {description ? (
-          <p className="mt-5 max-w-xl text-[14px] leading-[1.65] text-white/74 break-keep md:text-[15px]">
-            {description}
+          <p className="mt-5 max-w-xl text-sm leading-[var(--leading-body)] text-white/74 break-keep text-pretty md:text-sm">
+            {description.split(". ").map((sentence, index, sentences) => (
+              <span key={sentence} className="block">
+                {sentence}{index < sentences.length - 1 ? "." : ""}
+              </span>
+            ))}
           </p>
         ) : null}
       </div>

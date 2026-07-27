@@ -24,9 +24,9 @@ export const BrandSection = () => {
             whileInView={{ opacity: 0.5, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 1.2 }}
-            className="text-[11px] uppercase tracking-[-0.03em] mb-4 sm:mb-8 font-medium opacity-50 font-sans"
+            className="text-xs uppercase tracking-[-0.03em] mb-4 sm:mb-8 font-medium opacity-50 font-sans"
           >
-            MAISON OHMT의 철학
+            MAISON OHMT의 기준
           </motion.p>
          
           <motion.h2
@@ -34,11 +34,11 @@ export const BrandSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ delay: 0.2, duration: 1.5 }}
-            className="text-[13px] sm:text-[2.5vw] md:text-[1.6vw] lg:text-[1.3vw] font-normal tracking-[-0.04em] uppercase mb-6 sm:mb-12 leading-[1.3]"
+            className="text-xs sm:text-[2.5vw] md:text-[1.6vw] lg:text-[1.3vw] font-normal tracking-[-0.04em] uppercase mb-6 sm:mb-12 leading-[var(--leading-body)]"
             style={{ fontFamily: "'Pretendard', sans-serif" }}
           >
-            <span className="block">침묵 속에서 울려 퍼지는</span>
-            <span className="block text-white/20 font-normal tracking-[-0.04em]">형태의 언어.</span>
+            <span className="block">옷을 만드는 기준은,</span>
+            <span className="block text-white/20 font-normal tracking-[-0.04em]">입는 시간을 생각하는 일.</span>
           </motion.h2>
         
         <motion.div 
@@ -57,9 +57,9 @@ export const BrandSection = () => {
         >
             <Link 
               href="#" 
-              className="text-[13px] font-bold uppercase tracking-[-0.03em] border-b border-white/40 pb-2 hover:border-white transition-colors inline-block hover:opacity-70"
+              className="text-xs font-bold uppercase tracking-[-0.03em] border-b border-white/40 pb-2 hover:border-white transition-colors inline-block hover:opacity-70"
             >
-              더 알아보기
+              브랜드 이야기 보기
             </Link>
         </motion.div>
       </div>

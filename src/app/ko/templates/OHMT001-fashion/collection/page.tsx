@@ -29,23 +29,23 @@ function PageContent() {
         <SubpageHero
           eyebrow="Collection"
           title="이번 시즌"
-          description="테일러드 에센셜, 리미티드 오브젝트, 그리고 영구적인 피스를 하나의 간결한 옷장으로 엮었습니다."
+          description="재킷과 드레스, 티셔츠와 액세서리까지 함께 입기 좋은 제품으로 구성했습니다. 좋은 소재와 편안한 실루엣을 기준으로, 오래 활용할 수 있는 옷을 선보입니다."
           image="/templates/OHMT001-fashion/branding-custom.jpg"
-          imageAlt="이번 시즌 패션 캠페인"
+          imageAlt="이번 시즌 컬렉션"
         />
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-24">
           <Link
             href="/ko/templates/OHMT001-fashion"
-            className="group inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-black/40 hover:text-black transition-all mb-10 md:mb-16"
+            className="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-black/40 hover:text-black transition-all mb-10 md:mb-16"
           >
             <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
-            홈으로
+            홈으로 돌아가기
           </Link>
 
           <div className="mb-16 md:mb-24">
-            <h1 className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/30 mb-3">{LABEL}</h1>
+            <h1 className="text-xs font-bold uppercase tracking-[0.3em] text-black/30 mb-3">{LABEL}</h1>
             <p
-              className="text-[36px] font-bold leading-none tracking-[-0.035em] sm:text-[4vw]"
+              className="text-4xl font-bold leading-none tracking-[-0.035em] sm:text-[4vw]"
               style={{ fontFamily: "var(--font-bodoni)" }}
             >
               {filtered.length}개 상품
@@ -75,8 +75,8 @@ function PageContent() {
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                       />
                     </div>
-                    <h2 className="text-[13px] sm:text-[14px] font-bold uppercase tracking-[-0.01em] mb-1">{p.name}</h2>
-                    <p className="text-[13px] text-black/50 font-medium">{p.price}</p>
+                    <h2 className="text-xs sm:text-sm font-bold uppercase tracking-[-0.01em] mb-1">{p.name}</h2>
+                    <p className="text-xs text-black/50 font-medium">{p.price}</p>
                   </Link>
                 </motion.div>
               ))}
@@ -85,7 +85,7 @@ function PageContent() {
 
           {/* Pagination Controls */}
           {totalPages > 1 && (
-            <div className="flex justify-center items-center gap-6 mt-20 md:mt-28 border-t border-black/5 pt-8 text-[11px] font-bold uppercase tracking-[0.2em]">
+            <div className="flex justify-center items-center gap-6 mt-20 md:mt-28 border-t border-black/5 pt-8 text-xs font-bold uppercase tracking-[0.2em]">
               <button
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                 disabled={currentPage === 1}

@@ -1,12 +1,32 @@
 "use client";
 import React, { useMemo } from "react";
 import { motion } from "framer-motion";
-export function TemplateWrapper({ theme, children }: { theme: any; children: React.ReactNode }) {
+type TemplateTheme = {
+  theme: {
+    palette: {
+      primary: string;
+      secondary: string;
+      accent: string;
+      text: { main: string; muted: string; contrast: string };
+      ui: { border: string };
+    };
+    typography: {
+      heading: { font: string };
+      body: { font: string };
+    };
+    spacing: {
+      page_pt: string;
+      container: string;
+      gutter: string;
+    };
+  };
+};
+
+export function TemplateWrapper({ theme, children }: { theme: TemplateTheme; children: React.ReactNode }) {
   const [animationComplete, setAnimationComplete] = React.useState(false);
   React.useEffect(() => {
-    if (typeof window !== "undefined") {
-      if ("history" in window && "scrollRestoration" in window.history) window.history.scrollRestoration = "manual";
-      window.scrollTo({ top: 0, left: 0 });
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "auto";
     }
   }, []);
   const cssVariables = useMemo(() => {

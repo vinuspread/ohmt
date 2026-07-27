@@ -37,12 +37,12 @@ export const CollectionShowcase = () => {
               transition={{ duration: 1.2, ease: "easeOut" }}
               className="space-y-3 sm:space-y-4"
             >
-              <span className="text-[11px] uppercase tracking-[-0.03em] text-black/40 font-medium block">
-                리미티드 에디션
+              <span className="text-xs uppercase tracking-[-0.03em] text-black/40 font-medium block">
+                한정 컬렉션
               </span>
-              <h3 className="text-3xl md:text-5xl font-normal tracking-[-0.04em] uppercase leading-[1.1]">
-                익스클루시브 <br />
-                <span className="font-semibold">라이프스타일 랩</span>
+              <h3 className="text-3xl md:text-5xl font-normal tracking-[-0.04em] uppercase leading-[var(--leading-heading)]">
+                소량 제작 <br />
+                <span className="font-semibold">아틀리에 에디션</span>
               </h3>
             </motion.div>
 
@@ -51,10 +51,10 @@ export const CollectionShowcase = () => {
               whileInView={{ opacity: 0.6, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: 0.2, duration: 1.2, ease: "easeOut" }}
-              className="text-[15px] text-black/70 leading-[1.7] font-medium tracking-[-0.025em] max-w-md normal-case"
+              className="text-sm text-black/70 leading-[var(--leading-body)] font-medium tracking-[-0.025em] max-w-md normal-case"
               style={{ wordBreak: "keep-all" }}
             >
-              우리는 절제된 우아함과 타협하지 않는 품질을 추구합니다. 현대적인 실루엣에 깊은 감정적 울림을 불어넣어 시간의 흐름을 초월하는 독창적인 라이프스타일을 제시합니다. 거장의 테일러링과 세심하게 엄선된 소재로 정교하게 제작된 리미티드 에디션 컬렉션을 만나보세요.
+              좋은 소재를 구하기 어렵거나 제작 과정에 많은 시간이 필요한 제품은 소량으로만 만듭니다. 한 벌씩 재단과 봉제를 확인하고, 정해진 수량 안에서 완성도 있게 선보입니다.
             </motion.p>
 
             <motion.div
@@ -64,8 +64,8 @@ export const CollectionShowcase = () => {
               transition={{ delay: 0.4, duration: 1 }}
               className="pt-2"
             >
-              <Button variant="outline" className="px-8 py-3 sm:px-12 sm:py-3.5 text-[13px] sm:text-[13px] font-bold uppercase tracking-[-0.03em] transition-all duration-700 ease-out">
-                룩북 둘러보기
+              <Button variant="outline" className="px-8 py-3 sm:px-12 sm:py-3.5 text-xs sm:text-xs font-bold uppercase tracking-[-0.03em] transition-all duration-700 ease-out">
+                룩북 보기
               </Button>
             </motion.div>
           </div>

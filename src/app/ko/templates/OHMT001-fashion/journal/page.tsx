@@ -9,10 +9,10 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 const ARTICLES = [
-  { id: 1, category: "캠페인", title: "마지막 시즌", date: "2026년 6월 15일", excerpt: "베네치아 석호에서 3일간 촬영한, 끝과 그 조용한 아름다움에 대한 시각적 명상.", image: "/templates/OHMT001-fashion/journal-hero-v2.png", featured: true },
-  { id: 2, category: "소재", title: "일본 데님에 대하여", date: "2026년 5월 28일", excerpt: "셀비지, 무게, 그리고 완벽한 색바램에 대한 집착. 오카야마의 한 공장으로 거슬러 올라갑니다.", image: "/templates/OHMT001-fashion/hero-custom.jpg" },
-  { id: 3, category: "컬렉션", title: "조용한 장인정신", date: "2026년 5월 10일", excerpt: "지금까지 가장 기술적으로 까다로운 의복, 구조적 울 오버코트의 솔기 뒤 이야기.", image: "/templates/OHMT001-fashion/exclusive-lifestyle.png" },
-  { id: 4, category: "스타일", title: "계절을 위한 옷차림", date: "2026년 4월 22일", excerpt: "당신과 함께 나이 들어가는 캡슐 워드로브를 만들기 위한 실용적인 안내.", image: "/templates/OHMT001-fashion/branding-custom.jpg" },
+  { id: 1, category: "캠페인", title: "베네치아에서 기록한 마지막 여름", date: "2026년 6월 15일", excerpt: "베네치아 석호의 빛과 바람 속에서 촬영한 봄·여름 컬렉션의 마지막 장면.", image: "/templates/OHMT001-fashion/journal-hero-v2.png", featured: true },
+  { id: 2, category: "소재", title: "셀비지 데님은 어떻게 달라지는가", date: "2026년 5월 28일", excerpt: "오카야마의 셔틀 직기와 인디고 염색, 오래 입을수록 달라지는 데님의 특징을 살펴봅니다.", image: "/templates/OHMT001-fashion/hero-custom.jpg" },
+  { id: 3, category: "컬렉션", title: "울 오버코트 안쪽의 설계", date: "2026년 5월 10일", excerpt: "겉으로는 보이지 않는 심지와 봉제, 보강 작업을 통해 한 벌의 코트가 완성되는 과정을 소개합니다.", image: "/templates/OHMT001-fashion/exclusive-lifestyle.png" },
+  { id: 4, category: "스타일", title: "적은 옷으로 계절을 보내는 법", date: "2026년 4월 22일", excerpt: "자주 입는 옷을 중심으로 활용도 높은 옷장을 구성하는 방법을 정리했습니다.", image: "/templates/OHMT001-fashion/branding-custom.jpg" },
 ];
 
 function JournalContent() {
@@ -28,7 +28,7 @@ function JournalContent() {
             <SubpageHero
               eyebrow={featured.category}
               title={featured.title}
-              description={`${featured.date} · 끝과 소재의 기억, 그리고 조용히 사라지는 아름다움에 대한 에디토리얼 노트.`}
+              description={`${featured.date} · 소재와 제작 과정, 오래 입는 방법을 소개하는 MAISON OHMT 저널.`}
               image={featured.image}
               imageAlt={featured.title}
             />
@@ -41,10 +41,10 @@ function JournalContent() {
                 <div className="aspect-[3/4] overflow-hidden">
                   <img src={article.image} alt={article.title} className="w-full h-full object-cover group-hover:scale-[1.02] transition duration-700" />
                 </div>
-                <span className="block text-[11px] uppercase tracking-[-0.03em] text-[var(--color-text-muted)] mt-5 mb-2">{article.category}</span>
-                <h2 className="font-[family-name:var(--font-bodoni)] text-[20px] md:text-[24px] font-normal tracking-[-0.04em] leading-[1.1]">{article.title}</h2>
-                <p className="text-[12px] text-[var(--color-text-muted)] mt-1">{article.date}</p>
-                <p className="text-[14px] text-black/60 leading-relaxed mt-2 line-clamp-2 break-keep tracking-[-0.025em]">{article.excerpt}</p>
+                <span className="block text-xs uppercase tracking-[-0.03em] text-[var(--color-text-muted)] mt-5 mb-2">{article.category}</span>
+                <h2 className="font-[family-name:var(--font-bodoni)] text-xl md:text-2xl font-normal tracking-[-0.04em] leading-[var(--leading-heading)]">{article.title}</h2>
+                <p className="text-xs text-[var(--color-text-muted)] mt-1">{article.date}</p>
+                <p className="text-sm text-black/60 leading-relaxed mt-2 line-clamp-2 break-keep tracking-[-0.025em]">{article.excerpt}</p>
               </Link>
             ))}
           </div>

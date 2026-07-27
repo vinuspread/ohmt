@@ -13,38 +13,38 @@ import theme from "../theme.json";
 const SEASONS = [
   {
     id: "ss26",
-    label: "SS26 — 봄/여름",
-    title: "첫 번째 빛",
+    label: "SS26 · 봄/여름",
+    title: "2026 봄·여름 컬렉션",
     image: "/templates/OHMT001-fashion/exclusive-custom.jpg",
     description:
-      "구조와 유동성의 긴장 속에서 탄생한 데뷔 컬렉션. 테일러드 실루엣이 드레이프 오간자와 만나 통제된 부드러움을 탐구합니다.",
+      "얇은 울과 코튼, 오간자로 봄·여름 옷을 구성했습니다. 여유로운 재킷과 셔츠, 흐르는 드레스를 선보입니다.",
     year: "2026",
   },
   {
     id: "aw25",
-    label: "AW25 — 가을/겨울",
-    title: "콘크리트 정원",
+    label: "AW25 · 가을/겨울",
+    title: "2025 가을·겨울 컬렉션",
     image: "/templates/OHMT001-fashion/branding-custom.jpg",
     description:
-      "인간의 손길로 부드러워진 브루탈리스트 형태. 울, 가죽, 생지 가장자리로 정의된, 보호와 노출 사이를 걷는 시즌.",
+      "울 코트와 가죽 재킷, 니트로 겨울 옷을 구성했습니다. 차콜과 브라운, 딥 네이비를 중심으로 사용했습니다.",
     year: "2025",
   },
   {
     id: "core",
-    label: "코어 시리즈",
-    title: "영구적 대상",
+    label: "코어 컬렉션",
+    title: "시그니처 컬렉션",
     image: "/templates/OHMT001-fashion/hero-custom.jpg",
     description:
-      "기초. 한 시즌이 아닌 평생을 위해 디자인된 의복. 모든 스티치와 솔기, 실루엣이 본질적 형태로 정제되었습니다.",
+      "티셔츠와 셔츠, 팬츠처럼 자주 입는 옷을 모았습니다. 오래 입어도 형태가 유지되도록 소재와 봉제를 다듬었습니다.",
     year: "2025",
   },
   {
     id: "limited",
-    label: "리미티드 드롭",
-    title: "모뉴먼트",
+    label: "한정 컬렉션",
+    title: "아틀리에 에디션",
     image: "/templates/OHMT001-fashion/exclusive-lifestyle.png",
     description:
-      "의복과 조각의 경계를 탐구한 실험적 캡슐. 전 세계 50피스 한정 에디션으로 제작되었습니다.",
+      "특별한 소재와 정교한 공정이 필요한 제품만 선보입니다. 한정된 수량으로 제작하며 완성도를 세심하게 확인합니다.",
     year: "2024",
   },
 ];
@@ -57,20 +57,20 @@ function PageContent() {
 
         <SubpageHero
           eyebrow="ARCHIVE"
-          title="시즌의 발자취"
-          description="모든 컬렉션은 그 순간의 기록입니다. 다음 실루엣을 위한 참조로 이곳에 남아 있습니다."
+          title="지난 컬렉션"
+          description="시즌별로 선보였던 옷과 캠페인을 한곳에 모았습니다. 소재와 실루엣이 어떻게 달라져 왔는지 컬렉션별로 살펴보세요."
           image="/templates/OHMT001-fashion/archive-hero.jpg"
-          imageAlt="아카이브 에디토리얼 패션 캠페인"
+          imageAlt="지난 시즌 컬렉션 캠페인"
         />
 
         {/* Back link */}
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-12 md:pt-16">
           <Link
             href="/ko/templates/OHMT001-fashion"
-            className="group inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-white/40 hover:text-white transition-all"
+            className="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-white/40 hover:text-white transition-all"
           >
             <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
-            홈으로
+            홈으로 돌아가기
           </Link>
         </div>
 
@@ -101,17 +101,21 @@ function PageContent() {
                 transition={{ duration: 0.8, delay: 0.15 }}
                 className={i % 2 === 1 ? "md:col-start-1 md:row-start-1" : ""}
               >
-                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/20">
+                <span className="text-xs font-bold uppercase tracking-[0.3em] text-white/20">
                   {season.label}
                 </span>
-                <h2 className="text-[32px] sm:text-[3.5vw] font-bold tracking-[-0.04em] uppercase leading-[1.1] text-white mt-4 mb-6">
+                <h2 className="text-4xl sm:text-[3.5vw] font-bold tracking-[-0.04em] uppercase leading-[var(--leading-heading)] text-white mt-4 mb-6">
                   {season.title}
                 </h2>
-                <p className="text-[14px] sm:text-[15px] text-white/50 leading-relaxed max-w-md tracking-[-0.025em]">
-                  {season.description}
+                <p className="text-sm sm:text-sm text-white/50 leading-relaxed max-w-md tracking-[-0.025em]">
+                  {season.description.split(". ").map((sentence, index, sentences) => (
+                    <span key={sentence} className="block">
+                      {sentence}{index < sentences.length - 1 ? "." : ""}
+                    </span>
+                  ))}
                 </p>
                 <div className="flex items-center gap-4 mt-8">
-                  <span className="text-[40px] sm:text-[4vw] font-bold tracking-tighter text-white/10 leading-none">
+                  <span className="text-4xl sm:text-[4vw] font-bold tracking-tighter text-white/10 leading-none">
                     {season.year}
                   </span>
                   <div className="w-12 h-px bg-white/20" />
@@ -124,12 +128,12 @@ function PageContent() {
         {/* Closing CTA */}
         <section className="border-t border-white/10">
           <div className="max-w-[1440px] mx-auto px-6 md:px-12 py-20 md:py-28 text-center">
-            <p className="text-[14px] sm:text-[16px] text-white/40 max-w-lg mx-auto leading-relaxed tracking-[-0.025em] mb-8">
-              과거의 컬렉션이 다음을 만듭니다. 현재 시즌을 둘러보세요.
+            <p className="text-sm sm:text-base text-white/40 max-w-lg mx-auto leading-relaxed tracking-[-0.025em] mb-8">
+              현재 판매 중인 컬렉션을 확인해 보세요.
             </p>
             <Link
               href="/ko/templates/OHMT001-fashion/collection"
-              className="inline-block bg-white text-black px-10 py-4 text-[12px] font-bold uppercase tracking-[0.3em] hover:opacity-70 transition-all"
+              className="inline-block bg-white text-black px-10 py-4 text-xs font-bold uppercase tracking-[0.3em] hover:opacity-70 transition-all"
             >
               현재 컬렉션 보기
             </Link>

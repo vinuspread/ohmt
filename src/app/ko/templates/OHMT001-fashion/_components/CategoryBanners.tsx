@@ -15,7 +15,7 @@ export const CategoryBanners = () => {
             <div className="absolute inset-0 z-0">
               <img
                 src="/templates/OHMT001-fashion/womenswear-banner.png"
-                alt="위민스웨어"
+                alt="여성 컬렉션"
                 className="w-full h-full object-cover brightness-90 group-hover:scale-105 transition-transform duration-[2s] ease-out-quint"
               />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/35 transition-colors duration-700" />
@@ -23,7 +23,7 @@ export const CategoryBanners = () => {
 
             {/* Title Overlay */}
             <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-14 z-10 text-white">
-              <span className="text-[11px] uppercase tracking-[-0.03em] font-medium opacity-60 mb-2">
+              <span className="text-xs uppercase tracking-[-0.03em] font-medium opacity-60 mb-2">
                 컬렉션
               </span>
               <h4 className="text-xl md:text-3xl font-bold tracking-[-0.03em] uppercase mb-4">
@@ -38,7 +38,7 @@ export const CategoryBanners = () => {
             <div className="absolute inset-0 z-0">
               <img
                 src="/templates/OHMT001-fashion/menswear-banner.png"
-                alt="멘스웨어"
+                alt="남성 컬렉션"
                 className="w-full h-full object-cover brightness-90 group-hover:scale-105 transition-transform duration-[2s] ease-out-quint"
               />
               <div className="absolute inset-0 bg-black/20 group-hover:bg-black/35 transition-colors duration-700" />
@@ -46,7 +46,7 @@ export const CategoryBanners = () => {
 
             {/* Title Overlay */}
             <div className="absolute inset-0 flex flex-col justify-end p-8 md:p-14 z-10 text-white">
-              <span className="text-[11px] uppercase tracking-[-0.03em] font-medium opacity-60 mb-2">
+              <span className="text-xs uppercase tracking-[-0.03em] font-medium opacity-60 mb-2">
                 컬렉션
               </span>
               <h4 className="text-xl md:text-3xl font-bold tracking-[-0.03em] uppercase mb-4">
