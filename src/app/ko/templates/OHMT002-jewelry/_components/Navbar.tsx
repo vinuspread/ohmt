@@ -17,7 +17,8 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -31,7 +32,7 @@ export default function Navbar() {
 
   const menuItems = [
     { name: "컬렉션", id: "collections", href: "/ko/templates/OHMT002-jewelry/category/collections" },
-    { name: "약혼 & 웨딩", id: "engagement", href: "/ko/templates/OHMT002-jewelry/category/engagement" },
+    { name: "약혼·웨딩", id: "engagement", href: "/ko/templates/OHMT002-jewelry/category/engagement" },
     { name: "하이 주얼리", id: "high-jewelry", href: "/ko/templates/OHMT002-jewelry/category/high-jewelry" },
     { name: "브랜드 소개", id: "about", href: "/ko/templates/OHMT002-jewelry/category/about" },
   ];
@@ -41,14 +42,14 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 h-14 md:h-20 transition-all duration-700 flex items-center ${
           !isTransparent
-            ? "bg-[var(--color-bg-secondary)]/95 backdrop-blur-xl border-b border-neutral-100/50"
+            ? "bg-white border-b border-neutral-100"
             : "bg-transparent"
         }`}
       >
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex justify-between items-center transition-all w-full">
           
           {/* Desktop Left - Curation Categories */}
-          <div className="hidden lg:flex items-center gap-8 text-[14px] uppercase tracking-[-0.03em] font-bold">
+          <div className="hidden lg:flex items-center gap-8 text-sm uppercase tracking-[-0.03em] font-bold">
             {menuItems.slice(0, 3).map((item) => {
               const isActive = currentCategory === item.id;
               return (
@@ -89,7 +90,7 @@ export default function Navbar() {
           <div className="absolute left-1/2 -translate-x-1/2 flex items-center justify-center pointer-events-none max-w-[120px] sm:max-w-none">
             <Link
               href="/ko/templates/OHMT002-jewelry"
-              className={`text-[14px] sm:text-[18px] md:text-2xl font-serif tracking-[0.25em] -mr-[0.25em] font-normal uppercase transition-colors duration-700 pointer-events-auto text-center ${
+              className={`text-sm sm:text-lg md:text-2xl font-serif tracking-[0.25em] -mr-[0.25em] font-normal uppercase transition-colors duration-700 pointer-events-auto text-center ${
                 !isTransparent ? "text-neutral-900" : "text-white"
               }`}
             >
@@ -104,7 +105,7 @@ export default function Navbar() {
             }`}
           >
             {/* Desktop Only About Link on the right of Logo */}
-            <div className="hidden lg:flex items-center text-[14px] uppercase tracking-[-0.03em] font-bold">
+            <div className="hidden lg:flex items-center text-sm uppercase tracking-[-0.03em] font-bold">
               {menuItems.slice(3).map((item) => {
                 const isActive = currentCategory === item.id;
                 return (
@@ -178,7 +179,7 @@ export default function Navbar() {
                   </button>
                 </div>
 
-                <div className="flex flex-col gap-8 text-[14px] uppercase tracking-[-0.03em] font-bold text-neutral-600">
+                <div className="flex flex-col gap-8 text-sm uppercase tracking-[-0.03em] font-bold text-neutral-600">
                   {menuItems.map((item) => {
                     const isActive = currentCategory === item.id;
                     return (
@@ -198,7 +199,7 @@ export default function Navbar() {
                 </div>
               </div>
 
-              <div className="space-y-6 border-t border-neutral-200/50 pt-8 text-[14px] tracking-[-0.03em] text-neutral-500 font-bold uppercase">
+              <div className="space-y-6 border-t border-neutral-200/50 pt-8 text-sm tracking-[-0.03em] text-neutral-500 font-bold uppercase">
                 <p>© 2026 Oh My Template.</p>
                 <div className="flex gap-4">
                   <a href="#" className="hover:text-[var(--color-primary)] transition-colors">Instagram</a>

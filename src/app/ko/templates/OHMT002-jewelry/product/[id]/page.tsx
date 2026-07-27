@@ -14,7 +14,7 @@ const PRODUCTS_KO = [
     price: "₩4,250,000", 
     img: "/templates/OHMT002-jewelry/jewelry-ring.png", 
     category: "engagement",
-    desc: "하우스의 장인 정신으로 완성된 클래식 다이아몬드 솔리테어 반지입니다. 6발 프롱 백금 세팅으로 원석 본연의 빛과 영롱함을 극대화했습니다.",
+    desc: "라운드 다이아몬드를 여섯 개의 프롱으로 안정감 있게 세팅한 클래식 솔리테어 반지입니다. 플래티넘 밴드가 원석의 맑은 빛을 담백하게 담아냅니다.",
     specs: { carat: "1.5ct", gemstone: "Round Brilliant Diamond", metal: "Platinum 950", clarity: "VVS1" }
   },
   { 
@@ -23,7 +23,7 @@ const PRODUCTS_KO = [
     price: "₩3,400,000", 
     img: "/templates/OHMT002-jewelry/infinity-band.png", 
     category: "engagement",
-    desc: "영원을 상징하는 이터니티 스타일의 로즈 골드 다이아몬드 밴드입니다. 촘촘히 연결된 다이아몬드들이 손끝에서 찬란한 반짝임을 연출합니다.",
+    desc: "18K 로즈 골드 밴드에 작은 다이아몬드를 촘촘하게 세팅했습니다. 단독으로 착용하거나 다른 반지와 함께 겹쳐 끼기 좋습니다.",
     specs: { carat: "0.8ct", gemstone: "Full-Cut Diamonds", metal: "18K Rose Gold", clarity: "VS2" }
   },
   { 
@@ -32,16 +32,16 @@ const PRODUCTS_KO = [
     price: "₩6,800,000", 
     img: "/templates/OHMT002-jewelry/emerald-cut-ring.png", 
     category: "engagement",
-    desc: "고혹적인 매력의 에메랄드 컷 다이아몬드 주위를 라운드 다이아몬드가 헤일로 형태로 감싼 아르데코 감성의 하이엔드 링입니다.",
+    desc: "에메랄드 컷 다이아몬드 둘레에 라운드 다이아몬드를 세팅한 헤일로 반지입니다. 직선적인 중심 원석과 섬세한 테두리가 또렷한 인상을 만듭니다.",
     specs: { carat: "2.0ct", gemstone: "Emerald-Cut Diamond", metal: "Platinum 950", clarity: "VVS2" }
   },
   { 
     id: 4, 
-    name: "레이디언트 펄 펜던트", 
+    name: "남양 진주 펜던트", 
     price: "₩1,850,000", 
     img: "/templates/OHMT002-jewelry/jewelry-pendant.png", 
     category: "collections",
-    desc: "영롱한 빛깔의 남양 진주와 세밀하게 세팅된 다이아몬드 참이 우아함을 한층 강조하는 드롭 네클리스 펜던트입니다.",
+    desc: "은은한 광택의 남양 진주에 작은 다이아몬드 장식을 더한 펜던트입니다. 체인 아래로 자연스럽게 떨어져 단정하고 우아한 분위기를 연출합니다.",
     specs: { gemstone: "South Sea Pearl & Diamonds", metal: "18K Yellow Gold", clarity: "Natural High Lustre" }
   },
   { 
@@ -50,16 +50,16 @@ const PRODUCTS_KO = [
     price: "₩15,500,000", 
     img: "/templates/OHMT002-jewelry/tennis-necklace.png", 
     category: "high-jewelry",
-    desc: "메종의 최상위 아틀리에 라인에서만 생산되는 시그니처 테니스 넥클리스입니다. 균일한 투명도의 브릴리언트 다이아몬드가 끊임없이 연결된 걸작입니다.",
+    desc: "크기와 빛이 고르게 이어지도록 다이아몬드를 한 줄로 세팅한 테니스 목걸이입니다. 목선을 따라 부드럽게 놓이도록 연결 구조와 착용감을 세심하게 조정했습니다.",
     specs: { carat: "3.5ct Total", gemstone: "Round Cut Diamonds", metal: "18K White Gold", clarity: "VVS1" }
   },
   { 
     id: 6, 
-    name: "티파니 블루 사파이어 뱅글", 
+    name: "아쿠아 블루 사파이어 뱅글", 
     price: "₩12,200,000", 
     img: "/templates/OHMT002-jewelry/bangle-item.png", 
     category: "high-jewelry",
-    desc: "차갑게 빛나는 플래티넘 밴드 위로 티파니 블루 사파이어와 마키즈 다이아몬드가 조화롭게 세팅된 오트 주얼리 뱅글 팔찌입니다.",
+    desc: "플래티넘 밴드에 밝은 아쿠아 블루 사파이어와 마키즈 컷 다이아몬드를 세팅한 뱅글입니다. 차분한 색감과 선명한 형태가 조화를 이룹니다.",
     specs: { gemstone: "Blue Sapphires & Diamonds", metal: "Platinum 950", clarity: "Eye-Clean" }
   },
   { 
@@ -68,7 +68,7 @@ const PRODUCTS_KO = [
     price: "₩2,950,000", 
     img: "/templates/OHMT002-jewelry/gold-link-bracelet.png", 
     category: "high-jewelry",
-    desc: "장인의 핸드 피니시 기법으로 직조된 클래식 볼드 체인 브레이슬릿입니다. 시간이 흘러도 변치 않는 18K 옐로우 골드의 기품을 선사합니다.",
+    desc: "18K 옐로 골드 링크를 하나씩 연결하고 표면을 손으로 다듬어 완성한 체인 팔찌입니다. 단독으로 착용해도 존재감이 있으며, 시간이 지나며 자연스러운 광택이 더해집니다.",
     specs: { gemstone: "Pure Yellow Gold Links", metal: "18K Yellow Gold", clarity: "Polished Satin Finish" }
   },
   { 
@@ -77,16 +77,16 @@ const PRODUCTS_KO = [
     price: "₩1,250,000", 
     img: "/templates/OHMT002-jewelry/diamond-studs.png", 
     category: "collections",
-    desc: "데일리 럭셔리를 지향하는 베이직 4발 프롱 다이아몬드 스터드 이어링입니다. 완벽한 프로포션 컷으로 강렬한 파이어(Fire)를 자랑합니다.",
+    desc: "라운드 다이아몬드를 네 개의 프롱으로 세팅한 기본형 스터드 귀걸이입니다. 원석의 비율과 좌우 균형을 맞춰 일상에서 부담 없이 착용할 수 있습니다.",
     specs: { carat: "0.5ct Each", gemstone: "Round Diamonds", metal: "18K White Gold", clarity: "VS1" }
   },
   { 
     id: 9, 
-    name: "펄 드롭 아코야 귀걸이", 
+    name: "아코야 진주 드롭 귀걸이", 
     price: "₩980,000", 
     img: "/templates/OHMT002-jewelry/pearl-drop-earrings.png", 
     category: "collections",
-    desc: "바다의 온전한 무드를 머금은 최상급 아코야 진주가 가는 골드 체인 아래로 유려하게 매달린 매력적인 이어링 드롭 세트입니다.",
+    desc: "광택과 형태를 맞춘 아코야 진주를 가는 골드 체인 아래에 연결한 드롭 귀걸이입니다. 움직일 때마다 진주가 자연스럽게 흔들리며 은은한 빛을 냅니다.",
     specs: { gemstone: "Akoya Sea Pearls", metal: "18K Yellow Gold", clarity: "AAAA Mirror Lustre" }
   },
   { 
@@ -95,7 +95,7 @@ const PRODUCTS_KO = [
     price: "₩18,900,000", 
     img: "/templates/OHMT002-jewelry/emerald-chandelier.png", 
     category: "high-jewelry",
-    desc: "화려한 빅토리아 시대의 샹들리에에서 영감을 얻은 하이엔드 드롭 귀걸이입니다. 정밀하게 조각된 천연 에메랄드가 극적인 기품을 자랑합니다.",
+    desc: "에메랄드와 작은 다이아몬드를 층층이 연결한 드롭 귀걸이입니다. 길게 떨어지는 구조가 얼굴선을 또렷하게 보여주며 특별한 자리에도 잘 어울립니다.",
     specs: { carat: "4.2ct Total", gemstone: "Deep Forest Emeralds", metal: "18K White Gold", clarity: "VVS2" }
   }
 ];
@@ -112,7 +112,7 @@ export default function ProductDetailPage() {
 
   const handleBooking = (e: React.FormEvent) => {
     e.preventDefault();
-    alert(`${formData.name}님, ${formData.date} 살롱 프라이빗 예약 상담 신청이 접수되었습니다.`);
+    alert(`${formData.name}님, ${formData.date} 부티크 방문 상담 예약이 접수되었습니다.`);
     setBookingModal(false);
   };
 
@@ -147,7 +147,7 @@ export default function ProductDetailPage() {
 
             {/* Right: Scrolling Detail Panel */}
             <div className="flex flex-col">
-              <h1 className="font-[family-name:var(--theme-font-heading)] text-[clamp(2.2rem,4vw,3.8rem)] leading-[1.1] mb-4 font-bold tracking-tight">
+              <h1 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-h1)] leading-[var(--leading-heading)] mb-4 font-bold tracking-tight">
                 {product.name}
               </h1>
               
@@ -195,7 +195,7 @@ export default function ProductDetailPage() {
               <div className="flex flex-col gap-4">
                 <div className="flex gap-4">
                   <button 
-                    onClick={() => alert("장바구니에 담겼습니다.")}
+                    onClick={() => alert("장바구니에 담았습니다.")}
                     className="flex-1 bg-[#1E352F] text-[#FAF8F5] py-4 text-[0.85rem] uppercase tracking-[0.2em] font-bold hover:opacity-90 transition-opacity flex items-center justify-center gap-3"
                   >
                     <ShoppingBag className="w-4 h-4" /> Add to Cart
@@ -224,14 +224,14 @@ export default function ProductDetailPage() {
                   <Shield className="w-5 h-5 text-[#C5A880] shrink-0" />
                   <div>
                     <h4 className="text-[0.85rem] font-bold uppercase tracking-[0.1em] mb-1">Lifetime Warranty</h4>
-                    <p className="text-[0.72rem] text-[#1E352F]/60 leading-relaxed">평생 보증서 및 하우스의 철저한 세공 감정을 연동 제공합니다.</p>
+                    <p className="text-[0.72rem] text-[#1E352F]/60 leading-relaxed">제품과 함께 정품 인증서와 품질 보증 안내서를 제공합니다.</p>
                   </div>
                 </div>
                 <div className="flex gap-3 items-start">
                   <Sparkles className="w-5 h-5 text-[#C5A880] shrink-0" />
                   <div>
                     <h4 className="text-[0.85rem] font-bold uppercase tracking-[0.1em] mb-1">Maison Packaging</h4>
-                    <p className="text-[0.72rem] text-[#1E352F]/60 leading-relaxed">하우스의 시그니처 딥 그린 가죽 케이스 패키지에 동봉됩니다.</p>
+                    <p className="text-[0.72rem] text-[#1E352F]/60 leading-relaxed">OHMT 전용 케이스와 보호용 파우치에 담아 안전하게 배송합니다.</p>
                   </div>
                 </div>
               </div>
@@ -247,12 +247,12 @@ export default function ProductDetailPage() {
             <div className="bg-[#FAF8F5] border border-[#1E352F]/20 max-w-[480px] w-full p-8 shadow-2xl relative">
               <h2 className="font-[family-name:var(--theme-font-heading)] text-[1.8rem] font-bold mb-4 tracking-tight">Private Salon Booking</h2>
               <p className="text-[0.85rem] text-[#1E352F]/70 mb-6 leading-relaxed">
-                하우스 오브 오엠티의 오프라인 메종 살롱에서 주얼리 스페셜리스트의 1:1 VIP 퍼스널 쇼핑과 프라이빗 큐레이션을 경험해 보세요.
+                가까운 OHMT 부티크에서 주얼리 전문가와 1:1로 상담하고, 제품을 직접 착용해 보세요.
               </p>
               
               <form onSubmit={handleBooking} className="flex flex-col gap-4">
                 <div>
-                  <label className="text-[0.68rem] uppercase tracking-[0.15em] font-bold block mb-1">성함 (Full Name)</label>
+                  <label className="text-[0.68rem] uppercase tracking-[0.15em] font-bold block mb-1">성함</label>
                   <input 
                     type="text" 
                     required 
@@ -262,7 +262,7 @@ export default function ProductDetailPage() {
                   />
                 </div>
                 <div>
-                  <label className="text-[0.68rem] uppercase tracking-[0.15em] font-bold block mb-1">연락처 (Contact Phone)</label>
+                  <label className="text-[0.68rem] uppercase tracking-[0.15em] font-bold block mb-1">연락처</label>
                   <input 
                     type="tel" 
                     required 
@@ -272,7 +272,7 @@ export default function ProductDetailPage() {
                   />
                 </div>
                 <div>
-                  <label className="text-[0.68rem] uppercase tracking-[0.15em] font-bold block mb-1">희망 방문 일정 (Desired Date)</label>
+                  <label className="text-[0.68rem] uppercase tracking-[0.15em] font-bold block mb-1">희망 방문일</label>
                   <input 
                     type="date" 
                     required 

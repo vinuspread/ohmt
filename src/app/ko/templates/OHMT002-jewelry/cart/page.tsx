@@ -9,15 +9,16 @@ import { Search, Heart, User, ShoppingBag, Menu, ArrowRight } from "lucide-react
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import Button from "../_components/ui/Button";
+import TemplateSelect from '../_components/TemplateSelect'
 
 function JewelryCartPageContent() {
   const cartItems = [
     {
       id: "1",
-      name: "Tiffany-Blue Sapphire Bangle",
-      price: "₩1,200,000",
-      img: "/templates/OHMT002-jewelry/jewelry-hero-main.png",
-      material: "18k White Gold"
+      name: "아쿠아 블루 사파이어 뱅글",
+      price: "₩12,200,000",
+      img: "/templates/OHMT002-jewelry/bangle-item.png",
+      material: "플래티넘 · 블루 사파이어"
     }
   ];
 
@@ -29,7 +30,7 @@ function JewelryCartPageContent() {
       {/* Header */}
       <header className="fixed top-0 w-full z-50 border-b border-neutral-100 bg-white">
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
-          <Link href="/ko/templates/OHMT002-jewelry" className="text-xs uppercase tracking-[0.4em] font-bold text-neutral-500 hover:text-[var(--color-primary)]">Back to Boutique</Link>
+          <Link href="/ko/templates/OHMT002-jewelry" className="text-xs tracking-[0.15em] font-bold text-neutral-500 hover:text-[var(--color-primary)]">부티크로 돌아가기</Link>
           <div className="absolute left-1/2 -translate-x-1/2">
             <Link href="/ko/templates/OHMT002-jewelry" className="text-3xl font-serif tracking-[0.25em] font-normal uppercase text-neutral-900">OHMT</Link>
           </div>
@@ -43,7 +44,7 @@ function JewelryCartPageContent() {
         <div className="flex flex-col lg:flex-row gap-32">
           {/* Items */}
           <div className="flex-1">
-            <h1 className="text-5xl font-serif mb-16 tracking-tight">Your Shopping Bag</h1>
+            <h1 className="text-5xl font-serif mb-16 tracking-tight">쇼핑백</h1>
             <div className="space-y-12">
               {cartItems.map(item => (
                 <div key={item.id} className="flex flex-col md:flex-row gap-12 border-b border-neutral-200 pb-12">
@@ -59,16 +60,16 @@ function JewelryCartPageContent() {
                       <span className="text-lg font-serif">{item.price}</span>
                     </div>
                     <div className="flex justify-between items-end">
-                      <div className="flex items-center gap-8 text-[13px] uppercase font-bold tracking-widest text-[var(--color-primary)]">
-                        <button className="border-b border-[var(--color-primary)]">Remove</button>
-                        <button className="border-b border-transparent hover:border-neutral-900 text-neutral-300 hover:text-neutral-900">Move to Wishlist</button>
+                      <div className="flex items-center gap-8 text-xs uppercase font-bold tracking-widest text-[var(--color-primary)]">
+                        <button className="border-b border-[var(--color-primary)]">삭제</button>
+                        <button className="border-b border-transparent hover:border-neutral-900 text-neutral-300 hover:text-neutral-900">관심 상품으로 이동</button>
                       </div>
                       <div className="flex items-center gap-4 text-xs">
-                        <span className="opacity-40">Qty:</span>
-                        <select className="bg-transparent font-bold outline-none">
+                        <span className="opacity-40">수량</span>
+                        <TemplateSelect className="bg-transparent font-bold outline-none">
                           <option>1</option>
                           <option>2</option>
-                        </select>
+                        </TemplateSelect>
                       </div>
                     </div>
                   </div>
@@ -80,26 +81,26 @@ function JewelryCartPageContent() {
           {/* Checkout */}
           <div className="w-full lg:w-[450px]">
             <div className="bg-white p-12 border border-neutral-100 space-y-12">
-              <h3 className="text-2xl font-serif">Order Summary</h3>
+              <h3 className="text-2xl font-serif">주문 요약</h3>
               <div className="space-y-6 text-xs uppercase tracking-widest font-bold">
                 <div className="flex justify-between opacity-50">
-                  <span>Subtotal</span>
-                  <span>₩1,200,000</span>
+                  <span>상품 금액</span>
+                  <span>₩12,200,000</span>
                 </div>
                 <div className="flex justify-between opacity-50">
-                  <span>Standard Shipping</span>
-                  <span>Complimentary</span>
+                  <span>일반 배송</span>
+                  <span>무료</span>
                 </div>
                 <div className="flex justify-between border-t border-neutral-100 pt-8 text-lg font-serif normal-case tracking-tight">
-                  <span>Estimated Total</span>
-                  <span>₩1,200,000</span>
+                  <span>예상 결제 금액</span>
+                  <span>₩12,200,000</span>
                 </div>
               </div>
-              <Button variant="dark" className="w-full py-8 text-[13px] font-bold uppercase tracking-[0.5em]">
-                Begin Checkout
+              <Button variant="dark" className="w-full py-8 text-xs font-bold tracking-[0.15em]">
+                결제 진행하기
               </Button>
               <div className="text-center">
-                 <p className="text-[15px] text-neutral-500">"Complimentary shipping and signature packaging on all orders."</p>
+                 <p className="text-sm text-neutral-500">모든 주문에 무료 배송과 시그니처 포장을 제공합니다.</p>
               </div>
             </div>
           </div>
@@ -112,10 +113,10 @@ function JewelryCartPageContent() {
 }
 
 
-export default function JewelryCartPage(props: any) {
+export default function JewelryCartPage() {
   return (
     <React.Suspense fallback={null}>
-      <JewelryCartPageContent {...props} />
+      <JewelryCartPageContent />
     </React.Suspense>
   );
 }

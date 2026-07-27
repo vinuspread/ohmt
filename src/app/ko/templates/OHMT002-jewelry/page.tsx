@@ -13,24 +13,21 @@ function JewelryPageContent() {
   const containerRef = useRef(null);
   const [activeTab, setActiveTab] = React.useState("All");
 
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"]
-  });
+  const { scrollY } = useScroll();
 
-  const heroScale = useTransform(scrollYProgress, [0, 0.2], [1, 1.05]);
-  const heroOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
+  const heroScale = useTransform(scrollY, [0, 800], [1, 1.05]);
+  const heroOpacity = useTransform(scrollY, [0, 800], [1, 0]);
 
   const products = [
-    { id: 1, name: "다이아몬드 솔리테어 링", price: "₩4,250,000", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "웨딩" },
-    { id: 4, name: "래디언트 펄 펜던트", price: "₩1,850,000", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "시즈널" },
-    { id: 6, name: "사파이어 뱅글", price: "₩12,200,000", img: "/templates/OHMT002-jewelry/bangle-item.png", tag: "럭셔리" },
-    { id: 2, name: "로즈 골드 인피니티 밴드", price: "₩3,400,000", img: "/templates/OHMT002-jewelry/infinity-band.png", tag: "에센셜" },
+    { id: 1, name: "다이아몬드 솔리테어 반지", price: "₩4,250,000", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: "웨딩" },
+    { id: 4, name: "남양 진주 펜던트", price: "₩1,850,000", img: "/templates/OHMT002-jewelry/jewelry-pendant.png", tag: "시즌 컬렉션" },
+    { id: 6, name: "사파이어 뱅글", price: "₩12,200,000", img: "/templates/OHMT002-jewelry/bangle-item.png", tag: "하이 주얼리" },
+    { id: 2, name: "로즈 골드 인피니티 밴드", price: "₩3,400,000", img: "/templates/OHMT002-jewelry/infinity-band.png", tag: "데일리" },
   ];
 
   const filteredProducts = products.filter((product) => {
     if (activeTab === "All") return true;
-    if (activeTab === "Rings") return product.name.includes("링") || product.name.includes("밴드");
+    if (activeTab === "Rings") return product.name.includes("반지") || product.name.includes("밴드");
     if (activeTab === "Necklaces") return product.name.includes("펜던트") || product.name.includes("뱅글");
     if (activeTab === "Earrings") return product.name.includes("귀걸이");
     return true;
@@ -42,7 +39,7 @@ function JewelryPageContent() {
         <Navbar />
 
         {/* Hero */}
-        <section className="relative h-screen flex items-center justify-center overflow-hidden">
+        <section className="relative h-screen flex items-center justify-center overflow-hidden bg-white">
           <motion.div
             style={{ scale: heroScale, opacity: heroOpacity }}
             className="absolute inset-0 z-0"
@@ -61,22 +58,25 @@ function JewelryPageContent() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
             >
-              <span className="text-[13px] md:text-[15px] uppercase text-white mb-6 block tracking-tight font-bold opacity-80">
+              <span className="text-xs md:text-sm uppercase text-white mb-6 block tracking-tight font-bold opacity-80">
                 OHMT FINE JEWELRY
               </span>
-              <h2 className="text-white mb-12 flex flex-col items-center tracking-[0.05em] max-w-6xl mx-auto space-y-4">
-                <span className="block font-extralight text-white/90 text-center text-lg md:text-2xl tracking-tight" style={{ fontFamily: "'Nanum Myeongjo', serif" }}>시간이 흘러도 빛을 잃지 않는 고귀한 명작,</span>
-                <span className="block font-serif font-normal text-[var(--color-primary)] text-center text-3xl md:text-6xl leading-[1.2] md:leading-[1.2]" style={{ fontFamily: "'Nanum Myeongjo', serif" }}>
-                  {"당신의 찬란한 모든 순간 위에"} <br /> {"가장 눈부신 영원의 광채를 바칩니다."}
-                </span>
-              </h2>
+              <div className="mb-12 flex max-w-6xl flex-col items-center space-y-4 mx-auto break-keep">
+                <p className="flex flex-col items-center text-center text-lg font-extralight leading-snug tracking-tight text-white/90 md:text-2xl" style={{ fontFamily: "'Nanum Myeongjo', serif" }}>
+                  <span className="block">시간이 지나도</span>
+                  <span className="block">오래 간직할 주얼리</span>
+                </p>
+                <h1 className="block font-serif font-normal text-[var(--color-primary)] text-center text-3xl md:text-6xl leading-[var(--leading-heading)] md:leading-[var(--leading-heading)]" style={{ fontFamily: "'Nanum Myeongjo', serif" }}>
+                  {"소중한 순간을"} <br /> {"오래 기억할 수 있도록."}
+                </h1>
+              </div>
               <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-                <button className="px-10 py-4 bg-white text-neutral-900 text-[13px] font-bold uppercase tracking-[0.3em] hover:bg-[var(--color-primary)] hover:text-white transition-all">
-                  컬렉션 탐색
-                </button>
-                <button className="group flex items-center gap-4 text-white hover:text-[var(--color-primary)] transition-all text-[13px] uppercase tracking-[0.3em] font-bold">
-                  브랜드 헤리티지 <div className="w-10 h-px bg-white group-hover:bg-[var(--color-primary)] group-hover:w-16 transition-all duration-700" />
-                </button>
+                <Link href="/ko/templates/OHMT002-jewelry/category/collections" className="px-10 py-4 bg-white text-neutral-900 text-xs font-bold uppercase tracking-[0.3em] hover:bg-[var(--color-primary)] hover:text-white transition-all">
+                  컬렉션 보기
+                </Link>
+                <Link href="/ko/templates/OHMT002-jewelry/category/about" className="group flex items-center gap-4 text-white hover:text-[var(--color-primary)] transition-all text-xs uppercase tracking-[0.3em] font-bold">
+                  브랜드 이야기 <div className="w-10 h-px bg-white group-hover:bg-[var(--color-primary)] group-hover:w-16 transition-all duration-700" />
+                </Link>
               </div>
             </motion.div>
           </div>
@@ -85,11 +85,9 @@ function JewelryPageContent() {
         {/* Products */}
         <section className="py-10 md:py-20 md:py-32 px-6 md:px-12 bg-white">
           <div className="max-w-[1440px] mx-auto">
-            <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 md:mb-16 gap-8">
-                <div>
-                  <h3 className="text-3xl md:text-5xl font-serif font-bold tracking-[-0.04em]">모던 클래식 에디션</h3>
-                </div>
-              <div className="flex items-center gap-6 md:gap-10 overflow-x-auto pb-1" style={{ scrollbarWidth: "none" }}>
+            <div className="mb-12 md:mb-16">
+              <h3 className="text-3xl md:text-5xl font-serif font-bold tracking-[-0.04em] whitespace-nowrap">모던 클래식 컬렉션</h3>
+              <div className="mt-8 flex w-full max-w-full items-center gap-6 overflow-x-auto pb-1 no-scrollbar md:mt-10 md:gap-10" style={{ scrollbarWidth: "none" }}>
                 {[
                   { id: "All", label: "전체" },
                   { id: "Rings", label: "반지" },
@@ -99,7 +97,7 @@ function JewelryPageContent() {
                   <button
                     key={tab.id}
                     onClick={() => setActiveTab(tab.id)}
-                    className={`pb-2 text-[13px] uppercase tracking-[0.3em] font-bold transition-all duration-500 cursor-pointer whitespace-nowrap border-b-[1.5px] shrink-0 focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] focus-visible:ring-offset-2 ${
+                    className={`pb-2 text-xs uppercase tracking-[0.3em] font-bold transition-all duration-500 cursor-pointer whitespace-nowrap border-b-[1.5px] shrink-0 focus-visible:ring-2 focus-visible:ring-[var(--color-primary)] focus-visible:ring-offset-2 ${
                        activeTab === tab.id
                          ? "text-neutral-900 border-[var(--color-primary)]"
                          : "text-neutral-500 border-transparent hover:text-neutral-700 hover:border-neutral-300"
@@ -127,17 +125,17 @@ function JewelryPageContent() {
                       alt={item.name}
                       className="w-full h-full object-cover scale-[1.06] group-hover:scale-[1.12] transition-transform duration-[2.5s] ease-out"
                     />
-                    <div className="absolute top-3 right-3 z-10">
-                      <span className="block p-2 rounded-none bg-white/60 backdrop-blur-md text-neutral-400 group-hover:text-[var(--color-primary)] transition-colors" aria-hidden="true">
-                        <Heart size={14} strokeWidth={1.5} aria-hidden="true" />
-                      </span>
+                    <div className="absolute top-3.5 right-3.5 z-10">
+                      <button className="flex items-center justify-center w-7 h-7 rounded-full bg-white/80 backdrop-blur-md text-neutral-400 hover:text-red-500 hover:bg-white active:scale-95 transition-all duration-300 shadow-[0_2px_10px_rgba(0,0,0,0.05)]" aria-label="Add to wishlist">
+                        <Heart size={13} strokeWidth={1.8} />
+                      </button>
                     </div>
-                    <div className="absolute top-3 left-3">
-                      <span className="text-[10px] bg-white/95 text-[var(--color-primary)] border border-neutral-200/60 rounded-none px-2 py-0.5 uppercase font-bold tracking-[0.15em] backdrop-blur-sm">{item.tag}</span>
+                    <div className="absolute top-3.5 left-3.5">
+                      <span className="flex items-center justify-center h-7 text-xs bg-white/95 text-neutral-800 border border-neutral-200/50 rounded-none px-3.5 uppercase font-bold tracking-[0.15em] backdrop-blur-sm shadow-[0_2px_8px_rgba(0,0,0,0.03)]">{item.tag}</span>
                     </div>
                     <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[90%] z-20 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-700 hidden sm:block">
-                      <span className="block w-full py-3 bg-[var(--color-primary)] text-center text-[13px] font-bold uppercase tracking-[0.1em] text-white">
-                        프라이빗 예약 신청
+                      <span className="block w-full py-3 bg-[var(--color-primary)] text-center text-xs font-bold uppercase tracking-[0.1em] text-white">
+                        방문 상담 예약
                       </span>
                     </div>
                   </Link>
@@ -167,9 +165,10 @@ function JewelryPageContent() {
                 <img loading="lazy" src="/templates/OHMT002-jewelry/jewelry-craft.png" alt="Jewelry Craftsmanship" className="w-full h-full object-cover" />
               </motion.div>
               <div className="absolute -bottom-10 -right-6 lg:-bottom-14 lg:-right-14 w-72 bg-white p-8 hidden md:block shadow-[0_40px_80px_rgba(0,0,0,0.08)] border border-neutral-100">
-                <span className="text-[var(--color-primary)] text-[13px] font-bold uppercase tracking-[-0.03em] block mb-3">아틀리에의 장인정신</span>
+                <span className="text-[var(--color-primary)] text-xs font-bold uppercase tracking-[-0.03em] block mb-3">아틀리에의 세공</span>
                 <p className="text-sm text-neutral-800 leading-relaxed font-bold font-serif break-keep tracking-[-0.025em]">
-                  "모든 단면은 빛과 원석의 깊은 대화입니다. OHMT만의 독보적인 광채를 구현하기 위해 장인의 손길로 정교하게 다듬어집니다."
+                  <span className="block">“원석마다 빛나는 방식이 다릅니다.</span>
+                  <span className="block">가장 자연스러운 빛이 드러나도록 형태와 세팅을 세심하게 다듬습니다.”</span>
                 </p>
               </div>
             </div>
@@ -180,16 +179,21 @@ function JewelryPageContent() {
               viewport={{ once: true }}
               className="space-y-8"
             >
-              <span className="text-[13px] uppercase tracking-[-0.03em] text-neutral-500 font-bold">HERITAGE</span>
-              <h3 className="text-3xl md:text-5xl font-serif font-bold leading-[1.1] tracking-[-0.04em]">영혼을 담아 <span className="text-[var(--color-primary)]">빚어낸 찬란함</span></h3>
-              <p className="text-sm md:text-base text-neutral-600 leading-[1.7] md:leading-[1.8] max-w-md break-keep tracking-[-0.025em]">
-                OHMT는 주얼리가 단순한 장신구를 넘어, 삶의 가장 찬란한 순간을 함께 기억하는 영원한 동반자라 믿습니다. 하나의 완벽한 세팅을 위해, 장인들은 수백 시간 동안 예술에 가까운 헌신을 바칩니다.
+              <span className="text-xs uppercase tracking-[-0.03em] text-neutral-500 font-bold">HERITAGE</span>
+              <h3 className="text-3xl md:text-5xl font-serif font-bold leading-[var(--leading-heading)] tracking-[-0.04em]">
+                원석의 빛을 살리고
+                <br />
+                <span className="text-[var(--color-primary)]">착용감을 세심하게 다듬습니다.</span>
+              </h3>
+              <p className="text-sm md:text-base text-neutral-600 leading-[var(--leading-body)] md:leading-loose max-w-md break-keep tracking-[-0.025em]">
+                <span className="block">OHMT는 주얼리가 특별한 날에만 머무는 장식이 아니라, 일상의 순간과 기억을 오래 간직하는 물건이라고 생각합니다.</span>
+                <span className="block">원석을 고르는 단계부터 세팅과 마감까지 직접 살피며, 아름다움과 편안한 착용감을 함께 갖춘 주얼리를 만듭니다.</span>
               </p>
               <div className="flex items-center gap-4 group cursor-pointer pt-2">
                 <div className="w-11 h-11 rounded-full border border-neutral-200 flex items-center justify-center group-hover:bg-[var(--color-primary)] group-hover:border-[var(--color-primary)] group-hover:text-white transition-all duration-500 flex-shrink-0">
                   <Play size={12} fill="currentColor" className="translate-x-[1px]" />
                 </div>
-                <span className="text-[13px] uppercase tracking-[0.3em] font-bold group-hover:translate-x-2 transition-transform duration-500">장인의 아틀리에 엿보기</span>
+                <span className="text-xs uppercase tracking-[0.3em] font-bold group-hover:translate-x-2 transition-transform duration-500">제작 과정 보기</span>
               </div>
             </motion.div>
           </div>
