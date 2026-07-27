@@ -1,13 +1,7 @@
 ﻿import type { Metadata } from "next";
-import { Noto_Sans_KR, Instrument_Sans } from "next/font/google";
+import { Instrument_Sans } from "next/font/google";
 import "./theme.css";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
-
-const notoSansKr = Noto_Sans_KR({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-noto-sans-kr",
-});
 
 const instrumentSans = Instrument_Sans({
   subsets: ["latin"],
@@ -28,8 +22,8 @@ export const metadata: Metadata = {
 export default function ResortLayout({ children }: { children: React.ReactNode }) {
   return (
     <div
-      className={`resort-template ${notoSansKr.variable} ${instrumentSans.variable}`}
-      style={{ fontFamily: "var(--font-noto-sans-kr), var(--font-instrument-sans), sans-serif", backgroundColor: "var(--bg)" }}
+      className={`resort-template ${instrumentSans.variable}`}
+      style={{ fontFamily: "'Noto Sans KR', var(--font-instrument-sans), sans-serif", backgroundColor: "var(--bg)" }}
     >
       <TemplateWrapper>{children}</TemplateWrapper>
     </div>
