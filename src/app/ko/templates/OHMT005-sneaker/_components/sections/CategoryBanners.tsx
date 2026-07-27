@@ -9,9 +9,9 @@ export function CategoryBanners() {
     { label: "부츠", img: "/templates/OHMT005-sneaker/cat-boots.jpg" },
     { label: "포멀", img: "/templates/OHMT005-sneaker/category-formal.jpg" },
     { label: "러닝", img: "/templates/OHMT005-sneaker/category-running.jpg" },
-    { label: "옥스포드", img: "/templates/OHMT005-sneaker/product-aura.jpg" },
+    { label: "옥스퍼드", img: "/templates/OHMT005-sneaker/product-aura.jpg" },
     { label: "스포츠", img: "/templates/OHMT005-sneaker/cat-sports.jpg" },
-    { label: "하이넥", img: "/templates/OHMT005-sneaker/cat-highneck.jpg" },
+    { label: "하이탑", img: "/templates/OHMT005-sneaker/cat-highneck.jpg" },
     { label: "로퍼", img: "/templates/OHMT005-sneaker/cat-loafers.jpg" },
   ];
 

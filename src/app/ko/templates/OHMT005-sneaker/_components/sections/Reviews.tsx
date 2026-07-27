@@ -4,10 +4,10 @@ import { Star } from "lucide-react";
 const ratings = [5, 5, 4, 5];
 
 const reviews = [
-  { name: "제임스 K.", text: "최고의 스니커즈입니다. 완성도가 뛰어나고 실물이 더 멋져요.", product: "에어 스트라이드 프로", date: "2026년 5월" },
-  { name: "사라 M.", text: "한 달 내내 신고 다녔어요. 엄청 편안하고 여전히 새것 같아요.", product: "펄 로우", date: "2026년 4월" },
-  { name: "데이비드 L.", text: "디자인이 훌륭하고 매우 편안해요. 배송도 빠르고 포장도 깔끔했어요.", product: "섀도우 러너", date: "2026년 4월" },
-  { name: "에마 R.", text: "두 켤레를 주문했어요. 가격 대비 품질이 훌륭합니다. 또 구매할게요.", product: "어반 클래식", date: "2026년 3월" },
+  { name: "김현우", text: "사진보다 실물이 더 깔끔합니다. 마감이 단정하고 발을 안정적으로 잡아줘 러닝할 때 자주 신습니다.", product: "에어 스트라이드 프로", date: "2026년 5월" },
+  { name: "이수진", text: "한 달 정도 자주 신었는데 가죽이 발에 맞게 부드러워졌습니다. 오염도 쉽게 닦여 관리하기 편합니다.", product: "펄 로우", date: "2026년 4월" },
+  { name: "박지훈", text: "퀵 레이스가 편하고 비 오는 날에도 부담 없이 신었습니다. 포장 상태와 배송도 만족스러웠습니다.", product: "섀도우 러너", date: "2026년 4월" },
+  { name: "최예린", text: "기본 색상이라 옷에 맞추기 쉽고 착화감도 편합니다. 다른 색상도 추가로 구매했습니다.", product: "어반 클래식", date: "2026년 3월" },
 ];
 
 export const Reviews = () => {
@@ -16,8 +16,8 @@ export const Reviews = () => {
     <div className="max-w-[1440px] mx-auto px-6">
       <div className="flex items-end justify-between mb-10">
         <div>
-          <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-black/40 block mb-2">고객 리뷰</span>
-          <h2 className="text-[1.6rem] font-black tracking-[-0.03em] uppercase">고객 후기</h2>
+          <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-black/40 block mb-2">구매 후기</span>
+          <h2 className="text-[1.6rem] font-black tracking-[-0.03em] uppercase">직접 신어본 고객의 이야기</h2>
         </div>
         <div className="hidden md:flex items-center gap-2">
           <span className="text-[2rem] font-black text-black">4.6</span>
@@ -25,7 +25,7 @@ export const Reviews = () => {
             <div className="flex gap-0.5 mb-1">
               {[1,2,3,4,5].map(i => <Star key={i} size={14} className="fill-black text-black" />)}
             </div>
-            <p className="text-[0.72rem] text-black/50">총 680+개의 리뷰 기준</p>
+            <p className="text-[0.72rem] text-black/50">680개 이상의 구매 후기 기준</p>
           </div>
         </div>
       </div>

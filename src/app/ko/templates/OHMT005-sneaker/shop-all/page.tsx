@@ -7,6 +7,7 @@ import theme from "../theme.json";
 import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
 import { products } from "../_components/sections/ProductGrid";
+import TemplateSelect from '../_components/TemplateSelect'
 
 const categories = [
   { id: "all", label: "전체", img: null },
@@ -14,11 +15,13 @@ const categories = [
   { id: "running", label: "러닝", img: "/templates/OHMT005-sneaker/category-running.jpg" },
   { id: "formal", label: "포멀", img: "/templates/OHMT005-sneaker/category-formal.jpg" },
   { id: "boots", label: "부츠", img: "/templates/OHMT005-sneaker/cat-boots.jpg" },
-  { id: "oxford", label: "옥스포드", img: "/templates/OHMT005-sneaker/cat-oxford.jpg" },
+  { id: "oxford", label: "옥스퍼드", img: "/templates/OHMT005-sneaker/cat-oxford.jpg" },
   { id: "sports", label: "스포츠", img: "/templates/OHMT005-sneaker/cat-sports.jpg" },
-  { id: "highneck", label: "하이넥", img: "/templates/OHMT005-sneaker/cat-highneck.jpg" },
+  { id: "highneck", label: "하이탑", img: "/templates/OHMT005-sneaker/cat-highneck.jpg" },
   { id: "loafers", label: "로퍼", img: "/templates/OHMT005-sneaker/cat-loafers.jpg" },
 ];
+
+const formatWon = (value: number) => `${(value * 1000).toLocaleString("ko-KR")}원`;
 
 // Map products to categories (mock assignment for demo)
 const categoryMap: Record<string, string[]> = {
@@ -114,11 +117,11 @@ function ShopAllPageContent() {
             <div className="flex items-center justify-between mb-8">
               <p className="text-[0.78rem] text-black/40">{filtered.length}개 결과</p>
               <div className="flex items-center gap-2 border border-black/20 px-4 py-2">
-                <span className="text-[0.75rem] font-bold uppercase tracking-[0.06em] text-black/50">정렬:</span>
-                <select value={sortBy} onChange={e => setSortBy(e.target.value)}
+                <span className="text-[0.75rem] font-bold uppercase tracking-[0.06em] text-black/50">정렬</span>
+                <TemplateSelect value={sortBy} onChange={e => setSortBy(e.target.value)}
                   className="text-[0.78rem] font-bold bg-transparent focus:outline-none appearance-none">
                   {sortOptions.map(o => <option key={o}>{o}</option>)}
-                </select>
+                </TemplateSelect>
                 <ChevronDown size={14} className="text-black/40" />
               </div>
             </div>
@@ -135,7 +138,7 @@ function ShopAllPageContent() {
                     <div className="relative overflow-hidden aspect-square bg-[var(--color-bg-secondary)]">
                       <img loading="lazy" src={p.img} alt={p.name} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
                       {p.badge && (
-                        <span className={`absolute top-3 left-3 text-[9px] font-bold uppercase tracking-[0.15em] px-2 py-0.5 rounded-[3px] backdrop-blur-sm ${getBadgeStyle(p.badge)}`}>{p.badge}</span>
+                        <span className={`absolute top-3 left-3 text-xs font-bold uppercase tracking-[0.15em] px-2 py-0.5 rounded-[3px] backdrop-blur-sm ${getBadgeStyle(p.badge)}`}>{p.badge}</span>
                       )}
                     </div>
                     <div className="p-4">
@@ -147,8 +150,8 @@ function ShopAllPageContent() {
                         <span className="text-[0.68rem] text-black/40 ml-1">{p.rating}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="text-[0.95rem] font-black">${p.price}</span>
-                        {p.originalPrice && <span className="text-[0.78rem] text-black/30 line-through">${p.originalPrice}</span>}
+                        <span className="text-[0.95rem] font-black">{formatWon(p.price)}</span>
+                        {p.originalPrice && <span className="text-[0.78rem] text-black/30 line-through">{formatWon(p.originalPrice)}</span>}
                       </div>
                     </div>
                   </Link>
@@ -164,10 +167,10 @@ function ShopAllPageContent() {
 }
 
 
-export default function ShopAllPage(props: any) {
+export default function ShopAllPage() {
   return (
     <React.Suspense fallback={null}>
-      <ShopAllPageContent {...props} />
+      <ShopAllPageContent />
     </React.Suspense>
   );
 }

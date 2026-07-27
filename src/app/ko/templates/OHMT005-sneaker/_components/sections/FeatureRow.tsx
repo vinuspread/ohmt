@@ -9,10 +9,10 @@ const icons = [
 ];
 
 const features = [
-  { icon: icons[0], title: "친환경 소재", desc: "책임감 있게 조달된 친환경 원단" },
-  { icon: icons[1], title: "6개월 보증", desc: "모든 제품에 적용되는 풀 커버리지" },
-  { icon: icons[2], title: "빠른 배송", desc: "1-2일 내 배송 완료" },
-  { icon: icons[3], title: "친환경 패키징", desc: "100% 재활용 가능한 소재" },
+  { icon: icons[0], title: "친환경 소재", desc: "검증된 친환경 소재만 사용" },
+  { icon: icons[1], title: "6개월 보증", desc: "제조상 결함에 대한 품질 보증" },
+  { icon: icons[2], title: "빠른 배송", desc: "영업일 기준 1~2일 내 출고" },
+  { icon: icons[3], title: "친환경 패키징", desc: "재활용 가능한 포장재 사용" },
 ];
 
 export function FeatureRow() {

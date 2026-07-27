@@ -22,7 +22,7 @@ export function PageHero({ title, subtitle, image, breadcrumb }: PageHeroProps) 
 
             <div className="max-w-[1440px] mx-auto px-6 md:px-12 relative z-10">
                 {breadcrumb && (
-                    <div className="flex items-center gap-2 text-[12px] font-black tracking-[0.3em] text-brand-secondary/30 mb-8 uppercase">
+                    <div className="flex items-center gap-2 text-xs font-black tracking-[0.3em] text-brand-secondary/30 mb-8 uppercase">
                         <span>Shop</span>
                         <div className="w-1 h-1 bg-brand-accent rounded-full" />
                         <span className="text-brand-secondary">{breadcrumb}</span>
@@ -35,11 +35,11 @@ export function PageHero({ title, subtitle, image, breadcrumb }: PageHeroProps) 
                     transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
                 >
                     {subtitle && (
-                        <span className="text-brand-accent text-[13px] font-black tracking-[0.4em] uppercase mb-4 block">
+                        <span className="text-brand-accent text-xs font-black tracking-[0.4em] uppercase mb-4 block">
                             {subtitle}
                         </span>
                     )}
-                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[1.1]">
+                    <h1 className="text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter leading-[var(--leading-heading)]">
                         {title}
                     </h1>
                 </motion.div>

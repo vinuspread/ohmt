@@ -10,18 +10,18 @@ export const Footer = () => {
           <div className="col-span-2 md:col-span-1">
             <span className="text-[1.4rem] font-black tracking-[-0.04em] uppercase block mb-4">OHMT</span>
             <p className="text-[0.8rem] text-white/50 leading-relaxed max-w-[200px]">
-              지속 가능성과 스타일을 하나로, 프리미엄 신발 브랜드.
+              좋은 소재와 편안한 착용감, 책임 있는 생산을 함께 생각합니다.
             </p>
           </div>
 
           <div>
-            <h4 className="text-[0.7rem] font-bold uppercase tracking-[0.15em] text-white/40 mb-5">쇼핑</h4>
+            <h4 className="text-[0.7rem] font-bold uppercase tracking-[0.15em] text-white/40 mb-5">제품</h4>
             <ul className="space-y-3">
               {[
                 { label: "전체 상품", href: "/ko/templates/OHMT005-sneaker/shop-all" },
                 { label: "신상품", href: "/ko/templates/OHMT005-sneaker/shop-all" },
                 { label: "베스트셀러", href: "/ko/templates/OHMT005-sneaker/shop-all" },
-                { label: "세일", href: "/ko/templates/OHMT005-sneaker/shop-all" },
+                { label: "할인 상품", href: "/ko/templates/OHMT005-sneaker/shop-all" },
               ].map(l => (
                 <li key={l.label}><Link href={l.href} className="text-[0.85rem] text-white/70 hover:text-white transition-colors">{l.label}</Link></li>
               ))}
@@ -49,7 +49,7 @@ export const Footer = () => {
               {[
                 { label: "사이즈 가이드", href: "/ko/templates/OHMT005-sneaker/shop-all" },
                 { label: "배송 안내", href: "/ko/templates/OHMT005-sneaker/shop-all" },
-                { label: "교환/반품", href: "/ko/templates/OHMT005-sneaker/shop-all" },
+                { label: "교환·반품", href: "/ko/templates/OHMT005-sneaker/shop-all" },
                 { label: "문의하기", href: "/ko/templates/OHMT005-sneaker/contact" },
               ].map(l => (
                 <li key={l.label}><Link href={l.href} className="text-[0.85rem] text-white/70 hover:text-white transition-colors">{l.label}</Link></li>

@@ -12,6 +12,8 @@ const initItems = [
   { id: "sn-003", name: "Shadow Runner", size: "US 9", color: "Black", price: 320, qty: 1, img: "/templates/OHMT005-sneaker/product-3.jpg" },
 ];
 
+const formatWon = (value: number) => `${(value * 1000).toLocaleString("ko-KR")}원`;
+
 function CartPageContent() {
   const [items, setItems] = useState(initItems);
 
@@ -39,11 +41,11 @@ function CartPageContent() {
               <div className="text-center py-12 md:py-24">
                 <p className="text-[1.1rem] text-black/40 mb-6">장바구니가 비어 있습니다</p>
                 <Link href="/ko/templates/OHMT005-sneaker/shop-all" className="inline-flex items-center gap-2 bg-black text-white text-[0.82rem] font-bold uppercase tracking-[0.08em] px-8 py-4">
-                  쇼핑하기 <ArrowRight size={16} />
+                  상품 보기 <ArrowRight size={16} />
                 </Link>
               </div>
             ) : (
-              <div className="grid md:grid-cols-[1fr_360px] gap-12 items-start">
+              <div className="grid md:grid-cols-2 gap-12 items-start">
                 {/* Items */}
                 <div className="divide-y divide-black/10">
                   {items.map(item => (
@@ -69,7 +71,7 @@ function CartPageContent() {
                               <Plus size={14} />
                             </button>
                           </div>
-                          <span className="text-[0.95rem] font-black">${item.price * item.qty}</span>
+                          <span className="text-[0.95rem] font-black">{formatWon(item.price * item.qty)}</span>
                         </div>
                       </div>
                     </div>
@@ -82,22 +84,22 @@ function CartPageContent() {
                   <div className="space-y-3 mb-6 pb-6 border-b border-black/10">
                     <div className="flex justify-between text-[0.85rem]">
                       <span className="text-black/60">소계</span>
-                      <span className="font-bold">${subtotal}</span>
+                      <span className="font-bold">{formatWon(subtotal)}</span>
                     </div>
                     <div className="flex justify-between text-[0.85rem]">
                       <span className="text-black/60">배송비</span>
-                      <span className="font-bold">{subtotal >= 200 ? "무료" : "$12"}</span>
+                      <span className="font-bold">{subtotal >= 200 ? "무료" : formatWon(12)}</span>
                     </div>
                   </div>
                   <div className="flex justify-between mb-8">
                     <span className="font-black uppercase text-[0.9rem]">합계</span>
-                    <span className="font-black text-[1.1rem]">${subtotal >= 200 ? subtotal : subtotal + 12} USD</span>
+                    <span className="font-black text-[1.1rem]">{formatWon(subtotal >= 200 ? subtotal : subtotal + 12)}</span>
                   </div>
 
                   <div className="mb-4">
                     <input type="text" placeholder="프로모션 코드" className="w-full border border-black/20 px-4 py-3 text-[0.82rem] focus:outline-none focus:border-black mb-2 bg-white" />
                     <button className="w-full border border-black text-[0.78rem] font-bold uppercase tracking-[0.08em] py-3 hover:bg-black hover:text-white transition-colors">
-                      코드 적용
+                      적용
                     </button>
                   </div>
 
@@ -107,7 +109,7 @@ function CartPageContent() {
 
                   {subtotal < 200 && (
                     <p className="text-[0.72rem] text-black/40 text-center mt-4">
-                      무료 배송까지 ${200 - subtotal} 더 추가
+                      무료 배송까지 {formatWon(200 - subtotal)} 남았습니다
                     </p>
                   )}
                 </div>
@@ -122,10 +124,10 @@ function CartPageContent() {
 }
 
 
-export default function CartPage(props: any) {
+export default function CartPage() {
   return (
     <React.Suspense fallback={null}>
-      <CartPageContent {...props} />
+      <CartPageContent />
     </React.Suspense>
   );
 }
