@@ -6,9 +6,9 @@ export const Newsletter = () => {
     return (
         <section className="py-12 md:py-24 lg:py-32 bg-[var(--color-bg-secondary)] text-black">
             <div className="max-w-[1440px] mx-auto px-6 md:px-12 text-center">
-                <span className="text-[13px] uppercase tracking-[0.4em] sm:tracking-[0.6em] font-bold opacity-40 mb-6 md:mb-10 block">Stay Connected</span>
+                <span className="text-xs uppercase tracking-[0.4em] sm:tracking-[0.6em] font-bold opacity-40 mb-6 md:mb-10 block">Stay Connected</span>
                 <h2
-                    className="mb-10 text-[34px] font-bold leading-none tracking-[-0.035em] sm:text-[4.5vw] md:mb-16"
+                    className="mb-10 text-4xl font-bold leading-none tracking-[-0.035em] sm:text-[4.5vw] md:mb-16"
                     style={{ fontFamily: "var(--font-bodoni)" }}
                 >
                     Join the Laboratory Series
@@ -17,9 +17,9 @@ export const Newsletter = () => {
                     <input 
                         type="email" 
                         placeholder="EMAIL ADDRESS" 
-                        className="w-full bg-white border-0 py-4 sm:py-6 px-6 sm:px-10 text-[13px] font-bold tracking-[0.2em] sm:tracking-[0.3em] outline-none placeholder:text-black/20 focus:ring-1 focus:ring-black transition-all"
+                        className="w-full bg-white border-0 py-4 sm:py-6 px-6 sm:px-10 text-xs font-bold tracking-[0.2em] sm:tracking-[0.3em] outline-none placeholder:text-black/20 focus:ring-1 focus:ring-black transition-all"
                     />
-                    <button className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2 text-[13px] sm:text-[13px] font-bold tracking-[0.15em] sm:tracking-[0.2em] bg-black text-white px-6 py-2.5 sm:px-8 sm:py-4 hover:bg-black/80 transition-all">
+                    <button className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2 text-xs sm:text-xs font-bold tracking-[0.15em] sm:tracking-[0.2em] bg-black text-white px-6 py-2.5 sm:px-8 sm:py-4 hover:bg-black/80 transition-all">
                         SUBSCRIBE <ArrowRight size={12} className="sm:w-3.5" />
                     </button>
                 </div>
@@ -36,7 +36,7 @@ return (
           <Link href="/en/templates/OHMT001-fashion" className="text-xl md:text-2xl font-black tracking-tighter uppercase block">
             OHMT
           </Link>
-          <p className="text-[14px] text-black/60 font-medium leading-[1.4] max-w-xs mt-4 md:mt-6">
+          <p className="text-sm text-black/60 font-medium leading-[var(--leading-body)] max-w-xs mt-4 md:mt-6">
             Crafting silhouettes that speak volumes through silence. Redefining digital luxury for the next generation.
           </p>
           <div className="flex gap-6 mt-8 md:mt-12">
@@ -47,8 +47,8 @@ return (
         </div>
 
         <div className="space-y-4 md:space-y-8">
-            <h5 className="text-[13px] font-medium uppercase tracking-[0.4em] text-black/30">Catalogs</h5>
-            <ul className="space-y-3 md:space-y-4 text-[12px] font-medium uppercase tracking-widest">
+            <h5 className="text-xs font-medium uppercase tracking-[0.4em] text-black/30">Catalogs</h5>
+            <ul className="space-y-3 md:space-y-4 text-xs font-medium uppercase tracking-widest">
                 <li><Link href="/en/templates/OHMT001-fashion/collection" className="hover:text-black/40 transition-colors">Spring/Summer 26</Link></li>
                 <li><Link href="/en/templates/OHMT001-fashion/archive" className="hover:text-black/40 transition-colors">Autumn/Winter 25</Link></li>
                 <li><Link href="/en/templates/OHMT001-fashion/collection" className="hover:text-black/40 transition-colors">Core Series</Link></li>
@@ -57,15 +57,15 @@ return (
         </div>
 
         <div className="space-y-4 md:space-y-8">
-            <h5 className="text-[13px] font-medium uppercase tracking-[0.4em] text-black/30">Assistance</h5>
-            <ul className="space-y-3 md:space-y-4 text-[12px] font-medium uppercase tracking-widest">
+            <h5 className="text-xs font-medium uppercase tracking-[0.4em] text-black/30">Assistance</h5>
+            <ul className="space-y-3 md:space-y-4 text-xs font-medium uppercase tracking-widest">
                 <li><Link href="/en/templates/OHMT001-fashion/about" className="hover:text-black/40 transition-colors">Customer Care</Link></li>
             </ul>
         </div>
 
         <div className="space-y-4 md:space-y-8">
-            <h5 className="text-[13px] font-medium uppercase tracking-[0.4em] text-black/30">Legal</h5>
-            <ul className="space-y-3 md:space-y-4 text-[12px] font-medium uppercase tracking-widest">
+            <h5 className="text-xs font-medium uppercase tracking-[0.4em] text-black/30">Legal</h5>
+            <ul className="space-y-3 md:space-y-4 text-xs font-medium uppercase tracking-widest">
                 <li><Link href="#" className="hover:text-black/40 transition-colors">Privacy Policy</Link></li>
                 <li><Link href="#" className="hover:text-black/40 transition-colors">Terms of Service</Link></li>
                 <li><Link href="#" className="hover:text-black/40 transition-colors">Cookie Settings</Link></li>
@@ -74,10 +74,10 @@ return (
       </div>
 
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-8 md:pt-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-[12px] font-medium tracking-[0.4em] text-black/20 uppercase">
+          <p className="text-xs font-medium tracking-[0.4em] text-black/20 uppercase">
             © 2026 OHMT.
           </p>
-          <div className="flex gap-10 text-[12px] font-medium tracking-[0.2em] text-black/40 uppercase">
+          <div className="flex gap-10 text-xs font-medium tracking-[0.2em] text-black/40 uppercase">
               <Link href="#" className="hover:text-black transition-colors">Seoul</Link>
               <Link href="#" className="hover:text-black transition-colors">Paris</Link>
               <Link href="#" className="hover:text-black transition-colors">Tokyo</Link>

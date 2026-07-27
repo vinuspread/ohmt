@@ -27,12 +27,12 @@ function FashionCartPageContent() {
                     <div className="flex-1 space-y-16">
                         <div className="border-b border-black pb-8 flex justify-between items-end">
                             <h1
-                              className="text-[36px] font-bold leading-none tracking-[-0.035em] md:text-[48px]"
+                              className="text-4xl font-bold leading-none tracking-[-0.035em] md:text-5xl"
                               style={{ fontFamily: "var(--font-bodoni)" }}
                             >
                               Shopping Bag
                             </h1>
-                            <span className="text-[13px] font-bold tracking-widest text-black/30">1 Item</span>
+                            <span className="text-xs font-bold tracking-widest text-black/30">1 Item</span>
                         </div>
 
                         {items.map(item => (
@@ -44,19 +44,19 @@ function FashionCartPageContent() {
                                     <div className="space-y-6">
                                         <div className="flex justify-between items-start">
                                             <h2
-                                              className="max-w-xs text-[28px] font-bold leading-none tracking-[-0.03em]"
+                                              className="max-w-xs text-3xl font-bold leading-none tracking-[-0.03em]"
                                               style={{ fontFamily: "var(--font-bodoni)" }}
                                             >
                                               {item.name}
                                             </h2>
                                             <span className="text-lg font-bold">{item.price}</span>
                                         </div>
-                                        <div className="flex gap-10 text-[13px] font-bold tracking-[0.2em] text-black/40">
+                                        <div className="flex gap-10 text-xs font-bold tracking-[0.2em] text-black/40">
                                             <span>Size: {item.size}</span>
                                             <span>Color: Carbon</span>
                                         </div>
                                     </div>
-                                    <div className="flex justify-between items-center text-[13px] font-bold tracking-[0.2em]">
+                                    <div className="flex justify-between items-center text-xs font-bold tracking-[0.2em]">
                                         <div className="flex gap-8">
                                             <button className="border-b border-black pb-1 hover:text-black/40 hover:border-black/40 transition-all">Remove</button>
                                             <button className="border-b border-transparent pb-1 hover:border-black transition-all">Move to Archive</button>
@@ -74,12 +74,12 @@ function FashionCartPageContent() {
                     <div className="w-full lg:w-[400px] space-y-12 h-fit lg:sticky lg:top-48">
                         <div className="space-y-8">
                              <h3
-                               className="border-b border-black pb-6 text-[28px] font-bold leading-none tracking-[-0.03em]"
+                               className="border-b border-black pb-6 text-3xl font-bold leading-none tracking-[-0.03em]"
                                style={{ fontFamily: "var(--font-bodoni)" }}
                              >
                                Summary
                              </h3>
-                             <div className="space-y-4 text-[13px] font-bold tracking-widest">
+                             <div className="space-y-4 text-xs font-bold tracking-widest">
                                  <div className="flex justify-between opacity-40">
                                      <span>Subtotal</span>
                                      <span>$890.00</span>
@@ -94,10 +94,10 @@ function FashionCartPageContent() {
                                  </div>
                              </div>
                         </div>
-                        <Button variant="primary" className="w-full py-8 text-[13px] font-bold tracking-[0.4em] flex items-center justify-center gap-4">
+                        <Button variant="primary" className="w-full py-8 text-xs font-bold tracking-[0.4em] flex items-center justify-center gap-4">
                             Proceed to Checkout <ArrowRight size={14} />
                         </Button>
-                        <p className="text-[12px] text-center text-black/30 font-bold tracking-tight">
+                        <p className="text-xs text-center text-black/30 font-bold tracking-tight">
                             Free standard delivery for all members.
                         </p>
                     </div>

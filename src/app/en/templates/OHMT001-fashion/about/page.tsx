@@ -24,7 +24,7 @@ function AboutContent() {
 
         <section className="bg-black py-24 md:py-32">
           <div className="max-w-3xl mx-auto px-6 text-center">
-            <p className="font-[family-name:var(--font-bodoni)] italic text-[28px] md:text-[40px] text-white leading-[1.3]">
+            <p className="font-[family-name:var(--font-bodoni)] italic text-3xl md:text-4xl text-white leading-[var(--leading-body)]">
               &ldquo;We don&rsquo;t follow seasons. We build things that outlast them.&rdquo;
             </p>
             <div className="border-t border-white/20 w-16 mx-auto mt-12" />
@@ -35,11 +35,11 @@ function AboutContent() {
           <div className="max-w-[1440px] mx-auto px-6 md:px-12">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
               <div>
-                <span className="text-[11px] uppercase tracking-widest text-[var(--color-text-muted)]">Our Story</span>
-                <p className="text-[16px] text-black/70 leading-relaxed mt-6">
+                <span className="text-xs uppercase tracking-widest text-[var(--color-text-muted)]">Our Story</span>
+                <p className="text-base text-black/70 leading-relaxed mt-6">
                   Founded in 2026 with a single conviction: that clothing should outlast the moment it was made for. We work with a small circle of mills and artisans who share our obsession with material integrity. Every garment is pattern-cut by hand, sewn slowly, and finished without shortcuts.
                 </p>
-                <p className="text-[16px] text-black/70 leading-relaxed mt-6">
+                <p className="text-base text-black/70 leading-relaxed mt-6">
                   We are not interested in trend. We are interested in permanence.
                 </p>
               </div>
@@ -59,10 +59,10 @@ function AboutContent() {
                 { num: "03", title: "Timelessness", desc: "Designed to be worn decades from now." },
               ].map((item, i) => (
                 <div key={item.num} className={`py-12 md:py-0 ${i === 0 ? "md:pr-16 lg:pr-24" : i === 1 ? "md:px-16 lg:px-24" : "md:pl-16 lg:pl-24"}`}>
-                  <span className="block text-[9px] font-mono tracking-[0.25em] text-black/30 mb-7">— {item.num}</span>
-                  <h3 className="font-[family-name:var(--font-bodoni)] text-[28px] md:text-[32px] font-normal tracking-tight leading-tight">{item.title}</h3>
+                  <span className="block text-xs font-mono tracking-[0.25em] text-black/30 mb-7">· {item.num}</span>
+                  <h3 className="font-[family-name:var(--font-bodoni)] text-3xl md:text-4xl font-normal tracking-tight leading-tight">{item.title}</h3>
                   <div className="w-6 h-px bg-black/20 my-5" />
-                  <p className="text-[14px] text-black/55 leading-relaxed">{item.desc}</p>
+                  <p className="text-sm text-black/55 leading-relaxed">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -71,14 +71,14 @@ function AboutContent() {
 
         <section className="bg-white py-20 text-center">
           <p
-            className="text-[28px] text-black/58 md:text-[36px]"
+            className="text-3xl text-black/58 md:text-4xl"
             style={{ fontFamily: "var(--font-bodoni)" }}
           >
             Ready to wear something that lasts?
           </p>
           <Link
             href="/en/templates/OHMT001-fashion/collection"
-            className="inline-block bg-black text-white px-10 py-4 mt-8 text-[12px] uppercase tracking-[0.3em] hover:opacity-70 transition-opacity"
+            className="inline-block bg-black text-white px-10 py-4 mt-8 text-xs uppercase tracking-[0.3em] hover:opacity-70 transition-opacity"
           >
             Explore Collection
           </Link>

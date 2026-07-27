@@ -14,13 +14,13 @@ export const ProductGrid = () => {
         <div className="flex justify-between items-end mb-16 md:mb-24 gap-4">
           <div>
             <h2
-              className="text-[32px] font-bold leading-none tracking-[-0.035em] sm:text-[4vw]"
+              className="text-4xl font-bold leading-none tracking-[-0.035em] sm:text-[4vw]"
               style={{ fontFamily: "var(--font-bodoni)" }}
             >
               New Arrivals
             </h2>
           </div>
-          <Link href="/en/templates/OHMT001-fashion/collection" className="group flex items-center gap-2 text-[11px] sm:text-[12px] font-medium uppercase tracking-[0.15em] sm:tracking-[0.2em] border-b border-black/20 pb-1 hover:border-black/70 transition-all duration-300 whitespace-nowrap">
+          <Link href="/en/templates/OHMT001-fashion/collection" className="group flex items-center gap-2 text-xs sm:text-xs font-medium uppercase tracking-[0.15em] sm:tracking-[0.2em] border-b border-black/20 pb-1 hover:border-black/70 transition-all duration-300 whitespace-nowrap">
             VIEW ALL
           </Link>
         </div>
@@ -49,9 +49,9 @@ export const ProductGrid = () => {
                 </div>
                 <div className="space-y-1 transition-transform duration-500 ease-out group-hover:-translate-y-1">
                   <Link href={`/en/templates/OHMT001-fashion/product/${p.id}`}>
-                    <h3 className="text-[13px] sm:text-[14px] font-bold uppercase tracking-normal line-clamp-1">{p.name}</h3>
+                    <h3 className="text-xs sm:text-sm font-bold uppercase tracking-normal line-clamp-1">{p.name}</h3>
                   </Link>
-                  <p className="text-[13px] text-black/50 font-medium">{p.price}</p>
+                  <p className="text-xs text-black/50 font-medium">{p.price}</p>
                 </div>
               </motion.div>
             );

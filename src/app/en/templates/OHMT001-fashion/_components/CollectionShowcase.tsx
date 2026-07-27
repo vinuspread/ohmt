@@ -36,7 +36,7 @@ return (
               transition={{ duration: 1.2, ease: "easeOut" }}
             >
               <h3
-                className="text-[36px] font-bold leading-[0.98] tracking-[-0.035em] md:text-[58px]"
+                className="text-4xl font-bold leading-[var(--leading-display)] tracking-[-0.035em] md:text-6xl"
                 style={{ fontFamily: "var(--font-bodoni)" }}
               >
                 The Exclusive <br />
@@ -49,7 +49,7 @@ return (
               whileInView={{ opacity: 0.6, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: 0.2, duration: 1.2, ease: "easeOut" }}
-              className="text-[13px] text-black/70 leading-[1.4] font-medium tracking-[0.02em] max-w-md normal-case"
+              className="text-xs text-black/70 leading-[var(--leading-body)] font-medium tracking-[0.02em] max-w-md normal-case"
             >
               We pursue understated elegance and uncompromised quality. By infusing modern silhouettes with profound emotional resonance, we present a singular lifestyle that transcends the flow of time. Explore our limited-edition collections crafted with masterful tailoring and meticulously curated materials.
             </motion.p>
@@ -61,7 +61,7 @@ return (
               transition={{ delay: 0.4, duration: 1 }}
               className="pt-2"
             >
-              <Button variant="outline" className="px-8 py-3 sm:px-12 sm:py-3.5 text-[13px] sm:text-[13px] font-bold uppercase tracking-[0.25em] sm:tracking-[0.3em] mr-[-0.25em] sm:mr-[-0.3em] hover:tracking-[0.35em] hover:mr-[-0.35em] transition-all duration-700 ease-out">
+              <Button variant="outline" className="px-8 py-3 sm:px-12 sm:py-3.5 text-xs sm:text-xs font-bold uppercase tracking-[0.25em] sm:tracking-[0.3em] mr-[-0.25em] sm:mr-[-0.3em] hover:tracking-[0.35em] hover:mr-[-0.35em] transition-all duration-700 ease-out">
                 DISCOVER LOOKBOOK
               </Button>
             </motion.div>

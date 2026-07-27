@@ -36,16 +36,16 @@ function PageContent() {
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-24">
           <Link
             href="/en/templates/OHMT001-fashion"
-            className="group inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-black/40 hover:text-black transition-all mb-10 md:mb-16"
+            className="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-black/40 hover:text-black transition-all mb-10 md:mb-16"
           >
             <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
             Back to Home
           </Link>
 
           <div className="mb-16 md:mb-24">
-            <h1 className="text-[10px] font-bold uppercase tracking-[0.3em] text-black/30 mb-3">{LABEL}</h1>
+            <h1 className="text-xs font-bold uppercase tracking-[0.3em] text-black/30 mb-3">{LABEL}</h1>
             <p
-              className="text-[36px] font-bold leading-none tracking-[-0.035em] sm:text-[4vw]"
+              className="text-4xl font-bold leading-none tracking-[-0.035em] sm:text-[4vw]"
               style={{ fontFamily: "var(--font-bodoni)" }}
             >
               {filtered.length} Products
@@ -75,8 +75,8 @@ function PageContent() {
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                       />
                     </div>
-                    <h2 className="text-[13px] sm:text-[14px] font-bold uppercase tracking-[-0.01em] mb-1">{p.name}</h2>
-                    <p className="text-[13px] text-black/50 font-medium">{p.price}</p>
+                    <h2 className="text-xs sm:text-sm font-bold uppercase tracking-[-0.01em] mb-1">{p.name}</h2>
+                    <p className="text-xs text-black/50 font-medium">{p.price}</p>
                   </Link>
                 </motion.div>
               ))}
@@ -85,7 +85,7 @@ function PageContent() {
 
           {/* Pagination Controls */}
           {totalPages > 1 && (
-            <div className="flex justify-center items-center gap-6 mt-20 md:mt-28 border-t border-black/5 pt-8 text-[11px] font-bold uppercase tracking-[0.2em]">
+            <div className="flex justify-center items-center gap-6 mt-20 md:mt-28 border-t border-black/5 pt-8 text-xs font-bold uppercase tracking-[0.2em]">
               <button
                 onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
                 disabled={currentPage === 1}

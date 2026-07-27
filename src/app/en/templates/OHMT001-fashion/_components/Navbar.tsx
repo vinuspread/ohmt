@@ -31,7 +31,7 @@ useEffect(() => {
           </Link>
 
            {/* Desktop Menu */}
-           <div className={`hidden md:flex items-center gap-8 text-[11px] font-bold uppercase tracking-[0.22em] transition-colors duration-500 ${!isTransparent ? "text-black/60" : "text-white/80"}`}>
+           <div className={`hidden md:flex items-center gap-8 text-xs font-bold uppercase tracking-[0.22em] transition-colors duration-500 ${!isTransparent ? "text-black/60" : "text-white/80"}`}>
              {[
                 { name: "Collection", id: "collection", href: "/en/templates/OHMT001-fashion/collection" },
                  { name: "Archive", id: "archive", href: "/en/templates/OHMT001-fashion/archive" },
@@ -91,10 +91,10 @@ useEffect(() => {
           mobileOpen ? "top-14 max-h-[550px] opacity-100 py-10" : "top-14 max-h-0 opacity-0 py-0"
         }`}
       >
-        <div className="flex flex-col px-8 text-[13px] font-bold uppercase tracking-[0.25em] text-black/60">
+        <div className="flex flex-col px-8 text-xs font-bold uppercase tracking-[0.25em] text-black/60">
           {/* Categories */}
            <div className="flex flex-col gap-3 border-b border-black/5 pb-6 mb-6">
-               <span className="text-[12px] font-bold tracking-[0.2em] text-[var(--color-text-muted)] mb-3 block">Series</span>
+               <span className="text-xs font-bold tracking-[0.2em] text-[var(--color-text-muted)] mb-3 block">Series</span>
                {[
                  { name: "Collection", id: "collection", href: "/en/templates/OHMT001-fashion/collection" },
                  { name: "Archive", id: "archive", href: "/en/templates/OHMT001-fashion/archive" },
@@ -115,7 +115,7 @@ useEffect(() => {
 
           {/* Utilities */}
            <div className="flex flex-col gap-3">
-              <span className="text-[12px] font-bold tracking-[0.2em] text-[var(--color-text-muted)] mb-3 block">Services</span>
+              <span className="text-xs font-bold tracking-[0.2em] text-[var(--color-text-muted)] mb-3 block">Services</span>
              <Link
                href="/en/templates/OHMT001-fashion/cart"
                onClick={() => setMobileOpen(false)}

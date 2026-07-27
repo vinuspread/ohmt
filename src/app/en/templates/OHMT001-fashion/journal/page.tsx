@@ -82,17 +82,17 @@ function JournalContent() {
                     className="h-full w-full object-cover transition duration-700 group-hover:scale-[1.02]"
                   />
                 </div>
-                <span className="mt-5 mb-2 block text-[11px] uppercase tracking-widest text-[var(--color-text-muted)]">
+                <span className="mt-5 mb-2 block text-xs uppercase tracking-widest text-[var(--color-text-muted)]">
                   {article.category}
                 </span>
                 <h2
-                  className="text-[22px] font-bold leading-[1.05] tracking-[-0.025em] md:text-[28px]"
+                  className="text-2xl font-bold leading-[var(--leading-heading)] tracking-[-0.025em] md:text-3xl"
                   style={{ fontFamily: "var(--font-bodoni)" }}
                 >
                   {article.title}
                 </h2>
-                <p className="mt-1 text-[12px] text-[var(--color-text-muted)]">{article.date}</p>
-                <p className="mt-2 line-clamp-2 text-[14px] leading-relaxed text-black/60">
+                <p className="mt-1 text-xs text-[var(--color-text-muted)]">{article.date}</p>
+                <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-black/60">
                   {article.excerpt}
                 </p>
               </Link>

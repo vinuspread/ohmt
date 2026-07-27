@@ -33,17 +33,17 @@ export function SubpageHero({
           isLeft ? "items-start text-left" : "items-center text-center"
         }`}
       >
-        <span className="mb-4 text-[10px] font-bold uppercase tracking-[0.32em] text-white/62">
+        <span className="mb-4 text-xs font-bold uppercase tracking-[0.32em] text-white/62">
           {eyebrow}
         </span>
         <h1
-          className="max-w-full whitespace-nowrap text-[40px] font-bold leading-[0.94] tracking-[-0.035em] text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.25)] sm:text-[54px] md:text-[68px] lg:text-[84px]"
+          className="max-w-full whitespace-nowrap text-4xl font-bold leading-[var(--leading-heading)] tracking-[-0.035em] text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.25)] sm:text-6xl md:text-6xl lg:text-8xl"
           style={{ fontFamily: "var(--font-bodoni)" }}
         >
           {title}
         </h1>
         {description ? (
-          <p className="mt-5 max-w-xl text-[14px] leading-[1.65] text-white/74 md:text-[15px]">
+          <p className="mt-5 max-w-xl text-sm leading-[var(--leading-body)] text-white/74 md:text-sm">
             {description}
           </p>
         ) : null}

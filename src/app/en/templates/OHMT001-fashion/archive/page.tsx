@@ -17,7 +17,7 @@ const SEASONS = [
     title: "The First Light",
     image: "/templates/OHMT001-fashion/exclusive-custom.jpg",
     description:
-      "A debut collection born from the tension between structure and fluidity. Tailored silhouettes meet draped organza — a study in controlled softness.",
+      "A debut collection born from the tension between structure and fluidity. Tailored silhouettes meet draped organza - a study in controlled softness.",
     year: "2026",
   },
   {
@@ -67,7 +67,7 @@ function PageContent() {
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-12 md:pt-16">
           <Link
             href="/en/templates/OHMT001-fashion"
-            className="group inline-flex items-center gap-2 text-[11px] font-bold uppercase tracking-[0.2em] text-white/40 hover:text-white transition-all"
+            className="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-white/40 hover:text-white transition-all"
           >
             <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
             Back to Home
@@ -101,20 +101,20 @@ function PageContent() {
                 transition={{ duration: 0.8, delay: 0.15 }}
                 className={i % 2 === 1 ? "md:col-start-1 md:row-start-1" : ""}
               >
-                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-white/20">
+                <span className="text-xs font-bold uppercase tracking-[0.3em] text-white/20">
                   {season.label}
                 </span>
                 <h2
-                  className="text-[34px] font-bold leading-[0.95] tracking-[-0.035em] text-white sm:text-[4vw]"
+                  className="text-4xl font-bold leading-[var(--leading-display)] tracking-[-0.035em] text-white sm:text-[4vw]"
                   style={{ fontFamily: "var(--font-bodoni)" }}
                 >
                   {season.title}
                 </h2>
-                <p className="text-[14px] sm:text-[15px] text-white/50 leading-relaxed max-w-md">
+                <p className="text-sm sm:text-sm text-white/50 leading-relaxed max-w-md">
                   {season.description}
                 </p>
                 <div className="flex items-center gap-4 mt-8">
-                  <span className="text-[40px] sm:text-[4vw] font-bold tracking-tighter text-white/10 leading-none">
+                  <span className="text-4xl sm:text-[4vw] font-bold tracking-tighter text-white/10 leading-none">
                     {season.year}
                   </span>
                   <div className="w-12 h-px bg-white/20" />
@@ -127,12 +127,12 @@ function PageContent() {
         {/* Closing CTA */}
         <section className="border-t border-white/10">
           <div className="max-w-[1440px] mx-auto px-6 md:px-12 py-20 md:py-28 text-center">
-            <p className="text-[14px] sm:text-[16px] text-white/40 max-w-lg mx-auto leading-relaxed mb-8">
+            <p className="text-sm sm:text-base text-white/40 max-w-lg mx-auto leading-relaxed mb-8">
               Past collections inform what comes next. Explore the current season.
             </p>
             <Link
               href="/en/templates/OHMT001-fashion/collection"
-              className="inline-block bg-white text-black px-10 py-4 text-[12px] font-bold uppercase tracking-[0.3em] hover:opacity-70 transition-all"
+              className="inline-block bg-white text-black px-10 py-4 text-xs font-bold uppercase tracking-[0.3em] hover:opacity-70 transition-all"
             >
               View Current Collection
             </Link>

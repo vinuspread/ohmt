@@ -22,9 +22,9 @@ function ProductDetailContent() {
       <TemplateWrapper theme={theme}>
         <main className="min-h-screen bg-white">
           <Navbar />
-          <div className="flex flex-col items-center justify-center pt-[192px] pb-24">
-            <p className="text-[15px] font-bold uppercase tracking-[0.2em] text-black/40 mb-6">Product not found</p>
-            <Link href="/en/templates/OHMT001-fashion" className="group flex items-center gap-2 text-[13px] font-bold uppercase tracking-[0.2em] border-b border-black/20 pb-1 hover:border-black/70 transition-all">
+          <div className="flex flex-col items-center justify-center pt-48 pb-24">
+            <p className="text-sm font-bold uppercase tracking-[0.2em] text-black/40 mb-6">Product not found</p>
+            <Link href="/en/templates/OHMT001-fashion" className="group flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] border-b border-black/20 pb-1 hover:border-black/70 transition-all">
               <ArrowLeft size={14} /> Return to shop
             </Link>
           </div>
@@ -38,8 +38,8 @@ function ProductDetailContent() {
     <TemplateWrapper theme={theme}>
       <main className="min-h-screen bg-white selection:bg-black selection:text-white">
         <Navbar />
-        <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-[120px] md:pt-[160px] pb-16 md:pb-24">
-          <Link href="/en/templates/OHMT001-fashion" className="group inline-flex items-center gap-2 text-[11px] md:text-[12px] font-bold uppercase tracking-[0.2em] text-black/40 hover:text-black transition-all mb-10 md:mb-16">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-30 md:pt-40 pb-16 md:pb-24">
+          <Link href="/en/templates/OHMT001-fashion" className="group inline-flex items-center gap-2 text-xs md:text-xs font-bold uppercase tracking-[0.2em] text-black/40 hover:text-black transition-all mb-10 md:mb-16">
             <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
             Back to collection
           </Link>
@@ -64,36 +64,36 @@ function ProductDetailContent() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="flex flex-col justify-center"
             >
-              <p className="text-[11px] font-bold uppercase tracking-[0.3em] text-black/30 mb-4">New Arrival</p>
+              <p className="text-xs font-bold uppercase tracking-[0.3em] text-black/30 mb-4">New Arrival</p>
               <h1
-                className="mb-4 text-[36px] font-bold leading-[0.95] tracking-[-0.035em] sm:text-[4vw]"
+                className="mb-4 text-4xl font-bold leading-[var(--leading-display)] tracking-[-0.035em] sm:text-[4vw]"
                 style={{ fontFamily: "var(--font-bodoni)" }}
               >
                 {product.name}
               </h1>
-              <p className="text-[16px] md:text-[20px] font-bold text-black/60 mb-8">{product.price}</p>
+              <p className="text-base md:text-xl font-bold text-black/60 mb-8">{product.price}</p>
 
               <div className="space-y-4 mb-8 pb-8 border-b border-black/5">
-                <p className="text-[14px] text-black/70 leading-relaxed">{product.description}</p>
-                <div className="flex gap-8 text-[13px]">
+                <p className="text-sm text-black/70 leading-relaxed">{product.description}</p>
+                <div className="flex gap-8 text-xs">
                   <div>
-                    <span className="block text-[11px] font-bold uppercase tracking-[0.2em] text-black/30 mb-1">Material</span>
+                    <span className="block text-xs font-bold uppercase tracking-[0.2em] text-black/30 mb-1">Material</span>
                     <span className="font-medium">{product.material}</span>
                   </div>
                   <div>
-                    <span className="block text-[11px] font-bold uppercase tracking-[0.2em] text-black/30 mb-1">Color</span>
+                    <span className="block text-xs font-bold uppercase tracking-[0.2em] text-black/30 mb-1">Color</span>
                     <span className="font-medium">{product.color}</span>
                   </div>
                 </div>
               </div>
 
               <div className="mb-8">
-                <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-black/40 mb-4">Size</p>
+                <p className="text-xs font-bold uppercase tracking-[0.2em] text-black/40 mb-4">Size</p>
                 <div className="flex gap-3">
                   {SIZES.map((s) => (
                     <button
                       key={s}
-                      className="w-12 h-12 border border-black/10 text-[12px] font-bold uppercase tracking-wider hover:bg-black hover:text-white transition-all duration-300"
+                      className="w-12 h-12 border border-black/10 text-xs font-bold uppercase tracking-wider hover:bg-black hover:text-white transition-all duration-300"
                     >
                       {s}
                     </button>
@@ -102,7 +102,7 @@ function ProductDetailContent() {
               </div>
 
               <div className="flex gap-4">
-                <button className="flex-1 bg-black text-white text-[12px] md:text-[13px] font-bold uppercase tracking-[0.2em] py-4 md:py-5 hover:bg-black/80 transition-all duration-300 flex items-center justify-center gap-3">
+                <button className="flex-1 bg-black text-white text-xs md:text-xs font-bold uppercase tracking-[0.2em] py-4 md:py-5 hover:bg-black/80 transition-all duration-300 flex items-center justify-center gap-3">
                   <ShoppingBag size={16} strokeWidth={1.5} />
                   Add to bag
                 </button>
@@ -112,7 +112,7 @@ function ProductDetailContent() {
               </div>
 
               <div className="mt-10 pt-8 border-t border-black/5">
-                <p className="text-[15px] text-black/40 leading-relaxed">
+                <p className="text-sm text-black/40 leading-relaxed">
                   Complimentary shipping on orders over $500. Free returns within 30 days.
                 </p>
               </div>

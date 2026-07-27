@@ -28,10 +28,10 @@ const ARTICLES = [
     date: "May 28, 2026",
     image: "/templates/OHMT001-fashion/hero-custom.jpg",
     content: `Selvedge, weight, and the obsessive pursuit of the perfect fade. We trace our denim to a single mill in Okayama.
-
+    
     To understand the character of our denim is to understand the rhythm of old shuttle looms. Operating at a fraction of the speed of modern projectile looms, these vintage machines weave denim with a natural tension and structural variation that cannot be replicated. 
-
-    The resulting fabric has a rich, textured handfeel (known as 'slubby') and a self-finished edge—the selvedge. We dye our threads in natural indigo, layering the color slowly to ensure that as the garment ages, it fades not to a flat blue, but to a deeply personal gradient of wear. This is denim made to be lived in, breaking in over years to reflect your unique movement.`
+    
+    The resulting fabric has a rich, textured handfeel (known as 'slubby') and a self-finished edge - the selvedge. We dye our threads in natural indigo, layering the color slowly to ensure that as the garment ages, it fades not to a flat blue, but to a deeply personal gradient of wear. This is denim made to be lived in, breaking in over years to reflect your unique movement.`
   },
   {
     id: 3,
@@ -39,7 +39,7 @@ const ARTICLES = [
     title: "Quiet Craft",
     date: "May 10, 2026",
     image: "/templates/OHMT001-fashion/exclusive-lifestyle.png",
-    content: `Behind the seams of our most technically demanding garment to date — the structured wool overcoat.
+    content: `Behind the seams of our most technically demanding garment to date - the structured wool overcoat.
 
     We believe that true luxury lies in the details that remain unseen. The structured wool overcoat is a testament to this philosophy. Underneath the heavy double-faced wool outer layer lies a meticulously engineered internal structure of horsehair canvas, hand-stitched to the lapels to ensure they roll naturally rather than crease.
 
@@ -71,19 +71,19 @@ function JournalDetailContent() {
       <main className="antialiased min-h-screen bg-white">
         <Navbar />
 
-        <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-[120px] md:pt-[160px] pb-24">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-30 md:pt-40 pb-24">
           <Link
             href="/en/templates/OHMT001-fashion/journal"
-            className="inline-flex items-center gap-2 text-[12px] uppercase tracking-[0.2em] text-black/60 hover:text-black mb-8 transition-colors group"
+            className="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-black/60 hover:text-black mb-8 transition-colors group"
           >
             <ArrowLeft size={16} className="group-hover:-translate-x-1 transition-transform" />
             Back to Journal
           </Link>
 
           <article className="max-w-3xl mx-auto">
-            <span className="text-[11px] uppercase tracking-widest text-black/40">{article.category}</span>
-            <h1 className="font-[family-name:var(--font-bodoni)] text-[36px] md:text-[56px] text-black font-normal tracking-tight mt-4 leading-[1.1]">{article.title}</h1>
-            <p className="text-[12px] text-black/40 mt-3 pb-8 border-b border-black/10">{article.date}</p>
+            <span className="text-xs uppercase tracking-widest text-black/40">{article.category}</span>
+            <h1 className="font-[family-name:var(--font-bodoni)] text-4xl md:text-6xl text-black font-normal tracking-tight mt-4 leading-[var(--leading-heading)]">{article.title}</h1>
+            <p className="text-xs text-black/40 mt-3 pb-8 border-b border-black/10">{article.date}</p>
 
             <div className="mt-8 aspect-[21/9] overflow-hidden">
               <img src={article.image} alt={article.title} className="w-full h-full object-cover" />
@@ -91,7 +91,7 @@ function JournalDetailContent() {
 
             <div className="mt-12 space-y-6">
               {paragraphs.map((p, index) => (
-                <p key={index} className="text-[15px] text-black/70 leading-relaxed break-keep">
+                <p key={index} className="text-sm text-black/70 leading-relaxed break-keep">
                   {p.trim()}
                 </p>
               ))}

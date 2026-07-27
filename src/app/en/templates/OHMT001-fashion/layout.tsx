@@ -1,11 +1,11 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - Fashion",
+  title: "OHMT - Editorial Fashion Lookbook Template",
   description: "Premium fashion brand & editorial showcase",
   openGraph: {
-    title: "OHMT - Fashion",
+    title: "OHMT - Editorial Fashion Lookbook Template",
     description: "Premium fashion brand & editorial showcase",
     url: "https://ohmytemplate.com/en/templates/OHMT001-fashion",
     siteName: "OHMT",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Fashion",
+    title: "OHMT - Editorial Fashion Lookbook Template",
     description: "Premium fashion brand & editorial showcase",
     images: ["/templates/OHMT001-fashion/og-image.jpg"],
   },
@@ -42,4 +42,3 @@ export default function FashionLayout({
     </>
   );
 }
-
