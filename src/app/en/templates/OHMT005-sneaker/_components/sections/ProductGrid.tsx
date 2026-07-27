@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Star } from "lucide-react";
-import { useSearchParams } from "next/navigation";
 
 export const products = [
   {
@@ -456,7 +455,7 @@ function ProductCard({ product }: { product: typeof products[0] }) {
           className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
         />
         {product.badge && (
-          <span className={`absolute top-3 left-3 text-[9px] font-bold uppercase tracking-[0.15em] px-2 py-0.5 rounded-[3px] backdrop-blur-sm ${getBadgeStyle(product.badge)}`}>
+          <span className={`absolute top-3 left-3 text-xs font-bold uppercase tracking-[0.15em] px-2 py-0.5 rounded-[3px] backdrop-blur-sm ${getBadgeStyle(product.badge)}`}>
             {product.badge}
           </span>
         )}
@@ -483,7 +482,6 @@ interface Props {
 
 export function ProductGrid({ title, items, limit = 8 }: Props) {
   const [page, setPage] = useState(0);
-  const searchParams = useSearchParams();
   const t = {
     "nav": {
       "categories": `Categories`,

@@ -1,6 +1,5 @@
 "use client";
 import { Suspense } from "react";
-import { useSearchParams } from "next/navigation";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
 import theme from "./theme.json";
 import { Header } from "./_components/layout/Header";
@@ -14,7 +13,6 @@ import { Reviews } from "./_components/sections/Reviews";
 import { BlogSection } from "./_components/sections/BlogSection";
 
 function SneakerPageContent() {
-  const searchParams = useSearchParams();
   const t = {
   "nav": {
     "categories": `Categories`,

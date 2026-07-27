@@ -4,9 +4,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { useSearchParams } from "next/navigation";
 export const Hero = () => {
-  const searchParams = useSearchParams();
   const t = {
   "nav": {
     "categories": `Categories`,
@@ -179,7 +177,7 @@ export const Hero = () => {
             {t.hero.badgeText}
           </span>
           
-          <h1 className="text-[clamp(2.2rem,5.5vw,5rem)] tracking-[-0.03em] leading-[1.0] text-black uppercase mb-6">
+          <h1 className="text-[length:var(--text-h1)] tracking-[-0.03em] leading-[var(--leading-display)] text-black uppercase mb-6">
             <span className="block mb-1">{t.hero.title1}</span>
             <span className="font-black block">{t.hero.title2}</span>
           </h1>
@@ -188,13 +186,13 @@ export const Hero = () => {
             <p className="text-[1.05rem] text-black/60 leading-relaxed max-w-[500px]">
               {t.hero.desc}
             </p>
-            <div className="flex items-center gap-4 shrink-0 flex-wrap">
+            <div className="grid grid-cols-2 gap-3 md:flex md:items-center md:gap-4 w-full md:w-auto">
               <Link href={`/en/templates/OHMT005-sneaker/shop-all`}
-                className="group inline-flex items-center gap-3 bg-black text-white text-[0.9rem] font-bold uppercase tracking-[0.1em] px-9 py-4.5 hover:bg-black/80 transition-all duration-300">
-                {t.hero.cta} <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1.5" />
+                className="group inline-flex items-center justify-center gap-1.5 bg-black text-white text-[0.72rem] font-bold uppercase tracking-[0.1em] py-3.5 px-4 hover:bg-black/80 transition-all duration-300 w-full md:w-auto md:px-7 whitespace-nowrap">
+                {t.hero.cta} <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
               </Link>
               <Link href={`/en/templates/OHMT005-sneaker/shop-all`}
-                className="inline-flex items-center justify-center bg-white text-black border border-black text-[0.9rem] font-bold uppercase tracking-[0.1em] px-9 py-4.5 hover:bg-black hover:text-white transition-all duration-300">
+                className="inline-flex items-center justify-center bg-white text-black border border-black text-[0.72rem] font-bold uppercase tracking-[0.1em] py-3.5 px-4 hover:bg-black hover:text-white transition-all duration-300 w-full md:w-auto md:px-7 whitespace-nowrap">
                 {t.hero.cta2}
               </Link>
             </div>
@@ -202,27 +200,27 @@ export const Hero = () => {
         </div>
 
         {/* Bottom Asymmetric Double Media Grid (Acomik Style) */}
-        <div className="grid md:grid-cols-[1.3fr_0.7fr] gap-6 items-stretch">
+        <div className="grid md:grid-cols-2 gap-6 items-stretch">
           {/* Left Big Image */}
-          <div className="relative aspect-[16/10] md:aspect-auto md:h-[540px] overflow-hidden group">
+          <div className="relative aspect-square md:aspect-auto md:h-[600px] overflow-hidden group">
             <img
               src="/templates/OHMT005-sneaker/hero-main.jpg"
               alt="Premium Sneaker Street"
               className="w-full h-full object-cover object-center transition-transform duration-[1.5s] ease-out group-hover:scale-105"
             />
-            {/* Bottom Right Product Card */}
-            <div className="absolute bottom-6 right-6 bg-black/95 backdrop-blur-md border border-white/10 px-6 py-5 rounded-none shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-300 group-hover:translate-y-[-2px]">
-              <div className="flex items-center gap-2 mb-2">
+            {/* Bottom Right Product Card - Shrink padding & size to emphasize product */}
+            <div className="absolute bottom-6 right-6 bg-black/95 backdrop-blur-md border border-white/10 px-4 py-3.5 rounded-none shadow-[0_20px_40px_rgba(0,0,0,0.3)] transition-all duration-300 group-hover:translate-y-[-2px]">
+              <div className="flex items-center gap-1.5 mb-1.5">
                 <span className="w-1.5 h-1.5 bg-red-500 animate-pulse"></span>
-                <p className="text-[0.7rem] font-bold uppercase tracking-[0.25em] text-white/50">Featured</p>
+                <p className="text-[0.62rem] font-bold uppercase tracking-[0.2em] text-white/50">Featured</p>
               </div>
-              <p className="text-[1.25rem] font-black text-white tracking-tight uppercase mb-0.5">Air Max Pro</p>
-              <p className="text-[0.9rem] font-mono tracking-widest text-white/60">$240.00 USD</p>
+              <p className="text-[1.05rem] font-black text-white tracking-tight uppercase mb-0.5">Air Max Pro</p>
+              <p className="text-[0.8rem] font-mono tracking-widest text-white/60">$240.00 USD</p>
             </div>
           </div>
 
           {/* Right Vertical Image */}
-          <div className="hidden md:block relative h-[540px] overflow-hidden group">
+          <div className="hidden md:block relative h-[600px] overflow-hidden group">
             <img
               src="/templates/OHMT005-sneaker/hero-detail.jpg"
               alt="Premium Sneaker Product Detail Zoom"

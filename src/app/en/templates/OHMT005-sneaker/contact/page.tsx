@@ -5,6 +5,7 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
+import TemplateSelect from '../_components/TemplateSelect'
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -23,7 +24,7 @@ export default function ContactPage() {
         <section className="pt-16 md:pt-32 pb-16 border-b border-black/10">
           <div className="max-w-[1440px] mx-auto px-6">
             <span className="text-[0.7rem] font-bold uppercase tracking-[0.25em] text-black/40 block mb-4">Get in Touch</span>
-            <h1 className="text-[clamp(2.5rem,6vw,5rem)] font-black tracking-[-0.03em] uppercase leading-[1.1]">Contact Us</h1>
+            <h1 className="text-[length:var(--text-h1)] font-black tracking-[-0.03em] uppercase leading-[var(--leading-heading)]">Contact Us</h1>
           </div>
         </section>
 
@@ -33,7 +34,7 @@ export default function ContactPage() {
 
             {/* Info */}
             <div>
-              <p className="text-[0.95rem] text-black/60 leading-[1.4] mb-12 max-w-[420px]">
+              <p className="text-[0.95rem] text-black/60 leading-[var(--leading-body)] mb-12 max-w-[420px]">
                 Questions about sizing, returns, or wholesale? We typically reply within one business day. You can also visit us at our Lisbon flagship store.
               </p>
 
@@ -110,14 +111,14 @@ export default function ContactPage() {
 
                   <div>
                     <label className="block text-[0.72rem] font-bold uppercase tracking-[0.1em] text-black/50 mb-2">Subject</label>
-                    <select className="w-full border border-black/20 px-4 py-3 text-[0.88rem] focus:outline-none focus:border-black transition-colors bg-white">
+                    <TemplateSelect className="w-full border border-black/20 px-4 py-3 text-[0.88rem] focus:outline-none focus:border-black transition-colors bg-white">
                       <option>Order Inquiry</option>
                       <option>Returns & Exchanges</option>
                       <option>Sizing Help</option>
                       <option>Wholesale</option>
                       <option>Press & Media</option>
                       <option>Other</option>
-                    </select>
+                    </TemplateSelect>
                   </div>
 
                   <div>

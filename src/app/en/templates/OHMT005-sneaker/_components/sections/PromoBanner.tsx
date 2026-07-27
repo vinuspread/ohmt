@@ -1,9 +1,7 @@
 "use client";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { useSearchParams } from "next/navigation";
 export const PromoBanner = () => {
-  const searchParams = useSearchParams();
   const t = {
   "nav": {
     "categories": `Categories`,
@@ -179,7 +177,7 @@ return (
       <div className="relative z-10 max-w-[1440px] mx-auto px-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
         <div className="max-w-2xl">
           <span className="text-[0.7rem] font-bold uppercase tracking-[0.25em] text-white/60 block mb-3">{t.promoBanner.label}</span>
-          <h2 className="text-[clamp(1.8rem,4vw,2.8rem)] font-black tracking-[-0.03em] uppercase leading-tight mb-6">
+          <h2 className="text-[length:var(--text-h2)] font-black tracking-[-0.03em] uppercase leading-tight mb-6">
             {t.promoBanner.title1} {t.promoBanner.title2}
           </h2>
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 mb-8 text-white/80">

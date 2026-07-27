@@ -1,11 +1,11 @@
-﻿import type { Metadata } from "next";
+import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - Sneaker",
+  title: "OHMT - Brutalist Sneaker Drop Template",
   description: "Urban streetwear and sneaker releases",
   openGraph: {
-    title: "OHMT - Sneaker",
+    title: "OHMT - Brutalist Sneaker Drop Template",
     description: "Urban streetwear and sneaker releases",
     url: "https://ohmytemplate.com/en/templates/OHMT005-sneaker",
     siteName: "OHMT",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Sneaker",
+    title: "OHMT - Brutalist Sneaker Drop Template",
     description: "Urban streetwear and sneaker releases",
     images: ["/templates/OHMT005-sneaker/og-image.jpg"],
   },
@@ -40,4 +40,3 @@ export default function SneakerLayout({
     </>
   );
 }
-

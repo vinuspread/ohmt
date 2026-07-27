@@ -2,12 +2,15 @@
 
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { useSearchParams } from "next/navigation";
 const slugs = ["how-to-style-sneakers", "sustainable-footwear", "sneaker-care-guide", "2026-trends"];
-const imgs = ["/templates/OHMT005-sneaker/blog-1.jpg", "/templates/OHMT005-sneaker/blog-2.jpg", "/templates/OHMT005-sneaker/blog-3.jpg", "/templates/OHMT005-sneaker/blog-4.jpg"];
+const imgs = [
+  "/templates/OHMT005-sneaker/hero-detail.jpg",
+  "/templates/OHMT005-sneaker/product-6.jpg",
+  "/templates/OHMT005-sneaker/cat-sneakers-new.jpg",
+  "/templates/OHMT005-sneaker/category-running-new.jpg",
+];
 
 export const BlogSection = () => {
-  const searchParams = useSearchParams();
   const t = {
   "nav": {
     "categories": `Categories`,

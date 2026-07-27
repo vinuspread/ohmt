@@ -31,10 +31,10 @@ function AboutPageContent() {
         <section className="pt-16 md:pt-32 pb-20 bg-black text-white">
           <div className="max-w-[1440px] mx-auto px-6">
             <span className="text-[0.7rem] font-bold uppercase tracking-[0.25em] text-white/40 block mb-6">Our Story</span>
-            <h1 className="text-[clamp(3rem,7vw,6rem)] font-black tracking-[-0.03em] uppercase leading-[1.1] max-w-3xl">
+            <h1 className="text-[length:var(--text-display)] font-black tracking-[-0.03em] uppercase leading-[var(--leading-heading)] max-w-3xl">
               Premium<br /><span className="text-red-600">footwear.</span><br />Real values.
             </h1>
-            <p className="mt-8 text-[1rem] text-white/60 leading-[1.4] max-w-[520px]">
+            <p className="mt-8 text-[1rem] text-white/60 leading-[var(--leading-body)] max-w-[520px]">
               Vinus was founded in 2019 with one mission: to prove that premium footwear and ethical production are not mutually exclusive.
             </p>
           </div>
@@ -46,10 +46,10 @@ function AboutPageContent() {
             <div>
               <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-black/40 block mb-5">The Beginning</span>
               <h2 className="text-[2rem] font-black uppercase tracking-tight leading-tight mb-6">Started in a<br />small workshop.</h2>
-              <p className="text-[0.9rem] text-black/60 leading-[1.4] mb-4">
+              <p className="text-[0.9rem] text-black/60 leading-[var(--leading-body)] mb-4">
                 Our founder Marco spent three years working in traditional shoemaking before he realised the industry had a fundamental problem - quality and ethics were always traded off against each other.
               </p>
-              <p className="text-[0.9rem] text-black/60 leading-[1.4] mb-8">
+              <p className="text-[0.9rem] text-black/60 leading-[var(--leading-body)] mb-8">
                 In 2019 he opened a small workshop in Lisbon, partnering directly with tanneries that share our commitment to responsible sourcing. Today Vinus ships to 40+ countries, but the same care goes into every pair.
               </p>
               <Link href="/en/templates/OHMT005-sneaker/shop-all" className="inline-flex items-center gap-3 bg-black text-white text-[0.82rem] font-bold uppercase tracking-[0.08em] px-8 py-4 hover:bg-black/80 transition-colors">
@@ -72,7 +72,7 @@ function AboutPageContent() {
                 <div key={i} className="bg-white p-8 border border-black/5">
                   <span className="text-black/30 block mb-5">{v.icon}</span>
                   <h3 className="text-[1rem] font-black uppercase mb-3">{v.title}</h3>
-                  <p className="text-[0.82rem] text-black/60 leading-[1.4]">{v.desc}</p>
+                  <p className="text-[0.82rem] text-black/60 leading-[var(--leading-body)]">{v.desc}</p>
                 </div>
               ))}
             </div>
@@ -124,10 +124,10 @@ function AboutPageContent() {
 }
 
 
-export default function AboutPage(props: any) {
+export default function AboutPage() {
   return (
     <React.Suspense fallback={null}>
-      <AboutPageContent {...props} />
+      <AboutPageContent />
     </React.Suspense>
   );
 }

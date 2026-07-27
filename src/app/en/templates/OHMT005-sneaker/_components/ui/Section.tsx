@@ -33,7 +33,7 @@ export function Section({ children, title, description, className = '', isDark =
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.1 }}
-                                className="text-brand-secondary/40 text-[13px] uppercase tracking-widest font-bold"
+                                className="text-brand-secondary/40 text-xs uppercase tracking-widest font-bold"
                             >
                                 {description}
                             </motion.p>

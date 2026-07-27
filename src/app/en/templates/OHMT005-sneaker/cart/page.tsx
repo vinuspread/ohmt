@@ -43,7 +43,7 @@ function CartPageContent() {
                 </Link>
               </div>
             ) : (
-              <div className="grid md:grid-cols-[1fr_360px] gap-12 items-start">
+              <div className="grid md:grid-cols-2 gap-12 items-start">
                 {/* Items */}
                 <div className="divide-y divide-black/10">
                   {items.map(item => (
@@ -122,10 +122,10 @@ function CartPageContent() {
 }
 
 
-export default function CartPage(props: any) {
+export default function CartPage() {
   return (
     <React.Suspense fallback={null}>
-      <CartPageContent {...props} />
+      <CartPageContent />
     </React.Suspense>
   );
 }

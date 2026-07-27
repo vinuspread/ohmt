@@ -1,10 +1,8 @@
 "use client";
 import { Star } from "lucide-react";
-import { useSearchParams } from "next/navigation";
 const ratings = [5, 5, 4, 5];
 
 export const Reviews = () => {
-  const searchParams = useSearchParams();
   const t = {
   "nav": {
     "categories": `Categories`,
@@ -194,7 +192,7 @@ return (
                 <Star key={s} size={12} className={s <= ratings[i] ? "fill-black text-black" : "fill-black/20 text-black/20"} />
               ))}
             </div>
-            <p className="text-[0.85rem] text-black/70 leading-[1.4] mb-6">"{r.text}"</p>
+            <p className="text-[0.85rem] text-black/70 leading-[var(--leading-body)] mb-6">"{r.text}"</p>
             <div className="border-t border-black/5 pt-4">
               <p className="text-[0.82rem] font-bold text-black">{r.name}</p>
               <p className="text-[0.72rem] text-black/40">{r.product} · {r.date}</p>
