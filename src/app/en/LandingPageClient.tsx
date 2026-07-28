@@ -10,16 +10,16 @@ import type { PricingPackage } from "@/types/template";
 
 const HERO_SLIDES = [
   {
-    heading: <>Launch your business<br className="hidden sm:block" /> <span className="text-[#F1B100]">with a complete system.</span></>,
-    desc: "Premium templates, fully customized by our team.\nYour website, ready to go in 2 weeks.",
+    heading: <>Proven design,<br className="hidden sm:block" /> <span className="text-[#F1B100]">built into your brand.</span></>,
+    desc: "20 years of expertise, refined down to every detail.",
   },
   {
-    heading: <>Every feature you need,<br className="hidden sm:block" /> <span className="text-[#F1B100]">built exactly as you want.</span></>,
-    desc: "Got a specific feature in mind?\nMembership, bookings, payments — we build it all to fit your business.",
+    heading: <>Custom features,<br className="hidden sm:block" /> <span className="text-[#F1B100]">built for your goals.</span></>,
+    desc: "From memberships to bookings, extended exactly as you need.",
   },
   {
-    heading: <>Ongoing support<br className="hidden sm:block" /> <span className="text-[#F1B100]">you can count on.</span></>,
-    desc: "Business starts after launch.\nOur dedicated team responds quickly to any issues that arise.",
+    heading: <>Ongoing support,<br className="hidden sm:block" /> <span className="text-[#F1B100]">even after launch.</span></>,
+    desc: "Our dedicated team handles updates and fixes, fast.",
   },
 ];
 
@@ -333,7 +333,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -14 }}
                   transition={{ duration: 0.45, ease: EASE_OUT }}
-                  className="text-[2.8rem] md:text-[4.25rem] font-bold tracking-tight leading-[1.1] text-zinc-900 dark:text-zinc-100"
+                  className="text-[2.1rem] sm:text-[2.8rem] md:text-[4.25rem] font-bold tracking-tight leading-[1.25] md:leading-[1.1] text-zinc-900 dark:text-zinc-100"
                 >
                   {HERO_SLIDES[heroIndex].heading}
                 </motion.h1>
@@ -375,7 +375,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                 key={`${template.id}-${idx}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex-shrink-0 w-[240px] md:w-[320px] bg-white border border-zinc-200/60 rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-zinc-300 transition-all duration-300 pointer-events-auto dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600 dark:hover:shadow-zinc-900/50"
+                className="group flex-shrink-0 w-[192px] md:w-[320px] bg-white border border-zinc-200/60 rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-zinc-300 transition-all duration-300 pointer-events-auto dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600 dark:hover:shadow-zinc-900/50"
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-zinc-50 dark:bg-zinc-700">
                   <img src={template.image} alt={template.name} className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out" />

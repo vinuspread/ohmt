@@ -35,16 +35,16 @@ const POPULAR_TAGS = ["패션", "포트폴리오", "에이전시", "럭셔리", 
 
 const HERO_SLIDES = [
   {
-    heading: <>완성된 시스템으로 <br className="hidden sm:block" /><span className="text-[#FFB800]">비즈니스를 시작하세요.</span></>,
-    desc: "수많은 프리미엄 템플릿과 전담 팀의 커스터마이징으로\n2주 안에 완성된 웹사이트를 제공합니다.",
+    heading: <>검증된 디자인으로 <br className="hidden sm:block" /><span className="text-[#FFB800]">브랜드를 완성</span></>,
+    desc: "20년 전문가가 디테일을 직접 다듬습니다.",
   },
   {
-    heading: <>원하는 기능을 <br className="hidden sm:block" /><span className="text-[#FFB800]">그대로 담아드립니다.</span></>,
-    desc: "구현하고 싶은 기능이 있으신가요?\n회원 연동, 예약, 결제까지 비즈니스에 맞게 추가해 완성합니다.",
+    heading: <>필요한 기능을<br /><span className="text-[#FFB800]">목적에 맞게 개발</span></>,
+    desc: "회원, 예약 등 맞춤 개발로 확장합니다.",
   },
   {
-    heading: <>관리와 유지보수도 <br className="hidden sm:block" /><span className="text-[#FFB800]">안심하세요.</span></>,
-    desc: "비즈니스는 런칭 후부터 시작됩니다.\n운영 중 발생하는 문제를 전담 팀이 신속하게 대응합니다.",
+    heading: <>오픈 이후 운영까지 <br className="hidden sm:block" /><span className="text-[#FFB800]">완벽한 지원</span></>,
+    desc: "전담팀이 수정과 점검을 신속하게 대응합니다.",
   },
 ];
 
@@ -333,7 +333,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -14 }}
                   transition={{ duration: 0.45, ease: EASE_OUT }}
-                  className="text-[3rem] md:text-[4.8rem] font-bold tracking-tight leading-[1.1] text-zinc-900 dark:text-zinc-100"
+                  className="text-[2.5rem] sm:text-[3rem] md:text-[4.8rem] font-bold tracking-tight leading-[1.25] md:leading-[1.1] text-zinc-900 dark:text-zinc-100"
                 >
                   {HERO_SLIDES[heroIndex].heading}
                 </motion.h1>
@@ -346,7 +346,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.45, ease: EASE_OUT, delay: 0.05 }}
-                className="mt-6 text-lg md:text-xl text-zinc-500 font-normal leading-relaxed tracking-tight whitespace-pre-line max-w-2xl mx-auto dark:text-zinc-400"
+                className="mt-6 text-[1rem] md:text-xl text-zinc-500 font-normal leading-relaxed tracking-tight whitespace-pre-line max-w-2xl mx-auto dark:text-zinc-400"
               >
                 {HERO_SLIDES[heroIndex].desc}
               </motion.p>
@@ -375,7 +375,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                 key={`${template.id}-${idx}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex-shrink-0 w-[240px] md:w-[280px] bg-white border border-zinc-200/60 rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-zinc-300 transition-all duration-300 pointer-events-auto dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600 dark:hover:shadow-zinc-900/50"
+                className="group flex-shrink-0 w-[192px] md:w-[280px] bg-white border border-zinc-200/60 rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-zinc-300 transition-all duration-300 pointer-events-auto dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600 dark:hover:shadow-zinc-900/50"
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-zinc-50 dark:bg-zinc-700">
                   <img src={template.image} alt={template.name} className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out" />
