@@ -257,7 +257,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             <Logo className="h-6 w-auto block" />
           </Link>
           <nav className="hidden md:flex items-center gap-6 text-[0.82rem] font-bold text-zinc-500 uppercase tracking-wider dark:text-zinc-400">
-            <a href="#directions" className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">Direction</a>
+            <a href="#directions" className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">Services</a>
             <a href="#templates" className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">Templates</a>
             <a href="#pricing" className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">Pricing</a>
             <a href="#process" className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">Process</a>

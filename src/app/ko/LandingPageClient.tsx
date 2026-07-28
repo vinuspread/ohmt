@@ -257,7 +257,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             <Logo className="h-6 w-auto block" />
           </Link>
           <nav className="hidden md:flex items-center gap-6 text-[0.82rem] font-bold text-zinc-500 tracking-wider dark:text-zinc-400">
-            <a href="#directions" className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">방향</a>
+            <a href="#directions" className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">서비스소개</a>
             <a href="#templates" className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">템플릿</a>
             <a href="#pricing" className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">가격</a>
             <a href="#process" className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">프로세스</a>
@@ -270,9 +270,9 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           </Link>
           <Link
             href="/ko/contact"
-            className="hidden sm:inline-flex items-center justify-center bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-bold px-5 py-2.5 transition-colors duration-200 rounded-md dark:bg-zinc-700 dark:hover:bg-zinc-600"
+            className="hidden sm:inline-flex items-center justify-center bg-[#F1B100] hover:bg-[#d99e00] text-zinc-900 text-xs font-bold px-5 py-2.5 transition-colors duration-200 rounded-md"
           >
-            상담하기
+            제작 상담 신청
           </Link>
         </div>
       </header>
