@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import { Check } from "lucide-react";
 import { Button } from "../ui/Button";
 import { Input } from "../ui/Input";
 import { Select } from "../ui/Select";
@@ -156,12 +157,13 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
                   key={item.id}
                   type="button"
                   onClick={() => toggleCategory(item.name)}
-                  className={`px-3 py-1.5 text-xs font-medium rounded-lg border transition-colors ${
+                  className={`inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-medium rounded-lg border transition-colors ${
                     active
                       ? "bg-zinc-900 border-zinc-900 text-white"
                       : "bg-white border-zinc-200 text-zinc-600 hover:border-zinc-400"
                   }`}
                 >
+                  {active && <Check className="w-3.5 h-3.5" />}
                   {item.name}
                 </button>
               );
