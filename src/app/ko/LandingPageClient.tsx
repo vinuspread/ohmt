@@ -68,12 +68,12 @@ const modelStepsKo = [
 ];
 
 const directionsKo = [
-  { badge: "추천", title: "브랜드 런칭", desc: "신규 브랜드의 첫 공식 사이트를 빠르게 엽니다.", category: "브랜드 & 크리에이티브", filterCategory: "corporate" },
-  { badge: "추천", title: "병원/클리닉", desc: "신뢰가 먼저 보이는 의료, 전문직 사이트를 만듭니다.", category: "전문직 서비스", filterCategory: "corporate" },
-  { badge: "추천", title: "스튜디오/포트폴리오", desc: "작업물이 주인공이 되는 포트폴리오 구조를 고릅니다.", category: "포트폴리오 & 에이전시", filterCategory: "portfolio" },
-  { badge: "업종별", title: "F&B / 매장", desc: "메뉴, 매장, 예약 흐름이 중심인 구조로 시작합니다.", category: "F&B", filterCategory: "retail" },
-  { badge: "업종별", title: "B2B 서비스", desc: "신뢰 지표와 도입 문의가 잘 보이는 구조를 잡습니다.", category: "비즈니스 & 테크", filterCategory: "corporate" },
-  { badge: "업종별", title: "이벤트/프로모션", desc: "짧은 기간에 임팩트가 필요한 캠페인 구조로 구성합니다.", category: "이벤트 & 캠페인", filterCategory: "retail" },
+  { badge: "추천", title: "브랜드 런칭", desc: "신규 브랜드의 웹사이트를 구축할 때 추천합니다.", category: "브랜드 & 크리에이티브", filterCategory: "corporate" },
+  { badge: "추천", title: "병원/클리닉", desc: "신뢰도 높은 의료·전문직 사이트에 추천합니다.", category: "전문직 서비스", filterCategory: "corporate" },
+  { badge: "추천", title: "스튜디오/포트폴리오", desc: "작업물이 중심이 되는 포트폴리오 구조에 좋습니다.", category: "포트폴리오 & 에이전시", filterCategory: "portfolio" },
+  { badge: "업종별", title: "F&B / 매장", desc: "메뉴, 매장, 예약 흐름 중심의 구조에 적합합니다.", category: "F&B", filterCategory: "retail" },
+  { badge: "업종별", title: "B2B 서비스", desc: "신뢰 지표와 도입 문의가 잘 보이는 구조에 추천합니다.", category: "비즈니스 & 테크", filterCategory: "corporate" },
+  { badge: "업종별", title: "이벤트/프로모션", desc: "짧은 기간에 임팩트를 만드는 캠페인 구조에 적합합니다.", category: "이벤트 & 캠페인", filterCategory: "retail" },
 ];
 
 const carePlansKo = [
@@ -489,10 +489,10 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
               desc={<>업종과 목적에 맞는 방향을 선택하시면<br />추천 템플릿 리스트로 바로 이동합니다.</>}
             />
             <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/ko/contact" className="inline-flex items-center justify-center rounded-md bg-[#222222] px-6 py-3.5 text-xs font-extrabold text-[#F1B100] transition-colors hover:bg-[#2B2B2B] hover:text-[#F1B100]">
-                상담하기
+              <Link href="/ko/contact" className="w-[140px] sm:w-[200px] md:w-[240px] inline-flex items-center justify-center rounded-md bg-[#F1B100] px-6 md:px-8 py-3.5 md:py-4 text-xs sm:text-sm md:text-base font-extrabold text-zinc-900 transition-colors hover:bg-[#d99e00]">
+                제작 상담 신청
               </Link>
-              <button onClick={() => scrollToTemplates(ALL_LABEL)} className="bg-white border border-zinc-200/70 hover:border-zinc-400 text-zinc-800 text-xs font-bold px-5 py-3 rounded-md transition-colors dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-100">
+              <button onClick={() => scrollToTemplates(ALL_LABEL)} className="w-[140px] sm:w-[200px] md:w-[240px] bg-white border border-zinc-200/70 hover:border-zinc-400 text-zinc-800 text-xs sm:text-sm md:text-base font-bold px-5 md:px-8 py-3 md:py-4 rounded-md transition-colors">
                 전체 템플릿 보기
               </button>
             </div>
