@@ -3,7 +3,7 @@
 import React, { useState, useMemo, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, X, Search, Sparkles, Wrench, ImageOff, Shuffle, ClipboardList, PackageOpen } from "lucide-react";
+import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Menu, X, Search, Sparkles, Wrench, ImageOff, Shuffle, ClipboardList, PackageOpen } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Logo } from "@/components/Logo";
 import type { PricingPackage } from "@/types/template";
@@ -91,6 +91,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
   const router = useRouter();
   const [heroIndex, setHeroIndex] = useState(0);
   const [headerVisible, setHeaderVisible] = useState(true);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [activeCategory, setActiveCategory] = useState(ALL_LABEL);
@@ -264,18 +265,48 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             <a href="#faq" className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">FAQ</a>
           </nav>
         </div>
-        <div className="flex items-center gap-6">
-          <Link href="/ko" className="text-xs uppercase tracking-widest text-zinc-400 hover:text-zinc-900 transition-colors font-bold dark:text-zinc-500 dark:hover:text-zinc-100">
+        <div className="flex items-center gap-3 sm:gap-6">
+          <Link href="/ko" className="hidden sm:inline-flex text-xs uppercase tracking-widest text-zinc-400 hover:text-zinc-900 transition-colors font-bold dark:text-zinc-500 dark:hover:text-zinc-100">
             KR
           </Link>
           <Link
             href="/en/contact"
-            className="hidden sm:inline-flex items-center justify-center bg-zinc-900 hover:bg-zinc-800 text-white text-xs uppercase tracking-widest font-bold px-5 py-2.5 transition-colors duration-200 rounded-md dark:bg-zinc-700 dark:hover:bg-zinc-600"
+            className="inline-flex items-center justify-center bg-zinc-900 hover:bg-zinc-800 text-white text-[0.7rem] sm:text-xs uppercase tracking-widest font-bold px-3.5 sm:px-5 py-2 sm:py-2.5 transition-colors duration-200 rounded-md whitespace-nowrap dark:bg-zinc-700 dark:hover:bg-zinc-600"
           >
             Get Started
           </Link>
+          <button
+            type="button"
+            onClick={() => setMobileMenuOpen((prev) => !prev)}
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileMenuOpen}
+            className="md:hidden flex items-center justify-center w-8 h-8 text-zinc-700 hover:text-zinc-900 transition-colors dark:text-zinc-300 dark:hover:text-zinc-100"
+          >
+            {mobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
         </div>
       </header>
+
+      <AnimatePresence>
+        {mobileMenuOpen && (
+          <motion.nav
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="md:hidden fixed top-[64px] left-0 right-0 z-30 bg-white border-b border-zinc-200/60 px-5 py-4 flex flex-col gap-4 text-sm font-bold uppercase tracking-wider text-zinc-600 dark:bg-zinc-900 dark:border-zinc-800 dark:text-zinc-300"
+          >
+            <a href="#directions" onClick={() => setMobileMenuOpen(false)} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">Services</a>
+            <a href="#templates" onClick={() => setMobileMenuOpen(false)} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">Templates</a>
+            <a href="#pricing" onClick={() => setMobileMenuOpen(false)} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">Pricing</a>
+            <a href="#process" onClick={() => setMobileMenuOpen(false)} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">Process</a>
+            <a href="#faq" onClick={() => setMobileMenuOpen(false)} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">FAQ</a>
+            <Link href="/ko" onClick={() => setMobileMenuOpen(false)} className="sm:hidden text-xs uppercase tracking-widest text-zinc-400 hover:text-zinc-900 transition-colors dark:text-zinc-500 dark:hover:text-zinc-100">
+              KR
+            </Link>
+          </motion.nav>
+        )}
+      </AnimatePresence>
 
       {/* Hero Section */}
       <section className="pt-20 pb-9 bg-white border-b border-zinc-200/50 relative overflow-hidden dark:bg-zinc-900 dark:border-zinc-800">
