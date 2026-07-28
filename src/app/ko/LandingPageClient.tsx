@@ -394,7 +394,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           <SectionHeadingKo
             title={<>웹사이트 제작을 시작할 때<br /><span className="text-[#F1B100]">대부분 여기서 막힙니다.</span></>}
             desc={<>직접 만들면 오래 걸리고, 외주는 부담스럽습니다.<br />OHMT는 바로 시작할 수 있는 제작 방법을 제공합니다.</>}
-            titleClassName="text-[28px]!"
+            titleClassName="text-[28px]! sm:text-4xl! md:text-5xl!"
           />
           <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-3">
             {serviceCardsKo.map((item) => (
