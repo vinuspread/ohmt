@@ -7,7 +7,7 @@ export interface Template {
   lang: TemplateLang;
   template_key: string | null;
   name: string;
-  category: string;
+  categories: string[];
   description: string | null;
   thumbnail_url: string | null;
   price: number;

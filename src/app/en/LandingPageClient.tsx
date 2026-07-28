@@ -28,7 +28,7 @@ export interface TemplateItem {
   name: string;
   url: string;
   desc: string;
-  category: string;
+  categories: string[];
   image: string;
   isFeatured?: boolean;
   slug: string;
@@ -206,9 +206,11 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
     const seen = new Set<string>();
     const result: string[] = [ALL_LABEL];
     for (const t of templates) {
-      if (!seen.has(t.category)) {
-        seen.add(t.category);
-        result.push(t.category);
+      for (const c of t.categories) {
+        if (!seen.has(c)) {
+          seen.add(c);
+          result.push(c);
+        }
       }
     }
     return result;
@@ -216,10 +218,10 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
 
   const filteredTemplates = useMemo(() => {
     return templates.filter(t => {
-      const matchCategory = activeCategory === ALL_LABEL || t.category === activeCategory;
+      const matchCategory = activeCategory === ALL_LABEL || t.categories.includes(activeCategory);
       const matchSearch = t.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           t.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          t.category.toLowerCase().includes(searchTerm.toLowerCase());
+                          t.categories.some((c) => c.toLowerCase().includes(searchTerm.toLowerCase()));
       return matchCategory && matchSearch;
     });
   }, [activeCategory, searchTerm, templates]);
@@ -234,7 +236,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
     if (template) {
       params.set("template", template.name);
       params.set("image", template.image);
-      params.set("category", template.category);
+      params.set("category", template.categories.join(", "));
       params.set("template_slug", template.slug);
     }
     router.push(`/en/contact?${params.toString()}`);
@@ -381,7 +383,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                   <img src={template.image} alt={template.name} className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-500 ease-out" />
                 </div>
                 <div className="p-4 space-y-1">
-                  <span className="text-[0.6rem] font-bold text-zinc-400 uppercase tracking-widest dark:text-zinc-500">{template.category}</span>
+                  <span className="text-[0.6rem] font-bold text-zinc-400 uppercase tracking-widest dark:text-zinc-500">{template.categories.join(", ")}</span>
                   <h4 className="text-sm font-bold text-zinc-900 dark:text-zinc-100">{template.name}</h4>
                 </div>
               </Link>
@@ -578,7 +580,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                           <div className="space-y-1">
                             <h4 className="truncate text-sm sm:text-base font-bold text-zinc-900 dark:text-zinc-100">{template.name}</h4>
                             <p className="flex items-center gap-1.5 text-[0.65rem] text-zinc-400 font-bold tracking-wider dark:text-zinc-500">
-                              <span>{template.category}</span>
+                              <span>{template.categories.join(", ")}</span>
                               <span className="text-zinc-300 dark:text-zinc-600">·</span>
                               <span className="font-mono">{template.slug}</span>
                             </p>
@@ -824,7 +826,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                 <div className="p-6 space-y-4">
                   <div className="flex items-start justify-between gap-4">
                     <div className="space-y-1">
-                      <span className="text-[0.65rem] text-zinc-400 font-bold uppercase tracking-wider dark:text-zinc-500">{descModalTemplate.category}</span>
+                      <span className="text-[0.65rem] text-zinc-400 font-bold uppercase tracking-wider dark:text-zinc-500">{descModalTemplate.categories.join(", ")}</span>
                       <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">{descModalTemplate.name}</h3>
                     </div>
                     <button type="button" onClick={() => setDescModalTemplate(null)} className="text-zinc-400 hover:text-zinc-900 transition-colors dark:text-zinc-500 dark:hover:text-zinc-100" aria-label="Close">

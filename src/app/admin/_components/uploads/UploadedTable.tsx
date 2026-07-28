@@ -49,7 +49,7 @@ export function UploadedTable({ data }: { data: Template[] }) {
       render: (template) => <p className="font-medium text-zinc-900">{template.name}</p>,
     },
     { key: "lang", header: "언어", render: (template) => <span className="font-mono text-xs uppercase text-zinc-500">{template.lang}</span> },
-    { key: "category", header: "카테고리", render: (template) => template.category },
+    { key: "category", header: "카테고리", render: (template) => (template.categories ?? []).join(", ") },
     { key: "created_at", header: "업로드일", render: (template) => dateFormatter.format(new Date(template.created_at)) },
     { key: "status", header: "상태", render: (template) => <Badge status={template.status} /> },
     {

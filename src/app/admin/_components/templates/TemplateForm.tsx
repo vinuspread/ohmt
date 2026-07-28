@@ -26,8 +26,8 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
   const [slug, setSlug] = useState(initialData?.slug ?? "");
   const [lang, setLang] = useState<TemplateLang>(initialData?.lang ?? "en");
   const [name, setName] = useState(initialData?.name ?? "");
-  const [category, setCategory] = useState(initialData?.category ?? "");
-  const [categories, setCategories] = useState<Category[]>([]);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>(initialData?.categories ?? []);
+  const [categoryOptions, setCategoryOptions] = useState<Category[]>([]);
   const [published, setPublished] = useState(initialData?.status === "published");
   const price = initialData?.price ?? 0;
   const sortOrder = initialData?.sort_order ?? 0;
@@ -49,11 +49,19 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
     fetch("/api/admin/categories")
       .then((response) => (response.ok ? response.json() : []))
       .then((result: Category[]) => {
-        setCategories(result);
-        if (!initialData?.category && result.length > 0) setCategory(result[0].name);
+        setCategoryOptions(result);
+        if ((!initialData?.categories || initialData.categories.length === 0) && result.length > 0) {
+          setSelectedCategories([result[0].name]);
+        }
       })
       .catch(() => {});
-  }, [initialData?.category]);
+  }, [initialData?.categories]);
+
+  const toggleCategory = (name: string) => {
+    setSelectedCategories((prev) =>
+      prev.includes(name) ? prev.filter((c) => c !== name) : [...prev, name]
+    );
+  };
 
   useEffect(() => {
     fetch("/api/admin/pricing")
@@ -82,7 +90,7 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
     slug,
     lang,
     name,
-    category,
+    categories: selectedCategories,
     description: description || null,
     thumbnail_url: thumbnailUrl || null,
     template_key: templateKey.trim() || null,
@@ -101,6 +109,11 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
     event.preventDefault();
 
     if (slugError) return;
+
+    if (selectedCategories.length === 0) {
+      setToast({ message: "카테고리를 최소 1개 이상 선택해주세요.", type: "error" });
+      return;
+    }
 
     if (published && !requiresConsultation && pricingOptions.length === 0) {
       setToast({ message: "공개 전환을 위해 활성화된 가격 패키지가 필요합니다. 또는 '협의필요'를 체크해주세요.", type: "error" });
@@ -133,12 +146,29 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
         <Input label="슬러그" value={slug} onChange={(event) => setSlug(event.target.value)} onBlur={checkSlug} disabled={mode === "edit"} error={slugError} required />
         <Select label="언어" value={lang} onChange={(event) => setLang(event.target.value as TemplateLang)} options={langOptions} disabled={mode === "edit"} />
         <Input label="이름" value={name} onChange={(event) => setName(event.target.value)} required />
-        <Select
-          label="카테고리"
-          value={category}
-          onChange={(event) => setCategory(event.target.value)}
-          options={categories.map((item) => ({ value: item.name, label: item.name }))}
-        />
+        <div className="flex flex-col gap-1.5">
+          <span className="text-sm font-medium text-zinc-700">카테고리</span>
+          <div className="flex flex-wrap gap-2">
+            {categoryOptions.map((item) => {
+              const active = selectedCategories.includes(item.name);
+              return (
+                <button
+                  key={item.id}
+                  type="button"
+                  onClick={() => toggleCategory(item.name)}
+                  className={`px-3 py-1.5 text-xs font-medium rounded-lg border transition-colors ${
+                    active
+                      ? "bg-zinc-900 border-zinc-900 text-white"
+                      : "bg-white border-zinc-200 text-zinc-600 hover:border-zinc-400"
+                  }`}
+                >
+                  {item.name}
+                </button>
+              );
+            })}
+          </div>
+          <p className="text-xs text-zinc-400">여러 개 선택 가능. 최소 1개 이상 선택해야 합니다.</p>
+        </div>
         <label className="flex items-center gap-2 text-sm font-medium text-zinc-700">
           <input
             type="checkbox"

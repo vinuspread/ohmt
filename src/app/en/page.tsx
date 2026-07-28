@@ -137,7 +137,7 @@ export default async function Page() {
     name: template.name,
     url: `/en/templates/${template.slug}`,
     desc: template.description ?? "",
-    category: template.category,
+    categories: template.categories ?? [],
     image: template.thumbnail_url ?? "",
     isFeatured: template.is_featured,
     slug: template.slug,

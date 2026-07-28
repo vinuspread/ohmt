@@ -108,7 +108,7 @@ export async function POST(request: NextRequest) {
       .from("templates")
       .update({
         name,
-        category: themeJson.category ?? "uncategorized",
+        categories: themeJson.category ? [themeJson.category] : ["uncategorized"],
         description: finalDescription,
         thumbnail_url: `/templates/${slug}/og-image.jpg`,
         tags: themeJson.tags ?? [],

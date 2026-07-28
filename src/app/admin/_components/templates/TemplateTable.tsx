@@ -120,8 +120,8 @@ export function TemplateTable({ data }: { data: Template[] }) {
       }
 
       if (sortField === "category") {
-        const valA = a.category ?? "";
-        const valB = b.category ?? "";
+        const valA = (a.categories ?? []).join(", ");
+        const valB = (b.categories ?? []).join(", ");
         return sortDirection === "asc"
           ? valA.localeCompare(valB)
           : valB.localeCompare(valA);
@@ -431,7 +431,7 @@ function TemplateRow({
         <p className="truncate font-mono text-xs text-zinc-400">{template.slug}</p>
       </div>
       <span className="font-mono text-xs uppercase text-zinc-500">{template.lang}</span>
-      <span className="truncate">{template.category}</span>
+      <span className="truncate">{(template.categories ?? []).join(", ")}</span>
       <PricingBadges consultation={template.requires_consultation ?? false} />
       <StatusPill published={template.status === "published"} />
       <div>{template.is_featured ? <CheckIcon aria-label="대표 템플릿" className="w-4 h-4 text-emerald-500" /> : <span className="text-zinc-300">-</span>}</div>

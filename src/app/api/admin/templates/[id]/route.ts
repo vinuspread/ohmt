@@ -6,7 +6,7 @@ const templateStatuses: TemplateStatus[] = ["draft", "published", "archived"];
 
 interface TemplatePatchBody {
   name?: string;
-  category?: string;
+  categories?: string[];
   description?: string | null;
   thumbnail_url?: string | null;
   template_key?: string | null;
@@ -27,6 +27,7 @@ function isTemplateStatus(value: unknown): value is TemplateStatus {
 
 function hasInvalidPatch(body: TemplatePatchBody) {
   if (body.status !== undefined && !isTemplateStatus(body.status)) return true;
+  if (body.categories !== undefined && (!Array.isArray(body.categories) || body.categories.length === 0 || !body.categories.every((c) => typeof c === "string"))) return true;
   if (body.price !== undefined && typeof body.price !== "number") return true;
   if (body.sort_order !== undefined && typeof body.sort_order !== "number") return true;
   if (body.is_featured !== undefined && typeof body.is_featured !== "boolean") return true;
