@@ -3,7 +3,7 @@
 import React, { useState, useMemo, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Menu, X, Search, Sparkles, Wrench, ImageOff, Shuffle, ClipboardList, PackageOpen } from "lucide-react";
+import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Menu, X, Search, Sparkles, ImageOff, ClipboardList, PackageOpen } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Logo } from "@/components/Logo";
 import type { PricingPackage } from "@/types/template";
@@ -49,11 +49,9 @@ const HERO_SLIDES = [
 ];
 
 const serviceCardsKo = [
-  { icon: Wrench, title: "제작 과정의 많은 선택", desc: "디자인, 문구, 이미지, 구성, 기능까지 하나씩 결정하다 보면 예상보다 많은 시간과 에너지가 필요합니다." },
-  { icon: ImageOff, title: "콘텐츠 준비의 막막함", desc: "무엇을 넣어야 할지, 어떤 순서로 보여줘야 할지 정리되지 않으면 제작은 시작해도 오픈까지 이어지기 어렵습니다." },
-  { icon: Shuffle, title: "화면보다 중요한 흐름", desc: "보기 좋은 디자인도 중요하지만, 고객이 이해하고 신뢰하고 문의하게 만드는 구조가 함께 필요합니다." },
-  { icon: ClipboardList, title: "처음부터 부담스러운 외주", desc: "기획, 디자인, 개발을 모두 새로 시작하면 비용과 일정이 커지고 결정해야 할 것도 많아집니다." },
-  { icon: PackageOpen, title: "오픈 이후의 운영 부담", desc: "웹사이트는 완성 후에도 문구 수정, 이미지 교체, 오류 확인, 콘텐츠 업데이트가 계속 필요합니다." },
+  { icon: ImageOff, title: "무엇을 어떻게 담아야 할지, 막막합니다", desc: "화면 구성부터 콘텐츠까지 혼자 정해야 합니다." },
+  { icon: ClipboardList, title: "시작하기도 전에 부담스러운 비용", desc: "견적부터 계약까지, 진입장벽이 높습니다." },
+  { icon: PackageOpen, title: "오픈 후엔 누구에게 맡기나요", desc: "수정 하나에도 다시 개발자를 찾아야 합니다." },
 ];
 
 const modelStepsKo = [
@@ -77,11 +75,11 @@ const carePlansKo = [
   { title: "Managed Care", price: "별도협의", desc: "운영 대행, SLA, 상시 응대가 필요한 팀용 플랜입니다." },
 ];
 
-function SectionHeadingKo({ label, title, desc }: { label?: string; title: React.ReactNode; desc?: React.ReactNode }) {
+function SectionHeadingKo({ label, title, desc, titleClassName }: { label?: string; title: React.ReactNode; desc?: React.ReactNode; titleClassName?: string }) {
   return (
     <div className="ohmt-section-heading">
       {label && <span className="ohmt-section-label">{label}</span>}
-      <h2 className="ohmt-section-title">{title}</h2>
+      <h2 className={`ohmt-section-title${titleClassName ? ` ${titleClassName}` : ""}`}>{title}</h2>
       {desc && <p className="ohmt-section-desc text-pretty">{desc}</p>}
     </div>
   );
@@ -346,7 +344,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.45, ease: EASE_OUT, delay: 0.05 }}
-                className="mt-6 text-[1rem] md:text-xl text-zinc-500 font-normal leading-relaxed tracking-tight whitespace-pre-line max-w-2xl mx-auto dark:text-zinc-400"
+                className="mt-3 md:mt-6 text-[1rem] md:text-xl text-zinc-500 font-normal leading-relaxed tracking-tight whitespace-pre-line max-w-2xl mx-auto dark:text-zinc-400"
               >
                 {HERO_SLIDES[heroIndex].desc}
               </motion.p>
@@ -394,12 +392,13 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
       <section className="px-5 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16 md:py-28 bg-[#FCFCFD] border-b border-zinc-200/50 dark:bg-zinc-950 dark:border-zinc-800">
         <div className="max-w-[1440px] mx-auto space-y-9 md:space-y-12">
           <SectionHeadingKo
-            title="웹사이트가 필요한 순간, 대부분 여기서 막힙니다."
-            desc="직접 만들면 오래 걸리고, 외주는 부담스럽습니다. OHMT는 바로 실행할 수 있는 제작 기준을 제공합니다."
+            title={<>웹사이트 제작을 시작할 때<br /><span className="text-[#F1B100]">대부분 여기서 막힙니다.</span></>}
+            desc={<>직접 만들면 오래 걸리고, 외주는 부담스럽습니다.<br />OHMT는 바로 시작할 수 있는 제작 방법을 제공합니다.</>}
+            titleClassName="text-[28px]!"
           />
-          <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-6">
-            {serviceCardsKo.map((item, idx) => (
-              <div key={item.title} className={`flex gap-4 bg-white border border-zinc-200/60 rounded-xl p-5 hover:border-zinc-300 transition-colors sm:block sm:p-6 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600 ${idx < 3 ? "md:col-span-2" : "md:col-span-3"}`}>
+          <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-3">
+            {serviceCardsKo.map((item) => (
+              <div key={item.title} className="flex gap-4 bg-white border border-zinc-200/60 rounded-xl p-5 hover:border-zinc-300 transition-colors sm:block sm:p-6 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600">
                 <item.icon size={28} strokeWidth={1.7} className="mt-0.5 shrink-0 text-zinc-900 sm:mt-0 dark:text-zinc-100" />
                 <div className="min-w-0">
                   <h3 className="text-[15px] font-bold text-zinc-900 sm:mt-4 sm:text-[17px] dark:text-zinc-100">{item.title}</h3>
