@@ -68,12 +68,12 @@ const modelStepsKo = [
 ];
 
 const directionsKo = [
-  { badge: "추천", title: "브랜드 런칭", desc: "신규 브랜드의 첫 공식 사이트를 빠르게 엽니다.", category: "브랜드 & 크리에이티브" },
-  { badge: "추천", title: "병원/클리닉", desc: "신뢰가 먼저 보이는 의료, 전문직 사이트를 만듭니다.", category: "F&B & 서비스업" },
-  { badge: "추천", title: "스튜디오/포트폴리오", desc: "작업물이 주인공이 되는 포트폴리오 구조를 고릅니다.", category: "브랜드 & 크리에이티브" },
-  { badge: "업종별", title: "F&B / 매장", desc: "메뉴, 매장, 예약 흐름이 중심인 구조로 시작합니다.", category: "F&B & 서비스업" },
-  { badge: "업종별", title: "B2B 서비스", desc: "신뢰 지표와 도입 문의가 잘 보이는 구조를 잡습니다.", category: "비즈니스 & 테크" },
-  { badge: "업종별", title: "이벤트/프로모션", desc: "짧은 기간에 임팩트가 필요한 캠페인형 흐름입니다.", category: "리테일 & 커머스" },
+  { badge: "추천", title: "브랜드 런칭", desc: "신규 브랜드의 첫 공식 사이트를 빠르게 엽니다.", category: "브랜드 & 크리에이티브", filterCategory: "corporate" },
+  { badge: "추천", title: "병원/클리닉", desc: "신뢰가 먼저 보이는 의료, 전문직 사이트를 만듭니다.", category: "전문직 서비스", filterCategory: "corporate" },
+  { badge: "추천", title: "스튜디오/포트폴리오", desc: "작업물이 주인공이 되는 포트폴리오 구조를 고릅니다.", category: "포트폴리오 & 에이전시", filterCategory: "portfolio" },
+  { badge: "업종별", title: "F&B / 매장", desc: "메뉴, 매장, 예약 흐름이 중심인 구조로 시작합니다.", category: "F&B", filterCategory: "retail" },
+  { badge: "업종별", title: "B2B 서비스", desc: "신뢰 지표와 도입 문의가 잘 보이는 구조를 잡습니다.", category: "비즈니스 & 테크", filterCategory: "corporate" },
+  { badge: "업종별", title: "이벤트/프로모션", desc: "짧은 기간에 임팩트가 필요한 캠페인 구조로 구성합니다.", category: "이벤트 & 캠페인", filterCategory: "retail" },
 ];
 
 const carePlansKo = [
@@ -454,22 +454,27 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
       <section className="px-5 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16 md:py-28 bg-white border-b border-zinc-200/50 dark:bg-zinc-900 dark:border-zinc-800">
         <div className="max-w-[1440px] mx-auto space-y-9 md:space-y-12">
           <SectionHeadingKo
-            title={<>OHMT는 템플릿 판매 사이트가 아닙니다.<br />템플릿 기반의 맞춤 제작 서비스입니다.</>}
-            desc={<>완전히 빈 화면에서 시작하지 않습니다.<br />검증된 템플릿을 기준으로 방향을 고르고, 실제 브랜드에 맞게 완성합니다.</>}
+            title={<>우리는 템플릿을 팔지 않습니다.<br /><span className="text-[#F1B100]">브랜드에 맞게 커스텀합니다.</span></>}
+            desc={<>컨셉에 맞는 템플릿을 선택하면<br />브랜드에 최적화된 웹사이트를 제작합니다.</>}
           />
-          <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-0 md:divide-x md:divide-zinc-200 dark:md:divide-zinc-700">
-            {modelStepsKo.map((item) => (
-              <div key={item.step} className="flex flex-col items-center text-center gap-3 rounded-xl border border-zinc-200/60 bg-white p-4 md:rounded-none md:border-0 md:bg-transparent md:p-0 md:px-8 first:md:pl-0 last:md:pr-0 dark:border-zinc-700 dark:bg-zinc-800 dark:md:bg-transparent">
-                <span className="inline-flex w-9 h-9 shrink-0 rounded-full bg-zinc-900 dark:bg-zinc-100 items-center justify-center text-xs font-extrabold font-mono text-white dark:text-zinc-950 md:w-11 md:h-11 md:text-sm">{item.step}</span>
-                <div className="min-w-0">
-                  <h3 className="text-[15px] font-bold text-zinc-900 md:mt-5 md:text-lg dark:text-zinc-100">{item.title}</h3>
-                  <p className="mt-1.5 text-[13px] leading-6 text-zinc-500 md:mt-3 md:text-sm md:leading-relaxed dark:text-zinc-400">{item.desc}</p>
+          <div className="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-0">
+            {modelStepsKo.map((item, idx) => (
+              <React.Fragment key={item.step}>
+                <div className="flex-1 flex flex-col items-center text-center gap-3 rounded-xl border border-zinc-200/60 bg-white p-4 md:rounded-none md:border-0 md:bg-transparent md:p-0 md:px-8 dark:border-zinc-700 dark:bg-zinc-800 dark:md:bg-transparent">
+                  <span className="inline-flex w-9 h-9 shrink-0 rounded-full bg-zinc-900 dark:bg-zinc-100 items-center justify-center text-xs font-extrabold font-mono text-white dark:text-zinc-950 md:w-11 md:h-11 md:text-sm">{item.step}</span>
+                  <div className="min-w-0">
+                    <h3 className="text-[15px] font-bold text-zinc-900 md:mt-5 md:text-lg dark:text-zinc-100">{item.title}</h3>
+                    <p className="mt-1.5 text-[13px] leading-6 text-zinc-500 md:mt-3 md:text-sm md:leading-relaxed dark:text-zinc-400">{item.desc}</p>
+                  </div>
                 </div>
-              </div>
+                {idx < modelStepsKo.length - 1 && (
+                  <div className="flex items-center justify-center text-zinc-300 dark:text-zinc-600" aria-hidden="true">
+                    <ChevronDown size={20} className="md:hidden" />
+                    <ChevronRight size={20} className="hidden md:block" />
+                  </div>
+                )}
+              </React.Fragment>
             ))}
-          </div>
-          <div className="rounded-xl bg-zinc-950 px-6 py-7 text-center text-white md:px-8 dark:bg-black">
-            <p className="mx-auto text-[15px] font-bold tracking-tight sm:text-lg md:text-xl">저렴한 진입 가격, 전문가 커스터마이즈, 운영 지원까지 한 번의 계약으로 이어집니다.</p>
           </div>
         </div>
       </section>
@@ -480,8 +485,8 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           <div className="flex flex-col items-center gap-6 md:gap-8">
             <SectionHeadingKo
               label="Direction"
-              title={<>템플릿은 상품이 아니라,<br />제작 방향을 고르는 기준입니다.</>}
-              desc="업종과 목적에 맞는 방향을 고르면 아래 갤러리로 바로 이동합니다."
+              title={<>템플릿은 최종 상품이 아니라,<br /><span className="text-[#F1B100]">브랜드 방향의 출발점입니다.</span></>}
+              desc={<>업종과 목적에 맞는 방향을 선택하시면<br />추천 템플릿 리스트로 바로 이동합니다.</>}
             />
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/ko/contact" className="inline-flex items-center justify-center rounded-md bg-[#222222] px-6 py-3.5 text-xs font-extrabold text-[#F1B100] transition-colors hover:bg-[#2B2B2B] hover:text-[#F1B100]">
@@ -496,7 +501,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             {directionsKo.map((item) => (
               <button
                 key={item.title}
-                onClick={() => scrollToTemplates(item.category)}
+                onClick={() => scrollToTemplates(item.filterCategory)}
                 className="group text-left bg-white border border-zinc-200/60 rounded-xl p-4 sm:p-5 md:p-7 hover:border-zinc-400 transition-colors dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-500"
               >
                 <div className="flex items-center justify-between gap-3">
