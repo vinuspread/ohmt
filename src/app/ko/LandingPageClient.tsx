@@ -506,9 +506,8 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                 onClick={() => scrollToTemplates(item.filterCategory)}
                 className="group text-left bg-white border border-zinc-200/60 rounded-xl p-4 sm:p-5 md:p-7 hover:border-zinc-400 transition-colors dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-500"
               >
-                <div className="flex items-center justify-between gap-3">
+                <div className="flex items-center gap-3">
                   <span className="text-[0.62rem] font-bold text-[#F1B100]">{item.badge}</span>
-                  <span className="text-[0.62rem] font-bold text-zinc-400">{item.category}</span>
                 </div>
                 <h3 className="mt-2 text-base sm:text-lg md:text-xl font-bold text-zinc-900 group-hover:text-zinc-700 dark:text-zinc-100 dark:group-hover:text-zinc-300">{item.title}</h3>
                 <p className="mt-2 text-[13px] sm:text-sm leading-6 sm:leading-relaxed text-zinc-500 dark:text-zinc-400">{item.desc}</p>

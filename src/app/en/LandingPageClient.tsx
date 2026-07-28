@@ -2,8 +2,9 @@
 
 import React, { useState, useMemo, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Menu, X, Search, Sparkles, Wrench, ImageOff, Shuffle, ClipboardList, PackageOpen } from "lucide-react";
+import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Menu, X, Search, Sparkles, ImageOff, ClipboardList, PackageOpen } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Logo } from "@/components/Logo";
 import type { PricingPackage } from "@/types/template";
@@ -14,7 +15,7 @@ const HERO_SLIDES = [
     desc: "20 years of expertise, refined down to every detail.",
   },
   {
-    heading: <>Custom features,<br className="hidden sm:block" /> <span className="text-[#F1B100]">built for your goals.</span></>,
+    heading: <>Custom features,<br /> <span className="text-[#F1B100]">built for your goals.</span></>,
     desc: "From memberships to bookings, extended exactly as you need.",
   },
   {
@@ -49,11 +50,15 @@ const ALL_LABEL = "All";
 const POPULAR_TAGS = ["Fashion", "Portfolio", "Agency", "Luxury", "Minimalist"];
 
 const serviceCardsEn = [
-  { icon: Wrench, title: "DIY loses polish fast", desc: "Tools may feel simple, but structure, imagery, and copy quickly expose the limits of a self-made site." },
-  { icon: ImageOff, title: "Content becomes the blocker", desc: "A good layout still needs real words and images before it can become a launchable website." },
-  { icon: Shuffle, title: "The right flow is hard to judge", desc: "Without a clear first screen, section order, and inquiry path, the whole build keeps shifting." },
-  { icon: ClipboardList, title: "Outsourcing gets heavy early", desc: "Quotes, timelines, and feedback loops can turn even a small site into a large project." },
-  { icon: PackageOpen, title: "Launch is not the end", desc: "A site still needs edits, updates, and maintenance after purchase or production." },
+  { icon: ImageOff, title: "Not sure what to include, or how", desc: "You're left figuring out layout and content on your own." },
+  { icon: ClipboardList, title: "The cost feels heavy before you even start", desc: "From quotes to contracts, the barrier to entry is high." },
+  { icon: PackageOpen, title: "Who do you turn to after launch?", desc: "Even a small edit means finding a developer again." },
+];
+
+const solutionsEn = [
+  "We help organize your content and structure together.",
+  "Faster decisions cut both cost and timeline.",
+  "A dedicated team handles edits and upkeep after launch.",
 ];
 
 const modelStepsEn = [
@@ -63,12 +68,12 @@ const modelStepsEn = [
 ];
 
 const directionsEn = [
-  { badge: "Recommended", title: "Brand Launch", desc: "Get a new brand's first official site live, fast.", category: "Brand & Creative" },
-  { badge: "Recommended", title: "Clinic / Hospital", desc: "Build a medical or professional-services site where trust comes first.", category: "Food & Hospitality" },
-  { badge: "Recommended", title: "Studio / Portfolio", desc: "Choose a portfolio structure where the work is the main character.", category: "Brand & Creative" },
-  { badge: "By Industry", title: "F&B / Storefront", desc: "Start with a structure centered on menu, storefront, and reservation flow.", category: "Food & Hospitality" },
-  { badge: "By Industry", title: "B2B Service", desc: "Set up a structure where trust signals and inquiries are clearly visible.", category: "Business & Tech" },
-  { badge: "By Industry", title: "Event / Promotion", desc: "A campaign-style flow built for short bursts of impact.", category: "Retail & Commerce" },
+  { badge: "Recommended", title: "Brand Launch", desc: "Recommended when building a new brand's website.", category: "Brand & Creative", filterCategory: "corporate" },
+  { badge: "Recommended", title: "Clinic / Hospital", desc: "Recommended for trustworthy medical and professional-service sites.", category: "Professional Services", filterCategory: "corporate" },
+  { badge: "Recommended", title: "Studio / Portfolio", desc: "Great for a portfolio structure where the work takes center stage.", category: "Portfolio & Agency", filterCategory: "portfolio" },
+  { badge: "By Industry", title: "F&B / Storefront", desc: "Fits a structure centered on menu, storefront, and reservations.", category: "F&B", filterCategory: "retail" },
+  { badge: "By Industry", title: "B2B Service", desc: "Recommended when trust signals and inquiries need to stand out.", category: "Business & Tech", filterCategory: "corporate" },
+  { badge: "By Industry", title: "Event / Promotion", desc: "Fits a campaign structure built for short bursts of impact.", category: "Event & Campaign", filterCategory: "retail" },
 ];
 
 const carePlansEn = [
@@ -77,11 +82,11 @@ const carePlansEn = [
   { title: "Managed Care", price: "Custom quote", desc: "For teams that need full operational handling, SLAs, and always-on support." },
 ];
 
-function SectionHeadingEn({ label, title, desc }: { label?: string; title: React.ReactNode; desc?: string }) {
+function SectionHeadingEn({ label, title, desc, titleClassName }: { label?: string; title: React.ReactNode; desc?: React.ReactNode; titleClassName?: string }) {
   return (
     <div className="ohmt-section-heading">
       {label && <span className="ohmt-section-label">{label}</span>}
-      <h2 className="ohmt-section-title">{title}</h2>
+      <h2 className={`ohmt-section-title${titleClassName ? ` ${titleClassName}` : ""}`}>{title}</h2>
       {desc && <p className="ohmt-section-desc text-pretty">{desc}</p>}
     </div>
   );
@@ -273,9 +278,9 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           </Link>
           <Link
             href="/en/contact"
-            className="inline-flex items-center justify-center bg-zinc-900 hover:bg-zinc-800 text-white text-[0.7rem] sm:text-xs uppercase tracking-widest font-bold px-3.5 sm:px-5 py-2 sm:py-2.5 transition-colors duration-200 rounded-md whitespace-nowrap dark:bg-zinc-700 dark:hover:bg-zinc-600"
+            className="inline-flex items-center justify-center bg-[#F1B100] hover:bg-[#d99e00] text-zinc-900 text-[0.7rem] sm:text-xs uppercase tracking-widest font-bold px-3.5 sm:px-5 py-2 sm:py-2.5 transition-colors duration-200 rounded-md whitespace-nowrap"
           >
-            Get Started
+            Request a Consultation
           </Link>
           <button
             type="button"
@@ -348,7 +353,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -12 }}
                 transition={{ duration: 0.45, ease: EASE_OUT, delay: 0.05 }}
-                className="mt-6 text-lg md:text-xl text-zinc-500 font-normal leading-relaxed tracking-tight whitespace-pre-line max-w-2xl mx-auto dark:text-zinc-400"
+                className="mt-3 md:mt-6 text-[1rem] md:text-xl text-zinc-500 font-normal leading-relaxed tracking-tight whitespace-pre-line max-w-2xl mx-auto dark:text-zinc-400"
               >
                 {HERO_SLIDES[heroIndex].desc}
               </motion.p>
@@ -396,30 +401,53 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
       <section className="px-5 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16 md:py-28 bg-[#FCFCFD] border-b border-zinc-200/50 dark:bg-zinc-950 dark:border-zinc-800">
         <div className="max-w-[1440px] mx-auto space-y-9 md:space-y-12">
           <SectionHeadingEn
-            title={<>When you need a website,<br />this is where work gets stuck.</>}
-            desc="DIY takes too long. Outsourcing can feel too big. OHMT gives you a clear production standard in between."
+            title={<>When you start building a website,<br /><span className="text-[#F1B100]">this is where most people get stuck.</span></>}
+            desc={<>DIY takes too long, and outsourcing feels like too much.<br />OHMT gives you a way to start right away.</>}
+            titleClassName="text-[28px]! sm:text-4xl! md:text-5xl!"
           />
-          <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-6">
-            {serviceCardsEn.map((item, idx) => (
-              <div key={item.title} className={`flex gap-4 bg-white border border-zinc-200/60 rounded-xl p-5 hover:border-zinc-300 transition-colors sm:block sm:p-6 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600 ${idx < 3 ? "md:col-span-2" : "md:col-span-3"}`}>
-                <item.icon size={28} strokeWidth={1.7} className="mt-0.5 shrink-0 text-zinc-900 sm:mt-0 dark:text-zinc-100" />
-                <div className="min-w-0">
-                  <h3 className="text-[15px] font-bold text-zinc-900 sm:mt-4 sm:text-[17px] dark:text-zinc-100">{item.title}</h3>
-                  <p className="mt-1.5 text-[13px] leading-6 text-zinc-500 sm:mt-2 sm:text-sm sm:leading-relaxed dark:text-zinc-400">{item.desc}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="grid gap-4 rounded-xl border border-zinc-200/70 bg-white p-5 md:grid-cols-[220px_1fr] md:items-center md:p-6 dark:border-zinc-700 dark:bg-zinc-800">
-            <p className="text-sm font-extrabold text-zinc-950 dark:text-zinc-100">How OHMT solves it</p>
-            <div className="grid gap-3 text-sm text-zinc-600 md:grid-cols-3 md:divide-x md:divide-zinc-200 dark:text-zinc-300 dark:md:divide-zinc-700">
-              {["We define the production scope first.", "We fit copy and imagery to the real brand.", "We leave clear rules for edits and operation."].map((text, idx) => (
-                <div key={text} className="flex items-start gap-3 md:px-5 first:md:pl-0 last:md:pr-0">
-                  <span className="font-mono text-xs font-bold text-[#F1B100]">{String(idx + 1).padStart(2, "0")}</span>
-                  <span className="leading-6">{text}</span>
+          {/* Desktop / Tablet: cards grid + single solution bar */}
+          <div className="hidden md:block space-y-9 md:space-y-12">
+            <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-3">
+              {serviceCardsEn.map((item) => (
+                <div key={item.title} className="flex gap-4 bg-white border border-zinc-200/60 rounded-xl p-5 hover:border-zinc-300 transition-colors sm:block sm:p-6 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600">
+                  <item.icon size={28} strokeWidth={1.7} className="mt-0.5 shrink-0 text-zinc-900 sm:mt-0 dark:text-zinc-100" />
+                  <div className="min-w-0">
+                    <h3 className="text-[15px] font-bold text-zinc-900 sm:mt-4 sm:text-[17px] dark:text-zinc-100">{item.title}</h3>
+                    <p className="mt-1.5 text-[13px] leading-6 text-zinc-500 sm:mt-2 sm:text-sm sm:leading-relaxed dark:text-zinc-400">{item.desc}</p>
+                  </div>
                 </div>
               ))}
             </div>
+            <div className="grid gap-4 rounded-xl bg-zinc-950 p-5 md:grid-cols-[220px_1fr] md:items-center md:p-6 dark:bg-white">
+              <p className="text-sm font-extrabold text-white dark:text-zinc-950">How OHMT solves it</p>
+              <div className="grid gap-3 text-sm text-zinc-300 dark:text-zinc-700 md:grid-cols-3 md:divide-x md:divide-zinc-700 dark:md:divide-zinc-200">
+                {solutionsEn.map((text, idx) => (
+                  <div key={text} className="flex items-start gap-3 md:px-5 first:md:pl-0 last:md:pr-0">
+                    <span className="font-mono text-xs font-bold text-[#F1B100]">{String(idx + 1).padStart(2, "0")}</span>
+                    <span className="leading-6">{text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile: problem and solution combined in a single card */}
+          <div className="md:hidden flex flex-col gap-3">
+            {serviceCardsEn.map((item, idx) => (
+              <div key={item.title} className="bg-white border border-zinc-200/60 rounded-xl p-5 dark:bg-zinc-800 dark:border-zinc-700">
+                <div className="flex gap-4">
+                  <item.icon size={28} strokeWidth={1.7} className="mt-0.5 shrink-0 text-zinc-900 dark:text-zinc-100" />
+                  <div className="min-w-0">
+                    <h3 className="text-[15px] font-bold text-zinc-900 dark:text-zinc-100">{item.title}</h3>
+                    <p className="mt-1.5 text-[13px] leading-6 text-zinc-500 dark:text-zinc-400">{item.desc}</p>
+                  </div>
+                </div>
+                <div className="mt-4 pt-4 border-t border-zinc-200/60 flex items-start gap-3 dark:border-zinc-700">
+                  <Image src="/icon.png" alt="" width={20} height={20} className="mt-0.5 shrink-0 rounded-md" />
+                  <p className="text-[13px] leading-6 text-[#F1B100] font-bold">{solutionsEn[idx]}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -428,22 +456,27 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
       <section className="px-5 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16 md:py-28 bg-white border-b border-zinc-200/50 dark:bg-zinc-900 dark:border-zinc-800">
         <div className="max-w-[1440px] mx-auto space-y-9 md:space-y-12">
           <SectionHeadingEn
-            title={<>OHMT doesn't sell templates.<br />It builds from them.</>}
-            desc="Start from a proven direction, not a blank screen. We finish it around your real brand."
+            title={<>We don't sell templates.<br /><span className="text-[#F1B100]">We customize them to your brand.</span></>}
+            desc={<>Choose a template that fits your concept,<br />and we build a website optimized for your brand.</>}
           />
-          <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-0 md:divide-x md:divide-zinc-200 dark:md:divide-zinc-700">
-            {modelStepsEn.map((item) => (
-              <div key={item.step} className="flex flex-col items-center text-center gap-3 rounded-xl border border-zinc-200/60 bg-white p-4 md:rounded-none md:border-0 md:bg-transparent md:p-0 md:px-8 first:md:pl-0 last:md:pr-0 dark:border-zinc-700 dark:bg-zinc-800 dark:md:bg-transparent">
-                <span className="inline-flex w-9 h-9 shrink-0 rounded-full bg-zinc-900 dark:bg-zinc-100 items-center justify-center text-xs font-extrabold font-mono text-white dark:text-zinc-950 md:w-11 md:h-11 md:text-sm">{item.step}</span>
-                <div className="min-w-0">
-                  <h3 className="text-[15px] font-bold text-zinc-900 md:mt-5 md:text-lg dark:text-zinc-100">{item.title}</h3>
-                  <p className="mt-1.5 text-[13px] leading-6 text-zinc-500 md:mt-3 md:text-sm md:leading-relaxed dark:text-zinc-400">{item.desc}</p>
+          <div className="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-0">
+            {modelStepsEn.map((item, idx) => (
+              <React.Fragment key={item.step}>
+                <div className="flex-1 flex flex-col items-center text-center gap-3 rounded-xl border border-zinc-200/60 bg-white p-4 md:rounded-none md:border-0 md:bg-transparent md:p-0 md:px-8 dark:border-zinc-700 dark:bg-zinc-800 dark:md:bg-transparent">
+                  <span className="inline-flex w-9 h-9 shrink-0 rounded-full bg-zinc-900 dark:bg-zinc-100 items-center justify-center text-xs font-extrabold font-mono text-white dark:text-zinc-950 md:w-11 md:h-11 md:text-sm">{item.step}</span>
+                  <div className="min-w-0">
+                    <h3 className="text-[15px] font-bold text-zinc-900 md:mt-5 md:text-lg dark:text-zinc-100">{item.title}</h3>
+                    <p className="mt-1.5 text-[13px] leading-6 text-zinc-500 md:mt-3 md:text-sm md:leading-relaxed dark:text-zinc-400">{item.desc}</p>
+                  </div>
                 </div>
-              </div>
+                {idx < modelStepsEn.length - 1 && (
+                  <div className="flex items-center justify-center text-zinc-300 dark:text-zinc-600" aria-hidden="true">
+                    <ChevronDown size={20} className="md:hidden" />
+                    <ChevronRight size={20} className="hidden md:block" />
+                  </div>
+                )}
+              </React.Fragment>
             ))}
-          </div>
-          <div className="rounded-xl bg-zinc-950 px-6 py-7 text-center text-white md:px-8 dark:bg-black">
-            <p className="mx-auto text-[15px] font-bold tracking-tight sm:text-lg md:text-xl">Affordable entry pricing, expert customization, and ongoing support, all in a single flow.</p>
           </div>
         </div>
       </section>
@@ -454,14 +487,14 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           <div className="flex flex-col items-center gap-6 md:gap-8">
             <SectionHeadingEn
               label="Direction"
-              title={<>A template isn't the product.<br />It's how you choose a direction.</>}
-              desc="Choose the direction that fits your industry, then jump to that gallery category."
+              title={<>A template isn't the final product,<br /><span className="text-[#F1B100]">it's the starting point for your brand direction.</span></>}
+              desc={<>Choose the direction that fits your industry and goals,<br />and jump straight to the recommended template list.</>}
             />
             <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/en/contact" className="inline-flex items-center justify-center rounded-md bg-[#222222] px-6 py-3.5 text-xs font-extrabold uppercase tracking-widest text-[#F1B100] transition-colors hover:bg-[#2B2B2B] hover:text-[#F1B100]">
-                Get Started
+              <Link href="/en/contact" className="w-[140px] sm:w-[200px] md:w-[240px] inline-flex items-center justify-center rounded-md bg-[#F1B100] px-6 md:px-8 py-3.5 md:py-4 text-xs sm:text-sm md:text-base font-extrabold uppercase tracking-widest text-zinc-900 transition-colors hover:bg-[#d99e00]">
+                Request a Consultation
               </Link>
-              <button onClick={() => scrollToTemplates(ALL_LABEL)} className="bg-white border border-zinc-200/70 hover:border-zinc-400 text-zinc-800 text-xs font-bold uppercase tracking-widest px-5 py-3 rounded-md transition-colors dark:bg-zinc-800 dark:border-zinc-700 dark:text-zinc-100">
+              <button onClick={() => scrollToTemplates(ALL_LABEL)} className="w-[140px] sm:w-[200px] md:w-[240px] bg-white border border-zinc-200/70 hover:border-zinc-400 text-zinc-800 text-xs sm:text-sm md:text-base font-bold uppercase tracking-widest px-5 md:px-8 py-3 md:py-4 rounded-md transition-colors">
                 Browse All Templates
               </button>
             </div>
@@ -470,12 +503,11 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             {directionsEn.map((item) => (
               <button
                 key={item.title}
-                onClick={() => scrollToTemplates(item.category)}
+                onClick={() => scrollToTemplates(item.filterCategory)}
                 className="group text-left bg-white border border-zinc-200/60 rounded-xl p-4 sm:p-5 md:p-7 hover:border-zinc-400 transition-colors dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-500"
               >
-                <div className="flex items-center justify-between gap-3">
+                <div className="flex items-center gap-3">
                   <span className="text-[0.62rem] font-bold uppercase tracking-widest text-[#F1B100]">{item.badge}</span>
-                  <span className="text-[0.62rem] font-bold text-zinc-400">{item.category}</span>
                 </div>
                 <h3 className="mt-2 text-base sm:text-lg md:text-xl font-bold text-zinc-900 group-hover:text-zinc-700 dark:text-zinc-100 dark:group-hover:text-zinc-300">{item.title}</h3>
                 <p className="mt-2 text-[13px] sm:text-sm leading-6 sm:leading-relaxed text-zinc-500 dark:text-zinc-400">{item.desc}</p>
