@@ -850,8 +850,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                 <Logo className="block h-6 w-auto" />
               </Link>
               <p className="mt-5 text-sm font-normal leading-[1.7] text-zinc-600 dark:text-zinc-400">
-                템플릿을 기반으로 브랜드에 맞는<br />
-                웹사이트를 제작합니다.
+                템플릿을 기반으로 브랜드에 맞는 웹사이트를 제작합니다.
               </p>
             </div>
 

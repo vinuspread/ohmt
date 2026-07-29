@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   description: "Oh My Template(㈜바이너스프레드)의 개인정보처리방침을 안내합니다.",
   alternates: {
     canonical: "https://ohmt.site/ko/privacy-policy",
+    languages: { en: "https://ohmt.site/en/privacy-policy" },
   },
   robots: { index: true, follow: true },
 };
