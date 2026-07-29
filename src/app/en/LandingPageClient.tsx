@@ -506,12 +506,15 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
               <button
                 key={item.title}
                 onClick={() => scrollToTemplates(item.filterCategory)}
-                className="group text-left bg-white border border-zinc-200/60 rounded-xl p-4 sm:p-5 md:p-7 hover:border-zinc-400 transition-colors dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-500"
+                className="group relative text-left bg-white border border-zinc-200/60 rounded-xl p-4 sm:p-5 md:p-7 hover:border-zinc-400 transition-colors dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-500"
               >
-                <div className="flex items-center gap-3">
+                <span className="absolute top-4 right-4 sm:top-5 sm:right-5 md:top-7 md:right-7 inline-flex items-center justify-center w-8 h-8 rounded-full border border-zinc-200 text-zinc-400 transition-colors group-hover:border-zinc-400 group-hover:text-zinc-900 dark:border-zinc-700 dark:text-zinc-500 dark:group-hover:border-zinc-500 dark:group-hover:text-zinc-100">
+                  <ArrowUpRight size={16} />
+                </span>
+                <div className="flex items-center gap-3 pr-10">
                   <span className="text-[0.62rem] font-bold uppercase tracking-widest text-[#F1B100]">{item.badge}</span>
                 </div>
-                <h3 className="mt-2 text-base sm:text-lg md:text-xl font-bold text-zinc-900 group-hover:text-zinc-700 dark:text-zinc-100 dark:group-hover:text-zinc-300">{item.title}</h3>
+                <h3 className="mt-2 pr-10 text-base sm:text-lg md:text-xl font-bold text-zinc-900 group-hover:text-zinc-700 dark:text-zinc-100 dark:group-hover:text-zinc-300">{item.title}</h3>
                 <p className="mt-2 text-[13px] sm:text-sm leading-6 sm:leading-relaxed text-zinc-500 dark:text-zinc-400">{item.desc}</p>
               </button>
             ))}
@@ -545,10 +548,10 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                 </button>
               )}
             </div>
-            <div className="mt-4 flex flex-wrap items-center justify-center gap-2 text-xs">
-              <span className="font-medium text-zinc-400 dark:text-zinc-500">Popular keywords:</span>
+            <div className="mt-4 flex flex-nowrap items-center gap-2 overflow-x-auto scrollbar-hide text-xs md:flex-wrap md:justify-center md:overflow-visible">
+              <span className="shrink-0 font-medium text-zinc-400 dark:text-zinc-500">Popular keywords:</span>
               {POPULAR_TAGS.map((tag) => (
-                <button key={tag} onClick={() => setSearchTerm(tag)} className="rounded bg-white px-2.5 py-1 text-zinc-600 transition-colors hover:bg-zinc-100 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:bg-zinc-700">
+                <button key={tag} onClick={() => setSearchTerm(tag)} className="shrink-0 rounded bg-white px-2.5 py-1 text-zinc-600 transition-colors hover:bg-zinc-100 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:bg-zinc-700">
                   #{tag}
                 </button>
               ))}
@@ -556,22 +559,12 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           </div>
 
           {/* Category Tabs */}
-          <div className="md:hidden">
-            <label className="mb-2 block text-[0.62rem] font-extrabold uppercase tracking-widest text-zinc-400 dark:text-zinc-500">Category</label>
-            <select
-              value={activeCategory}
-              onChange={(e) => { setActiveCategory(e.target.value); setSearchTerm(""); }}
-              className="w-full rounded-lg border border-zinc-200 bg-white px-4 py-3 text-sm font-bold text-zinc-900 outline-none transition-colors focus:border-zinc-900 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100 dark:focus:border-zinc-500"
-            >
-              {categories.map((cat) => <option key={cat} value={cat}>{cat}</option>)}
-            </select>
-          </div>
-          <div className="hidden md:flex justify-center gap-2 border-b border-zinc-200/60 pb-2 dark:border-zinc-800">
+          <div className="flex justify-start md:justify-center gap-2 overflow-x-auto scrollbar-hide md:overflow-visible border-b border-zinc-200/60 pb-2 dark:border-zinc-800">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => { setActiveCategory(cat); setSearchTerm(""); }}
-                className={`px-4 py-2.5 text-xs font-bold uppercase tracking-wider relative whitespace-nowrap transition-colors ${activeCategory === cat ? "text-zinc-950 font-extrabold dark:text-zinc-100" : "text-zinc-400 hover:text-zinc-950 dark:text-zinc-500 dark:hover:text-zinc-100"}`}
+                className={`shrink-0 px-4 py-2.5 text-xs font-bold uppercase tracking-wider relative whitespace-nowrap transition-colors ${activeCategory === cat ? "text-zinc-950 font-extrabold dark:text-zinc-100" : "text-zinc-400 hover:text-zinc-950 dark:text-zinc-500 dark:hover:text-zinc-100"}`}
               >
                 {cat}
                 {activeCategory === cat && (
@@ -610,38 +603,31 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                         <Link href={template.url} target="_blank" rel="noopener noreferrer" className="relative aspect-[16/8] sm:aspect-[16/9] lg:aspect-[16/10] block overflow-hidden bg-zinc-50 dark:bg-zinc-700">
                           <img src={template.image} alt={template.name} className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out" />
                         </Link>
-                        <div className="p-4 sm:p-5 lg:p-6 space-y-3 lg:space-y-4">
-                          <div className="space-y-1">
-                            <h4 className="truncate text-sm sm:text-base font-bold text-zinc-900 dark:text-zinc-100">{template.name}</h4>
-                            <p className="flex items-center gap-1.5 text-[0.65rem] text-zinc-400 font-bold tracking-wider dark:text-zinc-500">
-                              <span>{template.categories.join(", ")}</span>
-                              <span className="text-zinc-300 dark:text-zinc-600">·</span>
-                              <span className="font-mono">{template.slug}</span>
-                            </p>
+                        <div className="p-4 sm:p-5 lg:p-6 flex flex-col gap-2 lg:gap-3">
+                          <div>
+                            <div className="flex items-center justify-between gap-2">
+                              <h4 className="truncate text-base sm:text-lg font-bold leading-tight text-zinc-900 dark:text-zinc-100">{template.name}</h4>
+                              <button
+                                onClick={() => goToContact('professional', template)}
+                                className="shrink-0 inline-flex items-center justify-center whitespace-nowrap bg-zinc-900 hover:bg-zinc-700 text-white text-[11px] sm:text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full transition-colors dark:bg-zinc-700 dark:hover:bg-zinc-600"
+                              >
+                                Get Started
+                              </button>
+                            </div>
+                            <p className="mt-0.5 font-mono text-[0.7rem] leading-tight text-zinc-400 dark:text-zinc-500">{template.slug}</p>
                           </div>
-                          <div className="space-y-1">
-                            <p className="text-xs sm:text-sm text-zinc-500 leading-relaxed font-normal dark:text-zinc-400 line-clamp-2">{template.desc}</p>
+                          <div>
+                            <p
+                              onClick={() => template.desc && setDescModalTemplate(template)}
+                              className={`text-xs sm:text-sm text-zinc-500 leading-relaxed font-normal dark:text-zinc-400 line-clamp-1 ${template.desc ? "cursor-pointer hover:text-zinc-700 dark:hover:text-zinc-300" : ""}`}
+                            >
+                              {template.desc}
+                            </p>
                             {template.desc && (
-                              <button onClick={() => setDescModalTemplate(template)} className="text-[10px] font-bold text-zinc-400 hover:text-zinc-700 transition-colors dark:text-zinc-500 dark:hover:text-zinc-300">
+                              <button onClick={() => setDescModalTemplate(template)} className="block leading-none text-[10px] font-bold text-zinc-400 hover:text-zinc-700 transition-colors dark:text-zinc-500 dark:hover:text-zinc-300">
                                 More
                               </button>
                             )}
-                          </div>
-                          <div className="flex items-center justify-between gap-2 pt-2 sm:pt-4 border-t border-zinc-100 dark:border-zinc-700">
-                            <Link
-                              href={template.url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="inline-flex items-center gap-1 whitespace-nowrap text-zinc-500 hover:text-zinc-900 text-[10px] sm:text-[11px] font-bold uppercase tracking-wider transition-colors dark:text-zinc-400 dark:hover:text-zinc-100"
-                            >
-                              Live Preview <ArrowUpRight size={11} />
-                            </Link>
-                            <button
-                              onClick={() => goToContact('professional', template)}
-                              className="inline-flex items-center justify-center gap-1.5 whitespace-nowrap bg-zinc-900 hover:bg-zinc-700 text-white text-[10px] sm:text-[11px] font-bold uppercase tracking-wider px-2.5 sm:px-3 py-1.5 rounded transition-colors dark:bg-zinc-700 dark:hover:bg-zinc-600"
-                            >
-                              Get Started
-                            </button>
                           </div>
                         </div>
                     </motion.div>
