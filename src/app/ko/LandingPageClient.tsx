@@ -854,12 +854,17 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
               </p>
             </div>
 
-            <nav aria-label="푸터 메뉴" className="flex flex-col items-start gap-4 text-sm font-bold text-zinc-600 md:flex-row md:items-center md:gap-8 dark:text-zinc-400">
-              <Link href="/ko/contact" className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-100">제작 상담 신청</Link>
+            <nav aria-label="푸터 메뉴" className="flex flex-row flex-wrap items-center gap-3 text-sm font-bold text-zinc-600 dark:text-zinc-400">
+              <Link href="/ko/contact" className="text-[#F1B100] transition-colors hover:text-[#d99e00]">제작 상담 신청</Link>
+              <span aria-hidden="true" className="text-zinc-300 dark:text-zinc-600">|</span>
               <Link href="/ko/privacy-policy" className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-100">개인정보처리방침</Link>
+              <span aria-hidden="true" className="text-zinc-300 dark:text-zinc-600">|</span>
               <Link href="/en" className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-100">English</Link>
               {isAdmin && (
-                <Link href="/admin/templates" className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-100">관리자</Link>
+                <>
+                  <span aria-hidden="true" className="text-zinc-300 dark:text-zinc-600">|</span>
+                  <Link href="/admin/templates" className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-100">관리자</Link>
+                </>
               )}
             </nav>
           </div>

@@ -121,20 +121,57 @@ export default async function ContactPage({
         </Suspense>
       </section>
 
-      <footer className="border-t border-zinc-200/60 bg-[#FCFCFD] dark:border-zinc-800 dark:bg-zinc-950">
-        <div className="px-6 md:px-12 lg:px-20 py-12 max-w-[1440px] mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-            <Link href="/ko" className="flex items-center gap-3 h-6">
-              <Logo className="h-6 w-auto block" />
-            </Link>
-            <div className="flex gap-8 text-xs font-bold text-zinc-400 uppercase tracking-widest dark:text-zinc-500">
-              <Link href="/en/contact" className="hover:text-zinc-950 transition-colors dark:hover:text-zinc-100">English</Link>
-              <Link href="/ko" className="hover:text-zinc-950 transition-colors dark:hover:text-zinc-100">템플릿 보기</Link>
+      <footer className="border-t border-zinc-200/60 bg-[#FCFCFD] px-5 py-12 sm:px-6 sm:py-14 md:px-12 lg:px-20 lg:py-16 dark:border-zinc-800 dark:bg-zinc-950">
+        <div className="mx-auto max-w-[1440px]">
+          <div className="flex flex-col items-start justify-between gap-9 md:flex-row md:gap-12">
+            <div>
+              <Link href="/ko" className="flex h-6 w-fit items-center" aria-label="OH! MY TEMPLATES 홈">
+                <Logo className="block h-6 w-auto" />
+              </Link>
+              <p className="mt-5 text-sm font-normal leading-[1.7] text-zinc-600 dark:text-zinc-400">
+                템플릿을 기반으로 브랜드에 맞는 웹사이트를 제작합니다.
+              </p>
+            </div>
+
+            <nav aria-label="푸터 메뉴" className="flex flex-row flex-wrap items-center gap-3 text-sm font-bold text-zinc-600 dark:text-zinc-400">
+              <Link href="/ko" className="text-[#F1B100] transition-colors hover:text-[#d99e00]">템플릿 보기</Link>
+              <span aria-hidden="true" className="text-zinc-300 dark:text-zinc-600">|</span>
+              <Link href="/ko/privacy-policy" className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-100">개인정보처리방침</Link>
+              <span aria-hidden="true" className="text-zinc-300 dark:text-zinc-600">|</span>
+              <Link href="/en/contact" className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-100">English</Link>
+            </nav>
+          </div>
+
+          <div className="mt-10 border-t border-zinc-200/80 pt-8 text-[0.75rem] font-normal leading-[1.8] text-zinc-600 sm:text-[0.8125rem] dark:border-zinc-800 dark:text-zinc-400">
+            <div className="hidden space-y-0.5 md:block">
+              <p>㈜바이너스프레드 <span aria-hidden="true">|</span> 대표 한성영 <span aria-hidden="true">|</span> 사업자등록번호 305-86-09778</p>
+              <p>서울특별시 강서구 공항대로 227, 12층 1202호 (마곡동, 마곡센트럴타워1차)</p>
+              <p>
+                대표전화 <a href="tel:02-3661-1907" className="underline-offset-4 hover:text-zinc-950 hover:underline dark:hover:text-zinc-100">02-3661-1907</a>
+                <span aria-hidden="true"> | </span>
+                이메일 <a href="mailto:vinus@vinus.co.kr" className="underline-offset-4 hover:text-zinc-950 hover:underline dark:hover:text-zinc-100">vinus@vinus.co.kr</a>
+              </p>
+            </div>
+
+            <div className="space-y-5 md:hidden">
+              <div>
+                <p>㈜바이너스프레드 · 대표 한성영</p>
+                <p>사업자등록번호 305-86-09778</p>
+              </div>
+              <address className="not-italic">
+                서울특별시 강서구 공항대로 227,<br />
+                12층 1202호 (마곡동, 마곡센트럴타워1차)
+              </address>
+              <div className="flex flex-col items-start">
+                <a href="tel:02-3661-1907" className="underline-offset-4 hover:text-zinc-950 hover:underline dark:hover:text-zinc-100">02-3661-1907</a>
+                <a href="mailto:vinus@vinus.co.kr" className="underline-offset-4 hover:text-zinc-950 hover:underline dark:hover:text-zinc-100">vinus@vinus.co.kr</a>
+              </div>
             </div>
           </div>
-          <div className="text-[0.62rem] font-bold text-zinc-400 uppercase tracking-widest mt-8 border-t border-zinc-100 pt-6 dark:text-zinc-500 dark:border-zinc-800">
-            &copy; 2026 Oh My Template. All rights reserved.
-          </div>
+
+          <p className="mt-6 text-[0.6875rem] font-normal leading-relaxed text-zinc-500 dark:text-zinc-500">
+            &copy; 2026 Oh My Template by Vinus Spread. All rights reserved.
+          </p>
         </div>
       </footer>
     </main>

@@ -862,12 +862,17 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
               </p>
             </div>
 
-            <nav aria-label="Footer navigation" className="flex flex-col items-start gap-4 text-sm font-bold text-zinc-600 md:flex-row md:items-center md:gap-8 dark:text-zinc-400">
-              <Link href="/en/contact" className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-100">Get Started</Link>
+            <nav aria-label="Footer navigation" className="flex flex-row flex-wrap items-center gap-3 text-sm font-bold text-zinc-600 dark:text-zinc-400">
+              <Link href="/en/contact" className="text-[#F1B100] transition-colors hover:text-[#d99e00]">Get Started</Link>
+              <span aria-hidden="true" className="text-zinc-300 dark:text-zinc-600">|</span>
               <Link href="/en/privacy-policy" className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-100">Privacy Policy</Link>
+              <span aria-hidden="true" className="text-zinc-300 dark:text-zinc-600">|</span>
               <Link href="/ko" className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-100">Korean</Link>
               {isAdmin && (
-                <Link href="/admin/templates" className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-100">Admin</Link>
+                <>
+                  <span aria-hidden="true" className="text-zinc-300 dark:text-zinc-600">|</span>
+                  <Link href="/admin/templates" className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-100">Admin</Link>
+                </>
               )}
             </nav>
           </div>
