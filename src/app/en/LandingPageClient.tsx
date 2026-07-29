@@ -300,7 +300,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             href="/en/contact"
             className="inline-flex items-center justify-center bg-[#F1B100] hover:bg-[#d99e00] text-zinc-900 text-[0.7rem] sm:text-xs uppercase tracking-widest font-bold px-3.5 sm:px-5 py-2 sm:py-2.5 transition-colors duration-200 rounded-md whitespace-nowrap"
           >
-            Request a Consultation
+            Get Started
           </Link>
           <button
             type="button"
@@ -476,7 +476,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
       <section className="px-5 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16 md:py-28 bg-white border-b border-zinc-200/50 dark:bg-zinc-900 dark:border-zinc-800">
         <div className="max-w-[1440px] mx-auto space-y-9 md:space-y-12">
           <SectionHeadingEn
-            title={<>We don't sell templates.<br /><span className="text-[#F1B100]">We customize them to your brand.</span></>}
+            title={<>We don&apos;t sell templates.<br /><span className="text-[#F1B100]">We customize them to your brand.</span></>}
             desc={<>Choose a template that fits your concept,<br />and we build a website optimized for your brand.</>}
           />
           <div className="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-0">
@@ -507,7 +507,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           <div className="flex flex-col items-center gap-6 md:gap-8">
             <SectionHeadingEn
               label="Direction"
-              title={<>A template isn't the final product,<br /><span className="text-[#F1B100]">it's where your brand direction starts.</span></>}
+              title={<>A template isn&apos;t the final product,<br /><span className="text-[#F1B100]">it&apos;s where your brand direction starts.</span></>}
               desc={<>Choose the direction that fits your industry and goals,<br />and jump straight to the recommended template list.</>}
             />
             <div className="flex flex-wrap justify-center gap-3">
@@ -545,7 +545,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
         <div className="max-w-[1440px] mx-auto space-y-8 md:space-y-12">
           <div className="max-w-[760px] mx-auto space-y-3 text-center">
             <span className="ohmt-section-label">Templates Gallery</span>
-            <h2 className="ohmt-section-title">Find the template you're looking for.</h2>
+            <h2 className="ohmt-section-title">Find the template you&apos;re looking for.</h2>
             <p className="mx-auto max-w-[62ch] text-sm sm:text-lg leading-relaxed text-zinc-500 text-pretty dark:text-zinc-400">Our experts customize it to match your brand.</p>
           </div>
 
@@ -667,15 +667,18 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
         <div className="max-w-[960px] mx-auto space-y-10 md:space-y-16">
           <div className="mx-auto max-w-[840px] space-y-4 text-center">
             <span className="ohmt-section-label">Price Package</span>
-            <h2 className="ohmt-section-title mx-auto max-w-[820px]">Choose the scope that fits your project.</h2>
-            <p className="ohmt-section-desc max-w-[72ch] text-pretty">Starter packages start at $4,200 for a fast turnaround.<br />Your final quote depends on page count, features, and scope.</p>
+            <h2 className="ohmt-section-title mx-auto max-w-[820px]">Choose the package that fits your project.</h2>
+            <p className="ohmt-section-desc max-w-[72ch] text-pretty">
+              Pricing varies based on the number of pages, revision scope,<br className="hidden sm:block" />
+              {" "}additional features, and ongoing support.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
             {packages.map((pkg) => (
               <div
                 key={pkg.id}
-                className={`relative rounded-xl p-6 border-2 transition-all duration-300 ${
+                className={`relative min-w-0 rounded-xl p-6 border-2 transition-all duration-300 ${
                   pkg.is_recommended
                     ? 'bg-[#FFFBEB] border-[#F1B100] shadow-lg shadow-[#F1B100]/10 dark:bg-zinc-800 dark:border-[#F1B100]'
                     : 'bg-white border-transparent border-zinc-200/60 hover:border-zinc-300 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600'
@@ -694,14 +697,14 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                     <p className="text-sm text-zinc-400 dark:text-zinc-500">{pkg.description}</p>
                   </div>
                   <div>
-                    <span className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-zinc-100">{pkg.price}</span>
+                    <span className="break-words text-3xl font-extrabold text-zinc-900 [overflow-wrap:anywhere] sm:text-4xl dark:text-zinc-100">{pkg.price}</span>
                     <span className="text-xs text-zinc-400 font-medium block mt-1 dark:text-zinc-500">Delivery: {pkg.duration}</span>
                   </div>
                   <ul className="space-y-3.5 pt-6 border-t border-zinc-100 dark:border-zinc-700">
                     {pkg.features.map((feature, fidx) => (
-                      <li key={fidx} className="flex gap-2.5 items-start text-sm text-zinc-600 dark:text-zinc-400">
+                      <li key={fidx} className="flex min-w-0 items-start gap-2.5 text-sm text-zinc-600 dark:text-zinc-400">
                         <span className="text-[#F1B100] font-bold flex-shrink-0">✓</span>
-                        <span>{feature}</span>
+                        <span className="min-w-0 break-words [overflow-wrap:anywhere]">{feature}</span>
                       </li>
                     ))}
                   </ul>
@@ -709,9 +712,15 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
               </div>
             ))}
           </div>
-          <p className="ohmt-note-line">
-            Pricing note: page count, customization scope, feature integrations, and operational cadence affect the final quote. We narrow the scope during consultation before confirming your quote.
-          </p>
+          <div className="mx-auto max-w-[720px] space-y-2 text-center text-xs font-normal leading-relaxed text-zinc-600 sm:text-sm dark:text-zinc-400">
+            <p className="text-pretty">
+              After you submit an inquiry, our team will confirm the scope<br className="hidden sm:block" />
+              {" "}by email or an online meeting and provide a detailed quote.
+            </p>
+            {!packages.some((pkg) => /\b(?:VAT|tax(?:es)?)\b/i.test(pkg.price)) && (
+              <p>Taxes, if applicable, are quoted separately.</p>
+            )}
+          </div>
         </div>
       </section>
 
