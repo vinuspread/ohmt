@@ -870,11 +870,11 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             <p className="ohmt-section-desc">Starter 패키지로 200만원에 빠르게 제작 가능합니다.<br />원하시는 페이지 수, 기능과 범위에 따라 최종 견적은 달라질 수 있습니다.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
+          <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 sm:-mx-6 sm:px-6 md:mx-0 md:px-0 md:grid md:grid-cols-3 md:gap-4 md:overflow-visible md:items-stretch">
             {packages.map((pkg) => (
               <div
                 key={pkg.id}
-                className={`relative rounded-xl p-6 border-2 transition-all duration-300 ${
+                className={`shrink-0 w-[80%] sm:w-[320px] snap-center relative rounded-xl p-5 border-2 transition-all duration-300 md:w-auto md:shrink md:snap-none md:p-6 ${
                   pkg.is_recommended
                     ? 'bg-[#FFFBEB] border-[#F1B100] shadow-lg shadow-[#F1B100]/10 dark:bg-zinc-800 dark:border-[#F1B100]'
                     : 'bg-white border-transparent border-zinc-200/60 hover:border-zinc-300 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600'
