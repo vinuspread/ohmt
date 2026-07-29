@@ -702,17 +702,17 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
         <div className="max-w-[1440px] mx-auto space-y-10 md:space-y-16">
           <div className="mx-auto max-w-[840px] space-y-4 text-center">
             <span className="ohmt-section-label">Process</span>
-            <h2 className="ohmt-section-title mx-auto max-w-[820px]">Five steps,<br />from consultation to operation</h2>
-            <p className="ohmt-section-desc max-w-[68ch] text-pretty">Template choice is only the start. Direction, production, and post-launch support stay in one flow.</p>
+            <h2 className="ohmt-section-title mx-auto max-w-[820px]">How your website comes together.</h2>
+            <p className="ohmt-section-desc max-w-[68ch] text-pretty">From consultation to planning, production, and post-launch support, all in one flow.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr_auto_1fr] gap-4 md:gap-2">
             {[
-              { step: "01", title: 'Consultation', desc: 'We confirm industry, purpose, budget, and target launch date, then narrow the production scope.' },
-              { step: "02", title: 'Choose Direction', desc: 'Pick a template direction matching your brand tone and goals, and define the sections you need.' },
-              { step: "03", title: 'Production', desc: 'Copy, imagery, color, and structure are adjusted to fit your real brand.' },
-              { step: "04", title: 'Launch', desc: 'We verify responsive layout, links, meta tags, basic SEO, and inquiry flow, then deploy.' },
-              { step: "05", title: 'Operate', desc: 'A Care plan carries you through edits, content updates, and feature improvements.' }
+              { step: "01", title: 'Consultation', desc: <>We confirm your industry, purpose, budget,<br />and target launch date.</> },
+              { step: "02", title: 'Choose Direction', desc: <>We settle on a template and page structure<br />that fits your brand.</> },
+              { step: "03", title: 'Production', desc: <>Copy, imagery, and layout are built out<br />to match your brand.</> },
+              { step: "04", title: 'Launch', desc: <>We QA every feature,<br />then launch the site.</> },
+              { step: "05", title: 'Operate', desc: <>Basic support is included,<br />with professional Care plans available for more.</> }
             ].map((item, idx, arr) => (
               <React.Fragment key={idx}>
                 <div className="flex items-start gap-4 bg-[#FCFCFD] border border-zinc-200/60 p-4 sm:p-6 rounded-xl text-left sm:gap-6 hover:border-zinc-300 transition-colors duration-200 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600 md:flex-col md:items-center md:gap-3 md:text-center">

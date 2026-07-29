@@ -703,17 +703,17 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
         <div className="max-w-[1440px] mx-auto space-y-10 md:space-y-16">
           <div className="space-y-4 text-center">
             <span className="ohmt-section-label">Process</span>
-            <h2 className="ohmt-section-title">상담에서 운영까지 이어지는 5단계</h2>
-            <p className="ohmt-section-desc">템플릿 선택만으로 끝내지 않고, 방향 설정부터 오픈 이후 대응까지 같은 흐름에서 관리합니다.</p>
+            <h2 className="ohmt-section-title">아래의 프로세스에 따라 제작됩니다.</h2>
+            <p className="ohmt-section-desc">상담을 시작으로 기획, 제작, 오픈 후 운영까지 지원합니다.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr_auto_1fr_auto_1fr] gap-4 md:gap-2">
             {[
-              { step: "01", title: '상담', desc: '업종, 목적, 예산, 오픈 희망일을 확인합니다.' },
-              { step: "02", title: '방향 선택', desc: '브랜드 톤에 맞는 방향과 섹션을 정합니다.' },
-              { step: "03", title: '제작', desc: '카피, 이미지, 구조를 브랜드에 맞게 조정합니다.' },
-              { step: "04", title: '오픈', desc: '반응형, 링크, 메타, 문의 흐름을 확인합니다.' },
-              { step: "05", title: '운영', desc: '수정, 업데이트, 기능 보완을 이어갑니다.' }
+              { step: "01", title: '상담', desc: <>업종, 목적, 예산과<br />원하는 오픈 일정을 확인합니다.</> },
+              { step: "02", title: '방향 선택', desc: <>브랜드에 맞는 템플릿과<br />페이지 구성을 정합니다.</> },
+              { step: "03", title: '제작', desc: <>문구, 이미지와 화면 구성을<br />브랜드에 맞게 제작합니다.</> },
+              { step: "04", title: '오픈', desc: <>구현된 기능의 QA 진행 후<br />사이트를 오픈 합니다.</> },
+              { step: "05", title: '운영 지원', desc: <>기본 운영 지원 외<br />전문적인 캐어 플랜도 선택가능합니다.</> }
             ].map((item, idx, arr) => (
               <React.Fragment key={idx}>
                 <div className="flex items-start gap-4 bg-[#FCFCFD] border border-zinc-200/60 p-4 sm:p-6 rounded-xl text-left sm:gap-6 hover:border-zinc-300 transition-colors duration-200 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600 md:flex-col md:items-center md:gap-3 md:text-center">
