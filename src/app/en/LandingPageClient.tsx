@@ -77,9 +77,27 @@ const directionsEn = [
 ];
 
 const carePlansEn = [
-  { title: "Basic Care", price: "$150/mo (excl. VAT)", desc: "Covers error response and small fixes to keep operations stable." },
-  { title: "Growth Care", price: "$300/mo (excl. VAT)", desc: "Includes content updates, page additions, and campaign rollout." },
-  { title: "Managed Care", price: "Custom quote", desc: "For teams that need full operational handling, SLAs, and always-on support." },
+  {
+    title: "Basic Care",
+    price: "$150/mo (excl. VAT)",
+    desc: "We handle error checks and simple copy or image edits.",
+    features: ["Error fixes within the original scope", "Copy and image swaps", "Link and inquiry form checks", "2 small edit requests per month"],
+    note: "New pages or features aren't included.",
+  },
+  {
+    title: "Growth Care",
+    price: "$300/mo (excl. VAT)",
+    desc: "For sites that need regular content updates.",
+    features: ["Everything in Basic Care", "4 content update requests per month", "Improvements to existing pages", "Event and promotion rollout"],
+    note: "New feature development or major structural changes require a separate quote.",
+  },
+  {
+    title: "Managed Care",
+    price: "Custom quote",
+    desc: "A plan for companies that want to hand off day-to-day site operations to a dedicated team.",
+    features: ["A dedicated account manager", "Regular content updates", "Edits on your operating schedule", "Monthly activity summary"],
+    note: "We provide a quote after reviewing your operating scope and request frequency.",
+  },
 ];
 
 function SectionHeadingEn({ label, title, desc, titleClassName }: { label?: string; title: React.ReactNode; desc?: React.ReactNode; titleClassName?: string }) {
@@ -738,27 +756,35 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
         <div className="max-w-[1440px] mx-auto space-y-9 md:space-y-12">
           <SectionHeadingEn
             label="Maintenance"
-            title={<>Launch isn't the finish line.<br />Real operation starts after that.</>}
-            desc="Launch day is not the end. We continue with fixes, content updates, and operational support as needed."
+            title={<>The support you need most after launch,<br />we can handle that too.</>}
+            desc={<>From fixing errors to updating copy, images, and content,<br />choose the plan that matches what you need.</>}
           />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:items-center">
+          <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 sm:-mx-6 sm:px-6 md:mx-0 md:px-0 md:grid md:grid-cols-3 md:gap-5 md:overflow-visible md:items-stretch">
             {carePlansEn.map((plan, idx) => (
               <div
                 key={plan.title}
                 className={idx === 1
-                  ? "bg-zinc-950 text-white rounded-xl p-6 sm:p-7 md:p-8 shadow-xl dark:bg-black"
-                  : "bg-white border border-zinc-200/60 rounded-xl p-5 sm:p-6 md:p-7 hover:border-zinc-300 transition-colors dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600"
+                  ? "shrink-0 w-[72%] sm:w-[300px] snap-center flex flex-col gap-4 bg-zinc-950 text-white rounded-xl p-5 shadow-xl md:w-auto md:shrink md:snap-none md:gap-5 md:p-8 dark:bg-black"
+                  : "shrink-0 w-[72%] sm:w-[300px] snap-center flex flex-col gap-4 bg-white border border-zinc-200/60 rounded-xl p-4 hover:border-zinc-300 transition-colors md:w-auto md:shrink md:snap-none md:gap-5 md:p-7 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600"
                 }
               >
                 <div className="flex flex-col gap-2">
-                  <h3 className={idx === 1 ? "text-lg font-bold text-white" : "text-lg font-bold text-zinc-900 dark:text-zinc-100"}>{plan.title}</h3>
-                  <p className="text-lg font-extrabold leading-none text-[#F1B100] md:text-xl">{plan.price}</p>
+                  <h3 className={idx === 1 ? "text-base sm:text-lg font-bold text-white" : "text-base sm:text-lg font-bold text-zinc-900 dark:text-zinc-100"}>{plan.title}</h3>
+                  <p className="text-base sm:text-lg font-extrabold leading-none text-[#F1B100] md:text-xl">{plan.price}</p>
+                  <p className={idx === 1 ? "text-xs sm:text-sm leading-relaxed text-zinc-300" : "text-xs sm:text-sm leading-relaxed text-zinc-500 dark:text-zinc-400"}>{plan.desc}</p>
                 </div>
-                <p className={idx === 1 ? "mt-4 text-sm leading-relaxed text-zinc-300" : "mt-4 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400"}>{plan.desc}</p>
+                <ul className={idx === 1 ? "space-y-2 sm:space-y-2.5 text-xs sm:text-sm text-zinc-300" : "space-y-2 sm:space-y-2.5 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400"}>
+                  {plan.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-2">
+                      <span className="text-[#F1B100] font-bold flex-shrink-0">✓</span>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className={idx === 1 ? "mt-auto pt-4 sm:pt-5 border-t border-zinc-800 text-[11px] sm:text-xs leading-relaxed text-zinc-400" : "mt-auto pt-4 sm:pt-5 border-t border-zinc-100 text-[11px] sm:text-xs leading-relaxed text-zinc-400 dark:border-zinc-700 dark:text-zinc-500"}>{plan.note}</p>
               </div>
             ))}
           </div>
-          <p className="mx-auto max-w-3xl text-center text-xs leading-relaxed text-zinc-400 sm:text-sm dark:text-zinc-500">New features are judged by operating frequency, not technical difficulty.</p>
         </div>
       </section>
 

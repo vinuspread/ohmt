@@ -77,9 +77,27 @@ const directionsKo = [
 ];
 
 const carePlansKo = [
-  { title: "Basic Care", price: "월 20만원 (VAT별도)", desc: "오류 대응과 작은 수정으로 운영 안정성을 챙깁니다." },
-  { title: "Growth Care", price: "월 40만원 (VAT별도)", desc: "콘텐츠 업데이트, 페이지 보완, 캠페인 반영을 포함합니다." },
-  { title: "Managed Care", price: "별도협의", desc: "운영 대행, SLA, 상시 응대가 필요한 팀용 플랜입니다." },
+  {
+    title: "Basic Care",
+    price: "월 20만원 (VAT별도)",
+    desc: "오류 점검과 간단한 문구·이미지 수정을 지원합니다.",
+    features: ["제작 범위 내 오류 대응", "문구·이미지 교체", "링크와 문의 폼 점검", "월 소규모 수정 요청 2회"],
+    note: "새로운 페이지나 기능 추가는 포함되지 않습니다.",
+  },
+  {
+    title: "Growth Care",
+    price: "월 40만원 (VAT별도)",
+    desc: "콘텐츠를 꾸준히 업데이트하는 사이트를 관리합니다.",
+    features: ["Basic Care 전체", "월 콘텐츠 수정 요청 4회", "기존 페이지 내용 보완", "이벤트·프로모션 반영"],
+    note: "새로운 기능 개발이나 큰 구조 변경은 별도 견적이 필요합니다.",
+  },
+  {
+    title: "Managed Care",
+    price: "별도협의",
+    desc: "운영업무를 전담 팀에 맡길 수 있는 기업 플랜입니다.",
+    features: ["전담 담당자 배정", "정기적인 콘텐츠 업데이트", "운영 일정에 따른 수정 반영", "월간 작업 내역 정리"],
+    note: "운영 범위와 요청 빈도를 확인한 뒤 견적을 안내합니다.",
+  },
 ];
 
 function SectionHeadingKo({ label, title, desc, titleClassName }: { label?: string; title: React.ReactNode; desc?: React.ReactNode; titleClassName?: string }) {
@@ -739,27 +757,35 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
         <div className="max-w-[1440px] mx-auto space-y-9 md:space-y-12">
           <SectionHeadingKo
             label="Maintenance"
-            title={<>오픈이 끝이 아닙니다.<br />진짜 운영은 그 다음부터입니다.</>}
-            desc="사이트는 오픈한 날 끝나지 않습니다. 오류 대응, 콘텐츠 업데이트, 운영 대행까지 필요한 빈도에 맞춰 이어갑니다."
+            title={<>오픈 후 가장 필요한<br />운영/관리도 맡기실 수 있습니다.</>}
+            desc={<>오류 대응부터 문구 · 이미지 · 콘텐츠까지<br />필요한 범위의 플랜을 선택하세요.</>}
           />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:items-center">
+          <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory scrollbar-hide -mx-5 px-5 sm:-mx-6 sm:px-6 md:mx-0 md:px-0 md:grid md:grid-cols-3 md:gap-5 md:overflow-visible md:items-stretch">
             {carePlansKo.map((plan, idx) => (
               <div
                 key={plan.title}
                 className={idx === 1
-                  ? "bg-zinc-950 text-white rounded-xl p-6 sm:p-7 md:p-8 shadow-xl dark:bg-black"
-                  : "bg-white border border-zinc-200/60 rounded-xl p-5 sm:p-6 md:p-7 hover:border-zinc-300 transition-colors dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600"
+                  ? "shrink-0 w-[72%] sm:w-[300px] snap-center flex flex-col gap-4 bg-zinc-950 text-white rounded-xl p-5 shadow-xl md:w-auto md:shrink md:snap-none md:gap-5 md:p-8 dark:bg-black"
+                  : "shrink-0 w-[72%] sm:w-[300px] snap-center flex flex-col gap-4 bg-white border border-zinc-200/60 rounded-xl p-4 hover:border-zinc-300 transition-colors md:w-auto md:shrink md:snap-none md:gap-5 md:p-7 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600"
                 }
               >
                 <div className="flex flex-col gap-2">
-                  <h3 className={idx === 1 ? "text-lg font-bold text-white" : "text-lg font-bold text-zinc-900 dark:text-zinc-100"}>{plan.title}</h3>
-                  <p className="text-lg font-extrabold leading-none text-[#F1B100] md:text-xl">{plan.price}</p>
+                  <h3 className={idx === 1 ? "text-base sm:text-lg font-bold text-white" : "text-base sm:text-lg font-bold text-zinc-900 dark:text-zinc-100"}>{plan.title}</h3>
+                  <p className="text-base sm:text-lg font-extrabold leading-none text-[#F1B100] md:text-xl">{plan.price}</p>
+                  <p className={idx === 1 ? "text-xs sm:text-sm leading-relaxed text-zinc-300" : "text-xs sm:text-sm leading-relaxed text-zinc-500 dark:text-zinc-400"}>{plan.desc}</p>
                 </div>
-                <p className={idx === 1 ? "mt-4 text-sm leading-relaxed text-zinc-300" : "mt-4 text-sm leading-relaxed text-zinc-500 dark:text-zinc-400"}>{plan.desc}</p>
+                <ul className={idx === 1 ? "space-y-2 sm:space-y-2.5 text-xs sm:text-sm text-zinc-300" : "space-y-2 sm:space-y-2.5 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400"}>
+                  {plan.features.map((feature) => (
+                    <li key={feature} className="flex items-start gap-2">
+                      <span className="text-[#F1B100] font-bold flex-shrink-0">✓</span>
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className={idx === 1 ? "mt-auto pt-4 sm:pt-5 border-t border-zinc-800 text-[11px] sm:text-xs leading-relaxed text-zinc-400" : "mt-auto pt-4 sm:pt-5 border-t border-zinc-100 text-[11px] sm:text-xs leading-relaxed text-zinc-400 dark:border-zinc-700 dark:text-zinc-500"}>{plan.note}</p>
               </div>
             ))}
           </div>
-          <p className="mx-auto max-w-3xl text-center text-xs leading-relaxed text-zinc-400 sm:text-sm dark:text-zinc-500">추가 기능은 기능 난이도보다 운영 빈도로 판단합니다.</p>
         </div>
       </section>
 
