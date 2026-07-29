@@ -475,7 +475,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                 type="button"
                 onClick={handleCloseMenu}
                 aria-label="메뉴 닫기"
-                className="flex h-10 w-10 shrink-0 items-center justify-center text-white transition-colors active:text-[#F1B100]"
+                className="flex h-10 w-10 shrink-0 items-center justify-center text-white outline-none transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F1B100] active:text-[#F1B100]"
               >
                 <X size={24} />
               </button>
@@ -496,7 +496,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                         ref={index === 0 ? firstMenuItemRef : undefined}
                         href={item.href}
                         onClick={handleCloseMenu}
-                        className={`flex min-h-11 w-full items-center text-[clamp(1.5rem,9vw,2.75rem)] font-bold leading-[1.05] transition-transform active:translate-x-1 ${item.isCta ? "text-[#F1B100] active:text-[#d99e00]" : "text-white active:text-[#F1B100]"}`}
+                        className={`flex min-h-11 w-full items-center text-[clamp(1.5rem,9vw,2.75rem)] font-bold leading-[1.05] outline-none transition-transform focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F1B100] active:translate-x-1 ${item.isCta ? "text-[#F1B100] active:text-[#d99e00]" : "text-white active:text-[#F1B100]"}`}
                       >
                         {item.label}
                       </Link>
@@ -505,7 +505,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                         ref={index === 0 ? firstMenuItemRef : undefined}
                         href={item.href}
                         onClick={handleCloseMenu}
-                        className="flex min-h-11 w-full items-center text-[clamp(1.5rem,9vw,2.75rem)] font-bold leading-[1.05] text-white transition-transform active:translate-x-1 active:text-[#F1B100]"
+                        className="flex min-h-11 w-full items-center text-[clamp(1.5rem,9vw,2.75rem)] font-bold leading-[1.05] text-white outline-none transition-transform focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F1B100] active:translate-x-1 active:text-[#F1B100]"
                       >
                         {item.label}
                       </a>
@@ -524,7 +524,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                 exit={{ opacity: 0, transition: { duration: 0.15 } }}
                 className="mt-8 border-t border-zinc-800 pt-5"
               >
-                <Link href="/en" onClick={handleCloseMenu} className="inline-flex min-h-11 items-center text-[1.375rem] font-bold text-zinc-300 active:text-[#F1B100]">
+                <Link href="/en" onClick={handleCloseMenu} className="inline-flex min-h-11 items-center text-[1.375rem] font-bold text-zinc-300 outline-none focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F1B100] active:text-[#F1B100]">
                   English
                 </Link>
               </motion.div>
