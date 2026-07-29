@@ -660,27 +660,36 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
 
       {/* Pricing Section */}
       <section id="pricing" className="px-5 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16 md:py-32 bg-[#FCFCFD] border-t border-zinc-200/50 dark:bg-zinc-950 dark:border-zinc-800">
-        <div className="max-w-[1440px] mx-auto space-y-10 md:space-y-16">
+        <div className="max-w-[960px] mx-auto space-y-10 md:space-y-16">
           <div className="mx-auto max-w-[840px] space-y-4 text-center">
             <span className="ohmt-section-label">Price Package</span>
-            <h2 className="ohmt-section-title mx-auto max-w-[820px]">Faster than outsourcing,<br />more polished than DIY.</h2>
-            <p className="ohmt-section-desc max-w-[72ch] text-pretty">Quotes are confirmed after consultation. Use these prices to gauge production depth and support scope.</p>
+            <h2 className="ohmt-section-title mx-auto max-w-[820px]">Choose the scope that fits your project.</h2>
+            <p className="ohmt-section-desc max-w-[72ch] text-pretty">Starter packages start at $4,200 for a fast turnaround.<br />Your final quote depends on page count, features, and scope.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-stretch">
             {packages.map((pkg) => (
               <div
                 key={pkg.id}
-                className={`bg-white rounded-xl p-6 border transition-all duration-300 dark:bg-zinc-800 dark:border-zinc-700 ${
-                  pkg.is_recommended ? 'border-[#F1B100]/50 dark:border-[#F1B100]/40' : 'border-zinc-200/60 hover:border-zinc-300 dark:hover:border-zinc-600'
+                className={`relative rounded-xl p-6 border-2 transition-all duration-300 ${
+                  pkg.is_recommended
+                    ? 'bg-[#FFFBEB] border-[#F1B100] shadow-lg shadow-[#F1B100]/10 dark:bg-zinc-800 dark:border-[#F1B100]'
+                    : 'bg-white border-transparent border-zinc-200/60 hover:border-zinc-300 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600'
                 }`}
               >
                 <div className="space-y-6">
                   <div className="space-y-1">
-                    <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">{pkg.name}</h3>
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">{pkg.name}</h3>
+                      {pkg.is_recommended && (
+                        <span className="inline-flex items-center rounded-full bg-[#F1B100] px-2.5 py-1 text-[0.65rem] font-bold uppercase tracking-widest text-zinc-900">
+                          Recommended
+                        </span>
+                      )}
+                    </div>
                     <p className="text-sm text-zinc-400 dark:text-zinc-500">{pkg.description}</p>
                   </div>
-                  <div className="border-t border-zinc-100 dark:border-zinc-700 pt-6">
+                  <div>
                     <span className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-zinc-100">{pkg.price}</span>
                     <span className="text-xs text-zinc-400 font-medium block mt-1 dark:text-zinc-500">Delivery: {pkg.duration}</span>
                   </div>
