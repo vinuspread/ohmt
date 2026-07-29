@@ -227,7 +227,8 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
       const matchSearch = t.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           t.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           t.categories.some((c) => c.toLowerCase().includes(searchTerm.toLowerCase())) ||
-                          t.hashtags.some((h) => h.replace(/^#/, "").toLowerCase().includes(searchTerm.toLowerCase()));
+                          t.hashtags.some((h) => h.replace(/^#/, "").toLowerCase().includes(searchTerm.toLowerCase())) ||
+                          t.applicableIndustries.some((i) => i.toLowerCase().includes(searchTerm.toLowerCase()));
       return matchCategory && matchSearch;
     });
   }, [activeCategory, searchTerm, templates]);
