@@ -39,6 +39,7 @@ const MOBILE_NAV_ITEMS_KO = [
   { href: "#pricing", label: "가격" },
   { href: "#process", label: "프로세스" },
   { href: "#faq", label: "FAQ" },
+  { href: "/ko/contact", label: "제작 상담 신청", isCta: true },
 ];
 const MOBILE_MENU_LIST_VARIANTS = {
   hidden: {},
@@ -468,24 +469,16 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             >
             <div className="flex min-h-16 items-center justify-between gap-2 px-5 py-4 sm:px-6">
               <Link href="/ko" onClick={handleCloseMenu} className="flex h-6 shrink-0 items-center" aria-label="OH! MY TEMPLATES 홈">
-                <Logo className="block h-6 w-auto brightness-0 invert" />
+                <Image src="/logo_white.svg" alt="Oh My Template" width={228} height={62} className="block h-6 w-auto" style={{ height: "100%", width: "auto" }} priority />
               </Link>
-              <div className="flex min-w-0 items-center gap-2">
-                <Link
-                  href="/ko/contact"
-                  className="inline-flex items-center justify-center whitespace-nowrap rounded-md bg-[#F1B100] px-3 py-2 text-[0.65rem] font-bold text-zinc-900 transition-colors active:bg-[#d99e00]"
-                >
-                  제작 상담 신청
-                </Link>
-                <button
-                  type="button"
-                  onClick={handleCloseMenu}
-                  aria-label="메뉴 닫기"
-                  className="flex h-10 w-10 shrink-0 items-center justify-center text-white transition-colors active:text-[#F1B100]"
-                >
-                  <X size={24} />
-                </button>
-              </div>
+              <button
+                type="button"
+                onClick={handleCloseMenu}
+                aria-label="메뉴 닫기"
+                className="flex h-10 w-10 shrink-0 items-center justify-center text-white transition-colors active:text-[#F1B100]"
+              >
+                <X size={24} />
+              </button>
             </div>
 
             <div className="flex min-h-0 flex-1 flex-col justify-center px-5 pb-6 sm:px-6">
@@ -494,18 +487,29 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                 initial="hidden"
                 animate="visible"
                 exit="hidden"
-                className="flex flex-col gap-1"
+                className="flex flex-col gap-2"
               >
                 {MOBILE_NAV_ITEMS_KO.map((item, index) => (
                   <motion.li key={item.href} variants={MOBILE_MENU_ITEM_VARIANTS}>
-                    <a
-                      ref={index === 0 ? firstMenuItemRef : undefined}
-                      href={item.href}
-                      onClick={handleCloseMenu}
-                      className="flex min-h-14 w-full items-center text-[clamp(2.5rem,11vw,3.25rem)] font-bold leading-[1.05] text-white transition-transform active:translate-x-1 active:text-[#F1B100]"
-                    >
-                      {item.label}
-                    </a>
+                    {item.href.startsWith("/") ? (
+                      <Link
+                        ref={index === 0 ? firstMenuItemRef : undefined}
+                        href={item.href}
+                        onClick={handleCloseMenu}
+                        className={`flex min-h-11 w-full items-center text-[clamp(1.5rem,9vw,2.75rem)] font-bold leading-[1.05] transition-transform active:translate-x-1 ${item.isCta ? "text-[#F1B100] active:text-[#d99e00]" : "text-white active:text-[#F1B100]"}`}
+                      >
+                        {item.label}
+                      </Link>
+                    ) : (
+                      <a
+                        ref={index === 0 ? firstMenuItemRef : undefined}
+                        href={item.href}
+                        onClick={handleCloseMenu}
+                        className="flex min-h-11 w-full items-center text-[clamp(1.5rem,9vw,2.75rem)] font-bold leading-[1.05] text-white transition-transform active:translate-x-1 active:text-[#F1B100]"
+                      >
+                        {item.label}
+                      </a>
+                    )}
                   </motion.li>
                 ))}
               </motion.ul>
@@ -521,7 +525,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                 className="mt-8 border-t border-zinc-800 pt-5"
               >
                 <Link href="/en" onClick={handleCloseMenu} className="inline-flex min-h-11 items-center text-[1.375rem] font-bold text-zinc-300 active:text-[#F1B100]">
-                  EN
+                  English
                 </Link>
               </motion.div>
             </div>
