@@ -92,7 +92,7 @@ export default async function ContactPage({
   return (
     <main className="min-h-screen bg-[#FCFCFD] text-zinc-900 font-sans antialiased dark:bg-zinc-950 dark:text-zinc-100">
       <header className="bg-white border-b border-zinc-200/60 sticky top-0 z-40 dark:bg-zinc-900 dark:border-zinc-800">
-        <div className="px-6 md:px-12 lg:px-20 py-4 max-w-[1440px] mx-auto flex justify-between items-center">
+        <div className="px-5 sm:px-6 md:px-12 lg:px-20 py-4 max-w-[1440px] mx-auto flex justify-between items-center">
           <Link href="/ko" className="flex items-center gap-3 h-6">
             <Logo className="h-6 w-auto block" />
           </Link>
@@ -102,7 +102,7 @@ export default async function ContactPage({
         </div>
       </header>
 
-      <section className="px-6 md:px-12 lg:px-20 py-20 max-w-[1440px] mx-auto">
+      <section className="px-5 sm:px-6 md:px-12 lg:px-20 py-20 max-w-[1440px] mx-auto">
         <Link href="/ko" className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-bold text-zinc-400 hover:text-zinc-900 transition-colors mb-12 dark:text-zinc-500 dark:hover:text-zinc-100">
           <ArrowLeft size={14} />
           뒤로

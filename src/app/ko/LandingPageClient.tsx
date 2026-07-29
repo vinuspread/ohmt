@@ -817,7 +817,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                       transition={{ duration: 0.25, delay: showAllTemplates && idx >= 8 ? (idx - 8) * 0.04 : 0 }}
                       className="group bg-white border border-zinc-200/60 hover:border-zinc-300 transition-all duration-300 rounded-xl overflow-hidden dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600"
                     >
-                        <Link href={template.url} target="_blank" rel="noopener noreferrer" className="relative aspect-[16/8] sm:aspect-[16/9] lg:aspect-[16/10] block overflow-hidden bg-zinc-50 dark:bg-zinc-700">
+                        <Link href={template.url} target="_blank" rel="noopener noreferrer" prefetch={false} className="relative aspect-[16/8] sm:aspect-[16/9] lg:aspect-[16/10] block overflow-hidden bg-zinc-50 dark:bg-zinc-700">
                           <img src={template.image} alt={template.name} className="w-full h-full object-cover group-hover:scale-[1.03] transition-transform duration-700 ease-out" />
                         </Link>
                         <div className="p-4 sm:p-5 lg:p-6 flex flex-col gap-2 lg:gap-3">
@@ -1142,7 +1142,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                   {descModalTemplate.hashtags.length > 0 && (
                     <p className="text-sm text-zinc-400 dark:text-zinc-500">{descModalTemplate.hashtags.join(" ")}</p>
                   )}
-                  <Link href={descModalTemplate.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-900 hover:text-zinc-600 transition-colors dark:text-zinc-100 dark:hover:text-zinc-400">
+                  <Link href={descModalTemplate.url} target="_blank" rel="noopener noreferrer" prefetch={false} className="inline-flex items-center gap-1.5 text-xs font-bold text-zinc-900 hover:text-zinc-600 transition-colors dark:text-zinc-100 dark:hover:text-zinc-400">
                     데모 확인하기 <ArrowUpRight size={12} />
                   </Link>
                 </div>
