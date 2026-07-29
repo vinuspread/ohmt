@@ -877,7 +877,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             {packages.map((pkg) => (
               <div
                 key={pkg.id}
-                className={`shrink-0 w-[80%] sm:w-[320px] snap-center relative min-w-0 rounded-xl p-5 border-2 transition-all duration-300 md:w-auto md:shrink md:snap-none md:p-6 ${
+                className={`shrink-0 w-[68%] sm:w-[280px] snap-center relative min-w-0 rounded-xl p-5 border-2 transition-all duration-300 md:w-auto md:shrink md:snap-none md:p-6 ${
                   pkg.is_recommended
                     ? 'bg-[#FFFBEB] border-[#F1B100] shadow-lg shadow-[#F1B100]/10 dark:bg-zinc-800 dark:border-[#F1B100]'
                     : 'bg-white border-transparent border-zinc-200/60 hover:border-zinc-300 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600'
