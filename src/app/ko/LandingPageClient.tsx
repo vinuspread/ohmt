@@ -765,7 +765,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
               <div
                 key={plan.title}
                 className={idx === 1
-                  ? "shrink-0 w-[72%] sm:w-[300px] snap-center flex flex-col gap-4 bg-zinc-950 text-white rounded-xl p-5 shadow-xl md:w-auto md:shrink md:snap-none md:gap-5 md:p-8 dark:bg-black"
+                  ? "shrink-0 w-[72%] sm:w-[300px] snap-center flex flex-col gap-4 bg-zinc-950 text-white border border-zinc-700 rounded-xl p-5 shadow-xl md:w-auto md:shrink md:snap-none md:gap-5 md:p-8 dark:bg-black dark:border-zinc-700"
                   : "shrink-0 w-[72%] sm:w-[300px] snap-center flex flex-col gap-4 bg-white border border-zinc-200/60 rounded-xl p-4 hover:border-zinc-300 transition-colors md:w-auto md:shrink md:snap-none md:gap-5 md:p-7 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600"
                 }
               >
