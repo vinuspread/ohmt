@@ -36,7 +36,6 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
   const [requiresConsultation, setRequiresConsultation] = useState(initialData?.requires_consultation ?? false);
   const [pricingOptions, setPricingOptions] = useState<PricingOption[]>([]);
   const [thumbnailUrl, setThumbnailUrl] = useState(initialData?.thumbnail_url ?? "");
-  const [tags, setTags] = useState(initialData?.tags.join(", ") ?? "");
   const [description, setDescription] = useState(initialData?.description ?? "");
   const [applicableIndustries, setApplicableIndustries] = useState(initialData?.applicable_industries?.join(", ") ?? "");
   const [hashtags, setHashtags] = useState(initialData?.hashtags?.join(" ") ?? "");
@@ -99,7 +98,6 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
     status: published ? "published" : "draft",
     sort_order: sortOrder,
     is_featured: isFeatured,
-    tags: tags.split(",").map((tag) => tag.trim()).filter(Boolean),
     applicable_industries: applicableIndustries.split(",").map((item) => item.trim()).filter(Boolean),
     hashtags: hashtags.split(" ").map((tag) => tag.trim()).filter(Boolean),
     applicable_packages: requiresConsultation ? [] : pricingOptions.map((o) => o.slug),
@@ -192,7 +190,6 @@ export function TemplateForm({ mode, initialData }: { mode: TemplateFormMode; in
           </label>
           <p className="text-xs text-zinc-400">목록 상단에 강조해서 보여집니다. 다중 선택 가능.</p>
         </div>
-        <Input label="태그" placeholder="responsive, dark-mode" value={tags} onChange={(event) => setTags(event.target.value)} />
         <div className="flex flex-col gap-1">
           <Input
             label="고유키"

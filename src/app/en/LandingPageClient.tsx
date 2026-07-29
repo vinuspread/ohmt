@@ -226,7 +226,8 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
       const matchCategory = activeCategory === ALL_LABEL || t.categories.includes(activeCategory);
       const matchSearch = t.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           t.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          t.categories.some((c) => c.toLowerCase().includes(searchTerm.toLowerCase()));
+                          t.categories.some((c) => c.toLowerCase().includes(searchTerm.toLowerCase())) ||
+                          t.hashtags.some((h) => h.replace(/^#/, "").toLowerCase().includes(searchTerm.toLowerCase()));
       return matchCategory && matchSearch;
     });
   }, [activeCategory, searchTerm, templates]);
@@ -487,15 +488,15 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           <div className="flex flex-col items-center gap-6 md:gap-8">
             <SectionHeadingEn
               label="Direction"
-              title={<>A template isn't the final product,<br /><span className="text-[#F1B100]">it's the starting point for your brand direction.</span></>}
+              title={<>A template isn't the final product,<br /><span className="text-[#F1B100]">it's where your brand direction starts.</span></>}
               desc={<>Choose the direction that fits your industry and goals,<br />and jump straight to the recommended template list.</>}
             />
             <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/en/contact" className="w-[140px] sm:w-[200px] md:w-[240px] inline-flex items-center justify-center rounded-md bg-[#F1B100] px-6 md:px-8 py-3.5 md:py-4 text-xs sm:text-sm md:text-base font-extrabold uppercase tracking-widest text-zinc-900 transition-colors hover:bg-[#d99e00]">
-                Request a Consultation
+              <Link href="/en/contact" className="w-[140px] sm:w-[200px] md:w-[240px] inline-flex items-center justify-center rounded-md bg-[#F1B100] px-6 md:px-8 py-3.5 md:py-4 text-xs sm:text-sm md:text-base font-extrabold text-zinc-900 transition-colors hover:bg-[#d99e00] whitespace-nowrap">
+                Book a Consultation
               </Link>
-              <button onClick={() => scrollToTemplates(ALL_LABEL)} className="w-[140px] sm:w-[200px] md:w-[240px] bg-white border border-zinc-200/70 hover:border-zinc-400 text-zinc-800 text-xs sm:text-sm md:text-base font-bold uppercase tracking-widest px-5 md:px-8 py-3 md:py-4 rounded-md transition-colors">
-                Browse All Templates
+              <button onClick={() => scrollToTemplates(ALL_LABEL)} className="w-[140px] sm:w-[200px] md:w-[240px] bg-white border border-zinc-200/70 hover:border-zinc-400 text-zinc-800 text-xs sm:text-sm md:text-base font-bold px-5 md:px-8 py-3 md:py-4 rounded-md transition-colors whitespace-nowrap">
+                View All Templates
               </button>
             </div>
           </div>
@@ -522,8 +523,8 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
         <div className="max-w-[1440px] mx-auto space-y-8 md:space-y-12">
           <div className="max-w-[760px] mx-auto space-y-3 text-center">
             <span className="ohmt-section-label">Templates Gallery</span>
-            <h2 className="ohmt-section-title">Not a finished product.<br />Built to match your brand.</h2>
-            <p className="mx-auto max-w-[62ch] text-sm sm:text-lg leading-relaxed text-zinc-500 text-pretty dark:text-zinc-400">The templates below are proven starting points, built to help you move fast.</p>
+            <h2 className="ohmt-section-title">Find the template you're looking for.</h2>
+            <p className="mx-auto max-w-[62ch] text-sm sm:text-lg leading-relaxed text-zinc-500 text-pretty dark:text-zinc-400">Our experts customize it to match your brand.</p>
           </div>
 
           {/* Search */}
@@ -534,7 +535,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                 type="text"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder="Search templates (e.g. fashion, agency, editorial...)"
+                placeholder="Search templates by industry or style"
                 className="w-full rounded-lg border border-zinc-200 bg-white py-3.5 pl-12 pr-10 text-sm text-zinc-900 outline-none transition-all placeholder:text-zinc-400 focus:border-zinc-900 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100 dark:placeholder:text-zinc-500 dark:focus:border-zinc-500"
               />
               {searchTerm && (
@@ -544,7 +545,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
               )}
             </div>
             <div className="mt-4 flex flex-wrap items-center justify-center gap-2 text-xs">
-              <span className="font-medium text-zinc-400 dark:text-zinc-500">Popular:</span>
+              <span className="font-medium text-zinc-400 dark:text-zinc-500">Popular keywords:</span>
               {POPULAR_TAGS.map((tag) => (
                 <button key={tag} onClick={() => setSearchTerm(tag)} className="rounded bg-white px-2.5 py-1 text-zinc-600 transition-colors hover:bg-zinc-100 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:bg-zinc-700">
                   #{tag}

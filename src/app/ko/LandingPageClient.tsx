@@ -226,7 +226,8 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
       const matchCategory = activeCategory === ALL_LABEL || t.categories.includes(activeCategory);
       const matchSearch = t.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                           t.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                          t.categories.some((c) => c.toLowerCase().includes(searchTerm.toLowerCase()));
+                          t.categories.some((c) => c.toLowerCase().includes(searchTerm.toLowerCase())) ||
+                          t.hashtags.some((h) => h.replace(/^#/, "").toLowerCase().includes(searchTerm.toLowerCase()));
       return matchCategory && matchSearch;
     });
   }, [activeCategory, searchTerm, templates]);
@@ -522,8 +523,8 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
         <div className="max-w-[1440px] mx-auto space-y-8 md:space-y-12">
           <div className="max-w-3xl mx-auto space-y-3 text-center">
             <span className="ohmt-section-label">Templates Gallery</span>
-            <h2 className="ohmt-section-title">완성품이 아닙니다.<br />당신 브랜드에 맞게 처음부터 만들어집니다.</h2>
-            <p className="text-sm sm:text-lg leading-relaxed text-zinc-500 dark:text-zinc-400">아래 템플릿은 빠르게 시작하기 위한 검증된 출발점입니다.</p>
+            <h2 className="ohmt-section-title">원하시는 템플릿을 찾아보세요.</h2>
+            <p className="text-sm sm:text-lg leading-relaxed text-zinc-500 dark:text-zinc-400">선택한 템플릿을 전문가가 브랜드에 맞게 커스텀 합니다.</p>
           </div>
 
           {/* Search */}
@@ -534,7 +535,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                 type="text"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder="템플릿 검색 (예: 패션, 에이전시, 에디토리얼...)"
+                placeholder="업종이나 스타일로 템플릿 검색"
                 className="w-full rounded-lg border border-zinc-200 bg-white py-3.5 pl-12 pr-10 text-sm text-zinc-900 outline-none transition-all placeholder:text-zinc-400 focus:border-zinc-900 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100 dark:placeholder:text-zinc-500 dark:focus:border-zinc-500"
               />
               {searchTerm && (
@@ -544,7 +545,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
               )}
             </div>
             <div className="mt-4 flex flex-wrap items-center justify-center gap-2 text-xs">
-              <span className="font-medium text-zinc-400 dark:text-zinc-500">빠른 선택:</span>
+              <span className="font-medium text-zinc-400 dark:text-zinc-500">추천 키워드:</span>
               {POPULAR_TAGS.map((tag) => (
                 <button key={tag} onClick={() => setSearchTerm(tag)} className="rounded bg-white px-2.5 py-1 text-zinc-600 transition-colors hover:bg-zinc-100 dark:bg-zinc-800 dark:text-zinc-400 dark:hover:bg-zinc-700">
                   #{tag}
