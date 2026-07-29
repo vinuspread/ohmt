@@ -145,26 +145,48 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
   const firstMenuItemRef = useRef<HTMLAnchorElement | null>(null);
   const overlayRef = useRef<HTMLDivElement | null>(null);
 
-  const handleOpenMenu = useCallback(() => {
+  const measureMenuOrigin = useCallback(() => {
     const rect = hamburgerBtnRef.current?.getBoundingClientRect();
+    const viewportWidth = window.visualViewport?.width ?? window.innerWidth;
+    const viewportHeight = window.visualViewport?.height ?? window.innerHeight;
     const origin = rect
       ? { x: rect.left + rect.width / 2, y: rect.top + rect.height / 2 }
-      : { x: window.innerWidth - 36, y: 32 };
+      : { x: viewportWidth - 36, y: 32 };
     const corners = [
       { x: 0, y: 0 },
-      { x: window.innerWidth, y: 0 },
-      { x: 0, y: window.innerHeight },
-      { x: window.innerWidth, y: window.innerHeight },
+      { x: viewportWidth, y: 0 },
+      { x: 0, y: viewportHeight },
+      { x: viewportWidth, y: viewportHeight },
     ];
-
-    setMenuOrigin(origin);
-    setMenuRadius(Math.max(...corners.map((corner) => Math.hypot(corner.x - origin.x, corner.y - origin.y))));
-    setMobileMenuOpen(true);
+    const radius = Math.max(...corners.map((corner) => Math.hypot(corner.x - origin.x, corner.y - origin.y)));
+    return { origin, radius };
   }, []);
+
+  const handleOpenMenu = useCallback(() => {
+    const { origin, radius } = measureMenuOrigin();
+    setMenuOrigin(origin);
+    setMenuRadius(radius);
+    setMobileMenuOpen(true);
+  }, [measureMenuOrigin]);
 
   const handleCloseMenu = useCallback(() => {
     setMobileMenuOpen(false);
   }, []);
+
+  // Seed the hamburger button's real position as soon as it's mounted (and keep it
+  // fresh on resize/orientation change) so the very first open never falls back to
+  // the {0,0} default, which some Android browsers were observed to briefly paint.
+  useEffect(() => {
+    const seedOrigin = () => {
+      if (mobileMenuOpen) return; // never move the origin out from under an open/animating menu
+      const { origin, radius } = measureMenuOrigin();
+      setMenuOrigin(origin);
+      setMenuRadius(radius);
+    };
+    seedOrigin();
+    window.addEventListener("resize", seedOrigin);
+    return () => window.removeEventListener("resize", seedOrigin);
+  }, [measureMenuOrigin, mobileMenuOpen]);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -406,26 +428,44 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
 
       <AnimatePresence>
         {mobileMenuOpen && (
-          <motion.div
+          <div
             ref={overlayRef}
             id="mobile-menu-ko"
             role="dialog"
             aria-modal="true"
             aria-label="모바일 메뉴"
-            initial={prefersReducedMotion
-              ? { opacity: 0 }
-              : { clipPath: `circle(0px at ${menuOrigin.x}px ${menuOrigin.y}px)` }}
-            animate={prefersReducedMotion
-              ? { opacity: 1 }
-              : { clipPath: `circle(${menuRadius}px at ${menuOrigin.x}px ${menuOrigin.y}px)` }}
-            exit={prefersReducedMotion
-              ? { opacity: 0 }
-              : { clipPath: `circle(0px at ${menuOrigin.x}px ${menuOrigin.y}px)` }}
-            transition={prefersReducedMotion
-              ? { duration: 0.2, ease: EASE_OUT }
-              : { duration: 0.6, ease: [0.65, 0, 0.35, 1] }}
-            className="fixed inset-0 z-50 flex flex-col bg-zinc-950 text-white md:hidden"
+            className="fixed inset-0 z-50 md:hidden"
           >
+            {/* Reveal background: a circle scaled from the hamburger button's
+                center. transform: scale() is reliably GPU-composited on every
+                platform (unlike clip-path, which some Android Chrome builds
+                animate unreliably), so this is the actual visual "circular
+                reveal" rather than an inline-style clip-path animation. */}
+            <motion.div
+              aria-hidden="true"
+              initial={prefersReducedMotion ? { opacity: 0 } : { scale: 0, opacity: 1 }}
+              animate={prefersReducedMotion ? { opacity: 1 } : { scale: 1, opacity: 1 }}
+              exit={prefersReducedMotion ? { opacity: 0 } : { scale: 0, opacity: 1 }}
+              transition={prefersReducedMotion
+                ? { duration: 0.2, ease: EASE_OUT }
+                : { duration: 0.6, ease: [0.65, 0, 0.35, 1] }}
+              style={{
+                position: "fixed",
+                left: menuOrigin.x - menuRadius,
+                top: menuOrigin.y - menuRadius,
+                width: menuRadius * 2,
+                height: menuRadius * 2,
+                borderRadius: "9999px",
+                willChange: "transform",
+              }}
+              className="bg-zinc-950"
+            />
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1, transition: { delay: prefersReducedMotion ? 0 : 0.32, duration: 0.2 } }}
+              exit={{ opacity: 0, transition: { duration: 0.15 } }}
+              className="relative flex h-full flex-col text-white"
+            >
             <div className="flex min-h-16 items-center justify-between gap-2 px-5 py-4 sm:px-6">
               <Link href="/ko" onClick={handleCloseMenu} className="flex h-6 shrink-0 items-center" aria-label="OH! MY TEMPLATES 홈">
                 <Logo className="block h-6 w-auto brightness-0 invert" />
@@ -485,7 +525,8 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                 </Link>
               </motion.div>
             </div>
-          </motion.div>
+            </motion.div>
+          </div>
         )}
       </AnimatePresence>
 
