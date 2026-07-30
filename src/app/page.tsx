@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     locale: "ko_KR",
     images: [
       {
-        url: "https://ohmt.site/og-site.png",
-        secureUrl: "https://ohmt.site/og-site.png",
+        url: "https://ohmt.site/og-share.png",
+        secureUrl: "https://ohmt.site/og-share.png",
         width: 1200,
-        height: 630,
+        height: 600,
         alt: "오마이템플릿 - 프리미엄 웹·앱 템플릿",
         type: "image/png",
       },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "오마이템플릿 | 프리미엄 웹·앱 템플릿",
     description: "웹사이트·앱·서비스 제작을 위한 프리미엄 템플릿과 맞춤 개발 서비스를 제공합니다.",
-    images: ["https://ohmt.site/og-site.png"],
+    images: ["https://ohmt.site/og-share.png"],
   },
 };
 
