@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { CheckCircle, LayoutTemplate, Wand2, MessageCircle, X } from "lucide-react";
+import { CheckCircle, ChevronDown, LayoutTemplate, Wand2, MessageCircle, X } from "lucide-react";
 
 type InquiryType = "template" | "custom" | "other" | null;
 
@@ -48,6 +48,7 @@ const SUBMIT_LABEL: Record<"template" | "custom" | "other", string> = {
 };
 
 const INPUT_CLASS = "bg-zinc-50 border border-zinc-200 focus:bg-white focus:border-zinc-900 outline-none text-zinc-900 placeholder:text-zinc-400 px-4 py-3 text-sm w-full transition-all rounded-lg dark:bg-zinc-800 dark:border-zinc-700 dark:focus:bg-zinc-800 dark:focus:border-zinc-500 dark:text-zinc-100 dark:placeholder:text-zinc-500";
+const SELECT_CLASS = `${INPUT_CLASS} appearance-none pr-10`;
 const LABEL_CLASS = "text-[0.62rem] uppercase tracking-widest text-zinc-500 font-bold mb-2 block dark:text-zinc-400";
 
 export function ContactForm({ packages, requiresConsultation = false, templateList = [] }: { packages: PackageOption[]; requiresConsultation?: boolean; templateList?: TemplateItem[] }) {
@@ -371,24 +372,30 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
               {type === "custom" && (
                 <div>
                   <label className={LABEL_CLASS}>가용 예산 <span className="text-zinc-400 normal-case tracking-normal font-normal">(선택)</span></label>
-                  <select name="budget" className={INPUT_CLASS}>
-                    <option value="">예산 범위를 선택하세요</option>
-                    <option value="500만원 이내">500만원 이내</option>
-                    <option value="1천만원 이내">1천만원 이내</option>
-                    <option value="2천만원 이내">2천만원 이내</option>
-                    <option value="협의 필요">협의 필요</option>
-                  </select>
+                  <div className="relative">
+                    <select name="budget" className={SELECT_CLASS}>
+                      <option value="">예산 범위를 선택하세요</option>
+                      <option value="500만원 이내">500만원 이내</option>
+                      <option value="1천만원 이내">1천만원 이내</option>
+                      <option value="2천만원 이내">2천만원 이내</option>
+                      <option value="협의 필요">협의 필요</option>
+                    </select>
+                    <ChevronDown size={16} className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-zinc-400" />
+                  </div>
                 </div>
               )}
               {type === "template" && !requiresConsultation && packages.length > 0 && (
                 <div>
                   <label className={LABEL_CLASS}>패키지 <span className="text-zinc-400 normal-case tracking-normal font-normal">(선택)</span></label>
-                  <select name="package" defaultValue={packageParam} className={INPUT_CLASS}>
-                    <option value="">패키지를 선택하세요</option>
-                    {packages.map((p) => (
-                      <option key={p.id} value={p.id}>{p.name}</option>
-                    ))}
-                  </select>
+                  <div className="relative">
+                    <select name="package" defaultValue={packageParam} className={SELECT_CLASS}>
+                      <option value="">패키지를 선택하세요</option>
+                      {packages.map((p) => (
+                        <option key={p.id} value={p.id}>{p.name}</option>
+                      ))}
+                    </select>
+                    <ChevronDown size={16} className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-zinc-400" />
+                  </div>
                 </div>
               )}
             </div>
