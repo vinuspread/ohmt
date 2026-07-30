@@ -24,19 +24,19 @@ const INQUIRY_TYPES = [
   {
     id: "template" as InquiryType,
     title: "템플릿 기반 제작",
-    desc: "선택한 템플릿으로 커스터마이징 합니다.",
+    desc: "선택한 템플릿을 기준으로 브랜드에 맞게 완성합니다.",
     icon: LayoutTemplate,
   },
   {
     id: "custom" as InquiryType,
     title: "맞춤 웹사이트 제작",
-    desc: "템플릿 없이 처음부터 기획·디자인·개발까지 함께합니다",
+    desc: "고객의 요구조건에 맞게 기획, 디자인, 개발을 진행합니다.",
     icon: Wand2,
   },
   {
     id: "other" as InquiryType,
     title: "기타 문의",
-    desc: "견적, 일정, 파트너십 등 궁금한 점은 무엇이든 물어보세요",
+    desc: "견적, 일정, 제휴 등 궁금한 내용을 편하게 문의하세요.",
     icon: MessageCircle,
   },
 ];
