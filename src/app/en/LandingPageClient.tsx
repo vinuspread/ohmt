@@ -724,10 +724,10 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
               desc={<>Choose the direction that fits your industry and goals,<br />and jump straight to the recommended template list.</>}
             />
             <div className="flex flex-wrap justify-center gap-3">
-              <Link href="/en/contact" className="w-[140px] sm:w-[200px] md:w-[240px] inline-flex items-center justify-center rounded-md bg-[#F1B100] px-6 md:px-8 py-3.5 md:py-4 text-xs sm:text-sm md:text-base font-extrabold text-zinc-900 transition-colors hover:bg-[#d99e00] whitespace-nowrap">
+              <Link href="/en/contact" className="w-[140px] sm:w-[200px] md:w-[240px] inline-flex items-center justify-center rounded-full bg-[#F1B100] px-6 md:px-8 py-3.5 md:py-4 text-xs sm:text-sm md:text-base font-extrabold text-zinc-900 transition-colors hover:bg-[#d99e00] whitespace-nowrap">
                 Book a Consultation
               </Link>
-              <button onClick={() => scrollToTemplates(ALL_LABEL)} className="w-[140px] sm:w-[200px] md:w-[240px] bg-white border border-zinc-200/70 hover:border-zinc-400 text-zinc-800 text-xs sm:text-sm md:text-base font-bold px-5 md:px-8 py-3 md:py-4 rounded-md transition-colors whitespace-nowrap">
+              <button onClick={() => scrollToTemplates(ALL_LABEL)} className="w-[140px] sm:w-[200px] md:w-[240px] bg-white border border-zinc-200/70 hover:border-zinc-400 text-zinc-800 text-xs sm:text-sm md:text-base font-bold px-5 md:px-8 py-3 md:py-4 rounded-full transition-colors whitespace-nowrap">
                 View All Templates
               </button>
             </div>
