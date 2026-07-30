@@ -6,6 +6,7 @@ import { Logo } from "@/components/Logo";
 import { createClient } from "@/lib/supabase/server";
 import { ContactForm } from "./_components/ContactForm";
 import type { PackageOption } from "./_components/ContactForm";
+import { SiteHeader } from "./_components/SiteHeader";
 
 export const metadata: Metadata = {
   title: "문의 & 맞춤형 홈페이지 제작 상담 | OHMT",
@@ -90,17 +91,8 @@ export default async function ContactPage({
   }));
 
   return (
-    <main className="min-h-screen bg-[#FCFCFD] text-zinc-900 font-sans antialiased dark:bg-zinc-950 dark:text-zinc-100">
-      <header className="bg-white border-b border-zinc-200/60 sticky top-0 z-40 dark:bg-zinc-900 dark:border-zinc-800">
-        <div className="px-5 sm:px-6 md:px-12 lg:px-20 py-4 max-w-[1440px] mx-auto flex justify-between items-center">
-          <Link href="/ko" className="flex items-center gap-3 h-6">
-            <Logo className="h-6 w-auto block" />
-          </Link>
-          <Link href="/en/contact" className="text-xs uppercase tracking-widest text-zinc-400 hover:text-zinc-900 transition-colors font-bold dark:text-zinc-500 dark:hover:text-zinc-100">
-            EN
-          </Link>
-        </div>
-      </header>
+    <main className="min-h-screen bg-[#FCFCFD] text-zinc-900 font-sans antialiased dark:bg-zinc-950 dark:text-zinc-100 pt-[64px]">
+      <SiteHeader />
 
       <section className="px-5 sm:px-6 md:px-12 lg:px-20 py-20 max-w-[1440px] mx-auto">
         <Link href="/ko" className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-bold text-zinc-400 hover:text-zinc-900 transition-colors mb-12 dark:text-zinc-500 dark:hover:text-zinc-100">
