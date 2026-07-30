@@ -601,6 +601,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                 key={`${template.id}-${idx}`}
                 target="_blank"
                 rel="noopener noreferrer"
+                prefetch={false}
                 className="group flex-shrink-0 w-[192px] md:w-[280px] bg-white border border-zinc-200/60 rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-zinc-300 transition-all duration-300 pointer-events-auto dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600 dark:hover:shadow-zinc-900/50"
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-zinc-50 dark:bg-zinc-700">
