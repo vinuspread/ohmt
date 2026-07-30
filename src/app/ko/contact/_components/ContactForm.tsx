@@ -373,18 +373,18 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
                     {type === "custom" ? "맞춤 제작" : "기타 문의"}
                   </p>
                   <p className="text-xl md:text-2xl font-bold text-zinc-900 dark:text-zinc-100 leading-snug">
-                    {type === "custom" ? "필요한 웹사이트를 처음부터 설계합니다." : "궁금한 점이 있으신가요?"}
+                    {type === "custom" ? "필요한 웹사이트를 처음부터 설계합니다." : "궁금한 내용을 편하게 문의해 주세요."}
                   </p>
                   <p className="text-sm text-zinc-400 dark:text-zinc-500 leading-relaxed">
                     {type === "custom"
                       ? "기획부터 디자인, 개발과 오픈까지 전담 팀이 진행합니다."
-                      : "어떤 문의든 편하게 남겨주세요."}
+                      : "견적, 일정, 제휴 등 문의 내용을 확인한 뒤 담당자가 답변드립니다."}
                   </p>
                 </div>
                 <div className="space-y-2.5">
                   {(type === "custom"
                     ? ["서비스 기획 및 UX 설계", "맞춤 디자인", "웹사이트 개발", "오픈 및 기술 지원"]
-                    : ["24시간 내 빠른 답변", "부담 없는 문의", "담당자 직접 응대"]
+                    : ["확인 후 빠른 답변(최대 12시간)", "견적·일정·제휴 문의", "담당자 직접 응대"]
                   ).map((item) => (
                     <div key={item} className="flex items-center gap-2 text-sm text-zinc-400 dark:text-zinc-500">
                       <span className="w-1.5 h-1.5 rounded-full bg-[#F1B100] flex-shrink-0" />
@@ -419,7 +419,7 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
             {type === "other" && (
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
-                  <label className={LABEL_CLASS}>회사 / 기관</label>
+                  <label className={LABEL_CLASS}>회사·기관명</label>
                   <input type="text" name="company" className={INPUT_CLASS} placeholder="회사 또는 기관명" />
                 </div>
                 <div>
