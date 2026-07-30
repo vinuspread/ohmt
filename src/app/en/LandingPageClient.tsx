@@ -142,6 +142,8 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
   const [descModalTemplate, setDescModalTemplate] = useState<TemplateItem | null>(null);
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const lastScrollY = useRef(0);
+  const navScrollLockRef = useRef(false);
+  const navScrollLockTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const hamburgerBtnRef = useRef<HTMLButtonElement | null>(null);
   const firstMenuItemRef = useRef<HTMLAnchorElement | null>(null);
   const overlayRef = useRef<HTMLDivElement | null>(null);
@@ -238,7 +240,9 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY;
-      if (currentY < 10) {
+      if (navScrollLockRef.current) {
+        setHeaderVisible(true);
+      } else if (currentY < 10) {
         setHeaderVisible(true);
       } else if (currentY < lastScrollY.current) {
         setHeaderVisible(true);
@@ -249,6 +253,15 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleNavAnchorClick = useCallback(() => {
+    navScrollLockRef.current = true;
+    setHeaderVisible(true);
+    if (navScrollLockTimeoutRef.current) clearTimeout(navScrollLockTimeoutRef.current);
+    navScrollLockTimeoutRef.current = setTimeout(() => {
+      navScrollLockRef.current = false;
+    }, 1000);
   }, []);
 
   const restartInterval = useCallback(() => {
@@ -396,11 +409,11 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             <Logo className="h-6 w-auto block" />
           </Link>
           <nav className="hidden md:flex items-center gap-6 text-[0.82rem] font-bold text-zinc-500 uppercase tracking-wider dark:text-zinc-400">
-            <a href="#directions" className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">Services</a>
-            <a href="#templates" className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">Templates</a>
-            <a href="#pricing" className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">Pricing</a>
-            <a href="#process" className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">Process</a>
-            <a href="#faq" className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">FAQ</a>
+            <a href="#directions" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">Services</a>
+            <a href="#templates" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">Templates</a>
+            <a href="#pricing" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">Pricing</a>
+            <a href="#process" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">Process</a>
+            <a href="#faq" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">FAQ</a>
           </nav>
         </div>
         <div className="flex items-center gap-3 sm:gap-6">
@@ -504,7 +517,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                       <a
                         ref={index === 0 ? firstMenuItemRef : undefined}
                         href={item.href}
-                        onClick={handleCloseMenu}
+                        onClick={() => { handleCloseMenu(); handleNavAnchorClick(); }}
                         className="flex min-h-11 w-full items-center text-[clamp(1.5rem,9vw,2.75rem)] font-bold leading-[1.05] text-white outline-none transition-transform focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#F1B100] active:translate-x-1 active:text-[#F1B100]"
                       >
                         {item.label}
