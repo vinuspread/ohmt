@@ -500,7 +500,7 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
                 type="file"
                 accept=".pdf,.jpg,.jpeg,.png,.gif,.zip"
                 onChange={handleFileChange}
-                className="w-full text-sm text-zinc-500 file:mr-3 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-bold file:uppercase file:tracking-widest file:bg-zinc-100 file:text-zinc-600 hover:file:bg-zinc-200 file:transition-colors cursor-pointer"
+                className="w-full text-sm text-zinc-500 file:mr-3 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-bold file:uppercase file:tracking-widest file:bg-zinc-100 file:text-zinc-600 hover:file:bg-zinc-200 file:transition-colors file:cursor-pointer cursor-pointer"
               />
               {fileError
                 ? <p className="mt-1.5 text-xs text-red-500">{fileError}</p>
@@ -513,7 +513,7 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
             <button
               type="submit"
               disabled={submitting}
-              className="w-full bg-[#F1B100] hover:bg-[#D9A000] disabled:opacity-50 disabled:cursor-not-allowed text-zinc-900 font-bold uppercase tracking-widest text-xs py-4 transition-all rounded-lg"
+              className="w-full bg-[#F1B100] hover:bg-[#D9A000] cursor-pointer disabled:cursor-not-allowed disabled:opacity-50 text-zinc-900 font-bold uppercase tracking-widest text-xs py-4 transition-all rounded-lg"
             >
               {submitting ? "Submitting..." : SUBMIT_LABEL[type ?? "other"]}
             </button>
