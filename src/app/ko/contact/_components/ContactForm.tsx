@@ -367,27 +367,27 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
                 })()}
               </>
             ) : (
-              <div className="pt-2 space-y-5">
-                <div className="space-y-2">
-                  <p className="text-[0.58rem] uppercase tracking-widest text-zinc-400 font-bold dark:text-zinc-500">
+              <div className="pt-2 space-y-6">
+                <div className="space-y-3">
+                  <p className="text-xs uppercase tracking-widest text-zinc-400 font-bold dark:text-zinc-500">
                     {type === "custom" ? "맞춤 제작" : "기타 문의"}
                   </p>
-                  <p className="text-base font-bold text-zinc-900 dark:text-zinc-100 leading-snug">
-                    {type === "custom" ? "함께 특별한 것을 만들어봐요." : "궁금한 점이 있으신가요?"}
+                  <p className="text-xl md:text-2xl font-bold text-zinc-900 dark:text-zinc-100 leading-snug">
+                    {type === "custom" ? "필요한 웹사이트를 처음부터 설계합니다." : "궁금한 점이 있으신가요?"}
                   </p>
-                  <p className="text-xs text-zinc-400 dark:text-zinc-500 leading-relaxed">
+                  <p className="text-sm text-zinc-400 dark:text-zinc-500 leading-relaxed">
                     {type === "custom"
-                      ? "기획부터 런칭까지 모든 디테일을 함께 챙겨드립니다."
+                      ? "기획부터 디자인, 개발과 오픈까지 전담 팀이 진행합니다."
                       : "어떤 문의든 편하게 남겨주세요."}
                   </p>
                 </div>
-                <div className="space-y-1.5">
+                <div className="space-y-2.5">
                   {(type === "custom"
-                    ? ["전략 & UX 기획", "맞춤 디자인 시스템", "풀스택 개발", "런칭 & 유지보수"]
+                    ? ["서비스 기획 및 UX 설계", "맞춤 디자인", "웹사이트 개발", "오픈 및 기술 지원"]
                     : ["24시간 내 빠른 답변", "부담 없는 문의", "담당자 직접 응대"]
                   ).map((item) => (
-                    <div key={item} className="flex items-center gap-2 text-xs text-zinc-400 dark:text-zinc-500">
-                      <span className="w-1 h-1 rounded-full bg-[#F1B100] flex-shrink-0" />
+                    <div key={item} className="flex items-center gap-2 text-sm text-zinc-400 dark:text-zinc-500">
+                      <span className="w-1.5 h-1.5 rounded-full bg-[#F1B100] flex-shrink-0" />
                       {item}
                     </div>
                   ))}
@@ -488,7 +488,7 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
                 name="message" rows={6} required className={`${INPUT_CLASS} resize-none`}
                 placeholder={
                   type === "template" ? "커스터마이징 요구사항과 프로젝트 목표를 알려주세요..."
-                  : type === "custom" ? "브랜드, 타겟 고객, 필요한 기능을 설명해 주세요..."
+                  : type === "custom" ? "필요한 웹사이트, 서비스에 대한 기능과 예상 일정을 알려주세요."
                   : "무엇을 도와드릴까요?"
                 }
               />
