@@ -41,6 +41,12 @@ const INQUIRY_TYPES = [
   },
 ];
 
+const SUBMIT_LABEL: Record<"template" | "custom" | "other", string> = {
+  template: "제작 상담 신청",
+  custom: "맞춤 제작 상담 신청",
+  other: "문의 보내기",
+};
+
 const INPUT_CLASS = "bg-zinc-50 border border-zinc-200 focus:bg-white focus:border-zinc-900 outline-none text-zinc-900 placeholder:text-zinc-400 px-4 py-3 text-sm w-full transition-all rounded-lg dark:bg-zinc-800 dark:border-zinc-700 dark:focus:bg-zinc-800 dark:focus:border-zinc-500 dark:text-zinc-100 dark:placeholder:text-zinc-500";
 const LABEL_CLASS = "text-[0.62rem] uppercase tracking-widest text-zinc-500 font-bold mb-2 block dark:text-zinc-400";
 
@@ -437,7 +443,7 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
               disabled={submitting}
               className="w-full bg-[#F1B100] hover:bg-[#D9A000] disabled:opacity-50 disabled:cursor-not-allowed text-zinc-900 font-bold uppercase tracking-widest text-xs py-4 transition-all rounded-lg"
             >
-              {submitting ? "제출 중..." : "문의 제출하기"}
+              {submitting ? "제출 중..." : SUBMIT_LABEL[type ?? "other"]}
             </button>
           </form>
         </div>
