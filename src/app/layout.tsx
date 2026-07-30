@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Cormorant_Garamond, Inter, Playfair_Display, Outfit, Bebas_Neue } from "next/font/google";
 import Script from "next/script";
+import { KakaoChatButton } from "./_components/KakaoChatButton";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -87,6 +88,7 @@ export default function RootLayout({
     <html lang="en" className={`${geistSans.variable} ${cormorant.variable} ${inter.variable} ${playfair.variable} ${outfit.variable} ${bebasNeue.variable}`} suppressHydrationWarning>
       <body>
         {children}
+        <KakaoChatButton />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
