@@ -5,10 +5,10 @@ import { headers } from "next/headers";
 export const metadata: Metadata = {
   metadataBase: new URL("https://ohmt.site"),
   title: "오마이템플릿 | 프리미엄 웹·앱 템플릿",
-  description: "웹사이트·앱·서비스 제작을 위한 프리미엄 템플릿과 맞춤 개발 서비스를 제공합니다.",
+  description: "가장 스마트한 웹·앱 서비스 제작 솔루션!",
   openGraph: {
     title: "오마이템플릿 | 프리미엄 웹·앱 템플릿",
-    description: "웹사이트·앱·서비스 제작을 위한 프리미엄 템플릿과 맞춤 개발 서비스를 제공합니다.",
+    description: "가장 스마트한 웹·앱 서비스 제작 솔루션!",
     url: "https://ohmt.site",
     siteName: "Oh My Template",
     type: "website",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
         secureUrl: "https://ohmt.site/og-share.png",
         width: 1200,
         height: 600,
-        alt: "오마이템플릿 - 프리미엄 웹·앱 템플릿",
+        alt: "오마이템플릿 - 프리미엄 웹사이트 템플릿",
         type: "image/png",
       },
     ],
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "오마이템플릿 | 프리미엄 웹·앱 템플릿",
-    description: "웹사이트·앱·서비스 제작을 위한 프리미엄 템플릿과 맞춤 개발 서비스를 제공합니다.",
+    description: "가장 스마트한 웹·앱 서비스 제작 솔루션!",
     images: ["https://ohmt.site/og-share.png"],
   },
 };
@@ -44,7 +44,7 @@ export default async function RootPage() {
   return (
     <main style={{ fontFamily: "sans-serif", padding: "40px", maxWidth: "600px", margin: "0 auto" }}>
       <h1>오마이템플릿</h1>
-      <p>웹사이트·앱·서비스 제작을 위한 프리미엄 템플릿과 맞춤 개발 서비스를 제공합니다.</p>
+      <p>가장 스마트한 웹·앱 서비스 제작 솔루션!</p>
       <a href="/ko">한국어</a> · <a href="/en">English</a>
     </main>
   );

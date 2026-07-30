@@ -92,7 +92,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "오마이템플릿",
-    description: "브랜드에 맞춘 디자인과 개발, 운영까지 제공하는 프리미엄 템플릿 서비스입니다.",
+    description: "가장 스마트한 웹·앱 서비스 제작 솔루션!",
     url: "https://ohmt.site/ko",
     siteName: "오마이템플릿",
     locale: "ko_KR",
@@ -103,7 +103,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "오마이템플릿",
-    description: "브랜드에 맞춘 디자인과 개발, 운영까지 제공하는 프리미엄 템플릿 서비스입니다.",
+    description: "가장 스마트한 웹·앱 서비스 제작 솔루션!",
     images: ["https://ohmt.site/og-share.png"],
   },
 };

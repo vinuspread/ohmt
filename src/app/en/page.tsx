@@ -92,7 +92,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "Oh My Template",
-    description: "A premium template service offering design, development, and ongoing support tailored to your brand.",
+    description: "The smarter way to build websites, apps, and digital services.",
     url: "https://ohmt.site/en",
     siteName: "Oh My Template",
     locale: "en_US",
@@ -103,7 +103,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Oh My Template",
-    description: "A premium template service offering design, development, and ongoing support tailored to your brand.",
+    description: "The smarter way to build websites, apps, and digital services.",
     images: ["https://ohmt.site/og-share.png"],
   },
 };
