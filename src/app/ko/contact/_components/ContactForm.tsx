@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { CheckCircle, ChevronDown, LayoutTemplate, Wand2, MessageCircle, X } from "lucide-react";
@@ -48,8 +48,71 @@ const SUBMIT_LABEL: Record<"template" | "custom" | "other", string> = {
 };
 
 const INPUT_CLASS = "bg-zinc-50 border border-zinc-200 focus:bg-white focus:border-zinc-900 outline-none text-zinc-900 placeholder:text-zinc-400 px-4 py-3 text-sm w-full transition-all rounded-lg dark:bg-zinc-800 dark:border-zinc-700 dark:focus:bg-zinc-800 dark:focus:border-zinc-500 dark:text-zinc-100 dark:placeholder:text-zinc-500";
-const SELECT_CLASS = `${INPUT_CLASS} appearance-none pr-10`;
+const SELECT_TRIGGER_CLASS = "bg-zinc-50 border border-zinc-200 focus:bg-white focus:border-zinc-900 outline-none px-4 py-3 text-sm w-full transition-all rounded-lg dark:bg-zinc-800 dark:border-zinc-700 dark:focus:bg-zinc-800 dark:focus:border-zinc-500 flex items-center justify-between gap-2 text-left";
 const LABEL_CLASS = "text-[0.62rem] uppercase tracking-widest text-zinc-500 font-bold mb-2 block dark:text-zinc-400";
+
+function SelectField({
+  name,
+  value,
+  onChange,
+  options,
+  placeholder,
+}: {
+  name: string;
+  value: string;
+  onChange: (value: string) => void;
+  options: { value: string; label: string }[];
+  placeholder: string;
+}) {
+  const [open, setOpen] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const handleClick = (e: MouseEvent) => {
+      if (containerRef.current && !containerRef.current.contains(e.target as Node)) setOpen(false);
+    };
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [open]);
+
+  const selectedLabel = options.find((o) => o.value === value)?.label ?? placeholder;
+
+  return (
+    <div ref={containerRef} className="relative">
+      <input type="hidden" name={name} value={value} />
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        className={`${SELECT_TRIGGER_CLASS} ${value ? "text-zinc-900 dark:text-zinc-100" : "text-zinc-400 dark:text-zinc-500"}`}
+      >
+        <span className="truncate">{selectedLabel}</span>
+        <ChevronDown size={16} className={`flex-shrink-0 text-zinc-400 transition-transform ${open ? "rotate-180" : ""}`} />
+      </button>
+      {open && (
+        <div className="absolute z-20 mt-1.5 w-full max-h-60 overflow-y-auto rounded-lg border border-zinc-200 bg-white shadow-lg dark:border-zinc-700 dark:bg-zinc-800">
+          {options.map((opt) => (
+            <button
+              key={opt.value || "__placeholder"}
+              type="button"
+              onClick={() => {
+                onChange(opt.value);
+                setOpen(false);
+              }}
+              className={`block w-full px-4 py-2.5 text-left text-sm transition-colors ${
+                opt.value === value
+                  ? "bg-[#F1B100]/10 font-semibold text-zinc-900 dark:text-zinc-100"
+                  : "text-zinc-700 hover:bg-zinc-50 dark:text-zinc-300 dark:hover:bg-zinc-700/60"
+              }`}
+            >
+              {opt.label}
+            </button>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
 
 export function ContactForm({ packages, requiresConsultation = false, templateList = [] }: { packages: PackageOption[]; requiresConsultation?: boolean; templateList?: TemplateItem[] }) {
   const searchParams = useSearchParams();
@@ -69,6 +132,8 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
   const [selectedTemplate, setSelectedTemplate] = useState<TemplateItem | null>(null);
   const [attachmentFile, setAttachmentFile] = useState<File | null>(null);
   const [fileError, setFileError] = useState<string | null>(null);
+  const [budget, setBudget] = useState("");
+  const [pkgValue, setPkgValue] = useState(packageParam);
 
   const MAX_FILE_BYTES = 5 * 1024 * 1024;
 
@@ -372,30 +437,30 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
               {type === "custom" && (
                 <div>
                   <label className={LABEL_CLASS}>가용 예산 <span className="text-zinc-400 normal-case tracking-normal font-normal">(선택)</span></label>
-                  <div className="relative">
-                    <select name="budget" className={SELECT_CLASS}>
-                      <option value="">예산 범위를 선택하세요</option>
-                      <option value="500만원 이내">500만원 이내</option>
-                      <option value="1천만원 이내">1천만원 이내</option>
-                      <option value="2천만원 이내">2천만원 이내</option>
-                      <option value="협의 필요">협의 필요</option>
-                    </select>
-                    <ChevronDown size={16} className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-zinc-400" />
-                  </div>
+                  <SelectField
+                    name="budget"
+                    value={budget}
+                    onChange={setBudget}
+                    placeholder="예산 범위를 선택하세요"
+                    options={[
+                      { value: "500만원 이내", label: "500만원 이내" },
+                      { value: "1천만원 이내", label: "1천만원 이내" },
+                      { value: "2천만원 이내", label: "2천만원 이내" },
+                      { value: "협의 필요", label: "협의 필요" },
+                    ]}
+                  />
                 </div>
               )}
               {type === "template" && !requiresConsultation && packages.length > 0 && (
                 <div>
                   <label className={LABEL_CLASS}>패키지 <span className="text-zinc-400 normal-case tracking-normal font-normal">(선택)</span></label>
-                  <div className="relative">
-                    <select name="package" defaultValue={packageParam} className={SELECT_CLASS}>
-                      <option value="">패키지를 선택하세요</option>
-                      {packages.map((p) => (
-                        <option key={p.id} value={p.id}>{p.name}</option>
-                      ))}
-                    </select>
-                    <ChevronDown size={16} className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-zinc-400" />
-                  </div>
+                  <SelectField
+                    name="package"
+                    value={pkgValue}
+                    onChange={setPkgValue}
+                    placeholder="패키지를 선택하세요"
+                    options={packages.map((p) => ({ value: p.id, label: p.name }))}
+                  />
                 </div>
               )}
             </div>
