@@ -112,7 +112,70 @@ components:
 ### Navigation
 - **Style:** 간결하고 가독성 높은 텍스트 링크 위주로 구성하며, 국문 템플릿은 모바일/데스크톱 가독성을 위해 폰트 크기를 영문 대비 15% 키운 `16px`을 강제합니다.
 
-## 6. Do's and Don'ts
+## 6. Site & Page Structure
+
+### 6.1 마케팅 랜딩 사이트 (`/en`, `/ko`)
+
+- 루트 `/`는 `/en`으로 리다이렉트되며, 랜딩 페이지는 언어별로 완전히 분리된 서버 컴포넌트(`src/app/en/page.tsx`, `src/app/ko/page.tsx`)가 Supabase의 `templates` / `faqs` / `pricing_packages` 테이블을 조회해 클라이언트 컴포넌트 `LandingPageClient.tsx`에 전달하는 구조입니다. (조회 실패 시 하드코딩된 fallback 데이터로 대체)
+- 실제 화면 구성(섹션 순서)은 `LandingPageClient.tsx` 기준 다음과 같습니다:
+  1. **Header/GNB** — `@/components/Logo` + 앵커 내비게이션
+  2. **Hero** — 헤드라인 슬라이드 전환
+  3. **Problem Section** — 문제 제기 카드 그리드
+  4. **Service Model Section** — 3단계 프로세스 설명
+  5. **Directions Section** (`#directions`)
+  6. **Templates Gallery** (`#templates`) — 검색/필터가 가능한 템플릿 카드 그리드. 개별 템플릿(`/en/templates/[name]`)으로의 실제 진입점.
+  7. **Pricing Section** (`#pricing`) — 3티어 패키지 카드
+  8. **Process Section** (`#process`)
+  9. **Care Section** (`#care`)
+  10. **Final CTA**
+  11. **FAQ** (`#faq`)
+  12. **Footer**
+- 랜딩 사이트는 Tailwind `dark:` variant로 라이트/다크 모드를 모두 지원합니다. 이는 마케팅 사이트에 한정된 예외이며, 개별 템플릿(아래 6.2)은 다크모드 대상이 아닙니다.
+
+### 6.2 템플릿 사이트 (`/en/templates/[name]`, `/ko/templates/[name]`)
+
+- 현재 en/ko 각각 **36개** 템플릿이 운영 중입니다 (`OHMT001` ~ `OHMT037`, `OHMT013-newspaper`는 결번).
+- 모든 템플릿의 상위에 공용 그룹 레이아웃 `src/app/en/templates/layout.tsx` / `src/app/ko/templates/layout.tsx`가 있으며, `@/components/DevicePreviewShell`로 감싸 관리자 미리보기(반응형 디바이스 프레임)를 제공합니다. 이 레이어는 템플릿 디자인과 무관한 관리자 인프라입니다.
+- 그 아래로는 [필수] 템플릿 독립 구조 규칙(본 문서 상단 CLAUDE.md 참고)에 따라 각 템플릿이 완전히 독립적인 폴더를 갖습니다. 신규 템플릿(`OHMT037-figure-shop`) 실측 기준 표준 구조:
+
+```
+OHMT0NN-name/
+├── _components/
+│   ├── TemplateWrapper.tsx   ← 필수. Provider + Header/Footer 조립
+│   ├── layout/Header.tsx
+│   ├── layout/Footer.tsx
+│   ├── sections/             ← 홈페이지 섹션 단위 컴포넌트
+│   └── ui/                   ← 버튼·카드 등 원자 컴포넌트
+├── [route]/page.tsx          ← 서브 페이지 (예: shop/, cart/, [slug]/)
+├── data/                     ← 정적 콘텐츠 데이터
+├── theme.css                 ← 디자인 토큰 (필수)
+├── theme.json                ← 템플릿 메타데이터 (name, description, palette 등)
+├── layout.tsx                ← metadata + theme.css import + TemplateWrapper 래핑
+└── page.tsx                  ← 홈페이지. 섹션 컴포넌트 조합만 담당
+```
+
+## 7. Component Composition
+
+템플릿 하나의 렌더 트리는 다음 계층을 따릅니다:
+
+```
+/en/templates/layout.tsx (DevicePreviewShell — 전 템플릿 공용)
+ └─ OHMT0NN-name/layout.tsx (템플릿별 metadata + theme.css)
+     └─ <TemplateWrapper>           ← 애니메이션, CSS 변수 주입(useMemo), 필요 시 Context Provider
+         ├─ <Header />              ← 내비게이션, 로고, CTA
+         ├─ <main>{children}</main> ← page.tsx가 나열한 섹션 목록
+         │    ├─ <HeroXxx />        ← 페이지 최상단 히어로 섹션
+         │    ├─ <SectionA />
+         │    ├─ <SectionB />
+         │    └─ ...
+         └─ <Footer />
+```
+
+- `page.tsx`는 로직 없이 섹션 컴포넌트를 순서대로 나열하는 조립 역할만 수행합니다. 예: `OHMT037-figure-shop/page.tsx`는 `HeroDrop → DropStrip → StatementBlock → LineTiles → CampaignBand → DropStrip → SplitPromo → SplitFeature → CraftStory → PreFooterCta` 순으로 9개 섹션을 배치합니다.
+- 장바구니 등 전역 상태가 필요한 템플릿은 `TemplateWrapper` 내부에서 Context Provider(`CartProvider` 등)로 감쌉니다.
+- `src/components/`는 전 템플릿 공용이며 규칙상 `Logo.tsx`만 허용됩니다. `DevicePreviewShell.tsx`는 관리자 미리보기 전용 인프라 컴포넌트로, 템플릿 렌더링 자체와는 무관하게 그룹 레이아웃에서만 사용됩니다.
+
+## 8. Do's and Don'ts
 
 ### Do:
 - **Do** 한글 대형 헤딩에는 반드시 `leading-[1.25]` 이상의 넉넉한 행간을 적용하십시오.
