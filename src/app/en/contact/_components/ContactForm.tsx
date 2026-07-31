@@ -363,7 +363,7 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
 
       {type && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-start">
-          <div className="col-span-1 sticky top-24 space-y-3">
+          <div className="col-span-1 md:sticky md:top-24 space-y-3">
             {type === "template" && (templateParam || selectedTemplate) ? (
               <>
                 <div className="relative aspect-[4/3] w-full rounded-2xl overflow-hidden">
