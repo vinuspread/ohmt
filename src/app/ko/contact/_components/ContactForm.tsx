@@ -41,6 +41,8 @@ const INQUIRY_TYPES = [
   },
 ];
 
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
 const SUBMIT_LABEL: Record<"template" | "custom" | "other", string> = {
   template: "제작 상담 신청",
   custom: "맞춤 제작 상담 신청",
@@ -49,7 +51,18 @@ const SUBMIT_LABEL: Record<"template" | "custom" | "other", string> = {
 
 const INPUT_CLASS = "bg-zinc-50 border border-zinc-200 focus:bg-white focus:border-zinc-900 outline-none text-zinc-900 placeholder:text-zinc-400 px-4 py-3 text-sm w-full transition-all rounded-lg dark:bg-zinc-800 dark:border-zinc-700 dark:focus:bg-zinc-800 dark:focus:border-zinc-500 dark:text-zinc-100 dark:placeholder:text-zinc-500";
 const SELECT_TRIGGER_CLASS = "bg-zinc-50 border border-zinc-200 focus:bg-white focus:border-zinc-900 outline-none px-4 py-3 text-sm w-full transition-all rounded-lg dark:bg-zinc-800 dark:border-zinc-700 dark:focus:bg-zinc-800 dark:focus:border-zinc-500 flex items-center justify-between gap-2 text-left";
+const INPUT_ERROR_CLASS = "border-red-400 bg-red-50 focus:border-red-500 dark:border-red-500/70 dark:bg-red-950/20 dark:focus:border-red-500";
 const LABEL_CLASS = "text-[0.62rem] uppercase tracking-widest text-zinc-500 font-bold mb-2 block dark:text-zinc-400";
+
+function FieldError({ message }: { message?: string }) {
+  if (!message) return null;
+  return (
+    <p className="mt-1.5 flex items-center gap-1 text-xs font-medium text-red-500 dark:text-red-400">
+      <span className="inline-block h-1 w-1 rounded-full bg-red-500 dark:bg-red-400" />
+      {message}
+    </p>
+  );
+}
 
 function SelectField({
   name,
@@ -134,6 +147,16 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
   const [fileError, setFileError] = useState<string | null>(null);
   const [budget, setBudget] = useState("");
   const [pkgValue, setPkgValue] = useState(packageParam);
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
+
+  const clearFieldError = (field: string) => {
+    setFieldErrors((prev) => {
+      if (!prev[field]) return prev;
+      const next = { ...prev };
+      delete next[field];
+      return next;
+    });
+  };
 
   const MAX_FILE_BYTES = 5 * 1024 * 1024;
 
@@ -159,12 +182,26 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitting(true);
     setError(null);
 
     const form = e.currentTarget;
     const name = (form.elements.namedItem("name") as HTMLInputElement).value;
     const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+    const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
+
+    const nextFieldErrors: Record<string, string> = {};
+    if (!name.trim()) nextFieldErrors.name = "이름을 입력해 주세요.";
+    if (!email.trim()) nextFieldErrors.email = "이메일을 입력해 주세요.";
+    else if (!EMAIL_PATTERN.test(email.trim())) nextFieldErrors.email = "올바른 이메일 형식이 아닙니다.";
+    if (!message.trim()) nextFieldErrors.message = "문의 내용을 입력해 주세요.";
+
+    if (Object.keys(nextFieldErrors).length > 0) {
+      setFieldErrors(nextFieldErrors);
+      return;
+    }
+    setFieldErrors({});
+    setSubmitting(true);
+
     const phone = (form.elements.namedItem("phone") as HTMLInputElement)?.value || "";
     const pkg = (form.elements.namedItem("package") as HTMLSelectElement)?.value || "";
     const budget = (form.elements.namedItem("budget") as HTMLSelectElement)?.value || "";
@@ -172,7 +209,6 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
     const template = selectedTemplate?.name || (form.elements.namedItem("template") as HTMLInputElement)?.value || templateParam;
     const company = (form.elements.namedItem("company") as HTMLInputElement)?.value || "";
     const role = (form.elements.namedItem("role") as HTMLInputElement)?.value || "";
-    const message = (form.elements.namedItem("message") as HTMLTextAreaElement).value;
 
     try {
       const attachment = attachmentFile
@@ -396,7 +432,7 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
             )}
           </div>
 
-          <form onSubmit={handleSubmit} className="md:col-span-2 space-y-5 bg-white border border-zinc-200 rounded-2xl p-8 dark:bg-zinc-900 dark:border-zinc-800">
+          <form onSubmit={handleSubmit} noValidate className="md:col-span-2 space-y-5 bg-white border border-zinc-200 rounded-2xl p-8 dark:bg-zinc-900 dark:border-zinc-800">
             {requiresConsultation && (
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 dark:border-amber-800 dark:bg-amber-950/30">
                 <p className="text-sm font-bold text-amber-800 dark:text-amber-400">이 템플릿은 별도 협의가 필요합니다</p>
@@ -408,11 +444,23 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div>
                 <label className={LABEL_CLASS}>이름</label>
-                <input type="text" name="name" required className={INPUT_CLASS} placeholder="성함을 입력하세요" />
+                <input
+                  type="text" name="name" required
+                  className={`${INPUT_CLASS} ${fieldErrors.name ? INPUT_ERROR_CLASS : ""}`}
+                  placeholder="성함을 입력하세요"
+                  onChange={() => clearFieldError("name")}
+                />
+                <FieldError message={fieldErrors.name} />
               </div>
               <div>
                 <label className={LABEL_CLASS}>이메일</label>
-                <input type="email" name="email" required className={INPUT_CLASS} placeholder="your@email.com" />
+                <input
+                  type="email" name="email" required
+                  className={`${INPUT_CLASS} ${fieldErrors.email ? INPUT_ERROR_CLASS : ""}`}
+                  placeholder="your@email.com"
+                  onChange={() => clearFieldError("email")}
+                />
+                <FieldError message={fieldErrors.email} />
               </div>
             </div>
 
@@ -485,13 +533,16 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
             <div>
               <label className={LABEL_CLASS}>문의 상세</label>
               <textarea
-                name="message" rows={6} required className={`${INPUT_CLASS} resize-none`}
+                name="message" rows={6} required
+                className={`${INPUT_CLASS} resize-none ${fieldErrors.message ? INPUT_ERROR_CLASS : ""}`}
                 placeholder={
                   type === "template" ? "커스터마이징 요구사항과 프로젝트 목표를 알려주세요..."
                   : type === "custom" ? "필요한 웹사이트, 서비스에 대한 기능과 예상 일정을 알려주세요."
                   : "무엇을 도와드릴까요?"
                 }
+                onChange={() => clearFieldError("message")}
               />
+              <FieldError message={fieldErrors.message} />
             </div>
 
             <div>
