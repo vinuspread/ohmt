@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useState } from "react";
+import { usePathname } from "next/navigation";
 import Script from "next/script";
 import { MessageCircle } from "lucide-react";
 
@@ -24,7 +25,9 @@ const KAKAO_JS_KEY = process.env.NEXT_PUBLIC_KAKAO_JS_KEY;
 const KAKAO_CHANNEL_ID = process.env.NEXT_PUBLIC_KAKAO_CHANNEL_ID;
 
 export function KakaoChatButton() {
+  const pathname = usePathname();
   const [sdkReady, setSdkReady] = useState(false);
+  const isAdminRoute = pathname?.startsWith("/admin") ?? false;
 
   const handleSdkLoad = useCallback(() => {
     try {
@@ -48,6 +51,8 @@ export function KakaoChatButton() {
   }, []);
 
   const isEnabled = Boolean(KAKAO_JS_KEY && KAKAO_CHANNEL_ID && sdkReady);
+
+  if (isAdminRoute) return null;
 
   return (
     <>
