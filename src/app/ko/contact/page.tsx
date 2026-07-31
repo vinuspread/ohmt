@@ -102,9 +102,9 @@ export default async function ContactPage({
 
         <div className="space-y-3 mb-10">
           <span className="text-[0.65rem] font-extrabold uppercase tracking-widest text-[#F1B100]">상담 신청</span>
-          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">브랜드에 어울리는<br />웹사이트, 함께 만들어요.</h1>
+          <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-100">브랜드에 맞는 웹서비스를<br />제작해드립니다.</h1>
           <p className="text-base text-zinc-500 leading-relaxed font-normal dark:text-zinc-400">
-            디자인부터 개발, 런칭까지 - 모든 과정을 함께합니다.<br />비즈니스에 집중하세요. 나머지는 저희가 맡겠습니다.
+            기획부터 디자인, 개발과 오픈까지 전담 팀이 진행합니다.<br />업종과 필요한 기능을 알려주시면 적합한 제작 방향을 제안드립니다.<br />비즈니스에 집중하세요. 웹서비스 제작은 저희가 맡겠습니다.
           </p>
         </div>
 
