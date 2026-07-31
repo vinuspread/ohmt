@@ -66,9 +66,9 @@ const HERO_SLIDES = [
 ];
 
 const serviceCardsKo = [
-  { icon: ImageOff, title: "무엇을 어떻게 담아야 할지, 막막합니다", desc: "화면 구성부터 콘텐츠까지 혼자 정해야 합니다." },
-  { icon: ClipboardList, title: "시작하기도 전에 부담스러운 비용", desc: "견적부터 계약까지, 진입장벽이 높습니다." },
-  { icon: PackageOpen, title: "오픈 후엔 누구에게 맡기나요", desc: "수정 하나에도 다시 개발자를 찾아야 합니다." },
+  { icon: ImageOff, title: "무엇을 담아야 할지 정리하기 어렵습니다", desc: "필요한 페이지와 콘텐츠의 순서를 잡기 어렵습니다." },
+  { icon: ClipboardList, title: "맞춤 외주의 비용과 일정이 부담됩니다", desc: "처음부터 새로 만들면 비용과 제작 기간이 커집니다." },
+  { icon: PackageOpen, title: "오픈 뒤 작은 수정도 맡길 곳이 필요합니다", desc: "문구나 이미지 하나를 바꿀 때도 새로운 업체를 찾아야 합니다." },
 ];
 
 const solutionsKo = [
@@ -652,7 +652,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
               ))}
             </div>
             <div className="grid gap-4 rounded-xl bg-zinc-950 p-5 md:grid-cols-[220px_1fr] md:items-center md:p-6 dark:bg-white">
-              <p className="text-sm font-extrabold text-white dark:text-zinc-950">Ohmytemplate의 해결방식</p>
+              <p className="text-sm font-extrabold text-white dark:text-zinc-950">Ohmytemplate의 해결 방식</p>
               <div className="grid gap-3 text-sm text-zinc-300 dark:text-zinc-700 md:grid-cols-3 md:divide-x md:divide-zinc-700 dark:md:divide-zinc-200">
                 {solutionsKo.map((text, idx) => (
                   <div key={text} className="flex items-start gap-3 md:px-5 first:md:pl-0 last:md:pr-0">
@@ -1020,7 +1020,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
         <div className="max-w-[1440px] mx-auto space-y-10 md:space-y-16">
           <div className="space-y-4 text-center">
             <span className="ohmt-section-label">FAQ</span>
-            <h2 className="text-[1.375rem] sm:text-3xl md:text-4xl font-extrabold tracking-tighter text-zinc-900 dark:text-zinc-100">자주 묻는 질문</h2>
+            <h2 className="text-[1.375rem] sm:text-3xl md:text-4xl font-extrabold tracking-tighter text-zinc-900 dark:text-zinc-100">시작하기 전에 확인해 보세요.</h2>
             <p className="ohmt-section-desc">제작 전 자주 받는 질문을 정리했습니다. 추가로 궁금한 점은 상담 시 바로 확인하실 수 있습니다.</p>
           </div>
           <div className="space-y-4">
