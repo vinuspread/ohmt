@@ -3,7 +3,7 @@
 import React, { useState, useMemo, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, X, Search, Sparkles, Wrench, ImageOff, Shuffle, ClipboardList, PackageOpen } from "lucide-react";
+import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, X, Search, Sparkles, Wrench, ImageOff, ClipboardList } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Logo } from "@/components/Logo";
 import type { PricingPackage } from "@/types/template";
@@ -49,11 +49,9 @@ const HERO_SLIDES = [
 ];
 
 const serviceCardsKo = [
-  { icon: Wrench, title: "제작 과정의 많은 선택", desc: "디자인, 문구, 이미지, 구성, 기능까지 하나씩 결정하다 보면 예상보다 많은 시간과 에너지가 필요합니다." },
-  { icon: ImageOff, title: "콘텐츠 준비의 막막함", desc: "무엇을 넣어야 할지, 어떤 순서로 보여줘야 할지 정리되지 않으면 제작은 시작해도 오픈까지 이어지기 어렵습니다." },
-  { icon: Shuffle, title: "화면보다 중요한 흐름", desc: "보기 좋은 디자인도 중요하지만, 고객이 이해하고 신뢰하고 문의하게 만드는 구조가 함께 필요합니다." },
-  { icon: ClipboardList, title: "처음부터 부담스러운 외주", desc: "기획, 디자인, 개발을 모두 새로 시작하면 비용과 일정이 커지고 결정해야 할 것도 많아집니다." },
-  { icon: PackageOpen, title: "오픈 이후의 운영 부담", desc: "웹사이트는 완성 후에도 문구 수정, 이미지 교체, 오류 확인, 콘텐츠 업데이트가 계속 필요합니다." },
+  { icon: ImageOff, title: "무엇을 담아야 할지 정리하기 어렵습니다", desc: "필요한 페이지와 콘텐츠의 순서를 잡기 어렵습니다." },
+  { icon: ClipboardList, title: "맞춤 외주의 비용과 일정이 부담됩니다", desc: "처음부터 새로 만들면 비용과 제작 기간이 커집니다." },
+  { icon: Wrench, title: "오픈 뒤 작은 수정도 맡길 곳이 필요합니다", desc: "문구나 이미지 하나를 바꿀 때도 새로운 업체를 찾아야 합니다." },
 ];
 
 const modelStepsKo = [
@@ -72,10 +70,16 @@ const directionsKo = [
 ];
 
 const carePlansKo = [
-  { title: "Basic Care", price: "월 20만원 (VAT별도)", desc: "오류 대응과 작은 수정으로 운영 안정성을 챙깁니다." },
-  { title: "Growth Care", price: "월 40만원 (VAT별도)", desc: "콘텐츠 업데이트, 페이지 보완, 캠페인 반영을 포함합니다." },
-  { title: "Managed Care", price: "별도협의", desc: "운영 대행, SLA, 상시 응대가 필요한 팀용 플랜입니다." },
+  { title: "Basic Care", price: "월 20만원 (VAT별도)", desc: "오류 확인과 간단한 문구·이미지 수정이 필요한 경우" },
+  { title: "Growth Care", price: "월 40만원 (VAT별도)", desc: "콘텐츠와 프로모션을 꾸준히 업데이트해야 하는 경우" },
+  { title: "Managed Care", price: "별도협의", desc: "전담 담당자와 정기 운영이 필요한 팀" },
 ];
+
+const pricingDescriptionsKo: Record<string, string> = {
+  starter: "빠르게 오픈할 기본 사이트가 필요한 경우",
+  professional: "페이지 구성과 디자인을 브랜드에 더 깊게 맞춰야 하는 경우",
+  premium: "별도 기능과 서비스 구조 설계가 필요한 경우",
+};
 
 function SectionHeadingKo({ label, title, desc }: { label?: string; title: React.ReactNode; desc?: React.ReactNode }) {
   return (
@@ -378,9 +382,13 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             ))}
           </div>
           <div className="grid gap-4 rounded-xl bg-zinc-950 p-5 md:grid-cols-[220px_1fr] md:items-center md:p-6 dark:bg-white">
-            <p className="text-sm font-extrabold text-white dark:text-zinc-950">Ohmytemplate의 해결방식</p>
+            <p className="text-sm font-extrabold text-white dark:text-zinc-950">Ohmytemplate의 해결 방식</p>
             <div className="grid gap-3 text-sm text-zinc-300 dark:text-zinc-700 md:grid-cols-3 md:divide-x md:divide-zinc-700 dark:md:divide-zinc-200">
-              {["제작 범위를 먼저 정리합니다.", "카피와 이미지를 실제 브랜드에 맞춥니다.", "오픈 후 수정과 운영 기준을 남깁니다."].map((text, idx) => (
+              {[
+                "필요한 페이지와 콘텐츠를 먼저 정리합니다.",
+                "완성된 디자인에서 시작해 결정과 제작에 드는 시간을 줄입니다.",
+                "사이트 제작에 참여한 팀이 오픈 이후의 수정과 운영을 이어서 지원합니다.",
+              ].map((text, idx) => (
                 <div key={text} className="flex items-start gap-3 md:px-5 first:md:pl-0 last:md:pr-0">
                   <span className="font-mono text-xs font-bold text-[#F1B100]">{String(idx + 1).padStart(2, "0")}</span>
                   <span className="leading-6">{text}</span>
@@ -396,7 +404,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
         <div className="max-w-[1440px] mx-auto space-y-9 md:space-y-12">
           <SectionHeadingKo
             title={<>OHMT는 템플릿 판매 사이트가 아닙니다.<br />템플릿 기반의 맞춤 제작 서비스입니다.</>}
-            desc={<>완전히 빈 화면에서 시작하지 않습니다.<br />검증된 템플릿을 기준으로 방향을 고르고, 실제 브랜드에 맞게 완성합니다.</>}
+            desc="선택한 디자인에 기반하여 브랜드의 문구, 이미지, 색, 글꼴, 페이지와 필요한 기능을 적용해 실제 운영할 사이트로 완성합니다."
           />
           <div className="grid grid-cols-1 gap-3 md:grid-cols-3 md:gap-0 md:divide-x md:divide-zinc-200 dark:md:divide-zinc-700">
             {modelStepsKo.map((item) => (
@@ -422,7 +430,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             <SectionHeadingKo
               label="Direction"
               title={<>템플릿은 상품이 아니라,<br />제작 방향을 고르는 기준입니다.</>}
-              desc="업종과 목적에 맞는 방향을 고르면 아래 갤러리로 바로 이동합니다."
+              desc="고객이 무엇을 확인하고 어떤 행동을 해야 하는지에 따라 필요한 페이지와 흐름이 달라집니다."
             />
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/ko/contact" className="inline-flex items-center justify-center rounded-md bg-[#222222] px-6 py-3.5 text-xs font-extrabold text-[#F1B100] transition-colors hover:bg-[#2B2B2B] hover:text-[#F1B100]">
@@ -596,7 +604,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
         <div className="max-w-[1440px] mx-auto space-y-10 md:space-y-16">
           <div className="space-y-4 text-center">
             <span className="ohmt-section-label">Price Package</span>
-            <h2 className="ohmt-section-title">외주보다 빠르고, DIY보다 완성도 있습니다.</h2>
+            <h2 className="ohmt-section-title">필요한 페이지와 맞춤 범위에 따라 선택하세요.</h2>
             <p className="ohmt-section-desc">정확한 견적은 상담 후 확정됩니다. 먼저 필요한 제작 밀도와 운영 범위를 가늠할 수 있게 가격대를 공개합니다.</p>
           </div>
 
@@ -611,7 +619,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                 <div className="space-y-6">
                   <div className="space-y-1">
                     <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">{pkg.name}</h3>
-                    <p className="text-sm text-zinc-400 dark:text-zinc-500">{pkg.description}</p>
+                    <p className="text-sm text-zinc-400 dark:text-zinc-500">{pricingDescriptionsKo[pkg.slug] ?? pkg.description}</p>
                   </div>
                   <div className="border-t border-zinc-100 dark:border-zinc-700 pt-6">
                     <span className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-zinc-100">{pkg.price}</span>
@@ -677,14 +685,14 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           <SectionHeadingKo
             label="Maintenance"
             title={<>오픈이 끝이 아닙니다.<br />진짜 운영은 그 다음부터입니다.</>}
-            desc="사이트는 오픈한 날 끝나지 않습니다. 오류 대응, 콘텐츠 업데이트, 운영 대행까지 필요한 빈도에 맞춰 이어갑니다."
+            desc="작은 수정부터 정기적인 콘텐츠 업데이트까지 필요한 운영 범위를 선택할 수 있습니다."
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:items-center">
             {carePlansKo.map((plan, idx) => (
               <div
                 key={plan.title}
                 className={idx === 1
-                  ? "bg-zinc-950 text-white rounded-xl p-6 sm:p-7 md:p-8 shadow-xl dark:bg-black"
+                  ? "bg-zinc-950 text-white rounded-xl p-6 sm:p-7 md:p-8 border border-[#F1B100]/50 shadow-xl dark:bg-black dark:border-[#F1B100]/40"
                   : "bg-white border border-zinc-200/60 rounded-xl p-5 sm:p-6 md:p-7 hover:border-zinc-300 transition-colors dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600"
                 }
               >
@@ -705,7 +713,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
         <div className="ohmt-final-cta-inner">
           <div className="space-y-3">
             <h2 className="ohmt-final-cta-title">나의 브랜드에 맞는 사이트, 빠르게 시작해보세요</h2>
-            <p className="ohmt-final-cta-desc">업종 방향과 템플릿 후보만 정해도 상담을 시작할 수 있습니다.</p>
+            <p className="ohmt-final-cta-desc">업종, 필요한 페이지, 원하는 오픈 시점만 알려주세요. 맞는 디자인과 제작 범위를 함께 제안해 드립니다.</p>
             <Link href="/ko/contact" className="ohmt-text-cta">
               상담하기
             </Link>
@@ -718,7 +726,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
         <div className="max-w-[1440px] mx-auto space-y-10 md:space-y-16">
           <div className="space-y-4 text-center">
             <span className="ohmt-section-label">FAQ</span>
-            <h2 className="text-[1.375rem] sm:text-3xl md:text-4xl font-extrabold tracking-tighter text-zinc-900 dark:text-zinc-100">자주 묻는 질문</h2>
+            <h2 className="text-[1.375rem] sm:text-3xl md:text-4xl font-extrabold tracking-tighter text-zinc-900 dark:text-zinc-100">시작하기 전에 확인해 보세요.</h2>
             <p className="ohmt-section-desc">제작 전 자주 받는 질문을 정리했습니다. 추가로 궁금한 점은 상담 시 바로 확인하실 수 있습니다.</p>
           </div>
           <div className="space-y-4">
@@ -755,9 +763,12 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
       {/* Footer */}
       <footer className="px-5 sm:px-6 md:px-12 lg:px-20 py-12 border-t border-zinc-200/60 bg-[#FCFCFD] dark:border-zinc-800 dark:bg-zinc-950">
         <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between items-center gap-6 text-center md:text-left">
-          <Link href="/ko" className="flex items-center gap-3 h-6">
-            <Logo className="h-6 w-auto block" />
-          </Link>
+          <div className="space-y-3">
+            <Link href="/ko" className="flex items-center gap-3 h-6">
+              <Logo className="h-6 w-auto block" />
+            </Link>
+            <p className="max-w-md text-xs leading-relaxed text-zinc-500 dark:text-zinc-400">검증된 디자인을 바탕으로 브랜드에 맞는 웹사이트를 제작하고 운영합니다.</p>
+          </div>
           <div className="flex gap-8 text-xs font-bold text-zinc-400 tracking-widest dark:text-zinc-500">
             <Link href="/en" className="hover:text-zinc-950 transition-colors dark:hover:text-zinc-100">English</Link>
             <Link href="/ko/contact" className="hover:text-zinc-950 transition-colors dark:hover:text-zinc-100">문의</Link>

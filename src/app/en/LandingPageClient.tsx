@@ -684,7 +684,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
               <div
                 key={plan.title}
                 className={idx === 1
-                  ? "bg-zinc-950 text-white rounded-xl p-6 sm:p-7 md:p-8 shadow-xl dark:bg-black"
+                  ? "bg-zinc-950 text-white rounded-xl p-6 sm:p-7 md:p-8 border border-[#F1B100]/50 shadow-xl dark:bg-black dark:border-[#F1B100]/40"
                   : "bg-white border border-zinc-200/60 rounded-xl p-5 sm:p-6 md:p-7 hover:border-zinc-300 transition-colors dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600"
                 }
               >
