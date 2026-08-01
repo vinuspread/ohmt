@@ -34,12 +34,12 @@ const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 const ALL_LABEL = "전체";
 const POPULAR_TAGS = ["패션", "포트폴리오", "에이전시", "럭셔리", "미니멀"];
 const MOBILE_NAV_ITEMS_KO = [
-  { href: "#directions", label: "서비스소개" },
-  { href: "#templates", label: "템플릿" },
+  { href: "#directions", label: "제작 방식" },
+  { href: "#templates", label: "디자인" },
   { href: "#pricing", label: "가격" },
-  { href: "#process", label: "프로세스" },
+  { href: "#process", label: "진행 과정" },
   { href: "#faq", label: "FAQ" },
-  { href: "/ko/contact", label: "제작 상담 신청", isCta: true },
+  { href: "/ko/contact", label: "제작 상담", isCta: true },
 ];
 const MOBILE_MENU_LIST_VARIANTS = {
   hidden: {},
@@ -409,10 +409,10 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             <Logo className="h-6 w-auto block" />
           </Link>
           <nav className="hidden md:flex items-center gap-6 text-[0.82rem] font-bold text-zinc-500 tracking-wider dark:text-zinc-400">
-            <a href="#directions" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">서비스소개</a>
-            <a href="#templates" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">템플릿</a>
+            <a href="#directions" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">제작 방식</a>
+            <a href="#templates" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">디자인</a>
             <a href="#pricing" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">가격</a>
-            <a href="#process" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">프로세스</a>
+            <a href="#process" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">진행 과정</a>
             <a href="#faq" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">FAQ</a>
           </nav>
         </div>
@@ -424,7 +424,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             href="/ko/contact"
             className="inline-flex items-center justify-center bg-[#F1B100] hover:bg-[#d99e00] text-zinc-900 text-[0.7rem] sm:text-xs font-bold px-3.5 sm:px-5 py-2 sm:py-2.5 transition-colors duration-200 rounded-full whitespace-nowrap"
           >
-            제작 상담 신청
+            제작 상담
           </Link>
           <button
             ref={hamburgerBtnRef}
@@ -725,7 +725,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             />
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/ko/contact" className="w-[140px] sm:w-[200px] md:w-[240px] inline-flex items-center justify-center rounded-full bg-[#F1B100] px-6 md:px-8 py-3.5 md:py-4 text-xs sm:text-sm md:text-base font-extrabold text-zinc-900 transition-colors hover:bg-[#d99e00]">
-                제작 상담 신청
+                제작 상담
               </Link>
               <button onClick={() => scrollToTemplates(ALL_LABEL)} className="w-[140px] sm:w-[200px] md:w-[240px] bg-white border border-zinc-200/70 hover:border-zinc-400 text-zinc-800 text-xs sm:text-sm md:text-base font-bold px-5 md:px-8 py-3 md:py-4 rounded-full transition-colors">
                 전체 템플릿 보기
@@ -1009,7 +1009,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             <h2 className="ohmt-final-cta-title">우리 브랜드에 맞는 웹사이트<br />상담부터 시작하세요.</h2>
             <p className="ohmt-final-cta-desc">업종과 필요한 기능만 알려주셔도<br />제작 방향과 템플릿을 함께 제안드립니다.</p>
             <Link href="/ko/contact" className="ohmt-text-cta">
-              제작 상담 신청
+              제작 상담
             </Link>
           </div>
         </div>
@@ -1068,7 +1068,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             </div>
 
             <nav aria-label="푸터 메뉴" className="flex flex-row flex-wrap items-center gap-3 text-sm font-bold text-zinc-600 dark:text-zinc-400">
-              <Link href="/ko/contact" className="text-[#F1B100] transition-colors hover:text-[#d99e00]">제작 상담 신청</Link>
+              <Link href="/ko/contact" className="text-[#F1B100] transition-colors hover:text-[#d99e00]">제작 상담</Link>
               <span aria-hidden="true" className="text-zinc-300 dark:text-zinc-600">|</span>
               <Link href="/ko/privacy-policy" className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-100">개인정보처리방침</Link>
               <span aria-hidden="true" className="text-zinc-300 dark:text-zinc-600">|</span>

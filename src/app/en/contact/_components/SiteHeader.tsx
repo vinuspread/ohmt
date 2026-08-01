@@ -10,8 +10,8 @@ import { Logo } from "@/components/Logo";
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 
 const MOBILE_NAV_ITEMS_EN = [
-  { href: "/en#directions", label: "Services" },
-  { href: "/en#templates", label: "Templates" },
+  { href: "/en#directions", label: "How It Works" },
+  { href: "/en#templates", label: "Design" },
   { href: "/en#pricing", label: "Pricing" },
   { href: "/en#process", label: "Process" },
   { href: "/en#faq", label: "FAQ" },
@@ -162,8 +162,8 @@ export function SiteHeader() {
             <Logo className="h-6 w-auto block" />
           </Link>
           <nav className="hidden md:flex items-center gap-6 text-[0.82rem] font-bold text-zinc-500 uppercase tracking-wider dark:text-zinc-400">
-            <a href="/en#directions" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">Services</a>
-            <a href="/en#templates" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">Templates</a>
+            <a href="/en#directions" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">How It Works</a>
+            <a href="/en#templates" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">Design</a>
             <a href="/en#pricing" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">Pricing</a>
             <a href="/en#process" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">Process</a>
             <a href="/en#faq" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">FAQ</a>
