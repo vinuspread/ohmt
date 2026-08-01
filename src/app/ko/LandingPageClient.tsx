@@ -635,7 +635,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
         <div className="max-w-[1440px] mx-auto space-y-9 md:space-y-12">
           <SectionHeadingKo
             title={<>사이트 하나를 열기까지,<br /><span className="text-[#F1B100]">결정할 일이 너무 많습니다.</span></>}
-            desc="기획, 디자인, 문구, 이미지, 기능을 처음부터 모두 정하면 시간과 비용이 커집니다. OHMT는 검증된 디자인과 전담 제작팀으로 이 과정을 줄입니다."
+            desc={<>기획, 디자인, 문구, 이미지, 기능을 처음부터 모두 정하면 시간과 비용이 커집니다.<br />오마이템플릿은 검증된 디자인과 전담 제작팀으로 이 과정을 줄입니다.</>}
             titleClassName="text-[28px]! sm:text-4xl! md:text-5xl!"
           />
           {/* Desktop / Tablet: cards grid + single solution bar */}
