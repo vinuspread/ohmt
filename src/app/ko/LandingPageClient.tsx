@@ -52,7 +52,7 @@ const MOBILE_MENU_ITEM_VARIANTS = {
 
 const HERO_SLIDES = [
   {
-    heading: <>검증된 디자인을 기반으로<br className="hidden sm:block" /><span className="text-[#FFB800]">차별화된 사이트를 완성합니다.</span></>,
+    heading: <>검증된 디자인을 기반으로<br /><span className="text-[#FFB800]">차별화된 사이트를 완성합니다.</span></>,
     desc: "20년 경력의 웹 제작팀이 구성, 문구, 이미지, 기능을 다듬고 오픈 후 운영까지 책임집니다.",
   },
   {
@@ -60,7 +60,7 @@ const HERO_SLIDES = [
     desc: "회원, 예약 등 맞춤 개발로 확장합니다.",
   },
   {
-    heading: <>오픈 이후 운영까지 <br className="hidden sm:block" /><span className="text-[#FFB800]">완벽한 지원</span></>,
+    heading: <>오픈 이후 운영까지 <br /><span className="text-[#FFB800]">완벽한 지원</span></>,
     desc: "전담팀이 수정과 점검을 신속하게 대응합니다.",
   },
 ];
@@ -559,7 +559,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             <ChevronRight size={18} />
           </button>
 
-          <div className="max-w-4xl mx-auto text-center px-6 relative z-10">
+          <div className="max-w-6xl mx-auto text-center px-6 relative z-10">
             <span className="inline-flex items-center gap-2 px-3 py-1 bg-zinc-100 text-zinc-700 text-xs font-bold uppercase tracking-wider rounded-full dark:bg-zinc-800 dark:text-zinc-300">
               <Sparkles size={12} className="text-orange-500" />
               OH! MY TEMPLATES
@@ -572,7 +572,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -14 }}
                   transition={{ duration: 0.45, ease: EASE_OUT }}
-                  className="text-[2.5rem] sm:text-[3rem] md:text-[4.8rem] font-bold tracking-tight leading-[1.25] md:leading-[1.1] text-zinc-900 dark:text-zinc-100"
+                  className="text-[2.5rem] sm:text-[3rem] md:text-[4.2rem] font-bold tracking-tight leading-[1.25] md:leading-[1.1] text-zinc-900 dark:text-zinc-100"
                 >
                   {HERO_SLIDES[heroIndex].heading}
                 </motion.h1>
