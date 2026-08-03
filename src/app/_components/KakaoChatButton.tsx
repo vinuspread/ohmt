@@ -53,10 +53,10 @@ export function KakaoChatButton() {
         return;
       }
       const restBottomGap = parseFloat(getComputedStyle(btn).bottom) || 0;
-      const restBottomEdge = window.innerHeight - restBottomGap;
-      const footerTop = footer.getBoundingClientRect().top;
-      const overlap = restBottomEdge - footerTop + FOOTER_GAP;
-      setLiftY(overlap > 0 ? -overlap : 0);
+      const footerRect = footer.getBoundingClientRect();
+      const nearFooter = footerRect.top < window.innerHeight;
+      const clearance = footerRect.height + FOOTER_GAP - restBottomGap;
+      setLiftY(nearFooter && clearance > 0 ? -clearance : 0);
     };
 
     const scheduleUpdate = () => {
