@@ -32,10 +32,14 @@ export function KakaoChatButton() {
   const [sdkReady, setSdkReady] = useState(false);
   const [liftY, setLiftY] = useState(0);
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const isAdminRoute = pathname?.startsWith("/admin") ?? false;
+  const isHiddenRoute =
+    pathname?.startsWith("/admin") ||
+    pathname?.startsWith("/en/templates") ||
+    pathname?.startsWith("/ko/templates") ||
+    false;
 
   useEffect(() => {
-    if (isAdminRoute) return;
+    if (isHiddenRoute) return;
 
     let frame = 0;
     const updateLift = () => {
@@ -66,7 +70,7 @@ export function KakaoChatButton() {
       window.removeEventListener("scroll", scheduleUpdate);
       window.removeEventListener("resize", scheduleUpdate);
     };
-  }, [isAdminRoute, pathname]);
+  }, [isHiddenRoute, pathname]);
 
   const handleSdkLoad = useCallback(() => {
     try {
@@ -91,7 +95,7 @@ export function KakaoChatButton() {
 
   const isEnabled = Boolean(KAKAO_JS_KEY && KAKAO_CHANNEL_ID && sdkReady);
 
-  if (isAdminRoute) return null;
+  if (isHiddenRoute) return null;
 
   return (
     <>
