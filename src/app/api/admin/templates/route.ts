@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { validateAdminUser } from "@/lib/admin-auth";
 import { createAdminClient } from "@/lib/supabase/admin";
 import type { TemplateLang, TemplateStatus } from "@/types/template";
 
@@ -41,6 +42,9 @@ function validateTemplateBody(body: TemplateRequestBody) {
 }
 
 export async function GET(request: Request) {
+  const authError = await validateAdminUser();
+  if (authError) return authError;
+
   const { searchParams } = new URL(request.url);
   const slug = searchParams.get("slug");
   const lang = searchParams.get("lang");
@@ -59,6 +63,9 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
+  const authError = await validateAdminUser();
+  if (authError) return authError;
+
   const body = (await request.json()) as TemplateRequestBody;
 
   if (!validateTemplateBody(body)) {

@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { validateAdminUser } from "@/lib/admin-auth";
 import { createAdminClient } from "@/lib/supabase/admin";
 import type { TemplateLang } from "@/types/template";
 
@@ -26,6 +27,9 @@ function validateFaqBody(body: FaqRequestBody) {
 }
 
 export async function GET(request: Request) {
+  const authError = await validateAdminUser();
+  if (authError) return authError;
+
   const { searchParams } = new URL(request.url);
   const lang = searchParams.get("lang");
   const supabase = createAdminClient();
@@ -44,6 +48,9 @@ export async function GET(request: Request) {
 }
 
 export async function POST(request: Request) {
+  const authError = await validateAdminUser();
+  if (authError) return authError;
+
   const body = (await request.json()) as FaqRequestBody;
 
   if (!validateFaqBody(body)) {

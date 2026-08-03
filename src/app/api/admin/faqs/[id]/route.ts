@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { validateAdminUser } from "@/lib/admin-auth";
 import { createAdminClient } from "@/lib/supabase/admin";
 
 interface FaqPatchBody {
@@ -17,6 +18,9 @@ function hasInvalidPatch(body: FaqPatchBody) {
 }
 
 export async function PATCH(request: Request, context: { params: Promise<{ id: string }> }) {
+  const authError = await validateAdminUser();
+  if (authError) return authError;
+
   const { id } = await context.params;
   const body = (await request.json()) as FaqPatchBody;
 
@@ -39,6 +43,9 @@ export async function PATCH(request: Request, context: { params: Promise<{ id: s
 }
 
 export async function DELETE(_request: Request, context: { params: Promise<{ id: string }> }) {
+  const authError = await validateAdminUser();
+  if (authError) return authError;
+
   const { id } = await context.params;
   const supabase = createAdminClient();
   const { error } = await supabase.from("faqs").delete().eq("id", id);

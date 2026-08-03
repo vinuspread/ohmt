@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { validateAdminUser } from "@/lib/admin-auth";
 import { createAdminClient } from "@/lib/supabase/admin";
 import type { InquiryStatus } from "@/types/template";
 
@@ -14,6 +15,9 @@ function isInquiryStatus(value: unknown): value is InquiryStatus {
 }
 
 export async function PATCH(request: Request, context: { params: Promise<{ id: string }> }) {
+  const authError = await validateAdminUser();
+  if (authError) return authError;
+
   const { id } = await context.params;
   const body = (await request.json().catch(() => null)) as InquiryPatchBody | null;
   const updates: { status?: InquiryStatus; note?: string | null } = {};
@@ -49,6 +53,9 @@ export async function PATCH(request: Request, context: { params: Promise<{ id: s
 }
 
 export async function DELETE(_request: Request, context: { params: Promise<{ id: string }> }) {
+  const authError = await validateAdminUser();
+  if (authError) return authError;
+
   const { id } = await context.params;
   const supabase = createAdminClient();
   const { error } = await supabase.from("inquiries").delete().eq("id", id);

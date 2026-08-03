@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { validateAdminUser } from "@/lib/admin-auth";
 import { createAdminClient } from "@/lib/supabase/admin";
 import type { OrderStatus } from "@/types/template";
 
@@ -9,6 +10,9 @@ function isOrderStatus(value: unknown): value is OrderStatus {
 }
 
 export async function PATCH(request: Request, context: { params: Promise<{ id: string }> }) {
+  const authError = await validateAdminUser();
+  if (authError) return authError;
+
   const { id } = await context.params;
   const body = (await request.json()) as { status?: unknown };
 
