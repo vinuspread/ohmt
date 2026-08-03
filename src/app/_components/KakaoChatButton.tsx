@@ -26,6 +26,7 @@ const KAKAO_JS_KEY = process.env.NEXT_PUBLIC_KAKAO_JS_KEY;
 const KAKAO_CHANNEL_ID = process.env.NEXT_PUBLIC_KAKAO_CHANNEL_ID;
 
 const FOOTER_GAP = 16;
+const LIFT_DELAY = 150;
 
 export function KakaoChatButton() {
   const pathname = usePathname();
@@ -42,6 +43,7 @@ export function KakaoChatButton() {
     if (isHiddenRoute) return;
 
     let frame = 0;
+    let debounce: ReturnType<typeof setTimeout> | null = null;
     const updateLift = () => {
       frame = 0;
       const btn = buttonRef.current;
@@ -58,8 +60,11 @@ export function KakaoChatButton() {
     };
 
     const scheduleUpdate = () => {
-      if (frame) return;
-      frame = requestAnimationFrame(updateLift);
+      if (debounce) clearTimeout(debounce);
+      debounce = setTimeout(() => {
+        if (frame) return;
+        frame = requestAnimationFrame(updateLift);
+      }, LIFT_DELAY);
     };
 
     updateLift();
@@ -67,6 +72,7 @@ export function KakaoChatButton() {
     window.addEventListener("resize", scheduleUpdate);
     return () => {
       if (frame) cancelAnimationFrame(frame);
+      if (debounce) clearTimeout(debounce);
       window.removeEventListener("scroll", scheduleUpdate);
       window.removeEventListener("resize", scheduleUpdate);
     };
@@ -113,7 +119,7 @@ export function KakaoChatButton() {
         disabled={!isEnabled}
         aria-label="카카오톡 상담하기"
         animate={{ y: liftY }}
-        transition={{ type: "spring", stiffness: 120, damping: 16 }}
+        transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
         whileHover={!isEnabled ? undefined : { scale: 1.05 }}
         whileTap={!isEnabled ? undefined : { scale: 0.97 }}
         className="fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-40 inline-flex items-center gap-2 rounded-full bg-[#FEE500] px-4 py-3 text-sm font-bold text-[#191919] shadow-lg shadow-black/10 disabled:cursor-not-allowed disabled:opacity-50"
