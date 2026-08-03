@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useSpring } from "framer-motion";
 import Script from "next/script";
 import { MessageCircle } from "lucide-react";
 
@@ -26,13 +26,13 @@ const KAKAO_JS_KEY = process.env.NEXT_PUBLIC_KAKAO_JS_KEY;
 const KAKAO_CHANNEL_ID = process.env.NEXT_PUBLIC_KAKAO_CHANNEL_ID;
 
 const FOOTER_GAP = 16;
-const LIFT_DELAY = 150;
 
 export function KakaoChatButton() {
   const pathname = usePathname();
   const [sdkReady, setSdkReady] = useState(false);
-  const [liftY, setLiftY] = useState(0);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const rawLiftY = useMotionValue(0);
+  const liftY = useSpring(rawLiftY, { stiffness: 55, damping: 16, mass: 1 });
   const isHiddenRoute =
     pathname?.startsWith("/admin") ||
     pathname?.startsWith("/en/templates") ||
@@ -43,28 +43,24 @@ export function KakaoChatButton() {
     if (isHiddenRoute) return;
 
     let frame = 0;
-    let debounce: ReturnType<typeof setTimeout> | null = null;
     const updateLift = () => {
       frame = 0;
       const btn = buttonRef.current;
       const footer = document.querySelector("footer");
       if (!btn || !footer) {
-        setLiftY(0);
+        rawLiftY.set(0);
         return;
       }
       const restBottomGap = parseFloat(getComputedStyle(btn).bottom) || 0;
-      const footerRect = footer.getBoundingClientRect();
-      const nearFooter = footerRect.top < window.innerHeight;
-      const clearance = footerRect.height + FOOTER_GAP - restBottomGap;
-      setLiftY(nearFooter && clearance > 0 ? -clearance : 0);
+      const restBottomEdge = window.innerHeight - restBottomGap;
+      const footerTop = footer.getBoundingClientRect().top;
+      const overlap = restBottomEdge - footerTop + FOOTER_GAP;
+      rawLiftY.set(overlap > 0 ? -overlap : 0);
     };
 
     const scheduleUpdate = () => {
-      if (debounce) clearTimeout(debounce);
-      debounce = setTimeout(() => {
-        if (frame) return;
-        frame = requestAnimationFrame(updateLift);
-      }, LIFT_DELAY);
+      if (frame) return;
+      frame = requestAnimationFrame(updateLift);
     };
 
     updateLift();
@@ -72,11 +68,10 @@ export function KakaoChatButton() {
     window.addEventListener("resize", scheduleUpdate);
     return () => {
       if (frame) cancelAnimationFrame(frame);
-      if (debounce) clearTimeout(debounce);
       window.removeEventListener("scroll", scheduleUpdate);
       window.removeEventListener("resize", scheduleUpdate);
     };
-  }, [isHiddenRoute, pathname]);
+  }, [isHiddenRoute, pathname, rawLiftY]);
 
   const handleSdkLoad = useCallback(() => {
     try {
@@ -118,8 +113,7 @@ export function KakaoChatButton() {
         onClick={handleClick}
         disabled={!isEnabled}
         aria-label="카카오톡 상담하기"
-        animate={{ y: liftY }}
-        transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+        style={{ y: liftY }}
         whileHover={!isEnabled ? undefined : { scale: 1.05 }}
         whileTap={!isEnabled ? undefined : { scale: 0.97 }}
         className="fixed bottom-5 right-5 sm:bottom-8 sm:right-8 z-40 inline-flex items-center gap-2 rounded-full bg-[#FEE500] px-4 py-3 text-sm font-bold text-[#191919] shadow-lg shadow-black/10 disabled:cursor-not-allowed disabled:opacity-50"
