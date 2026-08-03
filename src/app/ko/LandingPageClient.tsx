@@ -52,7 +52,7 @@ const MOBILE_MENU_ITEM_VARIANTS = {
 
 const HERO_SLIDES = [
   {
-    heading: <>검증된 디자인으로 시작해,<br className="hidden sm:block" /><span className="text-[#FFB800]">우리 브랜드만의 사이트로 완성합니다.</span></>,
+    heading: <>검증된 디자인을 기반으로<br className="hidden sm:block" /><span className="text-[#FFB800]">차별화된 사이트를 완성합니다.</span></>,
     desc: "20년 경력의 웹 제작팀이 구성, 문구, 이미지, 기능을 다듬고 오픈 후 운영까지 책임집니다.",
   },
   {
