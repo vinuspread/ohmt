@@ -4,7 +4,7 @@ import React, { useState, useMemo, useEffect, useRef, useCallback } from "react"
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Menu, X, Search, Sparkles, ImageOff, ClipboardList, PackageOpen } from "lucide-react";
+import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Menu, X, Search, Sparkles } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Logo } from "@/components/Logo";
 import type { PricingPackage } from "@/types/template";
@@ -72,14 +72,23 @@ const CASE_AVATAR_OPTIONS = ["/icons/avata_01.png", "/icons/avata_02.png", "/ico
 
 const serviceCardsKo = [
   {
-    icon: ImageOff,
     title: "전문 기획자가 없어 콘텐츠와 페이지 구성에 시간을 뺏깁니다",
     case1: "어떤 페이지가 필요한지, 문구와 콘텐츠는 어떻게 배치해야 타겟의 마음을 움직일지 막연하기만 합니다.",
     case2: "마케팅 메시지 정리부터 메뉴 구조, 이미지 수급까지... 본업에 집중하기도 모자란 시간에 기획에만 몇 주를 허비합니다.",
     solution: "페이지 구성부터 마케팅 메시지, 메뉴 구조, 이미지까지 전문 기획자가 함께 고민하고 채워드립니다.",
   },
-  { icon: ClipboardList, title: "맞춤 외주의 비용과 일정이 부담됩니다", desc: "처음부터 새로 만들면 비용과 제작 기간이 커집니다." },
-  { icon: PackageOpen, title: "오픈 뒤 작은 수정도 맡길 곳이 필요합니다", desc: "문구나 이미지 하나를 바꿀 때도 새로운 업체를 찾아야 합니다." },
+  {
+    title: "비싼 외주 비용 대비 오픈 일정과 퀄리티를 장담할 수 없습니다",
+    case1: "자체 개발이나 맞춤 외주는 수백~수천만 원의 비용이 들고, 수정이 반복되며 오픈 일정이 한없이 밀립니다.",
+    case2: "기획부터 개발까지 매번 새로 구축하는 외주는 눈덩이처럼 늘어나는 비용과 제작 기간의 리스크를 안게 됩니다.",
+    solution: "신속한 결정이 가능해 비용과 기간을 줄입니다.",
+  },
+  {
+    title: "오픈 후 텍스트 하나 바꾸려 해도 매번 외주를 찾아야 합니다",
+    case1: "론칭이 끝나면 기존 외주업체와 연락이 끊기거나, 아주 작은 수정 작업에도 과도한 추가 비용과 시간이 발생합니다.",
+    case2: "텍스트 수정, 이미지 교체, 간단한 기능 추가 등 오픈 이후 꾸준히 발생하는 관리 이슈를 책임질 전담팀이 없습니다.",
+    solution: "오픈 후 수정과 관리를 전담 팀이 지원합니다.",
+  },
 ];
 
 const modelStepsKo = [
@@ -134,11 +143,17 @@ function SectionHeadingKo({ label, title, desc, titleClassName }: { label?: stri
 export default function LandingPageClient({ templates, faqs, packages }: { templates: TemplateItem[]; faqs: FaqItem[]; packages: PricingPackage[] }) {
   const router = useRouter();
   const [heroIndex, setHeroIndex] = useState(0);
-  const [caseAvatars, setCaseAvatars] = useState<[string, string]>([CASE_AVATAR_OPTIONS[0], CASE_AVATAR_OPTIONS[1]]);
+  const [caseAvatars, setCaseAvatars] = useState<[string, string][]>(
+    serviceCardsKo.map(() => [CASE_AVATAR_OPTIONS[0], CASE_AVATAR_OPTIONS[1]])
+  );
 
   useEffect(() => {
-    const shuffled = [...CASE_AVATAR_OPTIONS].sort(() => Math.random() - 0.5);
-    setCaseAvatars([shuffled[0], shuffled[1]]);
+    setCaseAvatars(
+      serviceCardsKo.map(() => {
+        const shuffled = [...CASE_AVATAR_OPTIONS].sort(() => Math.random() - 0.5);
+        return [shuffled[0], shuffled[1]];
+      })
+    );
   }, []);
   const [headerVisible, setHeaderVisible] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -650,33 +665,22 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           />
           {/* Problem cards: single shared layout for all breakpoints */}
           <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-3">
-            {serviceCardsKo[0].case1 && serviceCardsKo[0].case2 && (
-              <div className="rounded-xl bg-white border border-zinc-200/60 p-5 dark:bg-zinc-800 dark:border-zinc-700">
-                <h3 className="text-[15px] font-bold text-zinc-900 dark:text-zinc-100">{serviceCardsKo[0].title}</h3>
+            {serviceCardsKo.map((item, idx) => (
+              <div key={item.title} className="rounded-xl bg-white border border-zinc-200/60 p-5 dark:bg-zinc-800 dark:border-zinc-700">
+                <h3 className="text-[15px] font-bold text-zinc-900 text-center dark:text-zinc-100">{item.title}</h3>
                 <div className="mt-3 space-y-2">
                   <div className="flex items-start gap-2.5 rounded-xl border border-amber-200/70 bg-amber-50 p-3 dark:border-amber-900/40 dark:bg-amber-500/10">
-                    <Image src={caseAvatars[0]} alt="" width={28} height={28} className="mt-0.5 shrink-0 rounded-full" />
-                    <p className="text-[13px] leading-6 text-zinc-600 dark:text-zinc-300">{serviceCardsKo[0].case1}</p>
+                    <Image src={caseAvatars[idx][0]} alt="" width={28} height={28} className="mt-0.5 shrink-0 rounded-full" />
+                    <p className="text-[13px] leading-6 text-zinc-600 dark:text-zinc-300">{item.case1}</p>
                   </div>
                   <div className="flex items-start gap-2.5 rounded-xl border border-amber-200/70 bg-amber-50 p-3 dark:border-amber-900/40 dark:bg-amber-500/10">
-                    <Image src={caseAvatars[1]} alt="" width={28} height={28} className="mt-0.5 shrink-0 rounded-full" />
-                    <p className="text-[13px] leading-6 text-zinc-600 dark:text-zinc-300">{serviceCardsKo[0].case2}</p>
+                    <Image src={caseAvatars[idx][1]} alt="" width={28} height={28} className="mt-0.5 shrink-0 rounded-full" />
+                    <p className="text-[13px] leading-6 text-zinc-600 dark:text-zinc-300">{item.case2}</p>
                   </div>
                 </div>
                 <div className="mt-4 pt-4 border-t border-zinc-200/60 flex items-start gap-3 dark:border-zinc-700">
                   <Image src="/icon.png" alt="" width={28} height={28} className="mt-0.5 shrink-0 rounded-full" />
-                  <p className="text-[13px] leading-6 text-zinc-900 font-bold dark:text-zinc-100">{serviceCardsKo[0].solution}</p>
-                </div>
-              </div>
-            )}
-            {serviceCardsKo.slice(1).map((item) => (
-              <div key={item.title} className="bg-white border border-zinc-200/60 rounded-xl p-5 dark:bg-zinc-800 dark:border-zinc-700">
-                <div className="flex gap-4">
-                  <item.icon size={28} strokeWidth={1.7} className="mt-0.5 shrink-0 text-zinc-900 dark:text-zinc-100" />
-                  <div className="min-w-0">
-                    <h3 className="text-[15px] font-bold text-zinc-900 dark:text-zinc-100">{item.title}</h3>
-                    <p className="mt-1.5 text-[13px] leading-6 text-zinc-500 dark:text-zinc-400">{item.desc}</p>
-                  </div>
+                  <p className="text-[13px] leading-6 text-zinc-900 font-bold dark:text-zinc-100">{item.solution}</p>
                 </div>
               </div>
             ))}
