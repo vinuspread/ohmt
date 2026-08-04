@@ -644,6 +644,12 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
               </div>
             ))}
           </div>
+          <div className="flex items-start gap-4 rounded-xl bg-zinc-950 p-5 sm:items-center sm:p-6 md:p-7 dark:bg-white">
+            <Image src="/icon.png" alt="" width={32} height={32} className="mt-0.5 shrink-0 rounded-md sm:mt-0" />
+            <p className="text-[15px] leading-7 font-bold text-[#F1B100] sm:text-lg md:text-xl">
+              페이지 구성부터 마케팅 메시지, 메뉴 구조, 이미지까지 전문 기획자가 함께 고민하고 채워드립니다.
+            </p>
+          </div>
         </div>
       </section>
 
