@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { validateAdminUser } from "@/lib/admin-auth";
 import { createAdminClient } from "@/lib/supabase/admin";
 import type { TemplateLang } from "@/types/template";
 
@@ -40,6 +41,9 @@ function validatePricingBody(body: PricingRequestBody) {
 }
 
 export async function GET() {
+  const authError = await validateAdminUser();
+  if (authError) return authError;
+
   const supabase = createAdminClient();
   const { data, error } = await supabase.from("pricing_packages").select("*").order("lang").order("sort_order", { ascending: true });
 
@@ -49,6 +53,9 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
+  const authError = await validateAdminUser();
+  if (authError) return authError;
+
   const body = (await request.json()) as PricingRequestBody;
 
   if (!validatePricingBody(body)) {

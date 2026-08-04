@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { validateAdminUser } from "@/lib/admin-auth";
 import { createAdminClient } from "@/lib/supabase/admin";
 import type { TemplateStatus } from "@/types/template";
 
@@ -41,6 +42,9 @@ function hasInvalidPatch(body: TemplatePatchBody) {
 }
 
 export async function GET(_request: Request, context: { params: Promise<{ id: string }> }) {
+  const authError = await validateAdminUser();
+  if (authError) return authError;
+
   const { id } = await context.params;
   const supabase = createAdminClient();
   const { data, error } = await supabase.from("templates").select("*").eq("id", id).maybeSingle();
@@ -52,6 +56,9 @@ export async function GET(_request: Request, context: { params: Promise<{ id: st
 }
 
 export async function PATCH(request: Request, context: { params: Promise<{ id: string }> }) {
+  const authError = await validateAdminUser();
+  if (authError) return authError;
+
   const { id } = await context.params;
   const body = (await request.json()) as TemplatePatchBody;
 
@@ -68,6 +75,9 @@ export async function PATCH(request: Request, context: { params: Promise<{ id: s
 }
 
 export async function DELETE(_request: Request, context: { params: Promise<{ id: string }> }) {
+  const authError = await validateAdminUser();
+  if (authError) return authError;
+
   const { id } = await context.params;
   const supabase = createAdminClient();
   const { error } = await supabase.from("templates").delete().eq("id", id);

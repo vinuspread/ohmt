@@ -10,12 +10,11 @@ import { Logo } from "@/components/Logo";
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 
 const MOBILE_NAV_ITEMS_KO = [
-  { href: "/ko#directions", label: "서비스소개" },
-  { href: "/ko#templates", label: "템플릿" },
+  { href: "/ko#templates", label: "디자인" },
   { href: "/ko#pricing", label: "가격" },
-  { href: "/ko#process", label: "프로세스" },
+  { href: "/ko#process", label: "진행 과정" },
   { href: "/ko#faq", label: "FAQ" },
-  { href: "/ko/contact", label: "제작 상담 신청", isCta: true },
+  { href: "/ko/contact", label: "제작 상담", isCta: true },
 ];
 
 const MOBILE_MENU_LIST_VARIANTS = {
@@ -162,10 +161,9 @@ export function SiteHeader() {
             <Logo className="h-6 w-auto block" />
           </Link>
           <nav className="hidden md:flex items-center gap-6 text-[0.82rem] font-bold text-zinc-500 tracking-wider dark:text-zinc-400">
-            <a href="/ko#directions" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">서비스소개</a>
-            <a href="/ko#templates" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">템플릿</a>
+            <a href="/ko#templates" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">디자인</a>
             <a href="/ko#pricing" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">가격</a>
-            <a href="/ko#process" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">프로세스</a>
+            <a href="/ko#process" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">진행 과정</a>
             <a href="/ko#faq" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">FAQ</a>
           </nav>
         </div>
@@ -177,7 +175,7 @@ export function SiteHeader() {
             href="/ko/contact"
             className="inline-flex items-center justify-center bg-[#F1B100] hover:bg-[#d99e00] text-zinc-900 text-[0.7rem] sm:text-xs font-bold px-3.5 sm:px-5 py-2 sm:py-2.5 transition-colors duration-200 rounded-full whitespace-nowrap"
           >
-            제작 상담 신청
+            제작 상담
           </Link>
           <button
             ref={hamburgerBtnRef}

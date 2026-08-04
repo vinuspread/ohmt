@@ -1,9 +1,8 @@
 "use client";
 
 import React, { useEffect, useRef, useState } from "react";
-import Link from "next/link";
-import { useSearchParams } from "next/navigation";
-import { CheckCircle, ChevronDown, LayoutTemplate, Wand2, MessageCircle, X } from "lucide-react";
+import { useRouter, useSearchParams } from "next/navigation";
+import { ChevronDown, LayoutTemplate, Wand2, MessageCircle, X } from "lucide-react";
 
 type InquiryType = "template" | "custom" | "other" | null;
 
@@ -128,6 +127,7 @@ function SelectField({
 }
 
 export function ContactForm({ packages, requiresConsultation = false, templateList = [] }: { packages: PackageOption[]; requiresConsultation?: boolean; templateList?: TemplateItem[] }) {
+  const router = useRouter();
   const searchParams = useSearchParams();
   const templateParam = searchParams.get("template") || "";
   const packageParam = searchParams.get("package") || "";
@@ -136,7 +136,6 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
 
   const hasTemplate = Boolean(templateParam && imageParam);
   const [type, setType] = useState<InquiryType>(hasTemplate ? "template" : null);
-  const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [heroError, setHeroError] = useState(false);
@@ -234,28 +233,13 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
       });
 
       if (!res.ok) throw new Error("서버 오류");
-      setSubmitted(true);
+      router.push("/ko/contact/complete");
     } catch {
       setError("문의 접수 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.");
     } finally {
       setSubmitting(false);
     }
   };
-
-  if (submitted) {
-    return (
-      <div className="flex flex-col items-center justify-center gap-6 py-24 text-center">
-        <CheckCircle size={40} className="text-[#F1B100]" strokeWidth={1.5} />
-        <div className="space-y-2">
-          <p className="text-zinc-900 text-base font-bold dark:text-zinc-100">문의가 접수되었습니다</p>
-          <p className="text-sm text-zinc-400 font-normal dark:text-zinc-500">문의를 검토 후 24시간 이내에 연락드립니다.</p>
-        </div>
-        <Link href="/ko" className="mt-4 text-xs uppercase tracking-widest font-bold text-zinc-400 hover:text-zinc-900 transition-colors dark:text-zinc-500 dark:hover:text-zinc-100">
-          템플릿으로 돌아가기
-        </Link>
-      </div>
-    );
-  }
 
   return (
     <div className="space-y-10">

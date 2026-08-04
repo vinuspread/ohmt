@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { validateAdminUser } from "@/lib/admin-auth";
 import { createAdminClient } from "@/lib/supabase/admin";
 
 interface CategoryRequestBody {
@@ -13,6 +14,9 @@ function validateCategoryBody(body: CategoryRequestBody) {
 }
 
 export async function GET() {
+  const authError = await validateAdminUser();
+  if (authError) return authError;
+
   const supabase = createAdminClient();
   const { data, error } = await supabase.from("categories").select("*").order("sort_order", { ascending: true });
   if (error) return NextResponse.json({ error: "카테고리 목록 조회에 실패했습니다." }, { status: 500 });
@@ -21,6 +25,9 @@ export async function GET() {
 }
 
 export async function POST(request: Request) {
+  const authError = await validateAdminUser();
+  if (authError) return authError;
+
   const body = (await request.json()) as CategoryRequestBody;
 
   if (!validateCategoryBody(body)) {

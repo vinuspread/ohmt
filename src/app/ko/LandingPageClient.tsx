@@ -4,7 +4,7 @@ import React, { useState, useMemo, useEffect, useRef, useCallback } from "react"
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Menu, X, Search, Sparkles, ImageOff, ClipboardList, PackageOpen } from "lucide-react";
+import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Menu, X, Search, Sparkles } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Logo } from "@/components/Logo";
 import type { PricingPackage } from "@/types/template";
@@ -34,12 +34,11 @@ const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 const ALL_LABEL = "전체";
 const POPULAR_TAGS = ["패션", "포트폴리오", "에이전시", "럭셔리", "미니멀"];
 const MOBILE_NAV_ITEMS_KO = [
-  { href: "#directions", label: "서비스소개" },
-  { href: "#templates", label: "템플릿" },
+  { href: "#templates", label: "디자인" },
   { href: "#pricing", label: "가격" },
-  { href: "#process", label: "프로세스" },
+  { href: "#process", label: "진행 과정" },
   { href: "#faq", label: "FAQ" },
-  { href: "/ko/contact", label: "제작 상담 신청", isCta: true },
+  { href: "/ko/contact", label: "제작 상담", isCta: true },
 ];
 const MOBILE_MENU_LIST_VARIANTS = {
   hidden: {},
@@ -52,29 +51,44 @@ const MOBILE_MENU_ITEM_VARIANTS = {
 
 const HERO_SLIDES = [
   {
-    heading: <>검증된 디자인으로 <br className="hidden sm:block" /><span className="text-[#FFB800]">브랜드를 완성</span></>,
-    desc: "20년 전문가가 디테일을 직접 다듬습니다.",
+    heading: <>검증된 디자인으로<br /><span className="text-[#FFB800]">경쟁력있는 사이트를 만듭니다.</span></>,
+    desc: "20년 경력의 전문팀이 기획부터 오픈까지\n모든 과정을 직접 관리하며 운영까지 책임집니다.",
   },
   {
-    heading: <>필요한 기능을<br /><span className="text-[#FFB800]">목적에 맞게 개발</span></>,
-    desc: "회원, 예약 등 맞춤 개발로 확장합니다.",
+    heading: <>빠르게 오픈하고<br /><span className="text-[#FFB800]">고객의 반응을 이끌어 냅니다.</span></>,
+    desc: "검증된 템플릿과 기능을 기반으로\n시장 반응에 맞춘 확실한 성과을 이끌어냅니다.",
   },
   {
-    heading: <>오픈 이후 운영까지 <br className="hidden sm:block" /><span className="text-[#FFB800]">완벽한 지원</span></>,
-    desc: "전담팀이 수정과 점검을 신속하게 대응합니다.",
+    heading: <>템플릿을 팔지 않습니다.<br /><span className="text-[#FFB800]">브랜드에 맞게 커스텀합니다.</span></>,
+    desc: "선택한 템플릿에 고객의 요구사항을 반영하여\n바로 운영 가능한 사이트로 완성합니다.",
+  },
+  {
+    heading: <>필요한 기능은<br /><span className="text-[#FFB800]">이미 다 준비되어 있습니다.</span></>,
+    desc: "자주 사용하는 기능은 기본으로 제공하고\n추가로 필요한 기능은 맞춤개발로 확장해 드립니다.",
   },
 ];
+
+const CASE_AVATAR_OPTIONS = ["/icons/avata_01.png", "/icons/avata_02.png", "/icons/avata_03.png"];
 
 const serviceCardsKo = [
-  { icon: ImageOff, title: "무엇을 담아야 할지 정리하기 어렵습니다", desc: "필요한 페이지와 콘텐츠의 순서를 잡기 어렵습니다." },
-  { icon: ClipboardList, title: "맞춤 외주의 비용과 일정이 부담됩니다", desc: "처음부터 새로 만들면 비용과 제작 기간이 커집니다." },
-  { icon: PackageOpen, title: "오픈 뒤 작은 수정도 맡길 곳이 필요합니다", desc: "문구나 이미지 하나를 바꿀 때도 새로운 업체를 찾아야 합니다." },
-];
-
-const solutionsKo = [
-  "필요한 내용과 콘텐츠 구성을 함께 정리합니다.",
-  "신속한 결정이 가능해 비용과 기간을 줄입니다.",
-  "오픈 후 수정과 관리를 전담 팀이 지원합니다.",
+  {
+    title: "전문 기획자가 없어 콘텐츠와 페이지 구성에 시간을 뺏깁니다",
+    case1: "어떤 페이지가 필요한지, 문구와 콘텐츠는 어떻게 배치해야 타겟의 마음을 움직일지 막연하기만 합니다.",
+    case2: "마케팅 메시지 정리부터 메뉴 구조, 이미지 수급까지... 본업에 집중하기도 모자란 시간에 기획에만 몇 주를 허비합니다.",
+    solution: "페이지 구성부터 마케팅 메시지, 메뉴 구조, 이미지까지 전문 기획자가 함께 고민하고 채워드립니다.",
+  },
+  {
+    title: "비싼 외주 비용 대비 오픈 일정과 퀄리티를 장담할 수 없습니다",
+    case1: "자체 개발이나 맞춤 외주는 수백~수천만 원의 비용이 들고, 수정이 반복되며 오픈 일정이 한없이 밀립니다.",
+    case2: "기획부터 개발까지 매번 새로 구축하는 외주는 눈덩이처럼 늘어나는 비용과 제작 기간의 리스크를 안게 됩니다.",
+    solution: "신속한 결정이 가능해 비용과 기간을 줄입니다.",
+  },
+  {
+    title: "오픈 후 텍스트 하나 바꾸려 해도 매번 외주를 찾아야 합니다",
+    case1: "론칭이 끝나면 기존 외주업체와 연락이 끊기거나, 아주 작은 수정 작업에도 과도한 추가 비용과 시간이 발생합니다.",
+    case2: "텍스트 수정, 이미지 교체, 간단한 기능 추가 등 오픈 이후 꾸준히 발생하는 관리 이슈를 책임질 전담팀이 없습니다.",
+    solution: "오픈 후 수정과 관리를 전담 팀이 지원합니다.",
+  },
 ];
 
 const modelStepsKo = [
@@ -129,6 +143,18 @@ function SectionHeadingKo({ label, title, desc, titleClassName }: { label?: stri
 export default function LandingPageClient({ templates, faqs, packages }: { templates: TemplateItem[]; faqs: FaqItem[]; packages: PricingPackage[] }) {
   const router = useRouter();
   const [heroIndex, setHeroIndex] = useState(0);
+  const [caseAvatars, setCaseAvatars] = useState<[string, string][]>(
+    serviceCardsKo.map(() => [CASE_AVATAR_OPTIONS[0], CASE_AVATAR_OPTIONS[1]])
+  );
+
+  useEffect(() => {
+    setCaseAvatars(
+      serviceCardsKo.map(() => {
+        const shuffled = [...CASE_AVATAR_OPTIONS].sort(() => Math.random() - 0.5);
+        return [shuffled[0], shuffled[1]];
+      })
+    );
+  }, []);
   const [headerVisible, setHeaderVisible] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [menuOrigin, setMenuOrigin] = useState({ x: 0, y: 0 });
@@ -409,10 +435,9 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             <Logo className="h-6 w-auto block" />
           </Link>
           <nav className="hidden md:flex items-center gap-6 text-[0.82rem] font-bold text-zinc-500 tracking-wider dark:text-zinc-400">
-            <a href="#directions" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">서비스소개</a>
-            <a href="#templates" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">템플릿</a>
+            <a href="#templates" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">디자인</a>
             <a href="#pricing" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">가격</a>
-            <a href="#process" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">프로세스</a>
+            <a href="#process" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">진행 과정</a>
             <a href="#faq" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">FAQ</a>
           </nav>
         </div>
@@ -424,7 +449,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             href="/ko/contact"
             className="inline-flex items-center justify-center bg-[#F1B100] hover:bg-[#d99e00] text-zinc-900 text-[0.7rem] sm:text-xs font-bold px-3.5 sm:px-5 py-2 sm:py-2.5 transition-colors duration-200 rounded-full whitespace-nowrap"
           >
-            제작 상담 신청
+            제작 상담
           </Link>
           <button
             ref={hamburgerBtnRef}
@@ -559,7 +584,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             <ChevronRight size={18} />
           </button>
 
-          <div className="max-w-4xl mx-auto text-center px-6 relative z-10">
+          <div className="max-w-6xl mx-auto text-center px-6 relative z-10">
             <span className="inline-flex items-center gap-2 px-3 py-1 bg-zinc-100 text-zinc-700 text-xs font-bold uppercase tracking-wider rounded-full dark:bg-zinc-800 dark:text-zinc-300">
               <Sparkles size={12} className="text-orange-500" />
               OH! MY TEMPLATES
@@ -572,7 +597,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -14 }}
                   transition={{ duration: 0.45, ease: EASE_OUT }}
-                  className="text-[2.5rem] sm:text-[3rem] md:text-[4.8rem] font-bold tracking-tight leading-[1.25] md:leading-[1.1] text-zinc-900 dark:text-zinc-100"
+                  className="text-[2.5rem] sm:text-[3rem] md:text-[4.2rem] font-bold tracking-tight leading-[1.25] md:leading-[1.1] text-zinc-900 dark:text-zinc-100"
                 >
                   {HERO_SLIDES[heroIndex].heading}
                 </motion.h1>
@@ -634,50 +659,28 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
       <section className="px-5 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16 md:py-28 bg-[#FCFCFD] border-b border-zinc-200/50 dark:bg-zinc-950 dark:border-zinc-800">
         <div className="max-w-[1440px] mx-auto space-y-9 md:space-y-12">
           <SectionHeadingKo
-            title={<>웹사이트 제작을 시작할 때<br /><span className="text-[#F1B100]">대부분 여기서 막힙니다.</span></>}
-            desc={<>직접 만들면 오래 걸리고, 외주는 부담스럽습니다.<br />OHMT는 바로 시작할 수 있는 제작 방법을 제공합니다.</>}
+            title={<>사이트 하나를 열기까지,<br /><span className="text-[#F1B100]">준비할 것들이 너무 많습니다.</span></>}
+            desc={<>처음부터 모든걸 준비할 필요가 없습니다.<br />오마이템플릿의 전문가가 그 과정을 도와드립니다.</>}
             titleClassName="text-[28px]! sm:text-4xl! md:text-5xl!"
           />
-          {/* Desktop / Tablet: cards grid + single solution bar */}
-          <div className="hidden md:block space-y-9 md:space-y-12">
-            <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-3">
-              {serviceCardsKo.map((item) => (
-                <div key={item.title} className="flex gap-4 bg-white border border-zinc-200/60 rounded-xl p-5 hover:border-zinc-300 transition-colors sm:block sm:p-6 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600">
-                  <item.icon size={28} strokeWidth={1.7} className="mt-0.5 shrink-0 text-zinc-900 sm:mt-0 dark:text-zinc-100" />
-                  <div className="min-w-0">
-                    <h3 className="text-[15px] font-bold text-zinc-900 sm:mt-4 sm:text-[17px] dark:text-zinc-100">{item.title}</h3>
-                    <p className="mt-1.5 text-[13px] leading-6 text-zinc-500 sm:mt-2 sm:text-sm sm:leading-relaxed dark:text-zinc-400">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="grid gap-4 rounded-xl bg-zinc-950 p-5 md:grid-cols-[220px_1fr] md:items-center md:p-6 dark:bg-white">
-              <p className="text-sm font-extrabold text-white dark:text-zinc-950">Ohmytemplate의 해결 방식</p>
-              <div className="grid gap-3 text-sm text-zinc-300 dark:text-zinc-700 md:grid-cols-3 md:divide-x md:divide-zinc-700 dark:md:divide-zinc-200">
-                {solutionsKo.map((text, idx) => (
-                  <div key={text} className="flex items-start gap-3 md:px-5 first:md:pl-0 last:md:pr-0">
-                    <span className="font-mono text-xs font-bold text-[#F1B100]">{String(idx + 1).padStart(2, "0")}</span>
-                    <span className="leading-6">{text}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile: problem and solution combined in a single card */}
-          <div className="md:hidden flex flex-col gap-3">
+          {/* Problem cards: single shared layout for all breakpoints */}
+          <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-3">
             {serviceCardsKo.map((item, idx) => (
-              <div key={item.title} className="bg-white border border-zinc-200/60 rounded-xl p-5 dark:bg-zinc-800 dark:border-zinc-700">
-                <div className="flex gap-4">
-                  <item.icon size={28} strokeWidth={1.7} className="mt-0.5 shrink-0 text-zinc-900 dark:text-zinc-100" />
-                  <div className="min-w-0">
-                    <h3 className="text-[15px] font-bold text-zinc-900 dark:text-zinc-100">{item.title}</h3>
-                    <p className="mt-1.5 text-[13px] leading-6 text-zinc-500 dark:text-zinc-400">{item.desc}</p>
+              <div key={item.title} className="rounded-xl bg-white border border-zinc-200/60 p-5 dark:bg-zinc-800 dark:border-zinc-700">
+                <h3 className="text-[15px] font-bold text-zinc-900 text-center dark:text-zinc-100">{item.title}</h3>
+                <div className="mt-3 space-y-2">
+                  <div className="flex items-start gap-2.5 rounded-xl border border-amber-200/70 bg-amber-50 p-3 dark:border-amber-900/40 dark:bg-amber-500/10">
+                    <Image src={caseAvatars[idx][0]} alt="" width={28} height={28} className="mt-0.5 shrink-0 rounded-full" />
+                    <p className="text-[13px] leading-6 text-zinc-600 dark:text-zinc-300">{item.case1}</p>
+                  </div>
+                  <div className="flex items-start gap-2.5 rounded-xl border border-amber-200/70 bg-amber-50 p-3 dark:border-amber-900/40 dark:bg-amber-500/10">
+                    <Image src={caseAvatars[idx][1]} alt="" width={28} height={28} className="mt-0.5 shrink-0 rounded-full" />
+                    <p className="text-[13px] leading-6 text-zinc-600 dark:text-zinc-300">{item.case2}</p>
                   </div>
                 </div>
                 <div className="mt-4 pt-4 border-t border-zinc-200/60 flex items-start gap-3 dark:border-zinc-700">
-                  <Image src="/icon.png" alt="" width={20} height={20} className="mt-0.5 shrink-0 rounded-md" />
-                  <p className="text-[13px] leading-6 text-[#F1B100] font-bold">{solutionsKo[idx]}</p>
+                  <Image src="/icon.png" alt="" width={28} height={28} className="mt-0.5 shrink-0 rounded-full" />
+                  <p className="text-[13px] leading-6 text-zinc-900 font-bold dark:text-zinc-100">{item.solution}</p>
                 </div>
               </div>
             ))}
@@ -685,12 +688,13 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
         </div>
       </section>
 
-      {/* Service Model Section */}
+      {/* Service Model Section (hidden per request) */}
+      {false && (
       <section className="px-5 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16 md:py-28 bg-white border-b border-zinc-200/50 dark:bg-zinc-900 dark:border-zinc-800">
         <div className="max-w-[1440px] mx-auto space-y-9 md:space-y-12">
           <SectionHeadingKo
-            title={<>우리는 템플릿을 팔지 않습니다.<br /><span className="text-[#F1B100]">브랜드에 맞게 커스텀합니다.</span></>}
-            desc={<>컨셉에 맞는 템플릿을 선택하면<br />브랜드에 최적화된 웹사이트를 제작합니다.</>}
+            title={<>템플릿을 팔지 않습니다.<br /><span className="text-[#F1B100]">브랜드에 맞게 커스텀합니다.</span></>}
+            desc={<>선택한 템플릿에 고객의 요구사항을 반영하여<br />바로 운영 가능한 사이트로 완성합니다.</>}
           />
           <div className="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-0">
             {modelStepsKo.map((item, idx) => (
@@ -713,8 +717,10 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           </div>
         </div>
       </section>
+      )}
 
-      {/* Directions Section */}
+      {/* Directions Section (hidden per request) */}
+      {false && (
       <section id="directions" className="px-5 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16 md:py-28 bg-[#FCFCFD] border-b border-zinc-200/50 dark:bg-zinc-950 dark:border-zinc-800">
         <div className="max-w-[1440px] mx-auto space-y-9 md:space-y-12">
           <div className="flex flex-col items-center gap-6 md:gap-8">
@@ -725,7 +731,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             />
             <div className="flex flex-wrap justify-center gap-3">
               <Link href="/ko/contact" className="w-[140px] sm:w-[200px] md:w-[240px] inline-flex items-center justify-center rounded-full bg-[#F1B100] px-6 md:px-8 py-3.5 md:py-4 text-xs sm:text-sm md:text-base font-extrabold text-zinc-900 transition-colors hover:bg-[#d99e00]">
-                제작 상담 신청
+                제작 상담
               </Link>
               <button onClick={() => scrollToTemplates(ALL_LABEL)} className="w-[140px] sm:w-[200px] md:w-[240px] bg-white border border-zinc-200/70 hover:border-zinc-400 text-zinc-800 text-xs sm:text-sm md:text-base font-bold px-5 md:px-8 py-3 md:py-4 rounded-full transition-colors">
                 전체 템플릿 보기
@@ -752,6 +758,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           </div>
         </div>
       </section>
+      )}
 
       {/* Templates Section */}
       <section id="templates" className="px-5 sm:px-6 md:px-12 lg:px-20 py-10 md:py-12 bg-[#F7F7F8] dark:bg-zinc-950">
@@ -1009,7 +1016,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             <h2 className="ohmt-final-cta-title">우리 브랜드에 맞는 웹사이트<br />상담부터 시작하세요.</h2>
             <p className="ohmt-final-cta-desc">업종과 필요한 기능만 알려주셔도<br />제작 방향과 템플릿을 함께 제안드립니다.</p>
             <Link href="/ko/contact" className="ohmt-text-cta">
-              제작 상담 신청
+              제작 상담
             </Link>
           </div>
         </div>
@@ -1068,7 +1075,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             </div>
 
             <nav aria-label="푸터 메뉴" className="flex flex-row flex-wrap items-center gap-3 text-sm font-bold text-zinc-600 dark:text-zinc-400">
-              <Link href="/ko/contact" className="text-[#F1B100] transition-colors hover:text-[#d99e00]">제작 상담 신청</Link>
+              <Link href="/ko/contact" className="text-[#F1B100] transition-colors hover:text-[#d99e00]">제작 상담</Link>
               <span aria-hidden="true" className="text-zinc-300 dark:text-zinc-600">|</span>
               <Link href="/ko/privacy-policy" className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-100">개인정보처리방침</Link>
               <span aria-hidden="true" className="text-zinc-300 dark:text-zinc-600">|</span>

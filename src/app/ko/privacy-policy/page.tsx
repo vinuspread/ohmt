@@ -188,7 +188,7 @@ export default function PrivacyPolicyPage() {
             </div>
 
             <nav aria-label="푸터 메뉴" className="flex flex-row flex-wrap items-center gap-3 text-sm font-bold text-zinc-600 dark:text-zinc-400">
-              <Link href="/ko/contact" className="text-[#F1B100] transition-colors hover:text-[#d99e00]">제작 상담 신청</Link>
+              <Link href="/ko/contact" className="text-[#F1B100] transition-colors hover:text-[#d99e00]">제작 상담</Link>
               <span aria-hidden="true" className="text-zinc-300 dark:text-zinc-600">|</span>
               <Link href="/ko" className="transition-colors hover:text-zinc-950 dark:hover:text-zinc-100">템플릿 보기</Link>
               <span aria-hidden="true" className="text-zinc-300 dark:text-zinc-600">|</span>
