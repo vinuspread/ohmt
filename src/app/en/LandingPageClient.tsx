@@ -4,7 +4,7 @@ import React, { useState, useMemo, useEffect, useRef, useCallback } from "react"
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Menu, X, Search, Sparkles, ImageOff, ClipboardList, PackageOpen } from "lucide-react";
+import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Menu, X, Search, Sparkles } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Logo } from "@/components/Logo";
 import type { PricingPackage } from "@/types/template";
@@ -66,15 +66,30 @@ const MOBILE_MENU_ITEM_VARIANTS = {
 };
 
 const serviceCardsEn = [
-  { icon: ImageOff, title: "Not sure what to include, or how", desc: "You're left figuring out layout and content on your own." },
-  { icon: ClipboardList, title: "The cost feels heavy before you even start", desc: "From quotes to contracts, the barrier to entry is high." },
-  { icon: PackageOpen, title: "Who do you turn to after launch?", desc: "Even a small edit means finding a developer again." },
+  {
+    title: "Without dedicated specialists, planning content and building pages can feel overwhelming.",
+    case1: "It is hard to know which pages you need or how to arrange copy and content so it connects with your audience.",
+    case2: "Weeks can disappear into messaging, navigation, and image sourcing when you should be focused on your business.",
+    solution: "A professional planner helps shape your page structure, messaging, navigation, and imagery.",
+  },
+  {
+    title: "High outsourcing costs still make timelines and quality difficult to guarantee.",
+    case1: "Custom development can become expensive quickly, while repeated revisions continue to push the launch date back.",
+    case2: "Starting every project from scratch increases both the budget and the risk of a longer production timeline.",
+    solution: "Faster decisions reduce both cost and production time.",
+  },
+  {
+    title: "Even small post-launch edits mean finding another agency or freelancer.",
+    case1: "Once the site launches, the original vendor may become hard to reach and even minor changes can cost extra time and money.",
+    case2: "There is often no dedicated team to handle ongoing copy, image, and feature updates after launch.",
+    solution: "A dedicated team supports ongoing edits and maintenance after launch.",
+  },
 ];
 
-const solutionsEn = [
-  "We help organize your content and structure together.",
-  "Faster decisions cut both cost and timeline.",
-  "A dedicated team handles edits and upkeep after launch.",
+const caseAvatarsEn = [
+  ["/icons/avata_03.png", "/icons/avata_01.png"],
+  ["/icons/avata_01.png", "/icons/avata_02.png"],
+  ["/icons/avata_02.png", "/icons/avata_03.png"],
 ];
 
 const modelStepsEn = [
@@ -638,46 +653,23 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             desc={<>DIY takes too long, and outsourcing feels like too much.<br />OHMT gives you a way to start right away.</>}
             titleClassName="text-[28px]! sm:text-4xl! md:text-5xl!"
           />
-          {/* Desktop / Tablet: cards grid + single solution bar */}
-          <div className="hidden md:block space-y-9 md:space-y-12">
-            <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-3">
-              {serviceCardsEn.map((item) => (
-                <div key={item.title} className="flex gap-4 bg-white border border-zinc-200/60 rounded-xl p-5 hover:border-zinc-300 transition-colors sm:block sm:p-6 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600">
-                  <item.icon size={28} strokeWidth={1.7} className="mt-0.5 shrink-0 text-zinc-900 sm:mt-0 dark:text-zinc-100" />
-                  <div className="min-w-0">
-                    <h3 className="text-[15px] font-bold text-zinc-900 sm:mt-4 sm:text-[17px] dark:text-zinc-100">{item.title}</h3>
-                    <p className="mt-1.5 text-[13px] leading-6 text-zinc-500 sm:mt-2 sm:text-sm sm:leading-relaxed dark:text-zinc-400">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="grid gap-4 rounded-xl bg-zinc-950 p-5 md:grid-cols-[220px_1fr] md:items-center md:p-6 dark:bg-white">
-              <p className="text-sm font-extrabold text-white dark:text-zinc-950">How OHMT solves it</p>
-              <div className="grid gap-3 text-sm text-zinc-300 dark:text-zinc-700 md:grid-cols-3 md:divide-x md:divide-zinc-700 dark:md:divide-zinc-200">
-                {solutionsEn.map((text, idx) => (
-                  <div key={text} className="flex items-start gap-3 md:px-5 first:md:pl-0 last:md:pr-0">
-                    <span className="font-mono text-xs font-bold text-[#F1B100]">{String(idx + 1).padStart(2, "0")}</span>
-                    <span className="leading-6">{text}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile: problem and solution combined in a single card */}
-          <div className="md:hidden flex flex-col gap-3">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5 lg:gap-6">
             {serviceCardsEn.map((item, idx) => (
-              <div key={item.title} className="bg-white border border-zinc-200/60 rounded-xl p-5 dark:bg-zinc-800 dark:border-zinc-700">
-                <div className="flex gap-4">
-                  <item.icon size={28} strokeWidth={1.7} className="mt-0.5 shrink-0 text-zinc-900 dark:text-zinc-100" />
-                  <div className="min-w-0">
-                    <h3 className="text-[15px] font-bold text-zinc-900 dark:text-zinc-100">{item.title}</h3>
-                    <p className="mt-1.5 text-[13px] leading-6 text-zinc-500 dark:text-zinc-400">{item.desc}</p>
+              <div key={item.title} className="flex h-full flex-col rounded-xl border border-zinc-200/60 bg-white p-6 lg:p-7 dark:border-zinc-700 dark:bg-zinc-800">
+                <h3 className="w-full text-balance text-left text-lg font-bold leading-snug text-zinc-900 md:min-h-[56px] md:text-xl dark:text-zinc-100">{item.title}</h3>
+                <div className="mb-6 mt-5 space-y-3">
+                  <div className="flex items-start gap-3 rounded-xl border border-amber-200/70 bg-amber-50 p-4 dark:border-amber-900/40 dark:bg-amber-500/10">
+                    <Image src={caseAvatarsEn[idx][0]} alt="" width={28} height={28} className="mt-0.5 shrink-0 rounded-full" />
+                    <p className="text-[13px] leading-6 text-zinc-600 dark:text-zinc-300">{item.case1}</p>
+                  </div>
+                  <div className="flex items-start gap-3 rounded-xl border border-amber-200/70 bg-amber-50 p-4 dark:border-amber-900/40 dark:bg-amber-500/10">
+                    <Image src={caseAvatarsEn[idx][1]} alt="" width={28} height={28} className="mt-0.5 shrink-0 rounded-full" />
+                    <p className="text-[13px] leading-6 text-zinc-600 dark:text-zinc-300">{item.case2}</p>
                   </div>
                 </div>
-                <div className="mt-4 pt-4 border-t border-zinc-200/60 flex items-start gap-3 dark:border-zinc-700">
-                  <Image src="/icon.png" alt="" width={20} height={20} className="mt-0.5 shrink-0 rounded-md" />
-                  <p className="text-[13px] leading-6 text-[#F1B100] font-bold">{solutionsEn[idx]}</p>
+                <div className="mt-auto flex items-start gap-3 border-t border-zinc-200/60 pt-5 dark:border-zinc-700">
+                  <Image src="/icon.png" alt="" width={28} height={28} className="mt-0.5 shrink-0 rounded-full" />
+                  <p className="text-[13px] font-bold leading-6 text-zinc-900 dark:text-zinc-100">{item.solution}</p>
                 </div>
               </div>
             ))}
@@ -790,12 +782,12 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           </div>
 
           {/* Category Tabs */}
-          <div className="flex justify-start md:justify-center gap-2 overflow-x-auto scrollbar-hide md:overflow-visible border-b border-zinc-200/60 pb-2 dark:border-zinc-800">
+          <div className="flex justify-start gap-2 overflow-x-auto scrollbar-hide border-b border-zinc-200/60 md:justify-center md:overflow-visible dark:border-zinc-800">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => { setActiveCategory(cat); setSearchTerm(""); }}
-                className={`shrink-0 px-4 py-2.5 text-xs font-bold uppercase tracking-wider relative whitespace-nowrap transition-colors ${activeCategory === cat ? "text-zinc-950 font-extrabold dark:text-zinc-100" : "text-zinc-400 hover:text-zinc-950 dark:text-zinc-500 dark:hover:text-zinc-100"}`}
+                className={`relative shrink-0 px-4 pb-4 pt-2.5 text-xs font-bold uppercase tracking-wider whitespace-nowrap transition-colors ${activeCategory === cat ? "text-zinc-950 font-extrabold dark:text-zinc-100" : "text-zinc-400 hover:text-zinc-950 dark:text-zinc-500 dark:hover:text-zinc-100"}`}
               >
                 {cat}
                 {activeCategory === cat && (
@@ -847,7 +839,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                             </div>
                             <p className="mt-0.5 font-mono text-[0.7rem] leading-tight text-zinc-400 dark:text-zinc-500">{template.slug}</p>
                           </div>
-                          <div>
+                          <div className="space-y-3">
                             <p
                               onClick={() => template.desc && setDescModalTemplate(template)}
                               className={`text-xs sm:text-sm text-zinc-500 leading-relaxed font-normal dark:text-zinc-400 line-clamp-1 ${template.desc ? "cursor-pointer hover:text-zinc-700 dark:hover:text-zinc-300" : ""}`}
@@ -877,7 +869,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
 
       {/* Pricing Section */}
       <section id="pricing" className="px-5 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16 md:py-32 bg-[#FCFCFD] border-t border-zinc-200/50 dark:bg-zinc-950 dark:border-zinc-800">
-        <div className="max-w-[960px] mx-auto space-y-10 md:space-y-16">
+        <div className="max-w-[1280px] mx-auto space-y-10 md:space-y-16">
           <div className="mx-auto max-w-[840px] space-y-4 text-center">
             <span className="ohmt-section-label">Price Package</span>
             <h2 className="ohmt-section-title mx-auto max-w-[820px]">Choose the package that fits your project.</h2>
@@ -898,7 +890,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                 }`}
               >
                 <div className="space-y-6">
-                  <div className="space-y-1">
+                  <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">{pkg.name}</h3>
                       {pkg.is_recommended && (
@@ -975,7 +967,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
 
       {/* Care Section */}
       <section id="care" className="px-5 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16 md:py-32 bg-[#FCFCFD] border-t border-zinc-200/50 dark:bg-zinc-950 dark:border-zinc-800">
-        <div className="max-w-[1440px] mx-auto space-y-9 md:space-y-12">
+        <div className="max-w-[1280px] mx-auto space-y-9 md:space-y-12">
           <SectionHeadingEn
             label="Maintenance"
             title={<>The support you need most after launch,<br />we can handle that too.</>}
@@ -986,16 +978,16 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
               <div
                 key={plan.title}
                 className={idx === 1
-                  ? "shrink-0 w-[72%] sm:w-[300px] snap-center flex flex-col gap-4 bg-zinc-950 text-white border border-zinc-700 rounded-xl p-5 shadow-xl md:w-auto md:shrink md:snap-none md:gap-5 md:p-8 dark:bg-black dark:border-zinc-700"
+                  ? "shrink-0 w-[72%] sm:w-[300px] snap-center flex flex-col gap-4 bg-[#FFFBEB] border-2 border-[#F1B100] rounded-xl p-5 shadow-lg shadow-[#F1B100]/10 md:w-auto md:shrink md:snap-none md:gap-5 md:p-7 dark:bg-zinc-800 dark:border-[#F1B100]"
                   : "shrink-0 w-[72%] sm:w-[300px] snap-center flex flex-col gap-4 bg-white border border-zinc-200/60 rounded-xl p-4 hover:border-zinc-300 transition-colors md:w-auto md:shrink md:snap-none md:gap-5 md:p-7 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600"
                 }
               >
-                <div className="flex flex-col gap-2">
-                  <h3 className={idx === 1 ? "text-base sm:text-lg font-bold text-white" : "text-base sm:text-lg font-bold text-zinc-900 dark:text-zinc-100"}>{plan.title}</h3>
+                <div className="flex flex-col gap-3">
+                  <h3 className="text-base sm:text-lg font-bold text-zinc-900 dark:text-zinc-100">{plan.title}</h3>
                   <p className="text-base sm:text-lg font-extrabold leading-none text-[#F1B100] md:text-xl">{plan.price}</p>
-                  <p className={idx === 1 ? "text-xs sm:text-sm leading-relaxed text-zinc-300" : "text-xs sm:text-sm leading-relaxed text-zinc-500 dark:text-zinc-400"}>{plan.desc}</p>
+                  <p className="text-xs sm:text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">{plan.desc}</p>
                 </div>
-                <ul className={idx === 1 ? "space-y-2 sm:space-y-2.5 text-xs sm:text-sm text-zinc-300" : "space-y-2 sm:space-y-2.5 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400"}>
+                <ul className="space-y-2 sm:space-y-2.5 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-2">
                       <span className="text-[#F1B100] font-bold flex-shrink-0">✓</span>
@@ -1003,7 +995,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                     </li>
                   ))}
                 </ul>
-                <p className={idx === 1 ? "mt-auto pt-4 sm:pt-5 border-t border-zinc-800 text-[11px] sm:text-xs leading-relaxed text-zinc-400" : "mt-auto pt-4 sm:pt-5 border-t border-zinc-100 text-[11px] sm:text-xs leading-relaxed text-zinc-400 dark:border-zinc-700 dark:text-zinc-500"}>{plan.note}</p>
+                <p className="mt-auto pt-4 sm:pt-5 border-t border-zinc-100 text-[11px] sm:text-xs leading-relaxed text-zinc-400 dark:border-zinc-700 dark:text-zinc-500">{plan.note}</p>
               </div>
             ))}
           </div>
@@ -1033,7 +1025,14 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           </div>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
-              <div key={faq.id} className="border border-zinc-200/60 rounded-xl overflow-hidden bg-[#FCFCFD] hover:border-zinc-300 transition-all duration-300 dark:border-zinc-700 dark:bg-zinc-800 dark:hover:border-zinc-600">
+              <div
+                key={faq.id}
+                className={`overflow-hidden rounded-xl border bg-[#FCFCFD] transition-colors duration-200 dark:bg-zinc-800 ${
+                  openFAQ === idx
+                    ? 'border-[#F1B100] dark:border-[#F1B100]'
+                    : 'border-zinc-200/60 hover:border-zinc-300 dark:border-zinc-700 dark:hover:border-zinc-600'
+                }`}
+              >
                 <button
                   onClick={() => setOpenFAQ(openFAQ === idx ? null : idx)}
                   className="w-full px-6 py-5 flex items-center justify-between hover:bg-zinc-50 transition-colors duration-300 dark:hover:bg-zinc-700"

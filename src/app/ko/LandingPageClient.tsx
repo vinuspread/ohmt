@@ -51,12 +51,12 @@ const MOBILE_MENU_ITEM_VARIANTS = {
 
 const HERO_SLIDES = [
   {
-    heading: <>검증된 디자인으로<br /><span className="text-[#FFB800]">경쟁력있는 사이트를 만듭니다.</span></>,
+    heading: <>검증된 디자인으로<br /><span className="text-[#FFB800]">경쟁력 있는 사이트를 만듭니다.</span></>,
     desc: "20년 경력의 전문팀이 기획부터 오픈까지\n모든 과정을 직접 관리하며 운영까지 책임집니다.",
   },
   {
-    heading: <>빠르게 오픈하고<br /><span className="text-[#FFB800]">고객의 반응을 이끌어 냅니다.</span></>,
-    desc: "검증된 템플릿과 기능을 기반으로\n시장 반응에 맞춘 확실한 성과을 이끌어냅니다.",
+    heading: <>빠르게 오픈하고<br /><span className="text-[#FFB800]">고객의 반응을 이끌어냅니다.</span></>,
+    desc: "검증된 템플릿과 기능을 기반으로\n시장 반응에 맞춘 확실한 성과를 이끌어냅니다.",
   },
   {
     heading: <>템플릿을 팔지 않습니다.<br /><span className="text-[#FFB800]">브랜드에 맞게 커스텀합니다.</span></>,
@@ -72,21 +72,21 @@ const CASE_AVATAR_OPTIONS = ["/icons/avata_01.png", "/icons/avata_02.png", "/ico
 
 const serviceCardsKo = [
   {
-    title: "전문 기획자가 없어 콘텐츠와 페이지 구성에 시간을 뺏깁니다",
+    title: "전문 인력이 없어 콘텐츠 기획이나 페이지 구성 및 구현이 막막합니다.",
     case1: "어떤 페이지가 필요한지, 문구와 콘텐츠는 어떻게 배치해야 타겟의 마음을 움직일지 막연하기만 합니다.",
     case2: "마케팅 메시지 정리부터 메뉴 구조, 이미지 수급까지... 본업에 집중하기도 모자란 시간에 기획에만 몇 주를 허비합니다.",
     solution: "페이지 구성부터 마케팅 메시지, 메뉴 구조, 이미지까지 전문 기획자가 함께 고민하고 채워드립니다.",
   },
   {
-    title: "비싼 외주 비용 대비 오픈 일정과 퀄리티를 장담할 수 없습니다",
+    title: "비싼 외부 비용에 비해 오픈 일정 준수 및 만족스러운 퀄리티를 장담하기 어려워요.",
     case1: "자체 개발이나 맞춤 외주는 수백~수천만 원의 비용이 들고, 수정이 반복되며 오픈 일정이 한없이 밀립니다.",
     case2: "기획부터 개발까지 매번 새로 구축하는 외주는 눈덩이처럼 늘어나는 비용과 제작 기간의 리스크를 안게 됩니다.",
     solution: "신속한 결정이 가능해 비용과 기간을 줄입니다.",
   },
   {
-    title: "오픈 후 텍스트 하나 바꾸려 해도 매번 외주를 찾아야 합니다",
+    title: "오픈 후 발생하는 작은 수정에도 매번 외주사 또는 프리랜서를 찾아야 합니다.",
     case1: "론칭이 끝나면 기존 외주업체와 연락이 끊기거나, 아주 작은 수정 작업에도 과도한 추가 비용과 시간이 발생합니다.",
-    case2: "텍스트 수정, 이미지 교체, 간단한 기능 추가 등 오픈 이후 꾸준히 발생하는 관리 이슈를 책임질 전담팀이 없습니다.",
+    case2: "텍스트 수정, 이미지 교체, 간단한 기능 추가 등 오픈 이후 꾸준히 발생하는 관리 이슈를 책임질 전담 팀이 없습니다.",
     solution: "오픈 후 수정과 관리를 전담 팀이 지원합니다.",
   },
 ];
@@ -109,22 +109,22 @@ const directionsKo = [
 const carePlansKo = [
   {
     title: "Basic Care",
-    price: "월 20만원 (VAT별도)",
+    price: "월 20만원 (VAT 별도)",
     desc: "오류 점검과 간단한 문구·이미지 수정을 지원합니다.",
     features: ["제작 범위 내 오류 대응", "문구·이미지 교체", "링크와 문의 폼 점검", "월 소규모 수정 요청 2회"],
     note: "새로운 페이지나 기능 추가는 포함되지 않습니다.",
   },
   {
     title: "Growth Care",
-    price: "월 40만원 (VAT별도)",
+    price: "월 40만원 (VAT 별도)",
     desc: "콘텐츠를 꾸준히 업데이트하는 사이트를 관리합니다.",
     features: ["Basic Care 전체", "월 콘텐츠 수정 요청 4회", "기존 페이지 내용 보완", "이벤트·프로모션 반영"],
     note: "새로운 기능 개발이나 큰 구조 변경은 별도 견적이 필요합니다.",
   },
   {
     title: "Managed Care",
-    price: "별도협의",
-    desc: "운영업무를 전담 팀에 맡길 수 있는 기업 플랜입니다.",
+    price: "별도 협의",
+    desc: "운영 업무를 전담 팀에 맡길 수 있는 기업 플랜입니다.",
     features: ["전담 담당자 배정", "정기적인 콘텐츠 업데이트", "운영 일정에 따른 수정 반영", "월간 작업 내역 정리"],
     note: "운영 범위와 요청 빈도를 확인한 뒤 견적을 안내합니다.",
   },
@@ -660,25 +660,25 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
         <div className="max-w-[1440px] mx-auto space-y-9 md:space-y-12">
           <SectionHeadingKo
             title={<>사이트 하나를 열기까지,<br /><span className="text-[#F1B100]">준비할 것들이 너무 많습니다.</span></>}
-            desc={<>처음부터 모든걸 준비할 필요가 없습니다.<br />오마이템플릿의 전문가가 그 과정을 도와드립니다.</>}
+            desc={<>처음부터 모든 걸 준비할 필요가 없습니다.<br />오마이템플릿의 전문가가 그 과정을 도와드립니다.</>}
             titleClassName="text-[28px]! sm:text-4xl! md:text-5xl!"
           />
           {/* Problem cards: single shared layout for all breakpoints */}
-          <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5 lg:gap-6">
             {serviceCardsKo.map((item, idx) => (
-              <div key={item.title} className="rounded-xl bg-white border border-zinc-200/60 p-5 dark:bg-zinc-800 dark:border-zinc-700">
-                <h3 className="text-[15px] font-bold text-zinc-900 text-center dark:text-zinc-100">{item.title}</h3>
-                <div className="mt-3 space-y-2">
-                  <div className="flex items-start gap-2.5 rounded-xl border border-amber-200/70 bg-amber-50 p-3 dark:border-amber-900/40 dark:bg-amber-500/10">
+              <div key={item.title} className="flex h-full flex-col rounded-xl border border-zinc-200/60 bg-white p-6 lg:p-7 dark:border-zinc-700 dark:bg-zinc-800">
+                <h3 className="w-full text-balance text-left text-lg font-bold leading-snug text-zinc-900 md:min-h-[56px] md:text-xl dark:text-zinc-100">{item.title}</h3>
+                <div className="mb-6 mt-5 space-y-3">
+                  <div className="flex items-start gap-3 rounded-xl border border-amber-200/70 bg-amber-50 p-4 dark:border-amber-900/40 dark:bg-amber-500/10">
                     <Image src={caseAvatars[idx][0]} alt="" width={28} height={28} className="mt-0.5 shrink-0 rounded-full" />
                     <p className="text-[13px] leading-6 text-zinc-600 dark:text-zinc-300">{item.case1}</p>
                   </div>
-                  <div className="flex items-start gap-2.5 rounded-xl border border-amber-200/70 bg-amber-50 p-3 dark:border-amber-900/40 dark:bg-amber-500/10">
+                  <div className="flex items-start gap-3 rounded-xl border border-amber-200/70 bg-amber-50 p-4 dark:border-amber-900/40 dark:bg-amber-500/10">
                     <Image src={caseAvatars[idx][1]} alt="" width={28} height={28} className="mt-0.5 shrink-0 rounded-full" />
                     <p className="text-[13px] leading-6 text-zinc-600 dark:text-zinc-300">{item.case2}</p>
                   </div>
                 </div>
-                <div className="mt-4 pt-4 border-t border-zinc-200/60 flex items-start gap-3 dark:border-zinc-700">
+                <div className="mt-auto flex items-start gap-3 border-t border-zinc-200/60 pt-5 dark:border-zinc-700">
                   <Image src="/icon.png" alt="" width={28} height={28} className="mt-0.5 shrink-0 rounded-full" />
                   <p className="text-[13px] leading-6 text-zinc-900 font-bold dark:text-zinc-100">{item.solution}</p>
                 </div>
@@ -797,12 +797,12 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           </div>
 
           {/* Category Tabs */}
-          <div className="flex justify-start md:justify-center gap-2 overflow-x-auto scrollbar-hide md:overflow-visible border-b border-zinc-200/60 pb-2 dark:border-zinc-800">
+          <div className="flex justify-start gap-2 overflow-x-auto scrollbar-hide border-b border-zinc-200/60 md:justify-center md:overflow-visible dark:border-zinc-800">
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => { setActiveCategory(cat); setSearchTerm(""); }}
-                className={`shrink-0 px-4 py-2.5 text-xs font-bold tracking-wider relative whitespace-nowrap transition-colors ${activeCategory === cat ? "text-zinc-950 font-extrabold dark:text-zinc-100" : "text-zinc-400 hover:text-zinc-950 dark:text-zinc-500 dark:hover:text-zinc-100"}`}
+                className={`relative shrink-0 px-4 pb-4 pt-2.5 text-xs font-bold tracking-wider whitespace-nowrap transition-colors ${activeCategory === cat ? "text-zinc-950 font-extrabold dark:text-zinc-100" : "text-zinc-400 hover:text-zinc-950 dark:text-zinc-500 dark:hover:text-zinc-100"}`}
               >
                 {cat}
                 {activeCategory === cat && (
@@ -854,7 +854,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                             </div>
                             <p className="mt-0.5 font-mono text-[0.7rem] leading-tight text-zinc-400 dark:text-zinc-500">{template.slug}</p>
                           </div>
-                          <div>
+                          <div className="space-y-3">
                             <p
                               onClick={() => template.desc && setDescModalTemplate(template)}
                               className={`text-xs sm:text-sm text-zinc-500 leading-relaxed font-normal dark:text-zinc-400 line-clamp-1 ${template.desc ? "cursor-pointer hover:text-zinc-700 dark:hover:text-zinc-300" : ""}`}
@@ -884,7 +884,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
 
       {/* Pricing Section */}
       <section id="pricing" className="px-5 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16 md:py-32 bg-[#FCFCFD] border-t border-zinc-200/50 dark:bg-zinc-950 dark:border-zinc-800">
-        <div className="max-w-[960px] mx-auto space-y-10 md:space-y-16">
+        <div className="max-w-[1280px] mx-auto space-y-10 md:space-y-16">
           <div className="space-y-4 text-center">
             <span className="ohmt-section-label">Price Package</span>
             <h2 className="ohmt-section-title">필요한 제작 범위에 맞춰 선택하세요.</h2>
@@ -902,7 +902,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                 }`}
               >
                 <div className="space-y-6">
-                  <div className="space-y-1">
+                  <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <h3 className="text-xl font-bold text-zinc-900 dark:text-zinc-100">{pkg.name}</h3>
                       {pkg.is_recommended && (
@@ -915,7 +915,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                   </div>
                   <div>
                     <span className="text-3xl sm:text-4xl font-extrabold text-zinc-900 dark:text-zinc-100">{pkg.price}</span>
-                    <span className="text-xs text-zinc-400 font-medium block mt-1 dark:text-zinc-500">평균 소요 기간: {pkg.duration} / 부가세별도</span>
+                    <span className="text-xs text-zinc-400 font-medium block mt-1 dark:text-zinc-500">평균 소요 기간: {pkg.duration} / 부가세 별도</span>
                   </div>
                   <ul className="space-y-3.5 pt-6 border-t border-zinc-100 dark:border-zinc-700">
                     {pkg.features.map((feature, fidx) => (
@@ -950,8 +950,8 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
               { step: "01", title: '상담', desc: <>업종, 목적, 예산과<br />원하는 오픈 일정을 확인합니다.</> },
               { step: "02", title: '방향 선택', desc: <>브랜드에 맞는 템플릿과<br />페이지 구성을 정합니다.</> },
               { step: "03", title: '제작', desc: <>문구, 이미지와 화면 구성을<br />브랜드에 맞게 제작합니다.</> },
-              { step: "04", title: '오픈', desc: <>구현된 기능의 QA 진행 후<br />사이트를 오픈 합니다.</> },
-              { step: "05", title: '운영 지원', desc: <>기본 운영 지원 외<br />전문적인 캐어 플랜도 선택가능합니다.</> }
+              { step: "04", title: '오픈', desc: <>구현된 기능의 QA 진행 후<br />사이트를 오픈합니다.</> },
+              { step: "05", title: '운영 지원', desc: <>기본 운영 지원 외<br />전문적인 케어 플랜도 선택할 수 있습니다.</> }
             ].map((item, idx, arr) => (
               <React.Fragment key={idx}>
                 <div className="flex items-start gap-4 bg-[#FCFCFD] border border-zinc-200/60 p-4 sm:p-6 rounded-xl text-left sm:gap-6 hover:border-zinc-300 transition-colors duration-200 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600 md:flex-col md:items-center md:gap-3 md:text-center">
@@ -974,7 +974,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
 
       {/* Care Section */}
       <section id="care" className="px-5 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16 md:py-32 bg-[#FCFCFD] border-t border-zinc-200/50 dark:bg-zinc-950 dark:border-zinc-800">
-        <div className="max-w-[1440px] mx-auto space-y-9 md:space-y-12">
+        <div className="max-w-[1280px] mx-auto space-y-9 md:space-y-12">
           <SectionHeadingKo
             label="Maintenance"
             title={<>오픈 후 가장 필요한<br />운영/관리도 맡기실 수 있습니다.</>}
@@ -985,16 +985,16 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
               <div
                 key={plan.title}
                 className={idx === 1
-                  ? "shrink-0 w-[72%] sm:w-[300px] snap-center flex flex-col gap-4 bg-zinc-950 text-white border border-zinc-700 rounded-xl p-5 shadow-xl md:w-auto md:shrink md:snap-none md:gap-5 md:p-8 dark:bg-black dark:border-zinc-700"
+                  ? "shrink-0 w-[72%] sm:w-[300px] snap-center flex flex-col gap-4 bg-[#FFFBEB] border-2 border-[#F1B100] rounded-xl p-5 shadow-lg shadow-[#F1B100]/10 md:w-auto md:shrink md:snap-none md:gap-5 md:p-7 dark:bg-zinc-800 dark:border-[#F1B100]"
                   : "shrink-0 w-[72%] sm:w-[300px] snap-center flex flex-col gap-4 bg-white border border-zinc-200/60 rounded-xl p-4 hover:border-zinc-300 transition-colors md:w-auto md:shrink md:snap-none md:gap-5 md:p-7 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600"
                 }
               >
-                <div className="flex flex-col gap-2">
-                  <h3 className={idx === 1 ? "text-base sm:text-lg font-bold text-white" : "text-base sm:text-lg font-bold text-zinc-900 dark:text-zinc-100"}>{plan.title}</h3>
+                <div className="flex flex-col gap-3">
+                  <h3 className="text-base sm:text-lg font-bold text-zinc-900 dark:text-zinc-100">{plan.title}</h3>
                   <p className="text-base sm:text-lg font-extrabold leading-none text-[#F1B100] md:text-xl">{plan.price}</p>
-                  <p className={idx === 1 ? "text-xs sm:text-sm leading-relaxed text-zinc-300" : "text-xs sm:text-sm leading-relaxed text-zinc-500 dark:text-zinc-400"}>{plan.desc}</p>
+                  <p className="text-xs sm:text-sm leading-relaxed text-zinc-500 dark:text-zinc-400">{plan.desc}</p>
                 </div>
-                <ul className={idx === 1 ? "space-y-2 sm:space-y-2.5 text-xs sm:text-sm text-zinc-300" : "space-y-2 sm:space-y-2.5 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400"}>
+                <ul className="space-y-2 sm:space-y-2.5 text-xs sm:text-sm text-zinc-600 dark:text-zinc-400">
                   {plan.features.map((feature) => (
                     <li key={feature} className="flex items-start gap-2">
                       <span className="text-[#F1B100] font-bold flex-shrink-0">✓</span>
@@ -1002,7 +1002,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                     </li>
                   ))}
                 </ul>
-                <p className={idx === 1 ? "mt-auto pt-4 sm:pt-5 border-t border-zinc-800 text-[11px] sm:text-xs leading-relaxed text-zinc-400" : "mt-auto pt-4 sm:pt-5 border-t border-zinc-100 text-[11px] sm:text-xs leading-relaxed text-zinc-400 dark:border-zinc-700 dark:text-zinc-500"}>{plan.note}</p>
+                <p className="mt-auto pt-4 sm:pt-5 border-t border-zinc-100 text-[11px] sm:text-xs leading-relaxed text-zinc-400 dark:border-zinc-700 dark:text-zinc-500">{plan.note}</p>
               </div>
             ))}
           </div>
@@ -1014,7 +1014,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
         <div className="ohmt-final-cta-inner">
           <div className="space-y-3">
             <h2 className="ohmt-final-cta-title">우리 브랜드에 맞는 웹사이트<br />상담부터 시작하세요.</h2>
-            <p className="ohmt-final-cta-desc">업종과 필요한 기능만 알려주셔도<br />제작 방향과 템플릿을 함께 제안드립니다.</p>
+            <p className="ohmt-final-cta-desc">업종과 필요한 기능만 알려주셔도 제작 방향과 템플릿을 함께 제안드립니다.</p>
             <Link href="/ko/contact" className="ohmt-text-cta">
               제작 상담
             </Link>
@@ -1032,7 +1032,14 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           </div>
           <div className="space-y-4">
             {faqs.map((faq, idx) => (
-              <div key={faq.id} className="border border-zinc-200/60 rounded-xl overflow-hidden bg-[#FCFCFD] hover:border-zinc-300 transition-all duration-300 dark:border-zinc-700 dark:bg-zinc-800 dark:hover:border-zinc-600">
+              <div
+                key={faq.id}
+                className={`overflow-hidden rounded-xl border bg-[#FCFCFD] transition-colors duration-200 dark:bg-zinc-800 ${
+                  openFAQ === idx
+                    ? 'border-[#F1B100] dark:border-[#F1B100]'
+                    : 'border-zinc-200/60 hover:border-zinc-300 dark:border-zinc-700 dark:hover:border-zinc-600'
+                }`}
+              >
                 <button
                   onClick={() => setOpenFAQ(openFAQ === idx ? null : idx)}
                   className="w-full px-6 py-5 flex items-center justify-between hover:bg-zinc-50 transition-colors duration-300 dark:hover:bg-zinc-700"
