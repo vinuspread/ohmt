@@ -4,7 +4,7 @@ import React, { useState, useMemo, useEffect, useRef, useCallback } from "react"
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Menu, X, Search, Sparkles, ImageOff, ClipboardList, PackageOpen, MessageCircleQuestion } from "lucide-react";
+import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Menu, X, Search, Sparkles, ImageOff, ClipboardList, PackageOpen, UserRound } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Logo } from "@/components/Logo";
 import type { PricingPackage } from "@/types/template";
@@ -643,21 +643,25 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           {/* Problem cards: single shared layout for all breakpoints */}
           <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-3">
             {serviceCardsKo[0].case1 && serviceCardsKo[0].case2 && (
-              <div className="rounded-xl bg-zinc-950 p-5 dark:bg-zinc-900">
-                <h3 className="text-[15px] font-bold text-white">{serviceCardsKo[0].title}</h3>
+              <div className="rounded-xl bg-white border border-zinc-200/60 p-5 dark:bg-zinc-800 dark:border-zinc-700">
+                <h3 className="text-[15px] font-bold text-zinc-900 dark:text-zinc-100">{serviceCardsKo[0].title}</h3>
                 <div className="mt-3 space-y-2">
-                  <div className="flex items-start gap-2.5 rounded-lg bg-white/5 p-3">
-                    <MessageCircleQuestion size={18} strokeWidth={1.7} className="mt-0.5 shrink-0 text-zinc-400" />
-                    <p className="text-[13px] leading-6 text-zinc-400">{serviceCardsKo[0].case1}</p>
+                  <div className="flex items-start gap-2.5 rounded-xl border border-amber-200/70 bg-amber-50 p-3 dark:border-amber-900/40 dark:bg-amber-500/10">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-orange-200 dark:bg-orange-500/30">
+                      <UserRound size={15} strokeWidth={2} className="text-orange-700 dark:text-orange-300" />
+                    </span>
+                    <p className="text-[13px] leading-6 text-zinc-600 dark:text-zinc-300">{serviceCardsKo[0].case1}</p>
                   </div>
-                  <div className="flex items-start gap-2.5 rounded-lg bg-white/5 p-3">
-                    <MessageCircleQuestion size={18} strokeWidth={1.7} className="mt-0.5 shrink-0 text-zinc-400" />
-                    <p className="text-[13px] leading-6 text-zinc-400">{serviceCardsKo[0].case2}</p>
+                  <div className="flex items-start gap-2.5 rounded-xl border border-amber-200/70 bg-amber-50 p-3 dark:border-amber-900/40 dark:bg-amber-500/10">
+                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-teal-200 dark:bg-teal-500/30">
+                      <UserRound size={15} strokeWidth={2} className="text-teal-700 dark:text-teal-300" />
+                    </span>
+                    <p className="text-[13px] leading-6 text-zinc-600 dark:text-zinc-300">{serviceCardsKo[0].case2}</p>
                   </div>
-                  <div className="flex items-start gap-2.5 rounded-lg bg-[#F1B100]/10 p-3">
-                    <Image src="/icon.png" alt="" width={18} height={18} className="mt-0.5 shrink-0 rounded-md" />
-                    <p className="text-[13px] leading-6 text-[#F1B100] font-bold">{serviceCardsKo[0].solution}</p>
-                  </div>
+                </div>
+                <div className="mt-4 pt-4 border-t border-zinc-200/60 flex items-start gap-3 dark:border-zinc-700">
+                  <Image src="/icon.png" alt="" width={28} height={28} className="mt-0.5 shrink-0 rounded-full" />
+                  <p className="text-[13px] leading-6 text-zinc-900 font-bold dark:text-zinc-100">{serviceCardsKo[0].solution}</p>
                 </div>
               </div>
             )}
