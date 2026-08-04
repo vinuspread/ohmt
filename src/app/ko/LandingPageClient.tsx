@@ -70,12 +70,6 @@ const serviceCardsKo = [
   { icon: PackageOpen, title: "오픈 뒤 작은 수정도 맡길 곳이 필요합니다", desc: "문구나 이미지 하나를 바꿀 때도 새로운 업체를 찾아야 합니다." },
 ];
 
-const solutionsKo = [
-  "필요한 내용과 콘텐츠 구성을 함께 정리합니다.",
-  "신속한 결정이 가능해 비용과 기간을 줄입니다.",
-  "오픈 후 수정과 관리를 전담 팀이 지원합니다.",
-];
-
 const modelStepsKo = [
   { step: "01", title: "방향성 선택", desc: "업종과 브랜드 톤에 맞는 템플릿 방향을 고릅니다." },
   { step: "02", title: "전문가 제작", desc: "카피, 이미지, 구조를 브랜드에 맞게 조정합니다." },
@@ -636,35 +630,9 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             desc={<>처음부터 모든걸 준비할 필요가 없습니다.<br />오마이템플릿의 전문가가 그 과정을 도와드립니다.</>}
             titleClassName="text-[28px]! sm:text-4xl! md:text-5xl!"
           />
-          {/* Desktop / Tablet: cards grid + single solution bar */}
-          <div className="hidden md:block space-y-9 md:space-y-12">
-            <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-3">
-              {serviceCardsKo.map((item) => (
-                <div key={item.title} className="flex gap-4 bg-white border border-zinc-200/60 rounded-xl p-5 hover:border-zinc-300 transition-colors sm:block sm:p-6 dark:bg-zinc-800 dark:border-zinc-700 dark:hover:border-zinc-600">
-                  <item.icon size={28} strokeWidth={1.7} className="mt-0.5 shrink-0 text-zinc-900 sm:mt-0 dark:text-zinc-100" />
-                  <div className="min-w-0">
-                    <h3 className="text-[15px] font-bold text-zinc-900 sm:mt-4 sm:text-[17px] dark:text-zinc-100">{item.title}</h3>
-                    <p className="mt-1.5 text-[13px] leading-6 text-zinc-500 sm:mt-2 sm:text-sm sm:leading-relaxed dark:text-zinc-400">{item.desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="grid gap-4 rounded-xl bg-zinc-950 p-5 md:grid-cols-[220px_1fr] md:items-center md:p-6 dark:bg-white">
-              <p className="text-sm font-extrabold text-white dark:text-zinc-950">Ohmytemplate의 해결 방식</p>
-              <div className="grid gap-3 text-sm text-zinc-300 dark:text-zinc-700 md:grid-cols-3 md:divide-x md:divide-zinc-700 dark:md:divide-zinc-200">
-                {solutionsKo.map((text, idx) => (
-                  <div key={text} className="flex items-start gap-3 md:px-5 first:md:pl-0 last:md:pr-0">
-                    <span className="font-mono text-xs font-bold text-[#F1B100]">{String(idx + 1).padStart(2, "0")}</span>
-                    <span className="leading-6">{text}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Mobile: problem and solution combined in a single card */}
-          <div className="md:hidden flex flex-col gap-3">
-            {serviceCardsKo.map((item, idx) => (
+          {/* Problem cards: single shared layout for all breakpoints */}
+          <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-3">
+            {serviceCardsKo.map((item) => (
               <div key={item.title} className="bg-white border border-zinc-200/60 rounded-xl p-5 dark:bg-zinc-800 dark:border-zinc-700">
                 <div className="flex gap-4">
                   <item.icon size={28} strokeWidth={1.7} className="mt-0.5 shrink-0 text-zinc-900 dark:text-zinc-100" />
@@ -672,10 +640,6 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                     <h3 className="text-[15px] font-bold text-zinc-900 dark:text-zinc-100">{item.title}</h3>
                     <p className="mt-1.5 text-[13px] leading-6 text-zinc-500 dark:text-zinc-400">{item.desc}</p>
                   </div>
-                </div>
-                <div className="mt-4 pt-4 border-t border-zinc-200/60 flex items-start gap-3 dark:border-zinc-700">
-                  <Image src="/icon.png" alt="" width={20} height={20} className="mt-0.5 shrink-0 rounded-md" />
-                  <p className="text-[13px] leading-6 text-[#F1B100] font-bold">{solutionsKo[idx]}</p>
                 </div>
               </div>
             ))}
