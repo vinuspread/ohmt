@@ -52,16 +52,16 @@ const MOBILE_MENU_ITEM_VARIANTS = {
 
 const HERO_SLIDES = [
   {
-    heading: <>검증된 디자인을 기반으로<br /><span className="text-[#FFB800]">차별화된 사이트를 완성합니다.</span></>,
-    desc: "20년 경력의 웹 제작팀이 구성, 문구, 이미지, 기능을 다듬고 오픈 후 운영까지 책임집니다.",
+    heading: <>검증된 디자인으로<br /><span className="text-[#FFB800]">경쟁력있는 사이트를 만듭니다.</span></>,
+    desc: "20년 경력의 전문팀이 기획부터 오픈까지\n모든 과정을 직접 관리하며 운영까지 책임집니다.",
   },
   {
-    heading: <>필요한 기능을<br /><span className="text-[#FFB800]">목적에 맞게 개발</span></>,
-    desc: "회원, 예약 등 맞춤 개발로 확장합니다.",
+    heading: <>빠르게 오픈하고<br /><span className="text-[#FFB800]">고객의 반응을 이끌어 냅니다.</span></>,
+    desc: "검증된 템플릿과 기능을 기반으로\n시장 반응에 맞춘 확실한 성과을 이끌어냅니다.",
   },
   {
-    heading: <>오픈 이후 운영까지 <br /><span className="text-[#FFB800]">완벽한 지원</span></>,
-    desc: "전담팀이 수정과 점검을 신속하게 대응합니다.",
+    heading: <>필요한 기능은<br /><span className="text-[#FFB800]">이미 다 준비되어 있습니다.</span></>,
+    desc: "자주 사용하는 기능은 기본으로 제공하고\n추가로 필요한 기능은 맞춤개발로 확장해 드립니다.",
   },
 ];
 
