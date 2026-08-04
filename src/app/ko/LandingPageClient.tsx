@@ -65,7 +65,12 @@ const HERO_SLIDES = [
 ];
 
 const serviceCardsKo = [
-  { icon: ImageOff, title: "전문 기획자가 없어 콘텐츠와 페이지 구성에 시간을 뺏깁니다", desc: <>어떤 페이지가 필요한지, 문구와 콘텐츠는 어떻게 배치해야 타겟의 마음을 움직일지 막연하기만 합니다.<br /><br />마케팅 메시지 정리부터 메뉴 구조, 이미지 수급까지... 본업에 집중하기도 모자란 시간에 기획에만 몇 주를 허비합니다.</> },
+  {
+    icon: ImageOff,
+    title: "전문 기획자가 없어 콘텐츠와 페이지 구성에 시간을 뺏깁니다",
+    desc: <>어떤 페이지가 필요한지, 문구와 콘텐츠는 어떻게 배치해야 타겟의 마음을 움직일지 막연하기만 합니다.<br /><br />마케팅 메시지 정리부터 메뉴 구조, 이미지 수급까지... 본업에 집중하기도 모자란 시간에 기획에만 몇 주를 허비합니다.</>,
+    solution: "페이지 구성부터 마케팅 메시지, 메뉴 구조, 이미지까지 전문 기획자가 함께 고민하고 채워드립니다.",
+  },
   { icon: ClipboardList, title: "맞춤 외주의 비용과 일정이 부담됩니다", desc: "처음부터 새로 만들면 비용과 제작 기간이 커집니다." },
   { icon: PackageOpen, title: "오픈 뒤 작은 수정도 맡길 곳이 필요합니다", desc: "문구나 이미지 하나를 바꿀 때도 새로운 업체를 찾아야 합니다." },
 ];
@@ -641,14 +646,14 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                     <p className="mt-1.5 text-[13px] leading-6 text-zinc-500 dark:text-zinc-400">{item.desc}</p>
                   </div>
                 </div>
+                {item.solution && (
+                  <div className="mt-4 pt-4 border-t border-zinc-200/60 flex items-start gap-3 dark:border-zinc-700">
+                    <Image src="/icon.png" alt="" width={20} height={20} className="mt-0.5 shrink-0 rounded-md" />
+                    <p className="text-[13px] leading-6 text-[#F1B100] font-bold">{item.solution}</p>
+                  </div>
+                )}
               </div>
             ))}
-          </div>
-          <div className="flex items-start gap-4 rounded-xl bg-zinc-950 p-5 sm:items-center sm:p-6 md:p-7 dark:bg-white">
-            <Image src="/icon.png" alt="" width={32} height={32} className="mt-0.5 shrink-0 rounded-md sm:mt-0" />
-            <p className="text-[15px] leading-7 font-bold text-[#F1B100] sm:text-lg md:text-xl">
-              페이지 구성부터 마케팅 메시지, 메뉴 구조, 이미지까지 전문 기획자가 함께 고민하고 채워드립니다.
-            </p>
           </div>
         </div>
       </section>
