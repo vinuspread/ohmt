@@ -34,7 +34,6 @@ const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 const ALL_LABEL = "전체";
 const POPULAR_TAGS = ["패션", "포트폴리오", "에이전시", "럭셔리", "미니멀"];
 const MOBILE_NAV_ITEMS_KO = [
-  { href: "#directions", label: "제작 방식" },
   { href: "#templates", label: "디자인" },
   { href: "#pricing", label: "가격" },
   { href: "#process", label: "진행 과정" },
@@ -409,7 +408,6 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
             <Logo className="h-6 w-auto block" />
           </Link>
           <nav className="hidden md:flex items-center gap-6 text-[0.82rem] font-bold text-zinc-500 tracking-wider dark:text-zinc-400">
-            <a href="#directions" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">제작 방식</a>
             <a href="#templates" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">디자인</a>
             <a href="#pricing" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">가격</a>
             <a href="#process" onClick={handleNavAnchorClick} className="hover:text-zinc-900 transition-colors dark:hover:text-zinc-100">진행 과정</a>
@@ -685,8 +683,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
         </div>
       </section>
 
-      {/* Service Model Section (hidden per request) */}
-      {false && (
+      {/* Service Model Section */}
       <section className="px-5 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16 md:py-28 bg-white border-b border-zinc-200/50 dark:bg-zinc-900 dark:border-zinc-800">
         <div className="max-w-[1440px] mx-auto space-y-9 md:space-y-12">
           <SectionHeadingKo
@@ -714,9 +711,9 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           </div>
         </div>
       </section>
-      )}
 
-      {/* Directions Section */}
+      {/* Directions Section (hidden per request) */}
+      {false && (
       <section id="directions" className="px-5 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16 md:py-28 bg-[#FCFCFD] border-b border-zinc-200/50 dark:bg-zinc-950 dark:border-zinc-800">
         <div className="max-w-[1440px] mx-auto space-y-9 md:space-y-12">
           <div className="flex flex-col items-center gap-6 md:gap-8">
@@ -754,6 +751,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           </div>
         </div>
       </section>
+      )}
 
       {/* Templates Section */}
       <section id="templates" className="px-5 sm:px-6 md:px-12 lg:px-20 py-10 md:py-12 bg-[#F7F7F8] dark:bg-zinc-950">
