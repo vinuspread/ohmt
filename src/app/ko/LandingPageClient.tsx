@@ -4,7 +4,7 @@ import React, { useState, useMemo, useEffect, useRef, useCallback } from "react"
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Menu, X, Search, Sparkles, ImageOff, ClipboardList, PackageOpen } from "lucide-react";
+import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Menu, X, Search, Sparkles, ImageOff, ClipboardList, PackageOpen, MessageCircleQuestion } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Logo } from "@/components/Logo";
 import type { PricingPackage } from "@/types/template";
@@ -72,7 +72,8 @@ const serviceCardsKo = [
   {
     icon: ImageOff,
     title: "전문 기획자가 없어 콘텐츠와 페이지 구성에 시간을 뺏깁니다",
-    desc: <>어떤 페이지가 필요한지, 문구와 콘텐츠는 어떻게 배치해야 타겟의 마음을 움직일지 막연하기만 합니다.<br /><br />마케팅 메시지 정리부터 메뉴 구조, 이미지 수급까지... 본업에 집중하기도 모자란 시간에 기획에만 몇 주를 허비합니다.</>,
+    case1: "어떤 페이지가 필요한지, 문구와 콘텐츠는 어떻게 배치해야 타겟의 마음을 움직일지 막연하기만 합니다.",
+    case2: "마케팅 메시지 정리부터 메뉴 구조, 이미지 수급까지... 본업에 집중하기도 모자란 시간에 기획에만 몇 주를 허비합니다.",
     solution: "페이지 구성부터 마케팅 메시지, 메뉴 구조, 이미지까지 전문 기획자가 함께 고민하고 채워드립니다.",
   },
   { icon: ClipboardList, title: "맞춤 외주의 비용과 일정이 부담됩니다", desc: "처음부터 새로 만들면 비용과 제작 기간이 커집니다." },
@@ -641,7 +642,26 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           />
           {/* Problem cards: single shared layout for all breakpoints */}
           <div className="grid grid-cols-1 gap-3 sm:gap-4 md:grid-cols-3">
-            {serviceCardsKo.map((item) => (
+            {serviceCardsKo[0].case1 && serviceCardsKo[0].case2 && (
+              <div className="rounded-xl bg-zinc-950 p-5 dark:bg-zinc-900">
+                <h3 className="text-[15px] font-bold text-white">{serviceCardsKo[0].title}</h3>
+                <div className="mt-3 space-y-2">
+                  <div className="flex items-start gap-2.5 rounded-lg bg-white/5 p-3">
+                    <MessageCircleQuestion size={18} strokeWidth={1.7} className="mt-0.5 shrink-0 text-zinc-400" />
+                    <p className="text-[13px] leading-6 text-zinc-400">{serviceCardsKo[0].case1}</p>
+                  </div>
+                  <div className="flex items-start gap-2.5 rounded-lg bg-white/5 p-3">
+                    <MessageCircleQuestion size={18} strokeWidth={1.7} className="mt-0.5 shrink-0 text-zinc-400" />
+                    <p className="text-[13px] leading-6 text-zinc-400">{serviceCardsKo[0].case2}</p>
+                  </div>
+                  <div className="flex items-start gap-2.5 rounded-lg bg-[#F1B100]/10 p-3">
+                    <Image src="/icon.png" alt="" width={18} height={18} className="mt-0.5 shrink-0 rounded-md" />
+                    <p className="text-[13px] leading-6 text-[#F1B100] font-bold">{serviceCardsKo[0].solution}</p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {serviceCardsKo.slice(1).map((item) => (
               <div key={item.title} className="bg-white border border-zinc-200/60 rounded-xl p-5 dark:bg-zinc-800 dark:border-zinc-700">
                 <div className="flex gap-4">
                   <item.icon size={28} strokeWidth={1.7} className="mt-0.5 shrink-0 text-zinc-900 dark:text-zinc-100" />
@@ -650,12 +670,6 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                     <p className="mt-1.5 text-[13px] leading-6 text-zinc-500 dark:text-zinc-400">{item.desc}</p>
                   </div>
                 </div>
-                {item.solution && (
-                  <div className="mt-4 pt-4 border-t border-zinc-200/60 flex items-start gap-3 dark:border-zinc-700">
-                    <Image src="/icon.png" alt="" width={20} height={20} className="mt-0.5 shrink-0 rounded-md" />
-                    <p className="text-[13px] leading-6 text-[#F1B100] font-bold">{item.solution}</p>
-                  </div>
-                )}
               </div>
             ))}
           </div>
