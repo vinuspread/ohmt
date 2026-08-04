@@ -662,7 +662,8 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
         </div>
       </section>
 
-      {/* Service Model Section */}
+      {/* Service Model Section (hidden per request) */}
+      {false && (
       <section className="px-5 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16 md:py-28 bg-white border-b border-zinc-200/50 dark:bg-zinc-900 dark:border-zinc-800">
         <div className="max-w-[1440px] mx-auto space-y-9 md:space-y-12">
           <SectionHeadingKo
@@ -690,6 +691,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           </div>
         </div>
       </section>
+      )}
 
       {/* Directions Section (hidden per request) */}
       {false && (
