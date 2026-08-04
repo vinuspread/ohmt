@@ -4,7 +4,7 @@ import React, { useState, useMemo, useEffect, useRef, useCallback } from "react"
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Menu, X, Search, Sparkles, ImageOff, ClipboardList, PackageOpen, UserRound } from "lucide-react";
+import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Menu, X, Search, Sparkles, ImageOff, ClipboardList, PackageOpen } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Logo } from "@/components/Logo";
 import type { PricingPackage } from "@/types/template";
@@ -67,6 +67,8 @@ const HERO_SLIDES = [
     desc: "자주 사용하는 기능은 기본으로 제공하고\n추가로 필요한 기능은 맞춤개발로 확장해 드립니다.",
   },
 ];
+
+const CASE_AVATAR_OPTIONS = ["/icons/avata_01.png", "/icons/avata_02.png", "/icons/avata_03.png"];
 
 const serviceCardsKo = [
   {
@@ -132,6 +134,12 @@ function SectionHeadingKo({ label, title, desc, titleClassName }: { label?: stri
 export default function LandingPageClient({ templates, faqs, packages }: { templates: TemplateItem[]; faqs: FaqItem[]; packages: PricingPackage[] }) {
   const router = useRouter();
   const [heroIndex, setHeroIndex] = useState(0);
+  const [caseAvatars, setCaseAvatars] = useState<[string, string]>([CASE_AVATAR_OPTIONS[0], CASE_AVATAR_OPTIONS[1]]);
+
+  useEffect(() => {
+    const shuffled = [...CASE_AVATAR_OPTIONS].sort(() => Math.random() - 0.5);
+    setCaseAvatars([shuffled[0], shuffled[1]]);
+  }, []);
   const [headerVisible, setHeaderVisible] = useState(true);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [menuOrigin, setMenuOrigin] = useState({ x: 0, y: 0 });
@@ -647,15 +655,11 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
                 <h3 className="text-[15px] font-bold text-zinc-900 dark:text-zinc-100">{serviceCardsKo[0].title}</h3>
                 <div className="mt-3 space-y-2">
                   <div className="flex items-start gap-2.5 rounded-xl border border-amber-200/70 bg-amber-50 p-3 dark:border-amber-900/40 dark:bg-amber-500/10">
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-orange-200 dark:bg-orange-500/30">
-                      <UserRound size={15} strokeWidth={2} className="text-orange-700 dark:text-orange-300" />
-                    </span>
+                    <Image src={caseAvatars[0]} alt="" width={28} height={28} className="mt-0.5 shrink-0 rounded-full" />
                     <p className="text-[13px] leading-6 text-zinc-600 dark:text-zinc-300">{serviceCardsKo[0].case1}</p>
                   </div>
                   <div className="flex items-start gap-2.5 rounded-xl border border-amber-200/70 bg-amber-50 p-3 dark:border-amber-900/40 dark:bg-amber-500/10">
-                    <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-teal-200 dark:bg-teal-500/30">
-                      <UserRound size={15} strokeWidth={2} className="text-teal-700 dark:text-teal-300" />
-                    </span>
+                    <Image src={caseAvatars[1]} alt="" width={28} height={28} className="mt-0.5 shrink-0 rounded-full" />
                     <p className="text-[13px] leading-6 text-zinc-600 dark:text-zinc-300">{serviceCardsKo[0].case2}</p>
                   </div>
                 </div>
