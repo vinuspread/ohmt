@@ -689,7 +689,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
       <section className="px-5 sm:px-6 md:px-12 lg:px-20 py-12 sm:py-16 md:py-28 bg-white border-b border-zinc-200/50 dark:bg-zinc-900 dark:border-zinc-800">
         <div className="max-w-[1440px] mx-auto space-y-9 md:space-y-12">
           <SectionHeadingKo
-            title={<>우리는 템플릿을 팔지 않습니다.<br /><span className="text-[#F1B100]">브랜드에 맞게 커스텀합니다.</span></>}
+            title={<>템플릿을 팔지 않습니다.<br /><span className="text-[#F1B100]">브랜드에 맞게 커스텀합니다.</span></>}
             desc={<>컨셉에 맞는 템플릿을 선택하면<br />브랜드에 최적화된 웹사이트를 제작합니다.</>}
           />
           <div className="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-0">
