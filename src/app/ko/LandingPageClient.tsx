@@ -68,7 +68,14 @@ const HERO_SLIDES = [
   },
 ];
 
-const CASE_AVATAR_OPTIONS = ["/icons/avata_01.png", "/icons/avata_02.png", "/icons/avata_03.png"];
+const CASE_AVATAR_OPTIONS = [
+  "/icons/avata_01.png",
+  "/icons/avata_02.png",
+  "/icons/avata_03.png",
+  "/icons/avata_04.png",
+  "/icons/avata_05.png",
+  "/icons/avata_06.png",
+];
 
 const serviceCardsKo = [
   {
