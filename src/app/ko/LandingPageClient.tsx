@@ -72,19 +72,19 @@ const CASE_AVATAR_OPTIONS = ["/icons/avata_01.png", "/icons/avata_02.png", "/ico
 
 const serviceCardsKo = [
   {
-    title: "전문 인력이 없어 콘텐츠와 페이지 구성이 막막합니다.",
+    title: <>전문 인력이 없어<br />콘텐츠와 페이지 구성이 막막합니다.</>,
     case1: "어떤 페이지가 필요한지, 문구와 콘텐츠는 어떻게 배치해야 고객의 마음을 움직일 수 있을지 막연해요.",
     case2: "카피 문구 정리부터 메뉴 구조, 이미지 수급까지. 본업에 집중하기도 부족한 시간에 준비에 몇 주를 허비해요.",
     solution: "페이지 구성부터 카피, 메뉴 구조, 이미지까지 전문 기획자가 함께 정리해 나갑니다.",
   },
   {
-    title: "검증되지 않은 외주는 비용과 일정을 예측하기 어렵습니다.",
+    title: <>검증되지 않은 외주는<br />비용과 일정을 예측하기 어렵습니다.</>,
     case1: "견적 받을 때마다 금액이 다르고, 수정할 때마다 추가 비용이 붙어서 예산 잡기가 힘들어요.",
     case2: "기획부터 개발까지 매번 새로 만드는 외주는 일정이 계속 밀려서, 오픈 날짜를 장담할 수 없어요.",
     solution: "검증된 템플릿을 기반으로 비용과 일정을 미리 가늠할 수 있습니다.",
   },
   {
-    title: "오픈 후 텍스트 하나 바꾸려 해도 매번 외주를 찾아야 합니다",
+    title: <>오픈 후 작은 수정도<br />매번 외주를 찾아야 합니다.</>,
     case1: "론칭이 끝나면 기존 외주업체와 연락이 끊기거나, 아주 작은 수정 작업에도 과도한 추가 비용과 시간이 발생합니다.",
     case2: "텍스트 수정, 이미지 교체, 간단한 기능 추가 등 오픈 이후 꾸준히 발생하는 관리 이슈를 책임질 전담 팀이 없습니다.",
     solution: "오픈 이후에도 전담팀이 수정과 관리를 계속 책임집니다.",
@@ -666,16 +666,16 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           {/* Problem cards: single shared layout for all breakpoints */}
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5 lg:gap-6">
             {serviceCardsKo.map((item, idx) => (
-              <div key={item.title} className="flex h-full flex-col rounded-xl border border-zinc-200/60 bg-white p-6 lg:p-7 dark:border-zinc-700 dark:bg-zinc-800">
+              <div key={idx} className="flex h-full flex-col rounded-xl border border-zinc-200/60 bg-white p-6 lg:p-7 dark:border-zinc-700 dark:bg-zinc-800">
                 <h3 className="w-full text-balance text-center text-lg font-bold leading-snug text-zinc-900 md:min-h-[56px] md:text-xl dark:text-zinc-100">{item.title}</h3>
                 <div className="mb-6 mt-5 space-y-3">
                   <div className="flex items-start gap-3 rounded-xl border border-amber-200/70 bg-amber-50 p-4 dark:border-amber-900/40 dark:bg-amber-500/10">
                     <Image src={caseAvatars[idx][0]} alt="" width={28} height={28} className="mt-0.5 shrink-0 rounded-full" />
-                    <p className="text-[13px] leading-6 text-zinc-600 dark:text-zinc-300">{item.case1}</p>
+                    <p className="text-[14px] leading-5 text-zinc-600 dark:text-zinc-300">{item.case1}</p>
                   </div>
                   <div className="flex items-start gap-3 rounded-xl border border-amber-200/70 bg-amber-50 p-4 dark:border-amber-900/40 dark:bg-amber-500/10">
                     <Image src={caseAvatars[idx][1]} alt="" width={28} height={28} className="mt-0.5 shrink-0 rounded-full" />
-                    <p className="text-[13px] leading-6 text-zinc-600 dark:text-zinc-300">{item.case2}</p>
+                    <p className="text-[14px] leading-5 text-zinc-600 dark:text-zinc-300">{item.case2}</p>
                   </div>
                 </div>
                 <div className="mt-auto flex items-start gap-3 border-t border-zinc-200/60 pt-5 dark:border-zinc-700">
