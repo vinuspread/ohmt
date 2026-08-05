@@ -669,11 +669,11 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
               <div key={idx} className="flex h-full flex-col rounded-xl border border-zinc-200/60 bg-white p-6 lg:p-7 dark:border-zinc-700 dark:bg-zinc-800">
                 <h3 className="w-full text-balance text-center text-lg font-bold leading-snug text-zinc-900 md:min-h-[56px] md:text-xl dark:text-zinc-100">{item.title}</h3>
                 <div className="mb-6 mt-5 space-y-3">
-                  <div className="flex items-start gap-3 rounded-xl border border-amber-200/70 bg-amber-50 p-4 dark:border-amber-900/40 dark:bg-amber-500/10">
+                  <div className="flex items-start gap-3 rounded-xl border border-amber-200/70 bg-amber-50 p-4 dark:border-zinc-700 dark:bg-zinc-700/40">
                     <Image src={caseAvatars[idx][0]} alt="" width={28} height={28} className="mt-0.5 shrink-0 rounded-full" />
                     <p className="text-[14px] leading-5 text-zinc-600 dark:text-zinc-300">{item.case1}</p>
                   </div>
-                  <div className="flex items-start gap-3 rounded-xl border border-amber-200/70 bg-amber-50 p-4 dark:border-amber-900/40 dark:bg-amber-500/10">
+                  <div className="flex items-start gap-3 rounded-xl border border-amber-200/70 bg-amber-50 p-4 dark:border-zinc-700 dark:bg-zinc-700/40">
                     <Image src={caseAvatars[idx][1]} alt="" width={28} height={28} className="mt-0.5 shrink-0 rounded-full" />
                     <p className="text-[14px] leading-5 text-zinc-600 dark:text-zinc-300">{item.case2}</p>
                   </div>
