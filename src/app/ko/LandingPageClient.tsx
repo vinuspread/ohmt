@@ -667,7 +667,7 @@ export default function LandingPageClient({ templates, faqs, packages }: { templ
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-5 lg:gap-6">
             {serviceCardsKo.map((item, idx) => (
               <div key={item.title} className="flex h-full flex-col rounded-xl border border-zinc-200/60 bg-white p-6 lg:p-7 dark:border-zinc-700 dark:bg-zinc-800">
-                <h3 className="w-full text-balance text-left text-lg font-bold leading-snug text-zinc-900 md:min-h-[56px] md:text-xl dark:text-zinc-100">{item.title}</h3>
+                <h3 className="w-full text-balance text-center text-lg font-bold leading-snug text-zinc-900 md:min-h-[56px] md:text-xl dark:text-zinc-100">{item.title}</h3>
                 <div className="mb-6 mt-5 space-y-3">
                   <div className="flex items-start gap-3 rounded-xl border border-amber-200/70 bg-amber-50 p-4 dark:border-amber-900/40 dark:bg-amber-500/10">
                     <Image src={caseAvatars[idx][0]} alt="" width={28} height={28} className="mt-0.5 shrink-0 rounded-full" />
