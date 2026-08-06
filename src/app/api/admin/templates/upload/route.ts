@@ -125,7 +125,7 @@ export async function POST(request: NextRequest) {
       slug,
       lang,
       name,
-      category: themeJson.category ?? "uncategorized",
+      categories: [themeJson.category ?? "uncategorized"],
       description,
       thumbnail_url: `/templates/${slug}/og-image.jpg`,
       template_key: templateKey ?? null,

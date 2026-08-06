@@ -54,8 +54,18 @@ export async function PATCH(request: Request, context: { params: Promise<{ id: s
   if (error) return NextResponse.json({ error: "카테고리 수정에 실패했습니다." }, { status: 500 });
 
   if (nextName && nextName !== current.name) {
-    const { error: cascadeError } = await supabase.from("templates").update({ category: nextName }).eq("category", current.name);
-    if (cascadeError) return NextResponse.json({ error: "카테고리 이름 변경은 됐지만, 연결된 템플릿 갱신에 실패했습니다." }, { status: 500 });
+    const { data: affected, error: affectedError } = await supabase
+      .from("templates")
+      .select("id, categories")
+      .contains("categories", [current.name]);
+
+    if (affectedError) return NextResponse.json({ error: "카테고리 이름 변경은 됐지만, 연결된 템플릿 조회에 실패했습니다." }, { status: 500 });
+
+    for (const template of affected ?? []) {
+      const nextCategories = (template.categories as string[]).map((name) => (name === current.name ? nextName : name));
+      const { error: cascadeError } = await supabase.from("templates").update({ categories: nextCategories }).eq("id", template.id);
+      if (cascadeError) return NextResponse.json({ error: "카테고리 이름 변경은 됐지만, 연결된 템플릿 갱신에 실패했습니다." }, { status: 500 });
+    }
   }
 
   return NextResponse.json(data);
@@ -75,7 +85,7 @@ export async function DELETE(_request: Request, context: { params: Promise<{ id:
   const { count, error: usageError } = await supabase
     .from("templates")
     .select("id", { count: "exact", head: true })
-    .eq("category", current.name);
+    .contains("categories", [current.name]);
 
   if (usageError) return NextResponse.json({ error: "카테고리 사용 여부 확인에 실패했습니다." }, { status: 500 });
   if (count && count > 0) {
