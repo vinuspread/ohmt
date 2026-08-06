@@ -32,18 +32,18 @@ const specs = [
     size: 'wide',
   },
   {
-    title: 'Hand-Finished Materials',
-    desc: 'Brushed stainless steel, exposed brass fittings, machined dials - every surface inspectable.',
-    target: '20+',
-    unit: 'hours',
-    size: 'wide',
-  },
-  {
     title: 'Shot Repeatability',
     desc: 'The aggregate promise: the tenth espresso of the day tastes like the first.',
     target: '100',
     unit: 'shots',
     size: 'compact',
+  },
+  {
+    title: 'Hand-Finished Materials',
+    desc: 'Brushed stainless steel, exposed brass fittings, machined dials - every surface inspectable.',
+    target: '20+',
+    unit: 'hours',
+    size: 'wide',
   },
 ]
 

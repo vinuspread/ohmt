@@ -8,7 +8,7 @@ import { AnimatePresence, motion } from 'motion/react'
 const base = '/en/templates/OHMT034-nova-coffee'
 
 const navLinks = [
-  { label: 'Product', href: base, desc: 'Machine, accessories, and reservation details' },
+  { label: 'Product', href: `${base}/product`, desc: 'Finishes, included kit, and pricing' },
   { label: 'Technology', href: `${base}/technology`, desc: 'Boiler control, pressure logic, and extraction system' },
   { label: 'Support', href: `${base}/support`, desc: 'Care guides, warranty, and setup help' },
   { label: 'Company', href: `${base}/company`, desc: 'Studio story and manufacturing notes' },
