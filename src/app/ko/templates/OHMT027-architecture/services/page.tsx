@@ -16,14 +16,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "서비스 | OHMT 건축 스튜디오",
     description: "주거 설계부터 상업·공공 건축, 인테리어 설계와 시공 감리까지 제공합니다.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT027-architecture/services",
+    url: "https://ohmt.site/ko/templates/OHMT027-architecture/services",
     images: [{ url: "/templates/OHMT027-architecture/og-image.jpg" }],
   },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT027-architecture/services",
+    canonical: "https://ohmt.site/ko/templates/OHMT027-architecture/services",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/OHMT027-architecture/services",
-      "ko": "https://ohmytemplate.com/ko/templates/OHMT027-architecture/services",
+      "en": "https://ohmt.site/en/templates/OHMT027-architecture/services",
+      "ko": "https://ohmt.site/ko/templates/OHMT027-architecture/services",
     },
   },
 };

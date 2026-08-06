@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - ?? ?? ?? ???",
     description: "항공권 예약과 취항지, 객실 서비스와 멤버십 혜택을 소개하는 프리미엄 항공사 웹사이트 템플릿입니다.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT008-airline",
+    url: "https://ohmt.site/ko/templates/OHMT008-airline",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT008-airline/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT008-airline",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT008-airline" },
+    canonical: "https://ohmt.site/ko/templates/OHMT008-airline",
+    languages: { "en": "https://ohmt.site/en/templates/OHMT008-airline" },
   },
 };
 

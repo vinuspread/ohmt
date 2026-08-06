@@ -55,7 +55,7 @@ export function Footer() {
                         &copy; 2026 OHMT Studio. 모든 권리 보유.
                     </span>
                     <span className="text-xs uppercase text-white/30 font-bold">
-                        서울, 대한민국 &middot; hello@ohmytemplate.com
+                        서울, 대한민국 &middot; hello@ohmt.site
                     </span>
                 </div>
             </div>

@@ -19,7 +19,7 @@ export default function TemplatePage() {
     "@type": "ProfessionalService",
     "name": "OHMT - Wedding Photography",
     "description": "Elegant dark portfolio template for wedding photography and cinematic capture",
-    "url": "https://ohmytemplate.com/en/templates/OHMT025-wedding",
+    "url": "https://ohmt.site/en/templates/OHMT025-wedding",
     "telephone": "+1-512-555-0199",
     "address": {
       "@type": "PostalAddress",

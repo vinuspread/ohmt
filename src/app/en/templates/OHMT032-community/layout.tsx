@@ -32,7 +32,7 @@ const jsonLd = {
   "@type": "WebSite",
   name: "OHMT Community",
   description: "An English community template for questions, resources, reviews, and announcements.",
-  url: "https://ohmytemplate.com/en/templates/OHMT032-community",
+  url: "https://ohmt.site/en/templates/OHMT032-community",
 }
 
 export default function CommunityLayout({ children }: { children: React.ReactNode }) {

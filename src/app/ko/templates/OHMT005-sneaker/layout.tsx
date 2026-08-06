@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - ?????? ??? ?? ???",
     description: "Urban streetwear and sneaker releases",
-    url: "https://ohmytemplate.com/ko/templates/OHMT005-sneaker",
+    url: "https://ohmt.site/ko/templates/OHMT005-sneaker",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT005-sneaker/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT005-sneaker",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT005-sneaker" },
+    canonical: "https://ohmt.site/ko/templates/OHMT005-sneaker",
+    languages: { "en": "https://ohmt.site/en/templates/OHMT005-sneaker" },
   },
 };
 

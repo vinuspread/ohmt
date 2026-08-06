@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - Modern Furniture Store Template",
     description: "Premium furniture & interior design showcase",
-    url: "https://ohmytemplate.com/en/templates/OHMT004-furniture",
+    url: "https://ohmt.site/en/templates/OHMT004-furniture",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT004-furniture/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT004-furniture",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT004-furniture" },
+    canonical: "https://ohmt.site/en/templates/OHMT004-furniture",
+    languages: { "ko": "https://ohmt.site/ko/templates/OHMT004-furniture" },
   },
 };
 

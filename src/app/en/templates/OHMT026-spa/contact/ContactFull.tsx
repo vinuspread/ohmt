@@ -68,7 +68,7 @@ export default function ContactFull() {
                 </div>
                 <div>
                   <h3 className="font-[family-name:var(--font-heading)] text-lg font-bold tracking-tight text-[var(--color-text)] mb-2">Contact</h3>
-                  <p className="text-sm text-[var(--color-text-muted)]">+1 (555) 010-2030<br />hello@ohmytemplate.com</p>
+                  <p className="text-sm text-[var(--color-text-muted)]">+1 (555) 010-2030<br />hello@ohmt.site</p>
                 </div>
                 <div className="rounded-2xl overflow-hidden h-64">
                   <img src="/templates/OHMT026-spa/clinic-interior.jpg" alt="Our clinic interior" className="w-full h-full object-cover" />

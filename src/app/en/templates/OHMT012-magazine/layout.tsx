@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - Independent Publishing Layout Template",
     description: "Editorial culture and lifestyle",
-    url: "https://ohmytemplate.com/en/templates/OHMT012-magazine",
+    url: "https://ohmt.site/en/templates/OHMT012-magazine",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT012-magazine/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT012-magazine",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT012-magazine" },
+    canonical: "https://ohmt.site/en/templates/OHMT012-magazine",
+    languages: { "ko": "https://ohmt.site/ko/templates/OHMT012-magazine" },
   },
 };
 
@@ -43,7 +43,7 @@ export default function MagazineLayout({
             "@context": "https://schema.org",
             "@type": "MagazineSeries",
             name: "OHMT Magazine",
-            url: "https://ohmytemplate.com/en/templates/OHMT012-magazine",
+            url: "https://ohmt.site/en/templates/OHMT012-magazine",
             description: "Editorial culture and lifestyle — A quarterly record of how design, culture, and sustainability actually intersect.",
             about: {
               "@type": "Thing",

@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   title: "OHMT | 건축 스튜디오",
   description: "주거, 상업, 공공, 인테리어 프로젝트를 설계하는 서울 기반 건축 스튜디오입니다.",
   keywords: ["건축", "건축 포트폴리오", "미니멀리즘", "인테리어 디자인", "OHMT"],
-  authors: [{ name: "OHMT", url: "https://ohmytemplate.com" }],
+  authors: [{ name: "OHMT", url: "https://ohmt.site" }],
   openGraph: {
     title: "OHMT | 건축 스튜디오",
     description: "주거, 상업, 공공, 인테리어 프로젝트를 설계하는 서울 기반 건축 스튜디오입니다.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT027-architecture",
+    url: "https://ohmt.site/ko/templates/OHMT027-architecture",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT027-architecture/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT027-architecture",
+    canonical: "https://ohmt.site/ko/templates/OHMT027-architecture",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/OHMT027-architecture",
-      "ko": "https://ohmytemplate.com/ko/templates/OHMT027-architecture",
+      "en": "https://ohmt.site/en/templates/OHMT027-architecture",
+      "ko": "https://ohmt.site/ko/templates/OHMT027-architecture",
     },
   },
 };

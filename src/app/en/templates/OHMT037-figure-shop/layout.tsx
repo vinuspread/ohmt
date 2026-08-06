@@ -40,7 +40,7 @@ const jsonLd = {
   name: 'OHMT - Forma Figures',
   description:
     'FORMA is a small-batch collectible figure studio: seasonal drops, numbered editions, and hand-finished sculpts across five lines.',
-  url: 'https://ohmytemplate.com/en/templates/OHMT037-figure-shop',
+  url: 'https://ohmt.site/en/templates/OHMT037-figure-shop',
 }
 
 export default function FigureShopLayout({ children }: { children: React.ReactNode }) {

@@ -10,7 +10,7 @@ import Footer from "../_components/layout/Footer";
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 
 const contactInfo = [
-  { icon: "\u{1F4E7}", label: "Email", value: "hello@ohmytemplate.com" },
+  { icon: "\u{1F4E7}", label: "Email", value: "hello@ohmt.site" },
   { icon: "\u{1F4DE}", label: "Phone", value: "+82 2-1234-5678" },
   { icon: "\u{1F4CD}", label: "Location", value: "Seoul, South Korea" },
 ];

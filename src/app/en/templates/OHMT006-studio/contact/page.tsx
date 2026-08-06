@@ -71,7 +71,7 @@ function StudioContactPageContent() {
   "cta": `Start Project`,
   "footer": {
     "copyright": `© 2026 OHMT.`,
-    "contact": `Austin, Texas · hello@ohmytemplate.com`
+    "contact": `Austin, Texas · hello@ohmt.site`
   },
   "aboutPage": {
     "category": `Architectural Core`,
@@ -247,7 +247,7 @@ const [submitted, setSubmitted] = useState(false);
                                             <Mail size={12} /> {t.contactPage.directContact}
                                         </span>
                                         <h3 className="text-base md:text-lg lg:text-xl font-bold text-black hover:opacity-60 transition-opacity duration-300">
-                                            hello@ohmytemplate.com
+                                            hello@ohmt.site
                                         </h3>
                                     </div>
 

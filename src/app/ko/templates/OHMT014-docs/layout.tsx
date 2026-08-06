@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - ?? ?? ?????? ???",
     description: "팀을 위한 깔끔한 노션 스타일 문서 워크스페이스입니다.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT014-docs",
+    url: "https://ohmt.site/ko/templates/OHMT014-docs",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT014-docs/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",

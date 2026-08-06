@@ -14,7 +14,7 @@ export default function TemplatePage() {
     "@type": "ProfessionalService",
     "name": "OHMT 웨딩 포토그래피",
     "description": "자연스러운 순간과 섬세한 구도로 결혼식의 하루를 기록하는 웨딩 포토그래피 스튜디오입니다.",
-    "url": "https://ohmytemplate.com/ko/templates/OHMT025-wedding",
+    "url": "https://ohmt.site/ko/templates/OHMT025-wedding",
     "telephone": "+1-512-555-0199",
     "address": {
       "@type": "PostalAddress",

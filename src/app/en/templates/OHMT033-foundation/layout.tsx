@@ -50,7 +50,7 @@ const jsonLd = {
   name: "OHMT Foundation - People, Proof, Progress",
   description:
     'OHMT Foundation proves social impact through people-first stories and verified program data across four community initiatives.',
-  url: "https://ohmytemplate.com/en/templates/OHMT033-foundation",
+  url: "https://ohmt.site/en/templates/OHMT033-foundation",
 }
 
 export default function FoundationLayout({ children }: { children: React.ReactNode }) {

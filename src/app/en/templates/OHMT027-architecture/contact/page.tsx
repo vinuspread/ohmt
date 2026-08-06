@@ -130,9 +130,9 @@ export default function ContactPage() {
                       DIRECT CHANNELS
                     </h3>
                     <div className="font-sans text-sm text-[var(--color-text-secondary)] space-y-2 leading-relaxed">
-                      <p>General Inquiries: info@ohmytemplate.com</p>
-                      <p>Media & PR: press@ohmytemplate.com</p>
-                      <p>Careers: careers@ohmytemplate.com</p>
+                      <p>General Inquiries: info@ohmt.site</p>
+                      <p>Media & PR: press@ohmt.site</p>
+                      <p>Careers: careers@ohmt.site</p>
                     </div>
                   </div>
                 </ScrollReveal>

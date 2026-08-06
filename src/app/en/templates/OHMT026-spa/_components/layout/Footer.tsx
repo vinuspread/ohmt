@@ -38,7 +38,7 @@ export default function Footer() {
         <div>
           <h4 className="text-xs font-bold uppercase tracking-wider text-white/40 mb-4">Contact</h4>
           <p className="text-sm text-white/70 mb-1">+1 (555) 010-2030</p>
-          <p className="text-sm text-white/70 mb-4">hello@ohmytemplate.com</p>
+          <p className="text-sm text-white/70 mb-4">hello@ohmt.site</p>
           <div className="flex gap-3">
             {["FB", "LI", "IG"].map((s) => (
               <span

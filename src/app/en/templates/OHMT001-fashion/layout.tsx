@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - Editorial Fashion Lookbook Template",
     description: "Premium fashion brand & editorial showcase",
-    url: "https://ohmytemplate.com/en/templates/OHMT001-fashion",
+    url: "https://ohmt.site/en/templates/OHMT001-fashion",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT001-fashion/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT001-fashion",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT001-fashion" },
+    canonical: "https://ohmt.site/en/templates/OHMT001-fashion",
+    languages: { "ko": "https://ohmt.site/ko/templates/OHMT001-fashion" },
   },
 };
 

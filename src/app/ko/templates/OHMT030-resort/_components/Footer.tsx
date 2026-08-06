@@ -59,7 +59,7 @@ export function Footer() {
                   className="text-sm text-white/60 hover:text-white transition-colors">
                   +1 (800) 123-4567
                 </a>
-                <a href="mailto:hello@ohmytemplate.com"
+                <a href="mailto:hello@ohmt.site"
                   className="text-sm text-white/60 hover:text-white transition-colors break-all">
                   contact@ohmt.site</a>
                 <p className="text-sm text-white/60">

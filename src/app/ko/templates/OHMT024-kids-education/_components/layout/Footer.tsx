@@ -111,7 +111,7 @@ export default function Footer() {
               ))}
             </ul>
             <div className="mt-6 text-sm text-white/40">
-              <p>hello@ohmytemplate.com</p>
+              <p>hello@ohmt.site</p>
               <p className="mt-1">Seoul, South Korea</p>
             </div>
           </div>

@@ -16,13 +16,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Services - Architecture Portfolio - OHMT",
     description: "Explore our professional disciplines, from high-end residential design and commercial architecture to interior planning.",
-    url: "https://ohmytemplate.com/en/templates/OHMT027-architecture/services",
+    url: "https://ohmt.site/en/templates/OHMT027-architecture/services",
     images: [{ url: "/templates/OHMT027-architecture/og-image.jpg" }],
   },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT027-architecture/services",
+    canonical: "https://ohmt.site/en/templates/OHMT027-architecture/services",
     languages: {
-      "ko": "https://ohmytemplate.com/ko/templates/OHMT027-architecture/services",
+      "ko": "https://ohmt.site/ko/templates/OHMT027-architecture/services",
     },
   },
 };

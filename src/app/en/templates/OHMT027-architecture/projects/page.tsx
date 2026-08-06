@@ -13,13 +13,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Projects Portfolio - Architecture Portfolio - OHMT",
     description: "Browse our selected residential, commercial, public, and interior architecture commissions.",
-    url: "https://ohmytemplate.com/en/templates/OHMT027-architecture/projects",
+    url: "https://ohmt.site/en/templates/OHMT027-architecture/projects",
     images: [{ url: "/templates/OHMT027-architecture/og-image.jpg" }],
   },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT027-architecture/projects",
+    canonical: "https://ohmt.site/en/templates/OHMT027-architecture/projects",
     languages: {
-      "ko": "https://ohmytemplate.com/ko/templates/OHMT027-architecture/projects",
+      "ko": "https://ohmt.site/ko/templates/OHMT027-architecture/projects",
     },
   },
 };

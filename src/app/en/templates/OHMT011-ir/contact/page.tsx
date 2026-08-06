@@ -11,10 +11,10 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 import TemplateSelect from '../_components/TemplateSelect'
 
 const teamMembers = [
-  { name: "Sarah Chen", title: "Vice President, Investor Relations", phone: "+1 (212) 555-0198", email: "schen@ohmytemplate.com", image: "/templates/OHMT011-ir/member-st.png" },
-  { name: "James Rodriguez", title: "Director, Investor Relations", phone: "+1 (212) 555-0423", email: "jrodriguez@ohmytemplate.com", image: "/templates/OHMT011-ir/member-rc.png" },
-  { name: "Emily Park", title: "Manager, Shareholder Services", phone: "+1 (212) 555-0771", email: "epark@ohmytemplate.com", image: "/templates/OHMT011-ir/member-ca.png" },
-  { name: "David Kim", title: "Analyst, Financial Communications", phone: "+1 (212) 555-0635", email: "dkim@ohmytemplate.com", image: "/templates/OHMT011-ir/member-dp.png" },
+  { name: "Sarah Chen", title: "Vice President, Investor Relations", phone: "+1 (212) 555-0198", email: "schen@ohmt.site", image: "/templates/OHMT011-ir/member-st.png" },
+  { name: "James Rodriguez", title: "Director, Investor Relations", phone: "+1 (212) 555-0423", email: "jrodriguez@ohmt.site", image: "/templates/OHMT011-ir/member-rc.png" },
+  { name: "Emily Park", title: "Manager, Shareholder Services", phone: "+1 (212) 555-0771", email: "epark@ohmt.site", image: "/templates/OHMT011-ir/member-ca.png" },
+  { name: "David Kim", title: "Analyst, Financial Communications", phone: "+1 (212) 555-0635", email: "dkim@ohmt.site", image: "/templates/OHMT011-ir/member-dp.png" },
 ];
 
 function IRContactContent() {
@@ -156,7 +156,7 @@ function IRContactContent() {
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="w-20 text-[0.62rem] font-bold uppercase tracking-[0.12em] text-[var(--color-dark-bg)]">Email</span>
-                    <a href="mailto:ir@ohmytemplate.com" className="text-[var(--color-dark-bg)] hover:text-[var(--color-accent)] transition-colors">ir@ohmytemplate.com</a>
+                    <a href="mailto:ir@ohmt.site" className="text-[var(--color-dark-bg)] hover:text-[var(--color-accent)] transition-colors">ir@ohmt.site</a>
                   </div>
                   <div className="flex items-center gap-3">
                     <span className="w-20 text-[0.62rem] font-bold uppercase tracking-[0.12em] text-[var(--color-dark-bg)]">Transfer Agent</span>

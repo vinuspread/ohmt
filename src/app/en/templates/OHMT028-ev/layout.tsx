@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - Electric Vehicle Concept Template",
     description: "Premium electric vehicle showcase template",
-    url: "https://ohmytemplate.com/en/templates/OHMT028-ev",
+    url: "https://ohmt.site/en/templates/OHMT028-ev",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT028-ev/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -40,7 +40,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "Product",
     name: "OHMT EV",
     description: "Premium electric vehicle showcase template",
-    url: "https://ohmytemplate.com/en/templates/OHMT028-ev",
+    url: "https://ohmt.site/en/templates/OHMT028-ev",
   };
   return (
     <div className={`${michroma.variable} ${inter.variable}`}>

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - Museum Exhibition Website Template",
     description: "Experience the epitome of elegance and durability.",
-    url: "https://ohmytemplate.com/en/templates/OHMT021-museum",
+    url: "https://ohmt.site/en/templates/OHMT021-museum",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT021-museum/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -32,8 +32,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT021-museum",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT021-museum" },
+    canonical: "https://ohmt.site/en/templates/OHMT021-museum",
+    languages: { "ko": "https://ohmt.site/ko/templates/OHMT021-museum" },
   },
 };
 
@@ -47,7 +47,7 @@ export default function ExhibitionLayout({
     "@type": "Museum",
     name: "OHMT Museum",
     description: "Experience the epitome of elegance and durability.",
-    url: "https://ohmytemplate.com/en/templates/OHMT021-museum",
+    url: "https://ohmt.site/en/templates/OHMT021-museum",
   };
   return (
     <>

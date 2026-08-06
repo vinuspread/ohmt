@@ -40,7 +40,7 @@ const jsonLd = {
   name: "OHMT - Amber Grove",
   description:
     'Amber Grove is a third-generation organic orchard growing stone fruit, berries, and citrus, sold direct from the farm.',
-  url: "https://ohmytemplate.com/en/templates/OHMT036-amber-grove",
+  url: "https://ohmt.site/en/templates/OHMT036-amber-grove",
 }
 
 export default function AmberGroveLayout({ children }: { children: React.ReactNode }) {

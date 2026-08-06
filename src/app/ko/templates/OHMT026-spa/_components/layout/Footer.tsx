@@ -28,7 +28,7 @@ export default function Footer() {
         <div>
           <h4 className="text-xs font-bold uppercase tracking-wider text-white/40 mb-4">문의</h4>
           <p className="text-sm text-white/70 mb-1">+1 (555) 010-2030</p>
-          <p className="text-sm text-white/70 mb-4">hello@ohmytemplate.com</p>
+          <p className="text-sm text-white/70 mb-4">hello@ohmt.site</p>
           <div className="flex gap-3">
             {["FB", "LI", "IG"].map((s) => (
               <span key={s} className="w-9 h-9 rounded-full border border-white/20 flex items-center justify-center text-[0.6rem] font-bold text-white/50 hover:border-[var(--color-primary)] hover:text-[var(--color-primary)] transition-colors duration-150">{s}</span>

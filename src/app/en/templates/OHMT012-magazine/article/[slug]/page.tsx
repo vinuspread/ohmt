@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     openGraph: {
       title: `${article.title} - OHMT Magazine`,
       description: article.desc,
-      url: `https://ohmytemplate.com/en/templates/OHMT012-magazine/article/${slug}`,
+      url: `https://ohmt.site/en/templates/OHMT012-magazine/article/${slug}`,
       siteName: "OHMT",
       images: [{ url: article.img, width: 1200, height: 630 }],
       locale: "en_US",

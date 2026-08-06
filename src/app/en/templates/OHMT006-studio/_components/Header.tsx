@@ -70,7 +70,7 @@ export function Header() {
   "cta": `Start Project`,
   "footer": {
     "copyright": `© 2026 OHMT.`,
-    "contact": `Austin, Texas · hello@ohmytemplate.com`
+    "contact": `Austin, Texas · hello@ohmt.site`
   },
   "aboutPage": {
     "category": `Architectural Core`,

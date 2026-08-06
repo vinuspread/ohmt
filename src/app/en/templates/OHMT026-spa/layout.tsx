@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   title: "OHMT - Retreat Booking Experience Template",
   description: "Premium spa and wellness shop template with a calming dark-green and cream palette, large lifestyle imagery, and a booking-first layout.",
   keywords: ["spa template", "wellness website", "spa booking", "Next.js template", "OHMT"],
-  authors: [{ name: "OHMT", url: "https://ohmytemplate.com" }],
+  authors: [{ name: "OHMT", url: "https://ohmt.site" }],
   openGraph: {
     title: "OHMT - Retreat Booking Experience Template",
     description: "Premium spa and wellness shop template with a calming dark-green and cream palette, large lifestyle imagery, and a booking-first layout.",
-    url: "https://ohmytemplate.com/en/templates/OHMT026-spa",
+    url: "https://ohmt.site/en/templates/OHMT026-spa",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT026-spa/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -23,10 +23,10 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT026-spa",
+    canonical: "https://ohmt.site/en/templates/OHMT026-spa",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/OHMT026-spa",
-      "ko": "https://ohmytemplate.com/ko/templates/OHMT026-spa",
+      "en": "https://ohmt.site/en/templates/OHMT026-spa",
+      "ko": "https://ohmt.site/ko/templates/OHMT026-spa",
     },
   },
 };
@@ -37,7 +37,7 @@ export default function SpaLayout({ children }: { children: React.ReactNode }) {
     "@type": "HealthAndBeautyBusiness",
     name: "OHMT Spa Wellness",
     description: "Premium spa and wellness shop template with a calming dark-green and cream palette, large lifestyle imagery, and a booking-first layout.",
-    url: "https://ohmytemplate.com/en/templates/OHMT026-spa",
+    url: "https://ohmt.site/en/templates/OHMT026-spa",
   };
   return (
     <>

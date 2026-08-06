@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - Documentation Workspace Template",
     description: "A clean Notion-style documentation workspace for teams.",
-    url: "https://ohmytemplate.com/en/templates/OHMT014-docs",
+    url: "https://ohmt.site/en/templates/OHMT014-docs",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT014-docs/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -30,7 +30,7 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
           "@context": "https://schema.org",
           "@type": "WebSite",
           name: "OHMT Docs",
-          url: "https://ohmytemplate.com/en/templates/OHMT014-docs",
+          url: "https://ohmt.site/en/templates/OHMT014-docs",
           description: "A clean Notion-style documentation workspace for teams.",
         }),
       }}

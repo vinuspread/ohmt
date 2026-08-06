@@ -11,7 +11,7 @@ import Footer from "../_components/layout/Footer";
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 
 const contactInfo = [
-  { icon: "✉️", label: "이메일", value: "hello@ohmytemplate.com" },
+  { icon: "✉️", label: "이메일", value: "hello@ohmt.site" },
   { icon: "📞", label: "전화번호", value: "02-1234-5678" },
   { icon: "📍", label: "위치", value: "서울특별시 강남구" },
 ];

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - Airline Booking Experience Template",
     description: "Premium aviation experience",
-    url: "https://ohmytemplate.com/en/templates/OHMT008-airline",
+    url: "https://ohmt.site/en/templates/OHMT008-airline",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT008-airline/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT008-airline",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT008-airline" },
+    canonical: "https://ohmt.site/en/templates/OHMT008-airline",
+    languages: { "ko": "https://ohmt.site/ko/templates/OHMT008-airline" },
   },
 };
 

@@ -41,7 +41,7 @@ export default async function FigurePage({ params }: { params: Promise<{ slug: s
     '@type': 'Product',
     name: figure.name,
     description: figure.description,
-    image: `https://ohmytemplate.com${figure.images.main}`,
+    image: `https://ohmt.site${figure.images.main}`,
     brand: { '@type': 'Brand', name: 'FORMA' },
     offers: {
       '@type': 'Offer',

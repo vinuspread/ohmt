@@ -26,7 +26,7 @@ const storeJsonLd = {
   '@type': 'OnlineStore',
   name: '아틀리에 하우스',
   description: '원목 식탁과 의자, 조명을 직접 설계하고 제작하는 소규모 가구 스튜디오',
-  url: 'https://ohmytemplate.com/ko/templates/OHMT035-atelier-house',
+  url: 'https://ohmt.site/ko/templates/OHMT035-atelier-house',
 }
 
 export default function AtelierHouseKoHomePage() {

@@ -54,7 +54,7 @@ function StudioContactPageContent() {
                                             <Mail size={12} /> {"스튜디오 연락처"}
                                         </span>
                                         <h3 className="text-base md:text-lg lg:text-xl font-bold text-black hover:opacity-60 transition-opacity duration-300">
-                                            hello@ohmytemplate.com
+                                            hello@ohmt.site
                                         </h3>
                                     </div>
 

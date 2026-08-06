@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - Investor Relations Website Template",
     description: "Corporate strategy and financial performance",
-    url: "https://ohmytemplate.com/en/templates/OHMT011-ir",
+    url: "https://ohmt.site/en/templates/OHMT011-ir",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT011-ir/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT011-ir",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT011-ir" },
+    canonical: "https://ohmt.site/en/templates/OHMT011-ir",
+    languages: { "ko": "https://ohmt.site/ko/templates/OHMT011-ir" },
   },
 };
 
@@ -43,7 +43,7 @@ export default function IRLayout({
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "OHMT Global Holdings",
-            url: "https://ohmytemplate.com/en/templates/OHMT011-ir",
+            url: "https://ohmt.site/en/templates/OHMT011-ir",
             description: "Investor Relations - Corporate strategy and financial performance",
             foundingDate: "2020",
           }),

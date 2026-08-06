@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     openGraph: {
       title: `${titles[slug] || slug} - OHMT Cosmetic Journal`,
       description: "Read the latest from OHMT Cosmetic.",
-      url: `https://ohmytemplate.com/en/templates/OHMT010-cosmetic/journal/${slug}`,
+      url: `https://ohmt.site/en/templates/OHMT010-cosmetic/journal/${slug}`,
       siteName: "OHMT",
       images: [{ url: "/templates/OHMT010-cosmetic/og-image.jpg", width: 1200, height: 630 }],
       locale: "en_US",

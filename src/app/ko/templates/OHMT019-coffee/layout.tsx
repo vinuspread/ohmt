@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT | 스페셜티 커피와 로스터리",
     description: "신선하게 로스팅한 원두와 시그니처 음료, 서울 매장 정보를 소개하는 스페셜티 커피 브랜드입니다.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT019-coffee",
+    url: "https://ohmt.site/ko/templates/OHMT019-coffee",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT019-coffee/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT019-coffee",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT019-coffee" },
+    canonical: "https://ohmt.site/ko/templates/OHMT019-coffee",
+    languages: { "en": "https://ohmt.site/en/templates/OHMT019-coffee" },
   },
 };
 

@@ -65,7 +65,7 @@ export function Footer() {
 
         <div className="mt-6 flex flex-col gap-3 text-xs leading-[var(--leading-body)] text-[var(--color-text-muted)] md:flex-row md:items-center md:justify-between md:border-t md:border-[var(--color-border)] md:pt-6">
           <p>&copy; 2026 OHMT.</p>
-          <p>contact@ohmytemplate.com</p>
+          <p>contact@ohmt.site</p>
         </div>
       </div>
     </footer>
