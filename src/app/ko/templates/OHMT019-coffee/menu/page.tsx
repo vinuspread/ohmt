@@ -1,11 +1,13 @@
 "use client";
 import React, { useState } from "react";
+import { motion } from "motion/react";
 import { Header } from "../_components/Header";
 import { Footer } from "../_components/Footer";
 import { menuItems, menuCategories } from "../data/data";
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
-import { formatWon } from "../_utils/currency";
+
+const ease = [0.23, 1, 0.32, 1] as const;
 
 function MenuPageContent() {
   const [active, setActive] = useState<string>(menuCategories[0].id);
@@ -17,83 +19,103 @@ function MenuPageContent() {
       <Header />
       <TemplateWrapper theme={theme}>
       <main className="antialiased min-h-screen bg-[var(--color-bg)] text-[var(--color-text)]">
+
         {/* Hero */}
-        <section className="relative bg-[var(--color-bg-dark)] h-[300px] flex items-center overflow-hidden">
+        <section className="relative bg-[var(--color-bg-dark)] h-[350px] flex items-center overflow-hidden">
           <img
             src="/templates/OHMT019-coffee/alt-detail.jpg"
-            alt="메뉴 소개 서브 비주얼"
+            alt="메뉴 서브 비주얼"
             className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-black/70" />
-          <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 text-center pt-12">
-            <p className="text-xs uppercase tracking-[0.3em] text-white/50 mb-3">메뉴</p>
-            <h1 className="text-4xl md:text-5xl font-bold font-heading leading-[var(--leading-heading)] text-white">
-              전체 메뉴</h1>
+          <div className="absolute inset-0 bg-[var(--color-bg-dark)]/75" />
+          <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6 pt-16">
+            <div>
+              <p className="text-xs uppercase tracking-[0.25em] text-white/50 mb-3">메뉴</p>
+              <h1 className="font-heading text-[length:var(--text-h1)] font-light text-white leading-[var(--leading-heading)]">
+                우리가 제공하는 메뉴
+              </h1>
+            </div>
+            <p className="text-white/40 text-sm max-w-[28ch] leading-relaxed">
+              싱글 오리진 원두, 계절 스페셜, 매일 아침 갓 굽는 페이스트리.
+            </p>
           </div>
         </section>
 
-        <section className="py-16">
+        {/* Tabs */}
+        <div className="sticky top-16 z-40 bg-[var(--color-bg)] border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto px-6 md:px-12">
-            <div className="flex flex-wrap justify-center gap-3 mb-12">
+            <div className="flex items-center gap-8 overflow-x-auto" style={{ scrollbarWidth: "none" }}>
               {menuCategories.map((cat) => (
                 <button
                   key={cat.id}
                   onClick={() => setActive(cat.id)}
-                  className={`text-xs uppercase tracking-[0.1em] px-5 py-2 font-semibold rounded-full transition-colors duration-200 ${
-                    active === cat.id
-                      ? "bg-[var(--color-primary)] text-white"
-                      : "bg-[var(--color-bg-secondary)] text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
-                  }`}
+                  className="relative pt-10 pb-5 text-xs uppercase tracking-[0.18em] font-semibold whitespace-nowrap transition-colors duration-200 shrink-0"
+                  style={{ color: active === cat.id ? "var(--color-text)" : "var(--color-text-muted)" }}
                 >
                   {cat.label}
+                  {active === cat.id && (
+                    <motion.span
+                      layoutId="menu-tab-indicator"
+                      className="absolute bottom-0 left-0 right-0 h-[2px] bg-[var(--color-accent)] translate-y-[1px]"
+                      transition={{ type: "spring", stiffness: 400, damping: 35 }}
+                    />
+                  )}
                 </button>
               ))}
             </div>
+          </div>
+        </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
+        {/* Grid */}
+        <section className="py-16 md:py-20">
+          <div className="max-w-[1440px] mx-auto px-6 md:px-12">
+            <motion.div
+              key={active}
+              className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.3, ease }}
+            >
               {filtered.map((item) => (
-                <div key={item.id} className="bg-white rounded-2xl overflow-hidden">
-                  <div className="aspect-square overflow-hidden">
+                <motion.div
+                  key={item.id}
+                  className="bg-[var(--color-bg)] p-5 md:p-6 flex flex-col gap-4"
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.35, ease }}
+                >
+                  <div className="aspect-square bg-white flex items-center justify-center overflow-hidden">
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-contain"
                     />
                   </div>
-                  <div className="p-4 md:p-5 flex flex-col h-[calc(100%-aspect-square)]">
-                    <div className="flex items-start justify-between gap-2 mb-1">
-                      <h3 className="text-base md:text-lg font-bold font-heading">{item.name}</h3>
-                      <span className="text-base font-semibold text-[var(--color-primary)] shrink-0">{formatWon(item.price)}</span>
+                  <div className="flex flex-col flex-grow">
+                    <div className="flex items-start justify-between gap-2 mb-1.5">
+                      <h3 className="text-sm md:text-base font-light font-heading leading-snug">{item.name}</h3>
+                      <span className="text-sm font-semibold text-[var(--color-accent)] shrink-0">${item.price.toFixed(2)}</span>
                     </div>
-                    <p className="text-sm text-[var(--color-text-muted)] leading-relaxed line-clamp-2 mb-3 flex-grow">{item.description}</p>
-                    <div className="flex items-center justify-between gap-2 mt-2 pt-2 border-t border-[var(--color-ui-border)]">
-                      {item.options && item.options.length > 0 ? (
-                        <div className="flex gap-1.5">
-                          {item.options.map((opt) => (
-                            <span
-                              key={opt}
-                              className="text-xs rounded-full px-2 py-0.5 bg-[var(--color-bg-secondary)] text-[var(--color-text-muted)] capitalize font-medium"
-                            >
-                              {opt === 'hot' ? '핫' : '아이스'}
-                            </span>
-                          ))}
-                        </div>
-                      ) : (
-                        <span className="text-xs text-[var(--color-text-muted)]">기본 옵션</span>
-                      )}
-                      <button
-                        onClick={() => alert(`"${item.name}" 주문이 완료되었습니다. 카운터에서 수령해 주세요.`)}
-                        className="bg-[var(--color-text)] text-[var(--color-text-contrast)] px-4 py-1.5 text-xs font-semibold hover:opacity-90 active:scale-95 transition-all"
-                      >
-                        주문하기
-                      </button>
-                    </div>
+                    <p className="text-sm text-[var(--color-text-muted)] leading-relaxed line-clamp-2 flex-grow">{item.description}</p>
+                    {item.options && item.options.length > 0 && (
+                      <div className="flex gap-1.5 mt-4 pt-3 border-t border-[var(--color-border)]">
+                        {item.options.map((opt) => (
+                          <span
+                            key={opt}
+                            className="text-xs px-2 py-0.5 border border-[var(--color-border)] text-[var(--color-text-muted)] capitalize font-medium"
+                          >
+                            {opt === 'hot' ? '핫' : '아이스'}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </section>
+
       </main>
       <Footer />
       </TemplateWrapper>

@@ -30,15 +30,14 @@ export const Header = () => {
     <header
       className="fixed top-0 left-0 right-0 z-50 h-16 transition-colors duration-300"
       style={{
-        backgroundColor: transparent ? "transparent" : "var(--color-bg)",
-        borderBottom: transparent ? "none" : "1px solid var(--color-border)",
+        backgroundColor: transparent ? "transparent" : "var(--color-primary-dark)",
+        borderBottom: transparent ? "none" : "1px solid rgba(255,255,255,0.06)",
       }}
     >
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex items-center justify-between h-full">
         <Link
           href="/ko/templates/OHMT019-coffee"
-          className="text-xl font-heading font-semibold"
-          style={{ color: "var(--color-text)" }}
+          className="text-xl font-heading font-semibold text-white/90 hover:text-white transition-colors"
         >
           OHMT
         </Link>
@@ -48,27 +47,22 @@ export const Header = () => {
             <Link
               key={link.href}
               href={link.href}
-              className="hover:opacity-80 transition-opacity duration-200 active:scale-[0.97]"
-              style={{ color: "var(--color-text)" }}
+              className="text-white/70 hover:text-white transition-colors duration-200"
             >
               {link.name}
             </Link>
           ))}
           <Link
             href="/ko/templates/OHMT019-coffee/menu"
-            className={`px-6 py-2 text-xs uppercase tracking-[0.2em] font-semibold rounded-full transition-[transform,colors] duration-160 ease-out active:scale-[0.97] ${
-              transparent
-                ? "bg-[var(--color-primary)] text-white"
-                : "bg-white text-[var(--color-primary)]"
-            }`}
+            className="border border-white/40 text-white/80 px-6 py-2 text-xs uppercase tracking-[0.2em] font-semibold hover:bg-white hover:text-[var(--color-primary-dark)] transition-colors duration-200"
           >
-            픽업 주문</Link>
+            주문하기
+          </Link>
         </nav>
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="md:hidden p-2 active:scale-[0.95] transition-transform duration-160 ease-out"
-          style={{ color: "var(--color-text)" }}
+          className="md:hidden p-2 text-white/80 active:scale-[0.95] transition-transform duration-160 ease-out"
           aria-label="메뉴 열기"
         >
           {mobileOpen ? <X size={22} /> : <Menu size={22} />}
@@ -123,7 +117,8 @@ export const Header = () => {
                   onClick={() => setMobileOpen(false)}
                   className="bg-[var(--color-primary)] text-white text-center px-6 py-3 text-xs uppercase tracking-[0.2em] font-semibold rounded-none block"
                 >
-                  픽업 주문</Link>
+                  주문하기
+                </Link>
               </motion.div>
             </motion.div>
           </motion.div>

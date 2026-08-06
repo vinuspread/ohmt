@@ -1,7 +1,19 @@
 "use client";
 import React, { useMemo } from "react";
-import { motion } from "framer-motion";
-export function TemplateWrapper({ theme, children }: { theme: any; children: React.ReactNode }) {
+import { motion } from "motion/react";
+
+interface CoffeeTheme {
+  theme: {
+    palette: {
+      primary: string; secondary: string; accent: string;
+      text: { main: string; muted: string; contrast: string };
+      ui: { border: string };
+    };
+    typography: { heading: { font: string }; body: { font: string } };
+    spacing: { page_pt: string; container: string; gutter: string };
+  };
+}
+export function TemplateWrapper({ theme, children }: { theme: CoffeeTheme; children: React.ReactNode }) {
   const [animationComplete, setAnimationComplete] = React.useState(false);
   React.useEffect(() => {
     if (typeof window !== "undefined") {
@@ -31,7 +43,7 @@ export function TemplateWrapper({ theme, children }: { theme: any; children: Rea
       <motion.div
         initial={{ opacity: 0, y: 15, filter: "blur(2px)" }}
         animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-        transition={{ duration: 0.85, ease: [0.25, 0.8, 0.25, 1] as any }}
+        transition={{ duration: 0.85, ease: [0.25, 0.8, 0.25, 1] }}
         onAnimationComplete={() => setAnimationComplete(true)}
         style={animationComplete ? { transform: "none", filter: "none" } : {}}
       >

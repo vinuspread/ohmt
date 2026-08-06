@@ -2,6 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
+import { ArrowRight } from "lucide-react";
 import { locations } from "../data/data";
 
 const easeOut = [0.23, 1, 0.32, 1] as const;
@@ -11,7 +12,7 @@ export const Locations = () => {
     <section className="py-20 md:py-28 bg-[var(--color-bg)]">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         <motion.h2
-          className="text-3xl md:text-4xl font-bold font-heading text-center mb-12"
+          className="text-3xl md:text-4xl font-light font-heading text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
@@ -30,7 +31,7 @@ export const Locations = () => {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.35, delay: i * 0.1, ease: easeOut }}
             >
-              <h3 className="text-xl font-bold font-heading mb-3">{loc.name}</h3>
+              <h3 className="text-xl font-light font-heading mb-3">{loc.name}</h3>
               <div className="space-y-2 text-sm text-[var(--color-text-muted)] mb-5">
                 <p>{loc.address}</p>
                 <p>{loc.hours}</p>
@@ -42,7 +43,7 @@ export const Locations = () => {
                 rel="noopener noreferrer"
                 className="inline-flex items-center text-xs font-semibold uppercase tracking-[0.1em] text-[var(--color-primary)] hover:opacity-80 transition-opacity"
               >
-                길찾기 &rarr;
+                길찾기 <ArrowRight size={14} className="inline" />
               </Link>
             </motion.div>
           ))}

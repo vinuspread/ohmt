@@ -1,65 +1,75 @@
 "use client";
 import React from "react";
 import { motion } from "motion/react";
-import { menuItems } from "../data/data";
-import { formatWon } from "../_utils/currency";
 
-const easeOut = [0.23, 1, 0.32, 1] as const;
+const ease = [0.23, 1, 0.32, 1] as const;
+
+const picks = [
+  {
+    badge: "신규",
+    label: "시그니처 콜드브루",
+    price: "$7.5",
+    image: "/templates/OHMT019-coffee/signature-coldbrew.jpg",
+  },
+  {
+    badge: "바리스타 추천",
+    label: "바닐라 오트 라떼",
+    price: "$6.5",
+    image: "/templates/OHMT019-coffee/signature-latte.jpg",
+  },
+  {
+    badge: "시즌 한정",
+    label: "싱글 오리진 에스프레소",
+    price: "$5.0",
+    image: "/templates/OHMT019-coffee/signature-espresso.jpg",
+  },
+  {
+    badge: "셰프 추천",
+    label: "말차 오트 라떼",
+    price: "$7.0",
+    image: "/templates/OHMT019-coffee/menu-matcha.jpg",
+  },
+];
 
 export const FeaturedDrinks = () => {
-  const signatureItems = menuItems.filter((item) => item.isSignature);
-
   return (
-    <section className="py-20 md:py-28 bg-[var(--color-bg-secondary)]">
+    <section className="bg-[var(--color-bg-secondary)] py-14 md:py-20">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
-        <motion.h2
-          className="text-3xl md:text-4xl font-bold font-heading text-center mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-50px" }}
-          transition={{ duration: 0.35, ease: easeOut }}
+        <motion.p
+          className="text-right text-xs uppercase tracking-[0.22em] text-[var(--color-text-muted)] font-semibold mb-8"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, ease }}
         >
-          OHMT 시그니처</motion.h2>
+          추천 메뉴
+        </motion.p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {signatureItems.slice(0, 3).map((item, i) => (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4">
+          {picks.map((item, i) => (
             <motion.div
-              key={item.id}
-              className="bg-white rounded-2xl overflow-hidden"
-              initial={{ opacity: 0, y: 24 }}
+              key={item.label}
+              className="flex flex-col gap-3"
+              initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ duration: 0.35, delay: i * 0.1, ease: easeOut }}
+              viewport={{ once: true, margin: "-40px" }}
+              transition={{ duration: 0.5, delay: i * 0.08, ease }}
             >
-              <div className="aspect-square overflow-hidden">
+              <div className="relative aspect-square overflow-hidden">
                 <img
                   src={item.image}
-                  alt={item.name}
-                  className="w-full h-full object-cover"
+                  alt={item.label}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                 />
+                <span className="absolute top-3 left-3 bg-[var(--color-accent)] text-white text-xs uppercase tracking-[0.15em] px-2.5 py-1 font-semibold">
+                  {item.badge}
+                </span>
               </div>
-              <div className="p-5">
-                <div className="flex items-start justify-between gap-2 mb-1">
-                  <h3 className="text-lg font-bold font-heading">{item.name}</h3>
-                  <span className="text-base font-semibold text-[var(--color-primary)] shrink-0">
-                    {formatWon(item.price)}
-                  </span>
-                </div>
-                <p className="text-sm text-[var(--color-text-muted)] leading-relaxed line-clamp-2 mb-3">
-                  {item.description}
+              <div className="flex items-start justify-between gap-2">
+                <p className="font-heading text-[var(--color-text)] text-sm font-bold leading-snug">
+                  {item.label}
                 </p>
-                {item.options && item.options.length > 0 && (
-                  <div className="flex gap-1.5">
-                    {item.options.map((opt) => (
-                      <span
-                        key={opt}
-                        className="text-xs rounded-full px-2 py-0.5 bg-[var(--color-bg-secondary)] text-[var(--color-text-muted)] capitalize"
-                      >
-                        {opt === 'hot' ? '핫' : '아이스'}
-                      </span>
-                    ))}
-                  </div>
-                )}
+                <span className="text-[var(--color-text-muted)] text-sm font-semibold shrink-0">{item.price}</span>
               </div>
             </motion.div>
           ))}

@@ -1,54 +1,62 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import { InstagramLogo, FacebookLogo, TwitterLogo } from "@phosphor-icons/react";
+
+const navLinks = [
+  { label: "소개", href: "/ko/templates/OHMT019-coffee/about" },
+  { label: "메뉴", href: "/ko/templates/OHMT019-coffee/menu" },
+  { label: "매장", href: "/ko/templates/OHMT019-coffee/locations" },
+  { label: "문의", href: "#" },
+];
+
+const social = [
+  { label: "인스타그램", Icon: InstagramLogo },
+  { label: "페이스북", Icon: FacebookLogo },
+  { label: "트위터", Icon: TwitterLogo },
+];
 
 export const Footer = () => {
   return (
-    <footer className="bg-[var(--color-bg-dark)] text-white">
-      <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-16 pb-8 md:pt-20 md:pb-10">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
-          <div className="col-span-2 md:col-span-1">
-            <Link href="/ko/templates/OHMT019-coffee" className="text-xl font-heading font-semibold text-white">
-              OHMT
+    <footer className="bg-[var(--color-bg-secondary)]">
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12 py-14 md:py-16 flex flex-col items-center gap-8 text-center">
+        <Link
+          href="/ko/templates/OHMT019-coffee"
+          className="font-heading text-2xl font-bold text-[var(--color-text)] tracking-tight"
+        >
+          OHMT
+        </Link>
+
+        <nav className="flex flex-wrap justify-center gap-x-7 gap-y-2">
+          {navLinks.map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              className="text-xs uppercase tracking-[0.15em] text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors duration-200"
+            >
+              {link.label}
             </Link>
-                        <p className="text-sm text-white/50 mt-4 leading-relaxed max-w-[220px]">
-              좋은 원두를 고르고, 매일 정성껏 내립니다.</p>
-          </div>
+          ))}
+        </nav>
 
-          <div>
-            <h4 className="text-xs uppercase tracking-[0.15em] text-white/40 mb-4">메뉴</h4>
-            <div className="flex flex-col gap-2.5">
-              <Link href="/ko/templates/OHMT019-coffee/menu" className="text-sm text-white/60 hover:text-white transition-colors">콜드브루</Link>
-              <Link href="/ko/templates/OHMT019-coffee/menu" className="text-sm text-white/60 hover:text-white transition-colors">라떼</Link>
-              <Link href="/ko/templates/OHMT019-coffee/menu" className="text-sm text-white/60 hover:text-white transition-colors">디저트</Link>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="text-xs uppercase tracking-[0.15em] text-white/40 mb-4">매장 안내</h4>
-            <div className="flex flex-col gap-2.5">
-              <Link href="/ko/templates/OHMT019-coffee/locations" className="text-sm text-white/60 hover:text-white transition-colors">성수점</Link>
-              <Link href="/ko/templates/OHMT019-coffee/locations" className="text-sm text-white/60 hover:text-white transition-colors">이태원점</Link>
-              <Link href="/ko/templates/OHMT019-coffee/locations" className="text-sm text-white/60 hover:text-white transition-colors">강남점</Link>
-            </div>
-          </div>
-
-          <div>
-            <h4 className="text-xs uppercase tracking-[0.15em] text-white/40 mb-4">연락처</h4>
-            <div className="flex flex-col gap-2.5 text-sm text-white/60">
-              <a href="mailto:contact@ohmt.site" className="hover:text-white transition-colors">contact@ohmt.site</a>
-              <p>02-1234-5678</p>
-            </div>
-            <div className="flex gap-4 mt-5">
-              <Link href="#" className="text-xs text-white/40 hover:text-white transition-colors uppercase tracking-[0.1em]">인스타그램</Link>
-              <Link href="#" className="text-xs text-white/40 hover:text-white transition-colors uppercase tracking-[0.1em]">트위터</Link>
-              <Link href="#" className="text-xs text-white/40 hover:text-white transition-colors uppercase tracking-[0.1em]">페이스북</Link>
-            </div>
-          </div>
+        <div className="flex gap-5">
+          {social.map((s) => (
+            <Link
+              key={s.label}
+              href="#"
+              className="w-8 h-8 rounded-full border border-[var(--color-text-muted)]/30 flex items-center justify-center text-[var(--color-text-muted)] hover:border-[var(--color-text)] hover:text-[var(--color-text)] transition-colors duration-200"
+              aria-label={s.label}
+            >
+              <s.Icon size={16} weight="fill" />
+            </Link>
+          ))}
         </div>
 
-        <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/30">
-          <p>&copy; 2026 OHMT. 모든 권리 보유.</p>
+        <div className="w-full h-px bg-[var(--color-text-muted)]/15" />
+
+        <div className="flex flex-col md:flex-row items-center justify-between w-full gap-2 text-xs text-[var(--color-text-muted)]">
+          <p>&copy; 2026 OHMT. All rights reserved.</p>
+          <Link href="#" className="hover:text-[var(--color-text)] transition-colors">개인정보 처리방침</Link>
         </div>
       </div>
     </footer>

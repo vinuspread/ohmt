@@ -38,7 +38,7 @@ export const InstagramGrid = () => {
             >
               <img
                 src={src}
-                alt={`OHMT 카페 인스타그램 이미지 ${i + 1}`}
+                alt={`카페 인스타그램 게시물 ${i + 1}`}
                 className="w-full h-full object-cover"
               />
             </motion.div>

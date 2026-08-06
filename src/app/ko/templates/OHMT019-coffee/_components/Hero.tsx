@@ -3,71 +3,54 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "motion/react";
 
-const easeOut = [0.23, 1, 0.32, 1] as const;
+const ease = [0.23, 1, 0.32, 1] as const;
 
 export const Hero = () => {
   return (
-    <section className="relative w-full min-h-screen bg-[var(--color-bg)]">
-      <div className="max-w-[1440px] mx-auto px-6 md:px-12 w-full min-h-screen flex flex-col justify-center">
-        <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-0">
-          <div className="w-full lg:w-[55%] pt-24 lg:pt-0 order-2 lg:order-1">
-            <motion.p
-              className="text-xs tracking-[0.3em] text-[var(--color-text-muted)] mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.2, ease: easeOut }}
-            >
-              여름 한정 메뉴</motion.p>
-            <motion.h1
-              className="text-5xl lg:text-7xl font-bold leading-[var(--leading-heading)]"
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3, ease: easeOut }}
-            >
-              이번 여름,<br />
-              <span className="text-[var(--color-primary)]">새롭게</span> 즐기는 커피.</motion.h1>
-            <motion.p
-              className="text-base md:text-lg text-[var(--color-text-muted)] mt-6 max-w-md leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.45, ease: easeOut }}
-            >
-              천천히 내린 콜드브루부터 시원한 라떼와 계절 음료까지, 매일 신선하게 준비합니다.</motion.p>
-            <motion.div
-              className="flex items-center gap-4 mt-10"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 0.6, ease: easeOut }}
-            >
-              <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
-                <Link
-                  href="/ko/templates/OHMT019-coffee/menu"
-                  className="inline-flex items-center justify-center bg-[var(--color-primary)] text-white px-8 py-3 text-xs uppercase tracking-[0.2em] font-semibold rounded-none transition-[transform,colors] duration-160 ease-out active:scale-[0.97] w-full"
-                >
-                  메뉴 보기
-                </Link>
-              </motion.div>
-              <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.98 }}>
-                <Link
-                  href="/ko/templates/OHMT019-coffee/about"
-                  className="inline-flex items-center justify-center border-2 border-[var(--color-primary)] text-[var(--color-primary)] px-8 py-3 text-xs uppercase tracking-[0.2em] font-semibold rounded-none transition-[transform,colors] duration-160 ease-out active:scale-[0.97] w-full"
-                >
-                  브랜드 이야기</Link>
-              </motion.div>
-            </motion.div>
-          </div>
+    <section className="relative w-full h-[68vh] min-h-[480px] flex flex-col items-center justify-center overflow-hidden">
+      <motion.img
+        src="/templates/OHMT019-coffee/story-brewing.jpg"
+        alt="커피 추출 장면"
+        className="absolute inset-0 w-full h-full object-cover"
+        initial={{ scale: 1.12, opacity: 0 }}
+        animate={{ scale: 1, opacity: 1 }}
+        transition={{ duration: 1.4, ease: [0.25, 1, 0.5, 1] }}
+      />
+      <div className="absolute inset-0 bg-[var(--color-bg-dark)]/70" />
 
-          <div className="hidden lg:flex w-[45%] items-start justify-end order-1 lg:order-2 relative mt-12">
-            <motion.img
-              src="/templates/OHMT019-coffee/hero-drink.jpg"
-              alt="Summer coffee drink"
-              className="w-full h-auto object-contain -mr-6 md:-mr-12"
-              initial={{ opacity: 0, x: 40, scale: 1.08 }}
-              animate={{ opacity: 1, x: 0, scale: 1 }}
-              transition={{ duration: 0.85, delay: 0.1, ease: [0.25, 1, 0.5, 1] }}
-            />
-          </div>
-        </div>
+      <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-3xl mx-auto">
+        <motion.h1
+          className="font-heading text-[length:var(--text-h1)] font-light text-white leading-[var(--leading-heading)] tracking-[-0.01em] mb-7 whitespace-nowrap"
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.95, ease: [0.215, 0.61, 0.355, 1] }}
+        >
+          천천히 즐길 가치가<br />있는 커피.
+        </motion.h1>
+
+        <motion.p
+          className="text-base md:text-lg text-white/60 leading-relaxed whitespace-nowrap mb-8"
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.85, delay: 0.25, ease: [0.215, 0.61, 0.355, 1] }}
+        >
+          싱글 오리진 원두, 매일 소량 로스팅. 서울 다섯 곳의 매장에서 만나보세요.
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.75, delay: 0.45, ease: [0.215, 0.61, 0.355, 1] }}
+          whileHover={{ scale: 1.03 }}
+          whileTap={{ scale: 0.98 }}
+        >
+          <Link
+            href="/ko/templates/OHMT019-coffee/menu"
+            className="inline-flex items-center justify-center border border-white/50 text-white px-10 py-3 text-xs uppercase tracking-[0.25em] font-semibold hover:bg-white hover:text-[var(--color-primary-dark)] transition-colors duration-300"
+          >
+            메뉴 보기
+          </Link>
+        </motion.div>
       </div>
     </section>
   );
