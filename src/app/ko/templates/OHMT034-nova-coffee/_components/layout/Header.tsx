@@ -8,10 +8,10 @@ import { AnimatePresence, motion } from 'motion/react'
 const base = '/ko/templates/OHMT034-nova-coffee'
 
 const navLinks = [
-  { label: '제품', href: base, desc: '머신, 액세서리, 예약 안내' },
-  { label: '기술', href: `${base}/technology`, desc: '보일러 제어, 압력 제어, 추출 시스템' },
-  { label: '지원', href: `${base}/support`, desc: '관리 가이드, 보증, 설치 안내' },
-  { label: '브랜드', href: `${base}/company`, desc: '브랜드 소개와 설계 원칙' },
+  { label: '제품', href: `${base}/product`, desc: '마감 선택, 기본 포함 구성품, 가격 안내' },
+  { label: '기술', href: `${base}/technology`, desc: '보일러 제어, 압력 로직, 추출 시스템' },
+  { label: '지원', href: `${base}/support`, desc: '관리 가이드, 보증, 설치 도움' },
+  { label: '브랜드', href: `${base}/company`, desc: '스튜디오 이야기와 제조 노트' },
 ]
 
 export function Header() {
@@ -66,7 +66,8 @@ export function Header() {
                     NOVA 메뉴
                   </p>
                   <p className="mt-1 text-xs leading-relaxed text-white/62">
-                    가정과 소규모 스튜디오를 위한 컴팩트 듀얼 보일러 에스프레소 머신.</p>
+                    홈 바와 작은 스튜디오를 위한 컴팩트 듀얼보일러 에스프레소 시스템.
+                  </p>
                 </div>
 
                 <nav className="divide-y divide-white/10">
@@ -92,15 +93,17 @@ export function Header() {
                 <div className="flex items-center justify-between gap-4 bg-white/[0.04] px-5 py-4">
                   <div>
                     <p className="text-xs font-semibold uppercase tracking-[0.14em] text-[var(--color-accent-soft)]">
-                      N-01 사전 예약</p>
-                    <p className="mt-1 text-xs text-white/45">보정 키트와 함께 배송됩니다.</p>
+                      N-01 예약
+                    </p>
+                    <p className="mt-1 text-xs text-white/45">캘리브레이션 키트와 함께 배송됩니다.</p>
                   </div>
                   <Link
                     href={base}
                     onClick={() => setOpen(false)}
                     className="inline-flex min-h-10 items-center justify-center rounded-full bg-white px-4 text-xs font-semibold text-[#17181A] active:scale-[0.98]"
                   >
-                    제품 보기</Link>
+                    보기
+                  </Link>
                 </div>
               </div>
             </motion.div>

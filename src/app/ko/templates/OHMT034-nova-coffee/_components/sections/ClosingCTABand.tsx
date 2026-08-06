@@ -34,13 +34,15 @@ export function ClosingCTABand() {
             직접 추출해보세요
           </h2>
           <p className="mt-4 text-sm leading-relaxed text-white/70 md:text-sm">
-            가까운 쇼룸에서 NOVA의 온도 안정성, 추출 압력, 작동 소음을 직접 확인하세요.</p>
+            가까운 쇼룸에서 NOVA의 온도 안정성, 압력, 소음을 직접 확인해보세요.
+          </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center sm:gap-5">
             <Link
               href={`${base}/support`}
               className="inline-flex items-center gap-2 border border-white bg-white px-7 py-3 text-xs font-semibold text-[var(--color-text)] transition-colors duration-300 hover:bg-transparent hover:text-white"
             >
-              데모 예약하기</Link>
+              데모 예약
+            </Link>
             <Link
               href={`${base}/support#store`}
               className="inline-flex items-center gap-2 border border-white/40 px-7 py-3 text-xs font-semibold text-white transition-colors duration-300 hover:border-white hover:bg-white/10"

@@ -5,28 +5,28 @@ import Link from 'next/link'
 const base = '/ko/templates/OHMT034-nova-coffee'
 
 export const metadata: Metadata = {
-  title: '브랜드 소개 - NOVA Coffee',
+  title: '브랜드 - NOVA Coffee',
   description:
-    '포틀랜드에서 시작한 NOVA의 설계 원칙과 수리 가능한 듀얼 보일러 에스프레소 머신 개발 이야기.',
+    '포틀랜드 엔지니어링 팀이 만든 수리 가능한 듀얼보일러 에스프레소 머신, NOVA의 설계 기준.',
 }
 
 const principles = [
   [
     '01',
-    '온도를 직접 확인',
-    '샷마다 온도와 압력 변화를 직접 확인할 수 있도록 설계합니다.',
+    '온도를 보이게',
+    '한 샷과 다음 샷 사이에 무엇이 달라졌는지 확인할 수 있어야 합니다.',
     'spec-control-detail.png',
   ],
   [
     '02',
-    '교체 가능한 부품',
-    '보일러, 펌프, 개스킷을 각각 교체할 수 있는 부품으로 구성합니다.',
+    '수리를 전제로',
+    '보일러, 펌프, 개스킷은 교체 가능한 서비스 부품으로 다룹니다.',
     'technology-internals.png',
   ],
   [
     '03',
-    '주방에 맞는 크기',
-    '상업용 장비의 핵심 기능을 담되 주방 카운터를 과도하게 차지하지 않도록 설계합니다.',
+    '카운터를 존중',
+    '진지한 장비처럼 느껴지되 주방 전체를 차지하지 않습니다.',
     'showroom-demo.png',
   ],
 ]
@@ -38,14 +38,15 @@ export default function CompanyPage() {
         <div className="mx-auto grid max-w-[1440px] gap-10 md:grid-cols-12 md:items-end">
           <div className="md:col-span-5">
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[var(--color-accent)]">
-              브랜드 소개</p>
+              Company
+            </p>
             <h1 className="mt-4 max-w-[700px] font-display text-[length:var(--text-h1)] font-bold leading-[var(--leading-display)] tracking-tight text-[var(--color-text)]">
-              온도와 압력을 직접 확인하는 머신.</h1>
+              감춰진 변수를 줄이려는 사람들이 만든 머신.
+            </h1>
           </div>
           <p className="max-w-[560px] text-sm leading-relaxed text-[var(--color-text-muted)] md:col-span-7 md:justify-self-end md:text-sm">
-            NOVA는 2019년 포틀랜드에서 시작했습니다.
-            <br className="hidden md:block" />
-            가정용 머신의 크기와 상업용 장비의 성능을 함께 갖춘 에스프레소 머신이 필요했습니다.
+            NOVA는 2019년 포틀랜드에서 시작했습니다. 약한 가전과 과한 카페 장비 사이에 놓을
+            홈 에스프레소 머신이 필요했습니다.
           </p>
         </div>
       </section>
@@ -68,7 +69,8 @@ export default function CompanyPage() {
             <div className="self-end">
               <p className="font-mono text-[length:var(--text-display)] font-semibold leading-none">12</p>
               <p className="mt-3 text-sm leading-relaxed text-white/68">
-                12명의 엔지니어, 디자이너, 서비스 담당자가 하나의 제품군을 함께 개발합니다.</p>
+                엔지니어, 디자이너, 서비스 담당자가 하나의 머신 패밀리에 집중합니다.
+              </p>
             </div>
           </div>
         </div>
@@ -77,7 +79,8 @@ export default function CompanyPage() {
       <section className="bg-[var(--color-bg-secondary)] px-5 py-16 md:px-8 md:py-24">
         <div className="mx-auto max-w-[1440px]">
           <h2 className="font-display text-[length:var(--text-h3)] font-bold leading-tight text-[var(--color-text)]">
-            세 가지 설계 원칙.</h2>
+            세 가지 원칙으로 설계합니다.
+          </h2>
           <div className="mt-10 grid gap-5 md:grid-cols-3">
             {principles.map(([step, title, desc, image]) => (
               <article key={step} className="bg-white">
@@ -85,7 +88,7 @@ export default function CompanyPage() {
                   <Image
                     unoptimized
                     src={`/templates/OHMT034-nova-coffee/${image}`}
-                    alt={`${title} 설계 원칙을 보여주는 제품 이미지`}
+                    alt={`${title} 원칙을 보여주는 제품 이미지`}
                     fill
                     className="object-cover brightness-[1.05] contrast-[1.04]"
                     sizes="(min-width: 768px) 33vw, 100vw"
@@ -107,14 +110,15 @@ export default function CompanyPage() {
       <section className="px-5 py-16 md:px-8 md:py-24">
         <div className="mx-auto flex max-w-[1440px] flex-col items-start gap-5 border-t border-[var(--color-border)] pt-10 md:flex-row md:items-center md:justify-between">
           <div>
-            <h2 className="font-display text-2xl font-bold text-[var(--color-text)]">내부 구조를 확인하세요.</h2>
-            <p className="mt-2 text-sm text-[var(--color-text-muted)]">NOVA의 설계 기준은 내부 구조에서 확인할 수 있습니다.</p>
+            <h2 className="font-display text-2xl font-bold text-[var(--color-text)]">이제 구조를 보세요.</h2>
+            <p className="mt-2 text-sm text-[var(--color-text-muted)]">브랜드의 기준은 내부 설계에서 확인됩니다.</p>
           </div>
           <Link
             href={`${base}/technology`}
             className="inline-flex border border-[var(--color-text)] bg-[var(--color-text)] px-5 py-3 text-xs font-semibold text-white transition-colors hover:bg-white hover:text-[var(--color-text)]"
           >
-            기술 자세히 보기</Link>
+            기술 보기
+          </Link>
         </div>
       </section>
     </div>

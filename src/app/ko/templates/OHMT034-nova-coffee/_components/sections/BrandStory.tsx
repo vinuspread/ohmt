@@ -10,7 +10,7 @@ const base = '/ko/templates/OHMT034-nova-coffee'
 const iconLinks = [
   {
     label: '브랜드',
-    desc: '포틀랜드 개발팀과 설계 원칙',
+    desc: '포틀랜드 팀과 설계 원칙',
     href: `${base}/company`,
   },
 ]
@@ -27,14 +27,14 @@ export function BrandStory() {
             transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           >
             <h2 className="font-display text-[length:var(--text-h3)] font-bold leading-[var(--leading-heading)] tracking-tight text-[var(--color-text)]">
-              가정용 머신의 한계에서 시작했습니다.</h2>
+              이 머신은 작은 팀의 불편함에서 시작했습니다.
+            </h2>
             <p className="mt-5 max-w-[480px] text-sm leading-relaxed text-[var(--color-text-muted)] md:text-sm">
-              두 명의 상업용 머신 엔지니어는 기능이 제한된 가정용 머신과 규모가 큰 카페 장비 사이의 선택지가 부족하다고 판단했습니다.
-              <br className="hidden md:block" />
-              NOVA는 가정과 소규모 스튜디오에 맞춘 듀얼 보일러 머신으로 개발했습니다.
+              두 명의 상업용 머신 엔지니어는 홈 에스프레소가 약한 가전과 과한 카페 장비 사이에 머물러 있다고 봤습니다. NOVA는 간격을 메우기 위해 만든 작은 듀얼보일러 플랫폼입니다.
             </p>
             <p className="mt-4 max-w-[480px] text-sm leading-relaxed text-[var(--color-text-muted)] md:text-sm">
-              소규모 개발팀, 교체 가능한 부품, 상태를 직접 확인하는 조작부를 핵심 설계 원칙으로 삼았습니다.</p>
+              작은 팀, 수리 가능한 구조, 드러나는 조작부라는 원칙은 지금의 브랜드 기준이 되었습니다.
+            </p>
 
             <div className="mt-8 max-w-[480px] border-t border-[var(--color-border)]">
               {iconLinks.map((item, i) => (

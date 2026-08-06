@@ -53,13 +53,6 @@ h2,
 h3,
 .font-display {
   line-height: 1.14 !important;
-  text-wrap: balance;
-}
-
-p,
-li,
-summary {
-  text-wrap: pretty;
 }
 
 .font-display {

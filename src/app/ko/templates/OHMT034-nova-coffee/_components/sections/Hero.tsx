@@ -10,7 +10,7 @@ const base = '/ko/templates/OHMT034-nova-coffee'
 const heroSpecs = [
   { label: '온도 편차', value: '±0.5°C' },
   { label: '로터리 펌프', value: '50dB' },
-  { label: '본체 폭', value: '240mm' },
+  { label: '카운터 적합성', value: '240mm 폭' },
 ]
 
 export function Hero() {
@@ -28,7 +28,7 @@ export function Hero() {
         <Image
           unoptimized
           src="/templates/OHMT034-nova-coffee/hero.jpg"
-          alt="어두운 그라데이션 배경에 놓인 브러시드 스틸과 무광 차콜 마감의 NOVA 듀얼 보일러 에스프레소 머신"
+          alt="NOVA dual-boiler espresso machine on dark gradient background, brushed steel and matte charcoal finish"
           fill
           priority
           className="object-cover object-[65%_center] brightness-[1.12] contrast-[1.08] saturate-[1.03] md:object-[55%_center]"
@@ -45,11 +45,14 @@ export function Hero() {
         >
           <h1 className="max-w-[920px]">
             <span className="font-display block text-[length:var(--text-display)] font-medium leading-[var(--leading-display)] tracking-tight text-white/85">
-              첫 샷의 기준을</span>
+              모든 샷을
+            </span>
             <span className="font-display block text-[length:var(--text-display)] font-medium leading-[var(--leading-display)] tracking-tight text-white/85">
-              다음 샷에도</span>
+              같은 기준에
+            </span>
             <span className="font-display block text-[length:var(--text-display)] font-bold leading-[var(--leading-display)] tracking-tight text-white">
-              그대로</span>
+              맞추다
+            </span>
           </h1>
         </motion.div>
 
@@ -59,7 +62,8 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           className="mt-6 max-w-[420px] text-xs font-medium uppercase tracking-[0.12em] text-white/50 md:mt-8"
         >
-          듀얼 보일러 에스프레소 머신 &middot; &plusmn;0.5&deg;C PID 온도 제어</motion.p>
+          듀얼보일러 에스프레소 &middot; &plusmn;0.5&deg;C 온도 제어
+        </motion.p>
 
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -71,7 +75,8 @@ export function Hero() {
             href={`${base}/technology`}
             className="inline-flex w-fit items-center justify-center border border-white bg-white px-5 py-3 text-xs font-semibold text-[var(--color-text)] transition-colors hover:bg-transparent hover:text-white"
           >
-            제품 기술 보기</Link>
+            기술 살펴보기
+          </Link>
           <Link
             href={`${base}/support#store`}
             className="inline-flex w-fit items-center justify-center border border-white/35 px-5 py-3 text-xs font-semibold text-white transition-colors hover:border-white hover:bg-white/10"

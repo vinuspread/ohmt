@@ -7,7 +7,8 @@ const columns = [
   {
     title: '제품',
     links: [
-      { label: '제품 홈', href: base },
+      { label: '개요', href: base },
+      { label: '제품', href: `${base}/product` },
       { label: '기술', href: `${base}/technology` },
     ],
   },
@@ -37,7 +38,8 @@ export function Footer() {
               NOVA · OHMT
             </p>
             <p className="mt-3 max-w-[220px] text-xs leading-relaxed text-[var(--color-text-muted)]">
-              온도와 압력을 직접 확인하고 조정하는 듀얼 보일러 에스프레소 머신.</p>
+              온도와 압력을 기준으로 설계한 프리미엄 에스프레소 머신.
+            </p>
             <div className="mt-6 flex items-center gap-4">
               <Link href={base} aria-label="Instagram" className="text-[var(--color-text-muted-on-dark)] transition-colors hover:text-[var(--color-accent)]">
                 <InstagramLogo size={18} />
@@ -72,9 +74,9 @@ export function Footer() {
         <div className="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-[var(--color-text-muted)] md:flex-row md:items-center md:justify-between">
           <p>&copy; 2026 OHMT.</p>
           <div className="flex items-center gap-4">
-            <span className="text-xs font-medium uppercase tracking-wider text-white/30">레드닷 디자인 어워드 2026</span>
+            <span className="text-xs font-medium uppercase tracking-wider text-white/30">Red Dot Design Award 2026</span>
             <span className="h-3 w-px bg-white/20" />
-            <span className="text-xs font-medium uppercase tracking-wider text-white/30">스페셜티 커피 협회</span>
+            <span className="text-xs font-medium uppercase tracking-wider text-white/30">Specialty Coffee Association</span>
           </div>
         </div>
       </div>

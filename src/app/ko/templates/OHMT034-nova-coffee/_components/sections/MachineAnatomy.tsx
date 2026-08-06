@@ -3,18 +3,18 @@ import Image from 'next/image'
 const callouts = [
   {
     k: 'A',
-    title: '분리된 보일러',
-    text: '추출용과 스팀용 보일러가 각각 설정 온도를 유지합니다.',
+    title: '분리된 열 구역',
+    text: '브루와 스팀 보일러가 따로 움직여 다음 샷의 열을 지킵니다.',
   },
   {
     k: 'B',
-    title: '압력 게이지',
-    text: '아날로그 게이지로 추출 압력을 한눈에 확인합니다.',
+    title: '보이는 압력',
+    text: '아날로그 게이지가 추출 상태를 한눈에 볼 수 있게 보여줍니다.',
   },
   {
     k: 'C',
-    title: '교체 가능한 핵심 부품',
-    text: '펌프, 보일러, 개스킷은 각각 교체할 수 있는 모듈입니다.',
+    title: '수리 가능한 핵심부',
+    text: '펌프, 보일러, 개스킷은 교체 가능한 모듈입니다.',
   },
 ]
 
@@ -25,12 +25,15 @@ export function MachineAnatomy() {
         <div className="grid gap-8 md:grid-cols-12 md:items-end">
           <div className="md:col-span-5">
             <p className="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-white/46">
-              머신 내부 구조</p>
+              머신 구조
+            </p>
             <h2 className="mt-4 max-w-[560px] font-display text-[length:var(--text-h2)] font-bold leading-[var(--leading-display)] tracking-tight">
-              추출 상태를 확인할 수 있는 내부 구조.</h2>
+              막힌 가전이 아니라 상태가 보이는 압력 시스템.
+            </h2>
           </div>
           <p className="max-w-[560px] text-sm leading-relaxed text-white/62 md:col-span-7 md:justify-self-end md:text-sm">
-            추출 보일러와 스팀 보일러, 압력 회로, 교체 가능한 부품을 구분해 배치했습니다.</p>
+            열이 머무는 곳, 압력이 움직이는 곳, 오래 쓴 뒤 손볼 수 있는 지점을 분명하게 나눴습니다.
+          </p>
         </div>
 
         <div className="mt-12 grid gap-5 md:grid-cols-12 md:gap-8">
@@ -38,7 +41,7 @@ export function MachineAnatomy() {
             <Image
               unoptimized
               src="/templates/OHMT034-nova-coffee/technology-diagram.jpg"
-              alt="NOVA 듀얼 보일러 내부 구조 다이어그램"
+              alt="NOVA 듀얼보일러 내부 구조 다이어그램"
               fill
               className="object-cover brightness-[1.06] contrast-[1.05]"
               sizes="(min-width: 768px) 900px, 100vw"
