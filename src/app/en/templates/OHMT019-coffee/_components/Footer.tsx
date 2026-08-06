@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
+import { InstagramLogo, FacebookLogo, TwitterLogo } from "@phosphor-icons/react";
 
 const navLinks = [
   { label: "About", href: "/en/templates/OHMT019-coffee/about" },
@@ -9,7 +10,11 @@ const navLinks = [
   { label: "Contact", href: "#" },
 ];
 
-const social = ["Instagram", "Facebook", "Twitter"];
+const social = [
+  { label: "Instagram", Icon: InstagramLogo },
+  { label: "Facebook", Icon: FacebookLogo },
+  { label: "Twitter", Icon: TwitterLogo },
+];
 
 export const Footer = () => {
   return (
@@ -37,14 +42,12 @@ export const Footer = () => {
         <div className="flex gap-5">
           {social.map((s) => (
             <Link
-              key={s}
+              key={s.label}
               href="#"
-              className="w-8 h-8 rounded-full border border-[var(--color-text-muted)]/30 flex items-center justify-center hover:border-[var(--color-text)] transition-colors duration-200"
-              aria-label={s}
+              className="w-8 h-8 rounded-full border border-[var(--color-text-muted)]/30 flex items-center justify-center text-[var(--color-text-muted)] hover:border-[var(--color-text)] hover:text-[var(--color-text)] transition-colors duration-200"
+              aria-label={s.label}
             >
-              <span className="text-xs font-bold text-[var(--color-text-muted)]">
-                {s[0]}
-              </span>
+              <s.Icon size={16} weight="fill" />
             </Link>
           ))}
         </div>
