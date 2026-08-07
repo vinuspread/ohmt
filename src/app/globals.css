@@ -141,9 +141,9 @@
 /* Ensure all focus states are visible */
 button:focus-visible,
 a:focus-visible,
-input:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
+input:focus-visible:not(.ohmt-contact-input),
+select:focus-visible:not(.ohmt-contact-input),
+textarea:focus-visible:not(.ohmt-contact-input) {
   outline: 2px solid;
   outline-offset: 2px;
 }
@@ -180,9 +180,9 @@ a:focus-visible {
 }
 
 /* Form elements */
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
+input:focus-visible:not(.ohmt-contact-input),
+textarea:focus-visible:not(.ohmt-contact-input),
+select:focus-visible:not(.ohmt-contact-input) {
   border-radius: 4px;
 }
 
