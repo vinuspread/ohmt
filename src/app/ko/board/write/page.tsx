@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { ArrowLeft, CheckCircle } from "lucide-react";
 
-const INPUT_CLASS = "w-full rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm text-zinc-900 outline-none transition-all placeholder:text-zinc-400 focus:border-zinc-900 focus:bg-white focus-visible:ring-2 focus-visible:ring-[#F1B100]/30 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100 dark:placeholder:text-zinc-500 dark:focus:border-zinc-500";
+const INPUT_CLASS = "w-full rounded-lg border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm text-zinc-900 outline-none transition-all placeholder:text-zinc-400 focus:border-zinc-900 focus:bg-white focus-visible:ring-2 focus-visible:ring-[#F1B100]/30 dark:border-zinc-700 dark:bg-zinc-800 dark:text-zinc-100 dark:placeholder:text-zinc-500 dark:focus:border-zinc-500 dark:focus:bg-zinc-800";
 const LABEL_CLASS = "mb-2 block text-[0.62rem] font-bold uppercase tracking-widest text-zinc-500 dark:text-zinc-400";
 
 export default function WritePage() {
