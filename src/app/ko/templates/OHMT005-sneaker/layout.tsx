@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - ?????? ??? ?? ???",
+  title: "OHMT - 브루탈리스트 스니커 드랍 템플릿",
   description: "Urban streetwear and sneaker releases",
   openGraph: {
-    title: "OHMT - ?????? ??? ?? ???",
+    title: "OHMT - 브루탈리스트 스니커 드랍 템플릿",
     description: "Urban streetwear and sneaker releases",
     url: "https://ohmytemplate.com/ko/templates/OHMT005-sneaker",
     siteName: "OHMT",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - ?????? ??? ?? ???",
+    title: "OHMT - 브루탈리스트 스니커 드랍 템플릿",
     description: "Urban streetwear and sneaker releases",
     images: ["/templates/OHMT005-sneaker/og-image.jpg"],
   },
