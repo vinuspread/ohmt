@@ -5,7 +5,7 @@ import { LockKeyhole, Search, Trash2 } from "lucide-react";
 import { Modal } from "../ui/Modal";
 import { Button } from "../ui/Button";
 import { Table, type Column } from "../ui/Table";
-import type { BoardPost } from "@/types/board";
+import type { BoardPostAdmin } from "@/types/board";
 
 function InfoRow({ label, value }: { label: string; value: string | null | undefined }) {
   if (!value) return null;
@@ -17,16 +17,16 @@ function InfoRow({ label, value }: { label: string; value: string | null | undef
   );
 }
 
-export function BoardTable({ data }: { data: BoardPost[] }) {
+export function BoardTable({ data }: { data: BoardPostAdmin[] }) {
   const [search, setSearch] = useState("");
-  const [posts, setPosts] = useState<BoardPost[]>(data);
-  const [selectedPost, setSelectedPost] = useState<BoardPost | null>(null);
+  const [posts, setPosts] = useState<BoardPostAdmin[]>(data);
+  const [selectedPost, setSelectedPost] = useState<BoardPostAdmin | null>(null);
   const [answerDraft, setAnswerDraft] = useState("");
   const [saving, setSaving] = useState(false);
-  const [deleteTarget, setDeleteTarget] = useState<BoardPost | null>(null);
+  const [deleteTarget, setDeleteTarget] = useState<BoardPostAdmin | null>(null);
   const [deleting, setDeleting] = useState(false);
 
-  const openPost = (post: BoardPost) => {
+  const openPost = (post: BoardPostAdmin) => {
     setSelectedPost(post);
     setAnswerDraft(post.answer ?? "");
   };
@@ -41,7 +41,7 @@ export function BoardTable({ data }: { data: BoardPost[] }) {
     });
     setSaving(false);
     if (res.ok) {
-      const updated = (await res.json()) as BoardPost;
+      const updated = (await res.json()) as BoardPostAdmin;
       setPosts((prev) => prev.map((p) => (p.id === updated.id ? updated : p)));
       setSelectedPost(updated);
     }
@@ -69,7 +69,7 @@ export function BoardTable({ data }: { data: BoardPost[] }) {
     );
   }, [posts, search]);
 
-  const columns: Column<BoardPost>[] = [
+  const columns: Column<BoardPostAdmin>[] = [
     {
       key: "title",
       header: "제목",

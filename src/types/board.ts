@@ -14,3 +14,6 @@ export interface BoardPost {
   created_at: string;
   updated_at: string;
 }
+
+/** Admin-facing view: excludes password_hash, which never needs to reach the client. */
+export type BoardPostAdmin = Omit<BoardPost, "password_hash">;

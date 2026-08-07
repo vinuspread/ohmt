@@ -1,20 +1,6 @@
 import { NextResponse } from "next/server";
-import { getAllowedAdminEmails, isAllowedAdminEmail } from "@/lib/admin-auth";
-import { createClient } from "@/lib/supabase/server";
+import { validateAdminUser } from "@/lib/admin-auth";
 import { createAdminClient } from "@/lib/supabase/admin";
-
-async function validateAdminUser() {
-  const supabase = await createClient();
-  const { data: { user } } = await supabase.auth.getUser();
-
-  if (!user) return NextResponse.json({ error: "로그인이 필요합니다." }, { status: 401 });
-
-  const allowedEmails = getAllowedAdminEmails();
-  if (allowedEmails.length === 0) return NextResponse.json({ error: "관리자 접근 설정이 필요합니다." }, { status: 403 });
-  if (!isAllowedAdminEmail(user.email, allowedEmails)) return NextResponse.json({ error: "권한이 없습니다." }, { status: 403 });
-
-  return null;
-}
 
 export async function PATCH(request: Request, context: { params: Promise<{ id: string }> }) {
   const authError = await validateAdminUser();
@@ -33,7 +19,7 @@ export async function PATCH(request: Request, context: { params: Promise<{ id: s
     .from("board_posts")
     .update({ answer: answer || null, answered_at: answer ? new Date().toISOString() : null })
     .eq("id", id)
-    .select("*")
+    .select("id, lang, title, author_name, contact, content, is_secret, answer, answered_at, created_at, updated_at")
     .single();
 
   if (error) return NextResponse.json({ error: "답변 저장에 실패했습니다." }, { status: 500 });
