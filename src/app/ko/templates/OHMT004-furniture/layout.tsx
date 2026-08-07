@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - ?? ?? ??? ???",
+  title: "OHMT - 모던 가구 스토어 템플릿",
   description: "프리미엄 가구 & 인테리어 디자인 쇼케이스",
   openGraph: {
-    title: "OHMT - ?? ?? ??? ???",
+    title: "OHMT - 모던 가구 스토어 템플릿",
     description: "프리미엄 가구 & 인테리어 디자인 쇼케이스",
     url: "https://ohmytemplate.com/ko/templates/OHMT004-furniture",
     siteName: "OHMT",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - ?? ?? ??? ???",
+    title: "OHMT - 모던 가구 스토어 템플릿",
     description: "프리미엄 가구 & 인테리어 디자인 쇼케이스",
     images: ["/templates/OHMT004-furniture/og-image.jpg"],
   },

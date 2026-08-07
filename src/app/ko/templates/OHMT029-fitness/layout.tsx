@@ -2,16 +2,16 @@ import "./theme.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "OHMT - ???? ?? ??? ???",
+  title: "OHMT - 트레이닝 클럽 멤버십 템플릿",
   description: "프리미엄 웰니스 스튜디오 템플릿 — B2B 위탁 운영 및 B2C 부티크 피트니스.",
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - ???? ?? ??? ???",
+    title: "OHMT - 트레이닝 클럽 멤버십 템플릿",
     description: "프리미엄 웰니스 스튜디오 템플릿 — B2B 위탁 운영 및 B2C 부티크 피트니스.",
     images: ["/templates/OHMT029-fitness/og-image.jpg"],
   },
   openGraph: {
-    title: "OHMT - ???? ?? ??? ???",
+    title: "OHMT - 트레이닝 클럽 멤버십 템플릿",
     description: "프리미엄 웰니스 스튜디오 템플릿 — B2B 위탁 운영 및 B2C 부티크 피트니스.",
     url: "https://ohmytemplate.com/ko/templates/OHMT029-fitness",
     siteName: "OHMT",

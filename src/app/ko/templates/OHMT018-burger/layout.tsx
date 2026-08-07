@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - ??? ??? ???? ?? ???",
+  title: "OHMT - 패스트 캐주얼 레스토랑 주문 템플릿",
   description: "프리미엄 버거 레스토랑 경험",
   openGraph: {
-    title: "OHMT - ??? ??? ???? ?? ???",
+    title: "OHMT - 패스트 캐주얼 레스토랑 주문 템플릿",
     description: "프리미엄 버거 레스토랑 경험",
     url: "https://ohmytemplate.com/ko/templates/OHMT018-burger",
     siteName: "OHMT",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - ??? ??? ???? ?? ???",
+    title: "OHMT - 패스트 캐주얼 레스토랑 주문 템플릿",
     description: "프리미엄 버거 레스토랑 경험",
     images: ["/templates/OHMT018-burger/og-image.jpg"],
   },

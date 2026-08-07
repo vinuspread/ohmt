@@ -21,10 +21,10 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'OHMT - ?? ??? ?? ????? ???',
+  title: 'OHMT - 분석 커맨드 센터 인터페이스 템플릿',
   description: 'OHMT 비즈니스 분석 대시보드 템플릿',
   openGraph: {
-    title: 'OHMT - ?? ??? ?? ????? ???',
+    title: 'OHMT - 분석 커맨드 센터 인터페이스 템플릿',
     description: 'OHMT 비즈니스 분석 대시보드 템플릿',
     url: 'https://ohmytemplate.com/ko/templates/OHMT015-dashboard',
     siteName: 'OHMT',
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'OHMT - ?? ??? ?? ????? ???',
+    title: 'OHMT - 분석 커맨드 센터 인터페이스 템플릿',
     description: 'OHMT 비즈니스 분석 대시보드 템플릿',
     images: ['/templates/OHMT015-dashboard/og-image.jpg'],
   },

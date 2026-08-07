@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - ??? ?? ???? ???",
+  title: "OHMT - 투자자 관계 웹사이트 템플릿",
   description: "기업 전략 및 재무 성과",
   openGraph: {
-    title: "OHMT - ??? ?? ???? ???",
+    title: "OHMT - 투자자 관계 웹사이트 템플릿",
     description: "기업 전략 및 재무 성과",
     url: "https://ohmytemplate.com/ko/templates/OHMT011-ir",
     siteName: "OHMT",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - ??? ?? ???? ???",
+    title: "OHMT - 투자자 관계 웹사이트 템플릿",
     description: "기업 전략 및 재무 성과",
     images: ["/templates/OHMT011-ir/og-image.jpg"],
   },
