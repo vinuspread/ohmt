@@ -48,7 +48,7 @@ export default function WritePage() {
 
   return (
     <section className="px-5 py-12 sm:px-6 md:px-12 md:py-20 lg:px-20">
-      <div className="mx-auto max-w-[1440px]">
+      <div className="mx-auto max-w-[1200px]">
         <Link href="/ko/board" className="mb-8 inline-flex items-center gap-2 text-xs font-bold text-zinc-400 transition-colors hover:text-zinc-900 dark:hover:text-zinc-100"><ArrowLeft size={14} />목록으로</Link>
         {submitted ? (
           <div role="status" className="rounded-xl border border-zinc-200/60 bg-white px-6 py-24 text-center dark:border-zinc-800 dark:bg-zinc-900">
