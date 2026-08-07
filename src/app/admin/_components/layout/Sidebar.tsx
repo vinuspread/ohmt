@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { BarChart2, DollarSign, Inbox, LayoutTemplate, LogOut, MessageCircleQuestion, ShoppingBag, Tags, Video } from "lucide-react";
+import { BarChart2, DollarSign, Inbox, LayoutTemplate, LogOut, MessageCircleQuestion, MessagesSquare, ShoppingBag, Tags, Video } from "lucide-react";
 import { clsx } from "clsx";
 import { createClient } from "@/lib/supabase/client";
 
@@ -15,6 +15,7 @@ const navItems = [
   { href: "/admin/assets", label: "미디어", icon: Video },
   { href: "/admin/faqs", label: "FAQ", icon: MessageCircleQuestion },
   { href: "/admin/orders", label: "Orders", icon: ShoppingBag },
+  { href: "/admin/board", label: "문의게시판", icon: MessagesSquare },
 ];
 
 function isNavItemActive(pathname: string, href: string) {
