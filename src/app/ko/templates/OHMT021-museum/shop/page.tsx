@@ -73,7 +73,7 @@ function ShopPageContent() {
                     <Heart size={16} />
                   </button>
                 </div>
-                <div className="absolute bottom-4 left-4 right-4 z-10 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                <div className="absolute bottom-4 left-4 right-4 z-10 translate-y-[calc(100%+1rem)] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
                   <button className="w-full py-3 bg-white text-xs font-bold tracking-[0.3em] flex items-center justify-center gap-2">
                     바로 담기<ShoppingBag size={14} />
                   </button>
