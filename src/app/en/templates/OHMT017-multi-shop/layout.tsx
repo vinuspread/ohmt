@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - Multi-Brand Shopfront Template",
     description: "Multi-brand shopping experience with curated collections",
-    url: "https://ohmytemplate.com/en/templates/OHMT017-multi-shop",
+    url: "https://ohmt.site/en/templates/OHMT017-multi-shop",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT017-multi-shop/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT017-multi-shop",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT017-multi-shop" },
+    canonical: "https://ohmt.site/en/templates/OHMT017-multi-shop",
+    languages: { "ko": "https://ohmt.site/ko/templates/OHMT017-multi-shop" },
   },
 };
 
@@ -44,7 +44,7 @@ export default function MultiShopLayout({
             "@context": "https://schema.org",
             "@type": "Store",
             name: "OHMT Multi-Shop",
-            url: "https://ohmytemplate.com/en/templates/OHMT017-multi-shop",
+            url: "https://ohmt.site/en/templates/OHMT017-multi-shop",
             description: "Multi-brand shopping experience with curated collections.",
           }),
         }}

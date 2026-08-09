@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - Interactive Game Launch Website Template",
     description: "Premium game studio & development showcase",
-    url: "https://ohmytemplate.com/en/templates/OHMT023-game",
+    url: "https://ohmt.site/en/templates/OHMT023-game",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT023-game/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT023-game",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT023-game" },
+    canonical: "https://ohmt.site/en/templates/OHMT023-game",
+    languages: { "ko": "https://ohmt.site/ko/templates/OHMT023-game" },
   },
 };
 
@@ -36,7 +36,7 @@ export default function GameLayout({
     "@type": "VideoGameSeries",
     name: "OHMT Game Studio",
     description: "Premium game studio & development showcase",
-    url: "https://ohmytemplate.com/en/templates/OHMT023-game",
+    url: "https://ohmt.site/en/templates/OHMT023-game",
   };
   return (
     <>

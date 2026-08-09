@@ -29,8 +29,8 @@ export const metadata: Metadata = {
     },
   },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
   },
 }
 
@@ -40,7 +40,7 @@ const jsonLd = {
   name: "OHMT - NOVA Coffee",
   description:
     'NOVA is a premium dual-boiler espresso machine engineered for thermal stability, mechanical repeatability, and a lifespan measured in decades.',
-  url: "https://ohmytemplate.com/en/templates/OHMT034-nova-coffee",
+  url: "https://ohmt.site/en/templates/OHMT034-nova-coffee",
 }
 
 export default function NovaLayout({ children }: { children: React.ReactNode }) {

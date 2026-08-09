@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: "OHMT | NUBI 도심형 전기차",
   description: "도심 주행에 알맞은 크기와 민첩한 움직임, 실용적인 주행거리를 갖춘 전기차 NUBI를 소개합니다.",
   keywords: ["전기차 템플릿", "EV 랜딩페이지", "NUBI", "OHMT"],
-  authors: [{ name: "OHMT", url: "https://ohmytemplate.com" }],
+  authors: [{ name: "OHMT", url: "https://ohmt.site" }],
   openGraph: {
     title: "OHMT | NUBI 도심형 전기차",
     description: "도심 주행에 알맞은 크기와 민첩한 움직임, 실용적인 주행거리를 갖춘 전기차 NUBI를 소개합니다.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT028-ev",
+    url: "https://ohmt.site/ko/templates/OHMT028-ev",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT028-ev/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT028-ev",
+    canonical: "https://ohmt.site/ko/templates/OHMT028-ev",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/OHMT028-ev",
-      "ko": "https://ohmytemplate.com/ko/templates/OHMT028-ev",
+      "en": "https://ohmt.site/en/templates/OHMT028-ev",
+      "ko": "https://ohmt.site/ko/templates/OHMT028-ev",
     },
   },
 };

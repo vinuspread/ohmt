@@ -8,13 +8,13 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ohmytemplate.com"),
+  metadataBase: new URL("https://ohmt.site"),
   title: "OHMT - Camera Product Showcase Template",
   description: "A premium compact camera landing page for creators who want quiet hardware and serious image quality.",
   openGraph: {
     title: "OHMT - Camera Product Showcase Template",
     description: "A premium compact camera landing page for creators who want quiet hardware and serious image quality.",
-    url: "https://ohmytemplate.com/en/templates/OHMT031-luma-camera",
+    url: "https://ohmt.site/en/templates/OHMT031-luma-camera",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT031-luma-camera/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -27,12 +27,12 @@ export const metadata: Metadata = {
     description: "A premium compact camera landing page for creators who want quiet hardware and serious image quality.",
     images: ["/templates/OHMT031-luma-camera/og-image.jpg"],
   },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: false },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT031-luma-camera",
+    canonical: "https://ohmt.site/en/templates/OHMT031-luma-camera",
     languages: {
-      en: "https://ohmytemplate.com/en/templates/OHMT031-luma-camera",
-      ko: "https://ohmytemplate.com/ko/templates/OHMT031-luma-camera",
+      en: "https://ohmt.site/en/templates/OHMT031-luma-camera",
+      ko: "https://ohmt.site/ko/templates/OHMT031-luma-camera",
     },
   },
 };
@@ -42,7 +42,7 @@ const jsonLd = {
   "@type": "WebSite",
   name: "OHMT - LUMA Camera",
   description: "A premium compact camera landing page for creators who want quiet hardware and serious image quality.",
-  url: "https://ohmytemplate.com/en/templates/OHMT031-luma-camera",
+  url: "https://ohmt.site/en/templates/OHMT031-luma-camera",
 };
 
 export default function LumaCameraLayout({ children }: { children: React.ReactNode }) {

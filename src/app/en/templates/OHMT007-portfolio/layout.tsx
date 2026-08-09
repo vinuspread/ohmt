@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - Brutalist Creative Portfolio Template",
     description: "Personal branding and creative portfolio",
-    url: "https://ohmytemplate.com/en/templates/OHMT007-portfolio",
+    url: "https://ohmt.site/en/templates/OHMT007-portfolio",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT007-portfolio/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT007-portfolio",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT007-portfolio" },
+    canonical: "https://ohmt.site/en/templates/OHMT007-portfolio",
+    languages: { "ko": "https://ohmt.site/ko/templates/OHMT007-portfolio" },
   },
 };
 

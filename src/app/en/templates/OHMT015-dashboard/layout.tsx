@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'OHMT - Analytics Command Center Interface Template',
     description: 'OHMT admin dashboard template',
-    url: 'https://ohmytemplate.com/en/templates/OHMT015-dashboard',
+    url: 'https://ohmt.site/en/templates/OHMT015-dashboard',
     siteName: 'OHMT',
     images: [{ url: '/templates/OHMT015-dashboard/og-image.jpg', width: 1200, height: 630 }],
     locale: 'en_US',
@@ -37,6 +37,10 @@ export const metadata: Metadata = {
     title: 'OHMT - Analytics Command Center Interface Template',
     description: 'OHMT admin dashboard template',
     images: ['/templates/OHMT015-dashboard/og-image.jpg'],
+  },
+  alternates: {
+    canonical: 'https://ohmt.site/en/templates/OHMT015-dashboard',
+    languages: { ko: 'https://ohmt.site/ko/templates/OHMT015-dashboard' },
   },
 }
 

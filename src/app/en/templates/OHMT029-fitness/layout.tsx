@@ -13,17 +13,17 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - Training Club Membership Template",
     description: "Premium wellness studio template for B2B consignment and B2C boutique fitness.",
-    url: "https://ohmytemplate.com/en/templates/OHMT029-fitness",
+    url: "https://ohmt.site/en/templates/OHMT029-fitness",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT029-fitness/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT029-fitness",
+    canonical: "https://ohmt.site/en/templates/OHMT029-fitness",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/OHMT029-fitness",
-      "ko": "https://ohmytemplate.com/ko/templates/OHMT029-fitness",
+      "en": "https://ohmt.site/en/templates/OHMT029-fitness",
+      "ko": "https://ohmt.site/ko/templates/OHMT029-fitness",
     },
   },
 };
@@ -33,7 +33,7 @@ const jsonLd = {
   "@type": "WebSite",
   name: "OHMT - Premium Fitness Studio",
   description: "Premium wellness studio template for B2B consignment and B2C boutique fitness.",
-  url: "https://ohmytemplate.com/en/templates/OHMT029-fitness",
+  url: "https://ohmt.site/en/templates/OHMT029-fitness",
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

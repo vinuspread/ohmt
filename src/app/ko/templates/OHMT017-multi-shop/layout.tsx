@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT | 미니멀 패션 스토어",
     description: "의류와 신발, 액세서리를 한곳에서 살펴볼 수 있는 미니멀 패션 스토어입니다.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT017-multi-shop",
+    url: "https://ohmt.site/ko/templates/OHMT017-multi-shop",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT017-multi-shop/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT017-multi-shop",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT017-multi-shop" },
+    canonical: "https://ohmt.site/ko/templates/OHMT017-multi-shop",
+    languages: { "en": "https://ohmt.site/en/templates/OHMT017-multi-shop" },
   },
 };
 

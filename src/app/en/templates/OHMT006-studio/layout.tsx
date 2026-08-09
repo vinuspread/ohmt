@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - Corporate Studio Portfolio Template",
     description: "Architecture and spatial design studio",
-    url: "https://ohmytemplate.com/en/templates/OHMT006-studio",
+    url: "https://ohmt.site/en/templates/OHMT006-studio",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT006-studio/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT006-studio",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT006-studio" },
+    canonical: "https://ohmt.site/en/templates/OHMT006-studio",
+    languages: { "ko": "https://ohmt.site/ko/templates/OHMT006-studio" },
   },
 };
 

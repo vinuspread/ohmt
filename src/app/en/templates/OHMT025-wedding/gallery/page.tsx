@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: "Portfolio - Lumen Wedding Photography",
   description: "Explore our portfolio of fine art wedding photography. Real love stories captured across the world with documentary and editorial style.",
   keywords: ["wedding portfolio", "fine art wedding gallery", "documentary wedding photos", "wedding photography examples"],
-  authors: [{ name: "OHMT", url: "https://ohmytemplate.com" }],
+  authors: [{ name: "OHMT", url: "https://ohmt.site" }],
   openGraph: {
     title: "Portfolio - Lumen Wedding Photography",
     description: "Explore our portfolio of fine art wedding photography. Real love stories captured across the world.",
-    url: "https://ohmytemplate.com/en/templates/OHMT025-wedding/gallery",
+    url: "https://ohmt.site/en/templates/OHMT025-wedding/gallery",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT025-wedding/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT025-wedding/gallery",
+    canonical: "https://ohmt.site/en/templates/OHMT025-wedding/gallery",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/OHMT025-wedding/gallery",
-      "ko": "https://ohmytemplate.com/ko/templates/OHMT025-wedding/gallery",
+      "en": "https://ohmt.site/en/templates/OHMT025-wedding/gallery",
+      "ko": "https://ohmt.site/ko/templates/OHMT025-wedding/gallery",
     },
   },
 };

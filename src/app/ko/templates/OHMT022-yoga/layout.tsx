@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT | 요가·필라테스 스튜디오",
     description: "빈야사와 하타 요가, 명상, 필라테스 클래스와 주간 일정을 확인하고 예약할 수 있습니다.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT022-yoga",
+    url: "https://ohmt.site/ko/templates/OHMT022-yoga",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT022-yoga/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT022-yoga",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT022-yoga" },
+    canonical: "https://ohmt.site/ko/templates/OHMT022-yoga",
+    languages: { "en": "https://ohmt.site/en/templates/OHMT022-yoga" },
   },
 };
 

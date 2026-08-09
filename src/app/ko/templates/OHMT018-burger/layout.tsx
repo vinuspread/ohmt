@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - 패스트 캐주얼 레스토랑 주문 템플릿",
     description: "프리미엄 버거 레스토랑 경험",
-    url: "https://ohmytemplate.com/ko/templates/OHMT018-burger",
+    url: "https://ohmt.site/ko/templates/OHMT018-burger",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT018-burger/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT018-burger",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT018-burger" },
+    canonical: "https://ohmt.site/ko/templates/OHMT018-burger",
+    languages: { "en": "https://ohmt.site/en/templates/OHMT018-burger" },
   },
 };
 

@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: "About - Lumen Wedding Photography",
   description: "Meet Clara, founder and lead photographer at OHMT. Capturing timeless wedding stories across the world with fine art documentary style.",
   keywords: ["wedding photographer", "fine art wedding photography", "documentary wedding photos"],
-  authors: [{ name: "OHMT", url: "https://ohmytemplate.com" }],
+  authors: [{ name: "OHMT", url: "https://ohmt.site" }],
   openGraph: {
     title: "About - Lumen Wedding Photography",
     description: "Meet Clara, founder and lead photographer. Capturing timeless wedding stories with fine art documentary style.",
-    url: "https://ohmytemplate.com/en/templates/OHMT025-wedding/about",
+    url: "https://ohmt.site/en/templates/OHMT025-wedding/about",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT025-wedding/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -25,10 +25,10 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT025-wedding/about",
+    canonical: "https://ohmt.site/en/templates/OHMT025-wedding/about",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/OHMT025-wedding/about",
-      "ko": "https://ohmytemplate.com/ko/templates/OHMT025-wedding/about",
+      "en": "https://ohmt.site/en/templates/OHMT025-wedding/about",
+      "ko": "https://ohmt.site/ko/templates/OHMT025-wedding/about",
     },
   },
 };

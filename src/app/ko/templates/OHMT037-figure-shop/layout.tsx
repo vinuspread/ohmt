@@ -28,8 +28,8 @@ export const metadata: Metadata = {
     },
   },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
   },
 }
 
@@ -39,7 +39,7 @@ const jsonLd = {
   name: 'FORMA 피규어',
   description:
     'FORMA는 소량 생산 피규어와 한정 에디션, 손도색 아트 토이를 선보이는 스튜디오입니다.',
-  url: 'https://ohmytemplate.com/ko/templates/OHMT037-figure-shop',
+  url: 'https://ohmt.site/ko/templates/OHMT037-figure-shop',
 }
 
 export default function FigureShopLayout({ children }: { children: React.ReactNode }) {

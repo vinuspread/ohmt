@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Issues - OHMT Magazine",
     description: "Each issue gathers a season's worth of reporting into a single theme.",
-    url: "https://ohmytemplate.com/en/templates/OHMT012-magazine/issues",
+    url: "https://ohmt.site/en/templates/OHMT012-magazine/issues",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT012-magazine/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",

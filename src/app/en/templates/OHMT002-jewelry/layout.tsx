@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - Luxury Jewelry Ecommerce Template",
     description: "Experience the timeless elegance and curated luxury.",
-    url: "https://ohmytemplate.com/en/templates/OHMT002-jewelry",
+    url: "https://ohmt.site/en/templates/OHMT002-jewelry",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT002-jewelry/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT002-jewelry",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT002-jewelry" },
+    canonical: "https://ohmt.site/en/templates/OHMT002-jewelry",
+    languages: { "ko": "https://ohmt.site/ko/templates/OHMT002-jewelry" },
   },
 };
 

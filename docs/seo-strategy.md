@@ -70,7 +70,7 @@
 
 모든 템플릿 페이지는 `layout.tsx`에 metadata를 선언한다.
 
-### 영문 템플릿 (27개)
+### 영문 템플릿 (현재 published 26개)
 
 | slug | title | description |
 |------|-------|-------------|
@@ -81,9 +81,10 @@
 | coffee | Coffee Shop & Roastery Website Template \| OHMT | A warm and elegant website template for coffee shops, cafes, and specialty roasteries. |
 | cosmetic | Beauty & Cosmetics Brand Website Template \| OHMT | A premium beauty and cosmetics brand website template with product showcase and e-commerce ready layouts. |
 | dashboard | Admin Dashboard Website Template \| OHMT | A clean admin dashboard template with data charts, tables, and analytics widgets. |
-| docs | Documentation Website Template \| OHMT | A Notion-style documentation website template for teams, products, and developer tools. |
 | exhibition | Exhibition & Art Gallery Website Template \| OHMT | A premium website template for exhibitions, art galleries, and cultural events. |
+| ev | Electric Vehicle Website Template \| OHMT | A modern electric vehicle website template with product highlights, specifications, and ordering flows. |
 | fashion | Fashion Brand Website Template \| OHMT | An editorial fashion brand website template with lookbook layouts and seasonal collection showcases. |
+| fitness | Fitness & Training Website Template \| OHMT | A bold fitness website template with training programs, memberships, and consultation content. |
 | furniture | Furniture & Interior Design Website Template \| OHMT | A premium furniture and interior design website template with product showcases and shop-ready layouts. |
 | game | Game Studio Website Template \| OHMT | A dynamic game studio website template for indie studios and esports brands. |
 | hotel | Luxury Hotel & Resort Website Template \| OHMT | A premium hotel and resort website template with room listings and booking call-to-action sections. |
@@ -92,17 +93,15 @@
 | kids-education | Kids Education & Learning Website Template \| OHMT | A bright website template for kids education centers, tutoring services, and learning platforms. |
 | magazine | Magazine & Editorial Website Template \| OHMT | A sophisticated magazine website template for culture, lifestyle, and digital media brands. |
 | multi-shop | Multi-Brand Shop Website Template \| OHMT | A versatile multi-brand e-commerce website template with category browsing and product listings. |
-| museum | Museum & Cultural Institution Website Template \| OHMT | A premium museum and cultural institution website template with exhibition highlights. |
-| newspaper | Newspaper & News Website Template \| OHMT | A responsive newspaper and online news website template with article layouts and editorial typography. |
 | portfolio | Creative Portfolio Website Template \| OHMT | A minimal and elegant personal portfolio website template for designers and creative professionals. |
+| resort | Luxury Resort Website Template \| OHMT | A premium resort website template with stays, dining, and destination experiences. |
 | sneaker | Sneaker & Streetwear Brand Website Template \| OHMT | A bold sneaker and streetwear brand website template with product launches and urban lifestyle layouts. |
-| spa | Spa & Wellness Website Template \| OHMT | A calming spa and wellness website template with service menus and booking sections. |
 | studio | Architecture & Design Studio Website Template \| OHMT | A sophisticated architecture and design studio website template with portfolio projects and team bios. |
 | technology | Tech Startup & AI Company Website Template \| OHMT | A dynamic technology and AI startup website template with product showcases and modern aesthetics. |
 | wedding | Wedding Photography Website Template \| OHMT | An elegant wedding photography website template with gallery layouts and pricing packages. |
 | yoga | Yoga & Wellness Studio Website Template \| OHMT | A serene yoga and wellness studio website template with class schedules and instructor profiles. |
 
-### 국문 템플릿 (27개)
+### 국문 템플릿 (현재 published 26개)
 
 | slug | title |
 |------|-------|
@@ -113,9 +112,10 @@
 | coffee | 카페·로스터리 웹사이트 템플릿 \| OHMT |
 | cosmetic | 뷰티·코스메틱 브랜드 웹사이트 템플릿 \| OHMT |
 | dashboard | 관리자 대시보드 웹사이트 템플릿 \| OHMT |
-| docs | 문서화 사이트 웹사이트 템플릿 \| OHMT |
 | exhibition | 전시·갤러리 웹사이트 템플릿 \| OHMT |
+| ev | 전기차 브랜드 웹사이트 템플릿 \| OHMT |
 | fashion | 패션 브랜드 웹사이트 템플릿 \| OHMT |
+| fitness | 피트니스·트레이닝 웹사이트 템플릿 \| OHMT |
 | furniture | 가구·인테리어 웹사이트 템플릿 \| OHMT |
 | game | 게임 스튜디오 웹사이트 템플릿 \| OHMT |
 | hotel | 호텔·리조트 웹사이트 템플릿 \| OHMT |
@@ -124,11 +124,9 @@
 | kids-education | 어린이 교육 웹사이트 템플릿 \| OHMT |
 | magazine | 매거진·에디토리얼 웹사이트 템플릿 \| OHMT |
 | multi-shop | 멀티 브랜드 쇼핑몰 웹사이트 템플릿 \| OHMT |
-| museum | 박물관·문화기관 웹사이트 템플릿 \| OHMT |
-| newspaper | 뉴스·신문 웹사이트 템플릿 \| OHMT |
 | portfolio | 크리에이티브 포트폴리오 웹사이트 템플릿 \| OHMT |
+| resort | 럭셔리 리조트 웹사이트 템플릿 \| OHMT |
 | sneaker | 스니커·스트리트웨어 브랜드 웹사이트 템플릿 \| OHMT |
-| spa | 스파·웰니스 웹사이트 템플릿 \| OHMT |
 | studio | 건축·공간디자인 스튜디오 웹사이트 템플릿 \| OHMT |
 | technology | IT·AI 스타트업 웹사이트 템플릿 \| OHMT |
 | wedding | 웨딩 사진·이벤트 웹사이트 템플릿 \| OHMT |
@@ -188,10 +186,35 @@ twitter:card   → "summary_large_image"
 
 ## 남은 SEO 개선 과제
 
+### 색인 현황 점검 (2026-08-09)
+
+- Search Console 보고 규모: 색인 생성 65개, 미색인 99개, 합계 164개
+- 점검 당시 배포 sitemap: 57개 URL
+  - 기본 페이지 5개
+  - 잘못된 bare slug 템플릿 URL 52개 (`/en/templates/fashion` 형식, 모두 404)
+- Supabase `templates` 현황: published 52행(영문 26 + 국문 26), draft 20행, uploaded 2행
+- 파일시스템 현황: 영문 36개 + 국문 36개 템플릿 폴더
+- 수정 후 sitemap 예상: 72개 URL
+  - 랜딩/contact/privacy-policy 6개
+  - published 템플릿 상세 52개 (`/en/templates/OHMT001-fashion` 형식)
+  - 자기 canonical을 가진 published 템플릿 하위 페이지 14개
+- 루트 `https://ohmt.site`는 `/en` 또는 `/ko`로 리다이렉트되므로 sitemap에서 제외
+- draft/uploaded 템플릿은 sitemap에서 제외하고 해당 템플릿 layout에 `noindex, nofollow` 적용
+- `feat/inquiry-board`의 board 라우트는 main 및 현재 배포에 아직 없으므로 이번 sitemap 대상에서 제외
+- 잘못된 `https://ohmytemplate.com` canonical/Open Graph/JSON-LD URL을 `https://ohmt.site`로 전수 교정
+
+배포 후 Search Console에서 기존 sitemap을 다시 제출하고, 대표 URL의 실제 canonical과 색인 가능 여부를 URL 검사로 확인해야 한다. GSC의 99개 미색인 사유별 상세 내역은 저장소만으로 확인할 수 없으므로 배포 후 별도 검증이 필요하다.
+
+- [x] sitemap을 실제 route slug 및 Supabase published 상태에 맞게 교정
+- [x] robots.txt의 sitemap 선언 확인 및 `/admin`, `/api` 차단
+- [x] 구 도메인 canonical/Open Graph/JSON-LD URL 제거
+- [x] draft/uploaded 템플릿 sitemap 제외 및 noindex 적용
+- [ ] 수정 브랜치 배포 후 `https://ohmt.site/sitemap.xml` 재검증
+
 - [ ] 랜딩 페이지(`/en`, `/ko`) H1 태그 검토 — 현재 마케팅 문구가 H1으로 명확히 지정되어 있는지 확인
 - [ ] 템플릿 상세 페이지 H1 태그 — 각 템플릿 내부 Hero 섹션 제목이 H1인지 확인
 - [ ] Contact 페이지 JSON-LD `ContactPage` 타입 추가
 - [ ] 랜딩 페이지 FAQ 섹션 있으면 `FAQPage` 구조화 데이터 추가
 - [ ] 이미지 alt 텍스트 전수 점검 (특히 랜딩 페이지 썸네일)
-- [ ] Google Search Console 색인 요청 (Submit to Google)
+- [ ] Google Search Console sitemap 재제출 및 대표 URL 색인 요청 (수정 배포 후 진행)
 - [ ] Core Web Vitals 측정 및 LCP/CLS 최적화

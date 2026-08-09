@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Robotflow | 자율 로보틱스 시스템',
     description: '자율 로봇 제품과 핵심 기술, 도입 상담 정보를 제공하는 로보틱스 기업 웹사이트입니다.',
-    url: 'https://ohmytemplate.com/ko/templates/OHMT016-technology',
+    url: 'https://ohmt.site/ko/templates/OHMT016-technology',
     siteName: 'Robotflow',
     images: [{ url: '/templates/OHMT016-technology/og-image.jpg', width: 1200, height: 630 }],
     locale: 'ko_KR',
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: 'https://ohmytemplate.com/ko/templates/OHMT016-technology',
-    languages: { 'en': 'https://ohmytemplate.com/en/templates/OHMT016-technology' },
+    canonical: 'https://ohmt.site/ko/templates/OHMT016-technology',
+    languages: { 'en': 'https://ohmt.site/en/templates/OHMT016-technology' },
   },
 }
 

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - Yoga Wellness Studio Template",
     description: "Find your inner peace with premium yoga and wellness classes",
-    url: "https://ohmytemplate.com/en/templates/OHMT022-yoga",
+    url: "https://ohmt.site/en/templates/OHMT022-yoga",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT022-yoga/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT022-yoga",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT022-yoga" },
+    canonical: "https://ohmt.site/en/templates/OHMT022-yoga",
+    languages: { "ko": "https://ohmt.site/ko/templates/OHMT022-yoga" },
   },
 };
 
@@ -36,7 +36,7 @@ export default function YogaLayout({
     "@type": "ExerciseGym",
     name: "OHMT Yoga & Wellness",
     description: "Find your inner peace with premium yoga and wellness classes",
-    url: "https://ohmytemplate.com/en/templates/OHMT022-yoga",
+    url: "https://ohmt.site/en/templates/OHMT022-yoga",
   };
   return (
     <>

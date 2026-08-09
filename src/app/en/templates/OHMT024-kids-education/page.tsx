@@ -15,7 +15,7 @@ const jsonLd = {
   "@type": "Organization",
   "name": "OHMT - Creative Academy",
   "description": "Playful and colorful children education platform with creative classes",
-  "url": "https://ohmytemplate.com/en/templates/OHMT024-kids-education",
+  "url": "https://ohmt.site/en/templates/OHMT024-kids-education",
 };
 
 export const metadata: Metadata = {

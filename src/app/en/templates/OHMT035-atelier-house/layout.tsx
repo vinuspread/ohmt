@@ -29,8 +29,8 @@ export const metadata: Metadata = {
     },
   },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
   },
 }
 
@@ -40,7 +40,7 @@ const jsonLd = {
   name: "OHMT - Atelier House",
   description:
     'Atelier House is a warm-minimal furniture and home goods studio. Solid-wood seating, tables, lighting, and textiles built for rooms that get used every day.',
-  url: "https://ohmytemplate.com/en/templates/OHMT035-atelier-house",
+  url: "https://ohmt.site/en/templates/OHMT035-atelier-house",
 }
 
 export default function AtelierHouseLayout({ children }: { children: React.ReactNode }) {

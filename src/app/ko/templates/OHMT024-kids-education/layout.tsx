@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - 키즈 아카데미 교육 템플릿",
     description: "놀이로 시작하는 배움. 코딩부터 미술, 과학 실험까지 50가지 이상의 어린이 창의 클래스를 경험해보세요.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT024-kids-education",
+    url: "https://ohmt.site/ko/templates/OHMT024-kids-education",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT024-kids-education/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -22,8 +22,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT024-kids-education",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT024-kids-education" },
+    canonical: "https://ohmt.site/ko/templates/OHMT024-kids-education",
+    languages: { "en": "https://ohmt.site/en/templates/OHMT024-kids-education" },
   },
 };
 

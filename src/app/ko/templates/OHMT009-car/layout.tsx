@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - 자동차 콘셉트 쇼케이스 템플릿",
     description: "프리미엄 자동차 컨셉 쇼케이스",
-    url: "https://ohmytemplate.com/ko/templates/OHMT009-car",
+    url: "https://ohmt.site/ko/templates/OHMT009-car",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT009-car/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT009-car",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT009-car" },
+    canonical: "https://ohmt.site/ko/templates/OHMT009-car",
+    languages: { "en": "https://ohmt.site/en/templates/OHMT009-car" },
   },
 };
 
