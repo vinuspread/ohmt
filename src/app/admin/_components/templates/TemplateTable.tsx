@@ -399,6 +399,18 @@ function TemplateRow({
 }) {
   const dragControls = useDragControls();
   const templateUrl = `/${template.lang}/templates/${template.slug}`;
+  const rowClassName = clsx("grid items-center gap-3 bg-white px-4 py-3 text-sm text-zinc-700 transition-colors hover:bg-zinc-50", templateGridClass);
+
+  // 정렬 중에는 Reorder.Group이 렌더링되지 않으므로, Reorder.Item이 요구하는
+  // ReorderContext가 없다. 이 상태에서 Reorder.Item을 그대로 쓰면 context가 null이라
+  // "Cannot destructure property 'axis' of null" 런타임 에러가 발생한다.
+  if (sortActive) {
+    return (
+      <div className={rowClassName}>
+        <TemplateRowContent template={template} templateUrl={templateUrl} onPreview={onPreview} onDelete={onDelete} sortActive={sortActive} dragControls={dragControls} />
+      </div>
+    );
+  }
 
   return (
     <Reorder.Item
@@ -408,8 +420,30 @@ function TemplateRow({
       onDragEnd={onDragEnd}
       whileDrag={{ scale: 1.01, boxShadow: "0 12px 30px rgba(15, 23, 42, 0.14)", zIndex: 20 }}
       transition={{ duration: 0.18, ease: [0.22, 1, 0.36, 1] }}
-      className={clsx("grid items-center gap-3 bg-white px-4 py-3 text-sm text-zinc-700 transition-colors hover:bg-zinc-50", templateGridClass)}
+      className={rowClassName}
     >
+      <TemplateRowContent template={template} templateUrl={templateUrl} onPreview={onPreview} onDelete={onDelete} sortActive={sortActive} dragControls={dragControls} />
+    </Reorder.Item>
+  );
+}
+
+function TemplateRowContent({
+  template,
+  templateUrl,
+  onPreview,
+  onDelete,
+  sortActive,
+  dragControls,
+}: {
+  template: Template;
+  templateUrl: string;
+  onPreview: (url: string) => void;
+  onDelete: (template: Template) => void;
+  sortActive: boolean;
+  dragControls: ReturnType<typeof useDragControls>;
+}) {
+  return (
+    <>
       <button
         type="button"
         aria-label="순서 변경"
@@ -448,7 +482,7 @@ function TemplateRow({
           삭제
         </Button>
       </div>
-    </Reorder.Item>
+    </>
   );
 }
 
