@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT | 현대미술 갤러리",
     description: "동시대 작가의 전시와 토크, 워크숍을 소개하는 현대미술 갤러리입니다.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT003-exhibition",
+    url: "https://ohmt.site/ko/templates/OHMT003-exhibition",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT003-exhibition/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT003-exhibition",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT003-exhibition" },
+    canonical: "https://ohmt.site/ko/templates/OHMT003-exhibition",
+    languages: { "en": "https://ohmt.site/en/templates/OHMT003-exhibition" },
   },
 };
 

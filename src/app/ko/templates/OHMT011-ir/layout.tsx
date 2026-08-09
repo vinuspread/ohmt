@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - 투자자 관계 웹사이트 템플릿",
     description: "기업 전략 및 재무 성과",
-    url: "https://ohmytemplate.com/ko/templates/OHMT011-ir",
+    url: "https://ohmt.site/ko/templates/OHMT011-ir",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT011-ir/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT011-ir",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT011-ir" },
+    canonical: "https://ohmt.site/ko/templates/OHMT011-ir",
+    languages: { "en": "https://ohmt.site/en/templates/OHMT011-ir" },
   },
 };
 

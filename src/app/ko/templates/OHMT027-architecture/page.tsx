@@ -16,8 +16,8 @@ export default function ArchitectureHome() {
     "@context": "https://schema.org",
     "@type": "ArchitecturalFirm",
     "name": "OHMT 건축 스튜디오",
-    "url": "https://ohmytemplate.com/ko/templates/OHMT027-architecture",
-    "image": "https://ohmytemplate.com/templates/OHMT027-architecture/og-image.jpg",
+    "url": "https://ohmt.site/ko/templates/OHMT027-architecture",
+    "image": "https://ohmt.site/templates/OHMT027-architecture/og-image.jpg",
     "description": "주거, 상업, 공공, 인테리어 프로젝트를 설계하는 서울 기반 건축 스튜디오입니다.",
     "address": {
       "@type": "PostalAddress",

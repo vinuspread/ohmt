@@ -113,7 +113,7 @@ const jsonLd = {
   "@type": "Store",
   name: "OHMT Cosmetic",
   description: "Premium beauty and cosmetic brand showcase featuring advanced skincare rooted in nature and refined by science.",
-  url: "https://ohmytemplate.com/en/templates/OHMT010-cosmetic",
+  url: "https://ohmt.site/en/templates/OHMT010-cosmetic",
   logo: "/templates/OHMT010-cosmetic/og-image.jpg",
 };
 

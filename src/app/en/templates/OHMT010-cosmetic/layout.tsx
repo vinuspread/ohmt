@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - Wellness Cosmetic Brand Template",
     description: "Premium beauty & cosmetic brand showcase",
-    url: "https://ohmytemplate.com/en/templates/OHMT010-cosmetic",
+    url: "https://ohmt.site/en/templates/OHMT010-cosmetic",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT010-cosmetic/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT010-cosmetic",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT010-cosmetic" },
+    canonical: "https://ohmt.site/en/templates/OHMT010-cosmetic",
+    languages: { "ko": "https://ohmt.site/ko/templates/OHMT010-cosmetic" },
   },
 };
 

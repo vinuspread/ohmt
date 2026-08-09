@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - 문서 협업 워크스페이스 템플릿",
     description: "팀을 위한 깔끔한 노션 스타일 문서 워크스페이스입니다.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT014-docs",
+    url: "https://ohmt.site/ko/templates/OHMT014-docs",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT014-docs/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -20,6 +20,8 @@ export const metadata: Metadata = {
     description: "팀을 위한 깔끔한 노션 스타일 문서 워크스페이스입니다.",
     images: ["/templates/OHMT014-docs/og-image.jpg"],
   },
+  robots: { index: false, follow: false },
+  alternates: { canonical: "https://ohmt.site/ko/templates/OHMT014-docs" },
 };
 
 export default function DocsLayout({ children }: { children: React.ReactNode }) {

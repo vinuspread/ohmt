@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - 웰니스 코스메틱 브랜드 템플릿",
     description: "프리미엄 뷰티 & 코스메틱 브랜드 쇼케이스",
-    url: "https://ohmytemplate.com/ko/templates/OHMT010-cosmetic",
+    url: "https://ohmt.site/ko/templates/OHMT010-cosmetic",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT010-cosmetic/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT010-cosmetic",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT010-cosmetic" },
+    canonical: "https://ohmt.site/ko/templates/OHMT010-cosmetic",
+    languages: { "en": "https://ohmt.site/en/templates/OHMT010-cosmetic" },
   },
 };
 

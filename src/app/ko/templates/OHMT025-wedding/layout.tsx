@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT | 웨딩 포토그래피",
     description: "자연스러운 순간과 섬세한 구도로 결혼식의 하루를 오래 남을 사진으로 기록합니다.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT025-wedding",
+    url: "https://ohmt.site/ko/templates/OHMT025-wedding",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT025-wedding/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -19,6 +19,10 @@ export const metadata: Metadata = {
     title: "OHMT | 웨딩 포토그래피",
     description: "자연스러운 순간과 섬세한 구도로 결혼식의 하루를 오래 남을 사진으로 기록합니다.",
     images: ["/templates/OHMT025-wedding/og-image.jpg"],
+  },
+  alternates: {
+    canonical: "https://ohmt.site/ko/templates/OHMT025-wedding",
+    languages: { en: "https://ohmt.site/en/templates/OHMT025-wedding" },
   },
 };
 

@@ -5,11 +5,11 @@ export const metadata: Metadata = {
   title: "OHMT | 스파 & 웰니스",
   description: "피부와 몸의 컨디션에 맞춘 페이셜·바디 케어를 제공하는 차분한 스파 & 웰니스 공간입니다.",
   keywords: ["스파 템플릿", "웰니스 웹사이트", "스파 예약", "Next.js 템플릿", "OHMT"],
-  authors: [{ name: "OHMT", url: "https://ohmytemplate.com" }],
+  authors: [{ name: "OHMT", url: "https://ohmt.site" }],
   openGraph: {
     title: "OHMT | 스파 & 웰니스",
     description: "피부와 몸의 컨디션에 맞춘 페이셜·바디 케어를 제공하는 차분한 스파 & 웰니스 공간입니다.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT026-spa",
+    url: "https://ohmt.site/ko/templates/OHMT026-spa",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT026-spa/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -21,12 +21,12 @@ export const metadata: Metadata = {
     description: "피부와 몸의 컨디션에 맞춘 페이셜·바디 케어를 제공하는 차분한 스파 & 웰니스 공간입니다.",
     images: ["/templates/OHMT026-spa/og-image.jpg"],
   },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: false },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT026-spa",
+    canonical: "https://ohmt.site/ko/templates/OHMT026-spa",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/OHMT026-spa",
-      "ko": "https://ohmytemplate.com/ko/templates/OHMT026-spa",
+      "en": "https://ohmt.site/en/templates/OHMT026-spa",
+      "ko": "https://ohmt.site/ko/templates/OHMT026-spa",
     },
   },
 };

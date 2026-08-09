@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: '아틀리에 하우스 | 원목 가구와 조명',
     description: '원목 식탁과 의자, 조명, 패브릭 제품을 소개하는 아틀리에 하우스 온라인 스토어입니다.',
-    url: 'https://ohmytemplate.com/ko/templates/OHMT035-atelier-house',
+    url: 'https://ohmt.site/ko/templates/OHMT035-atelier-house',
     siteName: 'OHMT',
     images: [{ url: '/templates/OHMT035-atelier-house/og-image.jpg', width: 1200, height: 630 }],
     locale: 'ko_KR',
@@ -28,6 +28,7 @@ export const metadata: Metadata = {
       ko: '/ko/templates/OHMT035-atelier-house',
     },
   },
+  robots: { index: false, follow: false },
 }
 
 const jsonLd = {
@@ -35,7 +36,7 @@ const jsonLd = {
   "@type": "WebSite",
   name: "아틀리에 하우스 | 원목 가구와 조명",
   description: '원목 식탁과 의자, 조명, 패브릭 제품을 소개하는 온라인 스토어',
-  url: "https://ohmytemplate.com/ko/templates/OHMT035-atelier-house",
+  url: "https://ohmt.site/ko/templates/OHMT035-atelier-house",
 }
 
 export default function AtelierHouseKoLayout({ children }: { children: React.ReactNode }) {

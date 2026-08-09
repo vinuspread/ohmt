@@ -14,14 +14,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "소개 | OHMT 건축 스튜디오",
     description: "OHMT의 설계 철학과 스튜디오의 시작, 프로젝트를 함께 만드는 사람들을 소개합니다.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT027-architecture/about",
+    url: "https://ohmt.site/ko/templates/OHMT027-architecture/about",
     images: [{ url: "/templates/OHMT027-architecture/og-image.jpg" }],
   },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT027-architecture/about",
+    canonical: "https://ohmt.site/ko/templates/OHMT027-architecture/about",
     languages: {
-      "en": "https://ohmytemplate.com/en/templates/OHMT027-architecture/about",
-      "ko": "https://ohmytemplate.com/ko/templates/OHMT027-architecture/about",
+      "en": "https://ohmt.site/en/templates/OHMT027-architecture/about",
+      "ko": "https://ohmt.site/ko/templates/OHMT027-architecture/about",
     },
   },
 };

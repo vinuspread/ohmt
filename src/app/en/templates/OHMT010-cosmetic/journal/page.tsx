@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Journal - OHMT Cosmetic",
     description: "Thoughts on conscious beauty.",
-    url: "https://ohmytemplate.com/en/templates/OHMT010-cosmetic/journal",
+    url: "https://ohmt.site/en/templates/OHMT010-cosmetic/journal",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT010-cosmetic/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",

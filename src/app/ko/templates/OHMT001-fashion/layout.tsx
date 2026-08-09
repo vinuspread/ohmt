@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - 에디토리얼 패션 룩북 템플릿",
     description: "좋은 소재와 편안한 실루엣을 바탕으로 오래 입을 수 있는 옷을 선보이는 패션 브랜드입니다.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT001-fashion",
+    url: "https://ohmt.site/ko/templates/OHMT001-fashion",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT001-fashion/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT001-fashion",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT001-fashion" },
+    canonical: "https://ohmt.site/ko/templates/OHMT001-fashion",
+    languages: { "en": "https://ohmt.site/en/templates/OHMT001-fashion" },
   },
 };
 

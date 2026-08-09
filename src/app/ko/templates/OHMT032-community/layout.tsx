@@ -22,9 +22,10 @@ export const metadata: Metadata = {
     images: ['/templates/OHMT032-community/og-image.jpg'],
   },
   robots: {
-    index: true,
-    follow: true,
+    index: false,
+    follow: false,
   },
+  alternates: { canonical: '/ko/templates/OHMT032-community' },
 }
 
 export default function CommunityLayout({ children }: { children: React.ReactNode }) {

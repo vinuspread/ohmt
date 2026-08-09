@@ -104,8 +104,8 @@ export default function LumaCameraPage() {
     "@type": "OnlineStore",
     name: "LUMA Camera",
     description: "Premium compact camera system with quiet hardware, honest color, creator notes, and reservation options.",
-    url: "https://ohmytemplate.com/en/templates/OHMT031-luma-camera",
-    image: "https://ohmytemplate.com/templates/OHMT031-luma-camera/og-image.jpg?v=20260702e",
+    url: "https://ohmt.site/en/templates/OHMT031-luma-camera",
+    image: "https://ohmt.site/templates/OHMT031-luma-camera/og-image.jpg?v=20260702e",
     brand: {
       "@type": "Brand",
       name: "OHMT",
@@ -119,7 +119,7 @@ export default function LumaCameraPage() {
         "@type": "Product",
         name: product.name,
         description: `${product.note}. ${product.spec}.`,
-        image: "https://ohmytemplate.com/templates/OHMT031-luma-camera/hero-camera.jpg?v=20260702e",
+        image: "https://ohmt.site/templates/OHMT031-luma-camera/hero-camera.jpg?v=20260702e",
       },
     })),
   };

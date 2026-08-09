@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - Brutalist Sneaker Drop Template",
     description: "Urban streetwear and sneaker releases",
-    url: "https://ohmytemplate.com/en/templates/OHMT005-sneaker",
+    url: "https://ohmt.site/en/templates/OHMT005-sneaker",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT005-sneaker/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT005-sneaker",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT005-sneaker" },
+    canonical: "https://ohmt.site/en/templates/OHMT005-sneaker",
+    languages: { "ko": "https://ohmt.site/ko/templates/OHMT005-sneaker" },
   },
 };
 

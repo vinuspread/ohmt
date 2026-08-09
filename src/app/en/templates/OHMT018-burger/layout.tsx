@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - Fast Casual Restaurant Ordering Template",
     description: "Premium burger restaurant experience",
-    url: "https://ohmytemplate.com/en/templates/OHMT018-burger",
+    url: "https://ohmt.site/en/templates/OHMT018-burger",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT018-burger/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT018-burger",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT018-burger" },
+    canonical: "https://ohmt.site/en/templates/OHMT018-burger",
+    languages: { "ko": "https://ohmt.site/ko/templates/OHMT018-burger" },
   },
 };
 
@@ -36,7 +36,7 @@ export default function BurgerLayout({
     "@type": "Restaurant",
     name: "OHMT Burger",
     description: "Premium burger restaurant experience",
-    url: "https://ohmytemplate.com/en/templates/OHMT018-burger",
+    url: "https://ohmt.site/en/templates/OHMT018-burger",
     servesCuisine: "American",
   };
   return (

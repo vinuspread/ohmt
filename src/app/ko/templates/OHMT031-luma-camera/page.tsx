@@ -107,8 +107,8 @@ export default function LumaCameraPage() {
     "@type": "OnlineStore",
     name: "LUMA Camera",
     description: "작은 바디와 자연스러운 색 표현, 촬영 노트 기능을 갖춘 컴팩트 카메라입니다.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT031-luma-camera",
-    image: "https://ohmytemplate.com/templates/OHMT031-luma-camera/og-image.jpg?v=20260702e",
+    url: "https://ohmt.site/ko/templates/OHMT031-luma-camera",
+    image: "https://ohmt.site/templates/OHMT031-luma-camera/og-image.jpg?v=20260702e",
     brand: {
       "@type": "Brand",
       name: "OHMT",
@@ -122,7 +122,7 @@ export default function LumaCameraPage() {
         "@type": "Product",
         name: product.name,
         description: `${product.note}. ${product.spec}.`,
-        image: "https://ohmytemplate.com/templates/OHMT031-luma-camera/hero-camera.jpg?v=20260702e",
+        image: "https://ohmt.site/templates/OHMT031-luma-camera/hero-camera.jpg?v=20260702e",
       },
     })),
   };

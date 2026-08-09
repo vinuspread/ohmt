@@ -24,7 +24,7 @@ export default function SpaPage() {
     "@type": "HealthClub",
     "name": "OHMT 스파 & 웰니스",
     "description": "피부 상태와 컨디션에 맞춘 페이셜·바디 케어를 제공하는 스파 & 웰니스 공간입니다.",
-    "url": "https://ohmytemplate.com/ko/templates/OHMT026-spa",
+    "url": "https://ohmt.site/ko/templates/OHMT026-spa",
     "logo": "/templates/OHMT026-spa/logo.png",
   };
 

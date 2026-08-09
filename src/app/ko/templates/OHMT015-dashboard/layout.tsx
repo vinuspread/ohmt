@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'OHMT - 분석 커맨드 센터 인터페이스 템플릿',
     description: 'OHMT 비즈니스 분석 대시보드 템플릿',
-    url: 'https://ohmytemplate.com/ko/templates/OHMT015-dashboard',
+    url: 'https://ohmt.site/ko/templates/OHMT015-dashboard',
     siteName: 'OHMT',
     images: [{ url: '/templates/OHMT015-dashboard/og-image.jpg', width: 1200, height: 630 }],
     locale: 'ko_KR',
@@ -38,6 +38,10 @@ export const metadata: Metadata = {
     title: 'OHMT - 분석 커맨드 센터 인터페이스 템플릿',
     description: 'OHMT 비즈니스 분석 대시보드 템플릿',
     images: ['/templates/OHMT015-dashboard/og-image.jpg'],
+  },
+  alternates: {
+    canonical: 'https://ohmt.site/ko/templates/OHMT015-dashboard',
+    languages: { en: 'https://ohmt.site/en/templates/OHMT015-dashboard' },
   },
 }
 

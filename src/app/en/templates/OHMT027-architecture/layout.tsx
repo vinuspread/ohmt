@@ -6,11 +6,11 @@ export const metadata: Metadata = {
   title: "OHMT - Architecture Portfolio Template",
   description: "A sophisticated architecture portfolio template with editorial typography and immersive visual storytelling.",
   keywords: ["architecture", "minimalism", "portfolio", "interior design", "OHMT"],
-  authors: [{ name: "OHMT", url: "https://ohmytemplate.com" }],
+  authors: [{ name: "OHMT", url: "https://ohmt.site" }],
   openGraph: {
     title: "OHMT - Architecture Portfolio Template",
     description: "A sophisticated architecture portfolio template with editorial typography and immersive visual storytelling.",
-    url: "https://ohmytemplate.com/en/templates/OHMT027-architecture",
+    url: "https://ohmt.site/en/templates/OHMT027-architecture",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT027-architecture/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT027-architecture",
+    canonical: "https://ohmt.site/en/templates/OHMT027-architecture",
     languages: {
-      "ko": "https://ohmytemplate.com/ko/templates/OHMT027-architecture",
+      "ko": "https://ohmt.site/ko/templates/OHMT027-architecture",
     },
   },
 };
@@ -41,7 +41,7 @@ export default function ArchitectureLayout({
     "@type": "ProfessionalService",
     name: "OHMT Architecture Portfolio",
     description: "A sophisticated architecture portfolio template with editorial typography and immersive visual storytelling.",
-    url: "https://ohmytemplate.com/en/templates/OHMT027-architecture",
+    url: "https://ohmt.site/en/templates/OHMT027-architecture",
   };
   return (
     <>

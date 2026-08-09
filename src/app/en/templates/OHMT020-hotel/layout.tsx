@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - Boutique Hotel Booking Template",
     description: "Premium luxury hotel & resort experience",
-    url: "https://ohmytemplate.com/en/templates/OHMT020-hotel",
+    url: "https://ohmt.site/en/templates/OHMT020-hotel",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT020-hotel/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/en/templates/OHMT020-hotel",
-    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT020-hotel" },
+    canonical: "https://ohmt.site/en/templates/OHMT020-hotel",
+    languages: { "ko": "https://ohmt.site/ko/templates/OHMT020-hotel" },
   },
 };
 
@@ -36,7 +36,7 @@ export default function HotelLayout({
     "@type": "Hotel",
     name: "Luxe Haven Hotel",
     description: "Premium luxury hotel & resort experience",
-    url: "https://ohmytemplate.com/en/templates/OHMT020-hotel",
+    url: "https://ohmt.site/en/templates/OHMT020-hotel",
   };
   return (
     <>

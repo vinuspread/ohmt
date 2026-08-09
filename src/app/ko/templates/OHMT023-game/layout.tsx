@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT | 게임 개발 스튜디오",
     description: "독창적인 세계관과 몰입도 높은 게임을 만드는 개발 스튜디오입니다.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT023-game",
+    url: "https://ohmt.site/ko/templates/OHMT023-game",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT023-game/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT023-game",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT023-game" },
+    canonical: "https://ohmt.site/ko/templates/OHMT023-game",
+    languages: { "en": "https://ohmt.site/en/templates/OHMT023-game" },
   },
 };
 

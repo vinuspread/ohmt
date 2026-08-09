@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'OHMT - Robotics Technology Landing Template',
     description: 'Empower machine learning and robotics startups with a professional, dynamic platform.',
-    url: 'https://ohmytemplate.com/en/templates/OHMT016-technology',
+    url: 'https://ohmt.site/en/templates/OHMT016-technology',
     siteName: 'OHMT',
     images: [{ url: '/templates/OHMT016-technology/og-image.jpg', width: 1200, height: 630 }],
     locale: 'en_US',
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: 'https://ohmytemplate.com/en/templates/OHMT016-technology',
-    languages: { 'ko': 'https://ohmytemplate.com/ko/templates/OHMT016-technology' },
+    canonical: 'https://ohmt.site/en/templates/OHMT016-technology',
+    languages: { 'ko': 'https://ohmt.site/ko/templates/OHMT016-technology' },
   },
 }
 
@@ -53,7 +53,7 @@ export default function TechnologyLayout({
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "OHMT Technology",
-            url: "https://ohmytemplate.com/en/templates/OHMT016-technology",
+            url: "https://ohmt.site/en/templates/OHMT016-technology",
             description: "Empower machine learning and robotics startups.",
           }),
         }}

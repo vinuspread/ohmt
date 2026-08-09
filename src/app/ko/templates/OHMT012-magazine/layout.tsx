@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT 매거진 | 디자인과 라이프스타일",
     description: "디자인과 문화, 지속가능성을 다루는 라이프스타일 매거진입니다.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT012-magazine",
+    url: "https://ohmt.site/ko/templates/OHMT012-magazine",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT012-magazine/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT012-magazine",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT012-magazine" },
+    canonical: "https://ohmt.site/ko/templates/OHMT012-magazine",
+    languages: { "en": "https://ohmt.site/en/templates/OHMT012-magazine" },
   },
 };
 

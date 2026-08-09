@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT | 바티칸 미술관 소장품과 전시",
     description: "바티칸 미술관의 대표 소장품과 전시, 오디오 가이드와 뮤지엄 숍을 소개합니다.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT021-museum",
+    url: "https://ohmt.site/ko/templates/OHMT021-museum",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT021-museum/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -32,10 +32,10 @@ export const metadata: Metadata = {
     description: "바티칸 미술관의 대표 소장품과 전시, 오디오 가이드와 뮤지엄 숍을 소개합니다.",
     images: ["/templates/OHMT021-museum/og-image.jpg"],
   },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: false },
   alternates: {
-    canonical: "https://ohmytemplate.com/ko/templates/OHMT021-museum",
-    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT021-museum" },
+    canonical: "https://ohmt.site/ko/templates/OHMT021-museum",
+    languages: { "en": "https://ohmt.site/en/templates/OHMT021-museum" },
   },
 };
 
@@ -49,7 +49,7 @@ export default function ExhibitionLayout({
     "@type": "Museum",
     name: "OHMT 미술관",
     description: "바티칸 미술관의 대표 소장품과 전시, 오디오 가이드와 뮤지엄 숍을 소개합니다.",
-    url: "https://ohmytemplate.com/ko/templates/OHMT021-museum",
+    url: "https://ohmt.site/ko/templates/OHMT021-museum",
   };
   return (
     <>

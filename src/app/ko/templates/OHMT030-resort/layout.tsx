@@ -20,8 +20,14 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "OHMT | 산토리니 해안 리조트",
+    description: "에게해의 절벽과 바다 사이에 자리한 스위트, 다이닝, 웰니스 중심의 해안 리조트입니다.",
+    url: "https://ohmt.site/ko/templates/OHMT030-resort",
     siteName: "OHMT",
     images: ["/templates/OHMT030-resort/og-image.jpg"],
+  },
+  alternates: {
+    canonical: "https://ohmt.site/ko/templates/OHMT030-resort",
+    languages: { en: "https://ohmt.site/en/templates/OHMT030-resort" },
   },
 };
 

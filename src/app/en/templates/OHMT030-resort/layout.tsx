@@ -20,8 +20,14 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "OHMT - Seaside Hospitality Booking Template",
+    description: "A seaside sanctuary of minimalist luxury.",
+    url: "https://ohmt.site/en/templates/OHMT030-resort",
     siteName: "OHMT",
     images: ["/templates/OHMT030-resort/og-image.jpg"],
+  },
+  alternates: {
+    canonical: "https://ohmt.site/en/templates/OHMT030-resort",
+    languages: { ko: "https://ohmt.site/ko/templates/OHMT030-resort" },
   },
 };
 
@@ -30,7 +36,7 @@ const jsonLd = {
   "@type": "WebSite",
   name: "OHMT - Coastal Luxury Resort",
   description: "A seaside sanctuary of minimalist luxury.",
-  url: "https://ohmytemplate.com/en/templates/OHMT030-resort",
+  url: "https://ohmt.site/en/templates/OHMT030-resort",
 };
 
 export default function ResortLayout({ children }: { children: React.ReactNode }) {

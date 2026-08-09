@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Account - OHMT Cosmetic",
     description: "Sign in to your OHMT account for exclusive member benefits.",
-    url: "https://ohmytemplate.com/en/templates/OHMT010-cosmetic/account",
+    url: "https://ohmt.site/en/templates/OHMT010-cosmetic/account",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT010-cosmetic/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
