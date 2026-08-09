@@ -12,12 +12,12 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 const products = [
-  { id: 1, name: "라오콘 군상 중형 복제품", price: "$850", img: "/templates/OHMT021-museum/laocoon-sculpture.png", category: "조각품" },
-  { id: 2, name: "〈아테네 학당〉 아트 프린트", price: "$320", img: "/templates/OHMT021-museum/school-of-athens.png", category: "아트 프린트" },
-  { id: 3, name: "〈아담의 창조〉 캔버스 프린트", price: "$480", img: "/templates/OHMT021-museum/creation-of-adam.png", category: "아트 프린트" },
-  { id: 4, name: "피에타 조각 복제품", price: "$1,200", img: "/templates/OHMT021-museum/pieta-sculpture.png", category: "조각품" },
-  { id: 5, name: "벨베데레의 아폴론 석고상", price: "$950", img: "/templates/OHMT021-museum/apollo-belvedere.png", category: "조각품" },
-  { id: 6, name: "〈그리스도의 변형〉 한정판 포스터", price: "$75", img: "/templates/OHMT021-museum/transfiguration.png", category: "아트 프린트" },
+  { id: 1, name: "라오콘 군상 중형 복제품", price: "1,100,000원", img: "/templates/OHMT021-museum/laocoon-sculpture.png", category: "조각품" },
+  { id: 2, name: "〈아테네 학당〉 아트 프린트", price: "420,000원", img: "/templates/OHMT021-museum/school-of-athens.png", category: "아트 프린트" },
+  { id: 3, name: "〈아담의 창조〉 캔버스 프린트", price: "620,000원", img: "/templates/OHMT021-museum/creation-of-adam.png", category: "아트 프린트" },
+  { id: 4, name: "피에타 조각 복제품", price: "1,560,000원", img: "/templates/OHMT021-museum/pieta-sculpture.png", category: "조각품" },
+  { id: 5, name: "벨베데레의 아폴론 석고상", price: "1,230,000원", img: "/templates/OHMT021-museum/apollo-belvedere.png", category: "조각품" },
+  { id: 6, name: "〈그리스도의 변형〉 한정판 포스터", price: "98,000원", img: "/templates/OHMT021-museum/transfiguration.png", category: "아트 프린트" },
 ];
 
 function ShopPageContent() {

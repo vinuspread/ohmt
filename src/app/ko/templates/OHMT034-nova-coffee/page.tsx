@@ -26,8 +26,8 @@ const productJsonLd = {
   offers: {
     '@type': 'Offer',
     availability: 'https://schema.org/InStock',
-    priceCurrency: 'USD',
-    price: '3499.00',
+    priceCurrency: 'KRW',
+    price: '4550000',
   },
 }
 

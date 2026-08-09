@@ -15,7 +15,7 @@ const products = [
     id: 1,
     name: "라오콘 군상 축소 복제품",
     category: "조각 복제품",
-    price: "€240.00",
+    price: "350,000원",
     img: "/templates/OHMT021-museum/museum-replica-laocoon.png",
     desc: "A hand-finished resin replica of the Trojan priest, capturing every sinew in 1/8 scale."
   },
@@ -23,7 +23,7 @@ const products = [
     id: 2,
     name: "바티칸 아카이브: 500년의 기록",
     category: "전시 도록",
-    price: "€85.00",
+    price: "125,000원",
     img: "/templates/OHMT021-museum/museum-catalog-vatican.png",
     desc: "바티칸 미술관의 역사를 정리한 도록으로, 리넨 표지로 제작했습니다."
   },
@@ -31,7 +31,7 @@ const products = [
     id: 3,
     name: "성 베드로 대성당 야경 프린트",
     category: "아트 프린트",
-    price: "€120.00",
+    price: "175,000원",
     img: "/templates/OHMT021-museum/museum-print-st-peters.png",
     desc: "300gsm 하네뮬레 용지에 제작한 한정판 지클레 프린트입니다."
   },
@@ -39,7 +39,7 @@ const products = [
     id: 4,
     name: "피에타 실버 펜던트",
     category: "주얼리",
-    price: "€55.00",
+    price: "80,000원",
     img: "/templates/OHMT021-museum/museum-jewelry-pieta.png",
     desc: "미켈란젤로의 피에타를 새긴 스털링 실버 펜던트입니다."
   },
@@ -47,7 +47,7 @@ const products = [
     id: 5,
     name: "벨베데레의 아폴론 흉상",
     category: "조각 복제품",
-    price: "€180.00",
+    price: "260,000원",
     img: "/templates/OHMT021-museum/museum-apollo-bust.png",
     desc: "A bronze-casted miniature bust of the Apollo Belvedere, reflecting classical perfection."
   },
@@ -55,7 +55,7 @@ const products = [
     id: 6,
     name: "르네상스 스케치북",
     category: "문구",
-    price: "€32.00",
+    price: "46,000원",
     img: "/templates/OHMT021-museum/museum-sketchbook.png",
     desc: "Hand-stitched leather sketchbook with archival-grade paper for artists."
   },
@@ -63,7 +63,7 @@ const products = [
     id: 7,
     name: "교황청 인장 밀랍 세트",
     category: "문구",
-    price: "€45.00",
+    price: "65,000원",
     img: "/templates/OHMT021-museum/museum-wax-seal.png",
     desc: "Authentic brass seal with three sticks of crimson Vatican wax."
   },
@@ -71,7 +71,7 @@ const products = [
     id: 8,
     name: "라파엘로의 천사 실크 스카프",
     category: "라이프스타일",
-    price: "€110.00",
+    price: "160,000원",
     img: "/templates/OHMT021-museum/museum-silk-scarf.png",
     desc: "100% silk scarf featuring detail from the Sistine Madonna."
   },
@@ -79,7 +79,7 @@ const products = [
     id: 9,
     name: "프리마 포르타의 아우구스투스 흉상",
     category: "조각 복제품",
-    price: "€320.00",
+    price: "465,000원",
     img: "/templates/OHMT021-museum/museum-replica-laocoon.png",
     desc: "Full-scale replica of the head of Augustus, the first Roman Emperor."
   },
@@ -87,7 +87,7 @@ const products = [
     id: 10,
     name: "아카이브 잉크 만년필",
     category: "문구",
-    price: "€145.00",
+    price: "210,000원",
     img: "/templates/OHMT021-museum/museum-fountain-pen.png",
     desc: "Handcrafted ebony fountain pen with a 14k gold nib."
   },
@@ -95,7 +95,7 @@ const products = [
     id: 11,
     name: "시스티나 성당 도면 프린트",
     category: "아트 프린트",
-    price: "€95.00",
+    price: "138,000원",
     img: "/templates/OHMT021-museum/museum-blueprint.png",
     desc: "Architectural blueprint print showing the structural genius of the chapel."
   },
@@ -103,7 +103,7 @@ const products = [
     id: 12,
     name: "로마네스크 브론즈 캔들",
     category: "라이프스타일",
-    price: "€65.00",
+    price: "95,000원",
     img: "/templates/OHMT021-museum/museum-bronze-candle.png",
     desc: "Hand-poured beeswax candle in a cast bronze vessel."
   },
@@ -111,7 +111,7 @@ const products = [
     id: 13,
     name: "바티칸 미술관 토트백",
     category: "라이프스타일",
-    price: "€25.00",
+    price: "36,000원",
     img: "/templates/OHMT021-museum/museum-catalog-vatican.png",
     desc: "Premium heavyweight cotton tote with minimalist typography."
   }
