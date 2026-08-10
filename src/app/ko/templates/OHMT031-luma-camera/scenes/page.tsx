@@ -8,7 +8,7 @@ const scenes = [
   {
     title: "아침 거리",
     text: "외출할 때 부담 없이 챙겨 아침 거리의 순간을 빠르게 기록합니다.",
-    image: "/templates/OHMT031-luma-camera/scene-travel-morning.jpg?v=20260702f",
+    image: "/templates/OHMT031-luma-camera/morning-street.jpg?v=20260810a",
   },
   {
     title: "주방 작업대",
