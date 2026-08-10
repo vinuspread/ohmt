@@ -98,7 +98,7 @@ export const MenuPreview = () => {
               </div>
               <div className="text-center">
                 <p className="font-heading text-[var(--color-text)] text-sm font-bold leading-snug">{item.name}</p>
-                <span className="text-[var(--color-text-muted)] text-xs font-semibold">${item.price.toFixed(2)}</span>
+                <span className="text-[var(--color-text-muted)] text-xs font-semibold">{item.price.toLocaleString()}원</span>
               </div>
             </motion.div>
           ))}
