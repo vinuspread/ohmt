@@ -33,11 +33,11 @@ export const Features = () => {
               신선한 메뉴, 따뜻한 공간, 정성껏 내린 커피. 우리가 매일 그 자리로 돌아오는 이유입니다.
             </p>
 
-            <div className="flex flex-wrap gap-3 md:gap-6">
+            <div className="flex flex-nowrap gap-2 sm:gap-3 md:gap-6">
               {badges.map((b, i) => (
                 <motion.div
                   key={i}
-                  className="w-[110px] h-[110px] md:w-[148px] md:h-[148px] shrink-0 rounded-full border-2 border-[var(--color-text-muted)]/35 flex flex-col items-center justify-center text-center gap-1 md:gap-1.5 px-2 md:px-3 cursor-pointer"
+                  className="w-[92px] h-[92px] sm:w-[110px] sm:h-[110px] md:w-[148px] md:h-[148px] shrink-0 rounded-full border-2 border-[var(--color-text-muted)]/35 flex flex-col items-center justify-center text-center gap-1 md:gap-1.5 px-1.5 sm:px-2 md:px-3 cursor-pointer"
                   whileHover={{ scale: 1.06, borderColor: "rgba(17,17,24,0.7)" }}
                   transition={{ duration: 0.25, ease: "easeOut" }}
                 >
