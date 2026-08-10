@@ -7,7 +7,7 @@ const scenes = [
   {
     title: "Morning street",
     text: "A camera small enough to leave near the coat, ready before the day turns deliberate.",
-    image: "/templates/OHMT031-luma-camera/scene-travel-morning.jpg?v=20260702f",
+    image: "/templates/OHMT031-luma-camera/morning-street.jpg?v=20260810a",
   },
   {
     title: "Studio table",
