@@ -8,22 +8,26 @@ const scenes = [
   {
     title: "아침 거리",
     text: "외출할 때 부담 없이 챙겨 아침 거리의 순간을 빠르게 기록합니다.",
-    image: "/templates/OHMT031-luma-camera/morning-street.jpg?v=20260810a",
+    image: "/templates/OHMT031-luma-camera/scene-morning-street-v2.jpg",
+    alt: "비가 갠 이른 아침, 자전거가 지나가는 조용한 골목",
   },
   {
     title: "주방 작업대",
     text: "음식과 세라믹, 포장재와 메모가 놓인 작업대의 색과 질감을 담습니다.",
-    image: "/templates/OHMT031-luma-camera/scene-kitchen-counter.jpg?v=20260702f",
+    image: "/templates/OHMT031-luma-camera/scene-kitchen-counter-v2.jpg",
+    alt: "세라믹 그릇과 빵, 감귤과 허브가 놓인 주방 작업대",
   },
   {
     title: "작업실",
     text: "큰 촬영 장비 없이 소재 샘플과 스케치, 작은 오브젝트를 기록합니다.",
-    image: "/templates/OHMT031-luma-camera/scene-workshop.jpg?v=20260702f",
+    image: "/templates/OHMT031-luma-camera/scene-ceramic-workshop-v2.jpg",
+    alt: "도자기 샘플과 스케치, 조각 도구가 펼쳐진 작업실 테이블",
   },
   {
     title: "조용한 저녁",
     text: "작은 바디와 조용한 셔터로 실내 분위기를 방해하지 않고 촬영합니다.",
-    image: "/templates/OHMT031-luma-camera/quiet-dinner.jpg?v=20260702e",
+    image: "/templates/OHMT031-luma-camera/scene-quiet-dinner-v2.jpg",
+    alt: "촛불과 푸른 저녁빛이 함께 비치는 두 사람의 저녁 식탁",
   },
 ];
 
@@ -62,7 +66,7 @@ export default function ScenesPage() {
           <div className="mx-auto grid max-w-[1380px] gap-4 md:grid-cols-2">
             {scenes.map((scene) => (
               <article key={scene.title} className="group relative aspect-[7/5] overflow-hidden bg-[var(--luma-dark)]">
-                <Image unoptimized src={scene.image} alt={`${scene.title} 속 LUMA 카메라`} fill className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" sizes="(min-width: 768px) 50vw, 100vw" />
+                <Image unoptimized src={scene.image} alt={scene.alt} fill className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" sizes="(min-width: 768px) 50vw, 100vw" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/72 via-black/12 to-transparent" />
                 <div className="absolute bottom-0 max-w-xl p-6 text-white md:p-9">
                   <h2 className="text-2xl font-bold tracking-[-0.035em] md:text-3xl break-keep">{scene.title}</h2>

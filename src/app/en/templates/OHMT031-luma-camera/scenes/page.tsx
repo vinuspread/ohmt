@@ -7,22 +7,26 @@ const scenes = [
   {
     title: "Morning street",
     text: "A camera small enough to leave near the coat, ready before the day turns deliberate.",
-    image: "/templates/OHMT031-luma-camera/morning-street.jpg?v=20260810a",
+    image: "/templates/OHMT031-luma-camera/scene-morning-street-v2.jpg",
+    alt: "A quiet alley just after rain at dawn, with a cyclist passing through",
   },
   {
     title: "Studio table",
     text: "Food, ceramics, packaging, and notes can stay on the same working surface.",
-    image: "/templates/OHMT031-luma-camera/scene-kitchen-counter.jpg?v=20260702f",
+    image: "/templates/OHMT031-luma-camera/scene-kitchen-counter-v2.jpg",
+    alt: "A kitchen counter with ceramic bowls, fresh bread, citrus, and herbs",
   },
   {
     title: "Workshop",
     text: "Material samples, sketches, and small objects can be archived without building a full setup.",
-    image: "/templates/OHMT031-luma-camera/scene-workshop.jpg?v=20260702f",
+    image: "/templates/OHMT031-luma-camera/scene-ceramic-workshop-v2.jpg",
+    alt: "A worktable scattered with ceramic samples, sketches, and carving tools",
   },
   {
     title: "Quiet dinner",
     text: "A small camera for rooms where the mood changes when the gear gets too loud.",
-    image: "/templates/OHMT031-luma-camera/quiet-dinner.jpg?v=20260702e",
+    image: "/templates/OHMT031-luma-camera/scene-quiet-dinner-v2.jpg",
+    alt: "Candlelight and blue evening light over a dinner table set for two",
   },
 ];
 
@@ -60,7 +64,7 @@ export default function ScenesPage() {
           <div className="mx-auto grid max-w-[1380px] gap-4 md:grid-cols-2">
             {scenes.map((scene) => (
               <article key={scene.title} className="group relative aspect-[7/5] overflow-hidden bg-[var(--luma-dark)]">
-                <Image unoptimized src={scene.image} alt={`LUMA in a ${scene.title.toLowerCase()} scene`} fill className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" sizes="(min-width: 768px) 50vw, 100vw" />
+                <Image unoptimized src={scene.image} alt={scene.alt} fill className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" sizes="(min-width: 768px) 50vw, 100vw" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/72 via-black/12 to-transparent" />
                 <div className="absolute bottom-0 max-w-xl p-6 text-white md:p-9">
                   <h2 className="luma-h2-sm">{scene.title}</h2>
