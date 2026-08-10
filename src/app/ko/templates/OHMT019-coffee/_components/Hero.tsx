@@ -20,7 +20,7 @@ export const Hero = () => {
 
       <div className="relative z-10 flex flex-col items-center text-center px-6 max-w-3xl mx-auto">
         <motion.h1
-          className="font-heading text-[length:var(--text-h1)] font-light text-white leading-[var(--leading-heading)] tracking-[-0.01em] mb-7 whitespace-nowrap"
+          className="font-heading text-[length:var(--text-h1)] font-light text-white leading-[var(--leading-heading)] tracking-[-0.01em] mb-7"
           initial={{ opacity: 0, y: 25 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.95, ease: [0.215, 0.61, 0.355, 1] }}
@@ -29,7 +29,7 @@ export const Hero = () => {
         </motion.h1>
 
         <motion.p
-          className="text-base md:text-lg text-white/60 leading-relaxed whitespace-nowrap mb-8"
+          className="text-base md:text-lg text-white/60 leading-relaxed max-w-[30ch] mb-8"
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, delay: 0.25, ease: [0.215, 0.61, 0.355, 1] }}
