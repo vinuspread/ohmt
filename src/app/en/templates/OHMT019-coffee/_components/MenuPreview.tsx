@@ -10,7 +10,7 @@ type Category = "All" | "Coffee" | "Cold Brew" | "Tea" | "Ade" | "Food";
 
 const menuItems: { category: Category; name: string; price: string; image: string }[] = [
   // Coffee
-  { category: "Coffee",    name: "Espresso",          price: "$4.0",  image: "/templates/OHMT019-coffee/menu-espresso-transparent.png" },
+  { category: "Coffee",    name: "Espresso",          price: "$4.0",  image: "/templates/OHMT019-coffee/menu-espresso.jpg" },
   { category: "Coffee",    name: "Americano",          price: "$4.5",  image: "/templates/OHMT019-coffee/menu-americano.jpg" },
   { category: "Coffee",    name: "Cappuccino",         price: "$5.0",  image: "/templates/OHMT019-coffee/menu-cappuccino.jpg" },
   { category: "Coffee",    name: "Vanilla Latte",      price: "$5.5",  image: "/templates/OHMT019-coffee/menu-vanilla-latte.jpg" },
@@ -19,7 +19,7 @@ const menuItems: { category: Category; name: string; price: string; image: strin
   { category: "Coffee",    name: "Caramel Macchiato",  price: "$6.0",  image: "/templates/OHMT019-coffee/menu-caramel-macchiato.jpg" },
   { category: "Coffee",    name: "Mocha",              price: "$6.0",  image: "/templates/OHMT019-coffee/menu-mocha.jpg" },
   // Cold Brew
-  { category: "Cold Brew", name: "Cold Brew",          price: "$6.0",  image: "/templates/OHMT019-coffee/menu-cold-brew-transparent.png" },
+  { category: "Cold Brew", name: "Cold Brew",          price: "$6.0",  image: "/templates/OHMT019-coffee/menu-cold-brew.jpg" },
   { category: "Cold Brew", name: "Cold Foam Brew",     price: "$6.5",  image: "/templates/OHMT019-coffee/menu-cold-foam.jpg" },
   { category: "Cold Brew", name: "Nitro Cold Brew",    price: "$7.0",  image: "/templates/OHMT019-coffee/menu-nitro.jpg" },
   { category: "Cold Brew", name: "Cold Brew Tonic",    price: "$7.0",  image: "/templates/OHMT019-coffee/menu-cold-brew-tonic.jpg" },
@@ -35,7 +35,7 @@ const menuItems: { category: Category; name: string; price: string; image: strin
   { category: "Ade",       name: "Grapefruit Ade",     price: "$5.5",  image: "/templates/OHMT019-coffee/menu-grapefruit-ade.jpg" },
   { category: "Ade",       name: "Matcha Ade",         price: "$6.0",  image: "/templates/OHMT019-coffee/menu-matcha-ade.jpg" },
   // Food
-  { category: "Food",      name: "Croissant",          price: "$4.5",  image: "/templates/OHMT019-coffee/menu-croissant-transparent.png" },
+  { category: "Food",      name: "Croissant",          price: "$4.5",  image: "/templates/OHMT019-coffee/menu-croissant.jpg" },
   { category: "Food",      name: "Pound Cake",         price: "$5.0",  image: "/templates/OHMT019-coffee/menu-pound-cake.jpg" },
   { category: "Food",      name: "Madeleine",          price: "$3.5",  image: "/templates/OHMT019-coffee/menu-madeleine.jpg" },
 ];
