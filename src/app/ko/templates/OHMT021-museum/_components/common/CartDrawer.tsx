@@ -42,8 +42,8 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
             {/* Content */}
             <div className="flex-1 overflow-y-auto p-8 space-y-8">
               {[
-                { name: "라오콘 군상 레플리카 (미디움 에디션)", price: "$850", img: "/templates/OHMT021-museum/laocoon-sculpture.png", size: "기본" },
-                { name: "아테네 학당 파인아트 프린트", price: "$320", img: "/templates/OHMT021-museum/school-of-athens.png", size: "액자포함" },
+                { name: "라오콘 군상 레플리카 (미디움 에디션)", price: "1,100,000원", img: "/templates/OHMT021-museum/laocoon-sculpture.png", size: "기본" },
+                { name: "아테네 학당 파인아트 프린트", price: "420,000원", img: "/templates/OHMT021-museum/school-of-athens.png", size: "액자포함" },
               ].map((item, i) => (
                 <div key={i} className="flex gap-6 group">
                   <div className="w-24 aspect-[3/4] bg-luxury-beige overflow-hidden">
@@ -71,7 +71,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
             <div className="p-8 bg-luxury-cream border-t border-luxury-border">
               <div className="flex justify-between items-center mb-8">
                 <span className="text-xs uppercase font-bold tracking-[0.3em] text-luxury-gray">Subtotal</span>
-                <span className="text-2xl font-serif tracking-tighter">$1,170.00</span>
+                <span className="text-2xl font-serif tracking-tighter">1,520,000원</span>
               </div>
               <button className="w-full py-6 bg-luxury-black text-white text-xs uppercase font-bold tracking-[0.4em] flex items-center justify-center gap-4 hover:bg-opacity-90 transition-[color,background,transform] active:scale-95">
                 Checkout Now <ArrowRight size={16} />

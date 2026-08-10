@@ -72,7 +72,7 @@ export default function ProductPage() {
           </div>
           <div className="nova-gradient-precision grid p-7 text-white md:col-span-5 md:p-9">
             <div className="self-end">
-              <p className="font-mono text-[length:var(--text-h2)] font-semibold leading-none">$3,499</p>
+              <p className="font-mono text-[length:var(--text-h2)] font-semibold leading-none">4,550,000원</p>
               <p className="mt-3 text-sm leading-relaxed text-white/68">
                 시작 가격, 데일리 샷 키트 포함 배송됩니다.
               </p>
