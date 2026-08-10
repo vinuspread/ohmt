@@ -84,7 +84,7 @@ function MenuPageContent() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.35, ease }}
                 >
-                  <div className="aspect-square bg-white flex items-center justify-center overflow-hidden">
+                  <div className="aspect-square flex items-center justify-center overflow-hidden">
                     <img
                       src={item.image}
                       alt={item.name}
