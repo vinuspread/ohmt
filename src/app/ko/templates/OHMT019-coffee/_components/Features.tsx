@@ -26,10 +26,10 @@ export const Features = () => {
             <p className="text-xs uppercase tracking-[0.2em] text-[var(--color-text-muted)] font-semibold border-b border-[var(--color-text-muted)]/30 pb-2 inline-block mb-6">
               우리는 누구인가
             </p>
-            <p className="font-heading text-[var(--color-text)] text-2xl md:text-[1.85rem] font-bold leading-[var(--leading-heading)] mb-5 max-w-[22ch]">
+            <p className="font-heading text-[var(--color-text)] text-2xl md:text-[1.85rem] font-bold leading-[var(--leading-heading)] mb-5 max-w-[22ch]" style={{ textWrap: "pretty" } as React.CSSProperties}>
               모든 손님은 올 때보다<br className="hidden md:block" /> 나은 채로 떠날 자격이 있다.
             </p>
-            <p className="text-[var(--color-text-muted)] text-base leading-relaxed mb-12 max-w-[40ch]">
+            <p className="text-[var(--color-text-muted)] text-base leading-relaxed mb-12 max-w-[40ch]" style={{ textWrap: "pretty" } as React.CSSProperties}>
               신선한 메뉴, 따뜻한 공간, 정성껏 내린 커피. 우리가 매일 그 자리로 돌아오는 이유입니다.
             </p>
 

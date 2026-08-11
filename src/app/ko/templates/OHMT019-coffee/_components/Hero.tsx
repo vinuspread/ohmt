@@ -30,6 +30,7 @@ export const Hero = () => {
 
         <motion.p
           className="text-base md:text-lg text-white/60 leading-relaxed max-w-[30ch] mb-8"
+          style={{ textWrap: "pretty" } as React.CSSProperties}
           initial={{ opacity: 0, y: 15 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.85, delay: 0.25, ease: [0.215, 0.61, 0.355, 1] }}

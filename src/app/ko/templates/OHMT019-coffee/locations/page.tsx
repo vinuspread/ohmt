@@ -32,7 +32,7 @@ function LocationsPageContent() {
                 매장 찾기
               </h1>
             </div>
-            <p className="text-white/40 text-sm max-w-[28ch] leading-relaxed">
+            <p className="text-white/40 text-sm max-w-[28ch] leading-relaxed" style={{ textWrap: "pretty" } as React.CSSProperties}>
               서울 다섯 곳의 매장. 일주일 내내 영업합니다.
             </p>
           </div>
