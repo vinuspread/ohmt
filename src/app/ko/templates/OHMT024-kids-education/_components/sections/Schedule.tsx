@@ -61,10 +61,10 @@ export default function Schedule() {
             >
               <Link
                 href={`${basePath}/classes`}
-                className="group grid grid-cols-[minmax(0,1fr)_auto_2.75rem] items-center gap-x-3 gap-y-3 border-b border-black/10 py-6 rounded-lg px-4 -mx-4 transition-colors duration-150 [@media(hover:hover)]:hover:bg-white sm:grid-cols-[9rem_minmax(0,1fr)_auto_auto_2.75rem] sm:gap-x-4 sm:gap-y-0"
+                className="ohmt024-schedule-event group grid items-center gap-x-3 gap-y-3 border-b border-black/10 py-6 rounded-lg px-4 -mx-4 transition-colors duration-150 [@media(hover:hover)]:hover:bg-white sm:gap-x-4 sm:gap-y-0"
               >
                 {/* Category dot + label */}
-                <div className="col-span-full flex items-center gap-2 sm:col-span-1">
+                <div className="ohmt024-schedule-category flex items-center gap-2">
                   <span
                     className="w-2.5 h-2.5 rounded-full shrink-0"
                     style={{ backgroundColor: event.color }}
@@ -76,28 +76,28 @@ export default function Schedule() {
 
                 {/* Title */}
                 <h3
-                  className="col-span-full min-w-0 text-lg font-bold leading-snug tracking-tight transition-colors duration-150 [@media(hover:hover)]:group-hover:text-[var(--color-primary)] sm:col-span-1"
+                  className="ohmt024-schedule-title min-w-0 text-lg font-bold leading-snug tracking-tight transition-colors duration-150 [@media(hover:hover)]:group-hover:text-[var(--color-primary)]"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
                   {event.title}
                 </h3>
 
                 {/* Date / Time */}
-                <div className="col-start-1 flex items-center gap-4 whitespace-nowrap text-sm font-semibold text-[var(--color-text-muted)] font-sans sm:col-start-auto sm:gap-6">
+                <div className="ohmt024-schedule-meta flex items-center gap-4 whitespace-nowrap text-sm font-semibold text-[var(--color-text-muted)] font-sans sm:gap-6">
                   <span>{event.date}</span>
                   <span>{event.time}</span>
                 </div>
 
                 {/* Price */}
                 <span
-                  className="col-start-2 whitespace-nowrap text-right text-xl font-bold sm:col-start-auto sm:w-24"
+                  className="ohmt024-schedule-price whitespace-nowrap text-right text-xl font-bold sm:w-24"
                   style={{ fontFamily: "var(--font-heading)" }}
                 >
                   {event.price}
                 </span>
 
                 {/* Arrow */}
-                <span className="col-start-3 flex h-11 w-11 items-center justify-end text-[var(--color-text-muted)] transition-all duration-150 [@media(hover:hover)]:group-hover:translate-x-1 [@media(hover:hover)]:group-hover:text-[var(--color-primary)] sm:col-start-auto">
+                <span className="ohmt024-schedule-arrow flex h-11 w-11 items-center justify-end text-[var(--color-text-muted)] transition-all duration-150 [@media(hover:hover)]:group-hover:translate-x-1 [@media(hover:hover)]:group-hover:text-[var(--color-primary)]">
                   →
                 </span>
               </Link>
