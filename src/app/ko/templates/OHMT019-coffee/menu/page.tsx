@@ -35,7 +35,7 @@ function MenuPageContent() {
                 우리가 제공하는 메뉴
               </h1>
             </div>
-            <p className="text-white/40 text-sm max-w-[28ch] leading-relaxed">
+            <p className="text-white/40 text-sm max-w-[28ch] leading-relaxed" style={{ textWrap: "pretty" } as React.CSSProperties}>
               싱글 오리진 원두, 계절 스페셜, 매일 아침 갓 굽는 페이스트리.
             </p>
           </div>
