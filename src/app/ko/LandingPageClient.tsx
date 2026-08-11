@@ -32,7 +32,7 @@ export interface FaqItem {
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 const ALL_LABEL = "전체";
-const POPULAR_TAGS = ["패션", "포트폴리오", "에이전시", "럭셔리", "미니멀"];
+const POPULAR_TAGS = ["쇼핑몰", "커피", "대시보드", "커뮤니티"];
 const MOBILE_NAV_ITEMS_KO = [
   { href: "#templates", label: "디자인" },
   { href: "#pricing", label: "가격" },
