@@ -98,13 +98,13 @@ export const metadata: Metadata = {
     locale: "ko_KR",
     type: "website",
     alternateLocale: ["en_US"],
-    images: [{ url: "https://ohmt.site/og-share-v2.png", secureUrl: "https://ohmt.site/og-share-v2.png", width: 1200, height: 630, alt: "오마이템플릿 - 프리미엄 웹사이트 템플릿", type: "image/png" }],
+    images: [{ url: "https://ohmt.site/og-share-v3.jpg", secureUrl: "https://ohmt.site/og-share-v3.jpg", width: 1200, height: 630, alt: "오마이템플릿 - 프리미엄 웹사이트 템플릿", type: "image/jpeg" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "오마이템플릿",
     description: "가장 스마트한 웹·앱 서비스 제작 솔루션!",
-    images: ["https://ohmt.site/og-share-v2.png"],
+    images: ["https://ohmt.site/og-share-v3.jpg"],
   },
 };
 

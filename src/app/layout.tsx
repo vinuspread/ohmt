@@ -56,13 +56,13 @@ export const metadata: Metadata = {
     siteName: "Oh My Template",
     title: "Oh My Template — Premium Next.js Web Templates",
     description: "Premium Next.js web templates for brands, agencies, and creators. Fully customized by our team in 2 days.",
-    images: [{ url: "https://ohmt.site/og-share-v2.png", secureUrl: "https://ohmt.site/og-share-v2.png", width: 1200, height: 630, alt: "Oh My Template", type: "image/png" }],
+    images: [{ url: "https://ohmt.site/og-share-v3.jpg", secureUrl: "https://ohmt.site/og-share-v3.jpg", width: 1200, height: 630, alt: "Oh My Template", type: "image/jpeg" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Oh My Template — Premium Next.js Web Templates",
     description: "Premium Next.js web templates for brands, agencies, and creators.",
-    images: ["https://ohmt.site/og-share-v2.png"],
+    images: ["https://ohmt.site/og-share-v3.jpg"],
   },
   robots: {
     index: true,
