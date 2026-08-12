@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description: "바티칸 미술관의 대표 소장품과 전시, 오디오 가이드와 뮤지엄 숍을 소개합니다.",
     images: ["/templates/OHMT021-museum/og-image.jpg"],
   },
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
   alternates: {
     canonical: "https://ohmt.site/ko/templates/OHMT021-museum",
     languages: { "en": "https://ohmt.site/en/templates/OHMT021-museum" },

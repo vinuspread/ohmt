@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     description: "팀을 위한 깔끔한 노션 스타일 문서 워크스페이스입니다.",
     images: ["/templates/OHMT014-docs/og-image.jpg"],
   },
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
   alternates: { canonical: "https://ohmt.site/ko/templates/OHMT014-docs" },
 };
 

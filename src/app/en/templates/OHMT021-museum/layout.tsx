@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     description: "Experience the epitome of elegance and durability.",
     images: ["/templates/OHMT021-museum/og-image.jpg"],
   },
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
   alternates: {
     canonical: "https://ohmt.site/en/templates/OHMT021-museum",
     languages: { "ko": "https://ohmt.site/ko/templates/OHMT021-museum" },
