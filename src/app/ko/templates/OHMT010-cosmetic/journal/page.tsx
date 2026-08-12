@@ -69,7 +69,7 @@ function CosmeticJournalPageContent() {
                         <span>읽는 시간 {entry.read}</span>
                       </div>
                     </div>
-                    <span className="text-[0.7rem] font-bold uppercase tracking-[0.15em] text-black/20 group-hover:text-black transition-colors">자세히 보기</span>
+                    <span className="text-[0.7rem] font-bold uppercase tracking-[0.15em] text-black/20 group-hover:text-black transition-colors justify-self-end">자세히 보기</span>
                   </div>
                 </Link>
               ))}
