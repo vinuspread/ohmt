@@ -80,7 +80,7 @@ export default function CosmeticJournalPage() {
                         <span>{entry.read} read</span>
                       </div>
                     </div>
-                    <span className="text-[0.7rem] font-bold uppercase tracking-[0.15em] text-black/20 group-hover:text-black transition-colors">Read More</span>
+                    <span className="text-[0.7rem] font-bold uppercase tracking-[0.15em] text-black/20 group-hover:text-black transition-colors justify-self-end">Read More</span>
                   </div>
                 </Link>
               ))}
