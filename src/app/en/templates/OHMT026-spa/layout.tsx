@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: "Premium spa and wellness shop template with a calming dark-green and cream palette, large lifestyle imagery, and a booking-first layout.",
     images: ["/templates/OHMT026-spa/og-image.jpg"],
   },
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
   alternates: {
     canonical: "https://ohmt.site/en/templates/OHMT026-spa",
     languages: {

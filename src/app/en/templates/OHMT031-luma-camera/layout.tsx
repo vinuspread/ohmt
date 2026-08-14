@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description: "A premium compact camera landing page for creators who want quiet hardware and serious image quality.",
     images: ["/templates/OHMT031-luma-camera/og-image.jpg"],
   },
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
   alternates: {
     canonical: "https://ohmt.site/en/templates/OHMT031-luma-camera",
     languages: {

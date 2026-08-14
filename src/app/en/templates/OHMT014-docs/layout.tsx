@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: "A clean Notion-style documentation workspace for teams.",
     images: ["/templates/OHMT014-docs/og-image.jpg"],
   },
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
   alternates: { canonical: "https://ohmt.site/en/templates/OHMT014-docs" },
 };
 

@@ -22,8 +22,8 @@ export const metadata: Metadata = {
     images: ['/templates/OHMT032-community/og-image.jpg'],
   },
   robots: {
-    index: false,
-    follow: false,
+    index: true,
+    follow: true,
   },
   alternates: { canonical: '/ko/templates/OHMT032-community' },
 }

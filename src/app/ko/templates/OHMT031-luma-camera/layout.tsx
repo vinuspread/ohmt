@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     description: "45MP 센서와 28mm 고정식 렌즈, 자연스러운 색 표현과 촬영 노트 기능을 갖춘 LUMA 컴팩트 카메라입니다.",
     images: ["/templates/OHMT031-luma-camera/og-image.jpg"],
   },
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
   alternates: {
     canonical: "https://ohmt.site/ko/templates/OHMT031-luma-camera",
     languages: {

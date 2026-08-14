@@ -28,7 +28,7 @@ export const metadata: Metadata = {
       ko: '/ko/templates/OHMT035-atelier-house',
     },
   },
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
 }
 
 const jsonLd = {

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     description: "피부와 몸의 컨디션에 맞춘 페이셜·바디 케어를 제공하는 차분한 스파 & 웰니스 공간입니다.",
     images: ["/templates/OHMT026-spa/og-image.jpg"],
   },
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
   alternates: {
     canonical: "https://ohmt.site/ko/templates/OHMT026-spa",
     languages: {
