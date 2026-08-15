@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { CheckCircle, ChevronDown, LayoutTemplate, Wand2, MessageCircle, X } from "lucide-react";
+import { trackLead } from "@/lib/metaPixel";
 
 type InquiryType = "template" | "custom" | "other" | null;
 
@@ -234,6 +235,7 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
       });
 
       if (!res.ok) throw new Error("Server error");
+      trackLead();
       setSubmitted(true);
     } catch {
       setError("Something went wrong. Please try again later.");
