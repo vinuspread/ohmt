@@ -6,13 +6,13 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 export const metadata: Metadata = {
-  title: "Our Story - OHMT Cosmetic",
-  description: "Discover the story behind OHMT — premium skincare rooted in nature, refined by science.",
+  title: "Our Story - VELURE Cosmetic",
+  description: "Discover the story behind VELURE — premium skincare rooted in nature, refined by science.",
   openGraph: {
-    title: "Our Story - OHMT Cosmetic",
-    description: "Discover the story behind OHMT.",
+    title: "Our Story - VELURE Cosmetic",
+    description: "Discover the story behind VELURE.",
     url: "https://ohmt.site/en/templates/OHMT010-cosmetic/story",
-    siteName: "OHMT",
+    siteName: "VELURE",
     images: [{ url: "/templates/OHMT010-cosmetic/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
@@ -82,7 +82,7 @@ export default function CosmeticStoryPage() {
             </h2>
             <div className="max-w-[680px] space-y-5 text-[0.95rem] leading-loose text-[var(--color-text-muted)]">
               <p>
-                OHMT began with this question. We believe good skincare should be measured by what skin
+                VELURE began with this question. We believe good skincare should be measured by what skin
                 actually feels and by the care taken at every stage of production.
               </p>
               <p>
@@ -179,7 +179,7 @@ export default function CosmeticStoryPage() {
               </div>
               <div>
                 <dt className="mb-2 text-[1.8rem] font-medium">50,000</dt>
-                <dd className="text-[0.82rem] leading-[1.5] text-white/60">Customers who chose OHMT</dd>
+                <dd className="text-[0.82rem] leading-[1.5] text-white/60">Customers who chose VELURE</dd>
               </div>
               <div>
                 <dt className="mb-2 text-[1.8rem] font-medium">100%</dt>

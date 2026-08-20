@@ -28,7 +28,7 @@ function JournalContent() {
             <SubpageHero
               eyebrow={featured.category}
               title={featured.title}
-              description={`${featured.date} · 소재와 제작 과정, 오래 입는 방법을 소개하는 MAISON OHMT 저널.`}
+              description={`${featured.date} · 소재와 제작 과정, 오래 입는 방법을 소개하는 SILO 저널.`}
               image={featured.image}
               imageAlt={featured.title}
             />

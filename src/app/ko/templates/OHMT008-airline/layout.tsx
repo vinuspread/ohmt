@@ -2,20 +2,20 @@ import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - 항공 예약 경험 템플릿",
+  title: "STRATUS - 항공 예약 경험",
   description: "항공권 예약과 취항지, 객실 서비스와 멤버십 혜택을 소개하는 프리미엄 항공사 웹사이트 템플릿입니다.",
   openGraph: {
-    title: "OHMT - 항공 예약 경험 템플릿",
+    title: "STRATUS - 항공 예약 경험",
     description: "항공권 예약과 취항지, 객실 서비스와 멤버십 혜택을 소개하는 프리미엄 항공사 웹사이트 템플릿입니다.",
     url: "https://ohmt.site/ko/templates/OHMT008-airline",
-    siteName: "OHMT",
+    siteName: "STRATUS",
     images: [{ url: "/templates/OHMT008-airline/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - 항공 예약 경험 템플릿",
+    title: "STRATUS - 항공 예약 경험",
     description: "항공권 예약과 취항지, 객실 서비스와 멤버십 혜택을 소개하는 프리미엄 항공사 웹사이트 템플릿입니다.",
     images: ["/templates/OHMT008-airline/og-image.jpg"],
   },

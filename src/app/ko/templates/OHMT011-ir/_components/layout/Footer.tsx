@@ -11,7 +11,7 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
           <div className="md:col-span-1">
             <Link href="/ko/templates/OHMT011-ir" className="flex flex-col gap-0.5 mb-6">
-              <span className="text-base font-semibold md:font-bold text-[var(--color-dark-bg)] tracking-tight leading-none">OHMT</span>
+              <span className="text-base font-semibold md:font-bold text-[var(--color-dark-bg)] tracking-tight leading-none">OBERON</span>
               <span className="text-[0.58rem] font-medium uppercase tracking-[0.2em] text-[#6B6B6B] leading-none">Global Holdings</span>
             </Link>
             <p className="text-[0.85rem] text-[#6B6B6B] leading-relaxed max-w-[280px]">
@@ -49,7 +49,7 @@ export const Footer = () => {
 
         <div className="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-[var(--color-border)] gap-6">
           <span className="text-[0.7rem] text-[#6B6B6B] uppercase tracking-widest font-medium">
-            © 2026 OHMT.
+            © 2026 OBERON.
           </span>
           <div className="flex gap-8">
             {["개인정보 처리방침", "이용약관", "주식 면책조항"].map(item => (

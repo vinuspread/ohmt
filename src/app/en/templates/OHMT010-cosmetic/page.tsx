@@ -60,7 +60,7 @@ function CosmeticTemplateContent() {
       "returns": `Returns`,
       "faq": `FAQ`
     },
-    "copyright": `© 2026 OHMT.`
+    "copyright": `© 2026 VELURE.`
   },
   "story": {
     "title": `Conscious beauty for the modern age.`,
@@ -111,7 +111,7 @@ return (
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Store",
-  name: "OHMT Cosmetic",
+  name: "VELURE Cosmetic",
   description: "Premium beauty and cosmetic brand showcase featuring advanced skincare rooted in nature and refined by science.",
   url: "https://ohmt.site/en/templates/OHMT010-cosmetic",
   logo: "/templates/OHMT010-cosmetic/og-image.jpg",

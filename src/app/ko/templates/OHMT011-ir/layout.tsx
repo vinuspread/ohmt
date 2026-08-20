@@ -2,20 +2,20 @@ import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - 투자자 관계 웹사이트 템플릿",
+  title: "OBERON - 투자자 관계 웹사이트",
   description: "기업 전략 및 재무 성과",
   openGraph: {
-    title: "OHMT - 투자자 관계 웹사이트 템플릿",
+    title: "OBERON - 투자자 관계 웹사이트",
     description: "기업 전략 및 재무 성과",
     url: "https://ohmt.site/ko/templates/OHMT011-ir",
-    siteName: "OHMT",
+    siteName: "OBERON",
     images: [{ url: "/templates/OHMT011-ir/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - 투자자 관계 웹사이트 템플릿",
+    title: "OBERON - 투자자 관계 웹사이트",
     description: "기업 전략 및 재무 성과",
     images: ["/templates/OHMT011-ir/og-image.jpg"],
   },

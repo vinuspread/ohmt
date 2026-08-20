@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { id } = await params;
   const product = products.find((item) => item.id === Number(id));
   return {
-    title: product ? `${product.name} - OHMT Museum` : "Product - OHMT Museum",
+    title: product ? `${product.name} - CURA Museum` : "Product - CURA Museum",
   };
 }
 

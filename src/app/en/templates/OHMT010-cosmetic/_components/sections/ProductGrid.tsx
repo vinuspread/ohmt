@@ -83,7 +83,7 @@ export const ProductGrid = () => {
       "returns": `Returns`,
       "faq": `FAQ`
     },
-    "copyright": `© 2026 OHMT.`
+    "copyright": `© 2026 VELURE.`
   },
   "story": {
     "title": `Conscious beauty for the modern age.`,

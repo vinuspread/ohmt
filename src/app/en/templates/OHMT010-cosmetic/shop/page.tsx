@@ -5,13 +5,13 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 export const metadata: Metadata = {
-  title: "Shop - OHMT Cosmetic",
+  title: "Shop - VELURE Cosmetic",
   description: "Browse our collection of clean, effective skincare products. Cruelty-free and sustainably sourced.",
   openGraph: {
-    title: "Shop - OHMT Cosmetic",
+    title: "Shop - VELURE Cosmetic",
     description: "Browse our collection of clean, effective skincare products.",
     url: "https://ohmt.site/en/templates/OHMT010-cosmetic/shop",
-    siteName: "OHMT",
+    siteName: "VELURE",
     images: [{ url: "/templates/OHMT010-cosmetic/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",

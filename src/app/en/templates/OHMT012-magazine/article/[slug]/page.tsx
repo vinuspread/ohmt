@@ -14,23 +14,23 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const article = getArticleBySlug(slug);
   if (!article) {
-    return { title: "Story Not Found - OHMT Magazine" };
+    return { title: "Story Not Found - FOLIO Magazine" };
   }
   return {
-    title: `${article.title} - OHMT Magazine`,
+    title: `${article.title} - FOLIO Magazine`,
     description: article.desc,
     openGraph: {
-      title: `${article.title} - OHMT Magazine`,
+      title: `${article.title} - FOLIO Magazine`,
       description: article.desc,
       url: `https://ohmt.site/en/templates/OHMT012-magazine/article/${slug}`,
-      siteName: "OHMT",
+      siteName: "FOLIO",
       images: [{ url: article.img, width: 1200, height: 630 }],
       locale: "en_US",
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
-      title: `${article.title} - OHMT Magazine`,
+      title: `${article.title} - FOLIO Magazine`,
       description: article.desc,
       images: [article.img],
     },

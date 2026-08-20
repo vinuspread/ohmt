@@ -31,9 +31,7 @@ export default function Navbar() {
           href={basePath}
           className="font-[family-name:var(--font-heading)] text-lg font-bold tracking-tight"
           style={{ color: useSolidHeader ? "var(--color-text)" : "var(--color-text-contrast)" }}
-        >
-          OHMT
-        </a>
+        >SERENITY</a>
 
         <div className="hidden lg:flex items-center gap-8">
           {navLinks.slice(1, -1).map((link) => (

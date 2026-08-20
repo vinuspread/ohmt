@@ -71,7 +71,7 @@ function CosmeticStoryPageContent() {
             </h2>
             <div className="max-w-[680px] space-y-5 break-keep text-[0.95rem] leading-loose text-[var(--color-text-muted)]">
               <p>
-                OHMT는 이 질문에서 출발했습니다. 좋은 스킨케어는 화려한 표현보다 피부가 실제로 느끼는 변화와
+                VELURE는 이 질문에서 출발했습니다. 좋은 스킨케어는 화려한 표현보다 피부가 실제로 느끼는 변화와
                 제품이 만들어지는 과정으로 증명되어야 한다고 생각했습니다.
               </p>
               <p>
@@ -172,7 +172,7 @@ function CosmeticStoryPageContent() {
               </div>
               <div>
                 <dt className="mb-2 text-[1.8rem] font-medium">50,000명</dt>
-                <dd className="text-[0.82rem] leading-[1.5] text-white/60">OHMT를 선택한 고객</dd>
+                <dd className="text-[0.82rem] leading-[1.5] text-white/60">VELURE를 선택한 고객</dd>
               </div>
               <div>
                 <dt className="mb-2 text-[1.8rem] font-medium">100%</dt>

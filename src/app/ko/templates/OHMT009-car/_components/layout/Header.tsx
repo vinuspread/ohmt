@@ -30,8 +30,7 @@ export const Header = () => {
         isScrolled || mobileOpen ? "bg-black/95 backdrop-blur-md" : "bg-transparent"
       )}>
         <div className="max-w-[var(--theme-container)] mx-auto px-6 md:px-[var(--theme-gutter)] flex items-center justify-between w-full">
-          <Link href="/ko/templates/OHMT009-car" className="text-[1.2rem] font-extrabold tracking-[0.2em] uppercase text-white">
-            OHMT<span className="text-[var(--theme-accent)]">.</span>
+          <Link href="/ko/templates/OHMT009-car" className="text-[1.2rem] font-extrabold tracking-[0.2em] uppercase text-white">IONARA<span className="text-[var(--theme-accent)]">.</span>
           </Link>
 
           {/* Desktop GNB */}

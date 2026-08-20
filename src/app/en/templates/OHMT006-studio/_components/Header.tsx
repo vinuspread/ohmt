@@ -69,13 +69,13 @@ export function Header() {
   },
   "cta": `Start Project`,
   "footer": {
-    "copyright": `© 2026 OHMT.`,
+    "copyright": `© 2026 TECTA.`,
     "contact": `Austin, Texas · hello@ohmytemplate.com`
   },
   "aboutPage": {
     "category": `Architectural Core`,
     "title1": `ABOUT`,
-    "title2": `OHMT.`,
+    "title2": `TECTA.`,
     "philosophy": {
       "title": `Space as a canvas.`,
       "desc": `We operate at the convergence of architecture, spatial brand experience, and tactile interaction. Our design lab is dedicated to executing systems that evoke silence, celebrate material honesty, and command physical space with ultimate rigor.`
@@ -236,8 +236,7 @@ useEffect(() => {
                 <Link
                     href="/en/templates/OHMT006-studio"
                     className={`text-lg md:text-xl font-black tracking-[-0.5px] uppercase transition-colors duration-500 ${isLight ? 'text-black' : 'text-white'}`}
-                >
-                    OHMT<span className="font-normal">.</span>
+                >TECTA<span className="font-normal">.</span>
                 </Link>
 
                 {/* Desktop Nav */}

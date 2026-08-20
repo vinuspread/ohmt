@@ -35,7 +35,7 @@ export const Hero = () => {
             2026년 설립
           </span>
           <h1 className="w-full max-w-4xl mx-auto text-center text-3xl sm:text-4xl md:text-5xl font-normal tracking-[-0.04em] leading-[var(--leading-body)] mb-6 drop-shadow-2xl break-keep text-balance" style={{ fontFamily: "var(--font-bodoni)" }}>
-            언제나 편하게 다시 꺼내 입을 수 있는 실용적인 일상속 베이직웨어를 꿈꿉니다.
+            언제나 편하게 다시 꺼내 입을 수 있는 실용적인 일상 속 베이직웨어를 꿈꿉니다.
           </h1>
 
           <p className="text-sm sm:text-base text-white/75 max-w-[600px] mx-auto text-center leading-relaxed mb-8 font-normal drop-shadow-lg break-keep text-pretty" style={{ fontFamily: "'Pretendard', sans-serif" }}>

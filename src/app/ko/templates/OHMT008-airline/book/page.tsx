@@ -78,7 +78,7 @@ function BookPageContent() {
         {/* Global Cover Header */}
         <PageHero
           imageSrc="/templates/OHMT008-airline/airline-book-hero.png"
-          imageAlt="OHMT 항공기"
+          imageAlt="STRATUS 항공기"
           label="항공권 예약"
           title={<>나에게 맞는 <br /><span className="text-[var(--color-accent)] font-[family-name:var(--font-heading)] normal-case font-[var(--font-weight-accent)]">A380 스위트.</span></>}
           description={"출발지와 목적지, 객실 등급과 좌석을 순서대로 선택하세요.\n원하는 기내식과 추가 서비스도 예약 단계에서 확인할 수 있습니다."}
@@ -349,7 +349,7 @@ function BookPageContent() {
                       {/* Pass details */}
                       <div className="flex justify-between items-start border-b border-white/10 pb-6 mb-8">
                         <div>
-                          <p className="text-sm uppercase tracking-[0.3em] text-[var(--color-accent)] font-bold">OHMT 탑승권</p>
+                          <p className="text-sm uppercase tracking-[0.3em] text-[var(--color-accent)] font-bold">STRATUS 탑승권</p>
                           <h3 className="font-[family-name:var(--theme-font-heading)] text-xl font-[var(--font-weight-heading)] tracking-tight text-white mt-1">퍼스트 클래스 스위트</h3>
                         </div>
                         <span className="text-lg text-[var(--color-accent)] font-black bg-[var(--color-accent)]/10 px-4 py-1.5 rounded-full">{selectedSeat?.id}</span>

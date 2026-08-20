@@ -162,7 +162,7 @@ export const Header = () => {
       "returns": `Returns`,
       "contact": `Contact`
     },
-    "copyright": `© 2026 OHMT.`,
+    "copyright": `© 2026 VINUS.`,
     "legal": {
       "privacy": `Privacy`,
       "terms": `Terms`,
@@ -196,9 +196,7 @@ const navLinks = [
     <>
       <header className={`isolate fixed top-0 left-0 w-full h-14 md:h-20 z-50 pointer-events-auto transition-all duration-300 flex items-center bg-white ${scrolled ? "border-b border-black/10 shadow-sm" : ""}`}>
         <div className="max-w-[1440px] mx-auto w-full px-6 flex items-center justify-between gap-8">
-          <Link href={`/en/templates/OHMT005-sneaker`} className="text-[1.2rem] md:text-[1.4rem] font-black tracking-[-0.04em] text-black uppercase shrink-0">
-            OHMT
-          </Link>
+          <Link href={`/en/templates/OHMT005-sneaker`} className="text-[1.2rem] md:text-[1.4rem] font-black tracking-[-0.04em] text-black uppercase shrink-0">VINUS</Link>
 
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((l) => (

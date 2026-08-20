@@ -39,7 +39,7 @@ export default function ReservationDrawer({ isOpen, onClose }: ReservationDrawer
           >
             <div className="flex items-center justify-between p-8 border-b border-black/10">
               <div>
-                <span className="text-xs uppercase font-bold tracking-[0.3em] text-black/40 block mb-1">OHMT 미술관</span>
+                <span className="text-xs uppercase font-bold tracking-[0.3em] text-black/40 block mb-1">CURA 미술관</span>
                 <h2 className="text-2xl font-serif">관람 예약</h2>
               </div>
               <button onClick={onClose} className="p-2 hover:bg-black/5 rounded-full transition-colors">

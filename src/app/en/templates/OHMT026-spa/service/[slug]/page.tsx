@@ -7,7 +7,7 @@ type PageProps = {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  return { title: `${slug.replace(/-/g, " ")} - OHMT Spa` };
+  return { title: `${slug.replace(/-/g, " ")} - SERENITY Spa` };
 }
 
 export default async function Page({ params }: PageProps) {

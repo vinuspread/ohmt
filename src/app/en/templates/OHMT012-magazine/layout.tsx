@@ -2,20 +2,20 @@ import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - Independent Publishing Layout Template",
+  title: "FOLIO - Independent Publishing Layout",
   description: "Editorial culture and lifestyle",
   openGraph: {
-    title: "OHMT - Independent Publishing Layout Template",
+    title: "FOLIO - Independent Publishing Layout",
     description: "Editorial culture and lifestyle",
     url: "https://ohmt.site/en/templates/OHMT012-magazine",
-    siteName: "OHMT",
+    siteName: "FOLIO",
     images: [{ url: "/templates/OHMT012-magazine/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Independent Publishing Layout Template",
+    title: "FOLIO - Independent Publishing Layout",
     description: "Editorial culture and lifestyle",
     images: ["/templates/OHMT012-magazine/og-image.jpg"],
   },
@@ -42,7 +42,7 @@ export default function MagazineLayout({
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "MagazineSeries",
-            name: "OHMT Magazine",
+            name: "FOLIO Magazine",
             url: "https://ohmt.site/en/templates/OHMT012-magazine",
             description: "Editorial culture and lifestyle — A quarterly record of how design, culture, and sustainability actually intersect.",
             about: {

@@ -7,7 +7,7 @@ export const STUDIO_ROUTES = {
 } as const;
 
 export const STUDIO_BRAND = {
-  NAME: 'OHMT.',
+  NAME: 'TECTA.',
   TAGLINE: '생활과 업무 방식에 맞는 공간을 설계합니다.',
   EMAIL: 'hello@ohmytemplate.design',
   PHONE: '+82 (2) 6123-4567',

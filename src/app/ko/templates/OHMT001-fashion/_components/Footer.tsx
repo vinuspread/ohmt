@@ -31,8 +31,8 @@ export const Footer = () => {
     <footer className="bg-white pt-12 md:pt-24 pb-12 border-t border-black/5 selection:bg-black selection:text-white">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-20 mb-12 md:mb-24">
         <div className="col-span-2 lg:col-span-1">
-          <Link href="/ko/templates/OHMT001-fashion" className="text-xl md:text-2xl font-black tracking-tighter uppercase block">
-            OHMT
+          <Link href="/ko/templates/OHMT001-fashion" className="text-xl md:text-2xl font-normal tracking-[0.08em] uppercase block" style={{ fontFamily: "var(--font-bodoni)" }}>
+            SILO
           </Link>
           <p className="text-sm text-black/60 font-medium leading-relaxed max-w-xs mt-4 md:mt-6">
             오래 입을수록 자연스러운 옷.<br />
@@ -74,7 +74,7 @@ export const Footer = () => {
 
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-8 md:pt-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
           <p className="text-xs font-medium tracking-tight text-black/20 uppercase">
-            © 2026 OHMT.
+            © 2026 SILO.
           </p>
           <div className="flex gap-10 text-xs font-medium tracking-[0.2em] text-black/40 uppercase">
               <Link href="#" className="hover:text-black transition-colors">Seoul</Link>

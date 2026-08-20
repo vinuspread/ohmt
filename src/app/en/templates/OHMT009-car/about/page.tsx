@@ -32,12 +32,12 @@ function CarAboutPageContent() {
         <section className="relative h-[85vh] min-h-[560px] overflow-hidden flex items-end">
           <img
             src="/templates/OHMT009-car/hero-1.jpg"
-            alt="OHMT Motors"
+            alt="IONARA Motors"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
           <div className="relative max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)] pb-8 md:pb-12 w-full">
-            <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-4 block">About OHMT</span>
+            <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-4 block">About IONARA</span>
             <h1 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-display)] font-bold tracking-tight leading-[var(--leading-display)] max-w-[680px]">
               Engineered for<br />extraordinary driving.
             </h1>
@@ -48,7 +48,7 @@ function CarAboutPageContent() {
         <section className="border-b border-[var(--theme-border)]">
           <div className="max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)] py-10 md:py-14 grid md:grid-cols-2 gap-10 md:gap-20 items-center">
             <p className="text-[length:var(--text-lead)] text-white font-normal leading-[var(--leading-body)] break-keep">
-              Founded in 2018, OHMT Motors set out to build vehicles that inspire. Not just modes of transport, but objects of desire - where cutting-edge technology meets uncompromising design.
+              Founded in 2018, IONARA Motors set out to build vehicles that inspire. Not just modes of transport, but objects of desire - where cutting-edge technology meets uncompromising design.
             </p>
             <p className="text-[1.02rem] text-white/50 leading-[var(--leading-body)] font-normal break-keep">
               Today, we employ over 12,000 people across three continents, with a network of 200+ showrooms worldwide. Our commitment to sustainable luxury drives every decision we make. We don't just build cars. We build the future of personal movement.

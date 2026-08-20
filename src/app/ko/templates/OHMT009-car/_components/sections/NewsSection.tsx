@@ -13,7 +13,7 @@ const news = [
   },
   {
     tag: "테크놀로지",
-    title: "OHMT 2026: 역사상 가장 혁신적이고 진화한 기술을 집약한 새로운 라인업 출시",
+    title: "IONARA 2026: 역사상 가장 혁신적으로 진화한 기술을 집약한 새로운 라인업 출시",
     date: "2026년 4월 28일",
     img: "/templates/OHMT009-car/car-4.jpg"
   },

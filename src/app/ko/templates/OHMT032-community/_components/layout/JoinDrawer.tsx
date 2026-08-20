@@ -10,7 +10,7 @@ export function JoinDrawer({ open, onClose }: { open: boolean; onClose: () => vo
 
   if (!open) return null
 
-  const mailto = `mailto:hello@ohmytemplate.io?subject=${encodeURIComponent('OHMT 커뮤니티 가입 문의')}&body=${encodeURIComponent(
+  const mailto = `mailto:hello@ohmytemplate.io?subject=${encodeURIComponent('AGORA 커뮤니티 가입 문의')}&body=${encodeURIComponent(
     `이름: ${name}\n이메일: ${email}\n문의내용: ${message}`,
   )}`
 

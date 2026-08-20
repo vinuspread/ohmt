@@ -6,13 +6,13 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 export const metadata: Metadata = {
-  title: "Journal - OHMT Cosmetic",
+  title: "Journal - VELURE Cosmetic",
   description: "Thoughts on conscious beauty — skincare tips, ingredient science, and sustainability stories.",
   openGraph: {
-    title: "Journal - OHMT Cosmetic",
+    title: "Journal - VELURE Cosmetic",
     description: "Thoughts on conscious beauty.",
     url: "https://ohmt.site/en/templates/OHMT010-cosmetic/journal",
-    siteName: "OHMT",
+    siteName: "VELURE",
     images: [{ url: "/templates/OHMT010-cosmetic/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",

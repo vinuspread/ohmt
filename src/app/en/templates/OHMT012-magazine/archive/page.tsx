@@ -10,20 +10,20 @@ import { getAllArticles } from "../constants";
 import theme from "../theme.json";
 
 export const metadata: Metadata = {
-  title: "Archive - OHMT Magazine",
+  title: "Archive - FOLIO Magazine",
   description: "Every story we've published, gathered in one place. From design and culture to sustainability and slow living.",
   openGraph: {
-    title: "Archive - OHMT Magazine",
+    title: "Archive - FOLIO Magazine",
     description: "Every story we've published, gathered in one place.",
     url: "https://ohmt.site/en/templates/OHMT012-magazine/archive",
-    siteName: "OHMT",
+    siteName: "FOLIO",
     images: [{ url: "/templates/OHMT012-magazine/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Archive - OHMT Magazine",
+    title: "Archive - FOLIO Magazine",
     description: "Every story we've published, gathered in one place.",
     images: ["/templates/OHMT012-magazine/og-image.jpg"],
   },

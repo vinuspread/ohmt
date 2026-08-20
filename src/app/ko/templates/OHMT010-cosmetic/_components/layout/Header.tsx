@@ -54,9 +54,7 @@ export const Header = () => {
           : "bg-transparent"
       )}>
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 h-full flex items-center justify-between">
-          <Link href="/ko/templates/OHMT010-cosmetic" className="text-[1rem] md:text-[1.15rem] font-black tracking-[0.12em] uppercase">
-            OHMT
-          </Link>
+          <Link href="/ko/templates/OHMT010-cosmetic" className="text-[1rem] md:text-[1.15rem] font-black tracking-[0.12em] uppercase">VELURE</Link>
 
           {/* Desktop GNB */}
           <div className="hidden md:flex gap-10 ml-20">

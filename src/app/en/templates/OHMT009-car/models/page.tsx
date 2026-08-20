@@ -29,7 +29,7 @@ function CarModelsPageContent() {
                 Every model,<br />a masterpiece.
               </h1>
               <p className="text-[1.15rem] md:text-[1.25rem] text-white/70 font-normal leading-[var(--leading-body)] max-w-[700px] break-keep">
-                From all-electric pioneers to high-performance icons - each OHMT is engineered with obsessive attention to detail.
+                From all-electric pioneers to high-performance icons - each IONARA is engineered with obsessive attention to detail.
               </p>
             </div>
 

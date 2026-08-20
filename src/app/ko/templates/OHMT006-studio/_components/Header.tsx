@@ -47,8 +47,7 @@ export function Header() {
                 <Link
                     href="/ko/templates/OHMT006-studio"
                     className={`text-lg md:text-xl font-black tracking-[-0.5px] uppercase transition-colors duration-500 ${isLight ? 'text-black' : 'text-white'}`}
-                >
-                    OHMT<span className="font-normal">.</span>
+                >TECTA<span className="font-normal">.</span>
                 </Link>
 
                 {/* Desktop Nav */}

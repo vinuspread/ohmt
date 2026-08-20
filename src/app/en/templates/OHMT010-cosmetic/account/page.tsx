@@ -5,13 +5,13 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 export const metadata: Metadata = {
-  title: "Account - OHMT Cosmetic",
-  description: "Sign in to your OHMT account for exclusive member benefits and early access.",
+  title: "Account - VELURE Cosmetic",
+  description: "Sign in to your VELURE account for exclusive member benefits and early access.",
   openGraph: {
-    title: "Account - OHMT Cosmetic",
-    description: "Sign in to your OHMT account for exclusive member benefits.",
+    title: "Account - VELURE Cosmetic",
+    description: "Sign in to your VELURE account for exclusive member benefits.",
     url: "https://ohmt.site/en/templates/OHMT010-cosmetic/account",
-    siteName: "OHMT",
+    siteName: "VELURE",
     images: [{ url: "/templates/OHMT010-cosmetic/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",

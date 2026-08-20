@@ -53,7 +53,7 @@ function CategoryContent() {
       case "engagement": return "Exquisite diamond rings hand-set to capture your promise of forever.";
       case "high-jewelry": return "Masterpieces of extraordinary rarity, featuring signature brilliance.";
       case "about": return "A century of artisan dedication, framing life's most brilliant moments.";
-      default: return "Discover the signature brilliance of OHMT.";
+      default: return "Discover the signature brilliance of AVELINE.";
     }
   };
 
@@ -97,7 +97,7 @@ function CategoryContent() {
                     <span className="text-xs uppercase tracking-[0.3em] text-neutral-500 font-bold">Artisan Technique</span>
                     <h2 className="text-3xl md:text-5xl font-serif font-bold text-neutral-900 leading-[var(--leading-heading)]">Hand-Finished with Passion</h2>
                     <p className="text-sm text-neutral-600 leading-relaxed">
-                      Founded with a dedication to preserving the pristine elegance of gemstones, OHMT Fine Jewelry is a bridge between nature's raw beauty and exceptional design. Every single facet is hand-set and hand-polished by our master artisans who spend hundreds of hours to bring out the fire in each stone.
+                      Founded with a dedication to preserving the pristine elegance of gemstones, AVELINE Fine Jewelry is a bridge between nature's raw beauty and exceptional design. Every single facet is hand-set and hand-polished by our master artisans who spend hundreds of hours to bring out the fire in each stone.
                     </p>
                     <p className="text-sm text-neutral-600 leading-relaxed">
                       We seek permanence. In a world of fast-moving trends, our jewelry is designed to be passed down through generations, holding memories and whispered promises of forever.
@@ -112,7 +112,7 @@ function CategoryContent() {
               <div className="max-w-[1440px] mx-auto">
                 <div className="text-center mb-16">
                   <span className="text-xs uppercase tracking-[0.3em] text-neutral-400 font-bold">Brand Philosophy</span>
-                  <h3 className="text-2xl md:text-4xl font-serif font-bold text-neutral-900 mt-2">The Three Pillars of OHMT</h3>
+                  <h3 className="text-2xl md:text-4xl font-serif font-bold text-neutral-900 mt-2">The Three Pillars of AVELINE</h3>
                 </div>
                 <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
                   <div className="bg-white p-8 md:p-10 border border-neutral-200/50 shadow-[0_4px_20px_rgba(0,0,0,0.01)] space-y-4 text-center">
@@ -173,7 +173,7 @@ function CategoryContent() {
                         <span className="text-xl md:text-2xl font-serif font-bold text-[var(--color-primary)]">1968</span>
                         <h4 className="text-base md:text-base font-serif font-bold text-neutral-800 mt-1">Royal Appointment</h4>
                         <p className="text-sm text-neutral-500 mt-2 leading-relaxed">
-                          The House of OHMT received the prestigious appointment of supplying unique custom gems to royal families across Europe.
+                          The House of AVELINE received the prestigious appointment of supplying unique custom gems to royal families across Europe.
                         </p>
                       </div>
                     </div>
@@ -218,7 +218,7 @@ function CategoryContent() {
               <div className="max-w-[1440px] mx-auto">
                 <div className="bg-[#1C1C1A] border-t-2 border-t-[var(--color-primary)] border-x border-b border-neutral-800 p-10 md:p-16 text-center max-w-5xl mx-auto shadow-[0_10px_30px_rgba(0,0,0,0.04)]">
                   <span className="text-xs tracking-[0.3em] text-[var(--color-primary)] font-bold uppercase block mb-3">Our Promise</span>
-                  <h3 className="font-serif text-2xl md:text-3xl font-bold text-white mb-6">The OHMT Pledge</h3>
+                  <h3 className="font-serif text-2xl md:text-3xl font-bold text-white mb-6">The AVELINE Pledge</h3>
                   <p className="text-base md:text-lg text-neutral-300 leading-relaxed max-w-2xl mx-auto font-light">
                     Every purchase is accompanied by a certificate of authenticity, a lifetime craftsmanship warranty,<br className="hidden md:block" /> and complimentary resizing and cleaning for the life of the piece.
                   </p>

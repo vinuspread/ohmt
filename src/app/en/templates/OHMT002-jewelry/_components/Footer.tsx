@@ -53,7 +53,7 @@ export default function Footer() {
 
       {/* Footer Bottom Bar */}
       <div className="max-w-[1440px] mx-auto mt-20 pt-8 border-t border-neutral-200/30 flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-medium text-neutral-500 uppercase tracking-widest">
-        <span>© 2026 OHMT.</span>
+        <span>© 2026 AVELINE.</span>
         <div className="flex gap-8">
           <a href="#" className="hover:text-[var(--color-primary)] transition-colors">Instagram</a>
           <a href="#" className="hover:text-[var(--color-primary)] transition-colors">LinkedIn</a>

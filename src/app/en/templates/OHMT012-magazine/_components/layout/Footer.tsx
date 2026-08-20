@@ -13,9 +13,7 @@ export const Footer = () => {
             <Link 
               href="/en/templates/OHMT012-magazine" 
               className="font-[family-name:var(--theme-font-heading)] text-[1.6rem] tracking-[0.12em] uppercase text-[var(--theme-text)] mb-6 block"
-            >
-              OHMT
-            </Link>
+            >FOLIO</Link>
             <p className="text-[0.85rem] text-[var(--theme-text-muted)] leading-[var(--leading-body)] font-normal">
               A premium lifestyle editorial exploring the intersections of design, culture, and sustainability.
             </p>
@@ -61,7 +59,7 @@ export const Footer = () => {
         
         <div className="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-[var(--theme-border)] gap-6">
           <span className="text-[0.7rem] text-[var(--theme-text-muted)] uppercase tracking-widest font-medium">
-            © 2026 OHMT.
+            © 2026 FOLIO.
           </span>
           <div className="flex gap-8">
             {["Privacy", "Terms", "Cookies"].map(item => (

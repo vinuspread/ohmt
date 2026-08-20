@@ -41,7 +41,7 @@ function AboutPageContent() {
             </div>
             <div className="space-y-6">
               <p className="text-[1rem] text-[var(--color-text-muted)] leading-relaxed">
-                2019년 서울에서 시작한 OHMT는 브랜드의 방향을 정리하고, 이를 시각 언어와 디지털 경험으로 만드는 크리에이티브 스튜디오입니다.
+                2019년 서울에서 시작한 HALF LIGHT는 브랜드의 방향을 정리하고, 이를 시각 언어와 디지털 경험으로 만드는 크리에이티브 스튜디오입니다.
               </p>
               <p className="text-[1rem] text-[var(--color-text-muted)] leading-relaxed">
                 좋은 디자인은 보기 좋은 장식에 머물지 않습니다. 제품을 처음 만나는 순간부터 사용하고 기억하는 방식까지 바꾸는 전략입니다.

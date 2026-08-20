@@ -73,7 +73,7 @@ const navItems = [
       )}>
         <div className="max-w-[1320px] mx-auto px-6 md:px-10 flex items-center justify-between w-full">
             <Link href="/en/templates/OHMT008-airline" className="shrink-0 group">
-            <span className="text-sm md:text-base font-bold tracking-[0.15em] uppercase text-white leading-none transition-[opacity] duration-[var(--transition-fast)] group-hover:opacity-70">OHMT</span>
+            <span className="text-sm md:text-base font-bold tracking-[0.15em] uppercase text-white leading-none transition-[opacity] duration-[var(--transition-fast)] group-hover:opacity-70">STRATUS</span>
           </Link>
 
           {/* Desktop GNB */}

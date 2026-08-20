@@ -14,7 +14,7 @@ const news = [
   },
   {
     tag: "Technology",
-    title: "OHMT 2026: The most technologically advanced model year in history",
+    title: "IONARA 2026: The most technologically advanced model year in history",
     date: "April 28, 2026",
     img: "/templates/OHMT009-car/car-4.jpg"
   },

@@ -41,7 +41,7 @@ function AboutPageContent() {
             </div>
             <div className="space-y-6">
               <p className="text-[1rem] text-[var(--color-text-muted)] leading-[var(--leading-body)]">
-                Founded in Seoul in 2019, OHMT is a creative studio that partners with brands and founders who have something real to say - and want the world to hear it.
+                Founded in Seoul in 2019, HALF LIGHT is a creative studio that partners with brands and founders who have something real to say - and want the world to hear it.
               </p>
               <p className="text-[1rem] text-[var(--color-text-muted)] leading-[var(--leading-body)]">
                 We believe great design is never decoration. It's a strategic act that changes how people feel about a product before they've used it.

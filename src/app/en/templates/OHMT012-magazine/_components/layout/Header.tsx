@@ -47,9 +47,7 @@ export const Header = ({ light, t }: { light?: boolean; t: { nav: MagazineT['nav
               "font-[family-name:var(--theme-font-heading)] text-[1.6rem] tracking-[0.12em] uppercase transition-all duration-300",
               scrolled ? "text-[var(--theme-text)]" : "text-white"
             )}
-          >
-            OHMT
-          </Link>
+          >FOLIO</Link>
 
           {/* Desktop GNB */}
           <div className="hidden md:flex gap-8 items-center">

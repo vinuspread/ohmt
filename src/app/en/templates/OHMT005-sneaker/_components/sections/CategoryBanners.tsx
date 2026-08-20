@@ -156,7 +156,7 @@ export function CategoryBanners() {
       "returns": `Returns`,
       "contact": `Contact`
     },
-    "copyright": `© 2026 OHMT.`,
+    "copyright": `© 2026 VINUS.`,
     "legal": {
       "privacy": `Privacy`,
       "terms": `Terms`,

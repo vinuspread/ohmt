@@ -2,20 +2,20 @@ import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - 브루탈리스트 스니커 드랍 템플릿",
+  title: "VINUS - 브루탈리스트 스니커 드랍",
   description: "Urban streetwear and sneaker releases",
   openGraph: {
-    title: "OHMT - 브루탈리스트 스니커 드랍 템플릿",
+    title: "VINUS - 브루탈리스트 스니커 드랍",
     description: "Urban streetwear and sneaker releases",
     url: "https://ohmt.site/ko/templates/OHMT005-sneaker",
-    siteName: "OHMT",
+    siteName: "VINUS",
     images: [{ url: "/templates/OHMT005-sneaker/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - 브루탈리스트 스니커 드랍 템플릿",
+    title: "VINUS - 브루탈리스트 스니커 드랍",
     description: "Urban streetwear and sneaker releases",
     images: ["/templates/OHMT005-sneaker/og-image.jpg"],
   },

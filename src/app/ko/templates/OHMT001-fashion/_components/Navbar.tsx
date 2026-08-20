@@ -27,8 +27,8 @@ export const Navbar = () => {
     <>
       <nav className={`fixed top-0 left-0 right-0 z-50 h-14 md:h-20 transition-[background,border-color] duration-700 flex items-center ${!isTransparent ? "bg-white/95 backdrop-blur-xl border-b border-black/5" : "bg-transparent"}`}>
         <div className="max-w-[1440px] mx-auto w-full px-6 md:px-12 flex justify-between items-center">
-          <Link href="/ko/templates/OHMT001-fashion" className={`text-xl md:text-2xl font-black tracking-tighter uppercase transition-colors duration-500 ${!isTransparent ? "text-black" : "text-white"}`}>
-            OHMT
+          <Link href="/ko/templates/OHMT001-fashion" className={`inline-flex min-h-11 items-center text-xl md:text-2xl font-normal tracking-[0.08em] uppercase transition-colors duration-500 ${!isTransparent ? "text-black" : "text-white"}`} style={{ fontFamily: "var(--font-bodoni)" }}>
+            SILO
           </Link>
 
            {/* Desktop Menu */}

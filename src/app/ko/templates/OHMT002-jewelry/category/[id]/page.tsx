@@ -53,7 +53,7 @@ function CategoryContent() {
       case "engagement": return "소중한 약속을 오래 기억할 수 있도록 원석과 세팅을 세심하게 고른 웨딩 링 컬렉션입니다.";
       case "high-jewelry": return "희소한 원석과 정교한 세공으로 완성한 특별한 하이 주얼리 컬렉션입니다.";
       case "about": return "브랜드가 시작된 순간부터 지금까지 이어온 제작 방식과 기준을 소개합니다.";
-      default: return "OHMT가 제안하는 파인 주얼리의 섬세한 광채을 만나보세요.";
+      default: return "AVELINE가 제안하는 파인 주얼리의 섬세한 광채를 만나보세요.";
     }
   };
 
@@ -97,7 +97,7 @@ function CategoryContent() {
                     <span className="text-xs uppercase tracking-[-0.03em] text-neutral-500 font-bold">세공 이야기</span>
                     <h2 className="text-3xl md:text-5xl font-serif font-bold text-neutral-900 leading-[var(--leading-heading)] tracking-[-0.04em]">원석의 빛을 살리는 섬세한 세공</h2>
                     <p className="text-sm text-neutral-600 leading-relaxed break-keep tracking-[-0.025em]">
-                      <span className="block">OHMT는 원석이 지닌 색과 투명도, 형태를 먼저 살핀 뒤 그에 맞는 디자인과 세팅을 정합니다.</span>
+                      <span className="block">AVELINE는 원석이 지닌 색과 투명도, 형태를 먼저 살핀 뒤 그에 맞는 디자인과 세팅을 정합니다.</span>
                       <span className="block">숙련된 세공사가 원석 하나하나를 직접 다듬고 고정하며, 표면과 가장자리를 여러 차례 확인해 착용감까지 편안하게 완성합니다.</span>
                     </p>
                     <p className="text-sm text-neutral-600 leading-relaxed break-keep tracking-[-0.025em]">
@@ -114,14 +114,14 @@ function CategoryContent() {
               <div className="max-w-[1440px] mx-auto">
                 <div className="text-center mb-16">
                   <span className="text-xs uppercase tracking-[0.3em] text-neutral-400 font-bold">브랜드 원칙</span>
-                  <h3 className="text-2xl md:text-4xl font-serif font-bold text-neutral-900 mt-2 tracking-[-0.03em]">OHMT가 지키는 세 가지 기준</h3>
+                  <h3 className="text-2xl md:text-4xl font-serif font-bold text-neutral-900 mt-2 tracking-[-0.03em]">AVELINE가 지키는 세 가지 기준</h3>
                 </div>
                 <div className="grid md:grid-cols-3 gap-8 lg:gap-12">
                   <div className="bg-white p-8 md:p-10 border border-neutral-200/50 shadow-[0_4px_20px_rgba(0,0,0,0.01)] space-y-4 text-center">
                     <div className="w-12 h-12 rounded-full bg-[var(--color-primary)] flex items-center justify-center mx-auto text-lg font-serif text-white font-bold">I</div>
                     <h4 className="text-lg font-serif font-bold text-neutral-800 tracking-[-0.02em]">책임 있는 원석 선택</h4>
                     <p className="text-sm text-neutral-500 leading-relaxed max-w-xs mx-auto break-keep tracking-[-0.02em]">
-                      명확하고 정직한 검증된 공급경가 확인된 원석만을 사용합니다. 원산지와 유통 과정도 투명하게 안내합니다.
+                      명확하고 정직한 검증된 공급 경로의 원석만을 사용합니다. 원산지와 유통 과정도 투명하게 안내합니다.
                     </p>
                   </div>
                   <div className="bg-white p-8 md:p-10 border border-neutral-200/50 shadow-[0_4px_20px_rgba(0,0,0,0.01)] space-y-4 text-center">
@@ -147,7 +147,7 @@ function CategoryContent() {
               <div className="max-w-[1440px] mx-auto">
                 <div className="text-center mb-12">
                   <span className="text-xs uppercase tracking-[0.3em] text-neutral-400 font-bold">브랜드의 기록</span>
-                  <h3 className="text-2xl md:text-4xl font-serif font-bold text-neutral-900 mt-2 tracking-[-0.03em]">OHMT가 걸어온 길</h3>
+                  <h3 className="text-2xl md:text-4xl font-serif font-bold text-neutral-900 mt-2 tracking-[-0.03em]">AVELINE가 걸어온 길</h3>
                 </div>
                 <div className="max-w-5xl mx-auto space-y-8 relative before:absolute before:inset-y-0 before:left-4 md:before:left-1/2 before:w-[1px] before:bg-neutral-200">
                   
@@ -159,7 +159,7 @@ function CategoryContent() {
                         <span className="text-xl md:text-2xl font-serif font-bold text-[var(--color-primary)]">1924</span>
                         <h4 className="text-base md:text-base font-serif font-bold text-neutral-800 mt-1">첫 공방을 열다</h4>
                         <p className="text-sm text-neutral-500 mt-2 leading-relaxed break-keep tracking-[-0.025em]">
-                          작은 공방에서 맞춤 반지와 기념 주얼리를 만들며 OHMT의 첫 작업을 시작했습니다. 원석을 고르는 일부터 세팅과 마감까지 한곳에서 직접 진행했습니다.
+                          작은 공방에서 맞춤 반지와 기념 주얼리를 만들며 AVELINE의 첫 작업을 시작했습니다. 원석을 고르는 일부터 세팅과 마감까지 한곳에서 직접 진행했습니다.
                         </p>
                       </div>
                     </div>
@@ -189,7 +189,7 @@ function CategoryContent() {
                         <span className="text-xl md:text-2xl font-serif font-bold text-[var(--color-primary)]">2002</span>
                         <h4 className="text-base md:text-base font-serif font-bold text-neutral-800 mt-1">해외 고객과 만나다</h4>
                         <p className="text-sm text-neutral-500 mt-2 leading-relaxed break-keep tracking-[-0.025em]">
-                          온라인 상담과 해외 배송을 확대해 더 많은 고객이 OHMT의 컬렉션과 맞춤 제작 서비스를 이용할 수 있도록 했습니다.
+                          온라인 상담과 해외 배송을 확대해 더 많은 고객이 AVELINE의 컬렉션과 맞춤 제작 서비스를 이용할 수 있도록 했습니다.
                         </p>
                       </div>
                     </div>

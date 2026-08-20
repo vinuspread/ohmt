@@ -19,7 +19,7 @@ export default async function Page({ params }: PageProps) {
         <main className="antialiased bg-[var(--color-bg)] text-[var(--theme-text)]">
           <Header light />
           <div className="pt-36 pb-24 px-6 md:px-[var(--theme-gutter)] max-w-[var(--theme-container)] mx-auto">
-            <p className="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[var(--theme-text-muted)]">OHMT 매거진 / 기사</p>
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.24em] text-[var(--theme-text-muted)]">FOLIO 매거진 / 기사</p>
             <h1 className="font-[family-name:var(--theme-font-heading)] text-4xl md:text-6xl font-normal">기사를 찾을 수 없습니다.</h1>
             <p className="mt-6 max-w-2xl text-base leading-7 text-[var(--theme-text-muted)] break-keep">이 기사는 이동되었거나 더 이상 제공되지 않습니다. 아카이브에서 다른 기사를 둘러보세요.</p>
             <Link href="/ko/templates/OHMT012-magazine/archive" className="mt-10 inline-flex min-h-11 items-center justify-center bg-[var(--theme-text)] px-6 text-sm font-bold text-white transition-colors hover:opacity-85">아카이브로 돌아가기</Link>

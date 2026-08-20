@@ -10,7 +10,7 @@ export default async function Page({ params }: PageProps) {
 
   return (
     <TemplatePendingPage
-      eyebrow="OHMT 스파 / 서비스"
+      eyebrow="SERENITY 스파 / 서비스"
       title={current}
       description={[
         "서비스 상세 정보를 준비하고 있습니다.",

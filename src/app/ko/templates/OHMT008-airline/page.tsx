@@ -123,7 +123,7 @@ function AirlineTemplateContent() {
                 <img
                   src="/templates/OHMT008-airline/airline-experience-hero.png"
                   className="w-full h-full object-cover opacity-80 transition-transform duration-[var(--transition-slow)] hover:scale-105"
-                  alt="OHMT 객실 승무원"
+                  alt="STRATUS 객실 승무원"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)]/60 via-transparent to-transparent" />
               </motion.div>

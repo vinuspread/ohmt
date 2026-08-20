@@ -294,8 +294,7 @@ const heroRef = useRef<HTMLElement>(null);
               transition={{ duration: 0.6 }}
               className="text-center"
             >
-              <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-4">
-                OHMT<span className="text-[var(--color-accent)]">.</span>
+              <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-4">HALF LIGHT<span className="text-[var(--color-accent)]">.</span>
               </h2>
               <p className="text-xs tracking-[0.3em] uppercase text-white/40">Creative Studio / Seoul</p>
             </motion.div>
@@ -366,7 +365,7 @@ const heroRef = useRef<HTMLElement>(null);
               viewport={{ once: true }}
               className="text-[length:var(--text-h3)] font-bold text-[var(--color-text)] leading-snug mb-12"
             >
-              We're OHMT - a creative studio cultivating bold brands, beautiful websites,
+              We're HALF LIGHT - a creative studio cultivating bold brands, beautiful websites,
               and ideas that refuse to be ordinary.
             </motion.p>
             {/* Client logos */}
@@ -466,7 +465,7 @@ const heroRef = useRef<HTMLElement>(null);
               viewport={{ once: true }}
               className="text-[length:var(--text-h2)] font-bold text-[var(--color-text)] leading-snug mb-16 max-w-3xl"
             >
-              OHMT is a creative studio shaping bold brands and daring ideas.
+              HALF LIGHT is a creative studio shaping bold brands and daring ideas.
             </motion.p>
 
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">

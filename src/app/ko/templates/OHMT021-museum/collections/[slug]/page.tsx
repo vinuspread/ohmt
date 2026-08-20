@@ -7,7 +7,7 @@ type PageProps = {
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params;
-  return { title: `${slug} | OHMT 미술관` };
+  return { title: `${slug} | CURA 미술관` };
 }
 
 export default async function Page({ params }: PageProps) {

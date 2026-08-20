@@ -13,20 +13,20 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "OHMT - Museum Exhibition Website Template",
+  title: "CURA - Museum Exhibition Website",
   description: "Experience the epitome of elegance and durability.",
   openGraph: {
-    title: "OHMT - Museum Exhibition Website Template",
+    title: "CURA - Museum Exhibition Website",
     description: "Experience the epitome of elegance and durability.",
     url: "https://ohmt.site/en/templates/OHMT021-museum",
-    siteName: "OHMT",
+    siteName: "CURA",
     images: [{ url: "/templates/OHMT021-museum/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Museum Exhibition Website Template",
+    title: "CURA - Museum Exhibition Website",
     description: "Experience the epitome of elegance and durability.",
     images: ["/templates/OHMT021-museum/og-image.jpg"],
   },
@@ -45,7 +45,7 @@ export default function ExhibitionLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Museum",
-    name: "OHMT Museum",
+    name: "CURA Museum",
     description: "Experience the epitome of elegance and durability.",
     url: "https://ohmt.site/en/templates/OHMT021-museum",
   };

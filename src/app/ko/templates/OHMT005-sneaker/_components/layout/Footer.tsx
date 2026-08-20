@@ -8,7 +8,7 @@ export const Footer = () => {
       <div className="max-w-[1440px] mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 pb-12 border-b border-white/10">
           <div className="col-span-2 md:col-span-1">
-            <span className="text-[1.4rem] font-black tracking-[-0.04em] uppercase block mb-4">OHMT</span>
+            <span className="text-[1.4rem] font-black tracking-[-0.04em] uppercase block mb-4">VINUS</span>
             <p className="text-[0.8rem] text-white/50 leading-relaxed max-w-[200px]">
               좋은 소재와 편안한 착용감, 책임 있는 생산을 함께 생각합니다.
             </p>
@@ -59,7 +59,7 @@ export const Footer = () => {
         </div>
 
         <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-[0.75rem] text-white/30">© 2026 OHMT.</p>
+          <p className="text-[0.75rem] text-white/30">© 2026 VINUS.</p>
           <div className="flex gap-6">
             {[
               { label: "개인정보처리방침", href: "#" },

@@ -5,7 +5,7 @@ import { faqs } from '../data/faqs-data'
 
 export const metadata: Metadata = {
   title: 'About the Community',
-  description: 'Explore the operating model, rules, and FAQ for the OHMT community template.',
+  description: 'Explore the operating model, rules, and FAQ for the AGORA community template.',
 }
 
 const faqJsonLd = {

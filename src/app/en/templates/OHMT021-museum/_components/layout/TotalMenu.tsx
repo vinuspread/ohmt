@@ -70,7 +70,7 @@ export default function TotalMenu({ isOpen, onClose }: TotalMenuProps) {
             className="max-w-[1440px] mx-auto w-full border-t border-[var(--color-accent)]/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6"
           >
             <div className="text-xs uppercase font-bold tracking-widest text-[var(--color-accent)]/30">
-              © 2026 OHMT.
+              © 2026 CURA.
             </div>
             <div className="flex gap-8 text-xs uppercase font-bold tracking-widest">
               <a href="#" className="hover:opacity-50">Instagram</a>

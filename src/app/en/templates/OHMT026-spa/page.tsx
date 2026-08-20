@@ -20,7 +20,7 @@ import Faq from "./_components/sections/Faq";
 import theme from "./theme.json";
 
 export const metadata: Metadata = {
-  title: "OHMT Spa - Home",
+  title: "SERENITY Spa - Home",
 };
 
 export default function SpaPage() {

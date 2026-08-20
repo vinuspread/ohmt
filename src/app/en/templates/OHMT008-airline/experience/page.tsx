@@ -277,7 +277,7 @@ function ExperiencePageContent() {
                       {totalBaggageSurcharge > 0 ? `$${totalBaggageSurcharge.toLocaleString()} USD` : "FREE OF CHARGE"}
                     </span>
                     <p className="text-sm text-[#7A7A7A] normal-case leading-[var(--leading-body)] font-normal">
-                      *Allowance status calculations are generated in real-time according to premier IATA weight standards and OHMT structural parameters.
+                      *Allowance status calculations are generated in real-time according to premier IATA weight standards and STRATUS structural parameters.
                     </p>
                   </div>
                 </div>

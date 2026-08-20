@@ -347,7 +347,7 @@ function BookPageContent() {
                       {/* Pass details */}
                       <div className="flex justify-between items-start border-b border-white/10 pb-6 mb-8">
                         <div>
-                          <p className="text-sm uppercase tracking-[0.3em] text-[var(--color-accent)] font-bold">OHMT Premium Pass</p>
+                          <p className="text-sm uppercase tracking-[0.3em] text-[var(--color-accent)] font-bold">STRATUS Premium Pass</p>
                           <h3 className="font-[family-name:var(--theme-font-heading)] text-xl font-bold tracking-tight text-white mt-1">FIRST CLASS SUITE</h3>
                         </div>
                         <span className="text-lg text-[var(--color-accent)] font-black bg-[var(--color-accent)]/10 px-4 py-1.5 rounded-full">{selectedSeat?.id}</span>

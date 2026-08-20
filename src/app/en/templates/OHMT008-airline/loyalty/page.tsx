@@ -55,7 +55,7 @@ function LoyaltyPageContent() {
           imageAlt="VIP Airport Lounge"
           label="Skyline Loyalty Club"
           title={<>Elevate Your <br /><span className="text-[var(--color-accent)] font-[family-name:var(--font-heading)] normal-case font-bold">Every Mile.</span></>}
-          description={"Join OHMT Skyline Club.\nAccess ultra-exclusive suites, private VIP airport lounges, accelerated miles earning, and elite priority luggage."}
+          description={"Join STRATUS Skyline Club.\nAccess ultra-exclusive suites, private VIP airport lounges, accelerated miles earning, and elite priority luggage."}
           descMaxWidth="max-w-[660px]"
         />
 
@@ -91,7 +91,7 @@ function LoyaltyPageContent() {
                       
                       <div className="flex justify-between items-start">
                         <div>
-                          <p className="text-xs uppercase tracking-widest font-black opacity-45">OHMT Skyline Club</p>
+                          <p className="text-xs uppercase tracking-widest font-black opacity-45">STRATUS Skyline Club</p>
                           <h4 className="text-base font-black uppercase tracking-wider mt-1">{t.name} Pass</h4>
                         </div>
                         <Award size={22} className="opacity-70" />
@@ -290,7 +290,7 @@ function LoyaltyPageContent() {
                   <tr className="hover:bg-[var(--color-bg-secondary)] transition-colors">
                     <td className="py-8 pr-6 font-bold text-[var(--color-primary)]">Airport Lounge VIP Access</td>
                     <td className="py-8 px-6 text-center text-neutral-300">Not Available</td>
-                    <td className="py-8 px-6 text-center text-[var(--color-accent)] font-extrabold bg-[var(--color-bg-secondary)]/30">OHMT Business Lounge</td>
+                    <td className="py-8 px-6 text-center text-[var(--color-accent)] font-extrabold bg-[var(--color-bg-secondary)]/30">STRATUS Business Lounge</td>
                     <td className="py-8 px-6 text-center">First Class Lounge</td>
                     <td className="py-8 pl-6 text-center">Private Signature VIP Lounge</td>
                   </tr>

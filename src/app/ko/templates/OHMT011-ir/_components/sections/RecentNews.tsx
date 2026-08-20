@@ -9,7 +9,7 @@ const newsItems = [
     date: "2026년 5월 5일",
     tag: "실적 발표",
     tagColor: "bg-[#EAF0FB] text-[#2356b3]",
-    title: "OHMT Global Holdings, 2026년 1분기 최대 실적 발표"
+    title: "OBERON Global Holdings, 2026년 1분기 최대 실적 발표"
   },
   {
     date: "2026년 4월 28일",

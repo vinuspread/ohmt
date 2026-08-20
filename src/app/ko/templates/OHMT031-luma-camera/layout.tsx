@@ -9,13 +9,13 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ohmt.site"),
-  title: "OHMT | LUMA 컴팩트 카메라",
+  title: "LUMA | LUMA 컴팩트 카메라",
   description: "45MP 센서와 28mm 고정식 렌즈, 자연스러운 색 표현과 촬영 노트 기능을 갖춘 LUMA 컴팩트 카메라입니다.",
   openGraph: {
-    title: "OHMT | LUMA 컴팩트 카메라",
+    title: "LUMA | LUMA 컴팩트 카메라",
     description: "45MP 센서와 28mm 고정식 렌즈, 자연스러운 색 표현과 촬영 노트 기능을 갖춘 LUMA 컴팩트 카메라입니다.",
     url: "https://ohmt.site/ko/templates/OHMT031-luma-camera",
-    siteName: "OHMT",
+    siteName: "LUMA",
     images: [{ url: "/templates/OHMT031-luma-camera/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     alternateLocale: "en_US",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT | LUMA 컴팩트 카메라",
+    title: "LUMA | LUMA 컴팩트 카메라",
     description: "45MP 센서와 28mm 고정식 렌즈, 자연스러운 색 표현과 촬영 노트 기능을 갖춘 LUMA 컴팩트 카메라입니다.",
     images: ["/templates/OHMT031-luma-camera/og-image.jpg"],
   },
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "OHMT | LUMA 컴팩트 카메라",
+  name: "LUMA | LUMA 컴팩트 카메라",
   description: "45MP 센서와 28mm 고정식 렌즈, 자연스러운 색 표현과 촬영 노트 기능을 갖춘 LUMA 컴팩트 카메라입니다.",
   url: "https://ohmt.site/ko/templates/OHMT031-luma-camera",
 };

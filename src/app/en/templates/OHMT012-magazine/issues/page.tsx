@@ -10,20 +10,20 @@ import { issues } from "../constants";
 import theme from "../theme.json";
 
 export const metadata: Metadata = {
-  title: "Issues - OHMT Magazine",
+  title: "Issues - FOLIO Magazine",
   description: "Each issue gathers a season's worth of reporting into a single theme. Browse the full run below.",
   openGraph: {
-    title: "Issues - OHMT Magazine",
+    title: "Issues - FOLIO Magazine",
     description: "Each issue gathers a season's worth of reporting into a single theme.",
     url: "https://ohmt.site/en/templates/OHMT012-magazine/issues",
-    siteName: "OHMT",
+    siteName: "FOLIO",
     images: [{ url: "/templates/OHMT012-magazine/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Issues - OHMT Magazine",
+    title: "Issues - FOLIO Magazine",
     description: "Each issue gathers a season's worth of reporting into a single theme.",
     images: ["/templates/OHMT012-magazine/og-image.jpg"],
   },

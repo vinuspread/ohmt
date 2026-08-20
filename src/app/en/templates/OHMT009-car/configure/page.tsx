@@ -138,7 +138,7 @@ function CarConfigurePageContent() {
 
             <div className="px-8 py-8 border-b border-white/5">
               <p className="text-[0.6rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-2">Configure</p>
-              <h1 className="text-[1.6rem] font-bold tracking-tight leading-tight">OHMT GT7</h1>
+              <h1 className="text-[1.6rem] font-bold tracking-tight leading-tight">IONARA GT7</h1>
               <p className="text-[0.78rem] text-[var(--theme-text-muted)] mt-1">Performance Sedan · From $89,400</p>
             </div>
 

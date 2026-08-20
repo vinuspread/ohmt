@@ -24,7 +24,7 @@ function CarTemplateContent() {
         <StatsRow />
         
         <SplitSection 
-          eyebrow="OHMT 테크놀로지"
+          eyebrow="IONARA 테크놀로지"
           title={"기술과 예술적 디자인의\n경이로운 결합."}
           desc="독자 개발한 AI 플랫폼이 실시간 도로 상태 분석, 예측형 서스펜션 조절, 적응형 파워트레인 제어를 담당해, 기계 공학을 넘어선 생명체 같은 드라이빙을 완성합니다."
           img="/templates/OHMT009-car/tech-dashboard-custom.png"

@@ -15,20 +15,20 @@ const inter = Inter({
 // Noto Serif KR is loaded via @import for Korean character fallback
 
 export const metadata: Metadata = {
-  title: "OHMT | 바티칸 미술관 소장품과 전시",
+  title: "CURA | 바티칸 미술관 소장품과 전시",
   description: "바티칸 미술관의 대표 소장품과 전시, 오디오 가이드와 뮤지엄 숍을 소개합니다.",
   openGraph: {
-    title: "OHMT | 바티칸 미술관 소장품과 전시",
+    title: "CURA | 바티칸 미술관 소장품과 전시",
     description: "바티칸 미술관의 대표 소장품과 전시, 오디오 가이드와 뮤지엄 숍을 소개합니다.",
     url: "https://ohmt.site/ko/templates/OHMT021-museum",
-    siteName: "OHMT",
+    siteName: "CURA",
     images: [{ url: "/templates/OHMT021-museum/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT | 바티칸 미술관 소장품과 전시",
+    title: "CURA | 바티칸 미술관 소장품과 전시",
     description: "바티칸 미술관의 대표 소장품과 전시, 오디오 가이드와 뮤지엄 숍을 소개합니다.",
     images: ["/templates/OHMT021-museum/og-image.jpg"],
   },
@@ -47,7 +47,7 @@ export default function ExhibitionLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Museum",
-    name: "OHMT 미술관",
+    name: "CURA 미술관",
     description: "바티칸 미술관의 대표 소장품과 전시, 오디오 가이드와 뮤지엄 숍을 소개합니다.",
     url: "https://ohmt.site/ko/templates/OHMT021-museum",
   };

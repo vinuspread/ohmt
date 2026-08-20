@@ -65,13 +65,13 @@ export function Footer() {
   },
   "cta": `Start Project`,
   "footer": {
-    "copyright": `© 2026 OHMT.`,
+    "copyright": `© 2026 TECTA.`,
     "contact": `Austin, Texas · hello@ohmytemplate.com`
   },
   "aboutPage": {
     "category": `Architectural Core`,
     "title1": `ABOUT`,
-    "title2": `OHMT.`,
+    "title2": `TECTA.`,
     "philosophy": {
       "title": `Space as a canvas.`,
       "desc": `We operate at the convergence of architecture, spatial brand experience, and tactile interaction. Our design lab is dedicated to executing systems that evoke silence, celebrate material honesty, and command physical space with ultimate rigor.`
@@ -214,8 +214,7 @@ const navItems = [
         <footer className="bg-[var(--color-bg-dark)] text-white px-6 md:px-16 lg:px-24 py-10 md:py-12 border-t border-white/10 relative z-30 font-sans">
             <div className="max-w-[1720px] mx-auto">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 pb-8 border-b border-white/10">
-                    <Link href="/en/templates/OHMT006-studio" className="text-xl font-black tracking-[-1px] uppercase text-white">
-                        OHMT<span className="font-normal">.</span>
+                    <Link href="/en/templates/OHMT006-studio" className="text-xl font-black tracking-[-1px] uppercase text-white">TECTA<span className="font-normal">.</span>
                     </Link>
 
                     <nav className="flex flex-wrap gap-6 md:gap-10">

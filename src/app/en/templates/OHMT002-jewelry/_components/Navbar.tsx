@@ -17,7 +17,7 @@ export default function Navbar() {
     "about": `About`
   },
   "hero": {
-    "badge": `OHMT Fine Jewelry`,
+    "badge": `AVELINE Fine Jewelry`,
     "title1": `The Radiance`,
     "title2": `of Forever`,
     "cta1": `Explore The Edition`,
@@ -48,11 +48,11 @@ export default function Navbar() {
   },
   "craftsmanship": {
     "badge": `Artisan Technique`,
-    "quote": `Every facet is a dialogue between light and stone, hand-polished to achieve OHMT's signature brilliance.`,
+    "quote": `Every facet is a dialogue between light and stone, hand-polished to achieve AVELINE's signature brilliance.`,
     "heritage": `The Heritage`,
     "title1": `Hand-Set`,
     "title2": `With Soul`,
-    "desc": `At OHMT, we believe a jewel is more than a material; it is a silent observer of life's most precious moments. Our artisans spend hundreds of hours perfecting a single setting.`,
+    "desc": `At AVELINE, we believe a jewel is more than a material; it is a silent observer of life's most precious moments. Our artisans spend hundreds of hours perfecting a single setting.`,
     "process": `Discover The Process`
   }
 };
@@ -141,7 +141,7 @@ const [scrolled, setScrolled] = useState(false);
                 !isTransparent ? "text-neutral-900" : "text-white"
               }`}
             >
-              OHMT
+              AVELINE
             </Link>
           </div>
 
@@ -217,7 +217,7 @@ const [scrolled, setScrolled] = useState(false);
             >
               <div className="space-y-16">
                 <div className="flex justify-between items-center">
-                  <span className="text-sm font-serif tracking-[0.2em] uppercase text-neutral-900">OHMT</span>
+                  <span className="text-sm font-serif tracking-[0.2em] uppercase text-neutral-900">AVELINE</span>
                   <button onClick={() => setMobileMenuOpen(false)} className="p-2 text-neutral-500 hover:text-neutral-900">
                     <X size={20} />
                   </button>

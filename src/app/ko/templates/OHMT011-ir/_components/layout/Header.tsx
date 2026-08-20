@@ -23,7 +23,7 @@ export const Header = () => {
       <nav className="sticky top-0 z-[900] h-16 bg-white border-b border-[var(--color-border)] flex items-center">
         <div className="max-w-[1280px] mx-auto px-6 md:px-10 flex items-center justify-between w-full">
           <Link href="/ko/templates/OHMT011-ir" className="flex flex-col gap-0.5">
-            <span className="text-base font-bold text-[var(--color-dark-bg)] tracking-tight leading-none">OHMT</span>
+            <span className="text-base font-bold text-[var(--color-dark-bg)] tracking-tight leading-none">OBERON</span>
             <span className="text-[0.58rem] font-medium uppercase tracking-[0.2em] text-[#6B6B6B] leading-none">Global Holdings</span>
           </Link>
           

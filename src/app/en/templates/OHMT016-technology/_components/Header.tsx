@@ -19,9 +19,7 @@ export default function Header() {
             <rect x="15" y="15" width="6" height="6" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" rx="1"/>
             <circle cx="12" cy="12" r="2" fill="currentColor"/>
           </svg>
-          <span className="text-xl font-bold tracking-tight text-[var(--color-text)] font-heading">
-            OHMT
-          </span>
+          <span className="text-xl font-bold tracking-tight text-[var(--color-text)] font-heading">KINETIX</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -76,7 +74,7 @@ export default function Header() {
                 <rect x="15" y="15" width="6" height="6" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" rx="1"/>
                 <circle cx="12" cy="12" r="2" fill="currentColor"/>
               </svg>
-              <span className="text-xl font-bold tracking-tight text-[var(--color-text)] font-heading">OHMT</span>
+              <span className="text-xl font-bold tracking-tight text-[var(--color-text)] font-heading">KINETIX</span>
             </Link>
             <button onClick={() => setMobileMenuOpen(false)} className="p-1 text-[var(--color-text)]">
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

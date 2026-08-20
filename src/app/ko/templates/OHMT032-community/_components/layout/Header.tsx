@@ -33,7 +33,7 @@ export function Header({
           <Menu size={18} strokeWidth={1.8} />
         </button>
         <a href="/ko/templates/OHMT032-community" className="shrink-0 text-lg font-semibold text-[var(--color-text)]">
-          OHMT 커뮤니티
+          AGORA 커뮤니티
         </a>
 
         <form onSubmit={submitSearch} className="relative ml-auto hidden w-full max-w-[420px] md:block">

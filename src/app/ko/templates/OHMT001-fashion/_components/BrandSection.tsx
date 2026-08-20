@@ -26,7 +26,7 @@ export const BrandSection = () => {
             transition={{ duration: 1.2 }}
             className="text-xs uppercase tracking-[-0.03em] mb-4 sm:mb-8 font-medium opacity-50 font-sans"
           >
-            MAISON OHMT의 기준
+            SILO의 기준
           </motion.p>
          
           <motion.h2

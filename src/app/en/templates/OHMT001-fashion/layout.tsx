@@ -2,20 +2,20 @@ import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - Editorial Fashion Lookbook Template",
+  title: "SILO - Editorial Fashion Lookbook",
   description: "Premium fashion brand & editorial showcase",
   openGraph: {
-    title: "OHMT - Editorial Fashion Lookbook Template",
+    title: "SILO - Editorial Fashion Lookbook",
     description: "Premium fashion brand & editorial showcase",
     url: "https://ohmt.site/en/templates/OHMT001-fashion",
-    siteName: "OHMT",
+    siteName: "SILO",
     images: [{ url: "/templates/OHMT001-fashion/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Editorial Fashion Lookbook Template",
+    title: "SILO - Editorial Fashion Lookbook",
     description: "Premium fashion brand & editorial showcase",
     images: ["/templates/OHMT001-fashion/og-image.jpg"],
   },

@@ -231,7 +231,7 @@ export default function ProductDetailPage() {
                   <Sparkles className="w-5 h-5 text-[#C5A880] shrink-0" />
                   <div>
                     <h4 className="text-[0.85rem] font-bold uppercase tracking-[0.1em] mb-1">Maison Packaging</h4>
-                    <p className="text-[0.72rem] text-[#1E352F]/60 leading-relaxed">OHMT 전용 케이스와 보호용 파우치에 담아 안전하게 배송합니다.</p>
+                    <p className="text-[0.72rem] text-[#1E352F]/60 leading-relaxed">AVELINE 전용 케이스와 보호용 파우치에 담아 안전하게 배송합니다.</p>
                   </div>
                 </div>
               </div>
@@ -247,7 +247,7 @@ export default function ProductDetailPage() {
             <div className="bg-[#FAF8F5] border border-[#1E352F]/20 max-w-[480px] w-full p-8 shadow-2xl relative">
               <h2 className="font-[family-name:var(--theme-font-heading)] text-[1.8rem] font-bold mb-4 tracking-tight">Private Salon Booking</h2>
               <p className="text-[0.85rem] text-[#1E352F]/70 mb-6 leading-relaxed">
-                가까운 OHMT 부티크에서 주얼리 전문가와 1:1로 상담하고, 제품을 직접 착용해 보세요.
+                가까운 AVELINE 부티크에서 주얼리 전문가와 1:1로 상담하고, 제품을 직접 착용해 보세요.
               </p>
               
               <form onSubmit={handleBooking} className="flex flex-col gap-4">

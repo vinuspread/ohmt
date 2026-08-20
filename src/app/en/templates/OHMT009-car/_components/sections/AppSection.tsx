@@ -18,7 +18,7 @@ export const AppSection = () => {
         <div className="relative overflow-hidden min-h-[360px]">
           <img
             src="/templates/OHMT009-car/car-4.jpg"
-            alt="OHMT Interior"
+            alt="IONARA Interior"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[var(--color-primary)]" />
@@ -27,13 +27,13 @@ export const AppSection = () => {
         {/* Right: content */}
         <div className="flex flex-col justify-center px-6 md:pr-[max(60px,calc((100vw-1440px)/2+60px))] md:pl-16 py-14 md:py-20">
           <span className="block text-[0.65rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-text-muted)] mb-5">
-            OHMT Connected
+            IONARA Connected
           </span>
           <h2 className="text-[length:var(--text-h2)] font-extrabold tracking-tight leading-[var(--leading-heading)] mb-5 text-white">
             Seamless dual<br />motor driving<br />experience.
           </h2>
           <p className="text-[0.88rem] text-[var(--theme-text-muted)] leading-[var(--leading-body)] font-normal mb-10 max-w-[380px]">
-            Monitor charging, pre-condition the cabin, unlock remotely, and track your range in real time - all from the OHMT app.
+            Monitor charging, pre-condition the cabin, unlock remotely, and track your range in real time - all from the IONARA app.
           </p>
 
            <div className="flex flex-col gap-6 mb-10">

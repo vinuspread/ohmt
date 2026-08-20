@@ -18,13 +18,13 @@ export const Hero = () => {
     "title2": `car`,
     "title3": `era is`,
     "title4": `upon us.`,
-    "desc": `Zero emissions. Infinite ambition. The OHMT EV9 redefines what a luxury vehicle can be.`,
+    "desc": `Zero emissions. Infinite ambition. The IONARA EV9 redefines what a luxury vehicle can be.`,
     "explore": `Explore EV9`,
     "allModels": `All Models`,
     "from": `From`
   },
   "tech": {
-    "badge": `OHMT Technology`,
+    "badge": `IONARA Technology`,
     "title": `Where technology<br />meets design.`,
     "desc": `Our proprietary AI platform integrates real-time road analysis, predictive suspension response, and adaptive powertrain management - delivering a driving experience that feels less engineered and more alive.`
   },
@@ -57,7 +57,7 @@ return (
         <img
           className="w-full h-full object-cover object-[center_40%]"
           src="/templates/OHMT009-car/hero-main.jpg"
-          alt="OHMT EV9"
+          alt="IONARA EV9"
         />
       </video>
       <div className="absolute inset-0 bg-[linear-gradient(105deg,rgba(10,10,10,0.75)_0%,rgba(10,10,10,0.2)_60%,transparent_100%)]"></div>

@@ -20,7 +20,7 @@ export default function AboutPage() {
         <Header />
 
         <section className="relative h-[56vh] min-h-[380px] max-h-[560px] overflow-hidden">
-          <img src="/templates/OHMT012-magazine/mag-workspace.jpg" alt="OHMT 스튜디오 내부" className="w-full h-full object-cover" />
+          <img src="/templates/OHMT012-magazine/mag-workspace.jpg" alt="FOLIO 스튜디오 내부" className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-black/10" />
           <div className="absolute inset-x-0 bottom-0">
             <div className="max-w-[var(--theme-container)] mx-auto px-6 md:px-[var(--theme-gutter)] pb-10 md:pb-14">
@@ -37,7 +37,7 @@ export default function AboutPage() {
         <section className="py-16 md:py-24 bg-white">
           <div className="max-w-[var(--theme-container)] mx-auto px-6 md:px-[var(--theme-gutter)]">
             <p className="text-[1.05rem] text-[var(--theme-text-muted)] max-w-2xl leading-[var(--leading-body)] break-keep">
-              <span className="md:block">OHMT는 건축학과 학생들이 복사해 나눠 보던 작은 독립 잡지에서 시작했습니다.</span>{" "}
+              <span className="md:block">FOLIO는 건축학과 학생들이 복사해 나눠 보던 작은 독립 잡지에서 시작했습니다.</span>{" "}
               <span className="md:block">지금은 계간 인쇄판과 온라인 매거진을 함께 발행합니다.</span>{" "}
               <span className="md:block">빠르게 소비되는 소식보다 오래 두고 읽을 가치가 있는 이야기를 전한다는 원칙은 그대로입니다.</span>
             </p>

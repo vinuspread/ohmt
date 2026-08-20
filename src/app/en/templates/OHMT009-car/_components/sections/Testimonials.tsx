@@ -7,17 +7,17 @@ const testimonials = [
   {
     text: "\"Unmatched power and performance. The EV9 corners like it reads your mind. I've done track days in supercars that couldn't match the precision of this car.\"",
     name: "James K.",
-    model: "OHMT EV9 · Obsidian Black"
+    model: "IONARA EV9 · Obsidian Black"
   },
   {
     text: "\"Incredible battery life. I've driven German, Italian, and Japanese luxury for twenty years. The EV9 is the first car that made me feel like the future had arrived.\"",
     name: "Sarah M.",
-    model: "OHMT EV9 · Arctic White"
+    model: "IONARA EV9 · Arctic White"
   },
   {
     text: "\"Best electric car I've ever driven. Seven seats, 530km range, 22-minute fast charge. I didn't believe a family car could feel this aspirational.\"",
     name: "Daniel P.",
-    model: "OHMT X5 · Deep Forest"
+    model: "IONARA X5 · Deep Forest"
   }
 ];
 

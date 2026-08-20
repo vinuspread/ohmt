@@ -55,7 +55,7 @@ function LoyaltyPageContent() {
           imageAlt="공항 라운지"
           label="스카이라인 멤버십"
           title={<>여행할수록 <br /><span className="text-[var(--color-accent)] font-[family-name:var(--font-heading)] normal-case font-[var(--font-weight-heading)]">더 많은 혜택을</span></>}
-          description={"OHMT 스카이라인 멤버십에 가입하면 탑승 실적에 따라 마일리지 보너스와 우선 수속,\n공항 라운지 등 등급별 혜택을 받을 수 있습니다."}
+          description={"STRATUS 스카이라인 멤버십에 가입하면 탑승 실적에 따라 마일리지 보너스와 우선 수속,\n공항 라운지 등 등급별 혜택을 받을 수 있습니다."}
         />
 
         {/* 1. Interactive Digital Skyline Pass Creator - Typography Focus */}
@@ -136,7 +136,7 @@ function LoyaltyPageContent() {
                       
                       <div className="flex justify-between items-start">
                         <div>
-                          <p className="text-xs uppercase tracking-widest font-black opacity-45">OHMT 스카이라인 클럽</p>
+                          <p className="text-xs uppercase tracking-widest font-black opacity-45">STRATUS 스카이라인 클럽</p>
                           <h4 className="text-base font-black uppercase tracking-wider mt-1">{t.name} 멤버십</h4>
                         </div>
                         <Award size={22} className="opacity-70" />
@@ -289,7 +289,7 @@ function LoyaltyPageContent() {
                   <tr className="hover:bg-[var(--color-bg-secondary)] transition-colors">
                     <td className="py-8 pr-6 font-bold text-[var(--color-primary)]">공항 라운지 이용</td>
                     <td className="py-8 px-6 text-center text-neutral-300">이용 불가</td>
-                    <td className="py-8 px-6 text-center text-[var(--color-accent)] font-extrabold bg-[var(--color-bg-secondary)]/30">OHMT 비즈니스 라운지</td>
+                    <td className="py-8 px-6 text-center text-[var(--color-accent)] font-extrabold bg-[var(--color-bg-secondary)]/30">STRATUS 비즈니스 라운지</td>
                     <td className="py-8 px-6 text-center">일등석 라운지</td>
                     <td className="py-8 pl-6 text-center">퍼스트 클래스 전용 라운지</td>
                   </tr>

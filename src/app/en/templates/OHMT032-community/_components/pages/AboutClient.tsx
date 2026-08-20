@@ -20,7 +20,7 @@ export function AboutClient() {
           A community structure built for reusable knowledge
         </h1>
         <div className="mt-4 max-w-3xl space-y-3 text-sm leading-6 text-[var(--color-text-secondary)]">
-          <p>OHMT Community is a board-style template for organizing questions, resources, reviews, and notices around a focused topic.</p>
+          <p>AGORA Community is a board-style template for organizing questions, resources, reviews, and notices around a focused topic.</p>
           <p>The three-column layout keeps frequent categories and popular discussions visible, then collapses into drawer navigation on mobile.</p>
           <p>Static data makes it useful for presenting a community MVP or validating screen structure before connecting a CMS.</p>
         </div>

@@ -9,13 +9,13 @@ const geist = Geist({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ohmt.site"),
-  title: "OHMT - Camera Product Showcase Template",
+  title: "LUMA - Camera Product Showcase",
   description: "A premium compact camera landing page for creators who want quiet hardware and serious image quality.",
   openGraph: {
-    title: "OHMT - Camera Product Showcase Template",
+    title: "LUMA - Camera Product Showcase",
     description: "A premium compact camera landing page for creators who want quiet hardware and serious image quality.",
     url: "https://ohmt.site/en/templates/OHMT031-luma-camera",
-    siteName: "OHMT",
+    siteName: "LUMA",
     images: [{ url: "/templates/OHMT031-luma-camera/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     alternateLocale: "ko_KR",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Camera Product Showcase Template",
+    title: "LUMA - Camera Product Showcase",
     description: "A premium compact camera landing page for creators who want quiet hardware and serious image quality.",
     images: ["/templates/OHMT031-luma-camera/og-image.jpg"],
   },
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "OHMT - LUMA Camera",
+  name: "LUMA - LUMA Camera",
   description: "A premium compact camera landing page for creators who want quiet hardware and serious image quality.",
   url: "https://ohmt.site/en/templates/OHMT031-luma-camera",
 };

@@ -20,7 +20,7 @@ function JewelryPageContent() {
     "about": `About`
   },
   "hero": {
-    "badge": `OHMT Fine Jewelry`,
+    "badge": `AVELINE Fine Jewelry`,
     "title1": `The Radiance`,
     "title2": `of Forever`,
     "cta1": `Explore The Edition`,
@@ -51,18 +51,21 @@ function JewelryPageContent() {
   },
   "craftsmanship": {
     "badge": `Artisan Technique`,
-    "quote": `Every facet is a dialogue between light and stone, hand-polished to achieve OHMT's signature brilliance.`,
+    "quote": `Every facet is a dialogue between light and stone, hand-polished to achieve AVELINE's signature brilliance.`,
     "heritage": `The Heritage`,
     "title1": `Hand-Set`,
     "title2": `With Soul`,
-    "desc": `At OHMT, we believe a jewel is more than a material; it is a silent observer of life's most precious moments. Our artisans spend hundreds of hours perfecting a single setting.`,
+    "desc": `At AVELINE, we believe a jewel is more than a material; it is a silent observer of life's most precious moments. Our artisans spend hundreds of hours perfecting a single setting.`,
     "process": `Discover The Process`
   }
 };
-  const { scrollY } = useScroll();
+const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"]
+  });
 
-  const heroScale = useTransform(scrollY, [0, 800], [1, 1.05]);
-  const heroOpacity = useTransform(scrollY, [0, 800], [1, 0]);
+  const heroScale = useTransform(scrollYProgress, [0, 0.2], [1, 1.05]);
+  const heroOpacity = useTransform(scrollYProgress, [0, 0.2], [1, 0]);
 
   const products = [
     { id: 1, name: t.products.items.item1, price: "$4,250", img: "/templates/OHMT002-jewelry/jewelry-ring.png", tag: t.products.tags.engagement },
@@ -85,7 +88,7 @@ function JewelryPageContent() {
         <Navbar />
 
         {/* Hero */}
-        <section className="relative h-screen flex items-center justify-center overflow-hidden bg-white">
+        <section className="relative h-screen flex items-center justify-center overflow-hidden">
           <motion.div
             style={{ scale: heroScale, opacity: heroOpacity }}
             className="absolute inset-0 z-0"
@@ -93,7 +96,7 @@ function JewelryPageContent() {
             <img
               src="/templates/OHMT002-jewelry/jewelry-hero-main.png"
               className="w-full h-full object-cover grayscale-[0.2]"
-              alt="OHMT Fine Jewelry Hero"
+              alt="AVELINE Fine Jewelry Hero"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
           </motion.div>
@@ -112,12 +115,12 @@ function JewelryPageContent() {
                 <span className="whitespace-nowrap font-bold text-white">{t.hero.title2}</span>
               </h2>
               <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-                <Link href="/en/templates/OHMT002-jewelry/category/collections" className="px-10 py-4 bg-white text-neutral-900 text-xs font-bold uppercase tracking-[0.3em] hover:bg-[var(--color-primary)] hover:text-white transition-all">
+                <button className="px-10 py-4 bg-white text-neutral-900 text-xs font-bold uppercase tracking-[0.3em] hover:bg-[var(--color-primary)] hover:text-white transition-all">
                   {t.hero.cta1}
-                </Link>
-                <Link href="/en/templates/OHMT002-jewelry/category/about" className="group flex items-center gap-4 text-white hover:text-[var(--color-primary)] transition-all text-xs uppercase tracking-[0.3em] font-bold">
+                </button>
+                <button className="group flex items-center gap-4 text-white hover:text-[var(--color-primary)] transition-all text-xs uppercase tracking-[0.3em] font-bold">
                   {t.hero.cta2} <div className="w-10 h-px bg-white group-hover:bg-[var(--color-primary)] group-hover:w-16 transition-all duration-300" />
-                </Link>
+                </button>
               </div>
             </motion.div>
           </div>
@@ -126,9 +129,11 @@ function JewelryPageContent() {
         {/* Products */}
         <section className="py-10 md:py-20 md:py-32 px-6 md:px-12 bg-white">
           <div className="max-w-[1440px] mx-auto">
-            <div className="mb-12 md:mb-16">
-              <h3 className="text-3xl md:text-5xl font-serif font-bold tracking-tight whitespace-nowrap">{t.products.title}</h3>
-              <div className="mt-8 flex w-full max-w-full items-center gap-6 overflow-x-auto pb-1 no-scrollbar md:mt-10 md:gap-10" style={{ scrollbarWidth: "none" }}>
+            <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 md:mb-16 gap-8">
+                <div>
+                  <h3 className="text-3xl md:text-5xl font-serif font-bold tracking-tight">{t.products.title}</h3>
+                </div>
+              <div className="flex items-center gap-6 md:gap-10 overflow-x-auto pb-1 w-full max-w-full no-scrollbar shrink-0" style={{ scrollbarWidth: "none" }}>
                 {[
                   { id: "All", label: t.products.tabs.all },
                   { id: "Rings", label: t.products.tabs.rings },

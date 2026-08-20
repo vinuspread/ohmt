@@ -31,12 +31,12 @@ function CarAboutPageContent() {
         <section className="relative h-[85vh] min-h-[560px] overflow-hidden flex items-end">
           <img
             src="/templates/OHMT009-car/about-hero.jpg"
-            alt="OHMT Motors"
+            alt="IONARA Motors"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
           <div className="relative max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)] pb-8 md:pb-12 w-full">
-            <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-4 block">About OHMT</span>
+            <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-4 block">About IONARA</span>
             <h1 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-display)] font-bold tracking-[-0.03em] leading-[var(--leading-heading)] max-w-[680px]">
               운전의 즐거움을<br />새롭게 설계합니다.
             </h1>
@@ -47,7 +47,7 @@ function CarAboutPageContent() {
         <section className="border-b border-[var(--theme-border)]">
           <div className="max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)] py-10 md:py-14 grid md:grid-cols-2 gap-10 md:gap-20 items-center">
             <p className="text-[length:var(--text-lead)] text-white font-normal leading-[var(--leading-body)] break-keep">
-              OHMT Motors는 정교한 기술과 절제된 디자인으로,<br />
+              IONARA Motors는 정교한 기술과 절제된 디자인으로,<br />
               목적지에 도착하는 과정까지 특별한 경험으로 만듭니다.
             </p>
             <p className="text-[1.02rem] text-white/50 leading-[var(--leading-body)] font-normal break-keep">

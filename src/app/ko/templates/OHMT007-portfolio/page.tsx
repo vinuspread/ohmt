@@ -292,8 +292,7 @@ function PortfolioHomeContent() {
               transition={{ duration: 0.6 }}
               className="text-center"
             >
-              <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-4">
-                OHMT<span className="text-[var(--color-accent)]">.</span>
+              <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-4">HALF LIGHT<span className="text-[var(--color-accent)]">.</span>
               </h2>
               <p className="text-xs tracking-[0.3em] uppercase text-white/40">크리에이티브 스튜디오 / 서울</p>
             </motion.div>
@@ -365,7 +364,7 @@ function PortfolioHomeContent() {
               viewport={{ once: true }}
               className="text-[length:var(--text-h3)] font-bold text-[var(--color-text)] leading-snug mb-12"
             >
-              OHMT 스튜디오는 브랜드의 방향을 정리하고<br />
+              HALF LIGHT 스튜디오는 브랜드의 방향을 정리하고<br />
               브랜드의 아이덴티티부터 웹사이트와 캠페인까지<br />
               원스톱으로 제작하는 크리에이티브 스튜디오 입니다.
             </motion.p>

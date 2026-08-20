@@ -27,13 +27,13 @@ function CarTemplateContent() {
     "title2": `car`,
     "title3": `era is`,
     "title4": `upon us.`,
-    "desc": `Zero emissions. Infinite ambition. The OHMT EV9 redefines what a luxury vehicle can be.`,
+    "desc": `Zero emissions. Infinite ambition. The IONARA EV9 redefines what a luxury vehicle can be.`,
     "explore": `Explore EV9`,
     "allModels": `All Models`,
     "from": `From`
   },
   "tech": {
-    "badge": `OHMT Technology`,
+    "badge": `IONARA Technology`,
     "title": `Where technology\nmeets design.`,
     "desc": `Our proprietary AI platform integrates real-time road analysis, predictive suspension response, and adaptive powertrain management - delivering a driving experience that feels less engineered and more alive.`
   },

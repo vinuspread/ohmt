@@ -41,7 +41,7 @@ export function HomeClient() {
         <div className="max-w-3xl">
           <p className="inline-flex items-center gap-1.5 text-xs font-semibold text-[var(--color-accent)]">
             <Sparkles size={24} strokeWidth={1.8} />
-            OHMT Community
+            AGORA Community
           </p>
           <h1 className="mt-2.5 text-3xl font-semibold leading-[var(--leading-heading)] text-[var(--color-text)] md:text-5xl">
             질문과 경험이 모여 다음 실행으로 이어지는 커뮤니티
@@ -151,7 +151,7 @@ export function HomeClient() {
             <h2 className="text-lg font-semibold text-[var(--color-text)]">카테고리 흐름</h2>
             <p className="mt-1 text-xs text-[var(--color-text-muted)]">어떤 주제가 활발한지 한눈에 보고 바로 이동합니다.</p>
           </div>
-          <span className="text-xs font-semibold text-[var(--color-accent)]">{posts.length} posts</span>
+          <span className="text-xs font-semibold text-[var(--color-accent)]">게시글 {posts.length}개</span>
         </div>
         <div className="mt-4 grid gap-2 sm:grid-cols-2 xl:grid-cols-4">
           {categorySummary.map((category) => (
@@ -187,7 +187,7 @@ export function HomeClient() {
             </p>
           </div>
           <span className="rounded-full bg-[var(--color-bg-secondary)] px-2.5 py-1 text-xs font-semibold text-[var(--color-text-muted)]">
-            128 votes
+             128표
           </span>
         </div>
 

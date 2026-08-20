@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const item = collections.find((c) => c.slug === slug);
   return {
-    title: item ? `${item.title} - OHMT Museum` : "Collection - OHMT Museum",
+    title: item ? `${item.title} - CURA Museum` : "Collection - CURA Museum",
   };
 }
 

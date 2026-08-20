@@ -2,22 +2,22 @@ import "./theme.css";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "OHMT - Retreat Booking Experience Template",
+  title: "SERENITY - Retreat Booking Experience",
   description: "Premium spa and wellness shop template with a calming dark-green and cream palette, large lifestyle imagery, and a booking-first layout.",
-  keywords: ["spa template", "wellness website", "spa booking", "Next.js template", "OHMT"],
-  authors: [{ name: "OHMT", url: "https://ohmt.site" }],
+  keywords: ["spa template", "wellness website", "spa booking", "Next.js template", "SERENITY"],
+  authors: [{ name: "SERENITY", url: "https://ohmt.site" }],
   openGraph: {
-    title: "OHMT - Retreat Booking Experience Template",
+    title: "SERENITY - Retreat Booking Experience",
     description: "Premium spa and wellness shop template with a calming dark-green and cream palette, large lifestyle imagery, and a booking-first layout.",
     url: "https://ohmt.site/en/templates/OHMT026-spa",
-    siteName: "OHMT",
+    siteName: "SERENITY",
     images: [{ url: "/templates/OHMT026-spa/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Retreat Booking Experience Template",
+    title: "SERENITY - Retreat Booking Experience",
     description: "Premium spa and wellness shop template with a calming dark-green and cream palette, large lifestyle imagery, and a booking-first layout.",
     images: ["/templates/OHMT026-spa/og-image.jpg"],
   },
@@ -35,7 +35,7 @@ export default function SpaLayout({ children }: { children: React.ReactNode }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "HealthAndBeautyBusiness",
-    name: "OHMT Spa Wellness",
+    name: "SERENITY Spa Wellness",
     description: "Premium spa and wellness shop template with a calming dark-green and cream palette, large lifestyle imagery, and a booking-first layout.",
     url: "https://ohmt.site/en/templates/OHMT026-spa",
   };

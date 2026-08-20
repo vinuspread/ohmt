@@ -55,7 +55,7 @@ export const Footer = () => {
       "returns": `Returns`,
       "faq": `FAQ`
     },
-    "copyright": `© 2026 OHMT.`
+    "copyright": `© 2026 VELURE.`
   },
   "story": {
     "title": `Conscious beauty for the modern age.`,
@@ -87,9 +87,7 @@ const shopLinks = [
       <div className="max-w-[1440px] mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-20 mb-20">
           <div>
-            <Link href="/en/templates/OHMT010-cosmetic" className="text-[1rem] md:text-[1.15rem] font-medium md:font-black tracking-[0.12em] uppercase mb-8 block">
-              OHMT
-            </Link>
+            <Link href="/en/templates/OHMT010-cosmetic" className="text-[1rem] md:text-[1.15rem] font-medium md:font-black tracking-[0.12em] uppercase mb-8 block">VELURE</Link>
             <p className="max-w-[320px] whitespace-pre-line text-[0.85rem] leading-[var(--leading-body)] opacity-70">
               {t.footer.brandDesc}
             </p>

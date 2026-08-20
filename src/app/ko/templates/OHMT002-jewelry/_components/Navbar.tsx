@@ -94,7 +94,7 @@ export default function Navbar() {
                 !isTransparent ? "text-neutral-900" : "text-white"
               }`}
             >
-              OHMT
+              AVELINE
             </Link>
           </div>
 
@@ -173,7 +173,7 @@ export default function Navbar() {
             >
               <div className="space-y-16">
                 <div className="flex justify-between items-center">
-                  <span className="text-sm font-serif tracking-[0.2em] uppercase text-neutral-900">OHMT</span>
+                  <span className="text-sm font-serif tracking-[0.2em] uppercase text-neutral-900">AVELINE</span>
                   <button onClick={() => setMobileMenuOpen(false)} className="p-2 text-neutral-500 hover:text-neutral-900">
                     <X size={20} />
                   </button>

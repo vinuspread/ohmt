@@ -5,7 +5,7 @@ import Header from '../_components/Header'
 import Footer from '../_components/Footer'
 
 export const metadata: Metadata = {
-  title: "About - OHMT Technology",
+  title: "About - KINETIX Technology",
   description: "Company founded with a vision to democratize advanced robotics and autonomous hardware systems.",
 };
 

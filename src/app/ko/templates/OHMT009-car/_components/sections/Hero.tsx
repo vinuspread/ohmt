@@ -20,7 +20,7 @@ export const Hero = () => {
         <img
           className="w-full h-full object-cover object-[center_40%]"
           src="/templates/OHMT009-car/hero-main.jpg"
-          alt="OHMT EV9"
+          alt="IONARA EV9"
         />
       </video>
       <div className="absolute inset-0 bg-[linear-gradient(105deg,rgba(10,10,10,0.75)_0%,rgba(10,10,10,0.2)_60%,transparent_100%)]"></div>
@@ -33,7 +33,7 @@ export const Hero = () => {
           전기차의 새로운 시대,<br />그 <span className="text-[var(--theme-accent)]/80">위대한 시작</span>
         </h1>
         <p className="text-[1.05rem] text-[var(--theme-text-muted)] leading-[var(--leading-body)] max-w-[400px] mb-[2.5rem] font-normal">
-          배출가스 제로. 한계 없는 주행. OHMT EV9은 럭셔리 모빌리티의 기준을 새롭게 정의합니다.
+          배출가스 제로. 한계 없는 주행. IONARA EV9은 럭셔리 모빌리티의 기준을 새롭게 정의합니다.
         </p>
         
         <div className="flex gap-6 items-center">

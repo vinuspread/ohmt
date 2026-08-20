@@ -2,20 +2,20 @@ import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - Corporate Studio Portfolio Template",
+  title: "TECTA - Corporate Studio Portfolio",
   description: "Architecture and spatial design studio",
   openGraph: {
-    title: "OHMT - Corporate Studio Portfolio Template",
+    title: "TECTA - Corporate Studio Portfolio",
     description: "Architecture and spatial design studio",
     url: "https://ohmt.site/en/templates/OHMT006-studio",
-    siteName: "OHMT",
+    siteName: "TECTA",
     images: [{ url: "/templates/OHMT006-studio/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Corporate Studio Portfolio Template",
+    title: "TECTA - Corporate Studio Portfolio",
     description: "Architecture and spatial design studio",
     images: ["/templates/OHMT006-studio/og-image.jpg"],
   },

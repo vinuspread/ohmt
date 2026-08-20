@@ -21,7 +21,7 @@ export function Header() {
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
           {/* Logo mark */}
           <Link href="/en/templates/OHMT007-portfolio" className="text-[1.2rem] font-black tracking-tighter text-[var(--color-text)] hover:opacity-60 transition-opacity">
-            OHMT.
+            HALF LIGHT.
           </Link>
 
           {/* Right: nav + social */}

@@ -2,20 +2,20 @@ import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT 매거진 | 디자인과 라이프스타일",
+  title: "FOLIO 매거진 | 디자인과 라이프스타일",
   description: "디자인과 문화, 지속가능성을 다루는 라이프스타일 매거진입니다.",
   openGraph: {
-    title: "OHMT 매거진 | 디자인과 라이프스타일",
+    title: "FOLIO 매거진 | 디자인과 라이프스타일",
     description: "디자인과 문화, 지속가능성을 다루는 라이프스타일 매거진입니다.",
     url: "https://ohmt.site/ko/templates/OHMT012-magazine",
-    siteName: "OHMT",
+    siteName: "FOLIO",
     images: [{ url: "/templates/OHMT012-magazine/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT 매거진 | 디자인과 라이프스타일",
+    title: "FOLIO 매거진 | 디자인과 라이프스타일",
     description: "디자인과 문화, 지속가능성을 다루는 라이프스타일 매거진입니다.",
     images: ["/templates/OHMT012-magazine/og-image.jpg"],
   },

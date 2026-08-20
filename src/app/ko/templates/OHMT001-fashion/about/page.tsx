@@ -19,7 +19,7 @@ function AboutContent() {
           title="브랜드 소개"
           description="좋은 원단과 유행을 타지 않는 디자인을 바탕으로 옷을 만듭니다. 시간이 지나도 자연스럽게 꺼내 입을 수 있도록 소재와 재단을 세심하게 다듬습니다."
           image="/templates/OHMT001-fashion/about-hero-v2.png"
-          imageAlt="MAISON OHMT 작업실과 제작 과정"
+          imageAlt="SILO 작업실과 제작 과정"
         />
 
         <section className="bg-black py-24 md:py-32">
@@ -37,7 +37,7 @@ function AboutContent() {
               <div>
                 <span className="text-xs uppercase tracking-[-0.03em] text-[var(--color-text-muted)]">브랜드 스토리</span>
                 <p className="text-base text-black/70 leading-relaxed mt-6 break-keep tracking-[-0.025em]">
-                  MAISON OHMT는 오래 입을수록 편안해지고 자연스럽게 몸에 익는 옷을 만들기 위해 시작했습니다. 소재의 촉감과 내구성을 먼저 살피고, 여러 차례의 피팅을 거쳐 움직임이 편한 실루엣을 완성합니다. 재단과 봉제, 마감까지 각 과정을 꼼꼼하게 확인하며 눈에 잘 띄지 않는 부분까지도 신경써서 제작합니다.
+                  SILO는 오래 입을수록 편안해지고 자연스럽게 몸에 익는 옷을 만들기 위해 시작했습니다. 소재의 촉감과 내구성을 먼저 살피고, 여러 차례의 피팅을 거쳐 움직임이 편한 실루엣을 완성합니다. 재단과 봉제, 마감까지 각 과정을 꼼꼼하게 확인하며 눈에 잘 띄지 않는 부분까지도 신경써서 제작합니다.
                 </p>
               </div>
               <div className="aspect-[4/5] overflow-hidden">

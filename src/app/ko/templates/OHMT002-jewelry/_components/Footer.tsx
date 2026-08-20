@@ -12,7 +12,7 @@ export default function Footer() {
         
         {/* Newsletter / Brand Statement */}
         <div className="md:col-span-2 space-y-6">
-          <h4 className="text-xs font-medium uppercase tracking-[0.2em] text-neutral-900">OHMT의 새 소식을 받아보세요</h4>
+          <h4 className="text-xs font-medium uppercase tracking-[0.2em] text-neutral-900">AVELINE의 새 소식을 받아보세요</h4>
           <p className="text-sm font-normal text-neutral-500 leading-relaxed max-w-sm normal-case">
             새 컬렉션과 부티크 행사, 주얼리 관리에 관한 소식을 이메일로 전해드립니다.
           </p>
@@ -53,7 +53,7 @@ export default function Footer() {
 
       {/* Footer Bottom Bar */}
       <div className="max-w-[1440px] mx-auto mt-20 pt-8 border-t border-neutral-200/30 flex flex-col md:flex-row justify-between items-center gap-6 text-xs font-medium text-neutral-500 uppercase tracking-widest">
-        <span>© 2026 OHMT.</span>
+        <span>© 2026 AVELINE.</span>
         <div className="flex gap-8">
           <a href="#" className="hover:text-[var(--color-primary)] transition-colors">Instagram</a>
           <a href="#" className="hover:text-[var(--color-primary)] transition-colors">LinkedIn</a>

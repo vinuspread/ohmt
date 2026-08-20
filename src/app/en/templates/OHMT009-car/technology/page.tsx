@@ -49,7 +49,7 @@ function CarTechnologyPageContent() {
         <section className="relative h-[70vh] min-h-[500px] overflow-hidden flex items-end">
           <img
             src="/templates/OHMT009-car/tech-hero-custom.png"
-            alt="OHMT Technology"
+            alt="IONARA Technology"
             className="absolute inset-0 w-full h-full object-cover object-center"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent" />

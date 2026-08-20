@@ -28,7 +28,7 @@ function CarModelsPageContent() {
                 한 대 한 대,<br />기준을 새로 씁니다.
               </h1>
               <p className="text-[1.15rem] md:text-[1.25rem] text-white/70 font-normal leading-[var(--leading-body)] max-w-[700px] break-keep">
-                순수 전기차의 선구자부터 고성능 아이콘에 이르기까지, 모든 OHMT 모델은 디테일을 향한 집착으로 완성됩니다.
+                순수 전기차의 선구자부터 고성능 아이콘에 이르기까지, 모든 IONARA 모델은 디테일을 향한 집착으로 완성됩니다.
               </p>
             </div>
 

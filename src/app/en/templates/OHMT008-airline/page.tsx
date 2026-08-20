@@ -41,7 +41,7 @@ function AirlineTemplateContent() {
     {
       icon: ShieldCheck,
       title: "Priority Concierge Service",
-      desc: "Dedicated personal concierge from pre-departure lounge access through seamless arrivals at every OHMT destination."
+      desc: "Dedicated personal concierge from pre-departure lounge access through seamless arrivals at every STRATUS destination."
     }
   ];
 
@@ -123,7 +123,7 @@ function AirlineTemplateContent() {
                 <img
                   src="/templates/OHMT008-airline/airline-experience-hero.png"
                   className="w-full h-full object-cover opacity-80 transition-transform duration-[var(--transition-slow)] hover:scale-105"
-                  alt="OHMT cabin crew"
+                  alt="STRATUS cabin crew"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)]/60 via-transparent to-transparent" />
               </motion.div>

@@ -17,7 +17,7 @@ export default function AboutFull() {
           <img src="/templates/OHMT026-spa/about-hero.jpg" alt="" className="absolute inset-0 h-full w-full object-cover opacity-50" />
           <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-secondary)] to-transparent" />
           <div className="relative z-10 flex h-full min-h-[60dvh] flex-col justify-end px-6 lg:px-16 pb-16">
-            <motion.h1 initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: EASE_OUT }} className="font-[family-name:var(--font-heading)] text-6xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[var(--leading-heading)] max-w-2xl">OHMT 소개</motion.h1>
+            <motion.h1 initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, ease: EASE_OUT }} className="font-[family-name:var(--font-heading)] text-6xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[var(--leading-heading)] max-w-2xl">SERENITY 소개</motion.h1>
             <motion.p initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1, ease: EASE_OUT }} className="mt-4 text-[0.95rem] text-white/60 leading-relaxed max-w-lg">피부 컨디션과 생활 리듬을 함께 살피는 스파 & 웰니스 공간입니다.</motion.p>
           </div>
         </section>

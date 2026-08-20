@@ -2,20 +2,20 @@ import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT | 크리에이티브 스튜디오 포트폴리오",
+  title: "HALF LIGHT | 크리에이티브 스튜디오 포트폴리오",
   description: "브랜드 디자인과 웹사이트, 캠페인 프로젝트를 소개하는 크리에이티브 스튜디오 포트폴리오 템플릿입니다.",
   openGraph: {
-    title: "OHMT | 크리에이티브 스튜디오 포트폴리오",
+    title: "HALF LIGHT | 크리에이티브 스튜디오 포트폴리오",
     description: "브랜드 디자인과 웹사이트, 캠페인 프로젝트를 소개하는 크리에이티브 스튜디오 포트폴리오 템플릿입니다.",
     url: "https://ohmt.site/ko/templates/OHMT007-portfolio",
-    siteName: "OHMT",
+    siteName: "HALF LIGHT",
     images: [{ url: "/templates/OHMT007-portfolio/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT | 크리에이티브 스튜디오 포트폴리오",
+    title: "HALF LIGHT | 크리에이티브 스튜디오 포트폴리오",
     description: "브랜드 디자인과 웹사이트, 캠페인 프로젝트를 소개하는 크리에이티브 스튜디오 포트폴리오 템플릿입니다.",
     images: ["/templates/OHMT007-portfolio/og-image.jpg"],
   },

@@ -83,13 +83,13 @@ Our architectural discipline ensures that massive spatial layouts retain microsc
   },
   "cta": `Start Project`,
   "footer": {
-    "copyright": `© 2026 OHMT.`,
+    "copyright": `© 2026 TECTA.`,
     "contact": `Austin, Texas · hello@ohmytemplate.com`
   },
   "aboutPage": {
     "category": `Architectural Core`,
     "title1": `ABOUT`,
-    "title2": `OHMT.`,
+    "title2": `TECTA.`,
     "philosophy": {
       "title": `Space as a canvas.`,
       "desc": `We operate at the convergence of architecture, spatial brand experience, and tactile interaction. Our design lab is dedicated to executing systems that evoke silence, celebrate material honesty, and command physical space with ultimate rigor.`
@@ -326,7 +326,7 @@ const fields = t.hero.fields.map((f: HeroField, i: number) => ({
                                             <h3 className="text-base md:text-xl font-bold text-white">{activeHeroField.subTitle}</h3>
                                             <span className="text-xs font-mono text-white/40">- {activeHeroField.location}</span>
                                         </div>
-                                        <p className="whitespace-pre-line text-sm text-white/50 font-normal leading-[var(--leading-body)] line-clamp-3 md:line-clamp-none">{activeHeroField.desc}</p>
+                                        <p className="text-sm md:text-sm text-white/50 font-normal leading-[var(--leading-body)] line-clamp-3 md:line-clamp-none">{activeHeroField.desc}</p>
                                     </div>
                                     <div className="flex items-center gap-3">
                                         <button onClick={handlePrev} className="w-7 h-7 md:w-8 md:h-8 rounded-full border border-white/20 hover:border-white text-white flex items-center justify-center transition-colors">
@@ -354,7 +354,7 @@ const fields = t.hero.fields.map((f: HeroField, i: number) => ({
                                 </h2>
                             </div>
                             <div className="lg:col-span-7 space-y-10 md:space-y-16">
-                                <p className="whitespace-pre-line text-sm font-normal leading-[var(--leading-body)] text-white/60 md:text-base lg:text-lg">
+                                <p className="text-sm md:text-base lg:text-lg text-white/60 leading-[var(--leading-body)] font-normal">
                                     {t.manifesto.desc}
                                 </p>
                                 <div className="grid grid-cols-3 gap-4 md:gap-8 border-t border-white/10 pt-8 md:pt-12">

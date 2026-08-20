@@ -98,7 +98,7 @@ export function SidebarNav({
           <button className="fixed inset-0 z-40 bg-black/30 text-left lg:hidden" aria-label="메뉴 닫기" onClick={onMobileClose} />
           <aside className="fixed left-0 top-0 z-50 h-dvh w-[284px] overflow-y-auto bg-[var(--color-bg-elevated)] p-4 shadow-[var(--shadow-card)] lg:hidden">
             <div className="mb-6 flex items-center justify-between">
-              <span className="text-sm font-semibold text-[var(--color-text)]">OHMT 커뮤니티</span>
+              <span className="text-sm font-semibold text-[var(--color-text)]">AGORA 커뮤니티</span>
               <button type="button" onClick={onMobileClose} className="rounded-full p-2 hover:bg-[var(--color-bg-hover)]" aria-label="닫기">
                 <X size={20} strokeWidth={1.7} />
               </button>

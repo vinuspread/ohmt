@@ -10,7 +10,7 @@ export function Footer() {
         {/* Top bar */}
         <div className="flex items-center justify-between mb-16 pb-6 border-b border-[var(--color-border)]">
           <Link href="/en/templates/OHMT007-portfolio" className="text-[1.2rem] font-black tracking-tighter text-[var(--color-text)] hover:opacity-60 transition-opacity">
-            OHMT.
+            HALF LIGHT.
           </Link>
           <div className="flex items-center gap-2 text-xs font-medium text-[var(--color-text-muted)]">
             <a href="#" className="hover:text-[var(--color-text)] transition-colors">BE</a>
@@ -65,7 +65,7 @@ export function Footer() {
               </Link>
             ))}
           </div>
-          <span className="text-[0.75rem] text-[var(--color-text-muted)]">© 2026 OHMT.</span>
+          <span className="text-[0.75rem] text-[var(--color-text-muted)]">© 2026 HALF LIGHT.</span>
         </div>
       </div>
     </footer>

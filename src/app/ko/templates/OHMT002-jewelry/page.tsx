@@ -47,7 +47,7 @@ function JewelryPageContent() {
             <img
               src="/templates/OHMT002-jewelry/jewelry-hero-main.png"
               className="w-full h-full object-cover grayscale-[0.2]"
-              alt="OHMT Fine Jewelry Hero"
+              alt="AVELINE Fine Jewelry Hero"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/10 to-black/40" />
           </motion.div>
@@ -59,7 +59,7 @@ function JewelryPageContent() {
               transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
             >
               <span className="text-xs md:text-sm uppercase text-white mb-6 block tracking-tight font-bold opacity-80">
-                OHMT FINE JEWELRY
+                AVELINE FINE JEWELRY
               </span>
               <div className="mb-12 flex max-w-6xl flex-col items-center space-y-4 mx-auto break-keep">
                 <p className="flex flex-col items-center text-center text-lg font-extralight leading-snug tracking-tight text-white/90 md:text-2xl" style={{ fontFamily: "'Nanum Myeongjo', serif" }}>
@@ -186,7 +186,7 @@ function JewelryPageContent() {
                 <span className="text-[var(--color-primary)]">착용감을 세심하게 다듬습니다.</span>
               </h3>
               <p className="text-sm md:text-base text-neutral-600 leading-[var(--leading-body)] md:leading-loose max-w-md break-keep tracking-[-0.025em]">
-                <span className="block">OHMT는 주얼리가 특별한 날에만 머무는 장식이 아니라, 일상의 순간과 기억을 오래 간직하는 물건이라고 생각합니다.</span>
+                <span className="block">AVELINE는 주얼리가 특별한 날에만 머무는 장식이 아니라, 일상의 순간과 기억을 오래 간직하는 물건이라고 생각합니다.</span>
                 <span className="block">원석을 고르는 단계부터 세팅과 마감까지 직접 살피며, 아름다움과 편안한 착용감을 함께 갖춘 주얼리를 만듭니다.</span>
               </p>
               <div className="flex items-center gap-4 group cursor-pointer pt-2">

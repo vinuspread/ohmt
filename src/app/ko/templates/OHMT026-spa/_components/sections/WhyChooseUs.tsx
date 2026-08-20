@@ -15,7 +15,7 @@ export default function WhyChooseUs() {
     <section className="relative overflow-hidden bg-[var(--color-secondary)] py-24 lg:py-32">
       <div className="mx-auto max-w-7xl px-6">
         <motion.div initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6, ease: EASE_OUT }} className="text-center mb-16">
-          <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">OHMT를 선택하는 이유</span>
+          <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">SERENITY를 선택하는 이유</span>
           <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text-contrast)] leading-[var(--leading-heading)]">꾸준히 찾는 데에는 이유가 있습니다</h2>
         </motion.div>
         <div className="grid gap-6 lg:grid-cols-4 mb-12">

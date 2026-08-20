@@ -8,20 +8,20 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 
 export const metadata: Metadata = {
-  title: "About - OHMT Magazine",
+  title: "About - FOLIO Magazine",
   description: "A quarterly record of how design, culture, and sustainability actually intersect.",
   openGraph: {
-    title: "About - OHMT Magazine",
+    title: "About - FOLIO Magazine",
     description: "A quarterly record of how design, culture, and sustainability actually intersect.",
     url: "https://ohmt.site/en/templates/OHMT012-magazine/about",
-    siteName: "OHMT",
+    siteName: "FOLIO",
     images: [{ url: "/templates/OHMT012-magazine/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "About - OHMT Magazine",
+    title: "About - FOLIO Magazine",
     description: "A quarterly record of how design, culture, and sustainability actually intersect.",
     images: ["/templates/OHMT012-magazine/og-image.jpg"],
   },
@@ -61,7 +61,7 @@ export default function AboutPage() {
         <section className="py-16 md:py-24 bg-white">
           <div className="max-w-[var(--theme-container)] mx-auto px-6 md:px-[var(--theme-gutter)]">
             <p className="text-[1.05rem] text-[var(--theme-text-muted)] max-w-2xl leading-[var(--leading-body)]">
-              OHMT started as a photocopied zine passed between architecture students and has since grown into a
+              FOLIO started as a photocopied zine passed between architecture students and has since grown into a
               quarterly print magazine and daily online edition. We still write every story like it has to earn a
               place on your coffee table.
             </p>

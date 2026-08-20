@@ -2,20 +2,20 @@ import type { Metadata } from "next";
 import './theme.css';
 
 export const metadata: Metadata = {
-  title: "OHMT - Automotive Concept Showcase Template",
+  title: "IONARA - Automotive Concept Showcase",
   description: "Premium automotive concept showcase",
   openGraph: {
-    title: "OHMT - Automotive Concept Showcase Template",
+    title: "IONARA - Automotive Concept Showcase",
     description: "Premium automotive concept showcase",
     url: "https://ohmt.site/en/templates/OHMT009-car",
-    siteName: "OHMT",
+    siteName: "IONARA",
     images: [{ url: "/templates/OHMT009-car/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Automotive Concept Showcase Template",
+    title: "IONARA - Automotive Concept Showcase",
     description: "Premium automotive concept showcase",
     images: ["/templates/OHMT009-car/og-image.jpg"],
   },

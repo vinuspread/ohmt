@@ -70,13 +70,13 @@ function StudioContactPageContent() {
   },
   "cta": `Start Project`,
   "footer": {
-    "copyright": `© 2026 OHMT.`,
+    "copyright": `© 2026 TECTA.`,
     "contact": `Austin, Texas · hello@ohmytemplate.com`
   },
   "aboutPage": {
     "category": `Architectural Core`,
     "title1": `ABOUT`,
-    "title2": `OHMT.`,
+    "title2": `TECTA.`,
     "philosophy": {
       "title": `Space as a canvas.`,
       "desc": `We operate at the convergence of architecture, spatial brand experience, and tactile interaction. Our design lab is dedicated to executing systems that evoke silence, celebrate material honesty, and command physical space with ultimate rigor.`

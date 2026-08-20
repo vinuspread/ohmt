@@ -15,20 +15,20 @@ const interTight = Inter_Tight({
 })
 
 export const metadata: Metadata = {
-  title: 'OHMT - Robotics Technology Landing Template',
+  title: 'KINETIX - Robotics Technology Landing Template',
   description: 'Empower machine learning and robotics startups with a professional, dynamic platform.',
   openGraph: {
-    title: 'OHMT - Robotics Technology Landing Template',
+    title: 'KINETIX - Robotics Technology Landing Template',
     description: 'Empower machine learning and robotics startups with a professional, dynamic platform.',
     url: 'https://ohmt.site/en/templates/OHMT016-technology',
-    siteName: 'OHMT',
+    siteName: 'KINETIX',
     images: [{ url: '/templates/OHMT016-technology/og-image.jpg', width: 1200, height: 630 }],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'OHMT - Robotics Technology Landing Template',
+    title: 'KINETIX - Robotics Technology Landing Template',
     description: 'Empower machine learning and robotics startups with a professional, dynamic platform.',
     images: ['/templates/OHMT016-technology/og-image.jpg'],
   },
@@ -52,7 +52,7 @@ export default function TechnologyLayout({
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            name: "OHMT Technology",
+            name: "KINETIX Technology",
             url: "https://ohmt.site/en/templates/OHMT016-technology",
             description: "Empower machine learning and robotics startups.",
           }),

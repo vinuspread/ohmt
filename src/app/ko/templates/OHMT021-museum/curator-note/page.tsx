@@ -63,7 +63,7 @@ function CuratorNotePageContent() {
           
           <div className="border-t border-black/20 mt-20 pt-10">
             <span className="text-xs uppercase tracking-[0.4em] font-bold block mb-2">{"큐레이터"}</span>
-            <span className="font-serif text-2xl">{"OHMT 미술관"}</span>
+            <span className="font-serif text-2xl">{"CURA 미술관"}</span>
           </div>
         </motion.article>
 
