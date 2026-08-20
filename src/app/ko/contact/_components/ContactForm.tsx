@@ -4,6 +4,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { ChevronDown, LayoutTemplate, Wand2, MessageCircle, X } from "lucide-react";
 import { trackLead } from "@/lib/metaPixel";
+import { trackGenerateLead } from "@/lib/googleTag";
 
 type InquiryType = "template" | "custom" | "other" | null;
 
@@ -235,6 +236,7 @@ export function ContactForm({ packages, requiresConsultation = false, templateLi
 
       if (!res.ok) throw new Error("서버 오류");
       trackLead();
+      trackGenerateLead();
       router.push("/ko/contact/complete");
     } catch {
       setError("문의 접수 중 오류가 발생했습니다. 잠시 후 다시 시도해 주세요.");
