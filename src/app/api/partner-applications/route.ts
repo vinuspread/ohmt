@@ -16,9 +16,9 @@ interface PartnerApplicationBody {
   website?: unknown;
 }
 
-const statuses = ["프리랜서", "개인사업자", "재직 중", "기타"] as const;
-const experiences = ["B2B 영업", "B2C 영업", "B2B / B2C 모두", "영업 경험 없음"] as const;
-const channelOptions = ["지인 네트워크", "이메일", "카카오톡", "링크드인", "커뮤니티", "오프라인"] as const;
+const statuses = ["독립 컨설턴트", "에이전시 / 법인", "현직 업계 전문가", "기타"] as const;
+const experiences = ["B2B 세일즈 / 컨설팅", "웹·IT 프로젝트", "광고 / 마케팅 대행", "기타 관련 경험"] as const;
+const channelOptions = ["보유 고객사", "업계 네트워크", "제휴 채널", "전문 커뮤니티", "콘텐츠 / 미디어", "오프라인 영업"] as const;
 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const maxBodyBytes = 16 * 1024;
 
@@ -102,14 +102,14 @@ export async function POST(request: Request) {
   }
 
   const applicationMessage = [
-    "[영업 파트너 지원]",
-    `현재 활동: ${status}`,
-    `영업 경험: ${experience}`,
-    `활동 채널: ${channels.join(", ")}`,
-    `관심 업종 또는 네트워크: ${industries || "미입력"}`,
-    `프로필 링크: ${profileUrl || "미입력"}`,
+    "[비즈니스 파트너십 신청]",
+    `사업 형태: ${status}`,
+    `관련 경험: ${experience}`,
+    `주요 고객 접점: ${channels.join(", ")}`,
+    `주요 산업군 또는 고객 네트워크: ${industries || "미입력"}`,
+    `회사 / 프로필 링크: ${profileUrl || "미입력"}`,
     "",
-    "활동 계획",
+    "파트너십 제안",
     plan,
   ].join("\n");
 
@@ -126,7 +126,7 @@ export async function POST(request: Request) {
         company: status,
         role: experience,
         package_name: channels.join(", "),
-        template_name: "영업 파트너 지원",
+        template_name: "비즈니스 파트너십 신청",
         message: applicationMessage,
       })
       .select("id")
@@ -142,11 +142,11 @@ export async function POST(request: Request) {
         ["이름", name],
         ["이메일", email],
         ["전화번호", phone],
-        ["현재 활동", status],
-        ["영업 경험", experience],
-        ["활동 채널", channels.join(", ")],
-        ["관심 업종", industries || "미입력"],
-        ["프로필", profileUrl || "미입력"],
+        ["사업 형태", status],
+        ["관련 경험", experience],
+        ["주요 고객 접점", channels.join(", ")],
+        ["주요 산업군", industries || "미입력"],
+        ["회사 / 프로필", profileUrl || "미입력"],
       ];
       const tableRows = rows
         .map(
@@ -158,16 +158,16 @@ export async function POST(request: Request) {
       const { error: emailError } = await getResend()!.emails.send({
         from: "Oh My Template <onboarding@resend.dev>",
         to: process.env.NOTIFY_EMAIL,
-        subject: `[영업 파트너 지원] ${name}`,
+        subject: `[비즈니스 파트너십 신청] ${name}`,
         html: `
           <div style="max-width:640px;margin:0 auto;padding:32px 24px;font-family:Arial,sans-serif">
-            <h1 style="margin:0 0 24px;font-size:22px;color:#18181b">새 영업 파트너 지원서</h1>
+            <h1 style="margin:0 0 24px;font-size:22px;color:#18181b">새 비즈니스 파트너십 신청서</h1>
             <table style="width:100%;border-collapse:collapse;background:#f4f4f5;border-radius:12px;overflow:hidden"><tbody>${tableRows}</tbody></table>
             <div style="margin-top:24px">
-              <p style="margin:0 0 8px;font-size:13px;font-weight:700;color:#71717a">활동 계획</p>
+              <p style="margin:0 0 8px;font-size:13px;font-weight:700;color:#71717a">파트너십 제안</p>
               <div style="padding:16px;border:1px solid #e4e4e7;border-radius:12px;white-space:pre-wrap;line-height:1.7;color:#18181b">${escapeHtml(plan)}</div>
             </div>
-            <p style="margin:28px 0 0;font-size:12px;color:#a1a1aa">OHMT 영업 파트너 모집 폼에서 접수되었습니다.</p>
+            <p style="margin:28px 0 0;font-size:12px;color:#a1a1aa">OHMT 비즈니스 파트너 프로그램에서 접수되었습니다.</p>
           </div>
         `,
       });
