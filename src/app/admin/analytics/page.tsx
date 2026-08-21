@@ -23,7 +23,7 @@ export default function AnalyticsPage() {
               <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
             </svg>
           </a>
-          <span className="text-xs text-zinc-400">GA4 측정 ID: G-TN2XSY9H59</span>
+          <span className="text-xs text-zinc-400">GA4 측정 ID: G-R392Z3BRLS (속성: ohmt.site)</span>
         </div>
 
         {/* Umami 대시보드 */}
