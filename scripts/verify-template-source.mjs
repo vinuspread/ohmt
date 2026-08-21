@@ -6,7 +6,7 @@ const root = process.cwd();
 const checks = [
   {
     path: "src/app/ko/templates/OHMT001-fashion/_components/BrandSection.tsx",
-    includes: ["MAISON OHMT"],
+    includes: ["SILO의 기준"],
     excludes: ["\uBC14\uC774\uB108\uC2A4\uD504\uB808\uB4DC"],
   },
   {
