@@ -75,12 +75,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
 
   return [
-    {
-      url: `${BASE}/ko/partners`,
-      lastModified: NOW,
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
-    },
     ...(["en", "ko"] as const).flatMap((lang) => [
       {
         url: `${BASE}/${lang}`,
