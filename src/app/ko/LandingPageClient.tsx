@@ -140,8 +140,21 @@ function SectionHeadingKo({ label, title, desc, titleClassName }: { label?: stri
   );
 }
 
-export default function LandingPageClient({ templates, faqs, packages }: { templates: TemplateItem[]; faqs: FaqItem[]; packages: PricingPackage[] }) {
+function shuffleTemplates(list: TemplateItem[]): TemplateItem[] {
+  const result = [...list];
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
+export default function LandingPageClient({ templates: templatesProp, faqs, packages }: { templates: TemplateItem[]; faqs: FaqItem[]; packages: PricingPackage[] }) {
   const router = useRouter();
+  const [templates, setTemplates] = useState(templatesProp);
+  useEffect(() => {
+    setTemplates(shuffleTemplates(templatesProp));
+  }, [templatesProp]);
   const [heroIndex, setHeroIndex] = useState(0);
   const [caseAvatars, setCaseAvatars] = useState<[string, string][]>(
     serviceCardsKo.map(() => [CASE_AVATAR_OPTIONS[0], CASE_AVATAR_OPTIONS[1]])
