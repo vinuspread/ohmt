@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Menu, X, Search, Sparkles } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Logo } from "@/components/Logo";
+import { WebMcpTemplateSearch } from "@/components/WebMcpTemplateSearch";
 import type { PricingPackage } from "@/types/template";
 
 const HERO_SLIDES = [
@@ -426,6 +427,7 @@ export default function LandingPageClient({ templates: templatesProp, faqs, pack
 
   return (
     <main className="min-h-screen bg-[#FCFCFD] text-zinc-900 font-sans selection:bg-[#F1B100] selection:text-zinc-900 overflow-x-hidden antialiased dark:bg-zinc-950 dark:text-zinc-100 pt-[64px]">
+      <WebMcpTemplateSearch lang="en" templates={templatesProp} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteOrganizationSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />

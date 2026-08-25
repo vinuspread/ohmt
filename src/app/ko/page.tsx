@@ -80,8 +80,9 @@ const fallbackFaqs: FaqItem[] = [
 ];
 
 export const metadata: Metadata = {
-  title: "오마이템플릿",
+  title: "홈페이지 제작·웹사이트 템플릿",
   description: "OHMT는 비즈니스 목적에 맞는 프리미엄 웹사이트 템플릿과 맞춤형 홈페이지 제작 서비스를 제공합니다. 템플릿 선택부터 커스터마이징, 기능 개발까지 상담을 통해 진행합니다.",
+  keywords: ["홈페이지 제작", "웹사이트 제작", "기업 홈페이지 제작", "브랜드 홈페이지", "반응형 웹사이트", "쇼핑몰 제작", "병원 홈페이지", "포트폴리오 사이트", "웹사이트 유지보수"],
   alternates: {
     canonical: "https://ohmt.site/ko",
     languages: {
@@ -91,8 +92,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "오마이템플릿",
-    description: "가장 스마트한 웹·앱 서비스 제작 솔루션!",
+    title: "OHMT | 비즈니스를 위한 맞춤형 홈페이지 제작",
+    description: "업종별 프리미엄 템플릿을 브랜드에 맞게 커스터마이징하고 반응형 웹사이트와 필요한 기능을 함께 제작합니다.",
     url: "https://ohmt.site/ko",
     siteName: "오마이템플릿",
     locale: "ko_KR",
@@ -102,8 +103,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "오마이템플릿",
-    description: "가장 스마트한 웹·앱 서비스 제작 솔루션!",
+    title: "OHMT | 비즈니스를 위한 맞춤형 홈페이지 제작",
+    description: "프리미엄 템플릿을 기반으로 기업과 브랜드에 맞는 반응형 웹사이트를 제작합니다.",
     images: ["https://ohmt.site/og-share-v4.png"],
   },
 };

@@ -80,8 +80,9 @@ const fallbackFaqs: FaqItem[] = [
 ];
 
 export const metadata: Metadata = {
-  title: "ohmytemplates",
-  description: "OHMT provides premium website templates and custom web design services for brands, businesses, portfolios, shops, magazines, and digital products. Ready in 2 days.",
+  title: "Custom Website Design & Business Templates",
+  description: "OHMT designs and develops responsive business websites using professionally crafted templates, tailored branding, custom features, SEO setup, and post-launch support.",
+  keywords: ["custom website design", "business website development", "responsive website", "corporate website", "ecommerce website", "portfolio website", "website templates", "website maintenance"],
   alternates: {
     canonical: "https://ohmt.site/en",
     languages: {
@@ -91,8 +92,8 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "Oh My Template",
-    description: "The smarter way to build websites, apps, and digital services.",
+    title: "OHMT | Custom Websites for Businesses and Brands",
+    description: "Professional templates customized into responsive websites with tailored branding, features, SEO setup, and launch support.",
     url: "https://ohmt.site/en",
     siteName: "Oh My Template",
     locale: "en_US",
@@ -102,8 +103,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Oh My Template",
-    description: "The smarter way to build websites, apps, and digital services.",
+    title: "OHMT | Custom Websites for Businesses and Brands",
+    description: "Professional website templates customized for businesses, brands, shops, and portfolios.",
     images: ["https://ohmt.site/og-share-v4.png"],
   },
 };

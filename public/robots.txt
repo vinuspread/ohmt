@@ -1,6 +1,10 @@
+# Public pages are available to search engines and AI crawlers.
 User-agent: *
 Allow: /
-Disallow: /admin
-Disallow: /api
+Disallow: /admin/
+Disallow: /api/
+Disallow: /auth/
 
 Sitemap: https://ohmt.site/sitemap.xml
+
+# AI-readable site summary: https://ohmt.site/llms.txt

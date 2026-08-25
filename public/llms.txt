@@ -1,0 +1,38 @@
+# OHMT (Oh My Template)
+
+> OHMT는 기업과 브랜드의 목적에 맞춰 전문 템플릿을 커스터마이징하는 웹사이트 제작 서비스입니다. 한국어와 영어 웹사이트 제작을 지원합니다.
+
+Canonical domain: https://ohmt.site
+
+OHMT provides template-based website planning, brand customization, responsive implementation, custom feature development, deployment, search-engine setup, and post-launch maintenance. Public template pages are design demonstrations and should not be represented as completed client projects. Final scope, schedule, pricing, and support terms are confirmed through consultation.
+
+주요 서비스와 검색 주제: 홈페이지 제작, 웹사이트 제작, 기업 홈페이지, 브랜드 웹사이트, 반응형 홈페이지, 쇼핑몰 제작, 병원 홈페이지, 식당 홈페이지, 포트폴리오 사이트, 웹사이트 템플릿, 맞춤형 웹 개발, 검색엔진 최적화, 웹사이트 유지보수, website design, website development, custom business websites, responsive websites, ecommerce websites, corporate websites, portfolio websites, and SEO setup.
+
+## Primary pages
+
+- [OHMT 한국어](https://ohmt.site/ko): 서비스 소개, 템플릿, 제작 범위, 가격, 진행 과정, 유지관리와 FAQ
+- [OHMT English](https://ohmt.site/en): English service overview, templates, pricing, process, maintenance, and FAQ
+- [한국어 템플릿](https://ohmt.site/ko#templates): 업종과 목적별 공개 템플릿 탐색
+- [English templates](https://ohmt.site/en#templates): Browse published templates by business type and purpose
+- [한국어 제작 상담](https://ohmt.site/ko/contact): 홈페이지 제작 범위와 견적 상담
+- [English consultation](https://ohmt.site/en/contact): Discuss website scope and request a quote
+
+## Service information
+
+- [한국어 가격 안내](https://ohmt.site/ko#pricing): 제작 패키지와 범위
+- [English pricing](https://ohmt.site/en#pricing): Production packages and scope
+- [한국어 제작 과정](https://ohmt.site/ko#process): 상담부터 제작, 오픈과 운영 지원까지의 절차
+- [English process](https://ohmt.site/en#process): Consultation, production, launch, and support process
+- [한국어 FAQ](https://ohmt.site/ko#faq): 수정, 호스팅, SEO와 유지관리 관련 안내
+- [English FAQ](https://ohmt.site/en#faq): Revisions, hosting, SEO, and maintenance information
+
+## Machine-readable resources
+
+- [XML sitemap](https://ohmt.site/sitemap.xml): Public, indexable pages with update metadata
+- [Robots policy](https://ohmt.site/robots.txt): Crawler access rules
+- [LLM site summary](https://ohmt.site/llms.txt): Canonical AI-readable overview
+
+## Optional
+
+- [한국어 개인정보처리방침](https://ohmt.site/ko/privacy-policy): 개인정보 처리 기준
+- [English privacy policy](https://ohmt.site/en/privacy-policy): Privacy policy
