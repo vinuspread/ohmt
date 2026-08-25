@@ -4,7 +4,7 @@ import React, { useState, useMemo, useEffect, useRef, useCallback } from "react"
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Menu, X, Search, Sparkles } from "lucide-react";
+import { ArrowUpRight, ChevronDown, ChevronLeft, ChevronRight, Menu, X, Search } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Logo } from "@/components/Logo";
 import { WebMcpTemplateSearch } from "@/components/WebMcpTemplateSearch";
@@ -590,8 +590,7 @@ export default function LandingPageClient({ templates: templatesProp, faqs, pack
           </button>
 
           <div className="max-w-4xl mx-auto text-center px-6 relative z-10">
-            <span className="inline-flex items-center gap-2 px-3 py-1 bg-zinc-100 text-zinc-700 text-xs font-bold uppercase tracking-wider rounded-full dark:bg-zinc-800 dark:text-zinc-300">
-              <Sparkles size={12} className="text-[#F1B100]" />
+            <span className="inline-flex items-center px-3 py-1 bg-zinc-100 text-zinc-700 text-xs font-bold uppercase tracking-wider rounded-full dark:bg-zinc-800 dark:text-zinc-300">
               OH! MY TEMPLATES
             </span>
             <div className="mt-10">
