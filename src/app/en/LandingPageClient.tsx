@@ -297,7 +297,7 @@ export default function LandingPageClient({ templates: templatesProp, faqs, pack
     if (intervalRef.current) clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
       setHeroIndex((prev) => (prev + 1) % HERO_SLIDES.length);
-    }, 6000);
+    }, 7800);
   }, []);
 
   const goPrev = useCallback(() => {
