@@ -1,9 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { Search, Bell, MessageCircle, Sun, Moon, Menu } from 'lucide-react'
-import { motion } from 'framer-motion'
-import { useTheme } from './ThemeProvider'
+import { Search, Bell, MessageCircle, Menu } from 'lucide-react'
 
 function Clock() {
   const [time, setTime] = useState(new Date())
@@ -29,8 +27,6 @@ export function Header({
   collapsed: boolean
   onMenuClick?: () => void
 }) {
-  const { theme, toggleTheme } = useTheme()
-
   return (
     <header
       className={`fixed top-0 right-0 h-16 bg-[var(--color-bg)] border-b border-[var(--color-border)] z-20 flex items-center justify-between px-6 transition-all duration-300 ease-in-out ${
@@ -64,19 +60,6 @@ export function Header({
           <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-[var(--color-success)] rounded-[var(--radius-full)]" />
         </button>
 
-        <button
-          onClick={toggleTheme}
-          className="p-2 rounded-[var(--radius-md)] text-[var(--color-text-muted)] hover:bg-[var(--color-bg-hover)] transition-colors"
-        >
-          <motion.div
-            key={theme}
-            initial={{ rotate: -90, opacity: 0 }}
-            animate={{ rotate: 0, opacity: 1 }}
-            transition={{ duration: 0.2 }}
-          >
-            {theme === 'dark' ? <Sun size={18} strokeWidth={1.5} /> : <Moon size={18} strokeWidth={1.5} />}
-          </motion.div>
-        </button>
       </div>
     </header>
   )
