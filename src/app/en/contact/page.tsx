@@ -9,17 +9,21 @@ import type { PackageOption } from "./_components/ContactForm";
 import { SiteHeader } from "./_components/SiteHeader";
 
 export const metadata: Metadata = {
-  title: "Contact & Custom Web Design Inquiry | OHMT",
-  description: "Get in touch with OHMT for custom website design, template-based builds, or general inquiries. We respond within 1 business day.",
+  title: "Contact & Custom Web Design Inquiry | Oh My Template",
+  description: "Get in touch with Oh My Template for custom website design, template-based builds, or general inquiries. We respond within 1 business day.",
   alternates: {
     canonical: "https://ohmt.site/en/contact",
-    languages: { ko: "https://ohmt.site/ko/contact" },
+    languages: {
+      en: "https://ohmt.site/en/contact",
+      ko: "https://ohmt.site/ko/contact",
+      "x-default": "https://ohmt.site/en/contact",
+    },
   },
   openGraph: {
-    title: "Contact & Custom Web Design Inquiry | OHMT",
-    description: "Get in touch with OHMT for custom website design, template-based builds, or general inquiries.",
+    title: "Contact & Custom Web Design Inquiry | Oh My Template",
+    description: "Get in touch with Oh My Template for custom website design, template-based builds, or general inquiries.",
     url: "https://ohmt.site/en/contact",
-    siteName: "OHMT",
+    siteName: "Oh My Template",
     locale: "en_US",
     type: "website",
   },

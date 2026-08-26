@@ -5,32 +5,26 @@ import { getAllowedAdminEmails, isAllowedAdminEmail } from "@/lib/admin-auth";
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // 루트 접근 시 크롤러는 page.tsx로 통과 (OG 태그 제공), 사람은 언어 감지 후 리디렉션
+  // 루트는 User-Agent나 위치와 무관하게 하나의 언어 정책을 사용한다.
   if (pathname === "/") {
-    const ua = request.headers.get("user-agent") ?? "";
-    const isCrawler = /bot|crawl|spider|facebookexternalhit|twitterbot|linkedinbot|whatsapp|telegram|slack|discord|kakaotalk|Iframely|Threads/i.test(ua);
-    if (isCrawler) {
-      return NextResponse.next();
-    }
-    const country = request.headers.get("x-vercel-ip-country") ?? "";
-    if (country === "KR") {
-      return NextResponse.redirect(new URL("/ko", request.url));
-    }
-    const acceptLanguage = request.headers.get("accept-language") ?? "";
-    if (acceptLanguage.toLowerCase().startsWith("ko")) {
-      return NextResponse.redirect(new URL("/ko", request.url));
-    }
-    return NextResponse.redirect(new URL("/en", request.url));
+    return NextResponse.redirect(new URL("/ko", request.url), 308);
   }
+
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set("x-ohmt-lang", pathname === "/en" || pathname.startsWith("/en/") ? "en" : "ko");
 
   const isAdminPage = pathname.startsWith("/admin");
   const isAdminApi = pathname.startsWith("/api/admin");
 
-  if (!isAdminPage && !isAdminApi) return NextResponse.next();
-  if (pathname === "/admin/login") return NextResponse.next();
+  if (!isAdminPage && !isAdminApi) {
+    return NextResponse.next({ request: { headers: requestHeaders } });
+  }
+  if (pathname === "/admin/login") {
+    return NextResponse.next({ request: { headers: requestHeaders } });
+  }
 
   const response = NextResponse.next({
-    request: { headers: request.headers },
+    request: { headers: requestHeaders },
   });
 
   const supabase = createServerClient(

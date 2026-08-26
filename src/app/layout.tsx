@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { headers } from "next/headers";
 import { Geist, Cormorant_Garamond, Inter, Playfair_Display, Outfit, Bebas_Neue } from "next/font/google";
 import Script from "next/script";
 import { KakaoChatButton } from "./_components/KakaoChatButton";
@@ -41,28 +42,28 @@ const bebasNeue = Bebas_Neue({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ohmt.site"),
-  applicationName: "OHMT",
+  applicationName: "Oh My Template",
   title: {
-    default: "OHMT | 맞춤형 홈페이지·웹사이트 제작",
-    template: "%s | OHMT",
+    default: "Oh My Template | 맞춤형 홈페이지·웹사이트 제작",
+    template: "%s | Oh My Template",
   },
   description: "기업과 브랜드에 맞는 프리미엄 템플릿을 바탕으로 반응형 홈페이지를 기획·디자인·개발합니다. 업종별 웹사이트부터 맞춤 기능과 운영 지원까지 제공합니다.",
   keywords: ["홈페이지 제작", "웹사이트 제작", "기업 홈페이지", "브랜드 웹사이트", "반응형 홈페이지", "쇼핑몰 제작", "웹사이트 템플릿", "맞춤형 웹 개발"],
-  authors: [{ name: "OHMT by Vinus Spread", url: "https://ohmt.site" }],
+  authors: [{ name: "Oh My Template by Vinus Spread", url: "https://ohmt.site" }],
   creator: "Vinus Spread",
   publisher: "Vinus Spread",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ohmt.site",
-    siteName: "OHMT",
-    title: "OHMT | 맞춤형 홈페이지·웹사이트 제작",
+    url: "https://ohmt.site/ko",
+    siteName: "Oh My Template",
+    title: "Oh My Template | 맞춤형 홈페이지·웹사이트 제작",
     description: "기업과 브랜드에 맞는 프리미엄 템플릿을 바탕으로 반응형 홈페이지를 기획·디자인·개발합니다.",
-    images: [{ url: "https://ohmt.site/og-share-v4.png", secureUrl: "https://ohmt.site/og-share-v4.png", width: 1200, height: 630, alt: "OHMT 맞춤형 홈페이지 제작", type: "image/png" }],
+    images: [{ url: "https://ohmt.site/og-share-v4.png", secureUrl: "https://ohmt.site/og-share-v4.png", width: 1200, height: 630, alt: "Oh My Template 맞춤형 홈페이지 제작", type: "image/png" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT | 맞춤형 홈페이지·웹사이트 제작",
+    title: "Oh My Template | 맞춤형 홈페이지·웹사이트 제작",
     description: "기업과 브랜드를 위한 프리미엄 템플릿 기반 맞춤형 웹사이트 제작 서비스입니다.",
     images: ["https://ohmt.site/og-share-v4.png"],
   },
@@ -71,23 +72,17 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
-  alternates: {
-    canonical: "https://ohmt.site/en",
-    languages: {
-      en: "https://ohmt.site/en",
-      ko: "https://ohmt.site/ko",
-      "x-default": "https://ohmt.site/en",
-    },
-  },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const language = (await headers()).get("x-ohmt-lang") === "en" ? "en" : "ko";
+
   return (
-    <html lang="en" className={`${geistSans.variable} ${cormorant.variable} ${inter.variable} ${playfair.variable} ${outfit.variable} ${bebasNeue.variable}`} suppressHydrationWarning>
+    <html lang={language} className={`${geistSans.variable} ${cormorant.variable} ${inter.variable} ${playfair.variable} ${outfit.variable} ${bebasNeue.variable}`} suppressHydrationWarning>
       <body>
         {children}
         <KakaoChatButton />
@@ -100,7 +95,8 @@ export default function RootLayout({
                 {
                   "@type": "Organization",
                   "@id": "https://ohmt.site/#organization",
-                  name: "OHMT",
+                  name: "Oh My Template",
+                  alternateName: "OHMT",
                   url: "https://ohmt.site",
                   logo: {
                     "@type": "ImageObject",
@@ -118,7 +114,8 @@ export default function RootLayout({
                   "@type": "WebSite",
                   "@id": "https://ohmt.site/#website",
                   url: "https://ohmt.site",
-                  name: "OHMT",
+                  name: "Oh My Template",
+                  alternateName: "OHMT",
                   description: "Template-based custom website design, development, SEO setup, and maintenance for businesses and brands",
                   publisher: { "@id": "https://ohmt.site/#organization" },
                   inLanguage: ["en", "ko"],

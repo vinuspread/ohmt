@@ -81,7 +81,7 @@ const fallbackFaqs: FaqItem[] = [
 
 export const metadata: Metadata = {
   title: "Custom Website Design & Business Templates",
-  description: "OHMT designs and develops responsive business websites using professionally crafted templates, tailored branding, custom features, SEO setup, and post-launch support.",
+  description: "Oh My Template designs and develops responsive business websites using professionally crafted templates, tailored branding, custom features, SEO setup, and post-launch support.",
   keywords: ["custom website design", "business website development", "responsive website", "corporate website", "ecommerce website", "portfolio website", "website templates", "website maintenance"],
   alternates: {
     canonical: "https://ohmt.site/en",
@@ -92,18 +92,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "OHMT | Custom Websites for Businesses and Brands",
+    title: "Oh My Template | Custom Websites for Businesses and Brands",
     description: "Professional templates customized into responsive websites with tailored branding, features, SEO setup, and launch support.",
     url: "https://ohmt.site/en",
     siteName: "Oh My Template",
     locale: "en_US",
     type: "website",
     alternateLocale: ["ko_KR"],
-    images: [{ url: "https://ohmt.site/og-share-v4.png", secureUrl: "https://ohmt.site/og-share-v4.png", width: 1200, height: 630, alt: "Oh My Template — Premium Website Templates", type: "image/png" }],
+    images: [{ url: "https://ohmt.site/og-share-v4.png", secureUrl: "https://ohmt.site/og-share-v4.png", width: 1200, height: 630, alt: "Oh My Template - Premium Website Templates", type: "image/png" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT | Custom Websites for Businesses and Brands",
+    title: "Oh My Template | Custom Websites for Businesses and Brands",
     description: "Professional website templates customized for businesses, brands, shops, and portfolios.",
     images: ["https://ohmt.site/og-share-v4.png"],
   },

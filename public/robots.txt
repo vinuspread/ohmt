@@ -1,4 +1,24 @@
-# Public pages are available to search engines and AI crawlers.
+# Search and user-request AI crawlers are explicitly allowed.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+# Model-training crawlers remain allowed under the current policy.
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+# Public pages are available to all other crawlers.
 User-agent: *
 Allow: /
 Disallow: /admin/

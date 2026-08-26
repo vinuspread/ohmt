@@ -334,38 +334,21 @@ export default function LandingPageClient({ templates: templatesProp, faqs, pack
     return () => { if (intervalRef.current) clearInterval(intervalRef.current); };
   }, [restartInterval]);
 
-  const websiteOrganizationSchema = {
+  const webPageSchema = {
     "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebSite",
-        "@id": "https://ohmt.site/#website",
-        url: "https://ohmt.site",
-        name: "Oh My Template",
-        description: "브랜드, 에이전시, 크리에이터를 위한 프리미엄 Next.js 웹 템플릿 서비스.",
-        inLanguage: ["en", "ko"],
-        potentialAction: {
-          "@type": "SearchAction",
-          target: "https://ohmt.site/ko?q={search_term_string}",
-          "query-input": "required name=search_term_string",
-        },
-      },
-      {
-        "@type": "Organization",
-        "@id": "https://ohmt.site/#organization",
-        name: "Oh My Template",
-        url: "https://ohmt.site",
-        email: "vinus@vinus.co.kr",
-        description: "브랜드, 에이전시, 크리에이터를 위한 프리미엄 Next.js 웹 템플릿 서비스.",
-        sameAs: [],
-      },
-    ],
+    "@type": "CollectionPage",
+    "@id": "https://ohmt.site/ko#webpage",
+    url: "https://ohmt.site/ko",
+    name: "Oh My Template | 비즈니스를 위한 맞춤형 홈페이지 제작",
+    inLanguage: "ko",
+    isPartOf: { "@id": "https://ohmt.site/#website" },
+    about: { "@id": "https://ohmt.site/#organization" },
   };
 
   const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Oh My Template — 템플릿 컬렉션",
+    name: "Oh My Template - 템플릿 컬렉션",
     description: "프리미엄 Next.js 웹 템플릿",
     url: "https://ohmt.site/ko",
     numberOfItems: templates.length,
@@ -439,7 +422,7 @@ export default function LandingPageClient({ templates: templatesProp, faqs, pack
   return (
     <main className="min-h-screen bg-[#FCFCFD] text-zinc-900 font-sans selection:bg-zinc-900 selection:text-white overflow-x-hidden antialiased break-keep dark:bg-zinc-950 dark:text-zinc-100 pt-[64px]">
       <WebMcpTemplateSearch lang="ko" templates={templatesProp} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteOrganizationSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
@@ -603,18 +586,21 @@ export default function LandingPageClient({ templates: templatesProp, faqs, pack
             <span className="inline-flex items-center px-3 py-1 bg-zinc-100 text-zinc-700 text-xs font-bold uppercase tracking-wider rounded-full dark:bg-zinc-800 dark:text-zinc-300">
               OH! MY TEMPLATES
             </span>
-            <div className="mt-10">
+            <h1 className="mt-10 text-[2.5rem] sm:text-[3rem] md:text-[4.2rem] font-bold tracking-tight leading-[1.25] md:leading-[1.1] text-zinc-900 dark:text-zinc-100">
+              브랜드에 맞춘 홈페이지를 제작합니다.
+            </h1>
+            <div className="mt-5 md:mt-7">
               <AnimatePresence mode="wait">
-                <motion.h1
+                <motion.p
                   key={`heading-${heroIndex}`}
                   initial={{ opacity: 0, y: 14 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -14 }}
                   transition={{ duration: 0.45, ease: EASE_OUT }}
-                  className="text-[2.5rem] sm:text-[3rem] md:text-[4.2rem] font-bold tracking-tight leading-[1.25] md:leading-[1.1] text-zinc-900 dark:text-zinc-100"
+                  className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tight leading-[1.3] text-zinc-700 dark:text-zinc-300"
                 >
                   {HERO_SLIDES[heroIndex].heading}
-                </motion.h1>
+                </motion.p>
               </AnimatePresence>
             </div>
             <AnimatePresence mode="wait">

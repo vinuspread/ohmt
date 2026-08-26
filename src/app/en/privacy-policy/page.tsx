@@ -8,7 +8,11 @@ export const metadata: Metadata = {
   description: "Read the privacy policy for Oh My Template, operated by Vinus Spread Inc.",
   alternates: {
     canonical: "https://ohmt.site/en/privacy-policy",
-    languages: { ko: "https://ohmt.site/ko/privacy-policy" },
+    languages: {
+      en: "https://ohmt.site/en/privacy-policy",
+      ko: "https://ohmt.site/ko/privacy-policy",
+      "x-default": "https://ohmt.site/en/privacy-policy",
+    },
   },
   robots: { index: true, follow: true },
 };
