@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     languages: {
       en: "https://ohmt.site/en/contact",
       ko: "https://ohmt.site/ko/contact",
-      "x-default": "https://ohmt.site/en/contact",
+      "x-default": "https://ohmt.site/ko/contact",
     },
   },
   openGraph: {
