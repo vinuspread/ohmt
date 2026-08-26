@@ -415,6 +415,7 @@ export default function LumaCameraPage() {
           <p className="font-bold text-[var(--luma-ink)]">LUMA by LUMA</p>
           <p>© 2026 LUMA. Compact camera concept.</p>
         </div>
+        <p className="mx-auto mt-4 max-w-[1380px] text-center text-[11px] leading-relaxed text-[var(--luma-muted)]">This page is a website design template demo by OHMT, not an actual client or operating business. The brand names, people, testimonials, contact details, and performance figures shown are example content.</p>
       </footer>
     </TemplateWrapper>
   );

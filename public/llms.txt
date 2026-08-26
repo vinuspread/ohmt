@@ -1,6 +1,6 @@
 # Oh My Template (OHMT)
 
-Last reviewed: 2026-08-26
+Last reviewed: 2026-08-26 (pricing corrected to match live pages)
 
 > OHMT는 기업과 브랜드의 목적에 맞춰 전문 템플릿을 커스터마이징하는 웹사이트 제작 서비스입니다. 한국어와 영어 웹사이트 제작을 지원합니다.
 
@@ -21,7 +21,7 @@ OHMT provides template-based website planning, brand customization, responsive i
 
 ## Service information
 
-Production package prices shown on the current landing pages are Starter $4,200 / 4,200,000원, Professional $6,200 / 6,200,000원, and Premium $9,200 / 9,200,000원. Package scope, final price, schedule, and support terms are confirmed through consultation.
+Production package prices shown on the current landing pages are Starter $1,500 / 2,000,000원, Professional $3,000 / 4,000,000원, and Premium Custom Quote / 별도 협의. Package scope, final price, schedule, and support terms are confirmed through consultation.
 
 Optional post-launch care shown on the landing pages includes Basic Care ($150/month excluding VAT / 월 20만원 VAT 별도), Growth Care ($300/month excluding VAT / 월 40만원 VAT 별도), and Managed Care (custom quote / 별도 협의).
 

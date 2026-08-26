@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     url: "https://ohmt.site/en/templates/OHMT027-architecture/services",
     images: [{ url: "/templates/OHMT027-architecture/og-image.jpg" }],
   },
+  robots: { index: false, follow: true },
   alternates: {
     canonical: "https://ohmt.site/en/templates/OHMT027-architecture/services",
     languages: {

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: "웨딩 촬영 패키지를 확인해보세요.",
     images: ["/templates/OHMT025-wedding/og-image.jpg"],
   },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: true },
   alternates: {
     canonical: "https://ohmt.site/ko/templates/OHMT025-wedding/pricing",
     languages: {

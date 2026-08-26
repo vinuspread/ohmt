@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: "Book your wedding photography date.",
     images: ["/templates/OHMT025-wedding/og-image.jpg"],
   },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: true },
   alternates: {
     canonical: "https://ohmt.site/en/templates/OHMT025-wedding/contact",
     languages: {
