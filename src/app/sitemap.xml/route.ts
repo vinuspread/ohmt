@@ -165,7 +165,7 @@ async function createSitemapXml() {
     <loc>${BASE}${path}</loc>${lastModified ? `\n    <lastmod>${escapeXml(lastModified)}</lastmod>` : ""}
     <xhtml:link rel="alternate" hreflang="${lang}" href="${BASE}${path}" />
     <xhtml:link rel="alternate" hreflang="${alternateLang}" href="${BASE}${alternatePath}" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE}${path.replace(/^\/ko(?=\/|$)/, "/en")}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${BASE}${path.replace(/^\/en(?=\/|$)/, "/ko")}" />
     <changefreq>${changeFrequency}</changefreq>
     <priority>${priority.toFixed(1)}</priority>
   </url>`;

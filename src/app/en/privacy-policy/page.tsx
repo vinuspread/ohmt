@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     languages: {
       en: "https://ohmt.site/en/privacy-policy",
       ko: "https://ohmt.site/ko/privacy-policy",
-      "x-default": "https://ohmt.site/en/privacy-policy",
+      "x-default": "https://ohmt.site/ko/privacy-policy",
     },
   },
   robots: { index: true, follow: true },

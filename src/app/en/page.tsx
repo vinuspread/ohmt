@@ -88,7 +88,7 @@ export const metadata: Metadata = {
     languages: {
       en: "https://ohmt.site/en",
       ko: "https://ohmt.site/ko",
-      "x-default": "https://ohmt.site/en",
+      "x-default": "https://ohmt.site/ko",
     },
   },
   openGraph: {
