@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: "예식 날짜와 장소를 남겨주시면 일정을 확인해드립니다.",
     images: ["/templates/OHMT025-wedding/og-image.jpg"],
   },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: true },
   alternates: {
     canonical: "https://ohmt.site/ko/templates/OHMT025-wedding/contact",
     languages: {

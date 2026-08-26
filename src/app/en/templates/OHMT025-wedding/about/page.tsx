@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: "Meet Clara, founder and lead photographer. Capturing timeless wedding stories with fine art documentary style.",
     images: ["/templates/OHMT025-wedding/og-image.jpg"],
   },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: true },
   alternates: {
     canonical: "https://ohmt.site/en/templates/OHMT025-wedding/about",
     languages: {

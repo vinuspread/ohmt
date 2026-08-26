@@ -41,16 +41,6 @@ const FALLBACK_PUBLISHED_TEMPLATE_SLUGS = [
   "OHMT037-figure-shop",
 ] as const;
 
-const INDEXABLE_TEMPLATE_SUBPAGES = [
-  "OHMT025-wedding/about",
-  "OHMT025-wedding/contact",
-  "OHMT025-wedding/gallery",
-  "OHMT025-wedding/pricing",
-  "OHMT027-architecture/about",
-  "OHMT027-architecture/projects",
-  "OHMT027-architecture/services",
-] as const;
-
 type Language = (typeof LANGUAGES)[number];
 type ChangeFrequency = "weekly" | "monthly" | "yearly";
 type TemplateRecord = { slug: string; lang: Language; updated_at: string | null };
@@ -145,12 +135,7 @@ async function buildEntries(): Promise<SitemapEntry[]> {
     }),
   );
 
-  // These paths are source-controlled and do not have a reliable record-level date.
-  const templateSubpages = INDEXABLE_TEMPLATE_SUBPAGES.flatMap((path) =>
-    addLanguagePair(`/templates/${path}`, "monthly", 0.6),
-  );
-
-  return [...pages, ...templateEntries, ...templateSubpages];
+  return [...pages, ...templateEntries];
 }
 
 function escapeXml(value: string) {

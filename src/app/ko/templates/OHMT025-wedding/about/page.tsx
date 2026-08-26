@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: "OHMT의 대표 포토그래퍼 클라라를 소개합니다.",
     images: ["/templates/OHMT025-wedding/og-image.jpg"],
   },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: true },
   alternates: {
     canonical: "https://ohmt.site/ko/templates/OHMT025-wedding/about",
     languages: {

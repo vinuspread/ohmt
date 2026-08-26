@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: "OHMT의 웨딩 사진 포트폴리오.",
     images: ["/templates/OHMT025-wedding/og-image.jpg"],
   },
-  robots: { index: true, follow: true },
+  robots: { index: false, follow: true },
   alternates: {
     canonical: "https://ohmt.site/ko/templates/OHMT025-wedding/gallery",
     languages: {
