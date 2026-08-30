@@ -1,31 +1,28 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
 export default function IntroSection() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 border-b border-[var(--color-border)]">
+    <section className="grid grid-cols-1 md:grid-cols-2">
       <div className="flex flex-col justify-end px-8 md:px-14 lg:px-20 py-16 md:py-24 bg-[var(--color-bg-medium)]">
-        <p className="text-xs tracking-[0.25em] uppercase text-white/40 mb-6"
-           style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}>
-          Our Philosophy
+        <p className="mb-6 text-sm font-medium tracking-[0.08em] uppercase text-white/65"
+           style={{ fontFamily: "var(--font-body)" }}>
+          How We Teach
         </p>
-        <h2 className="text-[length:var(--text-h1)] font-normal text-white leading-[var(--leading-heading)] tracking-[-0.02em]"
+        <h2 className="ohmt-display-leading text-[length:var(--text-h1)] font-medium tracking-[-0.02em] text-white"
             style={{ fontFamily: "var(--font-heading)" }}>
-          The Heart of
+          Notice what
           <br />
-          Movement
+          your body needs
         </h2>
-        <p className="mt-8 text-base text-white/50 leading-loose max-w-[360px]"
-           style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}>
-          We believe true wellness begins from within. Movement is medicine &mdash; a daily practice that
-          restores balance and reconnects you to yourself.
+        <p className="mt-8 max-w-[400px] text-base leading-relaxed text-white/70"
+           style={{ fontFamily: "var(--font-body)" }}>
+          Each class starts with breath and a short check-in. Your instructor adjusts pace, range, and props to how your body feels that day.
         </p>
-        <div className="mt-10 pt-8 border-t border-white/10">
+        <div className="mt-10 pt-8">
           <Link href="/en/templates/OHMT022-yoga/about"
-            className="inline-flex items-center gap-3 text-xs tracking-[0.18em] uppercase text-white hover:text-white/70 group transition-colors font-medium"
+            className="inline-flex border-b border-white/45 pb-1 text-sm font-medium text-white transition-colors hover:text-white/70"
             style={{ fontFamily: "var(--font-body)" }}>
-            Our Story
-            <span className="group-hover:translate-x-1 transition-all"><ArrowRight size={14} className="inline" /></span>
+            See how classes work
           </Link>
         </div>
       </div>

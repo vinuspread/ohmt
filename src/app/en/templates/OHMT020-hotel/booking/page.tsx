@@ -8,7 +8,6 @@ import { motion } from "motion/react";
 import { CalendarDays, Users, BedDouble, CheckCircle2 } from "lucide-react";
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
-import TemplateSelect from '../_components/TemplateSelect'
 
 const EASE = [0.23, 1, 0.32, 1] as const;
 
@@ -93,7 +92,7 @@ function BookingPageContent() {
                     <div>
                       <h2 className="text-2xl font-[var(--font-heading)] font-bold text-[var(--color-primary)] mb-2">Reservation Confirmed</h2>
                       <p className="text-sm text-[var(--color-text-muted)] max-w-md mx-auto">
-                        Thank you for choosing OHMT. Your reservation request has been received. Our team will contact you within 24 hours to confirm your booking details.
+                        Thank you for choosing CASSIA. Your reservation request has been received. Our team will contact you within 24 hours to confirm your booking details.
                       </p>
                     </div>
                     <Button variant="primary" size="md" onClick={() => setSubmitted(false)} className="text-xs tracking-[0.2em] uppercase rounded-sm mt-2">Make Another Reservation</Button>
@@ -141,12 +140,12 @@ function BookingPageContent() {
                         <label className="text-xs font-semibold text-[var(--color-text-muted)] uppercase tracking-wider block mb-2">
                           <Users size={10} className="inline mr-1" />Guests *
                         </label>
-                        <TemplateSelect required className="w-full border border-[var(--color-border)] bg-transparent px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-accent)] transition-colors rounded-sm appearance-none text-[var(--color-text)]">
+                        <select required className="w-full border border-[var(--color-border)] bg-transparent px-4 py-3 text-sm focus:outline-none focus:border-[var(--color-accent)] transition-colors rounded-sm appearance-none text-[var(--color-text)]">
                           <option value="1">1 Adult</option>
                           <option value="2">2 Adults</option>
                           <option value="3">3 Adults</option>
                           <option value="4">4 Adults</option>
-                        </TemplateSelect>
+                        </select>
                       </div>
                     </div>
 

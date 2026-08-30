@@ -1,4 +1,4 @@
-@import url('../../../en/templates/OHMT035-atelier-house/theme.css');
+@import url('./theme-base.css');
 
 :root {
   --text-display: clamp(3rem, 7vw, 5.5rem);
@@ -24,13 +24,4 @@ h6,
   line-height: 1.16 !important;
   word-break: keep-all;
   overflow-wrap: break-word;
-  text-wrap: balance;
-}
-
-p,
-li,
-summary {
-  word-break: keep-all;
-  overflow-wrap: break-word;
-  text-wrap: pretty;
 }

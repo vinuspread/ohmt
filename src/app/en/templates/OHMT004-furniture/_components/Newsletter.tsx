@@ -28,7 +28,7 @@ export const Newsletter = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.15, duration: 0.6 }}
-            className="text-[length:var(--text-h1)] md:text-[length:var(--text-display)] font-bold text-[var(--color-text)] leading-[var(--leading-heading)] mb-12 uppercase"
+            className="furniture-heading-tight text-[length:var(--text-h1)] md:text-[length:var(--text-display)] font-bold text-[var(--color-text)] mb-12 uppercase"
           >
             Curated Insights. <br /> In Your Inbox.
           </motion.h2>

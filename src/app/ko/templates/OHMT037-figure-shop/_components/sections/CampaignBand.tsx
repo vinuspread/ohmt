@@ -7,7 +7,7 @@ export function CampaignBand() {
     <section className="relative flex min-h-[520px] items-end overflow-hidden bg-[var(--color-bg-tile)] lg:min-h-[70vh]">
       <ParallaxImage
         src={CAMPAIGN.image}
-        alt="밝은 스튜디오 세트에 놓인 Ceramic Art Series 01 오브제"
+        alt="밝은 스튜디오 세트 위에 배치된 Ceramic Art Series 01 오브제"
         sizes="100vw"
       />
       <div

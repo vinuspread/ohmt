@@ -24,7 +24,7 @@ export function Header() {
         <div className="flex h-10 items-center justify-between">
           <Link href={base} className="group leading-none">
             <span className="text-base font-bold tracking-tight text-[var(--color-text)] transition-colors duration-300 group-hover:text-[var(--color-primary)]">
-              OHMT Foundation
+              VERITAS Foundation
             </span>
           </Link>
 

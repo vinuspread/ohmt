@@ -16,15 +16,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "서비스 | OHMT 건축 스튜디오",
     description: "주거 설계부터 상업·공공 건축, 인테리어 설계와 시공 감리까지 제공합니다.",
-    url: "https://ohmt.site/ko/templates/OHMT027-architecture/services",
+    url: "https://ohmytemplate.com/ko/templates/OHMT027-architecture/services",
     images: [{ url: "/templates/OHMT027-architecture/og-image.jpg" }],
   },
-  robots: { index: false, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/ko/templates/OHMT027-architecture/services",
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT027-architecture/services",
     languages: {
-      "en": "https://ohmt.site/en/templates/OHMT027-architecture/services",
-      "ko": "https://ohmt.site/ko/templates/OHMT027-architecture/services",
+      "en": "https://ohmytemplate.com/en/templates/OHMT027-architecture/services",
+      "ko": "https://ohmytemplate.com/ko/templates/OHMT027-architecture/services",
     },
   },
 };
@@ -43,19 +42,20 @@ export default function ServicesPage() {
     <TemplateWrapper>
       <div className="relative min-h-screen bg-white text-[#1A1A1A] font-sans antialiased overflow-hidden selection:bg-[#1A1A1A] selection:text-white">
         <Header />
-        
+
         <main className="pt-32 pb-24">
           {/* Header */}
           <section className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 py-16">
             <ScrollReveal>
               <div className="space-y-6 max-w-4xl">
                 <span className="font-sans text-xs font-medium tracking-[0.15em] text-[#888888] uppercase block">
-                  설계 분야</span>
+                  설계 분야
+                </span>
                 <h1 className="font-heading font-normal text-5xl md:text-6xl lg:text-7xl leading-[var(--leading-heading)] text-[#1A1A1A]">
-                  서비스</h1>
-                <p className="max-w-3xl pt-4 font-heading text-2xl font-normal leading-[var(--leading-body)] text-[#888888] md:text-3xl">
-                  <span className="md:block">대지 분석과 기획부터 실시 설계, 인허가 협의와</span>{" "}
-                  <span className="md:block">시공 감리까지 건축 전 과정을 함께합니다.</span>
+                  서비스
+                </h1>
+                <p className="font-heading font-normal text-2xl md:text-3xl leading-[var(--leading-body)] text-[#888888] pt-4">
+                  대지 분석과 기획부터 실시 설계, 인허가 협의와 시공 감리까지 건축 전 과정을 함께합니다.
                 </p>
               </div>
             </ScrollReveal>
@@ -64,7 +64,7 @@ export default function ServicesPage() {
           {/* Services Detailed List */}
           <section className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 mb-24 lg:mb-32">
             <div className="space-y-24">
-              {services.map((service) => (
+              {services.map((service, idx) => (
                 <ScrollReveal key={service.id}>
                   <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start border-b border-[#E0E0E0] pb-16 last:border-0 last:pb-0">
                     {/* Left: Image (col 5) */}
@@ -88,11 +88,12 @@ export default function ServicesPage() {
                       <p className="font-sans text-base leading-[var(--leading-body)] text-[#888888]">
                         {service.description}
                       </p>
-                      
+
                       {/* Features List */}
                       <div className="pt-4">
                         <h4 className="font-sans text-xs font-semibold text-[#1A1A1A] tracking-wider uppercase mb-4">
-                          업무 범위</h4>
+                          업무 범위
+                        </h4>
                         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-[#888888] font-sans">
                           {service.features.map((f, i) => (
                             <li key={i} className="flex items-center gap-2">
@@ -115,7 +116,8 @@ export default function ServicesPage() {
               <ScrollReveal>
                 <div className="border-b border-[#E0E0E0] pb-8 mb-16">
                   <h2 className="font-heading font-normal text-3xl md:text-4xl text-[#1A1A1A]">
-                    진행 과정</h2>
+                    진행 과정
+                  </h2>
                 </div>
               </ScrollReveal>
 
@@ -144,15 +146,18 @@ export default function ServicesPage() {
             <ScrollReveal>
               <div className="max-w-2xl mx-auto space-y-6">
                 <h2 className="font-heading font-normal text-4xl md:text-4xl text-[#1A1A1A] leading-[var(--leading-heading)]">
-                  새로운 공간을 준비하고 계신가요?</h2>
+                  새로운 공간을 준비하고 계신가요?
+                </h2>
                 <p className="font-sans text-sm text-[#888888] leading-relaxed max-w-md mx-auto">
-                  프로젝트의 위치와 용도, 규모와 일정에 대해 이야기해주세요.</p>
+                  프로젝트의 위치와 용도, 규모와 일정에 대해 이야기해주세요.
+                </p>
                 <div className="pt-4">
                   <Link
                     href={`${baseRoute}/contact`}
                     className="inline-block bg-[#0A0A0A] text-white px-8 py-3.5 text-sm font-sans tracking-[0.08em] hover:bg-zinc-800 transition-colors"
                   >
-                    프로젝트 문의</Link>
+                    프로젝트 문의
+                  </Link>
                 </div>
               </div>
             </ScrollReveal>

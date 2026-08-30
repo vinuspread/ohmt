@@ -21,15 +21,16 @@ export default function PricingFull() {
               className="mb-16"
             >
               <span className="text-[0.65rem] font-bold uppercase tracking-[0.28em] text-[var(--color-primary)] block mb-4">
-                촬영 안내</span>
+                투자 안내
+              </span>
               <h1
                 className="font-[family-name:var(--font-heading)] font-light capitalize text-[var(--color-text)] leading-[var(--leading-heading)]"
                 style={{ fontSize: "clamp(3rem, 7vw, 5.5rem)" }}
               >
-                촬영 패키지</h1>
-              <p className="mt-6 max-w-2xl text-[0.85rem] leading-relaxed text-[var(--color-text-muted)] font-[family-name:var(--font-body)]">
-                <span className="md:block">예식 규모와 원하는 촬영 범위에 맞는</span>{" "}
-                <span className="md:block">패키지를 선택해보세요.</span>
+                웨딩 컬렉션
+              </h1>
+              <p className="mt-6 text-[0.85rem] text-[var(--color-text-muted)] leading-relaxed max-w-md font-[family-name:var(--font-body)]">
+                여러분의 웨딩에 가장 잘 어울리는 패키지를 선택해보세요. 모든 패키지는 세심하게 구성됩니다.
               </p>
             </motion.div>
 
@@ -76,7 +77,8 @@ export default function PricingFull() {
                       href="/ko/templates/OHMT025-wedding/contact"
                       className="w-full inline-flex items-center justify-center border border-[var(--color-primary)] px-6 py-3 text-xs font-semibold uppercase tracking-[0.15em] text-[var(--color-primary)] hover:bg-[var(--color-primary)] hover:text-[var(--color-bg)] transition-all duration-300"
                     >
-                      이 패키지 문의</Link>
+                      이 패키지로 문의하기
+                    </Link>
                   </div>
                 </motion.div>
               ))}
@@ -87,16 +89,17 @@ export default function PricingFull() {
         <section className="bg-[#2C241E] py-20">
           <div className="max-w-[1440px] mx-auto px-8 lg:px-16 text-center">
             <h2 className="font-[family-name:var(--font-heading)] font-light text-4xl lg:text-6xl capitalize text-white leading-[var(--leading-heading)] mb-6">
-              어떤 패키지가 맞을지 고민되시나요?</h2>
+              어떤 패키지가 좋을지 모르시겠나요?
+            </h2>
             <p className="text-sm text-white/60 mb-8 font-[family-name:var(--font-body)]">
-              <span className="md:block">예식 일정과 원하는 촬영 범위를 알려주시면</span>{" "}
-              <span className="md:block">적합한 구성을 안내해드립니다.</span>
+              여러분의 웨딩에 가장 잘 맞는 구성을 찾아드리겠습니다.
             </p>
             <Link
               href="/ko/templates/OHMT025-wedding/contact"
               className="inline-flex items-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-white border-b border-white/40 pb-1 hover:border-white transition-colors duration-200"
             >
-              촬영 상담</Link>
+              문의하기
+            </Link>
           </div>
         </section>
       </main>

@@ -43,7 +43,7 @@ export default function JournalPage() {
                 />
               </div>
               <p className="mt-3 text-xs text-[var(--color-text-muted)]">{post.date}</p>
-              <h2 className="mt-1 text-base font-semibold leading-snug text-[var(--color-text)]">{post.title}</h2>
+              <h2 className="mt-1 text-base font-semibold leading-[1.05] text-[var(--color-text)]">{post.title}</h2>
               <p className="mt-2 text-xs leading-relaxed text-[var(--color-text-muted)]">{post.excerpt}</p>
             </Link>
           ))}

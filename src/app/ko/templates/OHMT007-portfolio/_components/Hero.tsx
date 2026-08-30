@@ -13,9 +13,9 @@ export function Hero() {
                 />
                 <div className="absolute inset-0 bg-black/10" />
             </div>
-            
+
             <div className="relative z-10 text-center text-white px-6">
-                <motion.span 
+                <motion.span
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="block text-xs font-bold tracking-[0.5em] uppercase mb-8"

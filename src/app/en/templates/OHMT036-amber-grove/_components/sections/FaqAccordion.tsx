@@ -18,7 +18,7 @@ export function FaqAccordion() {
       <div className="grid grid-cols-12 gap-y-8 sm:gap-x-10 lg:gap-x-16">
         <div className="col-span-12 lg:col-span-4">
           <p className="ledger-num text-sm font-bold text-[var(--color-accent)]">06 · FAQ</p>
-          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-2xl font-semibold leading-tight sm:text-4xl">
+          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-2xl font-semibold leading-[1.05] sm:text-4xl">
             Practical answers before you order.
           </h2>
         </div>

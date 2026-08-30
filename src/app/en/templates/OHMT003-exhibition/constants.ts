@@ -13,7 +13,7 @@ export const exhibitions: Exhibition[] = [
     image: '/templates/OHMT003-exhibition/exhibition-01.jpg',
     heroImage: '/templates/OHMT003-exhibition/exhibition-hero-01.jpg',
     description:
-      'Sophie Laurent\'s first solo exhibition at OHMT explores the tension between organic form and architectural structure. Her large-scale canvases merge gestural abstraction with precise geometric interventions, creating compositions that oscillate between chaos and control. Drawing on her background in architecture, Laurent constructs layered surfaces that reveal hidden geometries upon closer inspection. The exhibition traces her evolving practice from early charcoal studies to her latest mixed-media works, offering a comprehensive view of an artist at the height of her creative powers.',
+      'Sophie Laurent\'s first solo exhibition at VANTA explores the tension between organic form and architectural structure. Her large-scale canvases merge gestural abstraction with precise geometric interventions, creating compositions that oscillate between chaos and control. Drawing on her background in architecture, Laurent constructs layered surfaces that reveal hidden geometries upon closer inspection. The exhibition traces her evolving practice from early charcoal studies to her latest mixed-media works, offering a comprehensive view of an artist at the height of her creative powers.',
   },
   {
     slug: 'skin-and-steel',
@@ -41,7 +41,7 @@ export const exhibitions: Exhibition[] = [
     image: '/templates/OHMT003-exhibition/exhibition-03.jpg',
     heroImage: '/templates/OHMT003-exhibition/exhibition-hero-03.jpg',
     description:
-      'Yuki Tanaka creates immersive environmental installations that capture the ephemeral qualities of natural light. Using translucent materials, projected imagery, and carefully calibrated spatial interventions, Tanaka transforms the Installation Hall into a sensory landscape that shifts throughout the day. "Light Residue" invites visitors to slow down and observe the subtle interplay of light, shadow, and atmosphere. The exhibition includes a major new commission created on-site during a month-long residency, responding directly to the unique architecture of OHMT.',
+      'Yuki Tanaka creates immersive environmental installations that capture the ephemeral qualities of natural light. Using translucent materials, projected imagery, and carefully calibrated spatial interventions, Tanaka transforms the Installation Hall into a sensory landscape that shifts throughout the day. "Light Residue" invites visitors to slow down and observe the subtle interplay of light, shadow, and atmosphere. The exhibition includes a major new commission created on-site during a month-long residency, responding directly to the unique architecture of VANTA.',
   },
   {
     slug: 'uncertain-ground',
@@ -69,7 +69,7 @@ export const exhibitions: Exhibition[] = [
     image: '/templates/OHMT003-exhibition/exhibition-05.jpg',
     heroImage: '/templates/OHMT003-exhibition/exhibition-hero-05.jpg',
     description:
-      'Collective Studio brings together twelve emerging artists from six countries to explore the concept of a shared visual language for the twenty-first century. Working across sculpture, textile, digital media, and performance, the collective challenges traditional boundaries between art forms and cultural traditions. "New Primitives" presents a series of collaborative works created during an intensive six-month residency, alongside individual pieces that reflect each artist\'s unique perspective. The exhibition spills beyond the Garden Gallery into OHMT&apos;s outdoor spaces, activating the entire venue.',
+      'Collective Studio brings together twelve emerging artists from six countries to explore the concept of a shared visual language for the twenty-first century. Working across sculpture, textile, digital media, and performance, the collective challenges traditional boundaries between art forms and cultural traditions. "New Primitives" presents a series of collaborative works created during an intensive six-month residency, alongside individual pieces that reflect each artist\'s unique perspective. The exhibition spills beyond the Garden Gallery into VANTA&apos;s outdoor spaces, activating the entire venue.',
   },
   {
     slug: 'after-the-fact',
@@ -83,7 +83,7 @@ export const exhibitions: Exhibition[] = [
     image: '/templates/OHMT003-exhibition/exhibition-06.jpg',
     heroImage: '/templates/OHMT003-exhibition/exhibition-hero-06.jpg',
     description:
-      'Daniel Reeves\' seminal body of work, acquired by OHMT in 2024, spans three decades of conceptual practice that interrogates the nature of memory, documentation, and historical narrative. The permanent installation presents key works from each phase of Reeves\' career, from his early text-based pieces of the 1990s to his recent large-scale archival interventions. "After the Fact" is both a retrospective and a living archive, with selected works rotating periodically to reveal new connections and readings. The installation includes a dedicated research room where visitors can explore Reeves\' extensive archive of sketches, notes, and source materials.',
+      'Daniel Reeves\' seminal body of work, acquired by VANTA in 2024, spans three decades of conceptual practice that interrogates the nature of memory, documentation, and historical narrative. The permanent installation presents key works from each phase of Reeves\' career, from his early text-based pieces of the 1990s to his recent large-scale archival interventions. "After the Fact" is both a retrospective and a living archive, with selected works rotating periodically to reveal new connections and readings. The installation includes a dedicated research room where visitors can explore Reeves\' extensive archive of sketches, notes, and source materials.',
   },
 ];
 

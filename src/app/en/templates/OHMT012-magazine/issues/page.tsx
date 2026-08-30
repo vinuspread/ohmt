@@ -10,20 +10,20 @@ import { issues } from "../constants";
 import theme from "../theme.json";
 
 export const metadata: Metadata = {
-  title: "Issues - FOLIO Magazine",
+  title: "Issues - OHMT Magazine",
   description: "Each issue gathers a season's worth of reporting into a single theme. Browse the full run below.",
   openGraph: {
-    title: "Issues - FOLIO Magazine",
+    title: "Issues - OHMT Magazine",
     description: "Each issue gathers a season's worth of reporting into a single theme.",
-    url: "https://ohmt.site/en/templates/OHMT012-magazine/issues",
-    siteName: "FOLIO",
+    url: "https://ohmytemplate.com/en/templates/OHMT012-magazine/issues",
+    siteName: "OHMT",
     images: [{ url: "/templates/OHMT012-magazine/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Issues - FOLIO Magazine",
+    title: "Issues - OHMT Magazine",
     description: "Each issue gathers a season's worth of reporting into a single theme.",
     images: ["/templates/OHMT012-magazine/og-image.jpg"],
   },
@@ -69,7 +69,7 @@ export default function IssuesPage() {
                     <span className="text-[0.8rem] font-bold uppercase tracking-[0.18em] text-[var(--theme-accent)] mb-2 block">
                       Issue No. {issue.number} - {issue.season} {issue.year}
                     </span>
-                    <h2 className="font-[family-name:var(--theme-font-heading)] text-[1.5rem] sm:text-[1.7rem] font-normal leading-tight mb-4">
+                    <h2 className="font-[family-name:var(--theme-font-heading)] text-[1.5rem] sm:text-[1.7rem] font-normal leading-[1.05] mb-4">
                       {issue.theme}
                     </h2>
                     <Link

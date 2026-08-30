@@ -28,9 +28,9 @@ export function Services() {
 
             return (
               <ScrollReveal key={service.id}>
-                <div className="grid grid-cols-12 gap-8 items-center">
+                <div className="grid grid-cols-1 gap-8 items-center lg:grid-cols-12">
                   {/* Image — col 1–7 or 6–12 */}
-                  <div className={`col-span-12 lg:col-span-7 ${isEven ? "lg:order-last" : ""} relative aspect-[4/3] overflow-hidden group`}>
+                  <div className={`col-span-1 lg:col-span-7 ${isEven ? "lg:order-last" : ""} relative aspect-[4/3] overflow-hidden group`}>
                     <Image
                       src={service.image}
                       alt={service.name}
@@ -41,11 +41,11 @@ export function Services() {
                   </div>
 
                   {/* Text Block — col 8–12 or 1–5 */}
-                  <div className={`col-span-12 lg:col-span-5 space-y-6 ${isEven ? "lg:order-first lg:pl-0 lg:pr-8" : "lg:pl-8"}`}>
+                  <div className={`col-span-1 lg:col-span-5 space-y-6 ${isEven ? "lg:order-first lg:pl-0 lg:pr-8" : "lg:pl-8"}`}>
                     <span className="font-sans text-xs font-medium tracking-[0.15em] text-[var(--color-text-secondary)] uppercase block">
                       {service.label}
                     </span>
-                    <h3 className="font-heading font-normal text-3xl md:text-4xl text-[var(--color-text)] leading-tight">
+                    <h3 className="font-heading font-normal text-3xl md:text-4xl text-[var(--color-text)] leading-[1.05]">
                       {service.name}
                     </h3>
                     <div className="w-[60px] h-[1px] bg-[var(--color-border)]" />

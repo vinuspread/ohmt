@@ -17,56 +17,56 @@ function DestinationsPageContent() {
   const destinations = [
     {
       slug: "paris",
-      name: "Paris", 
-      country: "프랑스", 
-      desc: "예술과 건축, 미식과 역사적인 거리 풍경을 함께 즐길 수 있습니다.",
+      name: "Paris",
+      country: "프랑스",
+      desc: "세계적 수준의 예술, 미식의 천재성, 역사적 우아함에 빠져보세요.",
       img: "/templates/OHMT008-airline/paris.png",
-      mood: "문화유산·예술"
+      mood: "문화유산 & 예술"
     },
     {
       slug: "tokyo",
-      name: "Tokyo", 
-      country: "일본", 
-      desc: "오래된 사찰과 정원, 현대적인 거리와 다채로운 음식 문화를 함께 만날 수 있습니다.",
+      name: "Tokyo",
+      country: "일본",
+      desc: "정교한 고대 신사 전통과 네온 마천루가 공존하는 곳을 발견하세요.",
       img: "/templates/OHMT008-airline/tokyo.png",
-      mood: "도시 여행"
+      mood: "메트로폴리탄"
     },
     {
       slug: "new-york",
-      name: "New York", 
-      country: "미국", 
-      desc: "공연과 미술관, 쇼핑과 다양한 지역 문화를 한 도시에서 경험할 수 있습니다.",
+      name: "New York",
+      country: "미국",
+      desc: "세계에서 가장 극적인 스카이라인의 숨막히는 에너지를 느껴보세요.",
       img: "/templates/OHMT008-airline/new-york.png",
-      mood: "도시 여행"
+      mood: "메트로폴리탄"
     },
     {
       slug: "dubai",
-      name: "Dubai", 
-      country: "UAE", 
-      desc: "현대적인 건축과 사막 풍경, 해안과 도심의 다양한 즐길 거리를 만나보세요.",
+      name: "Dubai",
+      country: "UAE",
+      desc: "비할 데 없는 사막 건축, 웅장한 항구, 최고의 럭셔리를 즐기세요.",
       img: "/templates/OHMT008-airline/dubai.png",
-      mood: "도시 여행"
+      mood: "메트로폴리탄"
     },
     {
       slug: "sydney",
-      name: "Sydney", 
-      country: "호주", 
-      desc: "항구와 해변, 도심 문화와 근교 자연을 함께 즐길 수 있습니다.",
+      name: "Sydney",
+      country: "호주",
+      desc: "해안가 항구의 우아함, 깨끗한 만, 고급스러운 라이프스타일을 만끽하세요.",
       img: "/templates/OHMT008-airline/sydney.png",
-      mood: "자연·휴양"
+      mood: "자연 & 휴양"
     },
     {
       slug: "bali",
-      name: "Bali", 
-      country: "인도네시아", 
-      desc: "계단식 논과 사원, 해변과 숲이 어우러진 휴양지를 만나보세요.",
+      name: "Bali",
+      country: "인도네시아",
+      desc: "에메랄드 빛 계곡, 절벽 위 사원, 고요한 해변으로의 완벽한 도피.",
       img: "/templates/OHMT008-airline/bali.png",
-      mood: "자연·휴양"
+      mood: "자연 & 휴양"
     },
   ];
 
-  const filteredDestinations = selectedMood === "전체" 
-    ? destinations 
+  const filteredDestinations = selectedMood === "전체"
+    ? destinations
     : destinations.filter(d => d.mood === selectedMood);
 
   return (
@@ -77,20 +77,20 @@ function DestinationsPageContent() {
         {/* Hero Cover Banner */}
         <PageHero
           imageSrc="/templates/OHMT008-airline/destination-main.jpg"
-          imageAlt="세계 주요 여행지"
-          label="취항지 안내"
-          title={<>다시 찾고 싶은 <br /><span className="text-[var(--color-accent)] font-[family-name:var(--font-heading)] normal-case font-[var(--font-weight-accent)]">세계의 여행지.</span></>}
-          description={"도시 여행부터 문화유산과 휴양지까지 다양한 취항지를 확인하세요.\n노선과 운항 일정은 예약 화면에서 조회할 수 있습니다."}
+          imageAlt="글로벌 여행지"
+          label="큐레이티드 스카이 여행"
+          title={<>엄선하여 준비한 <br /><span className="text-[var(--color-accent)] font-[family-name:var(--font-heading)] normal-case font-[var(--font-weight-accent)]">특별한 여행지.</span></>}
+          description="80개국 200개 이상의 여행지. 글로벌 네트워크가 전설적인 메트로폴리탄 명소, 역사적 문화 유산, 평화로운 열대 휴양지로 안내합니다 - 타협 없는 럭셔리와 함께."
         />
 
         {/* Dynamic Catalog Section */}
         <section className="py-14 md:py-32 bg-white">
           <div className="max-w-[1320px] mx-auto px-6 md:px-10 space-y-16">
-            
+
             {/* Premium Mood Segmented filter deck */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-[var(--color-border)] pb-6 md:pb-8 gap-4 md:gap-6">
               <div className="flex flex-wrap items-center gap-2">
-                {["전체", "문화유산·예술", "자연·휴양", "도시 여행"].map((mood) => (
+                {["전체", "문화유산 & 예술", "자연 & 휴양", "메트로폴리탄"].map((mood) => (
                   <button
                     key={mood}
                     onClick={() => setSelectedMood(mood)}
@@ -105,12 +105,12 @@ function DestinationsPageContent() {
                 ))}
               </div>
               <span className="text-sm font-bold uppercase tracking-widest text-[#7A7A7A]">
-                {filteredDestinations.length}개 여행지
+                {filteredDestinations.length}개 여행지 표시
               </span>
             </div>
 
             {/* Editorial Typographic Grid - TEXT OUTSIDE OF IMAGES, COLORS BY DEFAULT, SCALE ON HOVER */}
-            <motion.div 
+            <motion.div
               layout
               className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-16"
             >
@@ -124,7 +124,7 @@ function DestinationsPageContent() {
                     exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <Link 
+                    <Link
                       href={`/ko/templates/OHMT008-airline/destinations/${dest.slug}`}
                       className="group block space-y-6 text-left select-none"
                     >

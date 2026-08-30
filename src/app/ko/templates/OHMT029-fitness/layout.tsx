@@ -1,29 +1,28 @@
 import "./theme.css";
 import type { Metadata } from "next";
-
 export const metadata: Metadata = {
-  title: "OHMT - 트레이닝 클럽 멤버십 템플릿",
+  title: "CORE - 프리미엄 피트니스 스튜디오",
   description: "프리미엄 웰니스 스튜디오 템플릿 — B2B 위탁 운영 및 B2C 부티크 피트니스.",
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - 트레이닝 클럽 멤버십 템플릿",
+    title: "CORE - 프리미엄 피트니스 스튜디오",
     description: "프리미엄 웰니스 스튜디오 템플릿 — B2B 위탁 운영 및 B2C 부티크 피트니스.",
     images: ["/templates/OHMT029-fitness/og-image.jpg"],
   },
   openGraph: {
-    title: "OHMT - 트레이닝 클럽 멤버십 템플릿",
+    title: "CORE - 프리미엄 피트니스 스튜디오",
     description: "프리미엄 웰니스 스튜디오 템플릿 — B2B 위탁 운영 및 B2C 부티크 피트니스.",
-    url: "https://ohmt.site/ko/templates/OHMT029-fitness",
-    siteName: "OHMT",
+    url: "https://ohmytemplate.com/ko/templates/OHMT029-fitness",
+    siteName: "CORE",
     images: [{ url: "/templates/OHMT029-fitness/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
   alternates: {
-    canonical: "https://ohmt.site/ko/templates/OHMT029-fitness",
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT029-fitness",
     languages: {
-      "en": "https://ohmt.site/en/templates/OHMT029-fitness",
-      "ko": "https://ohmt.site/ko/templates/OHMT029-fitness",
+      "en": "https://ohmytemplate.com/en/templates/OHMT029-fitness",
+      "ko": "https://ohmytemplate.com/ko/templates/OHMT029-fitness",
     },
   },
 };
@@ -31,17 +30,15 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "OHMT - 프리미엄 피트니스 스튜디오",
+  name: "CORE - 프리미엄 피트니스 스튜디오",
   description: "프리미엄 웰니스 스튜디오 템플릿 — B2B 위탁 운영 및 B2C 부티크 피트니스.",
-  url: "https://ohmt.site/ko/templates/OHMT029-fitness",
+  url: "https://ohmytemplate.com/ko/templates/OHMT029-fitness",
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" crossOrigin="anonymous" />
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
       `}</style>
       <script
         type="application/ld+json"

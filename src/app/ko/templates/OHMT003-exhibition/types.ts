@@ -17,7 +17,7 @@ export interface GalleryEvent {
   title: string;
   date: string;
   time: string;
-  type: '워크숍' | '작가 토크' | '전시 해설' | '퍼포먼스';
+  type: '워크숍' | '작가 토크' | '투어' | '퍼포먼스';
   ageRating: string;
   image: string;
 }

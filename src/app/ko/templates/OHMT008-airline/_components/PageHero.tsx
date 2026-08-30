@@ -45,7 +45,7 @@ export const PageHero = ({
           {title}
         </h1>
         <div className={`h-[1px] bg-white/20 w-32 mb-8 ${isCenter ? "mx-auto" : ""}`} />
-        <p className={`whitespace-pre-line text-base text-white/60 leading-loose font-normal normal-case ${descMaxWidth} ${isCenter ? "mx-auto" : ""}`}>
+        <p className={`text-base text-white/60 leading-loose font-normal normal-case ${descMaxWidth} ${isCenter ? "mx-auto" : ""}`}>
           {description}
         </p>
       </div>

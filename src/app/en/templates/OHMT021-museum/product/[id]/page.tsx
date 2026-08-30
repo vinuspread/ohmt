@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { id } = await params;
   const product = products.find((item) => item.id === Number(id));
   return {
-    title: product ? `${product.name} - CURA Museum` : "Product - CURA Museum",
+    title: product ? `${product.name} - OHMT Museum` : "Product - OHMT Museum",
   };
 }
 
@@ -44,7 +44,7 @@ export default async function Page({ params }: PageProps) {
                   Souvenir Shop
                 </Link>
                 <p className="mb-5 text-xs font-bold uppercase tracking-[0.45em] text-black/35">{product.category}</p>
-                <h1 className="font-serif text-5xl leading-[var(--leading-display)] tracking-tighter md:text-7xl">{product.name}</h1>
+                <h1 className="font-serif text-5xl leading-[var(--leading-display)] tracking-tight md:text-7xl">{product.name}</h1>
                 <p className="mt-8 text-3xl font-serif tracking-tight">{product.price}</p>
                 <p className="mt-8 max-w-xl text-base leading-7 text-black/60 md:text-lg">{product.description}</p>
               </div>

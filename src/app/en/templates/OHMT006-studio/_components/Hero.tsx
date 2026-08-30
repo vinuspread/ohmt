@@ -29,7 +29,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 30, scale: MOTION_CONSTANTS.scales.enter }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ duration: MOTION_CONSTANTS.durations.max - 0.1, ease: MOTION_CONSTANTS.easings.easeOut }}
-            className="text-white font-semibold text-8xl leading-[var(--leading-heading)] tracking-[-3.9px] m-0 p-0"
+            className="text-white font-semibold text-8xl leading-[var(--leading-heading)] tracking-[-1.95px] m-0 p-0"
           >
             Interior design
             <br />

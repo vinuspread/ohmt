@@ -24,7 +24,7 @@ export const Footer = () => {
           href="/ko/templates/OHMT019-coffee"
           className="font-heading text-2xl font-bold text-[var(--color-text)] tracking-tight"
         >
-          OHMT
+          SLOW DROP
         </Link>
 
         <nav className="flex flex-wrap justify-center gap-x-7 gap-y-2">
@@ -55,7 +55,7 @@ export const Footer = () => {
         <div className="w-full h-px bg-[var(--color-text-muted)]/15" />
 
         <div className="flex flex-col md:flex-row items-center justify-between w-full gap-2 text-xs text-[var(--color-text-muted)]">
-          <p>&copy; 2026 OHMT. All rights reserved.</p>
+          <p>&copy; 2026 SLOW DROP. All rights reserved.</p>
           <Link href="#" className="hover:text-[var(--color-text)] transition-colors">개인정보 처리방침</Link>
         </div>
       </div>

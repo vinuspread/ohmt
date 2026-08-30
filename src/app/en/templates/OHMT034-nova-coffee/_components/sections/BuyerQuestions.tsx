@@ -51,7 +51,7 @@ export function BuyerQuestions() {
         <div className="grid border-t border-[var(--color-border)]">
           {questions.map((item) => (
             <article key={item.q} className="grid gap-5 border-b border-[var(--color-border)] py-7 md:grid-cols-12 md:gap-12 md:py-9">
-              <h3 className="font-display text-xl font-bold leading-tight tracking-tight text-[var(--color-text)] md:col-span-5 md:text-3xl">
+              <h3 className="font-display text-xl font-bold leading-[1.05] tracking-tight text-[var(--color-text)] md:col-span-5 md:text-3xl">
                 {item.q}
               </h3>
               <p className="max-w-[560px] text-sm leading-relaxed text-[var(--color-text-muted)] md:col-span-7 md:text-sm">

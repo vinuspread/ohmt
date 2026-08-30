@@ -10,7 +10,7 @@ export function WelcomeCard() {
       <div className="relative z-10">
         <p className="text-sm text-[var(--color-text-muted)] mb-1">안녕하세요, Alex님</p>
         <h2 className="text-xl font-[var(--font-heading)] font-semibold text-[var(--color-text)]">
-          OHMT Motors
+          AXLE MOTORS
         </h2>
         <p className="text-sm text-[var(--color-text-muted)] mt-1">운영 및 영업 대시보드</p>
 

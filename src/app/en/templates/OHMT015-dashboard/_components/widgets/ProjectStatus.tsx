@@ -4,11 +4,11 @@ import { motion } from 'framer-motion'
 import { Avatar } from '../common/Avatar'
 
 const people: Record<string, string> = {
-  'Morgan Chen': '/templates/OHMT007-portfolio/portfolio-1.jpg',
-  'Sarah Yoon': '/templates/OHMT007-portfolio/portfolio-5.png',
-  'James Kang': '/templates/OHMT007-portfolio/portfolio-4.png',
-  'Mia Torres': '/templates/OHMT007-portfolio/portfolio-3.png',
-  'Daniel Park': '/templates/OHMT007-portfolio/portfolio-2.jpg',
+  'Morgan Chen': '/templates/OHMT015-dashboard/avatar-1.jpg',
+  'Sarah Yoon': '/templates/OHMT015-dashboard/avatar-5.png',
+  'James Kang': '/templates/OHMT015-dashboard/avatar-4.png',
+  'Mia Torres': '/templates/OHMT015-dashboard/avatar-3.png',
+  'Daniel Park': '/templates/OHMT015-dashboard/avatar-2.jpg',
 }
 
 const projects = [

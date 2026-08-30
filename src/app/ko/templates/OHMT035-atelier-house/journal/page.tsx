@@ -13,8 +13,8 @@ const journalImages: Record<string, string> = {
 }
 
 export const metadata: Metadata = {
-  title: '저널 | 아틀리에 하우스',
-  description: '원목의 특성, 가구 관리법, 좁은 공간을 위한 가구 배치와 실측 방법을 소개합니다.',
+  title: 'Atelier House - 저널',
+  description: '원목 자재 정보, 식탁 오일 관리법, 좁은 공간 레이아웃 가이드를 공유합니다.',
 }
 
 export default function JournalPage() {
@@ -26,9 +26,7 @@ export default function JournalPage() {
             저널
           </h1>
           <p className="mt-3 max-w-[520px] text-sm leading-relaxed text-[var(--color-text-muted)] word-keep-all">
-            원목의 특성과 식탁 마감 관리법, 작은 방에 맞는 가구 배치까지.
-            <br className="hidden md:block" />
-            가구를 고르고 오래 사용하는 데 필요한 정보를 기록합니다.
+            원목 자재 정보, 식탁 마감 관리법, 그리고 작은 방에 적합한 가구 배치까지. 가구를 고르고 살아가는 데 도움이 되는 이야기를 기록합니다.
           </p>
         </div>
       </section>
@@ -46,7 +44,7 @@ export default function JournalPage() {
               </div>
               <p className="mt-3 text-xs text-[var(--color-text-muted)]">{post.date}</p>
               <h2 className="mt-1 text-base font-semibold leading-snug text-[var(--color-text)]">{post.title}</h2>
-              <p className="mt-2 whitespace-pre-line text-xs leading-relaxed text-[var(--color-text-muted)] word-keep-all">{post.excerpt}</p>
+              <p className="mt-2 text-xs leading-relaxed text-[var(--color-text-muted)] word-keep-all">{post.excerpt}</p>
             </Link>
           ))}
         </div>

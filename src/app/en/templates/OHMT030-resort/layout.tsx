@@ -10,33 +10,27 @@ const instrumentSans = Instrument_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "OHMT - Seaside Hospitality Booking Template",
+  title: "SANCTUM - Seaside Hospitality Booking Template",
   description: "A seaside sanctuary of minimalist luxury.",
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Seaside Hospitality Booking Template",
+    title: "SANCTUM - Seaside Hospitality Booking Template",
     description: "A seaside sanctuary of minimalist luxury.",
     images: ["/templates/OHMT030-resort/og-image.jpg"],
   },
   openGraph: {
-    title: "OHMT - Seaside Hospitality Booking Template",
-    description: "A seaside sanctuary of minimalist luxury.",
-    url: "https://ohmt.site/en/templates/OHMT030-resort",
-    siteName: "OHMT",
+    title: "SANCTUM - Seaside Hospitality Booking Template",
+    siteName: "SANCTUM",
     images: ["/templates/OHMT030-resort/og-image.jpg"],
-  },
-  alternates: {
-    canonical: "https://ohmt.site/en/templates/OHMT030-resort",
-    languages: { ko: "https://ohmt.site/ko/templates/OHMT030-resort" },
   },
 };
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "OHMT - Coastal Luxury Resort",
+  name: "SANCTUM - Coastal Luxury Resort",
   description: "A seaside sanctuary of minimalist luxury.",
-  url: "https://ohmt.site/en/templates/OHMT030-resort",
+  url: "https://ohmytemplate.com/en/templates/OHMT030-resort",
 };
 
 export default function ResortLayout({ children }: { children: React.ReactNode }) {

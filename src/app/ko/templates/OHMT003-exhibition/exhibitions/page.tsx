@@ -22,11 +22,11 @@ export default function ExhibitionsPage() {
       <main>
         <section className="bg-[var(--color-bg)] pt-40 pb-16 border-b border-[var(--color-border)]">
           <div className="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-            <h1 className="font-heading font-semibold uppercase text-black leading-[var(--leading-heading)]" style={{ fontSize: 'clamp(4rem, 7vw, 7rem)', letterSpacing: '-0.04em' }}>
+            <h1 className="font-heading font-semibold uppercase text-black leading-[var(--leading-heading)]" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', letterSpacing: '-0.04em' }}>
               전시
             </h1>
             <p className="text-sm font-body text-black/50 leading-relaxed max-w-[32ch] md:text-right">
-              현재 진행 중인 전시와 개막 예정 전시, 상설 소장품을 한곳에서 살펴보세요.
+              현재 진행 중인 전시와 개막 예정 전시, 상설 소장품을 통합 탐색해 보세요.
             </p>
           </div>
         </section>

@@ -58,4 +58,3 @@ function GalleryCard({ project, index, reduce }: {
     </motion.div>
   );
 }
-

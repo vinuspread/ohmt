@@ -7,11 +7,11 @@ export const metadata: Metadata = {
   title: "Pricing - Lumen Wedding Photography",
   description: "Explore our wedding photography collections. Essence, Elegance, and Ever After packages designed for every love story.",
   keywords: ["wedding photography pricing", "wedding packages", "fine art wedding collection"],
-  authors: [{ name: "OHMT", url: "https://ohmt.site" }],
+  authors: [{ name: "OHMT", url: "https://ohmytemplate.com" }],
   openGraph: {
     title: "Pricing - Lumen Wedding Photography",
     description: "Explore our wedding photography collections. Essence, Elegance, and Ever After packages.",
-    url: "https://ohmt.site/en/templates/OHMT025-wedding/pricing",
+    url: "https://ohmytemplate.com/en/templates/OHMT025-wedding/pricing",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT025-wedding/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -23,12 +23,12 @@ export const metadata: Metadata = {
     description: "Explore our wedding photography collections.",
     images: ["/templates/OHMT025-wedding/og-image.jpg"],
   },
-  robots: { index: false, follow: true },
+  robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/OHMT025-wedding/pricing",
+    canonical: "https://ohmytemplate.com/en/templates/OHMT025-wedding/pricing",
     languages: {
-      "en": "https://ohmt.site/en/templates/OHMT025-wedding/pricing",
-      "ko": "https://ohmt.site/ko/templates/OHMT025-wedding/pricing",
+      "en": "https://ohmytemplate.com/en/templates/OHMT025-wedding/pricing",
+      "ko": "https://ohmytemplate.com/ko/templates/OHMT025-wedding/pricing",
     },
   },
 };

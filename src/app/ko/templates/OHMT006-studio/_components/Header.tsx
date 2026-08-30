@@ -32,7 +32,7 @@ export function Header() {
         { name: '서비스', href: '/ko/templates/OHMT006-studio/services' },
         { name: '프로젝트', href: '/ko/templates/OHMT006-studio/projects' },
         { name: '문의하기', href: '/ko/templates/OHMT006-studio/contact' },
-        { name: '소개', href: '/ko/templates/OHMT006-studio/about' },
+        { name: '어바웃', href: '/ko/templates/OHMT006-studio/about' },
     ];
 
     const isMainPage = /^\/(?:en|ko)\/templates\/OHMT006-studio\/?$/.test(pathname);
@@ -47,7 +47,8 @@ export function Header() {
                 <Link
                     href="/ko/templates/OHMT006-studio"
                     className={`text-lg md:text-xl font-black tracking-[-0.5px] uppercase transition-colors duration-500 ${isLight ? 'text-black' : 'text-white'}`}
-                >TECTA<span className="font-normal">.</span>
+                >
+                    OHMT<span className="font-normal">.</span>
                 </Link>
 
                 {/* Desktop Nav */}
@@ -69,7 +70,7 @@ export function Header() {
                             isLight ? 'border-black/15 text-black hover:bg-black hover:text-white' : 'border-white/30 text-white bg-white/10 hover:bg-white hover:text-black'
                         }`}
                     >
-                        프로젝트 문의
+                        프로젝트 시작하기
                     </Link>
                 </nav>
 
@@ -111,7 +112,7 @@ export function Header() {
                         onClick={() => setMenuOpen(false)}
                         className="inline-flex items-center justify-center w-full h-[52px] rounded-full border border-white/30 text-white text-xs font-bold tracking-[2px] uppercase hover:bg-white hover:text-black transition-all duration-500"
                     >
-                        프로젝트 문의
+                        프로젝트 시작하기
                     </Link>
                 </div>
             </div>

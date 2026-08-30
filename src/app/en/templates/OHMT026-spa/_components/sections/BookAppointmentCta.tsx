@@ -10,17 +10,17 @@ export default function BookAppointmentCta() {
   const reduce = useReducedMotion();
 
   return (
-    <section className="relative overflow-hidden bg-[var(--color-secondary)] py-24 lg:py-32">
+    <section className="relative overflow-hidden bg-[var(--color-secondary)] py-20 lg:py-28">
       <Image
         src="/templates/OHMT026-spa/cta-bg.jpg"
         alt=""
         fill
         role="presentation"
         sizes="100vw"
-        className="absolute inset-0 object-cover opacity-30"
+        className="absolute inset-0 object-cover object-[20%_center] opacity-45"
       />
       <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-secondary)] via-[var(--color-secondary)]/85 to-[var(--color-secondary)]/60" />
-      <div className="relative z-10 mx-auto max-w-7xl px-6 text-center">
+      <div className="relative z-10 mx-auto max-w-[1440px] px-6 text-center">
         <motion.div
           initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ export default function BookAppointmentCta() {
               Book appointment
             </Link>
             <Link
-              href="/en/templates/OHMT026-spa/service#pricing"
+              href="/en/templates/OHMT026-spa/pricing"
               className="inline-flex items-center rounded-full border border-white/20 text-[var(--color-text-contrast)] px-8 py-3.5 text-sm font-semibold hover:bg-white/10 transition-all duration-150"
             >
               View pricing
@@ -52,4 +52,3 @@ export default function BookAppointmentCta() {
     </section>
   );
 }
-

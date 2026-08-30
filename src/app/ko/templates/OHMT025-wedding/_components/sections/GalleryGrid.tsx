@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import Link from "next/link";
 import { projects } from "../../data/data";
 
 export default function GalleryGrid() {
@@ -34,34 +33,28 @@ function GalleryCard({ project, index, reduce }: {
       viewport={{ once: true, margin: "-5%" }}
       transition={{ duration: 0.8, delay: reduce ? 0 : index * 0.08, ease: [0.22, 0.61, 0.36, 1] }}
     >
-      <Link
-        href={`/ko/templates/OHMT025-wedding/gallery/${project.id}`}
-        className="block focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-primary)]"
-        aria-label={`${project.title} 웨딩 스토리 보기`}
-      >
-        <div className="relative overflow-hidden aspect-[4/5]">
-          <motion.img
-            src={project.image}
-            alt={`${project.title} 웨딩 사진`}
-            className="h-full w-full object-cover"
-            animate={{ scale: hovered ? 1.05 : 1 }}
-            transition={{ duration: 0.9, ease: [0.22, 0.61, 0.36, 1] }}
-          />
-          <motion.div
-            className="absolute inset-x-0 bottom-0 px-6 py-5 bg-gradient-to-t from-[#1A1816]/90 to-transparent"
-            initial={{ y: "100%" }}
-            animate={{ y: hovered ? "0%" : "100%" }}
-            transition={{ duration: 0.5, ease: [0.22, 0.61, 0.36, 1] }}
-          >
-            <h3 className="font-[family-name:var(--font-heading)] text-2xl font-light capitalize text-white leading-[var(--leading-heading)]">
-              {project.title}
-            </h3>
-            <p className="text-[0.65rem] uppercase tracking-[0.15em] text-white/60 mt-1">
-              {project.location} {"\u00B7"} {project.year}
-            </p>
-          </motion.div>
-        </div>
-      </Link>
+      <div className="relative overflow-hidden aspect-[4/5]">
+        <motion.img
+          src={project.image}
+          alt={`${project.title} 웨딩 사진`}
+          className="h-full w-full object-cover"
+          animate={{ scale: hovered ? 1.05 : 1 }}
+          transition={{ duration: 0.9, ease: [0.22, 0.61, 0.36, 1] }}
+        />
+        <motion.div
+          className="absolute inset-x-0 bottom-0 px-6 py-5 bg-gradient-to-t from-[#1A1816]/90 to-transparent"
+          initial={{ y: "100%" }}
+          animate={{ y: hovered ? "0%" : "100%" }}
+          transition={{ duration: 0.5, ease: [0.22, 0.61, 0.36, 1] }}
+        >
+          <h3 className="font-[family-name:var(--font-heading)] text-2xl font-light capitalize text-white leading-[var(--leading-heading)]">
+            {project.title}
+          </h3>
+          <p className="text-[0.65rem] uppercase tracking-[0.15em] text-white/60 mt-1">
+            {project.location} {"\u00B7"} {project.year}
+          </p>
+        </motion.div>
+      </div>
     </motion.div>
   );
 }

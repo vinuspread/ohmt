@@ -35,7 +35,7 @@ export default function Navbar({ solid }: { solid?: boolean }) {
               scrolled ? "text-[var(--color-text)]" : "text-white"
             }`}
           >
-            OHMT
+VOW
           </a>
 
           <nav className="hidden lg:flex items-center gap-10">
@@ -63,7 +63,8 @@ export default function Navbar({ solid }: { solid?: boolean }) {
                   : "border-white text-white hover:bg-white hover:text-[var(--color-text)]"
               }`}
             >
-              촬영 문의</a>
+              촬영 문의
+            </a>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="lg:hidden flex flex-col gap-1.5 p-1"
@@ -108,7 +109,8 @@ export default function Navbar({ solid }: { solid?: boolean }) {
                 onClick={() => setIsOpen(false)}
                 className="mt-4 inline-block bg-[var(--color-text)] px-10 py-4 text-sm font-bold uppercase tracking-[0.2em] text-white"
               >
-                촬영 문의</motion.a>
+                촬영 문의
+              </motion.a>
             </div>
           </motion.div>
         )}

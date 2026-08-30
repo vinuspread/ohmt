@@ -87,12 +87,14 @@ const shopLinks = [
       <div className="max-w-[1440px] mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-20 mb-20">
           <div>
-            <Link href="/en/templates/OHMT010-cosmetic" className="text-[1rem] md:text-[1.15rem] font-medium md:font-black tracking-[0.12em] uppercase mb-8 block">VELURE</Link>
-            <p className="max-w-[320px] whitespace-pre-line text-[0.85rem] leading-[var(--leading-body)] opacity-70">
+            <Link href="/en/templates/OHMT010-cosmetic" className="text-[1rem] md:text-[1.15rem] font-medium md:font-extrabold tracking-[0.12em] uppercase mb-8 block">
+              VELURE
+            </Link>
+            <p className="text-[0.85rem] opacity-70 leading-[var(--leading-body)] max-w-[320px]">
               {t.footer.brandDesc}
             </p>
           </div>
-          
+
           <div>
             <h4 className="text-[0.75rem] font-medium uppercase tracking-widest mb-8">{t.footer.shopTitle}</h4>
             <nav className="flex flex-col gap-4">
@@ -120,7 +122,7 @@ const shopLinks = [
             </nav>
           </div>
         </div>
-        
+
         <div className="pt-10 border-t border-white/10 text-[0.8rem] opacity-40 text-center md:text-left">
           {t.footer.copyright}
         </div>

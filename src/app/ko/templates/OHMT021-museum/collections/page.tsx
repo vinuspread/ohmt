@@ -15,13 +15,13 @@ const LIMIT_PER_PAGE = 10;
 function CollectionsPageContent() {
 
   const CATEGORIES = ["All", "Sculpture", "Fresco", "Marble"] as const;
-  const categoryLabels: Record<string, string> = { All: "전체", Sculpture: "조각", Fresco: "프레스코화", Marble: "대리석" };
+  const categoryLabels: Record<string, string> = { All: "전체", Sculpture: "조각", Fresco: "벽화", Marble: "대리석" };
 
   const [activeCategory, setActiveCategory] = useState<typeof CATEGORIES[number]>("All");
   const [visibleCount, setVisibleCount] = useState(LIMIT_PER_PAGE);
 
   // Filter items based on active category
-  const filteredItems = collections.filter(item => 
+  const filteredItems = collections.filter(item =>
     activeCategory === "All" || item.category === activeCategory
   );
 
@@ -44,32 +44,31 @@ function CollectionsPageContent() {
       <>
       <Header />
       <main className="antialiased min-h-screen bg-[var(--color-primary)] text-[var(--color-accent)] pt-16 md:pt-28 pb-20">
-      
+
       {/* Intro & Stats Section */}
       <div className="px-6 md:px-16 mb-12">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="grid md:grid-cols-2 gap-6 items-end"
         >
           <div>
-            <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/40 block mb-6 px-1">{"소장품 아카이브"}</span>
-            <h1 className="text-5xl md:text-8xl font-serif leading-[var(--leading-heading)] tracking-tighter break-keep">{"대표 소장품"}</h1>
+            <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/40 block mb-6 px-1">{"아카이브"}</span>
+            <h1 className="text-5xl md:text-8xl font-serif leading-[var(--leading-heading)] tracking-tighter break-keep">{"바티칸의 명작들"}</h1>
           </div>
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:gap-12 md:border-l md:border-white/10 md:pl-16 pt-4 md:pt-0 border-t border-white/10 md:border-t-0">
             <p className="text-sm md:text-base text-white/50 font-normal leading-relaxed max-w-sm flex-1 break-keep">
-              바티칸 미술관을 대표하는 조각과 회화, 프레스코화를 한곳에서 살펴보세요.<br className="hidden md:block" />
-              작품의 제작 시기와 작가, 주요 이야기를 함께 소개합니다.
+              {"엄선된 소장품들의 디지털 큐레이션을 경험해 보세요. 각각의 작품은 인류의 기술적 도약과 영적인 헌신의 이정표를 담고 있습니다."}
             </p>
             <div className="flex gap-8 md:gap-12 shrink-0">
               <div className="flex flex-col">
                 <span className="text-5xl md:text-8xl font-serif leading-none">{collections.length}</span>
-                <span className="text-xs uppercase tracking-widest text-white/30 mt-2">{"등록 작품"}</span>
+                <span className="text-xs uppercase tracking-widest text-white/30 mt-2">{"총 소장품 수"}</span>
               </div>
               <div className="flex flex-col">
                 <span className="text-5xl md:text-8xl font-serif leading-none">54</span>
-                <span className="text-xs uppercase tracking-widest text-white/30 mt-2">{"전시 공간"}</span>
+                <span className="text-xs uppercase tracking-widest text-white/30 mt-2">{"전시실 수"}</span>
               </div>
             </div>
           </div>
@@ -84,8 +83,8 @@ function CollectionsPageContent() {
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-1.5 rounded-full text-xs uppercase font-medium tracking-normal transition-colors border whitespace-nowrap ${
-                  activeCategory === cat 
-                  ? "bg-[var(--color-accent)] text-[var(--color-primary)] border-[var(--color-accent)]" 
+                  activeCategory === cat
+                  ? "bg-[var(--color-accent)] text-[var(--color-primary)] border-[var(--color-accent)]"
                   : "text-white/40 border-white/10 hover:border-white/40"
                 }`}
               >
@@ -118,12 +117,12 @@ function CollectionsPageContent() {
                   className="relative group overflow-hidden bg-[var(--color-primary)] aspect-[3/4]"
                 >
                   <Link href={`/ko/templates/OHMT021-museum/collections/${item.slug}`} className="block w-full h-full cursor-pointer">
-                    <img 
-                      src={item.img} 
+                    <img
+                      src={item.img}
                       alt={item.title}
                       className="w-full h-full object-cover transition-[filter,transform] duration-[2s] ease-out grayscale group-hover:grayscale-0 group-hover:scale-110 opacity-60 group-hover:opacity-100"
                     />
-                    
+
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8 md:p-12">
                          <span className="text-xs uppercase tracking-[0.4em] text-white/50 mb-3 block">{item.tag}</span>
                          <h3 className="text-2xl md:text-4xl font-serif break-keep">
@@ -142,12 +141,12 @@ function CollectionsPageContent() {
 
         {/* LOAD MORE BUTTON */}
         {hasMore && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="mt-16 flex justify-center"
           >
-            <button 
+            <button
               onClick={handleLoadMore}
               className="group flex flex-col items-center gap-6"
             >
@@ -155,7 +154,7 @@ function CollectionsPageContent() {
                 <Plus size={24} className="group-hover:rotate-90 transition-transform duration-500" />
               </div>
               <span className="text-xs uppercase font-medium tracking-normal text-white/40 group-hover:text-white transition-colors break-keep">
-                {"더 보기"}
+                {"소장품 더 보기"}
               </span>
             </button>
           </motion.div>

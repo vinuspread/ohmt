@@ -6,7 +6,6 @@ import { ChevronLeft, ChevronRight, FileText, Search } from 'lucide-react'
 import { categories, getCategory } from '../../data/categories-data'
 import { posts } from '../../data/posts-data'
 import { PostCard } from '../PostCard'
-import TemplateSelect from '../TemplateSelect'
 
 type SortKey = 'latest' | 'popular' | 'comments'
 
@@ -86,7 +85,7 @@ export function BoardClient({
               type="search"
             />
           </label>
-          <TemplateSelect
+          <select
             value={sortKey}
             onChange={(event) => {
               setSortKey(event.target.value as SortKey)
@@ -97,7 +96,7 @@ export function BoardClient({
             <option value="latest">Latest</option>
             <option value="popular">Popular</option>
             <option value="comments">Most Commented</option>
-          </TemplateSelect>
+          </select>
         </div>
       </div>
 

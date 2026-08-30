@@ -110,7 +110,7 @@ export default function OrdersPage() {
         className="space-y-3"
       >
         <PageHeader
-          title="Orders"
+          title="주문"
           action={
             <div className="flex flex-wrap items-center gap-3">
               <div className="relative">

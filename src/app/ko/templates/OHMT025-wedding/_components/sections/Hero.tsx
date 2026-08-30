@@ -44,18 +44,19 @@ export default function Hero() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 max-w-[1440px] mx-auto">
           <div>
             <div className="overflow-hidden mb-3">
-              <motion.p 
+              <motion.p
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 0.61, 0.36, 1] }}
                 className="text-[0.65rem] font-bold uppercase tracking-[0.3em] text-white/60"
               >
-                웨딩 포토그래피</motion.p>
+                웨딩 포토그래피
+              </motion.p>
             </div>
-            
+
             <h1
               className="font-[family-name:var(--font-heading)] font-light capitalize text-white leading-[var(--leading-heading)]"
-              style={{ fontSize: "clamp(3.5rem, 10vw, 8.5rem)" }}
+              style={{ fontSize: "clamp(3rem, 7vw, 5.5rem)" }}
             >
               {titleLines.map((line, lineIndex) => (
                 <div key={lineIndex} className="flex flex-wrap gap-x-4">
@@ -81,15 +82,18 @@ export default function Hero() {
           </div>
           <div className="flex flex-col items-start lg:items-end gap-5 lg:pb-2">
             <p className="text-sm text-white/70 max-w-[220px] lg:text-right leading-relaxed font-[family-name:var(--font-body)]">
-              자연스럽게, 섬세하게, 오래 남도록.</p>
+              자연스럽게, 섬세하게, 오래 남도록.
+            </p>
             <a
               href="/ko/templates/OHMT025-wedding/contact"
               className="relative overflow-hidden border border-white/40 hover:border-white px-8 py-3.5 text-[0.7rem] font-bold uppercase tracking-[0.2em] text-white group"
             >
               <span className="inline-block transition-transform duration-500 ease-[cubic-bezier(0.22,0.61,0.36,1)] group-hover:-translate-y-[150%]">
-                촬영 문의</span>
+                촬영 문의
+              </span>
               <span className="absolute inset-0 flex items-center justify-center transition-transform duration-500 ease-[cubic-bezier(0.22,0.61,0.36,1)] translate-y-[150%] group-hover:translate-y-0 text-white bg-white/10">
-                촬영 문의</span>
+                촬영 문의
+              </span>
             </a>
           </div>
         </div>

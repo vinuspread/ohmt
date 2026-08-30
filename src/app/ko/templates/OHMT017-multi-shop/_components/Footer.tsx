@@ -9,10 +9,11 @@ export const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
           <div className="col-span-2 md:col-span-2">
             <Link href="/ko/templates/OHMT017-multi-shop" className="text-2xl font-bold tracking-tight text-white">
-              OHMT
+              CANVAS SUPPLY
             </Link>
             <p className="text-sm text-white/50 mt-4 leading-relaxed max-w-[260px]">
-              유행보다 오래 입을 수 있는 옷과 액세서리를 선보입니다.</p>
+              유행보다 오래 입을 수 있는 옷과 액세서리를 선보입니다.
+            </p>
             <div className="flex gap-5 mt-8 text-sm">
               {["인스타그램", "트위터", "핀터레스트", "틱톡"].map((s) => (
                 <Link key={s} href="#" className="text-white/30 hover:text-white transition-colors duration-200 text-xs uppercase tracking-[0.1em]">
@@ -68,7 +69,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-16 pt-6 border-t border-white/8 flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-white/25">
-          <p>&copy; 2026 OHMT.</p>
+          <p>&copy; 2026 CANVAS SUPPLY.</p>
           <div className="flex gap-6">
             <Link href="#" className="hover:text-white/50 transition-colors duration-200">개인정보처리방침</Link>
             <Link href="#" className="hover:text-white/50 transition-colors duration-200">이용약관</Link>

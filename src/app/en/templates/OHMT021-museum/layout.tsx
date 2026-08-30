@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
 import './theme.css';
-
 const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-serif",
@@ -13,27 +12,27 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "CURA - Museum Exhibition Website",
+  title: "OHMT - Museum Exhibition Website Template",
   description: "Experience the epitome of elegance and durability.",
   openGraph: {
-    title: "CURA - Museum Exhibition Website",
+    title: "OHMT - Museum Exhibition Website Template",
     description: "Experience the epitome of elegance and durability.",
-    url: "https://ohmt.site/en/templates/OHMT021-museum",
-    siteName: "CURA",
+    url: "https://ohmytemplate.com/en/templates/OHMT021-museum",
+    siteName: "OHMT",
     images: [{ url: "/templates/OHMT021-museum/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "CURA - Museum Exhibition Website",
+    title: "OHMT - Museum Exhibition Website Template",
     description: "Experience the epitome of elegance and durability.",
     images: ["/templates/OHMT021-museum/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/OHMT021-museum",
-    languages: { "ko": "https://ohmt.site/ko/templates/OHMT021-museum" },
+    canonical: "https://ohmytemplate.com/en/templates/OHMT021-museum",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT021-museum" },
   },
 };
 
@@ -45,9 +44,9 @@ export default function ExhibitionLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Museum",
-    name: "CURA Museum",
+    name: "OHMT Museum",
     description: "Experience the epitome of elegance and durability.",
-    url: "https://ohmt.site/en/templates/OHMT021-museum",
+    url: "https://ohmytemplate.com/en/templates/OHMT021-museum",
   };
   return (
     <>

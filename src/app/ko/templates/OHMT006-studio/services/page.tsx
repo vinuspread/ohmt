@@ -11,77 +11,77 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 const services = [
   {
     idx: "01",
-    category: "공간 설계",
-    title: "공간 설계",
-    tagline: "공간의 용도와 동선을 바탕으로 기본 구조를 설계합니다.",
-    desc: "현장 조건과 사용 목적을 분석해 공간의 배치와 동선을 계획합니다.\n구조와 설비, 수납과 가구 위치를 함께 검토해 실제 생활과 업무에 불편함이 없도록 설계합니다.",
+    category: "공간 건축",
+    title: "공간 큐레이션",
+    tagline: "순수한 기하학적 비례와 엄격한 설계의 조화.",
+    desc: "단순한 물리적 공간을 밀도 높은 기능적 환경으로 재해석합니다. 동선의 흐름, 구조적 경계, 사소한 자재 선택에 이르기까지 모든 요소는 그 공간에 머무는 이들의 행동 패턴을 정밀하게 계산한 결과입니다.",
     stats: [
-      { value: "98.6%", label: "진행 방식" },
+      { value: "98.6%", label: "정밀도" },
       { value: "6–14주", label: "소요 기간" },
-      { value: "450+", label: "설계·시공" },
+      { value: "450+", label: "완성 공간" },
     ],
     process: [
-      { step: "01", title: "현장 분석", desc: "현장을 실측하고 구조와 설비, 채광과 소음, 주변 환경을 확인합니다." },
-      { step: "02", title: "공간 구성", desc: "필요한 공간을 정리하고 이동 동선과 수납, 가구 배치를 계획합니다." },
-      { step: "03", title: "소재 선정", desc: "예산과 관리 방법, 조명과 소음 조건을 고려해 마감재를 제안합니다." },
-      { step: "04", title: "시공 감리", desc: "주요 공정마다 현장을 확인하고 도면과 시방서에 맞게 시공되는지 점검합니다." },
+      { step: "01", title: "현장 분석", desc: "정밀 치수 측량, 구조적 하중 분석 및 주변 조도 감사." },
+      { step: "02", title: "기본 설계", desc: "공간 시퀀싱과 밀도 계획. 모든 면적에 독창적인 기능과 가치를 부여합니다." },
+      { step: "03", title: "소재 선정", desc: "조도·소음 차단·촉감 기준에 맞춰 면별 마감재를 엄선합니다." },
+      { step: "04", title: "시공 감리", desc: "주요 공정마다 전문가가 직접 현장에 입회하여 엄격하게 시공 품질을 관리합니다." },
     ],
     image: "/templates/OHMT006-studio/hero-1.jpg",
   },
   {
     idx: "02",
     category: "맞춤 인테리어",
-    title: "마감·스타일링",
-    tagline: "마감재와 조명, 가구와 패브릭을 한 흐름으로 제안합니다.",
-    desc: "마감재는 색과 질감뿐 아니라 내구성과 관리 방법, 빛에 따라 달라지는 표면까지 확인해 선택합니다.\n실제 샘플을 현장 조명에서 비교한 뒤 공간에 적합한 조합을 제안합니다.",
+    title: "비스포크 스타일링",
+    tagline: "모든 마감은 선택의 결과이며, 모든 선택은 공간의 철학이 됩니다.",
+    desc: "소재 선정은 감각에만 의존하지 않고 철저한 검증을 바탕으로 합니다. 빛의 반사율, 음향적 특성, 마감재 고유의 질감을 다각도로 분석하여 1,200여 개의 샘플 중 공간에 최적화된 마감재를 엄선합니다.",
     stats: [
-      { value: "1,200+", label: "마감재 샘플" },
-      { value: "0.1mm", label: "시공 기준" },
-      { value: "국내·외", label: "소재 조달" },
+      { value: "1,200+", label: "소재 라이브러리" },
+      { value: "0.1mm", label: "허용 공차" },
+      { value: "12개국", label: "소재 원산지" },
     ],
     process: [
-      { step: "01", title: "현장 환경 확인", desc: "채광과 조명, 소음과 시야, 기존 마감 상태를 종합적으로 살펴봅니다." },
-      { step: "02", title: "소재 보드", desc: "후보 마감재를 실제 조명 아래에서 비교해 색과 질감의 조화를 확인합니다." },
-      { step: "03", title: "조명 시뮬레이션", desc: "시간대별 자연광과 인공조명을 검토해 공간의 밝기와 눈부심을 조정합니다." },
-      { step: "04", title: "설치 관리", desc: "타일과 패널, 도장과 목공 등 주요 마감 공정을 현장에서 확인합니다." },
+      { step: "01", title: "감각 감사", desc: "대상 공간의 채광, 음향 및 시각적 조화를 종합적으로 평가합니다." },
+      { step: "02", title: "큐레이션 보드", desc: "실제 현장 조명 조건 아래에서 엄선된 마감재 후보군을 매칭하고 테스트합니다." },
+      { step: "03", title: "조명 시뮬레이션", desc: "빛을 공간의 중요 소재로 다루며, 시간대에 따른 마감 표면의 반사율을 시뮬레이션합니다." },
+      { step: "04", title: "설치 관리", desc: "주요 패널 설치 및 마감 공정 시 자재 정렬 기준을 현장에서 직접 감리합니다." },
     ],
     image: "/templates/OHMT006-studio/service-consulting.jpg",
   },
   {
     idx: "03",
-    category: "가구·오브제 큐레이션",
+    category: "오브제 큐레이션",
     title: "맞춤 가구",
-    tagline: "공간의 크기와 쓰임에 맞춰 가구를 별도로 제작합니다.",
-    desc: "기성 제품으로 해결하기 어려운 크기와 기능이 필요할 때 맞춤 가구를 설계합니다.\n목재와 금속, 석재를 다루는 제작 파트너와 협업하며 도면과 샘플, 시제품 확인을 거쳐 완성합니다.",
+    tagline: "공간을 위해 완성된 단 하나의 기능적 조각.",
+    desc: "공간의 비례와 성격에 맞춰 오직 단 하나의 커스텀 가구를 제작합니다. 금속, 석재, 목재 가공 분야의 장인 파트너들과 긴밀히 협력하여 규격화된 기성 가구로는 담아낼 수 없는 품격과 정성을 구현합니다.",
     stats: [
-      { value: "100%", label: "맞춤 제작" },
-      { value: "8–20주", label: "제작 기간" },
-      { value: "전문 공방", label: "제작 협력" },
+      { value: "100%", label: "커스텀 제작" },
+      { value: "8–20주", label: "피스당 기간" },
+      { value: "18곳", label: "공방 파트너" },
     ],
     process: [
-      { step: "01", title: "공간 분석", desc: "설치할 공간의 크기와 주변 동선, 사용 방식과 필요한 수납을 확인합니다." },
-      { step: "02", title: "형태 설계", desc: "스케치와 도면, 3D 모델을 통해 크기와 비율, 구조와 마감을 검토합니다." },
-      { step: "03", title: "장인 매칭", desc: "가구의 소재와 제작 방식에 맞는 전문 공방을 선정합니다." },
-      { step: "04", title: "설치와 조정", desc: "현장에 설치한 뒤 수평과 간격, 문과 서랍의 작동 상태를 최종 조정합니다." },
+      { step: "01", title: "공간 분석", desc: "가구가 위치할 공간의 스케일과 동선에 미치는 영향력을 면밀히 계산합니다." },
+      { step: "02", title: "형태 설계", desc: "제작 전, 형태적 비율을 맞추기 위해 정교한 스케치와 3D 모델링 작업을 선행합니다." },
+      { step: "03", title: "장인 매칭", desc: "완성한 가구의 디자인 특성과 제작 기법에 가장 최적화된 장인 공방을 연결합니다." },
+      { step: "04", title: "미세 조율", desc: "공간에 가구가 안착할 때까지 배치를 밀리미터 단위로 미세 조절합니다." },
     ],
     image: "/templates/OHMT006-studio/hero-3.jpg",
   },
   {
     idx: "04",
-    category: "현장 관리",
+    category: "전략적 감리",
     title: "시공 관리",
-    tagline: "설계 내용이 현장에서 제대로 구현되도록 주요 공정을 관리합니다.",
-    desc: "설계 도면과 시방서를 기준으로 시공 상태를 확인하고, 현장에서 발생하는 변경 사항과 자재 수급 문제를 기록해 대응합니다. 주요 공정은 다음 단계로 넘어가기 전에 품질과 치수를 점검합니다.",
+    tagline: "도면 위의 약속이 완벽한 공간으로 실현되기까지.",
+    desc: "설계 도면의 무결성이 현장에서 어긋나지 않도록 엄격한 시공 감리를 진행합니다. 현장 품질 기준을 철저히 모니터링하고 시공 과정에서 발생할 수 있는 오차를 실시간으로 제어하여 디자인의 왜곡 없는 준공을 보장합니다.",
     stats: [
-      { value: "< 0.5%", label: "도면 반영" },
+      { value: "< 0.5%", label: "이탈률" },
       { value: "주 3회", label: "현장 입회" },
-      { value: "Zero", label: "최종 검수" },
+      { value: "Zero", label: "타협 없는 준공" },
     ],
     process: [
-      { step: "01", title: "착공 전 협의", desc: "도면과 시방서, 공정표와 변경 절차를 시공사와 사전에 협의합니다." },
-      { step: "02", title: "공정별 승인", desc: "주요 공정이 끝날 때마다 품질과 치수를 확인한 뒤 다음 작업을 진행합니다." },
-      { step: "03", title: "현장 이슈 관리", desc: "현장 오차와 자재 변경, 일정 변동을 기록하고 대안을 협의합니다." },
-      { step: "04", title: "최종 검수와 인도", desc: "완공 상태를 도면과 시방서에 맞춰 확인하고, 보완이 필요한 항목을 정리한 뒤 최종 인도합니다." },
+      { step: "01", title: "착공 전 협의", desc: "구조물 허용 오차 기준과 대체 시공 정책을 명문화하고 사전에 합의합니다." },
+      { step: "02", title: "공정별 승인", desc: "주요 공정 완료 시 다음 단계로 넘어가기 전 엄격하게 품질 검사 및 승인을 수행합니다." },
+      { step: "03", title: "이슈 실시간 관리", desc: "현장 오차나 자재 수급 변수를 실시간 리포트로 관리하여 대처합니다." },
+      { step: "04", title: "최종 검수 인도", desc: "도면 및 시방서 사양과 최종 준공 상태를 1:1 대조하여 결함을 완벽히 보완한 후 인도합니다." },
     ],
     image: "/templates/OHMT006-studio/project-1.jpg",
   },
@@ -95,7 +95,7 @@ function StudioServicesPageContent() {
 
         <PageHeader
           category="우리의 전문성"
-          title={<>루미나 스튜디오의 <br /><span className="font-normal">주요 서비스</span></>}
+          title={<>제공하는 <br /><span className="font-normal">서비스.</span></>}
           breadcrumb={["스튜디오", "서비스"]}
         />
 
@@ -136,7 +136,7 @@ function StudioServicesPageContent() {
                       <p className="text-sm text-black/40 font-normal">{s.tagline}</p>
                     </div>
 
-                    <p className="w-full whitespace-pre-line text-base font-normal leading-loose text-black/65">
+                    <p className="text-base md:text-base text-black/65 leading-loose font-normal max-w-[520px]">
                       {s.desc}
                     </p>
 
@@ -175,19 +175,19 @@ function StudioServicesPageContent() {
           <div className="max-w-[1720px] mx-auto px-8 md:px-16 lg:px-24 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
             <div>
               <h3 className="text-[length:var(--text-h2)] font-bold leading-[var(--leading-heading)] mb-4">
-                새로운 공간을<br />계획하고 있나요?
+                공간 시스템을<br />구축할 준비가 되셨나요?
               </h3>
               <div className="flex flex-wrap gap-6 text-xs font-bold text-white/35">
-                <span>✓ 설계부터 시공까지 일관된 관리</span>
-                <span>✓ 예산과 일정에 맞춘 진행</span>
-                <span>✓ 주거·상업·호텔 공간 경험</span>
+                <span>✓ 98.6% 정밀도</span>
+                <span>✓ 타협 없는 준공</span>
+                <span>✓ 전 세계 450개 이상의 공간</span>
               </div>
             </div>
             <Link
               href="/ko/templates/OHMT006-studio/contact"
               className="group shrink-0 flex items-center gap-4 px-8 py-4 border border-white bg-white text-black text-xs font-bold uppercase tracking-widest hover:bg-transparent hover:text-white transition-all duration-300"
             >
-              프로젝트 상담 신청
+              프로젝트 시작
               <ArrowUpRight size={14} className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
           </div>

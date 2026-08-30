@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import './theme.css';
 import { SmoothScroll } from "./_components/SmoothScroll";
-
 export const metadata: Metadata = {
   title: "OHMT - Multi-Brand Shopfront Template",
   description: "Multi-brand shopping experience with curated collections",
   openGraph: {
     title: "OHMT - Multi-Brand Shopfront Template",
     description: "Multi-brand shopping experience with curated collections",
-    url: "https://ohmt.site/en/templates/OHMT017-multi-shop",
+    url: "https://ohmytemplate.com/en/templates/OHMT017-multi-shop",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT017-multi-shop/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -22,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/OHMT017-multi-shop",
-    languages: { "ko": "https://ohmt.site/ko/templates/OHMT017-multi-shop" },
+    canonical: "https://ohmytemplate.com/en/templates/OHMT017-multi-shop",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT017-multi-shop" },
   },
 };
 
@@ -35,7 +34,6 @@ export default function MultiShopLayout({
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;600&family=Inter:wght@400;600&display=swap');
       `}</style>
       <script
         type="application/ld+json"
@@ -43,8 +41,8 @@ export default function MultiShopLayout({
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Store",
-            name: "OHMT Multi-Shop",
-            url: "https://ohmt.site/en/templates/OHMT017-multi-shop",
+            name: "CANVAS SUPPLY",
+            url: "https://ohmytemplate.com/en/templates/OHMT017-multi-shop",
             description: "Multi-brand shopping experience with curated collections.",
           }),
         }}

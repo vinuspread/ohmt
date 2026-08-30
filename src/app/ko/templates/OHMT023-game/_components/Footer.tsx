@@ -21,7 +21,8 @@ export default function Footer() {
               OHMT
             </Link>
             <p className="mt-3 text-sm leading-relaxed text-[var(--color-text-muted)]">
-              상상을 플레이할 수 있는 세계로 만들고, 오래 기억되는 게임을 만듭니다.</p>
+              상상을 플레이할 수 있는 세계로 만들고, 오래 기억되는 게임을 만듭니다.
+            </p>
           </div>
 
           <div>
@@ -62,7 +63,8 @@ export default function Footer() {
 
           <div>
             <h4 className="mb-4 text-sm font-semibold tracking-[0.1em] text-[var(--color-text)] uppercase">
-              소셜</h4>
+              소셜
+            </h4>
             <ul className="space-y-3">
               <li>
                 <span className="text-sm text-[var(--color-text-muted)]">Twitter / X</span>

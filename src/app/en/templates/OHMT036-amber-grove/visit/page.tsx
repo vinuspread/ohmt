@@ -36,10 +36,10 @@ export default function VisitPage() {
 
       {/* Banner Photo */}
       <section className="relative aspect-[21/9] w-full overflow-hidden rounded border border-[var(--color-border)]">
-        <Image 
-          src="/templates/OHMT036-amber-grove/marquee-soil.jpg" 
-          alt="Soil and crops at Amber Grove" 
-          fill 
+        <Image
+          src="/templates/OHMT036-amber-grove/marquee-soil.jpg"
+          alt="Soil and crops at Amber Grove"
+          fill
           priority
           sizes="(min-width: 1024px) 80vw, 100vw"
           className="object-cover"
@@ -109,7 +109,7 @@ export default function VisitPage() {
             Crops change weekly based on climate conditions. Check our picking ledger before planning a harvest walk.
           </p>
         </div>
-        
+
         <div className="overflow-x-auto border border-[var(--color-border)] rounded">
           <table className="min-w-full divide-y divide-[var(--color-border)] text-left text-sm">
             <thead className="bg-[var(--color-bg-secondary)]">
@@ -147,7 +147,7 @@ export default function VisitPage() {
             We supply small-batch stone fruit, cider apples, and cold-pressed preserves to select restaurants and local grocers.
           </p>
         </div>
-        
+
         <div className="grid gap-6 md:grid-cols-2">
           <div className="space-y-4">
             <h3 className="text-lg font-bold text-[var(--color-text)] leading-[var(--leading-heading)]">Wholesale & Culinary Accounts</h3>

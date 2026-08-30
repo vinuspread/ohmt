@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Copy, Trash2, Plus, Eye, EyeOff } from 'lucide-react'
 import { DashboardLayout } from '../_components/layout/DashboardLayout'
 import { PageHeader } from '../_components/common/PageHeader'
-import TemplateSelect from '../_components/TemplateSelect'
 
 type SettingsTab = 'general' | 'notifications' | 'security' | 'api-keys'
 
@@ -106,16 +105,16 @@ function TabContent({ tab }: { tab: SettingsTab }) {
           <h4 className="text-sm font-medium text-[var(--color-text)] border-b border-[var(--color-border)] pb-2">General Information</h4>
           <FormInput label="Name" value="Morgan Chen" />
           <FormInput label="Email" value="morgan@ohmytemplate.io" />
-          <FormInput label="Company" value="OHMT" />
+          <FormInput label="Company" value="AXLE MOTORS" />
           <div>
             <label className="block text-xs font-medium text-[var(--color-text-muted)] mb-1.5">Timezone</label>
-            <TemplateSelect className="w-full px-3 py-2 text-sm bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-[var(--radius-md)] text-[var(--color-text)] focus:outline-none focus:border-[var(--color-primary-border)] transition-colors">
+            <select className="w-full px-3 py-2 text-sm bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-[var(--radius-md)] text-[var(--color-text)] focus:outline-none focus:border-[var(--color-primary-border)] transition-colors">
               <option>UTC+9 (Seoul)</option>
               <option>UTC-8 (PST)</option>
               <option>UTC-5 (EST)</option>
               <option>UTC+0 (GMT)</option>
               <option>UTC+1 (CET)</option>
-            </TemplateSelect>
+            </select>
           </div>
           <div>
             <label className="block text-xs font-medium text-[var(--color-text-muted)] mb-2">Theme</label>

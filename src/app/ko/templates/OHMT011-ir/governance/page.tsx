@@ -14,7 +14,7 @@ const boardMembers = [
   { name: "Elena M. Santos", role: "선임 독립 이사", initials: "ES", bio: "Pacific Advisors Group 사장으로, 5개 상장 기업 이사회에서 활동 중.", image: "/templates/OHMT011-ir/member-es.png" },
   { name: "David K. Park", role: "감사 위원회 위원장", initials: "DP", bio: "Deloitte LLP 전 파트너, CPA, 재무 보고 및 내부 통제 전문가.", image: "/templates/OHMT011-ir/member-dp.png" },
   { name: "Sarah L. Thornton", role: "보상 위원회 위원장", initials: "ST", bio: "GlobalTech Industries 전 CHRO, 임원 보상 및 인재 전략 전문가.", image: "/templates/OHMT011-ir/member-st.png" },
-  { name: "Robert M. Chen", role: "이사", initials: "RC", bio: "Crestview Capital 창립자 겸 대표 파트너, 5조 8,800억 원 규모 사모펀드 운용.", image: "/templates/OHMT011-ir/member-rc.png" },
+  { name: "Robert M. Chen", role: "이사", initials: "RC", bio: "Crestview Capital 창립자 겸 대표 파트너, 42억 달러 규모 사모펀드 운용.", image: "/templates/OHMT011-ir/member-rc.png" },
   { name: "Maria V. Gonzalez", role: "이사", initials: "MG", bio: "Horizon Renewables CEO, 지속가능 에너지 전환 분야의 선도적 리더.", image: "/templates/OHMT011-ir/member-mg.png" },
   { name: "Thomas W. Hayes", role: "이사", initials: "TH", bio: "전 미국 재무차관보, 규제 업무 및 공공 정책 전문가.", image: "/templates/OHMT011-ir/member-th.png" },
   { name: "Catherine N. Adebayo", role: "이사", initials: "CA", bio: "Sterling Bank COO, 기업 지배구조 및 리스크 관리 분야에서 풍부한 경험 보유.", image: "/templates/OHMT011-ir/member-ca.png" },

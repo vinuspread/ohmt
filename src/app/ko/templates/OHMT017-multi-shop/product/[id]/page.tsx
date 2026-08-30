@@ -24,7 +24,7 @@ function ProductPageContent() {
         <TemplateWrapper theme={theme}>
           <main className="min-h-screen pt-32 text-center text-[var(--color-text-muted)]">
             <p>상품을 찾을 수 없습니다.</p>
-            <Link href="/ko/templates/OHMT017-multi-shop/shop" className="mt-6 inline-block text-sm underline">스토어로 돌아가기</Link>
+            <Link href="/ko/templates/OHMT017-multi-shop/shop" className="mt-6 inline-block text-sm underline">쇼핑으로 돌아가기</Link>
           </main>
         </TemplateWrapper>
       </>
@@ -43,7 +43,8 @@ function ProductPageContent() {
           <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-24 md:pt-28 pb-4">
             <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-[var(--color-text-muted)]">
               <Link href="/ko/templates/OHMT017-multi-shop/shop" className="hover:text-[var(--color-text)] transition-colors flex items-center gap-1">
-                <ChevronLeft size={12} />스토어</Link>
+                <ChevronLeft size={12} />쇼핑
+              </Link>
               <span>/</span>
               <Link href={`/ko/templates/OHMT017-multi-shop/shop/${product.category}`} className="hover:text-[var(--color-text)] transition-colors capitalize">
                 {product.category}
@@ -75,7 +76,7 @@ function ProductPageContent() {
                         <Star key={i} size={13} fill={i <= Math.round(product.rating!) ? "var(--color-star)" : "none"} color={i <= Math.round(product.rating!) ? "var(--color-star)" : "#D1D5DB"} strokeWidth={1.5} />
                       ))}
                     </div>
-                    <span className="text-xs text-[var(--color-text-muted)]">{product.rating} ({product.reviewCount}개)</span>
+                    <span className="text-xs text-[var(--color-text-muted)]">{product.rating} ({product.reviewCount}개 리뷰)</span>
                   </div>
                 )}
 
@@ -119,7 +120,7 @@ function ProductPageContent() {
                     activeTab === tab ? "border-[var(--color-primary)] text-[var(--color-text)]" : "border-transparent text-[var(--color-text-muted)] hover:text-[var(--color-text)]"
                   }`}
                 >
-                  {tab === "desc" ? "상품 설명" : tab === "specs" ? "상품 정보" : `리뷰 (${product.reviewsList?.length ?? 0})`}
+                  {tab === "desc" ? "상세 설명" : tab === "specs" ? "스펙" : `리뷰 (${product.reviewsList?.length ?? 0})`}
                 </button>
               ))}
             </div>

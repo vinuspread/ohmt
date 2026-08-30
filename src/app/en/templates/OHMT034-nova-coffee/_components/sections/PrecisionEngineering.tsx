@@ -115,7 +115,7 @@ export function PrecisionEngineering() {
                 <p className="font-mono text-xs text-white/38">0{index + 1}</p>
               </div>
               <div className="mt-8 self-end">
-                <h3 className="font-display text-base font-bold leading-tight text-white md:text-lg">{spec.title}</h3>
+                <h3 className="font-display text-base font-bold leading-[1.05] text-white md:text-lg">{spec.title}</h3>
                 <p className={`mt-3 text-xs leading-relaxed text-white/72 md:text-sm ${
                   spec.size === 'wide' ? 'max-w-[520px]' : 'max-w-[330px]'
                 }`}>{spec.desc}</p>

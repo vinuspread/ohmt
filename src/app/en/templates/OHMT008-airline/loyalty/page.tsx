@@ -9,7 +9,6 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 import { Gift, Calculator, Award, ShieldAlert, Check } from "lucide-react";
 import { PageHero } from "../_components/PageHero";
 import { motion, AnimatePresence } from "framer-motion";
-import TemplateSelect from '../_components/TemplateSelect'
 
 function LoyaltyPageContent() {
   const [selectedTier, setSelectedTier] = useState("Gold");
@@ -55,16 +54,16 @@ function LoyaltyPageContent() {
           imageAlt="VIP Airport Lounge"
           label="Skyline Loyalty Club"
           title={<>Elevate Your <br /><span className="text-[var(--color-accent)] font-[family-name:var(--font-heading)] normal-case font-bold">Every Mile.</span></>}
-          description={"Join STRATUS Skyline Club.\nAccess ultra-exclusive suites, private VIP airport lounges, accelerated miles earning, and elite priority luggage."}
+          description="Join STRATUS Skyline Club.\nAccess ultra-exclusive suites, private VIP airport lounges, accelerated miles earning, and elite priority luggage."
           descMaxWidth="max-w-[660px]"
         />
 
         {/* 1. Interactive Digital Skyline Pass Creator - Typography Focus */}
         <section className="py-14 md:py-32 bg-white">
           <div className="max-w-[1320px] mx-auto px-6 md:px-10">
-            
+
             <div className="grid lg:grid-cols-12 gap-10 md:gap-20 items-center">
-              
+
               {/* Left: Beautiful floating metallic pass (Clean, borderless card focus) */}
               <div className="lg:col-span-5 flex flex-col items-center">
                 <div className="text-center pb-8 space-y-2">
@@ -88,11 +87,11 @@ function LoyaltyPageContent() {
                       className={`w-full max-w-[340px] h-[210px] bg-gradient-to-tr ${t.color} p-8 flex flex-col justify-between transition-all relative overflow-hidden group cursor-pointer rounded-3xl`}
                     >
                       <div className="absolute right-[-40px] top-[-40px] w-24 h-24 bg-white/10 rounded-full transition-transform duration-300" />
-                      
+
                       <div className="flex justify-between items-start">
                         <div>
-                          <p className="text-xs uppercase tracking-widest font-black opacity-45">STRATUS Skyline Club</p>
-                          <h4 className="text-base font-black uppercase tracking-wider mt-1">{t.name} Pass</h4>
+                          <p className="text-xs uppercase tracking-widest font-extrabold opacity-45">STRATUS Skyline Club</p>
+                          <h4 className="text-base font-extrabold uppercase tracking-wider mt-1">{t.name} Pass</h4>
                         </div>
                         <Award size={22} className="opacity-70" />
                       </div>
@@ -169,7 +168,7 @@ function LoyaltyPageContent() {
         {/* 2. Interactive Miles Earning Simulator - Clean Borderless Design */}
         <section className="py-14 md:py-32 bg-[var(--color-bg-secondary)] border-y border-[var(--color-border)]">
           <div className="max-w-[1320px] mx-auto px-6 md:px-10 grid lg:grid-cols-12 gap-10 md:gap-20 items-start">
-            
+
             {/* Left Selector Deck (Typographic Underlines instead of box selectors) */}
             <div className="lg:col-span-7 space-y-12">
               <div className="space-y-4">
@@ -187,7 +186,7 @@ function LoyaltyPageContent() {
                 {/* Route Selector (Modern elegant select) */}
                 <div className="space-y-3">
                   <label className="text-sm font-bold uppercase tracking-widest text-[#7A7A7A]">Curated Route</label>
-                  <TemplateSelect
+                  <select
                     value={route}
                     onChange={(e) => setRoute(e.target.value)}
                     className="w-full border-b border-[var(--color-border)] py-3 bg-transparent font-bold text-base text-[var(--color-primary)] rounded-none focus:outline-none focus:border-[var(--color-accent)] cursor-pointer"
@@ -196,13 +195,13 @@ function LoyaltyPageContent() {
                     <option value="Tokyo">Seoul NRT ({routeMiles.Tokyo} Mi)</option>
                     <option value="New York">Seoul JFK ({routeMiles["New York"]} Mi)</option>
                     <option value="Dubai">Seoul DXB ({routeMiles.Dubai} Mi)</option>
-                  </TemplateSelect>
+                  </select>
                 </div>
 
                 {/* Cabin Class Selector */}
                 <div className="space-y-3">
                   <label className="text-sm font-bold uppercase tracking-widest text-[#7A7A7A]">Flight Cabin Class</label>
-                  <TemplateSelect
+                  <select
                     value={cabinClass}
                     onChange={(e) => setCabinClass(e.target.value)}
                     className="w-full border-b border-[var(--color-border)] py-3 bg-transparent font-bold text-base text-[var(--color-primary)] rounded-none focus:outline-none focus:border-[var(--color-accent)] cursor-pointer"
@@ -210,7 +209,7 @@ function LoyaltyPageContent() {
                     <option value="First">First Class Suite (2.0x Multiplier)</option>
                     <option value="Business">Business Class (1.5x Multiplier)</option>
                     <option value="Economy">Economy Class (1.0x Multiplier)</option>
-                  </TemplateSelect>
+                  </select>
                 </div>
               </div>
             </div>

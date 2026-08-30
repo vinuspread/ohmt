@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { designerInfo } from '@/lib/portfolio-data';
+import { designerInfo } from '../../portfolio-data';
 
 export function Footer() {
   return (
@@ -9,7 +9,7 @@ export function Footer() {
       <div className="max-w-[1440px] mx-auto px-6 md:px-10 pt-16 pb-8">
         {/* Top bar */}
         <div className="flex items-center justify-between mb-16 pb-6 border-b border-[var(--color-border)]">
-          <Link href="/en/templates/OHMT007-portfolio" className="text-[1.2rem] font-black tracking-tighter text-[var(--color-text)] hover:opacity-60 transition-opacity">
+          <Link href="/en/templates/OHMT007-portfolio" className="text-[1.2rem] font-bold tracking-tight text-[var(--color-text)] hover:opacity-60 transition-opacity">
             HALF LIGHT.
           </Link>
           <div className="flex items-center gap-2 text-xs font-medium text-[var(--color-text-muted)]">

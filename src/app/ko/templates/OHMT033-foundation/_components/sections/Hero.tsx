@@ -98,7 +98,7 @@ export function Hero() {
               >
                 <div className="mb-6 flex max-w-[820px] items-center gap-3 text-white/76">
                   <span className="h-px w-12 bg-[var(--color-accent)]" />
-                  <p className="text-sm font-semibold text-white/82">OHMT 파운데이션</p>
+                  <p className="text-sm font-semibold text-white/82">VERITAS 재단</p>
                 </div>
                 <h1 className="max-w-[760px] font-heading text-[length:var(--text-h2)] font-semibold leading-[var(--leading-heading)] tracking-tight text-white drop-shadow-[0_2px_16px_rgba(0,0,0,0.28)] md:max-w-[900px] md:text-[length:var(--text-h1)] md:leading-[var(--leading-heading)]">
                   {slide.headline.map((line) => (
@@ -110,7 +110,8 @@ export function Hero() {
                 <div className="mt-6 flex max-w-[620px] flex-col items-start gap-6">
                   <p className="max-w-[400px] text-base leading-relaxed text-white/86 drop-shadow-[0_1px_10px_rgba(0,0,0,0.22)] md:text-base">{slide.sub}</p>
                   <ButtonLink href={`${base}/stories`} variant="light" size="sm">
-                    이야기 읽기</ButtonLink>
+                    이야기 읽기
+                  </ButtonLink>
                 </div>
               </motion.div>
             </AnimatePresence>

@@ -3,12 +3,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 const slugs = ["how-to-style-sneakers", "sustainable-footwear", "sneaker-care-guide", "2026-trends"];
-const imgs = [
-  "/templates/OHMT005-sneaker/hero-detail.jpg",
-  "/templates/OHMT005-sneaker/product-6.jpg",
-  "/templates/OHMT005-sneaker/cat-sneakers-new.jpg",
-  "/templates/OHMT005-sneaker/category-running-new.jpg",
-];
+const imgs = ["/templates/OHMT005-sneaker/blog-1.jpg", "/templates/OHMT005-sneaker/blog-2.jpg", "/templates/OHMT005-sneaker/blog-3.jpg", "/templates/OHMT005-sneaker/blog-4.jpg"];
 
 export const BlogSection = () => {
   const t = {
@@ -177,7 +172,7 @@ return (
     <section className="py-16 bg-white">
       <div className="max-w-[1440px] mx-auto px-6">
         <div className="flex items-center justify-between mb-10">
-          <h2 className="text-[1.6rem] font-black tracking-[-0.02em] uppercase">{t.blogSection.title}</h2>
+          <h2 className="text-[1.6rem] font-extrabold tracking-[-0.02em] uppercase">{t.blogSection.title}</h2>
           <Link href={`/en/templates/OHMT005-sneaker/blog`} className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-black/50 hover:text-black transition-colors border-b border-black/20 pb-0.5">
             {t.blogSection.allPosts}
           </Link>
@@ -189,7 +184,7 @@ return (
                 <img loading="lazy" src={imgs[i]} alt={p.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
               </div>
               <span className="text-[0.65rem] font-bold uppercase tracking-[0.15em] text-black/40 block mb-2">{p.category} · {p.date}</span>
-              <h3 className="text-[0.9rem] font-bold text-black leading-snug mb-3 group-hover:opacity-60 transition-opacity">{p.title}</h3>
+              <h3 className="text-[0.9rem] font-bold text-black leading-[1.05] mb-3 group-hover:opacity-60 transition-opacity">{p.title}</h3>
               <span className="inline-flex items-center gap-1.5 text-[0.75rem] font-bold uppercase tracking-[0.08em] text-black border-b border-black/30 pb-0.5">
                 {t.blogSection.readMore} <ArrowRight size={12} />
               </span>

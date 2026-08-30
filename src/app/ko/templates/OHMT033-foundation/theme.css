@@ -75,22 +75,6 @@
   letter-spacing: 0.08em;
 }
 
-.ohmt033-foundation .ohmt033-contact-submit,
-.ohmt033-foundation .ohmt033-contact-submit:hover,
-.ohmt033-foundation .ohmt033-contact-submit:focus-visible {
-  border-color: var(--color-primary) !important;
-  color: #ffffff !important;
-}
-
-.ohmt033-foundation .ohmt033-contact-submit {
-  background: var(--color-primary) !important;
-}
-
-.ohmt033-foundation .ohmt033-contact-submit:hover,
-.ohmt033-foundation .ohmt033-contact-submit:focus-visible {
-  background: var(--color-primary-hover) !important;
-}
-
 .ohmt033-fine-surface {
   background-image:
     linear-gradient(rgba(17, 24, 39, 0.045) 1px, transparent 1px),

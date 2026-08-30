@@ -6,7 +6,7 @@ import type { Figure } from '../data/figures'
 export type CartItem = {
   slug: string
   name: string
-  priceKrw: number
+  priceUsd: number
   image: string
   colorway: string
   qty: number
@@ -15,7 +15,7 @@ export type CartItem = {
 type CartContextValue = {
   items: CartItem[]
   count: number
-  totalKrw: number
+  totalUsd: number
   add: (figure: Figure, colorway: string) => void
   remove: (slug: string, colorway: string) => void
   setQty: (slug: string, colorway: string, qty: number) => void
@@ -39,7 +39,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         {
           slug: figure.slug,
           name: figure.name,
-          priceKrw: figure.priceKrw,
+          priceUsd: figure.priceUsd,
           image: figure.images.main,
           colorway,
           qty: 1,
@@ -62,8 +62,8 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   const value = useMemo<CartContextValue>(() => {
     const count = items.reduce((n, i) => n + i.qty, 0)
-    const totalKrw = items.reduce((n, i) => n + i.qty * i.priceKrw, 0)
-    return { items, count, totalKrw, add, remove, setQty }
+    const totalUsd = items.reduce((n, i) => n + i.qty * i.priceUsd, 0)
+    return { items, count, totalUsd, add, remove, setQty }
   }, [items, add, remove, setQty])
 
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>

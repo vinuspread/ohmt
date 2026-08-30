@@ -16,20 +16,20 @@ export default function InstructorCard({ instructor }: InstructorCardProps) {
 
       <div className="px-8 py-8 border-t border-[var(--color-border)]">
         <p
-          className="text-xs tracking-tight uppercase text-[var(--color-text-muted)] mb-3"
-          style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
+          className="mb-3 text-sm font-normal tracking-normal text-[var(--color-text-muted)]"
+          style={{ fontFamily: "var(--font-body)" }}
         >
           {instructor.role}
         </p>
         <h3
-          className="text-xl font-normal text-[var(--color-text)] tracking-[-0.01em]"
+          className="text-xl font-medium tracking-normal text-[var(--color-text)]"
           style={{ fontFamily: "var(--font-heading)" }}
         >
           {instructor.name}
         </h3>
         <p
           className="mt-4 text-sm text-[var(--color-text-muted)] leading-loose"
-          style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
+          style={{ fontFamily: "var(--font-body)" }}
         >
           {instructor.bio}
         </p>

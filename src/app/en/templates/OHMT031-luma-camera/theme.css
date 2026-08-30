@@ -33,28 +33,28 @@
   font-size: clamp(2.35rem, 5vw, 5.4rem);
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
 }
 
 .luma-h2 {
   font-size: clamp(1.8rem, 3vw, 3.35rem);
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.02em;
 }
 
 .luma-h3 {
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.02em;
 }
 
 .luma-h2-sm {
   font-size: clamp(1.5rem, 2.2vw, 1.875rem);
   font-weight: 700;
   line-height: 1.2;
-  letter-spacing: -0.035em;
+  letter-spacing: -0.02em;
 }
 
 .luma-body {

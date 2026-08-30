@@ -11,8 +11,6 @@ export const metadata: Metadata = {
 import IntroSection from "./_components/IntroSection";
 import BenefitsSection from "./_components/BenefitsSection";
 import ClassesPreview from "./_components/ClassesPreview";
-import InstructorsSection from "./_components/InstructorsSection";
-import TestimonialsSection from "./_components/TestimonialsSection";
 import CTASection from "./_components/CTASection";
 import Footer from "./_components/Footer";
 
@@ -24,10 +22,7 @@ function HomeContent() {
       <IntroSection />
       <BenefitsSection />
       <ClassesPreview />
-      <InstructorsSection />
-      <TestimonialsSection />
       <CTASection />
-      <p className="text-center text-[11px] leading-relaxed text-neutral-400 px-6 py-6">This page is a website design template demo by OHMT, not an actual client or operating business. The brand names, people, testimonials, contact details, and performance figures shown are example content.</p>
       <Footer />
     </TemplateWrapper>
   );

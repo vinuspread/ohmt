@@ -10,7 +10,7 @@ export const Footer = () => {
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16">
           <div>
-            <h3 className="text-2xl font-[var(--font-heading)] font-bold mb-4">OHMT</h3>
+            <h3 className="text-2xl font-[var(--font-heading)] font-bold mb-4">CASSIA</h3>
             <p className="text-sm text-[var(--color-bg)]/60 leading-relaxed max-w-xs">
               Silent Luxury, Timeless Sanctuary. Where the forest meets the sea and every moment is a memory.
             </p>
@@ -29,7 +29,7 @@ export const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={14} strokeWidth={1.2} className="text-[var(--color-accent)] flex-shrink-0" />
-                <span>contact@ohmt.site</span>
+                <span>contact@cassia.site</span>
               </div>
             </div>
           </div>
@@ -46,14 +46,13 @@ export const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-[var(--color-bg)]/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[var(--color-bg)]/40">
-          <span>&copy; 2026 OHMT. All rights reserved.</span>
+          <span>&copy; 2026 CASSIA. All rights reserved.</span>
           <div className="flex items-center gap-4">
             <Globe size={14} strokeWidth={1.2} className="hover:text-[var(--color-accent)] transition-colors cursor-pointer" />
-            <span>OHMT</span>
+            <span>CASSIA</span>
           </div>
         </div>
       </div>
     </footer>
   );
 };
-

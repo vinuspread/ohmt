@@ -47,7 +47,7 @@ export function Navbar() {
             isLight ? "text-[var(--accent)]" : "text-white"
           }`}
         >
-          OHMT
+CORE
         </a>
 
         <div className="hidden md:flex items-center justify-end">

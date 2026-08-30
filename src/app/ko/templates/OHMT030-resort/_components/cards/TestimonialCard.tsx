@@ -13,7 +13,7 @@ export function TestimonialCard({
 }: TestimonialCardProps) {
   return (
     <article className="flex min-h-[220px] flex-col justify-between rounded-2xl bg-white p-6">
-      <p className="text-pretty text-sm leading-[var(--leading-body)] text-[var(--text-dark)]">
+      <p className="text-sm leading-[var(--leading-body)] text-[var(--text-dark)]">
         {quote}
       </p>
       <div className="mt-6 flex items-end justify-between border-t border-black/10 pt-5">

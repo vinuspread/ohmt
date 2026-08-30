@@ -142,7 +142,7 @@ export default function SupportPage() {
 
       <section id="warranty" className="bg-[var(--color-bg-secondary)] px-5 py-16 md:px-8 md:py-24">
         <div className="mx-auto max-w-[1440px]">
-          <h2 className="font-display text-[length:var(--text-h3)] font-bold leading-tight text-[var(--color-text)]">
+          <h2 className="font-display text-[length:var(--text-h3)] font-bold leading-[1.05] text-[var(--color-text)]">
             Ownership support, split into three paths.
           </h2>
           <div className="mt-10 grid gap-5 md:grid-cols-3">
@@ -161,7 +161,7 @@ export default function SupportPage() {
                 <div className="grid min-h-[220px] p-6 md:p-8">
                   <p className="font-mono text-xs font-semibold text-[var(--color-accent)]">{item.step}</p>
                   <div className="self-end">
-                    <h3 className="font-display text-2xl font-bold leading-tight text-[var(--color-text)]">{item.title}</h3>
+                    <h3 className="font-display text-2xl font-bold leading-[1.05] text-[var(--color-text)]">{item.title}</h3>
                     <p className="mt-3 text-sm leading-relaxed text-[var(--color-text-muted)]">{item.desc}</p>
                   </div>
                 </div>
@@ -178,7 +178,7 @@ export default function SupportPage() {
               <p className="font-mono text-xs font-semibold uppercase tracking-[0.12em] text-[var(--color-accent)]">
                 Care kits
               </p>
-              <h2 className="mt-4 max-w-[520px] font-display text-[length:var(--text-h3)] font-bold leading-tight text-[var(--color-text)]">
+              <h2 className="mt-4 max-w-[520px] font-display text-[length:var(--text-h3)] font-bold leading-[1.05] text-[var(--color-text)]">
                 Small parts that keep the ritual sharp.
               </h2>
             </div>
@@ -197,7 +197,7 @@ export default function SupportPage() {
                   </p>
                 </div>
                 <div className="self-end">
-                  <h3 className="font-display text-2xl font-bold leading-tight text-[var(--color-text)]">{kit.title}</h3>
+                  <h3 className="font-display text-2xl font-bold leading-[1.05] text-[var(--color-text)]">{kit.title}</h3>
                   <p className="mt-4 text-sm leading-relaxed text-[var(--color-text-muted)]">{kit.desc}</p>
                 </div>
               </article>
@@ -209,7 +209,7 @@ export default function SupportPage() {
       <section className="px-5 py-16 md:px-8 md:py-24">
         <div className="mx-auto grid max-w-[1440px] gap-10 md:grid-cols-12 md:gap-16">
           <div className="md:col-span-4">
-            <h2 className="font-display text-[length:var(--text-h3)] font-bold leading-tight text-[var(--color-text)]">
+            <h2 className="font-display text-[length:var(--text-h3)] font-bold leading-[1.05] text-[var(--color-text)]">
               The questions support gets first.
             </h2>
             <p className="mt-4 max-w-[420px] text-sm leading-relaxed text-[var(--color-text-muted)]">

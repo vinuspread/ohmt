@@ -5,10 +5,10 @@ import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 
 const news = [
-    { date: 'jan 24, 2026', title: '오픈 오피스의 소음과 집중 공간을 함께 해결하는 법', image: '/templates/OHMT006-studio/blog-1.jpg' },
-    { date: 'dec 12, 2025', title: '상업 공간에서 장식을 덜어낼 때 확인할 것', image: '/templates/OHMT006-studio/blog-2.jpg' },
-    { date: 'nov 08, 2025', title: '오래 사용하기 좋은 친환경 마감재 고르기', image: '/templates/OHMT006-studio/blog-3.jpg' },
-    { date: 'oct 21, 2025', title: '업무 공간의 조명 밝기와 색온도 정하기', image: '/templates/OHMT006-studio/blog-4.jpg' },
+    { date: 'jan 24, 2026', title: '오픈 오피스 공간 레이아웃의 새로운 가능성', image: '/templates/OHMT006-studio/blog-1.jpg' },
+    { date: 'dec 12, 2025', title: '상업 공간에 녹아든 미니멀리즘의 가치', image: '/templates/OHMT006-studio/blog-2.jpg' },
+    { date: 'nov 08, 2025', title: '2026 지속 가능한 공간 마감 및 소재 큐레이션', image: '/templates/OHMT006-studio/blog-3.jpg' },
+    { date: 'oct 21, 2025', title: '조명과 빛이 업무 몰입에 미치는 공간 분석', image: '/templates/OHMT006-studio/blog-4.jpg' },
 ];
 
 const listVariants = {
@@ -51,7 +51,7 @@ export function NewsSection() {
                     <div className="flex flex-col gap-8 mb-16">
                         <span className="text-xs font-normal tracking-[3px] uppercase text-[#090B19] opacity-60">저널</span>
                         <h2 className="text-3xl md:text-5xl leading-[var(--leading-heading)] font-semibold tracking-[-1.44px] text-[#090B19] break-keep">
-                            공간을 설계하고<br />완성하는 과정.
+                            공간에 관한<br />새로운 기록.
                         </h2>
                     </div>
                     <a href="#" className="h-[54px] px-10 border border-[#090B19] rounded-[100px] flex items-center justify-center text-xs font-bold tracking-[3px] uppercase text-[#090B19] hover:bg-[#090B19] hover:text-white transition-colors">

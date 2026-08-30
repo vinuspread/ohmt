@@ -12,12 +12,12 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 const products = [
-  { id: 1, name: "라오콘 군상 중형 복제품", price: "1,100,000원", img: "/templates/OHMT021-museum/laocoon-sculpture.png", category: "조각품" },
-  { id: 2, name: "〈아테네 학당〉 아트 프린트", price: "420,000원", img: "/templates/OHMT021-museum/school-of-athens.png", category: "아트 프린트" },
-  { id: 3, name: "〈아담의 창조〉 캔버스 프린트", price: "620,000원", img: "/templates/OHMT021-museum/creation-of-adam.png", category: "아트 프린트" },
-  { id: 4, name: "피에타 조각 복제품", price: "1,560,000원", img: "/templates/OHMT021-museum/pieta-sculpture.png", category: "조각품" },
-  { id: 5, name: "벨베데레의 아폴론 석고상", price: "1,230,000원", img: "/templates/OHMT021-museum/apollo-belvedere.png", category: "조각품" },
-  { id: 6, name: "〈그리스도의 변형〉 한정판 포스터", price: "98,000원", img: "/templates/OHMT021-museum/transfiguration.png", category: "아트 프린트" },
+  { id: 1, name: "라오콘 군상 레플리카 (미디움 에디션)", price: "$850", img: "/templates/OHMT021-museum/laocoon-sculpture.png", category: "조각품" },
+  { id: 2, name: "아테네 학당 파인아트 프린트", price: "$320", img: "/templates/OHMT021-museum/school-of-athens.png", category: "아트프린트" },
+  { id: 3, name: "아담의 창조 캔버스 리프로덕션", price: "$480", img: "/templates/OHMT021-museum/creation-of-adam.png", category: "아트프린트" },
+  { id: 4, name: "피에타 조각상 레플리카", price: "$1,200", img: "/templates/OHMT021-museum/pieta-sculpture.png", category: "조각품" },
+  { id: 5, name: "벨베데레의 아폴론 석고 캐스트", price: "$950", img: "/templates/OHMT021-museum/apollo-belvedere.png", category: "조각품" },
+  { id: 6, name: "그리스도의 변형 한정판 포스터", price: "$75", img: "/templates/OHMT021-museum/transfiguration.png", category: "아트프린트" },
 ];
 
 function ShopPageContent() {
@@ -25,18 +25,18 @@ function ShopPageContent() {
     <TemplateWrapper theme={theme}>
       <>
       <Header />
-      <main className="antialiased pt-16 md:pt-32 pb-12 md:pb-24 bg-white text-[var(--color-primary)] min-h-screen">
+      <main className="antialiased pt-16 md:pt-32 pb-12 md:pb-24 bg-white min-h-screen">
       {/* Header Space */}
       <div className="max-w-7xl mx-auto px-6 mb-16">
-        <h1 className="text-5xl md:text-7xl font-serif mb-8 tracking-tighter">뮤지엄 숍</h1>
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 border-b border-black/10 pb-8">
-          <div className="flex gap-8 text-xs font-bold tracking-widest text-black/60 overflow-x-auto scrollbar-none whitespace-nowrap w-full md:w-auto pb-4 md:pb-0">
-            <span className="text-black cursor-pointer">전체 (6)</span>
-            <span className="cursor-pointer hover:text-black transition-colors">조각품</span>
-            <span className="cursor-pointer hover:text-black transition-colors">아트 프린트</span>
-            <span className="cursor-pointer hover:text-black transition-colors">도서·도록</span>
+        <h1 className="text-5xl md:text-7xl font-serif mb-8 tracking-tighter">소장품 컬렉션</h1>
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-8 border-b border-luxury-black/10 pb-8">
+          <div className="flex gap-8 text-xs font-bold tracking-widest text-luxury-gray overflow-x-auto scrollbar-none whitespace-nowrap w-full md:w-auto pb-4 md:pb-0">
+            <span className="text-luxury-black cursor-pointer">전체 (6)</span>
+            <span className="cursor-pointer hover:text-luxury-black transition-colors">조각품</span>
+            <span className="cursor-pointer hover:text-luxury-black transition-colors">아트프린트</span>
+            <span className="cursor-pointer hover:text-luxury-black transition-colors">도서·도록</span>
           </div>
-          
+
           <div className="flex items-center gap-6">
             <button className="flex items-center gap-2 text-xs font-bold tracking-widest">
               필터 <Filter size={14} />
@@ -52,7 +52,7 @@ function ShopPageContent() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-24">
           {products.map((product, i) => (
-            <motion.div 
+            <motion.div
               key={product.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -60,7 +60,7 @@ function ShopPageContent() {
               whileHover={{ y: -10 }}
               className="group cursor-pointer"
             >
-              <div className="relative aspect-[3/4] bg-black/5 mb-6 overflow-hidden">
+              <div className="relative aspect-[3/4] bg-luxury-cream mb-6 overflow-hidden">
                 <Link href={`/ko/templates/OHMT021-museum/product/${product.id}`} className="block h-full">
                   <img
                     src={product.img}
@@ -73,16 +73,16 @@ function ShopPageContent() {
                     <Heart size={16} />
                   </button>
                 </div>
-                <div className="absolute bottom-4 left-4 right-4 z-10 translate-y-[calc(100%+1rem)] opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
+                <div className="absolute bottom-4 left-4 right-4 z-10 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
                   <button className="w-full py-3 bg-white text-xs font-bold tracking-[0.3em] flex items-center justify-center gap-2">
-                    바로 담기<ShoppingBag size={14} />
+                    빠른 추가 <ShoppingBag size={14} />
                   </button>
                 </div>
               </div>
               <div className="flex justify-between items-start">
                 <div>
-                  <p className="text-xs tracking-widest text-black/60 mb-1">{product.category}</p>
-                  <Link href={`/ko/templates/OHMT021-museum/product/${product.id}`} className="hover:text-black/60 transition-colors">
+                  <p className="text-xs tracking-widest text-luxury-gray mb-1">{product.category}</p>
+                  <Link href={`/ko/templates/OHMT021-museum/product/${product.id}`} className="hover:text-luxury-gray transition-colors">
                     <h4 className="text-xl font-serif tracking-tight transition-[font-style]">{product.name}</h4>
                   </Link>
                 </div>
@@ -95,10 +95,10 @@ function ShopPageContent() {
 
       {/* Pagination Placeholder */}
       <div className="mt-40 flex justify-center gap-4 text-xs font-bold tracking-widest">
-        <span className="text-black border-b border-black pb-1">01</span>
-        <span className="text-black/50 hover:text-black cursor-pointer transition-colors">02</span>
-        <span className="text-black/50 hover:text-black cursor-pointer transition-colors">03</span>
-        <span className="ml-4 text-black/50 hover:text-black cursor-pointer transition-colors flex items-center gap-2">
+        <span className="text-luxury-black border-b border-black pb-1">01</span>
+        <span className="text-luxury-gray hover:text-luxury-black cursor-pointer transition-colors">02</span>
+        <span className="text-luxury-gray hover:text-luxury-black cursor-pointer transition-colors">03</span>
+        <span className="ml-4 text-luxury-gray hover:text-luxury-black cursor-pointer transition-colors flex items-center gap-2">
           다음 <ArrowRight size={14} />
         </span>
       </div>

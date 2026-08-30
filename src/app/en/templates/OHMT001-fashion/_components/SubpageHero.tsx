@@ -37,7 +37,7 @@ export function SubpageHero({
           {eyebrow}
         </span>
         <h1
-          className="max-w-full whitespace-nowrap text-4xl font-bold leading-[var(--leading-heading)] tracking-[-0.035em] text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.25)] sm:text-6xl md:text-6xl lg:text-8xl"
+          className="max-w-full text-3xl font-light leading-[1.12] tracking-[-0.025em] text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.25)] text-balance sm:text-4xl md:text-5xl lg:text-6xl"
           style={{ fontFamily: "var(--font-bodoni)" }}
         >
           {title}

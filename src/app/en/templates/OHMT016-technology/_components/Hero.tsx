@@ -13,7 +13,7 @@ export default function Hero() {
       >
         {/* Text area - solid bg, no overlap */}
         <div className="px-6 pt-10 pb-6 bg-[var(--color-bg)] flex-shrink-0">
-          <h1 className="text-[length:var(--text-h1)] font-extrabold tracking-[-0.04em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading mb-4">
+          <h1 className="text-[length:var(--text-h1)] font-extrabold tracking-[-0.02em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading mb-4">
             Autonomy<br />
             isn't the future -<br />
             <span className="text-[var(--color-accent)]">it's now.</span>
@@ -63,7 +63,7 @@ export default function Hero() {
         />
         <div className="relative z-10 mx-auto max-w-7xl px-6 w-full">
           <div className="w-1/2 flex flex-col items-start pr-8">
-            <h1 className="text-[length:var(--text-h1)] font-extrabold tracking-[-0.04em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading">
+            <h1 className="text-[length:var(--text-h1)] font-extrabold tracking-[-0.02em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading">
               Autonomy isn't<br />
               the future -<br />
               <span className="text-[var(--color-accent)]">it's now.</span>

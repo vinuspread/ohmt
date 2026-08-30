@@ -111,4 +111,3 @@ export default function PricingFull() {
 function NavSpacer() {
   return <div className="h-[72px]" />;
 }
-

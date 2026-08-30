@@ -1,113 +1,33 @@
-import { Suspense } from "react";
 import Link from "next/link";
+import Footer from "../_components/Footer";
+import Navbar from "../_components/Navbar";
+import SubpageHero from "../_components/SubpageHero";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
-import Navbar from "../_components/Navbar";
-import PageHeader from "../_components/PageHeader";
-import CTASection from "../_components/CTASection";
-import Footer from "../_components/Footer";
-import { SCHEDULE } from "../constants";
+import { ScheduleBooking } from "./ScheduleBooking";
 
-function ScheduleContent() {
+type PageProps = { searchParams: Promise<Record<string, string | string[] | undefined>> };
+type BookingParams = { preferredSlug?: string; preferredDay?: string; preferredTime?: string; demoState?: string };
+
+function firstValue(value: string | string[] | undefined) {
+  return Array.isArray(value) ? value[0] : value;
+}
+
+function ScheduleContent(bookingParams: BookingParams) {
   return (
     <TemplateWrapper theme={theme}>
       <Navbar />
-      <PageHeader
-        title="클래스 일정"
-        subtitle="한 주를 계획하고 나에게 맞는 클래스를 찾아보세요."
-        image="/templates/OHMT022-yoga/subpage-schedule.jpg"
-      />
-
-      <section className="bg-[var(--color-bg)] border-b border-[var(--color-border)]">
-        {/* 헤더 row */}
-        <div className="flex items-end justify-between px-8 md:px-14 lg:px-20 pt-12 pb-10 border-b border-[var(--color-border)]">
-          <h2
-            className="text-[length:var(--text-h3)] font-light text-[var(--color-text)] leading-[var(--leading-heading)] tracking-[-0.02em]"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            {SCHEDULE.length}일 &middot;{" "}
-            {SCHEDULE.reduce((acc, d) => acc + d.classes.length, 0)}개 클래스
-          </h2>
-          <p
-            className="hidden md:block text-sm text-[var(--color-text-muted)]"
-            style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-          >
-            수업 일정은 변경될 수 있습니다</p>
-        </div>
-
-        {/* 요일 컬럼 */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 divide-y sm:divide-y-0 sm:divide-x divide-[var(--color-border)]">
-          {SCHEDULE.map((day) => {
-            const pl = "pl-5 2xl:pl-6";
-            const pr = "pr-5 2xl:pr-6";
-            return (
-              <div key={day.day} className="flex flex-col">
-                {/* 요일 레이블 */}
-                <div className={`${pl} ${pr} py-5 border-b border-[var(--color-border)] bg-[var(--color-bg-alt)]`}>
-                  <p
-                    className="text-xs font-medium text-[var(--color-text)] tracking-[-0.01em]"
-                    style={{ fontFamily: "var(--font-body)" }}
-                  >
-                    {day.day}
-                  </p>
-                  <p
-                    className="text-xs tracking-[0.08em] uppercase text-[var(--color-text-muted)] mt-1"
-                    style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-                  >
-                    {day.classes.length}개 클래스
-                  </p>
-                </div>
-
-                {/* 클래스 목록 */}
-                <div className="flex-1 divide-y divide-[var(--color-border)]">
-                  {day.classes.map((cls, idx) => (
-                    <Link
-                      key={idx}
-                      href={`/ko/templates/OHMT022-yoga/classes/${cls.slug}`}
-                      className={`group flex flex-col ${pl} ${pr} py-6 hover:bg-[var(--color-bg-alt)] transition-colors`}
-                    >
-                      <p
-                        className="text-xs tracking-[0.15em] uppercase text-[var(--color-text-muted)] mb-2"
-                        style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-                      >
-                        {cls.time}
-                      </p>
-                      <p
-                        className="text-sm font-light text-[var(--color-text)] leading-[var(--leading-body)] tracking-[-0.01em] group-hover:text-[var(--color-text-muted)] transition-colors"
-                        style={{ fontFamily: "var(--font-body)" }}
-                      >
-                        {cls.name}
-                      </p>
-                      <p
-                        className="mt-1.5 text-sm text-[var(--color-text-muted)]"
-                        style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-                      >
-                        {cls.instructor}
-                      </p>
-                      <span
-                        className="mt-4 text-xs tracking-[0.18em] uppercase text-[var(--color-text)] font-medium opacity-0 group-hover:opacity-100 transition-opacity"
-                        style={{ fontFamily: "var(--font-body)" }}
-                      >
-                        클래스 예약 →</span>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
-      <CTASection />
+      <main className="prana-subpage bg-white pt-16 md:pt-[76px] break-keep">
+        <SubpageHero eyebrow="BOOK A CLASS" title="나를 위한 한 시간을 고르세요" description="날짜를 고르고 가능한 수업을 비교한 뒤, 모든 정보가 맞을 때 예약을 확정하세요." image="/templates/OHMT022-yoga/subpage-schedule-v3.webp" imageAlt="다음 수업을 위해 정돈된 PRANA 스튜디오" />
+        <ScheduleBooking {...bookingParams} />
+      </main>
+      <section className="bg-[var(--color-bg-alt)] px-6 py-16 md:px-14 md:py-20 lg:px-20"><div className="mx-auto grid max-w-[1180px] gap-10 lg:grid-cols-12 lg:gap-20"><h2 className="prana-sub-section max-w-[12ch] text-[var(--color-text)] lg:col-span-4">10분 먼저 도착하세요.</h2><div className="border-t border-[var(--color-text)] pt-7 lg:col-span-8"><p className="prana-sub-body max-w-2xl leading-8 text-[var(--color-text-muted)]">매트와 도구는 준비되어 있습니다. 물과 움직이기 편한 옷만 챙기고, 더 세심한 도움이 필요한 부분은 수업 전에 강사에게 알려 주세요.</p><Link href="/ko/templates/OHMT022-yoga/mypage" className="prana-sub-small mt-6 inline-flex min-h-11 items-center border-b border-[var(--color-text)] font-medium text-[var(--color-text)]">기존 예약 관리하기</Link></div></div></section>
       <Footer />
     </TemplateWrapper>
   );
 }
 
-export default function SchedulePage() {
-  return (
-    <Suspense>
-      <ScheduleContent />
-    </Suspense>
-  );
+export default async function SchedulePage({ searchParams }: PageProps) {
+  const params = await searchParams;
+  return <ScheduleContent preferredSlug={firstValue(params.class)} preferredDay={firstValue(params.day)} preferredTime={firstValue(params.time)} demoState={firstValue(params.state)} />;
 }

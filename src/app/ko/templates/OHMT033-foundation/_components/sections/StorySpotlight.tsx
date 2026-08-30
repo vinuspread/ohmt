@@ -78,19 +78,23 @@ export function StorySpotlight() {
         >
           <div>
             <p className="mb-6 text-sm font-semibold leading-none text-[var(--color-accent)]">
-              참여자 이야기</p>
+              참여자 이야기
+            </p>
             <h2 className="max-w-[700px] font-heading text-[length:var(--text-h1)] font-semibold leading-[var(--leading-heading)] tracking-tight text-[var(--color-text)]">
-              모든 변화는 한 사람의 참여에서 시작됩니다.</h2>
+              모든 변화는 한 사람의 참여에서 시작됩니다.
+            </h2>
           </div>
           <div className="md:justify-self-end">
             <p className="max-w-[360px] text-base leading-relaxed text-[var(--color-text-muted)]">
-              참여자와 멘토, 지역 파트너가 프로그램에서 경험한 변화와 과정을 기록했습니다.</p>
+              참여자와 멘토, 지역 파트너가 프로그램에서 경험한 변화와 과정을 기록했습니다.
+            </p>
             <MotionLink
               href={`${base}/stories`}
               whileTap={{ scale: 0.97 }}
               className="mt-6 inline-flex border border-[var(--color-text)] px-4 py-3 text-sm font-semibold text-[var(--color-text)] transition-colors hover:bg-[var(--color-text)] hover:text-white"
             >
-              모든 이야기 보기</MotionLink>
+              모든 이야기 보기
+            </MotionLink>
           </div>
         </motion.div>
 

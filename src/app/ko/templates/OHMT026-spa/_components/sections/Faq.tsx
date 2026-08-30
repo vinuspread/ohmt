@@ -11,12 +11,12 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number>(0);
   return (
     <section className="relative overflow-hidden bg-[var(--color-bg-secondary)] py-24 lg:py-32">
-      <div className="mx-auto max-w-3xl px-6">
-        <motion.div initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6, ease: EASE_OUT }} className="text-center mb-16">
+      <div className="mx-auto max-w-[1440px] px-6">
+        <motion.div initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6, ease: EASE_OUT }} className="text-center mb-16 max-w-3xl mx-auto">
           <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">FAQ</span>
           <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[var(--leading-heading)]">자주 묻는 질문</h2>
         </motion.div>
-        <div className="space-y-2">
+        <div className="space-y-2 max-w-3xl mx-auto">
           {faqs.map((faq, i) => {
             const isOpen = openIndex === i;
             return (

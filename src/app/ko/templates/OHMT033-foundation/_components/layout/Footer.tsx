@@ -38,9 +38,11 @@ export function Footer() {
         <div className="grid grid-cols-1 gap-6 md:grid-cols-4 md:gap-24">
           <div>
             <p className="text-base font-semibold leading-[var(--leading-heading)] text-[var(--color-text)] md:text-xs">
-              OHMT 파운데이션</p>
+              VERITAS 재단
+            </p>
             <p className="mt-3 max-w-[260px] text-xs leading-[var(--leading-body)] text-[var(--color-text-muted)]">
-              참여자의 이야기와 확인 가능한 프로그램 성과를 함께 공개합니다.</p>
+              인간 중심의 이야기와 검증된 프로그램 데이터로 사회적 영향력을 만들어갑니다.
+            </p>
           </div>
           {columns.map((col) => (
             <div key={col.title}>
@@ -64,8 +66,8 @@ export function Footer() {
         </div>
 
         <div className="mt-6 flex flex-col gap-3 text-xs leading-[var(--leading-body)] text-[var(--color-text-muted)] md:flex-row md:items-center md:justify-between md:border-t md:border-[var(--color-border)] md:pt-6">
-          <p>© 2026 OHMT.</p>
-          <p>contact@ohmt.site</p>
+          <p>&copy; 2026 VERITAS.</p>
+          <p>contact@ohmytemplate.com</p>
         </div>
       </div>
     </footer>

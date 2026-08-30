@@ -8,16 +8,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 const values = [
   {
-    title: "도시의 일상부터",
-    body: "좁은 골목과 짧은 이동, 복잡한 주차 환경을 먼저 살펴보고 차의 크기와 기능을 결정했습니다.",
+    title: "도시가 먼저",
+    body: "고속도로보다 골목길을 먼저 생각합니다. NUBI의 모든 결정은 실제 도시의 거리에서 출발합니다.",
   },
   {
     title: "달리는 즐거움",
-    body: "전기차의 조용함과 빠른 반응을 살려 도심에서도 가볍고 민첩한 주행감을 제공합니다.",
+    body: "제로 에미션이 운전의 재미를 지우지는 않습니다. NUBI는 민첩하고 반응이 빠르며, 매일 타도 질리지 않습니다.",
   },
   {
-    title: "부담을 낮춘 전기차",
-    body: "필요한 기능과 개성을 유지하면서도 2,890만 원부터 시작하는 가격으로 접근성을 높였습니다.",
+    title: "모두를 위한 EV",
+    body: "전기차가 특권층의 전유물일 이유는 없습니다. NUBI는 개성과 품질을 지키면서도 2,890만 원부터 시작합니다.",
   },
 ];
 
@@ -39,9 +39,11 @@ export function StoryMission() {
     <section ref={ref} className="bg-[var(--light-bg)]">
       <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 py-24 md:py-32">
         <p className="font-inter text-xs tracking-[0.15em] text-[var(--accent)] uppercase mb-6">
-          NUBI의 기준</p>
+          우리가 믿는 것
+        </p>
         <h2 className="font-michroma text-[length:var(--text-h3)] text-[var(--text-on-light)] leading-[var(--leading-heading)] tracking-[-0.02em] mb-16 md:mb-20">
-          NUBI를 설계할 때 지킨<br />세 가지 기준.</h2>
+          엔지니어링을 관통하는<br />세 가지 철칙.
+        </h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0 divide-y md:divide-y-0 md:divide-x divide-[var(--border-light)]">
           {values.map((v) => (
             <div key={v.title} className="value-item py-10 md:py-0 md:px-10 first:md:pl-0 last:md:pr-0">

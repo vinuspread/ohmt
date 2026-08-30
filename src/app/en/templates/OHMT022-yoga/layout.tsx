@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import "./theme.css";
-
 export const metadata: Metadata = {
   title: "OHMT - Yoga Wellness Studio Template",
-  description: "Find your inner peace with premium yoga and wellness classes",
+  description: "Compare Vinyasa, Hatha, meditation, and Pilates classes, then book a time this week.",
   openGraph: {
     title: "OHMT - Yoga Wellness Studio Template",
-    description: "Find your inner peace with premium yoga and wellness classes",
-    url: "https://ohmt.site/en/templates/OHMT022-yoga",
+    description: "Compare Vinyasa, Hatha, meditation, and Pilates classes, then book a time this week.",
+    url: "https://ohmytemplate.com/en/templates/OHMT022-yoga",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT022-yoga/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -16,13 +15,13 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "OHMT - Yoga Wellness Studio Template",
-    description: "Find your inner peace with premium yoga and wellness classes",
+    description: "Compare Vinyasa, Hatha, meditation, and Pilates classes, then book a time this week.",
     images: ["/templates/OHMT022-yoga/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/OHMT022-yoga",
-    languages: { "ko": "https://ohmt.site/ko/templates/OHMT022-yoga" },
+    canonical: "https://ohmytemplate.com/en/templates/OHMT022-yoga",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT022-yoga" },
   },
 };
 
@@ -35,8 +34,8 @@ export default function YogaLayout({
     "@context": "https://schema.org",
     "@type": "ExerciseGym",
     name: "OHMT Yoga & Wellness",
-    description: "Find your inner peace with premium yoga and wellness classes",
-    url: "https://ohmt.site/en/templates/OHMT022-yoga",
+    description: "Compare Vinyasa, Hatha, meditation, and Pilates classes, then book a time this week.",
+    url: "https://ohmytemplate.com/en/templates/OHMT022-yoga",
   };
   return (
     <>
@@ -44,14 +43,9 @@ export default function YogaLayout({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@200;300;400;500&display=swap');
-
-        :root {
-          --font-inter: 'Outfit', sans-serif;
-        }
-      `}</style>
-      {children}
+      <div className="yoga-en">
+        <div lang="en" className="ohmt022-yoga">{children}</div>
+      </div>
     </>
   );
 }

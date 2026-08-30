@@ -14,7 +14,7 @@ export const ProductGrid = () => {
         <div className="flex justify-between items-end mb-16 md:mb-24 gap-4">
           <div>
             <h2
-              className="text-4xl font-bold leading-none tracking-[-0.035em] sm:text-[4vw]"
+              className="text-[clamp(2rem,3.5vw,3.5rem)] font-light leading-[1.1] tracking-[-0.02em]"
               style={{ fontFamily: "var(--font-bodoni)" }}
             >
               New Arrivals
@@ -38,10 +38,10 @@ export const ProductGrid = () => {
               >
                 <div className="aspect-square bg-[var(--color-bg-secondary)] overflow-hidden mb-4 sm:mb-6 relative">
                   <Link href={`/en/templates/OHMT001-fashion/product/${p.id}`} className="block w-full h-full">
-                    <img 
-                      src={p.image} 
-                      alt={p.name} 
-                      className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105" 
+                    <img
+                      src={p.image}
+                      alt={p.name}
+                      className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
                     />
                   </Link>
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-all duration-500 pointer-events-none" />
@@ -49,9 +49,9 @@ export const ProductGrid = () => {
                 </div>
                 <div className="space-y-1 transition-transform duration-500 ease-out group-hover:-translate-y-1">
                   <Link href={`/en/templates/OHMT001-fashion/product/${p.id}`}>
-                    <h3 className="text-xs sm:text-sm font-bold uppercase tracking-normal line-clamp-1">{p.name}</h3>
+                    <h3 className="text-base font-medium tracking-[-0.01em] line-clamp-1">{p.name}</h3>
                   </Link>
-                  <p className="text-xs text-black/50 font-medium">{p.price}</p>
+                  <p className="text-sm text-black/60 font-normal">{p.price}</p>
                 </div>
               </motion.div>
             );

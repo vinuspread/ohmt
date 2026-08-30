@@ -3,120 +3,169 @@
   --text-h1: clamp(2.5rem, 5vw, 4rem);
   --text-h2: clamp(2rem, 4vw, 3rem);
   --text-h3: clamp(1.5rem, 3vw, 2rem);
-  --text-lead: clamp(1.125rem, 2vw, 1.5rem);
   --leading-display: 0.95;
   --leading-heading: 1.1;
   --leading-body: 1.6;
 
-  --luma-bg: #f4f1ea;
-  --luma-ink: #141611;
-  --luma-muted: #696d62;
-  --luma-line: #d9d4c8;
-  --luma-dark: #10120f;
-  --luma-accent: #d7ff63;
-  --luma-soft: #ece7dc;
-  --luma-ease: cubic-bezier(0.23, 1, 0.32, 1);
-  --space-container-x-mobile: 20px;
-  --space-section-y-mobile: 72px;
-  --type-display-mobile: clamp(2.55rem, 13vw, 4.1rem);
-  --type-section-title-mobile: clamp(2rem, 9vw, 3.2rem);
-  --rail-gap-mobile: 14px;
+  /* Webflow Hardware Exact Color Tokens */
+  --hw-bg: #050608;
+  --hw-bg-darker: #020304;
+  --hw-surface: #0e1015;
+  --hw-surface-card: #0d0f14;
+  --hw-blue: #0066ff;
+  --hw-accent-white: #ffffff;
+  --hw-ink: #ffffff;
+  --hw-muted: #888d99;
+  --hw-line: rgba(255, 255, 255, 0.08);
+  --hw-line-bright: rgba(255, 255, 255, 0.25);
+  --hw-ease: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .luma-camera-template {
-  background: var(--luma-bg);
-  color: var(--luma-ink);
+  background: var(--hw-bg);
+  color: var(--hw-ink);
+  font-family: var(--font-sans, Inter, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: geometricPrecision;
 }
 
-/* Typography System */
-.luma-h1 {
-  font-size: clamp(2.35rem, 5vw, 5.4rem);
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.04em;
-  text-wrap: balance;
-  word-break: keep-all;
+.luma-camera-template,
+.luma-camera-template * {
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  text-rendering: geometricPrecision !important;
 }
 
-.luma-h2 {
-  font-size: clamp(1.8rem, 3vw, 3.35rem);
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.035em;
-  text-wrap: balance;
-  word-break: keep-all;
+.luma-camera-template h1,
+.luma-camera-template h2,
+.luma-camera-template h3,
+.luma-camera-template p,
+.luma-camera-template span,
+.luma-camera-template a {
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
-.luma-h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.04em;
-  text-wrap: balance;
-  word-break: keep-all;
+/* Square Dot Indicator & Badge */
+.dot-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.25rem 0.625rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
 }
 
-.luma-h2-sm {
-  font-size: clamp(1.5rem, 2.2vw, 1.875rem);
-  font-weight: 700;
-  line-height: 1.25;
-  letter-spacing: -0.03em;
-  text-wrap: balance;
-  word-break: keep-all;
+.square-dot {
+  width: 5px;
+  height: 5px;
+  background-color: #ffffff;
+  border-radius: 0px;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
 }
 
-.luma-body {
-  font-size: 1rem;
-  line-height: 1.625;
-  overflow-wrap: break-word;
-  text-wrap: pretty;
-  word-break: keep-all;
-  color: var(--luma-muted);
+.square-dot.green {
+  background-color: #ffffff;
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.6);
 }
 
-.luma-camera-template p:not(.luma-label) {
-  overflow-wrap: break-word;
-  text-wrap: pretty;
-  word-break: keep-all;
-}
-
-@media (min-width: 768px) {
-  .luma-body {
-    font-size: 1.125rem;
-  }
-}
-
-.luma-label {
+.badge-text {
+  font-family: var(--font-sans, Inter, system-ui, sans-serif);
   font-size: 0.75rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.08em;
+  color: rgba(255, 255, 255, 0.92);
 }
 
-/* Card Component Styles */
-.luma-card {
-  background-color: rgba(255, 255, 255, 0.55);
-  padding: 1.5rem;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.035);
+/* Light Path Animations */
+.gradient-line-horizontal {
+  position: relative;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.12) 20%, rgba(255, 255, 255, 0.12) 80%, transparent 100%);
+  overflow: hidden;
 }
 
-.luma-card-dark {
-  background-color: var(--luma-dark);
+.gradient-line-horizontal::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
+  animation: light-path-horizontal 4s infinite cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes light-path-horizontal {
+  0% { left: -60%; }
+  50%, 100% { left: 100%; }
+}
+
+/* Clean Minimalist Accents */
+
+/* Metric Display Typography */
+.metric-text-large {
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  font-weight: 700;
+  letter-spacing: -0.04em;
   color: #ffffff;
-  padding: 1.5rem;
+  line-height: 0.95;
 }
 
-@media (min-width: 768px) {
-  .luma-card,
-  .luma-card-dark {
-    padding: 2.25rem;
-  }
+/* Button Styles matching Webflow Reference */
+.button-glass {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.875rem 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 2px;
+  transition: all 0.3s var(--hw-ease);
 }
 
-.luma-grain {
-  background-image:
-    radial-gradient(circle at 20% 10%, rgba(255, 255, 255, 0.72), transparent 32%),
-    linear-gradient(135deg, rgba(20, 22, 17, 0.04), transparent 40%);
+.button-glass:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.button-blue {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.875rem 1.5rem;
+  background: var(--hw-blue);
+  color: #ffffff;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 2px;
+  transition: all 0.3s var(--hw-ease);
+}
+
+.button-blue:hover {
+  background: #1a75ff;
+  box-shadow: 0 0 20px rgba(0, 102, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Monospace Badge Overlay Block */
+.monospace-badge-block {
+  background: rgba(10, 12, 16, 0.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.875rem 1.25rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -36,9 +36,9 @@ function CarAboutPageContent() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
           <div className="relative max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)] pb-8 md:pb-12 w-full">
-            <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-4 block">About IONARA</span>
+            <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-4 block">About OHMT</span>
             <h1 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-display)] font-bold tracking-[-0.03em] leading-[var(--leading-heading)] max-w-[680px]">
-              운전의 즐거움을<br />새롭게 설계합니다.
+              운전이 특별해야 한다는<br />믿음에서 시작되었습니다.
             </h1>
           </div>
         </section>
@@ -47,8 +47,7 @@ function CarAboutPageContent() {
         <section className="border-b border-[var(--theme-border)]">
           <div className="max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)] py-10 md:py-14 grid md:grid-cols-2 gap-10 md:gap-20 items-center">
             <p className="text-[length:var(--text-lead)] text-white font-normal leading-[var(--leading-body)] break-keep">
-              IONARA Motors는 정교한 기술과 절제된 디자인으로,<br />
-              목적지에 도착하는 과정까지 특별한 경험으로 만듭니다.
+              2018년, IONARA Motors는 영감을 주는 차량을 만들겠다는 목표로 출발했습니다. 단순한 이동 수단이 아닌, 첨단 기술과 타협 없는 디자인이 만나는 욕망의 대상입니다.
             </p>
             <p className="text-[1.02rem] text-white/50 leading-[var(--leading-body)] font-normal break-keep">
               현재 우리는 3개 대륙에서 12,000명 이상의 직원을 고용하며, 전 세계 200개 이상의 쇼룸 네트워크를 운영하고 있습니다. 지속 가능한 럭셔리를 향한 약속이 모든 결정의 기준이 됩니다. 우리는 단순히 자동차를 만드는 것이 아닙니다. 우리는 개인 이동의 미래를 구축합니다.

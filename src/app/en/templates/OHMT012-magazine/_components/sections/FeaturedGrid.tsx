@@ -1,4 +1,4 @@
-﻿// src/app/templates/OHMT012-magazine/-components/sections/FeaturedGrid.tsx
+// src/app/templates/OHMT012-magazine/-components/sections/FeaturedGrid.tsx
 "use client";
 
 import React from "react";
@@ -26,7 +26,7 @@ export const FeaturedGrid = ({ t }: { t: MagazineT }) => {
           <div className="group">
             <div className="overflow-hidden h-[520px] mb-8">
               <img
-                src="/templates/OHMT012-magazine/mag-article-nordic-architecture-v2.jpg"
+                src="/templates/OHMT012-magazine/mag-2.jpg"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 alt="Main story"
               />
@@ -34,7 +34,7 @@ export const FeaturedGrid = ({ t }: { t: MagazineT }) => {
             <span className="text-[0.875rem] font-bold uppercase tracking-[0.18em] text-[var(--theme-accent)] mb-3 block">
               {t.featuredGrid.items[0].tag}
             </span>
-            <h2 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-lead)] font-normal leading-tight mb-3">
+            <h2 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-lead)] font-normal leading-[1.05] mb-3">
               <Link href="/en/templates/OHMT012-magazine/article/minimalist-architecture-nordic-cities" className="hover:text-[var(--theme-accent)] transition-colors">
                 {t.featuredGrid.items[0].title}
               </Link>
@@ -52,13 +52,13 @@ export const FeaturedGrid = ({ t }: { t: MagazineT }) => {
              {[
                {
                  slug: "hidden-galleries-berlin-east-side",
-                 img: "/templates/OHMT012-magazine/mag-article-berlin-gallery-v2.jpg",
+                 img: "/templates/OHMT012-magazine/mag-3.jpg",
                  author: "Marta Weber",
                  index: 1
                },
                {
                  slug: "regenerative-agriculture-future",
-                 img: "/templates/OHMT012-magazine/mag-desert-living-v2.jpg",
+                 img: "/templates/OHMT012-magazine/mag-4.jpg",
                  author: "Sarah Chen",
                  index: 2
                }
@@ -74,7 +74,7 @@ export const FeaturedGrid = ({ t }: { t: MagazineT }) => {
                  <span className="text-[0.875rem] font-bold uppercase tracking-[0.18em] text-[var(--theme-accent)] mb-2 block">
                    {t.featuredGrid.items[item.index].tag}
                  </span>
-                 <h3 className="font-[family-name:var(--theme-font-heading)] text-[1.35rem] font-normal leading-snug mb-2">
+                 <h3 className="font-[family-name:var(--theme-font-heading)] text-[1.35rem] font-normal leading-[1.05] mb-2">
                    <Link href={`/en/templates/OHMT012-magazine/article/${item.slug}`} className="hover:text-[var(--theme-accent)] transition-colors">
                      {t.featuredGrid.items[item.index].title}
                    </Link>

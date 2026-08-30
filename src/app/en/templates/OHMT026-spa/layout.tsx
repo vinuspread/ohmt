@@ -1,32 +1,31 @@
 import "./theme.css";
 import type { Metadata } from "next";
-
 export const metadata: Metadata = {
-  title: "SERENITY - Retreat Booking Experience",
+  title: "SOMA - Retreat Booking Experience Template",
   description: "Premium spa and wellness shop template with a calming dark-green and cream palette, large lifestyle imagery, and a booking-first layout.",
-  keywords: ["spa template", "wellness website", "spa booking", "Next.js template", "SERENITY"],
-  authors: [{ name: "SERENITY", url: "https://ohmt.site" }],
+  keywords: ["spa template", "wellness website", "spa booking", "Next.js template", "SOMA"],
+  authors: [{ name: "SOMA", url: "https://ohmytemplate.com" }],
   openGraph: {
-    title: "SERENITY - Retreat Booking Experience",
+    title: "SOMA - Retreat Booking Experience Template",
     description: "Premium spa and wellness shop template with a calming dark-green and cream palette, large lifestyle imagery, and a booking-first layout.",
-    url: "https://ohmt.site/en/templates/OHMT026-spa",
-    siteName: "SERENITY",
+    url: "https://ohmytemplate.com/en/templates/OHMT026-spa",
+    siteName: "SOMA",
     images: [{ url: "/templates/OHMT026-spa/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "SERENITY - Retreat Booking Experience",
+    title: "SOMA - Retreat Booking Experience Template",
     description: "Premium spa and wellness shop template with a calming dark-green and cream palette, large lifestyle imagery, and a booking-first layout.",
     images: ["/templates/OHMT026-spa/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/OHMT026-spa",
+    canonical: "https://ohmytemplate.com/en/templates/OHMT026-spa",
     languages: {
-      "en": "https://ohmt.site/en/templates/OHMT026-spa",
-      "ko": "https://ohmt.site/ko/templates/OHMT026-spa",
+      "en": "https://ohmytemplate.com/en/templates/OHMT026-spa",
+      "ko": "https://ohmytemplate.com/ko/templates/OHMT026-spa",
     },
   },
 };
@@ -35,15 +34,14 @@ export default function SpaLayout({ children }: { children: React.ReactNode }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "HealthAndBeautyBusiness",
-    name: "SERENITY Spa Wellness",
+    name: "Serenity Wellness Spa",
     description: "Premium spa and wellness shop template with a calming dark-green and cream palette, large lifestyle imagery, and a booking-first layout.",
-    url: "https://ohmt.site/en/templates/OHMT026-spa",
+    url: "https://ohmytemplate.com/en/templates/OHMT026-spa",
   };
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
       `}</style>
       {children}
     </>

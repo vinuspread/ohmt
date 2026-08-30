@@ -44,7 +44,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row gap-8 md:gap-12 mb-8 md:mb-12">
           {/* Brand */}
           <div className="md:w-1/3">
-            <p className="font-michroma text-xl text-[var(--text)] mb-2">OHMT</p>
+            <p className="font-michroma text-xl text-[var(--text)] mb-2">NUBI</p>
             <p className="font-inter text-sm text-[var(--text-muted)] mb-5 leading-relaxed">
               Small car. Big city fun. Zero emissions, all character.
             </p>
@@ -95,7 +95,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="flex flex-row items-center justify-between gap-4 pt-6 border-t border-[var(--border)]">
           <p className="font-inter text-sm text-[var(--text-muted)]">
-            &copy; 2026 OHMT.
+            &copy; 2026 NUBI.
           </p>
           <div className="flex items-center gap-4">
             <a href="#" className="font-inter text-xs text-[var(--text-muted)] hover:text-[var(--text)] transition-colors">Privacy</a>

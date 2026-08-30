@@ -61,18 +61,18 @@ return (
         />
       </video>
       <div className="absolute inset-0 bg-[linear-gradient(105deg,rgba(10,10,10,0.75)_0%,rgba(10,10,10,0.2)_60%,transparent_100%)]"></div>
-      
+
       <div className="absolute top-[52%] -translate-y-1/2 left-0 right-0 max-w-[var(--theme-container)] mx-auto px-6 md:px-[var(--theme-gutter)] w-full">
         <span className="block text-[0.65rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-[1.2rem]">
           {t.hero.badge}
         </span>
-        <h1 className="text-[length:var(--text-display)] font-bold tracking-[-0.03em] leading-[var(--leading-heading)] mb-[1.8rem] max-w-[1000px] text-white break-words">
+        <h1 className="text-[length:var(--text-display)] font-bold tracking-[-0.02em] leading-[var(--leading-heading)] mb-[1.8rem] max-w-[1000px] text-white break-words">
           The electric<br />car Era is<br /><span className="text-[var(--theme-accent)]/80">upon us.</span>
         </h1>
         <p className="text-[1.05rem] text-[var(--theme-text-muted)] leading-[var(--leading-body)] max-w-[440px] mb-[2.5rem] font-normal">
           {t.hero.desc}
         </p>
-        
+
         <div className="flex gap-6 items-center">
           <button className="text-[0.68rem] font-bold uppercase tracking-[0.16em] px-8 py-[0.65rem] bg-[var(--theme-accent)] text-black hover:opacity-90 transition-all duration-300 active:scale-95">
             {t.hero.explore}
@@ -81,7 +81,7 @@ return (
             {t.hero.allModels} <ArrowRight size={16} className="transition-transform duration-300" />
           </button>
         </div>
-        
+
         <p className="text-[0.7rem] text-[var(--theme-text-muted)] uppercase tracking-[0.2em] mt-8">
           {t.hero.from} <strong className="text-white text-base font-bold ml-1">$79,900</strong>
         </p>

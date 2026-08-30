@@ -25,9 +25,9 @@ export default function Navbar() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-[var(--color-bg)]/95 backdrop-blur-sm border-b border-black/8">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
           <Link href={basePath} className="text-xl font-bold tracking-tight" style={{ fontFamily: "var(--font-heading)" }}>
-            OHMT
+SPROUT
           </Link>
-          
+
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <Link
@@ -49,7 +49,7 @@ export default function Navbar() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 active:scale-[0.97] transition-transform duration-100"
-            aria-label="Toggle menu"
+            aria-label="메뉴 열기"
             aria-expanded={isOpen}
           >
             <span className={`block w-5 h-0.5 bg-current transition-all duration-200 ${isOpen ? "rotate-45 translate-y-2" : ""}`} />

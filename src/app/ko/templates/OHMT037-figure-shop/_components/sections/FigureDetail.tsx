@@ -5,11 +5,10 @@ import Image from 'next/image'
 import { ChevronDown } from 'lucide-react'
 import { clsx } from 'clsx'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
-import { IMG, formatKrw, lineLabel, type Figure } from '../../data/figures'
+import { IMG, formatUsd, lineLabel, type Figure } from '../../data/figures'
 import { Badge, statusBadgeLabel, statusBadgeVariant } from '../ui/Badge'
 import { SpecBar } from '../ui/SpecBar'
 import { useCart } from '../CartContext'
-import TemplateSelect from '../TemplateSelect'
 
 function AccordionRow({ title, children }: { title: string; children: React.ReactNode }) {
   const [open, setOpen] = useState(false)
@@ -58,33 +57,33 @@ export function FigureDetail({ figure }: { figure: Figure }) {
   const detailStats = [
     { label: '스케일', value: figure.scale },
     { label: '높이', value: `${figure.heightMm} mm` },
-    { label: '제작 수량', value: figure.editionSize.toString() },
+    { label: '에디션 수량', value: figure.editionSize.toString() },
     { label: '아티스트', value: figure.artist },
   ]
   const detailImages = [
     {
       src: figure.images.alt,
-      title: '마감 상세',
-      body: '표면 질감과 모서리 처리, 도색 경계를 중립 조명에서 다시 확인합니다. 손마감 상태를 사진에서도 살펴볼 수 있도록 가까이 촬영한 이미지를 제공합니다.',
+      title: '마감 클로즈업',
+      body: '표면의 결, 모서리 처리, 컬러 경계를 중립 조명에서 다시 봅니다. 사진으로도 손마감의 차이가 읽히도록 가까운 컷을 함께 제공합니다.',
     },
     {
       src: `${IMG}/craft-01.webp`,
-      title: '제작 검수',
-      body: '도색과 조립, 에디션 번호를 생산 단위별로 기록합니다. 판매가 끝난 뒤에도 각 피규어가 어떤 제작 과정에서 나온 제품인지 확인할 수 있습니다.',
+      title: '벤치 검수',
+      body: '도색, 조립, 넘버링을 같은 배치 단위로 기록합니다. 런이 끝난 뒤에도 어떤 공정에서 나온 피스인지 추적할 수 있게 둡니다.',
     },
     {
       src: `${IMG}/craft-02.webp`,
-      title: '전용 포장',
-      body: '제작자 서명과 마감 정보가 적힌 카드, 형태에 맞춘 보호재를 함께 넣어 포장합니다. 배송 중 제품이 움직이지 않도록 상자 내부를 고정합니다.',
+      title: '컬렉터 패키징',
+      body: '서명 프로세스 카드와 맞춤 보호재를 맞춘 뒤 출고 박스에 넣습니다. 선반에 올리기 전까지 흔들리지 않도록 내부 공간을 고정합니다.',
     },
   ]
   const ctaLabel =
     figure.status === 'Pre-order'
-      ? '예약 구매'
+      ? '예약 주문'
       : figure.status === 'In stock'
         ? '장바구니에 담기'
         : figure.status === 'Coming soon'
-          ? '판매 예정'
+          ? '오픈 전'
           : '판매 종료'
 
   const onAdd = () => {
@@ -151,8 +150,8 @@ export function FigureDetail({ figure }: { figure: Figure }) {
           <h1 className="mt-3 text-4xl leading-[var(--leading-heading)] tracking-normal text-[var(--color-ink)] lg:text-5xl">
             {figure.name}
           </h1>
-          <p className="value-text mt-3 text-[var(--color-ink)]">{formatKrw(figure.priceKrw)}</p>
-          <p className="preserve-lines mt-6 max-w-[560px] text-base leading-relaxed text-[var(--color-ink-muted)]">
+          <p className="value-text mt-3 text-[var(--color-ink)]">{formatUsd(figure.priceUsd)}</p>
+          <p className="mt-6 max-w-[520px] text-base leading-relaxed text-[var(--color-ink-muted)]">
             {figure.description}
           </p>
 
@@ -166,7 +165,7 @@ export function FigureDetail({ figure }: { figure: Figure }) {
           </dl>
 
           <div className="mt-8 max-w-[560px]">
-            <p className="meta-label text-[var(--color-ink-faint)]">소재</p>
+            <p className="meta-label text-[var(--color-ink-faint)]">소재 구성</p>
             <ul className="mt-3 flex flex-wrap gap-2">
               {figure.materials.map((material) => (
                 <li
@@ -181,8 +180,9 @@ export function FigureDetail({ figure }: { figure: Figure }) {
 
           <div className="mt-9">
             <label htmlFor="colorway" className="meta-label block text-[var(--color-ink-faint)]">
-              판매 정보</label>
-            <TemplateSelect
+              에디션
+            </label>
+            <select
               id="colorway"
               value={colorway}
               onChange={(e) => setColorway(e.target.value)}
@@ -193,7 +193,7 @@ export function FigureDetail({ figure }: { figure: Figure }) {
                   {c.label}
                 </option>
               ))}
-            </TemplateSelect>
+            </select>
           </div>
 
           <div className="mt-6 max-w-[480px]">
@@ -213,41 +213,37 @@ export function FigureDetail({ figure }: { figure: Figure }) {
           </div>
 
           <div className="mt-12 flex max-w-[480px] flex-col gap-3 bg-[var(--color-bg-tile-deep)] p-6">
-            <SpecBar label="도색 완성도" valueLabel={`${figure.paintGrade}`} pct={figure.paintGrade} />
+            <SpecBar label="도색 등급" valueLabel={`${figure.paintGrade}`} pct={figure.paintGrade} />
             <SpecBar label="조립 난도" valueLabel={`${figure.assembly}`} pct={figure.assembly} />
-            <SpecBar label="판매율" valueLabel={`${figure.claimedPct}%`} pct={figure.claimedPct} accent />
+            <SpecBar label="소진율" valueLabel={`${figure.claimedPct}%`} pct={figure.claimedPct} accent />
             <p className="meta-label mt-1 text-[var(--color-ink-faint)]">
-              총 {figure.editionSize}개 한정 제작 · 베이스 플레이트 번호 각인
+              총 {figure.editionSize}개 에디션, 베이스 플레이트 넘버링
             </p>
           </div>
 
           <div className="mt-10 grid max-w-[560px] grid-cols-1 gap-8 md:grid-cols-2">
             <section>
-              <h2 className="meta-label text-[var(--color-ink)]">구성품</h2>
+              <h2 className="meta-label text-[var(--color-ink)]">포함 구성</h2>
               <ul className="mt-4 flex list-none flex-col gap-3 text-base leading-relaxed text-[var(--color-ink-muted)]">
-                <li>에디션 기록과 연결된 번호 각인 베이스 플레이트</li>
-                <li>아티스트 서명과 마감 정보가 적힌 제작 카드</li>
-                <li>형태에 맞춘 보호재가 들어간 이중 골판지 전용 박스</li>
+                <li>에디션 원장과 연결된 넘버링 베이스 플레이트.</li>
+                <li>아티스트와 마감 노트가 적힌 서명 프로세스 카드.</li>
+                <li>맞춤 보호재가 들어간 더블월 컬렉터 박스.</li>
               </ul>
             </section>
             <section>
-              <h2 className="meta-label text-[var(--color-ink)]">제작 정보</h2>
+              <h2 className="meta-label text-[var(--color-ink)]">벤치 노트</h2>
               <p className="mt-4 text-base leading-relaxed text-[var(--color-ink-muted)]">
-                도색 완성도와 조립 난도, 판매율을 구매 전에 확인할 수 있습니다.
-                <br className="hidden sm:block" />
-                단순한 상품 정보에 그치지 않고, 각 피규어의 제작 수량과 생산 이력을 살펴볼 수 있도록
-                구성했습니다.
+                도색 점수, 조립 난도, 소진율을 구매 전에 보여줍니다. 단순한 상품 타일이 아니라,
+                어떤 런에서 나온 피스인지 읽을 수 있게 하기 위한 정보입니다.
               </p>
             </section>
           </div>
 
           <div className="mt-6 max-w-[480px]">
-            <AccordionRow title="아티스트 정보">
+            <AccordionRow title="아티스트와 크레딧">
               <p>
-                원형 제작과 도색 방향은 {figure.artist}가 맡았습니다.
-                <br />
-                성형과 마감, 최종 검수는 FORMA 스튜디오에서 진행하며, 각 피규어에는 제작 정보 카드가
-                동봉됩니다.
+                조형과 페인트 방향은 {figure.artist}가 맡았습니다. 캐스팅, 마감, 최종 검수는 FORMA
+                스튜디오 벤치에서 진행하며, 각 피스에는 서명 프로세스 카드가 동봉됩니다.
               </p>
             </AccordionRow>
             <AccordionRow title="소재와 관리">
@@ -260,10 +256,8 @@ export function FigureDetail({ figure }: { figure: Figure }) {
             </AccordionRow>
             <AccordionRow title="에디션 정보">
               <p>
-                총 {figure.editionSize}개 한정 에디션이며, 현재 {figure.claimedPct}%가 판매되었습니다.
-                <br />
-                판매가 끝난 에디션은 같은 구성으로 다시 생산하지 않으며, 마지막 제작 후 몰드는 사용을
-                종료합니다.
+                총 {figure.editionSize}개 에디션입니다. 현재 {figure.claimedPct}%가 소진되었습니다.
+                닫힌 런은 다시 캐스팅하지 않고, 마지막 생산 뒤 몰드를 퇴역시킵니다.
               </p>
             </AccordionRow>
           </div>
@@ -273,12 +267,14 @@ export function FigureDetail({ figure }: { figure: Figure }) {
       <section className="px-4 pb-20 pt-4 lg:px-12 lg:pb-28 lg:pt-16">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
           <div className="max-w-[440px]">
-            <p className="meta-label text-[var(--color-ink-faint)]">마감 상세</p>
+            <p className="meta-label text-[var(--color-ink-faint)]">디테일 검수</p>
             <h2 className="mt-4 text-3xl leading-[var(--leading-heading)] tracking-normal text-[var(--color-ink)] lg:text-5xl">
-              여러 각도에서 표면과 도색 상태를 확인할 수 있습니다.</h2>
+              어느 방향에서 보아도 마감이 읽히도록 구성했습니다.
+            </h2>
             <p className="mt-5 text-base leading-relaxed text-[var(--color-ink-muted)]">
-              하단 갤러리에서 표면 마감과 제작 과정,
-              상자에 포함되는 구성품까지 상세하게 확인할 수 있습니다.</p>
+              하단 갤러리는 구매자가 실제로 궁금해하는 단서를 보여줍니다. 표면 마감, 제작 과정,
+              박스 안에 들어가는 구성까지 상세 페이지 안에서 바로 확인해보세요.
+            </p>
           </div>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
             {detailImages.map((item, index) => (

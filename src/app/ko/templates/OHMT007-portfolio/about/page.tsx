@@ -8,13 +8,13 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
-import { stats, designerInfo } from "../_data/portfolio-data";
+import { stats, designerInfo } from "../portfolio-data";
 
 const team = [
-  { name: "Marco Vinus", role: "창립자·크리에이티브 디렉터", img: "/templates/OHMT007-portfolio/team-founder.jpg" },
-  { name: "Yuna Park", role: "수석 디자이너", img: "/templates/OHMT007-portfolio/team-designer.jpg" },
-  { name: "Tobias Krenn", role: "프론트엔드 엔지니어", img: "/templates/OHMT007-portfolio/team-engineer.jpg" },
-  { name: "Sofia Reyes", role: "브랜드 전략가", img: "/templates/OHMT007-portfolio/team-strategist.jpg" },
+  { name: "Marco Vinus", role: "창립자·크리에이티브 디렉터", img: "/templates/OHMT007-portfolio/portfolio-1.png" },
+  { name: "Yuna Park", role: "수석 디자이너", img: "/templates/OHMT007-portfolio/portfolio-2.png" },
+  { name: "Tobias Krenn", role: "프론트엔드 엔지니어", img: "/templates/OHMT007-portfolio/portfolio-3.png" },
+  { name: "Sofia Reyes", role: "브랜드 전략가", img: "/templates/OHMT007-portfolio/portfolio-4.png" },
 ];
 
 const process = [

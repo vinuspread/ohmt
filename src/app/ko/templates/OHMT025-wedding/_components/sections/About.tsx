@@ -35,22 +35,12 @@ export default function About() {
             <h2 className="mt-4 font-[var(--font-heading)] text-5xl font-light uppercase tracking-[0.05em] text-[var(--color-text)]">
               안녕하세요, 클라라입니다
             </h2>
-            <div className="mt-6 max-w-[560px] space-y-6 text-base text-[var(--color-text-muted)] leading-relaxed">
+            <div className="mt-6 space-y-6 text-base text-[var(--color-text-muted)] leading-relaxed">
               <p>
-                <span className="md:block">
-                  8년이 넘는 시간 동안, 저는 웃음과 온기, 그리고 영원한 아름다움이 가득한 결혼식을 기록해 왔습니다.
-                </span>{" "}
-                <span className="md:block">
-                  제 목표는 여러분의 기억처럼 따뜻하고, 진실되며, 영원히 남을 이미지를 만드는 것입니다.
-                </span>
+                8년이 넘는 시간 동안, 저는 웃음과 온기, 그리고 영원한 아름다움이 가득한 결혼식을 기록해 왔습니다. 제 목표는 여러분의 기억처럼 따뜻하고, 진실되며, 영원히 남을 이미지를 만드는 것입니다.
               </p>
               <p>
-                <span className="md:block">
-                  결혼식은 여러분이 가장 아끼는 이들과 깊은 약속, 그리고 미래를 정의할 고요한 순간들이 만나는 드문 교차점입니다.
-                </span>{" "}
-                <span className="md:block">
-                  저는 가식 없는 다큐멘터리 스토리텔링과 잡지 화보 같은 세련미를 결합하여, 여러분이 그 순간에 온전히 머물 수 있도록 집중합니다.
-                </span>
+                결혼식은 여러분이 가장 아끼는 이들과 깊은 약속, 그리고 미래를 정의할 고요한 순간들이 만나는 드문 교차점입니다. 저는 가식 없는 다큐멘터리 스토리텔링과 잡지 화보 같은 세련미를 결합하여, 여러분이 그 순간에 온전히 머물 수 있도록 집중합니다.
               </p>
             </div>
             <div className="mt-10">

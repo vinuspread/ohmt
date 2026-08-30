@@ -30,7 +30,7 @@ export const Testimonials = () => {
             오너 이야기 (Owner Stories)
           </span>
         </div>
-        
+
          <div className="grid md:grid-cols-3 gap-px bg-[var(--theme-border)] overflow-hidden">
            {testimonials.map((t) => (
              <div key={t.name} className="bg-black px-6 py-6 md:p-10 flex flex-col justify-between gap-4 md:gap-6">

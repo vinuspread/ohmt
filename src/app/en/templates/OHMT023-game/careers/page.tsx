@@ -88,7 +88,7 @@ export default function CareersPage() {
                   <span className="inline-block rounded-full bg-[var(--color-primary)]/10 px-3 py-1 text-xs font-medium text-[var(--color-primary)]">
                     {job.department}
                   </span>
-                  <h3 className="mt-3 font-[var(--font-heading)] text-lg font-bold leading-snug text-[var(--color-text)] transition-colors group-hover:text-[var(--color-primary)]">
+                  <h3 className="mt-3 font-[var(--font-heading)] text-lg font-bold leading-[1.05] text-[var(--color-text)] transition-colors group-hover:text-[var(--color-primary)]">
                     {job.title}
                   </h3>
                   <p className="mt-2 line-clamp-2 text-sm text-[var(--color-text-muted)]">

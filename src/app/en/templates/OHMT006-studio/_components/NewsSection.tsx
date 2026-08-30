@@ -50,7 +50,7 @@ export function NewsSection() {
                 >
                     <div className="flex flex-col gap-8 mb-16">
                         <span className="text-xs font-normal tracking-[3px] uppercase text-[#090B19] opacity-60">Journal</span>
-                        <h2 className="text-3xl md:text-5xl leading-[var(--leading-heading)] font-semibold tracking-[-1.44px] text-[#090B19]">
+                        <h2 className="text-3xl md:text-5xl leading-[var(--leading-heading)] font-semibold tracking-[-0.72px] text-[#090B19]">
                             What's new?
                         </h2>
                     </div>
@@ -80,7 +80,7 @@ export function NewsSection() {
                                 <motion.h3
                                     whileHover={{ x: 4 }}
                                     transition={{ duration: 0.25, ease: [0.23, 1, 0.32, 1] }}
-                                    className="text-2xl leading-[var(--leading-heading)] font-bold tracking-[-0.72px] text-[#090B19] group-hover:opacity-60 transition-opacity"
+                                    className="text-2xl leading-[var(--leading-heading)] font-bold tracking-[-0.36px] text-[#090B19] group-hover:opacity-60 transition-opacity"
                                 >
                                     {item.title}
                                 </motion.h3>

@@ -7,21 +7,21 @@ import Link from "next/link";
 const picks = [
   {
     slug: "sensory-language-ceramics",
-    title: "손으로 빚은 도자기의 가치",
-    desc: "빠른 시대에 손으로 만든 물건이 오래 남는 이유.",
-    img: "/templates/OHMT012-magazine/mag-editors-ceramics-v3.jpg"
+    title: "도자기의 감각적 언어.",
+    desc: "디지털 시대에 손공예 물건이 최고의 럭셔리가 되는 이유.",
+    img: "/templates/OHMT012-magazine/mag-5.jpg"
   },
   {
     slug: "urban-gardening-vertical-revolution",
-    title: "도시 농업, 위로 자라다",
-    desc: "버려진 벽과 옥상을 식량을 만드는 공간으로 바꾸는 실험.",
-    img: "/templates/OHMT012-magazine/mag-editors-urban-farming-v3.jpg"
+    title: "도시 원예: 수직 혁명.",
+    desc: "콘크리트 공간에서 지속 가능한 식량 생태계를 재구성하다.",
+    img: "/templates/OHMT012-magazine/mag-6.jpg"
   },
   {
     slug: "acoustics-of-silence",
-    title: "침묵을 설계하는 법",
-    desc: "도시의 소음에서 벗어나 집중과 휴식을 돕는 공간.",
-    img: "/templates/OHMT012-magazine/mag-editors-acoustic-silence-v3.jpg"
+    title: "침묵의 음향학.",
+    desc: "현대의 소음으로부터 심리적 안식처를 제공하는 공간 설계.",
+    img: "/templates/OHMT012-magazine/mag-7.jpg"
   }
 ];
 
@@ -32,7 +32,7 @@ export const EditorsPicks = () => {
         <div className="text-[1.1rem] font-bold uppercase tracking-tight text-[var(--theme-text-muted)] pb-4 mb-10">
           편집자의 선택
         </div>
-        
+
         <div className="grid md:grid-cols-3 gap-12">
            {picks.map((pick, i) => (
              <div key={i} className="group">

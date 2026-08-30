@@ -5,10 +5,10 @@ import { ArrowRight } from '@phosphor-icons/react/dist/ssr'
 const base = '/ko/templates/OHMT036-amber-grove'
 
 const ledger = [
-  ['1984', '과수원 시작'],
-  ['5만 평', '재배 면적'],
+  ['1984', '과수원을 연 해'],
+  ['5만 평', '돌보는 밭'],
   ['28주 차', '이번 주 수확'],
-  ['18종', '재배 품종'],
+  ['18종', '기르는 품종'],
 ]
 
 export function Hero() {
@@ -27,23 +27,21 @@ export function Hero() {
       <div className="relative px-4 py-14 sm:px-6 lg:px-10 lg:py-16">
         <div className="flex min-h-[42dvh] items-end">
           <div className="max-w-4xl">
-            <p className="ledger-num mb-5 text-sm font-bold text-[var(--color-accent-light)]">01 · 과수원에서 바로 배송</p>
-            <h1 className="copy-heading font-[family-name:var(--font-heading)] text-3xl font-semibold leading-[var(--leading-heading)] sm:text-5xl lg:text-6xl">
-              먹기 좋게 익은 과일을
-              <br />
-              수확해 바로 보내드립니다.
+            <p className="ledger-num mb-5 text-sm font-bold text-[var(--color-accent-light)]">01 · 유기농 과수원 직송</p>
+            <h1 className="font-[family-name:var(--font-heading)] text-3xl font-semibold leading-[var(--leading-heading)] sm:text-5xl lg:text-6xl">
+              잘 익은 과일을 바로 수확해
+              <br />가장 맛있을 때 배송해 드립니다.
             </h1>
-            <p className="copy-body mt-6 max-w-2xl text-base leading-7 text-white/78 sm:text-lg">
-              앰버 그로브는 가족이 직접 재배하고 수확한 과일을 농장 안 포장동에서 선별해 보냅니다.
-              <br className="hidden sm:block" /> 상자에는 수확 날짜와 구역, 품종을 적은 기록 카드를 함께 넣습니다.
+            <p className="mt-6 max-w-xl text-base leading-7 text-white/78 sm:text-lg">
+              앰버그로브는 가족이 직접 키우고, 수확하고 발송합니다. 상품을 재배한 기록카드를 함께 보내드립니다.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link href={`${base}/shop`} className="inline-flex items-center justify-center gap-2 rounded bg-[var(--color-accent-light)] px-6 py-2.5 text-sm font-bold text-[var(--color-bg-dark)] transition-colors duration-200 hover:bg-white active:scale-[0.98]">
-                이번 주 과일 보기
+                이번 주 수확 보기
                 <ArrowRight size={17} weight="bold" />
               </Link>
               <Link href={`${base}/about`} className="inline-flex items-center justify-center rounded border border-white/25 px-6 py-2.5 text-sm font-bold text-white transition-colors duration-200 hover:bg-white/10">
-                과수원 소개
+                과수원 이야기
               </Link>
             </div>
           </div>

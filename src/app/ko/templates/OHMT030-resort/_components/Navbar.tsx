@@ -6,7 +6,7 @@ import { ArrowRight, List, X } from "@phosphor-icons/react";
 
 const base = "/ko/templates/OHMT030-resort";
 const navLinks = [
-  { label: "객실", href: `${base}/stay` },
+  { label: "빌라", href: `${base}/stay` },
   { label: "다이닝", href: `${base}/dine` },
   { label: "소개", href: `${base}/about` },
 ];
@@ -40,17 +40,18 @@ export function Navbar() {
           </div>
 
           <div className="flex flex-col items-start gap-1 md:items-center md:gap-0 md:absolute md:left-1/2 md:-translate-x-1/2">
-            <Link href={base} className="text-xs md:text-xl font-semibold text-white tracking-tight leading-none">OHMT</Link>
-            <span className="text-xs font-normal leading-none text-white/70 md:text-white/60">에게해 리조트</span>
+            <Link href={base} className="text-xs md:text-xl font-semibold text-white tracking-tight leading-none">SANCTUM</Link>
+            <span className="text-xs font-normal leading-none text-white/70 md:text-white/60">coastal resort</span>
           </div>
 
           <div className="hidden md:flex items-center gap-6">
             <Link href={`${base}/#contact`}
               className="text-white/80 hover:text-white text-base font-medium transition-colors focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]">
-              예약 문의</Link>
+              문의하기
+            </Link>
             <Link href={`${base}/#book`}
               className="inline-flex items-center gap-2 text-[var(--accent)] hover:text-[var(--accent-hover)] text-base font-medium transition-colors focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]">
-              <span>객실 예약</span>
+              <span>예약하기</span>
               <ArrowRight size={16} weight="bold" aria-hidden="true" />
             </Link>
           </div>
@@ -76,10 +77,11 @@ export function Navbar() {
           ))}
           <Link href={`${base}/#contact`} onClick={() => setOpen(false)}
             className="py-3 text-base text-white/80 hover:text-white font-medium border-b border-white/10">
-            예약 문의</Link>
+            문의하기
+          </Link>
           <Link href={`${base}/#book`} onClick={() => setOpen(false)}
             className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-[var(--accent)] px-6 py-3 text-[var(--text-contrast)] text-base font-medium">
-            <span>객실 예약</span>
+            <span>예약하기</span>
             <ArrowRight size={16} weight="bold" aria-hidden="true" />
           </Link>
         </div>

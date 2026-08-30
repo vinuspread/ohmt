@@ -8,26 +8,26 @@ import { TabButton } from "../ui/TabButton";
 const tabs = [
   {
     label: "레스토랑",
-    heading: "산토리니의 계절을 담은 요리",
-    body: "현지 해산물과 섬에서 기른 채소를 중심으로 계절 메뉴를 선보입니다.\n넓은 창과 테라스에서는 에게해를 바라보며 식사할 수 있습니다.",
+    heading: "해안을 담은 다이닝",
+    body: "미쉐린 스타를 획득한 레스토랑으로, 고대 건축 양식과 해안의 자연광이 조화를 이룹니다. 탁 트인 통창 너머로 바다가 보이며, 요리 하나하나에 주변 풍경을 담았습니다.",
     image: "/templates/OHMT030-resort/dining.png",
   },
   {
     label: "바",
-    heading: "해 질 무렵 시작되는 바",
-    body: "현지 허브와 과일을 사용한 칵테일을 선보입니다.\n돌과 목재로 완성한 차분한 공간에서 파도 소리와 저녁 바다를 즐겨보세요.",
+    heading: "밤이 되면 바가 해변으로 이어집니다",
+    body: "시그니처 칵테일과 함께 파도 소리를 즐겨보세요. 돌과 목재로 이루어져 바다의 저녁을 차분하게 보낼 수 있는 아늑한 공간입니다.",
     image: "/templates/OHMT030-resort/gallery-4.jpg",
   },
   {
     label: "테라스",
-    heading: "바다를 향해 열린 테라스",
-    body: "일몰과 밤바다를 바라보며 식사할 수 있는 야외 테라스입니다.\n소규모 모임과 프라이빗 디너도 진행합니다.",
+    heading: "하늘과 지평선이 열린 공간",
+    body: "쏟아지는 별빛 아래에서 바다를 마주하며 식사할 수 있습니다. 일몰을 감상하며 저녁 식사를 하거나 프라이빗한 파티를 열기에 가장 자연적인 공간입니다.",
     image: "/templates/OHMT030-resort/gallery-5.jpg",
   },
   {
     label: "비치 카페",
-    heading: "바닷바람과 함께하는 아침",
-    body: "가벼운 아침 식사와 갓 짠 주스, 커피를 준비합니다.\n바닷바람과 아침 햇살을 느끼며 하루를 천천히 시작해보세요.",
+    heading: "수면 위로 떠오르는 아침 햇살",
+    body: "맨발로 즐기는 가벼운 아침 식사, 착즙 주스, 그리고 여유로운 아침. 비치 카페는 바닷바람과 따뜻한 첫 햇살 속에서 기분 좋은 하루를 시작하는 곳입니다.",
     image: "/templates/OHMT030-resort/gallery-6.jpg",
   },
 ];
@@ -44,7 +44,8 @@ export function Dining() {
         <div className="flex items-end justify-between mb-12">
           <div>
             <SectionHeading>
-              에게해의 계절을 맛보다</SectionHeading>
+              해안의 맛을 느끼다
+            </SectionHeading>
           </div>
           <div className="hidden md:flex items-center gap-2 bg-white/10 rounded-full px-4 py-2">
             <Star size={16} color="var(--accent)" weight="fill" />
@@ -86,7 +87,7 @@ export function Dining() {
             </BodyText>
             <a href="#"
               className="inline-flex items-center gap-2 self-start rounded-full bg-[var(--accent)] px-6 py-3 text-[var(--text-dark)] text-sm font-medium hover:opacity-85 transition-opacity">
-              <span>레스토랑 예약</span>
+              <span>테이블 예약</span>
               <ArrowRight size={16} weight="bold" aria-hidden="true" />
             </a>
           </div>

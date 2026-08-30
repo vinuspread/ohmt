@@ -1,29 +1,26 @@
-:root {
-  --text-display: clamp(3rem, 7vw, 5.5rem);
-  --text-h1: clamp(2.5rem, 5vw, 4rem);
-  --text-h2: clamp(2rem, 4vw, 3rem);
-  --text-h3: clamp(1.5rem, 3vw, 2rem);
-  --text-lead: clamp(1.125rem, 2vw, 1.5rem);
-  --leading-display: 0.95;
-  --leading-heading: 1.1;
+.yoga-ko {
+  --text-display: clamp(2.75rem, 5vw, 4.75rem);
+  --text-h1: clamp(2.25rem, 4.1vw, 3.75rem);
+  --text-h2: clamp(1.75rem, 3vw, 2.625rem);
+  --text-h3: clamp(1.375rem, 1.8vw, 1.75rem);
+  --text-lead: clamp(1.0625rem, 1.6vw, 1.375rem);
+  --leading-display: 1.1;
+  --leading-heading: 1.16;
   --leading-body: 1.6;
 
-  --color-primary: #9B8B7A;
-  --color-secondary: #3A4050;
-  --color-accent: #C4956A;
-  --color-bg: #FDFCF9;
-  --color-bg-alt: #F7F5F1;
-  --color-bg-secondary: #F1EEE8;
-  --color-bg-dark: #3A4050;
-  --color-bg-medium: #7A8594;
-  --color-text: #1C1C1A;
-  --color-text-muted: #9A9690;
-  --color-text-contrast: #1C1C1A;
-  --color-border: rgba(28, 28, 26, 0.12);
-  --color-border-light: rgba(255, 255, 255, 1);
-
-  --font-heading: var(--font-inter);
-  --font-body: var(--font-inter);
+  --color-primary: #6D665E;
+  --color-secondary: #353B46;
+  --color-accent: #9A623D;
+  --color-bg: #F6F3ED;
+  --color-bg-alt: #EEE9DF;
+  --color-bg-secondary: #E8E6E1;
+  --color-bg-dark: #353B46;
+  --color-bg-medium: #727B84;
+  --color-text: #22211D;
+  --color-text-muted: #6E6A63;
+  --color-text-contrast: #22211D;
+  --color-border: rgba(34, 33, 29, 0.14);
+  --color-border-light: rgba(255, 255, 255, 0.24);
 
   --transition-base: 400ms ease-out;
 
@@ -31,29 +28,104 @@
   --focus-ring-offset: 2px;
 }
 
-/* Global: Inter light as default */
-body {
-  font-family: var(--font-inter), sans-serif;
-  font-weight: 300;
-  -webkit-font-smoothing: antialiased;
+.ohmt022-yoga {
+  --font-heading: "Pretendard", "SUIT", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --font-body: "Pretendard", "SUIT", "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-family: var(--font-body);
+  font-weight: 400;
+}
+
+.ohmt022-yoga,
+.ohmt022-yoga * {
+  -webkit-font-smoothing: auto !important;
+  -moz-osx-font-smoothing: auto !important;
+  text-rendering: optimizeLegibility !important;
+}
+
+.ohmt022-yoga :where(a, button, input, select, textarea):focus-visible {
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.ohmt022-yoga :where(h1, h2, h3, p) {
+  word-break: keep-all;
+}
+
+.ohmt022-yoga :where(h1, h2) {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: var(--leading-heading) !important;
+  text-wrap: balance;
+}
+
+.ohmt022-yoga h3 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: var(--leading-heading) !important;
+  text-wrap: balance;
+}
+
+.ohmt022-yoga .ohmt-display-leading {
+  line-height: var(--leading-display) !important;
+}
+
+.ohmt022-yoga p {
+  text-wrap: pretty;
+}
+
+.ohmt022-yoga :where(p, li, dt, dd) {
+  font-family: var(--font-body);
+  font-weight: 400 !important;
+  line-height: var(--leading-body);
 }
 
 .hero-bg-image {
   background-position: center top;
 }
 
-.ohmt022-yoga :where(h1, h2, h3, h4) {
-  word-break: keep-all;
-  overflow-wrap: break-word;
-  text-wrap: balance;
+/* 국문 서브페이지 전용: 메인과 분리된 단일 타입·여백 체계. */
+.ohmt022-yoga .prana-subpage {
+  --color-accent: #3f7168;
+  --color-bg: #ffffff;
+  --color-bg-alt: #eef2f2;
+  --color-bg-secondary: #e6eceb;
+  --color-text: #182124;
+  --color-text-muted: #657074;
+  --color-border: rgba(24, 33, 36, 0.14);
 }
 
-.ohmt022-yoga :where(p, blockquote, li, figcaption) {
-  word-break: keep-all;
-  overflow-wrap: break-word;
-  text-wrap: pretty;
+.ohmt022-yoga .prana-sub-display {
+  font-family: var(--font-heading);
+  font-size: var(--text-display);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  line-height: var(--leading-display) !important;
 }
 
+.ohmt022-yoga .prana-sub-section {
+  font-family: var(--font-heading);
+  font-size: var(--text-h2);
+  font-weight: 400;
+  letter-spacing: -0.025em;
+  line-height: var(--leading-heading) !important;
+}
+
+.ohmt022-yoga .prana-sub-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  font-weight: 400;
+  letter-spacing: -0.015em;
+  line-height: var(--leading-heading) !important;
+}
+
+.ohmt022-yoga .prana-sub-lead { font-size: var(--text-lead); }
+.ohmt022-yoga .prana-sub-body { font-size: 1rem; }
+.ohmt022-yoga .prana-sub-small { font-size: 0.875rem; }
+.ohmt022-yoga .prana-sub-label { font-size: 0.6875rem; }
+
+.ohmt022-yoga .prana-sub-hero {
+  min-height: clamp(34rem, 62vw, 47.5rem);
+}
 @media (min-width: 768px) {
   .hero-bg-image {
     background-position: center -200px;

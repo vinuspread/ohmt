@@ -26,7 +26,7 @@ export default function TechDesign() {
 
         {/* Video Mockup Section */}
         <div className="relative">
-          <div 
+          <div
             className="relative aspect-[16/9] w-full overflow-hidden rounded-[48px] bg-cover bg-center group flex items-center justify-between px-8 md:px-20"
             style={{ backgroundImage: "url('/templates/OHMT016-technology/tech-design-bg.png')" }}
           >
@@ -41,7 +41,7 @@ export default function TechDesign() {
                 backgroundSize: '24px 24px',
               }}
             />
- 
+
             {/* Left Column: Tech spec details & Play button */}
             <div className="relative z-20 w-full md:w-3/5 flex flex-col items-start gap-3 md:gap-4 pr-4">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-accent)]">
@@ -50,7 +50,7 @@ export default function TechDesign() {
               <h3 className="text-xl md:text-3xl font-extrabold text-white font-heading tracking-tight leading-[var(--leading-heading)] break-keep">
                 OmniBot Gen 2 자율주행 시연과 하드웨어 구성 소개
               </h3>
-              
+
               {/* Play Button */}
               <div className="mt-4 flex items-center gap-4">
                 <button className="relative w-14 h-14 rounded-full border border-white/30 bg-white/10 flex items-center justify-center group-hover:scale-105 group-hover:border-[var(--color-accent)] group-hover:bg-[var(--color-accent)] transition-all duration-300">

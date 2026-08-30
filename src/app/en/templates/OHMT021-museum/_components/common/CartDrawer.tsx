@@ -15,16 +15,16 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
       {isOpen && (
         <>
           {/* Overlay */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
             className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[100]"
           />
-          
+
           {/* Drawer */}
-          <motion.div 
+          <motion.div
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
@@ -71,7 +71,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
             <div className="p-8 bg-luxury-cream border-t border-luxury-border">
               <div className="flex justify-between items-center mb-8">
                 <span className="text-xs uppercase font-bold tracking-[0.3em] text-luxury-gray">Subtotal</span>
-                <span className="text-2xl font-serif tracking-tighter">$1,170.00</span>
+                <span className="text-2xl font-serif tracking-tight">$1,170.00</span>
               </div>
               <button className="w-full py-6 bg-luxury-black text-white text-xs uppercase font-bold tracking-[0.4em] flex items-center justify-center gap-4 hover:bg-opacity-90 transition-all active:scale-95">
                 Checkout Now <ArrowRight size={16} />
@@ -83,4 +83,3 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
     </AnimatePresence>
   );
 }
-

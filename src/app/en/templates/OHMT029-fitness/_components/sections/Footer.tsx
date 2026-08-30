@@ -6,7 +6,7 @@ export function Footer() {
       <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div>
-            <p className="font-['Montserrat'] font-bold text-xl text-[var(--accent)] mb-3">OHMT</p>
+            <p className="font-['Montserrat'] font-bold text-xl text-[var(--accent)] mb-3">CORE</p>
             <p className="text-sm text-[var(--text-muted)] leading-relaxed">
               Your wellness. Our craft.
             </p>
@@ -47,7 +47,7 @@ export function Footer() {
         </div>
 
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 pt-12 mt-12 border-t border-[var(--border)]">
-          <p className="text-sm text-[var(--text-muted)]">&copy; 2026 OHMT. All rights reserved.</p>
+          <p className="text-sm text-[var(--text-muted)]">&copy; 2026 CORE. All rights reserved.</p>
         </div>
       </div>
     </footer>

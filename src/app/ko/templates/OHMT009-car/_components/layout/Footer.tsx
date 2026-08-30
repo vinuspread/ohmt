@@ -10,7 +10,8 @@ export const Footer = () => {
       <div className="max-w-[var(--theme-container)] mx-auto px-6 md:px-[var(--theme-gutter)]">
         <div className="grid grid-cols-3 md:grid-cols-4 gap-6 md:gap-12 mb-8 md:mb-16">
           <div className="col-span-3 md:col-span-1 mb-2 md:mb-0">
-            <span className="text-[0.95rem] md:text-[1.2rem] font-medium md:font-bold tracking-[0.25em] uppercase text-white mb-3 block">IONARA<span className="text-[var(--theme-accent)]">.</span>
+            <span className="text-[0.95rem] md:text-[1.2rem] font-medium md:font-bold tracking-[0.25em] uppercase text-white mb-3 block">
+              OHMT<span className="text-[var(--theme-accent)]">.</span>
             </span>
             <p className="hidden md:block text-[0.85rem] text-[var(--theme-text-muted)] leading-relaxed max-w-[280px]">
               더 높은 기준을 원하는 모든 이를 위한, 공학의 완성.

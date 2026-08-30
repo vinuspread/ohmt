@@ -35,7 +35,7 @@ function MenuPageContent() {
                 우리가 제공하는 메뉴
               </h1>
             </div>
-            <p className="text-white/40 text-sm max-w-[28ch] leading-relaxed" style={{ textWrap: "pretty" } as React.CSSProperties}>
+            <p className="text-white/40 text-sm max-w-[28ch] leading-relaxed">
               싱글 오리진 원두, 계절 스페셜, 매일 아침 갓 굽는 페이스트리.
             </p>
           </div>
@@ -94,7 +94,7 @@ function MenuPageContent() {
                   <div className="flex flex-col flex-grow">
                     <div className="flex items-start justify-between gap-2 mb-1.5">
                       <h3 className="text-sm md:text-base font-light font-heading leading-snug">{item.name}</h3>
-                      <span className="text-sm font-semibold text-[var(--color-accent)] shrink-0">{item.price.toLocaleString()}원</span>
+                      <span className="text-sm font-semibold text-[var(--color-accent)] shrink-0">${item.price.toFixed(2)}</span>
                     </div>
                     <p className="text-sm text-[var(--color-text-muted)] leading-relaxed line-clamp-2 flex-grow">{item.description}</p>
                     {item.options && item.options.length > 0 && (

@@ -47,7 +47,7 @@ export default function Hero() {
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 max-w-[1440px] mx-auto">
           <div>
             <div className="overflow-hidden mb-3">
-              <motion.p 
+              <motion.p
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 0.61, 0.36, 1] }}
@@ -56,7 +56,7 @@ export default function Hero() {
                 Fine Art Wedding Photography
               </motion.p>
             </div>
-            
+
             <h1
               className="font-[family-name:var(--font-heading)] font-light capitalize text-white leading-[var(--leading-heading)]"
               style={{ fontSize: "clamp(3.5rem, 10vw, 8.5rem)" }}
@@ -104,4 +104,3 @@ export default function Hero() {
     </section>
   );
 }
-

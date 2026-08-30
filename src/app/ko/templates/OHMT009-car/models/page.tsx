@@ -19,7 +19,7 @@ function CarModelsPageContent() {
     <TemplateWrapper theme={theme}>
       <main className="antialiased bg-black text-white selection:bg-[var(--theme-accent)] selection:text-black">
         <Header />
-        
+
         <section className="pt-24 md:pt-36 pb-20 md:pb-28">
           <div className="max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)]">
             <div className="mb-10">

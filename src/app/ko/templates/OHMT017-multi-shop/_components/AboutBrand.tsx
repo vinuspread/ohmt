@@ -40,15 +40,18 @@ export const AboutBrand = () => {
               className="text-4xl md:text-5xl font-bold tracking-tight leading-[var(--leading-heading)]"
               style={{ textWrap: "balance" } as React.CSSProperties}
             >
-              오래 입을 수 있는 옷</h2>
+              오래 입을 수 있는 옷
+            </h2>
             <p className="text-base leading-relaxed text-[var(--color-text-muted)] mt-6">
               유행을 그대로 따르기보다 실제로 자주 입게 될 옷인지 먼저 생각합니다.
               디자인을 시작할 때마다 묻습니다. ‘우리도 계속 입고 싶은가?’
-              답이 분명하지 않은 제품은 만들지 않습니다.</p>
+              답이 분명하지 않은 제품은 만들지 않습니다.
+            </p>
             <p className="text-base leading-relaxed text-[var(--color-text-muted)] mt-4">
               각 컬렉션은 서로 다른 분위기를 가지면서도 자연스럽게 어울립니다.
               단정한 실루엣과 편안한 촉감, 쓰임이 분명한 디테일에 집중합니다.
-              불필요한 장식은 덜어냅니다.</p>
+              불필요한 장식은 덜어냅니다.
+            </p>
             <div className="grid grid-cols-3 gap-6 mt-10 pt-10 border-t border-[var(--color-border)]">
               {[
                 { value: "200+", label: "제품" },
@@ -67,7 +70,8 @@ export const AboutBrand = () => {
               href="/ko/templates/OHMT017-multi-shop/about"
               className="inline-block mt-10 bg-[var(--color-primary)] text-white px-8 py-3 text-xs uppercase tracking-[0.2em] hover:bg-black/80 transition-[transform,colors] duration-160 ease-out active:scale-[0.97]"
             >
-              브랜드 이야기 보기</Link>
+              브랜드 이야기 보기
+            </Link>
           </motion.div>
         </div>
       </div>

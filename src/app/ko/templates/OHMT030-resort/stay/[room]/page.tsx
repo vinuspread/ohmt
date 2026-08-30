@@ -8,71 +8,67 @@ import { RoomOverviewSection } from "../../_components/sections/RoomOverviewSect
 const base = "/ko/templates/OHMT030-resort";
 
 const rooms: Record<string, {
-  name: string; heroTitle: string; price: string; img: string; hero: string;
+  name: string; price: string; img: string; hero: string;
   desc: string; spec: { label: string; value: string }[];
   gallery: string[];
 }> = {
   celestial: {
     name: "셀레스티얼 스위트",
-    heroTitle: "Celestial Suite",
     price: "₩480,000",
     img: "villa-bedroom-arch.jpg",
     hero: "room-celestial.jpg",
-    desc: "리조트 가장 높은 곳에 자리한 셀레스티얼 스위트입니다.\n침실과 거실의 전면 창으로 칼데라와 에게해가 한눈에 들어옵니다.\n넓은 테라스의 프라이빗 플런지 풀에서 일출부터 밤하늘까지 조용히 감상할 수 있습니다.",
+    desc: "셀레스티얼 스위트는 리조트에서 가장 높은 곳에 자리 잡고 있습니다. 칼데라 가장자리에 새겨진 이 전망대에서는 하늘이 손에 닿을 듯 가깝게 느껴집니다. 침실과 거실을 감싸는 천장부터 바닥까지의 유리창은 에게해의 수평선 전체를 첫 빛부터 마지막 별자리까지 담아냅니다. 프라이빗 플런지 풀이 바다 위에 떠 있는 듯한 테라스로 이어집니다.",
     spec: [
       { label: "수용 인원", value: "2명" },
-      { label: "면적", value: "85m²" },
-      { label: "전망", value: "에게해와 칼데라" },
-      { label: "침대", value: "킹사이즈 침대·유기농 면 침구" },
-      { label: "편의시설", value: "프라이빗 플런지 풀·야외 샤워" },
+      { label: "면적", value: "85 sqm" },
+      { label: "전망", value: "에게해 & 칼데라" },
+      { label: "침대", value: "킹사이즈 유기농 코튼" },
+      { label: "편의시설", value: "프라이빗 플런지 풀, 야외 샤워" },
     ],
     gallery: ["pool-bluehour.jpg", "villa-pool-caldera.jpg", "terrace-dining-caldera.jpg"],
   },
   bellemont: {
     name: "벨몬트 스위트",
-    heroTitle: "Bellemont Suite",
     price: "₩360,000",
     img: "villa-bedroom-seaview.jpg",
     hero: "room-bellemont.jpg",
-    desc: "돌담과 올리브 나무, 라벤더 정원 사이에 자리한 벨몬트 스위트입니다.\n거실에서 바로 이어지는 프라이빗 파티오에는 선베드와 야외 휴식 공간이 마련되어 있습니다.\n정원과 바다 전망을 함께 즐기며 여유롭게 머물기 좋은 객실입니다.",
+    desc: "야생 정원과 돌담으로 둘러싸인 벨몬트 스위트는 부겐빌레아, 라벤더, 올리브 나무 사이에 자리 잡고 있습니다. 실내외가 연결된 레이아웃은 일광욕실이 있는 프라이빗 파티오로 열리며, 자스민 향기와 짭짤한 바다 공기가 어우러집니다. 느린 아침과 긴 오후를 책과 함께 보내기 위해 완성한 스위트입니다.",
     spec: [
       { label: "수용 인원", value: "2명" },
-      { label: "면적", value: "70m²" },
-      { label: "전망", value: "정원 및 일부 바다 전망" },
-      { label: "침대", value: "킹사이즈 침대·유기농 면 침구" },
-      { label: "편의시설", value: "프라이빗 정원·야외 라운지" },
+      { label: "면적", value: "70 sqm" },
+      { label: "전망", value: "가든 & 부분 바다뷰" },
+      { label: "침대", value: "킹사이즈 유기농 코튼" },
+      { label: "편의시설", value: "프라이빗 가든, 야외 라운징" },
     ],
     gallery: ["alley-bougainvillea.jpg", "villa-exterior-golden.jpg", "overwater-cabana-sunset.jpg"],
   },
   tofutalia: {
     name: "토푸탈리아 스위트",
-    heroTitle: "Tofutalia Suite",
     price: "₩320,000",
     img: "villa-bedroom-porthole.jpg",
     hero: "room-tofutalia.jpg",
-    desc: "절벽의 지형을 따라 만든 동굴형 토푸탈리아 스위트입니다.\n프라이빗 테라스에는 현지 돌로 만든 냉수 욕조가 있어 가까이에서 파도 소리를 들을 수 있습니다.\n화산석의 거친 질감과 부드러운 린넨이 차분한 분위기를 만듭니다.",
+    desc: "절벽면에 직접 새겨진 토푸탈리아 스위트는 물에 최대한 가까이 다가갈 수 있는 아늑한 동굴형 은신처입니다. 침실에서 내려가면 현지 돌로 조각된 냉각욕조가 있는 보호된 테라스가 나오며, 파도 소리가 화산암에 울려 퍼집니다. 거친 질감과 부드러운 린넨이 인테리어를 정의합니다.",
     spec: [
       { label: "수용 인원", value: "2명" },
-      { label: "면적", value: "55m²" },
-      { label: "전망", value: "절벽 아래 바다 전망" },
-      { label: "침대", value: "퀸사이즈 침대·유기농 면 침구" },
-      { label: "편의시설", value: "냉수 욕조·스톤 테라스" },
+      { label: "면적", value: "55 sqm" },
+      { label: "전망", value: "해수면 절벽 사이드" },
+      { label: "침대", value: "퀸사이즈 유기농 코튼" },
+      { label: "편의시설", value: "냉각욕조, 스톤 테라스" },
     ],
     gallery: ["sailing-cove.jpg", "villa-pool-caldera.jpg", "blue-dome-church.jpg"],
   },
   zephyr: {
     name: "제피르 로프트",
-    heroTitle: "Zephyr Loft",
     price: "₩290,000",
     img: "room-zephyr.jpg",
     hero: "room-zephyr.jpg",
-    desc: "메인 빌라 위쪽에 자리한 오픈 플랜형 제피르 로프트입니다.\n높은 천장과 넓은 창으로 자연광이 깊숙이 들어오며, 침실과 거실은 미닫이 구조로 유연하게 나뉩니다.\n간이 주방에서 객실 안의 간단한 식사를 준비할 수 있습니다.",
+    desc: "메인 빌라 단지 위에 자리 잡은 오픈 플랜 로프트, 제피르 로프트는 빛의 볼륨감이 특징입니다. 이중 천장 높이와 창문 벽이 이름처럼 해안 바람을 닮은 공기감을 만들어냅니다. 미닫이식 침실 공간이 아래의 거실을 내려다보고, 컴팩트한 간이 주방이 프라이빗 다이닝을 실현합니다.",
     spec: [
       { label: "수용 인원", value: "2명" },
-      { label: "면적", value: "60m²" },
-      { label: "전망", value: "탁 트인 해안 전망" },
-      { label: "침대", value: "퀸사이즈 침대·유기농 면 침구" },
-      { label: "편의시설", value: "미닫이형 공간·간이 주방" },
+      { label: "면적", value: "60 sqm" },
+      { label: "전망", value: "파노라마 해안선" },
+      { label: "침대", value: "퀸사이즈 유기농 코튼" },
+      { label: "편의시설", value: "미닫이 구조, 간이 주방" },
     ],
     gallery: ["aerial-caldera-golden.jpg", "villa-bedroom-arched-window.jpg", "bar-rooftop-sunset.jpg"],
   },
@@ -88,11 +84,11 @@ export default async function RoomPage({ params }: { params: Promise<{ room: str
       <Navbar />
       <main className="min-h-screen">
         <SubpageHero
-          title={data.heroTitle.replace(" ", "\n")}
+          title={data.name.replace(" ", "\n")}
           image={data.hero}
           alt={data.name}
-          eyebrow="OHMT 리조트 · 스위트"
-          price={`${data.price} · 1박`}
+          eyebrow="SANCTUM 리조트 - 더 빌라스"
+          price={`${data.price} / 1박`}
           detail
           overlay="bg-gradient-to-t from-black/70 via-black/25 to-transparent"
         >

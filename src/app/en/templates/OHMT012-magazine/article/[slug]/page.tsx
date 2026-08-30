@@ -14,23 +14,23 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const article = getArticleBySlug(slug);
   if (!article) {
-    return { title: "Story Not Found - FOLIO Magazine" };
+    return { title: "Story Not Found - OHMT Magazine" };
   }
   return {
-    title: `${article.title} - FOLIO Magazine`,
+    title: `${article.title} - OHMT Magazine`,
     description: article.desc,
     openGraph: {
-      title: `${article.title} - FOLIO Magazine`,
+      title: `${article.title} - OHMT Magazine`,
       description: article.desc,
-      url: `https://ohmt.site/en/templates/OHMT012-magazine/article/${slug}`,
-      siteName: "FOLIO",
+      url: `https://ohmytemplate.com/en/templates/OHMT012-magazine/article/${slug}`,
+      siteName: "OHMT",
       images: [{ url: article.img, width: 1200, height: 630 }],
       locale: "en_US",
       type: "article",
     },
     twitter: {
       card: "summary_large_image",
-      title: `${article.title} - FOLIO Magazine`,
+      title: `${article.title} - OHMT Magazine`,
       description: article.desc,
       images: [article.img],
     },
@@ -192,7 +192,7 @@ export default async function Page({ params }: PageProps) {
                     <Link href={`/en/templates/OHMT012-magazine/article/${item.slug}`} className="block overflow-hidden h-[180px] mb-4">
                       <img src={item.img} alt={item.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
                     </Link>
-                    <h3 className="font-[family-name:var(--theme-font-heading)] text-[1.15rem] font-normal leading-snug">
+                    <h3 className="font-[family-name:var(--theme-font-heading)] text-[1.15rem] font-normal leading-[1.05]">
                       <Link href={`/en/templates/OHMT012-magazine/article/${item.slug}`} className="hover:text-[var(--theme-accent)] transition-colors">
                         {item.title}
                       </Link>

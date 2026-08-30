@@ -28,7 +28,8 @@ export const Testimonials = () => {
           className="text-center mb-12 md:mb-16"
         >
           <h2 className="text-[length:var(--text-h2)] font-[var(--font-heading)] font-bold leading-[var(--leading-heading)]">
-            투숙객 후기</h2>
+            고객님의 진솔한 이야기
+          </h2>
         </motion.div>
 
         <div className="max-w-3xl mx-auto relative">
@@ -46,7 +47,7 @@ export const Testimonials = () => {
                   <Star key={i} size={16} className="text-[var(--color-accent)]" fill="var(--color-accent)" strokeWidth={0} />
                 ))}
               </div>
-              <blockquote className="text-lg md:text-xl lg:text-2xl font-[var(--font-heading)] leading-relaxed mb-8 break-keep [text-wrap:pretty]">
+              <blockquote className="text-lg md:text-xl lg:text-2xl font-[var(--font-heading)] leading-relaxed mb-8">
                 &ldquo;{current.text}&rdquo;
               </blockquote>
               <div className="w-12 h-[2px] bg-[var(--color-accent)] mx-auto mb-6" />

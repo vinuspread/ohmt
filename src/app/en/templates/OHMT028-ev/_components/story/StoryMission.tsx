@@ -49,7 +49,7 @@ export function StoryMission() {
           {values.map((v) => (
             <div key={v.title} className="value-item py-10 md:py-0 md:px-10 first:md:pl-0 last:md:pr-0">
               <div className="w-6 h-[2px] bg-[var(--accent)] mb-6" />
-              <h3 className="font-michroma text-base text-[var(--text-on-light)] mb-4 leading-snug">
+              <h3 className="font-michroma text-base text-[var(--text-on-light)] mb-4 leading-[1.05]">
                 {v.title}
               </h3>
               <p className="font-inter text-sm text-[var(--text-muted-light)] leading-relaxed">

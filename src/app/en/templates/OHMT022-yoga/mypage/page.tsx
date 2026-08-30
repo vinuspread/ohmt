@@ -1,322 +1,85 @@
+
 import type { Metadata } from "next";
-import { Suspense } from "react";
+import Image from "next/image";
 import Link from "next/link";
+import Footer from "../_components/Footer";
+import Navbar from "../_components/Navbar";
+import SubpageHero from "../_components/SubpageHero";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
-import Navbar from "../_components/Navbar";
 
-export const metadata: Metadata = {
-  title: "My Page - OHMT Yoga",
-};
-import PageHeader from "../_components/PageHeader";
-import Footer from "../_components/Footer";
+export const metadata: Metadata = { title: "My Page - PRANA" };
 
-const MY_SCHEDULE = [
-  { date: "Mon, Jun 16", time: "07:00 AM", name: "Vinyasa Flow", instructor: "Sophia Chen", status: "Upcoming" },
-  { date: "Wed, Jun 18", time: "06:30 PM", name: "Hatha Yoga", instructor: "Lena Park", status: "Upcoming" },
-  { date: "Fri, Jun 20", time: "08:00 AM", name: "Meditation", instructor: "Marcus Webb", status: "Upcoming" },
-  { date: "Mon, Jun 9",  time: "07:00 AM", name: "Vinyasa Flow", instructor: "Sophia Chen", status: "Completed" },
-  { date: "Fri, Jun 6",  time: "06:30 PM", name: "Pilates",      instructor: "Lena Park",   status: "Completed" },
+type ReservationViewState = "ready" | "empty" | "error";
+type PageProps = { searchParams: Promise<{ state?: string | string[] }> };
+type Reservation = { id: string; date: string; time: string; name: string; instructor: string; status: string; slug: string };
+
+const UPCOMING: Reservation[] = [
+  { id: "1", date: "Monday, June 16", time: "7:00 AM", name: "Vinyasa Flow", instructor: "Sofia Chen", status: "Confirmed", slug: "vinyasa-flow" },
+  { id: "2", date: "Wednesday, June 18", time: "6:30 PM", name: "Hatha Yoga", instructor: "Sofia Chen", status: "Confirmed", slug: "hatha-yoga" },
+  { id: "3", date: "Friday, June 20", time: "8:00 AM", name: "Meditation", instructor: "Mira Song", status: "Confirmed", slug: "meditation" },
 ];
 
-const PAYMENT_HISTORY = [
-  { date: "Jun 1, 2026",  desc: "Monthly Membership",  amount: "$89.00",  status: "Paid" },
-  { date: "May 1, 2026",  desc: "Monthly Membership",  amount: "$89.00",  status: "Paid" },
-  { date: "Apr 1, 2026",  desc: "Monthly Membership",  amount: "$89.00",  status: "Paid" },
-];
-
-function MyPageContent() {
+function BookingRow({ item }: { item: Reservation }) {
   return (
-    <TemplateWrapper theme={theme}>
-      <Navbar />
-      <PageHeader
-        title="My Page"
-        subtitle="Manage your bookings, membership, and account settings."
-        image="/templates/OHMT022-yoga/subpage-mypage.jpg"
-      />
-
-      {/* Profile + stats row */}
-      <section className="grid grid-cols-1 lg:grid-cols-4 border-b border-[var(--color-border)]">
-        {/* Profile */}
-        <div className="px-8 md:px-14 lg:px-20 py-10 border-b lg:border-b-0 lg:border-r border-[var(--color-border)] bg-[var(--color-bg-alt)] flex flex-col gap-5">
-          <div className="flex items-center gap-5">
-            <div
-              className="w-16 h-16 rounded-full bg-cover bg-center flex-shrink-0"
-              style={{ backgroundImage: "url('/templates/OHMT022-yoga/instructor-1.jpg')" }}
-            />
-            <div>
-              <p
-                className="text-xs tracking-[0.22em] uppercase text-[var(--color-text-muted)] mb-1"
-                style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-              >
-                Member since 2024
-              </p>
-              <h2
-                className="text-xl font-light text-[var(--color-text)] tracking-[-0.01em]"
-                style={{ fontFamily: "var(--font-heading)" }}
-              >
-                Alex Kim
-              </h2>
-              <p
-                className="mt-0.5 text-sm text-[var(--color-text-muted)]"
-                style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-              >
-                alex.kim@email.com
-              </p>
-            </div>
-          </div>
-          <div className="pt-6 border-t border-[var(--color-border)]">
-            <p
-              className="text-xs tracking-[0.22em] uppercase text-[var(--color-text-muted)] mb-2"
-              style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-            >
-              Current Plan
-            </p>
-            <p
-              className="text-base font-light text-[var(--color-text)]"
-              style={{ fontFamily: "var(--font-body)" }}
-            >
-              Monthly Membership
-            </p>
-            <p
-              className="mt-1 text-sm text-[var(--color-text-muted)]"
-              style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-            >
-              Renews Jul 1, 2026 · $89/mo
-            </p>
-          </div>
-          <Link
-            href="/en/templates/OHMT022-yoga/schedule"
-            className="mt-2 inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] font-medium transition-colors"
-            style={{ fontFamily: "var(--font-body)" }}
-          >
-            Book a Class →
-          </Link>
-        </div>
-
-        {/* Stats */}
-        <div className="col-span-1 lg:col-span-3 grid grid-cols-3 divide-x divide-[var(--color-border)]">
-          {[
-            { value: "48",    label: "Classes Attended" },
-            { value: "12",    label: "This Month" },
-            { value: "6 mo",  label: "Active Streak" },
-          ].map((stat) => (
-            <div key={stat.label} className="flex flex-col justify-center px-8 py-8 border-b lg:border-b-0 border-[var(--color-border)]">
-              <p
-                className="text-[length:var(--text-h2)] font-light text-[var(--color-text)] tracking-[-0.02em] whitespace-nowrap"
-                style={{ fontFamily: "var(--font-heading)" }}
-              >
-                {stat.value}
-              </p>
-              <p
-                className="mt-2 text-xs tracking-[0.08em] uppercase text-[var(--color-text-muted)] whitespace-nowrap"
-                style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-              >
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* My Schedule */}
-      <section className="bg-[var(--color-bg)] border-b border-[var(--color-border)]">
-        <div className="px-8 md:px-14 lg:px-20 pt-20 pb-14 border-b border-[var(--color-border)]">
-          <p
-            className="text-xs tracking-[0.25em] uppercase text-[var(--color-text-muted)] mb-4"
-            style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-          >
-            Reservations
-          </p>
-          <h2
-            className="text-[length:var(--text-h2)] font-light text-[var(--color-text)] leading-[var(--leading-heading)] tracking-[-0.02em]"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            My Schedule
-          </h2>
-        </div>
-
-        <div className="divide-y divide-[var(--color-border)]">
-          {MY_SCHEDULE.map((item, i) => (
-            <div
-              key={i}
-              className="grid grid-cols-2 md:grid-cols-3 items-center gap-x-6 md:gap-x-10 px-8 md:px-14 lg:px-20 py-6"
-            >
-              {/* Date / Time */}
-              <div>
-                <p
-                  className="text-xs tracking-[0.12em] uppercase text-[var(--color-text-muted)]"
-                  style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-                >
-                  {item.date}
-                </p>
-                <p
-                  className="mt-0.5 text-sm text-[var(--color-text-muted)]"
-                  style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-                >
-                  {item.time}
-                </p>
-              </div>
-
-              {/* Class / Instructor */}
-              <div className="min-w-0">
-                <p
-                  className="text-sm font-light text-[var(--color-text)] tracking-[-0.01em]"
-                  style={{ fontFamily: "var(--font-body)" }}
-                >
-                  {item.name}
-                </p>
-                <p
-                  className="mt-0.5 text-sm text-[var(--color-text-muted)]"
-                  style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-                >
-                  {item.instructor}
-                </p>
-              </div>
-
-              {/* Status - desktop only */}
-              <div className="hidden md:flex items-center gap-4">
-                <span
-                  className={`text-xs tracking-[0.15em] uppercase ${
-                    item.status === "Completed"
-                      ? "text-[var(--color-text-muted)]"
-                      : "text-[var(--color-text)]"
-                  }`}
-                  style={{ fontFamily: "var(--font-body)", fontWeight: item.status === "Upcoming" ? 500 : 300 }}
-                >
-                  {item.status}
-                </span>
-                {item.status === "Upcoming" && (
-                  <button
-                    className="text-xs tracking-[0.15em] uppercase text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
-                    style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-                  >
-                    Cancel
-                  </button>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Payment + Account - side by side */}
-      <section className="grid grid-cols-1 md:grid-cols-2 border-b border-[var(--color-border)]">
-
-        {/* Left: Payment History */}
-        <div className="border-b md:border-b-0 md:border-r border-[var(--color-border)] bg-[var(--color-bg-alt)]">
-          <div className="px-8 md:px-14 lg:px-20 pt-14 pb-8 border-b border-[var(--color-border)]">
-            <p
-              className="text-xs tracking-[0.25em] uppercase text-[var(--color-text-muted)] mb-3"
-              style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-            >
-              Billing
-            </p>
-            <h2
-              className="text-[length:var(--text-lead)] font-light text-[var(--color-text)] leading-[var(--leading-heading)] tracking-[-0.02em]"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              Payment History
-            </h2>
-          </div>
-          <div className="divide-y divide-[var(--color-border)]">
-            {PAYMENT_HISTORY.map((item, i) => (
-              <div key={i} className="grid grid-cols-3 md:grid-cols-3 items-center gap-x-6 md:gap-x-10 px-8 md:px-14 lg:px-20 py-5">
-                <p
-                  className="text-sm text-[var(--color-text-muted)]"
-                  style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-                >
-                  {item.date}
-                </p>
-                <p
-                  className="text-sm font-light text-[var(--color-text)] truncate"
-                  style={{ fontFamily: "var(--font-body)" }}
-                >
-                  {item.desc}
-                </p>
-                <div className="flex items-center gap-4">
-                  <p
-                    className="text-sm font-light text-[var(--color-text)]"
-                    style={{ fontFamily: "var(--font-body)" }}
-                  >
-                    {item.amount}
-                  </p>
-                  <span
-                    className="text-xs tracking-[0.15em] uppercase text-[var(--color-text-muted)]"
-                    style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-                  >
-                    {item.status}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Right: Account Settings */}
-        <div className="bg-[var(--color-bg)]">
-          <div className="px-8 md:px-14 lg:px-20 pt-14 pb-8 border-b border-[var(--color-border)]">
-            <p
-              className="text-xs tracking-[0.25em] uppercase text-[var(--color-text-muted)] mb-3"
-              style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-            >
-              Profile
-            </p>
-            <h2
-              className="text-[length:var(--text-lead)] font-light text-[var(--color-text)] leading-[var(--leading-heading)] tracking-[-0.02em]"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              Account Settings
-            </h2>
-          </div>
-          <div className="divide-y divide-[var(--color-border)]">
-            {[
-              { label: "Full Name",     value: "Alex Kim" },
-              { label: "Email",         value: "alex.kim@email.com" },
-              { label: "Phone",         value: "+1 (555) 012-3456" },
-              { label: "Password",      value: "••••••••••" },
-              { label: "Notifications", value: "Email & Push" },
-            ].map((field) => (
-              <div
-                key={field.label}
-                className="flex items-center justify-between px-8 md:px-14 lg:px-20 py-5 group hover:bg-[var(--color-bg-alt)] transition-colors"
-              >
-                <div className="flex items-center gap-6 min-w-0">
-                  <p
-                    className="text-xs tracking-[0.18em] uppercase text-[var(--color-text-muted)] w-28 flex-shrink-0"
-                    style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-                  >
-                    {field.label}
-                  </p>
-                  <p
-                    className="text-sm font-light text-[var(--color-text)] truncate"
-                    style={{ fontFamily: "var(--font-body)" }}
-                  >
-                    {field.value}
-                  </p>
-                </div>
-                <button
-                  className="text-xs tracking-[0.18em] uppercase text-[var(--color-text-muted)] hover:text-[var(--color-text)] font-medium transition-colors opacity-0 group-hover:opacity-100 flex-shrink-0 ml-4"
-                  style={{ fontFamily: "var(--font-body)" }}
-                >
-                  Edit →
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
-
-      </section>
-
-      <Footer />
-    </TemplateWrapper>
+    <article className="grid gap-5 border-b border-[var(--color-border)] py-7 md:grid-cols-12 md:items-center md:gap-8">
+      <div className="md:col-span-3"><p className="prana-sub-small text-[var(--color-text)]">{item.date}</p><p className="prana-sub-small mt-2 text-[var(--color-text-muted)]">{item.time}</p></div>
+      <div className="md:col-span-5"><h3 className="prana-sub-title text-[var(--color-text)]">{item.name}</h3><p className="prana-sub-small mt-2 text-[var(--color-text-muted)]">{item.instructor} · {item.status}</p></div>
+      <div className="flex gap-6 md:col-span-4 md:justify-end"><Link href={`/en/templates/OHMT022-yoga/classes/${item.slug}`} className="prana-sub-small inline-flex min-h-11 items-center text-[var(--color-text)]">Class details</Link><Link href="/en/templates/OHMT022-yoga/schedule" className="prana-sub-small inline-flex min-h-11 items-center border-b border-[var(--color-text)] font-medium text-[var(--color-text)]">Change</Link></div>
+    </article>
   );
 }
 
-export default function MyPage() {
+export default async function MyPage({ searchParams }: PageProps) {
+  const params = await searchParams;
+  const raw = Array.isArray(params.state) ? params.state[0] : params.state;
+  const state: ReservationViewState = raw === "empty" || raw === "error" ? raw : "ready";
+  const next = UPCOMING[0];
+
   return (
-    <Suspense>
-      <MyPageContent />
-    </Suspense>
+    <TemplateWrapper theme={theme}>
+      <Navbar />
+      <main className="prana-subpage bg-white pt-16 md:pt-[76px]">
+        <SubpageHero eyebrow="MY PRACTICE" title="Your week, held in one calm place." description="See what is next, make a change, and return to the practice that supports you." image="/templates/OHMT022-yoga/subpage-mypage-v4.webp" imageAlt="PRANA member resting in a cool-toned studio with living plants" imagePosition="object-[66%_center] md:object-center" />
+
+        <section className="border-b border-[var(--color-border)] px-6 md:px-14 lg:px-20">
+          <dl className="mx-auto grid max-w-[1180px] md:grid-cols-3">
+            {[["Member", "Alex Kim"], ["Membership", "8 classes left"], ["Renews", "July 1"]].map(([label, value], index) => <div key={label} className={`py-7 ${index ? "border-t border-[var(--color-border)] md:border-l md:border-t-0 md:pl-8" : ""}`}><dt className="prana-sub-label uppercase tracking-[0.16em] text-[var(--color-text-muted)]">{label}</dt><dd className="prana-sub-small mt-3 text-[var(--color-text)]">{value}</dd></div>)}
+          </dl>
+        </section>
+
+        <section className="bg-[var(--color-bg-alt)] px-6 py-20 md:px-14 md:py-28 lg:px-20">
+          <div className="mx-auto max-w-[1180px]">
+            {state === "ready" ? (
+              <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center lg:gap-20">
+                <div>
+                  <p className="prana-sub-label uppercase tracking-[0.18em] text-[var(--color-text-muted)]">NEXT CLASS</p>
+                  <p className="prana-sub-lead mt-6 text-[var(--color-text)]">{next.date}</p>
+                  <p className="prana-sub-small mt-2 text-[var(--color-text-muted)]">{next.time}</p>
+                  <h2 className="prana-sub-section mt-10 text-[var(--color-text)]">{next.name}</h2>
+                  <p className="prana-sub-small mt-4 text-[var(--color-text-muted)]">with {next.instructor} · {next.status}</p>
+                  <div className="mt-9 flex flex-wrap gap-4">
+                    <Link href={`/en/templates/OHMT022-yoga/classes/${next.slug}`} className="prana-sub-small inline-flex min-h-12 items-center border border-[var(--color-border)] bg-white px-6 font-medium text-[var(--color-text)]">Class details</Link>
+                    <Link href="/en/templates/OHMT022-yoga/schedule" className="prana-sub-small inline-flex min-h-12 items-center bg-[var(--color-accent)] px-6 font-medium text-white">Change time</Link>
+                  </div>
+                </div>
+                <div className="relative aspect-[4/3] min-h-[300px] overflow-hidden bg-[var(--color-bg-secondary)] lg:min-h-[420px]">
+                  <Image src="/templates/OHMT022-yoga/class-vinyasa-v2.webp" alt="Vinyasa Flow class in the PRANA studio" fill sizes="(max-width: 1023px) 100vw, 58vw" className="object-cover" />
+                </div>
+              </div>
+            ) : <div><p className="prana-sub-label uppercase tracking-[0.18em] text-[var(--color-text-muted)]">{state === "error" ? "RESERVATIONS UNAVAILABLE" : "NO NEXT CLASS"}</p><h2 className="prana-sub-section mt-6 max-w-[15ch] text-[var(--color-text)]">{state === "error" ? "Your bookings are still saved." : "Choose the first class for your week."}</h2><p className="prana-sub-small mt-6 max-w-xl leading-7 text-[var(--color-text-muted)]">{state === "error" ? "Reload this page. For an urgent change, contact the studio directly." : "Pick a day and practice. The confirmed class will appear here."}</p><Link href={state === "error" ? "/en/templates/OHMT022-yoga/mypage" : "/en/templates/OHMT022-yoga/schedule"} className="prana-sub-small mt-7 inline-flex min-h-12 items-center bg-[var(--color-accent)] px-7 font-medium text-white">{state === "error" ? "Load again" : "Find a class"}</Link></div>}
+          </div>
+        </section>
+
+        <section className="px-6 py-20 md:px-14 md:py-28 lg:px-20 lg:py-32">
+          <div className="mx-auto max-w-[1180px]">
+            <div className="grid gap-7 lg:grid-cols-12 lg:items-end"><div className="lg:col-span-8"><p className="prana-sub-label uppercase tracking-[0.18em] text-[var(--color-text-muted)]">UPCOMING</p><h2 className="prana-sub-section mt-5 text-[var(--color-text)]">Classes ahead.</h2></div><div className="lg:col-span-4 lg:text-right"><Link href="/en/templates/OHMT022-yoga/schedule" className="prana-sub-small inline-flex min-h-12 items-center bg-[var(--color-accent)] px-7 font-medium text-white">Add a class</Link></div></div>
+            <div className="mt-10 border-t border-[var(--color-text)]">{state === "ready" ? UPCOMING.slice(1).map((item) => <BookingRow key={item.id} item={item} />) : <p className="prana-sub-small py-10 text-[var(--color-text-muted)]">Upcoming bookings will appear here.</p>}</div>
+            <div className="mt-16 grid gap-6 border-t border-[var(--color-border)] pt-8 md:grid-cols-12 md:gap-10"><h2 className="prana-sub-title text-[var(--color-text)] md:col-span-4">Need help with a late change?</h2><p className="prana-sub-small max-w-2xl leading-7 text-[var(--color-text-muted)] md:col-span-8">Contact the studio before class begins. We will confirm whether your place can be moved to another session.</p></div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </TemplateWrapper>
   );
 }

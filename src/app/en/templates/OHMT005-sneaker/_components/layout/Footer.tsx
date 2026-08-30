@@ -169,7 +169,7 @@ return (
       <div className="max-w-[1440px] mx-auto px-6">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-12 pb-12 border-b border-white/10">
           <div className="col-span-2 md:col-span-1">
-            <span className="text-[1.4rem] font-black tracking-[-0.04em] uppercase block mb-4">VINUS</span>
+            <span className="text-[1.4rem] font-extrabold tracking-[-0.02em] uppercase block mb-4">VINUS</span>
             <p className="text-[0.8rem] text-white/50 leading-[var(--leading-body)] max-w-[200px]">
               {t.footer.brandDesc}
             </p>

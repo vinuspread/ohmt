@@ -20,7 +20,7 @@ function ShopPageContent() {
       {/* Header Space */}
       <div className="max-w-7xl mx-auto px-6 mb-16">
         <p className="mb-4 text-xs font-bold uppercase tracking-[0.4em] text-black/40">Museum Store</p>
-        <h1 className="text-5xl md:text-7xl font-serif mb-5 tracking-tighter">Souvenir Shop</h1>
+        <h1 className="text-5xl md:text-7xl font-serif mb-5 tracking-tight">Souvenir Shop</h1>
         <p className="max-w-2xl text-base md:text-lg leading-7 text-black/55 mb-10">
           Take home art prints, small replicas, stationery, and keepsakes inspired by the museum galleries.
         </p>
@@ -32,7 +32,7 @@ function ShopPageContent() {
             <span className="cursor-pointer hover:text-luxury-black transition-colors">Stationery</span>
             <span className="cursor-pointer hover:text-luxury-black transition-colors">Lifestyle</span>
           </div>
-          
+
           <div className="flex items-center gap-6">
             <button className="flex items-center gap-2 text-xs font-bold tracking-widest">
               Filter <Filter size={14} />
@@ -48,7 +48,7 @@ function ShopPageContent() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16">
           {products.map((product, i) => (
-            <motion.div 
+            <motion.div
               key={product.id}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -79,10 +79,10 @@ function ShopPageContent() {
                 <div className="min-w-0">
                   <p className="text-xs tracking-widest text-luxury-gray mb-1">{product.category}</p>
                   <Link href={`/en/templates/OHMT021-museum/product/${product.id}`} className="hover:text-luxury-gray transition-colors">
-                    <h4 className="text-xl font-serif tracking-tight leading-tight transition-all">{product.name}</h4>
+                    <h4 className="text-xl font-serif tracking-tight leading-[1.1] transition-all">{product.name}</h4>
                   </Link>
                 </div>
-                <span className="shrink-0 font-serif text-lg tracking-tighter">{product.price}</span>
+                <span className="shrink-0 font-serif text-lg tracking-tight">{product.price}</span>
               </div>
             </motion.div>
           ))}
@@ -103,4 +103,3 @@ export default function ShopPage() {
     </React.Suspense>
   );
 }
-

@@ -6,10 +6,10 @@ import { Menu, X } from "lucide-react";
 import { TemplateWrapper } from "./TemplateWrapper";
 
 const navItems = [
-  { label: "이미지 엔진", href: "/ko/templates/OHMT031-luma-camera/image-engine" },
-  { label: "촬영 장면", href: "/ko/templates/OHMT031-luma-camera/scenes" },
-  { label: "촬영 노트", href: "/ko/templates/OHMT031-luma-camera/stories" },
-  { label: "제품", href: "/ko/templates/OHMT031-luma-camera/shop" },
+  { label: "이미지", href: "/ko/templates/OHMT031-luma-camera/image-engine" },
+  { label: "장면", href: "/ko/templates/OHMT031-luma-camera/scenes" },
+  { label: "스토리", href: "/ko/templates/OHMT031-luma-camera/stories" },
+  { label: "구매", href: "/ko/templates/OHMT031-luma-camera/shop" },
 ];
 
 export function LumaChrome({ children }: { children: React.ReactNode }) {
@@ -18,8 +18,10 @@ export function LumaChrome({ children }: { children: React.ReactNode }) {
   return (
     <TemplateWrapper>
       <header className="fixed left-0 right-0 top-0 z-40 bg-[var(--luma-dark)] px-4 md:px-9">
-        <nav className="mx-auto flex h-16 max-w-[1380px] items-center justify-between text-white">
-          <Link href="/ko/templates/OHMT031-luma-camera" className="inline-flex min-h-12 items-center text-sm font-black tracking-[0.14em] text-white">LUMA</Link>
+        <nav className="mx-auto flex h-16 max-w-[1440px] items-center justify-between text-white">
+          <Link href="/ko/templates/OHMT031-luma-camera" className="inline-flex min-h-12 items-center text-sm font-black tracking-[0.14em] text-white">
+LUMA
+          </Link>
           <div className="hidden items-center gap-3 text-xs font-semibold text-white/70 md:flex lg:gap-6">
             {navItems.map((item) => (
               <Link key={item.href} href={item.href} className="inline-flex min-h-12 min-w-12 items-center justify-center px-2 transition-colors hover:text-white">
@@ -28,7 +30,8 @@ export function LumaChrome({ children }: { children: React.ReactNode }) {
             ))}
           </div>
           <Link href="/ko/templates/OHMT031-luma-camera/shop" className="hidden min-h-12 items-center justify-center bg-white/10 px-4 text-xs font-bold text-white transition-colors hover:bg-white hover:text-[var(--luma-dark)] md:inline-flex">
-            구매하기</Link>
+            예약하기
+          </Link>
           <button
             type="button"
             onClick={() => setMobileOpen((open) => !open)}
@@ -40,7 +43,7 @@ export function LumaChrome({ children }: { children: React.ReactNode }) {
           </button>
         </nav>
         {mobileOpen && (
-          <div className="mx-auto max-w-[1380px] border-t border-white/10 py-4 md:hidden">
+          <div className="mx-auto max-w-[1440px] border-t border-white/10 py-4 md:hidden">
             <div className="grid gap-1">
               {navItems.map((item) => (
                 <Link
@@ -57,16 +60,17 @@ export function LumaChrome({ children }: { children: React.ReactNode }) {
                 onClick={() => setMobileOpen(false)}
                 className="mt-2 inline-flex min-h-12 items-center justify-center bg-white text-xs font-bold text-[var(--luma-dark)]"
               >
-                구매하기</Link>
+                예약하기
+              </Link>
             </div>
           </div>
         )}
       </header>
       {children}
       <footer className="px-4 py-12 md:px-9">
-        <div className="mx-auto flex max-w-[1380px] flex-col gap-4 text-sm text-[var(--luma-muted)] md:flex-row md:items-center md:justify-between">
-          <p className="font-bold text-[var(--luma-ink)]">LUMA LUMA</p>
-          <p>© 2026 LUMA. LUMA Camera.</p>
+        <div className="mx-auto flex max-w-[1440px] flex-col gap-4 text-sm text-[var(--luma-muted)] md:flex-row md:items-center md:justify-between">
+          <p className="font-bold text-[var(--luma-ink)]">LUMA</p>
+          <p>© 2026 LUMA. 카메라 커머스 템플릿.</p>
         </div>
       </footer>
     </TemplateWrapper>

@@ -4,7 +4,7 @@
   "name_ko": "포르마 피규어",
   "category": "retail",
   "description": "An edition-catalog webshop for collectible designer figures: seasonal drops, line explorer, spec-driven product pages, and a light cart.",
-  "description_ko": "컬렉터블 피규어 판매에 맞춘 카탈로그형 쇼핑몰 템플릿입니다. 신규 발매, 제품 라인별 탐색, 상세 사양, 장바구니 기능을 포함합니다.",
+  "description_ko": "컬렉터블 디자이너 피규어를 위한 에디션 카탈로그형 웹샵. 시즌 드롭, 라인 탐색, 스펙 중심 상세 페이지, 가벼운 장바구니 흐름을 포함합니다.",
   "mode": "light",
   "theme": {
     "palette": {

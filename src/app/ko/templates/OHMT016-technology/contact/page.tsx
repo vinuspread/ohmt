@@ -4,7 +4,6 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 import Header from '../_components/Header'
 import Footer from '../_components/Footer'
-import FormSelect from '../_components/FormSelect'
 import { useState } from 'react'
 
 const officeData = [
@@ -34,7 +33,7 @@ export default function TechnologyContactPage() {
   })
   const [submitted, setSubmitted] = useState(false)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
@@ -143,19 +142,19 @@ export default function TechnologyContactPage() {
                       <label htmlFor="model" className="block text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text)] mb-2">
                         관심 모델
                       </label>
-                      <FormSelect
+                      <select
                         id="model"
                         name="model"
                         value={form.model}
-                        onChange={(model) => setForm((current) => ({ ...current, model }))}
+                        onChange={handleChange}
                         required
-                        placeholder="모델 선택"
-                        options={[
-                          { value: 'gen2', label: 'OmniBot Gen 2' },
-                          { value: 'prime', label: 'OmniBot Prime' },
-                          { value: 'both', label: '모델 상담 필요' },
-                        ]}
-                      />
+                        className="w-full border border-[var(--color-border)] bg-[var(--color-bg-secondary)] px-4 py-3 text-sm text-[var(--color-text)] outline-none focus:border-[var(--color-accent)] transition-colors duration-200 rounded-md"
+                      >
+                        <option value="">모델 선택</option>
+                        <option value="gen2">OmniBot Gen 2</option>
+                        <option value="prime">OmniBot Prime</option>
+                        <option value="both">모델 상담 필요</option>
+                      </select>
                     </div>
 
                     <div>
@@ -200,7 +199,7 @@ export default function TechnologyContactPage() {
                     >
                       <div className="flex items-center gap-3 mb-4">
                         <div className="flex h-8 w-8 items-center justify-center text-[var(--color-accent)] font-mono text-xs font-bold">
-                          {office.city === 'San Francisco' ? 'SF' : 'SEL'}
+                          {office.city === '샌프란시스코' ? 'SF' : 'SEL'}
                         </div>
                         <div>
                           <h3 className="text-base font-bold text-[var(--color-text)] font-heading">

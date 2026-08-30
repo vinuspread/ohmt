@@ -20,8 +20,8 @@ const PRODUCTS = [
 ];
 
 const CATEGORY_ASSETS: Record<string, { bg: string; eyebrow: string }> = {
-  collections: { bg: "/templates/OHMT002-jewelry/category-atelier.png", eyebrow: "Boutique" },
-  engagement: { bg: "/templates/OHMT002-jewelry/category-engagement.png", eyebrow: "Boutique" },
+  collections: { bg: "/templates/OHMT002-jewelry/category-atelier.png", eyebrow: "Collection" },
+  engagement: { bg: "/templates/OHMT002-jewelry/category-engagement.png", eyebrow: "Engagement" },
   "high-jewelry": { bg: "/templates/OHMT002-jewelry/category-high-jewelry.png", eyebrow: "Haute Joaillerie" },
   about: { bg: "/templates/OHMT002-jewelry/jewelry-craft.png", eyebrow: "Our Story" },
 };
@@ -148,7 +148,7 @@ function CategoryContent() {
                   <h3 className="text-2xl md:text-4xl font-serif font-bold text-neutral-900 mt-2">Chronicles of Splendor</h3>
                 </div>
                 <div className="max-w-5xl mx-auto space-y-8 relative before:absolute before:inset-y-0 before:left-4 md:before:left-1/2 before:w-[1px] before:bg-neutral-200">
-                  
+
                   {/* 1924 */}
                   <div className="relative flex flex-col md:flex-row items-start md:justify-between">
                     <div className="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-[var(--color-primary)] border-4 border-white -translate-x-[7px] md:-translate-x-2 z-10" />

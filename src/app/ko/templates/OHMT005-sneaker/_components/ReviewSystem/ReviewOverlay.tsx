@@ -2,8 +2,8 @@
 
 import React, { useState, useEffect } from 'react';
 import { useReview, Annotation } from './ReviewProvider';
-import { 
-  MessageSquarePlus, X, CheckCircle2, Trash2, 
+import {
+  MessageSquarePlus, X, CheckCircle2, Trash2,
   Clock, FileCode, ChevronRight, Filter,
   AlertCircle, PlayCircle, CheckCircle
 } from 'lucide-react';
@@ -32,7 +32,7 @@ export const ReviewOverlay: React.FC = () => {
   const handleMouseDown = (e: React.MouseEvent) => {
     const target = e.target as HTMLElement;
     if (target.closest('.review-pin') || target.closest('.review-modal') || target.closest('.review-sidebar')) return;
-    
+
     setDragStart({ x: e.pageX, y: e.pageY });
     setDragCurrent({ x: e.pageX, y: e.pageY });
     setSelectedId(null);
@@ -90,7 +90,7 @@ export const ReviewOverlay: React.FC = () => {
   };
 
   return (
-    <div 
+    <div
       className="absolute top-0 left-0 w-full min-h-full z-[100000] cursor-crosshair bg-black/5 select-none font-sans"
       onMouseDown={handleMouseDown}
       onMouseMove={handleMouseMove}
@@ -124,14 +124,14 @@ export const ReviewOverlay: React.FC = () => {
             </div>
           ) : (
             annotations.map((a, idx) => (
-              <div 
+              <div
                 key={a.id}
                 id={`card-${a.id}`}
                 onClick={() => setSelectedId(a.id)}
                 className={cn(
                   "p-6 rounded-2xl border transition-colors cursor-pointer group",
-                  selectedId === a.id 
-                    ? "bg-pink-500/10 border-pink-500/50 shadow-[0_10px_30px_rgba(236,72,153,0.15)]" 
+                  selectedId === a.id
+                    ? "bg-pink-500/10 border-pink-500/50 shadow-[0_10px_30px_rgba(236,72,153,0.15)]"
                     : "bg-white/5 border-white/5 hover:bg-white/10 hover:border-white/20"
                 )}
               >
@@ -144,7 +144,7 @@ export const ReviewOverlay: React.FC = () => {
                     </div>
                   </div>
                   <div className="flex gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <button 
+                    <button
                       onClick={(e) => { e.stopPropagation(); removeAnnotation(a.id); }}
                       className="p-1.5 rounded-lg hover:bg-rose-500/20 text-gray-500 hover:text-rose-500 transition-colors"
                     >
@@ -163,7 +163,7 @@ export const ReviewOverlay: React.FC = () => {
                   <div className="flex gap-1">
                     {(['pending', 'in-progress', 'done'] as const).map(s => (
                       s !== a.status && (
-                        <button 
+                        <button
                           key={s}
                           onClick={(e) => { e.stopPropagation(); updateAnnotationStatus(a.id, s); }}
                           className="w-6 h-6 rounded-full flex items-center justify-center bg-white/5 hover:bg-white/20 text-gray-400 hover:text-white transition-colors border border-white/5"
@@ -181,7 +181,7 @@ export const ReviewOverlay: React.FC = () => {
       </div>
 
       {!showSidebar && (
-        <button 
+        <button
           onClick={() => setShowSidebar(true)}
           className="fixed right-0 top-1/2 -translate-y-1/2 bg-pink-500 text-white p-2 rounded-l-xl z-[100011] hover:pr-4 transition-[padding-right]"
         >
@@ -191,16 +191,16 @@ export const ReviewOverlay: React.FC = () => {
 
       {/* ── Annotation Markers ── */}
       {annotations.map((a, idx) => (
-        <div 
+        <div
           key={a.id}
           className={cn(
             "review-pin absolute z-[100001] transition-transform duration-300",
             selectedId === a.id ? "scale-110" : "hover:scale-105"
           )}
-          style={{ 
-            left: a.x, 
-            top: a.y, 
-            width: a.width || 0, 
+          style={{
+            left: a.x,
+            top: a.y,
+            width: a.width || 0,
             height: a.height || 0,
             transform: a.width ? 'none' : 'translate(-50%, -50%)'
           }}
@@ -209,15 +209,15 @@ export const ReviewOverlay: React.FC = () => {
           {a.width && a.height ? (
             <div className={cn(
               "w-full h-full border-2 border-dashed rounded-xl transition-colors",
-              selectedId === a.id 
-                ? "border-pink-500 bg-pink-500/20 shadow-[0_0_30px_rgba(236,72,153,0.3)]" 
+              selectedId === a.id
+                ? "border-pink-500 bg-pink-500/20 shadow-[0_0_30px_rgba(236,72,153,0.3)]"
                 : "border-pink-500/40 bg-pink-500/5 hover:bg-pink-500/10"
             )} />
           ) : (
             <div className={cn(
               "w-10 h-10 rounded-full border-4 border-[var(--color-primary)] shadow-[0_10px_30px_rgba(0,0,0,0.5)] flex items-center justify-center transition-[transform,background-color]",
-              selectedId === a.id 
-                ? "bg-pink-500 scale-125 shadow-[0_0_30px_#ec4899]" 
+              selectedId === a.id
+                ? "bg-pink-500 scale-125 shadow-[0_0_30px_#ec4899]"
                 : "bg-pink-500/80 hover:bg-pink-500"
             )}>
               <span className="text-white text-xs font-black">{idx + 1}</span>
@@ -228,7 +228,7 @@ export const ReviewOverlay: React.FC = () => {
 
       {/* ── Selection Rect ── */}
       {dragStart && dragCurrent && (
-        <div 
+        <div
           className="absolute border-2 border-dashed border-pink-500 bg-pink-500/10 pointer-events-none rounded-xl"
           style={{
             left: Math.min(dragStart.x, dragCurrent.x),
@@ -241,11 +241,11 @@ export const ReviewOverlay: React.FC = () => {
 
       {/* ── Input Modal ── */}
       {tempPin && (
-        <div 
+        <div
           className="review-modal absolute bg-[var(--color-text-contrast)] p-8 rounded-[2.5rem] shadow-[0_50px_100px_rgba(0,0,0,0.7)] border border-white/10 backdrop-blur-3xl min-w-[380px] z-[100003] animate-in slide-in-from-bottom-5 duration-500"
-          style={{ 
-            left: tempPin.w ? tempPin.x : tempPin.x + 20, 
-            top: tempPin.h ? tempPin.y + tempPin.h + 20 : tempPin.y + 20 
+          style={{
+            left: tempPin.w ? tempPin.x : tempPin.x + 20,
+            top: tempPin.h ? tempPin.y + tempPin.h + 20 : tempPin.y + 20
           }}
           onClick={(e) => e.stopPropagation()}
           onMouseDown={(e) => e.stopPropagation()}
@@ -262,7 +262,7 @@ export const ReviewOverlay: React.FC = () => {
               <X size={20} />
             </button>
           </div>
-          <textarea 
+          <textarea
             autoFocus
             className="w-full p-6 rounded-2xl border border-white/5 bg-white/5 text-sm text-white placeholder:text-gray-600 focus:outline-none focus:ring-2 focus:ring-pink-500/50 transition-shadow h-32 resize-none leading-relaxed"
             placeholder="마스터, 여기에 수정 지시를 남겨주세요..."
@@ -270,7 +270,7 @@ export const ReviewOverlay: React.FC = () => {
             onChange={(e) => setInputText(e.target.value)}
           />
           <div className="flex gap-2 mt-4">
-            <button 
+            <button
               onClick={handleAdd}
               className="flex-1 bg-pink-500 text-white py-4 rounded-2xl text-sm font-black uppercase tracking-widest hover:bg-pink-400 transition-colors active:scale-[0.98]"
             >

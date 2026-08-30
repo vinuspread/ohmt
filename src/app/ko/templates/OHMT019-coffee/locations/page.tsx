@@ -32,7 +32,7 @@ function LocationsPageContent() {
                 매장 찾기
               </h1>
             </div>
-            <p className="text-white/40 text-sm max-w-[28ch] leading-relaxed" style={{ textWrap: "pretty" } as React.CSSProperties}>
+            <p className="text-white/40 text-sm max-w-[28ch] leading-relaxed">
               서울 다섯 곳의 매장. 일주일 내내 영업합니다.
             </p>
           </div>
@@ -91,7 +91,7 @@ function LocationsPageContent() {
             <div className="text-center mb-12">
               <p className="text-xs uppercase tracking-[0.25em] text-[var(--color-text-muted)] mb-3">파트너십</p>
               <h2 className="text-3xl font-light font-heading mb-4 text-[var(--color-text)]">가맹점 문의</h2>
-              <p className="text-sm text-[var(--color-text-muted)]">OHMT 브랜드와 함께 독특한 커피 문화를 만들어갈 파트너를 찾고 있습니다.</p>
+              <p className="text-sm text-[var(--color-text-muted)]">SLOW DROP 브랜드와 함께 독특한 커피 문화를 만들어갈 파트너를 찾고 있습니다.</p>
             </div>
             <form onSubmit={(e) => { e.preventDefault(); alert("문의가 접수되었습니다. 담당자가 곧 연락드리겠습니다."); }} className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">

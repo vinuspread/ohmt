@@ -72,18 +72,6 @@
   --shadow-none: none;
 }
 
-.ohmt021-museum :where(h1, h2, h3, h4) {
-  word-break: keep-all;
-  overflow-wrap: break-word;
-  text-wrap: balance;
-}
-
-.ohmt021-museum :where(p, blockquote, li, figcaption) {
-  word-break: keep-all;
-  overflow-wrap: break-word;
-  text-wrap: pretty;
-}
-
 /* Accessibility: Respect motion preferences */
 @media (prefers-reduced-motion: reduce) {
   *,

@@ -29,7 +29,7 @@ const mosaicArtworksKo = [
 const events = [
   { title: '작가와의 대화: 소피 로랑', date: '2026년 6월 14일', time: '15:00', type: '작가 토크', ageRating: '18세 이상', image: '/templates/OHMT003-exhibition/event-01.jpg' },
   { title: '관찰 드로잉 워크숍', date: '2026년 6월 21일', time: '10:00', type: '워크숍', ageRating: '12세 이상', image: '/templates/OHMT003-exhibition/event-02.jpg' },
-  { title: '큐레이터 전시 해설: Echoes of Form', date: '2026년 6월 28일', time: '14:00', type: '전시 해설', ageRating: '전체 관람가', image: '/templates/OHMT003-exhibition/event-01.jpg' },
+  { title: '큐레이터 전시 해설: Echoes of Form', date: '2026년 6월 28일', time: '14:00', type: '투어', ageRating: '전체 관람가', image: '/templates/OHMT003-exhibition/event-01.jpg' },
   { title: '라이브 퍼포먼스: 공간 속의 몸', date: '2026년 7월 5일', time: '19:30', type: '퍼포먼스', ageRating: '16세 이상', image: '/templates/OHMT003-exhibition/event-02.jpg' },
 ];
 
@@ -45,10 +45,10 @@ export default function HomePage() {
       const rect = containerRef.current.getBoundingClientRect();
       const elementHeight = rect.height;
       const windowHeight = window.innerHeight;
-      
+
       const scrollRange = elementHeight - windowHeight;
       if (scrollRange <= 0) return;
-      
+
       const currentScroll = -rect.top;
       const progress = Math.min(Math.max(currentScroll / scrollRange, 0), 1);
       setScrollProgress(progress);
@@ -65,8 +65,8 @@ export default function HomePage() {
   }, []);
 
   // Translate right image grid by up to -620px to perfectly dock with text bottom baseline
-  const y = scrollProgress <= 0.75 
-    ? `${(scrollProgress / 0.75) * -620}px` 
+  const y = scrollProgress <= 0.75
+    ? `${(scrollProgress / 0.75) * -620}px`
     : '-620px';
 
   const filtered = exhibitions.filter((ex) => ex.status === activeTab);
@@ -83,25 +83,22 @@ export default function HomePage() {
       {/* Section 1 - Hero */}
       <section className="min-h-screen bg-[var(--color-bg)] flex flex-col justify-between">
         <div className="max-w-[1400px] mx-auto px-6 pt-32 flex-1 flex flex-col">
-          <h1 className="font-heading font-semibold uppercase leading-[var(--leading-heading)] text-black" style={{ fontSize: 'clamp(5rem, 10vw, 9rem)', letterSpacing: '-0.04em' }}>
-            OHMT
+          <h1 className="ohmt003-home-title font-heading font-bold uppercase leading-[0.92] text-black" style={{ fontSize: 'clamp(6rem, 11.8vw, 10.75rem)', letterSpacing: '-0.04em' }}>
+            <span className="block">New art.</span>
+            <span className="block">No distance.</span>
           </h1>
           <div className="flex-1 grid md:grid-cols-2 gap-12 mt-12">
             <div className="aspect-[3/4] overflow-hidden">
               <img src="/templates/OHMT003-exhibition/hero-left.jpg" alt="" className="w-full h-full object-cover" />
             </div>
             <div className="flex flex-col justify-between">
-              <div>
-                <h2 className="max-w-[12ch] font-heading font-semibold text-black" style={{ fontSize: 'clamp(2rem, 4vw, 3.5rem)', letterSpacing: '-0.03em', lineHeight: '1.2', textWrap: 'pretty' }}>
-                  동시대 미술을 가까이 만나는 곳
+              <div className="md:w-[70%] md:self-end">
+                <h2 className="ohmt003-hero-statement font-heading font-semibold text-black" style={{ letterSpacing: '-0.03em' }}>
+                  동시대 작가의 시선으로<br />익숙한 장면을 다시 보고<br />새로운 감각을 발견합니다.
                 </h2>
                  <div className="mt-10 aspect-[3/4] overflow-hidden md:hidden">
                   <img src="/templates/OHMT003-exhibition/hero-right-sub.jpg" alt="" className="w-full h-full object-cover" />
                 </div>
-                <Link href="/ko/templates/OHMT003-exhibition/contact" className="relative overflow-hidden group inline-flex px-8 py-4 border border-black mt-10 active:scale-[0.97] transition-transform duration-100">
-                  <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-                  <span className="relative text-black group-hover:text-white text-xs font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-300">전시 관람권 예매</span>
-                </Link>
               </div>
               <div className="hidden md:block w-[70%] aspect-[3/4] overflow-hidden self-end">
                 <img src="/templates/OHMT003-exhibition/hero-right-sub.jpg" alt="" className="w-full h-full object-cover" />
@@ -132,7 +129,7 @@ export default function HomePage() {
       <section className="relative bg-[var(--color-bg)]" style={{ height: '230vh' }}>
         {/* Sticky Overlay Text (Natural CSS sticky layout) */}
         <div className="sticky z-10 pointer-events-none max-w-[1400px] mx-auto px-6 pt-24" style={{ top: '12vh' }}>
-          <h2 className="max-w-[14ch] font-heading font-semibold text-black" style={{ fontSize: 'clamp(3rem, 5vw, 4.5rem)', letterSpacing: '-0.03em', lineHeight: '1.2', textWrap: 'pretty' }}>
+          <h2 className="font-heading font-semibold uppercase text-black leading-none" style={{ fontSize: 'clamp(3rem, 5vw, 4.5rem)', letterSpacing: '-0.04em' }}>
             지금 이곳에서 만나는 동시대 미술
           </h2>
           <p className="mt-6 text-lg font-body text-black/60 leading-relaxed max-w-[36ch]">
@@ -215,7 +212,7 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-12 mb-16">
             <div>
               <p className="text-xs font-body font-semibold uppercase tracking-[0.1em] text-black/60 mb-2">전시 일정</p>
-              <h2 className="font-heading font-semibold text-black" style={{ fontSize: 'clamp(3.5rem, 5vw, 5rem)', letterSpacing: '-0.03em', lineHeight: '1.2' }}>
+              <h2 className="font-heading font-semibold uppercase text-black" style={{ fontSize: 'clamp(3.5rem, 5vw, 5rem)', letterSpacing: '-0.04em', lineHeight: '0.96' }}>
                 현재 전시
               </h2>
             </div>
@@ -245,7 +242,7 @@ export default function HomePage() {
       {/* Section 4 - Plan Your Visit */}
       <section className="bg-[var(--color-bg-dark)] py-32">
         <div className="max-w-[1400px] mx-auto px-6">
-          <h2 className="max-w-[14ch] font-heading font-semibold text-white mb-20" style={{ fontSize: 'clamp(3.5rem, 5vw, 5rem)', letterSpacing: '-0.03em', lineHeight: '1.2', textWrap: 'pretty' }}>
+          <h2 className="font-heading font-semibold uppercase text-white mb-20" style={{ fontSize: 'clamp(3.5rem, 5vw, 5rem)', letterSpacing: '-0.04em', lineHeight: '0.96' }}>
             갤러리 관람 안내
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-x-12 gap-y-14 border-t border-white/15 pt-16">
@@ -253,11 +250,11 @@ export default function HomePage() {
               { label: '주소', value: '123 West 25th Street\nNew York, NY 10001' },
               { label: '관람 시간', value: '화–금 10:00–18:00\n토–일 10:00–20:00\n월요일 휴관' },
               { label: '전화', value: '+1 (212) 555-0147' },
-              { label: '이메일', value: 'info@formagallery.com' },
+              { label: '이메일', value: 'info@vantagallery.com' },
             ].map((info) => (
               <div key={info.label} className="break-words">
                 <p className="text-xs font-body font-semibold uppercase tracking-[0.12em] text-white/35 mb-4">{info.label}</p>
-                <p className="text-[1.25rem] font-heading font-semibold text-white whitespace-pre-line leading-[var(--leading-body)]" style={{ letterSpacing: '-0.02em' }}>{info.value}</p>
+                <p className="text-[1.25rem] font-heading font-semibold text-white whitespace-pre-line leading-[var(--leading-body)] break-all" style={{ letterSpacing: '-0.02em' }}>{info.value}</p>
               </div>
             ))}
           </div>
@@ -267,7 +264,7 @@ export default function HomePage() {
       {/* Section 5 - Events */}
       <section className="bg-[var(--color-bg)] py-32">
         <div className="max-w-[1400px] mx-auto px-6">
-          <h2 className="max-w-[14ch] font-heading font-semibold text-black mb-16" style={{ fontSize: 'clamp(3.5rem, 5vw, 5rem)', letterSpacing: '-0.03em', lineHeight: '1.2', textWrap: 'pretty' }}>
+          <h2 className="font-heading font-semibold uppercase text-black mb-16" style={{ fontSize: 'clamp(3.5rem, 5vw, 5rem)', letterSpacing: '-0.04em', lineHeight: '0.96' }}>
             다가오는 프로그램
           </h2>
           <div className="grid md:grid-cols-2 gap-10">
@@ -295,7 +292,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      <p className="text-center text-[11px] leading-relaxed text-neutral-400 px-6 py-6">이 페이지는 실제 고객사나 운영 중인 업체가 아닌 OHMT의 웹사이트 디자인 템플릿 데모입니다. 표시된 브랜드명, 인물, 후기, 연락처와 성과 수치는 예시 콘텐츠입니다.</p>
       <Footer />
     </TemplateWrapper>
   );

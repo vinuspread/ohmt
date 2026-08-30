@@ -1,116 +1,62 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import Link from "next/link";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 import Navbar from "../_components/Navbar";
+import Footer from "../_components/Footer";
+import SubpageHero from "../_components/SubpageHero";
+import { ScheduleBooking } from "./ScheduleBooking";
 
 export const metadata: Metadata = {
   title: "Schedule - OHMT Yoga",
 };
-import PageHeader from "../_components/PageHeader";
-import CTASection from "../_components/CTASection";
-import Footer from "../_components/Footer";
-import { SCHEDULE } from "../constants";
 
-function ScheduleContent() {
+type PageProps = {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+};
+
+type BookingParams = {
+  preferredSlug?: string;
+  preferredDay?: string;
+  preferredTime?: string;
+  demoState?: string;
+};
+
+function firstValue(value: string | string[] | undefined) {
+  return Array.isArray(value) ? value[0] : value;
+}
+
+function ScheduleContent(bookingParams: BookingParams) {
   return (
     <TemplateWrapper theme={theme}>
       <Navbar />
-      <PageHeader
-        title="Book a Class"
-        subtitle="Plan your week and find the class that fits your rhythm."
-        image="/templates/OHMT022-yoga/subpage-schedule.jpg"
-      />
-
-      <section className="bg-[var(--color-bg)] border-b border-[var(--color-border)]">
-        {/* Header row */}
-        <div className="flex items-end justify-between px-8 md:px-14 lg:px-20 pt-12 pb-10 border-b border-[var(--color-border)]">
-          <h2
-            className="text-[length:var(--text-h3)] font-light text-[var(--color-text)] leading-[var(--leading-heading)] tracking-[-0.02em]"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            {SCHEDULE.length} Days &middot;{" "}
-            {SCHEDULE.reduce((acc, d) => acc + d.classes.length, 0)} Classes
-          </h2>
-          <p
-            className="hidden md:block text-sm text-[var(--color-text-muted)]"
-            style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-          >
-            Schedule subject to change
-          </p>
-        </div>
-
-        {/* Day columns */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7 divide-y sm:divide-y-0 sm:divide-x divide-[var(--color-border)]">
-          {SCHEDULE.map((day) => (
-            <div key={day.day} className="flex flex-col">
-              {/* Day label */}
-              <div className="px-6 py-5 border-b border-[var(--color-border)] bg-[var(--color-bg-alt)]">
-                <p
-                  className="text-xs font-medium text-[var(--color-text)] tracking-[-0.01em]"
-                  style={{ fontFamily: "var(--font-body)" }}
-                >
-                  {day.day}
-                </p>
-                <p
-                  className="text-xs tracking-[0.12em] uppercase text-[var(--color-text-muted)] mt-1"
-                  style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-                >
-                  {day.classes.length} classes
-                </p>
-              </div>
-
-              {/* Classes */}
-              <div className="flex-1 divide-y divide-[var(--color-border)]">
-                {day.classes.map((cls, idx) => (
-                  <Link
-                    key={idx}
-                    href={`/en/templates/OHMT022-yoga/classes/${cls.slug}`}
-                    className="group flex flex-col px-6 py-6 hover:bg-[var(--color-bg-alt)] transition-colors"
-                  >
-                    <p
-                      className="text-xs tracking-[0.15em] uppercase text-[var(--color-text-muted)] mb-2"
-                      style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-                    >
-                      {cls.time}
-                    </p>
-                    <p
-                      className="text-sm font-light text-[var(--color-text)] leading-[var(--leading-body)] tracking-[-0.01em] group-hover:text-[var(--color-text-muted)] transition-colors"
-                      style={{ fontFamily: "var(--font-body)" }}
-                    >
-                      {cls.name}
-                    </p>
-                    <p
-                      className="mt-1.5 text-sm text-[var(--color-text-muted)]"
-                      style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-                    >
-                      {cls.instructor}
-                    </p>
-                    <span
-                      className="mt-4 text-xs tracking-[0.18em] uppercase text-[var(--color-text)] font-medium opacity-0 group-hover:opacity-100 transition-opacity"
-                      style={{ fontFamily: "var(--font-body)" }}
-                    >
-                      Reserve →
-                    </span>
-                  </Link>
-                ))}
-              </div>
-            </div>
-          ))}
+      <main className="prana-subpage bg-white pt-16 md:pt-[76px]">
+        <SubpageHero eyebrow="BOOK A CLASS" title="Choose one clear hour for yourself." description="Pick a day, compare the available sessions, and confirm only after every detail feels right." image="/templates/OHMT022-yoga/subpage-schedule-v3.webp" imageAlt="PRANA studio prepared for the next class" />
+        <ScheduleBooking {...bookingParams} />
+      </main>
+      <section className="prana-subpage bg-[var(--color-bg-alt)] px-6 py-16 md:px-14 md:py-20 lg:px-20">
+        <div className="mx-auto grid max-w-[1180px] gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start lg:gap-20">
+          <h2 className="prana-sub-section max-w-[12ch] text-[var(--color-text)]">Arrive ten minutes early.</h2>
+          <div className="border-t border-[var(--color-text)] pt-7">
+            <p className="prana-sub-body max-w-2xl leading-8 text-[var(--color-text-muted)]">Mats and props are ready in the room. Bring water, wear clothes you can move in, and tell your teacher if anything needs extra support.</p>
+            <Link href="/en/templates/OHMT022-yoga/mypage" className="prana-sub-small mt-6 inline-flex min-h-11 items-center border-b border-[var(--color-text)] font-medium text-[var(--color-text)]">Manage an existing booking</Link>
+          </div>
         </div>
       </section>
-
-      <CTASection />
       <Footer />
     </TemplateWrapper>
   );
 }
 
-export default function SchedulePage() {
+export default async function SchedulePage({ searchParams }: PageProps) {
+  const params = await searchParams;
+
   return (
-    <Suspense>
-      <ScheduleContent />
-    </Suspense>
+    <ScheduleContent
+      preferredSlug={firstValue(params.class)}
+      preferredDay={firstValue(params.day)}
+      preferredTime={firstValue(params.time)}
+      demoState={firstValue(params.state)}
+    />
   );
 }

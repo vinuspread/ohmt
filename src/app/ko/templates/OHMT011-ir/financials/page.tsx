@@ -10,16 +10,16 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 const quarterlyData = [
-  { period: "Q1 2026", revenue: "20조 4,848억 원", netIncome: "3조 9,858억 원", eps: "5,894원", margin: "19.5%" },
-  { period: "Q4 2025", revenue: "19조 4,474억 원", netIncome: "3조 5,154억 원", eps: "5,208원", margin: "18.1%" },
-  { period: "Q3 2025", revenue: "18조 5,430억 원", netIncome: "3조 2,312억 원", eps: "4,802원", margin: "17.4%" },
-  { period: "Q2 2025", revenue: "18조 1,692억 원", netIncome: "3조 716억 원", eps: "4,564원", margin: "16.9%" },
-  { period: "Q1 2025", revenue: "17조 3,880억 원", netIncome: "2조 8,602억 원", eps: "4,256원", margin: "16.4%" },
+  { period: "Q1 2026", revenue: "$14,632M", netIncome: "$2,847M", eps: "$4.21", margin: "19.5%" },
+  { period: "Q4 2025", revenue: "$13,891M", netIncome: "$2,511M", eps: "$3.72", margin: "18.1%" },
+  { period: "Q3 2025", revenue: "$13,245M", netIncome: "$2,308M", eps: "$3.43", margin: "17.4%" },
+  { period: "Q2 2025", revenue: "$12,978M", netIncome: "$2,194M", eps: "$3.26", margin: "16.9%" },
+  { period: "Q1 2025", revenue: "$12,420M", netIncome: "$2,043M", eps: "$3.04", margin: "16.4%" },
 ];
 
 const metricsCards = [
-  { label: "시가총액", value: "402조 6,400억 원", change: "+12.3%" },
-  { label: "기업 가치", value: "437조 3,600억 원", change: "+9.8%" },
+  { label: "시가총액", value: "$287.6B", change: "+12.3%" },
+  { label: "기업 가치", value: "$312.4B", change: "+9.8%" },
   { label: "PER", value: "24.8x", change: "-" },
   { label: "배당 수익률", value: "2.40%", change: "+0.05pp" },
 ];

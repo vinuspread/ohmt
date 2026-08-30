@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./theme.css";
-
 export const metadata: Metadata = {
   title: "OHMT - 키즈 아카데미 교육 템플릿",
   description: "놀이로 시작하는 배움. 코딩부터 미술, 과학 실험까지 50가지 이상의 어린이 창의 클래스를 경험해보세요.",
@@ -8,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "OHMT - 키즈 아카데미 교육 템플릿",
     description: "놀이로 시작하는 배움. 코딩부터 미술, 과학 실험까지 50가지 이상의 어린이 창의 클래스를 경험해보세요.",
-    url: "https://ohmt.site/ko/templates/OHMT024-kids-education",
+    url: "https://ohmytemplate.com/ko/templates/OHMT024-kids-education",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT024-kids-education/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -22,8 +21,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/ko/templates/OHMT024-kids-education",
-    languages: { "en": "https://ohmt.site/en/templates/OHMT024-kids-education" },
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT024-kids-education",
+    languages: { "en": "https://ohmytemplate.com/en/templates/OHMT024-kids-education" },
   },
 };
 
@@ -31,7 +30,6 @@ export default function KidsEducationLayout({ children }: { children: React.Reac
   return (
     <div className="kids-education-ko">
       <style>{`
-        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
 
         :root {
           --font-pretendard: 'Pretendard', sans-serif;

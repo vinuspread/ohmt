@@ -54,7 +54,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
           </div>
           <div className="col-span-12 lg:col-span-5 lg:sticky lg:top-28">
             <p className="ledger-num text-sm font-bold text-[var(--color-accent)]">{product.category}</p>
-            <h1 className="mt-5 font-[family-name:var(--font-heading)] text-4xl font-semibold leading-tight sm:text-6xl">{product.name}</h1>
+            <h1 className="mt-5 font-[family-name:var(--font-heading)] text-4xl font-semibold leading-[1.05] sm:text-6xl">{product.name}</h1>
             <p className="ledger-num mt-6 text-2xl font-bold">{product.price}</p>
             <p className="mt-5 text-lg leading-8 text-[var(--color-text-muted)]">{product.description}</p>
             <div className="mt-8 border-t border-[var(--color-border)] pt-6">

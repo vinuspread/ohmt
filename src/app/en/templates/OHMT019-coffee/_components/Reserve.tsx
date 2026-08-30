@@ -27,7 +27,7 @@ export const Reserve = () => {
             <p className="text-xs uppercase tracking-[0.28em] text-white/40 mb-3">
               Join Our Newsletter
             </p>
-            <h2 className="font-heading text-xl md:text-2xl font-bold text-white leading-snug">
+            <h2 className="font-heading text-xl md:text-2xl font-bold text-white leading-[1.05]">
               Good coffee starts with good news.
             </h2>
           </div>

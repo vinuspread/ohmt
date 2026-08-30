@@ -11,7 +11,7 @@ export function FeatureBand() {
         </div>
         <div className="col-span-12 lg:col-span-5">
           <p className="ledger-num text-sm font-bold text-[var(--color-accent)]">02 · Orchard practice</p>
-          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-2xl font-semibold leading-tight sm:text-4xl">
+          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-2xl font-semibold leading-[1.05] sm:text-4xl">
             Picked for the day it reaches your kitchen.
           </h2>
           <p className="mt-5 text-base leading-7 text-[var(--color-text-muted)]">

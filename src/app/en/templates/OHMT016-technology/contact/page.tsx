@@ -4,7 +4,6 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 import Header from '../_components/Header'
 import Footer from '../_components/Footer'
-import FormSelect from '../_components/FormSelect'
 import { useState } from 'react'
 
 const officeData = [
@@ -34,7 +33,7 @@ export default function TechnologyContactPage() {
   })
   const [submitted, setSubmitted] = useState(false)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
@@ -54,7 +53,7 @@ export default function TechnologyContactPage() {
             <span className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-[var(--color-accent)] block">
               Get In Touch
             </span>
-            <h1 className="mb-6 text-[length:var(--text-h1)] font-bold tracking-[-0.03em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading">
+            <h1 className="mb-6 text-[length:var(--text-h1)] font-bold tracking-[-0.02em] leading-[var(--leading-heading)] text-[var(--color-text)] font-heading">
               Let&apos;s Build the Future Together
             </h1>
             <p className="mx-auto max-w-2xl text-base md:text-lg text-[var(--color-text-muted)] leading-[var(--leading-heading)]">
@@ -143,19 +142,19 @@ export default function TechnologyContactPage() {
                       <label htmlFor="model" className="block text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text)] mb-2">
                          Interested Model
                       </label>
-                      <FormSelect
+                      <select
                         id="model"
                         name="model"
                         value={form.model}
-                        onChange={(model) => setForm((current) => ({ ...current, model }))}
+                        onChange={handleChange}
                         required
-                        placeholder="Select a model"
-                        options={[
-                          { value: 'gen2', label: 'OmniBot Gen 2' },
-                          { value: 'prime', label: 'OmniBot Prime' },
-                          { value: 'both', label: 'Both / Not Sure' },
-                        ]}
-                      />
+                        className="w-full border border-[var(--color-border)] bg-[var(--color-bg-secondary)] px-4 py-3 text-sm text-[var(--color-text)] outline-none focus:border-[var(--color-accent)] transition-colors duration-200 rounded-md"
+                      >
+                        <option value="">Select a model</option>
+                        <option value="gen2">OmniBot Gen 2</option>
+                        <option value="prime">OmniBot Prime</option>
+                        <option value="both">Both / Not Sure</option>
+                      </select>
                     </div>
 
                     <div>

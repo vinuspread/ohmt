@@ -8,6 +8,7 @@ import { BrandSection } from "./_components/BrandSection";
 import { ProductGrid } from "./_components/ProductGrid";
 import { CollectionShowcase } from "./_components/CollectionShowcase";
 import { CategoryBanners } from "./_components/CategoryBanners";
+import { EditorialStories } from "./_components/EditorialStories";
 import { Footer } from "./_components/Footer";
 import theme from "./theme.json";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
@@ -22,7 +23,7 @@ function FashionPageContent() {
         <BrandSection />
         <CollectionShowcase />
         <CategoryBanners />
-        <p className="text-center text-[11px] leading-relaxed text-neutral-400 px-6 py-6">This page is a website design template demo by OHMT, not an actual client or operating business. The brand names, people, testimonials, contact details, and performance figures shown are example content.</p>
+        <EditorialStories />
         <Footer />
       </main>
     </TemplateWrapper>

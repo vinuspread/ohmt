@@ -13,7 +13,7 @@ export function Footer() {
       <div className="mx-auto px-4 pb-10 pt-14 sm:px-6 lg:px-14 lg:pt-20">
         <div className="grid grid-cols-12 gap-y-6 border-b border-white/12 pb-8 sm:gap-x-10 lg:gap-x-16 lg:items-center">
           <div className="col-span-12 lg:col-span-7">
-            <h2 className="font-[family-name:var(--font-heading)] text-xl font-semibold leading-tight sm:text-3xl">
+            <h2 className="font-[family-name:var(--font-heading)] text-xl font-semibold leading-[1.05] sm:text-3xl">
               Build a box around what is actually ripe this week.
             </h2>
             <Link href="/en/templates/OHMT036-amber-grove/shop" className="mt-4 inline-flex items-center justify-center rounded bg-[var(--color-secondary-accent)] px-5 py-2 text-sm font-semibold text-[var(--color-bg-dark)] transition-colors duration-200 hover:opacity-90">

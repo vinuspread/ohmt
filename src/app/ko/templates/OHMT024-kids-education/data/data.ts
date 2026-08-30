@@ -145,7 +145,6 @@ export const teachers: Teacher[] = [
   { id: "sarah", name: "Sarah Kim", role: "교육 디렉터", image: "/templates/OHMT024-kids-education/teacher-01.png", color: "var(--color-primary)" },
   { id: "mike", name: "Mike Chen", role: "STEM 교육 총괄", image: "/templates/OHMT024-kids-education/teacher-02.png", color: "var(--color-secondary)" },
   { id: "emma", name: "Emma Davis", role: "미술 수석 강사", image: "/templates/OHMT024-kids-education/teacher-03.png", color: "var(--color-accent)" },
-  { id: "luca", name: "Luca Moreno", role: "음악·움직임 강사", image: "/templates/OHMT024-kids-education/teacher-04.png", color: "var(--color-red)" },
 ];
 
 export const homeClasses: ClassItem[] = classes.slice(0, 3);

@@ -21,7 +21,7 @@ function CartPageContent() {
   ]);
 
   const updateQuantity = (id: string, delta: number) => {
-    setCartItems(prev => prev.map(item => 
+    setCartItems(prev => prev.map(item =>
       item.id === id ? { ...item, quantity: Math.max(1, item.quantity + delta) } : item
     ));
   };
@@ -84,29 +84,21 @@ function CartPageContent() {
                   transition={{ duration: 0.5 }}
                   className="flex flex-col md:flex-row gap-10 items-center md:items-start group border-b border-black/5 pb-12"
                 >
-                  <Link
-                    href={`/en/templates/OHMT004-furniture/product/${item.id}`}
-                    aria-label={`View ${item.name} details`}
-                    className="group/product-image flex h-48 w-48 shrink-0 items-center justify-center bg-white p-4 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black"
-                  >
-                    <img loading="lazy" src={item.image} alt={item.name} className="w-full h-full object-contain transition-transform duration-700 group-hover/product-image:scale-110" />
-                  </Link>
-                  
+                  <div className="w-48 h-48 bg-white flex items-center justify-center p-4">
+                    <img loading="lazy" src={item.image} alt={item.name} className="w-full h-full object-contain group-hover:scale-110 transition-transform duration-700" />
+                  </div>
+
                   <div className="flex-1 flex flex-col pt-4">
-                    <Link
-                      href={`/en/templates/OHMT004-furniture/product/${item.id}`}
-                      className="group/product-info block rounded-sm focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-black"
-                    >
-                      <div className="flex justify-between items-start mb-4">
-                        <div>
-                          <h3 className="text-sm font-bold text-[var(--color-text)] uppercase mb-1 group-hover/product-info:underline underline-offset-4">{item.name}</h3>
-                          <p className="text-xs font-medium text-[var(--color-secondary)] uppercase">{item.category}</p>
-                        </div>
-                        <span className="text-base font-bold text-[var(--color-text)]">{item.price}</span>
+                    <div className="flex justify-between items-start mb-4">
+                      <div>
+                        <h3 className="text-sm font-bold text-[var(--color-text)] uppercase mb-1">{item.name}</h3>
+                        <p className="text-xs font-medium text-[var(--color-secondary)] uppercase">{item.category}</p>
                       </div>
-                      <p className="text-sm text-[var(--color-secondary)] mb-8 max-w-sm">{item.desc}</p>
-                    </Link>
-                    
+                      <span className="text-base font-bold text-[var(--color-text)]">{item.price}</span>
+                    </div>
+
+                    <p className="text-sm text-[var(--color-secondary)] mb-8 max-w-sm">{item.desc}</p>
+
                     <div className="flex items-center justify-between mt-auto">
                       <div className="flex items-center gap-6 border border-black/10 rounded-full px-4 py-2">
                         <button onClick={() => updateQuantity(item.id, -1)} className="hover:opacity-50 transition-opacity">
@@ -130,7 +122,7 @@ function CartPageContent() {
           {/* Right: Summary Box */}
           <div className="bg-zinc-50 p-10 lg:sticky lg:top-40">
             <h2 className="text-xs font-bold uppercase mb-10 text-black/40">Bag Summary</h2>
-            
+
             <div className="space-y-6 mb-12">
               <div className="flex justify-between text-xs font-medium text-[var(--color-secondary)]">
                 <span>Member Shipping</span>
@@ -150,7 +142,7 @@ function CartPageContent() {
             <Button variant="primary" className="w-full py-6 rounded-full font-bold text-xs uppercase shadow-xl active:scale-95 flex items-center justify-center gap-3">
               Checkout <ArrowRight size={16} />
             </Button>
-            
+
             <div className="mt-10 flex flex-col gap-4">
               <p className="text-sm text-center text-[var(--color-secondary)] font-medium">Secure payment powered by Stripe. Global delivery available.</p>
             </div>

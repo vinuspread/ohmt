@@ -17,20 +17,16 @@ export function Hero() {
         <div className="flex justify-between items-start">
           <div className="flex items-center gap-2 text-xs text-white md:text-sm">
             <MapPin size={16} color="var(--accent)" weight="fill" className="hidden md:block" />
-            <span>산토리니, 그리스</span>
+            <span>88 Tidal Walk, Byron Bay, Australia</span>
           </div>
           <p className="text-white text-sm text-right max-w-[260px] leading-relaxed hidden md:block">
-            에게해의 빛과 고요를 담은 해안 리조트</p>
+            미니멀리즘 럭셔리가 깃든 해변의 은신처, SANCTUM
+          </p>
         </div>
 
-        <div className="pointer-events-none absolute inset-x-0 bottom-48 pl-6 md:pl-16">
-          <h1
-            className="font-semibold leading-[0.9] tracking-[-0.04em] text-white select-none"
-            style={{
-              fontFamily: "var(--font-body)",
-              fontSize: "clamp(80px, 16vw, 280px)",
-            }}
-          >
+        <div className="pointer-events-none absolute inset-x-0 bottom-48 pl-6 md:inset-0 md:flex md:items-center md:justify-start md:pl-16">
+          <h1 className="font-semibold text-white !text-6xl !leading-[var(--leading-display)] tracking-[-0.02em] select-none md:!text-[length:var(--text-display)] md:!leading-[var(--leading-display)]"
+              style={{ fontSize: "clamp(80px, 16vw, 280px)" }}>
             <span className="block">Slow</span>
             <span className="block">Luxuriance</span>
           </h1>
@@ -39,8 +35,8 @@ export function Hero() {
         <div className="absolute inset-x-6 bottom-0 z-10 md:static md:flex md:justify-start md:items-end md:gap-8">
           <div className="flex w-full flex-col gap-3 bg-white/15 p-4 backdrop-blur-sm md:max-w-[380px] md:gap-4 md:rounded-2xl md:p-6">
             <p className="text-xs leading-[var(--leading-heading)] text-white md:text-sm md:leading-relaxed">
-              현지 석재와 노출 콘크리트, 천연 목재를 사용해<br className="hidden md:block" />
-              건축이 절벽과 해안 풍경에 자연스럽게 이어지도록 설계했습니다.
+              주변의 석재, 질감을 살린 콘크리트, 천연 목재를 사용하여
+              건축물이 해안선 풍경의 일부가 되도록 자연스럽게 연출했습니다.
             </p>
             <div className="flex gap-3">
               {[FacebookLogo, InstagramLogo, XLogo].map((Icon, i) => (

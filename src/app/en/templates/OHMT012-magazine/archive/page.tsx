@@ -10,20 +10,20 @@ import { getAllArticles } from "../constants";
 import theme from "../theme.json";
 
 export const metadata: Metadata = {
-  title: "Archive - FOLIO Magazine",
+  title: "Archive - OHMT Magazine",
   description: "Every story we've published, gathered in one place. From design and culture to sustainability and slow living.",
   openGraph: {
-    title: "Archive - FOLIO Magazine",
+    title: "Archive - OHMT Magazine",
     description: "Every story we've published, gathered in one place.",
-    url: "https://ohmt.site/en/templates/OHMT012-magazine/archive",
-    siteName: "FOLIO",
+    url: "https://ohmytemplate.com/en/templates/OHMT012-magazine/archive",
+    siteName: "OHMT",
     images: [{ url: "/templates/OHMT012-magazine/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Archive - FOLIO Magazine",
+    title: "Archive - OHMT Magazine",
     description: "Every story we've published, gathered in one place.",
     images: ["/templates/OHMT012-magazine/og-image.jpg"],
   },
@@ -72,7 +72,7 @@ export default function ArchivePage() {
                       {article.tag}
                     </span>
                   )}
-                  <h2 className="font-[family-name:var(--theme-font-heading)] text-[1.3rem] font-normal leading-snug mb-2">
+                  <h2 className="font-[family-name:var(--theme-font-heading)] text-[1.3rem] font-normal leading-[1.05] mb-2">
                     <Link href={`/en/templates/OHMT012-magazine/article/${article.slug}`} className="hover:text-[var(--theme-accent)] transition-colors">
                       {article.title}
                     </Link>

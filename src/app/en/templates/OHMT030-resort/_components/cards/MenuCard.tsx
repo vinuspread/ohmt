@@ -31,7 +31,7 @@ export function MenuCard({
             {price}
           </span>
         </div>
-        <h3 className="mb-1 text-base font-medium leading-snug text-white">
+        <h3 className="mb-1 text-base font-medium leading-[1.05] text-white">
           {name}
         </h3>
         <p className="text-sm leading-relaxed text-white/50">{desc}</p>

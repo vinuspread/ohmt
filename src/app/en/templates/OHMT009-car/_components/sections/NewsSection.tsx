@@ -38,7 +38,7 @@ export const NewsSection = () => {
             All News <ArrowRight size={16} />
           </button>
         </div>
-        
+
          <div className="grid md:grid-cols-3 gap-px bg-[var(--theme-border)] overflow-hidden">
            {news.map((item) => (
              <div key={item.title} className="bg-black group">
@@ -49,7 +49,7 @@ export const NewsSection = () => {
                  <span className="block text-[0.62rem] font-bold uppercase tracking-[0.2em] text-[var(--theme-accent)] mb-3">
                    {item.tag}
                  </span>
-                 <h3 className="text-base font-semibold leading-relaxed mb-3 text-white">
+                 <h3 className="text-base font-semibold leading-[1.05] mb-3 text-white">
                    {item.title}
                  </h3>
                  <span className="text-[0.68rem] text-[var(--theme-text-muted)] uppercase tracking-[0.1em]">

@@ -1,82 +1,58 @@
 import Link from "next/link";
-import { NAV_ITEMS, SOCIAL_LINKS, BRAND } from "../constants";
+import { NAV_ITEMS, BRAND } from "../constants";
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--color-bg-secondary)] border-t border-[var(--color-border)]">
-      {/* Main row */}
-      <div className="flex flex-col md:flex-row border-b border-[var(--color-border)]">
-        {/* Brand */}
-        <div className="flex-1 px-8 md:px-14 lg:px-20 py-12 border-b md:border-b-0 md:border-r border-[var(--color-border)]">
+    <footer className="border-t border-[var(--color-border)] bg-white">
+      <div className="grid gap-12 px-8 py-14 md:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] md:gap-16 md:px-14 md:py-16 lg:px-20">
+        <div>
           <Link
             href="/en/templates/OHMT022-yoga"
-            className="text-base font-medium text-[var(--color-text)] tracking-[-0.01em]"
+            className="inline-flex text-lg font-medium tracking-[-0.01em] text-[var(--color-text)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-4 focus-visible:ring-offset-[var(--color-bg-secondary)]"
             style={{ fontFamily: "var(--font-body)" }}
           >
             {BRAND.name}
           </Link>
-          <p className="mt-2 text-sm text-[var(--color-text-muted)]"
-             style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}>
+          <p className="mt-3 max-w-sm text-sm font-normal leading-6 text-[var(--color-text-muted)]" style={{ fontFamily: "var(--font-body)" }}>
             {BRAND.tagline}
           </p>
         </div>
 
-        {/* Nav */}
-        <div className="flex-1 px-8 md:px-14 lg:px-20 py-12 border-b md:border-b-0 md:border-r border-[var(--color-border)]">
-          <p className="text-xs tracking-[0.22em] uppercase text-[var(--color-text-muted)] mb-6"
-             style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}>
-            Pages
-          </p>
-          <ul className="flex flex-wrap gap-x-8 gap-y-3">
-            {NAV_ITEMS.map((item) => (
-              <li key={item.href}>
-                <Link
-                  href={item.href}
-                  className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
-                  style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-                >
-                  {item.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
+        <div className="grid gap-10 sm:grid-cols-[minmax(0,2fr)_minmax(12rem,1fr)] sm:gap-12">
+          <nav aria-label="Footer navigation">
+            <h2 className="text-sm font-medium text-[var(--color-text)]" style={{ fontFamily: "var(--font-body)" }}>Pages</h2>
+            <ul className="mt-5 grid grid-cols-2 gap-x-8 gap-y-3">
+              {NAV_ITEMS.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-sm font-normal text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-4 focus-visible:ring-offset-[var(--color-bg-secondary)]"
+                    style={{ fontFamily: "var(--font-body)" }}
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
-        {/* Connect */}
-        <div className="flex-1 px-8 md:px-14 lg:px-20 py-12">
-          <p className="text-xs tracking-[0.22em] uppercase text-[var(--color-text-muted)] mb-6"
-             style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}>
-            Connect
-          </p>
-          <ul className="flex flex-wrap gap-x-8 gap-y-3">
-            {SOCIAL_LINKS.map((link) => (
-              <li key={link.label}>
-                <a
-                  href={link.href}
-                  className="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
-                  style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-                >
-                  {link.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <div>
+            <h2 className="text-sm font-medium text-[var(--color-text)]" style={{ fontFamily: "var(--font-body)" }}>Contact</h2>
+            <a
+              href={`mailto:${BRAND.email}`}
+              className="mt-5 inline-flex text-sm font-normal text-[var(--color-text-muted)] transition-colors hover:text-[var(--color-text)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-accent)] focus-visible:ring-offset-4 focus-visible:ring-offset-[var(--color-bg-secondary)]"
+              style={{ fontFamily: "var(--font-body)" }}
+            >
+              {BRAND.email}
+            </a>
+          </div>
         </div>
       </div>
 
-      {/* Bottom bar */}
-      <div className="flex items-center justify-between px-8 md:px-14 lg:px-20 py-6">
-        <p className="text-sm text-[var(--color-text-muted)]"
-           style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}>
+      <div className="border-t border-[var(--color-border)] px-8 py-5 md:px-14 lg:px-20">
+        <p className="text-xs font-normal text-[var(--color-text-muted)]" style={{ fontFamily: "var(--font-body)" }}>
           &copy; {BRAND.copyright}
         </p>
-        <a
-          href={`mailto:${BRAND.email}`}
-          className="text-xs text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
-          style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-        >
-          {BRAND.email}
-        </a>
       </div>
     </footer>
   );

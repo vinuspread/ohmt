@@ -16,7 +16,7 @@ function CuratorNotePageContent() {
     "souvenirShop": `Souvenir Shop`
   },
   "hero": {
-    "badge": `Musei Vaticani - CURA Curation`,
+    "badge": `Musei Vaticani - OHMT Curation`,
     "title1": `THE ETERNAL`,
     "title2": `Masterpieces`,
     "cta": `Begin Journey`
@@ -40,7 +40,7 @@ function CuratorNotePageContent() {
     "p2": `Our curation seeks to extract the structural brilliance from the overwhelming ornamentation. By highlighting works like the Laocoon or the delicate Pieta in an isolated, digital space, we allow their raw theological and emotional gravity to echo without the noise of the physical gallery crowd.`,
     "p3": `Every brushstroke captured by Raphael, every chisel strike endured by Michelangelo - these are not relics of the past. They are continuing dialogues on the nature of humanity, suffering, knowledge, and divinity.`,
     "curator": `Curator`,
-    "curatorName": `CURA Exhibition`
+    "curatorName": `OHMT Exhibition`
   },
   "ourStory": {
     "heritage": `MUSEI VATICANI - 500 YEARS OF HERITAGE`,
@@ -157,31 +157,31 @@ return (
       <Header />
       <main className="min-h-screen bg-[var(--color-accent)] text-[var(--color-primary)] pt-20 md:pt-40 pb-16 md:pb-32">
       <div className="max-w-4xl mx-auto px-6">
-        
-        <motion.div 
+
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="mb-20 text-center"
         >
           <span className="text-xs uppercase font-bold tracking-[0.5em] text-black/40 block mb-6">{t.curatorNote.editorial}</span>
-          <h1 className="text-5xl md:text-8xl font-serif leading-[var(--leading-heading)] tracking-tighter break-keep">{t.curatorNote.title}</h1>
+          <h1 className="text-5xl md:text-8xl font-serif leading-[var(--leading-heading)] tracking-tight break-keep">{t.curatorNote.title}</h1>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4, duration: 1 }}
           className="aspect-[21/9] w-full bg-black mb-24 overflow-hidden relative"
         >
-          <img 
-            src="/templates/OHMT021-museum/curator.png" 
+          <img
+            src="/templates/OHMT021-museum/curator.png"
             alt="Curator Note Architecture"
             className="w-full h-full object-cover grayscale opacity-90"
           />
         </motion.div>
 
-        <motion.article 
+        <motion.article
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6, duration: 1 }}
@@ -196,7 +196,7 @@ return (
           <p className="mt-8 break-keep">
             {t.curatorNote.p3}
           </p>
-          
+
           <div className="border-t border-black/20 mt-20 pt-10">
             <span className="text-xs uppercase tracking-[0.4em] font-bold block mb-2">{t.curatorNote.curator}</span>
             <span className="font-serif text-2xl">{t.curatorNote.curatorName}</span>
@@ -219,4 +219,3 @@ export default function CuratorNotePage() {
     </React.Suspense>
   );
 }
-

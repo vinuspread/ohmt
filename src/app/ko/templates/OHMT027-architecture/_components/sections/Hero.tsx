@@ -42,14 +42,17 @@ export function Hero() {
       <div className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 pt-16 pb-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
           <h1 className="font-heading font-normal text-5xl md:text-6xl lg:text-7xl leading-[var(--leading-heading)] tracking-[-0.02em] text-[#1A1A1A] max-w-3xl">
-            삶과 장소에 맞는<br />
-            공간을 설계합니다.</h1>
+            삶과 장소에 맞는
+            <br />
+            공간을 설계합니다.
+          </h1>
           <div className="pb-2">
             <Link
               href="/ko/templates/OHMT027-architecture/projects"
               className="font-sans text-xs font-medium tracking-[0.12em] text-[#1A1A1A] uppercase border-b border-[#1A1A1A] pb-1 hover:text-[#B07D4F] hover:border-[#B07D4F] transition-colors"
             >
-              프로젝트 살펴보기 →</Link>
+              프로젝트 살펴보기 →
+            </Link>
           </div>
         </div>
       </div>

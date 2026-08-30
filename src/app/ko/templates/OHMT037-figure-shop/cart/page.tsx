@@ -3,8 +3,8 @@ import { CartView } from '../_components/sections/CartView'
 import { SubHero } from '../_components/ui/SubHero'
 
 export const metadata: Metadata = {
-  title: 'FORMA 피규어 | 장바구니',
-  description: '장바구니에 담은 FORMA 피규어와 수량, 주문 금액을 확인합니다.',
+  title: 'OHMT - Forma Figures | Cart',
+  description: '장바구니에 담은 FORMA 에디션과 주문 요약.',
 }
 
 export default function CartPage() {
@@ -12,8 +12,8 @@ export default function CartPage() {
     <div className="pt-16">
       <SubHero
         title="장바구니"
-        label="주문 확인"
-        description={'담아둔 피규어의 에디션과 색상을 확인하고,\n주문할 수량을 다시 살펴보세요.'}
+        label="주문"
+        description="담아둔 에디션, 컬러웨이, 수량을 한 번 더 확인합니다."
       />
       <CartView />
     </div>

@@ -25,7 +25,7 @@ function StudioContactPageContent() {
 
             <PageHeader
                 category={"문의하기"}
-                title={<>{"새 프로젝트를"} <br /><span className="font-normal">{"함께 시작해 보세요."}</span></>}
+                title={<>{"새로운 공간을"} <br /><span className="font-normal">{"향한 여정."}</span></>}
                 breadcrumb={["Studio", "문의하기"]}
             />
 
@@ -38,20 +38,20 @@ function StudioContactPageContent() {
                             <div className="space-y-8 md:space-y-16">
                                 <div className="space-y-4 md:space-y-6">
                                     <span className="text-xs md:text-xs text-black/40 font-bold block uppercase">
-                                        {"연락처"}
+                                        {"연락하기"}
                                     </span>
                                     <h2 className="text-[length:var(--text-h1)] font-bold leading-[var(--leading-heading)] text-black break-keep">
                                         {"프로젝트 문의"}
                                     </h2>
                                     <p className="text-sm text-black/50 leading-relaxed font-normal break-keep max-w-[480px]">
-                                        {"공간의 용도와 위치, 예상 일정과 예산, 필요한 업무 범위를 알려주세요. 내용을 확인한 뒤 상담 가능 일정과 진행 방법을 안내해 드립니다."}
+                                        {"프로젝트의 비전과 일정, 구체적인 목표를 공유해 주세요. 빛과 그림자, 질감과 형태를 조율하여 오직 당신만을 위한 차원 높은 공간을 함께 빚어가겠습니다."}
                                     </p>
                                 </div>
 
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 md:gap-8 border-t border-black/5 pt-8 md:pt-12">
                                     <div className="space-y-2 group cursor-pointer">
                                         <span className="text-xs md:text-xs font-bold text-black/50 flex items-center gap-2 uppercase">
-                                            <Mail size={12} /> {"스튜디오 연락처"}
+                                            <Mail size={12} /> {"직접 연락처"}
                                         </span>
                                         <h3 className="text-base md:text-lg lg:text-xl font-bold text-black hover:opacity-60 transition-opacity duration-300">
                                             hello@ohmytemplate.com
@@ -87,13 +87,13 @@ function StudioContactPageContent() {
                                     </div>
                                     <div className="space-y-2">
                                         <h3 className="text-2xl font-bold tracking-tight text-white break-keep">
-                                            {"문의가 정상적으로 접수되었습니다."}
+                                            {"메시지가 성공적으로 전달되었습니다."}
                                         </h3>
                                         <p className="text-sm text-white/50 font-normal break-keep">
-                                            {"내용을 확인한 뒤 입력하신 이메일로 상담 절차를 안내해 드리겠습니다."}
+                                            {"보내주신 문의 사항을 확인한 후 빠른 시일 내에 기재해주신 연락처로 상담 안내를 드리겠습니다."}
                                         </p>
                                     </div>
-                                    <button 
+                                    <button
                                         onClick={() => setSubmitted(false)}
                                         className="text-xs font-bold uppercase tracking-widest text-white/40 hover:text-white transition-colors"
                                     >
@@ -109,7 +109,7 @@ function StudioContactPageContent() {
                                         <input
                                             type="text"
                                             className="w-full bg-transparent outline-none text-sm font-bold text-white placeholder-white/25 placeholder:text-white/20"
-                                            placeholder={"성함 또는 회사명을 입력해 주세요"}
+                                            placeholder={"성함 또는 기업명을 입력해 주세요"}
                                             required
                                         />
                                     </div>
@@ -128,11 +128,11 @@ function StudioContactPageContent() {
 
                                     <div className="space-y-3 border-b border-white/5 pb-4 focus-within:border-white transition-colors duration-500">
                                         <label className="text-xs md:text-xs font-bold text-white/40 block uppercase">
-                                            {"프로젝트 내용"}
+                                            {"프로젝트 상세 내용"}
                                         </label>
                                         <textarea
                                             className="w-full bg-transparent outline-none text-[14.5px] font-bold text-white placeholder-white/25 placeholder:text-white/20 min-h-[100px] resize-none"
-                                            placeholder={"공간의 용도와 위치, 규모, 예상 일정과 예산을 적어주세요."}
+                                            placeholder={"구상 중이신 공간의 성격과 디자인 비전을 자유롭게 적어주세요..."}
                                             required
                                         />
                                     </div>
@@ -143,7 +143,7 @@ function StudioContactPageContent() {
                                             className="w-full h-[56px] md:h-[64px] bg-white hover:bg-neutral-200 text-black font-bold text-xs transition-all duration-500 flex items-center justify-center gap-4 group/btn"
                                         >
                                             <span className="font-bold uppercase tracking-widest text-xs">
-                                                {"문의 보내기"}
+                                                {"메시지 전송"}
                                             </span>
                                             <ArrowUpRight size={14} className="text-black transition-colors duration-500" />
                                         </button>

@@ -32,7 +32,7 @@ export function Footer() {
 
             {/* Brand */}
             <div className="md:col-span-1">
-              <p className="text-white text-xl font-semibold tracking-widest mb-4">OHMT</p>
+              <p className="text-white text-xl font-semibold tracking-widest mb-4">SANCTUM</p>
               <p className="resort-body text-sm text-white/50 mb-6">
                 A coastal sanctuary of quiet luxury, designed to dissolve the distance between you and the sea.
               </p>
@@ -92,7 +92,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="resort-container border-t border-white/10 py-6">
           <div className="flex flex-col md:flex-row justify-between gap-3 text-xs text-white/25">
-            <p>&copy; 2026 OHMT.</p>
+            <p>&copy; 2026 SANCTUM.</p>
             <p>Privacy Policy &middot; Terms of Use</p>
             <p>Template by OHMT.</p>
           </div>

@@ -20,9 +20,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { slug } = await params
   const post = journalPosts.find((p) => p.slug === slug)
-  if (!post) return { title: '저널 | 아틀리에 하우스' }
+  if (!post) return { title: 'Atelier House - 저널' }
   return {
-    title: `${post.title} | 아틀리에 하우스`,
+    title: `Atelier House - ${post.title}`,
     description: post.excerpt,
   }
 }
@@ -65,7 +65,7 @@ export default async function JournalDetailPage({
           </div>
           <div className="mt-8 flex flex-col gap-5">
             {post.body.map((para, i) => (
-              <p key={i} className="whitespace-pre-line text-base leading-relaxed text-[var(--color-text)] word-keep-all">
+              <p key={i} className="text-base leading-relaxed text-[var(--color-text)] word-keep-all">
                 {para}
               </p>
             ))}

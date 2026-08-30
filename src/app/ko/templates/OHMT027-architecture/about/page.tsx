@@ -14,15 +14,14 @@ export const metadata: Metadata = {
   openGraph: {
     title: "소개 | OHMT 건축 스튜디오",
     description: "OHMT의 설계 철학과 스튜디오의 시작, 프로젝트를 함께 만드는 사람들을 소개합니다.",
-    url: "https://ohmt.site/ko/templates/OHMT027-architecture/about",
+    url: "https://ohmytemplate.com/ko/templates/OHMT027-architecture/about",
     images: [{ url: "/templates/OHMT027-architecture/og-image.jpg" }],
   },
-  robots: { index: false, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/ko/templates/OHMT027-architecture/about",
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT027-architecture/about",
     languages: {
-      "en": "https://ohmt.site/en/templates/OHMT027-architecture/about",
-      "ko": "https://ohmt.site/ko/templates/OHMT027-architecture/about",
+      "en": "https://ohmytemplate.com/en/templates/OHMT027-architecture/about",
+      "ko": "https://ohmytemplate.com/ko/templates/OHMT027-architecture/about",
     },
   },
 };
@@ -57,19 +56,20 @@ export default function AboutPage() {
     <TemplateWrapper>
       <div className="relative min-h-screen bg-white text-[#1A1A1A] font-sans antialiased overflow-hidden selection:bg-[#1A1A1A] selection:text-white">
         <Header />
-        
+
         <main className="pt-32 pb-24">
           {/* Hero Section */}
           <section className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 py-16">
             <ScrollReveal>
               <div className="space-y-6 max-w-4xl">
                 <span className="font-sans text-xs font-medium tracking-[0.15em] text-[#888888] uppercase block">
-                  스튜디오</span>
+                  스튜디오
+                </span>
                 <h1 className="font-heading font-normal text-5xl md:text-6xl lg:text-7xl leading-[var(--leading-heading)] text-[#1A1A1A]">
-                  OHMT 소개</h1>
-                <p className="max-w-3xl pt-4 font-heading text-2xl font-normal leading-[var(--leading-body)] text-[#888888] md:text-3xl">
-                  <span className="md:block">공간은 사람의 일상과 관계를 바꿀 수 있습니다.</span>{" "}
-                  <span className="md:block">OHMT는 구조와 재료, 동선을 세심하게 다듬어 오래 사용할 수 있는 공간을 설계합니다.</span>
+                  OHMT 소개
+                </h1>
+                <p className="font-heading font-normal text-2xl md:text-3xl leading-[var(--leading-body)] text-[#888888] pt-4">
+                  공간은 사람의 일상과 관계를 바꿀 수 있습니다. OHMT는 구조와 재료, 동선을 세심하게 다듬어 오래 사용할 수 있는 공간을 설계합니다.
                 </p>
               </div>
             </ScrollReveal>
@@ -92,16 +92,15 @@ export default function AboutPage() {
               <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
                 <div className="lg:col-span-4">
                   <h2 className="font-heading font-normal text-3xl md:text-4xl text-[#1A1A1A]">
-                    오래 머무는 공간</h2>
+                    오래 머무는 공간
+                  </h2>
                 </div>
                 <div className="lg:col-span-8 font-sans text-base leading-loose text-[#888888] space-y-6">
                   <p>
-                    <span className="md:block">전체 공간의 흐름부터 손이 닿는 작은 디테일까지 함께 설계합니다.</span>{" "}
-                    <span className="md:block">재료의 질감과 빛, 비어 있는 여백이 자연스럽게 이어지도록 조율합니다.</span>
+                    전체 공간의 흐름부터 손이 닿는 작은 디테일까지 함께 설계합니다. 재료의 질감과 빛, 비어 있는 여백이 자연스럽게 이어지도록 조율합니다.
                   </p>
                   <p>
-                    <span className="md:block">건축과 인테리어, 브랜드 경험을 하나의 공간 안에서 연결합니다.</span>{" "}
-                    <span className="md:block">재료를 과장하지 않고 본래의 성질을 살리며, 사용 목적에 맞게 공간을 명확하게 구성합니다.</span>
+                    건축과 인테리어, 브랜드 경험을 하나의 공간 안에서 연결합니다. 재료를 과장하지 않고 본래의 성질을 살리며, 사용 목적에 맞게 공간을 명확하게 구성합니다.
                   </p>
                 </div>
               </div>
@@ -114,7 +113,8 @@ export default function AboutPage() {
               <ScrollReveal>
                 <div className="border-b border-[#E0E0E0] pb-8 mb-16">
                   <h2 className="font-heading font-normal text-3xl md:text-4xl text-[#1A1A1A]">
-                    스튜디오의 시작</h2>
+                    스튜디오의 시작
+                  </h2>
                 </div>
               </ScrollReveal>
 
@@ -143,7 +143,8 @@ export default function AboutPage() {
             <ScrollReveal>
               <div className="border-b border-[#E0E0E0] pb-8 mb-16">
                 <h2 className="font-heading font-normal text-3xl md:text-4xl text-[#1A1A1A]">
-                  함께하는 사람들</h2>
+                  함께하는 사람들
+                </h2>
               </div>
             </ScrollReveal>
 

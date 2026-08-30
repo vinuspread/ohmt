@@ -87,7 +87,7 @@ function CarModelDetailContent({ params }: { params: { slug: string } }) {
             <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent" />
             <div className="absolute bottom-8 left-0 right-0 max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)]">
               <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-3 block">Our Lineup</span>
-              <h1 className="text-[length:var(--text-display)] font-bold tracking-[-0.04em] leading-none mb-2">{model.name}</h1>
+              <h1 className="text-[length:var(--text-display)] font-bold tracking-[-0.02em] leading-none mb-2">{model.name}</h1>
               <p className="text-[0.8rem] uppercase tracking-[0.2em] text-white/50">{model.type}</p>
             </div>
           </div>

@@ -74,10 +74,10 @@ export default function HomePage() {
       const rect = containerRef.current.getBoundingClientRect();
       const elementHeight = rect.height;
       const windowHeight = window.innerHeight;
-      
+
       const scrollRange = elementHeight - windowHeight;
       if (scrollRange <= 0) return;
-      
+
       const currentScroll = -rect.top;
       const progress = Math.min(Math.max(currentScroll / scrollRange, 0), 1);
       setScrollProgress(progress);
@@ -94,8 +94,8 @@ export default function HomePage() {
   }, []);
 
   // Translate right image grid by up to -620px to perfectly dock with text bottom baseline
-  const y = scrollProgress <= 0.75 
-    ? `${(scrollProgress / 0.75) * -620}px` 
+  const y = scrollProgress <= 0.75
+    ? `${(scrollProgress / 0.75) * -620}px`
     : '-620px';
 
   const filtered = exhibitions.filter((ex) => ex.status === activeTab);
@@ -113,13 +113,14 @@ export default function HomePage() {
       <section className="min-h-screen bg-[var(--color-bg)] flex flex-col justify-between">
         <div className="max-w-[1400px] mx-auto px-6 pt-32 flex-1 flex flex-col">
           <h1
-            className="font-heading font-semibold uppercase leading-none text-black"
+            className="ohmt003-home-title font-heading font-bold uppercase leading-[0.92] text-black"
             style={{
-              fontSize: 'clamp(5rem, 10vw, 9rem)',
-              letterSpacing: '-0.04em',
+              fontSize: 'clamp(6rem, 11.8vw, 10.75rem)',
+              letterSpacing: '-0.02em',
             }}
           >
-            OHMT
+            <span className="block">New art.</span>
+            <span className="block">No distance.</span>
           </h1>
 
           <div className="flex-1 grid md:grid-cols-2 gap-12 mt-12">
@@ -132,16 +133,14 @@ export default function HomePage() {
             </div>
 
             <div className="flex flex-col justify-between">
-              <div>
+              <div className="md:w-[70%] md:self-end">
                 <h2
-                  className="font-heading font-semibold uppercase text-black"
+                  className="ohmt003-hero-statement font-heading font-semibold text-black"
                   style={{
-                    fontSize: 'clamp(2rem, 4vw, 3.5rem)',
-                    letterSpacing: '-0.03em',
-                    lineHeight: '0.96',
+                    letterSpacing: '-0.02em',
                   }}
                 >
-                  Bold Art<br />and New Ideas
+                  Contemporary artists<br />reframe how we see<br />the world around us.
                 </h2>
                 <div className="mt-10 aspect-[3/4] overflow-hidden md:hidden">
                   <img
@@ -150,15 +149,6 @@ export default function HomePage() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <Link
-                  href="/en/templates/OHMT003-exhibition/contact"
-                  className="relative overflow-hidden group inline-flex px-8 py-4 border border-black mt-10 active:scale-[0.97] transition-transform duration-100"
-                >
-                  <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
-                  <span className="relative text-black group-hover:text-white text-xs font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-300">
-                    Get Tickets
-                  </span>
-                </Link>
               </div>
 
               <div className="hidden md:block w-[70%] aspect-[3/4] overflow-hidden self-end">
@@ -214,7 +204,7 @@ export default function HomePage() {
         <div className="sticky z-10 pointer-events-none max-w-[1400px] mx-auto px-6 pt-24" style={{ top: '12vh' }}>
           <h2
             className="font-heading font-semibold uppercase text-black"
-            style={{ fontSize: 'clamp(3rem, 5vw, 4.5rem)', letterSpacing: '-0.04em', lineHeight: '0.96' }}
+            style={{ fontSize: 'clamp(3rem, 5vw, 4.5rem)', letterSpacing: '-0.02em', lineHeight: '0.96' }}
           >
             Collect What<br />Moves You
           </h2>
@@ -232,7 +222,7 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out flex flex-col justify-end p-6 z-10">
                 <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300 ease-out">
                   <span className="text-xs text-white/60 tracking-[0.2em] uppercase font-bold">{mosaicArtworksEn[0].artist}</span>
-                  <h4 className="font-serif text-lg md:text-xl font-bold text-white mt-1">{mosaicArtworksEn[0].title}</h4>
+                  <h4 className="font-heading text-lg md:text-xl font-bold text-white mt-1">{mosaicArtworksEn[0].title}</h4>
                   <p className="text-xs text-white/40 mt-1 font-body">{mosaicArtworksEn[0].year}</p>
                 </div>
               </div>
@@ -242,7 +232,7 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out flex flex-col justify-end p-6 z-10">
                 <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300 ease-out">
                   <span className="text-xs text-white/60 tracking-[0.2em] uppercase font-bold">{mosaicArtworksEn[1].artist}</span>
-                  <h4 className="font-serif text-lg md:text-xl font-bold text-white mt-1">{mosaicArtworksEn[1].title}</h4>
+                  <h4 className="font-heading text-lg md:text-xl font-bold text-white mt-1">{mosaicArtworksEn[1].title}</h4>
                   <p className="text-xs text-white/40 mt-1 font-body">{mosaicArtworksEn[1].year}</p>
                 </div>
               </div>
@@ -258,7 +248,7 @@ export default function HomePage() {
                   <div className="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out flex flex-col justify-end p-6 z-10">
                     <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300 ease-out">
                       <span className="text-xs text-white/60 tracking-[0.2em] uppercase font-bold">{artwork.artist}</span>
-                      <h4 className="font-serif text-lg md:text-xl font-bold text-white mt-1">{artwork.title}</h4>
+                      <h4 className="font-heading text-lg md:text-xl font-bold text-white mt-1">{artwork.title}</h4>
                       <p className="text-xs text-white/40 mt-1 font-body">{artwork.year}</p>
                     </div>
                   </div>
@@ -273,7 +263,7 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out flex flex-col justify-end p-6 z-10">
                 <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300 ease-out">
                   <span className="text-xs text-white/60 tracking-[0.2em] uppercase font-bold">{mosaicArtworksEn[5].artist}</span>
-                  <h4 className="font-serif text-lg md:text-xl font-bold text-white mt-1">{mosaicArtworksEn[5].title}</h4>
+                  <h4 className="font-heading text-lg md:text-xl font-bold text-white mt-1">{mosaicArtworksEn[5].title}</h4>
                   <p className="text-xs text-white/40 mt-1 font-body">{mosaicArtworksEn[5].year}</p>
                 </div>
               </div>
@@ -283,7 +273,7 @@ export default function HomePage() {
               <div className="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-out flex flex-col justify-end p-6 z-10">
                 <div className="translate-y-4 group-hover:translate-y-0 transition-transform duration-300 ease-out">
                   <span className="text-xs text-white/60 tracking-[0.2em] uppercase font-bold">{mosaicArtworksEn[6].artist}</span>
-                  <h4 className="font-serif text-lg md:text-xl font-bold text-white mt-1">{mosaicArtworksEn[6].title}</h4>
+                  <h4 className="font-heading text-lg md:text-xl font-bold text-white mt-1">{mosaicArtworksEn[6].title}</h4>
                   <p className="text-xs text-white/40 mt-1 font-body">{mosaicArtworksEn[6].year}</p>
                 </div>
               </div>
@@ -304,7 +294,7 @@ export default function HomePage() {
                 className="font-heading font-semibold uppercase text-black"
                 style={{
                   fontSize: 'clamp(3.5rem, 5vw, 5rem)',
-                  letterSpacing: '-0.04em',
+                  letterSpacing: '-0.02em',
                   lineHeight: '0.96',
                 }}
               >
@@ -355,7 +345,7 @@ export default function HomePage() {
             className="font-heading font-semibold uppercase text-white mb-20"
             style={{
               fontSize: 'clamp(3.5rem, 5vw, 5rem)',
-              letterSpacing: '-0.04em',
+              letterSpacing: '-0.02em',
               lineHeight: '0.96',
             }}
           >
@@ -367,7 +357,7 @@ export default function HomePage() {
               { label: 'Address', value: '123 West 25th Street\nNew York, NY 10001' },
               { label: 'Open Hours', value: 'Tue-Fri 10am-6pm\nSat-Sun 10am-8pm\nMon Closed' },
               { label: 'Phone', value: '+1 (212) 555-0147' },
-              { label: 'Email', value: 'info@formagallery.com' },
+              { label: 'Email', value: 'info@vantagallery.com' },
             ].map((info) => (
               <div key={info.label} className="break-words">
                 <p className="text-xs font-body font-semibold uppercase tracking-[0.12em] text-white/35 mb-4">
@@ -389,7 +379,7 @@ export default function HomePage() {
             className="font-heading font-semibold uppercase text-black mb-16"
             style={{
               fontSize: 'clamp(3.5rem, 5vw, 5rem)',
-              letterSpacing: '-0.04em',
+              letterSpacing: '-0.02em',
               lineHeight: '0.96',
             }}
           >
@@ -419,7 +409,7 @@ export default function HomePage() {
                     </span>
                   </div>
                 </div>
-                <h3 className="mt-3 text-[1.25rem] font-heading font-semibold tracking-[-0.02em] text-black leading-tight">
+                <h3 className="mt-3 text-[1.25rem] font-heading font-semibold tracking-[-0.02em] text-black leading-[1.05]">
                   {evt.title}
                 </h3>
               </div>
@@ -438,7 +428,6 @@ export default function HomePage() {
       </section>
 
       {/* Footer */}
-      <p className="text-center text-[11px] leading-relaxed text-neutral-400 px-6 py-6">This page is a website design template demo by OHMT, not an actual client or operating business. The brand names, people, testimonials, contact details, and performance figures shown are example content.</p>
       <Footer />
     </TemplateWrapper>
   );

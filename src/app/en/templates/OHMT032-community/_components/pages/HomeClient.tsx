@@ -41,7 +41,7 @@ export function HomeClient() {
         <div className="max-w-3xl">
           <p className="inline-flex items-center gap-1.5 text-xs font-semibold text-[var(--color-accent)]">
             <Sparkles size={24} strokeWidth={1.8} />
-            AGORA Community
+            OHMT Community
           </p>
           <h1 className="mt-2.5 text-3xl font-semibold leading-[var(--leading-heading)] text-[var(--color-text)] md:text-5xl">
             A community where questions become the next action

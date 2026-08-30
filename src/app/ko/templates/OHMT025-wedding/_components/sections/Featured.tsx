@@ -1,8 +1,7 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring, useReducedMotion } from "framer-motion";
-import Link from "next/link";
 import { projects } from "../../data/data";
 
 export default function Featured() {
@@ -45,9 +44,11 @@ export default function Featured() {
             className="font-[family-name:var(--font-heading)] font-light capitalize text-[var(--color-text)] leading-[var(--leading-heading)]"
             style={{ fontSize: "clamp(3rem, 7vw, 5.5rem)" }}
           >
-            선별한<br />웨딩</h2>
+            선별한<br />웨딩
+          </h2>
           <p className="hidden lg:block max-w-[240px] text-[0.85rem] text-[var(--color-text-muted)] leading-relaxed text-right font-[family-name:var(--font-body)]">
-            다양한 장소와 분위기에서 기록한 웨딩 사진을 살펴보세요.</p>
+            다양한 장소와 분위기에서 기록한 웨딩 사진을 살펴보세요.
+          </p>
         </div>
 
         <div className="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:grid-rows-2 lg:gap-6">
@@ -79,7 +80,8 @@ export default function Featured() {
             href="/ko/templates/OHMT025-wedding/contact"
             className="inline-flex items-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-[var(--color-text)] border-b border-[var(--color-text)] pb-1 hover:text-[var(--color-primary)] hover:border-[var(--color-primary)] transition-colors duration-300"
           >
-            촬영 문의</a>
+            촬영 문의
+          </a>
         </div>
       </div>
     </section>
@@ -103,34 +105,28 @@ function GalleryItem({ project, className = "", aspectClass = "aspect-[3/4]" }: 
       viewport={{ once: true, margin: "-10%" }}
       transition={{ duration: 1.1, ease: [0.22, 0.61, 0.36, 1] }}
     >
-      <Link
-        href={`/ko/templates/OHMT025-wedding/gallery/${project.id}`}
-        className="block h-full focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-primary)]"
-        aria-label={`${project.title} 웨딩 스토리 보기`}
-      >
-        <div className={`relative overflow-hidden ${aspectClass}`}>
-          <motion.img
-            src={project.image}
-            alt={project.title}
-            className="h-full w-full object-cover"
-            animate={{ scale: hovered ? 1.05 : 1 }}
-            transition={{ duration: 0.9, ease: [0.22, 0.61, 0.36, 1] }}
-          />
-          <motion.div
-            className="absolute inset-x-0 bottom-0 px-6 py-5 bg-gradient-to-t from-[var(--color-primary)]/90 to-transparent"
-            initial={{ y: "100%" }}
-            animate={{ y: hovered ? "0%" : "100%" }}
-            transition={{ duration: 0.5, ease: [0.22, 0.61, 0.36, 1] }}
-          >
-            <h3 className="font-[family-name:var(--font-heading)] text-2xl font-light capitalize text-white leading-[var(--leading-heading)]">
-              {project.title}
-            </h3>
-            <p className="text-[0.65rem] uppercase tracking-[0.15em] text-white/60 mt-1">
-              {project.location} {"\u00B7"} {project.year}
-            </p>
-          </motion.div>
-        </div>
-      </Link>
+      <div className={`relative overflow-hidden ${aspectClass}`}>
+        <motion.img
+          src={project.image}
+          alt={project.title}
+          className="h-full w-full object-cover"
+          animate={{ scale: hovered ? 1.05 : 1 }}
+          transition={{ duration: 0.9, ease: [0.22, 0.61, 0.36, 1] }}
+        />
+        <motion.div
+          className="absolute inset-x-0 bottom-0 px-6 py-5 bg-gradient-to-t from-[var(--color-primary)]/90 to-transparent"
+          initial={{ y: "100%" }}
+          animate={{ y: hovered ? "0%" : "100%" }}
+          transition={{ duration: 0.5, ease: [0.22, 0.61, 0.36, 1] }}
+        >
+          <h3 className="font-[family-name:var(--font-heading)] text-2xl font-light capitalize text-white leading-[var(--leading-heading)]">
+            {project.title}
+          </h3>
+          <p className="text-[0.65rem] uppercase tracking-[0.15em] text-white/60 mt-1">
+            {project.location} {"\u00B7"} {project.year}
+          </p>
+        </motion.div>
+      </div>
     </motion.div>
   );
 }

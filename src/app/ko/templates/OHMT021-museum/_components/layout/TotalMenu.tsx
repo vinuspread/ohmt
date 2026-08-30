@@ -11,12 +11,12 @@ interface TotalMenuProps {
 }
 
 const menuItems = [
-  { name: "홈", href: "/ko/templates/OHMT021-museum", desc: "Experience the Sanctuary" },
-  { name: "미술관 안내", href: "/ko/templates/OHMT021-museum/our-story", desc: "Our 500-Year Legacy" },
-  { name: "소장품", href: "/ko/templates/OHMT021-museum/collections", desc: "Explore the Archive" },
-  { name: "전시", href: "/ko/templates/OHMT021-museum/exhibitions", desc: "현재 전시와 특별 전시" },
-  { name: "뮤지엄 숍", href: "/ko/templates/OHMT021-museum/shop", desc: "도록과 기념품" },
-  { name: "큐레이터 노트", href: "/ko/templates/OHMT021-museum/curator-note", desc: "작품과 시대를 읽는 글" },
+  { name: "홈", href: "/ko/templates/OHMT021-museum", desc: "성역의 시작" },
+  { name: "미술관 안내", href: "/ko/templates/OHMT021-museum/our-story", desc: "500년의 유산" },
+  { name: "소장품", href: "/ko/templates/OHMT021-museum/collections", desc: "컬렉션 둘러보기" },
+  { name: "특별 전시", href: "/ko/templates/OHMT021-museum/exhibitions", desc: "상설 & 특별 전시" },
+  { name: "기념품샵", href: "/ko/templates/OHMT021-museum/shop", desc: "에디션 & 소장품" },
+  { name: "큐레이터 노트", href: "/ko/templates/OHMT021-museum/curator-note", desc: "신학적 통찰" },
 ];
 
 export default function TotalMenu({ isOpen, onClose }: TotalMenuProps) {
@@ -70,12 +70,12 @@ export default function TotalMenu({ isOpen, onClose }: TotalMenuProps) {
             className="max-w-[1440px] mx-auto w-full border-t border-[var(--color-accent)]/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6"
           >
             <div className="text-xs uppercase font-bold tracking-widest text-[var(--color-accent)]/30">
-              © 2026 CURA.
+              © 2026 OHMT.
             </div>
             <div className="flex gap-8 text-xs uppercase font-bold tracking-widest">
               <a href="#" className="hover:opacity-50">Instagram</a>
               <a href="#" className="hover:opacity-50">Twitter</a>
-              <a href="#" className="hover:opacity-50">바티칸 시국 · 로마</a>
+              <a href="#" className="hover:opacity-50">Vatican City, Rome</a>
             </div>
           </motion.div>
         </motion.div>

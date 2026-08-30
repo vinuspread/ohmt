@@ -1,61 +1,26 @@
-import { Suspense } from "react";
-import Link from "next/link";
-import { TemplateWrapper } from "../_components/TemplateWrapper";
-import theme from "../theme.json";
-import Navbar from "../_components/Navbar";
-import PageHeader from "../_components/PageHeader";
-import ClassCard from "../_components/ClassCard";
-import CTASection from "../_components/CTASection";
 import Footer from "../_components/Footer";
+import Navbar from "../_components/Navbar";
+import SubpageHero from "../_components/SubpageHero";
+import { TemplateWrapper } from "../_components/TemplateWrapper";
 import { CLASSES } from "../constants";
-
-function ClassesContent() {
-  return (
-    <TemplateWrapper theme={theme}>
-      <Navbar />
-      <PageHeader
-        title="클래스"
-        subtitle={"당신의 마음에 울리는 수련을 찾아보세요.\n다이내믹한 플로우부터 고요한 명상까지, 모든 레벨을 위한 다양한 클래스를 선보입니다."}
-        image="/templates/OHMT022-yoga/subpage-classes.jpg"
-      />
-
-      <section className="bg-[var(--color-bg)] border-b border-[var(--color-border)]">
-        {/* 헤더 row */}
-        <div className="flex items-end justify-between px-8 md:px-14 lg:px-20 pt-12 pb-10 border-b border-[var(--color-border)]">
-          <h2
-            className="text-[length:var(--text-h2)] font-light text-[var(--color-text)] leading-[var(--leading-heading)] tracking-[-0.02em]"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            {CLASSES.length}개 클래스
-          </h2>
-          <Link
-            href="/ko/templates/OHMT022-yoga/schedule"
-            className="hidden md:inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] font-medium transition-colors"
-            style={{ fontFamily: "var(--font-body)" }}
-          >
-            주간 일정 보기 →</Link>
-        </div>
-
-        {/* 클래스 그리드 */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 divide-x-0 sm:divide-x divide-[var(--color-border)]">
-          {CLASSES.map((cls, idx) => {
-            const pl = idx === 0 ? "pl-8 md:pl-14 lg:pl-20" : "pl-6";
-            const pr = idx === CLASSES.length - 1 ? "pr-8 md:pr-14 lg:pr-20" : "pr-6";
-            return <ClassCard key={cls.id} yogaClass={cls} textClassName={`${pl} ${pr} py-8`} />;
-          })}
-        </div>
-      </section>
-
-      <CTASection />
-      <Footer />
-    </TemplateWrapper>
-  );
-}
+import theme from "../theme.json";
+import ClassesExplorer from "./_components/ClassesExplorer";
 
 export default function ClassesPage() {
   return (
-    <Suspense>
-      <ClassesContent />
-    </Suspense>
+    <TemplateWrapper theme={theme}>
+      <Navbar />
+      <main className="prana-subpage bg-white pt-16 md:pt-[76px]">
+        <SubpageHero
+          eyebrow="CLASSES"
+          title="오늘 움직이고 싶은 방식으로 고르세요"
+          description="속도와 난이도, 시간을 먼저 비교하세요. 모든 수업은 오늘의 몸 상태에 맞게 조절할 수 있습니다."
+          image="/templates/OHMT022-yoga/subpage-classes-v3.webp"
+          imageAlt="식물이 있는 밝은 스튜디오에서 함께 요가를 수련하는 세 사람"
+        />
+        <ClassesExplorer classes={CLASSES} />
+      </main>
+      <Footer />
+    </TemplateWrapper>
   );
 }

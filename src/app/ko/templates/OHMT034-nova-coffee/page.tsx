@@ -26,8 +26,8 @@ const productJsonLd = {
   offers: {
     '@type': 'Offer',
     availability: 'https://schema.org/InStock',
-    priceCurrency: 'KRW',
-    price: '4550000',
+    priceCurrency: 'USD',
+    price: '3499.00',
   },
 }
 
@@ -45,4 +45,3 @@ export default function NovaHomePage() {
     </>
   )
 }
-

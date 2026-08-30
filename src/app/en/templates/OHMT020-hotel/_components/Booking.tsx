@@ -3,7 +3,6 @@
 import React from "react";
 import { motion } from "motion/react";
 import { Button } from "./ui/Button";
-import TemplateSelect from './TemplateSelect'
 
 export const Booking = () => {
   return (
@@ -50,20 +49,20 @@ export const Booking = () => {
             </div>
             <div>
               <label className="text-xs font-medium text-[var(--color-text-muted)] uppercase tracking-[0.1em] block mb-2">Room Type</label>
-              <TemplateSelect className="w-full border border-[var(--color-border)] bg-transparent px-4 py-3 text-sm text-[var(--color-text)] focus:outline-none focus:border-[var(--color-accent)] transition-colors appearance-none">
+              <select className="w-full border border-[var(--color-border)] bg-transparent px-4 py-3 text-sm text-[var(--color-text)] focus:outline-none focus:border-[var(--color-accent)] transition-colors appearance-none">
                 <option>Deluxe Room</option>
                 <option>Executive Suite</option>
                 <option>Pool Villa</option>
-              </TemplateSelect>
+              </select>
             </div>
             <div>
               <label className="text-xs font-medium text-[var(--color-text-muted)] uppercase tracking-[0.1em] block mb-2">Guests</label>
-              <TemplateSelect className="w-full border border-[var(--color-border)] bg-transparent px-4 py-3 text-sm text-[var(--color-text)] focus:outline-none focus:border-[var(--color-accent)] transition-colors appearance-none">
+              <select className="w-full border border-[var(--color-border)] bg-transparent px-4 py-3 text-sm text-[var(--color-text)] focus:outline-none focus:border-[var(--color-accent)] transition-colors appearance-none">
                 <option>1 Guest</option>
                 <option>2 Guests</option>
                 <option>3 Guests</option>
                 <option>4 Guests</option>
-              </TemplateSelect>
+              </select>
             </div>
           </div>
 

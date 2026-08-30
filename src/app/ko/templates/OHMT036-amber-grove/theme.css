@@ -1,4 +1,4 @@
-@import url('../../../en/templates/OHMT036-amber-grove/theme.css');
+@import url('./theme-base.css');
 
 :root {
   --text-display: clamp(3rem, 7vw, 5.5rem);
@@ -25,21 +25,4 @@ h3,
 h4 {
   word-break: keep-all;
   letter-spacing: -0.02em;
-  text-wrap: balance;
-}
-
-.ohmt036-amber-grove .copy-heading {
-  white-space: pre-line;
-  text-wrap: balance;
-}
-
-.ohmt036-amber-grove .copy-body {
-  white-space: pre-line;
-  text-wrap: pretty;
-}
-
-.ohmt036-amber-grove p,
-.ohmt036-amber-grove blockquote,
-.ohmt036-amber-grove li {
-  overflow-wrap: break-word;
 }

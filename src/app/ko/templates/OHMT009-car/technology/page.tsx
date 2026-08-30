@@ -64,8 +64,7 @@ function CarTechnologyPageContent() {
         {/* Intro */}
         <section className="max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)] pt-8 pb-10 md:pb-12 border-b border-[var(--theme-border)]">
           <p className="text-[1.15rem] md:text-[1.25rem] text-white/70 font-normal leading-[var(--leading-body)] max-w-[750px] break-keep">
-            우리의 엔지니어링 철학은 단순합니다. 모든 것에 의문을 제기하라.<br />
-            그 결과는 차량의 가능성을 재정의하는 기술의 집합체를 탄생입니다.
+            우리의 엔지니어링 철학은 단순합니다: 모든 것에 의문을 제기하라.<br className="hidden md:inline" />그 결과는 차량의 가능성을 재정의하는 기술의 집합체입니다.
           </p>
         </section>
 

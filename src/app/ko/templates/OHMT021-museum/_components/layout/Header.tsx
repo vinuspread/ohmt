@@ -86,7 +86,9 @@ export default function Header() {
         <Link
           href="/ko/templates/OHMT021-museum"
           className={`text-sm sm:text-lg lg:text-2xl font-serif font-bold tracking-[0.2em] -mr-[0.2em] absolute left-1/2 -translate-x-1/2 cursor-pointer uppercase drop- transition-colors duration-500 ${logoColor}`}
-        >CURA</Link>
+        >
+CURA
+        </Link>
 
         {/* 우측: Tickets / Souvenir Shop (데스크톱 전용) / 메뉴 버튼 */}
         <div className="flex items-center justify-end gap-8 text-xs tracking-tight font-bold flex-1 lg:flex-initial lg:w-1/3">
@@ -132,17 +134,12 @@ export default function Header() {
       />
 
       <div className="lg:hidden">
-        <MobileBottomTabBar 
-          isMenuOpen={isMenuOpen} 
-          onMenuToggle={() => setIsMenuOpen(!isMenuOpen)} 
+        <MobileBottomTabBar
+          isMenuOpen={isMenuOpen}
+          onMenuToggle={() => setIsMenuOpen(!isMenuOpen)}
           onTicketClick={() => setIsReservationOpen(true)}
         />
       </div>
     </>
   );
 }
-
-
-
-
-

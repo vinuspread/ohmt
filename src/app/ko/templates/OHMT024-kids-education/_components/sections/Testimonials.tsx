@@ -83,14 +83,14 @@ export default function Testimonials() {
             <button
               onClick={prev}
               className="w-9 h-9 rounded-full border border-black/15 flex items-center justify-center text-sm font-bold hover:bg-[var(--color-primary)] hover:border-[var(--color-primary)] active:scale-[0.97] transition-all duration-150"
-              aria-label="Previous"
+              aria-label="이전 리뷰"
             >
               ←
             </button>
             <button
               onClick={next}
               className="w-9 h-9 rounded-full border border-black/15 flex items-center justify-center text-sm font-bold hover:bg-[var(--color-primary)] hover:border-[var(--color-primary)] active:scale-[0.97] transition-all duration-150"
-              aria-label="Next"
+              aria-label="다음 리뷰"
             >
               →
             </button>
@@ -154,7 +154,7 @@ export default function Testimonials() {
               className={`h-1.5 rounded-full transition-all duration-200 ${
                 i === current ? "w-6 bg-[var(--color-primary)]" : "w-1.5 bg-black/15"
               }`}
-              aria-label={`Review ${i + 1}`}
+              aria-label={`${i + 1}번째 리뷰`}
             />
           ))}
         </div>

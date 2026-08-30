@@ -147,4 +147,3 @@ export default function AboutFull() {
 function NavSpacer() {
   return <div className="h-[72px]" />;
 }
-

@@ -125,7 +125,7 @@ export default function TechnologyPage() {
 
       <section className="bg-[var(--color-bg-secondary)] px-5 py-16 md:px-8 md:py-24">
         <div className="mx-auto max-w-[1440px]">
-          <h2 className="font-display text-[length:var(--text-h3)] font-bold leading-tight text-[var(--color-text)]">
+          <h2 className="font-display text-[length:var(--text-h3)] font-bold leading-[1.05] text-[var(--color-text)]">
             Three systems do the work.
           </h2>
           <div className="mt-10 grid gap-5 md:grid-cols-3">
@@ -144,7 +144,7 @@ export default function TechnologyPage() {
                 <div className="grid min-h-[220px] p-6 md:p-8">
                   <p className="font-mono text-xs font-semibold text-[var(--color-accent)]">{item.step}</p>
                   <div className="self-end">
-                    <h3 className="font-display text-2xl font-bold leading-tight text-[var(--color-text)]">{item.title}</h3>
+                    <h3 className="font-display text-2xl font-bold leading-[1.05] text-[var(--color-text)]">{item.title}</h3>
                     <p className="mt-3 text-sm leading-relaxed text-[var(--color-text-muted)]">{item.desc}</p>
                   </div>
                 </div>
@@ -173,7 +173,7 @@ export default function TechnologyPage() {
             {specGroups.map((group) => (
               <article key={group.title} className="border-t border-[var(--color-border)] pt-6">
                 <p className="font-mono text-xs font-semibold text-[var(--color-accent)]">{group.step}</p>
-                <h2 className="mt-6 font-display text-2xl font-bold leading-tight text-[var(--color-text)]">
+                <h2 className="mt-6 font-display text-2xl font-bold leading-[1.05] text-[var(--color-text)]">
                   {group.title}
                 </h2>
                 <div className="mt-6 divide-y divide-[var(--color-border)]">
@@ -200,7 +200,7 @@ export default function TechnologyPage() {
             {howItWorks.map(([step, title, desc]) => (
               <div key={step}>
                 <p className="font-mono text-xs font-semibold text-[var(--color-accent)]">{step}</p>
-                <h2 className="mt-3 font-display text-base font-bold leading-tight text-[var(--color-text)]">{title}</h2>
+                <h2 className="mt-3 font-display text-base font-bold leading-[1.05] text-[var(--color-text)]">{title}</h2>
                 <p className="mt-2 text-xs leading-relaxed text-[var(--color-text-muted)]">{desc}</p>
               </div>
             ))}

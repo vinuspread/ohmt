@@ -20,11 +20,12 @@ export function Hero() {
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
             className="absolute bottom-5 left-5 right-5 max-w-[430px] rounded-[8px] bg-[#FAFAF8] p-6 text-[var(--color-text)] shadow-[0_8px_24px_rgba(0,0,0,0.14)] md:bottom-8 md:left-8 md:right-auto md:p-8"
           >
-            <p className="whitespace-pre-line font-display text-[length:var(--text-h2)] font-semibold leading-[var(--leading-body)] tracking-tight text-[var(--color-text)] break-keep">
-              오래 쓰도록
-단단하게 만든 가구</p>
+            <p className="font-display text-[length:var(--text-h2)] font-semibold leading-[var(--leading-body)] tracking-tight text-[var(--color-text)] break-keep">
+              일상의 여백을 지키는, 오래 머무는 원목 가구.
+            </p>
             <p className="mt-4 max-w-[360px] text-sm leading-relaxed text-[var(--color-text-muted)] word-keep-all">
-              자작나무와 참나무 원목을 짜맞춤 방식으로 조립해 견고하게 만들고, 사용 중 헐거워진 부분은 다시 조정할 수 있도록 설계합니다.</p>
+              쉽게 사고 쉽게 버리는 대신 손수 고쳐 쓸 수 있도록, 자작나무와 참나무 원목을 짜 맞추어 견고하게 제작합니다.
+            </p>
             <Link
               href={`${base}/shop`}
               className="mt-6 inline-flex items-center rounded-[4px] bg-[#1a1a1a] px-6 py-3 text-xs font-semibold text-white transition-opacity duration-300 hover:opacity-85"
@@ -57,7 +58,8 @@ export function Hero() {
               </span>
             </div>
             <p className="mt-5 text-xs leading-relaxed text-white/62 word-keep-all">
-              참나무 집성 원목 상판에 무광 오일 마감을 적용한 6인용 식탁입니다.</p>
+              집성 원목에 무광 오일로 차분하게 마감해 여섯 명까지 넉넉히 앉을 수 있는 식탁입니다.
+            </p>
           </motion.div>
         </div>
       </div>

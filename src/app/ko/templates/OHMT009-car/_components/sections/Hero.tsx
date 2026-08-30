@@ -24,7 +24,7 @@ export const Hero = () => {
         />
       </video>
       <div className="absolute inset-0 bg-[linear-gradient(105deg,rgba(10,10,10,0.75)_0%,rgba(10,10,10,0.2)_60%,transparent_100%)]"></div>
-      
+
       <div className="absolute top-[52%] -translate-y-1/2 left-0 right-0 max-w-[var(--theme-container)] mx-auto px-6 md:px-[var(--theme-gutter)] w-full">
         <span className="block text-[0.65rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-[1.2rem]">
           NEW - EV9 플래그십 전기 SUV
@@ -35,7 +35,7 @@ export const Hero = () => {
         <p className="text-[1.05rem] text-[var(--theme-text-muted)] leading-[var(--leading-body)] max-w-[400px] mb-[2.5rem] font-normal">
           배출가스 제로. 한계 없는 주행. IONARA EV9은 럭셔리 모빌리티의 기준을 새롭게 정의합니다.
         </p>
-        
+
         <div className="flex gap-6 items-center">
           <button className="text-[0.68rem] font-bold uppercase tracking-[0.16em] px-8 py-[0.65rem] bg-[var(--theme-accent)] text-black hover:opacity-85 transition-all duration-500">
             EV9 자세히 보기
@@ -44,7 +44,7 @@ export const Hero = () => {
             전체 라인업 <ArrowRight size={16} />
           </button>
         </div>
-        
+
         <p className="text-[0.7rem] text-[var(--theme-text-muted)] uppercase tracking-[0.2em] mt-8">
           시작가 <strong className="text-white text-base font-bold ml-1">₩79,900,000</strong>
         </p>

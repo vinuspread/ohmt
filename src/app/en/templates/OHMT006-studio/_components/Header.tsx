@@ -235,8 +235,9 @@ useEffect(() => {
                 {/* Logo */}
                 <Link
                     href="/en/templates/OHMT006-studio"
-                    className={`text-lg md:text-xl font-black tracking-[-0.5px] uppercase transition-colors duration-500 ${isLight ? 'text-black' : 'text-white'}`}
-                >TECTA<span className="font-normal">.</span>
+                    className={`text-lg md:text-xl font-extrabold tracking-[-0.25px] uppercase transition-colors duration-500 ${isLight ? 'text-black' : 'text-white'}`}
+                >
+                    TECTA<span className="font-normal">.</span>
                 </Link>
 
                 {/* Desktop Nav */}

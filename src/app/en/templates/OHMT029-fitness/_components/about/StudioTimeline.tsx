@@ -14,8 +14,8 @@ export function StudioTimeline() {
           Studio timeline
         </h2>
         <div className="relative">
-          <div className="hidden md:block absolute top-[6px] left-0 right-0 h-[1px] bg-[var(--border)]" />
-          <div className="hidden md:grid grid-cols-5 gap-4">
+          <div className="hidden md:block absolute top-12 left-0 right-0 h-[1px] bg-[var(--border)]" />
+          <div className="hidden md:grid grid-cols-4 gap-8">
             {milestones.map((m) => (
               <div key={m.year} className="relative text-center">
                 <div className="w-3 h-3 bg-[var(--accent)] rounded-full mx-auto mb-8 relative z-10" />

@@ -20,7 +20,7 @@ export function Footer() {
           <div className="space-y-6">
             <Link href={baseRoute} className="flex items-center">
               <span className="font-sans font-bold text-lg tracking-[0.06em] text-white">
-                OHMT
+ARCHE
               </span>
             </Link>
             <div className="font-sans text-sm text-white/70 space-y-2 leading-relaxed">
@@ -143,4 +143,3 @@ export function Footer() {
     </footer>
   );
 }
-

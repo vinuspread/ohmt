@@ -41,7 +41,7 @@ export function SectionHeading({
 
 export function BodyText({ children, className = "" }: TextProps) {
   return (
-    <p className={`resort-body whitespace-pre-line text-pretty text-base font-normal text-white/70 break-keep ${className}`}>
+    <p className={`resort-body text-base font-normal text-white/70 break-keep ${className}`}>
       {children}
     </p>
   );

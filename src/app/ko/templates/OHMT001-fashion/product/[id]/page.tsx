@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { useParams, useRouter } from "next/navigation";
+import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import { Navbar } from "../../_components/Navbar";
 import { Footer } from "../../_components/Footer";
@@ -15,7 +15,6 @@ const SIZES = ["XS", "S", "M", "L", "XL"];
 
 function ProductDetailContent() {
   const params = useParams();
-  const router = useRouter();
   const product = PRODUCTS.find(p => p.id === Number(params.id));
 
   if (!product) {
@@ -40,14 +39,10 @@ function ProductDetailContent() {
       <main className="min-h-screen bg-white selection:bg-black selection:text-white">
         <Navbar />
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-30 md:pt-40 pb-16 md:pb-24">
-          <button
-            type="button"
-            onClick={() => router.back()}
-            className="group inline-flex items-center gap-2 text-xs md:text-xs font-bold uppercase tracking-[0.2em] text-black/40 hover:text-black transition-all mb-10 md:mb-16 cursor-pointer"
-          >
+          <Link href="/ko/templates/OHMT001-fashion" className="group inline-flex items-center gap-2 text-xs md:text-xs font-bold uppercase tracking-[0.2em] text-black/40 hover:text-black transition-all mb-10 md:mb-16">
             <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
             컬렉션으로 돌아가기
-          </button>
+          </Link>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20">
             <motion.div
@@ -74,13 +69,7 @@ function ProductDetailContent() {
               <p className="text-base md:text-xl font-bold text-black/60 mb-8">{product.price}</p>
 
               <div className="space-y-4 mb-8 pb-8 border-b border-black/5">
-                <p className="text-sm text-black/70 leading-relaxed">
-                  {product.description.split(". ").map((sentence, index, sentences) => (
-                    <span key={sentence} className="block">
-                      {sentence}{index < sentences.length - 1 ? "." : ""}
-                    </span>
-                  ))}
-                </p>
+                <p className="text-sm text-black/70 leading-relaxed">{product.description}</p>
                 <div className="flex gap-8 text-xs">
                   <div>
                     <span className="block text-xs font-bold uppercase tracking-[0.2em] text-black/30 mb-1">소재</span>

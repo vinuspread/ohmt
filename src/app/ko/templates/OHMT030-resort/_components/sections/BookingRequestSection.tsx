@@ -11,9 +11,11 @@ export function BookingRequestSection({ backHref }: BookingRequestSectionProps) 
       style={{ backgroundColor: "var(--bg-dark)" }}
     >
       <h2 className="resort-heading mb-3 text-4xl font-normal tracking-[-0.02em] text-white">
-        예약 가능 여부를 확인해보세요.</h2>
+        투숙을 요청하세요.
+      </h2>
       <p className="mb-12 text-sm text-white/40">
-        요청하신 날짜의 객실을 확인한 뒤 24시간 이내에 안내해드립니다.</p>
+        24시간 이내에 예약 가능 여부를 확인해 드립니다.
+      </p>
       <div className="mx-auto max-w-[600px] px-6 md:px-12">
         <div className="flex flex-col gap-4 md:flex-row">
           <input
@@ -29,7 +31,8 @@ export function BookingRequestSection({ backHref }: BookingRequestSectionProps) 
           />
         </div>
         <button className="mt-6 rounded-full bg-[var(--accent)] px-9 py-3 text-base font-medium text-[var(--text-contrast)] transition-all hover:bg-[var(--accent-hover)]">
-          예약 문의 보내기</button>
+          요청 제출
+        </button>
       </div>
       <PillLink
         href={backHref}
@@ -37,7 +40,8 @@ export function BookingRequestSection({ backHref }: BookingRequestSectionProps) 
         tone="muted"
         className="mt-12 px-0 py-0"
       >
-        객실 목록으로</PillLink>
+        빌라 목록으로
+      </PillLink>
     </section>
   );
 }

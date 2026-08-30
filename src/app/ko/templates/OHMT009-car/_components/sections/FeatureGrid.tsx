@@ -18,8 +18,8 @@ export const SplitSection = ({ eyebrow, title, desc, img, reverse }: SplitProps)
   <div className={clsx("grid md:grid-cols-2 min-h-[620px] bg-black overflow-hidden", reverse && "md:[direction:rtl]")}>
     <div className={clsx(
       "flex flex-col justify-center py-14 md:py-32 px-6",
-      reverse 
-        ? "md:pl-16 md:pr-[max(60px,calc((100vw-1440px)/2+60px))] [direction:ltr]" 
+      reverse
+        ? "md:pl-16 md:pr-[max(60px,calc((100vw-1440px)/2+60px))] [direction:ltr]"
         : "md:pr-16 md:pl-[max(60px,calc((100vw-1440px)/2+60px))] [direction:ltr]"
     )}>
       <span className="block text-[0.68rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-5">

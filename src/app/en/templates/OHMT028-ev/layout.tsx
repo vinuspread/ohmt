@@ -4,26 +4,22 @@ import "./theme.css";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
 
 export const metadata: Metadata = {
-  title: "OHMT - Electric Vehicle Concept Template",
+  title: "NUBI - Electric Vehicle Concept Template",
   description: "Premium electric vehicle showcase template",
   openGraph: {
-    title: "OHMT - Electric Vehicle Concept Template",
+    title: "NUBI - Electric Vehicle Concept Template",
     description: "Premium electric vehicle showcase template",
-    url: "https://ohmt.site/en/templates/OHMT028-ev",
-    siteName: "OHMT",
+    url: "https://ohmytemplate.com/en/templates/OHMT028-ev",
+    siteName: "NUBI",
     images: [{ url: "/templates/OHMT028-ev/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT - Electric Vehicle Concept Template",
+    title: "NUBI - Electric Vehicle Concept Template",
     description: "Premium electric vehicle showcase template",
     images: ["/templates/OHMT028-ev/og-image.jpg"],
-  },
-  alternates: {
-    canonical: "https://ohmt.site/en/templates/OHMT028-ev",
-    languages: { ko: "https://ohmt.site/ko/templates/OHMT028-ev" },
   },
 };
 
@@ -44,7 +40,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     "@type": "Product",
     name: "OHMT EV",
     description: "Premium electric vehicle showcase template",
-    url: "https://ohmt.site/en/templates/OHMT028-ev",
+    url: "https://ohmytemplate.com/en/templates/OHMT028-ev",
   };
   return (
     <div className={`${michroma.variable} ${inter.variable}`}>

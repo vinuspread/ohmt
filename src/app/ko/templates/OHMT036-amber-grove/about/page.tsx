@@ -5,27 +5,27 @@ const base = '/ko/templates/OHMT036-amber-grove'
 
 const principles = [
   {
-    title: '제대로 익을 때까지 기다립니다',
-    label: '제철에 맞춘 수확',
-    text: '판매 일정은 달력보다 작물의 상태를 기준으로 정합니다. 날씨와 토양, 익은 정도를 살펴 수확하고 출하를 서두르지 않습니다. 제철에 충분히 익은 과일만 선별해 보내드립니다.',
+    title: '가장 맛있는 때를 기다립니다',
+    label: '철저한 제철 원칙',
+    text: '직판장과 온라인 스토어의 판매 일정은 작물의 상태에 따라 달라집니다. 날씨와 토양, 생육 상태를 살펴 충분히 익었을 때 수확합니다. 출하 시기를 억지로 앞당기지 않고, 제철의 맛이 오른 열매만 보내드립니다.',
   },
   {
-    title: '건강한 흙에서 시작',
-    label: '흙을 돌보는 재배 방식',
-    text: '풋거름 작물과 퇴비로 흙의 힘을 보충하고, 잡초는 필요한 만큼 직접 관리합니다. 합성 자재 사용을 줄이고 지역 환경에 맞는 방식으로 나무가 건강하게 자랄 토양을 가꿉니다.',
+    title: '건강한 땅에서 좋은 열매가 자랍니다',
+    label: '흙을 살리는 농사',
+    text: '질소를 보충하는 풋거름 작물과 퇴비를 사용하고, 잡초는 손으로 직접 관리합니다. 합성 자재에 의존하기보다 지역 생태와 어울리는 방식으로 땅의 힘을 키우며, 나무가 오래도록 건강하게 자랄 수 있는 환경을 만듭니다.',
   },
   {
-    title: '수확한 날 바로 선별·포장',
-    label: '과수원에서 바로 선별·포장',
-    text: '수확한 과일은 과수원 안 포장동에서 바로 선별하고 포장합니다. 상자에는 수확 날짜와 구역, 품종, 권장 섭취 시기를 적어 보냅니다. 어떤 과일이 언제 수확되고 출고됐는지 확인할 수 있습니다.',
+    title: '수확부터 포장까지 꼼꼼하게',
+    label: '산지 직송 콜드체인',
+    text: '수확한 열매는 농장 내 포장 시설에서 바로 선별하고 포장합니다. 상자마다 수확 구역과 구역 번호, 권장 섭취 시기를 표시해 보내드립니다. 어느 나무에서 수확해 어떻게 출고했는지 전 과정을 확인해보세요.',
   },
 ]
 
 const timeline = [
   { year: '1984', title: '길가의 작은 노점', text: '김태석·정은주 부부가 길가 평상에 직접 기른 복숭아를 내놓으며 과수원의 첫걸음을 시작했습니다.' },
-  { year: '1998', title: '유기농 재배의 시작', text: '합성 자재 사용을 줄이고 농장 안에 퇴비장을 마련했습니다. 풋거름 작물을 심으며 토양을 관리하는 재배 방식으로 바꾸기 시작했습니다.' },
+  { year: '1998', title: '유기농 재배의 시작', text: '합성 자재 사용을 줄이고 직접 퇴비장을 마련했습니다. 풋거름 작물을 심으며 땅을 살리는 농사를 시작했습니다.' },
   { year: '2008', title: '자체 포장동 마련', text: '수확한 열매를 과수원에서 바로 선별하고 포장할 수 있도록 농장 안에 포장동을 지었습니다.' },
-  { year: '2026', title: '3대째 이어지는 과수원', text: '현재는 손녀 김하람이 과수원을 이어 운영합니다. 수확 시기와 선별, 포장 기준도 가족이 함께 지켜 온 방식대로 관리합니다.' },
+  { year: '2026', title: '3대째 이어지는 과수원', text: '이제는 손녀 김하람이 농사를 이어갑니다. 수확부터 포장까지, 오랫동안 지켜 온 기준을 그대로 이어가고 있습니다.' },
 ]
 
 const certifications = [
@@ -55,15 +55,13 @@ export default function AboutPage() {
           <span className="ledger-num text-xs font-bold bg-[var(--color-bg-secondary)] px-2.5 py-1 text-[var(--color-accent)] rounded">
             [ 01 ]
           </span>
-          <span className="ledger-num text-xs font-bold text-[var(--color-accent)]">앰버 그로브 과수원</span>
+          <span className="ledger-num text-xs font-bold text-[var(--color-accent)]">앰버 그로브 소개</span>
         </div>
-        <h1 className="copy-heading mt-8 max-w-4xl font-[family-name:var(--font-heading)] text-3xl font-semibold leading-[var(--leading-body)] text-[var(--color-text)] sm:text-5xl">
-          3대째 이어온 과수원
-          제철에 맞춰 수확합니다.
+        <h1 className="font-[family-name:var(--font-heading)] text-3xl sm:text-5xl font-semibold leading-[var(--leading-body)] text-[var(--color-text)] mt-8">
+          3대가 이어온 밭에서, 한 상자씩 정성을 담습니다.
         </h1>
-        <p className="copy-body max-w-3xl text-base leading-relaxed text-[var(--color-text-muted)] sm:text-lg">
-          앰버 그로브는 1984년 장터 옆 작은 노점에서 시작했습니다.
-          <br className="hidden sm:block" /> 지금은 3대가 함께 과수원을 돌보며, 익은 정도를 살펴 손으로 수확하고 농장 안 포장동에서 소량씩 선별해 보냅니다.
+        <p className="text-base sm:text-lg leading-relaxed text-[var(--color-text-muted)] max-w-3xl">
+          1984년 장터 한 귀퉁이 노점에서 시작된 앰버그로브. 처음 심은 나무들이 어느덧 훌쩍 자라나 산지 직거래 과수원으로 성장했습니다. 손으로 직접 따고, 소량씩 포장해서 기준에 맞춰 출하합니다.
         </p>
       </section>
 
@@ -83,10 +81,9 @@ export default function AboutPage() {
       <section className="grid gap-10 lg:grid-cols-12 border-t border-[var(--color-border)] pt-12">
         <div className="lg:col-span-4 space-y-8">
           <span className="ledger-num text-xs font-bold text-[var(--color-accent)]">[ 02 / 재배 기준 ]</span>
-          <h2 className="copy-heading font-[family-name:var(--font-heading)] text-3xl font-semibold leading-[var(--leading-body)] sm:text-4xl">과일을 기르는 기준</h2>
-          <p className="copy-body max-w-md text-sm leading-relaxed text-[var(--color-text-muted)]">
-            작물의 상태를 자주 살피고, 익은 과일만 골라 손으로 수확합니다.
-            <br /> 수확 시기를 서두르지 않고 토양과 나무를 함께 관리합니다.
+          <h2 className="font-[family-name:var(--font-heading)] text-3xl sm:text-4xl font-semibold leading-[var(--leading-body)]">이렇게 키웁니다.</h2>
+          <p className="text-sm leading-relaxed text-[var(--color-text-muted)]">
+            손이 많이 가더라도 전통 방식을 고집합니다. 과일 하나하나 손으로 직접 만지고 수확해 맛이 다릅니다.
           </p>
         </div>
 
@@ -95,8 +92,8 @@ export default function AboutPage() {
             {principles.map((item) => (
               <div key={item.title} className="space-y-2">
                 <span className="ledger-num text-xs font-bold text-[var(--color-accent)] block">{item.label}</span>
-                <h3 className="copy-heading text-base font-bold leading-[var(--leading-body)] text-[var(--color-text)]">{item.title}</h3>
-                <p className="copy-body text-xs leading-relaxed text-[var(--color-text-muted)]">{item.text}</p>
+                <h3 className="text-base font-bold text-[var(--color-text)] leading-[var(--leading-body)]">{item.title}</h3>
+                <p className="text-xs leading-relaxed text-[var(--color-text-muted)]">{item.text}</p>
               </div>
             ))}
           </div>
@@ -107,10 +104,9 @@ export default function AboutPage() {
       <section className="grid gap-10 lg:grid-cols-12 border-t border-[var(--color-border)] pt-12">
         <div className="lg:col-span-4 space-y-8">
           <span className="ledger-num text-xs font-bold text-[var(--color-accent)]">[ 03 / 걸어온 길 ]</span>
-          <h2 className="copy-heading font-[family-name:var(--font-heading)] text-3xl font-semibold leading-[var(--leading-body)] sm:text-4xl">40년 넘게 이어온 과수원</h2>
-          <p className="copy-body max-w-md text-sm leading-relaxed text-[var(--color-text-muted)]">
-            길가의 작은 노점에서 시작해 산지 직송 과수원이 되기까지,
-            <br className="hidden xl:block" /> 40년 넘게 가족이 이어온 재배와 수확의 기록입니다.
+          <h2 className="font-[family-name:var(--font-heading)] text-3xl sm:text-4xl font-semibold leading-[var(--leading-body)]">과수원에 쌓인 40년의 시간</h2>
+          <p className="text-sm leading-relaxed text-[var(--color-text-muted)]">
+            길가의 작은 노점에서 시작해 오늘의 산지 직송까지, 40년 동안 한결같이 지켜 온 수확과 농사의 기록입니다.
           </p>
         </div>
 
@@ -120,8 +116,8 @@ export default function AboutPage() {
               <div key={item.year} className="relative">
                 <div className="absolute -left-[29px] top-1 flex h-3 w-3 items-center justify-center rounded-full border-2 border-[var(--color-accent)] bg-white" />
                 <span className="ledger-num font-[family-name:var(--font-heading)] text-xl font-bold text-[var(--color-accent)]">{item.year}</span>
-                <h3 className="copy-heading mt-1 text-base font-bold leading-[var(--leading-body)] text-[var(--color-text)]">{item.title}</h3>
-                <p className="copy-body mt-2 max-w-2xl text-xs leading-relaxed text-[var(--color-text-muted)]">{item.text}</p>
+                <h3 className="text-base font-bold mt-1 text-[var(--color-text)] leading-[var(--leading-body)]">{item.title}</h3>
+                <p className="mt-2 text-xs leading-relaxed text-[var(--color-text-muted)]">{item.text}</p>
               </div>
             ))}
           </div>
@@ -132,10 +128,9 @@ export default function AboutPage() {
       <section className="grid gap-10 lg:grid-cols-12 border-t border-[var(--color-border)] pt-12">
         <div className="lg:col-span-4 space-y-8">
           <span className="ledger-num text-xs font-bold text-[var(--color-accent)]">[ 04 / 인증 ]</span>
-          <h2 className="copy-heading font-[family-name:var(--font-heading)] text-3xl font-semibold leading-[var(--leading-body)] sm:text-4xl">인증 현황</h2>
-          <p className="copy-body max-w-md text-sm leading-relaxed text-[var(--color-text-muted)]">
-            유기농산물, 저탄소 농축산물,
-            <br className="hidden xl:block" /> 농산물우수관리 인증을 정기적으로 심사받아 유지하고 있습니다.
+          <h2 className="font-[family-name:var(--font-heading)] text-3xl sm:text-4xl font-semibold leading-[var(--leading-body)]">받은 인증</h2>
+          <p className="text-sm leading-relaxed text-[var(--color-text-muted)]">
+            유기농산물과 우수관리 기준을 매년 심사받아 유지하고 있습니다.
           </p>
         </div>
 
@@ -163,13 +158,12 @@ export default function AboutPage() {
         <div className="flex flex-col gap-6 bg-[var(--color-bg-dark)] p-6 text-[var(--color-text-contrast)] sm:p-8 lg:flex-row lg:items-center lg:justify-between rounded">
           <div>
             <span className="ledger-num text-xs font-bold text-[var(--color-accent-light)]">[ 05 / 방문 안내 ]</span>
-            <h2 className="copy-heading mt-3 max-w-2xl font-[family-name:var(--font-heading)] text-2xl font-semibold leading-[var(--leading-body)] sm:text-4xl">
-              수확철에는 목요일부터 일요일까지
-              <br className="hidden sm:block" /> 방문 수령할 수 있습니다.
+            <h2 className="mt-3 max-w-xl font-[family-name:var(--font-heading)] text-2xl sm:text-4xl font-semibold leading-[var(--leading-body)]">
+              수확철에는 목요일부터 일요일까지 픽업이 가능합니다.
             </h2>
           </div>
           <Link href={`${base}/visit`} className="inline-flex shrink-0 items-center justify-center rounded bg-[var(--color-secondary-accent)] px-6 py-2.5 text-xs font-bold text-[var(--color-bg-dark)] transition-colors duration-200 hover:opacity-90">
-            방문 안내 보기
+            방문 방법 및 운영시간
           </Link>
         </div>
       </section>

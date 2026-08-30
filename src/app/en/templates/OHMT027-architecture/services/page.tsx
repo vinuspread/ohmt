@@ -16,14 +16,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Services - Architecture Portfolio - OHMT",
     description: "Explore our professional disciplines, from high-end residential design and commercial architecture to interior planning.",
-    url: "https://ohmt.site/en/templates/OHMT027-architecture/services",
+    url: "https://ohmytemplate.com/en/templates/OHMT027-architecture/services",
     images: [{ url: "/templates/OHMT027-architecture/og-image.jpg" }],
   },
-  robots: { index: false, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/OHMT027-architecture/services",
+    canonical: "https://ohmytemplate.com/en/templates/OHMT027-architecture/services",
     languages: {
-      "ko": "https://ohmt.site/ko/templates/OHMT027-architecture/services",
+      "ko": "https://ohmytemplate.com/ko/templates/OHMT027-architecture/services",
     },
   },
 };
@@ -42,7 +41,7 @@ export default function ServicesPage() {
     <TemplateWrapper>
       <div className="relative min-h-screen bg-white text-[var(--color-text)] font-sans antialiased overflow-hidden selection:bg-[var(--color-text)] selection:text-white">
         <Header />
-        
+
         <main className="pt-32 pb-24">
           {/* Header */}
           <section className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 py-16">
@@ -51,7 +50,7 @@ export default function ServicesPage() {
                 <span className="font-sans text-xs font-medium tracking-[0.15em] text-[var(--color-text-secondary)] uppercase block">
                   CAPABILITIES
                 </span>
-                <h1 className="font-heading font-normal text-5xl md:text-6xl lg:text-7xl leading-tight text-[var(--color-text)]">
+                <h1 className="font-heading font-normal text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-[var(--color-text)]">
                   Our Services.
                 </h1>
                 <p className="font-heading font-normal text-2xl md:text-3xl leading-[var(--leading-body)] text-[var(--color-text-secondary)] pt-4">
@@ -82,13 +81,13 @@ export default function ServicesPage() {
                       <span className="font-sans text-xs font-medium tracking-[0.15em] text-[var(--color-accent)] uppercase block">
                         {service.label}
                       </span>
-                      <h2 className="font-heading font-normal text-4xl md:text-4xl text-[var(--color-text)] leading-tight">
+                      <h2 className="font-heading font-normal text-4xl md:text-4xl text-[var(--color-text)] leading-[1.05]">
                         {service.name}
                       </h2>
                       <p className="font-sans text-base leading-[var(--leading-body)] text-[var(--color-text-secondary)]">
                         {service.description}
                       </p>
-                      
+
                       {/* Features List */}
                       <div className="pt-4">
                         <h4 className="font-sans text-xs font-semibold text-[var(--color-text)] tracking-wider uppercase mb-4">
@@ -145,7 +144,7 @@ export default function ServicesPage() {
           <section className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 text-center">
             <ScrollReveal>
               <div className="max-w-2xl mx-auto space-y-6">
-                <h2 className="font-heading font-normal text-4xl md:text-4xl text-[var(--color-text)] leading-tight">
+                <h2 className="font-heading font-normal text-4xl md:text-4xl text-[var(--color-text)] leading-[1.05]">
                   Ready to collaborate on your next space?
                 </h2>
                 <p className="font-sans text-sm text-[var(--color-text-secondary)] leading-relaxed max-w-md mx-auto">

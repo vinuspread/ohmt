@@ -16,7 +16,8 @@ export function Services() {
         <ScrollReveal>
           <div className="mb-20">
             <h2 className="font-heading font-normal text-4xl md:text-5xl text-[#1A1A1A]">
-              서비스</h2>
+              서비스
+            </h2>
           </div>
         </ScrollReveal>
 
@@ -27,9 +28,9 @@ export function Services() {
 
             return (
               <ScrollReveal key={service.id}>
-                <div className="grid grid-cols-12 gap-8 items-center">
+                <div className="grid grid-cols-1 gap-8 items-center lg:grid-cols-12">
                   {/* Image — col 1–7 or 6–12 */}
-                  <div className={`col-span-12 lg:col-span-7 ${isEven ? "lg:order-last" : ""} relative aspect-[4/3] overflow-hidden group`}>
+                  <div className={`col-span-1 lg:col-span-7 ${isEven ? "lg:order-last" : ""} relative aspect-[4/3] overflow-hidden group`}>
                     <Image
                       src={service.image}
                       alt={service.name}
@@ -40,7 +41,7 @@ export function Services() {
                   </div>
 
                   {/* Text Block — col 8–12 or 1–5 */}
-                  <div className={`col-span-12 lg:col-span-5 space-y-6 ${isEven ? "lg:order-first lg:pl-0 lg:pr-8" : "lg:pl-8"}`}>
+                  <div className={`col-span-1 lg:col-span-5 space-y-6 ${isEven ? "lg:order-first lg:pl-0 lg:pr-8" : "lg:pl-8"}`}>
                     <span className="font-sans text-xs font-medium tracking-[0.15em] text-[#888888] uppercase block">
                       {service.label}
                     </span>
@@ -56,7 +57,8 @@ export function Services() {
                         href={`${baseRoute}/services`}
                         className="font-sans text-xs font-medium tracking-[0.12em] text-[#1A1A1A] uppercase border-b border-[#1A1A1A] pb-1 hover:text-[#B07D4F] hover:border-[#B07D4F] transition-colors"
                       >
-                        서비스 보기 →</Link>
+                        서비스 보기 →
+                      </Link>
                     </div>
                   </div>
                 </div>

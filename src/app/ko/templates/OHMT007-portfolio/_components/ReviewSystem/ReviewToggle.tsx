@@ -8,11 +8,11 @@ export const ReviewToggle: React.FC = () => {
   const { isReviewMode, setReviewMode } = useReview();
 
   return (
-    <button 
+    <button
       onClick={() => setReviewMode(!isReviewMode)}
       className={`fixed bottom-6 right-6 z-[100000] p-4 rounded-2xl border transition-all duration-300 flex items-center gap-3 active:scale-95 ${
-        isReviewMode 
-          ? 'bg-pink-500 text-white border-pink-400' 
+        isReviewMode
+          ? 'bg-pink-500 text-white border-pink-400'
           : 'bg-white/90 text-black border-white backdrop-blur-md hover:shadow-pink-500/20'
       }`}
     >

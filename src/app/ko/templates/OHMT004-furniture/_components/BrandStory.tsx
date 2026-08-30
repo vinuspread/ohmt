@@ -73,7 +73,7 @@ export const BrandStory = () => {
               transition={{ delay: 0.3, duration: 0.6 }}
               className="text-base md:text-lg lg:text-xl text-[var(--color-text)] font-bold leading-relaxed mb-6 md:mb-10 uppercase"
             >
-              {"비움과 정밀함을 철학으로 삼아, OHMT는 삶의 가장 본질적인 인테리어를 선보입니다."}
+              {"비움과 정밀함을 철학으로 삼아, KRAFT는 삶의 가장 본질적인 인테리어를 선보입니다."}
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 16 }}

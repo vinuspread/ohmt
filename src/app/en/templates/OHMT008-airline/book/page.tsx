@@ -9,7 +9,6 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 import { Plane, Compass, User, Armchair, ChevronRight, Check } from "lucide-react";
 import { PageHero } from "../_components/PageHero";
 import { motion, AnimatePresence } from "framer-motion";
-import TemplateSelect from '../_components/TemplateSelect'
 
 interface Seat {
   id: string;
@@ -24,7 +23,7 @@ function BookPageContent() {
   const [destination, setDestination] = useState("Paris");
   const [cabinClass, setCabinClass] = useState("First");
   const [selectedSeat, setSelectedSeat] = useState<Seat | null>(null);
-  
+
   // Dummy flight base prices matching destinationData
   const basePrices: Record<string, number> = {
     Paris: 6900,
@@ -48,7 +47,7 @@ function BookPageContent() {
 
   const handleSeatClick = (seat: Seat) => {
     if (seat.status === "Occupied") return;
-    
+
     setSeats(prev => prev.map(s => {
       if (s.id === seat.id) {
         return { ...s, status: s.status === "Selected" ? "Available" : "Selected" };
@@ -79,7 +78,7 @@ function BookPageContent() {
           imageAlt="Luxury flight silhouette"
           label="Book Premium Flight Suite"
           title={<>Configure Your <br /><span className="text-[var(--color-accent)] font-[family-name:var(--font-heading)] normal-case font-bold">A380 Sanctuary.</span></>}
-          description={"Tailor every dimension of your flight.\nChoose elite destinations, select your private structural suite, and pre-book Michelin dining elements."}
+          description="Tailor every dimension of your flight.\nChoose elite destinations, select your private structural suite, and pre-book Michelin dining elements."
         />
 
         {/* Interactive Booking Steps Grid */}
@@ -100,7 +99,7 @@ function BookPageContent() {
 
             {/* Left Col: Dynamic Step Flow Container */}
             <div className="lg:col-span-8 space-y-10 md:space-y-16">
-              
+
               {/* Step Progress indicators - Editorial Clean timeline */}
               <div className="flex items-center justify-between border-b border-[var(--color-border)] pb-8">
                 {[
@@ -122,7 +121,7 @@ function BookPageContent() {
               </div>
 
               <AnimatePresence mode="wait">
-                
+
                 {/* STEP 1: DESTINATION & CABIN SELECTION */}
                 {step === 1 && (
                   <motion.div
@@ -134,7 +133,7 @@ function BookPageContent() {
                   >
                     <div className="space-y-4">
                       <span className="text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">Step 01</span>
-                      <h2 className="text-[length:var(--text-h3)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight leading-tight">
+                      <h2 className="text-[length:var(--text-h3)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight leading-[1.05]">
                         Select curated route and cabin class.
                       </h2>
                       <div className="h-[2px] bg-[var(--color-accent)] w-12" />
@@ -153,7 +152,7 @@ function BookPageContent() {
                       {/* To Field (Interactive underline input) */}
                       <div className="space-y-3">
                         <label className="text-sm font-bold uppercase tracking-widest text-[#7A7A7A]">Destination (Arrival)</label>
-                        <TemplateSelect
+                        <select
                           value={destination}
                           onChange={(e) => setDestination(e.target.value)}
                           className="w-full border-b border-[var(--color-border)] py-3 bg-transparent font-bold text-lg text-[var(--color-primary)] rounded-none focus:outline-none focus:border-[var(--color-accent)] cursor-pointer"
@@ -162,7 +161,7 @@ function BookPageContent() {
                           <option value="Tokyo">TOKYO NRT (Japan) - $2,800</option>
                           <option value="New York">NEW YORK JFK (USA) - $8,500</option>
                           <option value="Dubai">DUBAI DXB (UAE) - $7,200</option>
-                        </TemplateSelect>
+                        </select>
                       </div>
                     </div>
 
@@ -210,7 +209,7 @@ function BookPageContent() {
                       </div>
                     </div>
 
-                    <button 
+                    <button
                       onClick={() => setStep(2)}
                       className="w-full sm:w-fit px-12 py-4 bg-[var(--color-primary)] text-[var(--color-accent)] text-sm font-bold uppercase tracking-[0.25em] flex items-center justify-center gap-3 hover:bg-[var(--color-primary)]/90 transition-colors duration-300 cursor-pointer rounded-none"
                     >
@@ -230,7 +229,7 @@ function BookPageContent() {
                   >
                     <div className="space-y-4">
                       <span className="text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">Step 02</span>
-                      <h2 className="text-[length:var(--text-h3)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight leading-tight">
+                      <h2 className="text-[length:var(--text-h3)] font-[family-name:var(--theme-font-heading)] font-bold text-[var(--color-primary)] uppercase tracking-tight leading-[1.05]">
                         Interactive A380 Cabin Suite Map.
                       </h2>
                       <div className="h-[2px] bg-[var(--color-accent)] w-12" />
@@ -265,7 +264,7 @@ function BookPageContent() {
                             >
                               <Armchair size={18} className="mb-1" />
                               <span>{seat.id}</span>
-                              
+
                               {/* Extra price mini tag */}
                               {!isOccupied && (
                                 <span className={`absolute bottom-2 text-xs font-bold ${
@@ -293,7 +292,7 @@ function BookPageContent() {
 
                     {/* Selected Seat detail box - Typography style */}
                     {selectedSeat && (
-                      <motion.div 
+                      <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         animate={{ opacity: 1, y: 0 }}
                         className="py-6 border-t-2 border-[var(--color-accent)] normal-case"
@@ -305,7 +304,7 @@ function BookPageContent() {
                     )}
 
                     <div className="flex gap-4">
-                      <button 
+                      <button
                         onClick={() => setStep(1)}
                         className="px-10 py-4 border border-[var(--color-border)] text-[var(--color-primary)] text-sm font-bold uppercase tracking-wider hover:border-[var(--color-primary)] transition-all cursor-pointer rounded-none"
                       >
@@ -343,14 +342,14 @@ function BookPageContent() {
                     {/* Highly stylized Skyline boarding ticket pass */}
                     <div className="p-8 max-w-xl mx-auto bg-[var(--color-primary)] text-white relative overflow-hidden rounded-[32px]">
                       <div className="absolute right-[-40px] top-[-40px] w-32 h-32 bg-white/5 rounded-full" />
-                      
+
                       {/* Pass details */}
                       <div className="flex justify-between items-start border-b border-white/10 pb-6 mb-8">
                         <div>
                           <p className="text-sm uppercase tracking-[0.3em] text-[var(--color-accent)] font-bold">STRATUS Premium Pass</p>
                           <h3 className="font-[family-name:var(--theme-font-heading)] text-xl font-bold tracking-tight text-white mt-1">FIRST CLASS SUITE</h3>
                         </div>
-                        <span className="text-lg text-[var(--color-accent)] font-black bg-[var(--color-accent)]/10 px-4 py-1.5 rounded-full">{selectedSeat?.id}</span>
+                        <span className="text-lg text-[var(--color-accent)] font-extrabold bg-[var(--color-accent)]/10 px-4 py-1.5 rounded-full">{selectedSeat?.id}</span>
                       </div>
 
                       <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 text-left normal-case mb-8">
@@ -384,7 +383,7 @@ function BookPageContent() {
                     </div>
 
                     <div className="flex justify-center pt-4">
-                      <button 
+                      <button
                         onClick={() => {
                           setStep(1);
                           setSelectedSeat(null);

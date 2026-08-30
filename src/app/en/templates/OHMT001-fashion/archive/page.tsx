@@ -15,7 +15,7 @@ const SEASONS = [
     id: "ss26",
     label: "Spring / Summer 26",
     title: "The First Light",
-    image: "/templates/OHMT001-fashion/exclusive-custom.jpg",
+    image: "/templates/OHMT001-fashion/archive-ss26-v2.jpg",
     description:
       "A debut collection born from the tension between structure and fluidity. Tailored silhouettes meet draped organza - a study in controlled softness.",
     year: "2026",
@@ -24,7 +24,7 @@ const SEASONS = [
     id: "aw25",
     label: "Autumn / Winter 25",
     title: "Concrete Garden",
-    image: "/templates/OHMT001-fashion/branding-custom.jpg",
+    image: "/templates/OHMT001-fashion/archive-aw25-v2.jpg",
     description:
       "Brutalist forms softened by human touch. Wool, leather, and raw-edged seams define a season that walks the line between shelter and exposure.",
     year: "2025",
@@ -33,7 +33,7 @@ const SEASONS = [
     id: "core",
     label: "Core Series",
     title: "Permanent Objects",
-    image: "/templates/OHMT001-fashion/hero-custom.jpg",
+    image: "/templates/OHMT001-fashion/archive-core-v2.jpg",
     description:
       "The foundation. Garments designed not for a single season but for a lifetime. Every stitch, seam, and silhouette refined to its essential form.",
     year: "2025",
@@ -42,7 +42,7 @@ const SEASONS = [
     id: "limited",
     label: "Limited Drop",
     title: "Monument",
-    image: "/templates/OHMT001-fashion/exclusive-lifestyle.png",
+    image: "/templates/OHMT001-fashion/archive-limited-v2.jpg",
     description:
       "An experimental capsule exploring the boundary between garment and sculpture. Produced in an edition of 50 pieces worldwide.",
     year: "2024",
@@ -101,20 +101,20 @@ function PageContent() {
                 transition={{ duration: 0.8, delay: 0.15 }}
                 className={i % 2 === 1 ? "md:col-start-1 md:row-start-1" : ""}
               >
-                <span className="text-xs font-bold uppercase tracking-[0.3em] text-white/20">
+                <span className="text-xs font-semibold uppercase tracking-[0.22em] text-white/40">
                   {season.label}
                 </span>
                 <h2
-                  className="text-4xl font-bold leading-[var(--leading-display)] tracking-[-0.035em] text-white sm:text-[4vw]"
+                  className="mt-3 text-2xl font-light leading-[1.15] tracking-[-0.025em] text-white sm:text-3xl md:text-4xl"
                   style={{ fontFamily: "var(--font-bodoni)" }}
                 >
                   {season.title}
                 </h2>
-                <p className="text-sm sm:text-sm text-white/50 leading-relaxed max-w-md">
+                <p className="mt-5 max-w-[52ch] text-base leading-[1.7] text-white/60">
                   {season.description}
                 </p>
                 <div className="flex items-center gap-4 mt-8">
-                  <span className="text-4xl sm:text-[4vw] font-bold tracking-tighter text-white/10 leading-none">
+                  <span className="text-2xl font-light leading-none tracking-tight text-white/20 sm:text-3xl">
                     {season.year}
                   </span>
                   <div className="w-12 h-px bg-white/20" />

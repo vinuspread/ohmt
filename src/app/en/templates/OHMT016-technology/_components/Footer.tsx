@@ -17,7 +17,9 @@ export default function Footer() {
                 <rect x="15" y="15" width="6" height="6" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" rx="1"/>
                 <circle cx="12" cy="12" r="2" fill="currentColor"/>
               </svg>
-              <span className="text-xl font-bold tracking-tight text-[var(--color-text)] font-heading">KINETIX</span>
+              <span className="text-xl font-bold tracking-tight text-[var(--color-text)] font-heading">
+                KINETIX
+              </span>
             </Link>
             <p className="text-sm text-[var(--color-text-muted)] leading-[var(--leading-heading)] max-w-sm">
               Empowering next generation engineering startups and autonomous creators with modular hardware ecosystems.

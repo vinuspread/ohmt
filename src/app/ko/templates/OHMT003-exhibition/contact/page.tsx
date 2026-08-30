@@ -7,7 +7,7 @@ const infoBlocks = [
   { label: '주소', value: '123 West 25th Street\nNew York, NY 10001' },
   { label: '관람 시간', value: '화–금 10:00–18:00\n토–일 10:00–20:00\n월요일 휴관' },
   { label: '전화', value: '+1 (212) 555-0147' },
-  { label: '이메일', value: 'info@formagallery.com' },
+  { label: '이메일', value: 'info@vantagallery.com' },
 ];
 
 export default function ContactPage() {
@@ -17,10 +17,10 @@ export default function ContactPage() {
       <main>
         <section className="bg-[var(--color-bg)] pt-40 pb-16 border-b border-[var(--color-border)]">
           <div className="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-            <h1 className="font-heading font-semibold uppercase text-black leading-[var(--leading-heading)]" style={{ fontSize: 'clamp(4rem, 7vw, 7rem)', letterSpacing: '-0.04em' }}>
+            <h1 className="font-heading font-semibold uppercase text-black leading-[var(--leading-heading)]" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', letterSpacing: '-0.04em' }}>
               방문·문의
             </h1>
-            <p className="max-w-[720px] text-sm font-body text-black/50 leading-relaxed md:text-right">
+            <p className="text-sm font-body text-black/50 leading-relaxed max-w-[32ch] md:text-right">
               전시와 프로그램, 단체 관람, 공간 이용에 관한 문의를 남겨주세요.<br />
               담당자가 확인 후 안내해 드립니다.
             </p>
@@ -33,7 +33,7 @@ export default function ContactPage() {
               <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
               <span className="relative text-black group-hover:text-white text-xs font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-300">전화: +1 (212) 555-0147</span>
             </a>
-            <a href="mailto:info@formagallery.com" className="relative overflow-hidden group px-8 py-4 border border-black">
+            <a href="mailto:info@vantagallery.com" className="relative overflow-hidden group px-8 py-4 border border-black">
               <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />
               <span className="relative text-black group-hover:text-white text-xs font-body font-semibold uppercase tracking-[0.12em] transition-colors duration-300">이메일 문의</span>
             </a>

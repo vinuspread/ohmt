@@ -16,10 +16,10 @@ const values = [
 ];
 
 const team = [
-  { name: "Marco Vinus", role: "창업자·대표", img: "/templates/OHMT005-sneaker/about-founder.png" },
-  { name: "Yuna Park", role: "디자인 총괄", img: "/templates/OHMT005-sneaker/team-yuna.png" },
-  { name: "Tobias Krenn", role: "소재 총괄", img: "/templates/OHMT005-sneaker/team-tobias-v2.webp" },
-  { name: "Sofia Reyes", role: "브랜드 디렉터", img: "/templates/OHMT005-sneaker/team-sofia.png" },
+  { name: "Marco Vinus", role: "창업자·대표", img: "/templates/OHMT005-sneaker/blog-1.jpg" },
+  { name: "Yuna Park", role: "디자인 총괄", img: "/templates/OHMT005-sneaker/blog-2.jpg" },
+  { name: "Tobias Krenn", role: "소재 총괄", img: "/templates/OHMT005-sneaker/blog-3.jpg" },
+  { name: "Sofia Reyes", role: "브랜드 디렉터", img: "/templates/OHMT005-sneaker/blog-4.jpg" },
 ];
 
 function AboutPageContent() {
@@ -36,9 +36,7 @@ function AboutPageContent() {
               좋은 소재로<br /><span className="text-red-600">제대로 만든 신발.</span><br />가까운 매장에서 만나보세요.
             </h1>
             <p className="mt-8 text-[1rem] text-white/60 leading-relaxed max-w-[520px]">
-              좋은 소재와 믿을 수 있는 품질로 새로운 가치를 제공합니다.
-              <br />
-              더 가까운 곳에서 고객을 만나기 위해 2019년에 시작했습니다.
+              좋은 소재와 믿을 수 있는 품질로 새로운 가치를 제공합니다. 더 가까운 곳에서 고객을 만나기 위해 2019년에 시작했습니다.
             </p>
           </div>
         </section>
@@ -50,21 +48,17 @@ function AboutPageContent() {
               <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-black/40 block mb-5">브랜드의 시작</span>
               <h2 className="text-[2rem] font-black uppercase tracking-[-0.03em] leading-[var(--leading-heading)] mb-6">리스본의 작은 작업실에서<br />첫 신발을 만들었습니다.</h2>
               <p className="text-[0.9rem] text-black/60 leading-relaxed mb-4">
-                창립자 마르코는 전통 제화 기술을 배우며 소재와 제작 환경을 함께 살폈습니다.
-                <br />
-                좋은 신발을 만들기 위해 품질과 책임 있는 생산 중 하나를 포기할 필요는 없다고 생각했습니다.
+                창립자 마르코는 전통 제화 기술을 배우며 소재와 제작 환경을 함께 살폈습니다. 좋은 신발을 만들기 위해 품질과 책임 있는 생산 중 하나를 포기할 필요는 없다고 생각했습니다.
               </p>
               <p className="text-[0.9rem] text-black/60 leading-relaxed mb-8">
-                2019년 리스본에 작은 작업실을 열고, 공급 경로를 확인할 수 있는 제혁소와 직접 협업하기 시작했습니다.
-                <br />
-                지금은 40여 개국에 제품을 보내고 있지만 소재를 고르고 한 켤레씩 마감하는 기준은 처음과 같습니다.
+                2019년 리스본에 작은 작업실을 열고, 공급 경로를 확인할 수 있는 제혁소와 직접 협업하기 시작했습니다. 지금은 40여 개국에 제품을 보내고 있지만 소재를 고르고 한 켤레씩 마감하는 기준은 처음과 같습니다.
               </p>
               <Link href="/ko/templates/OHMT005-sneaker/shop-all" className="inline-flex items-center gap-3 bg-black text-white text-[0.82rem] font-bold uppercase tracking-[0.08em] px-8 py-4 hover:bg-black/80 transition-colors">
                 컬렉션 보기 <ArrowRight size={16} />
               </Link>
             </div>
             <div className="aspect-[4/5] overflow-hidden bg-[var(--color-bg-secondary)]">
-              <img loading="lazy" src="/templates/OHMT005-sneaker/about-founder.png" alt="작업실에 선 창립자 마르코" className="w-full h-full object-cover" />
+              <img loading="lazy" src="/templates/OHMT005-sneaker/hero-main.jpg" alt="작업실에 선 창립자 마르코" className="w-full h-full object-cover" />
             </div>
           </div>
         </section>

@@ -29,19 +29,21 @@ export default function Navbar({ solid = false }: { solid?: boolean }) {
         isDark ? "bg-[var(--color-bg)]/95 backdrop-blur-sm shadow-sm" : "bg-transparent"
       }`}
     >
-      <nav className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
+      <nav className="mx-auto max-w-[1440px] px-6 py-4 flex items-center justify-between">
         <a
           href={basePath}
-          className="font-[family-name:var(--font-heading)] text-xl font-bold tracking-tight"
+          className="font-[family-name:var(--font-heading)] text-lg font-bold tracking-tight"
           style={{ color: isDark ? "var(--color-text)" : "var(--color-text-contrast)" }}
-        >SERENITY</a>
+        >
+          SERENITY
+        </a>
 
         <div className="hidden lg:flex items-center gap-8">
           {navLinks.slice(1, -1).map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-base font-medium transition-colors duration-200 hover:text-[var(--color-primary)]"
+              className="text-sm font-medium transition-colors duration-200 hover:text-[var(--color-primary)]"
               style={{ color: isDark ? "var(--color-text)" : "var(--color-text-contrast)" }}
             >
               {link.label}

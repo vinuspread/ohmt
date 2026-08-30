@@ -35,13 +35,15 @@ export function SpecsCta() {
       <div className="absolute inset-0 bg-[var(--bg)]/60" />
       <div className="relative z-10 text-center px-6">
         <h2 className="font-michroma text-[length:var(--text-h2)] text-[var(--text)] leading-[var(--leading-heading)] tracking-[-0.03em] mb-4">
-          원하는 모델과 옵션을 고르고<br />NUBI의 생산 순서를<br />먼저 예약하세요.</h2>
+          온라인 스펙 커스텀으로<br />원하는 NUBI 슬롯을<br />먼저 선점하세요.
+        </h2>
         <p className="font-inter text-sm text-[var(--text-muted)] mb-8">
           2,890만 원부터 시작합니다.
-          <br className="hidden md:block" />{" "}
-          예약금 35만 원은 취소 시 전액 환불됩니다.</p>
+          예약금 35만 원은 언제든 전액 환불됩니다.
+        </p>
         <button className="inline-flex items-center gap-2 bg-[var(--accent)] text-[var(--text-on-light)] px-8 py-4 rounded-full text-sm font-inter font-medium tracking-[0.03em] hover:bg-[var(--accent-dark)] transition-colors duration-300 mb-6">
-          NUBI 사전 예약 →</button>
+          지금 사전 예약하기 →
+        </button>
         <div>
           <a href="#top" className="font-inter text-xs text-[var(--text-muted)] hover:text-[var(--text)] transition-colors">
             트림 비교 ↑

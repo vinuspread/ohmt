@@ -13,7 +13,7 @@ export default function FigureShopHome() {
   return (
     <>
       <HeroDrop />
-      <DropStrip id="drops" label="새로 나온 에디션" slugs={NEW_DROPS} priorityImages />
+      <DropStrip id="drops" label="신규 드롭" slugs={NEW_DROPS} priorityImages />
       <StatementBlock />
       <LineTiles />
       <CampaignBand />

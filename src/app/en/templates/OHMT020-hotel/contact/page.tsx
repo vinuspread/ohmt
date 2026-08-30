@@ -46,7 +46,7 @@ function ContactPageContent() {
                   <span className="text-xs font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] block mb-3">Reach Out</span>
                   <h2 className="text-3xl font-[var(--font-heading)] font-bold text-[var(--color-primary)] mb-6">Our Resort Location</h2>
                   <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-                    Set on a secluded hillside dropping into a private bay, OHMT is situated on Koh Samui's pristine north-eastern coast.
+                    Set on a secluded hillside dropping into a private bay, CASSIA is situated on Koh Samui's pristine north-eastern coast.
                   </p>
                 </div>
 
@@ -69,7 +69,7 @@ function ContactPageContent() {
                     <Mail className="text-[var(--color-accent)] flex-shrink-0 mt-1" size={18} />
                     <div>
                       <h4 className="font-semibold text-[var(--color-primary)] mb-1">General Inquiries</h4>
-                      <p className="text-[var(--color-text-muted)]">contact@ohmt.site</p>
+                      <p className="text-[var(--color-text-muted)]">contact@cassia.site</p>
                     </div>
                   </div>
                 </div>
@@ -77,7 +77,7 @@ function ContactPageContent() {
                 {/* OpenStreetMap embed - Koh Samui, Thailand */}
                 <div className="aspect-[16/10] border border-[var(--color-border)] overflow-hidden">
                   <iframe
-                    title="OHMT Location"
+                    title="CASSIA Location"
                     src="https://www.openstreetmap.org/export/embed.html?bbox=99.9%2C9.45%2C100.15%2C9.6&layer=mapnik&marker=9.527%2C100.063"
                     className="w-full h-full"
                     style={{ border: 0 }}

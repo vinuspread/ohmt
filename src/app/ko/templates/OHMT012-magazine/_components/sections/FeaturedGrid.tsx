@@ -5,14 +5,14 @@ import React from "react";
 import Link from "next/link";
 
 const featuredItems = [
-  { tag: "디자인", title: "북유럽 미니멀 건축의 진화", desc: "코펜하겐에서 스톡홀름까지, 기능과 자연 소재가 도시 풍경을 바꾸는 방식." },
-  { tag: "문화", title: "베를린 동부의 숨은 갤러리", desc: "도시 곳곳의 독창적인 미술 공간을 찾아가는 여정." },
-  { tag: "라이프스타일", title: "사막에서 지속가능하게 살아가기", desc: "자급자족 공동체가 만들어가는 새로운 생활 방식." }
+  { tag: "디자인", title: "북유럽 도시의 미니멀 건축 진화.", desc: "코펜하겐부터 스톡홀름까지, 기능주의와 자연 소재가 도시 풍경을 재정의하다." },
+  { tag: "문화", title: "베를린 동쪽 지역의 숨겨진 갤러리.", desc: "도시의 가장 독창적인 미술 공간들을 찾아다니는 큐레이션 여행." },
+  { tag: "지속가능성", title: "재생 농업의 미래.", desc: "농부들이 지역사회에 식량을 공급하면서 생태계를 복원하는 방법." }
 ];
 
 const subItems = [
-  { slug: "hidden-galleries-berlin-east-side", img: "/templates/OHMT012-magazine/mag-article-berlin-gallery-v2.jpg", author: "Marta Weber", index: 1 },
-  { slug: "regenerative-agriculture-future", img: "/templates/OHMT012-magazine/mag-desert-living-v2.jpg", author: "Sarah Chen", index: 2 }
+  { slug: "hidden-galleries-berlin-east-side", img: "/templates/OHMT012-magazine/mag-3.jpg", author: "Marta Weber", index: 1 },
+  { slug: "regenerative-agriculture-future", img: "/templates/OHMT012-magazine/mag-4.jpg", author: "Sarah Chen", index: 2 }
 ];
 
 export const FeaturedGrid = () => {
@@ -20,7 +20,7 @@ export const FeaturedGrid = () => {
     <section className="py-12 md:py-24 bg-white">
       <div className="max-w-[var(--theme-container)] mx-auto px-6 md:px-[var(--theme-gutter)]">
         <div className="text-[1.1rem] font-bold uppercase tracking-tight text-[var(--theme-text-muted)] mb-10">
-          추천 기사
+          추천 스토리
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-10">
@@ -28,7 +28,7 @@ export const FeaturedGrid = () => {
           <div className="group">
             <div className="overflow-hidden h-[480px] mb-8">
               <img
-                src="/templates/OHMT012-magazine/mag-article-nordic-architecture-v2.jpg"
+                src="/templates/OHMT012-magazine/mag-2.jpg"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                 alt="메인 스토리"
               />
@@ -45,7 +45,7 @@ export const FeaturedGrid = () => {
               {featuredItems[0].desc}
             </p>
             <div className="text-[0.875rem] text-[var(--theme-text-muted)] font-medium">
-              글 <strong className="text-[var(--theme-text)]">Anders Holm</strong>
+              By <strong className="text-[var(--theme-text)]">Anders Holm</strong>
             </div>
           </div>
 
@@ -70,7 +70,7 @@ export const FeaturedGrid = () => {
                  </h3>
 
                 <div className="text-[0.875rem] text-[var(--theme-text-muted)] font-medium">
-                  글 <strong className="text-[var(--theme-text)]">{item.author}</strong>
+                  By <strong className="text-[var(--theme-text)]">{item.author}</strong>
                 </div>
               </div>
             ))}

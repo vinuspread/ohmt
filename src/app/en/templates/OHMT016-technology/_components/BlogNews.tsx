@@ -82,7 +82,7 @@ export default function BlogNews() {
                       {post.date}
                     </span>
                   </div>
-                  <h3 className="text-base font-semibold text-[var(--color-text)] font-heading transition-colors group-hover:text-[var(--color-accent)] leading-snug tracking-tight">
+                  <h3 className="text-base font-semibold text-[var(--color-text)] font-heading transition-colors group-hover:text-[var(--color-accent)] leading-[1.05] tracking-tight">
                     {post.title}
                   </h3>
                   <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-[var(--color-text-muted)] group-hover:text-[var(--color-text)] transition-colors duration-200 mt-1">

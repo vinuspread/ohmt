@@ -28,7 +28,7 @@ export function LabelRow({ label, link, onPrev, onNext }: LabelRowProps) {
         <div className="flex items-center gap-2">
           <button
             type="button"
-            aria-label={`${label} 이전 항목 보기`}
+            aria-label={`${label} 이전으로`}
             onClick={onPrev}
             className="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-ink)] transition-colors duration-150 hover:border-[var(--color-ink)]"
           >
@@ -36,7 +36,7 @@ export function LabelRow({ label, link, onPrev, onNext }: LabelRowProps) {
           </button>
           <button
             type="button"
-            aria-label={`${label} 다음 항목 보기`}
+            aria-label={`${label} 다음으로`}
             onClick={onNext}
             className="flex h-9 w-9 items-center justify-center rounded-full border border-[var(--color-border)] text-[var(--color-ink)] transition-colors duration-150 hover:border-[var(--color-ink)]"
           >

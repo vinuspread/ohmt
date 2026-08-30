@@ -20,7 +20,7 @@ export function Footer() {
           <div className="space-y-6">
             <Link href={baseRoute} className="flex items-center">
               <span className="font-sans font-bold text-lg tracking-[0.06em] text-white">
-                OHMT
+ARCHE
               </span>
             </Link>
             <div className="font-sans text-sm text-white/70 space-y-2 leading-relaxed">
@@ -33,7 +33,8 @@ export function Footer() {
           {/* Right: Newsletter */}
           <div className="space-y-4">
             <h3 className="font-sans text-xs tracking-[0.08em] font-medium text-white/90">
-              소식 구독</h3>
+              소식 구독
+            </h3>
             <form onSubmit={handleSubscribe} className="flex flex-col sm:flex-row gap-3">
               <input
                 type="email"
@@ -57,7 +58,8 @@ export function Footer() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           <div className="space-y-4">
             <h4 className="font-sans text-xs font-medium text-[#888888] tracking-[0.15em] uppercase">
-              스튜디오</h4>
+              스튜디오
+            </h4>
             <div className="flex flex-col gap-2">
               <Link href={`${baseRoute}/about`} className="font-sans text-sm text-white/70 hover:text-[#B07D4F] transition-colors">
                 소개
@@ -90,7 +92,8 @@ export function Footer() {
 
           <div className="space-y-4">
             <h4 className="font-sans text-xs font-medium text-[#888888] tracking-[0.15em] uppercase">
-              소셜</h4>
+              소셜
+            </h4>
             <div className="flex flex-col gap-2">
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="font-sans text-sm text-white/70 hover:text-[#B07D4F] transition-colors">
                 Instagram
@@ -110,7 +113,8 @@ export function Footer() {
             </h4>
             <div className="flex flex-col gap-2">
               <Link href={`${baseRoute}`} className="font-sans text-sm text-white/70 hover:text-[#B07D4F] transition-colors">
-                보도자료</Link>
+                보도자료
+              </Link>
               <Link href={`${baseRoute}`} className="font-sans text-sm text-white/70 hover:text-[#B07D4F] transition-colors">
                 개인정보 처리방침
               </Link>

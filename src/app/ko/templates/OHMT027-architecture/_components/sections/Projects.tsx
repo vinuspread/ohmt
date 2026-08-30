@@ -22,17 +22,17 @@ export function Projects() {
     const pattern = index % 5;
     switch (pattern) {
       case 0:
-        return "col-span-12 aspect-[21/9]";
+        return "col-span-1 aspect-[4/3] md:col-span-12 md:aspect-[21/9]";
       case 1:
-        return "col-span-12 md:col-span-7 aspect-[4/3]";
+        return "col-span-1 md:col-span-7 aspect-[4/3]";
       case 2:
-        return "col-span-12 md:col-span-5 aspect-[4/3]";
+        return "col-span-1 md:col-span-5 aspect-[4/3]";
       case 3:
-        return "col-span-12 md:col-span-5 aspect-[4/3]";
+        return "col-span-1 md:col-span-5 aspect-[4/3]";
       case 4:
-        return "col-span-12 md:col-span-7 aspect-[4/3]";
+        return "col-span-1 md:col-span-7 aspect-[4/3]";
       default:
-        return "col-span-12 md:col-span-6 aspect-[4/3]";
+        return "col-span-1 md:col-span-6 aspect-[4/3]";
     }
   };
 
@@ -43,7 +43,8 @@ export function Projects() {
         <ScrollReveal>
           <div className="flex flex-col sm:flex-row justify-between items-baseline gap-4 border-b border-[#E0E0E0] pb-8 mb-12">
             <h2 className="font-heading font-normal text-4xl md:text-5xl text-[#1A1A1A]">
-              주요 프로젝트</h2>
+              주요 프로젝트
+            </h2>
             <span className="font-sans text-xs text-[#888888] tracking-wider uppercase">
               {projects.length}개 프로젝트
             </span>
@@ -73,7 +74,7 @@ export function Projects() {
         </ScrollReveal>
 
         {/* Magazine Grid */}
-        <div className="grid grid-cols-12 gap-8">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-12">
           <AnimatePresence mode="popLayout">
             {filteredProjects.map((project, idx) => {
               const gridClass = getGridClass(idx);
@@ -113,11 +114,11 @@ export function Projects() {
                   </Link>
 
                   {/* Caption */}
-                  <div className="mt-4 flex justify-between items-baseline">
-                    <span className="font-sans text-sm font-medium text-[#1A1A1A]">
+                  <div className="mt-4 flex items-baseline justify-between gap-4">
+                    <span className="min-w-0 font-sans text-sm font-medium text-[#1A1A1A]">
                       {project.title}
                     </span>
-                    <span className="font-sans text-xs text-[#888888]">
+                    <span className="shrink-0 text-right font-sans text-xs text-[#888888]">
                       {project.location}
                     </span>
                   </div>

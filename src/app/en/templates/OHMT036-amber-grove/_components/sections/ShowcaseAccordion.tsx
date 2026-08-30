@@ -13,7 +13,7 @@ export function ShowcaseAccordion() {
       <div className="grid grid-cols-12 gap-y-10 sm:gap-x-10 lg:gap-x-20 lg:items-start">
         <div className="col-span-12 lg:col-span-7">
           <p className="ledger-num text-sm font-bold text-[var(--color-accent)]">03 · Fruit calendar</p>
-          <h2 className="mt-4 max-w-xl font-[family-name:var(--font-heading)] text-2xl font-semibold leading-tight sm:text-4xl">
+          <h2 className="mt-4 max-w-xl font-[family-name:var(--font-heading)] text-2xl font-semibold leading-[1.05] sm:text-4xl">
             Six ways to buy from the same harvest rhythm.
           </h2>
           <div className="mt-10 max-w-2xl divide-y divide-[var(--color-border)] border-t border-[var(--color-border)]">

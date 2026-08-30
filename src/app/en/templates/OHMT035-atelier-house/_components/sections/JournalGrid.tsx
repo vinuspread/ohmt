@@ -29,7 +29,7 @@ export function JournalGrid() {
                 />
               </div>
               <p className="mt-3 text-xs text-[var(--color-text-muted)]">{post.date}</p>
-              <h3 className="mt-1 text-base font-semibold leading-snug text-[var(--color-text)]">{post.title}</h3>
+              <h3 className="mt-1 text-base font-semibold leading-[1.05] text-[var(--color-text)]">{post.title}</h3>
               <span className="mt-2 inline-block text-xs font-semibold text-[var(--color-text)] underline decoration-[var(--color-border)] underline-offset-4 transition-colors duration-300 group-hover:text-[var(--color-accent)]">
                 Read more
               </span>

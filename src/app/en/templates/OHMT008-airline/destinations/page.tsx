@@ -17,56 +17,56 @@ function DestinationsPageContent() {
   const destinations = [
     {
       slug: "paris",
-      name: "Paris", 
-      country: "France", 
+      name: "Paris",
+      country: "France",
       desc: "Immerse yourself in world-class art, culinary genius, and historical elegance.",
       img: "/templates/OHMT008-airline/paris.png",
       mood: "Heritage & Arts"
     },
     {
       slug: "tokyo",
-      name: "Tokyo", 
-      country: "Japan", 
+      name: "Tokyo",
+      country: "Japan",
       desc: "Discover where ancient meticulous shrine traditions border neon skyscrapers.",
       img: "/templates/OHMT008-airline/tokyo.png",
       mood: "Metropolitan"
     },
     {
       slug: "new-york",
-      name: "New York", 
-      country: "USA", 
+      name: "New York",
+      country: "USA",
       desc: "Thrive inside the soaring energy of the world's most dramatic skyline.",
       img: "/templates/OHMT008-airline/new-york.png",
       mood: "Metropolitan"
     },
     {
       slug: "dubai",
-      name: "Dubai", 
-      country: "UAE", 
+      name: "Dubai",
+      country: "UAE",
       desc: "Indulge in unparalleled desert architecture, grand harbors, and high luxury.",
       img: "/templates/OHMT008-airline/dubai.png",
       mood: "Metropolitan"
     },
     {
       slug: "sydney",
-      name: "Sydney", 
-      country: "Australia", 
+      name: "Sydney",
+      country: "Australia",
       desc: "Delight in coastal harborside elegance, pristine bays, and upscale lifestyle.",
       img: "/templates/OHMT008-airline/sydney.png",
       mood: "Nature & Retreats"
     },
     {
       slug: "bali",
-      name: "Bali", 
-      country: "Indonesia", 
+      name: "Bali",
+      country: "Indonesia",
       desc: "Escape into cascading emerald valleys, clifftop temples, and serene beaches.",
       img: "/templates/OHMT008-airline/bali.png",
       mood: "Nature & Retreats"
     },
   ];
 
-  const filteredDestinations = selectedMood === "All" 
-    ? destinations 
+  const filteredDestinations = selectedMood === "All"
+    ? destinations
     : destinations.filter(d => d.mood === selectedMood);
 
   return (
@@ -80,13 +80,13 @@ function DestinationsPageContent() {
           imageAlt="Global destinations"
           label="Curated Sky Escapes"
           title={<>Explore Our <br /><span className="text-[var(--color-accent)] font-[family-name:var(--font-heading)] normal-case font-bold">Refined World.</span></>}
-          description={"Over 200 destinations across 80 countries.\nOur global network connects you with legendary metropolitan wonders, historical cultural heritages, and tranquil tropical sanctuaries - always with uncompromised luxury."}
+          description="Over 200 destinations across 80 countries.\nOur global network connects you with legendary metropolitan wonders, historical cultural heritages, and tranquil tropical sanctuaries - always with uncompromised luxury."
         />
 
         {/* Dynamic Catalog Section */}
         <section className="py-14 md:py-32 bg-white">
           <div className="max-w-[1320px] mx-auto px-6 md:px-10 space-y-16">
-            
+
             {/* Premium Mood Segmented filter deck */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-[var(--color-border)] pb-6 md:pb-8 gap-4 md:gap-6">
               <div className="flex flex-wrap items-center gap-2">
@@ -110,7 +110,7 @@ function DestinationsPageContent() {
             </div>
 
             {/* Editorial Typographic Grid - TEXT OUTSIDE OF IMAGES, COLORS BY DEFAULT, SCALE ON HOVER */}
-            <motion.div 
+            <motion.div
               layout
               className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-16"
             >
@@ -124,7 +124,7 @@ function DestinationsPageContent() {
                     exit={{ opacity: 0, scale: 0.95 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <Link 
+                    <Link
                       href={`/en/templates/OHMT008-airline/destinations/${dest.slug}`}
                       className="group block space-y-6 text-left select-none"
                     >

@@ -35,7 +35,7 @@ function Counter({ value, unit }: { value: number; unit: string }) {
   }, [inView, value]);
 
   return (
-    <span ref={ref} className="text-6xl font-bold tracking-[-1.92px]">
+    <span ref={ref} className="text-6xl font-bold tracking-[-0.96px]">
       {count}
       {unit}
     </span>
@@ -54,7 +54,7 @@ export function StatsSection() {
           viewport={{ once: true, margin: '-50px' }}
           className="flex flex-col gap-8 mb-30 text-center"
         >
-          <h2 className="text-3xl md:text-5xl leading-[var(--leading-heading)] font-semibold tracking-[-1.44px] text-[#090B19] max-w-2xl mx-auto">
+          <h2 className="text-3xl md:text-5xl leading-[var(--leading-heading)] font-semibold tracking-[-0.72px] text-[#090B19] max-w-2xl mx-auto">
             By the numbers
           </h2>
           <p className="text-base leading-[var(--leading-heading)] text-[var(--color-text-muted)] max-w-xl mx-auto">

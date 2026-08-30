@@ -22,15 +22,15 @@ function StudioHomeContent() {
     }, []);
 
     const fields = [
-        { title: "공간 설계", subTitle: "절제된 선과 비례", location: "서울, 강남", desc: "불필요한 장식을 덜어내고 동선과 비례, 수납 기능에 집중한 주거 공간입니다.\n밝은 석재와 따뜻한 원목을 함께 사용해 차분하면서도 편안한 분위기를 만들었습니다.", idx: "01", image: "/templates/OHMT006-studio/hero-1.jpg" },
-        { title: "맞춤 인테리어", subTitle: "자연광을 살린 공간", location: "경주, 보문동", desc: "창으로 들어오는 자연광과 간접조명이 시간대에 따라 공간의 표정을 바꾸도록 설계했습니다.\n트래버틴과 원목의 질감을 살려 편안하고 차분한 분위기를 완성했습니다.", idx: "02", image: "/templates/OHMT006-studio/hero-2.jpg" },
-        { title: "맞춤 가구", subTitle: "공간에 맞춘 가구와 집기", location: "제주, 서귀포", desc: "공간의 크기와 동선에 맞춰 테이블과 수납장, 조명과 집기를 별도로 설계했습니다.\n형태뿐 아니라 수납과 관리, 실제 사용 방식까지 고려해 제작했습니다.", idx: "03", image: "/templates/OHMT006-studio/hero-3.jpg" },
+        { title: "공간 큐레이션", subTitle: "기하학적 절제", location: "서울, 강남", desc: "순수한 기하학적 형태와 절제된 소재를 통해 공간의 경계를 재정의합니다. 모든 면과 선은 머무는 이에게 몰입감을 선사하며, 불필요한 장식을 배제하고 본질적인 비례미에 집중합니다.", idx: "01", image: "/templates/OHMT006-studio/hero-1.jpg" },
+        { title: "비스포크 인테리어", subTitle: "유기적인 빛", location: "경주, 불국사", desc: "천연 트래버틴 특유의 거친 질감과 은은하게 퍼지는 간접 광원이 자아내는 자연스러운 조화. 공간 곳곳으로 부드럽게 흐르는 빛은 고요하면서도 깊이 있는 세련미를 전달합니다.", idx: "02", image: "/templates/OHMT006-studio/hero-2.jpg" },
+        { title: "오브제 디렉팅", subTitle: "조각적 공간 오브제", location: "제주, 서귀포", desc: "빛의 방향과 흐름을 조율하기 위해 정교하게 다듬어진 커스텀 오브제입니다. 철저한 소재 연구를 거쳐 탄생한 가구와 집기들은 예술과 쓰임새의 경계에서 공간의 완성을 돕습니다.", idx: "03", image: "/templates/OHMT006-studio/hero-3.jpg" },
     ];
 
     const featuredProjects = [
         {
             id: "proj-1",
-            title: "한강이 보이는 주택",
+            title: "호수가 보이는 주택",
             category: "주택 설계",
             year: "2026",
             location: "서울, 강남",
@@ -38,7 +38,7 @@ function StudioHomeContent() {
         },
         {
             id: "proj-2",
-            title: "테크 기업 오피스",
+            title: "모던 테크 오피스",
             category: "상업공간",
             year: "2025",
             location: "부산, 해운대",
@@ -89,7 +89,7 @@ function StudioHomeContent() {
                         <div className="space-y-5 md:space-y-8 max-w-5xl">
                             <span className="text-xs font-bold text-white/60 block">{"ARCHITECTURAL STUDIO"}</span>
                             <h1 className="text-[length:var(--text-display)] font-bold leading-[var(--leading-heading)] text-white break-keep">
-                                {"좋은 공간은"}<br /><span className="font-serif font-normal lowercase text-white/90">{"생활과 일을 자연스럽게 담아냅니다."}</span>
+                                {"형태는 침묵하고,"}<br /><span className="font-serif font-normal lowercase text-white/90">{"공간은 이야기를 시작한다."}</span>
                             </h1>
                             <div className="pt-2 md:pt-4">
                                 <Link
@@ -125,7 +125,7 @@ function StudioHomeContent() {
                                             <h3 className="text-base md:text-xl font-bold text-white">{activeHeroField.subTitle}</h3>
                                             <span className="text-xs text-white/40">- {activeHeroField.location}</span>
                                         </div>
-                                        <p className="whitespace-pre-line text-sm text-white/50 font-normal leading-relaxed line-clamp-3 md:line-clamp-none">{activeHeroField.desc}</p>
+                                        <p className="text-sm md:text-sm text-white/50 font-normal leading-relaxed line-clamp-3 md:line-clamp-none">{activeHeroField.desc}</p>
                                     </div>
                                     <div className="flex items-center gap-3">
                                         <button onClick={handlePrev} className="w-7 h-7 md:w-8 md:h-8 rounded-full border border-white/20 hover:border-white text-white flex items-center justify-center transition-colors">
@@ -147,14 +147,14 @@ function StudioHomeContent() {
                     <div className="max-w-[1720px] mx-auto px-6 md:px-16 lg:px-24">
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-16 items-start">
                             <div className="lg:col-span-5 space-y-3 md:space-y-4">
-                                <span className="text-xs text-white/40 font-bold block">{"설계 기준"}</span>
+                                <span className="text-xs text-white/40 font-bold block">{"스튜디오 철학"}</span>
                                 <h2 className="text-3xl md:text-4xl lg:text-6xl font-bold leading-[var(--leading-heading)] text-white break-keep">
-                                    {"동선과 빛,"} <br />{"소재와 쓰임의 균형."}
+                                    {"빛과 그림자,"} <br />{"그리고 감각의 균형."}
                                 </h2>
                             </div>
                             <div className="lg:col-span-7 space-y-10 md:space-y-16">
-                                <p className="whitespace-pre-line break-keep text-sm font-normal leading-[var(--leading-body)] text-white/60 md:text-base lg:text-lg">
-                                    {"공간을 설계할 때는 먼저 사람이 어떻게 이동하고 머무는지 살핍니다.\n필요한 기능을 정리한 뒤 자연광과 인공조명, 수납과 가구, 마감재를 하나의 흐름으로 연결합니다.\n보기 좋은 장면뿐 아니라 매일 사용할 때 편안한 공간을 만드는 것이 우리의 기준입니다."}
+                                <p className="text-sm md:text-base lg:text-lg text-white/60 leading-[var(--leading-body)] font-normal break-keep">
+                                    {"우리가 빚어내는 모든 모서리와 비례, 여백은 공간의 물리적 경계를 넘어 깊은 정서적 안정감을 주도록 정밀히 조율됩니다. 구조적인 공간 시퀀스 설계 위에 최적의 조명 계획과 마감 자재의 본질적 가치를 조합하여 시대를 아우르는 명작을 완성합니다."}
                                 </p>
                                 <div className="grid grid-cols-3 gap-4 md:gap-8 border-t border-white/10 pt-8 md:pt-12">
                                     <div className="space-y-2">
@@ -163,11 +163,11 @@ function StudioHomeContent() {
                                     </div>
                                     <div className="space-y-2">
                                         <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-white">98%</div>
-                                        <span className="text-xs font-bold text-white/40 block">{"고객 만족도"}</span>
+                                        <span className="text-xs font-bold text-white/40 block">{"고객 만족"}</span>
                                     </div>
                                     <div className="space-y-2">
                                         <div className="text-2xl md:text-4xl lg:text-5xl font-bold text-white">8+</div>
-                                        <span className="text-xs font-bold text-white/40 block">{"운영 기간"}</span>
+                                        <span className="text-xs font-bold text-white/40 block">{"운영 연차"}</span>
                                     </div>
                                 </div>
                             </div>
@@ -180,15 +180,15 @@ function StudioHomeContent() {
                     <div className="max-w-[1720px] mx-auto px-6 md:px-16 lg:px-24">
                         <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16 items-center">
                             <div className="md:col-span-4 aspect-[3/4] overflow-hidden border border-black/10 shadow-sm relative">
-                                <img loading="lazy" src="/templates/OHMT006-studio/hero-2.jpg" alt={"정렬된 석재 패널과 알루미늄 프레임"} className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]" />
+                                <img loading="lazy" src="/templates/OHMT006-studio/hero-2.jpg" alt={"정밀한 재료의 정렬."} className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]" />
                             </div>
                             <div className="md:col-span-5 space-y-5 md:space-y-6 lg:px-12">
-                                <span className="text-xs text-black/40 font-bold block">{"한 공간 안에서 자연스럽게 연결합니다."}</span>
+                                <span className="text-xs text-black/40 font-bold block">{"소재 본질의 극대화"}</span>
                                 <h3 className="text-2xl md:text-3xl lg:text-5xl font-bold text-black leading-[var(--leading-heading)] break-keep tracking-[-0.04em]">
-                                    {"단차와 이음새까지 세심하게."}
+                                    {"이음새 없는 섬세한 결합."}
                                 </h3>
                                 <p className="text-sm md:text-base lg:text-lg text-black/50 leading-relaxed font-normal break-keep tracking-[-0.025em]">
-                                    {"석재 패널과 아노다이징 알루미늄 프레임이 만나는 부분의 단차와 줄눈을 세심하게 조정했습니다. 서로 다른 질감이 어색하게 끊기지 않고 하나의 면처럼 이어지도록 시공했습니다."}
+                                    {"정밀하게 가공된 스톤 패널과 아노다이징 처리된 알루미늄 프레임의 만남. 서로 다른 소재가 이루는 매끄러운 단차와 연속적인 구조를 통해 시각적 안정감을 선사합니다."}
                                 </p>
                             </div>
                             <div className="md:col-span-3 aspect-[1/1] overflow-hidden border border-black/10 self-end md:mb-12">
@@ -202,9 +202,9 @@ function StudioHomeContent() {
                 <section className="py-14 md:py-32 bg-white border-t border-black/10">
                     <div className="max-w-[1720px] mx-auto px-6 md:px-16 lg:px-24">
                         <div className="flex justify-between items-center pb-8 md:pb-12 border-b border-black/10 mb-10 md:mb-20">
-                            <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-black break-keep">{"주요 프로젝트"}</h2>
+                            <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-black break-keep">{"엄선된 포트폴리오"}</h2>
                             <Link href="/ko/templates/OHMT006-studio/projects" className="text-xs font-bold border-b-2 border-black pb-1 hover:opacity-60 transition-all shrink-0 ml-4 whitespace-nowrap">
-                                {"전체 프로젝트 보기 [12]"}
+                                {"전체 보기 [12]"}
                             </Link>
                         </div>
                         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 md:gap-20">
@@ -237,7 +237,6 @@ function StudioHomeContent() {
 
                 <TeamSection />
 
-                <p className="text-center text-[11px] leading-relaxed text-neutral-400 px-6 py-6">이 페이지는 실제 고객사나 운영 중인 업체가 아닌 OHMT의 웹사이트 디자인 템플릿 데모입니다. 표시된 브랜드명, 인물, 후기, 연락처와 성과 수치는 예시 콘텐츠입니다.</p>
                 <Footer />
             </main>
         </TemplateWrapper>

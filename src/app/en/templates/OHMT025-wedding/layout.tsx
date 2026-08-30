@@ -1,15 +1,14 @@
 import "./theme.css";
 import type { Metadata } from "next";
-
 export const metadata: Metadata = {
   title: "OHMT - Documentary Wedding Photography Template",
   description: "Timeless and authentic wedding photography. Capturing your love story through a documentary lens with fine art elegance.",
   keywords: ["wedding photography", "documentary wedding", "fine art wedding", "photographer portfolio", "OHMT"],
-  authors: [{ name: "OHMT", url: "https://ohmt.site" }],
+  authors: [{ name: "OHMT", url: "https://ohmytemplate.com" }],
   openGraph: {
     title: "OHMT - Documentary Wedding Photography Template",
     description: "Timeless and authentic wedding photography. Capturing your love story through a documentary lens with fine art elegance.",
-    url: "https://ohmt.site/en/templates/OHMT025-wedding",
+    url: "https://ohmytemplate.com/en/templates/OHMT025-wedding",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT025-wedding/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -23,9 +22,9 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/OHMT025-wedding",
+    canonical: "https://ohmytemplate.com/en/templates/OHMT025-wedding",
     languages: {
-      "ko": "https://ohmt.site/ko/templates/OHMT025-wedding",
+      "ko": "https://ohmytemplate.com/ko/templates/OHMT025-wedding",
     },
   },
 };
@@ -36,13 +35,12 @@ export default function WeddingLayout({ children }: { children: React.ReactNode 
     "@type": "LocalBusiness",
     name: "Lumen Wedding",
     description: "Timeless and authentic wedding photography. Capturing your love story through a documentary lens with fine art elegance.",
-    url: "https://ohmt.site/en/templates/OHMT025-wedding",
+    url: "https://ohmytemplate.com/en/templates/OHMT025-wedding",
   };
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Elms+Sans:wght@100..900&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
       `}</style>
       {children}
     </>

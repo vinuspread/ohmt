@@ -4,90 +4,21 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, Focus, Menu, Moon, Smartphone, Sparkles, X } from "lucide-react";
-import { ResponsiveText } from "./_components/ResponsiveText";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
+import { HardwareBanner } from "./_components/HardwareBanner";
+import { CircuitFeatures } from "./_components/CircuitFeatures";
 
-const moments = [
-  { label: "아침 거리", value: "1/500", detail: "전원을 빠르게 켜고 조용한 셔터로 순간을 놓치지 않습니다." },
-  { label: "스튜디오", value: "45 MP", detail: "45MP 해상도로 작은 부분을 잘라 사용해도 질감과 색을 유지합니다." },
-  { label: "블루아워", value: "ISO 12800", detail: "노이즈를 과도하게 지우지 않고 저녁의 빛과 분위기를 남깁니다." },
-];
-
-const products = [
-  {
-    slug: "luma-one",
-    name: "LUMA One",
-    price: "₩2,490,000",
-    note: "매일 가볍게 들고 다니는 기본 모델",
-    spec: "28mm 고정식 렌즈",
-    image: "/templates/OHMT031-luma-camera/product-one.jpg?v=20260702e",
-  },
-  {
-    slug: "luma-one-pro",
-    name: "LUMA One Pro",
-    price: "₩3,190,000",
-    note: "촬영 작업과 여행에 알맞은 확장 모델",
-    spec: "28mm 렌즈·전용 그립",
-    image: "/templates/OHMT031-luma-camera/product-pro.jpg?v=20260702e",
-  },
-];
-
-const photoSamples = [
-  {
-    title: "창가 인물",
-    text: "피부톤을 자연스럽게 유지하면서 니트와 세라믹의 색도 균형 있게 표현합니다.",
-    image: "/templates/OHMT031-luma-camera/sample-portrait.png?v=20260703a",
-  },
-  {
-    title: "블루아워 풍경",
-    text: "과도한 HDR 효과 없이 푸른 하늘과 도시의 작은 불빛을 구분해 담습니다.",
-    image: "/templates/OHMT031-luma-camera/sample-landscape.png?v=20260703a",
-  },
-  {
-    title: "생활 정물",
-    text: "컵과 과일, 천처럼 익숙한 소재의 색을 과장 없이 자연스럽게 표현합니다.",
-    image: "/templates/OHMT031-luma-camera/sample-color.jpg?v=20260702e",
-  },
-  {
-    title: "실내 저조도",
-    text: "푸른 창밖과 따뜻한 실내 조명이 한 화면에서도 서로 다른 색감을 유지합니다.",
-    image: "/templates/OHMT031-luma-camera/sample-lowlight.jpg?v=20260702e",
-  },
-];
-
-const imageQuality = [
-  {
-    label: "컬러",
-    title: "바로 사용할 수 있는 자연스러운 색",
-    text: "인물과 세라믹, 과일, 천이 한 화면에 있어도 각 소재의 색을 자연스럽게 구분합니다.",
-    image: "/templates/OHMT031-luma-camera/engine-color-grid.jpg?v=20260702f",
-  },
-  {
-    label: "저조도",
-    title: "어두운 장면에서도 조명의 분위기를 그대로",
-    text: "저녁과 실내 촬영에서 과도한 노이즈 제거를 줄이고 어두운 영역의 디테일을 유지합니다.",
-    image: "/templates/OHMT031-luma-camera/engine-lowlight-room.jpg?v=20260702f",
-  },
-  {
-    label: "디테일",
-    title: "표면은 선명하게, 윤곽은 자연스럽게",
-    text: "천과 세라믹, 종이, 금속의 질감을 과도한 선명도 효과 없이 표현합니다.",
-    image: "/templates/OHMT031-luma-camera/engine-texture-close.jpg?v=20260702f",
-  },
-];
-
-const EASE = [0.23, 1, 0.32, 1] as const;
+const EASE = [0.16, 1, 0.3, 1] as const;
 
 function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
   const reduceMotion = useReducedMotion();
 
   return (
     <motion.div
-      initial={reduceMotion ? false : { opacity: 0, y: 24 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.55, delay, ease: EASE }}
+      initial={reduceMotion ? false : { opacity: 0, y: 48, scale: 0.96 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      viewport={{ once: true, margin: "-40px" }}
+      transition={{ duration: 0.7, delay, ease: EASE }}
     >
       {children}
     </motion.div>
@@ -96,35 +27,35 @@ function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: nu
 
 export default function LumaCameraPage() {
   const [mobileOpen, setMobileOpen] = useState(false);
+
   const navItems = [
-    { label: "이미지 엔진", href: "/ko/templates/OHMT031-luma-camera/image-engine" },
-    { label: "촬영 장면", href: "/ko/templates/OHMT031-luma-camera/scenes" },
-    { label: "촬영 노트", href: "/ko/templates/OHMT031-luma-camera/stories" },
     { label: "제품", href: "/ko/templates/OHMT031-luma-camera/shop" },
+    { label: "광학 엔진", href: "/ko/templates/OHMT031-luma-camera/image-engine" },
+    { label: "촬영 현장", href: "/ko/templates/OHMT031-luma-camera/scenes" },
+    { label: "고객 사례", href: "/ko/templates/OHMT031-luma-camera/stories" },
   ];
+
+  const customers = [
+    {
+      company: "베일리 + 클라인 (Bailey + Klein)",
+      industry: "제약 및 광학 분석",
+      title: "보고 오버헤드를 대폭 줄이면서 엄격한 광학 규정 준수를 성공적으로 유지한 방법.",
+      image: "/templates/OHMT031-luma-camera/lab-microscope-optical.png?v=20260703a",
+    },
+    {
+      company: "모란스 정밀 (Morance)",
+      industry: "자동차 및 정밀 광학",
+      title: "복잡한 공정을 단일 시스템으로 통합하여 3개 글로벌 공장의 품질 질서를 구축한 방법.",
+      image: "/templates/OHMT031-luma-camera/app-recipe-view.jpg?v=20260703a",
+    },
+  ];
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "OnlineStore",
-    name: "LUMA Camera",
-    description: "작은 바디와 자연스러운 색 표현, 촬영 노트 기능을 갖춘 컴팩트 카메라입니다.",
-    url: "https://ohmt.site/ko/templates/OHMT031-luma-camera",
-    image: "https://ohmt.site/templates/OHMT031-luma-camera/og-image.jpg?v=20260702e",
-    brand: {
-      "@type": "Brand",
-      name: "LUMA",
-    },
-    makesOffer: products.map((product) => ({
-      "@type": "Offer",
-      name: product.name,
-      price: product.price.replace("₩", "").replace(",", ""),
-      priceCurrency: "KRW",
-      itemOffered: {
-        "@type": "Product",
-        name: product.name,
-        description: `${product.note}. ${product.spec}.`,
-        image: "https://ohmt.site/templates/OHMT031-luma-camera/hero-camera.jpg?v=20260702e",
-      },
-    })),
+    name: "LUMA 하드웨어 광학",
+    description: "대담한 Framer Motion 3D 틸트 및 줌 인터랙션의 하드웨어 카메라 템플릿.",
+    url: "https://ohmytemplate.com/ko/templates/OHMT031-luma-camera",
   };
 
   return (
@@ -133,296 +64,371 @@ export default function LumaCameraPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <header className="fixed left-0 right-0 top-0 z-40 bg-[var(--luma-dark)] px-4 md:px-9">
-        <nav className="mx-auto flex h-16 max-w-[1380px] items-center justify-between text-white">
-          <Link href="/ko/templates/OHMT031-luma-camera" className="inline-flex min-h-12 items-center text-sm font-black tracking-[0.14em] text-white">LUMA</Link>
-          <div className="hidden items-center gap-3 text-xs font-semibold text-white/70 md:flex lg:gap-6">
-            {navItems.map((item) => (
-              <Link key={item.href} href={item.href} className="inline-flex min-h-12 min-w-12 items-center justify-center px-2 transition-colors hover:text-white">
-                {item.label}
-              </Link>
-            ))}
-          </div>
-          <Link href="/ko/templates/OHMT031-luma-camera/shop" className="hidden min-h-12 items-center justify-center bg-white/10 px-4 text-xs font-bold text-white transition-colors hover:bg-white hover:text-[var(--luma-dark)] md:inline-flex">
-            구매하기</Link>
-          <button
-            type="button"
-            onClick={() => setMobileOpen((open) => !open)}
-            className="inline-flex h-12 w-12 items-center justify-center border border-white/20 text-white md:hidden"
-            aria-label={mobileOpen ? "메뉴 닫기" : "메뉴 열기"}
-            aria-expanded={mobileOpen}
-          >
-            {mobileOpen ? <X size={19} strokeWidth={1.8} /> : <Menu size={19} strokeWidth={1.8} />}
-          </button>
-        </nav>
-        {mobileOpen && (
-          <div className="mx-auto max-w-[1380px] border-t border-white/10 py-4 md:hidden">
-            <div className="grid gap-1">
+      <div className="luma-camera-template min-h-screen bg-[#050608] text-white">
+        {/* Navigation Header */}
+        <header className="sticky top-0 z-50 border-b border-white/10 bg-[#050608]/90 backdrop-blur-md">
+          <div className="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-6 md:px-12">
+            <Link href="/ko/templates/OHMT031-luma-camera" className="text-xl font-bold tracking-tighter text-white">
+              LUMA
+            </Link>
+
+            <nav className="hidden items-center gap-10 md:flex">
               {navItems.map((item) => (
-                <Link key={item.href} href={item.href} onClick={() => setMobileOpen(false)} className="px-1 py-3 text-sm font-semibold text-white/80">
-                  {item.label}
-                </Link>
+                <motion.div key={item.label} whileHover={{ y: -2, scale: 1.05 }}>
+                  <Link
+                    href={item.href}
+                    className="text-sm font-medium text-white/90 hover:text-white transition-colors"
+                  >
+                    {item.label}
+                  </Link>
+                </motion.div>
               ))}
-              <Link href="/ko/templates/OHMT031-luma-camera/shop" onClick={() => setMobileOpen(false)} className="mt-2 inline-flex min-h-12 items-center justify-center bg-white text-xs font-bold text-[var(--luma-dark)]">
-                구매하기</Link>
-            </div>
-          </div>
-        )}
-      </header>
+            </nav>
 
-      <main className="overflow-hidden">
-        <section className="luma-grain px-4 pb-16 pt-24 md:px-9 md:pb-24">
-          <motion.div
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.75, ease: EASE }}
-            className="relative mx-auto min-h-[76dvh] max-w-[1380px] overflow-hidden bg-[var(--luma-dark)] shadow-2xl shadow-black/10"
-          >
-            <Image unoptimized src="/templates/OHMT031-luma-camera/hero-camera.jpg?v=20260702e" alt="LUMA 컴팩트 카메라 제품 이미지" fill priority className="object-cover" sizes="100vw" />
-            <div className="absolute inset-0 bg-gradient-to-br from-black/75 via-black/30 to-black/5" />
-            <div className="absolute left-0 top-0 p-6 text-white md:p-9 lg:p-12">
-              <p className="luma-label mb-4 text-white/60">컴팩트 이미지 시스템</p>
-              <h1 className="luma-h1 max-w-[560px]" style={{ textWrap: "pretty" } as React.CSSProperties}>
-                작은 바디로 더 자주 기록합니다.</h1>
-              <p className="luma-body mt-6 max-w-[560px] !text-white/70">
-                <ResponsiveText>
-                  {"휴대하기 좋은 작은 바디로 거리와 작업실, 식탁의 순간을 자연스럽게 기록합니다.\n촬영 정보와 컬러 설정은 사진과 함께 저장됩니다."}
-                </ResponsiveText>
-              </p>
-              <div className="mt-9 flex flex-row gap-3">
-                <Link href="/ko/templates/OHMT031-luma-camera/shop" className="inline-flex items-center justify-center gap-2 bg-white px-6 py-3 text-sm font-bold text-[var(--luma-ink)] transition-transform duration-200 ease-out active:scale-[0.97]">
-                  제품 보기<ArrowRight size={16} />
+            <div className="hidden items-center gap-4 md:flex">
+              <motion.div whileHover={{ scale: 1.06, y: -2 }} whileTap={{ scale: 0.95 }}>
+                <Link href="/ko/templates/OHMT031-luma-camera/shop" className="button-glass hover:border-white">
+                  <span>구매하기</span>
                 </Link>
-                <Link href="/ko/templates/OHMT031-luma-camera/image-engine" className="inline-flex items-center justify-center bg-white/12 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-white/20">
-                  이미지 엔진 알아보기</Link>
+              </motion.div>
+            </div>
+
+            <button
+              type="button"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="p-2 text-sm font-bold text-white md:hidden uppercase tracking-wider"
+              aria-label="메뉴 열기"
+            >
+              {mobileOpen ? "CLOSE" : "MENU"}
+            </button>
+          </div>
+
+          {mobileOpen && (
+            <div className="border-t border-white/10 bg-[#050608] px-6 py-6 md:hidden">
+              <div className="flex flex-col gap-4">
+                {navItems.map((item) => (
+                  <Link
+                    key={item.label}
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="text-lg font-medium text-white/90"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+                <Link
+                  href="/ko/templates/OHMT031-luma-camera/shop"
+                  onClick={() => setMobileOpen(false)}
+                  className="button-blue mt-4 w-full justify-center"
+                >
+                  구매하기
+                </Link>
               </div>
             </div>
-          </motion.div>
-        </section>
+          )}
+        </header>
 
-        <section className="px-4 pb-24 md:px-9 md:pb-32">
-          <div className="mx-auto grid max-w-[1380px] gap-4 md:grid-cols-2">
-            {products.map((product) => (
-              <Reveal key={product.name}>
-                <div className="group overflow-hidden bg-white/60 shadow-xl shadow-black/[0.04]">
-                  <div className="relative aspect-[4/3] overflow-hidden bg-[var(--luma-soft)]">
-                    <Image unoptimized src={product.image} alt={`${product.name} 제품 이미지`} fill className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" sizes="(min-width: 768px) 50vw, 100vw" />
-                  </div>
-                  <div className="flex flex-col gap-6 p-6 md:flex-row md:items-end md:justify-between md:p-9">
-                    <div>
-                      <p className="luma-label text-[var(--luma-muted)]">{product.spec}</p>
-                      <h2 className="mt-3 text-2xl font-bold tracking-[-0.035em]">{product.name}</h2>
-                      <p className="mt-3 text-sm leading-6 text-[var(--luma-muted)]">{product.note}</p>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <Link href={`/ko/templates/OHMT031-luma-camera/product/${product.slug}`} className="inline-flex min-h-12 items-center justify-center border border-[var(--luma-dark)]/15 px-6 text-sm font-bold text-[var(--luma-ink)] hover:bg-[var(--luma-dark)]/5 transition-colors">
-                        자세히 보기
-                      </Link>
-                      <Link href={`/ko/templates/OHMT031-luma-camera/product/${product.slug}`} className="inline-flex min-h-12 items-center bg-[var(--luma-dark)] px-6 text-sm font-bold text-white transition-transform duration-200 ease-out active:scale-[0.97]">
-                        구매하기</Link>
-                    </div>
-                  </div>
-                </div>
-              </Reveal>
-            ))}
-          </div>
-        </section>
+        <main>
+          {/* Section 1: Hero Section */}
+          <section className="relative min-h-[75vh] overflow-hidden bg-[#050608] flex items-center w-full">
+            <div className="absolute inset-0 z-0">
+              <motion.div
+                initial={{ scale: 1.15, opacity: 0.5 }}
+                animate={{ scale: 1, opacity: 0.8 }}
+                transition={{ duration: 1.4, ease: EASE }}
+                className="relative w-full h-full"
+              >
+                <Image
+                  unoptimized
+                  src="/templates/OHMT031-luma-camera/luma-x1-model-front-hero.png?v=20260703c"
+                  alt="LUMA X-1 카메라 동일 기종 정면 컷"
+                  fill
+                  priority
+                  className="object-cover object-center"
+                  sizes="100vw"
+                />
+              </motion.div>
+              <div className="absolute inset-0 bg-gradient-to-r from-[#050608] via-[#050608]/75 to-transparent w-full md:w-3/5" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#050608] via-transparent to-transparent" />
+            </div>
 
-        <section id="image-engine" className="px-4 pb-24 md:px-9 md:pb-32">
-          <div className="mx-auto grid max-w-[1380px] gap-12 lg:grid-cols-2">
-            <Reveal>
+            <div className="relative z-10 mx-auto w-full max-w-[1440px] px-6 md:px-12 py-16">
               <div className="max-w-2xl">
-                <Focus size={25} strokeWidth={1.5} />
-                <h2 className="luma-h2 mt-6">
-                  작은 카메라로도 오래 활용할 수 있는 결과물.</h2>
-                <p className="luma-body mt-6" style={{ textWrap: "pretty" } as React.CSSProperties}>
-                  <ResponsiveText>
-                    {"색과 저조도, 디테일을 과장하지 않고 촬영 직후 바로 활용할 수 있는 결과를 제공합니다.\n촬영 메모와 설정도 사진과 함께 저장됩니다."}
-                  </ResponsiveText>
-                </p>
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, ease: EASE }}
+                  className="dot-title mb-6"
+                >
+                  <span className="square-dot" />
+                  <span className="badge-text">하드웨어 광학 솔루션</span>
+                </motion.div>
+
+                <motion.h1
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, delay: 0.1, ease: EASE }}
+                  className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.1] mb-6"
+                >
+                  전체 촬영 공급망을 아우르는 정밀 추적성.
+                </motion.h1>
+
+                <motion.p
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, delay: 0.2, ease: EASE }}
+                  className="text-[#888d99] text-sm md:text-base mb-8 leading-relaxed max-w-xl"
+                >
+                  렌즈 사양과 센서 캘리브레이션을 정밀 제어하여 어떤 조도 환경에서도 오차 없는 선명도와 본래의 자연스러운 톤을 보증합니다.
+                </motion.p>
+
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.7, delay: 0.3, ease: EASE }}
+                  className="flex flex-wrap items-center gap-4"
+                >
+                  <motion.div whileHover={{ scale: 1.08, y: -3 }} whileTap={{ scale: 0.95 }}>
+                    <Link href="/ko/templates/OHMT031-luma-camera/image-engine" className="button-glass">
+                      <span>자세히 보기</span>
+                    </Link>
+                  </motion.div>
+                  <motion.div whileHover={{ scale: 1.08, y: -3 }} whileTap={{ scale: 0.95 }}>
+                    <Link href="/ko/templates/OHMT031-luma-camera/scenes" className="button-blue">
+                      <span>소개 영상</span>
+                    </Link>
+                  </motion.div>
+                </motion.div>
               </div>
-            </Reveal>
-
-            <Reveal delay={0.08}>
-              <div className="space-y-9">
-                <div className="grid gap-4 md:grid-cols-3">
-                  {imageQuality.map((item) => (
-                    <article key={item.label} className="overflow-hidden bg-white/55 shadow-lg shadow-black/[0.04]">
-                      <div className="relative aspect-[7/5] overflow-hidden">
-                        <Image unoptimized src={item.image} alt={`LUMA ${item.label} 촬영 결과 샘플`} fill className="object-cover" sizes="(min-width: 768px) 28vw, 100vw" />
-                      </div>
-                      <div className="p-6">
-                        <p className="luma-label text-[var(--luma-muted)]">{item.label}</p>
-                        <h3 className="luma-h3 mt-4 break-keep">{item.title}</h3>
-                        <p className="mt-3 text-sm leading-6 text-[var(--luma-muted)]">{item.text}</p>
-                      </div>
-                    </article>
-                  ))}
-                </div>
-
-                <div className="grid gap-4 lg:grid-cols-2">
-                  <div className="luma-card-dark">
-                    <Smartphone size={22} strokeWidth={1.5} />
-                    <h3 className="luma-h3 mt-6">촬영 메모를 사진과 함께 저장합니다.</h3>
-                    <p className="mt-4 max-w-xl text-sm leading-6 text-white/70">
-                      렌즈와 컬러 설정, 촬영 장소, 컬렉션 정보를 한 번에 기록해 원하는 사진을 쉽게 다시 찾을 수 있습니다.</p>
-                  </div>
-                  <div className="grid bg-[var(--luma-bg)] sm:grid-cols-3 lg:grid-cols-1">
-                    {moments.map((item) => (
-                      <div key={item.label} className="luma-card !p-6">
-                        <p className="luma-label text-[var(--luma-muted)]">{item.label}</p>
-                        <p className="mt-2 text-2xl font-bold tracking-[-0.035em]">{item.value}</p>
-                        <p className="mt-2 text-sm leading-6 text-[var(--luma-muted)]">{item.detail}</p>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-        </section>
-
-        <section id="scenes" className="px-4 pb-24 md:px-9 md:pb-32">
-          <div className="mx-auto max-w-[1380px]">
-            <Reveal>
-              <div className="max-w-3xl">
-                <h2 className="luma-h2">
-                  카메라가 남기는 결과부터 확인하세요.</h2>
-                <p className="luma-body mt-6 max-w-2xl">
-                  <ResponsiveText>
-                    {"인물의 피부톤과 풍경의 원경, 실내의 어두운 영역,\n가까운 소재의 질감을 직접 확인해보세요."}
-                  </ResponsiveText>
-                </p>
-              </div>
-            </Reveal>
-
-            <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-              {photoSamples.map((sample, index) => (
-                <Reveal key={sample.title} delay={index * 0.05}>
-                  <article className="group relative aspect-[3/4] overflow-hidden bg-[var(--luma-dark)] shadow-xl shadow-black/[0.06]">
-                    <div className="absolute inset-0">
-                      <Image unoptimized src={sample.image} alt={`LUMA로 촬영한 ${sample.title} 샘플`} fill className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]" sizes="(min-width: 1024px) 33vw, 100vw" />
-                    </div>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/24 to-transparent" />
-                    <div className="absolute bottom-0 left-0 max-w-xl p-6 text-white">
-                      <h3 className="text-lg font-bold tracking-[-0.035em]">{sample.title}</h3>
-                      <p className="mt-2 text-xs leading-relaxed text-white/80">{sample.text}</p>
-                    </div>
-                  </article>
-                </Reveal>
-              ))}
             </div>
-          </div>
-        </section>
+          </section>
 
-        <section id="stories" className="px-4 pb-24 md:px-9 md:pb-32">
-          <div className="mx-auto grid max-w-[1380px] gap-4 lg:grid-cols-2">
-            <Reveal>
-              <div className="group relative min-h-[620px] overflow-hidden bg-[var(--luma-dark)]">
-                <Image unoptimized src="/templates/OHMT031-luma-camera/engine-lowlight-room.jpg?v=20260702f" alt="따뜻한 실내 조명과 푸른 창밖 빛의 LUMA 저조도 샘플" fill className="object-cover transition-transform duration-700 ease-out group-hover:scale-105" sizes="(min-width: 1024px) 58vw, 100vw" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                <div className="absolute bottom-0 max-w-xl p-6 text-white md:p-9">
-                  <Moon size={24} strokeWidth={1.5} />
-                  <h2 className="luma-h2 mt-6">밤의 밝기와 색을 자연스럽게 남깁니다.</h2>
-                </div>
-              </div>
-            </Reveal>
+          {/* Section 2: Metric & Dual Visuals */}
+          <section className="px-6 py-20 md:px-12 md:py-28 border-t border-white/10 bg-[#050608]">
+            <div className="mx-auto max-w-[1440px]">
+              <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 items-center w-full">
+                <div className="lg:col-span-6">
+                  <Reveal>
+                    <p className="text-lg md:text-2xl font-medium leading-snug text-white mb-10">
+                      설계 사양을 처음부터 명확하게 다듬습니다.{" "}
+                      <span className="text-[#888d99]">
+                        LUMA는 본격적인 제품 개발이 시작되기 전 치수, 오차 범위, 광학 소재를 확실히 정하여 렌즈와 센서의 불확실성을 완전히 제거합니다.
+                      </span>
+                    </p>
 
-            <div className="grid gap-4">
-              <Reveal delay={0.08}>
-                <div className="relative min-h-[300px] overflow-hidden bg-white">
-                  <Image unoptimized src="/templates/OHMT031-luma-camera/body-detail.jpg?v=20260702e" alt="LUMA 카메라 바디와 렌즈 디테일" fill className="object-cover" sizes="(min-width: 1024px) 40vw, 100vw" />
-                </div>
-              </Reveal>
-              <Reveal delay={0.12}>
-                <div className="relative min-h-[300px] overflow-hidden bg-white">
-                  <Image unoptimized src="/templates/OHMT031-luma-camera/app-insight.jpg?v=20260702e" alt="LUMA 앱과 카메라" fill className="object-cover" sizes="(min-width: 1024px) 40vw, 100vw" />
-                </div>
-              </Reveal>
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-[var(--luma-dark)] px-4 py-24 text-white md:px-9 md:py-32">
-          <div className="mx-auto grid max-w-[1380px] items-center gap-12 lg:grid-cols-2">
-            <Reveal>
-              <div>
-                <Smartphone size={26} strokeWidth={1.5} />
-                <h2 className="luma-h2 mt-6">
-                  앱에 촬영 정보와 메모를 함께 기록합니다.</h2>
-                <p className="luma-body mt-6 max-w-xl !text-white/70">
-                  <ResponsiveText>
-                    {"렌즈와 컬러 설정, 위치, 컬렉션 정보를 사진과 함께 저장합니다.\n시간이 지나도 촬영 환경과 의도를 쉽게 확인할 수 있습니다."}
-                  </ResponsiveText>
-                </p>
-              </div>
-            </Reveal>
-            <Reveal delay={0.1}>
-              <div className="relative aspect-[4/3] overflow-hidden">
-                <Image unoptimized src="/templates/OHMT031-luma-camera/app-collection-view.jpg?v=20260702f" alt="LUMA 앱 컬렉션 화면과 카메라" fill className="object-cover" sizes="(min-width: 1024px) 48vw, 100vw" />
-              </div>
-            </Reveal>
-          </div>
-        </section>
-
-        <section id="shop" className="px-4 pb-24 md:px-9 md:pb-32">
-          <div className="mx-auto max-w-[1380px]">
-            <Reveal>
-              <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
-                <div>
-                  <Sparkles size={24} strokeWidth={1.5} />
-                  <h2 className="luma-h2 mt-6 max-w-3xl">
-                    촬영 방식에 맞는 모델을 선택하세요.</h2>
-                </div>
-                <p className="max-w-sm text-sm leading-6 text-[var(--luma-muted)]">
-                  <ResponsiveText>
-                    {"One은 일상과 여행에 적합하고, Pro는 그립과 확장 구성으로 반복 촬영에 유리합니다.\n이미지 프로파일과 앱 기능은 동일합니다."}
-                  </ResponsiveText>
-                </p>
-              </div>
-            </Reveal>
-
-            <div className="mt-12 grid gap-4 md:grid-cols-2">
-              {products.map((product) => (
-                <Reveal key={product.name}>
-                  <div className="luma-card shadow-xl shadow-black/[0.04]">
-                    <h3 className="text-2xl font-bold tracking-[-0.035em]">{product.name}</h3>
-                    <p className="mt-2 text-sm text-[var(--luma-muted)]">{product.note}</p>
-                    <p className="mt-3 text-lg font-bold tracking-[-0.035em]">{product.price}</p>
-                    <div className="mt-6 grid gap-3 text-sm text-[var(--luma-muted)]">
-                      <div className="flex items-center justify-between bg-[var(--luma-soft)] px-4 py-3">
-                        <span>컬러 프로파일</span>
-                        <span className="font-bold text-[var(--luma-ink)]">중립 / 따뜻함</span>
-                      </div>
-                      <div className="flex items-center justify-between bg-[var(--luma-soft)] px-4 py-3">
-                        <span>촬영 모드</span>
-                        <span className="font-bold text-[var(--luma-ink)]">{product.name.includes("Pro") ? "그립·노트" : "일상 휴대"}</span>
-                      </div>
-                    </div>
-                    <div className="mt-6 flex items-center justify-between">
-                      <span className="text-sm font-semibold text-[var(--luma-muted)]">{product.spec}</span>
-                      <Link
-                        href={`/ko/templates/OHMT031-luma-camera/product/${product.slug}`}
-                        className="inline-flex min-h-11 items-center bg-[var(--luma-dark)] px-6 py-3 text-sm font-bold text-white transition-transform duration-200 ease-out active:scale-[0.97]"
+                    <div className="mb-8">
+                      <motion.div
+                        whileHover={{ scale: 1.05, x: 4 }}
+                        className="metric-text-large mb-2 text-4xl md:text-5xl font-bold inline-block text-white"
                       >
-                        구매하기
-                      </Link>
+                        +300nm
+                      </motion.div>
+                      <div className="font-sans text-xs uppercase tracking-wider text-[#888d99]">
+                        외부 자기 및 광량 정밀도
+                      </div>
                     </div>
+
+                    <div>
+                      <motion.div whileHover={{ scale: 1.06, y: -2 }} className="inline-block">
+                        <Link href="/ko/templates/OHMT031-luma-camera/image-engine" className="button-glass">
+                          <span>사양 탐색</span>
+                        </Link>
+                      </motion.div>
+                    </div>
+                  </Reveal>
+                </div>
+
+                <div className="lg:col-span-6 relative">
+                  <div className="grid grid-cols-12 gap-6 items-end w-full">
+                    <motion.div
+                      whileHover={{ scale: 1.04, y: -6 }}
+                      transition={{ duration: 0.4, ease: EASE }}
+                      className="col-span-7 relative aspect-[3/4] overflow-hidden group bg-[#07090c]"
+                    >
+                      <Image
+                        unoptimized
+                        src="/templates/OHMT031-luma-camera/scene-kitchen-counter.jpg?v=20260702e"
+                        alt="인테리어 라이팅 스틸 비주얼"
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-115"
+                      />
+                    </motion.div>
+
+                    <motion.div
+                      whileHover={{ scale: 1.06, y: -8 }}
+                      transition={{ duration: 0.4, ease: EASE }}
+                      className="col-span-5 relative aspect-[3/4] overflow-hidden group -ml-6 mb-6 z-10 bg-[#07090c]"
+                    >
+                      <Image
+                        unoptimized
+                        src="/templates/OHMT031-luma-camera/morning-street.jpg?v=20260702f"
+                        alt="도심 모닝 라이트 비주얼"
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-115"
+                      />
+                    </motion.div>
                   </div>
-                </Reveal>
-              ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 3: Prototyping & Process */}
+          <section className="px-6 py-20 md:px-12 md:py-28 border-t border-white/10 bg-[#050608]">
+            <div className="mx-auto max-w-[1440px]">
+              <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 items-center w-full">
+                {/* Left Image */}
+                <div className="lg:col-span-6 order-2 lg:order-1">
+                  <Reveal delay={0.1}>
+                    <motion.div
+                      whileHover={{ scale: 1.04, rotate: -0.5 }}
+                      transition={{ duration: 0.4, ease: EASE }}
+                      className="relative aspect-square w-full overflow-hidden group bg-[#07090c]"
+                    >
+                      <Image
+                        unoptimized
+                        src="/templates/OHMT031-luma-camera/quiet-dinner.jpg?v=20260702e"
+                        alt="저조도 다이닝 감성 광학 샷"
+                        fill
+                        className="object-cover transition-transform duration-700 group-hover:scale-115"
+                      />
+                      <div className="absolute bottom-6 right-6 monospace-badge-block">
+                        <span className="font-sans text-xs font-semibold uppercase tracking-wider text-white">
+                          ■ 첫날부터 작동하는<br />차세대 실시간 피드백<br />메커니즘
+                        </span>
+                      </div>
+                    </motion.div>
+                  </Reveal>
+                </div>
+
+                {/* Right Text */}
+                <div className="lg:col-span-6 order-1 lg:order-2">
+                  <Reveal>
+                    <p className="text-lg md:text-2xl font-bold leading-snug text-white mb-8">
+                      시제품 제작은 추측이 아닌 검증의 과정입니다.{" "}<br className="hidden md:block" />
+                      <span className="text-[#888d99] font-normal">
+                        LUMA는 정의된 하드웨어 벤치마크 기준에 맞춰 초기 버전 모듈을 직접 제작하고 정밀 테스트합니다.
+                      </span>
+                    </p>
+
+                    <div className="mb-10 space-y-5">
+                      <motion.div whileHover={{ x: 6 }} className="pt-4 border-t border-white/15">
+                        <div className="flex items-center gap-4 font-sans text-xs uppercase tracking-wider text-[#888d99]">
+                          <span>01</span>
+                          <span className="text-white font-semibold">실시간 광학 I/O 신호</span>
+                        </div>
+                      </motion.div>
+
+                      <motion.div whileHover={{ x: 6 }} className="pt-4 border-t border-white/15">
+                        <div className="flex items-center gap-4 font-sans text-xs uppercase tracking-wider text-[#888d99]">
+                          <span>02</span>
+                          <span className="text-white font-semibold">수요 및 해상도 신호 분석</span>
+                        </div>
+                      </motion.div>
+                    </div>
+
+                    <div>
+                      <motion.div whileHover={{ scale: 1.06, y: -2 }} className="inline-block">
+                        <Link href="/ko/templates/OHMT031-luma-camera/scenes" className="button-glass">
+                          <span>기술 사양 보기</span>
+                        </Link>
+                      </motion.div>
+                    </div>
+                  </Reveal>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Section 4: Hardware Banner */}
+          <HardwareBanner />
+
+          {/* Section 5: Real Photo 1-Row Carousel Slider */}
+          <CircuitFeatures />
+
+          {/* Section 6: Editorial Quote Section */}
+          <section className="px-6 py-20 md:px-12 md:py-28 border-t border-b border-white/10 bg-[#07090c] w-full">
+            <div className="mx-auto max-w-[1440px]">
+              <Reveal>
+                <div className="dot-title mb-6">
+                  <span className="square-dot" />
+                  <span className="badge-text">INDUSTRIAL TESTIMONIAL</span>
+                </div>
+                <blockquote className="text-xl md:text-3xl lg:text-4xl font-normal text-white leading-relaxed mb-8 w-full">
+                  “우리 생산 시설에서 정밀도는 곧 가동률을 의미합니다.<br />
+                  LUMA 덕분에 라인이 멈추는 사고가 발생하기 전 미세한 광학 편차를 미리 발견할 수 있었습니다.<br />
+                  <span className="text-[#888d99]">
+                    단순합니다: 놀람은 줄고, 생산은 더욱 일관되어졌습니다.
+                  </span>”
+                </blockquote>
+                <div className="font-sans text-xs font-semibold uppercase tracking-wider text-[#888d99] flex items-center gap-3">
+                  <span className="w-8 h-[2px] bg-[#0052ff]" />
+                  <span>루카스 보이드 (Lucas Boyd) — Morance Inc. 설립자</span>
+                </div>
+              </Reveal>
+            </div>
+          </section>
+
+          {/* Section 7: Customers Grid */}
+          <section className="px-6 py-20 md:px-12 md:py-28 bg-[#050608]">
+            <div className="mx-auto max-w-[1440px]">
+              <div className="mb-10">
+                <h2 className="text-2xl md:text-4xl font-bold tracking-tight text-white">
+                  고객 사례
+                </h2>
+              </div>
+
+              <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:gap-12 w-full">
+                {customers.map((c, idx) => (
+                  <Reveal key={c.company} delay={idx * 0.08}>
+                    <motion.div
+                      whileHover={{ y: -8, scale: 1.02 }}
+                      transition={{ duration: 0.4, ease: EASE }}
+                      className="group pt-6 border-t border-white/15 w-full bg-[#050608]"
+                    >
+                      <div className="flex items-center justify-between mb-4 font-sans text-xs uppercase tracking-wider">
+                        <span className="text-white font-bold">{c.company}</span>
+                        <span className="text-[#888d99]">{c.industry}</span>
+                      </div>
+
+                      <div className="relative aspect-[16/10] overflow-hidden mb-6 bg-[#050608]">
+                        <Image
+                          unoptimized
+                          src={c.image}
+                          alt={c.company}
+                          fill
+                          className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+                      </div>
+
+                      <h3 className="text-lg font-bold text-white leading-snug mb-5">
+                        {c.title}
+                      </h3>
+
+                      <Link href="/ko/templates/OHMT031-luma-camera/stories" className="inline-block font-sans text-xs font-semibold uppercase tracking-wider text-white underline underline-offset-8 transition-opacity hover:opacity-80">
+                        사례 분석 읽기
+                      </Link>
+                    </motion.div>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+          </section>
+        </main>
+
+        {/* Footer */}
+        <footer className="border-t border-white/10 bg-[#020304] px-6 py-16 md:px-12">
+          <div className="mx-auto flex max-w-[1440px] flex-col gap-6 md:flex-row md:items-center md:justify-between font-sans text-xs text-[#888d99]">
+            <div className="flex items-center gap-2 text-white font-bold">
+              <span className="square-dot" />
+              <span>LUMA — 하드웨어 광학 아키텍처</span>
+            </div>
+            <div>
+              © 2026 OHMT. Webflow Hardware Technology Consulting 기반 한국어 하드웨어 카메라 템플릿.
             </div>
           </div>
-        </section>
-      </main>
-
-      <footer className="px-4 py-12 md:px-9">
-        <div className="mx-auto flex max-w-[1380px] flex-col gap-4 text-sm text-[var(--luma-muted)] md:flex-row md:items-center md:justify-between">
-          <p className="font-bold text-[var(--luma-ink)]">LUMA LUMA</p>
-          <p>© 2026 LUMA. LUMA Camera.</p>
-        </div>
-        <p className="mx-auto mt-4 max-w-[1380px] text-center text-[11px] leading-relaxed text-[var(--luma-muted)]">이 페이지는 실제 고객사나 운영 중인 업체가 아닌 OHMT의 웹사이트 디자인 템플릿 데모입니다. 표시된 브랜드명, 인물, 후기, 연락처와 성과 수치는 예시 콘텐츠입니다.</p>
-      </footer>
+        </footer>
+      </div>
     </TemplateWrapper>
   );
 }

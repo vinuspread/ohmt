@@ -41,7 +41,7 @@ export function HomeClient() {
         <div className="max-w-3xl">
           <p className="inline-flex items-center gap-1.5 text-xs font-semibold text-[var(--color-accent)]">
             <Sparkles size={24} strokeWidth={1.8} />
-            AGORA Community
+            OHMT Community
           </p>
           <h1 className="mt-2.5 text-3xl font-semibold leading-[var(--leading-heading)] text-[var(--color-text)] md:text-5xl">
             질문과 경험이 모여 다음 실행으로 이어지는 커뮤니티
@@ -187,7 +187,7 @@ export function HomeClient() {
             </p>
           </div>
           <span className="rounded-full bg-[var(--color-bg-secondary)] px-2.5 py-1 text-xs font-semibold text-[var(--color-text-muted)]">
-             128표
+            128표
           </span>
         </div>
 

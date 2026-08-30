@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import './theme.css';
-
 export const metadata: Metadata = {
   title: "OHMT - Interactive Game Launch Website Template",
   description: "Premium game studio & development showcase",
   openGraph: {
     title: "OHMT - Interactive Game Launch Website Template",
     description: "Premium game studio & development showcase",
-    url: "https://ohmt.site/en/templates/OHMT023-game",
+    url: "https://ohmytemplate.com/en/templates/OHMT023-game",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT023-game/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -21,8 +20,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/OHMT023-game",
-    languages: { "ko": "https://ohmt.site/ko/templates/OHMT023-game" },
+    canonical: "https://ohmytemplate.com/en/templates/OHMT023-game",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT023-game" },
   },
 };
 
@@ -36,7 +35,7 @@ export default function GameLayout({
     "@type": "VideoGameSeries",
     name: "OHMT Game Studio",
     description: "Premium game studio & development showcase",
-    url: "https://ohmt.site/en/templates/OHMT023-game",
+    url: "https://ohmytemplate.com/en/templates/OHMT023-game",
   };
   return (
     <>
@@ -45,7 +44,6 @@ export default function GameLayout({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
       `}</style>
       {children}
     </>

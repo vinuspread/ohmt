@@ -14,7 +14,7 @@ export const news: NewsItem[] = [
     tag: '유스 인 테크',
     title: '유스 인 테크, 2026 펠로우십 정원 40명 확대',
     excerpt: '두 개 도시에서 워크숍을 새로 열고 졸업생 멘토 과정을 추가했습니다.',
-    image: 'news-youth-tech-2026.webp',
+    image: 'news-1.jpg',
   },
   {
     id: 'health-corps-10000-hours',
@@ -22,7 +22,7 @@ export const news: NewsItem[] = [
     tag: '헬스 코어',
     title: '네이버후드 헬스 코어, 연간 봉사 1만 시간 달성',
     excerpt: '14개 지역의 봉사자가 연간 활동 목표를 예정보다 세 달 앞서 달성했습니다.',
-    image: 'news-health-corps-hours.webp',
+    image: 'news-2.jpg',
   },
   {
     id: 'green-futures-millionth-tree',
@@ -30,7 +30,7 @@ export const news: NewsItem[] = [
     tag: '그린 퓨처스',
     title: '그린 퓨처스, 누적 120만 그루 식재',
     excerpt: '같은 유역에서 여섯 시즌 동안 활동한 봉사팀이 120만 번째 식재에 참여했습니다.',
-    image: 'news-green-futures-tree.webp',
+    image: 'news-3.jpg',
   },
   {
     id: 'first-gen-largest-cohort',
@@ -38,7 +38,7 @@ export const news: NewsItem[] = [
     tag: '퍼스트젠 스칼러스',
     title: '퍼스트젠 스칼러스, 역대 최대 규모 장학생 선발',
     excerpt: '가을 학기를 앞두고 신입 장학생 138명에게 전담 멘토를 연결했습니다.',
-    image: 'program-3.jpg',
+    image: 'news-4.jpg',
   },
   {
     id: 'corporate-impact-award-finalist',
@@ -54,6 +54,6 @@ export const news: NewsItem[] = [
     tag: '로컬 메이커스 펀드',
     title: '로컬 메이커스 펀드, 3분기 지원 신청 접수',
     excerpt: '협력 지역의 소상공인을 대상으로 장비 구입비와 운영자금 신청을 받습니다.',
-    image: 'program-1.jpg',
+    image: 'news-6.jpg',
   },
 ]

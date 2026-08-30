@@ -7,7 +7,7 @@ export default function PopularServices() {
 
   return (
     <section className="relative overflow-hidden bg-[var(--color-bg-secondary)] py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-[1440px] px-6">
         <div className="mb-16 max-w-2xl">
           <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">
             Popular services

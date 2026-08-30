@@ -25,20 +25,6 @@
   --focus-ring-offset: 2px;
 }
 
-h1,
-h2,
-h3 {
-  text-wrap: balance;
-  word-break: keep-all;
-}
-
-p,
-li {
-  text-wrap: pretty;
-  word-break: keep-all;
-  overflow-wrap: break-word;
-}
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

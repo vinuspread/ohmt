@@ -48,7 +48,7 @@ function CosmeticJournalPageContent() {
     <TemplateWrapper theme={theme}>
       <main className="antialiased bg-[var(--color-bg)] text-black selection:bg-black selection:text-white">
         <Header />
-        
+
         <section className="pt-48 pb-16 md:pb-32">
           <div className="max-w-[1440px] mx-auto px-6 md:px-10">
             <div className="mb-16">
@@ -69,7 +69,7 @@ function CosmeticJournalPageContent() {
                         <span>읽는 시간 {entry.read}</span>
                       </div>
                     </div>
-                    <span className="text-[0.7rem] font-bold uppercase tracking-[0.15em] text-black/20 group-hover:text-black transition-colors justify-self-end">자세히 보기</span>
+                    <span className="text-[0.7rem] font-bold uppercase tracking-[0.15em] text-black/20 group-hover:text-black transition-colors">자세히 보기</span>
                   </div>
                 </Link>
               ))}

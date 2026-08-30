@@ -10,7 +10,7 @@ export default function MeetOurTeam() {
 
   return (
     <section className="relative overflow-hidden bg-[var(--color-bg)] py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-[1440px] px-6">
         <motion.div
           initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -33,7 +33,7 @@ export default function MeetOurTeam() {
           {team.map((member, i) => (
             <motion.a
               key={member.id}
-              href={`/en/templates/OHMT026-spa/about#${member.id}`}
+              href={`/en/templates/OHMT026-spa/therapists#${member.id}`}
               initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-80px" }}
@@ -44,7 +44,7 @@ export default function MeetOurTeam() {
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-6">
@@ -60,4 +60,3 @@ export default function MeetOurTeam() {
     </section>
   );
 }
-

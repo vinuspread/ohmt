@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { BASE, formatKrw, lineLabel, type Figure } from '../../data/figures'
+import { BASE, formatUsd, lineLabel, type Figure } from '../../data/figures'
 import { Badge, statusBadgeLabel, statusBadgeVariant } from './Badge'
 
 export function FigureCard({ figure, priority = false }: { figure: Figure; priority?: boolean }) {
@@ -8,7 +8,7 @@ export function FigureCard({ figure, priority = false }: { figure: Figure; prior
     <Link
       href={`${BASE}/figures/${figure.slug}`}
       className="group block bg-[var(--color-bg)]"
-      aria-label={`${figure.name}, ${formatKrw(figure.priceKrw)}`}
+      aria-label={`${figure.name}, ${formatUsd(figure.priceUsd)}`}
     >
       <div className="relative aspect-[4/5] overflow-hidden bg-[var(--color-bg-tile)] transition-colors duration-200 group-hover:bg-[var(--color-bg-tile-deep)]">
         <div className="absolute left-3 top-3 z-10">
@@ -36,7 +36,7 @@ export function FigureCard({ figure, priority = false }: { figure: Figure; prior
       <div className="flex flex-col gap-1 px-4 py-4">
         <span className="text-base font-semibold leading-tight text-[var(--color-ink)]">{figure.name}</span>
         <span className="meta-label text-[var(--color-ink-faint)]">{lineLabel(figure.line)}</span>
-        <span className="value-text mt-1 text-[var(--color-ink)]">{formatKrw(figure.priceKrw)}</span>
+        <span className="value-text mt-1 text-[var(--color-ink)]">{formatUsd(figure.priceUsd)}</span>
       </div>
     </Link>
   )

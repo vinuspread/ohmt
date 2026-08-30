@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Copy, Trash2, Plus, Eye, EyeOff } from 'lucide-react'
 import { DashboardLayout } from '../_components/layout/DashboardLayout'
 import { PageHeader } from '../_components/common/PageHeader'
-import TemplateSelect from '../_components/TemplateSelect'
 
 type SettingsTab = 'general' | 'notifications' | 'security' | 'api-keys'
 
@@ -106,23 +105,23 @@ function TabContent({ tab }: { tab: SettingsTab }) {
           <h4 className="text-sm font-medium text-[var(--color-text)] border-b border-[var(--color-border)] pb-2">기본 정보</h4>
           <FormInput label="이름" value="Morgan Chen" />
           <FormInput label="이메일" value="morgan@ohmytemplate.io" />
-          <FormInput label="회사" value="OHMT" />
+          <FormInput label="회사" value="AXLE MOTORS" />
           <div>
             <label className="block text-xs font-medium text-[var(--color-text-muted)] mb-1.5">시간대</label>
-            <TemplateSelect className="w-full px-3 py-2 text-sm bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-[var(--radius-md)] text-[var(--color-text)] focus:outline-none focus:border-[var(--color-primary-border)] transition-colors">
+            <select className="w-full px-3 py-2 text-sm bg-[var(--color-bg-surface)] border border-[var(--color-border)] rounded-[var(--radius-md)] text-[var(--color-text)] focus:outline-none focus:border-[var(--color-primary-border)] transition-colors">
               <option>UTC+9 (Seoul)</option>
               <option>UTC-8 (PST)</option>
               <option>UTC-5 (EST)</option>
               <option>UTC+0 (GMT)</option>
               <option>UTC+1 (CET)</option>
-            </TemplateSelect>
+            </select>
           </div>
           <div>
             <label className="block text-xs font-medium text-[var(--color-text-muted)] mb-2">테마</label>
             <div className="flex gap-3">
               {['라이트', '다크', '시스템'].map((t) => (
                 <label key={t} className="flex items-center gap-2 cursor-pointer">
-                  <input type="radio" name="theme" defaultChecked={t === 'Dark'} className="accent-[var(--color-primary)]" />
+                  <input type="radio" name="theme" defaultChecked={t === '다크'} className="accent-[var(--color-primary)]" />
                   <span className="text-sm text-[var(--color-text)]">{t}</span>
                 </label>
               ))}
@@ -234,7 +233,7 @@ export default function SettingsPage() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
       >
-        <PageHeader title="Settings" />
+        <PageHeader title="설정" />
 
         <div className="flex flex-col gap-6 lg:flex-row">
           <div className="w-full lg:w-48 lg:shrink-0">

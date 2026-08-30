@@ -38,13 +38,10 @@ export default function AboutStudio() {
               and a deep respect for the art of gaming.
             </p>
 
-            <div className="mt-10 flex flex-wrap gap-x-10 gap-y-8 sm:flex-nowrap">
+            <div className="mt-10 grid grid-cols-2 gap-8 sm:grid-cols-4">
               {stats.map((stat) => (
-                <div
-                  key={stat.label}
-                  className="shrink-0 text-center"
-                >
-                  <div className="whitespace-nowrap font-[var(--font-heading)] text-3xl font-bold text-[var(--color-primary)] md:text-4xl">
+                <div key={stat.label}>
+                  <div className="font-[var(--font-heading)] text-3xl font-bold text-[var(--color-primary)] md:text-4xl">
                     {stat.value}
                   </div>
                   <div className="mt-1 text-sm text-[var(--color-text-muted)]">{stat.label}</div>

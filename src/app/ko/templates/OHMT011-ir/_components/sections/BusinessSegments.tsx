@@ -56,7 +56,7 @@ export const BusinessSegments = () => {
             디지털 전환, 지속가능성, 글로벌 연결성이라는 장기 테마를 기반으로 구축된 포트폴리오입니다.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-px bg-transparent md:bg-[var(--color-border)]">
           {segments.map((s, i) => (
             <div key={i} className="bg-[var(--color-light-bg)] overflow-hidden group/card border border-[var(--color-border)] md:border-none">

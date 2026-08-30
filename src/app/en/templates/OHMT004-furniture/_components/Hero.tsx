@@ -46,7 +46,7 @@ export const Hero = () => {
     "badge": `Our Story / Narrative`,
     "title1": `Between material`,
     "title2": `and space.`,
-    "sub": `Founded on the principles of purity and precision, OHMT is an archive of essential interiors.`,
+    "sub": `Founded on the principles of purity and precision, KRAFT is an archive of essential interiors.`,
     "desc": `Each piece in our collection is a dialogue. We explore the tension between raw material and refined form, creating objects that bring a sense of serenity to the modern home. 01 Edition.`,
     "journal": `Read the Journal`
   },
@@ -138,10 +138,10 @@ const [index, setIndex] = useState(0);
   const current = HERO_PRODUCTS[index];
 
   return (
-    <section className="relative bg-white overflow-x-clip selection:bg-[var(--color-text)] selection:text-white flex flex-col pt-10 pb-4 sm:pt-0 lg:pb-0" style={{ minHeight: "clamp(600px, 88vh, 1000px)" }}>
-      <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 flex-1 grid grid-cols-1 sm:grid-cols-[0.9fr_1.1fr] lg:grid-cols-2 gap-0 sm:gap-6 lg:gap-0 items-stretch w-full">
+    <section className="relative bg-white overflow-x-clip selection:bg-[var(--color-text)] selection:text-white flex flex-col pt-10 pb-4 lg:pt-0 lg:pb-0" style={{ minHeight: "clamp(600px, 88vh, 1000px)" }}>
+      <div className="max-w-[1440px] mx-auto px-6 md:px-12 lg:px-16 flex-1 grid grid-cols-1 lg:grid-cols-2 items-stretch w-full">
         {/* Left: Content */}
-        <div className="z-10 relative flex flex-col justify-center order-last sm:order-first py-0 sm:py-12 md:py-16 lg:py-20">
+        <div className="z-10 relative flex flex-col justify-center order-last lg:order-first py-0 lg:py-20">
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
@@ -151,16 +151,16 @@ const [index, setIndex] = useState(0);
               transition={{ duration: 0.7, ease: "easeOut" }}
               className="flex flex-col"
             >
-              <span className="text-xs font-bold text-[var(--color-secondary)] uppercase mb-4 sm:mb-6 lg:mb-8 block tracking-wider">{current.subtitle}</span>
-              <h1 className="text-[length:var(--text-h3)] sm:text-[length:var(--text-h2)] lg:text-[length:var(--text-display)] font-bold text-[var(--color-text)] leading-[var(--leading-heading)] mb-4 sm:mb-6 lg:mb-10 uppercase [text-wrap:balance] lg:[text-wrap:normal]">
+              <span className="text-xs font-bold text-[var(--color-secondary)] uppercase mb-4 lg:mb-8 block tracking-wider">{current.subtitle}</span>
+              <h1 className="furniture-heading-tight text-[length:var(--text-h2)] lg:text-[length:var(--text-display)] font-bold text-[var(--color-text)] mb-4 lg:mb-10 uppercase [text-wrap:balance] lg:[text-wrap:normal]">
                 {current.titleLine1}<br />{current.titleLine2}
               </h1>
-              <p className="text-sm text-[var(--color-secondary)] font-normal leading-relaxed max-w-sm sm:max-w-md mb-6 sm:mb-10 lg:mb-12">
+              <p className="text-sm lg:text-sm text-[var(--color-secondary)] font-normal leading-relaxed max-w-sm mb-6 lg:mb-12">
                 {current.desc}
               </p>
 
-              <div className="hidden sm:flex items-center gap-4 lg:gap-6">
-                <Button variant="primary" className="px-7 lg:px-10 py-4 text-sm font-bold rounded-full flex items-center gap-3 whitespace-nowrap">
+              <div className="hidden lg:flex items-center gap-6">
+                <Button variant="primary" className="px-10 py-4 text-sm font-bold rounded-full flex items-center gap-3 whitespace-nowrap">
                   {t.hero.cta} <ArrowRight size={16} />
                 </Button>
                 <Button variant="ghost" className="group flex items-center gap-3 text-sm font-bold whitespace-nowrap">
@@ -175,7 +175,7 @@ const [index, setIndex] = useState(0);
         </div>
 
         {/* Right: Large Single Product Slider */}
-        <div className="relative h-[360px] sm:h-auto sm:min-h-[520px] md:min-h-[560px] order-first sm:order-2 overflow-visible">
+        <div className="relative h-[360px] sm:h-[420px] lg:h-auto order-first lg:order-2 overflow-visible">
             <AnimatePresence mode="popLayout" initial={false} custom={direction}>
               <motion.div
                 key={index}
@@ -184,7 +184,7 @@ const [index, setIndex] = useState(0);
                 animate={{ opacity: 1, x: 0, scale: 1 }}
                 exit={{ opacity: 0, x: direction > 0 ? -260 : 260, scale: 0.85 }}
                 transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
-                className="absolute -inset-x-8 sm:-inset-x-10 lg:-inset-x-16 inset-y-0 sm:-inset-y-4 lg:-inset-y-8 flex items-center justify-center"
+                className="absolute -inset-x-8 lg:-inset-x-16 inset-y-0 lg:-inset-y-8 flex items-center justify-center"
               >
                  <motion.img
                    src={current.image}
@@ -197,7 +197,7 @@ const [index, setIndex] = useState(0);
       </div>
 
       {/* Mobile Actions */}
-      <div className="flex sm:hidden items-center justify-start gap-4 px-6 pt-6 pb-6 z-30">
+      <div className="flex lg:hidden items-center justify-start gap-4 px-6 pt-6 pb-6 z-30">
         <Button variant="primary" className="px-6 py-3 text-xs font-bold rounded-full flex items-center gap-2 whitespace-nowrap">
           {t.hero.cta} <ArrowRight size={14} />
         </Button>
@@ -281,7 +281,7 @@ export const CategoryNav = () => {
     "badge": `Our Story / Narrative`,
     "title1": `Between material`,
     "title2": `and space.`,
-    "sub": `Founded on the principles of purity and precision, OHMT is an archive of essential interiors.`,
+    "sub": `Founded on the principles of purity and precision, KRAFT is an archive of essential interiors.`,
     "desc": `Each piece in our collection is a dialogue. We explore the tension between raw material and refined form, creating objects that bring a sense of serenity to the modern home. 01 Edition.`,
     "journal": `Read the Journal`
   },

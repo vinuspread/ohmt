@@ -19,7 +19,7 @@ const storeJsonLd = {
   '@type': 'OnlineStore',
   name: 'Atelier House',
   description: 'Warm-minimal furniture and home goods studio: solid-wood seating, tables, lighting, and textiles.',
-  url: 'https://ohmt.site/en/templates/OHMT035-atelier-house',
+  url: 'https://ohmytemplate.com/en/templates/OHMT035-atelier-house',
 }
 
 export default function AtelierHouseHomePage() {

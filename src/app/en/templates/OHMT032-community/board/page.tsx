@@ -4,7 +4,7 @@ import { BoardClient } from '../_components/pages/BoardClient'
 
 export const metadata: Metadata = {
   title: 'All Posts',
-  description: 'Browse all AGORA community posts by latest, popular, or most commented.',
+  description: 'Browse all OHMT community posts by latest, popular, or most commented.',
 }
 
 export default async function BoardPage({

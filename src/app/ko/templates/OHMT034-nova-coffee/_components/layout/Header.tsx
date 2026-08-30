@@ -23,7 +23,7 @@ export function Header() {
         <div className="flex h-10 items-center justify-between">
           <Link href={base} className="group leading-none">
             <span className="font-display text-lg font-bold tracking-tight text-[var(--color-text)] transition-colors duration-300 group-hover:text-[var(--color-accent)]">
-              NOVA · OHMT
+              NOVA
             </span>
           </Link>
 

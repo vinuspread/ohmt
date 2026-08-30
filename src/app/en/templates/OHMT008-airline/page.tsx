@@ -147,7 +147,7 @@ function AirlineTemplateContent() {
                     { value: "15yr", label: "Avg. Crew Exp." },
                   ].map((stat) => (
                     <div key={stat.label}>
-                      <div className="text-2xl md:text-3xl font-black text-[var(--color-accent)]">{stat.value}</div>
+                      <div className="text-2xl md:text-3xl font-extrabold text-[var(--color-accent)]">{stat.value}</div>
                       <div className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-white/40 mt-1">{stat.label}</div>
                     </div>
                   ))}
@@ -191,7 +191,7 @@ function AirlineTemplateContent() {
                     <div className="w-10 h-10 bg-[var(--color-primary)] flex items-center justify-center group-hover:bg-[var(--color-accent)] transition-colors duration-[var(--transition-base)]">
                       <s.icon size={18} className="text-[var(--color-accent)] group-hover:text-[var(--color-primary)] transition-colors duration-[var(--transition-base)]" />
                     </div>
-                    <h3 className="text-[0.92rem] font-bold text-[var(--color-primary)] leading-tight uppercase tracking-wide">
+                    <h3 className="text-[0.92rem] font-bold text-[var(--color-primary)] leading-[1.05] uppercase tracking-wide">
                       {s.title}
                     </h3>
                     <p className="text-[0.82rem] text-[var(--color-text-muted)] leading-[var(--leading-body)] font-normal">
@@ -212,7 +212,6 @@ function AirlineTemplateContent() {
           </div>
         </motion.section>
 
-        <p className="text-center text-[11px] leading-relaxed text-neutral-400 px-6 py-6">This page is a website design template demo by OHMT, not an actual client or operating business. The brand names, people, testimonials, contact details, and performance figures shown are example content.</p>
         <Footer />
       </main>
     </TemplateWrapper>

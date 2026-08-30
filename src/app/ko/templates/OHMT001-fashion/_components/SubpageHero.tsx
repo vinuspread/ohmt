@@ -37,18 +37,14 @@ export function SubpageHero({
           {eyebrow}
         </span>
         <h1
-          className="max-w-full whitespace-nowrap text-4xl font-bold leading-[var(--leading-heading)] tracking-[-0.035em] text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.25)] break-keep sm:text-5xl md:text-6xl lg:text-7xl"
+          className="max-w-full text-3xl font-light leading-[1.15] tracking-[-0.025em] text-white drop-shadow-[0_2px_18px_rgba(0,0,0,0.25)] break-keep text-balance sm:text-4xl md:text-5xl lg:text-6xl"
           style={{ fontFamily: "var(--font-bodoni)" }}
         >
           {title}
         </h1>
         {description ? (
-          <p className="mt-5 max-w-xl text-sm leading-[var(--leading-body)] text-white/74 break-keep text-pretty md:text-sm">
-            {description.split(". ").map((sentence, index, sentences) => (
-              <span key={sentence} className="block">
-                {sentence}{index < sentences.length - 1 ? "." : ""}
-              </span>
-            ))}
+          <p className="mt-5 max-w-xl text-sm leading-[var(--leading-body)] text-white/74 break-keep md:text-sm">
+            {description}
           </p>
         ) : null}
       </div>

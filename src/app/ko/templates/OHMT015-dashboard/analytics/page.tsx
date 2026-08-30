@@ -91,7 +91,7 @@ export default function AnalyticsPage() {
         className="space-y-3"
       >
         <PageHeader
-          title="Analytics"
+          title="분석"
           action={
             <div className="flex gap-1 bg-[var(--color-bg-surface)] rounded-[var(--radius-md)] p-0.5">
               {periods.map((p) => (

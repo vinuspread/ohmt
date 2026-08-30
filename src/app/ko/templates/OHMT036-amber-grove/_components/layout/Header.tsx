@@ -8,10 +8,10 @@ import { List, X } from '@phosphor-icons/react'
 const base = '/ko/templates/OHMT036-amber-grove'
 
 const navItems = [
-  { href: `${base}/shop`, label: '과일 상자', note: '이번 주 판매 상품' },
-  { href: `${base}/about`, label: '과수원 소개', note: '3대째 이어온 과수원' },
-  { href: `${base}/journal`, label: '농장일지', note: '재배와 수확 기록' },
-  { href: `${base}/visit`, label: '방문 안내', note: '직판장·방문 수령·도매' },
+  { href: `${base}/shop`, label: '스토어', note: '제철 과일 상자' },
+  { href: `${base}/about`, label: '소개', note: '3대째 이어온 과수원' },
+  { href: `${base}/journal`, label: '저널', note: '밭에서 쓰는 기록' },
+  { href: `${base}/visit`, label: '방문', note: '픽업과 도매 안내' },
 ]
 
 export function Header() {
@@ -33,7 +33,8 @@ export function Header() {
         </div>
 
         <Link href={`${base}/shop/orchard-gift-crate`} className="hidden items-center rounded bg-[var(--color-bg-dark)] px-5 py-2 text-sm font-semibold text-[var(--color-text-contrast)] transition-colors duration-200 hover:opacity-90 md:flex">
-          앰버 그로브 과일 상자</Link>
+          앰버그로브 선물상자
+        </Link>
 
         <button
           type="button"
@@ -91,7 +92,8 @@ export function Header() {
                   onClick={() => setOpen(false)}
                   className="mt-14 inline-flex items-center justify-center rounded bg-[var(--color-accent)] px-8 py-3 text-base font-bold text-[var(--color-text-contrast)] transition-colors duration-200 hover:opacity-90"
                 >
-                  앰버 그로브 과일 상자</Link>
+                  앰버그로브 선물상자
+                </Link>
               </div>
             </div>
           </motion.div>

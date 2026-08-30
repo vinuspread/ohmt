@@ -89,15 +89,18 @@ export function Cta() {
 
           <div className="w-full max-w-[500px] pt-8">
             <p className="font-inter font-medium text-xs tracking-[0.15em] text-[var(--accent)] uppercase mb-5">
-              사전 예약</p>
+              얼리 액세스
+            </p>
             <h2 className="font-michroma text-[length:var(--text-h2)] text-[var(--text)] leading-[var(--leading-heading)] tracking-[-0.03em] mb-6">
-              도시의 새로운<br />이동을 NUBI와<br />시작해보세요.</h2>
+              오늘부터 도시의<br />모든 드라이빙 루트는<br />당신의 것이 됩니다.
+            </h2>
             <p className="font-inter text-sm text-[var(--text-muted)] mb-10">
-              2,890만 원부터 시작합니다.
-              <br className="hidden md:block" />{" "}
-              예약금 35만 원은 취소 시 전액 환불됩니다.</p>
+              2,890만 원부터 시작. 2026년 1분기 첫 인도 예정입니다.
+              예약금 35만 원은 전액 환불됩니다.
+            </p>
             <button className="inline-flex items-center gap-2.5 bg-[var(--accent)] text-[var(--text-on-light)] px-8 py-4 rounded-full text-xs font-inter font-medium tracking-[0.03em] hover:bg-[var(--accent-dark)] transition-colors duration-300">
-              NUBI 사전 예약 →</button>
+              사전 예약하기 →
+            </button>
           </div>
         </div>
       </div>

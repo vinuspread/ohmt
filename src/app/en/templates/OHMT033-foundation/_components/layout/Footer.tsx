@@ -37,7 +37,7 @@ export function Footer() {
       <div className="mx-auto max-w-[1440px] md:border-t md:border-[var(--color-border)] md:pt-6">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-4 md:gap-24">
           <div>
-            <p className="text-base font-semibold leading-[var(--leading-heading)] text-[var(--color-text)] md:text-xs">OHMT Foundation</p>
+            <p className="text-base font-semibold leading-[var(--leading-heading)] text-[var(--color-text)] md:text-xs">VERITAS Foundation</p>
             <p className="mt-3 max-w-[260px] text-xs leading-[var(--leading-body)] text-[var(--color-text-muted)]">
               Human-centered stories and verifiable program data for social impact.
             </p>
@@ -64,7 +64,7 @@ export function Footer() {
         </div>
 
         <div className="mt-6 flex flex-col gap-3 text-xs leading-[var(--leading-body)] text-[var(--color-text-muted)] md:flex-row md:items-center md:justify-between md:border-t md:border-[var(--color-border)] md:pt-6">
-          <p>&copy; 2026 OHMT.</p>
+          <p>&copy; 2026 VERITAS.</p>
           <p>contact@ohmytemplate.com</p>
         </div>
       </div>

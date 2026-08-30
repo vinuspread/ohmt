@@ -14,8 +14,8 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 function RoomsPageContent() {
   const [filterView, setFilterView] = useState("all");
 
-  const filteredRooms = filterView === "all" 
-    ? rooms 
+  const filteredRooms = filterView === "all"
+    ? rooms
     : rooms.filter(r => r.view.toLowerCase().includes(filterView));
 
   return (

@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
 import './theme.css';
-
 export const metadata: Metadata = {
   title: "OHMT - Boutique Hotel Booking Template",
   description: "Premium luxury hotel & resort experience",
   openGraph: {
     title: "OHMT - Boutique Hotel Booking Template",
     description: "Premium luxury hotel & resort experience",
-    url: "https://ohmt.site/en/templates/OHMT020-hotel",
+    url: "https://ohmytemplate.com/en/templates/OHMT020-hotel",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT020-hotel/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
@@ -21,8 +20,8 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/OHMT020-hotel",
-    languages: { "ko": "https://ohmt.site/ko/templates/OHMT020-hotel" },
+    canonical: "https://ohmytemplate.com/en/templates/OHMT020-hotel",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT020-hotel" },
   },
 };
 
@@ -36,7 +35,7 @@ export default function HotelLayout({
     "@type": "Hotel",
     name: "Luxe Haven Hotel",
     description: "Premium luxury hotel & resort experience",
-    url: "https://ohmt.site/en/templates/OHMT020-hotel",
+    url: "https://ohmytemplate.com/en/templates/OHMT020-hotel",
   };
   return (
     <>
@@ -45,7 +44,6 @@ export default function HotelLayout({
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=Inter:wght@400;500;600&display=swap');
       `}</style>
       {children}
     </>

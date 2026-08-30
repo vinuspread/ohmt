@@ -22,7 +22,8 @@ export const RoomTabs = () => {
         >
           <h2 className="text-[length:var(--text-h2)] font-[var(--font-heading)] font-bold text-[var(--color-primary)] leading-[var(--leading-heading)]">
             <span className="text-xs md:text-xs font-medium text-[var(--color-accent)] tracking-tight block mb-4">객실 안내</span>
-            객실과 스위트</h2>
+            객실 & 스위트
+          </h2>
         </motion.div>
 
         <div className="flex justify-start md:justify-center gap-1 md:gap-2 mb-10 md:mb-14 overflow-x-auto no-scrollbar max-w-full pb-2 -mx-6 px-6 md:mx-0 md:px-0">
@@ -55,14 +56,7 @@ export const RoomTabs = () => {
             <div className="flex flex-col gap-6">
               <div>
                 <h3 className="text-2xl md:text-3xl font-[var(--font-heading)] font-bold text-[var(--color-primary)] mb-2">{room.name}</h3>
-                <p className="text-sm md:text-base text-[var(--color-text-muted)] leading-relaxed break-keep [text-wrap:pretty] max-w-2xl">
-                  {room.desc.split(/(?<=\.)\s+/).map((sentence, index, sentences) => (
-                    <React.Fragment key={sentence}>
-                      {sentence}
-                      {index < sentences.length - 1 && <br />}
-                    </React.Fragment>
-                  ))}
-                </p>
+                <p className="text-sm md:text-base text-[var(--color-text-muted)] leading-relaxed">{room.desc}</p>
               </div>
 
               <div className="grid grid-cols-3 gap-4 py-4 border-t border-b border-[var(--color-border)]">
@@ -81,7 +75,7 @@ export const RoomTabs = () => {
               </div>
 
               <div>
-                <span className="text-xs font-medium text-[var(--color-text-muted)] tracking-tight block mb-3">편의시설</span>
+                <span className="text-xs font-medium text-[var(--color-text-muted)] tracking-tight block mb-3">어메니티</span>
                 <div className="grid grid-cols-2 gap-2">
                   {room.amenities.map((a) => (
                     <div key={a} className="flex items-center gap-2 text-sm text-[var(--color-text)]">
@@ -94,7 +88,7 @@ export const RoomTabs = () => {
 
               <div className="flex items-center justify-between pt-2">
                 <div>
-                  <span className="text-xs font-medium text-[var(--color-text-muted)] tracking-tight">1박 기준</span>
+                  <span className="text-xs font-medium text-[var(--color-text-muted)] tracking-tight">1박 요금</span>
                   <p className="text-2xl md:text-3xl font-bold text-[var(--color-primary)]">{room.price}</p>
                 </div>
                 <Button variant="primary" size="md" className="text-xs tracking-tight">예약하기</Button>

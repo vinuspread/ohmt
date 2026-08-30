@@ -8,7 +8,7 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
-import { blogPosts } from "@/lib/portfolio-data";
+import { blogPosts } from "../portfolio-data";
 
 const allPosts = [
   ...blogPosts,
@@ -27,7 +27,7 @@ function JournalPageContent() {
         <section className="pt-40 pb-16 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto px-6">
             <span className="text-xs font-bold tracking-[0.4em] uppercase text-[var(--color-text-muted)] block mb-6">Creative Dispatch</span>
-            <h1 className="text-[length:var(--text-display)] font-medium uppercase tracking-tighter leading-[var(--leading-heading)]">Journal</h1>
+            <h1 className="text-[length:var(--text-display)] font-medium uppercase tracking-tight leading-[var(--leading-heading)]">Journal</h1>
           </div>
         </section>
 
@@ -44,7 +44,7 @@ function JournalPageContent() {
                   <span className="text-xs font-medium uppercase tracking-widest text-[var(--color-text)] bg-[var(--color-primary)]/10 px-2 py-1">{allPosts[0].category}</span>
                   <span className="text-xs text-[var(--color-text-muted)]/60">{allPosts[0].date}</span>
                 </div>
-                <h2 className="text-[2rem] font-medium uppercase tracking-tighter leading-tight mb-6 group-hover:text-[var(--color-text)] transition-colors">
+                <h2 className="text-[2rem] font-medium uppercase tracking-tight leading-[1.05] mb-6 group-hover:text-[var(--color-text)] transition-colors">
                   {allPosts[0].title}
                 </h2>
                 <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-[var(--color-text-muted)]/60 group-hover:text-[var(--color-text)] transition-colors">

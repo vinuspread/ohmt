@@ -83,7 +83,7 @@ export default function ProductPage() {
                 {product.tag} / {product.category}
               </p>
               <h1 className="text-4xl md:text-6xl font-black leading-none">{product.name}</h1>
-              <p className="mt-6 text-2xl md:text-3xl font-black">{product.price}</p>
+              <p className="mt-6 text-2xl md:text-3xl font-extrabold">{product.price}</p>
               <p className="mt-6 text-base md:text-lg leading-relaxed text-[var(--color-secondary)]">
                 {product.desc}
               </p>
@@ -102,7 +102,7 @@ export default function ProductPage() {
               </div>
 
               <div className="mt-10 border-t border-black/10 pt-8">
-                <h2 className="text-xl font-black mb-4">Product details</h2>
+                <h2 className="text-xl font-extrabold mb-4">Product details</h2>
                 <div className="grid grid-cols-1 gap-3">
                   {Object.entries(product.details).map(([key, value]) => (
                     <div key={key} className="grid grid-cols-2 gap-4 text-sm border-b border-black/5 pb-3">
@@ -114,7 +114,7 @@ export default function ProductPage() {
               </div>
 
               <div className="mt-10 border-t border-black/10 pt-8">
-                <h2 className="text-xl font-black mb-4">Customer reviews</h2>
+                <h2 className="text-xl font-extrabold mb-4">Customer reviews</h2>
                 <div className="space-y-5">
                   {product.reviewsList.slice(0, 3).map((review) => (
                     <article key={review.id} className="border-b border-black/5 pb-5">

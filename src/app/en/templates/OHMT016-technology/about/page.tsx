@@ -5,7 +5,7 @@ import Header from '../_components/Header'
 import Footer from '../_components/Footer'
 
 export const metadata: Metadata = {
-  title: "About - KINETIX Technology",
+  title: "About - OHMT Technology",
   description: "Company founded with a vision to democratize advanced robotics and autonomous hardware systems.",
 };
 
@@ -58,7 +58,7 @@ export default function TechnologyAboutPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
           <div className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center">
-            <h1 className="mb-4 text-[length:var(--text-h1)] font-bold tracking-[-0.03em] leading-[var(--leading-heading)] text-white font-heading">
+            <h1 className="mb-4 text-[length:var(--text-h1)] font-bold tracking-[-0.02em] leading-[var(--leading-heading)] text-white font-heading">
               Architecting the Physical Future
             </h1>
             <p className="mx-auto max-w-2xl text-base md:text-lg text-white/70 leading-[var(--leading-heading)]">

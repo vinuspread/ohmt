@@ -11,23 +11,23 @@ const instrumentSans = Instrument_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: 'OHMT Foundation - People, Proof, Progress',
-    template: '%s | OHMT Foundation',
+    default: 'VERITAS Foundation - People, Proof, Progress',
+    template: '%s | VERITAS Foundation',
   },
   description:
-    'OHMT Foundation proves social impact through people-first stories and verified program data across four community initiatives.',
+    'VERITAS Foundation proves social impact through people-first stories and verified program data across four community initiatives.',
   openGraph: {
-    title: 'OHMT - Nonprofit Proof Report Template',
+    title: 'VERITAS - Nonprofit Proof Report Template',
     description:
       'A CSR and foundation template that pairs real stories with verified impact data across four community initiatives.',
     images: [{ url: '/templates/OHMT033-foundation/og-image.jpg', width: 1200, height: 630 }],
     locale: 'en_US',
-    siteName: 'OHMT',
+    siteName: 'VERITAS',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'OHMT - Nonprofit Proof Report Template',
+    title: 'VERITAS - Nonprofit Proof Report Template',
     description: 'A CSR and foundation template built on real stories and verified impact data.',
     images: ['/templates/OHMT033-foundation/og-image.jpg'],
   },
@@ -47,10 +47,10 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  name: "OHMT Foundation - People, Proof, Progress",
+  name: "VERITAS Foundation - People, Proof, Progress",
   description:
-    'OHMT Foundation proves social impact through people-first stories and verified program data across four community initiatives.',
-  url: "https://ohmt.site/en/templates/OHMT033-foundation",
+    'VERITAS Foundation proves social impact through people-first stories and verified program data across four community initiatives.',
+  url: "https://ohmytemplate.com/en/templates/OHMT033-foundation",
 }
 
 export default function FoundationLayout({ children }: { children: React.ReactNode }) {

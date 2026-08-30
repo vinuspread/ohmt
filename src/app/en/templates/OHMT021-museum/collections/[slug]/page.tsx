@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const { slug } = await params;
   const item = collections.find((c) => c.slug === slug);
   return {
-    title: item ? `${item.title} - CURA Museum` : "Collection - CURA Museum",
+    title: item ? `${item.title} - OHMT Museum` : "Collection - OHMT Museum",
   };
 }
 
@@ -56,7 +56,7 @@ export default async function Page({ params }: PageProps) {
                   Archives
                 </Link>
                 <p className="mb-5 text-xs font-bold uppercase tracking-[0.5em] text-white/35">{item.category}</p>
-                <h1 className="font-serif text-5xl leading-[var(--leading-display)] tracking-tighter md:text-7xl lg:text-8xl">
+                <h1 className="font-serif text-5xl leading-[var(--leading-display)] tracking-tight md:text-7xl lg:text-8xl">
                   {item.title}
                 </h1>
                 <p className="mt-8 max-w-xl text-base leading-7 text-white/60 md:text-lg">
@@ -89,7 +89,7 @@ export default async function Page({ params }: PageProps) {
           <section className="mx-auto mt-16 grid max-w-[1440px] grid-cols-1 gap-10 border-t border-white/10 px-6 pt-12 md:mt-24 md:grid-cols-2 md:gap-16 md:px-12 md:pt-16 lg:px-20">
             <div>
               <p className="mb-4 text-xs font-bold uppercase tracking-[0.45em] text-white/35">Curator Notes</p>
-              <h2 className="font-serif text-4xl leading-tight tracking-tighter md:text-6xl">Why This Work Matters</h2>
+              <h2 className="font-serif text-4xl leading-[1.1] tracking-tight md:text-6xl">Why This Work Matters</h2>
             </div>
             <div className="grid gap-8 text-white/62 md:grid-cols-2">
               <p className="text-base leading-7">
@@ -120,7 +120,7 @@ export default async function Page({ params }: PageProps) {
             <div className="mb-8 flex items-end justify-between border-t border-white/10 pt-10">
               <div>
                 <p className="mb-3 text-xs font-bold uppercase tracking-[0.45em] text-white/35">Continue Exploring</p>
-                <h2 className="font-serif text-4xl tracking-tighter md:text-6xl">Related Masterpieces</h2>
+                <h2 className="font-serif text-4xl tracking-tight md:text-6xl">Related Masterpieces</h2>
               </div>
               <Link href="/en/templates/OHMT021-museum/collections" className="hidden items-center gap-3 text-xs font-bold uppercase tracking-[0.3em] text-white/40 transition-colors hover:text-white md:inline-flex">
                 All Archives

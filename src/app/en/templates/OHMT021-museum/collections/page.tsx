@@ -21,7 +21,7 @@ function CollectionsPageContent() {
     "souvenirShop": `Souvenir Shop`
   },
   "hero": {
-    "badge": `Musei Vaticani - CURA Curation`,
+    "badge": `Musei Vaticani - OHMT Curation`,
     "title1": `THE ETERNAL`,
     "title2": `Masterpieces`,
     "cta": `Begin Journey`
@@ -45,7 +45,7 @@ function CollectionsPageContent() {
     "p2": `Our curation seeks to extract the structural brilliance from the overwhelming ornamentation. By highlighting works like the Laocoon or the delicate Pieta in an isolated, digital space, we allow their raw theological and emotional gravity to echo without the noise of the physical gallery crowd.`,
     "p3": `Every brushstroke captured by Raphael, every chisel strike endured by Michelangelo - these are not relics of the past. They are continuing dialogues on the nature of humanity, suffering, knowledge, and divinity.`,
     "curator": `Curator`,
-    "curatorName": `CURA Exhibition`
+    "curatorName": `OHMT Exhibition`
   },
   "ourStory": {
     "heritage": `MUSEI VATICANI - 500 YEARS OF HERITAGE`,
@@ -168,7 +168,7 @@ const CATEGORIES = ["All", "Sculpture", "Fresco", "Marble"] as const;
   const [visibleCount, setVisibleCount] = useState(LIMIT_PER_PAGE);
 
   // Filter items based on active category
-  const filteredItems = collections.filter(item => 
+  const filteredItems = collections.filter(item =>
     activeCategory === "All" || item.category === activeCategory
   );
 
@@ -191,10 +191,10 @@ const CATEGORIES = ["All", "Sculpture", "Fresco", "Marble"] as const;
       <>
       <Header />
       <main className="antialiased min-h-screen bg-[var(--color-primary)] text-[var(--color-accent)] pt-16 md:pt-28 pb-20">
-      
+
       {/* Intro & Stats Section */}
       <div className="px-6 md:px-16 mb-12">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -202,7 +202,7 @@ const CATEGORIES = ["All", "Sculpture", "Fresco", "Marble"] as const;
         >
           <div>
             <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/40 block mb-6 px-1">{t.collectionsPage.category}</span>
-            <h1 className="text-5xl md:text-8xl font-serif leading-[var(--leading-heading)] tracking-tighter break-keep">{t.collectionsPage.title}</h1>
+            <h1 className="text-5xl md:text-8xl font-serif leading-[var(--leading-heading)] tracking-tight break-keep">{t.collectionsPage.title}</h1>
           </div>
           <div className="flex flex-col gap-6 md:flex-row md:items-end md:gap-12 md:border-l md:border-white/10 md:pl-16 pt-4 md:pt-0 border-t border-white/10 md:border-t-0">
             <p className="text-sm md:text-base text-white/50 font-normal leading-[var(--leading-body)] max-w-sm flex-1 break-keep">
@@ -230,8 +230,8 @@ const CATEGORIES = ["All", "Sculpture", "Fresco", "Marble"] as const;
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
                 className={`px-4 py-1.5 rounded-full text-xs uppercase font-medium tracking-normal transition-all border whitespace-nowrap ${
-                  activeCategory === cat 
-                  ? "bg-[var(--color-accent)] text-[var(--color-primary)] border-[var(--color-accent)]" 
+                  activeCategory === cat
+                  ? "bg-[var(--color-accent)] text-[var(--color-primary)] border-[var(--color-accent)]"
                   : "text-white/40 border-white/10 hover:border-white/40"
                 }`}
               >
@@ -264,12 +264,12 @@ const CATEGORIES = ["All", "Sculpture", "Fresco", "Marble"] as const;
                   className="relative group overflow-hidden bg-[var(--color-primary)] aspect-[3/4]"
                 >
                   <Link href={`/en/templates/OHMT021-museum/collections/${item.slug}`} className="block w-full h-full cursor-pointer">
-                    <img 
-                      src={item.img} 
+                    <img
+                      src={item.img}
                       alt={item.title}
                       className="w-full h-full object-cover transition-all duration-[2s] ease-out grayscale group-hover:grayscale-0 group-hover:scale-110 opacity-60 group-hover:opacity-100"
                     />
-                    
+
                     <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8 md:p-12">
                          <span className="text-xs uppercase tracking-[0.4em] text-white/50 mb-3 block">{item.tag}</span>
                          <h3 className="text-2xl md:text-4xl font-serif break-keep">
@@ -284,12 +284,12 @@ const CATEGORIES = ["All", "Sculpture", "Fresco", "Marble"] as const;
 
         {/* LOAD MORE BUTTON */}
         {hasMore && (
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             className="mt-16 flex justify-center"
           >
-            <button 
+            <button
               onClick={handleLoadMore}
               className="group flex flex-col items-center gap-6"
             >
@@ -326,4 +326,3 @@ export default function CollectionsPage() {
     </React.Suspense>
   );
 }
-

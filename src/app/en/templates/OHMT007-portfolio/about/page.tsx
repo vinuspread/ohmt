@@ -8,7 +8,7 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
-import { stats, designerInfo } from "@/lib/portfolio-data";
+import { stats, designerInfo } from "../portfolio-data";
 
 const team = [
   { name: "Marco Vinus", role: "Founder & Creative Director", img: "/templates/OHMT007-portfolio/portfolio-1.png" },
@@ -35,7 +35,7 @@ function AboutPageContent() {
           <div className="max-w-[1440px] mx-auto px-6 grid md:grid-cols-2 gap-20 items-end">
             <div>
               <span className="text-xs font-bold tracking-[0.4em] uppercase text-[var(--color-text-muted)] block mb-6">About the Studio</span>
-              <h1 className="text-[length:var(--text-display)] font-medium uppercase tracking-tighter leading-[var(--leading-heading)]">
+              <h1 className="text-[length:var(--text-display)] font-medium uppercase tracking-tight leading-[var(--leading-heading)]">
                 We make<br />the bold<br /><span className="text-[var(--color-text)]">visible.</span>
               </h1>
             </div>
@@ -66,7 +66,7 @@ function AboutPageContent() {
                   transition={{ delay: i * 0.1 }}
                   className="py-14 px-8 text-center"
                 >
-                  <p className="text-[3rem] font-black tracking-tighter leading-none text-[var(--color-text)] mb-2">{s.num}</p>
+                  <p className="text-[3rem] font-bold tracking-tight leading-none text-[var(--color-text)] mb-2">{s.num}</p>
                   <p className="text-[0.72rem] uppercase tracking-widest text-[var(--color-text-muted)]/60 font-medium">{s.label}</p>
                 </motion.div>
               ))}
@@ -79,7 +79,7 @@ function AboutPageContent() {
           <div className="max-w-[1440px] mx-auto px-6">
             <div className="mb-16">
               <span className="text-xs font-bold tracking-[0.3em] uppercase text-[var(--color-text-muted)] block mb-4">How We Work</span>
-              <h2 className="text-[length:var(--text-h2)] font-medium uppercase tracking-tighter leading-none">Our Process</h2>
+              <h2 className="text-[length:var(--text-h2)] font-medium uppercase tracking-tight leading-none">Our Process</h2>
             </div>
             <div className="grid md:grid-cols-4 gap-0 divide-x divide-white/10 border-x border-[var(--color-border)]">
               {process.map((step, i) => (
@@ -91,7 +91,7 @@ function AboutPageContent() {
                   transition={{ delay: i * 0.1 }}
                   className="p-10 group"
                 >
-                  <span className="text-[2.5rem] font-black text-[var(--color-text)]/15 group-hover:text-[var(--color-text)]/40 transition-colors block mb-6 leading-none">{step.num}</span>
+                  <span className="text-[2.5rem] font-bold text-[var(--color-text)]/15 group-hover:text-[var(--color-text)]/40 transition-colors block mb-6 leading-none">{step.num}</span>
                   <h3 className="text-[1rem] font-medium uppercase tracking-tight mb-4 group-hover:text-[var(--color-text)] transition-colors">{step.title}</h3>
                   <p className="text-[0.82rem] text-[var(--color-text-muted)] leading-[var(--leading-body)]">{step.desc}</p>
                 </motion.div>
@@ -105,7 +105,7 @@ function AboutPageContent() {
           <div className="max-w-[1440px] mx-auto px-6">
             <div className="mb-16">
               <span className="text-xs font-bold tracking-[0.3em] uppercase text-[var(--color-text-muted)] block mb-4">The People</span>
-              <h2 className="text-[length:var(--text-h2)] font-medium uppercase tracking-tighter leading-none">Meet the Team</h2>
+              <h2 className="text-[length:var(--text-h2)] font-medium uppercase tracking-tight leading-none">Meet the Team</h2>
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {team.map((m, i) => (

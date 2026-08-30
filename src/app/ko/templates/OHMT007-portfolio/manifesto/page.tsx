@@ -18,7 +18,7 @@ function PortfolioManifestoPageContent() {
                 <div className="flex flex-col gap-24">
                     <div className="space-y-4 border-b border-black/10 pb-12">
                         <span className="text-xs font-black tracking-tight text-[var(--color-accent)] uppercase block">챕터 01</span>
-                        <h1 className="text-7xl md:text-[10vw] font-black tracking-tighter leading-[var(--leading-heading)] uppercase">스튜디오 선언</h1>
+                        <h1 className="text-7xl font-black tracking-tighter leading-[var(--leading-heading)] uppercase">스튜디오 선언</h1>
                     </div>
 
                     <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 items-start">

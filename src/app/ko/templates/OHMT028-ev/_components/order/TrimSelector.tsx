@@ -1,9 +1,9 @@
 "use client";
 
 const trims = [
-  { id: "standard",    name: "스탠더드",  range: "280 km", power: "215 kW", price: "2,890만 원", tag: "" },
-  { id: "longrange",   name: "롱 레인지",       range: "380 km", power: "260 kW", price: "3,350만 원", tag: "가장 많이 선택" },
-  { id: "performance", name: "퍼포먼스",      range: "340 km", power: "320 kW", price: "4,050만 원", tag: "" },
+  { id: "standard",    name: "Standard Range",  range: "280 km", power: "215 kW", price: "2,890만 원", tag: "" },
+  { id: "longrange",   name: "Long Range",       range: "380 km", power: "260 kW", price: "3,350만 원", tag: "가장 많이 선택" },
+  { id: "performance", name: "Performance",      range: "340 km", power: "320 kW", price: "4,050만 원", tag: "" },
 ] as const;
 
 export type TrimId = (typeof trims)[number]["id"];
@@ -18,7 +18,8 @@ export function TrimSelector({
   return (
     <section>
       <h2 className="font-michroma text-[length:var(--text-lead)] text-[var(--text)] leading-[var(--leading-heading)] tracking-[-0.02em] mb-6">
-        모델 선택</h2>
+        트림 선택
+      </h2>
       <div className="space-y-0">
         {trims.map((trim) => {
           const isActive = selected === trim.id;

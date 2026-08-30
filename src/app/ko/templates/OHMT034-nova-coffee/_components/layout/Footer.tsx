@@ -35,7 +35,7 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
           <div className="col-span-2 md:col-span-1">
             <p className="font-display text-lg font-bold tracking-tight text-[var(--color-text-contrast)]">
-              NOVA · OHMT
+              NOVA
             </p>
             <p className="mt-3 max-w-[220px] text-xs leading-relaxed text-[var(--color-text-muted)]">
               온도와 압력을 기준으로 설계한 프리미엄 에스프레소 머신.
@@ -72,7 +72,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-[var(--color-text-muted)] md:flex-row md:items-center md:justify-between">
-          <p>&copy; 2026 OHMT.</p>
+          <p>&copy; 2026 NOVA.</p>
           <div className="flex items-center gap-4">
             <span className="text-xs font-medium uppercase tracking-wider text-white/30">Red Dot Design Award 2026</span>
             <span className="h-3 w-px bg-white/20" />

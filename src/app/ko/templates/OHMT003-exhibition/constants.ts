@@ -83,7 +83,7 @@ export const exhibitions: Exhibition[] = [
     image: '/templates/OHMT003-exhibition/exhibition-06.jpg',
     heroImage: '/templates/OHMT003-exhibition/exhibition-hero-06.jpg',
     description:
-      'OHMT가 2024년에 소장한 대니얼 리브스의 주요 작품을 중심으로, 기억과 기록, 역사 서사를 다뤄온 30년의 작업을 소개합니다. 시기별 대표작과 관련 자료를 함께 구성했으며, 전시장 내 아카이브에서 작가의 노트와 제작 기록을 열람할 수 있습니다.',
+      'VANTA가 2024년에 소장한 대니얼 리브스의 주요 작품을 중심으로, 기억과 기록, 역사 서사를 다뤄온 30년의 작업을 소개합니다. 시기별 대표작과 관련 자료를 함께 구성했으며, 전시장 내 아카이브에서 작가의 노트와 제작 기록을 열람할 수 있습니다.',
   },
 ];
 
@@ -111,7 +111,7 @@ export const events: GalleryEvent[] = [
     title: '큐레이터 전시 해설: Echoes of Form',
     date: '2026년 6월 28일',
     time: '14:00',
-    type: '전시 해설',
+    type: '투어',
     ageRating: '전체 관람가',
     image: '/templates/OHMT003-exhibition/event-03.jpg',
   },

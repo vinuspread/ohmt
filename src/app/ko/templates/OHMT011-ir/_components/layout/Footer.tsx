@@ -18,7 +18,7 @@ export const Footer = () => {
               투명하고 정확하며 적시성 있는 정보를 투자자 커뮤니티에 제공하기 위해 최선을 다하고 있습니다.
             </p>
           </div>
-          
+
           <div>
             <h5 className="text-[0.7rem] font-medium uppercase tracking-[0.2em] text-[var(--color-dark-bg)] mb-6">투자 정보</h5>
             <nav className="flex flex-col gap-4">

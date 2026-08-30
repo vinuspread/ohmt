@@ -18,35 +18,35 @@ function ExperiencePageContent() {
   const meals = [
     {
       id: "Michelin",
-      name: "프렌치 코스 메뉴",
-      desc: "캐비어와 블리니로 시작해 생선 요리와 디저트로 이어지는 프렌치 코스 메뉴입니다.",
-      detail: "캐비어와 블리니를 곁들인 전채, 화이트 와인 소스의 생선 요리, 다크 초콜릿 디저트로 구성된 3코스 메뉴입니다. 샴페인 또는 무알코올 음료를 선택할 수 있습니다.",
-      tags: ["3코스", "샴페인 페어링", "퍼스트 클래스 전용"],
-      img: "/templates/OHMT008-airline/french-course-menu.png"
+      name: "미슐랭 스타 세트",
+      desc: "신선한 블리니와 함께 슬라이스한 프렌치 캐비어를 크뤼그 클로 담보네 빈티지 샴페인으로 페어링한 요리.",
+      detail: "르 베르나르뎅의 3미슐랭 셰프 앙투안 뒤부아가 창작한 세트. 오시에트라 캐비어로 시작하는 콜드 아뮤즈부슈, 샹파뉴 뵈르 블랑을 곁들인 브르타뉴산 넙치의 판시어드 메인 코스, 그리고 다크 초콜릿 밀 푀유로 마무리됩니다. 크뤼그 클로 담보네 2002와 15년산 아르마냑 디제스티프가 함께 제공됩니다.",
+      tags: ["3코스", "샴페인 페어링", "퍼스트클래스 전용"],
+      img: "/templates/OHMT008-airline/michelin-dining.jpg"
     },
     {
       id: "Korean",
-      name: "한식 코스 메뉴",
-      desc: "밤과 대추를 넣어 부드럽게 조린 갈비찜과 계절 반찬, 밥으로 구성된 한식 메뉴입니다.",
-      detail: "갈비찜과 계절 나물, 밥과 후식 음료로 구성했습니다. 장시간 비행에서도 부담이 적도록 간을 조절하며, 알레르기나 식이 제한은 출발 전에 신청할 수 있습니다.",
-      tags: ["계절 메뉴", "전통 조리법", "비즈니스·퍼스트 클래스"],
+      name: "한국 왕실 요리",
+      desc: "밤과 대추로 천천히 조린 프리미엄 한우 갈비찜을 온기가 유지되는 유기농 청동그릇에 담아 서빙합니다.",
+      detail: "조선시대 왕실 연회 전통에서 영감을 받은 코스입니다. 한우 1++ 등급의 갈비를 구기자, 밤, 숙성 된장과 함께 8시간 끓인 요리이며, 계절 나물, 돌솥밥, 그리고 입가심용 따뜻한 대추-계피 식혜가 함께 제공됩니다. 최적의 온도를 유지하기 위해 손으로 만든 유기농 청동 그릇에 담겨 드립니다.",
+      tags: ["계절 메뉴", "전통 조리법", "비즈니스클래스 & 퍼스트클래스"],
       img: "/templates/OHMT008-airline/korean-cuisine.jpg"
     },
     {
       id: "Wellness",
-      name: "식물성 웰니스 메뉴",
-      desc: "퀴노아와 버섯, 제철 채소로 구성한 가벼운 식물성 메뉴입니다.",
-      detail: "퀴노아 샐러드와 채소 수프, 구운 버섯과 망고 디저트로 구성된 식물성 메뉴입니다. 글루텐을 포함하지 않는 조리법을 사용하며, 상세 알레르기 정보는 예약 단계에서 확인할 수 있습니다.",
+      name: "유기농 웰니스 세트",
+      desc: "트러플 향이 나는 퀴노아와 정원의 마이크로 허브, 유기농 신선 착즙 슈퍼푸드와의 페어링.",
+      detail: "영양사 유키 타나카 박사와의 협력으로 개발된 세트입니다. 완전 식물성이며 글루텐 프리이며, 트러플 향이 나는 재래종 퀴노아 타불레, 코코넛 폼이 올려진 콜드프레스 스피룰리나 비스크, 그리고 화이트 트러플 쥬와 함께 로스팅한 마이타케 버섯이 메인입니다. 로우 카카오와 망고 타르트로 마무리됩니다. 모든 재료는 유기농 인증 및 지속 가능한 출처입니다.",
       tags: ["식물성", "글루텐 프리", "전 객실 이용 가능"],
       img: "/templates/OHMT008-airline/wellness-set.jpg"
     }
   ];
 
   // Baggage Calculator logic
-  const allowedBaggageCount = 2; 
-  const allowedBaggageWeight = 32; 
-  const excessBaggageFeePerKg = 15_000;
-  const excessPieceFee = 150_000;
+  const allowedBaggageCount = 2;
+  const allowedBaggageWeight = 32;
+  const excessBaggageFeePerKg = 15;
+  const excessPieceFee = 150;
 
   const excessPieces = Math.max(0, baggageCount - allowedBaggageCount);
   const excessWeight = Math.max(0, baggageWeight - allowedBaggageWeight);
@@ -60,26 +60,26 @@ function ExperiencePageContent() {
         {/* Hero Cover (Completely Borderless & Floating Atmosphere) */}
         <PageHero
           imageSrc="/templates/OHMT008-airline/airline-experience-hero.png"
-          imageAlt="퍼스트 클래스 객실"
-          label="기내 경험"
-          title={<>편안한 비행을 위한 <br /><span className="text-[var(--color-accent)] font-[family-name:var(--font-heading)] normal-case font-[var(--font-weight-accent)]">서비스와 공간.</span></>}
-          description={"좌석과 기내식, 엔터테인먼트와 수하물 서비스를 미리 확인하세요.\n일부 메뉴와 특별식은 출발 전에 예약할 수 있습니다."}
+          imageAlt="프리미엄 캐빈 디테일"
+          label="캐빈 경험"
+          title={<>세심하게 완성한 <br /><span className="text-[var(--color-accent)] font-[family-name:var(--font-heading)] normal-case font-[var(--font-weight-accent)]">비행의 정수.</span></>}
+          description="대륙간 비행의 모든 디테일을 재정의합니다. 사전 예약으로 미슐랭 스타 셰프의 시그니처 메뉴를 즐기고 탑승 전 엘리트 수하물 한도를 확인하세요."
           descMaxWidth="max-w-[680px]"
         />
 
         {/* 1. Gourmet Curation - Editorial Typographic List Design (No Box Borders) */}
         <section className="py-14 md:py-32 bg-white">
           <div className="max-w-[1320px] mx-auto px-6 md:px-10">
-            
+
             {/* Header section with clean vertical layout */}
             <div className="mb-10 md:mb-20 space-y-4 max-w-[800px]">
-              <span className="text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">기내식</span>
+              <span className="text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">미식 큐레이션</span>
               <h2 className="text-[length:var(--text-h2)] font-[family-name:var(--theme-font-heading)] font-[var(--font-weight-heading)] text-[var(--color-primary)] uppercase tracking-tight leading-[var(--leading-heading)]">
-                사전 예약 기내식
+                사전 예약 시그니처 스카이 다이닝
               </h2>
               <div className="h-[2px] bg-[var(--color-accent)] w-12" />
               <p className="text-base text-[#7A7A7A] normal-case leading-relaxed font-normal pt-2">
-                퍼스트 클래스에서 제공하는 코스 메뉴를 확인하고 원하는 식사를 출발 전에 선택하세요.
+                퍼스트클래스 승객을 위한 셰프 맞춤형 다이닝 세트. 아래 코스를 둘러보고 상세 정보를 확인한 후 다이닝 패스를 확보하세요.
               </p>
             </div>
 
@@ -164,7 +164,7 @@ function ExperiencePageContent() {
                               <span key={tag} className="text-xs font-bold uppercase tracking-wider px-2 py-0.5 bg-[var(--color-accent)]/20 text-[var(--color-accent)] border border-[var(--color-accent)]/30">{tag}</span>
                             ))}
                           </div>
-                          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-accent)] block">메뉴 선택</span>
+                          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[var(--color-accent)] block">다이닝 패스</span>
                           <h3 className="font-[family-name:var(--theme-font-heading)] text-xl font-[var(--font-weight-heading)] text-white">{meal.name}</h3>
                         </div>
                       </div>
@@ -180,25 +180,25 @@ function ExperiencePageContent() {
         {/* 2. Baggage Calculator - Clean Typography Grid (No Box Borders) */}
         <section className="py-14 md:py-32 bg-[var(--color-bg-secondary)]">
           <div className="max-w-[1320px] mx-auto px-6 md:px-10">
-            
+
             {/* Header */}
             <div className="mb-10 md:mb-20 space-y-4 max-w-[800px]">
-              <span className="text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">수하물 확인</span>
+              <span className="text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">수하물 사전 체크</span>
               <h2 className="text-[length:var(--text-h2)] font-[family-name:var(--theme-font-heading)] font-[var(--font-weight-heading)] text-[var(--color-primary)] uppercase tracking-tight leading-[var(--leading-heading)]">
-                추가 수하물 요금 계산
+                스마트 수하물 추가 요금 계산기
               </h2>
               <div className="h-[2px] bg-[var(--color-accent)] w-12" />
               <p className="text-sm text-[#7A7A7A] normal-case leading-relaxed font-normal pt-2">
-                퍼스트 클래스 운임에는 <strong className="text-[var(--color-primary)">2개 (각 32kg)</strong>의 위탁 수하물이 포함됩니다. 개수와 무게를 입력하면 예상 추가 요금을 확인할 수 있습니다.
+                퍼스트클래스 티켓에는 <strong className="text-[var(--color-primary)">2개 (각 32kg)</strong>의 수하물이 포함됩니다. 아래 입력값을 조절하여 체크인 전 실시간 초과 수하물 요금을 계산하세요.
               </p>
             </div>
 
             {/* Completely borderless typographic controls grid */}
             <div className="grid lg:grid-cols-12 gap-10 md:gap-20 items-start">
-              
+
               {/* Left Side: Clean Sliders and Inputs */}
               <div className="lg:col-span-6 space-y-12">
-                
+
                 {/* Luggage pieces counter */}
                 <div className="space-y-4">
                   <div className="flex justify-between items-baseline text-sm font-bold uppercase tracking-wider text-[var(--color-primary)]">
@@ -244,22 +244,22 @@ function ExperiencePageContent() {
               {/* Right Side: Editorial Statement Layout (No Border Boxes) */}
               <div className="lg:col-span-6 space-y-8 lg:pl-10">
                   <span className="text-sm font-bold uppercase tracking-widest text-[#7A7A7A] block">
-                    요금 계산 결과
+                    수하물 요금 명세서
                   </span>
 
                   {/* Typography alignment list */}
                   <div className="space-y-4 text-sm font-bold normal-case text-[#7A7A7A] pb-6 border-b border-[var(--color-border)]">
                     <div className="flex justify-between items-baseline py-2">
-                      <span className="font-normal">기본 허용량</span>
+                      <span className="font-normal">엘리트 허용 한도</span>
                       <span className="text-[var(--color-primary)] font-semibold">2개 (각 최대 32kg)</span>
                     </div>
                     <div className="flex justify-between items-baseline py-2">
                       <span className="font-normal">초과 개수 추가 요금</span>
-                      <span className="text-[var(--color-primary)] font-semibold">{(excessPieces * excessPieceFee).toLocaleString("ko-KR")}원 ({excessPieces}개 초과)</span>
+                      <span className="text-[var(--color-primary)] font-semibold">${excessPieces * excessPieceFee} USD ({excessPieces}개 초과)</span>
                     </div>
                     <div className="flex justify-between items-baseline py-2">
                       <span className="font-normal">초과 중량 추가 요금</span>
-                      <span className="text-[var(--color-primary)] font-semibold">{(excessWeight * excessBaggageFeePerKg).toLocaleString("ko-KR")}원 ({excessWeight}kg 초과)</span>
+                      <span className="text-[var(--color-primary)] font-semibold">${excessWeight * excessBaggageFeePerKg} USD ({excessWeight}kg 초과)</span>
                     </div>
                   </div>
 
@@ -268,16 +268,16 @@ function ExperiencePageContent() {
                     <span className="text-sm uppercase font-bold tracking-widest text-[var(--color-primary)]">
                       수하물 요금
                     </span>
-                    
+
                     {/* Huge bold editorial number display */}
                     <div className="space-y-2">
                       <span className={`text-[length:var(--text-h2)] font-extrabold leading-none block ${
                         totalBaggageSurcharge > 0 ? "text-rose-600" : "text-[var(--color-accent)]"
                       }`}>
-                        {totalBaggageSurcharge > 0 ? `${totalBaggageSurcharge.toLocaleString("ko-KR")}원` : "무료"}
+                        {totalBaggageSurcharge > 0 ? `$${totalBaggageSurcharge.toLocaleString()} USD` : "무료"}
                       </span>
                       <p className="text-sm text-[#7A7A7A] normal-case leading-relaxed font-normal">
-                        *실제 허용량과 요금은 노선과 운임 조건에 따라 달라질 수 있으며, 결제 전 최종 금액을 확인해야 합니다.
+                        *허용 한도 계산은 IATA 중량 기준과 STRATUS 항공 구조 파라미터에 따라 실시간으로 산출됩니다.
                       </p>
                     </div>
                   </div>
@@ -291,19 +291,19 @@ function ExperiencePageContent() {
         <section className="py-14 md:py-32 bg-white">
           <div className="max-w-[1320px] mx-auto px-6 md:px-10">
               <span className="block text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-4">
-                공항 라운지와 기내 서비스
+                엘리트 라운지 & 스파
               </span>
               <h2 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-h1)] font-[var(--font-weight-heading)] tracking-tight text-[var(--color-primary)] leading-[var(--leading-heading)] mb-20 uppercase">
-                편안한 여정을 위한 서비스.
+                스카이 생추어리 서비스.
               </h2>
 
             {/* Asymmetrical elegant grid layout */}
             <div className="grid md:grid-cols-2 gap-x-20 gap-y-24">
               {[
-                { title: "독립형 퍼스트 클래스 스위트", desc: "슬라이딩 도어와 개인 수납공간, 180° 플랫베드를 갖춘 독립형 스위트입니다." },
-                { title: "노선별 기내식", desc: "노선과 계절에 맞춰 구성한 코스 메뉴와 와인 또는 무알코올 음료를 제공합니다." },
-                { title: "기내 웰니스 키트", desc: "스킨케어 제품과 수면용품, 장거리 비행을 위한 간단한 스트레칭 안내를 제공합니다." },
-                { title: "4K 기내 엔터테인먼트", desc: "32인치 4K 스크린에서 영화와 음악, 다큐멘터리와 국제 뉴스를 이용할 수 있습니다." }
+                { title: "프라이빗 스위트 생추어리", desc: "맞춤형 슬라이딩 도어, 개인 미니 옷장, 180° 플랫베드를 갖춘 완전 밀폐형 프라이빗 스위트." },
+                { title: "글로벌 큐리너리 다이닝", desc: "미슐랭 스타 셰프가 선보이는 멀티 코스 미식 플레이트, 빈티지 샴페인 매칭 포함." },
+                { title: "기내 아로마테라피 스파", desc: "스킨케어 리메디, 맞춤형 드라이 미스트 아로마테라피, 스트레칭 가이드를 포함한 기내 웰니스." },
+                { title: "울트라 HD 기내 엔터테인먼트", desc: "32인치 4K 해상도 스크린, 1,500시간 이상의 주문형 문화 콘텐츠 및 실시간 국제 뉴스." }
               ].map((f, i) => (
                 <motion.div
                   key={f.title}
@@ -315,7 +315,7 @@ function ExperiencePageContent() {
                 >
                   {/* Subtle index tag */}
                   <span className="text-sm font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] block">
-                    서비스 01{i + 1}
+                    구역 0{i + 1}
                   </span>
                   <h3 className="font-[family-name:var(--theme-font-heading)] text-2xl font-[var(--font-weight-heading)] text-[var(--color-primary)] tracking-tight">
                     {f.title}

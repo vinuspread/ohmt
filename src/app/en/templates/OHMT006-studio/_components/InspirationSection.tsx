@@ -36,7 +36,7 @@ export function InspirationSection() {
                     className="flex flex-col gap-8 mb-30 border-b border-[#F3F6FC] pb-16"
                 >
                     <span className="text-xs font-normal tracking-[3px] uppercase text-[#090B19] opacity-60">Services</span>
-                    <h2 className="text-3xl md:text-5xl leading-[var(--leading-heading)] font-semibold tracking-[-1.44px] text-[#090B19]">
+                    <h2 className="text-3xl md:text-5xl leading-[var(--leading-heading)] font-semibold tracking-[-0.72px] text-[#090B19]">
                         We do it best.
                     </h2>
                 </motion.div>
@@ -66,7 +66,7 @@ export function InspirationSection() {
                                     <Icon size={24} className="text-[#090B19]" strokeWidth={1.5} />
                                 </motion.div>
                                 <div>
-                                    <h3 className="text-2xl leading-[var(--leading-heading)] font-bold tracking-[-0.72px] text-[#090B19] mb-4">
+                                    <h3 className="text-2xl leading-[var(--leading-heading)] font-bold tracking-[-0.36px] text-[#090B19] mb-4">
                                         {service.title}
                                     </h3>
                                     <p className="text-base leading-[var(--leading-heading)] font-normal text-[var(--color-text-muted)]">
@@ -98,7 +98,7 @@ export function InspirationSection() {
                         viewport={{ once: true, margin: '-50px' }}
                         className="relative z-10 max-w-4xl px-4"
                     >
-                        <h2 className="text-3xl md:text-5xl leading-[var(--leading-heading)] font-semibold tracking-[-1.44px] mb-12">
+                        <h2 className="text-3xl md:text-5xl leading-[var(--leading-heading)] font-semibold tracking-[-0.72px] mb-12">
                             We are innovating the way companies reinvent their office spaces.
                         </h2>
                         <motion.div

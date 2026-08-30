@@ -6,7 +6,7 @@
   --text-h3: clamp(1.5rem, 3vw, 2rem);
   --text-lead: clamp(1.125rem, 2vw, 1.5rem);
   --leading-display: 0.95;
-  --leading-heading: 1.1;
+  --leading-heading: 0.9;
   --leading-body: 1.6;
 
   /* Color System */
@@ -68,6 +68,10 @@
   --radius-md: 0.5rem;
   --radius-lg: 1rem;
   --radius-full: 9999px;
+}
+
+.furniture-heading-tight {
+  line-height: 0.9 !important;
 }
 
 /* Accessibility: Respect motion preferences */

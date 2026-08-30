@@ -65,7 +65,7 @@ export default function ReportsPage() {
         className="space-y-3"
       >
         <PageHeader
-          title="Reports"
+          title="리포트"
           action={
             <button className="flex items-center gap-1.5 px-3 py-2 bg-[var(--color-primary)] text-white text-sm font-medium rounded-[var(--radius-md)] hover:bg-[var(--color-primary-hover)] transition-colors">
               <Plus size={16} strokeWidth={1.5} />

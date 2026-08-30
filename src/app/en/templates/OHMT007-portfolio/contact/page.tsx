@@ -6,7 +6,7 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
-import { designerInfo, faqs } from "@/lib/portfolio-data";
+import { designerInfo, faqs } from "../portfolio-data";
 
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
@@ -57,7 +57,7 @@ function ContactPageContent() {
             <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-10">
               <div>
                 <span className="text-xs font-medium tracking-[0.3em] uppercase text-[var(--color-text-muted)] block mb-6">Get in touch</span>
-                <h1 className="text-[length:var(--text-h1)] font-black tracking-tighter leading-[var(--leading-heading)] max-w-[700px]">
+                <h1 className="text-[length:var(--text-h1)] font-bold tracking-tight leading-[var(--leading-heading)] max-w-[700px]">
                   Planning a new project?<br />
                   Tell us about it.
                 </h1>
@@ -94,7 +94,7 @@ function ContactPageContent() {
                   animate={{ opacity: 1, y: 0 }}
                   className="py-16"
                 >
-                  <h2 className="text-[2rem] font-black uppercase tracking-tighter mb-3">Message Received</h2>
+                  <h2 className="text-[2rem] font-bold uppercase tracking-tight mb-3">Message Received</h2>
                   <p className="text-[var(--color-text-muted)] text-[0.9rem]">We'll get back to you within one business day.</p>
                 </motion.div>
               ) : (
@@ -142,7 +142,7 @@ function ContactPageContent() {
             <div className="grid md:grid-cols-2 gap-16">
               <div>
                 <span className="text-xs font-medium tracking-[0.3em] uppercase text-[var(--color-text-muted)] block mb-6">FAQ</span>
-                <h2 className="text-[length:var(--text-h2)] font-black tracking-tighter leading-tight">Frequently Asked Questions</h2>
+                <h2 className="text-[length:var(--text-h2)] font-bold tracking-tight leading-[1.05]">Frequently Asked Questions</h2>
               </div>
               <div className="border-t border-[var(--color-border)]">
                 {faqs.map((faq, i) => (

@@ -57,16 +57,6 @@
 .ohmt037fs h2,
 .ohmt037fs h3 {
   font-weight: 650;
-  text-wrap: balance;
-}
-
-.ohmt037fs p,
-.ohmt037fs li {
-  text-wrap: pretty;
-}
-
-.ohmt037fs .preserve-lines {
-  white-space: pre-line;
 }
 
 .ohmt037fs ::selection {

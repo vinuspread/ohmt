@@ -24,7 +24,7 @@ export function Header() {
         <div className="flex h-10 items-center justify-between">
           <Link href={base} className="group leading-none">
             <span className="text-base font-bold tracking-tight text-[var(--color-text)] transition-colors duration-300 group-hover:text-[var(--color-primary)]">
-              OHMT 파운데이션
+              VERITAS 재단
             </span>
           </Link>
 
@@ -39,7 +39,8 @@ export function Header() {
               </Link>
             ))}
             <ButtonLink href={`${base}/#contact`} size="sm" variant="dark">
-              협력 문의</ButtonLink>
+                    협력 문의
+                  </ButtonLink>
           </nav>
 
           <motion.button
@@ -81,7 +82,8 @@ export function Header() {
                     variant="primary"
                     className="mt-3 justify-between"
                   >
-                    협력 문의</ButtonLink>
+              협력 문의
+                  </ButtonLink>
                 </div>
               </div>
             </motion.div>

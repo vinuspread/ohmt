@@ -36,7 +36,7 @@ export function SubpageHero({
       />
       <div className={`absolute inset-0 ${overlay}`} />
       <div className="resort-container absolute inset-x-0 bottom-12 z-10">
-        <div className={detail ? "flex max-w-[700px] flex-col gap-3 md:gap-6" : "flex max-w-[1000px] flex-col gap-4 md:gap-6"}>
+        <div className={detail ? "flex max-w-[700px] flex-col gap-3 md:gap-6" : "flex max-w-[700px] flex-col gap-4 md:gap-6"}>
           {eyebrow ? (
             <p className="text-xs font-medium leading-[var(--leading-heading)] text-white">
               {eyebrow}
@@ -46,12 +46,12 @@ export function SubpageHero({
             className={`font-semibold text-white !tracking-normal md:tracking-[-0.02em] ${
               detail
                 ? "!text-6xl !leading-[var(--subpage-hero-heading-leading-mobile)] md:!text-9xl md:!leading-[var(--subpage-hero-heading-leading-desktop)]"
-                : "!leading-[var(--subpage-hero-heading-leading-mobile)] md:!leading-[var(--subpage-hero-heading-leading-desktop)]"
+                : "!text-6xl !leading-[var(--subpage-hero-heading-leading-mobile)] md:!text-9xl md:!leading-[var(--subpage-hero-heading-leading-desktop)]"
             }`}
-            style={detail ? undefined : { fontSize: "clamp(44px, 10vw, 128px)" }}
           >
             {title.split("\n").map((line, index) => (
-              <span key={`${line}-${index}`} className="block whitespace-nowrap">
+              <span key={line}>
+                {index > 0 ? <br /> : null}
                 {line}
               </span>
             ))}

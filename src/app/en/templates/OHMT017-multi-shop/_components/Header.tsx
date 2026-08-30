@@ -44,7 +44,7 @@ export const Header = () => {
             className="text-xl md:text-2xl font-bold tracking-tight transition-colors duration-300"
             style={{ color: transparent ? "var(--color-bg)" : "var(--color-text)" }}
           >
-            OHMT
+CANVAS SUPPLY
           </Link>
 
           <nav

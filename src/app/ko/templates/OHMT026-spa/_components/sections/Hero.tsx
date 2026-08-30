@@ -4,7 +4,7 @@ import { motion, useReducedMotion } from "framer-motion";
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 
-const tags = ["두피·헤어 케어", "페이셜 케어", "바디 케어"];
+const tags = ["헤어 리스토어링", "페이셜 테라피", "바디 트리트먼트"];
 
 export default function Hero() {
   const reduce = useReducedMotion();
@@ -14,7 +14,7 @@ export default function Hero() {
       <motion.img
         src="/templates/OHMT026-spa/hero-bg.jpg"
         alt="차분한 스파 트리트먼트 룸을 준비하는 테라피스트"
-        className="absolute inset-0 h-full w-full object-cover opacity-70"
+        className="absolute inset-0 h-full w-full object-cover object-center opacity-70"
         initial={reduce ? { scale: 1 } : { scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1.4, ease: EASE_OUT }}
@@ -33,16 +33,17 @@ export default function Hero() {
               className="font-[family-name:var(--font-heading)] font-bold tracking-tight text-[var(--color-text-contrast)] leading-[var(--leading-heading)] mb-6"
               style={{ fontSize: "clamp(2.5rem, 6vw, 4.5rem)" }}
             >
-              피부와 몸을 위한 맞춤 케어</h1>
-            <p className="mb-8 max-w-xl text-[0.95rem] leading-relaxed text-white/70">
-              <span className="md:block">현재 컨디션과 원하는 변화에 맞춰 페이셜과 바디 케어를 제안합니다.</span>{" "}
-              <span className="md:block">조용한 공간에서 편안하게 받아보세요.</span>
+              프리미엄 스파 트리트먼트
+            </h1>
+            <p className="text-[0.95rem] text-white/70 leading-relaxed max-w-md mb-8">
+              공인 테라피스트가 제공하는 맞춤형 피부·바디 케어. 차분하고 프리미엄한 공간에서 경험하세요.
             </p>
             <a
               href="/ko/templates/OHMT026-spa/contact"
               className="inline-flex items-center rounded-full bg-[var(--color-primary)] text-[var(--color-text-contrast)] px-7 py-3.5 text-sm font-semibold hover:brightness-110 active:scale-[0.97] transition-all duration-150"
             >
-              상담 예약</a>
+              무료 상담 예약하기
+            </a>
           </motion.div>
 
           <motion.div

@@ -21,7 +21,7 @@ const PRODUCTS_KO = [
 
 const CATEGORY_ASSETS_KO: Record<string, { bg: string; eyebrow: string }> = {
   collections: { bg: "/templates/OHMT002-jewelry/category-atelier.png", eyebrow: "컬렉션" },
-  engagement: { bg: "/templates/OHMT002-jewelry/category-engagement.png", eyebrow: "컬렉션" },
+  engagement: { bg: "/templates/OHMT002-jewelry/category-engagement.png", eyebrow: "약혼·웨딩" },
   "high-jewelry": { bg: "/templates/OHMT002-jewelry/category-high-jewelry.png", eyebrow: "하이 주얼리" },
   about: { bg: "/templates/OHMT002-jewelry/jewelry-craft.png", eyebrow: "브랜드 이야기" },
 };
@@ -39,11 +39,11 @@ function CategoryContent() {
 
   const getCategoryTitle = () => {
     switch (categoryId) {
-      case "collections": return "전체 컬렉션";
-      case "engagement": return "약혼·웨딩";
-      case "high-jewelry": return "하이 주얼리";
-      case "about": return "브랜드 이야기";
-      default: return "파인 주얼리";
+      case "collections": return "ALL COLLECTIONS";
+      case "engagement": return "ENGAGEMENT & WEDDING";
+      case "high-jewelry": return "HIGH JEWELRY";
+      case "about": return "BRAND STORY";
+      default: return "FINE JEWELRY";
     }
   };
 
@@ -74,7 +74,7 @@ function CategoryContent() {
             <span className="text-xs text-white/80 mb-3 block tracking-[-0.03em] font-bold uppercase">
               {assetKo.eyebrow}
             </span>
-            <h1 className="font-serif text-[length:var(--text-h1)] font-bold text-white leading-[var(--leading-heading)] tracking-[-0.04em]">
+            <h1 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-h1)] font-bold text-white leading-[var(--leading-heading)] tracking-[0em]">
               {getCategoryTitle()}
             </h1>
             <p className="text-sm text-white/70 max-w-xl mx-auto mt-4 leading-relaxed break-keep tracking-[-0.025em]">
@@ -97,12 +97,10 @@ function CategoryContent() {
                     <span className="text-xs uppercase tracking-[-0.03em] text-neutral-500 font-bold">세공 이야기</span>
                     <h2 className="text-3xl md:text-5xl font-serif font-bold text-neutral-900 leading-[var(--leading-heading)] tracking-[-0.04em]">원석의 빛을 살리는 섬세한 세공</h2>
                     <p className="text-sm text-neutral-600 leading-relaxed break-keep tracking-[-0.025em]">
-                      <span className="block">AVELINE는 원석이 지닌 색과 투명도, 형태를 먼저 살핀 뒤 그에 맞는 디자인과 세팅을 정합니다.</span>
-                      <span className="block">숙련된 세공사가 원석 하나하나를 직접 다듬고 고정하며, 표면과 가장자리를 여러 차례 확인해 착용감까지 편안하게 완성합니다.</span>
+                      AVELINE는 원석이 지닌 색과 투명도, 형태를 먼저 살핀 뒤 그에 맞는 디자인과 세팅을 정합니다. 숙련된 세공사가 원석 하나하나를 직접 다듬고 고정하며, 표면과 가장자리를 여러 차례 확인해 착용감까지 편안하게 완성합니다.
                     </p>
                     <p className="text-sm text-neutral-600 leading-relaxed break-keep tracking-[-0.025em]">
-                      <span className="block">빠르게 바뀌는 유행보다 오래 착용할 수 있는 균형과 완성도를 중요하게 생각합니다.</span>
-                      <span className="block">시간이 지나도 자연스럽게 손이 가고, 소중한 사람에게 이어줄 수 있는 주얼리를 만듭니다.</span>
+                      빠르게 바뀌는 유행보다 오래 착용할 수 있는 균형과 완성도를 중요하게 생각합니다. 시간이 지나도 자연스럽게 손이 가고, 소중한 사람에게 이어줄 수 있는 주얼리를 만듭니다.
                     </p>
                   </div>
                 </div>
@@ -121,7 +119,7 @@ function CategoryContent() {
                     <div className="w-12 h-12 rounded-full bg-[var(--color-primary)] flex items-center justify-center mx-auto text-lg font-serif text-white font-bold">I</div>
                     <h4 className="text-lg font-serif font-bold text-neutral-800 tracking-[-0.02em]">책임 있는 원석 선택</h4>
                     <p className="text-sm text-neutral-500 leading-relaxed max-w-xs mx-auto break-keep tracking-[-0.02em]">
-                      명확하고 정직한 검증된 공급 경로의 원석만을 사용합니다. 원산지와 유통 과정도 투명하게 안내합니다.
+                      명확하고 정직하게 검증된 공급 경로의 원석만을 사용합니다. 원산지와 유통 과정도 투명하게 안내합니다.
                     </p>
                   </div>
                   <div className="bg-white p-8 md:p-10 border border-neutral-200/50 shadow-[0_4px_20px_rgba(0,0,0,0.01)] space-y-4 text-center">
@@ -149,18 +147,23 @@ function CategoryContent() {
                   <span className="text-xs uppercase tracking-[0.3em] text-neutral-400 font-bold">브랜드의 기록</span>
                   <h3 className="text-2xl md:text-4xl font-serif font-bold text-neutral-900 mt-2 tracking-[-0.03em]">AVELINE가 걸어온 길</h3>
                 </div>
-                <div className="max-w-5xl mx-auto space-y-8 relative before:absolute before:inset-y-0 before:left-4 md:before:left-1/2 before:w-[1px] before:bg-neutral-200">
-                  
+                <div className="max-w-5xl mx-auto space-y-12 relative before:absolute before:inset-y-0 before:left-4 md:before:left-1/2 before:w-[1px] before:bg-neutral-200">
+
                   {/* 1924 */}
                   <div className="relative flex flex-col md:flex-row items-start md:justify-between">
                     <div className="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-[var(--color-primary)] border-4 border-white -translate-x-[7px] md:-translate-x-2 z-10" />
                     <div className="w-full md:w-[47%] pl-10 md:pl-0 md:pr-10 md:text-right">
-                      <div className="bg-white p-6 md:p-8 border border-neutral-100 shadow-[0_4px_20px_rgba(0,0,0,0.01)] transition-transform hover:-translate-y-1 inline-block text-left w-full">
-                        <span className="text-xl md:text-2xl font-serif font-bold text-[var(--color-primary)]">1924</span>
-                        <h4 className="text-base md:text-base font-serif font-bold text-neutral-800 mt-1">첫 공방을 열다</h4>
-                        <p className="text-sm text-neutral-500 mt-2 leading-relaxed break-keep tracking-[-0.025em]">
-                          작은 공방에서 맞춤 반지와 기념 주얼리를 만들며 AVELINE의 첫 작업을 시작했습니다. 원석을 고르는 일부터 세팅과 마감까지 한곳에서 직접 진행했습니다.
-                        </p>
+                      <div className="bg-white border border-neutral-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-transform hover:-translate-y-1 inline-block text-left w-full overflow-hidden">
+                        <div className="relative aspect-[16/9] w-full bg-neutral-100 overflow-hidden">
+                          <img src="/templates/OHMT002-jewelry/heritage-1924-atelier.png" alt="1924 첫 공방" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                        </div>
+                        <div className="p-6 md:p-8">
+                          <span className="text-xl md:text-2xl font-serif font-bold text-[var(--color-primary)]">1924</span>
+                          <h4 className="text-base md:text-base font-serif font-bold text-neutral-800 mt-1">첫 공방을 열다</h4>
+                          <p className="text-sm text-neutral-500 mt-2 leading-relaxed break-keep tracking-[-0.025em]">
+                            작은 공방에서 맞춤 반지와 기념 주얼리를 만들며 AVELINE의 첫 작업을 시작했습니다. 원석을 고르는 일부터 세팅과 마감까지 전 과정을 직접 진행합니다.
+                          </p>
+                        </div>
                       </div>
                     </div>
                     <div className="hidden md:block w-[47%]" />
@@ -171,12 +174,17 @@ function CategoryContent() {
                     <div className="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-[var(--color-primary)] border-4 border-white -translate-x-[7px] md:-translate-x-2 z-10" />
                     <div className="hidden md:block w-[47%]" />
                     <div className="w-full md:w-[47%] pl-10 md:pl-10">
-                      <div className="bg-white p-6 md:p-8 border border-neutral-100 shadow-[0_4px_20px_rgba(0,0,0,0.01)] transition-transform hover:-translate-y-1 inline-block w-full">
-                        <span className="text-xl md:text-2xl font-serif font-bold text-[var(--color-primary)]">1968</span>
-                        <h4 className="text-base md:text-base font-serif font-bold text-neutral-800 mt-1">맞춤 제작 서비스 시작</h4>
-                        <p className="text-sm text-neutral-500 mt-2 leading-relaxed break-keep tracking-[-0.025em]">
-                          고객의 이야기와 취향을 반영한 1:1 맞춤 제작 서비스를 시작했습니다. 상담부터 원석 선택, 디자인과 제작 과정을 함께 확인할 수 있도록 운영했습니다.
-                        </p>
+                      <div className="bg-white border border-neutral-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-transform hover:-translate-y-1 inline-block w-full overflow-hidden">
+                        <div className="relative aspect-[16/9] w-full bg-neutral-100 overflow-hidden">
+                          <img src="/templates/OHMT002-jewelry/heritage-1968-boutique.png" alt="1968 맞춤 제작 서비스" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                        </div>
+                        <div className="p-6 md:p-8">
+                          <span className="text-xl md:text-2xl font-serif font-bold text-[var(--color-primary)]">1968</span>
+                          <h4 className="text-base md:text-base font-serif font-bold text-neutral-800 mt-1">맞춤 제작 서비스 시작</h4>
+                          <p className="text-sm text-neutral-500 mt-2 leading-relaxed break-keep tracking-[-0.025em]">
+                            고객의 이야기와 취향을 반영한 1:1 맞춤 제작 서비스를 시작했습니다. 상담부터 원석 선택, 디자인과 제작 과정을 함께 확인할 수 있도록 운영했습니다.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -185,12 +193,17 @@ function CategoryContent() {
                   <div className="relative flex flex-col md:flex-row items-start md:justify-between">
                     <div className="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-[var(--color-primary)] border-4 border-white -translate-x-[7px] md:-translate-x-2 z-10" />
                     <div className="w-full md:w-[47%] pl-10 md:pl-0 md:pr-10 md:text-right">
-                      <div className="bg-white p-6 md:p-8 border border-neutral-100 shadow-[0_4px_20px_rgba(0,0,0,0.01)] transition-transform hover:-translate-y-1 inline-block text-left w-full">
-                        <span className="text-xl md:text-2xl font-serif font-bold text-[var(--color-primary)]">2002</span>
-                        <h4 className="text-base md:text-base font-serif font-bold text-neutral-800 mt-1">해외 고객과 만나다</h4>
-                        <p className="text-sm text-neutral-500 mt-2 leading-relaxed break-keep tracking-[-0.025em]">
-                          온라인 상담과 해외 배송을 확대해 더 많은 고객이 AVELINE의 컬렉션과 맞춤 제작 서비스를 이용할 수 있도록 했습니다.
-                        </p>
+                      <div className="bg-white border border-neutral-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-transform hover:-translate-y-1 inline-block text-left w-full overflow-hidden">
+                        <div className="relative aspect-[16/9] w-full bg-neutral-100 overflow-hidden">
+                          <img src="/templates/OHMT002-jewelry/heritage-2002-global.png" alt="2002 해외 고객 확장" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                        </div>
+                        <div className="p-6 md:p-8">
+                          <span className="text-xl md:text-2xl font-serif font-bold text-[var(--color-primary)]">2002</span>
+                          <h4 className="text-base md:text-base font-serif font-bold text-neutral-800 mt-1">해외 고객과 만나다</h4>
+                          <p className="text-sm text-neutral-500 mt-2 leading-relaxed break-keep tracking-[-0.025em]">
+                            온라인 상담과 해외 배송을 확대해 더 많은 고객이 AVELINE의 컬렉션과 맞춤 제작 서비스를 이용할 수 있도록 했습니다.
+                          </p>
+                        </div>
                       </div>
                     </div>
                     <div className="hidden md:block w-[47%]" />
@@ -201,12 +214,17 @@ function CategoryContent() {
                     <div className="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-[var(--color-primary)] border-4 border-white -translate-x-[7px] md:-translate-x-2 z-10" />
                     <div className="hidden md:block w-[46%]" />
                     <div className="w-full md:w-[46%] pl-10 md:pl-8">
-                      <div className="bg-white p-6 md:p-8 border border-neutral-100 shadow-[0_4px_20px_rgba(0,0,0,0.01)] transition-transform hover:-translate-y-1 inline-block w-full">
-                        <span className="text-xl md:text-2xl font-serif font-bold text-[var(--color-primary)]">2026</span>
-                        <h4 className="text-base md:text-base font-serif font-bold text-neutral-800 mt-1">책임 있는 제작 기준 마련</h4>
-                        <p className="text-sm text-neutral-500 mt-2 leading-relaxed break-keep tracking-[-0.025em]">
-                          원석의 공급 경로를 확인하고 포장과 제작 과정에서 불필요한 자원 사용을 줄이는 등, 브랜드가 지켜야 할 기준을 구체적으로 정리했습니다.
-                        </p>
+                      <div className="bg-white border border-neutral-100 shadow-[0_4px_20px_rgba(0,0,0,0.02)] transition-transform hover:-translate-y-1 inline-block w-full overflow-hidden">
+                        <div className="relative aspect-[16/9] w-full bg-neutral-100 overflow-hidden">
+                          <img src="/templates/OHMT002-jewelry/heritage-2026-studio.png" alt="2026 책임 있는 제작 기준" className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+                        </div>
+                        <div className="p-6 md:p-8">
+                          <span className="text-xl md:text-2xl font-serif font-bold text-[var(--color-primary)]">2026</span>
+                          <h4 className="text-base md:text-base font-serif font-bold text-neutral-800 mt-1">책임 있는 제작 기준 마련</h4>
+                          <p className="text-sm text-neutral-500 mt-2 leading-relaxed break-keep tracking-[-0.025em]">
+                            원석의 공급 경로를 확인하고 포장과 제작 과정에서 불필요한 자원 사용을 줄이는 등, 브랜드가 지켜야 할 기준을 구체적으로 정리했습니다.
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>

@@ -32,7 +32,7 @@ function MuseumInfoContent() {
     "souvenirShop": `Souvenir Shop`
   },
   "hero": {
-    "badge": `Musei Vaticani - CURA Curation`,
+    "badge": `Musei Vaticani - OHMT Curation`,
     "title1": `THE ETERNAL`,
     "title2": `Masterpieces`,
     "cta": `Begin Journey`
@@ -56,7 +56,7 @@ function MuseumInfoContent() {
     "p2": `Our curation seeks to extract the structural brilliance from the overwhelming ornamentation. By highlighting works like the Laocoon or the delicate Pieta in an isolated, digital space, we allow their raw theological and emotional gravity to echo without the noise of the physical gallery crowd.`,
     "p3": `Every brushstroke captured by Raphael, every chisel strike endured by Michelangelo - these are not relics of the past. They are continuing dialogues on the nature of humanity, suffering, knowledge, and divinity.`,
     "curator": `Curator`,
-    "curatorName": `CURA Exhibition`
+    "curatorName": `OHMT Exhibition`
   },
   "ourStory": {
     "heritage": `MUSEI VATICANI - 500 YEARS OF HERITAGE`,
@@ -169,7 +169,7 @@ function MuseumInfoContent() {
 };
 const timelineData = t.ourStory.timeline;
   const grottoesData = t.ourStory.grottoes;
-  
+
   const grottoes = [
     { ...grottoesData[0], img: "/templates/OHMT021-museum/papal-tombs.png" },
     { ...grottoesData[1], img: "/templates/OHMT021-museum/curator.png" },
@@ -213,7 +213,7 @@ const timelineData = t.ourStory.timeline;
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.5, delay: 0.8 }}
-            className="text-5xl md:text-8xl font-serif font-medium leading-none tracking-tighter break-keep"
+            className="text-5xl md:text-8xl font-serif font-medium leading-none tracking-tight break-keep"
           >
             {t.ourStory.heroTitle}
           </motion.h1>
@@ -231,7 +231,7 @@ const timelineData = t.ourStory.timeline;
         >
           <motion.div variants={fadeIn} className="space-y-10">
             <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/40">{t.ourStory.ch1}</span>
-            <h2 className="text-5xl md:text-7xl font-serif leading-[var(--leading-heading)] tracking-tighter break-keep">
+            <h2 className="text-5xl md:text-7xl font-serif leading-[var(--leading-heading)] tracking-tight break-keep">
               {t.ourStory.ch1Title}
             </h2>
             <p className="text-lg text-white/60 leading-[var(--leading-body)] font-normal break-keep">
@@ -267,7 +267,7 @@ const timelineData = t.ourStory.timeline;
       <section className="max-w-[1440px] mx-auto px-8 md:px-16 py-10 md:py-20 md:py-32 lg:py-40 border-b border-white/5">
         <div className="mb-24">
           <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/40 block mb-6">{t.ourStory.ch2}</span>
-          <h2 className="text-5xl md:text-7xl font-serif tracking-tighter leading-[var(--leading-heading)] break-keep">
+          <h2 className="text-5xl md:text-7xl font-serif tracking-tight leading-[var(--leading-heading)] break-keep">
             {t.ourStory.ch2Title}
           </h2>
         </div>
@@ -278,7 +278,7 @@ const timelineData = t.ourStory.timeline;
           </motion.div>
           <div className="space-y-10">
             <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/40">{t.ourStory.altar}</span>
-            <h3 className="text-4xl md:text-6xl font-serif leading-[var(--leading-heading)] tracking-tighter break-keep">
+            <h3 className="text-4xl md:text-6xl font-serif leading-[var(--leading-heading)] tracking-tight break-keep">
               {t.ourStory.altarTitle}
             </h3>
             <p className="text-lg text-white/60 font-normal leading-[var(--leading-body)] break-keep">
@@ -292,7 +292,7 @@ const timelineData = t.ourStory.timeline;
         <div className="border-t border-white/5 pt-12 md:pt-24">
           <div className="mb-16">
             <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/40 block mb-6">{t.ourStory.silentVatican}</span>
-            <h3 className="text-4xl md:text-6xl font-serif tracking-tighter leading-[var(--leading-heading)] break-keep">
+            <h3 className="text-4xl md:text-6xl font-serif tracking-tight leading-[var(--leading-heading)] break-keep">
               {t.ourStory.grottoesTitle}
             </h3>
           </div>
@@ -314,7 +314,7 @@ const timelineData = t.ourStory.timeline;
       {/* CTA */}
       <section className="py-10 md:py-20 md:py-32 lg:py-40 text-center px-6">
         <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/40 block mb-8">{t.ourStory.exploreFurther}</span>
-        <h3 className="text-5xl md:text-7xl font-serif tracking-tighter mb-16 break-keep">
+        <h3 className="text-5xl md:text-7xl font-serif tracking-tight mb-16 break-keep">
           {t.ourStory.visitArchive}
         </h3>
         <Link

@@ -7,7 +7,7 @@ const infoBlocks = [
   { label: 'Address', value: '123 West 25th Street\nNew York, NY 10001' },
   { label: 'Open Hours', value: 'Tue-Fri 10am-6pm\nSat-Sun 10am-8pm\nMon Closed' },
   { label: 'Phone', value: '+1 (212) 555-0147' },
-  { label: 'Email', value: 'info@formagallery.com' },
+  { label: 'Email', value: 'info@vantagallery.com' },
 ];
 
 export default function ContactPage() {
@@ -19,11 +19,11 @@ export default function ContactPage() {
           <div className="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <h1
               className="font-heading font-semibold uppercase text-black leading-none"
-              style={{ fontSize: 'clamp(4rem, 7vw, 7rem)', letterSpacing: '-0.04em' }}
+              style={{ fontSize: 'clamp(4rem, 7vw, 7rem)', letterSpacing: '-0.02em' }}
             >
               Get in<br />Touch
             </h1>
-            <p className="max-w-[58ch] text-pretty text-sm font-body text-black/50 leading-relaxed md:text-right">
+            <p className="text-sm font-body text-black/50 leading-relaxed max-w-[32ch] md:text-right">
               We'd love to hear from you - whether you have a question about an exhibition, a booking enquiry, or just want to say hello.
             </p>
           </div>
@@ -41,7 +41,7 @@ export default function ContactPage() {
               </span>
             </a>
             <a
-              href="mailto:info@formagallery.com"
+              href="mailto:info@vantagallery.com"
               className="relative overflow-hidden group px-8 py-4 border border-black"
             >
               <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out" />

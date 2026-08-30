@@ -31,7 +31,7 @@ export function ImageCard({
         />
       </div>
       {meta ? <p className="mt-4 text-xs font-medium leading-snug text-[var(--color-text-muted)]">{meta}</p> : null}
-      <h2 className="mt-2 font-heading text-lg font-semibold leading-snug text-[var(--color-text)] transition-colors duration-300 group-hover:text-[var(--color-primary)]">
+      <h2 className="mt-2 font-heading text-lg font-semibold leading-[1.05] text-[var(--color-text)] transition-colors duration-300 group-hover:text-[var(--color-primary)]">
         {title}
       </h2>
       {description ? <p className="mt-2 text-sm leading-relaxed text-[var(--color-text-muted)]">{description}</p> : null}

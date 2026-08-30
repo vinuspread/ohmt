@@ -43,7 +43,7 @@ export const BrandStory = () => {
     "badge": `Our Story / Narrative`,
     "title1": `Between material`,
     "title2": `and space.`,
-    "sub": `Founded on the principles of purity and precision, OHMT is an archive of essential interiors.`,
+    "sub": `Founded on the principles of purity and precision, KRAFT is an archive of essential interiors.`,
     "desc": `Each piece in our collection is a dialogue. We explore the tension between raw material and refined form, creating objects that bring a sense of serenity to the modern home. 01 Edition.`,
     "journal": `Read the Journal`
   },
@@ -140,7 +140,7 @@ return (
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.6 }}
-              className="text-[length:var(--text-h1)] font-bold text-[var(--color-text)] leading-[var(--leading-heading)] mb-8 md:mb-12 uppercase"
+              className="furniture-heading-tight text-[length:var(--text-h1)] font-bold text-[var(--color-text)] mb-8 md:mb-12 uppercase"
             >
               {t.story.title1} <br /> {t.story.title2}
             </motion.h2>
@@ -155,7 +155,7 @@ return (
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3, duration: 0.6 }}
-              className="text-base md:text-lg lg:text-xl text-[var(--color-text)] font-bold leading-[var(--leading-body)] mb-6 md:mb-10 uppercase"
+              className="text-base md:text-lg lg:text-xl text-[var(--color-text)] font-bold leading-[var(--leading-body)] mb-6 md:mb-10"
             >
               {t.story.sub}
             </motion.p>
@@ -163,7 +163,7 @@ return (
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.35, duration: 0.6 }}
-              className="text-sm md:text-base lg:text-lg text-[var(--color-secondary)] font-medium leading-[var(--leading-body)] mb-10 md:mb-16 uppercase"
+              className="text-sm md:text-base lg:text-lg text-[var(--color-secondary)] font-medium leading-[var(--leading-body)] mb-10 md:mb-16"
             >
               {t.story.desc}
             </motion.p>

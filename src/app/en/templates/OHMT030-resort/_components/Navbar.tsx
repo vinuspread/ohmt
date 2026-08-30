@@ -40,7 +40,7 @@ export function Navbar() {
           </div>
 
           <div className="flex flex-col items-start gap-1 md:items-center md:gap-0 md:absolute md:left-1/2 md:-translate-x-1/2">
-            <Link href={base} className="text-xs md:text-xl font-semibold text-white tracking-tight leading-none">OHMT</Link>
+            <Link href={base} className="text-xs md:text-xl font-semibold text-white tracking-tight leading-none">SANCTUM</Link>
             <span className="text-xs font-normal leading-none text-white/70 md:text-white/60">coastal resort</span>
           </div>
 

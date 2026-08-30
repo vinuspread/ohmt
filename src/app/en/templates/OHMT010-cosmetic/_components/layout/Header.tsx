@@ -8,7 +8,7 @@ import { Menu, X, Search } from "lucide-react";
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  
+
   const t = {
   "nav": {
     "shop": `Shop`,
@@ -83,24 +83,13 @@ const NAV_ITEMS = [
 
   return (
     <>
-      {/* Marquee banner */}
-      <div
-        className="fixed left-0 top-0 z-[1000] flex h-[38px] w-full items-center overflow-hidden bg-black text-white"
-        role="note"
-        aria-label={t.nav.banner}
-      >
-        <div className="cosmetic-marquee-track" aria-hidden="true">
-          {[0, 1].map((group) => (
-            <div key={group} className="cosmetic-marquee-group">
-              {[0, 1, 2].map((item) => (
-                <span
-                  key={item}
-                  className="shrink-0 px-8 text-[0.72rem] font-medium uppercase tracking-[0.05em] md:px-16"
-                >
-                  {t.nav.banner}
-                </span>
-              ))}
-            </div>
+      {/* Marquee banner - 25s */}
+      <div className="bg-black text-white h-[38px] fixed top-0 left-0 w-full z-[1000] flex items-center overflow-hidden">
+        <div className="flex whitespace-nowrap animate-marquee-cosmetic">
+          {[1, 2, 3, 4].map((i) => (
+            <p key={i} className="px-16 text-[0.72rem] font-medium tracking-[0.05em] uppercase">
+              {t.nav.banner}
+            </p>
           ))}
         </div>
       </div>
@@ -112,7 +101,9 @@ const NAV_ITEMS = [
           : "bg-transparent"
       )}>
         <div className="max-w-[1440px] mx-auto px-6 md:px-10 h-full flex items-center justify-between">
-          <Link href="/en/templates/OHMT010-cosmetic" className="text-[1rem] md:text-[1.15rem] font-black tracking-[0.12em] uppercase">VELURE</Link>
+          <Link href="/en/templates/OHMT010-cosmetic" className="text-[1rem] md:text-[1.15rem] font-extrabold tracking-[0.12em] uppercase">
+            VELURE
+          </Link>
 
           {/* Desktop GNB */}
           <div className="hidden md:flex gap-10 ml-20">
@@ -129,7 +120,7 @@ const NAV_ITEMS = [
           </div>
 
            <div className="flex items-center gap-4 ml-auto">
-             
+
              <button className="hidden md:flex items-center gap-1.5 text-[0.82rem] font-bold uppercase tracking-wider opacity-60 hover:opacity-100 transition-opacity">
                <Search size={15} />
              </button>
@@ -174,28 +165,12 @@ const NAV_ITEMS = [
       </div>
 
       <style>{`
-        @keyframes cosmetic-marquee {
-          from { transform: translate3d(0, 0, 0); }
-          to { transform: translate3d(-50%, 0, 0); }
+        @keyframes marquee-cosmetic {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-50%); }
         }
-        .cosmetic-marquee-track {
-          display: flex;
-          width: max-content;
-          white-space: nowrap;
-          animation: cosmetic-marquee 32s linear infinite;
-          will-change: transform;
-        }
-        .cosmetic-marquee-group {
-          display: flex;
-          flex-shrink: 0;
-          align-items: center;
-          white-space: nowrap;
-        }
-        @media (prefers-reduced-motion: reduce) {
-          .cosmetic-marquee-track {
-            animation: none;
-            transform: none;
-          }
+        .animate-marquee-cosmetic {
+          animation: marquee-cosmetic 25s linear infinite;
         }
       `}</style>
     </>

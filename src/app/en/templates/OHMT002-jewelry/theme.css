@@ -9,17 +9,18 @@
   --leading-heading: 1.1;
   --leading-body: 1.6;
 
-  --color-primary: #70C5BB;
+  --color-primary: #1E352F;
+  --color-primary-hover: #16261F;
   --color-secondary: #171717;
-  --color-bg: #FBF9F6;
+  --color-bg: #FAF8F5;
   --color-bg-secondary: #FFFFFF;
   --color-text: #171717;
   --color-text-secondary: #525252;
   --color-text-muted: #737373;
   --color-text-contrast: #FFFFFF;
   --color-border: rgba(0,0,0,0.1);
-  --color-accent: #70C5BB;
-  --color-primary-hover: #5fb3a9;
+  --color-accent: #C5A880;
+  --color-accent-hover: #B5966A;
 
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;

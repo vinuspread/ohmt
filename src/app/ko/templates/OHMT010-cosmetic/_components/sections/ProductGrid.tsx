@@ -22,8 +22,8 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 40 },
-  show: { 
-    opacity: 1, 
+  show: {
+    opacity: 1,
     y: 0,
     transition: {
       duration: 0.8,
@@ -51,8 +51,8 @@ export const ProductGrid = () => {
           <span className="text-[0.75rem] uppercase tracking-[0.15em] font-bold text-[var(--color-text-muted)] mb-4 block">에센셜 라인</span>
           <h2 className="text-[1.7rem] md:text-[3rem] font-normal mt-2 leading-[var(--leading-heading)]">스킨케어 에디션</h2>
         </div>
-        
-        <motion.div 
+
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
@@ -60,8 +60,8 @@ export const ProductGrid = () => {
           className="grid md:grid-cols-3 gap-8"
         >
           {products.map((p, i) => (
-            <motion.div 
-              key={i} 
+            <motion.div
+              key={i}
               variants={itemVariants}
               className="bg-white border border-black/10 group cursor-pointer"
             >

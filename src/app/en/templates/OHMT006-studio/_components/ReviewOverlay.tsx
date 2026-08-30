@@ -102,7 +102,7 @@ export const ReviewOverlay: React.FC = () => {
       )}>
         <div className="p-6 border-b border-white/5 flex justify-between items-center">
           <div>
-            <h2 className="text-white font-black text-xl flex items-center gap-2">
+            <h2 className="text-white font-extrabold text-xl flex items-center gap-2">
               <div className="w-2 h-2 bg-pink-500 rounded-full animate-pulse" />
               DesignReview
             </h2>
@@ -136,7 +136,7 @@ export const ReviewOverlay: React.FC = () => {
               >
                 <div className="flex justify-between items-start mb-3">
                   <div className="flex items-center gap-2">
-                    <span className="text-xs font-black text-pink-500 bg-pink-500/10 px-2 py-0.5 rounded-md">#{idx + 1}</span>
+                    <span className="text-xs font-extrabold text-pink-500 bg-pink-500/10 px-2 py-0.5 rounded-md">#{idx + 1}</span>
                     <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-md bg-white/5 border border-white/5">
                       {statusIcons[a.status]}
                       <span className="text-xs font-bold text-gray-400 uppercase">{statusLabels[a.status]}</span>
@@ -219,7 +219,7 @@ export const ReviewOverlay: React.FC = () => {
                 ? "bg-pink-500 scale-125 shadow-[0_0_30px_#ec4899]"
                 : "bg-pink-500/80 hover:bg-pink-500"
             )}>
-              <span className="text-white text-xs font-black">{idx + 1}</span>
+              <span className="text-white text-xs font-extrabold">{idx + 1}</span>
             </div>
           )}
         </div>
@@ -251,7 +251,7 @@ export const ReviewOverlay: React.FC = () => {
         >
           <div className="flex justify-between items-center mb-5">
             <div>
-              <h3 className="text-white font-black text-lg flex items-center gap-2">
+              <h3 className="text-white font-extrabold text-lg flex items-center gap-2">
                 <MessageSquarePlus size={18} className="text-pink-500" />
                 New Instruction
               </h3>
@@ -271,7 +271,7 @@ export const ReviewOverlay: React.FC = () => {
           <div className="flex gap-2 mt-4">
             <button
               onClick={handleAdd}
-              className="flex-1 bg-pink-500 text-white py-4 rounded-2xl text-sm font-black uppercase hover:bg-pink-400 transition-all shadow-lg active:scale-[0.98]"
+              className="flex-1 bg-pink-500 text-white py-4 rounded-2xl text-sm font-extrabold uppercase hover:bg-pink-400 transition-all shadow-lg active:scale-[0.98]"
             >
               Add Command
             </button>

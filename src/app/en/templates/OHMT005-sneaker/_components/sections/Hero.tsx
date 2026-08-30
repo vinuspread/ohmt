@@ -170,14 +170,14 @@ export const Hero = () => {
   return (
     <section className="pt-24 pb-16 bg-white overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-6">
-        
+
         {/* Top Typography */}
         <div className="mb-12 md:mb-16">
           <span className="text-[0.8rem] font-bold uppercase tracking-[0.25em] text-black/40 mb-4 block">
             {t.hero.badgeText}
           </span>
-          
-          <h1 className="text-[length:var(--text-h1)] tracking-[-0.03em] leading-[var(--leading-display)] text-black uppercase mb-6">
+
+          <h1 className="text-[length:var(--text-h1)] tracking-[-0.02em] leading-[var(--leading-display)] text-black uppercase mb-6">
             <span className="block mb-1">{t.hero.title1}</span>
             <span className="font-black block">{t.hero.title2}</span>
           </h1>
@@ -214,7 +214,7 @@ export const Hero = () => {
                 <span className="w-1.5 h-1.5 bg-red-500 animate-pulse"></span>
                 <p className="text-[0.62rem] font-bold uppercase tracking-[0.2em] text-white/50">Featured</p>
               </div>
-              <p className="text-[1.05rem] font-black text-white tracking-tight uppercase mb-0.5">Air Max Pro</p>
+              <p className="text-[1.05rem] font-extrabold text-white tracking-tight uppercase mb-0.5">Air Max Pro</p>
               <p className="text-[0.8rem] font-mono tracking-widest text-white/60">$240.00 USD</p>
             </div>
           </div>

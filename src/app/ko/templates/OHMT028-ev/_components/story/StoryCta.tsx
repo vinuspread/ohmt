@@ -32,9 +32,11 @@ export function StoryCta() {
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 pb-16 md:pb-24">
         <div ref={ref}>
           <h2 className="font-michroma text-[length:var(--text-h1)] text-[var(--text)] leading-[var(--leading-heading)] tracking-[-0.03em] mb-4">
-            NUBI와 함께할<br />도시를 만나보세요.</h2>
+            당신의 도시가<br />기다리고 있습니다.
+          </h2>
           <p className="font-inter text-sm text-[var(--text-muted)] mb-8 max-w-[380px] leading-relaxed">
-            30만 원의 환불 가능한 예약금으로 NUBI 사전 예약을 신청할 수 있습니다.</p>
+            NUBI와 함께 가장 먼저 도심을 달리세요. 완전 환불 가능한 30만 원 보증금으로 예약할 수 있습니다.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href={`${base}/order`}>
               <button className="inline-flex items-center gap-2 bg-[var(--accent)] text-[var(--text-on-light)] px-8 py-4 rounded-full font-inter font-medium text-xs tracking-[0.03em] hover:bg-[var(--accent-dark)] transition-colors">

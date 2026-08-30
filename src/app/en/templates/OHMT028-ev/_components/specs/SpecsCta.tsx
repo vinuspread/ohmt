@@ -34,7 +34,7 @@ export function SpecsCta() {
     >
       <div className="absolute inset-0 bg-[var(--bg)]/60" />
       <div className="relative z-10 text-center px-6">
-        <h2 className="font-michroma text-[length:var(--text-h2)] text-[var(--text)] leading-[var(--leading-display)] tracking-[-0.03em] mb-4">
+        <h2 className="font-michroma text-[length:var(--text-h2)] text-[var(--text)] leading-[var(--leading-display)] tracking-[-0.02em] mb-4">
           Ready to reserve?
         </h2>
         <p className="font-inter text-sm text-[var(--text-muted)] mb-8">

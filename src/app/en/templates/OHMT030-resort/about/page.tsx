@@ -49,18 +49,18 @@ export default function AboutPage() {
             </div>
             <div>
               <p className="resort-body mb-6 text-lg font-normal text-white/85">
-                OHMT rises from the volcanic cliffs of Santorini, where the caldera meets the open 
-                sea in a constant exchange of light and shadow. The resort was shaped by the land itself, 
-                using local stone, sand-treated concrete, and timber harvested from sustainable Aegean 
-                forests. Every wall follows the natural contour of the cliff. Every window frames a 
-                specific moment of the day: dawn breaking over the water, the midday sun bleaching the 
+                OHMT rises from the volcanic cliffs of Santorini, where the caldera meets the open
+                sea in a constant exchange of light and shadow. The resort was shaped by the land itself,
+                using local stone, sand-treated concrete, and timber harvested from sustainable Aegean
+                forests. Every wall follows the natural contour of the cliff. Every window frames a
+                specific moment of the day: dawn breaking over the water, the midday sun bleaching the
                 terrace, the violet dusk folding into night.
               </p>
               <p className="resort-body text-base font-normal text-white/70">
-                We believe architecture should not dominate a landscape but converse with it. At OHMT, 
-                the interiors are quiet on purpose, muted palettes, raw textures, soft light, so that 
-                the view remains the loudest element in the room. The result is a place where you are 
-                never distracted from the present moment, where stillness becomes the ultimate luxury 
+                We believe architecture should not dominate a landscape but converse with it. At OHMT,
+                the interiors are quiet on purpose, muted palettes, raw textures, soft light, so that
+                the view remains the loudest element in the room. The result is a place where you are
+                never distracted from the present moment, where stillness becomes the ultimate luxury
                 and the sea is your constant companion.
               </p>
             </div>

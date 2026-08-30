@@ -23,10 +23,10 @@ export default function ArchivePage() {
               모든 기사
             </span>
             <h1 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-h2)] font-normal leading-[var(--leading-heading)] max-w-3xl">
-              아카이브
+              아카이브.
             </h1>
             <p className="mt-5 text-[1rem] text-[var(--theme-text-muted)] max-w-xl leading-[var(--leading-body)]">
-              지금까지 발행한 기사를 한곳에 모았습니다. 디자인과 문화, 지속가능한 삶에 관한 이야기를 살펴보세요.
+              지금까지 발행한 모든 기사를 한곳에 모았습니다. 디자인과 문화부터 지속가능성, 슬로우 리빙까지.
             </p>
           </div>
         </section>

@@ -51,7 +51,7 @@ export default function TotalMenu({ isOpen, onClose }: TotalMenuProps) {
                   onClick={onClose}
                   className="group flex flex-col gap-2"
                 >
-                  <h2 className="text-4xl md:text-7xl font-serif tracking-tighter group-hover:opacity-50 transition-opacity duration-300">
+                  <h2 className="text-4xl md:text-7xl font-serif tracking-tight group-hover:opacity-50 transition-opacity duration-300">
                     {item.name}
                   </h2>
                   <p className="text-xs md:text-sm uppercase tracking-[0.4em] font-normal text-[var(--color-accent)]/40 group-hover:text-[var(--color-accent)] transition-colors">
@@ -70,7 +70,7 @@ export default function TotalMenu({ isOpen, onClose }: TotalMenuProps) {
             className="max-w-[1440px] mx-auto w-full border-t border-[var(--color-accent)]/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-6"
           >
             <div className="text-xs uppercase font-bold tracking-widest text-[var(--color-accent)]/30">
-              © 2026 CURA.
+              © 2026 OHMT.
             </div>
             <div className="flex gap-8 text-xs uppercase font-bold tracking-widest">
               <a href="#" className="hover:opacity-50">Instagram</a>
@@ -83,4 +83,3 @@ export default function TotalMenu({ isOpen, onClose }: TotalMenuProps) {
     </AnimatePresence>
   );
 }
-

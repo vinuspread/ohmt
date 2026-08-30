@@ -27,7 +27,7 @@ export const Navbar = () => {
             href="/en/templates/OHMT003-exhibition"
             className="text-[1rem] font-heading font-semibold uppercase tracking-[0.15em] text-white"
           >
-            OHMT
+            VANTA
           </Link>
 
           <div className="flex items-center gap-6">
@@ -85,7 +85,7 @@ export const Navbar = () => {
                       className="block font-heading font-semibold uppercase text-white hover:translate-x-1 transition-transform duration-200"
                       style={{
                         fontSize: 'clamp(2.5rem, 5vw, 4rem)',
-                        letterSpacing: '-0.03em',
+                        letterSpacing: '-0.02em',
                       }}
                     >
                       {link.label}
@@ -100,7 +100,7 @@ export const Navbar = () => {
                 123 West 25th Street<br />New York, NY 10001
               </p>
               <p className="text-xs font-body text-white/60 uppercase tracking-[0.08em] mb-4">
-                info@formagallery.com<br />+1 (212) 555-0147
+                info@vantagallery.com<br />+1 (212) 555-0147
               </p>
               <Link
                 href="/en/templates/OHMT003-exhibition/contact"

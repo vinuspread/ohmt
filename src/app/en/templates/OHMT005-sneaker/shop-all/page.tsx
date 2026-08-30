@@ -7,7 +7,6 @@ import theme from "../theme.json";
 import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
 import { products } from "../_components/sections/ProductGrid";
-import TemplateSelect from '../_components/TemplateSelect'
 
 const categories = [
   { id: "all", label: "All", img: null },
@@ -77,7 +76,7 @@ function ShopAllPageContent() {
                 <img loading="lazy" src={activeCat.img} alt={activeCat.label} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-black/10 flex items-center">
                   <div className="max-w-[1440px] mx-auto px-6 w-full">
-                    <h1 className="text-[2rem] font-black uppercase tracking-[-0.02em] text-white">
+                    <h1 className="text-[2rem] font-extrabold uppercase tracking-[-0.02em] text-white">
                       {activeCat.label}
                     </h1>
                     <p className="text-[0.78rem] text-white/60">{filtered.length} products</p>
@@ -87,7 +86,7 @@ function ShopAllPageContent() {
             ) : (
               <div className="absolute inset-0 flex items-center bg-white">
                 <div className="max-w-[1440px] mx-auto px-6 w-full">
-                  <h1 className="text-[2rem] font-black uppercase tracking-[-0.02em] text-black">
+                  <h1 className="text-[2rem] font-extrabold uppercase tracking-[-0.02em] text-black">
                     Shop All
                   </h1>
                   <p className="text-[0.78rem] text-black/40">{filtered.length} products</p>
@@ -116,10 +115,10 @@ function ShopAllPageContent() {
               <p className="text-[0.78rem] text-black/40">{filtered.length} results</p>
               <div className="flex items-center gap-2 border border-black/20 px-4 py-2">
                 <span className="text-[0.75rem] font-bold uppercase tracking-[0.06em] text-black/50">Sort:</span>
-                <TemplateSelect value={sortBy} onChange={e => setSortBy(e.target.value)}
+                <select value={sortBy} onChange={e => setSortBy(e.target.value)}
                   className="text-[0.78rem] font-bold bg-transparent focus:outline-none appearance-none">
                   {sortOptions.map(o => <option key={o}>{o}</option>)}
-                </TemplateSelect>
+                </select>
                 <ChevronDown size={14} className="text-black/40" />
               </div>
             </div>
@@ -148,7 +147,7 @@ function ShopAllPageContent() {
                         <span className="text-[0.68rem] text-black/40 ml-1">{p.rating}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="text-[0.95rem] font-black">${p.price}</span>
+                        <span className="text-[0.95rem] font-extrabold">${p.price}</span>
                         {p.originalPrice && <span className="text-[0.78rem] text-black/30 line-through">${p.originalPrice}</span>}
                       </div>
                     </div>

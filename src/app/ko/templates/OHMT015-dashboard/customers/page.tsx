@@ -45,7 +45,7 @@ export default function CustomersPage() {
     { key: 'status', label: '상태', render: (c) => (
       <div className="flex items-center gap-1.5">
         <div className={`w-1.5 h-1.5 rounded-[var(--radius-full)] ${c.status === 'active' ? 'bg-[var(--color-success)]' : 'bg-[var(--color-text-muted)]'}`} />
-        <span className="text-sm text-[var(--color-text-secondary)]">{c.status.charAt(0).toUpperCase() + c.status.slice(1)}</span>
+        <span className="text-sm text-[var(--color-text-secondary)]">{c.status === 'active' ? '활성' : '비활성'}</span>
       </div>
     )},
     { key: 'joinDate', label: '가입일', render: (c) => <span className="text-[var(--color-text-muted)]">{c.joinDate}</span> },
@@ -60,7 +60,7 @@ export default function CustomersPage() {
         className="space-y-3"
       >
         <PageHeader
-          title="Customers"
+          title="고객"
           action={
             <div className="flex flex-wrap items-center gap-3">
               <div className="relative">

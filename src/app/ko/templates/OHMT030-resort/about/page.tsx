@@ -5,10 +5,10 @@ import { TimelineItem } from "../_components/cards/TimelineItem";
 import { IntroTextSection } from "../_components/sections/IntroTextSection";
 
 const timeline = [
-  { year: "2024", title: "설계 시작", desc: "현지 석재와 노출 콘크리트, 에게해산 목재를 바탕으로 건축의 방향을 정했습니다." },
-  { year: "2025", title: "건축과 인테리어 완성", desc: "주변 환경에 미치는 영향을 줄여 시공하고, 수공예 가구와 화산석으로 실내를 완성했습니다." },
-  { year: "2026", title: "정식 개관", desc: "네 개의 스위트와 레스토랑, 탁 트인 에게해 전망으로 첫 투숙객을 맞았습니다." },
-  { year: "2027", title: "다음 여정", desc: "레스토랑의 첫 미쉐린 스타에 이어 절벽 위 스파와 새로운 레지던스를 준비합니다." },
+  { year: "2024", title: "착공 및 디자인 단계", desc: "현지 석재, 노출 콘크리트, 에게해 목재를 중심으로 건축의 첫 윤곽을 잡았습니다." },
+  { year: "2025", title: "건설 및 인테리어 큐레이션", desc: "저영향 공법으로 구조를 세우고, 장인의 가구와 화산석 마감재로 실내의 밀도를 완성했습니다." },
+  { year: "2026", title: "그랜드 오픈", desc: "네 개의 스위트, 미쉐린 셰프의 주방, 끝없는 에게해 전망으로 첫 투숙객을 맞이합니다." },
+  { year: "2027", title: "미쉐린 스타와 그 너머", desc: "레스토랑의 첫 미쉐린 스타 이후, 절벽 위 스파와 두 개의 신규 레지던스를 준비합니다." },
 ];
 
 export default function AboutPage() {
@@ -16,16 +16,17 @@ export default function AboutPage() {
     <>
       <Navbar />
       <main>
-        <SubpageHero title={"THE\nSANCTUARY"} image="sub-hero-about.jpg" alt="OHMT 리조트 전경">
+        <SubpageHero title={"더\n생추어리"} image="sub-hero-about.jpg" alt="OHMT 리조트 전경">
           <>
-            하얀 벽과 푸른 바다, 오래 머무는 고요.<br />
-            절벽의 지형과 빛을 따라 완성한 공간.</>
+            하얀 벽, 코발트빛 돔, 끝없는 고요.<br />
+            절벽에서 태어나 빛으로 완성된 공간.
+          </>
         </SubpageHero>
 
         <IntroTextSection>
-          OHMT는 주변 풍경보다 앞서 보이지 않도록 절벽의 높이와 곡선을 따라 낮게 자리 잡았습니다.<br />
-          시간에 따라 달라지는 빛과 바다를 가까이 느끼며<br />
-          조용히 머물 수 있도록 설계했습니다.
+          OHMT는 과시하기 위해 지어진 리조트가 아닙니다. 절벽 속으로 낮게
+          스며들고, 매 시간 달라지는 빛의 일부가 되도록 설계했습니다. 이곳의
+          가장 중요한 편의시설은 고요함입니다.
         </IntroTextSection>
 
         <section className="py-16 md:py-32" style={{ backgroundColor: "var(--bg)" }}>
@@ -48,14 +49,14 @@ export default function AboutPage() {
             </div>
             <div>
               <p className="resort-body mb-6 text-lg font-normal text-white/85">
-                OHMT는 칼데라와 에게해가 맞닿는 화산 절벽 위에 자리합니다.<br />
-                현지 석재와 노출 콘크리트, 책임 있게 조달한 목재를 중심으로 공간을 구성했습니다.<br />
-                벽은 지형의 흐름을 따르고, 창은 바다와 자연광을 향해 열립니다.
+                OHMT는 칼데라가 열린 바다와 만나는 화산 절벽 위에 놓였습니다.
+                현지 석재, 노출 콘크리트, 지속 가능한 에게해 목재가 건축의 중심이 됩니다.
+                모든 벽은 절벽의 곡선을 따르고, 모든 창은 하루 중 가장 아름다운 빛을 프레임에 담습니다.
               </p>
               <p className="resort-body text-base font-normal text-white/70">
-                건축이 풍경을 가리지 않아야 한다는 원칙으로 실내도 차분하게 정리했습니다.<br />
-                색과 장식을 줄이고 돌과 목재의 질감, 부드러운 빛을 남겼습니다.<br />
-                어느 공간에서든 바다와 절벽이 자연스럽게 중심이 됩니다.
+                우리는 건축이 풍경을 지배하지 않고, 풍경과 대화해야 한다고 믿습니다.
+                그래서 인테리어는 의도적으로 조용합니다.
+                절제된 팔레트와 거친 질감, 부드러운 빛만 남겨 바다가 가장 큰 목소리를 내게 했습니다.
               </p>
             </div>
           </div>
@@ -63,7 +64,7 @@ export default function AboutPage() {
 
         <section className="bg-white px-6 py-16 md:px-12 md:py-32">
           <div className="mx-auto max-w-[800px]">
-            <p className="mb-16 text-left text-sm leading-[var(--leading-body)] text-neutral-500 md:text-center">리조트의 여정</p>
+            <p className="mb-16 text-left text-sm leading-[var(--leading-body)] text-neutral-500 md:text-center">여정</p>
             <div className="flex max-w-[326px] flex-col gap-12 md:mx-auto md:max-w-[640px]">
               {timeline.map((t) => (
                 <TimelineItem

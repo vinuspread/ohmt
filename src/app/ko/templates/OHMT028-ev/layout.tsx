@@ -4,31 +4,31 @@ import type { Metadata } from "next";
 import { TemplateWrapper } from "./_components/TemplateWrapper";
 
 export const metadata: Metadata = {
-  title: "OHMT | NUBI 도심형 전기차",
-  description: "도심 주행에 알맞은 크기와 민첩한 움직임, 실용적인 주행거리를 갖춘 전기차 NUBI를 소개합니다.",
-  keywords: ["전기차 템플릿", "EV 랜딩페이지", "NUBI", "OHMT"],
-  authors: [{ name: "OHMT", url: "https://ohmt.site" }],
+  title: "NUBI - 전기차",
+  description: "미니멀한 어반 EV 브랜드 NUBI — 작은 차, 큰 재미. 제로 배출, 올 캐릭터.",
+  keywords: ["전기차 템플릿", "EV 랜딩페이지", "NUBI"],
+  authors: [{ name: "NUBI", url: "https://ohmytemplate.com" }],
   openGraph: {
-    title: "OHMT | NUBI 도심형 전기차",
-    description: "도심 주행에 알맞은 크기와 민첩한 움직임, 실용적인 주행거리를 갖춘 전기차 NUBI를 소개합니다.",
-    url: "https://ohmt.site/ko/templates/OHMT028-ev",
-    siteName: "OHMT",
+    title: "NUBI - 전기차",
+    description: "미니멀한 어반 EV 브랜드 NUBI — 작은 차, 큰 재미. 제로 배출, 올 캐릭터.",
+    url: "https://ohmytemplate.com/ko/templates/OHMT028-ev",
+    siteName: "NUBI",
     images: [{ url: "/templates/OHMT028-ev/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT | NUBI 도심형 전기차",
-    description: "도심 주행에 알맞은 크기와 민첩한 움직임, 실용적인 주행거리를 갖춘 전기차 NUBI를 소개합니다.",
+    title: "NUBI - 전기차",
+    description: "미니멀한 어반 EV 브랜드 NUBI — 작은 차, 큰 재미. 제로 배출, 올 캐릭터.",
     images: ["/templates/OHMT028-ev/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/ko/templates/OHMT028-ev",
+    canonical: "https://ohmytemplate.com/ko/templates/OHMT028-ev",
     languages: {
-      "en": "https://ohmt.site/en/templates/OHMT028-ev",
-      "ko": "https://ohmt.site/ko/templates/OHMT028-ev",
+      "en": "https://ohmytemplate.com/en/templates/OHMT028-ev",
+      "ko": "https://ohmytemplate.com/ko/templates/OHMT028-ev",
     },
   },
 };
@@ -47,7 +47,6 @@ const inter = Inter({
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div className={`${michroma.variable} ${inter.variable}`} style={{ fontFamily: "'Pretendard Variable', Pretendard, var(--font-inter), sans-serif" }}>
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" crossOrigin="anonymous" />
       <TemplateWrapper>
           <div lang="ko" className="ohmt028-ev">{children}</div>
         </TemplateWrapper>

@@ -6,13 +6,13 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 export const metadata: Metadata = {
-  title: "Journal - VELURE Cosmetic",
+  title: "Journal - OHMT Cosmetic",
   description: "Thoughts on conscious beauty — skincare tips, ingredient science, and sustainability stories.",
   openGraph: {
-    title: "Journal - VELURE Cosmetic",
+    title: "Journal - OHMT Cosmetic",
     description: "Thoughts on conscious beauty.",
-    url: "https://ohmt.site/en/templates/OHMT010-cosmetic/journal",
-    siteName: "VELURE",
+    url: "https://ohmytemplate.com/en/templates/OHMT010-cosmetic/journal",
+    siteName: "OHMT",
     images: [{ url: "/templates/OHMT010-cosmetic/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
@@ -59,7 +59,7 @@ export default function CosmeticJournalPage() {
     <TemplateWrapper theme={theme}>
       <main className="antialiased bg-[var(--color-bg)] text-black selection:bg-black selection:text-white">
         <Header />
-        
+
         <section className="pt-48 pb-16 md:pb-32">
           <div className="max-w-[1440px] mx-auto px-6 md:px-10">
             <div className="mb-16">
@@ -80,7 +80,7 @@ export default function CosmeticJournalPage() {
                         <span>{entry.read} read</span>
                       </div>
                     </div>
-                    <span className="text-[0.7rem] font-bold uppercase tracking-[0.15em] text-black/20 group-hover:text-black transition-colors justify-self-end">Read More</span>
+                    <span className="text-[0.7rem] font-bold uppercase tracking-[0.15em] text-black/20 group-hover:text-black transition-colors">Read More</span>
                   </div>
                 </Link>
               ))}

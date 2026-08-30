@@ -9,7 +9,6 @@ import { Search, Heart, User, ShoppingBag, Menu, ArrowRight } from "lucide-react
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import Button from "../_components/ui/Button";
-import TemplateSelect from '../_components/TemplateSelect'
 
 function JewelryCartPageContent() {
   const cartItems = [
@@ -66,10 +65,10 @@ function JewelryCartPageContent() {
                       </div>
                       <div className="flex items-center gap-4 text-xs">
                         <span className="opacity-40">Qty:</span>
-                        <TemplateSelect className="bg-transparent font-bold outline-none">
+                        <select className="bg-transparent font-bold outline-none">
                           <option>1</option>
                           <option>2</option>
-                        </TemplateSelect>
+                        </select>
                       </div>
                     </div>
                   </div>

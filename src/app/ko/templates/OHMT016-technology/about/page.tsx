@@ -7,7 +7,7 @@ import Footer from '../_components/Footer'
 
 const timeline = [
   { year: '2024', event: '첨단 로보틱스와 자율 하드웨어를 더 많은 현장에 보급하겠다는 목표로 설립.' },
-  { year: '2025', event: 'TechWorld Expo에서 OmniBot Gen 1 시제품 공개. 연구개발 확대를 위해 168억 원 규모의 시리즈 A 투자 유치.' },
+  { year: '2025', event: 'TechWorld Expo에서 OmniBot Gen 1 시제품 공개. 연구개발 확대를 위해 1200만 달러 규모의 시리즈 A 투자 유치.' },
   { year: '2026', event: '온디바이스 AI와 모듈형 구조, 음성·제스처 인식을 적용한 OmniBot Gen 2 출시. 서울 연구개발센터 개소.' },
 ]
 

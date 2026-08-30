@@ -57,7 +57,7 @@ export const BusinessSegments = () => {
             Our portfolio is built on long-term themes of digital transformation, sustainability, and global connectivity.
           </p>
         </div>
-        
+
         <div className="grid md:grid-cols-3 gap-px bg-[var(--color-border)]">
           {segments.map((s, i) => (
             <div key={i} className="bg-[var(--color-light-bg)] overflow-hidden group/card">
@@ -67,7 +67,7 @@ export const BusinessSegments = () => {
               <div className="p-10">
                 <span className="text-[0.7rem] font-bold tracking-[0.25em] text-[var(--color-border)] block mb-4">{s.num}</span>
                 <span className="text-[0.85rem] font-bold uppercase tracking-[0.2em] text-[var(--color-accent)] mb-4 block">{s.icon}</span>
-                <h3 className="text-[1.25rem] font-bold text-[var(--color-dark-bg)] mb-3 leading-snug">{s.title}</h3>
+                <h3 className="text-[1.25rem] font-bold text-[var(--color-dark-bg)] mb-3 leading-[1.05]">{s.title}</h3>
                 <p className="text-[0.93rem] text-[var(--color-text-muted)] leading-[var(--leading-body)] mb-8">{s.desc}</p>
                 <div className="pt-5 border-t border-[var(--color-border)] flex flex-col gap-1">
                   <span className="text-[0.7rem] font-bold uppercase tracking-[0.14em] text-[var(--color-text-muted)]">{s.stat}</span>

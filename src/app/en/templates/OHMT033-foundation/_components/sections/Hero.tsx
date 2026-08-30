@@ -108,7 +108,7 @@ export function Hero() {
               >
                 <div className="mb-6 flex max-w-[820px] items-center gap-3 text-white/76">
                   <span className="h-px w-12 bg-[var(--color-accent)]" />
-                  <p className="text-sm font-semibold text-white/82">OHMT Foundation</p>
+                  <p className="text-sm font-semibold text-white/82">VERITAS Foundation</p>
                 </div>
                 <h1 className="max-w-[760px] font-heading text-[length:var(--text-h2)] font-semibold leading-[var(--leading-heading)] tracking-tight text-white drop-shadow-[0_2px_16px_rgba(0,0,0,0.28)] md:max-w-[900px] md:text-[length:var(--text-h1)] md:leading-[var(--leading-display)]">
                   {slide.headline.map((line) => (

@@ -7,7 +7,7 @@ import { blogPosts as allPosts } from "../data/data";
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
-const categories = ["전체", "스타일 가이드", "브랜드 스토리", "남성 스타일"];
+const categories = ["전체", "스타일 가이드", "브랜드 스토리", "남성 가이드"];
 
 function BlogPageContent() {
   const [activeCategory, setActiveCategory] = useState("전체");
@@ -65,14 +65,16 @@ function BlogPageContent() {
                         <span>{post.readTime}</span>
                       </div>
                       <span className="inline-block mt-4 text-xs uppercase tracking-[0.2em] text-[var(--color-primary)] font-medium group-hover:opacity-60 transition-opacity">
-                        글 보기 &rarr;</span>
+                        글 보기 &rarr;
+                      </span>
                     </div>
                   </Link>
                 ))}
               </div>
             ) : (
               <p className="text-center text-[var(--color-text-muted)] py-20">
-                이 카테고리에 등록된 글이 없습니다.</p>
+                이 카테고리에 등록된 글이 없습니다.
+              </p>
             )}
           </div>
         </section>

@@ -55,7 +55,7 @@ function AboutPageContent() {
               목적을 담아 내리고,<br />정성으로 대접합니다.
             </h2>
             <p className="text-base leading-loose text-[var(--color-text-muted)]">
-              OHMT는 성수동의 작은 커피 카트에서 시작했습니다.
+              SLOW DROP은 성수동의 작은 커피 카트에서 시작했습니다.
               주말 취미 프로젝트로 시작된 일은 어느새 동네의 든든한
               단골집으로 자리 잡았습니다. 창립자들은 에티오피아와
               콜롬비아의 커피 산지를 수년간 오가며, 품질에 대한

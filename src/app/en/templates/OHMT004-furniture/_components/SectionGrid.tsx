@@ -123,7 +123,7 @@ export const ProductGrid = () => {
     "badge": `Our Story / Narrative`,
     "title1": `Between material`,
     "title2": `and space.`,
-    "sub": `Founded on the principles of purity and precision, OHMT is an archive of essential interiors.`,
+    "sub": `Founded on the principles of purity and precision, KRAFT is an archive of essential interiors.`,
     "desc": `Each piece in our collection is a dialogue. We explore the tension between raw material and refined form, creating objects that bring a sense of serenity to the modern home. 01 Edition.`,
     "journal": `Read the Journal`
   },
@@ -185,7 +185,7 @@ const localProducts = products.map((p) => {
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end mb-10 md:mb-16 lg:mb-24 gap-4 md:gap-12 border-b border-black/5 pb-6 md:pb-12">
           <div className="max-w-2xl">
             <span className="text-xs md:text-xs font-bold text-[var(--color-primary)] uppercase mb-2 md:mb-6 block">{t.grid.badge}</span>
-            <h2 className="text-2xl sm:text-[length:var(--text-h2)] font-bold text-[var(--color-text)] leading-[var(--leading-heading)] sm:leading-[var(--leading-heading)]">
+            <h2 className="furniture-heading-tight text-2xl sm:text-[length:var(--text-h2)] font-bold text-[var(--color-text)]">
               {t.grid.title1} <br />
               <span className="text-[var(--color-secondary)]">{t.grid.title2}</span>
             </h2>

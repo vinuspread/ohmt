@@ -45,7 +45,8 @@ export const ProductCard = ({
 
         <div className="absolute inset-x-0 bottom-0 bg-[var(--color-primary)] py-3 text-center translate-y-full motion-safe:group-hover:translate-y-0 transition-transform duration-300 ease-out">
           <span className="text-white text-xs uppercase tracking-[0.2em] font-medium">
-            빠른 보기</span>
+            빠른 보기
+          </span>
         </div>
       </div>
 

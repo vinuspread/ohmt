@@ -13,7 +13,7 @@ export function PageHeader({ category, title, breadcrumb, isBadgeCategory = fals
         <section className="relative pt-14 md:pt-28 md:pt-48 pb-12 md:pb-24 bg-white border-b border-black/5 overflow-hidden">
             <div className="max-w-[1720px] mx-auto px-8 md:px-16 lg:px-24 relative z-10">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
-                    
+
                     {/* Left title and category */}
                     <div className="lg:col-span-8 space-y-6">
                         {isBadgeCategory ? (

@@ -6,10 +6,10 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 const issueTopics = [
-  { tag: "디자인", title: "다시 쓰는 북유럽 미니멀리즘" },
+  { tag: "디자인", title: "북유럽 미니멀리즘의 재정의" },
   { tag: "문화", title: "베를린의 숨겨진 예술 현장" },
-  { tag: "여행", title: "교토의 숨은 찻집" },
-  { tag: "지속가능성", title: "농업의 미래" }
+  { tag: "여행", title: "교토의 비밀스러운 찻집들" },
+  { tag: "지속가능성", title: "미래의 농업" }
 ];
 
 export const Hero = () => {
@@ -26,14 +26,14 @@ export const Hero = () => {
       {/* 상단 카피 */}
       <div className="absolute left-0 right-0 px-6 md:px-[4rem] max-w-[calc(var(--theme-container)+5rem)] mx-auto w-full" style={{ top: "calc(38% - 220px)" }}>
         <span className="inline-block bg-white text-[var(--theme-accent)] text-[0.75rem] font-bold uppercase tracking-tight px-3 py-1 mb-6 antialiased">
-          라이프스타일과 문화
+          라이프스타일 & 컬처
         </span>
         <h1 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-h1)] font-normal leading-[var(--leading-heading)] text-white max-w-[720px] mb-6 tracking-[0.01em] break-keep">
-          <span className="block font-normal text-white">유행보다 오래 남는 감각.</span>
-          <span className="block font-normal text-white/80 mt-2">삶을 깊게 보는 이야기.</span>
+          <span className="block font-normal text-white">유행이 아니라 감각을.</span>
+          <span className="block font-normal text-white/80 mt-2">시대를 관통하는 큐레이션.</span>
         </h1>
         <p className="text-[0.85rem] text-white/75 max-w-[540px] leading-loose mb-5 font-normal">
-                    빠르게 소비되는 소식 대신, 오래 두고 읽을 디자인과 문화, 삶의 이야기를 전합니다.
+                    매일 쏟아지는 자극적인 일회성 가십 대신, 당신의 삶의 궤적에 품격 있게 스며들 깊은 예술적 통찰과 에스테틱 라이프스타일 서사를 엮어냅니다.
         </p>
         <div className="flex flex-col gap-4">
           <div className="text-[0.8rem] text-white/55 font-normal tracking-tight antialiased">
@@ -43,30 +43,30 @@ export const Hero = () => {
             href="/ko/templates/OHMT012-magazine/article/slow-living-digital-world"
             className="text-[0.75rem] font-bold uppercase tracking-tight text-white border-b border-white/50 pb-0.5 hover:border-white transition-colors duration-300 w-fit antialiased"
           >
-                        최신호 읽기
+                        최신 에디션 읽기
           </Link>
         </div>
       </div>
 
-       {/* 이슈 서머리 - 하단 배너 높이만큼 위에 배치 */}
-       <div className="absolute bottom-30 left-0 right-0 hidden md:block">
+       {/* 이슈 서머리 - 하단에서 96px 위 (배너 높이) */}
+       <div className="absolute bottom-24 left-0 right-0 hidden md:block">
          <div className="max-w-[calc(var(--theme-container)+5rem)] mx-auto w-full px-6 md:px-[4rem]">
-           <div className="flex items-start gap-8 overflow-x-auto border-t border-white/25 py-6 md:gap-12 md:py-8" style={{ scrollbarWidth: "none" }}>
-             <div className="min-w-[90px] shrink-0">
+           <div className="border-t border-white/25 py-6 md:py-8 flex items-start gap-8 md:gap-12 overflow-x-auto" style={{ scrollbarWidth: "none" }}>
+             <div className="shrink-0 min-w-[90px]">
                <span className="text-[0.7rem] font-bold uppercase tracking-tight text-white/40 block mb-2 antialiased">
                                    이번 호의 주제
                </span>
                <span className="text-[1.1rem] font-bold uppercase tracking-tight text-white antialiased">
-                                   제42호 · 여름
+                                   #42 여름호
                </span>
              </div>
              <div className="w-px self-stretch bg-white/20 shrink-0" />
              {issueTopics.map((item: any, i: number) => (
-               <div key={i} className="group shrink-0 cursor-pointer">
+               <div key={i} className="shrink-0 group cursor-pointer">
                  <span className="text-[0.7rem] font-bold uppercase tracking-tight text-[var(--theme-accent)] block mb-2 antialiased">
                    {item.tag}
                  </span>
-                 <span className="block whitespace-nowrap text-[0.95rem] font-normal leading-snug text-white/75 transition-colors group-hover:text-white">
+                 <span className="text-[0.95rem] text-white/75 group-hover:text-white transition-colors font-normal leading-snug block max-w-[140px]">
                    {item.title}
                  </span>
                </div>
@@ -81,10 +81,10 @@ export const Hero = () => {
             <div className="flex items-center gap-6 md:gap-10">
               <div>
                 <p className="text-[0.65rem] font-bold uppercase tracking-tight text-white/45 mb-0.5 antialiased">
-                  지금 구매 가능
+                  지금 바로 구매 가능
                 </p>
                 <h2 className="font-[family-name:var(--theme-font-heading)] text-[1rem] md:text-[1.25rem] font-normal text-white leading-[var(--leading-heading)] tracking-[-0.02em] antialiased">
-                  2026년 여름호가 발행되었습니다.
+                  2026 여름 프린트 에디션 출시.
                 </h2>
               </div>
             </div>
@@ -93,7 +93,7 @@ export const Hero = () => {
               href="/ko/templates/OHMT012-magazine"
               className="inline-flex items-center gap-2 shrink-0 self-start md:self-auto text-[0.72rem] font-bold uppercase tracking-tight text-white border border-white/40 px-6 py-2.5 hover:bg-white hover:text-[var(--color-banner-bg)] transition-colors duration-300 antialiased"
             >
-              인쇄본 구매 <ArrowRight size={14} />
+              소장 판본 구매 <ArrowRight size={14} />
             </Link>
           </div>
         </div>

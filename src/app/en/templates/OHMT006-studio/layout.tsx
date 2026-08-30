@@ -1,28 +1,27 @@
 import type { Metadata } from "next";
 import './theme.css';
-
 export const metadata: Metadata = {
-  title: "TECTA - Corporate Studio Portfolio",
+  title: "OHMT - Corporate Studio Portfolio Template",
   description: "Architecture and spatial design studio",
   openGraph: {
-    title: "TECTA - Corporate Studio Portfolio",
+    title: "OHMT - Corporate Studio Portfolio Template",
     description: "Architecture and spatial design studio",
-    url: "https://ohmt.site/en/templates/OHMT006-studio",
-    siteName: "TECTA",
+    url: "https://ohmytemplate.com/en/templates/OHMT006-studio",
+    siteName: "OHMT",
     images: [{ url: "/templates/OHMT006-studio/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "TECTA - Corporate Studio Portfolio",
+    title: "OHMT - Corporate Studio Portfolio Template",
     description: "Architecture and spatial design studio",
     images: ["/templates/OHMT006-studio/og-image.jpg"],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/OHMT006-studio",
-    languages: { "ko": "https://ohmt.site/ko/templates/OHMT006-studio" },
+    canonical: "https://ohmytemplate.com/en/templates/OHMT006-studio",
+    languages: { "ko": "https://ohmytemplate.com/ko/templates/OHMT006-studio" },
   },
 };
 
@@ -34,7 +33,6 @@ export default function StudioLayout({
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
 
         :root {
           --font-outfit: 'Outfit', sans-serif;

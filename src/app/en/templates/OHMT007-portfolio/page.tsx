@@ -7,7 +7,7 @@ import { TemplateWrapper } from "./_components/TemplateWrapper";
 import theme from "./theme.json";
 import { Header } from "./_components/layout/Header";
 import { Footer } from "./_components/layout/Footer";
-import { projects, services, stats, testimonials, faqs, blogPosts } from "@/lib/portfolio-data";
+import { projects, services, stats, testimonials, faqs, blogPosts } from "./portfolio-data";
 /* === Marquee === */
 const marqueeImages = [
   "/templates/OHMT007-portfolio/portfolio-1.png",
@@ -45,10 +45,10 @@ function Marquee() {
           const heights = [240, 310, 270, 300]; // Mobile heights
           const dWidths = [200, 310, 240, 280]; // Desktop widths
           const dHeights = [420, 520, 450, 500]; // Desktop heights
-          
+
           const angle = (i / items.length) * Math.PI * 4;
           // Responsive wave offset: 16px on mobile, 36px on desktop
-          
+
           return (
             <div key={i}
               className="shrink-0 overflow-hidden hover:scale-[1.03] transition-transform duration-300"
@@ -294,7 +294,8 @@ const heroRef = useRef<HTMLElement>(null);
               transition={{ duration: 0.6 }}
               className="text-center"
             >
-              <h2 className="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-4">HALF LIGHT<span className="text-[var(--color-accent)]">.</span>
+              <h2 className="text-4xl md:text-6xl font-bold tracking-tight uppercase mb-4">
+                HALF LIGHT<span className="text-[var(--color-accent)]">.</span>
               </h2>
               <p className="text-xs tracking-[0.3em] uppercase text-white/40">Creative Studio / Seoul</p>
             </motion.div>
@@ -331,10 +332,10 @@ const heroRef = useRef<HTMLElement>(null);
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="text-[length:var(--text-display)] tracking-tighter leading-[var(--leading-display)] text-[var(--color-text)] mb-6"
+              className="text-[length:var(--text-display)] tracking-tight leading-[var(--leading-display)] text-[var(--color-text)] mb-6"
             >
               <span className="font-bold">{t.hero.title1}</span><br />
-              <span className="font-black">{t.hero.title2}</span>
+              <span className="font-bold">{t.hero.title2}</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 15 }}
@@ -381,7 +382,7 @@ const heroRef = useRef<HTMLElement>(null);
         <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[var(--color-border)] overflow-hidden">
           <div className="max-w-[1440px] mx-auto">
             <div className="flex items-end justify-between mb-12">
-              <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none">
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-none">
                 Latest<br />Projects.
               </h2>
               <span className="text-[0.82rem] text-[var(--color-text-muted)] hidden md:block">( _©26 )</span>
@@ -393,7 +394,7 @@ const heroRef = useRef<HTMLElement>(null);
                 <button
                   key={cat}
                   onClick={() => setActiveCategory(cat)}
-                  className={`px-6 py-2 text-xs font-black uppercase tracking-wider transition-all duration-300 inline-block whitespace-nowrap ${
+                  className={`px-6 py-2 text-xs font-bold uppercase tracking-wider transition-all duration-300 inline-block whitespace-nowrap ${
                     activeCategory === cat
                       ? "bg-[var(--color-primary)] border border-[var(--color-primary)] text-white"
                       : "border border-black/10 text-[var(--color-text-muted)] hover:border-[var(--color-primary)] hover:text-[var(--color-primary)]"
@@ -423,8 +424,8 @@ const heroRef = useRef<HTMLElement>(null);
                       </div>
                       <div className="absolute bottom-0 left-0 right-0 p-6 flex items-end justify-between bg-gradient-to-t from-black/70 via-black/30 to-transparent text-white">
                         <div>
-                          <p className="text-2xl font-black tracking-tighter uppercase">{p.title}</p>
-                          <p className="text-xs font-black uppercase tracking-widest text-white/70">{p.category}</p>
+                          <p className="text-2xl font-bold tracking-tight uppercase">{p.title}</p>
+                          <p className="text-xs font-medium uppercase tracking-widest text-white/70">{p.category}</p>
                         </div>
                         <span className="text-xs text-white/60 border border-white/20 rounded-full px-3 py-1 uppercase">{p.date}</span>
                       </div>
@@ -440,7 +441,7 @@ const heroRef = useRef<HTMLElement>(null);
         <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto">
             <div className="flex items-end justify-between mb-10">
-              <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none">Services.</h2>
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-none">Services.</h2>
               <Link href="/en/templates/OHMT007-portfolio/contact" className="text-[0.82rem] font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors flex items-center gap-2">
                 Get in touch <span className="text-lg leading-none">+</span>
               </Link>
@@ -477,7 +478,7 @@ const heroRef = useRef<HTMLElement>(null);
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
                 >
-                  <p className="text-[2.8rem] font-black tracking-tighter text-[var(--color-text)] leading-none mb-1">{s.num}</p>
+                  <p className="text-[2.8rem] font-bold tracking-tight text-[var(--color-text)] leading-none mb-1">{s.num}</p>
                   <p className="text-[0.78rem] text-[var(--color-text-muted)] uppercase tracking-widest">{s.label}</p>
                 </motion.div>
               ))}
@@ -489,8 +490,8 @@ const heroRef = useRef<HTMLElement>(null);
         <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto">
             <div className="text-center mb-12">
-              <p className="text-xs font-black uppercase tracking-tight text-[var(--color-accent)] mb-4">TESTIMONIALS</p>
-              <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none text-[var(--color-text)]">
+              <p className="text-xs font-bold uppercase tracking-tight text-[var(--color-accent)] mb-4">TESTIMONIALS</p>
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-none text-[var(--color-text)]">
                 Trusted by brands who<br />aren't afraid to stand out.
               </h2>
             </div>
@@ -502,7 +503,7 @@ const heroRef = useRef<HTMLElement>(null);
         <section className="py-10 md:py-20 px-5 md:px-10 border-b border-[var(--color-border)]">
           <div className="max-w-[1440px] mx-auto grid md:grid-cols-2 gap-16">
             <div>
-              <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none">FAQ.</h2>
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-none">FAQ.</h2>
             </div>
             <div>
               {faqs.map((item, i) => (
@@ -516,7 +517,7 @@ const heroRef = useRef<HTMLElement>(null);
         <section className="py-10 md:py-20 px-5 md:px-10">
           <div className="max-w-[1440px] mx-auto">
             <div className="flex items-end justify-between mb-12">
-              <h2 className="text-3xl md:text-5xl font-black tracking-tighter leading-none">
+              <h2 className="text-3xl md:text-5xl font-bold tracking-tight leading-none">
                 Creative<br />dispatch
               </h2>
               <Link href="/en/templates/OHMT007-portfolio/journal" className="text-[0.82rem] font-medium text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors flex items-center gap-2">
@@ -539,7 +540,7 @@ const heroRef = useRef<HTMLElement>(null);
                         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                     </div>
                     <p className="text-[0.75rem] text-[var(--color-text-muted)] mb-2">{post.date}</p>
-                    <h3 className="text-[0.95rem] font-medium text-[var(--color-text)] leading-snug group-hover:text-[var(--color-text-muted)] transition-colors">{post.title}</h3>
+                    <h3 className="text-[0.95rem] font-medium text-[var(--color-text)] leading-[1.05] group-hover:text-[var(--color-text-muted)] transition-colors">{post.title}</h3>
                   </Link>
                 </motion.div>
               ))}
@@ -547,7 +548,6 @@ const heroRef = useRef<HTMLElement>(null);
           </div>
         </section>
 
-        <p className="text-center text-[11px] leading-relaxed text-neutral-400 px-6 py-6">This page is a website design template demo by OHMT, not an actual client or operating business. The brand names, people, testimonials, contact details, and performance figures shown are example content.</p>
         <Footer />
       </div>
     </TemplateWrapper>

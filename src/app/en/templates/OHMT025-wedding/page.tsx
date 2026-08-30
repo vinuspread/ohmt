@@ -19,7 +19,7 @@ export default function TemplatePage() {
     "@type": "ProfessionalService",
     "name": "OHMT - Wedding Photography",
     "description": "Elegant dark portfolio template for wedding photography and cinematic capture",
-    "url": "https://ohmt.site/en/templates/OHMT025-wedding",
+    "url": "https://ohmytemplate.com/en/templates/OHMT025-wedding",
     "telephone": "+1-512-555-0199",
     "address": {
       "@type": "PostalAddress",
@@ -45,7 +45,6 @@ export default function TemplatePage() {
           <HowItWorks />
           <Featured />
         </main>
-        <p className="text-center text-[11px] leading-relaxed text-neutral-400 px-6 py-6">This page is a website design template demo by OHMT, not an actual client or operating business. The brand names, people, testimonials, contact details, and performance figures shown are example content.</p>
         <Footer />
       </TemplateWrapper>
     </>

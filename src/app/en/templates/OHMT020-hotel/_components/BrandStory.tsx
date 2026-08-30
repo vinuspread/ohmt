@@ -53,7 +53,7 @@ export const BrandStory = () => {
               className="h-[2px] w-12 md:w-16 bg-[var(--color-accent)] mb-6 md:mb-8"
             />
             <motion.p variants={textItem} className="text-base md:text-lg text-[var(--color-text)] font-medium leading-relaxed mb-4">
-              Founded on the belief that true luxury lies in harmony with nature, OHMT was born from a vision to create a retreat where time slows and the soul breathes.
+              Founded on the belief that true luxury lies in harmony with nature, CASSIA was born from a vision to create a retreat where time slows and the soul breathes.
             </motion.p>
             <motion.p variants={textItem} className="text-sm md:text-base text-[var(--color-text-muted)] leading-relaxed">
               Every suite and villa is thoughtfully positioned to frame the natural beauty of the coastline. From the locally sourced stone used in construction to the organic produce in our kitchens, sustainability and craftsmanship define every aspect of your stay.

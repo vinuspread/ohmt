@@ -27,7 +27,7 @@ export function ShopExplorer({ initialLine }: { initialLine?: string }) {
 
   return (
     <>
-      <div className="flex h-16 items-center justify-between bg-[var(--color-bg-tile-deep)] px-4 lg:px-6">
+      <div className="flex h-12 items-center justify-between bg-[var(--color-bg-tile-deep)] px-4 lg:px-6">
         <span className="meta-label text-[var(--color-ink-muted)]">
           {filtered.length} / {FIGURES.length}
         </span>

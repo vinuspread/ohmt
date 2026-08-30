@@ -20,7 +20,7 @@ export function Hero() {
             <span>88 Tidal Walk, Byron Bay, Australia</span>
           </div>
           <p className="text-white text-sm text-right max-w-[260px] leading-relaxed hidden md:block">
-            At OHMT, a seaside sanctuary of minimalist luxury
+            At SANCTUM, a seaside sanctuary of minimalist luxury
           </p>
         </div>
 

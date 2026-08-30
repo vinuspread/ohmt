@@ -34,7 +34,8 @@ export default function Footer() {
         </div>
         <div className="pt-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <p className="text-[0.65rem] uppercase tracking-[0.18em] text-white/30">
-            웨딩 포토그래피</p>
+            웨딩 포토그래피
+          </p>
           <p className="text-[0.65rem] text-white/30">
             © 2026 OHMT.
           </p>
@@ -43,4 +44,3 @@ export default function Footer() {
     </footer>
   );
 }
-

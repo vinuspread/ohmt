@@ -18,7 +18,7 @@ export function FoundationIntro() {
     <section className="bg-white px-6 py-16 md:px-12 md:pb-16 md:pt-32">
       <div className="mx-auto max-w-[1440px] border-t border-[#111827] pt-6 md:pt-7">
         <div className="flex flex-col gap-6 md:gap-8">
-          <p className="text-xs font-semibold leading-[var(--leading-heading)] text-[var(--color-accent)] md:text-sm">About OHMT Foundation</p>
+          <p className="text-xs font-semibold leading-[var(--leading-heading)] text-[var(--color-accent)] md:text-sm">About VERITAS Foundation</p>
           <div className="grid gap-8 lg:grid-cols-2 lg:gap-16">
             <div className="flex flex-col items-start gap-6 md:gap-12">
           <h2 className="max-w-[525px] font-heading text-4xl font-semibold leading-[var(--leading-heading)] text-[var(--color-text)] md:text-5xl">
@@ -31,7 +31,7 @@ export function FoundationIntro() {
 
             <div className="grid gap-8 md:grid-cols-2 md:gap-12">
             <p className="max-w-[346px] text-base leading-[var(--leading-body)] text-[var(--color-text)]">
-              OHMT Foundation funds community programs only when the work can be named, counted, and followed over
+              VERITAS Foundation funds community programs only when the work can be named, counted, and followed over
               time. That makes the site less like a campaign page and more like a public record people can return to.
             </p>
           <div className="grid gap-6 md:max-w-[385px]">

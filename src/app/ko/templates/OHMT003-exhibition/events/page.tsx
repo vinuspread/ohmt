@@ -11,7 +11,7 @@ export default function EventsPage() {
       <main>
         <section className="bg-[var(--color-bg)] pt-40 pb-16 border-b border-[var(--color-border)]">
           <div className="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-            <h1 className="max-w-[12ch] font-heading font-semibold text-black" style={{ fontSize: 'clamp(4rem, 7vw, 7rem)', letterSpacing: '-0.03em', lineHeight: '1.1', textWrap: 'pretty' }}>
+            <h1 className="font-heading font-semibold uppercase text-black leading-[var(--leading-heading)]" style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', letterSpacing: '-0.04em' }}>
               전시 연계 프로그램
             </h1>
             <p className="text-sm font-body text-black/50 leading-relaxed max-w-[32ch] md:text-right">

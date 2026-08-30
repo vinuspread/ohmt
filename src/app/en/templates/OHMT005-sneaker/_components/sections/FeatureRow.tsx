@@ -1,9 +1,9 @@
 "use client";
 import { Leaf, Shield, Truck, Recycle } from "lucide-react";
 const icons = [
-  <Leaf key="leaf" size={34} strokeWidth={1.5} />, 
-  <Shield key="shield" size={34} strokeWidth={1.5} />, 
-  <Truck key="truck" size={34} strokeWidth={1.5} />, 
+  <Leaf key="leaf" size={34} strokeWidth={1.5} />,
+  <Shield key="shield" size={34} strokeWidth={1.5} />,
+  <Truck key="truck" size={34} strokeWidth={1.5} />,
   <Recycle key="recycle" size={34} strokeWidth={1.5} />
 ];
 

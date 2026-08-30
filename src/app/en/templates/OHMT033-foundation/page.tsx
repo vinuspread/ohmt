@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { Hero } from './_components/sections/Hero'
 import { VisionStatement } from './_components/sections/VisionStatement'
 import { FoundationIntro } from './_components/sections/FoundationIntro'

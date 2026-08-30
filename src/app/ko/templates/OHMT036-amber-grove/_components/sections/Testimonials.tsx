@@ -1,13 +1,13 @@
 const testimonials = [
   {
-    quote: '필요한 날짜에 맞춰 보내주셔서 좋아요.\n과일 상태가 좋고, 그때그때 추천해 주시는 품종도 만족스럽습니다.',
+    quote: '딱 저희가 필요할 때 보내주세요. 맛은 더 이상 말할 필요가 없고요. 추천해주시는 과일도 너무 좋습니다.',
     name: '박세영',
-    role: '레스토랑 식재료 구매 담당',
+    role: '레스토랑 구매 담당',
   },
   {
-    quote: '손님 반응이 좋아 꾸준히 주문하고 있습니다.\n함께 오는 수확 기록을 설명드리면 더 안심하고 구매하세요.',
+    quote: '손님들이 많이 찾으세요. 함께 보내주시는 기록지가 있어서 더 믿음이 가요.',
     name: '정회윤',
-    role: '동네 청과점 운영',
+    role: '동네 청과상 운영',
   },
 ]
 
@@ -16,10 +16,9 @@ export function Testimonials() {
     <section className="border-t border-[var(--color-border)] py-20 lg:py-28">
       <div className="grid grid-cols-12 gap-y-8 sm:gap-x-10 lg:gap-x-16">
         <div className="col-span-12 lg:col-span-4">
-          <p className="ledger-num text-sm font-bold text-[var(--color-accent)]">05 · 거래처 후기</p>
-          <h2 className="copy-heading mt-4 font-[family-name:var(--font-heading)] text-2xl font-semibold leading-[var(--leading-body)] sm:text-4xl">
-            함께 거래하는
-            <br className="hidden lg:block" /> 분들의 이야기
+          <p className="ledger-num text-sm font-bold text-[var(--color-accent)]">05 · 거래처의 말</p>
+          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-2xl font-semibold leading-[var(--leading-body)] sm:text-4xl">
+            한번 경험하신 고객님은 앰버그로브의 단골이 됩니다.
           </h2>
         </div>
         <div className="col-span-12 divide-y divide-[var(--color-border)] border-t border-[var(--color-border)] lg:col-span-8">
@@ -32,7 +31,7 @@ export function Testimonials() {
                   <p className="text-xs text-[var(--color-text-muted)]">{item.role}</p>
                 </div>
               </figcaption>
-              <blockquote className="copy-body text-lg font-medium leading-relaxed text-[var(--color-text)]">
+              <blockquote className="text-lg font-medium leading-relaxed text-[var(--color-text)]">
                 &ldquo;{item.quote}&rdquo;
               </blockquote>
             </figure>

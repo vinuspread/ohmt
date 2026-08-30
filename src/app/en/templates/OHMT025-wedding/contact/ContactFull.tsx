@@ -51,4 +51,3 @@ export default function ContactFull() {
 function NavSpacer() {
   return <div className="h-[72px]" />;
 }
-

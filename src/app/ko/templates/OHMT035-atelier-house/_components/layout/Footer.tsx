@@ -7,7 +7,7 @@ const base = '/ko/templates/OHMT035-atelier-house'
 
 const columns = [
   {
-    title: '제품',
+    title: '제품군',
     links: [
       { label: '전체 보기', href: `${base}/shop` },
       { label: '의자', href: `${base}/shop` },
@@ -37,7 +37,8 @@ export function Footer() {
               소식 구독하기
             </p>
             <p className="mt-3 max-w-[420px] text-xs leading-relaxed text-white/55 word-keep-all">
-              신제품 출시 소식과 원목 가구 관리법, 공간에 맞는 실측 방법을 이메일로 보내드립니다.</p>
+              소량으로 선보이는 신제품 출시 정보와 원목 가구 관리법, 공간에 맞는 실측 가이드를 메일로 보내드립니다.
+            </p>
           </div>
           <div className="flex w-full max-w-[440px] flex-col gap-2 sm:flex-row">
             <label htmlFor="atelier-newsletter-email" className="sr-only">
@@ -64,7 +65,8 @@ export function Footer() {
               ATELIER HOUSE
             </p>
             <p className="mt-3 max-w-[280px] text-xs leading-relaxed text-white/55 word-keep-all">
-              원목의 구조와 사용 환경을 고려해 오래 사용하고 수리할 수 있는 가구와 조명을 만듭니다.</p>
+              매일 마주하고 손때를 타며 익숙해지는 일상 공간을 위해 견고하게 지은 원목 가구와 조명을 선보입니다.
+            </p>
             <div className="mt-6 flex items-center gap-4">
               <Link href={base} aria-label="Instagram" className="text-white/50 transition-colors hover:text-[var(--color-accent)]">
                 <InstagramLogo size={18} />
@@ -97,7 +99,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14 border-t border-white/10 pt-6 text-xs text-white/40">
-          <p>&copy; 2026 OHMT.</p>
+          <p>&copy; 2026 ATELIER.</p>
         </div>
       </div>
     </footer>

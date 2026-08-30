@@ -1,28 +1,20 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { BRAND } from "../constants";
 
 export default function Hero() {
-  const parallaxRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (parallaxRef.current) {
-        parallaxRef.current.style.transform = `translateY(${window.scrollY * 0.3}px)`;
-      }
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  const reduceMotion = useReducedMotion();
+  const { scrollY } = useScroll();
+  const parallaxY = useTransform(scrollY, [0, 800], [0, 64]);
 
   return (
-    <section className="relative h-screen overflow-hidden">
-      <div
-        ref={parallaxRef}
+    <section className="relative min-h-[100dvh] overflow-hidden">
+      <motion.div
         className="absolute will-change-transform hero-bg-image"
         style={{
+          y: reduceMotion ? 0 : parallaxY,
           backgroundImage: "url('/templates/OHMT022-yoga/hero-bg.jpg')",
           backgroundSize: "cover",
           inset: "-10% 0 0 0",
@@ -33,14 +25,14 @@ export default function Hero() {
 
       <div className="absolute top-20 left-0 right-0 h-[1px] bg-white/20 z-10" />
 
-      <div className="absolute bottom-0 left-0 right-0 z-10 border-t border-white/25">
-        <div className="flex items-end justify-between px-8 md:px-14 py-10 gap-8">
+      <div className="absolute bottom-0 left-0 right-0 z-10">
+        <div className="flex flex-col items-start gap-8 px-8 py-10 md:flex-row md:items-end md:justify-between md:px-14">
           <div>
-            <p className="text-xs tracking-[0.3em] uppercase text-white/40 mb-5 font-normal"
+            <p className="mb-5 text-xs font-normal tracking-[0.3em] text-white/65"
                style={{ fontFamily: "var(--font-body)" }}>
               {BRAND.tagline}
             </p>
-            <h1 className="text-[length:var(--text-display)] font-normal text-white leading-[var(--leading-heading)] tracking-[-0.03em]"
+            <h1 className="text-[length:var(--text-display)] font-normal text-white leading-[var(--leading-heading)] tracking-[-0.02em]"
                 style={{ fontFamily: "var(--font-heading)" }}>
               Find stillness in
               <br />
@@ -48,14 +40,14 @@ export default function Hero() {
             </h1>
           </div>
 
-          <div className="hidden md:flex flex-col items-end gap-4 flex-shrink-0 pb-1">
+          <div className="flex flex-shrink-0 flex-col items-start gap-4 pb-1 md:items-end">
             <Link href="/en/templates/OHMT022-yoga/classes"
-              className="text-xs tracking-[0.2em] uppercase text-white hover:text-white/70 transition-colors border-b border-white/40 pb-1 font-medium whitespace-nowrap"
+              className="hidden whitespace-nowrap border-b border-white/40 pb-1 text-xs font-medium tracking-[0.2em] uppercase text-white transition-colors hover:text-white/70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white md:inline-flex"
               style={{ fontFamily: "var(--font-body)" }}>
               Explore Classes
             </Link>
             <Link href="/en/templates/OHMT022-yoga/schedule"
-              className="text-xs tracking-[0.2em] uppercase text-white/60 hover:text-white transition-colors font-medium whitespace-nowrap"
+              className="inline-flex whitespace-nowrap border-b border-white/60 pb-1 text-sm font-medium text-white transition-colors hover:text-white/75 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white md:border-b-0 md:pb-0 md:text-xs md:tracking-[0.2em] md:uppercase md:text-white/70 md:hover:text-white"
               style={{ fontFamily: "var(--font-body)" }}>
               View Schedule
             </Link>

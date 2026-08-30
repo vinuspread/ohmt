@@ -53,7 +53,7 @@ export const MenuGrid = () => {
               </div>
               <div className="p-4 md:p-5">
                 <div className="flex items-start justify-between gap-2 mb-2">
-                  <h3 className="text-base md:text-lg font-bold leading-tight">{item.name}</h3>
+                  <h3 className="text-base md:text-lg font-bold leading-[1.05]">{item.name}</h3>
                   <span className="text-base md:text-lg font-bold text-[var(--color-accent)] shrink-0">${item.price}</span>
                 </div>
                 <p className="text-sm text-[var(--color-text-muted)] leading-relaxed line-clamp-2">{item.description}</p>

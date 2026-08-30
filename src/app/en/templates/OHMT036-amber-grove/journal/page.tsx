@@ -7,7 +7,7 @@ export default function JournalPage() {
     <div>
       <section className="py-20 lg:py-28">
         <p className="ledger-num text-sm font-bold text-[var(--color-accent)]">Field journal</p>
-        <h1 className="mt-4 max-w-4xl font-[family-name:var(--font-heading)] text-4xl font-semibold leading-tight sm:text-6xl">
+        <h1 className="mt-4 max-w-4xl font-[family-name:var(--font-heading)] text-4xl font-semibold leading-[1.05] sm:text-6xl">
           Notes from the rows, the packing room, and the soil.
         </h1>
       </section>
@@ -21,7 +21,7 @@ export default function JournalPage() {
                   <Image src={post.image} alt={post.title} fill loading="eager" sizes="(min-width: 1024px) 33vw, 100vw" className="object-cover transition-transform duration-500 group-hover:scale-[1.04]" />
                 </div>
                 <p className="ledger-num mt-5 text-sm font-semibold text-[var(--color-text-muted)]">{post.date}</p>
-                <h2 className="mt-2 text-2xl font-bold leading-tight">{post.title}</h2>
+                <h2 className="mt-2 text-2xl font-bold leading-[1.05]">{post.title}</h2>
                 <p className="mt-3 text-sm leading-6 text-[var(--color-text-muted)]">{post.excerpt}</p>
                 <span className="mt-4 inline-block text-sm font-bold text-[var(--color-accent)] underline decoration-1 underline-offset-4">
                   Read note

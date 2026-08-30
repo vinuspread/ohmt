@@ -25,8 +25,9 @@ type TemplateTheme = {
 export function TemplateWrapper({ theme, children }: { theme: TemplateTheme; children: React.ReactNode }) {
   const [animationComplete, setAnimationComplete] = React.useState(false);
   React.useEffect(() => {
-    if ("scrollRestoration" in window.history) {
-      window.history.scrollRestoration = "auto";
+    if (typeof window !== "undefined") {
+      if ("history" in window && "scrollRestoration" in window.history) window.history.scrollRestoration = "manual";
+      window.scrollTo({ top: 0, left: 0 });
     }
   }, []);
   const cssVariables = useMemo(() => {

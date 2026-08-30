@@ -8,7 +8,6 @@ import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
-import TemplateSelect from '../_components/TemplateSelect'
 
 const teamMembers = [
   { name: "Sarah Chen", title: "Vice President, Investor Relations", phone: "+1 (212) 555-0198", email: "schen@ohmytemplate.com", image: "/templates/OHMT011-ir/member-st.png" },
@@ -51,7 +50,7 @@ function IRContactContent() {
               <h1 className="text-[length:var(--text-h1)] font-bold tracking-tight leading-[var(--leading-heading)] mb-6">
                 Get in Touch
               </h1>
-              <p className="max-w-[680px] text-[0.9rem] font-normal leading-[var(--leading-body)] text-white/55">
+              <p className="text-[0.9rem] text-white/55 leading-[var(--leading-body)] max-w-[520px] font-normal">
                 Our investor relations team is dedicated to providing timely and transparent communication.
                 <br />
                 We welcome your inquiries.
@@ -181,13 +180,13 @@ function IRContactContent() {
                   </div>
                   <div className="col-span-2">
                     <label className="block text-[0.62rem] font-bold uppercase tracking-[0.12em] text-[var(--color-dark-bg)] mb-2">Subject</label>
-                    <TemplateSelect className="w-full border border-[var(--color-border)] px-4 py-2.5 text-[0.82rem] text-[var(--color-text-muted)] outline-none focus:border-[var(--color-accent)] transition-colors bg-white">
+                    <select className="w-full border border-[var(--color-border)] px-4 py-2.5 text-[0.82rem] text-[var(--color-text-muted)] outline-none focus:border-[var(--color-accent)] transition-colors bg-white">
                       <option>General Inquiry</option>
                       <option>Shareholder Services</option>
                       <option>Financial Information</option>
                       <option>Media / Press</option>
                       <option>Other</option>
-                    </TemplateSelect>
+                    </select>
                   </div>
                   <div className="col-span-2">
                     <label className="block text-[0.62rem] font-bold uppercase tracking-[0.12em] text-[var(--color-dark-bg)] mb-2">Message</label>

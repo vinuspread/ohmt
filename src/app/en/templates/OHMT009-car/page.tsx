@@ -57,47 +57,46 @@ return (
     <TemplateWrapper theme={theme}>
       <main className="antialiased bg-black text-white selection:bg-[var(--theme-accent)] selection:text-black">
         <Header />
-        
+
         <Hero />
-        
+
         <StatsRow />
-        
-        <SplitSection 
+
+        <SplitSection
           eyebrow={t.tech.badge}
           title={t.tech.title}
           desc={t.tech.desc}
           img="/templates/OHMT009-car/tech-dashboard-custom.png"
         />
-        
-        <FullBleedSection 
+
+        <FullBleedSection
           eyebrow={t.battery.badge}
           title={t.battery.title}
           desc={t.battery.desc}
           img="/templates/OHMT009-car/home-banner-sub.jpg"
         />
-        
-        <SplitSection 
+
+        <SplitSection
           eyebrow={t.charge.badge}
           title={t.charge.title}
           desc={t.charge.desc}
           img="/templates/OHMT009-car/hero-2.jpg"
           reverse
         />
-        
+
         <AppSection />
-        
-        <FullBleedSection 
+
+        <FullBleedSection
           eyebrow={t.interior.badge}
           title={t.interior.title}
           desc={t.interior.desc}
           img="/templates/OHMT009-car/car-3.jpg"
         />
-        
+
         <Testimonials />
-        
+
         <NewsSection />
-        
-        <p className="text-center text-[11px] leading-relaxed text-neutral-400 px-6 py-6">This page is a website design template demo by OHMT, not an actual client or operating business. The brand names, people, testimonials, contact details, and performance figures shown are example content.</p>
+
         <Footer />
       </main>
     </TemplateWrapper>

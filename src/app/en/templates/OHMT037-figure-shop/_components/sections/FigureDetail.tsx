@@ -9,7 +9,6 @@ import { IMG, formatUsd, lineLabel, type Figure } from '../../data/figures'
 import { Badge, statusBadgeLabel, statusBadgeVariant } from '../ui/Badge'
 import { SpecBar } from '../ui/SpecBar'
 import { useCart } from '../CartContext'
-import TemplateSelect from '../TemplateSelect'
 
 function AccordionRow({ title, children }: { title: string; children: React.ReactNode }) {
   const [open, setOpen] = useState(false)
@@ -182,7 +181,7 @@ export function FigureDetail({ figure }: { figure: Figure }) {
             <label htmlFor="colorway" className="meta-label block text-[var(--color-ink-faint)]">
               Edition
             </label>
-            <TemplateSelect
+            <select
               id="colorway"
               value={colorway}
               onChange={(e) => setColorway(e.target.value)}
@@ -193,7 +192,7 @@ export function FigureDetail({ figure }: { figure: Figure }) {
                   {c.label}
                 </option>
               ))}
-            </TemplateSelect>
+            </select>
           </div>
 
           <div className="mt-6 max-w-[480px]">

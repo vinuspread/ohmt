@@ -37,7 +37,7 @@ export const NewsSection = () => {
             전체 뉴스 <ArrowRight size={16} />
           </button>
         </div>
-        
+
          <div className="grid md:grid-cols-3 gap-px bg-[var(--theme-border)] overflow-hidden">
            {news.map((item) => (
              <div key={item.title} className="bg-black group">

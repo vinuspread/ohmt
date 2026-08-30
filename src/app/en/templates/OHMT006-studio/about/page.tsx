@@ -206,7 +206,7 @@ function StudioAboutPageContent() {
 };
 const stats = t.aboutPage.stats;
     const history = t.aboutPage.awards;
-    
+
     const teamMembers = t.aboutPage.team;
     const team = [
         { name: teamMembers[0].name, role: teamMembers[0].role, image: '/templates/OHMT006-studio/team-1.jpg' },
@@ -220,10 +220,10 @@ const stats = t.aboutPage.stats;
 
         <main className="antialiased min-h-screen bg-white text-black font-sans selection:bg-black selection:text-white relative overflow-hidden">
             <Header />
-            <PageHeader 
-                category={t.aboutPage.category} 
-                title={<>{t.aboutPage.title1} <br /><span className="font-normal">{t.aboutPage.title2}</span></>} 
-                breadcrumb={[t.nav.about || "About"]} 
+            <PageHeader
+                category={t.aboutPage.category}
+                title={<>{t.aboutPage.title1} <br /><span className="font-normal">{t.aboutPage.title2}</span></>}
+                breadcrumb={[t.nav.about || "About"]}
             />
 
             {/* 2. Philosophy */}

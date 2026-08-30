@@ -464,7 +464,7 @@ function ProductCard({ product }: { product: typeof products[0] }) {
         <h3 className="text-[0.88rem] font-bold text-black mb-1.5">{product.name}</h3>
         <StarRating rating={product.rating} />
         <div className="flex items-center gap-2 mt-2">
-          <span className="text-[0.95rem] font-black text-black">${product.price} USD</span>
+          <span className="text-[0.95rem] font-extrabold text-black">${product.price} USD</span>
           {product.originalPrice && (
             <span className="text-[0.8rem] text-black/30 line-through">${product.originalPrice}</span>
           )}
@@ -652,7 +652,7 @@ export function ProductGrid({ title, items, limit = 8 }: Props) {
     <section className="py-16 bg-white">
       <div className="max-w-[1440px] mx-auto px-6">
         <div className="flex items-center justify-between mb-10">
-          <h2 className="text-[1.6rem] font-black tracking-[-0.02em] uppercase">{title}</h2>
+          <h2 className="text-[1.6rem] font-extrabold tracking-[-0.02em] uppercase">{title}</h2>
           <Link href="/en/templates/OHMT005-sneaker/shop-all" className="text-[0.78rem] font-bold uppercase tracking-[0.1em] text-black/50 hover:text-black transition-colors border-b border-black/20 pb-0.5">
             {t.productGrid.viewAll}
           </Link>

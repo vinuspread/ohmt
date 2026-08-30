@@ -18,13 +18,13 @@ export default function BrandStory() {
   });
   const scrollYProgress = useSpring(rawProgress, { stiffness: 280, damping: 38, mass: 0.4 });
 
-  const x1 = useTransform(scrollYProgress, [0, 0.42], reduce ? ["0px", "0px"] : ["-40px", "0px"]);
-  const x2 = useTransform(scrollYProgress, [0, 0.42], reduce ? ["0px", "0px"] : ["40px", "0px"]);
-  const x3 = useTransform(scrollYProgress, [0, 0.5], reduce ? ["0px", "0px"] : ["-30px", "0px"]);
+  const x1 = useTransform(scrollYProgress, [0, 0.5], reduce ? ["0px", "0px"] : ["-40px", "0px"]);
+  const x2 = useTransform(scrollYProgress, [0, 0.5], reduce ? ["0px", "0px"] : ["40px", "0px"]);
+  const x3 = useTransform(scrollYProgress, [0, 0.6], reduce ? ["0px", "0px"] : ["-30px", "0px"]);
   const imgOpacity = useTransform(scrollYProgress, [0, 0.2], [0, 1]);
 
-  const p0 = useTransform(scrollYProgress, [0.06, 0.18, 0.36, 0.48], [0, 1, 1, 0]);
-  const p1 = useTransform(scrollYProgress, [0.44, 0.58, 0.9, 1], [0, 1, 1, 1]);
+  const p0 = useTransform(scrollYProgress, [0.1, 0.32, 0.55, 0.7], [0, 1, 1, 0.3]);
+  const p1 = useTransform(scrollYProgress, [0.68, 0.85, 1, 1], [0, 1, 1, 1]);
 
   const phaseOpacities = [p0, p1];
 
@@ -33,7 +33,7 @@ export default function BrandStory() {
       <section
         ref={containerRef}
         className="relative hidden lg:block bg-[var(--color-bg-secondary)]"
-        style={{ height: "400vh" }}
+        style={{ height: "280vh" }}
       >
         <div className="sticky top-0 min-h-[100dvh] flex items-center justify-center overflow-hidden">
           <motion.div
@@ -85,10 +85,9 @@ export default function BrandStory() {
             </div>
             <motion.p
               style={{ opacity: reduce ? 1 : p1 }}
-              className="mt-8 text-sm text-[var(--color-text-muted)] leading-relaxed max-w-xl mx-auto font-[family-name:var(--font-body)]"
+              className="mt-8 text-sm text-[var(--color-text-muted)] leading-relaxed max-w-md mx-auto font-[family-name:var(--font-body)]"
             >
-              <span className="md:block">연출을 줄이고 순간에 집중합니다.</span>{" "}
-              <span className="md:block">빛과 표정, 작은 움직임까지 자연스럽게 기록합니다.</span>
+              연출을 줄이고 순간에 집중합니다. 빛과 표정, 작은 움직임까지 자연스럽게 기록합니다.
             </motion.p>
           </div>
         </div>
@@ -119,12 +118,14 @@ export default function BrandStory() {
             className="font-[family-name:var(--font-heading)] font-light normal-case text-[var(--color-text-muted)] leading-[var(--leading-heading)] text-balance"
             style={{ fontSize: "clamp(1.8rem, 7vw, 2.4rem)" }}
           >
-            결혼식의 하루는 사진보다 더 많은 것을 남깁니다.</p>
+            결혼식의 하루는 사진보다 더 많은 것을 남깁니다.
+          </p>
           <p
             className="mt-2 font-[family-name:var(--font-heading)] font-light normal-case text-[var(--color-text)] leading-[var(--leading-heading)] text-balance"
             style={{ fontSize: "clamp(1.8rem, 7vw, 2.4rem)" }}
           >
-            두 사람과 소중한 사람들이 함께 만든 특별한 시간입니다.</p>
+            두 사람과 소중한 사람들이 함께 만든 특별한 시간입니다.
+          </p>
           <p className="mt-6 text-sm text-[var(--color-text-muted)] leading-relaxed font-[family-name:var(--font-body)]">
             연출을 줄이고 순간에 집중합니다. 빛과 표정, 작은 움직임까지 자연스럽게 기록합니다.
           </p>

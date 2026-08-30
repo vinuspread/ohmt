@@ -8,15 +8,15 @@ export const Newsletter = () => {
             <div className="max-w-[1440px] mx-auto px-6 md:px-12 text-center">
                 <span className="text-xs uppercase tracking-[0.4em] sm:tracking-[0.6em] font-bold opacity-40 mb-6 md:mb-10 block">Stay Connected</span>
                 <h2
-                    className="mb-10 text-4xl font-bold leading-none tracking-[-0.035em] sm:text-[4.5vw] md:mb-16"
+                    className="mb-10 text-4xl font-bold leading-none tracking-[-0.02em] sm:text-[4.5vw] md:mb-16"
                     style={{ fontFamily: "var(--font-bodoni)" }}
                 >
                     Join the Laboratory Series
                 </h2>
                 <div className="max-w-2xl mx-auto relative group">
-                    <input 
-                        type="email" 
-                        placeholder="EMAIL ADDRESS" 
+                    <input
+                        type="email"
+                        placeholder="EMAIL ADDRESS"
                         className="w-full bg-white border-0 py-4 sm:py-6 px-6 sm:px-10 text-xs font-bold tracking-[0.2em] sm:tracking-[0.3em] outline-none placeholder:text-black/20 focus:ring-1 focus:ring-black transition-all"
                     />
                     <button className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2 text-xs sm:text-xs font-bold tracking-[0.15em] sm:tracking-[0.2em] bg-black text-white px-6 py-2.5 sm:px-8 sm:py-4 hover:bg-black/80 transition-all">

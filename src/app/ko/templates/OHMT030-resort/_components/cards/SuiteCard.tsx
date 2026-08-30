@@ -27,7 +27,7 @@ export function SuiteCard({
       <h2 className="mt-4 text-4xl font-normal leading-[var(--leading-heading)] text-white md:text-xl md:leading-[var(--leading-body)]">
         {name}
       </h2>
-      <p className="mt-1 text-sm text-white/60">{price} · 1박</p>
+      <p className="mt-1 text-sm text-white/60">{price} / 1박</p>
       <PillLink href={href} className="mt-3">
         {actionLabel}
       </PillLink>

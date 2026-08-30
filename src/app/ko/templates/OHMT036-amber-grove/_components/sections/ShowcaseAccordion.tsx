@@ -14,10 +14,9 @@ export function ShowcaseAccordion() {
     <section className="border-t border-[var(--color-border)] py-20 lg:py-28">
       <div className="grid grid-cols-12 gap-y-10 sm:gap-x-10 lg:gap-x-20 lg:items-start">
         <div className="col-span-12 lg:col-span-7">
-          <p className="ledger-num text-sm font-bold text-[var(--color-accent)]">03 · 제철 과일 상자</p>
-          <h2 className="copy-heading mt-4 max-w-2xl font-[family-name:var(--font-heading)] text-2xl font-semibold leading-[var(--leading-body)] sm:text-4xl">
-            계절과 수확 품목에 따라 구성한
-            <br className="hidden sm:block" /> 여섯 가지 과일 상자를 소개합니다.
+          <p className="ledger-num text-sm font-bold text-[var(--color-accent)]">03 · 과일 캘린더</p>
+          <h2 className="mt-4 max-w-xl font-[family-name:var(--font-heading)] text-2xl font-semibold leading-[var(--leading-body)] sm:text-4xl">
+            앰버그로브에서 만날 수 있는 여섯 가지 선물상자를 확인하세요.
           </h2>
           <div className="mt-10 max-w-2xl divide-y divide-[var(--color-border)] border-t border-[var(--color-border)]">
             {products.map((product, index) => {
@@ -51,9 +50,9 @@ export function ShowcaseAccordion() {
             <div className="pt-4">
               <p className="text-xs font-semibold text-[var(--color-accent)]">{active.category}</p>
               <h3 className="mt-2 font-[family-name:var(--font-heading)] text-2xl font-semibold leading-[var(--leading-body)]">{active.name}</h3>
-              <p className="copy-body mt-3 text-sm leading-6 text-[var(--color-text-muted)]">{active.description}</p>
+              <p className="mt-3 text-sm leading-6 text-[var(--color-text-muted)]">{active.description}</p>
               <Link href={`${base}/shop/${active.slug}`} className="mt-5 inline-flex items-center justify-center rounded bg-[var(--color-bg-dark)] px-5 py-2 text-sm font-semibold text-[var(--color-text-contrast)] transition-colors duration-200 hover:opacity-90">
-                상품 보기
+                상자 살펴보기
               </Link>
             </div>
           </div>

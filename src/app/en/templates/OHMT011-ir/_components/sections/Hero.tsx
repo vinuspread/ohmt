@@ -43,7 +43,7 @@ return (
         muted
         playsInline
       />
-      
+
       <div className="relative flex-1 flex items-center px-6 md:px-10 max-w-[1280px] mx-auto w-full py-12 md:py-24">
         <div className="max-w-[760px]">
           <div className="flex items-center gap-3 text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-8">
@@ -66,7 +66,7 @@ return (
           </div>
         </div>
       </div>
-      
+
       <div className="relative border-t border-white/10 grid grid-cols-2 md:grid-cols-4 bg-white/5 backdrop-blur-sm">
         {[
           { label: "Market Cap", val: "42.8", unit: "B", change: "+12.4%", up: true },
@@ -74,7 +74,7 @@ return (
           { label: "EPS (LTM)", val: "4.12", unit: "USD", change: "-0.4%", up: false },
           { label: "Dividend Yield", val: "2.85", unit: "%", change: "+0.1%", up: true }
         ].map((kpi, i) => (
-          <div key={i} className="flex flex-col items-center justify-center border-r border-white/10 p-8 text-center last:border-r-0">
+          <div key={i} className="p-8 border-r border-white/10 last:border-r-0">
             <span className="text-[0.62rem] font-bold uppercase tracking-[0.18em] text-white/35 block mb-1">{kpi.label}</span>
             <span className="text-[length:var(--text-lead)] font-extrabold text-white leading-none block mb-1">
               {kpi.val}<span className="text-[0.55em] text-white/40 font-medium ml-1">{kpi.unit}</span>

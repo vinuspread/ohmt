@@ -17,8 +17,7 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
-    handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -42,12 +41,12 @@ export default function Navbar() {
       <nav
         className={`fixed top-0 left-0 right-0 z-50 h-14 md:h-20 transition-all duration-700 flex items-center ${
           !isTransparent
-            ? "bg-white border-b border-neutral-100"
+            ? "bg-[var(--color-bg-secondary)]/95 backdrop-blur-xl border-b border-neutral-100/50"
             : "bg-transparent"
         }`}
       >
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex justify-between items-center transition-all w-full">
-          
+
           {/* Desktop Left - Curation Categories */}
           <div className="hidden lg:flex items-center gap-8 text-sm uppercase tracking-[-0.03em] font-bold">
             {menuItems.slice(0, 3).map((item) => {

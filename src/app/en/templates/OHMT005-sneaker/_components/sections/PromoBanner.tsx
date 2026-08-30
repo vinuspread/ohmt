@@ -167,9 +167,9 @@ export const PromoBanner = () => {
 return (
     <section className="relative overflow-hidden bg-black text-white py-12 md:py-24">
       <div className="absolute inset-0 z-0">
-        <img 
-          src="/templates/OHMT005-sneaker/promo-bg.jpg" 
-          alt="Promo Background" 
+        <img
+          src="/templates/OHMT005-sneaker/promo-bg.jpg"
+          alt="Promo Background"
           className="w-full h-full object-cover opacity-50 brightness-75"
         />
         <div className="absolute inset-0 bg-black/40" />
@@ -177,7 +177,7 @@ return (
       <div className="relative z-10 max-w-[1440px] mx-auto px-6 flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
         <div className="max-w-2xl">
           <span className="text-[0.7rem] font-bold uppercase tracking-[0.25em] text-white/60 block mb-3">{t.promoBanner.label}</span>
-          <h2 className="text-[length:var(--text-h2)] font-black tracking-[-0.03em] uppercase leading-tight mb-6">
+          <h2 className="text-[length:var(--text-h2)] font-extrabold tracking-[-0.02em] uppercase leading-[1.05] mb-6">
             {t.promoBanner.title1} {t.promoBanner.title2}
           </h2>
           <div className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 mb-8 text-white/80">

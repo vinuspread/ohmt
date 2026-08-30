@@ -3,17 +3,17 @@ import { BASE, LINES } from '../../data/figures'
 import { Button } from '../ui/Button'
 
 const INFO_LINKS = [
-  { label: '배송 안내', href: `${BASE}/shipping-returns#shipping` },
-  { label: '교환·반품', href: `${BASE}/shipping-returns#returns` },
-  { label: '에디션 현황', href: `${BASE}/shop` },
-  { label: '관리 방법', href: `${BASE}/story` },
+  { label: '배송', href: `${BASE}/shipping-returns#shipping` },
+  { label: '반품', href: `${BASE}/shipping-returns#returns` },
+  { label: '에디션 원장', href: `${BASE}/shop` },
+  { label: '관리 가이드', href: `${BASE}/story` },
 ]
 
 const STUDIO_LINKS = [
   { label: 'FORMA 소개', href: `${BASE}/story` },
-  { label: '참여 아티스트', href: `${BASE}/story#artists` },
+  { label: '아티스트', href: `${BASE}/story#artists` },
   { label: '제작 과정', href: `${BASE}/story#process` },
-  { label: '문의하기', href: `${BASE}/story#visit` },
+  { label: '문의', href: `${BASE}/story#visit` },
 ]
 
 export function Footer() {
@@ -22,7 +22,7 @@ export function Footer() {
       <div className="mx-auto max-w-[1440px] px-4 py-16 lg:px-6 lg:py-24">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
           <div>
-            <h2 className="meta-label text-[var(--color-on-dark-muted)]">이용 안내</h2>
+            <h2 className="meta-label text-[var(--color-on-dark-muted)]">정보</h2>
             <ul className="mt-4 flex flex-col gap-2">
               {INFO_LINKS.map((l) => (
                 <li key={l.label}>
@@ -37,7 +37,7 @@ export function Footer() {
             </ul>
           </div>
           <div>
-            <h2 className="meta-label text-[var(--color-on-dark-muted)]">제품 라인</h2>
+            <h2 className="meta-label text-[var(--color-on-dark-muted)]">라인</h2>
             <ul className="mt-4 flex flex-col gap-2">
               {LINES.map((line) => (
                 <li key={line.id}>
@@ -68,10 +68,12 @@ export function Footer() {
           </div>
           <div>
             <p className="text-xl font-semibold leading-snug">
-              새 에디션의 제작 수량과 판매 시작 시간을 미리 안내합니다.</p>
+              다음 드롭 전에 수량과 오픈 시간을 먼저 보냅니다.
+            </p>
             <div className="mt-6">
               <Button variant="outline-inverse" href={`${BASE}/story#visit`}>
-                신규 발매 알림 받기</Button>
+                드롭 알림 받기
+              </Button>
             </div>
           </div>
         </div>
@@ -80,7 +82,8 @@ export function Footer() {
           <div>
             <p className="text-lg font-semibold tracking-[0.2em]">FORMA</p>
             <p className="meta-label mt-2 max-w-[360px] text-[var(--color-on-dark-muted)]">
-              FORMA는 원형 제작부터 손도색과 에디션 번호 각인까지 직접 진행하는 소량 생산 피규어 스튜디오입니다.</p>
+              소량 생산 컬렉터블 피규어. 조형부터 손마감, 넘버링까지 한 스튜디오에서 진행합니다.
+            </p>
           </div>
           <p className="meta-label text-[var(--color-on-dark-muted)]">© 2026 OHMT.</p>
         </div>

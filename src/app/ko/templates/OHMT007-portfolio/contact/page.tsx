@@ -6,7 +6,7 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
-import { designerInfo, faqs } from "../_data/portfolio-data";
+import { designerInfo, faqs } from "../portfolio-data";
 
 function FAQItem({ q, a }: { q: string; a: string }) {
   const [open, setOpen] = useState(false);
@@ -58,8 +58,7 @@ function ContactPageContent() {
               <div>
                 <span className="text-xs font-medium tracking-[0.3em] uppercase text-[var(--color-text-muted)] block mb-6">연락하기</span>
                 <h1 className="text-[length:var(--text-h1)] font-black tracking-tighter leading-[var(--leading-heading)] max-w-[700px]">
-                  새 프로젝트를 준비 중인가요?<br />
-                  이야기를 들려주세요.
+                  새 프로젝트를 준비 중인가요? 이야기를 들려주세요.
                 </h1>
                 <a
                   href={`mailto:${designerInfo.contact.email}`}

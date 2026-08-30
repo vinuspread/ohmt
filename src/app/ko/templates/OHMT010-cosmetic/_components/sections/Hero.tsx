@@ -19,27 +19,27 @@ export const Hero = () => {
               </button>
             </div>
           </div>
-          
+
           <div className="hidden md:block w-[240px] border border-black/10 bg-white p-6 shrink-0 group">
-            <img 
-              src="/templates/OHMT010-cosmetic/cosmetic-1.jpg" 
-              className="w-full h-[180px] object-cover mb-4 grayscale group-hover:grayscale-0 transition-[filter] duration-700" 
-              alt="Featured product" 
+            <img
+              src="/templates/OHMT010-cosmetic/cosmetic-1.jpg"
+              className="w-full h-[180px] object-cover mb-4 grayscale group-hover:grayscale-0 transition-[filter] duration-700"
+              alt="Featured product"
             />
             <div className="text-[0.85rem] font-bold mb-1">리커버리 리스토러티브 세럼</div>
             <div className="text-base font-bold mb-4">₩85,000</div>
             <button className="text-[0.75rem] font-bold uppercase border-b border-black/20 pb-0.5 hover:border-black transition-colors">
-              장바구니에 담기
+              빠른 추가
             </button>
           </div>
         </div>
       </div>
-      
+
       <div className="w-full h-[50vh] overflow-hidden">
-        <img 
-          src="/templates/OHMT010-cosmetic/cosmetic-hero-luxury.jpg?v=2" 
-          className="w-full h-full object-cover object-center" 
-          alt="Hero background" 
+        <img
+          src="/templates/OHMT010-cosmetic/cosmetic-hero-luxury.jpg?v=2"
+          className="w-full h-full object-cover object-center"
+          alt="Hero background"
         />
       </div>
     </section>

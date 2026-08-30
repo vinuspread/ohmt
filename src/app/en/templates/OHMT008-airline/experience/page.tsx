@@ -22,7 +22,7 @@ function ExperiencePageContent() {
       desc: "Seared French Caviar with fresh blinis, paired with Krug Clos d'Ambonnay vintage champagne.",
       detail: "Crafted by Chef Antoine Dubois, 3-Michelin-star alumnus of Le Bernardin. The set opens with a cold amuse-bouche of oscietra caviar on buckwheat blini, followed by a main of pan-seared Brittany turbot with champagne beurre blanc, and closes with a dark chocolate mille-feuille. Wine pairing includes Krug Clos d'Ambonnay 2002 and a 15-year Armagnac digestif.",
       tags: ["3-Course", "Champagne Pairing", "First Class Only"],
-      img: "/templates/OHMT008-airline/french-course-menu.png"
+      img: "/templates/OHMT008-airline/michelin-dining.jpg"
     },
     {
       id: "Korean",
@@ -43,10 +43,10 @@ function ExperiencePageContent() {
   ];
 
   // Baggage Calculator logic
-  const allowedBaggageCount = 2; 
-  const allowedBaggageWeight = 32; 
-  const excessBaggageFeePerKg = 15; 
-  const excessPieceFee = 150; 
+  const allowedBaggageCount = 2;
+  const allowedBaggageWeight = 32;
+  const excessBaggageFeePerKg = 15;
+  const excessPieceFee = 150;
 
   const excessPieces = Math.max(0, baggageCount - allowedBaggageCount);
   const excessWeight = Math.max(0, baggageWeight - allowedBaggageWeight);
@@ -63,14 +63,14 @@ function ExperiencePageContent() {
           imageAlt="Premium Cabin Detail"
           label="The Cabin Experience"
           title={<>Crafted Beyond <br /><span className="text-[var(--color-accent)] font-[family-name:var(--font-heading)] normal-case font-bold">Expectations.</span></>}
-          description={"We redefine every detail of transcontinental flight.\nPre-book your signature Michelin-starred menus and compute elite baggage limits prior to boarding."}
+          description="We redefine every detail of transcontinental flight.\nPre-book your signature Michelin-starred menus and compute elite baggage limits prior to boarding."
           descMaxWidth="max-w-[680px]"
         />
 
         {/* 1. Gourmet Curation - Editorial Typographic List Design (No Box Borders) */}
         <section className="py-14 md:py-32 bg-white">
           <div className="max-w-[1320px] mx-auto px-6 md:px-10">
-            
+
             {/* Header section with clean vertical layout */}
             <div className="mb-10 md:mb-20 space-y-4 max-w-[800px]">
               <span className="text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">Gourmet Curation</span>
@@ -180,7 +180,7 @@ function ExperiencePageContent() {
         {/* 2. Baggage Calculator - Clean Typography Grid (No Box Borders) */}
         <section className="py-14 md:py-32 bg-[var(--color-bg-secondary)]">
           <div className="max-w-[1320px] mx-auto px-6 md:px-10">
-            
+
             {/* Header */}
             <div className="mb-10 md:mb-20 space-y-4 max-w-[800px]">
               <span className="text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)]">Luggage Precheck</span>
@@ -195,10 +195,10 @@ function ExperiencePageContent() {
 
             {/* Completely borderless typographic controls grid */}
             <div className="grid lg:grid-cols-12 gap-10 md:gap-20 items-start">
-              
+
               {/* Left Side: Clean Sliders and Inputs */}
               <div className="lg:col-span-6 space-y-12">
-                
+
                 {/* Luggage pieces counter */}
                 <div className="space-y-4">
                   <div className="flex justify-between items-baseline text-sm font-bold uppercase tracking-wider text-[var(--color-primary)]">
@@ -268,7 +268,7 @@ function ExperiencePageContent() {
                   <span className="text-sm uppercase font-bold tracking-widest text-[var(--color-primary)]">
                     Baggage Fee Due
                   </span>
-                  
+
                   {/* Huge bold editorial number display */}
                   <div className="space-y-2">
                     <span className={`text-[length:var(--text-h2)] font-extrabold leading-none block ${
@@ -293,7 +293,7 @@ function ExperiencePageContent() {
             <span className="block text-sm font-bold uppercase tracking-[0.3em] text-[var(--color-accent)] mb-4">
               Elite Lounge & Spa
             </span>
-            <h2 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-h1)] font-bold tracking-tight text-[var(--color-primary)] leading-tight mb-20 uppercase">
+            <h2 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-h1)] font-bold tracking-tight text-[var(--color-primary)] leading-[1.05] mb-20 uppercase">
               Sky Sanctuary Services.
             </h2>
 

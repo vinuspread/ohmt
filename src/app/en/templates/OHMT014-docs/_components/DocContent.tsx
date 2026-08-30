@@ -76,7 +76,7 @@ export function DocContent({
           <span className="text-[var(--color-text)]">{page.title}</span>
         </div>
       )}
-      <h1 className="mb-3 text-3xl font-bold leading-tight text-[var(--color-text)] md:text-4xl" style={{ fontFamily: "var(--font-heading)" }}>
+      <h1 className="mb-3 text-3xl font-bold leading-[1.05] text-[var(--color-text)] md:text-4xl" style={{ fontFamily: "var(--font-heading)" }}>
         {page.title}
       </h1>
       <p className="mb-10 max-w-2xl text-base leading-relaxed text-[var(--color-text-muted)]">

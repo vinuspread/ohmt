@@ -23,9 +23,9 @@
     "typography": {
       "heading": {
         "font": "Inter, Pretendard, sans-serif",
-        "weight": "900",
-        "tracking": "-0.03em",
-        "style": "font-black tracking-tighter uppercase italic"
+        "weight": "700",
+        "tracking": "-0.01em",
+        "style": "font-bold tracking-tight uppercase italic"
       },
       "body": {
         "font": "Inter, Pretendard, sans-serif",

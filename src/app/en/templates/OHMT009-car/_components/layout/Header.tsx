@@ -8,7 +8,7 @@ import { Menu, X } from "lucide-react";
 export const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  
+
   const t = {
   "nav": {
     "models": `Models`,
@@ -69,7 +69,8 @@ const NAV_ITEMS = [
         isScrolled || mobileOpen ? "bg-black/95 backdrop-blur-md" : "bg-transparent"
       )}>
         <div className="max-w-[var(--theme-container)] mx-auto px-6 md:px-[var(--theme-gutter)] flex items-center justify-between w-full">
-          <Link href="/en/templates/OHMT009-car" className="text-[1.2rem] font-extrabold tracking-[0.2em] uppercase text-white">IONARA<span className="text-[var(--theme-accent)]">.</span>
+          <Link href="/en/templates/OHMT009-car" className="text-[1.2rem] font-extrabold tracking-[0.2em] uppercase text-white">
+            OHMT<span className="text-[var(--theme-accent)]">.</span>
           </Link>
 
           {/* Desktop GNB */}
@@ -88,7 +89,7 @@ const NAV_ITEMS = [
           </div>
 
           <div className="flex items-center gap-4">
-            
+
             <button className="hidden md:block text-[0.75rem] font-bold uppercase tracking-[0.16em] px-6 py-2 border border-white/25 bg-transparent text-white hover:border-white transition-all duration-300">
               {t.nav.testDrive}
             </button>

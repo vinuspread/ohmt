@@ -8,7 +8,6 @@ import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
-import TemplateSelect from '../_components/TemplateSelect'
 
 const teamMembers = [
   { name: "Sarah Chen", title: "Vice President, Investor Relations", phone: "+1 (212) 555-0198", email: "schen@ohmytemplate.com", image: "/templates/OHMT011-ir/member-st.png" },
@@ -51,10 +50,8 @@ function IRContactContent() {
               <h1 className="text-[length:var(--text-h1)] font-bold tracking-tight leading-[var(--leading-heading)] mb-6">
                 문의하기
               </h1>
-              <p className="max-w-[680px] break-keep text-[0.9rem] font-normal leading-loose text-white/55">
-                투자자 관계 팀은 적시에 투명한 커뮤니케이션을 제공하기 위해 최선을 다하고 있습니다.
-                <br />
-                문의 사항을 환영합니다.
+              <p className="text-[0.9rem] text-white/55 leading-loose max-w-[520px] font-normal">
+                투자자 관계 팀은 적시에 투명한 커뮤니케이션을 제공하기 위해 최선을 다하고 있습니다. 문의 사항을 환영합니다.
               </p>
             </div>
           </div>
@@ -181,13 +178,13 @@ function IRContactContent() {
                   </div>
                   <div className="col-span-2">
                     <label className="block text-[0.62rem] font-bold uppercase tracking-[0.12em] text-[var(--color-dark-bg)] mb-2">제목</label>
-                    <TemplateSelect className="w-full border border-[var(--color-border)] px-4 py-2.5 text-[0.82rem] text-[#6B6B6B] outline-none focus:border-[var(--color-accent)] transition-colors bg-white">
+                    <select className="w-full border border-[var(--color-border)] px-4 py-2.5 text-[0.82rem] text-[#6B6B6B] outline-none focus:border-[var(--color-accent)] transition-colors bg-white">
                       <option>일반 문의</option>
                       <option>주주 서비스</option>
                       <option>재무 정보</option>
                       <option>미디어 / 언론</option>
                       <option>기타</option>
-                    </TemplateSelect>
+                    </select>
                   </div>
                   <div className="col-span-2">
                     <label className="block text-[0.62rem] font-bold uppercase tracking-[0.12em] text-[var(--color-dark-bg)] mb-2">메시지</label>

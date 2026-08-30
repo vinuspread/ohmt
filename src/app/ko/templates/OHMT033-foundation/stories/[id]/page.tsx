@@ -14,13 +14,13 @@ type PageProps = {
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { id } = await params
   const story = stories.find((s) => s.id === id)
-  if (!story) return { title: '해당 스토리를 찾을 수 없습니다' }
+  if (!story) return { title: '스토리를 찾을 수 없습니다' }
 
   return {
-    title: `${story.name} | ${story.program}`,
+    title: `${story.name} - ${story.program}`,
     description: story.excerpt,
     openGraph: {
-      title: `${story.name} | ${story.program}`,
+      title: `${story.name} - ${story.program}`,
       description: story.excerpt,
       images: [{ url: `/templates/OHMT033-foundation/${story.image}` }],
     },
@@ -35,7 +35,7 @@ export default async function StoryDetailPage({ params }: PageProps) {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: `${story.name} | ${story.program}`,
+    headline: `${story.name} - ${story.program}`,
     description: story.excerpt,
     author: { '@type': 'Organization', name: 'OHMT 파운데이션' },
   }
@@ -49,7 +49,7 @@ export default async function StoryDetailPage({ params }: PageProps) {
         className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-primary)] hover:underline"
       >
         <ArrowLeft size={16} weight="bold" aria-hidden="true" />
-        <span>스토리 목록</span>
+        <span>전체 스토리</span>
       </Link>
 
       <p className="mt-6 text-sm font-medium text-[var(--color-accent)]">
@@ -87,7 +87,7 @@ export default async function StoryDetailPage({ params }: PageProps) {
           href={`${base}/programs`}
           className="inline-flex items-center gap-2 text-sm font-medium text-[var(--color-primary)] hover:underline"
         >
-          <span>프로그램 전체 보기</span>
+          <span>전체 프로그램 보기</span>
           <ArrowRight size={16} weight="bold" aria-hidden="true" />
         </Link>
       </div>

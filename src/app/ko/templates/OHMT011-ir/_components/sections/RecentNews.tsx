@@ -15,7 +15,7 @@ const newsItems = [
     date: "2026년 4월 28일",
     tag: "분기 배당",
     tagColor: "bg-[#F5EDD5] text-[#7a5a10]",
-    title: "이사회, 주당 910원 분기 현금 배당 승인"
+    title: "이사회, 주당 0.65달러 분기 현금 배당 승인"
   },
   {
     date: "2026년 4월 15일",
@@ -43,7 +43,7 @@ export const RecentNews = () => {
             전체 뉴스 보기 <span className="text-[1.2em]">→</span>
           </button>
         </div>
-        
+
         <div className="flex flex-col border-t border-[var(--color-border)]">
           {newsItems.map((item, i) => (
             <div key={i} className="grid grid-cols-3 gap-8 py-8 border-b border-[var(--color-border)] group cursor-pointer hover:pl-2 transition-all duration-300">

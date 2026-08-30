@@ -91,7 +91,7 @@ export function Cta() {
             <p className="font-inter font-medium text-xs tracking-[0.15em] text-[var(--accent)] uppercase mb-5">
               Early Access
             </p>
-            <h2 className="font-michroma text-[length:var(--text-h2)] text-[var(--text)] leading-[var(--leading-display)] tracking-[-0.03em] mb-6">
+            <h2 className="font-michroma text-[length:var(--text-h2)] text-[var(--text)] leading-[var(--leading-display)] tracking-[-0.02em] mb-6">
               <span className="whitespace-nowrap">Reserve your</span><br />
               <span className="whitespace-nowrap">NUBI today</span>
             </h2>

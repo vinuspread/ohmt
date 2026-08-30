@@ -5,13 +5,13 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 export const metadata: Metadata = {
-  title: "Account - VELURE Cosmetic",
-  description: "Sign in to your VELURE account for exclusive member benefits and early access.",
+  title: "Account - OHMT Cosmetic",
+  description: "Sign in to your OHMT account for exclusive member benefits and early access.",
   openGraph: {
-    title: "Account - VELURE Cosmetic",
-    description: "Sign in to your VELURE account for exclusive member benefits.",
-    url: "https://ohmt.site/en/templates/OHMT010-cosmetic/account",
-    siteName: "VELURE",
+    title: "Account - OHMT Cosmetic",
+    description: "Sign in to your OHMT account for exclusive member benefits.",
+    url: "https://ohmytemplate.com/en/templates/OHMT010-cosmetic/account",
+    siteName: "OHMT",
     images: [{ url: "/templates/OHMT010-cosmetic/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
@@ -23,7 +23,7 @@ export default function CosmeticAccountPage() {
     <TemplateWrapper theme={theme}>
       <main className="antialiased bg-[var(--color-bg)] text-black selection:bg-black selection:text-white">
         <Header />
-        
+
         <section className="pt-48 pb-16 md:pb-32">
           <div className="max-w-[1440px] mx-auto px-6 md:px-10">
             <div className="mb-16">

@@ -9,7 +9,7 @@ const base = '/ko/templates/OHMT035-atelier-house'
 
 const navLinks = [
   { label: '홈', href: base },
-  { label: '제품', href: `${base}/shop` },
+  { label: '샵', href: `${base}/shop` },
   { label: '저널', href: `${base}/journal` },
   { label: '소개', href: `${base}/about` },
 ]

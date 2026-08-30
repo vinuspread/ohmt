@@ -19,9 +19,9 @@ const serviceVariants = {
 
 export function InspirationSection() {
     const services = [
-        { id: '01', title: '공간 계획', description: '공간의 용도와 사용 인원을 살펴 동선과 수납, 가구 배치를 효율적으로 계획합니다.', icon: Layout },
-        { id: '02', title: '가구·마감재 선정', description: '예산과 관리 방법, 원하는 분위기에 맞춰 마감재와 가구, 조명을 함께 제안합니다.', icon: Palette },
-        { id: '03', title: '조명과 스타일링', description: '조명의 밝기와 위치를 조정하고 패브릭과 소품을 더해 공간의 분위기를 마무리합니다.', icon: Lightbulb },
+        { id: '01', title: '스페이스 플래닝', description: '동선과 공간 배치를 정교하게 조율하여, 머무는 이들의 일상에 최적의 편리함과 영감을 선사합니다.', icon: Layout },
+        { id: '02', title: '가구 & 마감 큐레이션', description: '공간의 철학과 사용자 고유의 미적 취향을 투영하는 유일무이한 마감재와 오브제를 엄선합니다.', icon: Palette },
+        { id: '03', title: '감도 높은 스타일링', description: '조명의 세심한 배치와 감각적인 오브제 레이어링을 통해, 공간의 완성도를 극대화합니다.', icon: Lightbulb },
     ];
 
     return (
@@ -37,7 +37,7 @@ export function InspirationSection() {
                 >
                     <span className="text-xs font-normal tracking-[3px] uppercase text-[#090B19] opacity-60">우리의 전문성</span>
                     <h2 className="text-3xl md:text-5xl leading-[var(--leading-heading)] font-semibold tracking-[-1.44px] text-[#090B19] break-keep">
-                        계획부터 마감까지 세심하게 확인합니다.
+                        정교한 디테일로 만드는 최상의 공간.
                     </h2>
                 </motion.div>
 
@@ -99,7 +99,7 @@ export function InspirationSection() {
                         className="relative z-10 max-w-4xl px-4"
                     >
                         <h2 className="text-3xl md:text-5xl leading-[var(--leading-heading)] font-semibold tracking-[-1.44px] mb-12 break-keep">
-                            현재 공간의 장점은 살리고 불편한 부분은 개선해 생활과 업무에 잘 맞는 환경을 만듭니다.
+                            공간이 지닌 가치를 재발견하고, 이를 시대를 초월한 감각적인 경험으로 혁신합니다.
                         </h2>
                         <motion.div
                             initial={{ opacity: 0, scaleY: 0 }}

@@ -16,13 +16,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 
   return {
-    title: `${titles[slug] || slug} - VELURE Cosmetic Journal`,
-    description: "Read the latest from VELURE Cosmetic — skincare insights, ingredient science, and conscious beauty stories.",
+    title: `${titles[slug] || slug} - OHMT Cosmetic Journal`,
+    description: "Read the latest from OHMT Cosmetic — skincare insights, ingredient science, and conscious beauty stories.",
     openGraph: {
-      title: `${titles[slug] || slug} - VELURE Cosmetic Journal`,
-      description: "Read the latest from VELURE Cosmetic.",
-      url: `https://ohmt.site/en/templates/OHMT010-cosmetic/journal/${slug}`,
-      siteName: "VELURE",
+      title: `${titles[slug] || slug} - OHMT Cosmetic Journal`,
+      description: "Read the latest from OHMT Cosmetic.",
+      url: `https://ohmytemplate.com/en/templates/OHMT010-cosmetic/journal/${slug}`,
+      siteName: "OHMT",
       images: [{ url: "/templates/OHMT010-cosmetic/og-image.jpg", width: 1200, height: 630 }],
       locale: "en_US",
       type: "article",

@@ -26,7 +26,8 @@ export default function NewsPage() {
           <div className="mb-12">
             <h1 className="font-[var(--font-heading)] text-5xl font-bold">뉴스</h1>
             <p className="mt-3 text-[var(--color-text-muted)]">
-              OHMT 소식</p>
+              OHMT 소식
+            </p>
           </div>
 
           <div className="mb-10 flex flex-wrap gap-2">
@@ -63,7 +64,8 @@ export default function NewsPage() {
 
           {filtered.length === 0 && (
             <p className="py-20 text-center text-[var(--color-text-muted)]">
-              등록된 소식이 없습니다.</p>
+              등록된 소식이 없습니다.
+            </p>
           )}
         </div>
       </main>

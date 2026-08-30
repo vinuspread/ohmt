@@ -7,7 +7,7 @@ export const Hero = () => {
 return (
     <section className="relative h-screen overflow-hidden bg-black selection:bg-white selection:text-black">
       {/* Background Image */}
-      <motion.div 
+      <motion.div
         initial={{ scale: 1.2, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 2.5, ease: "easeOut" }}
@@ -15,7 +15,7 @@ return (
       >
         <img
           src="/templates/OHMT001-fashion/branding-custom.jpg"
-          alt="Luxury Fashion Hero" 
+          alt="Luxury Fashion Hero"
           className="w-full h-full object-cover brightness-75"
           loading="eager"
         />
@@ -30,12 +30,12 @@ return (
            transition={{ delay: 0.8, duration: 1 }}
            className="max-w-5xl"
         >
-          <span className="text-xs md:text-xs uppercase tracking-[0.3em] sm:tracking-[0.4em] font-bold mb-3 sm:mb-4 block opacity-60" style={{ fontFamily: "'Pretendard', sans-serif" }}>
+          <span className="text-xs uppercase tracking-[0.24em] sm:tracking-[0.32em] font-semibold mb-3 sm:mb-4 block opacity-70" style={{ fontFamily: "'Pretendard', sans-serif" }}>
             EST. 2026
           </span>
-          <h1 className="text-4xl sm:text-[6vw] md:text-[5vw] font-normal tracking-[-0.02em] leading-[var(--leading-heading)] mb-4 sm:mb-5 drop-shadow-2xl" style={{ fontFamily: "var(--font-bodoni)" }}>
-            <span className="block whitespace-nowrap">LUXURY BRAND</span>
-            <span className="block text-white/40 whitespace-nowrap">NEVER FADES</span>
+          <h1 className="text-[clamp(2.75rem,6vw,5.5rem)] font-light tracking-[-0.02em] leading-[1.05] mb-4 sm:mb-5 drop-shadow-2xl" style={{ fontFamily: "var(--font-bodoni)" }}>
+            <span className="block whitespace-nowrap">BEYOND THE SEASONS</span>
+            <span className="block text-white/55 whitespace-nowrap">MADE TO STAY WITH YOU</span>
           </h1>
 
           <p className="text-[1rem] sm:text-[1.1rem] text-white/75 max-w-[580px] mx-auto text-center leading-[var(--leading-body)] mb-7 sm:mb-9 font-normal drop-shadow-lg" style={{ fontFamily: "'Pretendard', sans-serif" }}>
@@ -49,7 +49,7 @@ return (
               <span className="relative z-10 group-hover:text-white transition-colors duration-500">EXPLORE COLLECTION</span>
               <span className="absolute inset-0 bg-black translate-y-full group-hover:translate-y-0 transition-transform duration-[0.6s] ease-[0.16,1,0.3,1] origin-bottom" />
             </button>
-            <Button variant="ghost" className="text-xs sm:text-xs font-bold tracking-[0.3em] sm:tracking-[0.4em] border border-white hover:opacity-60 transition-opacity duration-300 px-8 py-3.5 sm:px-12 sm:py-4">
+            <Button variant="ghost" className="text-xs font-semibold tracking-[0.22em] sm:tracking-[0.3em] border border-white text-white hover:!text-white hover:!bg-white/10 transition-colors duration-300 px-8 py-3.5 sm:px-12 sm:py-4">
               WATCH CAMPAIGN
             </Button>
           </div>
@@ -57,7 +57,7 @@ return (
       </div>
 
       {/* Scroll Indicator */}
-      <motion.div 
+      <motion.div
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
         className="absolute bottom-12 left-1/2 -translate-x-1/2 text-white/50"

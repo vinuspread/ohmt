@@ -26,14 +26,14 @@ const navItems = [
     activeIcon: ChevronUp,
   },
   {
-    name: "티켓",
+    name: "예매",
     href: "#",
     icon: Ticket,
     activeIcon: Ticket,
     isAction: true,
   },
   {
-    name: "뮤지엄 숍",
+    name: "샵",
     href: "/ko/templates/OHMT021-museum/shop",
     icon: ShoppingBag,
     activeIcon: ShoppingBag,
@@ -98,7 +98,8 @@ export default function MobileBottomTabBar({ isMenuOpen, onMenuToggle, onTicketC
         >
           <Menu size={18} className="mb-2" />
           <span className="text-xs uppercase tracking-[0.15em] font-medium leading-[var(--leading-display)]">
-            메뉴</span>
+            메뉴
+          </span>
         </button>
       </div>
     </motion.div>

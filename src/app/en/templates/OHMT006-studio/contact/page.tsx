@@ -255,7 +255,7 @@ const [submitted, setSubmitted] = useState(false);
                                         <span className="text-xs md:text-xs font-bold text-black/50 flex items-center gap-2 uppercase">
                                             <MapPin size={12} /> {t.contactPage.designCasingLab || "Design Casing Lab"}
                                         </span>
-                                        <h3 className="text-base md:text-lg lg:text-xl font-bold text-black leading-tight">
+                                        <h3 className="text-base md:text-lg lg:text-xl font-bold text-black leading-[1.05]">
                                             Austin, Texas // 308 Congress Ave.
                                         </h3>
                                     </div>
@@ -286,7 +286,7 @@ const [submitted, setSubmitted] = useState(false);
                                             {t.contactPage.successDesc}
                                         </p>
                                     </div>
-                                    <button 
+                                    <button
                                         onClick={() => setSubmitted(false)}
                                         className="text-xs font-bold uppercase tracking-widest text-white/40 hover:text-white transition-colors"
                                     >

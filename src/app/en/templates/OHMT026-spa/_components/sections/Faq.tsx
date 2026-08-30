@@ -12,38 +12,24 @@ export default function Faq() {
 
   return (
     <section className="relative overflow-hidden bg-[var(--color-bg-secondary)] py-24 lg:py-32">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-start">
-          <motion.div
-            initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.6, ease: EASE_OUT }}
-            className="hidden lg:block sticky top-28"
-          >
-            <div className="aspect-[4/5] rounded-2xl overflow-hidden">
-              <img src="/templates/OHMT026-spa/faq.jpg" alt="A client relaxing during a spa treatment" className="h-full w-full object-cover" />
-            </div>
-          </motion.div>
+      <div className="mx-auto max-w-[1440px] px-6">
+        <motion.div
+          initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.6, ease: EASE_OUT }}
+          className="text-center mb-16 max-w-3xl mx-auto"
+        >
+          <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">
+            FAQ
+          </span>
+          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[var(--leading-heading)]">
+            Frequently asked questions
+          </h2>
+        </motion.div>
 
-          <div>
-            <motion.div
-              initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.6, ease: EASE_OUT }}
-              className="mb-12"
-            >
-              <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">
-                FAQ
-              </span>
-              <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[var(--leading-heading)]">
-                Frequently asked questions
-              </h2>
-            </motion.div>
-
-            <div className="space-y-2">
-              {faqs.map((faq, i) => {
+        <div className="space-y-2 max-w-3xl mx-auto">
+          {faqs.map((faq, i) => {
             const isOpen = openIndex === i;
             return (
               <div
@@ -82,9 +68,7 @@ export default function Faq() {
                 </AnimatePresence>
               </div>
             );
-              })}
-            </div>
-          </div>
+          })}
         </div>
 
         <script
@@ -108,4 +92,3 @@ export default function Faq() {
     </section>
   );
 }
-

@@ -27,17 +27,17 @@ const stagger = {
 function MuseumInfoContent() {
 
   const timelineData = [
-  { year: "1506", title: "라오콘 군상 발견", desc: "교황 율리오 2세가 라오콘 군상을 소장하면서 바티칸 미술관 컬렉션의 출발점이 마련되었습니다." },
-  { year: "1512", title: "시스티나 성당 천장화 완성", desc: "미켈란젤로가 약 4년에 걸쳐 작업한 시스티나 성당 천장화를 완성했습니다." },
-  { year: "1771", title: "클레멘스 미술관 개관", desc: "교황 클레멘스 14세가 소장품을 대중에게 공개하며 미술관의 기반을 넓혔습니다." },
-  { year: "1932", title: "피나코테카 신관 개관", desc: "교황 비오 11세가 현재의 피나코테카 건물을 공식 개관했습니다." }
-  ];
-  const grottoesData = [
-  { name: "교황 그레고리오 16세 묘소", title: "역사적 묘소", desc: "교황의 좌상과 비문, 촛불이 놓인 석조 묘소를 통해 바티칸의 장례 조각과 기념 문화를 살펴봅니다." },
-  { name: "원형 돔 회랑", title: "건축과 빛", desc: "돔의 원형 채광창과 열주, 곡선 계단이 이어지는 공간에서 바티칸 건축의 비례와 빛을 확인할 수 있습니다." },
-  { name: "조각 회랑", title: "고대 조각 컬렉션", desc: "대리석 인물상과 흉상이 늘어선 긴 회랑으로, 고대 조각을 시대와 주제에 따라 감상할 수 있습니다." }
+  { year: "1506", title: "라오콘 군상 발견", desc: "교황 율리오 2세가 대리석 조각상을 구입하면서 바티칸 미술관 설립의 초석이 마련되었습니다." },
+  { year: "1512", title: "시스티나 성당 천장화 완성", desc: "미켈랑젤로가 4년여의 치열한 사투 끝에 위대한 불멸의 걸작을 공개했습니다." },
+  { year: "1771", title: "클레멘스 미술관 개관", desc: "교황 클레멘스 14세가 미술관을 대중에게 개방하며 현대식 전시 체계를 도입했습니다." },
+  { year: "1932", title: "회화관 (Pinacoteca) 신관 개관", desc: "교황 비오 11세가 오늘날의 피나코테카 미술관 건물을 공식 개관했습니다." }
 ];
-  
+  const grottoesData = [
+  { name: "사도 성 베드로", title: "초대 교황", desc: "대성당 중앙 제단 바로 아래 안치되어 있으며, 그의 무덤은 오늘날 대성당이 세워진 영적 기초입니다." },
+  { name: "교황 요한 바오로 2세", title: "위대한 순례자", desc: "그의 묘소는 전 세계 그리스도인들이 가장 많이 찾는 성스러운 순례지 중 하나입니다." },
+  { name: "교황 그레고리오 1세", title: "교회의 대박사", desc: "전례와 성가에 헌신한 그의 안식처는 소박하면서도 장엄한 대리석 조각으로 장식되어 있습니다." }
+];
+
   const grottoes = [
     { ...grottoesData[0], img: "/templates/OHMT021-museum/papal-tombs.png" },
     { ...grottoesData[1], img: "/templates/OHMT021-museum/curator.png" },
@@ -75,7 +75,7 @@ function MuseumInfoContent() {
             transition={{ duration: 1.5, delay: 0.5 }}
             className="inline-block text-xs uppercase font-bold tracking-[0.5em] text-white/40 mb-8"
           >
-            {"바티칸 미술관, 500년의 역사"}
+            {"바티칸 미술관 - 500년의 헤리티지"}
           </motion.span>
           <motion.h1
             initial={{ opacity: 0, y: 50 }}
@@ -83,7 +83,7 @@ function MuseumInfoContent() {
             transition={{ duration: 1.5, delay: 0.8 }}
             className="text-5xl md:text-8xl font-serif font-medium leading-[var(--leading-heading)] tracking-tighter break-keep"
           >
-            {"예술이 쌓아 올린 시간"}
+            {"돌에 깃든 영혼"}
           </motion.h1>
         </div>
       </section>
@@ -100,14 +100,14 @@ function MuseumInfoContent() {
           <motion.div variants={fadeIn} className="space-y-10">
             <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/40">{"제1장"}</span>
             <h2 className="text-5xl md:text-7xl font-serif leading-[var(--leading-heading)] tracking-tighter break-keep">
-              {"소장품의 시작"}
+              {"빛의 기초"}
             </h2>
             <p className="text-lg text-white/60 leading-relaxed font-normal break-keep">
-              {"1506년 라오콘 군상의 발견을 계기로 시작된 컬렉션은 여러 교황의 수집과 후원을 거쳐 오늘날의 바티칸 미술관으로 이어졌습니다."}
+              {"1506년 라오콘 군상의 발견과 함께 시작된 바티칸 미술관은 교황들의 예술적 후원과 완벽을 향한 인류의 끊임없는 열망이 축적된 5세기의 역사를 품고 있습니다."}
             </p>
           </motion.div>
           <motion.div variants={fadeIn} className="relative aspect-[4/5] overflow-hidden">
-            <img loading="lazy" src="/templates/OHMT021-museum/vatican-hallway.png" alt="바티칸 미술관 회랑" className="w-full h-full object-cover grayscale-[0.3] hover:scale-105 transition-transform duration-[2s]" />
+            <img loading="lazy" src="/templates/OHMT021-museum/vatican-hallway.png" alt="Museum Corridor" className="w-full h-full object-cover grayscale-[0.3] hover:scale-105 transition-transform duration-[2s]" />
           </motion.div>
         </motion.div>
 
@@ -115,7 +115,7 @@ function MuseumInfoContent() {
         <div className="max-w-3xl mx-auto">
           <div className="flex items-center gap-6 mb-16 text-white/20">
             <History size={28} strokeWidth={1} />
-            <h3 className="text-xl font-serif uppercase tracking-widest">{"주요 연혁"}</h3>
+            <h3 className="text-xl font-serif uppercase tracking-widest">{"시간의 궤적."}</h3>
           </div>
           <div className="flex flex-col gap-20 relative">
             <div className="absolute left-[20px] top-0 bottom-0 w-px bg-white/10" />
@@ -142,27 +142,26 @@ function MuseumInfoContent() {
 
         <div className="grid md:grid-cols-2 gap-24 items-center mb-40">
           <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ duration: 1.2 }} className="aspect-[4/5] overflow-hidden">
-            <img loading="lazy" src="/templates/OHMT021-museum/baldaquin.png" alt="베르니니의 청동 천개" className="w-full h-full object-cover grayscale-[0.2] hover:scale-105 transition-transform duration-[2s]" />
+            <img loading="lazy" src="/templates/OHMT021-museum/baldaquin.png" alt="Bernini's Baldaquin" className="w-full h-full object-cover grayscale-[0.2] hover:scale-105 transition-transform duration-[2s]" />
           </motion.div>
           <div className="space-y-10">
-            <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/40">{"성당의 중심"}</span>
+            <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/40">{"교황 제단"}</span>
             <h3 className="text-4xl md:text-6xl font-serif leading-[var(--leading-heading)] tracking-tighter break-keep">
-              {"베르니니의 청동 천개"}
+              {"베르니니의 천개 (Baldaquin)"}
             </h3>
             <p className="text-lg text-white/60 font-normal leading-relaxed break-keep">
-              미켈란젤로가 설계한 돔 아래에는 잔 로렌초 베르니니의 거대한 청동 천개가 놓여 있습니다.<br className="hidden md:block" />
-              성 베드로의 무덤이 있는 위치를 표시하며 대성당의 중심을 이룹니다.
+              {"미켈랑젤로가 설계한 돔 바로 아래, 잔 로렌초 베르니니가 만든 29미터 높이의 거대한 청동 천개는 성 베드로의 무덤을 표시하며 성당의 미학적 중심을 이룹니다."}
             </p>
-            <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/20">{"제작 기간: 1623–1634년"}</span>
+            <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/20">{"제작 기간: 1623년 - 1634년"}</span>
           </div>
         </div>
 
         {/* Papal Grottoes */}
         <div className="border-t border-white/5 pt-12 md:pt-24">
           <div className="mb-16">
-            <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/40 block mb-6">{"바티칸의 공간과 역사"}</span>
+            <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/40 block mb-6">{"고요한 바티칸의 기록"}</span>
             <h3 className="text-4xl md:text-6xl font-serif tracking-tighter leading-[var(--leading-heading)] break-keep">
-              {"미술관의 공간과 기억"}
+              {"교황의 지하 묘소 (Grottoes)"}
             </h3>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -182,7 +181,7 @@ function MuseumInfoContent() {
 
       {/* CTA */}
       <section className="py-10 md:py-20 md:py-32 lg:py-40 text-center px-6">
-        <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/40 block mb-8">{"더 살펴보기"}</span>
+        <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/40 block mb-8">{"여정의 확장"}</span>
         <h3 className="text-5xl md:text-7xl font-serif tracking-tighter mb-16 break-keep">
           {"아카이브 둘러보기"}
         </h3>
@@ -190,7 +189,7 @@ function MuseumInfoContent() {
           href="/ko/templates/OHMT021-museum/collections"
           className="inline-flex items-center gap-4 text-xs font-bold uppercase tracking-[0.5em] border border-white/20 px-10 py-6 hover:bg-[var(--color-accent)] hover:text-[var(--color-primary)] transition-[color,background] duration-500 group"
         >
-          {"소장품 둘러보기"}
+          {"소장품 탐색하기"}
           <ArrowRight size={14} className="group-hover:translate-x-2 transition-transform duration-300" />
         </Link>
       </section>

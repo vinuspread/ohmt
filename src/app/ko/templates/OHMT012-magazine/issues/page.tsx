@@ -21,10 +21,10 @@ export default function IssuesPage() {
               지난 발행호
             </span>
             <h1 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-h2)] font-normal leading-[var(--leading-heading)] max-w-3xl">
-              발행호
+              이슈.
             </h1>
             <p className="mt-5 text-[1rem] text-[var(--theme-text-muted)] max-w-xl leading-[var(--leading-body)] break-keep">
-              계절마다 하나의 주제를 깊이 있게 다룹니다. 지금까지 발행한 모든 호를 살펴보세요.
+              매 호마다 한 시즌의 취재를 하나의 테마로 엮어냅니다. 지금까지의 발행호를 살펴보세요.
             </p>
           </div>
         </section>
@@ -43,7 +43,7 @@ export default function IssuesPage() {
                   </Link>
                   <div className="flex flex-col justify-center">
                     <span className="text-[0.8rem] font-bold uppercase tracking-[0.18em] text-[var(--theme-accent)] mb-2 block">
-                      제{issue.number}호 · {issue.year}년 {issue.season}
+                      제{issue.number}호 - {issue.year}년 {issue.season}
                     </span>
                     <h2 className="font-[family-name:var(--theme-font-heading)] text-[1.5rem] sm:text-[1.7rem] font-normal leading-tight mb-4 break-keep">
                       {issue.theme}
@@ -52,7 +52,7 @@ export default function IssuesPage() {
                       href={`/ko/templates/OHMT012-magazine/article/${issue.leadSlug}`}
                       className="text-[0.8rem] font-bold uppercase tracking-[0.14em] text-[var(--theme-text)] hover:text-[var(--theme-accent)] transition-colors underline underline-offset-4"
                     >
-                      대표 기사 보기
+                      대표 기사 읽기
                     </Link>
                   </div>
                 </article>

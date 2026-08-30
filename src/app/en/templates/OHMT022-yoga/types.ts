@@ -8,7 +8,15 @@ export interface YogaClass {
   image: string;
   duration: string;
   level: string;
+  intensity: 1 | 2 | 3;
+  instructorId: string;
+  preparation: string;
   benefits: string[];
+  recommendedFor: string[];
+  curriculum: {
+    title: string;
+    description: string;
+  }[];
 }
 
 export interface Instructor {

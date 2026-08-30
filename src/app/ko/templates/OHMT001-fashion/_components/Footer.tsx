@@ -12,9 +12,9 @@ export const Newsletter = () => {
                     새 컬렉션과 재입고, 저널 소식을 이메일로 받아보세요.
                 </h2>
                 <div className="max-w-2xl mx-auto relative group">
-                    <input 
-                        type="email" 
-                        placeholder="이메일 주소" 
+                    <input
+                        type="email"
+                        placeholder="이메일 주소"
                         className="w-full bg-white border-0 py-4 sm:py-6 px-6 sm:px-10 text-xs font-bold tracking-[0.2em] sm:tracking-[0.3em] outline-none placeholder:text-black/20 focus:ring-1 focus:ring-black transition-shadow"
                     />
                      <button className="absolute right-3 top-1/2 -translate-y-1/2 flex items-center gap-2 text-xs sm:text-xs font-bold tracking-[0.15em] sm:tracking-[0.2em] bg-black text-white px-6 py-3 hover:bg-black/80 transition-colors">

@@ -54,7 +54,7 @@ export const ProductCard = ({
         <span className="text-xs uppercase tracking-[0.2em] text-[var(--color-text-muted)]">
           {category}
         </span>
-        <h3 className="text-sm font-medium text-[var(--color-text)] leading-snug">
+        <h3 className="text-sm font-medium text-[var(--color-text)] leading-[1.05]">
           {name}
         </h3>
 

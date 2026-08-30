@@ -90,12 +90,12 @@ export default function CategoryPage() {
                     <p className="text-xs font-bold uppercase tracking-[0.16em] text-[var(--color-secondary)]">
                       {product.category}
                     </p>
-                    <h2 className="mt-2 text-xl md:text-2xl font-black">{product.name}</h2>
+                    <h2 className="mt-2 text-xl md:text-2xl font-extrabold">{product.name}</h2>
                     <p className="mt-2 text-sm leading-relaxed text-[var(--color-secondary)] line-clamp-2">
                       {product.desc}
                     </p>
                     <div className="mt-5 flex items-center justify-between border-t border-black/10 pt-4">
-                      <span className="text-lg font-black">{product.price}</span>
+                      <span className="text-lg font-extrabold">{product.price}</span>
                       <span className="inline-flex items-center gap-2 text-sm font-bold uppercase">
                         <ShoppingBag size={16} strokeWidth={1.6} />
                         View
@@ -107,7 +107,7 @@ export default function CategoryPage() {
             </div>
           ) : (
             <div className="border border-black/10 rounded-md p-10 text-center">
-              <h2 className="text-2xl font-black mb-3">No pieces found</h2>
+              <h2 className="text-2xl font-extrabold mb-3">No pieces found</h2>
               <p className="text-[var(--color-secondary)] mb-6">
                 This category is being curated. Return to the full collection.
               </p>

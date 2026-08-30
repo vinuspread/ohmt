@@ -68,13 +68,13 @@ export default function AboutPage() {
 
       {/* Banner Photo */}
       <section className="relative aspect-[21/9] w-full overflow-hidden rounded border border-[var(--color-border)]">
-        <Image 
-          src="/templates/OHMT036-amber-grove/hero-orchard-v3.jpg" 
-          alt="Amber Grove orchard rows in morning light" 
-          fill 
+        <Image
+          src="/templates/OHMT036-amber-grove/hero-orchard-v3.jpg"
+          alt="Amber Grove orchard rows in morning light"
+          fill
           sizes="(min-width: 1024px) 80vw, 100vw"
-          priority 
-          className="object-cover" 
+          priority
+          className="object-cover"
         />
       </section>
 
@@ -87,7 +87,7 @@ export default function AboutPage() {
             We focus on traditional husbandry methods rather than agricultural automation. The result is real orchard flavor.
           </p>
         </div>
-        
+
         <div className="lg:col-span-8">
           <div className="grid gap-8 sm:grid-cols-3">
             {principles.map((item) => (
@@ -110,7 +110,7 @@ export default function AboutPage() {
             Forty years of hand-written records and field logs from Thomas's stand to today's crate shipping.
           </p>
         </div>
-        
+
         <div className="lg:col-span-8">
           <div className="relative border-l border-[var(--color-border)] pl-6 ml-3 space-y-10">
             {timeline.map((item) => (
@@ -134,7 +134,7 @@ export default function AboutPage() {
             Certified organic and biodynamic agricultural practices audited annually.
           </p>
         </div>
-        
+
         <div className="lg:col-span-8">
           <div className="grid gap-6 sm:grid-cols-3">
             {certifications.map((cert) => (

@@ -9,7 +9,7 @@ export const CollectionShowcase = () => {
     <section className="py-12 md:py-24 lg:py-32 bg-[#F9F9FB] selection:bg-black selection:text-white overflow-hidden">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-24 items-center">
-          
+
           {/* Asymmetric Left: High Quality Lookbook Image */}
           <div className="lg:col-span-7 group cursor-pointer relative overflow-hidden aspect-[4/3] md:aspect-[16/10] bg-gray-200">
             <motion.div
@@ -21,7 +21,7 @@ export const CollectionShowcase = () => {
             >
               <img
                 src="/templates/OHMT001-fashion/exclusive-custom.jpg"
-                alt="Exclusive Collection Lookbook" 
+                alt="Exclusive Collection Lookbook"
                 className="w-full h-full object-cover grayscale brightness-95 group-hover:grayscale-0 group-hover:scale-105 transition-[filter,transform] duration-[1.8s] ease-out-sine"
               />
               <div className="absolute inset-0 bg-black/5 group-hover:bg-black/0 transition-colors duration-1000" />
@@ -40,7 +40,7 @@ export const CollectionShowcase = () => {
               <span className="text-xs uppercase tracking-[-0.03em] text-black/40 font-medium block">
                 한정 컬렉션
               </span>
-              <h3 className="text-3xl md:text-5xl font-normal tracking-[-0.04em] uppercase leading-[var(--leading-heading)]">
+              <h3 className="text-[clamp(2rem,4vw,3.75rem)] font-light tracking-[-0.035em] leading-[1.12] text-balance">
                 소량 제작 <br />
                 <span className="font-semibold">아틀리에 에디션</span>
               </h3>
@@ -51,7 +51,7 @@ export const CollectionShowcase = () => {
               whileInView={{ opacity: 0.6, x: 0 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: 0.2, duration: 1.2, ease: "easeOut" }}
-              className="text-sm text-black/70 leading-[var(--leading-body)] font-medium tracking-[-0.025em] max-w-md normal-case"
+              className="text-base text-black/70 leading-[1.7] font-normal tracking-[-0.015em] max-w-[48ch] normal-case"
               style={{ wordBreak: "keep-all" }}
             >
               좋은 소재를 구하기 어렵거나 제작 과정에 많은 시간이 필요한 제품은 소량으로만 만듭니다. 한 벌씩 재단과 봉제를 확인하고, 정해진 수량 안에서 완성도 있게 선보입니다.

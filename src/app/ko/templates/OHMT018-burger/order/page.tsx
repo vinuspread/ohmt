@@ -7,7 +7,6 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import { motion, AnimatePresence } from "motion/react";
 import { Check, ArrowRight, ArrowLeft, ShoppingBag, CreditCard, ChevronRight } from "lucide-react";
-import { formatWon } from "../_utils/currency";
 
 // 주문 프로세스 단계 정의
 type OrderStep = "burger" | "options" | "drinks" | "payment" | "success";
@@ -52,17 +51,17 @@ function OrderPageContent() {
   const calculateTotal = () => {
     if (!order.burger) return 0;
     let total = order.burger.price;
-    
+
     // 패티 옵션 추가 금액
     if (order.options.patty === "double") total += 2.0;
     if (order.options.patty === "triple") total += 4.0;
-    
+
     // 베이컨 추가 금액
     if (order.options.bacon) total += 1.5;
-    
+
     // 음료 금액
     if (order.drink) total += order.drink.price;
-    
+
     return parseFloat(total.toFixed(2));
   };
 
@@ -96,13 +95,13 @@ function OrderPageContent() {
       <TemplateWrapper theme={theme}>
         <main className="antialiased min-h-screen pt-20 md:pt-24 bg-white text-[var(--color-text)]">
           <div className="max-w-[1440px] mx-auto px-6 md:px-12 py-10">
-            
+
             {/* Step Progress Indicator (Only visible if not success) */}
             {step !== "success" && (
               <div className="flex items-center justify-between overflow-x-auto pb-6 border-b border-[var(--color-border)] mb-10 gap-2 scrollbar-none">
                 {steps.slice(0, 4).map((s, idx) => {
                   const isActive = step === s.key;
-                  const isCompleted = 
+                  const isCompleted =
                     steps.findIndex(x => x.key === step) > steps.findIndex(x => x.key === s.key);
                   return (
                     <div key={s.key} className="flex items-center gap-3 shrink-0">
@@ -133,11 +132,11 @@ function OrderPageContent() {
 
             {/* Layout Grid (4 columns, content occupies 3 columns) */}
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-              
+
               {/* Main Interaction Area */}
               <div className="lg:col-span-3">
                 <AnimatePresence mode="wait">
-                  
+
                   {/* Step 1: Burger Selection */}
                   {step === "burger" && (
                     <motion.div
@@ -165,7 +164,7 @@ function OrderPageContent() {
                             <div className="p-4 md:p-5">
                               <div className="flex items-start justify-between gap-2 mb-2">
                                 <h3 className="text-base md:text-lg font-bold leading-[var(--leading-heading)]">{item.name}</h3>
-                                <span className="text-base md:text-lg font-bold text-[var(--color-accent)] shrink-0">{formatWon(item.price)}</span>
+                                <span className="text-base md:text-lg font-bold text-[var(--color-accent)] shrink-0">${item.price}</span>
                               </div>
                               <p className="text-sm text-[var(--color-text-muted)] leading-relaxed line-clamp-2">{item.description}</p>
                               {item.calories && (
@@ -204,8 +203,8 @@ function OrderPageContent() {
                         <div className="grid grid-cols-3 gap-3">
                           {[
                             { key: "single", label: "싱글 패티", price: "기본" },
-                            { key: "double", label: "더블 패티", price: "+2,000원" },
-                            { key: "triple", label: "트리플 패티", price: "+4,000원" },
+                            { key: "double", label: "더블 패티", price: "+$2.00" },
+                            { key: "triple", label: "트리플 패티", price: "+$4.00" },
                           ].map(opt => (
                             <button
                               key={opt.key}
@@ -263,7 +262,7 @@ function OrderPageContent() {
                               <span className="text-xs text-[var(--color-text-muted)]">바삭한 훈제 베이컨 슬라이스 2장</span>
                             </div>
                             <div className="flex items-center gap-3">
-                              <span className="text-sm font-bold text-[var(--color-accent-sub)]">+1,500원</span>
+                              <span className="text-sm font-bold text-[var(--color-accent-sub)]">+$1.50</span>
                               <input
                                 type="checkbox"
                                 checked={order.options.bacon}
@@ -342,7 +341,7 @@ function OrderPageContent() {
                             <div className="p-4 md:p-5">
                               <div className="flex items-start justify-between gap-2 mb-2">
                                 <h3 className="text-base md:text-lg font-bold leading-[var(--leading-heading)]">{item.name}</h3>
-                                <span className="text-base md:text-lg font-bold text-[var(--color-accent)] shrink-0">{formatWon(item.price)}</span>
+                                <span className="text-base md:text-lg font-bold text-[var(--color-accent)] shrink-0">${item.price}</span>
                               </div>
                               <p className="text-sm text-[var(--color-text-muted)] leading-relaxed line-clamp-2">{item.description}</p>
                               {item.calories && (
@@ -387,7 +386,7 @@ function OrderPageContent() {
                         <h3 className="text-base font-bold flex items-center gap-2">
                           <CreditCard size={18} /> 결제 정보 입력
                         </h3>
-                        
+
                         <div className="space-y-3">
                           <div>
                             <label className="text-xs text-[var(--color-text-muted)] block mb-1">카드 소유주 명</label>
@@ -430,7 +429,7 @@ function OrderPageContent() {
                         onClick={processPayment}
                         className="w-full bg-[var(--color-accent-sub)] text-white py-4 font-bold uppercase tracking-wider flex items-center justify-center gap-2 hover:bg-[var(--color-accent-sub-hover)] rounded-full active:scale-[0.98] transition-all"
                       >
-                        결제 승인 및 주문완료 ({formatWon(calculateTotal())}) <Check size={16} />
+                        결제 승인 및 주문완료 (${calculateTotal()}) <Check size={16} />
                       </button>
                     </motion.div>
                   )}
@@ -463,24 +462,24 @@ function OrderPageContent() {
                         <div className="space-y-2">
                           <div className="flex justify-between text-sm font-bold">
                             <span>{order.burger?.name}</span>
-                            <span>{order.burger ? formatWon(order.burger.price) : ""}</span>
+                            <span>${order.burger?.price}</span>
                           </div>
                           <div className="pl-4 text-xs text-[var(--color-text-muted)] space-y-1">
                             <div>· 패티: {order.options.patty === "single" ? "싱글" : order.options.patty === "double" ? "더블" : "트리플"}</div>
                             <div>· 소스: {order.options.sauce === "none" ? "없음" : order.options.sauce === "default" ? "보통" : "많이"}</div>
                             <div>· 양파: {order.options.onion ? "포함" : "제외"}</div>
-                            {order.options.bacon && <div>· 추가 베이컨: (+1,500원)</div>}
+                            {order.options.bacon && <div>· 추가 베이컨: (+ $1.50)</div>}
                           </div>
                           {order.drink && (
                             <div className="flex justify-between text-sm font-bold">
                               <span>{order.drink.name}</span>
-                              <span>{formatWon(order.drink.price)}</span>
+                              <span>${order.drink.price}</span>
                             </div>
                           )}
                         </div>
                         <div className="border-t pt-3 flex justify-between font-bold text-base text-[var(--color-accent-sub)]">
                           <span>총 결제금액</span>
-                          <span>{formatWon(calculateTotal())}</span>
+                          <span>${calculateTotal()}</span>
                         </div>
                       </div>
 
@@ -512,35 +511,35 @@ function OrderPageContent() {
                     <h3 className="text-lg font-bold flex items-center gap-2">
                       <ShoppingBag size={18} /> 주문 명세서
                     </h3>
-                    
+
                     {order.burger ? (
                       <div className="space-y-4">
                         <div className="space-y-2">
                           <div className="flex justify-between text-sm font-bold">
                             <span>{order.burger.name}</span>
-                            <span>{formatWon(order.burger.price)}</span>
+                            <span>${order.burger.price}</span>
                           </div>
-                          
+
                           {/* Options display */}
                           <div className="text-xs text-[var(--color-text-muted)] space-y-1 pl-3 border-l-2 border-[var(--color-border)]">
-                            <div>· 패티: {order.options.patty === "single" ? "싱글" : order.options.patty === "double" ? "더블 (+2,000원)" : "트리플 (+4,000원)"}</div>
+                            <div>· 패티: {order.options.patty === "single" ? "싱글" : order.options.patty === "double" ? "더블 (+ $2.00)" : "트리플 (+ $4.00)"}</div>
                             <div>· 소스: {order.options.sauce === "none" ? "없음" : order.options.sauce === "default" ? "보통" : "많이"}</div>
                             <div>· 양파: {order.options.onion ? "포함" : "제외"}</div>
-                            {order.options.bacon && <div>· 베이컨 추가 (+1,500원)</div>}
+                            {order.options.bacon && <div>· 베이컨 추가 (+ $1.50)</div>}
                           </div>
                         </div>
 
                         {order.drink && (
                           <div className="flex justify-between text-sm font-bold border-t border-[var(--color-border)] pt-3">
                             <span>{order.drink.name}</span>
-                            <span>{formatWon(order.drink.price)}</span>
+                            <span>${order.drink.price}</span>
                           </div>
                         )}
 
                         <div className="border-t border-[var(--color-border)] pt-4 space-y-2">
                           <div className="flex justify-between text-xs text-[var(--color-text-muted)]">
                             <span>소계</span>
-                            <span>{formatWon(calculateTotal())}</span>
+                            <span>${calculateTotal()}</span>
                           </div>
                           <div className="flex justify-between text-xs text-[var(--color-text-muted)]">
                             <span>세금 (VAT 10%)</span>
@@ -548,7 +547,7 @@ function OrderPageContent() {
                           </div>
                           <div className="flex justify-between font-bold text-lg text-[var(--color-accent-sub)] pt-1">
                             <span>총금액</span>
-                            <span>{formatWon(calculateTotal())}</span>
+                            <span>${calculateTotal()}</span>
                           </div>
                         </div>
                       </div>

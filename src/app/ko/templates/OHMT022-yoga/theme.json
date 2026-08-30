@@ -6,43 +6,43 @@
   "mode": "light",
   "theme": {
     "palette": {
-      "primary": "#FDFCF9",
-      "secondary": "#1C1C1A",
-      "accent": "#C4956A",
+      "primary": "#F6F3ED",
+      "secondary": "#353B46",
+      "accent": "#9A623D",
       "text": {
-        "main": "#1C1C1A",
-        "muted": "#9A9690",
+        "main": "#22211D",
+        "muted": "#6E6A63",
         "contrast": "#FFFFFF"
       },
       "ui": {
-        "border": "rgba(28, 28, 26, 0.12)",
-        "hover": "#F7F5F1",
+        "border": "rgba(34, 33, 29, 0.14)",
+        "hover": "#EEE9DF",
         "shadow": "none"
       }
     },
     "typography": {
       "heading": {
-        "font": "Inter, sans-serif",
-        "weight": "300",
-        "tracking": "-0.02em",
-        "style": "font-light tracking-tight"
+        "font": "Pretendard, SUIT, Noto Sans KR, sans-serif",
+        "weight": "600",
+        "tracking": "0",
+        "style": "font-semibold tracking-normal"
       },
       "body": {
-        "font": "Inter, sans-serif",
-        "weight": "300",
+        "font": "Pretendard, SUIT, Noto Sans KR, sans-serif",
+        "weight": "400",
         "leading": "1.6",
-        "style": "font-light leading-relaxed"
+        "style": "font-normal leading-relaxed"
       },
       "mono": {
         "font": "JetBrains Mono",
         "weight": "400"
       },
       "type_scale": {
-        "display": "clamp(3rem, 7vw, 5.5rem)",
-        "h1": "clamp(2.5rem, 5vw, 4rem)",
-        "h2": "clamp(2rem, 4vw, 3rem)",
-        "h3": "clamp(1.5rem, 3vw, 2rem)",
-        "lead": "clamp(1.125rem, 2vw, 1.5rem)",
+        "display": "clamp(2.75rem, 5vw, 4.75rem)",
+        "h1": "clamp(2.25rem, 4.1vw, 3.75rem)",
+        "h2": "clamp(1.75rem, 3vw, 2.625rem)",
+        "h3": "clamp(1.375rem, 1.8vw, 1.75rem)",
+        "lead": "clamp(1.0625rem, 1.6vw, 1.375rem)",
         "body": "Tailwind text-base / text-sm / text-xs"
       }
     },

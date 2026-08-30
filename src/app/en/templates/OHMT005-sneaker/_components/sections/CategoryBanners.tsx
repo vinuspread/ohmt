@@ -179,7 +179,7 @@ const categories = [
     <section className="py-16 bg-white">
       <div className="max-w-[1440px] mx-auto px-6">
         <div className="flex items-center justify-between mb-10">
-          <h2 className="text-[1.5rem] md:text-[1.8rem] font-black tracking-[-0.03em] uppercase">{t.categoryBanners.title}</h2>
+          <h2 className="text-[1.5rem] md:text-[1.8rem] font-extrabold tracking-[-0.02em] uppercase">{t.categoryBanners.title}</h2>
           <Link href="/en/templates/OHMT005-sneaker/shop-all" className="text-[0.85rem] font-bold uppercase tracking-[0.15em] text-black/50 hover:text-black transition-colors border-b-2 border-black/20 pb-0.5">
             {t.categoryBanners.viewAll}
           </Link>
@@ -194,7 +194,7 @@ const categories = [
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>
-              <span className="text-[0.82rem] md:text-[0.9rem] font-black uppercase tracking-[0.05em] text-center text-black/80 group-hover:text-black transition-colors">
+              <span className="text-[0.82rem] md:text-[0.9rem] font-extrabold uppercase tracking-[0.05em] text-center text-black/80 group-hover:text-black transition-colors">
                 {cat.label}
               </span>
             </Link>

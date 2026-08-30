@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { Hero } from './_components/sections/Hero'
 import { VisionStatement } from './_components/sections/VisionStatement'
 import { FoundationIntro } from './_components/sections/FoundationIntro'
@@ -9,9 +9,9 @@ import { NewsroomPreview } from './_components/sections/NewsroomPreview'
 import { CTABanner } from './_components/sections/CTABanner'
 
 export const metadata: Metadata = {
-  title: 'OHMT 파운데이션',
+  title: 'OHMT 파운데이션 홈',
   description:
-    '기술 교육, 지역 건강 지원, 숲 복원, 장학 프로그램의 참여자 이야기와 확인 가능한 성과를 소개합니다.',
+    '유스 인 테크, 헬스 코어, 그린 퓨처스, 퍼스트젠 스칼러스의 사람 중심 스토리와 검증 가능한 임팩트 데이터.',
 }
 
 const orgJsonLd = {
@@ -19,7 +19,7 @@ const orgJsonLd = {
   '@type': 'NGO',
   name: 'OHMT 파운데이션',
   url: '/ko/templates/OHMT033-foundation',
-  description: '참여자의 이야기와 확인 가능한 프로그램 성과를 함께 공개하는 재단입니다.',
+  description: '사람 중심 스토리와 검증 가능한 프로그램 데이터로 사회적 임팩트를 보여주는 재단.',
   logo: '/templates/OHMT033-foundation/og-image.jpg',
 }
 

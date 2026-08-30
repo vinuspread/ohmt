@@ -7,7 +7,7 @@ import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 const contactInfo = [
-  { icon: Mail, title: "Email", details: "contact@ohmt.site" },
+  { icon: Mail, title: "Email", details: "contact@canvassupply.site" },
   { icon: MapPin, title: "Studio", details: "Seoul, South Korea" },
   { icon: Clock, title: "Hours", details: "Mon-Fri, 9AM-6PM" },
 ];
@@ -88,4 +88,3 @@ export default function ContactPage() {
     </React.Suspense>
   );
 }
-

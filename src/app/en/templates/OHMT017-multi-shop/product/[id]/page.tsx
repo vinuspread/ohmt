@@ -65,7 +65,7 @@ function ProductPageContent() {
 
               <div className="md:sticky md:top-28">
                 <p className="text-xs uppercase tracking-[0.25em] text-[var(--color-text-muted)] mb-3">{product.category}</p>
-                <h1 className="text-2xl md:text-3xl font-bold tracking-tight leading-tight mb-3">{product.name}</h1>
+                <h1 className="text-2xl md:text-3xl font-bold tracking-tight leading-[1.05] mb-3">{product.name}</h1>
 
                 {product.rating && (
                   <div className="flex items-center gap-2 mb-5">

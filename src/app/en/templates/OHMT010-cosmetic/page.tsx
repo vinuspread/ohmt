@@ -72,19 +72,19 @@ return (
     <TemplateWrapper theme={theme}>
       <main className="antialiased bg-[var(--color-bg)] text-black selection:bg-black selection:text-white">
         <Header />
-        
+
         <Hero />
-        
+
         <ProductGrid />
-        
+
         <section className="py-16 md:py-32 bg-white border-t border-black/10 overflow-hidden">
           <div className="max-w-[1440px] mx-auto px-6 md:px-10">
             <div className="grid md:grid-cols-2 gap-28 items-center">
               <div className="order-2 md:order-1">
-                <img 
-                  src="/templates/OHMT010-cosmetic/cosmetic-face-mask.png" 
-                  className="w-full h-[380px] object-cover" 
-                  alt="Brand story" 
+                <img
+                  src="/templates/OHMT010-cosmetic/cosmetic-face-mask.png"
+                  className="w-full h-[380px] object-cover"
+                  alt="Brand story"
                 />
               </div>
               <div className="order-1 md:order-2">
@@ -101,8 +101,7 @@ return (
             </div>
           </div>
         </section>
-        
-        <p className="text-center text-[11px] leading-relaxed text-neutral-400 px-6 py-6">This page is a website design template demo by OHMT, not an actual client or operating business. The brand names, people, testimonials, contact details, and performance figures shown are example content.</p>
+
         <Footer />
       </main>
     </TemplateWrapper>
@@ -114,7 +113,7 @@ const jsonLd = {
   "@type": "Store",
   name: "VELURE Cosmetic",
   description: "Premium beauty and cosmetic brand showcase featuring advanced skincare rooted in nature and refined by science.",
-  url: "https://ohmt.site/en/templates/OHMT010-cosmetic",
+  url: "https://ohmytemplate.com/en/templates/OHMT010-cosmetic",
   logo: "/templates/OHMT010-cosmetic/og-image.jpg",
 };
 

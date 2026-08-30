@@ -68,14 +68,14 @@ export const Navbar = () => {
 
            {/* Icons */}
            <div className={`flex items-center gap-4 sm:gap-6 transition-colors duration-500 ${!isTransparent ? "text-black" : "text-white"}`}>
-             <button className="hover:opacity-50 transition-opacity focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-500" aria-label="검색">
+             <button className="inline-flex min-h-11 min-w-11 items-center justify-center hover:opacity-50 transition-opacity focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-500" aria-label="검색">
                <Search size={20} strokeWidth={1.5} aria-hidden="true" />
              </button>
-             <Link href="/ko/templates/OHMT001-fashion/cart" className="relative hover:opacity-50 transition-opacity focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-500" aria-label="쇼핑백">
+             <Link href="/ko/templates/OHMT001-fashion/cart" className="relative inline-flex min-h-11 min-w-11 items-center justify-center hover:opacity-50 transition-opacity focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-500" aria-label="쇼핑백">
                <ShoppingBag size={20} strokeWidth={1.5} aria-hidden="true" />
              </Link>
-             <button 
-               className="md:hidden p-1 focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-500"
+             <button
+               className="md:hidden inline-flex min-h-11 min-w-11 items-center justify-center focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-neutral-500"
                onClick={() => setMobileOpen(!mobileOpen)}
                aria-label={mobileOpen ? "메뉴 닫기" : "메뉴 열기"}
              >
@@ -87,7 +87,7 @@ export const Navbar = () => {
       </nav>
 
       {/* Mobile Menu Drawer */}
-      <div 
+      <div
         className={`fixed inset-x-0 z-40 bg-white border-b border-[var(--color-border)] transition-[max-height,opacity] duration-500 md:hidden overflow-hidden ${
           mobileOpen ? "top-14 max-h-[550px] opacity-100 py-10" : "top-14 max-h-0 opacity-0 py-0"
         }`}
@@ -106,7 +106,7 @@ export const Navbar = () => {
                     key={item.id}
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
-                   className="hover:text-black py-2.5 transition-colors block"
+                   className="hover:text-black py-3.5 transition-colors block"
                  >
                    {item.name}
                  </Link>

@@ -50,7 +50,7 @@ export function Header() {
         {/* Logo */}
         <Link href={baseRoute} className="flex items-center group">
           <span className="font-sans font-bold text-lg tracking-[0.06em] text-[var(--color-text)]">
-            OHMT
+ARCHE
           </span>
         </Link>
 

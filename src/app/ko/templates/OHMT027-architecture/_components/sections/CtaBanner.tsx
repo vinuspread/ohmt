@@ -27,8 +27,10 @@ export function CtaBanner() {
         <ScrollReveal>
           <div className="space-y-8 max-w-2xl">
             <h2 className="font-heading font-normal text-5xl md:text-6xl text-white leading-[var(--leading-heading)]">
-              준비 중인 공간을<br />
-              이야기해주세요.</h2>
+              준비 중인 공간을
+              <br />
+              이야기해주세요.
+            </h2>
             <div>
               <Link
                 href={`${baseRoute}/contact`}

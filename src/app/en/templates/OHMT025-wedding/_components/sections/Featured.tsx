@@ -142,4 +142,3 @@ function GalleryItem({ project, className = "", aspectClass = "aspect-[3/4]" }: 
     </motion.div>
   );
 }
-

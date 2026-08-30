@@ -24,13 +24,14 @@ export function SpecsHero() {
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 pb-16 md:pb-24">
         <div ref={ref}>
           <p className="font-inter text-xs tracking-[0.15em] text-[var(--accent)] uppercase mb-4">
-            NUBI 제원</p>
+            성능 제원
+          </p>
           <h1 className="font-michroma text-[length:var(--text-h1)] text-[var(--text)] leading-[var(--leading-heading)] tracking-[-0.03em] mb-4">
-            수치로 확인하세요.</h1>
+            설계로 증명합니다.
+          </h1>
           <p className="font-inter text-sm text-[var(--text-muted)] max-w-[440px] leading-relaxed">
-            주행거리와 충전, 크기와 주요 편의 기능을
-            <br className="hidden md:block" />{" "}
-            한눈에 확인할 수 있습니다.</p>
+            하나하나 의미 있게 완성한 수치들을 직접 확인해보세요.
+          </p>
         </div>
       </div>
     </section>

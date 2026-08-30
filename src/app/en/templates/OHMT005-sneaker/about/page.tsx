@@ -31,7 +31,7 @@ function AboutPageContent() {
         <section className="pt-16 md:pt-32 pb-20 bg-black text-white">
           <div className="max-w-[1440px] mx-auto px-6">
             <span className="text-[0.7rem] font-bold uppercase tracking-[0.25em] text-white/40 block mb-6">Our Story</span>
-            <h1 className="text-[length:var(--text-display)] font-black tracking-[-0.03em] uppercase leading-[var(--leading-heading)] max-w-3xl">
+            <h1 className="text-[length:var(--text-display)] font-black tracking-[-0.02em] uppercase leading-[var(--leading-heading)] max-w-3xl">
               Premium<br /><span className="text-red-600">footwear.</span><br />Real values.
             </h1>
             <p className="mt-8 text-[1rem] text-white/60 leading-[var(--leading-body)] max-w-[520px]">
@@ -45,7 +45,7 @@ function AboutPageContent() {
           <div className="max-w-[1440px] mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
             <div>
               <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-black/40 block mb-5">The Beginning</span>
-              <h2 className="text-[2rem] font-black uppercase tracking-tight leading-tight mb-6">Started in a<br />small workshop.</h2>
+              <h2 className="text-[2rem] font-extrabold uppercase tracking-tight leading-[1.05] mb-6">Started in a<br />small workshop.</h2>
               <p className="text-[0.9rem] text-black/60 leading-[var(--leading-body)] mb-4">
                 Our founder Marco spent three years working in traditional shoemaking before he realised the industry had a fundamental problem - quality and ethics were always traded off against each other.
               </p>
@@ -66,12 +66,12 @@ function AboutPageContent() {
         <section className="py-12 md:py-24 bg-[var(--color-bg-secondary)]">
           <div className="max-w-[1440px] mx-auto px-6">
             <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-black/40 block mb-4">What We Stand For</span>
-            <h2 className="text-[2rem] font-black uppercase tracking-tight leading-tight mb-14">Our values.</h2>
+            <h2 className="text-[2rem] font-extrabold uppercase tracking-tight leading-[1.05] mb-14">Our values.</h2>
             <div className="grid md:grid-cols-4 gap-6">
               {values.map((v, i) => (
                 <div key={i} className="bg-white p-8 border border-black/5">
                   <span className="text-black/30 block mb-5">{v.icon}</span>
-                  <h3 className="text-[1rem] font-black uppercase mb-3">{v.title}</h3>
+                  <h3 className="text-[1rem] font-extrabold uppercase mb-3">{v.title}</h3>
                   <p className="text-[0.82rem] text-black/60 leading-[var(--leading-body)]">{v.desc}</p>
                 </div>
               ))}
@@ -90,7 +90,7 @@ function AboutPageContent() {
                 { num: "80%", label: "Renewable energy used" },
               ].map((s, i) => (
                 <div key={i} className="py-10 px-8 text-center">
-                  <p className="text-[3rem] font-black tracking-[-0.03em] leading-none mb-2">{s.num}</p>
+                  <p className="text-[3rem] font-extrabold tracking-[-0.02em] leading-none mb-2">{s.num}</p>
                   <p className="text-[0.75rem] text-black/50 uppercase tracking-[0.1em] font-bold">{s.label}</p>
                 </div>
               ))}
@@ -102,14 +102,14 @@ function AboutPageContent() {
         <section className="py-12 md:py-24 bg-white">
           <div className="max-w-[1440px] mx-auto px-6">
             <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-black/40 block mb-4">The People</span>
-            <h2 className="text-[2rem] font-black uppercase tracking-tight leading-tight mb-14">Meet the team.</h2>
+            <h2 className="text-[2rem] font-extrabold uppercase tracking-tight leading-[1.05] mb-14">Meet the team.</h2>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {team.map((m, i) => (
                 <div key={i} className="group">
                   <div className="aspect-square overflow-hidden bg-[var(--color-bg-secondary)] mb-4">
                     <img loading="lazy" src={m.img} alt={m.name} className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" />
                   </div>
-                  <p className="text-[0.9rem] font-black uppercase">{m.name}</p>
+                  <p className="text-[0.9rem] font-extrabold uppercase">{m.name}</p>
                   <p className="text-[0.78rem] text-black/50">{m.role}</p>
                 </div>
               ))}

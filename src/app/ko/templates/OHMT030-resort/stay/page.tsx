@@ -18,17 +18,12 @@ export default function StayPage() {
     <>
       <Navbar />
       <main className="min-h-screen" style={{ backgroundColor: "var(--bg)" }}>
-        <SubpageHero title={"THE\nVILLAS"} image="sub-hero-stay.jpg" alt="OHMT 스위트">
-          <>
-            에게해와 칼데라를 바라보는 네 개의 스위트.<br />
-            서로 다른 전망과 구조로 편안한 머무름을 제공합니다.
-          </>
+        <SubpageHero title={"더\n빌라스"} image="sub-hero-stay.jpg" alt="더 빌라스">
+          에게해의 전망을 품은 4개의 럭셔리 스위트. 완전한 고요와 아늑한 해안의 온기가 머무는 곳.
         </SubpageHero>
 
         <IntroTextSection>
-          네 개의 스위트는 절벽 위 위치와 전망에 따라 서로 다른 구조를 갖습니다.<br />
-          칼데라를 정면으로 바라보는 객실부터 정원과 바다를 함께 품은 객실까지,<br />
-          모든 공간은 자연광과 개방감을 중심으로 설계했습니다.
+          네 개의 스위트는 각각 절벽 위 위치에 따라 형태가 달라집니다. 어떤 스위트는 칼데라의 전체 아치를 마주하고, 다른 스위트는 고요한 바다를 향합니다. 모든 공간은 하나의 원칙을 따릅니다: 당신은 결코 갇혀 있다고 느껴서는 안 된다는 것.
         </IntroTextSection>
 
         <section className="grid grid-cols-1 md:grid-cols-3 gap-x-12 gap-y-16 max-w-[1440px] mx-auto px-6 pb-16 md:px-12 md:pb-32">

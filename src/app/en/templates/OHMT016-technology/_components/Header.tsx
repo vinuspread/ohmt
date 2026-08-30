@@ -19,7 +19,9 @@ export default function Header() {
             <rect x="15" y="15" width="6" height="6" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" rx="1"/>
             <circle cx="12" cy="12" r="2" fill="currentColor"/>
           </svg>
-          <span className="text-xl font-bold tracking-tight text-[var(--color-text)] font-heading">KINETIX</span>
+          <span className="text-xl font-bold tracking-tight text-[var(--color-text)] font-heading">
+            KINETIX
+          </span>
         </Link>
 
         {/* Desktop Nav */}
@@ -92,7 +94,7 @@ export default function Header() {
                 key={item.label}
                 href={item.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-[length:var(--text-h1)] font-extrabold tracking-[-0.03em] text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors duration-200 leading-[var(--leading-heading)] border-b border-[var(--color-border)]/40 py-4"
+                className="text-[length:var(--text-h1)] font-extrabold tracking-[-0.02em] text-[var(--color-text)] hover:text-[var(--color-accent)] transition-colors duration-200 leading-[var(--leading-heading)] border-b border-[var(--color-border)]/40 py-4"
               >
                 {item.label}
               </Link>

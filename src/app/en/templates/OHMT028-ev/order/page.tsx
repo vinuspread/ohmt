@@ -23,7 +23,7 @@ export default function OrderPage() {
             <p className="font-inter font-medium text-xs tracking-[0.15em] text-[var(--accent)] uppercase mb-3">
               Early Access
             </p>
-            <h1 className="font-michroma text-[length:var(--text-h1)] text-[var(--text)] leading-[var(--leading-display)] tracking-[-0.03em]">
+            <h1 className="font-michroma text-[length:var(--text-h1)] text-[var(--text)] leading-[var(--leading-display)] tracking-[-0.02em]">
               Configure your NUBI
             </h1>
           </div>

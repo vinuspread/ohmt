@@ -14,14 +14,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Us - Architecture Portfolio - OHMT",
     description: "Learn about our architectural philosophy, our history, and the visionaries behind our practice.",
-    url: "https://ohmt.site/en/templates/OHMT027-architecture/about",
+    url: "https://ohmytemplate.com/en/templates/OHMT027-architecture/about",
     images: [{ url: "/templates/OHMT027-architecture/og-image.jpg" }],
   },
-  robots: { index: false, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/OHMT027-architecture/about",
+    canonical: "https://ohmytemplate.com/en/templates/OHMT027-architecture/about",
     languages: {
-      "ko": "https://ohmt.site/ko/templates/OHMT027-architecture/about",
+      "ko": "https://ohmytemplate.com/ko/templates/OHMT027-architecture/about",
     },
   },
 };
@@ -56,7 +55,7 @@ export default function AboutPage() {
     <TemplateWrapper>
       <div className="relative min-h-screen bg-white text-[var(--color-text)] font-sans antialiased overflow-hidden selection:bg-[var(--color-text)] selection:text-white">
         <Header />
-        
+
         <main className="pt-32 pb-24">
           {/* Hero Section */}
           <section className="max-w-[1440px] mx-auto px-8 md:px-12 lg:px-20 py-16">
@@ -65,7 +64,7 @@ export default function AboutPage() {
                 <span className="font-sans text-xs font-medium tracking-[0.15em] text-[var(--color-text-secondary)] uppercase block">
                   OUR CONTEXT
                 </span>
-                <h1 className="font-heading font-normal text-5xl md:text-6xl lg:text-7xl leading-tight text-[var(--color-text)]">
+                <h1 className="font-heading font-normal text-5xl md:text-6xl lg:text-7xl leading-[1.05] text-[var(--color-text)]">
                   About the Practice.
                 </h1>
                 <p className="font-heading font-normal text-2xl md:text-3xl leading-[var(--leading-body)] text-[var(--color-text-secondary)] pt-4">

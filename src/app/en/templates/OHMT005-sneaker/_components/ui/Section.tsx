@@ -22,7 +22,7 @@ export function Section({ children, title, description, className = '', isDark =
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                className="text-4xl md:text-5xl font-black tracking-tighter mb-4"
+                                className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4"
                             >
                                 {title}
                             </motion.h2>

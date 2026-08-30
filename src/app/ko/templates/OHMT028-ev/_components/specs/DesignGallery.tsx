@@ -3,13 +3,13 @@ import { useState } from "react";
 
 const gallery = {
   exterior: [
-    { image: "hero-static.jpg",      title: "도시 실루엣",      desc: "작은 차체 안에 안정적인 비율과 분명한 인상을 담았습니다." },
-    { image: "detail-headlight.jpg", title: "시그니처 라이트",  desc: "원형 LED 헤드램프로 낮과 밤 모두 NUBI만의 인상을 보여줍니다." },
-    { image: "detail-side.jpg",      title: "사이드 라인",      desc: "부드러운 측면 라인이 공기 저항을 줄이고 안정적인 비율을 만듭니다." },
+    { image: "hero-static.jpg",      title: "도시 실루엣",      desc: "최소한의 크기로 최대한의 존재감. 모든 각도가 의도를 담고 있습니다." },
+    { image: "detail-headlight.jpg", title: "시그니처 라이트",  desc: "주간에도 야간에도, NUBI만의 표정이 빛납니다." },
+    { image: "detail-side.jpg",      title: "사이드 라인",      desc: "공기 저항을 줄인 유려한 바디. 도시의 공기 위를 달립니다." },
   ],
   interior: [
-    { image: "detail-interior.jpg",  title: "운전석",           desc: "자주 쓰는 기능을 손이 닿는 위치에 배치하고 불필요한 버튼은 줄였습니다." },
-    { image: "detail-roof.jpg",      title: "파노라마 루프",    desc: "넓은 글라스 루프가 자연광을 들이고 실내의 개방감을 높입니다." },
+    { image: "detail-interior.jpg",  title: "운전석",           desc: "최소한의 버튼, 최대한의 명료함. 필요한 모든 것이 손 닿는 곳에." },
+    { image: "detail-roof.jpg",      title: "파노라마 루프",    desc: "전면 글라스 루프로 하늘을 담습니다. 도시 풍경이 드라이브의 일부가 됩니다." },
     { image: "detail-charge.jpg",    title: "스마트 디스플레이", desc: "10.4인치 터치 디스플레이. NUBI OS와 무선 업데이트를 지원합니다." },
   ],
 } as const;
@@ -25,14 +25,15 @@ export function DesignGallery() {
 
   const handleTab = (t: Tab) => { setTab(t); setActive(0); };
 
-  const tabLabels: Record<Tab, string> = { exterior: "외관", interior: "실내" };
+  const tabLabels: Record<Tab, string> = { exterior: "익스테리어", interior: "인테리어" };
 
   return (
     <section className="bg-[var(--bg)]">
       <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 py-24 md:py-32">
         <div className="flex items-center justify-between mb-10">
           <h2 className="font-michroma text-[length:var(--text-h3)] text-[var(--text)] leading-[var(--leading-heading)] tracking-[-0.02em]">
-            디자인</h2>
+            디자인 상세
+          </h2>
           <div className="flex gap-1 border border-[var(--border)] rounded-full p-1">
             {(["exterior", "interior"] as Tab[]).map((t) => (
               <button
@@ -70,7 +71,7 @@ export function DesignGallery() {
               {featured.desc}
             </p>
           </div>
-          <div className="flex max-w-full flex-shrink-0 gap-3 overflow-x-auto pb-1 md:overflow-visible">
+          <div className="flex gap-3 flex-shrink-0">
             {items.map((item, i) => (
               <button
                 key={i}

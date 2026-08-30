@@ -37,7 +37,7 @@ function CarAboutPageContent() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent" />
           <div className="relative max-w-[var(--theme-container)] mx-auto px-5 md:px-[var(--theme-gutter)] pb-8 md:pb-12 w-full">
-            <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-4 block">About IONARA</span>
+            <span className="text-[0.62rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-4 block">About OHMT</span>
             <h1 className="font-[family-name:var(--theme-font-heading)] text-[length:var(--text-display)] font-bold tracking-tight leading-[var(--leading-display)] max-w-[680px]">
               Engineered for<br />extraordinary driving.
             </h1>

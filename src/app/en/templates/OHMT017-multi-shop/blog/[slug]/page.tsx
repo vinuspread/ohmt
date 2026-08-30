@@ -67,7 +67,7 @@ function BlogDetailPageContent({ params }: { params: { slug: string } }) {
 
           <article className="max-w-[800px] mx-auto px-6 pb-24">
             <span className="text-xs uppercase tracking-[0.2em] text-[var(--color-primary)] font-semibold">{post.category}</span>
-            <h1 className="text-3xl md:text-4xl font-bold tracking-tight mt-3 mb-6 leading-tight">{post.title}</h1>
+            <h1 className="text-3xl md:text-4xl font-bold tracking-tight mt-3 mb-6 leading-[1.05]">{post.title}</h1>
 
             <div className="flex items-center gap-4 text-xs text-[var(--color-text-muted)] mb-8 border-b border-black/5 pb-4">
               <span>{post.date}</span>

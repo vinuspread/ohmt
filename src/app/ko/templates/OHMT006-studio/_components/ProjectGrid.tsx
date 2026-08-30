@@ -51,7 +51,7 @@ export function ProjectGrid() {
                 <span className="text-xs font-normal tracking-[3px] uppercase text-[#090B19] opacity-60">포트폴리오</span>
                 <div className="flex flex-col md:flex-row justify-between items-end gap-8">
                     <h2 className="text-3xl md:text-5xl leading-[var(--leading-heading)] font-semibold tracking-[-1.44px] text-[#090B19] break-keep">
-                        주거와 상업 공간, 호텔과 맞춤 가구 프로젝트를 확인해 보세요.
+                        함께 만들어낸 공간의 감동을 감상해보세요.
                     </h2>
                     <a href="#" className="h-[54px] px-10 border border-[#090B19] rounded-none flex items-center justify-center text-xs font-bold tracking-[3px] uppercase text-[#090B19] hover:bg-[#090B19] hover:text-white transition-colors">
                         전체 프로젝트 보기

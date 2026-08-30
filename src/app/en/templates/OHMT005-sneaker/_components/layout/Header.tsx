@@ -184,23 +184,17 @@ const navLinks = [
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const handleNavigation = (href: string) => {
-    setMobileOpen(false);
-    if (href.endsWith("/blog") && window.location.pathname === href) {
-      window.dispatchEvent(new Event("ohmt005:reset-blog"));
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
-
   return (
     <>
-      <header className={`isolate fixed top-0 left-0 w-full h-14 md:h-20 z-50 pointer-events-auto transition-all duration-300 flex items-center bg-white ${scrolled ? "border-b border-black/10 shadow-sm" : ""}`}>
+      <header className={`fixed top-0 left-0 w-full h-14 md:h-20 z-50 transition-all duration-300 flex items-center bg-white ${scrolled ? "border-b border-black/10 shadow-sm" : ""}`}>
         <div className="max-w-[1440px] mx-auto w-full px-6 flex items-center justify-between gap-8">
-          <Link href={`/en/templates/OHMT005-sneaker`} className="text-[1.2rem] md:text-[1.4rem] font-black tracking-[-0.04em] text-black uppercase shrink-0">VINUS</Link>
+          <Link href={`/en/templates/OHMT005-sneaker`} className="text-[1.2rem] md:text-[1.4rem] font-extrabold tracking-[-0.02em] text-black uppercase shrink-0">
+            OHMT
+          </Link>
 
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((l) => (
-              <Link key={l.label} href={`${l.href}`} onClick={() => handleNavigation(l.href)} className="text-[0.92rem] font-semibold text-black/75 hover:text-black transition-colors">
+              <Link key={l.label} href={`${l.href}`} className="text-[0.92rem] font-semibold text-black/75 hover:text-black transition-colors">
                 {l.label}
               </Link>
             ))}
@@ -226,7 +220,7 @@ const navLinks = [
       {mobileOpen && (
         <div className="fixed inset-0 z-40 bg-white pt-20 px-6 flex flex-col">
           {navLinks.map((l) => (
-            <Link key={l.label} href={`${l.href}`} onClick={() => handleNavigation(l.href)}
+            <Link key={l.label} href={`${l.href}`} onClick={() => setMobileOpen(false)}
               className="text-[1.2rem] font-bold text-black border-b border-black/10 py-4">
               {l.label}
             </Link>

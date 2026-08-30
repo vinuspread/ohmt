@@ -109,4 +109,3 @@ export default function MobileBottomTabBar({ isMenuOpen, onMenuToggle, onTicketC
     </motion.div>
   );
 }
-

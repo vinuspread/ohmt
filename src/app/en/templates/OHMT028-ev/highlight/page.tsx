@@ -97,7 +97,7 @@ function FeatureBlock({ feature, index }: { feature: typeof features[0]; index: 
           </span>
           <SplitHeading
             text={feature.heading}
-            className="font-michroma text-[length:var(--text-h2)] text-[var(--text)] leading-[var(--leading-heading)] tracking-[-0.03em] mb-5"
+            className="font-michroma text-[length:var(--text-h2)] text-[var(--text)] leading-[var(--leading-heading)] tracking-[-0.02em] mb-5"
           />
           <p className="font-inter text-sm text-[var(--text-muted)] leading-relaxed mb-8 max-w-[440px]">
             {feature.body}
@@ -182,7 +182,7 @@ function HeroBanner() {
             <p className="font-inter text-xs tracking-[0.15em] text-[var(--accent)] uppercase mb-4">
               NUBI Electric — Highlights
             </p>
-            <h1 className="font-michroma text-[length:var(--text-h1)] text-[var(--text)] leading-[var(--leading-display)] tracking-[-0.03em] mb-5">
+            <h1 className="font-michroma text-[length:var(--text-h1)] text-[var(--text)] leading-[var(--leading-display)] tracking-[-0.02em] mb-5">
               Every detail.<br />Fully electric.
             </h1>
             <p className="font-inter text-sm text-[var(--text-muted)] max-w-[420px]">
@@ -222,7 +222,7 @@ function HighlightCta() {
           </p>
           <SplitHeading
             text="Ready to make it yours?"
-            className="font-michroma text-[length:var(--text-h2)] text-[var(--text)] leading-[var(--leading-heading)] tracking-[-0.03em] mb-5"
+            className="font-michroma text-[length:var(--text-h2)] text-[var(--text)] leading-[var(--leading-heading)] tracking-[-0.02em] mb-5"
           />
           <p className="font-inter text-sm text-[var(--text-muted)] mb-10">
             Starting from $24,900. Reserve with a fully refundable $300 deposit.

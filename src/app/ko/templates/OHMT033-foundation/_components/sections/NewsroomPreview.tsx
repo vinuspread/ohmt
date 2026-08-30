@@ -24,7 +24,8 @@ export function NewsroomPreview() {
         <div className="mb-6 flex items-end justify-between border-t border-[var(--color-text)] pt-6 md:mb-12">
           <div>
             <h2 className="font-heading text-[length:var(--text-h3)] font-semibold tracking-tight text-[var(--color-text)]">
-              최근 소식</h2>
+              최근 소식
+            </h2>
           </div>
           <ButtonLink
             href={`${base}/newsroom`}
@@ -32,7 +33,8 @@ export function NewsroomPreview() {
             size="sm"
             className="hidden md:inline-flex"
           >
-            전체 소식 보기</ButtonLink>
+            전체 소식 보기
+          </ButtonLink>
         </div>
 
         <div className="grid md:grid-cols-3">
@@ -71,7 +73,8 @@ export function NewsroomPreview() {
           size="sm"
           className="mt-6 md:hidden"
         >
-          전체 소식 보기</ButtonLink>
+          전체 소식 보기
+        </ButtonLink>
       </div>
     </section>
   )

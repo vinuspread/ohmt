@@ -34,7 +34,8 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3, ease: easeOut }}
         >
-          오래 입을 옷을<br />만듭니다.</motion.h1>
+          오래 입을 옷을<br />만듭니다.
+        </motion.h1>
         <motion.p
           className="text-base text-white/70 mt-6 max-w-md mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
@@ -42,7 +43,8 @@ export const Hero = () => {
           transition={{ duration: 0.4, delay: 0.45, ease: easeOut }}
         >
           유행에 흔들리지 않는 실루엣과
-          세심하게 다듬은 디테일.</motion.p>
+          세심하게 다듬은 디테일.
+        </motion.p>
         <motion.div
           className="flex flex-col md:flex-row items-center justify-center gap-4 mt-10"
           initial={{ opacity: 0, y: 20 }}
@@ -53,7 +55,8 @@ export const Hero = () => {
             href="/ko/templates/OHMT017-multi-shop/shop"
             className="inline-flex items-center justify-center w-[180px] bg-white text-[var(--color-primary)] py-3.5 border border-transparent text-xs uppercase tracking-[0.2em] font-semibold hover:bg-white/90 transition-[transform,colors] duration-160 ease-out active:scale-[0.97]"
           >
-            컬렉션 보기</Link>
+            컬렉션 보기
+          </Link>
           <Link
             href="/ko/templates/OHMT017-multi-shop/shop"
             className="inline-flex items-center justify-center w-[180px] border border-white/50 text-white py-3.5 text-xs uppercase tracking-[0.2em] hover:border-white hover:bg-white/10 transition-[transform,colors] duration-160 ease-out active:scale-[0.97]"

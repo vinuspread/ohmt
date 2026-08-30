@@ -10,13 +10,9 @@ export default function ShopPage() {
       <section className="py-20 lg:py-28">
         <p className="ledger-num text-sm font-bold text-[var(--color-accent)]">이번 주 수확</p>
         <div className="mt-4 grid grid-cols-12 gap-y-6 sm:gap-x-10 lg:items-end">
-          <h1 className="copy-heading col-span-12 font-[family-name:var(--font-heading)] text-3xl font-semibold leading-[var(--leading-body)] sm:text-5xl lg:col-span-7">
-            이번 주 수확으로 꾸린
-            <br className="hidden sm:block" /> 과일 상자
-          </h1>
-          <p className="copy-body col-span-12 max-w-2xl text-lg leading-8 text-[var(--color-text-muted)] lg:col-span-5">
-            상자 구성은 그 주의 수확량과 익은 정도에 따라 달라집니다.
-            <br className="hidden lg:block" /> 수확 날짜와 구역, 품종을 적은 기록 카드를 함께 넣어드립니다.
+          <h1 className="col-span-12 font-[family-name:var(--font-heading)] text-3xl font-semibold leading-[var(--leading-body)] sm:text-5xl lg:col-span-7">가장 신선한 과일을 엄선해 다양한 식감과 맛을 즐기실 수 있게 구성합니다.</h1>
+          <p className="col-span-12 text-lg leading-8 text-[var(--color-text-muted)] lg:col-span-5">
+            구성은 수확에 따라 매주 바뀝니다. 모든 상자에는 밭과 과일의 기록지를 동봉합니다.
           </p>
         </div>
       </section>
@@ -36,9 +32,9 @@ export default function ShopPage() {
                   </div>
                   <p className="ledger-num rounded border border-[var(--color-border)] px-3 py-1.5 text-sm font-bold">{product.price}</p>
                 </div>
-                <p className="copy-body mt-3 text-sm leading-6 text-[var(--color-text-muted)]">{product.description}</p>
+                <p className="mt-3 text-sm leading-6 text-[var(--color-text-muted)]">{product.description}</p>
                 <span className="mt-4 inline-block text-sm font-bold text-[var(--color-accent)] underline decoration-1 underline-offset-4">
-                  상품 보기
+                  자세히 보기
                 </span>
               </Link>
             </article>

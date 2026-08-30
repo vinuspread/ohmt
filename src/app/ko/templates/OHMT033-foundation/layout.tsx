@@ -1,27 +1,27 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { TemplateWrapper } from './_components/TemplateWrapper'
 import './theme.css'
 
 export const metadata: Metadata = {
   title: {
-    default: 'OHMT 파운데이션 | 사람과 기록으로 만드는 변화',
-    template: '%s | OHMT 파운데이션',
+    default: 'VERITAS 재단 - 사람, 증거, 진전',
+    template: '%s | VERITAS 재단',
   },
   description:
-    'OHMT 파운데이션은 참여자의 이야기와 확인 가능한 프로그램 성과를 함께 공개합니다.',
+    'VERITAS 재단은 사람 중심의 스토리와 검증 가능한 프로그램 데이터로 사회적 임팩트를 보여줍니다.',
   openGraph: {
-    title: 'OHMT | 파운데이션·사회공헌',
+    title: 'VERITAS - 비영리 증명 보고서 템플릿',
     description:
-      '참여자의 실제 이야기와 확인 가능한 성과 데이터를 담은 재단·사회공헌 웹사이트입니다.',
+      '실제 스토리와 검증 가능한 임팩트 데이터를 함께 보여주는 CSR·재단 템플릿입니다.',
     images: [{ url: '/templates/OHMT033-foundation/og-image.jpg', width: 1200, height: 630 }],
     locale: 'ko_KR',
-    siteName: 'OHMT',
+    siteName: 'VERITAS',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'OHMT | 파운데이션·사회공헌',
-    description: '참여자의 실제 이야기와 확인 가능한 성과 데이터를 담은 재단·사회공헌 웹사이트입니다.',
+    title: 'VERITAS - 비영리 증명 보고서 템플릿',
+    description: '실제 스토리와 검증 가능한 임팩트 데이터로 구성된 CSR·재단 템플릿입니다.',
     images: ['/templates/OHMT033-foundation/og-image.jpg'],
   },
   alternates: {

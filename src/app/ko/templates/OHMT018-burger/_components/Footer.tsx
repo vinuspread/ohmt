@@ -9,7 +9,7 @@ export const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-8">
           <div className="col-span-2 md:col-span-1">
             <Link href="/ko/templates/OHMT018-burger" className="text-xl font-bold tracking-tight text-white">
-              OHMT
+              PATTY & CO
             </Link>
             <p className="text-sm text-white/50 mt-4 leading-relaxed max-w-[220px]">
               프리미엄 버거. 신선한 재료. 타협 없이.
@@ -46,7 +46,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-white/30">
-          <p>&copy; 2026 OHMT. All rights reserved.</p>
+          <p>&copy; 2026 PATTY & CO. All rights reserved.</p>
           <div className="flex gap-6">
             <Link href="#" className="hover:text-white/60 transition-colors">개인정보처리방침</Link>
             <Link href="#" className="hover:text-white/60 transition-colors">이용약관</Link>

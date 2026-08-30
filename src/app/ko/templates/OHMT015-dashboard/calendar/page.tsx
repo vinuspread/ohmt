@@ -136,7 +136,7 @@ export default function CalendarPage() {
         className="space-y-3"
       >
         <PageHeader
-          title="Calendar"
+          title="캘린더"
           action={
             <button className="flex items-center gap-1.5 px-3 py-2 bg-[var(--color-primary)] text-white text-sm font-medium rounded-[var(--radius-md)] hover:bg-[var(--color-primary-hover)] transition-colors">
               <Plus size={16} strokeWidth={1.5} />
@@ -230,7 +230,7 @@ export default function CalendarPage() {
                           </div>
                         ))}
                         {dayEvents.length > 3 && (
-                          <span className="text-xs text-[var(--color-text-muted)]">+{dayEvents.length - 3} more</span>
+                          <span className="text-xs text-[var(--color-text-muted)]">+{dayEvents.length - 3}개 더</span>
                         )}
                       </div>
                     </button>

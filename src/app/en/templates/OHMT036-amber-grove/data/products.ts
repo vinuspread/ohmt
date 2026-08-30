@@ -10,7 +10,7 @@ export type Product = {
   shipWindow: string
 }
 
-const imageBase = '/templates/OHMT036-amber-grove'
+const imageBase = '/templates/en/OHMT036-amber-grove'
 
 export const products: Product[] = [
   {

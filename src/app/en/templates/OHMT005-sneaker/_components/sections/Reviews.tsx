@@ -171,10 +171,10 @@ return (
       <div className="flex items-end justify-between mb-10">
         <div>
           <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-black/40 block mb-2">{t.reviews.label}</span>
-          <h2 className="text-[1.6rem] font-black tracking-[-0.02em] uppercase">{t.reviews.title}</h2>
+          <h2 className="text-[1.6rem] font-extrabold tracking-[-0.02em] uppercase">{t.reviews.title}</h2>
         </div>
         <div className="hidden md:flex items-center gap-2">
-          <span className="text-[2rem] font-black text-black">4.6</span>
+          <span className="text-[2rem] font-extrabold text-black">4.6</span>
           <div>
             <div className="flex gap-0.5 mb-1">
               {[1,2,3,4,5].map(i => <Star key={i} size={14} className="fill-black text-black" />)}

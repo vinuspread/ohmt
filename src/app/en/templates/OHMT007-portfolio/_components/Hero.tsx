@@ -13,16 +13,16 @@ export function Hero() {
                 />
                 <div className="absolute inset-0 bg-black/10" />
             </div>
-            
+
             <div className="relative z-10 text-center text-white px-6">
-                <motion.span 
+                <motion.span
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     className="block text-xs font-bold tracking-[0.5em] uppercase mb-8"
                 >
                     COMMERCIAL EST. 2024
                 </motion.span>
-                <h1 className="text-[12vw] md:text-[8vw] font-extrabold leading-[var(--leading-display)] tracking-tighter uppercase mb-12">
+                <h1 className="text-[12vw] md:text-[8vw] font-extrabold leading-[var(--leading-display)] tracking-tight uppercase mb-12">
                     THE FUTURE <br /> OF FORM.
                 </h1>
             </div>

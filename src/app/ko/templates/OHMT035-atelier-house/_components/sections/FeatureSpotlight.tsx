@@ -7,9 +7,9 @@ const base = '/ko/templates/OHMT035-atelier-house'
 const featured = products.find((p) => p.slug === 'harbor-sofa')!
 
 const highlights = [
-  { text: '가공판재 없이 인공 건조한 하드우드로 제작한 프레임' },
-  { text: '생활 오염을 닦아내기 쉬운 기능성 패브릭 시트' },
-  { text: '몸을 안정적으로 받치는 복원력 높은 3쿠션 구조' },
+  { text: '가공판재를 배제하고 자연스럽게 말려 견고함을 유지하는 참나무 프레임' },
+  { text: '생활 오염을 쉽게 닦아낼 수 있어 실용성이 우수한 패브릭 시트' },
+  { text: '몸을 포근하게 받쳐주고 형태가 변하지 않는 3쿠션 구조' },
 ]
 
 export function FeatureSpotlight() {
@@ -44,7 +44,7 @@ export function FeatureSpotlight() {
           </div>
 
           <div className="md:pl-10">
-            <p className="whitespace-pre-line text-sm leading-relaxed text-[var(--color-text-muted)] word-keep-all">{featured.description}</p>
+            <p className="text-sm leading-relaxed text-[var(--color-text-muted)] word-keep-all">{featured.description}</p>
             <ul className="mt-6 flex list-disc flex-col gap-3 pl-5 marker:text-[var(--color-accent)]">
               {highlights.map((h, i) => (
                 <li key={i} className="text-sm leading-relaxed text-[var(--color-text)] word-keep-all">

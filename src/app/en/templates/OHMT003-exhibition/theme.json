@@ -22,13 +22,13 @@
     },
     "typography": {
       "heading": {
-        "font": "Inter, sans-serif",
+        "font": "var(--font-inter), sans-serif",
         "weight": "600",
         "tracking": "-0.04em",
         "style": "font-semibold uppercase tracking-tighter"
       },
       "body": {
-        "font": "Plus Jakarta Sans, sans-serif",
+        "font": "var(--font-inter), sans-serif",
         "weight": "500",
         "leading": "1.6",
         "style": "font-medium"

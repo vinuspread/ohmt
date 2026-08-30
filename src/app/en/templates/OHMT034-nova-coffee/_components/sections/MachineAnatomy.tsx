@@ -62,7 +62,7 @@ export function MachineAnatomy() {
                   <span className="mt-2 h-px w-16 bg-white/28" />
                 </div>
                 <div className="self-end">
-                  <h3 className="font-display text-lg font-bold leading-tight">{item.title}</h3>
+                  <h3 className="font-display text-lg font-bold leading-[1.05]">{item.title}</h3>
                   <p className="mt-3 text-xs leading-relaxed text-white/64 md:text-sm">{item.text}</p>
                 </div>
               </article>

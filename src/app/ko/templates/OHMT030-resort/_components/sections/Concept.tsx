@@ -10,21 +10,21 @@ const base = "/ko/templates/OHMT030-resort";
 
 const slides = [
   {
-    eyebrow: "건축",
-    heading: "절벽의 흐름을 따라\n낮고 조용하게",
-    body: "건축의 높이와 동선을 해안선에 맞추고, 현지 석재와 목재를 사용했습니다.\n자연광과 바다 풍경이 객실 안까지 이어집니다.",
+    eyebrow: "컨셉",
+    heading: "차분한 아름다움과\n깊은 고요함을 제공합니다",
+    body: "모든 공간은 해안선과 자연스럽게 이어지도록 설계했습니다. 현지 석재와 목재, 자연광과 파도 소리가 어우러져 공간에 깊이를 더합니다.",
     image: "/templates/OHMT030-resort/gallery-1.png",
   },
   {
-    eyebrow: "재료",
-    heading: "시간이 지날수록\n깊어지는 재료",
-    body: "화산석과 노출 콘크리트, 목재처럼 시간이 지나며\n자연스럽게 색과 질감이 깊어지는 재료를 선택했습니다.",
+    eyebrow: "철학",
+    heading: "세련된 디자인과\n바다의 조화로운 공존",
+    body: "진정한 휴식은 화려함이 아닌 멈춤에서 시작됩니다. 조수 간만의 차를 견디며 시간과 함께 자연스럽게 깊이를 더해가는 소재를 골랐습니다.",
     image: "/templates/OHMT030-resort/gallery-2.png",
   },
   {
     eyebrow: "공간",
-    heading: "바다를 가까이 두고\n온전히 쉬는 공간",
-    body: "절벽과 바다가 맞닿는 위치를 살려\n객실과 테라스 어디에서든 수평선을 바라볼 수 있도록 설계했습니다.",
+    heading: "세상과 단절된\n고요하고 아늑한 안식처",
+    body: "육지와 바다가 맞닿은 경계에 세워진 공간입니다. 어디서나 눈앞에 펼쳐지는 수평선을 바라볼 수 있습니다.",
     image: "/templates/OHMT030-resort/gallery-3.jpg",
   },
 ];
@@ -59,7 +59,7 @@ export function Concept() {
                 href={`${base}/#`}
                 className="inline-flex items-center gap-2 rounded-full border border-white/60 px-6 py-3 text-white text-sm hover:bg-white/10 transition-colors focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]"
               >
-                리조트 소개<ArrowRight size={15} />
+                더 알아보기 <ArrowRight size={15} />
               </Link>
 
               <div className="flex items-center gap-3">

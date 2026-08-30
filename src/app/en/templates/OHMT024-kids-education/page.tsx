@@ -15,7 +15,7 @@ const jsonLd = {
   "@type": "Organization",
   "name": "OHMT - Creative Academy",
   "description": "Playful and colorful children education platform with creative classes",
-  "url": "https://ohmt.site/en/templates/OHMT024-kids-education",
+  "url": "https://ohmytemplate.com/en/templates/OHMT024-kids-education",
 };
 
 export const metadata: Metadata = {
@@ -39,7 +39,6 @@ export default function KidsEducationPage() {
           <Schedule />
           <Testimonials />
         </main>
-        <p className="text-center text-[11px] leading-relaxed text-neutral-400 px-6 py-6">This page is a website design template demo by OHMT, not an actual client or operating business. The brand names, people, testimonials, contact details, and performance figures shown are example content.</p>
         <Footer />
       </TemplateWrapper>
     </>

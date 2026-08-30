@@ -63,4 +63,3 @@ export default function GalleryFull() {
 function NavSpacer() {
   return <div className="h-[72px]" />;
 }
-

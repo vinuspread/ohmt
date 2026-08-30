@@ -78,12 +78,12 @@ return (
               </button>
             </div>
           </div>
-          
+
           <div className="hidden md:block w-[240px] border border-black/10 bg-white p-6 shrink-0 group">
-            <img 
-              src="/templates/OHMT010-cosmetic/cosmetic-1.jpg" 
-              className="w-full h-[180px] object-cover mb-4 grayscale group-hover:grayscale-0 transition-all duration-300" 
-              alt="Featured product" 
+            <img
+              src="/templates/OHMT010-cosmetic/cosmetic-1.jpg"
+              className="w-full h-[180px] object-cover mb-4 grayscale group-hover:grayscale-0 transition-all duration-300"
+              alt="Featured product"
             />
             <div className="text-[0.85rem] font-bold mb-1">{t.hero.featured}</div>
             <div className="text-base font-bold mb-4">$85.00</div>
@@ -93,12 +93,12 @@ return (
           </div>
         </div>
       </div>
-      
+
       <div className="w-full h-[50vh] overflow-hidden">
-        <img 
-          src="/templates/OHMT010-cosmetic/cosmetic-5.jpg" 
-          className="w-full h-full object-cover object-center" 
-          alt="Hero background" 
+        <img
+          src="/templates/OHMT010-cosmetic/cosmetic-5.jpg"
+          className="w-full h-full object-cover object-center"
+          alt="Hero background"
         />
       </div>
     </section>

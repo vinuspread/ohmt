@@ -50,7 +50,7 @@ export function Header() {
         {/* Logo */}
         <Link href={baseRoute} className="flex items-center group">
           <span className="font-sans font-bold text-lg tracking-[0.06em] text-[#1A1A1A]">
-            OHMT
+ARCHE
           </span>
         </Link>
 
@@ -80,7 +80,8 @@ export function Header() {
             href={`${baseRoute}/contact`}
             className="bg-[#0A0A0A] text-white px-6 py-2.5 text-xs font-sans tracking-[0.08em] transition-transform duration-300 hover:scale-[1.02] active:scale-[0.98] block"
           >
-            프로젝트 문의</Link>
+            프로젝트 문의
+          </Link>
         </div>
 
         {/* Mobile menu button */}
@@ -118,7 +119,8 @@ export function Header() {
             onClick={() => setIsMobileMenuOpen(false)}
             className="bg-[#0A0A0A] text-white py-3 text-center text-sm font-sans tracking-[0.08em]"
           >
-            프로젝트 문의</Link>
+            프로젝트 문의
+          </Link>
         </div>
       )}
     </header>

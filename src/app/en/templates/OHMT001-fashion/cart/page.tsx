@@ -27,7 +27,7 @@ function FashionCartPageContent() {
                     <div className="flex-1 space-y-16">
                         <div className="border-b border-black pb-8 flex justify-between items-end">
                             <h1
-                              className="text-4xl font-bold leading-none tracking-[-0.035em] md:text-5xl"
+                              className="text-4xl font-bold leading-none tracking-[-0.02em] md:text-5xl"
                               style={{ fontFamily: "var(--font-bodoni)" }}
                             >
                               Shopping Bag
@@ -44,7 +44,7 @@ function FashionCartPageContent() {
                                     <div className="space-y-6">
                                         <div className="flex justify-between items-start">
                                             <h2
-                                              className="max-w-xs text-3xl font-bold leading-none tracking-[-0.03em]"
+                                              className="max-w-xs text-3xl font-bold leading-none tracking-[-0.02em]"
                                               style={{ fontFamily: "var(--font-bodoni)" }}
                                             >
                                               {item.name}
@@ -74,7 +74,7 @@ function FashionCartPageContent() {
                     <div className="w-full lg:w-[400px] space-y-12 h-fit lg:sticky lg:top-48">
                         <div className="space-y-8">
                              <h3
-                               className="border-b border-black pb-6 text-3xl font-bold leading-none tracking-[-0.03em]"
+                               className="border-b border-black pb-6 text-3xl font-bold leading-none tracking-[-0.02em]"
                                style={{ fontFamily: "var(--font-bodoni)" }}
                              >
                                Summary

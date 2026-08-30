@@ -15,24 +15,24 @@ function CosmeticTemplateContent() {
     <TemplateWrapper theme={theme}>
       <main className="antialiased bg-[var(--color-bg)] text-black selection:bg-black selection:text-white">
         <Header />
-        
+
         <Hero />
-        
+
         <ProductGrid />
-        
+
         <section className="py-16 md:py-32 bg-white border-t border-black/10 overflow-hidden">
           <div className="max-w-[1440px] mx-auto px-6 md:px-10">
             <div className="grid md:grid-cols-2 gap-28 items-center">
               <div className="order-2 md:order-1">
-                <img 
-                  src="/templates/OHMT010-cosmetic/cosmetic-face-mask.png" 
-                  className="w-full h-[380px] object-cover" 
-                  alt="Brand story" 
+                <img
+                  src="/templates/OHMT010-cosmetic/cosmetic-face-mask.png"
+                  className="w-full h-[380px] object-cover"
+                  alt="Brand story"
                 />
               </div>
               <div className="order-1 md:order-2">
                 <h2 className="text-[1.6rem] md:text-[2.8rem] font-normal leading-[var(--leading-heading)] mb-8">
-                  현대적인 뷰티의 기준
+                  현대적이고 의식 있는 뷰티의 기준.
                 </h2>
                 <p className="text-[0.95rem] text-[var(--color-text-muted)] leading-loose mb-12 max-w-[480px]">
                   우리는 심플한 질문에서 시작했습니다. 왜 효능과 순수함 중 하나를 포기해야 할까요? 피부 본연의 힘을 깨우는 고기능성 포뮬러와 지구를 배려한 순수한 원료를 연구하기 위해 지난 5년의 시간을 바쳤습니다.
@@ -44,8 +44,7 @@ function CosmeticTemplateContent() {
             </div>
           </div>
         </section>
-        
-        <p className="text-center text-[11px] leading-relaxed text-neutral-400 px-6 py-6">이 페이지는 실제 고객사나 운영 중인 업체가 아닌 OHMT의 웹사이트 디자인 템플릿 데모입니다. 표시된 브랜드명, 인물, 후기, 연락처와 성과 수치는 예시 콘텐츠입니다.</p>
+
         <Footer />
       </main>
     </TemplateWrapper>

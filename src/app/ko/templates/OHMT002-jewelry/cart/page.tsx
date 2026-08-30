@@ -9,15 +9,14 @@ import { Search, Heart, User, ShoppingBag, Menu, ArrowRight } from "lucide-react
 import theme from "../theme.json";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import Button from "../_components/ui/Button";
-import TemplateSelect from '../_components/TemplateSelect'
 
 function JewelryCartPageContent() {
   const cartItems = [
     {
       id: "1",
       name: "아쿠아 블루 사파이어 뱅글",
-      price: "₩12,200,000",
-      img: "/templates/OHMT002-jewelry/bangle-item.png",
+      price: "₩1,200,000",
+      img: "/templates/OHMT002-jewelry/jewelry-hero-main.png",
       material: "플래티넘 · 블루 사파이어"
     }
   ];
@@ -30,7 +29,7 @@ function JewelryCartPageContent() {
       {/* Header */}
       <header className="fixed top-0 w-full z-50 border-b border-neutral-100 bg-white">
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 h-20 flex items-center justify-between">
-          <Link href="/ko/templates/OHMT002-jewelry" className="text-xs tracking-[0.15em] font-bold text-neutral-500 hover:text-[var(--color-primary)]">부티크로 돌아가기</Link>
+          <Link href="/ko/templates/OHMT002-jewelry" className="text-xs uppercase tracking-[0.4em] font-bold text-neutral-500 hover:text-[var(--color-primary)]">부티크로 돌아가기</Link>
           <div className="absolute left-1/2 -translate-x-1/2">
             <Link href="/ko/templates/OHMT002-jewelry" className="text-3xl font-serif tracking-[0.25em] font-normal uppercase text-neutral-900">AVELINE</Link>
           </div>
@@ -66,10 +65,10 @@ function JewelryCartPageContent() {
                       </div>
                       <div className="flex items-center gap-4 text-xs">
                         <span className="opacity-40">수량</span>
-                        <TemplateSelect className="bg-transparent font-bold outline-none">
+                        <select className="bg-transparent font-bold outline-none">
                           <option>1</option>
                           <option>2</option>
-                        </TemplateSelect>
+                        </select>
                       </div>
                     </div>
                   </div>
@@ -85,7 +84,7 @@ function JewelryCartPageContent() {
               <div className="space-y-6 text-xs uppercase tracking-widest font-bold">
                 <div className="flex justify-between opacity-50">
                   <span>상품 금액</span>
-                  <span>₩12,200,000</span>
+                  <span>₩1,200,000</span>
                 </div>
                 <div className="flex justify-between opacity-50">
                   <span>일반 배송</span>
@@ -93,10 +92,10 @@ function JewelryCartPageContent() {
                 </div>
                 <div className="flex justify-between border-t border-neutral-100 pt-8 text-lg font-serif normal-case tracking-tight">
                   <span>예상 결제 금액</span>
-                  <span>₩12,200,000</span>
+                  <span>₩1,200,000</span>
                 </div>
               </div>
-              <Button variant="dark" className="w-full py-8 text-xs font-bold tracking-[0.15em]">
+              <Button variant="dark" className="w-full py-8 text-xs font-bold uppercase tracking-[0.5em]">
                 결제 진행하기
               </Button>
               <div className="text-center">

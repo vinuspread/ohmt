@@ -11,20 +11,20 @@ const base = "/ko/templates/OHMT030-resort";
 const slides = [
   {
     image: "/templates/OHMT030-resort/gallery-4.jpg",
-    label: "명상과 웰니스",
-    location: "절벽 위 파빌리온",
+    label: "명상 & 웰니스",
+    location: "절벽 정상 파빌리온",
     time: "오전 7시 – 오전 9시",
   },
   {
     image: "/templates/OHMT030-resort/gallery-5.jpg",
-    label: "해안 트레킹",
-    location: "히든 코브 산책로",
+    label: "해안 탐험",
+    location: "히든 코브 트레일",
     time: "오전 9시 – 오후 12시",
   },
   {
     image: "/templates/OHMT030-resort/gallery-6.jpg",
-    label: "선셋 세일링 투어",
-    location: "전용 선착장",
+    label: "선셋 세일링",
+    location: "프라이빗 마리나",
     time: "오후 5시 – 오후 7시 30분",
   },
 ];
@@ -42,14 +42,14 @@ export function Experience() {
         <div className="flex flex-col justify-between">
           <div>
             <SectionEyebrow>
-              액티비티</SectionEyebrow>
+              경험
+            </SectionEyebrow>
             <SectionHeading size="large" className="mb-12 whitespace-pre-line">
-              {`머무는 시간이
-여행의 기억이 됩니다`}
+              {`시간이 머무는 곳,\n기억이 되는 순간`}
             </SectionHeading>
             <Link href={`${base}/#`}
               className="inline-flex items-center gap-2 rounded-full border border-white/60 bg-white/10 px-6 py-3 text-white text-base hover:bg-white/20 transition-all focus-visible:outline-[var(--focus-ring)] focus-visible:outline-offset-[var(--focus-ring-offset)]">
-              전체 프로그램 보기<ArrowRight size={15} />
+              모두 보기 <ArrowRight size={15} />
             </Link>
           </div>
 

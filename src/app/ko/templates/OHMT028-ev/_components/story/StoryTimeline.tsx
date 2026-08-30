@@ -7,11 +7,11 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 const milestones = [
-  { year: "2022", title: "도심형 전기차의 시작",  body: "세 명의 엔지니어가 작은 차체와 실용성, 주행의 즐거움을 함께 담는 방법을 고민하기 시작했습니다." },
-  { year: "2023", title: "첫 번째 NUBI", body: "12개월의 개발 끝에 첫 번째 주행 가능한 프로토타입을 완성했습니다." },
-  { year: "2024", title: "디자인 확정",  body: "원형 헤드램프와 파노라마 루프, 일곱 가지 컬러를 적용해 NUBI의 디자인을 완성했습니다." },
+  { year: "2022", title: "첫 번째 질문",  body: "세 명의 엔지니어, 하나의 화이트보드, 단 하나의 질문. 도시형 차가 진심으로 사랑받는 존재가 될 수 있을까?" },
+  { year: "2023", title: "첫 번째 NUBI", body: "12개월의 밤샘 작업 끝에 첫 번째 NUBI가 작업장을 나섰습니다. 완벽하지는 않았지만, 달렸습니다." },
+  { year: "2024", title: "NUBI의 얼굴",  body: "둥근 헤드라이트, 파노라마 루프, 일곱 가지 컬러. NUBI만의 표정이 비로소 완성되었습니다." },
   { year: "2025", title: "생산 시작",    body: "발렌시아 공장에서 생산이 시작됐습니다. 사전 예약 고객을 위한 첫 1,000대입니다." },
-  { year: "2026", title: "첫 출고",      body: "사전 예약 순서에 따라 첫 차량을 순차적으로 인도합니다." },
+  { year: "2026", title: "첫 출고",      body: "NUBI가 처음으로 도심 거리에 모습을 드러냅니다. 얼리 리저버 전원 대상으로 1분기 순차 출고됩니다." },
 ];
 
 export function StoryTimeline() {
@@ -37,7 +37,8 @@ export function StoryTimeline() {
           연혁
         </p>
         <h2 className="font-michroma text-[length:var(--text-h3)] text-[var(--text)] leading-[var(--leading-heading)] tracking-[-0.02em] mb-16 md:mb-20">
-          NUBI의 개발 과정</h2>
+          이렇게 만들어졌습니다.
+        </h2>
         <div className="space-y-0">
           {milestones.map((m, i) => (
             <div

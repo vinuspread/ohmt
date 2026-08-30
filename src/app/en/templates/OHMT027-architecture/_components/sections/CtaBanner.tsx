@@ -26,7 +26,7 @@ export function CtaBanner() {
       <div className="absolute inset-0 z-20 flex items-center justify-center text-center px-6">
         <ScrollReveal>
           <div className="space-y-8 max-w-2xl">
-            <h2 className="font-heading font-normal text-5xl md:text-6xl text-white leading-tight">
+            <h2 className="font-heading font-normal text-5xl md:text-6xl text-white leading-[1.05]">
               Let's Design Your
               <br />
               Space Together.

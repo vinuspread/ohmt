@@ -19,7 +19,7 @@ export default function ExhibitionDetailPage() {
         <main className="min-h-screen flex items-center justify-center bg-[var(--color-bg)]">
           <div className="text-center">
             <p className="text-xs font-semibold uppercase tracking-[0.12em] text-black/50 mb-4">404</p>
-            <h1 className="font-heading text-[length:var(--text-h1)] uppercase tracking-[-0.04em] mb-6">Exhibition Not Found</h1>
+            <h1 className="font-heading text-[length:var(--text-h1)] uppercase tracking-[-0.02em] mb-6">Exhibition Not Found</h1>
             <Link href="/en/templates/OHMT003-exhibition/exhibitions" className="text-xs font-semibold uppercase tracking-[0.12em] underline underline-offset-4">Back to Exhibitions</Link>
           </div>
         </main>
@@ -46,7 +46,7 @@ export default function ExhibitionDetailPage() {
             </p>
             <h1
               className="font-heading font-semibold uppercase text-white leading-[var(--leading-display)] max-w-[12ch]"
-              style={{ fontSize: 'clamp(3rem, 6vw, 6rem)', letterSpacing: '-0.04em' }}
+              style={{ fontSize: 'clamp(3rem, 6vw, 6rem)', letterSpacing: '-0.02em' }}
             >
               {exhibition.name}
             </h1>

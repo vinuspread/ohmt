@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import TemplateSelect from '../TemplateSelect'
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 
@@ -79,7 +78,7 @@ export default function EnrollmentForm() {
                   <label htmlFor="age" className="block text-xs font-bold uppercase tracking-wider mb-2">
                     나이 *
                   </label>
-                  <TemplateSelect
+                  <select
                     id="age"
                     required
                     defaultValue=""
@@ -91,7 +90,7 @@ export default function EnrollmentForm() {
                     <option value="7-8">7 - 8 세</option>
                     <option value="9-10">9 - 10 세</option>
                     <option value="11-12">11 - 12 세</option>
-                  </TemplateSelect>
+                  </select>
                 </div>
               </div>
 
@@ -126,7 +125,7 @@ export default function EnrollmentForm() {
                 <label htmlFor="interest" className="block text-xs font-bold uppercase tracking-wider mb-2">
                   관심 있는 클래스 *
                 </label>
-                <TemplateSelect
+                <select
                   id="interest"
                   required
                   defaultValue=""
@@ -137,7 +136,7 @@ export default function EnrollmentForm() {
                   <option value="art">창작 미술 스튜디오</option>
                   <option value="science">창의 과학 실험실</option>
                   <option value="math">수학 퍼즐 모험</option>
-                </TemplateSelect>
+                </select>
               </div>
 
               <div>

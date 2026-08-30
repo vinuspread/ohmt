@@ -8,7 +8,7 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
-import { blogPosts } from "../_data/portfolio-data";
+import { blogPosts } from "../portfolio-data";
 
 const allPosts = [
   ...blogPosts,

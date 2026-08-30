@@ -66,7 +66,7 @@ function ProductDetailContent() {
             >
               <p className="text-xs font-bold uppercase tracking-[0.3em] text-black/30 mb-4">New Arrival</p>
               <h1
-                className="mb-4 text-4xl font-bold leading-[var(--leading-display)] tracking-[-0.035em] sm:text-[4vw]"
+                className="mb-4 text-4xl font-bold leading-[var(--leading-display)] tracking-[-0.02em] sm:text-[4vw]"
                 style={{ fontFamily: "var(--font-bodoni)" }}
               >
                 {product.name}

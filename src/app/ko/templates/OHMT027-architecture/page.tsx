@@ -16,8 +16,8 @@ export default function ArchitectureHome() {
     "@context": "https://schema.org",
     "@type": "ArchitecturalFirm",
     "name": "OHMT 건축 스튜디오",
-    "url": "https://ohmt.site/ko/templates/OHMT027-architecture",
-    "image": "https://ohmt.site/templates/OHMT027-architecture/og-image.jpg",
+    "url": "https://ohmytemplate.com/ko/templates/OHMT027-architecture",
+    "image": "https://ohmytemplate.com/templates/OHMT027-architecture/og-image.jpg",
     "description": "주거, 상업, 공공, 인테리어 프로젝트를 설계하는 서울 기반 건축 스튜디오입니다.",
     "address": {
       "@type": "PostalAddress",
@@ -43,7 +43,6 @@ export default function ArchitectureHome() {
             <CtaBanner />
             <Testimonials />
           </main>
-          <p className="text-center text-[11px] leading-relaxed text-neutral-400 px-6 py-6">이 페이지는 실제 고객사나 운영 중인 업체가 아닌 OHMT의 웹사이트 디자인 템플릿 데모입니다. 표시된 브랜드명, 인물, 후기, 연락처와 성과 수치는 예시 콘텐츠입니다.</p>
           <Footer />
           <CustomCursor />
         </div>

@@ -11,7 +11,8 @@ export function ReserveForm() {
   return (
     <section>
       <h2 className="font-michroma text-[length:var(--text-lead)] text-[var(--text)] leading-[var(--leading-heading)] tracking-[-0.02em] mb-6">
-        신청자 정보</h2>
+        예약 정보
+      </h2>
       <div className="space-y-4">
         {[
           { label: "성명",    type: "text",  value: name,  setter: setName,  placeholder: "홍길동" },
@@ -40,9 +41,11 @@ export function ReserveForm() {
                 : "bg-[var(--border)] text-[var(--text-muted)] cursor-not-allowed"
             }`}
           >
-            30만 원으로 사전 예약 →</button>
+            30만 원으로 예약하기 →
+          </button>
           <p className="font-inter text-sm text-[var(--text-muted)] text-center mt-3">
-            예약 취소 시 전액 환불됩니다. 최종 구매 의무는 없습니다.</p>
+            완전 환불 가능. 어떠한 의무도 없습니다.
+          </p>
         </div>
       </div>
     </section>

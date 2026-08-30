@@ -13,20 +13,19 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 
 function StudioAboutPageContent() {
     const stats: Array<{ value: string; label: string; desc: string }> = [
-        { value: "180+", label: "완료 프로젝트", desc: "주거 공간부터 오피스와 상업 공간까지 다양한 프로젝트를 설계하고 완성했습니다." },
-        { value: "98%", label: "고객 만족도", desc: "충분한 상담과 체계적인 진행 과정을 바탕으로 쌓아온 고객 평가입니다." },
-        { value: "8+", label: "스튜디오 운영", desc: "8년 동안 공간의 쓰임과 완성도를 함께 고민해 왔습니다." }
+        { value: "180+", label: "공간 프로젝트", desc: "전국의 하이엔드 단독주택, 상업 공간 및 호스피탈리티 명작 설계." },
+        { value: "98%", label: "클라이언트 만족도", desc: "사려 깊은 디자인 철학과 빈틈없는 실행력으로 다져진 신뢰." },
+        { value: "8+", label: "아틀리에 헤리티지", desc: "8년이 넘는 시간 동안 증명해 온 창의적 공간의 가치와 명성." }
     ];
     const history: Array<{ year: string; title: string; category: string }> = [
-        { year: "2026", title: "올해의 주거 공간 디자인", category: "대한민국 공간디자인 어워드" },
-        { year: "2025", title: "지속 가능한 공간 디자인상", category: "녹색건축협의회" },
-        { year: "2024", title: "주목할 만한 신진 스튜디오", category: "월간 인테리어디자인" }
+        { year: "2026", title: "올해의 최고 주거 건축 설계상", category: "대한민국 공간 디자인 어워드" },
+        { year: "2025", title: "지속 가능한 공간 디자인 리더십상", category: "녹색 건축 협의회" },
+        { year: "2024", title: "가장 주목받는 신진 아틀리에상", category: "월간 인테리어 디자인 매거진" }
     ];
     const team: Array<{ name: string; role: string; image: string }> = [
-        { name: "Elena Moreau", role: "건축·공간 디렉터", image: '/templates/OHMT006-studio/team-1.jpg' },
-        { name: "Daniel Foster", role: "가구·오브제 디렉터", image: '/templates/OHMT006-studio/team-2.jpg' },
-        { name: "Claire Bennett", role: "수석 인테리어 디자이너", image: '/templates/OHMT006-studio/team-3.jpg' },
-        { name: "Marcus Reed", role: "프로젝트 디렉터", image: '/templates/OHMT006-studio/team-4.png' }
+        { name: "박사라", role: "크리에이티브 디렉터", image: '/templates/OHMT006-studio/team-1.jpg' },
+        { name: "이제임스", role: "시니어 디자이너", image: '/templates/OHMT006-studio/team-2.jpg' },
+        { name: "엠마 로드리게스", role: "프로젝트 매니저", image: '/templates/OHMT006-studio/team-3.jpg' }
     ];
 
     return (
@@ -35,10 +34,10 @@ function StudioAboutPageContent() {
 
         <main className="antialiased min-h-screen bg-white text-black font-sans selection:bg-black selection:text-white relative overflow-hidden">
             <Header />
-            <PageHeader 
-                category={"스튜디오 소개"}
-                title={<>{"루미나"} <br /><span className="font-normal">{"스튜디오"}</span></>}
-                breadcrumb={["루미나 스튜디오"]}
+            <PageHeader
+                category={"우리 소개"}
+                title={<>{"루미나"} <br /><span className="font-normal">{"스튜디오."}</span></>}
+                breadcrumb={["회사소개"]}
             />
 
             {/* 2. Philosophy */}
@@ -47,12 +46,12 @@ function StudioAboutPageContent() {
                     <div className="grid lg:grid-cols-12 gap-8 md:gap-20 items-start">
                         <div className="lg:col-span-5 space-y-3 md:space-y-4">
                             <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold leading-[var(--leading-heading)] text-black break-keep">
-                                {"생활 방식에서 출발해 오래 편안한 공간을 설계합니다."}
+                                {"이유가 있는 설계, 본질을 담는 공간."}
                             </h2>
                         </div>
                         <div className="lg:col-span-7 space-y-8 md:space-y-20">
                             <p className="text-sm md:text-base lg:text-lg text-black/50 leading-loose font-normal break-keep">
-                                {"좋은 공간은 멋진 이미지보다 그곳에서 생활하고 일하는 사람을 이해하는 데서 시작합니다. 루미나 스튜디오는 상담을 통해 필요한 기능과 선호하는 분위기, 예산과 일정을 함께 정리합니다. 이후 공간 구성과 자재, 조명, 가구를 하나의 흐름으로 설계하고 시공 과정까지 꾸준히 확인합니다."}
+                                {"진정한 인테리어 예술은 클라이언트의 삶을 깊이 경청하는 것에서 시작한다고 믿습니다. 숙련된 건축 디자이너와 현장 스페셜리스트로 구성된 루미나 스튜디오의 팀은 클라이언트의 목소리 너머에 숨겨진 라이프스타일, 미학적 선호, 그리고 차원 높은 염원까지 완벽하게 공명합니다. 첫 개념 구상부터 마침내 완공되는 찬란한 순간까지, 우리는 보이지 않는 모든 세부 디테일을 정교하게 통제하여 상상 이상의 특별한 공간을 선사합니다."}
                             </p>
                             {/* Stats - 모바일 1열 */}
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 border-t border-black/5 pt-8 md:pt-12">
@@ -75,15 +74,15 @@ function StudioAboutPageContent() {
             <SplitScreenSection bgClass="bg-white" textColorClass="text-black" borderColorClass="border-transparent" imageSrc="/templates/OHMT006-studio/hero-2.jpg" imageAlt="Studio interior showcase" imagePosition="left">
                 <div className="space-y-3 md:space-y-4">
                     <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold leading-[var(--leading-heading)] text-black break-keep">
-                        {"계획부터 시공까지,"} <br />{"한 기준으로 관리합니다."}
+                        {"사려 깊은 마스터플랜,"} <br />{"빈틈없는 정밀 시공."}
                     </h3>
                 </div>
                 <p className="text-sm md:text-sm text-black/50 leading-loose font-normal break-keep">
-                    {"동선과 수납 계획, 조명과 마감재, 가구와 패브릭까지 공간을 이루는 요소를 함께 검토합니다. 설계 의도가 현장에서 달라지지 않도록 주요 공정과 마감 상태를 확인하고, 실제 사용에 불편함이 없는지 최종 점검한 뒤 공간을 인도합니다."}
+                    {"입체적인 공간 흐름 설계와 독창적인 조명 디자인, 마감재 솔루션부터 명작 가구 큐레이션 및 패브릭 스타일링까지 공간 창조의 모든 여정을 세심하게 조율합니다. 조명의 각도 하나, 가구의 보이지 않는 모서리에 이르기까지, 디테일을 향한 루미나 스튜디오의 집요한 관심은 개별 요소들이 완벽히 조화를 이뤄 삶의 품격이 온전히 묻어나는 응집력 있는 공간을 탄생시킵니다."}
                 </p>
                 <div className="pt-2 md:pt-4">
                     <Link href={`/ko/templates/OHMT006-studio/contact`} className="group inline-flex items-center gap-4 border-b-2 border-black pb-2 text-xs font-bold text-black transition-opacity hover:opacity-60 uppercase">
-                        {"프로젝트 상담 신청"} <ArrowUpRight size={14} />
+                        {"상담 예약하기"} <ArrowUpRight size={14} />
                     </Link>
                 </div>
             </SplitScreenSection>
@@ -92,7 +91,7 @@ function StudioAboutPageContent() {
             <section className="py-12 md:py-36 bg-[var(--color-bg-dark)] text-white">
                 <div className="max-w-[1720px] mx-auto px-6 md:px-16 lg:px-24 space-y-8 md:space-y-16">
                     <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-white leading-[var(--leading-heading)] break-keep">
-                        {"프로젝트를 통해"} <br />{"받은 주요 평가와 수상."}
+                        {"공간의 예술적 가치로"} <br />{"인정받은 영광의 순간들."}
                     </h2>
                     <div className="border-t border-white/5 divide-y divide-white/5">
                         {history.map((h: any, idx: number) => (
@@ -128,17 +127,17 @@ function StudioAboutPageContent() {
                 <div className="max-w-[1720px] mx-auto px-6 md:px-16 lg:px-24 space-y-8 md:space-y-16">
                     <div className="text-center max-w-xl mx-auto">
                         <h2 className="text-2xl md:text-4xl lg:text-6xl font-bold text-black leading-[var(--leading-heading)] break-keep">
-                            {"프로젝트를 함께 만드는 사람들."}
+                            {"공간을 빚는 아틀리에 마스터들."}
                         </h2>
                     </div>
-                    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
                         {team.map((t, idx) => (
                             <div key={idx} className="group relative overflow-hidden bg-white">
-                                <div className="relative aspect-[4/5] overflow-hidden">
+                                <div className="aspect-[3/4] overflow-hidden relative">
                                     <img loading="lazy" src={t.image} alt={t.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-[1.2s] ease-out" />
                                 </div>
-                                <div className="relative z-10 space-y-1 bg-white py-6">
-                                    <h4 className="text-xl font-bold text-black">{t.name}</h4>
+                                <div className="py-6 md:p-8 space-y-1 md:space-y-1.5 bg-white relative z-10">
+                                    <h4 className="text-xl md:text-2xl font-bold text-black">{t.name}</h4>
                                     <p className="text-xs font-bold text-black/50 uppercase">{t.role}</p>
                                 </div>
                             </div>

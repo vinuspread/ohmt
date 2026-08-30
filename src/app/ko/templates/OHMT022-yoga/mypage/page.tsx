@@ -1,304 +1,62 @@
-import { Suspense } from "react";
+
+import Image from "next/image";
 import Link from "next/link";
+import Footer from "../_components/Footer";
+import Navbar from "../_components/Navbar";
+import SubpageHero from "../_components/SubpageHero";
 import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
-import Navbar from "../_components/Navbar";
-import PageHeader from "../_components/PageHeader";
-import Footer from "../_components/Footer";
 
-const MY_SCHEDULE = [
-  { date: "6월 16일", time: "오전 7:00", name: "빈야사 플로우", instructor: "소피아 첸", status: "예정" },
-  { date: "6월 18일", time: "오후 6:30", name: "하타 요가",      instructor: "레나 박",   status: "예정" },
-  { date: "6월 20일", time: "오전 8:00", name: "명상",           instructor: "마커스 웹", status: "예정" },
-  { date: "6월 9일",  time: "오전 7:00", name: "빈야사 플로우", instructor: "소피아 첸", status: "완료" },
-  { date: "6월 6일",  time: "오후 6:30", name: "필라테스",       instructor: "레나 박",   status: "완료" },
+type ReservationViewState = "ready" | "empty" | "error";
+type PageProps = { searchParams: Promise<{ state?: string | string[] }> };
+type Reservation = { id: string; date: string; time: string; name: string; instructor: string; status: string; slug: string };
+
+const UPCOMING: Reservation[] = [
+  { id: "1", date: "6월 16일 월요일", time: "오전 7:00", name: "빈야사 플로우", instructor: "소피아 첸", status: "예약 확정", slug: "vinyasa-flow" },
+  { id: "2", date: "6월 18일 수요일", time: "오후 6:30", name: "하타 요가", instructor: "소피아 첸", status: "예약 확정", slug: "hatha-yoga" },
+  { id: "3", date: "6월 20일 금요일", time: "오전 8:00", name: "명상", instructor: "미라 송", status: "예약 확정", slug: "meditation" },
 ];
 
-const PAYMENT_HISTORY = [
-  { date: "2026. 6. 1",  desc: "월 정기권",  amount: "89,000원",  status: "결제 완료" },
-  { date: "2026. 5. 1",  desc: "월 정기권",  amount: "89,000원",  status: "결제 완료" },
-  { date: "2026. 4. 1",  desc: "월 정기권",  amount: "89,000원",  status: "결제 완료" },
-];
+function BookingRow({ item }: { item: Reservation }) {
+  return <article className="grid gap-5 border-b border-[var(--color-border)] py-7 md:grid-cols-12 md:items-center md:gap-8"><div className="md:col-span-3"><p className="prana-sub-small text-[var(--color-text)]">{item.date}</p><p className="prana-sub-small mt-2 text-[var(--color-text-muted)]">{item.time}</p></div><div className="md:col-span-5"><h3 className="prana-sub-title text-[var(--color-text)]">{item.name}</h3><p className="prana-sub-small mt-2 text-[var(--color-text-muted)]">{item.instructor} · {item.status}</p></div><div className="flex gap-6 md:col-span-4 md:justify-end"><Link href={`/ko/templates/OHMT022-yoga/classes/${item.slug}`} className="prana-sub-small inline-flex min-h-11 items-center text-[var(--color-text)]">수업 정보</Link><Link href="/ko/templates/OHMT022-yoga/schedule" className="prana-sub-small inline-flex min-h-11 items-center border-b border-[var(--color-text)] font-medium text-[var(--color-text)]">변경</Link></div></article>;
+}
 
-function MyPageContent() {
+export default async function MyPage({ searchParams }: PageProps) {
+  const params = await searchParams;
+  const raw = Array.isArray(params.state) ? params.state[0] : params.state;
+  const state: ReservationViewState = raw === "empty" || raw === "error" ? raw : "ready";
+  const next = UPCOMING[0];
+
   return (
     <TemplateWrapper theme={theme}>
       <Navbar />
-      <PageHeader
-        title="마이페이지"
-        subtitle="예약 내역, 멤버십, 계정 설정을 관리하세요."
-        image="/templates/OHMT022-yoga/subpage-mypage.jpg"
-      />
+      <main className="prana-subpage bg-white pt-16 md:pt-[76px] break-keep">
+        <SubpageHero eyebrow="MY PRACTICE" title="한 주의 수련을 차분하게 모아보세요" description="다음 수업을 확인하고 필요한 변경만 간단히 처리한 뒤, 다시 수련에 집중하세요." image="/templates/OHMT022-yoga/subpage-mypage-v3.webp" imageAlt="식물이 있는 PRANA 스튜디오에서 수련을 준비하는 회원" imagePosition="object-[70%_center] md:object-center" />
 
-      {/* 프로필 + 스탯 */}
-      <section className="grid grid-cols-1 lg:grid-cols-4 border-b border-[var(--color-border)]">
-        {/* 프로필 */}
-        <div className="px-8 md:px-14 lg:px-20 py-10 border-b lg:border-b-0 lg:border-r border-[var(--color-border)] bg-[var(--color-bg-alt)] flex flex-col gap-5">
-          <div className="flex items-center gap-5">
-            <div
-              className="w-16 h-16 rounded-full bg-cover bg-center flex-shrink-0"
-              style={{ backgroundImage: "url('/templates/OHMT022-yoga/instructor-1.jpg')" }}
-            />
+        <section className="border-b border-[var(--color-border)] px-6 md:px-14 lg:px-20"><dl className="mx-auto grid max-w-[1180px] md:grid-cols-3">{[["회원", "김지수"], ["이용권", "8회 남음"], ["갱신일", "7월 1일"]].map(([label, value], index) => <div key={label} className={`py-7 ${index ? "border-t border-[var(--color-border)] md:border-l md:border-t-0 md:pl-8" : ""}`}><dt className="prana-sub-label tracking-[0.14em] text-[var(--color-text-muted)]">{label}</dt><dd className="prana-sub-small mt-3 text-[var(--color-text)]">{value}</dd></div>)}</dl></section>
+
+        <section className="bg-[var(--color-bg-alt)] px-6 py-20 md:px-14 md:py-28 lg:px-20"><div className="mx-auto max-w-[1180px]">{state === "ready" ? (
+          <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-center lg:gap-20">
             <div>
-              <p
-                className="text-xs tracking-[0.22em] uppercase text-[var(--color-text-muted)] mb-1"
-                style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-              >
-                2024년 가입
-              </p>
-              <h2
-                className="text-xl font-light text-[var(--color-text)] tracking-[-0.01em]"
-                style={{ fontFamily: "var(--font-heading)" }}
-              >
-                김지수
-              </h2>
-              <p
-                className="mt-0.5 text-sm text-[var(--color-text-muted)]"
-                style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-              >
-                jisoo.kim@email.com
-              </p>
-            </div>
-          </div>
-          <div className="pt-6 border-t border-[var(--color-border)]">
-            <p
-              className="text-xs tracking-[0.22em] uppercase text-[var(--color-text-muted)] mb-2"
-              style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-            >
-              이용 중인 정기권</p>
-            <p
-              className="text-base font-light text-[var(--color-text)]"
-              style={{ fontFamily: "var(--font-body)" }}
-            >
-              월 정기권
-            </p>
-            <p
-              className="mt-1 text-sm text-[var(--color-text-muted)]"
-              style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-            >
-              매월 1일 갱신 · 월 89,000원</p>
-          </div>
-          <Link
-            href="/ko/templates/OHMT022-yoga/schedule"
-            className="mt-2 inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] font-medium transition-colors"
-            style={{ fontFamily: "var(--font-body)" }}
-          >
-            클래스 예약 →
-          </Link>
-        </div>
-
-        {/* 스탯 */}
-        <div className="col-span-1 lg:col-span-3 grid grid-cols-3 divide-x divide-[var(--color-border)]">
-          {[
-            { value: "48",    label: "누적 수강" },
-            { value: "12",    label: "이번 달 수강" },
-            { value: "6개월", label: "연속 이용" },
-          ].map((stat) => (
-            <div key={stat.label} className="flex flex-col justify-center px-8 py-8 border-b lg:border-b-0 border-[var(--color-border)]">
-              <p
-                className="text-[length:var(--text-h2)] font-light text-[var(--color-text)] tracking-[-0.02em] whitespace-nowrap"
-                style={{ fontFamily: "var(--font-heading)" }}
-              >
-                {stat.value}
-              </p>
-              <p
-                className="mt-2 text-xs tracking-[0.08em] uppercase text-[var(--color-text-muted)] whitespace-nowrap"
-                style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-              >
-                {stat.label}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 나의 스케줄 */}
-      <section className="bg-[var(--color-bg)] border-b border-[var(--color-border)]">
-        <div className="px-8 md:px-14 lg:px-20 pt-20 pb-14 border-b border-[var(--color-border)]">
-          <p
-            className="text-xs tracking-[0.25em] uppercase text-[var(--color-text-muted)] mb-4"
-            style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-          >
-            클래스 예약</p>
-          <h2
-            className="text-[length:var(--text-h2)] font-light text-[var(--color-text)] leading-[var(--leading-heading)] tracking-[-0.02em]"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            예약한 클래스</h2>
-        </div>
-
-        <div className="divide-y divide-[var(--color-border)]">
-          {MY_SCHEDULE.map((item, i) => (
-            <div
-              key={i}
-              className="grid grid-cols-2 md:grid-cols-3 items-center gap-x-6 md:gap-x-10 px-8 md:px-14 lg:px-20 py-6"
-            >
-              <div>
-                <p
-                  className="text-xs tracking-[0.08em] uppercase text-[var(--color-text-muted)]"
-                  style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-                >
-                  {item.date}
-                </p>
-                <p
-                  className="mt-0.5 text-sm text-[var(--color-text-muted)]"
-                  style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-                >
-                  {item.time}
-                </p>
-              </div>
-              <div className="min-w-0">
-                <p
-                  className="text-sm font-light text-[var(--color-text)] tracking-[-0.01em]"
-                  style={{ fontFamily: "var(--font-body)" }}
-                >
-                  {item.name}
-                </p>
-                <p
-                  className="mt-0.5 text-sm text-[var(--color-text-muted)]"
-                  style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-                >
-                  {item.instructor}
-                </p>
-              </div>
-              <div className="hidden md:flex items-center gap-4">
-                <span
-                  className={`text-xs tracking-[0.15em] uppercase ${
-                    item.status === "완료" ? "text-[var(--color-text-muted)]" : "text-[var(--color-text)]"
-                  }`}
-                  style={{ fontFamily: "var(--font-body)", fontWeight: item.status === "예정" ? 500 : 300 }}
-                >
-                  {item.status}
-                </span>
-                {item.status === "예정" && (
-                  <button
-                    className="text-xs tracking-[0.15em] uppercase text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors"
-                    style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-                  >
-                    취소
-                  </button>
-                )}
+              <p className="prana-sub-label tracking-[0.16em] text-[var(--color-text-muted)]">다음 수업</p>
+              <p className="prana-sub-lead mt-6 text-[var(--color-text)]">{next.date}</p>
+              <p className="prana-sub-small mt-2 text-[var(--color-text-muted)]">{next.time}</p>
+              <h2 className="prana-sub-section mt-10 text-[var(--color-text)]">{next.name}</h2>
+              <p className="prana-sub-small mt-4 text-[var(--color-text-muted)]">{next.instructor} · {next.status}</p>
+              <div className="mt-9 flex flex-wrap gap-4">
+                <Link href={`/ko/templates/OHMT022-yoga/classes/${next.slug}`} className="prana-sub-small inline-flex min-h-12 items-center border border-[var(--color-border)] bg-white px-6 font-medium text-[var(--color-text)]">수업 정보</Link>
+                <Link href="/ko/templates/OHMT022-yoga/schedule" className="prana-sub-small inline-flex min-h-12 items-center bg-[var(--color-accent)] px-6 font-medium text-white">시간 변경</Link>
               </div>
             </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 결제 내역 + 계정 설정 */}
-      <section className="grid grid-cols-1 md:grid-cols-2 border-b border-[var(--color-border)]">
-
-        {/* 결제 내역 */}
-        <div className="border-b md:border-b-0 md:border-r border-[var(--color-border)] bg-[var(--color-bg-alt)]">
-          <div className="px-8 md:px-14 lg:px-20 pt-14 pb-8 border-b border-[var(--color-border)]">
-            <p
-              className="text-xs tracking-[0.25em] uppercase text-[var(--color-text-muted)] mb-3"
-              style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-            >
-              결제</p>
-            <h2
-              className="text-[length:var(--text-lead)] font-light text-[var(--color-text)] leading-[var(--leading-heading)] tracking-[-0.02em]"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              결제 내역
-            </h2>
+            <div className="relative aspect-[4/3] min-h-[300px] overflow-hidden bg-[var(--color-bg-secondary)] lg:min-h-[420px]">
+              <Image src="/templates/OHMT022-yoga/class-vinyasa-v2.webp" alt="PRANA 스튜디오의 빈야사 플로우 수업" fill sizes="(max-width: 1023px) 100vw, 58vw" className="object-cover" />
+            </div>
           </div>
-          <div className="divide-y divide-[var(--color-border)]">
-            {PAYMENT_HISTORY.map((item, i) => (
-              <div key={i} className="grid grid-cols-3 md:grid-cols-3 items-center gap-x-6 md:gap-x-10 px-8 md:px-14 lg:px-20 py-5">
-                <p
-                  className="text-sm text-[var(--color-text-muted)]"
-                  style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-                >
-                  {item.date}
-                </p>
-                <p
-                  className="text-sm font-light text-[var(--color-text)] truncate"
-                  style={{ fontFamily: "var(--font-body)" }}
-                >
-                  {item.desc}
-                </p>
-                <div className="flex items-center gap-4">
-                  <p
-                    className="text-sm font-light text-[var(--color-text)]"
-                    style={{ fontFamily: "var(--font-body)" }}
-                  >
-                    {item.amount}
-                  </p>
-                  <span
-                    className="text-xs tracking-[0.15em] uppercase text-[var(--color-text-muted)]"
-                    style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-                  >
-                    {item.status}
-                  </span>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
+        ) : <div><p className="prana-sub-label tracking-[0.16em] text-[var(--color-text-muted)]">{state === "error" ? "예약 정보를 불러올 수 없음" : "다음 수업 없음"}</p><h2 className="prana-sub-section mt-6 max-w-[15ch] text-[var(--color-text)]">{state === "error" ? "예약 내용은 그대로 보관되어 있습니다." : "이번 주 첫 수업을 골라보세요."}</h2><p className="prana-sub-small mt-6 max-w-xl leading-7 text-[var(--color-text-muted)]">{state === "error" ? "페이지를 다시 불러오거나 급한 변경은 스튜디오로 연락해 주세요." : "날짜와 수련을 고르면 확정된 일정이 여기에 표시됩니다."}</p><Link href={state === "error" ? "/ko/templates/OHMT022-yoga/mypage" : "/ko/templates/OHMT022-yoga/schedule"} className="prana-sub-small mt-7 inline-flex min-h-12 items-center bg-[var(--color-accent)] px-7 font-medium text-white">{state === "error" ? "다시 불러오기" : "수업 찾기"}</Link></div>}</div></section>
 
-        {/* 계정 설정 */}
-        <div className="bg-[var(--color-bg)]">
-          <div className="px-8 md:px-14 lg:px-20 pt-14 pb-8 border-b border-[var(--color-border)]">
-            <p
-              className="text-xs tracking-[0.25em] uppercase text-[var(--color-text-muted)] mb-3"
-              style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-            >
-              프로필
-            </p>
-            <h2
-              className="text-[length:var(--text-lead)] font-light text-[var(--color-text)] leading-[var(--leading-heading)] tracking-[-0.02em]"
-              style={{ fontFamily: "var(--font-heading)" }}
-            >
-              계정 설정
-            </h2>
-          </div>
-          <div className="divide-y divide-[var(--color-border)]">
-            {[
-              { label: "이름",     value: "김지수" },
-              { label: "이메일",   value: "jisoo.kim@email.com" },
-              { label: "연락처",   value: "010-1234-5678" },
-              { label: "비밀번호", value: "••••••••••" },
-              { label: "알림 설정", value: "이메일 및 앱 푸시" },
-            ].map((field) => (
-              <div
-                key={field.label}
-                className="flex items-center justify-between px-8 md:px-14 lg:px-20 py-5 group hover:bg-[var(--color-bg-alt)] transition-colors"
-              >
-                <div className="flex items-center gap-6 min-w-0">
-                  <p
-                    className="text-xs tracking-[0.18em] uppercase text-[var(--color-text-muted)] w-24 flex-shrink-0"
-                    style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-                  >
-                    {field.label}
-                  </p>
-                  <p
-                    className="text-sm font-light text-[var(--color-text)] truncate"
-                    style={{ fontFamily: "var(--font-body)" }}
-                  >
-                    {field.value}
-                  </p>
-                </div>
-                <button
-                  className="text-xs tracking-[0.18em] uppercase text-[var(--color-text-muted)] hover:text-[var(--color-text)] font-medium transition-colors opacity-0 group-hover:opacity-100 flex-shrink-0 ml-4"
-                  style={{ fontFamily: "var(--font-body)" }}
-                >
-                  변경 →</button>
-              </div>
-            ))}
-          </div>
-        </div>
-
-      </section>
-
+        <section className="px-6 py-20 md:px-14 md:py-28 lg:px-20 lg:py-32"><div className="mx-auto max-w-[1180px]"><div className="grid gap-7 lg:grid-cols-12 lg:items-end"><div className="lg:col-span-8"><p className="prana-sub-label tracking-[0.16em] text-[var(--color-text-muted)]">UPCOMING</p><h2 className="prana-sub-section mt-5 text-[var(--color-text)]">다가오는 수업</h2></div><div className="lg:col-span-4 lg:text-right"><Link href="/ko/templates/OHMT022-yoga/schedule" className="prana-sub-small inline-flex min-h-12 items-center bg-[var(--color-accent)] px-7 font-medium text-white">수업 추가</Link></div></div><div className="mt-10 border-t border-[var(--color-text)]">{state === "ready" ? UPCOMING.slice(1).map((item) => <BookingRow key={item.id} item={item} />) : <p className="prana-sub-small py-10 text-[var(--color-text-muted)]">예약한 수업이 여기에 표시됩니다.</p>}</div><div className="mt-16 grid gap-6 border-t border-[var(--color-border)] pt-8 md:grid-cols-12 md:gap-10"><h2 className="prana-sub-title text-[var(--color-text)] md:col-span-4">늦은 변경에 도움이 필요하신가요?</h2><p className="prana-sub-small max-w-2xl leading-7 text-[var(--color-text-muted)] md:col-span-8">수업 시작 전에 스튜디오로 연락해 주세요. 다른 시간으로 옮길 수 있는지 확인해 드립니다.</p></div></div></section>
+      </main>
       <Footer />
     </TemplateWrapper>
-  );
-}
-
-export default function MyPage() {
-  return (
-    <Suspense>
-      <MyPageContent />
-    </Suspense>
   );
 }

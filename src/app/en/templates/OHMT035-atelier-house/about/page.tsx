@@ -81,7 +81,7 @@ export default function AboutPage() {
 
       <section className="bg-[var(--color-bg-secondary)] px-5 py-16 md:px-8 md:py-24">
         <div className="mx-auto max-w-[1440px]">
-          <h2 className="font-display text-[length:var(--text-h3)] font-semibold leading-tight tracking-tight text-[var(--color-text)]">
+          <h2 className="font-display text-[length:var(--text-h3)] font-semibold leading-[1.05] tracking-tight text-[var(--color-text)]">
             Three rules the catalog has to follow.
           </h2>
           <div className="mt-10 grid gap-8 md:grid-cols-3">
@@ -132,7 +132,7 @@ export default function AboutPage() {
 
       <section className="bg-[var(--color-bg-secondary)] px-5 py-16 md:px-8 md:py-24">
         <div className="mx-auto max-w-[1440px]">
-          <h2 className="max-w-[560px] font-display text-[length:var(--text-h3)] font-semibold leading-tight tracking-tight text-[var(--color-text)]">
+          <h2 className="max-w-[560px] font-display text-[length:var(--text-h3)] font-semibold leading-[1.05] tracking-tight text-[var(--color-text)]">
             Six things the workshop will not compromise on.
           </h2>
           <div className="mt-10 grid gap-x-8 gap-y-10 sm:grid-cols-2 md:grid-cols-3">
@@ -151,7 +151,7 @@ export default function AboutPage() {
 
       <section className="px-5 py-16 md:px-8 md:py-24">
         <div className="mx-auto max-w-[1440px]">
-          <h2 className="max-w-[560px] font-display text-[length:var(--text-h3)] font-semibold leading-tight tracking-tight text-[var(--color-text)]">
+          <h2 className="max-w-[560px] font-display text-[length:var(--text-h3)] font-semibold leading-[1.05] tracking-tight text-[var(--color-text)]">
             Six people, no hidden layers.
           </h2>
           <div className="mt-10 grid grid-cols-3 gap-x-4 gap-y-8 md:grid-cols-6 md:gap-x-6">

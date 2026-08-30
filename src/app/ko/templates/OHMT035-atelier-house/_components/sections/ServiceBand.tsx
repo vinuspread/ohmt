@@ -3,18 +3,18 @@ import { TreeStructure, ShieldCheck, ArrowsClockwise } from '@phosphor-icons/rea
 const services = [
   {
     icon: TreeStructure,
-    title: 'FSC 인증 원목 사용',
-    desc: '프레임에는 FSC 인증 원목을 사용하며 합판이나 무늬목으로 대체하지 않습니다.',
+    title: '원목 소재 보증',
+    desc: '모든 뼈대는 FSC 인증을 통과한 단단한 원목만을 사용합니다. 합판이나 무늬목으로 대체하지 않습니다.',
   },
   {
     icon: ShieldCheck,
     title: '10년 프레임 무상 보증',
-    desc: '가구 프레임은 10년, 패브릭과 오일 마감은 2년 동안 보증합니다.\n세부 범위는 제품별 보증 기준에 따릅니다.',
+    desc: '가구의 뼈대는 10년 동안 무상으로 수리해 드립니다. 패브릭 및 오일 마감 보증 기간은 2년입니다.',
   },
   {
     icon: ArrowsClockwise,
-    title: '30일 체험 후 반품',
-    desc: '30일 동안 공간과 생활 방식에 맞는지 확인할 수 있습니다.\n불만족 시 회수 비용 없이 반품할 수 있습니다.',
+    title: '30일 체험 제도',
+    desc: '집 안 분위기와 생활 방식에 맞는지 충분히 겪어보세요. 불만족 시 회수 비용 없이 반품해 드립니다.',
   },
 ]
 
@@ -33,9 +33,11 @@ export function ServiceBand() {
           <div>
             <p className="text-xs font-semibold uppercase tracking-wider text-white/42">품질 약속</p>
             <h2 className="mt-4 font-display text-[length:var(--text-h3)] font-semibold leading-[var(--leading-heading)] tracking-tight word-keep-all">
-              배송 후에도 이어지는 관리</h2>
+              집으로 배송된 이후의 오랜 시간까지 책임집니다.
+            </h2>
             <p className="mt-5 max-w-[430px] text-sm leading-relaxed text-white/58 word-keep-all">
-              사용 원목과 보증 기간, 체험 및 반품 기준을 구체적으로 안내해 구매 후 관리까지 확인할 수 있습니다.</p>
+              단순한 품질 약속 아이콘 나열을 넘어, 공간에 놓인 후에도 흔들림 없는 일상의 지원군이 되겠다는 다짐입니다.
+            </p>
           </div>
 
           <div className="mt-9 divide-y divide-white/12 border-t border-white/12">
@@ -44,7 +46,7 @@ export function ServiceBand() {
                 <s.icon size={24} weight="light" className="mt-0.5 text-[var(--color-accent)]" />
                 <div>
                   <h3 className="text-sm font-semibold text-white">{s.title}</h3>
-                  <p className="mt-2 max-w-[360px] whitespace-pre-line text-xs leading-relaxed text-white/55 word-keep-all">{s.desc}</p>
+                  <p className="mt-2 max-w-[360px] text-xs leading-relaxed text-white/55 word-keep-all">{s.desc}</p>
                 </div>
               </div>
             ))}

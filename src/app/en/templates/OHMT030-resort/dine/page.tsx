@@ -68,21 +68,21 @@ export default function DinePage() {
           </div>
           <div>
             <p className="resort-body mb-6 text-lg font-normal text-white/85">
-              At OHMT, every meal is a conversation between land and sea. Our kitchen draws from the 
-              coastal pantry of the Aegean: sun-ripened tomatoes, wild herbs gathered from the cliffs, 
-              fish caught at dawn and served within hours. The Michelin-starred team works with 
-              restraint and respect, letting each ingredient speak for itself against a backdrop of 
+              At OHMT, every meal is a conversation between land and sea. Our kitchen draws from the
+              coastal pantry of the Aegean: sun-ripened tomatoes, wild herbs gathered from the cliffs,
+              fish caught at dawn and served within hours. The Michelin-starred team works with
+              restraint and respect, letting each ingredient speak for itself against a backdrop of
               panoramic ocean views.
             </p>
             <p className="resort-body text-base font-normal text-white/70">
-              Head chef Elena Marchetti sources directly from local fishermen and small-batch 
-              producers across the Cyclades. Every dish begins on the water or in the soil, 
-              never on a plate. The menu changes with the seasons and the catch, guided by 
+              Head chef Elena Marchetti sources directly from local fishermen and small-batch
+              producers across the Cyclades. Every dish begins on the water or in the soil,
+              never on a plate. The menu changes with the seasons and the catch, guided by
               what is freshest rather than what is expected.
             </p>
             <div className="mt-8 pl-6 border-l-2 border-[var(--accent)]">
               <p className="resort-body text-sm font-normal text-white/60">
-                &ldquo;We do not impose on the ingredients. We listen to them. The sea tells us 
+                &ldquo;We do not impose on the ingredients. We listen to them. The sea tells us
                 what to cook each morning.&rdquo;
               </p>
               <p className="text-[var(--accent)] text-xs font-medium mt-2 tracking-widest uppercase">

@@ -58,7 +58,7 @@ export default function ProfilePage() {
             <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
               <div className="relative shrink-0">
                 <div className="w-16 h-16 rounded-full border-2 border-[var(--color-border)] overflow-hidden bg-[var(--color-bg-surface)]">
-                  <Image src="/templates/OHMT007-portfolio/portfolio-1.jpg" alt="Morgan Chen" width={64} height={64} className="object-cover w-full h-full" />
+                  <Image src="/templates/OHMT015-dashboard/avatar-1.jpg" alt="Morgan Chen" width={64} height={64} className="object-cover w-full h-full" />
                 </div>
                 <div className="absolute bottom-0.5 right-0.5 w-3.5 h-3.5 rounded-full bg-[var(--color-success)] border-2 border-[var(--color-bg-elevated)]" />
               </div>
@@ -68,7 +68,7 @@ export default function ProfilePage() {
                   <Badge variant="primary">리드 개발자</Badge>
                 </div>
                 <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-[var(--color-text-muted)]">
-                  <span className="flex items-center gap-1.5"><Briefcase size={13} strokeWidth={1.5} /> OHMT Motors</span>
+                  <span className="flex items-center gap-1.5"><Briefcase size={13} strokeWidth={1.5} /> AXLE MOTORS</span>
                   <span className="flex items-center gap-1.5"><MapPin size={13} strokeWidth={1.5} /> Seoul, Korea</span>
                   <span className="flex items-center gap-1.5"><Star size={13} strokeWidth={1.5} className="text-[var(--color-warning)]" /> 평점 4.9</span>
                 </div>
@@ -116,7 +116,7 @@ export default function ProfilePage() {
             >
               <h3 className="text-sm font-semibold text-[var(--color-text)] mb-3">소개</h3>
               <p className="text-sm text-[var(--color-text-secondary)] leading-relaxed">
-                OHMT Motors에서 8년 넘게 확장 가능한 웹 애플리케이션을 구축해온 풀스택 개발자입니다. 개발자 도구, 디자인 시스템, 성능 최적화에 관심이 많습니다.
+                AXLE MOTORS에서 8년 넘게 확장 가능한 웹 애플리케이션을 구축해온 풀스택 개발자입니다. 개발자 도구, 디자인 시스템, 성능 최적화에 관심이 많습니다.
               </p>
             </motion.div>
 

@@ -122,7 +122,7 @@ const ITEMS_PER_PAGE = 12;
 function SouvenirShopContent() {
   const [currentPage, setCurrentPage] = useState(1);
   const totalPages = Math.ceil(products.length / ITEMS_PER_PAGE);
-  
+
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const currentItems = products.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
@@ -134,17 +134,17 @@ function SouvenirShopContent() {
       <Header />
       <main className="antialiased bg-white text-[var(--color-text)] min-h-screen pt-20 md:pt-40 pb-16 md:pb-32 selection:bg-[var(--color-primary)] selection:text-white">
       <div className="max-w-[1440px] mx-auto px-6">
-        
+
         {/* Header Section */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="mb-20 text-center"
         >
           <span className="text-xs uppercase font-bold tracking-[0.5em] text-black/40 block mb-6">The Museum Store</span>
-          <h1 className="text-5xl md:text-8xl font-serif tracking-tighter leading-none mb-8">Echos of History</h1>
+          <h1 className="text-5xl md:text-8xl font-serif tracking-tight leading-none mb-8">Echos of History</h1>
           <p className="max-w-2xl mx-auto text-black/60 font-serif text-lg leading-[var(--leading-body)]">
-            Curated objects that transmit the legacy of the Vatican Museums into the modern home. 
+            Curated objects that transmit the legacy of the Vatican Museums into the modern home.
             Each piece is selected for its material integrity and theological depth.
           </p>
         </motion.div>
@@ -153,7 +153,7 @@ function SouvenirShopContent() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-20 min-h-[1200px]">
           <AnimatePresence mode="wait">
             {currentItems.map((product, i) => (
-              <motion.div 
+              <motion.div
                 key={`${product.id}-${currentPage}`}
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -162,8 +162,8 @@ function SouvenirShopContent() {
                 className="group"
               >
                 <div className="aspect-[3/4] bg-black/5 overflow-hidden mb-8 relative">
-                  <img 
-                    src={product.img} 
+                  <img
+                    src={product.img}
                     alt={product.name}
                     className="w-full h-full object-cover grayscale-[0.3] group-hover:grayscale-0 group-hover:scale-105 transition-all duration-300"
                   />
@@ -172,7 +172,7 @@ function SouvenirShopContent() {
                   </div>
                 </div>
                 <div className="space-y-3 px-2">
-                  <h3 className="font-serif text-xl tracking-tight leading-tight">{product.name}</h3>
+                  <h3 className="font-serif text-xl tracking-tight leading-[1.1]">{product.name}</h3>
                   <p className="text-sm text-black/70 line-clamp-2 font-sans leading-[var(--leading-body)]">{product.desc}</p>
                   <div className="flex items-center justify-between pt-6 border-t border-black/5">
                     <span className="text-sm font-bold tracking-[0.1em]">{product.price}</span>
@@ -189,7 +189,7 @@ function SouvenirShopContent() {
         {/* Pagination */}
         {totalPages > 1 && (
           <div className="mt-40 flex items-center justify-center gap-12 border-t border-black/10 pt-20">
-            <button 
+            <button
               onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
               disabled={currentPage === 1}
               className={`flex items-center gap-2 text-xs uppercase tracking-widest font-bold transition-all ${currentPage === 1 ? 'opacity-20 cursor-not-allowed' : 'hover:-translate-x-2'}`}
@@ -198,7 +198,7 @@ function SouvenirShopContent() {
             </button>
             <div className="flex items-center gap-6">
                {[...Array(totalPages)].map((_, i) => (
-                 <button 
+                 <button
                    key={i}
                    onClick={() => setCurrentPage(i + 1)}
                    className={`text-xs uppercase font-bold tracking-widest ${currentPage === i + 1 ? 'text-black underline underline-offset-8' : 'text-black/30 hover:text-black'}`}
@@ -207,7 +207,7 @@ function SouvenirShopContent() {
                  </button>
                ))}
             </div>
-            <button 
+            <button
               onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
               disabled={currentPage === totalPages}
               className={`flex items-center gap-2 text-xs uppercase tracking-widest font-bold transition-all ${currentPage === totalPages ? 'opacity-20 cursor-not-allowed' : 'hover:translate-x-2'}`}
@@ -218,15 +218,15 @@ function SouvenirShopContent() {
         )}
 
         {/* Collections Link */}
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           className="mt-40 flex flex-col md:flex-row items-center justify-between gap-12 bg-white p-12 md:p-20 border border-black/5"
         >
           <div className="max-w-xl">
-             <h2 className="text-4xl font-serif mb-6 text-black tracking-tighter">Authentic Reproductions.</h2>
+             <h2 className="text-4xl font-serif mb-6 text-black tracking-tight">Authentic Reproductions.</h2>
              <p className="text-black/60 font-serif leading-[var(--leading-body)] text-lg">
-               All artifact replicas are produced in collaboration with the Vatican Pontifical Academy, 
+               All artifact replicas are produced in collaboration with the Vatican Pontifical Academy,
                using high-precision 3D scans of the original works to ensure absolute fidelity to the source.
              </p>
           </div>
@@ -251,4 +251,3 @@ export default function SouvenirShop(props: Record<string, unknown>) {
     </React.Suspense>
   );
 }
-

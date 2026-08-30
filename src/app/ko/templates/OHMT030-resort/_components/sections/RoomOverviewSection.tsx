@@ -17,7 +17,7 @@ export function RoomOverviewSection({
   return (
     <section className="py-16 md:py-32" style={{ backgroundColor: "var(--bg)" }}>
       <div className="resort-container grid grid-cols-1 gap-12 md:grid-cols-2">
-        <p className="resort-body whitespace-pre-line text-lg font-normal text-white/90 break-keep">
+        <p className="resort-body text-lg font-normal text-white/90 break-keep">
           {description}
         </p>
         <SpecList items={specs} />

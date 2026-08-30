@@ -26,7 +26,8 @@ export const Services = () => {
           className="text-center mb-12 md:mb-16"
         >
           <h2 className="text-[length:var(--text-h2)] font-[var(--font-heading)] font-bold text-[var(--color-primary)] leading-[var(--leading-heading)]">
-            서비스와 편의시설</h2>
+            프리미엄 서비스 & 편의시설
+          </h2>
         </motion.div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -43,7 +44,7 @@ export const Services = () => {
                 {iconMap[s.icon]}
               </div>
               <h3 className="text-lg font-bold text-[var(--color-text)] mb-2">{s.title}</h3>
-              <p className="text-sm text-[var(--color-text-muted)] leading-relaxed break-keep [text-wrap:pretty]">{s.desc}</p>
+              <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">{s.desc}</p>
             </motion.div>
           ))}
         </div>

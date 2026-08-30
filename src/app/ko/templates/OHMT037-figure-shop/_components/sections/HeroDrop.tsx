@@ -31,15 +31,14 @@ export function HeroDrop() {
           {...item(0)}
           className="max-w-[900px] text-5xl leading-[var(--leading-display)] tracking-normal text-white lg:text-8xl"
         >
-          <span className="block">Solis로 시작하는</span>
-          <span className="block">Ceramic Art Series 01</span>
+          Solis가 여는 Ceramic Art Series 01
         </motion.h1>
         <motion.div {...item(1)} className="mt-9 flex flex-wrap gap-4">
           <Button href={`${BASE}/figures/vala-kaiju-03`} variant="solid-white">
             Solis 보기
           </Button>
           <Button href={`${BASE}/shop`} variant="solid-white">
-            전체 상품 보기
+            전체 보기
           </Button>
         </motion.div>
       </div>

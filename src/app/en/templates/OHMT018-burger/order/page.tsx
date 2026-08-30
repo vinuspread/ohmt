@@ -51,17 +51,17 @@ function OrderPageContent() {
   const calculateTotal = () => {
     if (!order.burger) return 0;
     let total = order.burger.price;
-    
+
     // Patty option extra cost
     if (order.options.patty === "double") total += 2.0;
     if (order.options.patty === "triple") total += 4.0;
-    
+
     // Bacon extra cost
     if (order.options.bacon) total += 1.5;
-    
+
     // Drink cost
     if (order.drink) total += order.drink.price;
-    
+
     return parseFloat(total.toFixed(2));
   };
 
@@ -95,13 +95,13 @@ function OrderPageContent() {
       <TemplateWrapper theme={theme}>
         <main className="antialiased min-h-screen pt-20 md:pt-24 bg-white text-[var(--color-text)]">
           <div className="max-w-[1440px] mx-auto px-6 md:px-12 py-10">
-            
+
             {/* Step Progress Indicator (Only visible if not success) */}
             {step !== "success" && (
               <div className="flex items-center justify-between overflow-x-auto pb-6 border-b border-[var(--color-border)] mb-10 gap-2 scrollbar-none">
                 {steps.slice(0, 4).map((s, idx) => {
                   const isActive = step === s.key;
-                  const isCompleted = 
+                  const isCompleted =
                     steps.findIndex(x => x.key === step) > steps.findIndex(x => x.key === s.key);
                   return (
                     <div key={s.key} className="flex items-center gap-3 shrink-0">
@@ -132,11 +132,11 @@ function OrderPageContent() {
 
             {/* Layout Grid (4 columns, content occupies 3 columns) */}
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-              
+
               {/* Main Interaction Area */}
               <div className="lg:col-span-3">
                 <AnimatePresence mode="wait">
-                  
+
                   {/* Step 1: Burger Selection */}
                   {step === "burger" && (
                     <motion.div
@@ -163,7 +163,7 @@ function OrderPageContent() {
                             </div>
                             <div className="p-4 md:p-5">
                               <div className="flex items-start justify-between gap-2 mb-2">
-                                <h3 className="text-base md:text-lg font-bold leading-tight">{item.name}</h3>
+                                <h3 className="text-base md:text-lg font-bold leading-[1.05]">{item.name}</h3>
                                 <span className="text-base md:text-lg font-bold text-[var(--color-accent)] shrink-0">${item.price}</span>
                               </div>
                               <p className="text-sm text-[var(--color-text-muted)] leading-relaxed line-clamp-2">{item.description}</p>
@@ -340,7 +340,7 @@ function OrderPageContent() {
                             </div>
                             <div className="p-4 md:p-5">
                               <div className="flex items-start justify-between gap-2 mb-2">
-                                <h3 className="text-base md:text-lg font-bold leading-tight">{item.name}</h3>
+                                <h3 className="text-base md:text-lg font-bold leading-[1.05]">{item.name}</h3>
                                 <span className="text-base md:text-lg font-bold text-[var(--color-accent)] shrink-0">${item.price}</span>
                               </div>
                               <p className="text-sm text-[var(--color-text-muted)] leading-relaxed line-clamp-2">{item.description}</p>
@@ -386,7 +386,7 @@ function OrderPageContent() {
                         <h3 className="text-base font-bold flex items-center gap-2">
                           <CreditCard size={18} /> Payment Details
                         </h3>
-                        
+
                         <div className="space-y-3">
                           <div>
                             <label className="text-xs text-[var(--color-text-muted)] block mb-1">Cardholder Name</label>
@@ -511,7 +511,7 @@ function OrderPageContent() {
                     <h3 className="text-lg font-bold flex items-center gap-2">
                       <ShoppingBag size={18} /> Order Summary
                     </h3>
-                    
+
                     {order.burger ? (
                       <div className="space-y-4">
                         <div className="space-y-2">
@@ -519,7 +519,7 @@ function OrderPageContent() {
                             <span>{order.burger.name}</span>
                             <span>${order.burger.price}</span>
                           </div>
-                          
+
                           {/* Options display */}
                           <div className="text-xs text-[var(--color-text-muted)] space-y-1 pl-3 border-l-2 border-[var(--color-border)]">
                             <div>· Patty: {order.options.patty === "single" ? "Single" : order.options.patty === "double" ? "Double (+ $2.00)" : "Triple (+ $4.00)"}</div>

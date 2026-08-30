@@ -26,20 +26,6 @@
   --font-body: 'Pretendard Variable', Pretendard, 'Inter', sans-serif;
 }
 
-.ohmt027-architecture h1,
-.ohmt027-architecture h2,
-.ohmt027-architecture h3 {
-  text-wrap: balance;
-  word-break: keep-all;
-}
-
-.ohmt027-architecture p,
-.ohmt027-architecture li {
-  text-wrap: pretty;
-  word-break: keep-all;
-  overflow-wrap: break-word;
-}
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

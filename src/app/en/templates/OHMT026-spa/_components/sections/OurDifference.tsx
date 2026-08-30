@@ -15,7 +15,7 @@ export default function OurDifference() {
 
   return (
     <section className="relative overflow-hidden bg-[var(--color-bg)] py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-[1440px] px-6">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-20 items-center">
           <motion.div
             initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }}
@@ -52,34 +52,17 @@ export default function OurDifference() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.7, ease: EASE_OUT }}
-            className="grid grid-cols-2 gap-4"
+            className="grid grid-cols-5 gap-4"
           >
-            <div className="space-y-4">
-              <div className="overflow-hidden rounded-2xl">
-                <img
-                  src={images[0]}
-                  alt="Spa treatment room with natural light"
-                  className="w-full h-64 object-cover hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <div className="overflow-hidden rounded-2xl">
-                <img
-                  src={images[2]}
-                  alt="Skin therapy products arranged on marble"
-                  className="w-full h-48 object-cover hover:scale-105 transition-transform duration-700"
-                />
-              </div>
+            <div className="col-span-3 overflow-hidden rounded-sm">
+              <img src={images[0]} alt="Spa treatment room with natural light" className="w-full h-full min-h-[22rem] object-cover hover:scale-105 transition-transform duration-700" />
             </div>
-            <div className="pt-12 space-y-4">
-              <div className="overflow-hidden rounded-2xl">
-                <img
-                  src={images[1]}
-                  alt="Therapist preparing a facial treatment"
-                  className="w-full h-48 object-cover hover:scale-105 transition-transform duration-700"
-                />
+            <div className="col-span-2 space-y-4">
+              <div className="overflow-hidden rounded-sm">
+                <img src={images[1]} alt="Therapist preparing a facial treatment" className="w-full h-52 object-cover hover:scale-105 transition-transform duration-700" />
               </div>
-              <div className="overflow-hidden rounded-2xl bg-[var(--color-secondary)] h-48 flex items-center justify-center">
-                <span className="font-[family-name:var(--font-heading)] text-6xl font-bold text-white/20">✦</span>
+              <div className="overflow-hidden rounded-sm">
+                <img src={images[2]} alt="Skin therapy products arranged on marble" className="w-full h-36 object-cover hover:scale-105 transition-transform duration-700" />
               </div>
             </div>
           </motion.div>
@@ -88,4 +71,3 @@ export default function OurDifference() {
     </section>
   );
 }
-

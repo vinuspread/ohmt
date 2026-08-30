@@ -9,29 +9,29 @@ const base = '/ko/templates/OHMT033-foundation'
 
 export const metadata: Metadata = {
   title: '소개',
-  description: 'OHMT 파운데이션은 2015년, 성과를 숫자로 공개하고 참여자의 이름과 근거를 함께 기록한다는 원칙으로 시작했습니다.',
+  description: 'OHMT 파운데이션은 2015년, 숫자를 공개하고 사람의 이름을 밝히고 근거를 보여준다는 원칙으로 시작했습니다.',
 }
 
 const principles = [
   {
-    title: '성과를 숫자로 공개합니다',
-    body: '모든 프로그램은 분기마다 핵심 지표를 정리하고 내부 검토를 거쳐 사이트에 공개합니다.',
+    title: '숫자를 공개합니다',
+    body: '모든 프로그램은 분기마다 핵심 지표를 보고하고, 검토를 거친 뒤에만 사이트에 공개됩니다.',
   },
   {
-    title: '사람과 역할을 함께 기록합니다',
-    body: '스토리에는 실제 참여자의 이름과 역할, 확인된 결과만 담습니다. 여러 사례를 합쳐 만든 가상의 인물은 사용하지 않습니다.',
+    title: '사람의 이름을 밝힙니다',
+    body: '스토리에는 실제 이름과 역할, 실제 결과만 담습니다. 여러 사례를 합친 가상의 인물은 쓰지 않습니다.',
   },
   {
-    title: '근거 자료를 남깁니다',
-    body: '지원금 집행 내역과 봉사 시간은 요약 수치에 그치지 않고 요청 시 확인할 수 있는 기록으로 보관합니다.',
+    title: '근거를 보여줍니다',
+    body: '지원금 집행 내역과 봉사 시간 기록은 연차보고서 요약이 아니라 요청 시 확인할 수 있는 자료로 남깁니다.',
   },
 ]
 
 const leadership = [
-  { name: '프리야 찬드란', role: '상임이사', focus: '운영 체계' },
+  { name: '프리야 찬드란', role: '상임이사', focus: '거버넌스' },
   { name: '마르쿠스 페레이라', role: '프로그램 총괄', focus: '현장 운영' },
-  { name: '유키 다나카', role: '재무 책임자', focus: '재무·감사' },
-  { name: '나오미 오카포', role: '커뮤니케이션 책임자', focus: '정보 공개' },
+  { name: '유키 다나카', role: '재무 책임자', focus: '감사 기록' },
+  { name: '나오미 오카포', role: '커뮤니케이션 책임자', focus: '공개 기록' },
 ]
 
 export default function AboutPage() {
@@ -39,8 +39,8 @@ export default function AboutPage() {
     <SectionShell className="md:py-24">
         <section>
           <SubpageHeader
-            title="좋은 의도를 확인 가능한 기록으로."
-            description="OHMT 파운데이션은 2015년, 성과를 숫자로 공개하고 참여자의 이름과 근거를 함께 기록한다는 원칙으로 시작했습니다."
+            title="약속이 아니라 근거로."
+            description="OHMT 파운데이션은 2015년, 숫자를 공개하고 사람의 이름을 밝히고 근거를 보여준다는 단순한 원칙으로 시작했습니다."
           />
           <div className="relative mt-12 h-[240px] overflow-hidden bg-[var(--color-field)] md:h-[400px] ohmt033-photo-frame">
             <Image
@@ -58,15 +58,18 @@ export default function AboutPage() {
         <section className="mt-12 grid gap-6 md:mt-24 md:gap-6 lg:grid-cols-2 lg:gap-16">
           <div>
             <h2 className="font-heading text-[length:var(--text-h3)] font-semibold leading-[var(--leading-heading)] tracking-tight text-[var(--color-text)]">
-              규모는 커졌지만 운영 원칙은 그대로입니다.</h2>
+              커진 것은 규모이고, 남은 것은 원칙입니다.
+            </h2>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
             <p className="text-base leading-relaxed text-[var(--color-text)] md:text-base">
-              네 명의 자원봉사 엔지니어는 좋은 일을 했다는 만족보다 실제 변화가 있었는지 확인하고 싶었습니다.
-              그 기준이 지금의 운영 방식으로 이어졌습니다.</p>
+              네 명의 자원봉사 엔지니어가 원한 것은 의미 있는 일을 한다는 느낌이 아니라, 실제로 변화가 생겼다는 증거였습니다.
+              그 태도가 지금의 운영 방식이 되었습니다.
+            </p>
             <p className="text-base leading-relaxed text-[var(--color-text-muted)] md:text-base">
-              10년이 지난 지금 활동은 12개국, 4개 프로그램으로 확장됐습니다. 규모가 달라져도 모든 프로그램은
-              출석과 집행 내역, 후속 성과처럼 구체적인 수치를 보고해야 합니다.</p>
+              10년이 지난 지금 활동은 12개국, 4개 프로그램으로 확장됐습니다. 그래도 모든 프로그램은 거짓이라면 공개하기
+              부끄러울 만큼 구체적인 숫자를 보고해야 합니다.
+            </p>
           </div>
         </section>
 
@@ -88,7 +91,8 @@ export default function AboutPage() {
 
         <section className="mt-12 md:mt-24">
           <h2 className="font-heading max-w-[860px] text-[length:var(--text-h3)] font-semibold leading-[var(--leading-heading)] tracking-tight text-[var(--color-text)]">
-            책임지는 사람과 역할을 공개합니다.</h2>
+            책임에는 이름이 필요합니다.
+          </h2>
           <div className="mt-6 divide-y divide-[var(--color-border)] md:mt-6">
             {leadership.map((person) => (
               <div key={person.name} className="grid gap-2 py-4 sm:grid-cols-3">
@@ -120,9 +124,11 @@ export default function AboutPage() {
 
         <section className="mt-12 flex flex-col gap-8 bg-white p-6 sm:flex-row sm:items-center sm:justify-between md:mt-24 md:px-12 md:py-12">
           <p className="max-w-[480px] text-base leading-relaxed text-[var(--color-text-muted)]">
-            성과 수치의 근거와 세부 기록을 확인해보세요.</p>
+            요약이 아니라 이 숫자 뒤의 전체 기록이 궁금하신가요?
+          </p>
           <ButtonLink href={`${base}/newsroom`} variant="outline" size="sm">
-            연차보고서 확인</ButtonLink>
+            연차보고서 보기
+          </ButtonLink>
         </section>
     </SectionShell>
   )

@@ -1,13 +1,12 @@
 import "./theme.css";
 import type { Metadata } from "next";
-
 export const metadata: Metadata = {
-  title: "OHMT | 웨딩 포토그래피",
-  description: "자연스러운 순간과 섬세한 구도로 결혼식의 하루를 오래 남을 사진으로 기록합니다.",
+  title: "OHMT - 프리미엄 웨딩 포토그래피 템플릿",
+  description: "현실적이고 감성적인 다큐멘터리 스타일로 영원한 사랑을 기록합니다. OHMT의 프리미엄 템플릿입니다.",
   openGraph: {
-    title: "OHMT | 웨딩 포토그래피",
-    description: "자연스러운 순간과 섬세한 구도로 결혼식의 하루를 오래 남을 사진으로 기록합니다.",
-    url: "https://ohmt.site/ko/templates/OHMT025-wedding",
+    title: "OHMT - 프리미엄 웨딩 포토그래피 템플릿",
+    description: "현실적이고 감성적인 다큐멘터리 스타일로 영원한 사랑을 기록합니다. OHMT의 프리미엄 템플릿입니다.",
+    url: "https://ohmytemplate.com/ko/templates/OHMT025-wedding",
     siteName: "OHMT",
     images: [{ url: "/templates/OHMT025-wedding/og-image.jpg", width: 1200, height: 630 }],
     locale: "ko_KR",
@@ -16,20 +15,15 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OHMT | 웨딩 포토그래피",
-    description: "자연스러운 순간과 섬세한 구도로 결혼식의 하루를 오래 남을 사진으로 기록합니다.",
+    title: "OHMT - 프리미엄 웨딩 포토그래피 템플릿",
+    description: "현실적이고 감성적인 다큐멘터리 스타일로 영원한 사랑을 기록합니다. OHMT의 프리미엄 템플릿입니다.",
     images: ["/templates/OHMT025-wedding/og-image.jpg"],
-  },
-  alternates: {
-    canonical: "https://ohmt.site/ko/templates/OHMT025-wedding",
-    languages: { en: "https://ohmt.site/en/templates/OHMT025-wedding" },
   },
 };
 
 export default function TemplateLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <style>{`@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css');`}</style>
       <div lang="ko" className="ohmt025-wedding">{children}</div>
     </>
   );

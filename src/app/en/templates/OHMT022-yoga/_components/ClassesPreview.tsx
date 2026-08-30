@@ -1,20 +1,19 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 import { INSTRUCTORS } from "../constants";
 
 export default function ClassesPreview() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-2 border-b border-[var(--color-border)]">
+    <section className="grid grid-cols-1 md:grid-cols-2">
       {/* Left: full-bleed studio image */}
-      <div className="relative border-r border-[var(--color-border)] min-h-[50vh]">
+      <div className="relative min-h-[50vh]">
         <div
           className="absolute inset-0 bg-cover bg-center"
-          style={{ backgroundImage: "url('/templates/OHMT022-yoga/studio.jpg')" }}
+          style={{ backgroundImage: "url('/templates/OHMT022-yoga/home-instructors-studio.webp')" }}
         />
       </div>
 
       {/* Right: instructors */}
-      <div className="flex flex-col bg-[var(--color-bg-alt)]">
+      <div className="flex flex-col bg-white">
         {/* Header */}
         <div className="px-8 md:px-14 lg:px-20 py-12 border-b border-[var(--color-border)]">
           <p
@@ -36,16 +35,16 @@ export default function ClassesPreview() {
           {INSTRUCTORS.map((instructor) => (
             <div key={instructor.id} className="flex items-center gap-6 px-8 md:px-14 lg:px-20 py-9">
               <div
-                className="w-24 h-24 rounded-full bg-cover bg-center flex-shrink-0"
+                className="h-20 w-20 flex-shrink-0 rounded-full bg-cover bg-center"
                 style={{ backgroundImage: `url('${instructor.image}')` }}
               />
               <div>
-                <p
-                  className="text-lg font-normal text-[var(--color-text)] tracking-[-0.01em]"
-                  style={{ fontFamily: "var(--font-body)" }}
+                <h3
+                  className="text-lg font-semibold tracking-[-0.01em] text-[var(--color-text)]"
+                  style={{ fontFamily: "var(--font-heading)", fontWeight: 600 }}
                 >
                   {instructor.name}
-                </p>
+                </h3>
                 <p
                   className="text-sm text-[var(--color-text-muted)] mt-1.5"
                   style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
@@ -58,14 +57,13 @@ export default function ClassesPreview() {
         </div>
 
         {/* CTA */}
-        <div className="px-8 md:px-14 lg:px-20 py-8 border-t border-[var(--color-border)]">
+        <div className="border-t border-[var(--color-border)] px-8 py-12 md:px-14 md:py-14 lg:px-20">
           <Link
             href="/en/templates/OHMT022-yoga/about"
-            className="inline-flex items-center gap-2 text-xs tracking-[0.18em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] group transition-colors font-medium"
+            className="inline-flex border-b border-[var(--color-text)] pb-1 text-sm font-medium text-[var(--color-text)] transition-colors hover:text-[var(--color-text-muted)]"
             style={{ fontFamily: "var(--font-body)" }}
           >
-            Learn More
-            <span className="group-hover:translate-x-1 transition-all"><ArrowRight size={14} className="inline" /></span>
+            Meet the instructors and see how we teach
           </Link>
         </div>
       </div>

@@ -19,14 +19,14 @@ const stories = [
     tag: "Photography",
     title: "Light & Shadow: Capturing the brutalist heart of London.",
     desc: "A photographic journey through the city's most controversial concrete monuments.",
-    img: '/templates/OHMT012-magazine/mag-article-brutalist-london-v2.jpg'
+    img: '/templates/OHMT012-magazine/mag-3.jpg'
   },
   {
     slug: "hidden-teahouses-kyoto",
     tag: "Travel",
     title: "The hidden teahouses of Kyoto's outer districts.",
     desc: "Finding tradition and tranquility away from the tourist crowds.",
-    img: '/templates/OHMT012-magazine/mag-article-kyoto-teahouse-v2.jpg'
+    img: '/templates/OHMT012-magazine/mag-gardening.jpg'
   }
 ];
 
@@ -46,7 +46,7 @@ export const LatestStories = ({ t }: { t: MagazineT }) => {
                 </div>
                 <div>
                   <span className="text-[0.875rem] font-bold uppercase tracking-[0.18em] text-[var(--theme-accent)] mb-2 block">{t.latestStories.stories[i].tag}</span>
-                  <h3 className="font-[family-name:var(--theme-font-heading)] text-[1.15rem] font-normal leading-snug mb-2">
+                  <h3 className="font-[family-name:var(--theme-font-heading)] text-[1.15rem] font-normal leading-[1.05] mb-2">
                     <Link href={`/en/templates/OHMT012-magazine/article/${story.slug}`} className="hover:text-[var(--theme-accent)] transition-colors">{t.latestStories.stories[i].title}</Link>
                   </h3>
                   <p className="text-[0.875rem] text-[var(--theme-text-muted)] leading-[var(--leading-body)] font-normal">
@@ -71,7 +71,7 @@ export const LatestStories = ({ t }: { t: MagazineT }) => {
                   <span className="font-[family-name:var(--theme-font-heading)] text-[2.5rem] leading-none text-[var(--theme-border)] group-hover:text-[var(--theme-accent)] transition-colors shrink-0 pt-1">
                     0{n}
                   </span>
-                  <h5 className="font-[family-name:var(--theme-font-heading)] text-[1rem] leading-snug self-center">
+                  <h5 className="font-[family-name:var(--theme-font-heading)] text-[1rem] leading-[1.05] self-center">
                     <Link href={`/en/templates/OHMT012-magazine/article/${slug}`} className="hover:text-[var(--theme-accent)] transition-colors">
                       {t.latestStories.mostReadItems[i]}
                     </Link>

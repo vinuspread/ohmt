@@ -24,21 +24,6 @@
 .font-michroma { font-family: var(--font-michroma), sans-serif; }
 .font-inter { font-family: 'Pretendard Variable', Pretendard, var(--font-inter), sans-serif; }
 
-.ohmt028-ev h1,
-.ohmt028-ev h2,
-.ohmt028-ev h3 {
-  text-wrap: balance;
-  word-break: keep-all;
-}
-
-.ohmt028-ev p,
-.ohmt028-ev li,
-.ohmt028-ev label {
-  text-wrap: pretty;
-  word-break: keep-all;
-  overflow-wrap: break-word;
-}
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

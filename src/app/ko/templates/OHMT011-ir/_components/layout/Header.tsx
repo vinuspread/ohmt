@@ -26,7 +26,7 @@ export const Header = () => {
             <span className="text-base font-bold text-[var(--color-dark-bg)] tracking-tight leading-none">OBERON</span>
             <span className="text-[0.58rem] font-medium uppercase tracking-[0.2em] text-[#6B6B6B] leading-none">Global Holdings</span>
           </Link>
-          
+
           <div className="hidden md:flex gap-10">
             {navItems.map((item) => (
               <Link
@@ -38,7 +38,7 @@ export const Header = () => {
               </Link>
             ))}
           </div>
-        
+
           <div className="hidden items-center gap-6 md:flex">
             <div className="hidden lg:flex flex-col text-right leading-tight pr-4 border-r border-[var(--color-border)]">
               <span className="text-[0.7rem] font-bold text-[var(--color-dark-bg)] block">NAS: VINU</span>

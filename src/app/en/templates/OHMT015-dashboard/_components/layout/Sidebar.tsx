@@ -60,7 +60,7 @@ export function Sidebar({
       <div className="h-16 flex items-center justify-between px-4 border-b border-[var(--color-border)]">
         {!collapsed && (
           <span className="text-lg font-[var(--font-heading)] font-semibold text-[var(--color-primary)]">
-            OHMT
+            AXLE
           </span>
         )}
         <button
@@ -122,7 +122,7 @@ export function Sidebar({
       </nav>
 
       <div className={`border-t border-[var(--color-border)] flex items-center ${collapsed ? 'justify-center p-2' : 'gap-3 p-4'}`}>
-        <Avatar name="Morgan Chen" src="/templates/OHMT007-portfolio/portfolio-1.jpg" size="sm" />
+        <Avatar name="Morgan Chen" src="/templates/OHMT015-dashboard/avatar-1.jpg" size="sm" />
         {!collapsed && (
           <div className="min-w-0">
             <p className="text-sm font-medium text-[var(--color-text)] truncate">Morgan Chen</p>

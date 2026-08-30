@@ -30,7 +30,8 @@ export const Header = () => {
         isScrolled || mobileOpen ? "bg-black/95 backdrop-blur-md" : "bg-transparent"
       )}>
         <div className="max-w-[var(--theme-container)] mx-auto px-6 md:px-[var(--theme-gutter)] flex items-center justify-between w-full">
-          <Link href="/ko/templates/OHMT009-car" className="text-[1.2rem] font-extrabold tracking-[0.2em] uppercase text-white">IONARA<span className="text-[var(--theme-accent)]">.</span>
+          <Link href="/ko/templates/OHMT009-car" className="text-[1.2rem] font-extrabold tracking-[0.2em] uppercase text-white">
+            OHMT<span className="text-[var(--theme-accent)]">.</span>
           </Link>
 
           {/* Desktop GNB */}
@@ -49,7 +50,7 @@ export const Header = () => {
           </div>
 
           <div className="flex items-center gap-4">
-            
+
             <button className="hidden md:block text-[0.75rem] font-bold uppercase tracking-[0.16em] px-6 py-2 border border-white/25 bg-transparent text-white hover:border-white transition-all duration-500">
               시승 신청
             </button>

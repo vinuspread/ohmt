@@ -13,15 +13,15 @@ export default function CategoryShowcase() {
     <section className="py-16 md:py-32 bg-white">
       <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-3">
         {categories.map((cat, i) => (
-          <motion.div 
+          <motion.div
             key={i}
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 1, delay: i * 0.2 }}
             className="group relative h-[70vh] cursor-pointer overflow-hidden border-r border-neutral-100 last:border-0"
           >
-            <img 
-              src={cat.image} 
+            <img
+              src={cat.image}
               alt={cat.name}
               className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
             />

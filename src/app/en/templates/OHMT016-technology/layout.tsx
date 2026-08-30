@@ -1,7 +1,6 @@
 import type { Metadata } from "next"
 import './theme.css'
 import { Inter, Inter_Tight } from 'next/font/google'
-
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-body',
@@ -15,27 +14,27 @@ const interTight = Inter_Tight({
 })
 
 export const metadata: Metadata = {
-  title: 'KINETIX - Robotics Technology Landing Template',
+  title: 'OHMT - Robotics Technology Landing Template',
   description: 'Empower machine learning and robotics startups with a professional, dynamic platform.',
   openGraph: {
-    title: 'KINETIX - Robotics Technology Landing Template',
+    title: 'OHMT - Robotics Technology Landing Template',
     description: 'Empower machine learning and robotics startups with a professional, dynamic platform.',
-    url: 'https://ohmt.site/en/templates/OHMT016-technology',
-    siteName: 'KINETIX',
+    url: 'https://ohmytemplate.com/en/templates/OHMT016-technology',
+    siteName: 'OHMT',
     images: [{ url: '/templates/OHMT016-technology/og-image.jpg', width: 1200, height: 630 }],
     locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'KINETIX - Robotics Technology Landing Template',
+    title: 'OHMT - Robotics Technology Landing Template',
     description: 'Empower machine learning and robotics startups with a professional, dynamic platform.',
     images: ['/templates/OHMT016-technology/og-image.jpg'],
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: 'https://ohmt.site/en/templates/OHMT016-technology',
-    languages: { 'ko': 'https://ohmt.site/ko/templates/OHMT016-technology' },
+    canonical: 'https://ohmytemplate.com/en/templates/OHMT016-technology',
+    languages: { 'ko': 'https://ohmytemplate.com/ko/templates/OHMT016-technology' },
   },
 }
 
@@ -53,7 +52,7 @@ export default function TechnologyLayout({
             "@context": "https://schema.org",
             "@type": "Organization",
             name: "KINETIX Technology",
-            url: "https://ohmt.site/en/templates/OHMT016-technology",
+            url: "https://ohmytemplate.com/en/templates/OHMT016-technology",
             description: "Empower machine learning and robotics startups.",
           }),
         }}

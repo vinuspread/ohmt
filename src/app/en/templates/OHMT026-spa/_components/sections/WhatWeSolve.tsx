@@ -18,7 +18,7 @@ export default function WhatWeSolve() {
 
   return (
     <section className="relative overflow-hidden bg-[var(--color-bg-secondary)] py-24 lg:py-32">
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-[1440px] px-6">
         <motion.div
           initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -27,7 +27,7 @@ export default function WhatWeSolve() {
           className="mb-16 max-w-2xl"
         >
           <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">
-            What we solve
+            Solutions
           </span>
           <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[var(--leading-heading)]">
             Skin concerns we treat
@@ -39,16 +39,13 @@ export default function WhatWeSolve() {
       </div>
 
       <div className="overflow-hidden">
-        <div className="animate-marquee-left flex gap-6 w-max" style={{ animationDuration: "40s" }}>
+        <div className="solve-card-track flex w-max gap-6 px-6">
           {[...cards, ...cards].map((card, i) => (
-            <div
-              key={i}
-              className="w-[300px] shrink-0 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] p-8"
-            >
+            <div key={`${card.label}-${i}`} className="w-[300px] shrink-0 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] p-8">
               <span className="text-[0.65rem] font-bold uppercase tracking-[0.15em] text-[var(--color-primary)]">
                 {String(i % cards.length + 1).padStart(2, "0")}
               </span>
-              <h3 className="mt-4 font-[family-name:var(--font-heading)] text-xl font-bold tracking-tight text-[var(--color-text)] leading-snug">
+              <h3 className="mt-4 font-[family-name:var(--font-heading)] text-xl font-bold tracking-tight text-[var(--color-text)] leading-[var(--leading-heading)]">
                 {card.label}
               </h3>
               <p className="mt-3 text-sm text-[var(--color-text-muted)] leading-relaxed">
@@ -60,15 +57,27 @@ export default function WhatWeSolve() {
       </div>
 
       <style>{`
-        @keyframes marquee-left {
-          from { transform: translateX(0); }
-          to { transform: translateX(-50%); }
+        @keyframes solve-card-step {
+          0%, 10% { transform: translateX(0); }
+          14%, 24% { transform: translateX(-324px); }
+          28%, 38% { transform: translateX(-648px); }
+          42%, 52% { transform: translateX(-972px); }
+          56%, 66% { transform: translateX(-1296px); }
+          70%, 80% { transform: translateX(-1620px); }
+          84%, 100% { transform: translateX(-1944px); }
         }
-        .animate-marquee-left {
-          animation: marquee-left linear infinite;
+
+        .solve-card-track {
+          animation: solve-card-step 24s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+          transform: translateX(0);
         }
+
+        .solve-card-track:hover {
+          animation-play-state: paused;
+        }
+
         @media (prefers-reduced-motion: reduce) {
-          .animate-marquee-left {
+          .solve-card-track {
             animation: none;
           }
         }
@@ -76,4 +85,3 @@ export default function WhatWeSolve() {
     </section>
   );
 }
-

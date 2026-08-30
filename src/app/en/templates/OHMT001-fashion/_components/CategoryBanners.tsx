@@ -8,7 +8,7 @@ return (
     <section className="py-12 md:py-24 bg-white selection:bg-black selection:text-white">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          
+
           {/* Womenswear Banner */}
           <Link href="#" className="relative block aspect-[16/10] overflow-hidden group cursor-pointer bg-gray-100">
             <div className="absolute inset-0 z-0">

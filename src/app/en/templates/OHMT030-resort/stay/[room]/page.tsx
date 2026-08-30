@@ -87,7 +87,7 @@ export default async function RoomPage({ params }: { params: Promise<{ room: str
           title={data.name.replace(" ", "\n")}
           image={data.hero}
           alt={data.name}
-          eyebrow="OHMT Resort - The Villas"
+          eyebrow="SANCTUM Resort - The Villas"
           price={`From ${data.price} / night`}
           detail
           overlay="bg-gradient-to-t from-black/70 via-black/25 to-transparent"

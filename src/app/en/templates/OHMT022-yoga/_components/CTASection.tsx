@@ -1,44 +1,49 @@
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
 
 export default function CTASection() {
   return (
-    <section className="bg-[var(--color-bg-alt)] border-b border-[var(--color-border)]">
-      <div className="flex flex-col md:flex-row md:items-stretch divide-y md:divide-y-0 md:divide-x divide-[var(--color-border)]">
-        <div className="flex-1 px-8 md:px-14 lg:px-20 py-16 md:py-20">
+    <section className="bg-[var(--color-secondary)] text-white">
+      <div className="grid gap-12 px-8 py-16 md:grid-cols-[minmax(0,7fr)_minmax(18rem,5fr)] md:items-end md:px-14 md:py-24 lg:px-20">
+        <div>
           <p
-            className="text-xs tracking-[0.25em] uppercase text-[var(--color-text-muted)] mb-5"
-            style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
+            className="mb-5 text-sm font-medium tracking-[0.08em] uppercase text-white/75"
+            style={{ fontFamily: "var(--font-body)" }}
           >
-            Our Classes
+            New to the studio
           </p>
           <h2
-            className="text-[length:var(--text-h1)] font-normal text-[var(--color-text)] leading-[var(--leading-heading)] tracking-[-0.02em]"
+            className="text-[length:var(--text-h1)] font-medium leading-[var(--leading-heading)] tracking-[-0.02em] text-white"
             style={{ fontFamily: "var(--font-heading)" }}
           >
-            Find Your
+            Start slowly with
             <br />
-            Practice
+            Hatha Yoga
           </h2>
         </div>
 
-        <div className="flex flex-col justify-between px-8 md:px-14 lg:px-20 py-16 md:py-20 md:max-w-[360px]">
+        <div>
           <p
-            className="text-sm text-[var(--color-text-muted)] leading-loose"
-            style={{ fontFamily: "var(--font-body)", fontWeight: 300 }}
-          >
-            Vinyasa, Hatha, Meditation, Pilates.
-            <br />
-            Every level. Every body.
-          </p>
-          <Link
-            href="/en/templates/OHMT022-yoga/classes"
-            className="mt-8 inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-[var(--color-text)] hover:text-[var(--color-text-muted)] group transition-colors font-medium"
+            className="max-w-md text-base leading-relaxed text-white/80"
             style={{ fontFamily: "var(--font-body)" }}
           >
-            View All Classes
-            <span className="group-hover:translate-x-1 transition-all"><ArrowRight size={14} className="inline" /></span>
-          </Link>
+            This class takes time with foundational poses. Props are ready at the studio, and your instructor checks any discomfort before you begin.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Link
+              href="/en/templates/OHMT022-yoga/classes/hatha-yoga"
+              className="inline-flex min-h-12 items-center bg-[var(--color-accent)] px-6 text-sm font-semibold text-[var(--color-text)] transition-colors hover:bg-[#D2A57D]"
+              style={{ fontFamily: "var(--font-body)" }}
+            >
+              Explore Hatha Yoga
+            </Link>
+            <Link
+              href="/en/templates/OHMT022-yoga/schedule"
+              className="inline-flex min-h-12 items-center border border-white/35 px-6 text-sm font-semibold text-white transition-colors hover:border-white/70"
+              style={{ fontFamily: "var(--font-body)" }}
+            >
+              View this week&apos;s schedule
+            </Link>
+          </div>
         </div>
       </div>
     </section>

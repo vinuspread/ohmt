@@ -101,7 +101,7 @@ export const SearchWidget = () => {
           {/* FROM */}
           <div className="group px-4 py-4 hover:bg-[#fafafa] cursor-pointer transition-colors border-r border-[#eee]">
             <span className="text-[0.6rem] font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] block mb-1">From</span>
-            <div className="text-[1.4rem] font-black text-[var(--color-primary)] leading-none tracking-tighter mb-0.5">ICN</div>
+            <div className="text-[1.4rem] font-extrabold text-[var(--color-primary)] leading-none tracking-tight mb-0.5">ICN</div>
             <span className="text-[0.7rem] text-[var(--color-text-muted)]">Seoul / Incheon</span>
           </div>
 
@@ -115,7 +115,7 @@ export const SearchWidget = () => {
           {/* TO */}
           <div className="group px-4 py-4 hover:bg-[#fafafa] cursor-pointer transition-colors">
             <span className="text-[0.6rem] font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] block mb-1">To</span>
-            <div className="text-[1.4rem] font-black text-[var(--color-primary)]/30 leading-none tracking-tighter mb-0.5">LHR</div>
+            <div className="text-[1.4rem] font-extrabold text-[var(--color-primary)]/30 leading-none tracking-tight mb-0.5">LHR</div>
             <span className="text-[0.7rem] text-[var(--color-text-muted)]">London / Heathrow</span>
           </div>
         </div>
@@ -180,7 +180,7 @@ export const SearchWidget = () => {
           {/* FROM */}
           <div className="flex-[2.5] group px-6 py-6 hover:bg-[#fafafa] cursor-pointer transition-colors flex flex-col justify-center border-r border-[#eee]">
             <span className="text-[0.6rem] font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] block mb-2">From</span>
-            <div className="text-[2rem] font-black text-[var(--color-primary)] leading-none tracking-tighter mb-1">ICN</div>
+            <div className="text-[2rem] font-extrabold text-[var(--color-primary)] leading-none tracking-tight mb-1">ICN</div>
             <span className="text-[0.75rem] text-[var(--color-text-muted)]">Seoul / Incheon</span>
           </div>
 
@@ -194,7 +194,7 @@ export const SearchWidget = () => {
           {/* TO */}
           <div className="flex-[2.5] group px-6 py-6 hover:bg-[#fafafa] cursor-pointer transition-colors flex flex-col justify-center border-r border-[#eee]">
             <span className="text-[0.6rem] font-bold uppercase tracking-[0.25em] text-[var(--color-accent)] block mb-2">To</span>
-            <div className="text-[2rem] font-black text-[var(--color-primary)]/30 leading-none tracking-tighter mb-1">LHR</div>
+            <div className="text-[2rem] font-extrabold text-[var(--color-primary)]/30 leading-none tracking-tight mb-1">LHR</div>
             <span className="text-[0.75rem] text-[var(--color-text-muted)]">London / Heathrow</span>
           </div>
 

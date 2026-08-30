@@ -2,7 +2,6 @@
 import React, { useState } from "react";
 import { motion } from "motion/react";
 import { menuItems, menuCategories, type MenuCategory } from "../data/data";
-import { formatWon } from "../_utils/currency";
 
 const easeOut = [0.23, 1, 0.32, 1] as const;
 
@@ -55,7 +54,7 @@ export const MenuGrid = () => {
               <div className="p-4 md:p-5">
                 <div className="flex items-start justify-between gap-2 mb-2">
                   <h3 className="text-base md:text-lg font-bold leading-[var(--leading-heading)]">{item.name}</h3>
-                  <span className="text-base md:text-lg font-bold text-[var(--color-accent)] shrink-0">{formatWon(item.price)}</span>
+                  <span className="text-base md:text-lg font-bold text-[var(--color-accent)] shrink-0">${item.price}</span>
                 </div>
                 <p className="text-sm text-[var(--color-text-muted)] leading-relaxed line-clamp-2">{item.description}</p>
                 {item.calories && (

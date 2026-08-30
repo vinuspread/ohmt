@@ -35,7 +35,7 @@ export default function Navbar() {
           href="/en/templates/OHMT023-game"
           className="bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)] bg-clip-text text-xl font-bold text-transparent font-[var(--font-heading)]"
         >
-          OHMT
+FORGE
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

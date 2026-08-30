@@ -13,7 +13,7 @@ export default function EventsPage() {
           <div className="max-w-[1400px] mx-auto px-6 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
             <h1
               className="font-heading font-semibold uppercase text-black leading-none"
-              style={{ fontSize: 'clamp(4rem, 7vw, 7rem)', letterSpacing: '-0.04em' }}
+              style={{ fontSize: 'clamp(4rem, 7vw, 7rem)', letterSpacing: '-0.02em' }}
             >
               Programs &<br />Events
             </h1>
@@ -48,7 +48,7 @@ export default function EventsPage() {
                       </span>
                     </div>
                   </div>
-                  <h3 className="mt-3 text-[1.25rem] font-heading font-semibold tracking-[-0.02em] text-black leading-tight">
+                  <h3 className="mt-3 text-[1.25rem] font-heading font-semibold tracking-[-0.02em] text-black leading-[1.05]">
                     {evt.title}
                   </h3>
                 </div>

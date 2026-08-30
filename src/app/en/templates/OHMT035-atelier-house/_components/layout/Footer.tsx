@@ -99,7 +99,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14 border-t border-white/10 pt-6 text-xs text-white/40">
-          <p>&copy; 2026 OHMT.</p>
+          <p>&copy; 2026 ATELIER.</p>
         </div>
       </div>
     </footer>

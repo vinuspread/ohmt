@@ -14,7 +14,7 @@ export default function Hero() {
       <motion.img
         src="/templates/OHMT026-spa/hero-bg.jpg"
         alt="Therapist preparing a calming spa treatment room"
-        className="absolute inset-0 h-full w-full object-cover opacity-70"
+        className="absolute inset-0 h-full w-full object-cover object-center opacity-70"
         initial={reduce ? { scale: 1 } : { scale: 1.1 }}
         animate={{ scale: 1 }}
         transition={{ duration: 1.4, ease: EASE_OUT }}
@@ -66,4 +66,3 @@ export default function Hero() {
     </section>
   );
 }
-

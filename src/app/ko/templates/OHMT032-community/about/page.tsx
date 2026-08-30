@@ -5,7 +5,7 @@ import { faqs } from '../data/faqs-data'
 
 export const metadata: Metadata = {
   title: '커뮤니티 소개',
-  description: 'AGORA 커뮤니티 템플릿의 운영 방식, 규칙, FAQ를 확인합니다.',
+  description: 'OHMT 커뮤니티 템플릿의 운영 방식, 규칙, FAQ를 확인합니다.',
 }
 
 const faqJsonLd = {

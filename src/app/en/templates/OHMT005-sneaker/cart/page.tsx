@@ -33,7 +33,7 @@ function CartPageContent() {
                 <ArrowLeft size={14} /> Continue Shopping
               </Link>
             </div>
-            <h1 className="text-[2rem] font-black uppercase tracking-[-0.02em] mb-10">Your Bag ({items.length})</h1>
+            <h1 className="text-[2rem] font-extrabold uppercase tracking-[-0.02em] mb-10">Your Bag ({items.length})</h1>
 
             {items.length === 0 ? (
               <div className="text-center py-12 md:py-24">
@@ -69,7 +69,7 @@ function CartPageContent() {
                               <Plus size={14} />
                             </button>
                           </div>
-                          <span className="text-[0.95rem] font-black">${item.price * item.qty}</span>
+                          <span className="text-[0.95rem] font-extrabold">${item.price * item.qty}</span>
                         </div>
                       </div>
                     </div>
@@ -78,7 +78,7 @@ function CartPageContent() {
 
                 {/* Summary */}
                 <div className="bg-[var(--color-bg-secondary)] p-8 sticky top-24">
-                  <h2 className="text-[1rem] font-black uppercase tracking-[-0.01em] mb-6">Order Summary</h2>
+                  <h2 className="text-[1rem] font-extrabold uppercase tracking-[-0.01em] mb-6">Order Summary</h2>
                   <div className="space-y-3 mb-6 pb-6 border-b border-black/10">
                     <div className="flex justify-between text-[0.85rem]">
                       <span className="text-black/60">Subtotal</span>
@@ -90,8 +90,8 @@ function CartPageContent() {
                     </div>
                   </div>
                   <div className="flex justify-between mb-8">
-                    <span className="font-black uppercase text-[0.9rem]">Total</span>
-                    <span className="font-black text-[1.1rem]">${subtotal >= 200 ? subtotal : subtotal + 12} USD</span>
+                    <span className="font-extrabold uppercase text-[0.9rem]">Total</span>
+                    <span className="font-extrabold text-[1.1rem]">${subtotal >= 200 ? subtotal : subtotal + 12} USD</span>
                   </div>
 
                   <div className="mb-4">

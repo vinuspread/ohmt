@@ -44,7 +44,7 @@ export default function AboutContent() {
             initial={shouldReduce ? { opacity: 0 } : { opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.2, ease: EASE_OUT }}
-            className="max-w-4xl"
+            className="max-w-2xl"
           >
             <span className="inline-flex items-center justify-center bg-[var(--color-accent)] text-white rounded-full px-5 py-2.5 text-xs font-bold uppercase tracking-wider leading-none mb-4">
               아카데미 소개
@@ -52,7 +52,7 @@ export default function AboutContent() {
             <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight leading-[var(--leading-heading)]" style={{ fontFamily: "var(--font-heading)" }}>
               모든 아이가 스스로의
               <br />
-              <span className="text-[var(--color-accent)] sm:whitespace-nowrap">특별한 불꽃을 발견하는 곳</span>
+              <span className="text-[var(--color-accent)]">특별한 불꽃을 발견하는 곳</span>
             </h1>
           </motion.div>
 
@@ -66,7 +66,7 @@ export default function AboutContent() {
                 교육 이사회의 미션
               </h2>
               <p className="text-base text-[var(--color-text-muted)] leading-relaxed">
-                오마이템플릿 크리에이티브 아카데미는 자라나는 모든 어린이들이 저마다 눈부신 탐구심을 지니고 태어난다고 확신합니다. 놀이 중심의 다양한 교육 경험을 제공하여 예술적 상상력을 자극하고, 자아 존중감을 심어주며, 평생 배움을 사랑하는 아이로 자라도록 이끌어 줍니다.
+                키즈 아카데미는 자라나는 모든 어린이들이 저마다 눈부신 탐구심을 지니고 태어난다고 확신합니다. 놀이 중심의 다양한 교육 경험을 제공하여 예술적 상상력을 자극하고, 자아 존중감을 심어주며, 평생 배움을 사랑하는 아이로 자라도록 이끌어 줍니다.
               </p>
             </motion.div>
             <motion.div
@@ -170,7 +170,7 @@ export default function AboutContent() {
             </h2>
           </motion.div>
 
-          <div className="mx-auto grid max-w-6xl gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid sm:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {teachers.map((teacher, idx) => (
               <motion.div
                 key={teacher.id}
@@ -205,7 +205,7 @@ export default function AboutContent() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.2, ease: EASE_OUT }}
           >
-            <p className="text-white/80 text-xs font-bold tracking-wider mb-3">Ready to start?</p>
+            <p className="text-white/80 text-xs font-bold tracking-wider mb-3">시작할 준비가 되셨나요?</p>
             <h2 className="text-4xl sm:text-5xl font-bold text-white leading-[var(--leading-heading)]" style={{ fontFamily: "var(--font-heading)" }}>
               배움이 곧 즐거운 놀이가 되는 곳
             </h2>

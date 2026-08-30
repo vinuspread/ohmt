@@ -39,7 +39,7 @@ export function LeadSection() {
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.15, ease: [0.23, 1, 0.32, 1] }}
-                        className="text-5xl leading-[var(--leading-heading)] font-semibold tracking-[-1.44px] mb-12"
+                        className="text-5xl leading-[var(--leading-heading)] font-semibold tracking-[-0.72px] mb-12"
                     >
                         Get in touch.
                     </motion.h2>
@@ -60,7 +60,7 @@ export function LeadSection() {
                                     type="text"
                                     whileFocus={{ scale: 1.02 }}
                                     transition={{ duration: 0.15, ease: [0.23, 1, 0.32, 1] }}
-                                    className="bg-transparent text-lg font-medium tracking-[-0.5px] outline-none placeholder:opacity-20 w-full"
+                                    className="bg-transparent text-lg font-medium tracking-[-0.25px] outline-none placeholder:opacity-20 w-full"
                                 />
                             </motion.div>
                         ))}
@@ -89,14 +89,14 @@ export function LeadSection() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                         <div>
                             <span className="text-xs font-normal tracking-[3px] uppercase opacity-60 block mb-6">Office</span>
-                            <p className="text-lg leading-[var(--leading-heading)] font-bold tracking-[-0.5px]">
+                            <p className="text-lg leading-[var(--leading-heading)] font-bold tracking-[-0.25px]">
                                 213 West 5th Street<br />
                                 Austin, Texas 78701
                             </p>
                         </div>
                         <div>
                             <span className="text-xs font-normal tracking-[3px] uppercase opacity-60 block mb-6">Direct</span>
-                            <p className="text-lg leading-[var(--leading-heading)] font-bold tracking-[-0.5px]">
+                            <p className="text-lg leading-[var(--leading-heading)] font-bold tracking-[-0.25px]">
                                 512 827 2100<br />
                                 hello@ohmytemplate.design
                             </p>

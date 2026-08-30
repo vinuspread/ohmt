@@ -94,7 +94,7 @@ const [scrolled, setScrolled] = useState(false);
         }`}
       >
         <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex justify-between items-center transition-all w-full">
-          
+
           {/* Desktop Left - Curation Categories */}
           <div className="hidden lg:flex items-center gap-8 text-sm uppercase tracking-[0.2em] -mr-[0.3em] font-bold">
             {menuItems.slice(0, 3).map((item) => {

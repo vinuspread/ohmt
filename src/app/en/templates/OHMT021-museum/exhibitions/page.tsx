@@ -18,7 +18,7 @@ function SpecialExhibitionsContent() {
     "souvenirShop": `Souvenir Shop`
   },
   "hero": {
-    "badge": `Musei Vaticani - CURA Curation`,
+    "badge": `Musei Vaticani - OHMT Curation`,
     "title1": `THE ETERNAL`,
     "title2": `Masterpieces`,
     "cta": `Begin Journey`
@@ -42,7 +42,7 @@ function SpecialExhibitionsContent() {
     "p2": `Our curation seeks to extract the structural brilliance from the overwhelming ornamentation. By highlighting works like the Laocoon or the delicate Pieta in an isolated, digital space, we allow their raw theological and emotional gravity to echo without the noise of the physical gallery crowd.`,
     "p3": `Every brushstroke captured by Raphael, every chisel strike endured by Michelangelo - these are not relics of the past. They are continuing dialogues on the nature of humanity, suffering, knowledge, and divinity.`,
     "curator": `Curator`,
-    "curatorName": `CURA Exhibition`
+    "curatorName": `OHMT Exhibition`
   },
   "ourStory": {
     "heritage": `MUSEI VATICANI - 500 YEARS OF HERITAGE`,
@@ -161,7 +161,7 @@ const specialExhibitionsData = t.exhibitionsPage.specialExhibitions;
 
   const permanentGalleriesData = t.exhibitionsPage.permanentGalleries;
   const permanentGalleries = [
-    { ...permanentGalleriesData[0], img: "/templates/OHMT021-museum/permanent-sistine-chapel.webp" },
+    { ...permanentGalleriesData[0], img: "/templates/OHMT021-museum/hero-bg.png" },
     { ...permanentGalleriesData[1], img: "/templates/OHMT021-museum/vatican-hallway.png" }
   ];
 
@@ -177,14 +177,14 @@ const specialExhibitionsData = t.exhibitionsPage.specialExhibitions;
       <section className="px-6 md:px-12 mb-20 md:mb-32 lg:mb-40 text-center">
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }}>
           <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/40 mb-8 block font-sans">{t.exhibitionsPage.currentFeature}</span>
-          <h2 className="text-5xl md:text-[7vw] font-serif leading-none tracking-tighter mb-12 break-keep">{t.exhibitionsPage.title}</h2>
+          <h2 className="text-5xl md:text-[7vw] font-serif leading-none tracking-tight mb-12 break-keep">{t.exhibitionsPage.title}</h2>
         </motion.div>
       </section>
 
       {/* Poster Style Special Exhibitions */}
       <section className="max-w-[1440px] mx-auto px-6 space-y-20 md:space-y-32 lg:space-y-40 mb-32 md:mb-48 lg:mb-60">
         {specialExhibitions.map((exhib, i: number) => (
-          <motion.div 
+          <motion.div
             key={i}
             initial={{ opacity: 0, scale: 0.98 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -192,25 +192,25 @@ const specialExhibitionsData = t.exhibitionsPage.specialExhibitions;
             transition={{ duration: 1.5 }}
             className="group grid grid-cols-1 lg:grid-cols-2 gap-20 items-center"
           >
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, scale: 0.94 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 1.4, ease: [0.16, 1, 0.3, 1] }}
               className={`relative aspect-[3/4] md:aspect-[4/5] overflow-hidden ${i % 2 === 1 ? 'lg:order-2' : ''}`}
             >
-              <img 
-                src={exhib.img} 
-                alt={exhib.name} 
+              <img
+                src={exhib.img}
+                alt={exhib.name}
                 className="w-full h-full object-cover grayscale brightness-50 group-hover:scale-105 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-[3s] ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-primary)] via-transparent to-transparent opacity-60" />
             </motion.div>
-            
+
             <div className={`space-y-6 ${i % 2 === 1 ? 'lg:order-1 lg:text-right' : ''}`}>
               <span className="text-xs uppercase font-bold tracking-[0.6em] text-white/30 block mb-4 font-sans">{exhib.tag}</span>
-              <h3 className="text-4xl md:text-6xl font-serif tracking-tighter leading-none mb-6 break-keep">{exhib.name}</h3>
-              
+              <h3 className="text-4xl md:text-6xl font-serif tracking-tight leading-none mb-6 break-keep">{exhib.name}</h3>
+
               <div className={`flex flex-col gap-3 text-xs font-medium uppercase tracking-normal text-white/40 font-sans ${i % 2 === 1 ? 'lg:items-end' : ''}`}>
                  <div className="flex items-center gap-3"><Calendar size={14} strokeWidth={1.5} /> {exhib.period}</div>
                  <div className="flex items-center gap-3"><MapPin size={14} strokeWidth={1.5} /> {exhib.venue}</div>

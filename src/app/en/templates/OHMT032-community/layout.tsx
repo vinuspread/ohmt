@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
-  alternates: { canonical: '/en/templates/OHMT032-community' },
 }
 
 const jsonLd = {
@@ -33,7 +32,7 @@ const jsonLd = {
   "@type": "WebSite",
   name: "AGORA Community",
   description: "An English community template for questions, resources, reviews, and announcements.",
-  url: "https://ohmt.site/en/templates/OHMT032-community",
+  url: "https://ohmytemplate.com/en/templates/OHMT032-community",
 }
 
 export default function CommunityLayout({ children }: { children: React.ReactNode }) {

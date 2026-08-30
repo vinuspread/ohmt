@@ -1,8 +1,8 @@
 "use client";
 
-import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import { ArrowRight, MousePointerClick, Headphones } from "lucide-react";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Link from "next/link";
 import { collections } from "./data/collections";
 import Header from "./_components/layout/Header";
@@ -34,7 +34,7 @@ function HomeContent() {
     "souvenirShop": `Souvenir Shop`
   },
   "hero": {
-    "badge": `Musei Vaticani - CURA Curation`,
+    "badge": `Musei Vaticani - OHMT Curation`,
     "title1": `THE ETERNAL`,
     "title2": `Masterpieces`,
     "cta": `Begin Journey`
@@ -58,7 +58,7 @@ function HomeContent() {
     "p2": `Our curation seeks to extract the structural brilliance from the overwhelming ornamentation. By highlighting works like the Laocoon or the delicate Pieta in an isolated, digital space, we allow their raw theological and emotional gravity to echo without the noise of the physical gallery crowd.`,
     "p3": `Every brushstroke captured by Raphael, every chisel strike endured by Michelangelo. These are not relics of the past. They are continuing dialogues on the nature of humanity, suffering, knowledge, and divinity.`,
     "curator": `Curator`,
-    "curatorName": `CURA Exhibition`
+    "curatorName": `OHMT Exhibition`
   },
   "ourStory": {
     "heritage": `MUSEI VATICANI - 500 YEARS OF HERITAGE`,
@@ -178,41 +178,51 @@ function HomeContent() {
 
   const heroScale = useTransform(heroProgress, [0, 1], [1, 1.15]);
   const heroOpacity = useTransform(heroProgress, [0, 0.8], [1, 0]);
-  const horizontalRef = useRef<HTMLElement>(null);
-  const horizontalTrackRef = useRef<HTMLDivElement>(null);
-  const [horizontalTravel, setHorizontalTravel] = useState(0);
-  const [isDesktop, setIsDesktop] = useState(false);
-  const shouldReduceMotion = useReducedMotion();
-
-  const { scrollYProgress: horizontalProgress } = useScroll({
-    target: horizontalRef,
-    offset: ["start start", "end end"]
-  });
-
-  const x = useTransform(horizontalProgress, [0, 1], [0, -horizontalTravel]);
-  const shouldPinGallery = isDesktop && !shouldReduceMotion && horizontalTravel > 0;
+  const collectionRailRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const mediaQuery = window.matchMedia("(min-width: 768px)");
-    const updateLayout = () => {
-      window.requestAnimationFrame(() => {
-        setIsDesktop(mediaQuery.matches);
-        const trackWidth = horizontalTrackRef.current?.scrollWidth ?? 0;
-        setHorizontalTravel(Math.max(0, trackWidth - window.innerWidth));
-      });
+    const rail = collectionRailRef.current;
+    if (!rail) return;
+
+    let targetScrollLeft = rail.scrollLeft;
+    let animationFrame = 0;
+
+    const animateScroll = () => {
+      const distance = targetScrollLeft - rail.scrollLeft;
+      rail.scrollLeft += distance * 0.16;
+
+      if (Math.abs(distance) > 0.5) {
+        animationFrame = requestAnimationFrame(animateScroll);
+      } else {
+        rail.scrollLeft = targetScrollLeft;
+        animationFrame = 0;
+      }
     };
 
-    updateLayout();
-    mediaQuery.addEventListener("change", updateLayout);
-    window.addEventListener("resize", updateLayout);
+    const handleWheel = (event: WheelEvent) => {
+      if (Math.abs(event.deltaY) <= Math.abs(event.deltaX)) return;
 
-    const resizeObserver = new ResizeObserver(updateLayout);
-    if (horizontalTrackRef.current) resizeObserver.observe(horizontalTrackRef.current);
+      const maxScrollLeft = rail.scrollWidth - rail.clientWidth;
+      targetScrollLeft = Math.max(0, Math.min(maxScrollLeft, targetScrollLeft));
+      const isScrollingRight = event.deltaY > 0;
+      const canScrollRight = rail.scrollLeft < maxScrollLeft - 2;
+      const canScrollLeft = rail.scrollLeft > 2;
 
+      if ((isScrollingRight && canScrollRight) || (!isScrollingRight && canScrollLeft)) {
+        event.preventDefault();
+        const normalizedDelta = event.deltaMode === 1 ? event.deltaY * 32 : event.deltaY;
+        targetScrollLeft = Math.max(0, Math.min(maxScrollLeft, targetScrollLeft + normalizedDelta * 1.15));
+
+        if (!animationFrame) {
+          animationFrame = requestAnimationFrame(animateScroll);
+        }
+      }
+    };
+
+    rail.addEventListener("wheel", handleWheel, { passive: false });
     return () => {
-      mediaQuery.removeEventListener("change", updateLayout);
-      window.removeEventListener("resize", updateLayout);
-      resizeObserver.disconnect();
+      rail.removeEventListener("wheel", handleWheel);
+      if (animationFrame) cancelAnimationFrame(animationFrame);
     };
   }, []);
 
@@ -223,16 +233,16 @@ function HomeContent() {
       <>
       <Header />
       <main className="antialiased relative bg-[var(--color-primary)] text-[var(--color-accent)] selection:bg-[var(--color-accent)] selection:text-[var(--color-primary)]">
-      
+
       {/* Hero Section */}
       <section ref={heroRef} className="relative h-screen flex flex-col items-center justify-center text-center overflow-hidden">
-        <motion.div 
+        <motion.div
           style={{ scale: heroScale, opacity: heroOpacity }}
           className="absolute inset-0 z-0 bg-[var(--color-primary)]"
         >
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-[var(--color-primary)] z-10" />
-          <img 
-            src="/templates/OHMT021-museum/hero-bg.png" 
+          <img
+            src="/templates/OHMT021-museum/hero-bg.png"
             alt="Vatican Ceiling"
             className="w-full h-full object-cover opacity-80"
           />
@@ -249,7 +259,7 @@ function HomeContent() {
           </motion.span>
           <motion.h2
             variants={fadeIn}
-            className="text-4xl md:text-5xl lg:text-[6.5vw] font-serif font-medium leading-[var(--leading-display)] tracking-tighter mb-8 md:mb-12 text-[var(--color-accent)]"
+            className="text-4xl md:text-5xl lg:text-[6.5vw] font-serif font-medium leading-[var(--leading-display)] tracking-tight mb-8 md:mb-12 text-[var(--color-accent)]"
           >
             {t.hero.title1} <br />
             <span className="font-normal text-[var(--color-accent)]/80">{t.hero.title2}</span>
@@ -296,43 +306,46 @@ function HomeContent() {
         </motion.div>
       </section>
 
-      {/* Horizontal Scroll Gallery Section */}
-      <section
-        ref={horizontalRef}
-        className="relative bg-[var(--color-primary)]"
-        style={{ height: shouldPinGallery ? `calc(100vh + ${horizontalTravel}px)` : "auto" }}
-      >
-        <div className={`${shouldPinGallery ? "sticky top-0 h-screen overflow-hidden" : "relative"} flex flex-col justify-center py-6 md:py-16 lg:pt-16`}>
-          <div className="px-4 md:px-12 lg:px-24 mb-3 md:mb-8 lg:mb-12">
-            <span className="text-xs uppercase font-bold tracking-[0.5em] text-white/40 block mb-2 md:mb-4">{t.gallery.badge}</span>
-            <h3 className="text-xl md:text-4xl lg:text-6xl font-serif font-bold tracking-[-0.03em]">{t.gallery.title}</h3>
+      {/* Collection Rail Section */}
+      <section className="relative bg-[var(--color-primary)] py-12 md:py-20 lg:py-28">
+        <div className="overflow-hidden">
+          <div className="px-6 md:px-12 lg:px-24 mb-8 md:mb-12">
+            <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
+              <div>
+                <span className="text-xs md:text-xs uppercase font-bold tracking-[0.42em] text-white/40 block mb-3 md:mb-4">{t.gallery.badge}</span>
+                <h3 className="text-3xl md:text-5xl lg:text-6xl font-serif font-bold tracking-tight">{t.gallery.title}</h3>
+              </div>
+              <Link href="/en/templates/OHMT021-museum/collections" className="inline-flex w-fit items-center gap-3 border-b border-white/30 pb-2 text-xs font-bold uppercase tracking-[0.28em] text-white/55 transition-colors hover:text-white">
+                View Archives
+                <ArrowRight size={14} />
+              </Link>
+            </div>
           </div>
 
-          <div className={shouldPinGallery ? "overflow-hidden" : "overflow-x-auto no-scrollbar touch-pan-x"}>
-            <motion.div
-              ref={horizontalTrackRef}
-              style={{ x: shouldPinGallery ? x : 0 }}
-              className="flex w-max gap-3 px-4 pb-6 md:gap-6 md:px-12 md:pb-12 lg:gap-24 lg:px-24 lg:pb-20"
-            >
-            {collections.slice(0, 6).map((item, i) => (
+          <div
+            ref={collectionRailRef}
+            data-collection-rail
+            className="flex gap-5 overflow-x-auto overscroll-x-contain px-6 pb-8 md:gap-8 md:px-12 lg:px-24 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
+            {collections.map((item, i) => (
               <motion.div
-                key={item.id}
-                initial={{ opacity: 0, x: 80 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: i * 0.08 }}
-                className="w-[85vw] shrink-0 sm:w-[80vw] md:w-[50vw] lg:w-[35vw] xl:w-[25vw]"
+                key={i}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: Math.min(i * 0.04, 0.24) }}
+                className="w-[78vw] shrink-0 sm:w-[46vw] lg:w-[28vw] xl:w-[22vw]"
               >
                 <Link href={`/en/templates/OHMT021-museum/collections/${item.slug}`} className="group relative cursor-pointer block">
-                  <div className="relative aspect-[3/4] bg-[var(--color-bg-secondary)] overflow-hidden mb-8">
-                    <img 
-                      src={item.img} 
+                  <div className="relative aspect-[3/4] bg-[var(--color-bg-secondary)] overflow-hidden mb-6">
+                    <img
+                      src={item.img}
                       alt={item.title}
                       className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-[1.5s] ease-out brightness-75 group-hover:brightness-100"
                     />
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-700" />
-                    
-                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-300" />
+
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
                       <div className="w-16 h-16 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/30 text-white">
                         <MousePointerClick size={20} />
                       </div>
@@ -341,7 +354,7 @@ function HomeContent() {
 
                   <div className="flex flex-col border-t border-white/10 pt-6 px-1">
                     <div className="flex justify-between items-start mb-4 gap-4">
-                      <h4 className="text-xl md:text-2xl font-serif tracking-tight leading-snug break-words">{item.title}</h4>
+                      <h4 className="text-xl md:text-2xl font-serif tracking-tight leading-[1.1] break-words">{item.title}</h4>
                       <span className="text-xs whitespace-nowrap uppercase tracking-widest text-white/50 bg-white/5 px-2 py-1 h-fit">{item.tag}</span>
                     </div>
                     <div className="flex justify-between text-xs font-normal tracking-widest text-white/60">
@@ -352,7 +365,6 @@ function HomeContent() {
                 </Link>
               </motion.div>
             ))}
-            </motion.div>
           </div>
         </div>
       </section>
@@ -368,7 +380,7 @@ function HomeContent() {
             className="order-2 md:order-1 max-w-lg"
           >
             <span className="text-xs md:text-xs uppercase font-bold tracking-[0.5em] text-black/40 mb-4 md:mb-6 block">{t.curatorNote.editorial}</span>
-            <h3 className="text-4xl md:text-7xl font-serif font-bold mb-4 md:mb-10 leading-[var(--leading-heading)] tracking-tighter">{t.curatorNote.title}</h3>
+            <h3 className="text-4xl md:text-7xl font-serif font-bold mb-4 md:mb-10 leading-[var(--leading-heading)] tracking-tight">{t.curatorNote.title}</h3>
             <p className="text-base md:text-lg text-black/70 leading-[var(--leading-body)] mb-4 md:mb-10 font-normal">
               {t.curatorNote.p1}
               <br /><br />
@@ -396,7 +408,6 @@ function HomeContent() {
       </section>
 
       </main>
-      <p className="text-center text-[11px] leading-relaxed text-neutral-400 px-6 py-6">This page is a website design template demo by OHMT, not an actual client or operating business. The brand names, people, testimonials, contact details, and performance figures shown are example content.</p>
       <Footer />
     </>
 

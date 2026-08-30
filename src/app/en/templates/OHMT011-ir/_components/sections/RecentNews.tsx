@@ -45,7 +45,7 @@ export const RecentNews = () => {
             View All News <ArrowRight size={14} className="inline" />
           </button>
         </div>
-        
+
         <div className="flex flex-col border-t border-[var(--color-border)]">
           {newsItems.map((item, i) => (
             <div key={i} className="grid grid-cols-3 gap-8 py-7 border-b border-[var(--color-border)] group cursor-pointer hover:bg-white/40 hover:pl-2 transition-all duration-300">
@@ -56,7 +56,7 @@ export const RecentNews = () => {
                 <span className={clsx("inline-block text-[0.58rem] font-bold uppercase tracking-[0.16em] px-2 py-0.5 rounded-[2px] mb-2", item.tagColor)}>
                   {item.tag}
                 </span>
-                <h3 className="text-base font-bold text-black leading-snug group-hover:text-[var(--color-dark-bg)] transition-colors">
+                <h3 className="text-base font-bold text-black leading-[1.05] group-hover:text-[var(--color-dark-bg)] transition-colors">
                   {item.title}
                 </h3>
               </div>

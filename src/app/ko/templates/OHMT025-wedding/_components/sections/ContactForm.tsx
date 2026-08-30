@@ -18,10 +18,10 @@ export default function ContactForm() {
         className="font-[family-name:var(--font-heading)] font-light capitalize text-[var(--color-text)] leading-[var(--leading-heading)] mb-4"
         style={{ fontSize: "clamp(2.5rem, 6vw, 4rem)" }}
       >
-        촬영 문의</h1>
-      <p className="mb-12 max-w-xl text-[0.85rem] leading-relaxed text-[var(--color-text-muted)] font-[family-name:var(--font-body)]">
-        <span className="md:block">예식 날짜와 장소를 남겨주시면</span>{" "}
-        <span className="md:block">촬영 가능 여부와 안내 사항을 확인해드립니다.</span>
+        촬영 문의
+      </h1>
+      <p className="text-[0.85rem] text-[var(--color-text-muted)] leading-relaxed mb-12 font-[family-name:var(--font-body)]">
+        예식 날짜와 장소를 남겨주시면 촬영 가능 여부와 안내 사항을 확인해드립니다.
       </p>
 
       {submitted ? (
@@ -35,8 +35,7 @@ export default function ContactForm() {
             문의가 접수되었습니다
           </p>
           <p className="text-sm text-[var(--color-text-muted)] font-[family-name:var(--font-body)]">
-            <span className="md:block">문의해주셔서 감사합니다.</span>{" "}
-            <span className="md:block">내용을 확인한 뒤 1~2일 이내에 답변드리겠습니다.</span>
+            문의해주셔서 감사합니다. 내용을 확인한 뒤 1~2일 이내에 답변드리겠습니다.
           </p>
         </motion.div>
       ) : (
@@ -51,7 +50,8 @@ export default function ContactForm() {
           </div>
           <div>
             <label htmlFor="message" className="block text-[0.65rem] uppercase tracking-[0.18em] font-medium text-[var(--color-text-muted)] mb-2">
-              촬영 관련 요청</label>
+              촬영 관련 요청
+            </label>
             <textarea
               id="message"
               rows={5}
@@ -63,7 +63,8 @@ export default function ContactForm() {
             type="submit"
             className="w-full bg-[var(--color-text)] text-white hover:bg-[var(--color-primary)] transition-colors duration-300 font-medium uppercase tracking-[0.2em] py-4 text-[0.72rem] font-[family-name:var(--font-body)]"
           >
-            촬영 문의 보내기</button>
+            촬영 문의 보내기
+          </button>
         </form>
       )}
     </div>

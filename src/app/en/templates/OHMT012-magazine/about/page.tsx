@@ -8,20 +8,20 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 
 export const metadata: Metadata = {
-  title: "About - FOLIO Magazine",
+  title: "About - OHMT Magazine",
   description: "A quarterly record of how design, culture, and sustainability actually intersect.",
   openGraph: {
-    title: "About - FOLIO Magazine",
+    title: "About - OHMT Magazine",
     description: "A quarterly record of how design, culture, and sustainability actually intersect.",
-    url: "https://ohmt.site/en/templates/OHMT012-magazine/about",
-    siteName: "FOLIO",
+    url: "https://ohmytemplate.com/en/templates/OHMT012-magazine/about",
+    siteName: "OHMT",
     images: [{ url: "/templates/OHMT012-magazine/og-image.jpg", width: 1200, height: 630 }],
     locale: "en_US",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "About - FOLIO Magazine",
+    title: "About - OHMT Magazine",
     description: "A quarterly record of how design, culture, and sustainability actually intersect.",
     images: ["/templates/OHMT012-magazine/og-image.jpg"],
   },
@@ -95,10 +95,10 @@ export default function AboutPage() {
                 Pitches, corrections, and the occasional argument about serif fonts are all welcome.
               </p>
               <a
-                href="mailto:editors@ohmt.site"
+                href="mailto:editors@folio.site"
                 className="text-[0.85rem] font-bold uppercase tracking-[0.14em] text-[var(--theme-text)] hover:text-[var(--theme-accent)] transition-colors underline underline-offset-4"
               >
-                editors@ohmt.site
+                editors@folio.site
               </a>
             </div>
             <div>

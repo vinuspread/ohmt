@@ -34,7 +34,7 @@ export const Footer = () => {
     <footer className="bg-white text-[var(--color-primary)] py-12 md:py-20 border-t border-black/5">
       <div className="max-w-[1440px] mx-auto px-6 md:px-12 flex flex-col md:flex-row justify-between items-center gap-8 md:gap-12">
         <div className="text-center md:text-left">
-          <h2 className="text-xl md:text-2xl font-medium md:font-black lowercase mb-1">OHMT</h2>
+          <h2 className="text-xl md:text-2xl font-medium md:font-black lowercase mb-1">KRAFT</h2>
           <p className="text-xs text-[var(--color-secondary)] font-medium uppercase">에센셜 인테리어 아카이브</p>
         </div>
 

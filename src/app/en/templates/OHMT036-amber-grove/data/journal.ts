@@ -7,7 +7,7 @@ export type JournalPost = {
   body: string[]
 }
 
-const imageBase = '/templates/OHMT036-amber-grove'
+const imageBase = '/templates/en/OHMT036-amber-grove'
 
 export const journalPosts: JournalPost[] = [
   {

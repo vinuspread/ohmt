@@ -13,13 +13,14 @@ export function VillaRow({ name, description, href }: VillaRowProps) {
         <h3 className="mb-2 text-xl font-medium leading-[var(--leading-body)] text-white">
           {name}
         </h3>
-        <p className="whitespace-pre-line text-pretty text-base leading-[var(--leading-body)] text-white/60">
+        <p className="text-base leading-[var(--leading-body)] text-white/60">
           {description}
         </p>
       </div>
       <div className="shrink-0">
         <PillLink href={href} tone="muted" className="px-0 py-0 text-base">
-          객실 보기</PillLink>
+          더 보기
+        </PillLink>
       </div>
     </div>
   );

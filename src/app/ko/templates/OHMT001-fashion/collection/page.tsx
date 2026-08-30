@@ -17,7 +17,7 @@ const ITEMS_PER_PAGE = 6;
 function PageContent() {
   const filtered = PRODUCTS.filter((p) => p.category === "collection");
   const [currentPage, setCurrentPage] = useState(1);
-  
+
   const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const paginatedProducts = filtered.slice(startIndex, startIndex + ITEMS_PER_PAGE);
@@ -33,26 +33,26 @@ function PageContent() {
           image="/templates/OHMT001-fashion/branding-custom.jpg"
           imageAlt="이번 시즌 컬렉션"
         />
-        <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-12 md:pt-16 pb-24">
+        <div className="max-w-[1440px] mx-auto px-6 md:px-12 pt-8 md:pt-12 pb-24">
           <Link
             href="/ko/templates/OHMT001-fashion"
-            className="group inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.2em] text-black/40 hover:text-black transition-all mb-10 md:mb-16"
+            className="group inline-flex items-center gap-2 text-xs font-semibold tracking-[-0.01em] text-black/50 hover:text-black transition-all mb-8 md:mb-10"
           >
             <ArrowLeft size={14} className="group-hover:-translate-x-1 transition-transform" />
             홈으로 돌아가기
           </Link>
 
-          <div className="mb-16 md:mb-24">
-            <h1 className="text-xs font-bold uppercase tracking-[0.3em] text-black/30 mb-3">{LABEL}</h1>
+          <div className="mb-12 md:mb-16">
+            <h1 className="text-xs font-semibold tracking-[-0.01em] text-black/40 mb-2">{LABEL}</h1>
             <p
-              className="text-4xl font-bold leading-none tracking-[-0.035em] sm:text-[4vw]"
+              className="text-2xl font-light leading-tight tracking-[-0.02em] sm:text-3xl md:text-4xl"
               style={{ fontFamily: "var(--font-bodoni)" }}
             >
               {filtered.length}개 상품
             </p>
           </div>
 
-          <motion.div 
+          <motion.div
             layout
             className="grid grid-cols-2 md:grid-cols-3 gap-x-6 sm:gap-x-12 gap-y-16 sm:gap-y-24"
           >
@@ -129,4 +129,3 @@ export default function Page() {
     </React.Suspense>
   );
 }
-

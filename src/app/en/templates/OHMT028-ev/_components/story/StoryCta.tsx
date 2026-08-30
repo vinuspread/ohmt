@@ -29,7 +29,7 @@ export function StoryCta() {
       <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg)] via-[var(--bg)]/55 to-transparent" />
       <div className="relative z-10 w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 pb-16 md:pb-24">
         <div ref={ref}>
-          <h2 className="font-michroma text-[length:var(--text-h1)] text-[var(--text)] leading-[var(--leading-display)] tracking-[-0.03em] mb-4">
+          <h2 className="font-michroma text-[length:var(--text-h1)] text-[var(--text)] leading-[var(--leading-display)] tracking-[-0.02em] mb-4">
             The city is waiting.
           </h2>
           <p className="font-inter text-sm text-[var(--text-muted)] mb-8 max-w-[380px]">

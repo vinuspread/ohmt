@@ -13,13 +13,13 @@ function CosmeticAccountPageContent() {
     <TemplateWrapper theme={theme}>
       <main className="antialiased bg-[var(--color-bg)] text-black selection:bg-black selection:text-white">
         <Header />
-        
+
         <section className="pt-48 pb-16 md:pb-32">
           <div className="max-w-[1440px] mx-auto px-6 md:px-10">
             <div className="mb-16">
               <span className="text-[0.65rem] font-bold uppercase tracking-[0.3em] text-black/40 mb-4 block">마이페이지</span>
               <h1 className="text-[length:var(--text-h2)] font-normal tracking-tight leading-[var(--leading-heading)]">
-                로그인이 필요합니다.
+                다시 만나 반갑습니다.
               </h1>
             </div>
 

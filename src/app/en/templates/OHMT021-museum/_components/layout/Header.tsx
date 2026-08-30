@@ -31,7 +31,7 @@ export default function Header() {
     "souvenirShop": `Museum Shop`
   },
   "hero": {
-    "badge": `Musei Vaticani - CURA Curation`,
+    "badge": `Musei Vaticani - OHMT Curation`,
     "title1": `THE ETERNAL`,
     "title2": `Masterpieces`,
     "cta": `Begin Journey`
@@ -55,7 +55,7 @@ export default function Header() {
     "p2": `Our curation seeks to extract the structural brilliance from the overwhelming ornamentation. By highlighting works like the Laocoon or the delicate Pieta in an isolated, digital space, we allow their raw theological and emotional gravity to echo without the noise of the physical gallery crowd.`,
     "p3": `Every brushstroke captured by Raphael, every chisel strike endured by Michelangelo - these are not relics of the past. They are continuing dialogues on the nature of humanity, suffering, knowledge, and divinity.`,
     "curator": `Curator`,
-    "curatorName": `CURA Exhibition`
+    "curatorName": `OHMT Exhibition`
   },
   "ourStory": {
     "heritage": `MUSEI VATICANI - 500 YEARS OF HERITAGE`,
@@ -177,7 +177,7 @@ useMotionValueEvent(scrollY, "change", (latest) => {
   // Since I removed usePathname from imports earlier, I must add it back if it's used here.
   // Actually, I'll just hardcode or let the user know, but it's better to keep it working.
   // I'll add usePathname back.
-  
+
   const pathname = usePathname();
   const isActive = scrolled || isMenuOpen;
   const isLightPage = LIGHT_BG_ROUTES.some(route => pathname?.startsWith(route));
@@ -234,7 +234,9 @@ useMotionValueEvent(scrollY, "change", (latest) => {
         <Link
           href="/en/templates/OHMT021-museum"
           className={`text-sm sm:text-lg lg:text-2xl font-serif font-bold tracking-[0.2em] -mr-[0.2em] absolute left-1/2 -translate-x-1/2 cursor-pointer uppercase transition-colors duration-300 ${logoColor}`}
-        >CURA</Link>
+        >
+CURA
+        </Link>
 
         {/* Right: Tickets / Souvenir Shop (desktop only) / menu button */}
         <div className="flex items-center justify-end gap-8 text-sm tracking-normal font-bold flex-1 lg:flex-initial lg:w-1/3">
@@ -280,14 +282,12 @@ useMotionValueEvent(scrollY, "change", (latest) => {
       />
 
       <div className="lg:hidden">
-        <MobileBottomTabBar 
-          isMenuOpen={isMenuOpen} 
-          onMenuToggle={() => setIsMenuOpen(!isMenuOpen)} 
+        <MobileBottomTabBar
+          isMenuOpen={isMenuOpen}
+          onMenuToggle={() => setIsMenuOpen(!isMenuOpen)}
           onTicketClick={() => setIsReservationOpen(true)}
         />
       </div>
     </>
   );
 }
-
-

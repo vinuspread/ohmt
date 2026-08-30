@@ -19,7 +19,8 @@ export const BlogPreview = () => {
             href="/ko/templates/OHMT017-multi-shop/blog"
             className="hidden md:inline-block text-xs uppercase tracking-[0.2em] text-[var(--color-text-muted)] hover:text-[var(--color-text)] transition-colors duration-200 border-b border-[var(--color-text-muted)] pb-0.5"
           >
-            전체 보기</Link>
+            전체 보기
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -55,7 +56,8 @@ export const BlogPreview = () => {
                     {post.excerpt}
                   </p>
                   <span className="inline-block mt-4 text-xs uppercase tracking-[0.2em] text-[var(--color-primary)] font-medium motion-safe:group-hover:opacity-60 transition-opacity duration-200">
-                    글 보기 &rarr;</span>
+                    글 보기 &rarr;
+                  </span>
                 </div>
               </Link>
             </motion.div>

@@ -59,7 +59,6 @@ export function Header({
           <MessageCircle size={18} strokeWidth={1.5} />
           <span className="absolute top-1.5 right-1.5 w-2 h-2 bg-[var(--color-success)] rounded-[var(--radius-full)]" />
         </button>
-
       </div>
     </header>
   )

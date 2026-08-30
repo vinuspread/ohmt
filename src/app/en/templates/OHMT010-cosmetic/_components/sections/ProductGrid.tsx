@@ -21,8 +21,8 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 40 },
-  show: { 
-    opacity: 1, 
+  show: {
+    opacity: 1,
     y: 0,
     transition: {
       duration: 0.8,
@@ -108,8 +108,8 @@ const localProducts = products.map((p) => {
           <span className="text-[0.75rem] uppercase tracking-[0.15em] font-bold text-[var(--color-text-muted)] mb-4 block">{t.grid.badge}</span>
           <h2 className="text-[1.7rem] md:text-[3rem] font-normal mt-2 leading-[var(--leading-heading)]">{t.grid.title}</h2>
         </div>
-        
-        <motion.div 
+
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="show"

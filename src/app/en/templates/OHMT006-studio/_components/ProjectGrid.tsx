@@ -50,7 +50,7 @@ export function ProjectGrid() {
             >
                 <span className="text-xs font-normal tracking-[3px] uppercase text-[#090B19] opacity-60">Portfolio</span>
                 <div className="flex flex-col md:flex-row justify-between items-end gap-8">
-                    <h2 className="text-3xl md:text-5xl leading-[var(--leading-heading)] font-semibold tracking-[-1.44px] text-[#090B19]">
+                    <h2 className="text-3xl md:text-5xl leading-[var(--leading-heading)] font-semibold tracking-[-0.72px] text-[#090B19]">
                         See what we can do together.
                     </h2>
                     <a href="#" className="h-[54px] px-10 border border-[#090B19] rounded-none flex items-center justify-center text-xs font-bold tracking-[3px] uppercase text-[#090B19] hover:bg-[#090B19] hover:text-white transition-colors">
@@ -107,7 +107,7 @@ export function ProjectGrid() {
                                 initial={{ y: 20, opacity: 0 }}
                                 whileHover={{ y: 0, opacity: 1 }}
                                 transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
-                                className="text-2xl leading-[var(--leading-heading)] font-bold tracking-[-0.72px]"
+                                className="text-2xl leading-[var(--leading-heading)] font-bold tracking-[-0.36px]"
                             >
                                 {project.name}
                             </motion.h3>

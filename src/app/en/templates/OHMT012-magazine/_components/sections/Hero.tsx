@@ -84,7 +84,7 @@ export const Hero = ({ t }: { t: MagazineT }) => {
                <p className="text-[0.65rem] font-bold uppercase tracking-[0.3em] text-white/45 mb-0.5">
                  {t.hero.bannerBadge}
                </p>
-               <h2 className="font-[family-name:var(--theme-font-heading)] text-[1.1rem] md:text-[1.4rem] font-normal text-white leading-tight">
+               <h2 className="font-[family-name:var(--theme-font-heading)] text-[1.1rem] md:text-[1.4rem] font-normal text-white leading-[1.05]">
                  {t.hero.bannerTitle}
                </h2>
              </div>

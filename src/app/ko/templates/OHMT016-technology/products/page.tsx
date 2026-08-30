@@ -4,7 +4,6 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 import Header from '../_components/Header'
 import Footer from '../_components/Footer'
-import FormSelect from '../_components/FormSelect'
 import { modelData, featuresData } from '../data/data'
 import { useState } from 'react'
 
@@ -24,7 +23,7 @@ export default function TechnologyProductsPage() {
   const [form, setForm] = useState({ name: '', company: '', email: '', model: '', quantity: '1', message: '' })
   const [submitted, setSubmitted] = useState(false)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
@@ -49,9 +48,7 @@ export default function TechnologyProductsPage() {
               현장 규모에 맞는 두 가지 모델
             </h1>
             <p className="mx-auto max-w-2xl text-base md:text-lg text-[var(--color-text-muted)] leading-[var(--leading-heading)]">
-              실내 자동화부터 산업 현장까지
-              <br />
-              작업 환경과 적재 하중에 맞춰 선택할 수 있는 두 가지 자율 로봇입니다.
+              실내 자동화부터 산업 현장까지 작업 환경과 적재 하중에 맞춰 선택할 수 있는 두 가지 자율 로봇입니다.
             </p>
           </div>
         </section>
@@ -89,7 +86,7 @@ export default function TechnologyProductsPage() {
                     </p>
                     <div className="flex items-baseline gap-3 pt-2">
                       <span className="text-3xl font-bold text-[var(--color-text)] font-heading">
-                        {model.id === 'gen2' ? '28,000,000원' : '35,000,000원'}
+                        {model.id === 'gen2' ? '$20K' : '$25K'}
                       </span>
                       <span className="text-sm text-[var(--color-text-muted)] line-through">
                         {model.slashedPrice}
@@ -280,34 +277,27 @@ export default function TechnologyProductsPage() {
                         <label htmlFor="model" className="block text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text)] mb-2">
                           모델
                         </label>
-                        <FormSelect
-                          id="model"
-                          name="model"
-                          value={form.model}
-                          onChange={(model) => setForm((current) => ({ ...current, model }))}
-                          required
-                          placeholder="모델 선택"
-                          options={[
-                            { value: 'gen2', label: 'OmniBot Gen 2 · 28,000,000원' },
-                            { value: 'prime', label: 'OmniBot Prime · 35,000,000원' },
-                          ]}
-                        />
+                        <select
+                          id="model" name="model" value={form.model} onChange={handleChange} required
+                          className="w-full border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-3 text-sm text-[var(--color-text)] outline-none focus:border-[var(--color-accent)] transition-colors duration-200 rounded-md"
+                        >
+                          <option value="">모델 선택</option>
+                          <option value="gen2">OmniBot Gen 2 - $20K</option>
+                          <option value="prime">OmniBot Prime - $25K</option>
+                        </select>
                       </div>
                       <div>
                         <label htmlFor="quantity" className="block text-xs font-bold uppercase tracking-[0.1em] text-[var(--color-text)] mb-2">
                           수량
                         </label>
-                        <FormSelect
-                          id="quantity"
-                          name="quantity"
-                          value={form.quantity}
-                          onChange={(quantity) => setForm((current) => ({ ...current, quantity }))}
-                          placeholder="수량 선택"
-                          options={['1', '2', '3', '4', '5', '6-10', '10+'].map((quantity) => ({
-                            value: quantity,
-                            label: `${quantity}개`,
-                          }))}
-                        />
+                        <select
+                          id="quantity" name="quantity" value={form.quantity} onChange={handleChange}
+                          className="w-full border border-[var(--color-border)] bg-[var(--color-bg)] px-4 py-3 text-sm text-[var(--color-text)] outline-none focus:border-[var(--color-accent)] transition-colors duration-200 rounded-md"
+                        >
+                          {['1', '2', '3', '4', '5', '6-10', '10+'].map((q) => (
+                            <option key={q} value={q}>{q}개</option>
+                          ))}
+                        </select>
                       </div>
                     </div>
 

@@ -34,7 +34,7 @@ export function MenuCard({
         <h3 className="mb-1 text-base font-medium leading-snug text-white">
           {name}
         </h3>
-        <p className="text-pretty text-sm leading-relaxed text-white/50">{desc}</p>
+        <p className="text-sm leading-relaxed text-white/50">{desc}</p>
       </div>
     </div>
   );

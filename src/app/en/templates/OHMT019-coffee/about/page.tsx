@@ -55,7 +55,7 @@ function AboutPageContent() {
               Brewing with purpose,<br />serving with care.
             </h2>
             <p className="text-base leading-loose text-[var(--color-text-muted)]">
-              OHMT started as a small coffee cart in Seongsu-dong.
+              SLOW DROP started as a small coffee cart in Seongsu-dong.
               What began as a weekend passion project grew into a neighborhood
               staple. Our founders spent years traveling through coffee regions
               in Ethiopia and Colombia, building relationships with farmers who

@@ -7,9 +7,9 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 const trims = [
-  { id: "city",  name: "시티",   price: "2,890만 원", range: "180 km", charge: "45분", power: "95 kW",  topSpeed: "145 km/h", isPopular: false },
-  { id: "urban", name: "어반+", price: "3,350만 원", range: "280 km", charge: "30분", power: "120 kW", topSpeed: "160 km/h", isPopular: true  },
-  { id: "sport", name: "스포츠",  price: "4,050만 원", range: "260 km", charge: "28분", power: "160 kW", topSpeed: "180 km/h", isPopular: false },
+  { id: "city",  name: "City",   price: "2,890만 원", range: "180 km", charge: "45분", power: "95 kW",  topSpeed: "145 km/h", isPopular: false },
+  { id: "urban", name: "Urban+", price: "3,350만 원", range: "280 km", charge: "30분", power: "120 kW", topSpeed: "160 km/h", isPopular: true  },
+  { id: "sport", name: "Sport",  price: "4,050만 원", range: "260 km", charge: "28분", power: "160 kW", topSpeed: "180 km/h", isPopular: false },
 ];
 
 const rows = [
@@ -88,7 +88,8 @@ export function TrimCompare() {
                         ? "bg-[var(--accent)] text-[var(--text-on-light)] hover:bg-[var(--accent-dark)]"
                         : "border border-[var(--border)] text-[var(--text)] hover:border-[var(--text-muted)]"
                     }`}>
-                      {t.name} 사전 예약</button>
+                      {t.name} 예약
+                    </button>
                   </a>
                 </td>
               ))}

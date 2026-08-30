@@ -9,9 +9,9 @@ import { BASE, LINES } from '../../data/figures'
 import { useCart } from '../CartContext'
 
 const NAV = [
-  { label: '스토어', href: `${BASE}/shop` },
-  { label: '스튜디오', href: `${BASE}/story` },
-  { label: '신규 발매', href: `${BASE}/drops` },
+  { label: '숍', href: `${BASE}/shop` },
+  { label: '스토리', href: `${BASE}/story` },
+  { label: '드롭', href: `${BASE}/drops` },
 ]
 
 export function Header() {

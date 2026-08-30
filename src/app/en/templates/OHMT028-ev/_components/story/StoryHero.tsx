@@ -26,7 +26,7 @@ export function StoryHero() {
           <p className="font-inter text-xs tracking-[0.15em] text-[var(--accent)] uppercase mb-4">
             Our Story
           </p>
-          <h1 className="font-michroma text-[length:var(--text-display)] text-[var(--text)] leading-[var(--leading-display)] tracking-[-0.03em] mb-6">
+          <h1 className="font-michroma text-[length:var(--text-display)] text-[var(--text)] leading-[var(--leading-display)] tracking-[-0.02em] mb-6">
             Small car.<br />Big idea.
           </h1>
           <p className="font-inter text-sm text-[var(--text-muted)] max-w-[400px] leading-relaxed">

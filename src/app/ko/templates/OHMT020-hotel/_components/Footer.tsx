@@ -10,9 +10,10 @@ export const Footer = () => {
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16">
           <div>
-            <h3 className="text-2xl font-[var(--font-heading)] font-bold mb-4">OHMT</h3>
+            <h3 className="text-2xl font-[var(--font-heading)] font-bold mb-4">CASSIA</h3>
             <p className="text-sm text-[var(--color-bg)]/60 leading-relaxed max-w-xs">
-              바다와 숲이 만나는 코사무이에서 편안한 휴식을 준비합니다.</p>
+              고요한 럭셔리, 영원한 안식처. 숲과 바다가 만나는 곳, 모든 순간이 기억이 됩니다.
+            </p>
           </div>
 
           <div>
@@ -28,13 +29,13 @@ export const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <Mail size={14} strokeWidth={1.2} className="text-[var(--color-accent)] flex-shrink-0" />
-                <span>contact@ohmt.site</span>
+                <span>contact@cassia.site</span>
               </div>
             </div>
           </div>
 
           <div>
-            <h4 className="text-xs font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] mb-5">안내</h4>
+            <h4 className="text-xs font-semibold text-[var(--color-accent)] uppercase tracking-[0.2em] mb-5">링크</h4>
             <div className="flex flex-col gap-2">
               <Link href="#" className="text-sm text-[var(--color-bg)]/70 hover:text-[var(--color-accent)] transition-colors">개인정보처리방침</Link>
               <Link href="#" className="text-sm text-[var(--color-bg)]/70 hover:text-[var(--color-accent)] transition-colors">이용약관</Link>
@@ -45,10 +46,10 @@ export const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-[var(--color-bg)]/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[var(--color-bg)]/40">
-          <span>&copy; 2026 OHMT. 모든 권리 보유.</span>
+          <span>&copy; 2026 CASSIA. All rights reserved.</span>
           <div className="flex items-center gap-4">
             <Globe size={14} strokeWidth={1.2} className="hover:text-[var(--color-accent)] transition-colors cursor-pointer" />
-            <span>OHMT</span>
+            <span>CASSIA</span>
           </div>
         </div>
       </div>

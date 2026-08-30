@@ -18,14 +18,14 @@ export const SplitSection = ({ eyebrow, title, desc, img, reverse }: SplitProps)
   <div className={clsx("grid md:grid-cols-2 min-h-[620px] bg-black overflow-hidden", reverse && "md:[direction:rtl]")}>
     <div className={clsx(
       "flex flex-col justify-center py-14 md:py-32 px-6",
-      reverse 
-        ? "md:pl-16 md:pr-[max(60px,calc((100vw-1440px)/2+60px))] [direction:ltr]" 
+      reverse
+        ? "md:pl-16 md:pr-[max(60px,calc((100vw-1440px)/2+60px))] [direction:ltr]"
         : "md:pr-16 md:pl-[max(60px,calc((100vw-1440px)/2+60px))] [direction:ltr]"
     )}>
       <span className="block text-[0.68rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-5">
         {eyebrow}
       </span>
-      <h2 className="text-[length:var(--text-h2)] font-extrabold tracking-[-0.04em] leading-[var(--leading-heading)] mb-6 text-white whitespace-pre-line">
+      <h2 className="text-[length:var(--text-h2)] font-extrabold tracking-[-0.02em] leading-[var(--leading-heading)] mb-6 text-white whitespace-pre-line">
         {title}
       </h2>
       <p className="text-[0.92rem] md:text-[0.98rem] text-white/60 leading-loose font-normal mb-10 max-w-[420px]">
@@ -49,7 +49,7 @@ export const FullBleedSection = ({ eyebrow, title, desc, img }: Omit<SplitProps,
       <span className="block text-[0.68rem] font-bold uppercase tracking-[0.3em] text-[var(--theme-accent)] mb-5">
         {eyebrow}
       </span>
-      <h2 className="text-[length:var(--text-h1)] font-bold tracking-[-0.04em] leading-[var(--leading-heading)] mb-5 max-w-[700px] text-white whitespace-pre-line">
+      <h2 className="text-[length:var(--text-h1)] font-bold tracking-[-0.02em] leading-[var(--leading-heading)] mb-5 max-w-[700px] text-white whitespace-pre-line">
         {title}
       </h2>
       <p className="text-[0.92rem] md:text-[0.98rem] text-white/60 font-normal mb-8 max-w-[460px]">

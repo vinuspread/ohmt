@@ -1,137 +1,66 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { useCallback, useEffect, useRef, useState } from "react";
 
 const EASE_OUT = [0.23, 1, 0.32, 1] as const;
 
 const cards = [
-  { label: "트러블과 흔적", desc: "피부 상태에 따라 각질·모공·흔적을 위한 관리 방법을 제안합니다." },
-  { label: "탄력과 잔주름", desc: "피부 컨디션에 맞춘 관리로 탄력과 피부결을 세심하게 돌봅니다." },
-  { label: "색소 침착", desc: "칙칙함과 고르지 않은 피부 톤을 위한 맞춤 관리를 제안합니다." },
-  { label: "민감성 피부", desc: "민감도와 붉은기를 고려해 자극을 줄인 진정·보습 관리를 진행합니다." },
-  { label: "모공과 피부결", desc: "피부 상태에 맞춰 각질과 모공, 거친 피부결을 관리합니다." },
-  { label: "스트레스와 피로", desc: "부드러운 마사지와 아로마 케어로 몸의 긴장을 풀고 편안한 휴식을 돕습니다." },
+  { label: "여드름 & 흉터", desc: "첨단 레이저와 마이크로니들링으로 매끄러운 피부를 되찾습니다." },
+  { label: "노화 고민", desc: "비수술 필과 콜라겐 유도로 생기 있는 젊음을 유지합니다." },
+  { label: "색소 침착", desc: "기미와 자외선 손상을 위한 표적 미백 트리트먼트." },
+  { label: "민감성 피부", desc: "붉은기와 자극을 완화하는 순한 배리어 리페어 테라피." },
+  { label: "피부결 문제", desc: "모공과 요철을 개선하는 리서페이싱 트리트먼트." },
+  { label: "스트레스 & 피로", desc: "에너지를 회복하고 얼굴에 광채를 되찾아주는 릴렉세이션 리추얼." },
 ];
 
 export default function WhatWeSolve() {
   const reduce = useReducedMotion();
-  const carouselRef = useRef<HTMLDivElement>(null);
-  const [canMovePrevious, setCanMovePrevious] = useState(false);
-  const [canMoveNext, setCanMoveNext] = useState(true);
-
-  const updateControls = useCallback(() => {
-    const carousel = carouselRef.current;
-    if (!carousel) return;
-
-    const maxScrollLeft = Math.max(0, carousel.scrollWidth - carousel.clientWidth);
-    setCanMovePrevious(carousel.scrollLeft > 2);
-    setCanMoveNext(carousel.scrollLeft < maxScrollLeft - 2);
-  }, []);
-
-  useEffect(() => {
-    const carousel = carouselRef.current;
-    if (!carousel) return;
-
-    updateControls();
-    const resizeObserver = new ResizeObserver(updateControls);
-    resizeObserver.observe(carousel);
-
-    return () => resizeObserver.disconnect();
-  }, [updateControls]);
-
-  const moveCarousel = (direction: -1 | 1) => {
-    const carousel = carouselRef.current;
-    const firstCard = carousel?.querySelector<HTMLElement>("[data-care-card]");
-    if (!carousel || !firstCard) return;
-
-    const styles = window.getComputedStyle(carousel);
-    const gap = Number.parseFloat(styles.columnGap || styles.gap) || 0;
-    carousel.scrollBy({
-      left: direction * (firstCard.offsetWidth + gap),
-      behavior: reduce ? "auto" : "smooth",
-    });
-  };
-
   return (
     <section className="relative overflow-hidden bg-[var(--color-bg-secondary)] py-24 lg:py-32">
-      <div className="mx-auto mb-12 flex max-w-7xl items-end justify-between gap-8 px-6 lg:mb-16">
-        <motion.div initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6, ease: EASE_OUT }} className="max-w-2xl">
-          <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">피부 고민</span>
-          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[var(--leading-heading)]">상태별 맞춤 케어</h2>
-          <p className="mt-5 max-w-md text-[0.95rem] leading-relaxed text-[var(--color-text-muted)]">현재 피부 상태를 먼저 살펴보고 필요한 관리 방향을 안내합니다.</p>
+      <div className="mx-auto max-w-[1440px] px-6">
+        <motion.div initial={reduce ? { opacity: 0 } : { opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6, ease: EASE_OUT }} className="mb-16 max-w-2xl">
+          <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--color-primary)]">솔루션</span>
+          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-5xl font-bold tracking-tight text-[var(--color-text)] leading-[var(--leading-heading)]">치료하는 피부 고민</h2>
+          <p className="mt-5 text-[0.95rem] text-[var(--color-text-muted)] leading-relaxed max-w-md">피부 상태를 먼저 진단하고, 그에 맞는 관리 프로토콜을 제안합니다.</p>
         </motion.div>
-
-        <div className="hidden shrink-0 items-center gap-3 sm:flex" aria-label="맞춤 케어 슬라이드 제어">
-          <button
-            type="button"
-            onClick={() => moveCarousel(-1)}
-            disabled={!canMovePrevious}
-            aria-label="이전 맞춤 케어 보기"
-            className="inline-flex size-12 items-center justify-center rounded-full bg-[var(--color-secondary)]/70 text-white backdrop-blur-sm transition-[background-color,opacity,transform] duration-200 hover:bg-[var(--color-secondary)] active:scale-95 disabled:cursor-not-allowed disabled:opacity-25"
-          >
-            <svg aria-hidden="true" viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="1.8">
-              <path d="m15 18-6-6 6-6" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
-          <button
-            type="button"
-            onClick={() => moveCarousel(1)}
-            disabled={!canMoveNext}
-            aria-label="다음 맞춤 케어 보기"
-            className="inline-flex size-12 items-center justify-center rounded-full bg-[var(--color-secondary)]/70 text-white backdrop-blur-sm transition-[background-color,opacity,transform] duration-200 hover:bg-[var(--color-secondary)] active:scale-95 disabled:cursor-not-allowed disabled:opacity-25"
-          >
-            <svg aria-hidden="true" viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="1.8">
-              <path d="m9 6 6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
-            </svg>
-          </button>
+      </div>
+      <div className="overflow-hidden">
+        <div className="solve-card-track flex w-max gap-6 px-6">
+          {[...cards, ...cards].map((card, i) => (
+            <div key={`${card.label}-${i}`} className="w-[300px] shrink-0 rounded-2xl bg-[var(--color-bg)] border border-[var(--color-border)] p-8">
+              <span className="text-[0.65rem] font-bold uppercase tracking-[0.15em] text-[var(--color-primary)]">{String(i % cards.length + 1).padStart(2, "0")}</span>
+              <h3 className="mt-4 font-[family-name:var(--font-heading)] text-xl font-bold tracking-tight text-[var(--color-text)] leading-[var(--leading-heading)]">{card.label}</h3>
+              <p className="mt-3 text-sm text-[var(--color-text-muted)] leading-relaxed">{card.desc}</p>
+            </div>
+          ))}
         </div>
       </div>
+      <style>{`
+        @keyframes solve-card-step {
+          0%, 10% { transform: translateX(0); }
+          14%, 24% { transform: translateX(-324px); }
+          28%, 38% { transform: translateX(-648px); }
+          42%, 52% { transform: translateX(-972px); }
+          56%, 66% { transform: translateX(-1296px); }
+          70%, 80% { transform: translateX(-1620px); }
+          84%, 100% { transform: translateX(-1944px); }
+        }
 
-      <div
-        ref={carouselRef}
-        onScroll={updateControls}
-        role="region"
-        aria-label="상태별 맞춤 케어"
-        className="flex snap-x snap-mandatory scroll-px-6 gap-6 overflow-x-auto scroll-smooth px-6 pb-2"
-      >
-        {cards.map((card, i) => (
-          <div
-            key={card.label}
-            data-care-card
-            className="w-[min(300px,calc(100vw-3rem))] shrink-0 snap-start rounded-2xl border border-[var(--color-border)] bg-[var(--color-bg)] p-8"
-          >
-            <span className="text-[0.65rem] font-bold uppercase tracking-[0.15em] text-[var(--color-primary)]">{String(i + 1).padStart(2, "0")}</span>
-            <h3 className="mt-4 font-[family-name:var(--font-heading)] text-xl font-bold tracking-tight text-[var(--color-text)] leading-[var(--leading-heading)]">{card.label}</h3>
-            <p className="mt-3 text-sm text-[var(--color-text-muted)] leading-relaxed">{card.desc}</p>
-          </div>
-        ))}
-      </div>
+        .solve-card-track {
+          animation: solve-card-step 24s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+          transform: translateX(0);
+        }
 
-      <div className="mt-6 flex items-center justify-center gap-3 px-6 sm:hidden" aria-label="맞춤 케어 슬라이드 제어">
-        <button
-          type="button"
-          onClick={() => moveCarousel(-1)}
-          disabled={!canMovePrevious}
-          aria-label="이전 맞춤 케어 보기"
-          className="inline-flex size-12 items-center justify-center rounded-full bg-[var(--color-secondary)]/70 text-white backdrop-blur-sm transition-[background-color,opacity,transform] duration-200 active:scale-95 disabled:cursor-not-allowed disabled:opacity-25"
-        >
-          <svg aria-hidden="true" viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="1.8">
-            <path d="m15 18-6-6 6-6" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </button>
-        <button
-          type="button"
-          onClick={() => moveCarousel(1)}
-          disabled={!canMoveNext}
-          aria-label="다음 맞춤 케어 보기"
-          className="inline-flex size-12 items-center justify-center rounded-full bg-[var(--color-secondary)]/70 text-white backdrop-blur-sm transition-[background-color,opacity,transform] duration-200 active:scale-95 disabled:cursor-not-allowed disabled:opacity-25"
-        >
-          <svg aria-hidden="true" viewBox="0 0 24 24" className="size-5" fill="none" stroke="currentColor" strokeWidth="1.8">
-            <path d="m9 6 6 6-6 6" strokeLinecap="round" strokeLinejoin="round" />
-          </svg>
-        </button>
-      </div>
+        .solve-card-track:hover {
+          animation-play-state: paused;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .solve-card-track {
+            animation: none;
+          }
+        }
+      `}</style>
     </section>
   );
 }

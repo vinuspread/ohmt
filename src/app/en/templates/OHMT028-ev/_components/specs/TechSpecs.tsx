@@ -30,7 +30,7 @@ export function TechSpecs() {
   return (
     <section className="bg-[var(--light-bg)]">
       <div className="w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 py-24 md:py-32">
-        <h2 className="font-michroma text-[length:var(--text-h2)] text-[var(--text-on-light)] leading-[var(--leading-display)] tracking-[-0.03em] mb-16">
+        <h2 className="font-michroma text-[length:var(--text-h2)] text-[var(--text-on-light)] leading-[var(--leading-display)] tracking-[-0.02em] mb-16">
           Detailed Specs
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">

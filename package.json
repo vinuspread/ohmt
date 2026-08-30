@@ -8,6 +8,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "capture:templates": "node scripts/capture-template-pages.mjs",
+    "capture:collect": "node scripts/collect-responsive-captures.mjs",
     "verify:source": "node scripts/verify-template-source.mjs",
     "deploy:check": "powershell -ExecutionPolicy Bypass -File scripts/check-vercel-target.ps1",
     "deploy:prod": "powershell -ExecutionPolicy Bypass -File scripts/deploy-ohmt-prod.ps1",

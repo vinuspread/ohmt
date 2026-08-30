@@ -8,25 +8,25 @@ const picks = [
   {
     badge: "신규",
     label: "시그니처 콜드브루",
-    price: "9,500원",
+    price: "$7.5",
     image: "/templates/OHMT019-coffee/signature-coldbrew.jpg",
   },
   {
     badge: "바리스타 추천",
     label: "바닐라 오트 라떼",
-    price: "8,500원",
+    price: "$6.5",
     image: "/templates/OHMT019-coffee/signature-latte.jpg",
   },
   {
     badge: "시즌 한정",
     label: "싱글 오리진 에스프레소",
-    price: "6,500원",
+    price: "$5.0",
     image: "/templates/OHMT019-coffee/signature-espresso.jpg",
   },
   {
     badge: "셰프 추천",
     label: "말차 오트 라떼",
-    price: "9,000원",
+    price: "$7.0",
     image: "/templates/OHMT019-coffee/menu-matcha.jpg",
   },
 ];

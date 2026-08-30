@@ -40,14 +40,13 @@ const jsonLd = {
   name: 'OHMT - Forma Figures',
   description:
     'FORMA is a small-batch collectible figure studio: seasonal drops, numbered editions, and hand-finished sculpts across five lines.',
-  url: 'https://ohmt.site/en/templates/OHMT037-figure-shop',
+  url: 'https://ohmytemplate.com/en/templates/OHMT037-figure-shop',
 }
 
 export default function FigureShopLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;600&display=swap');
       `}</style>
       <TemplateWrapper>{children}</TemplateWrapper>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />

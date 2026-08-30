@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-const tags = ['손으로 수확', '종이 포장', '저온 보관']
+const tags = ['손 수확', '종이 포장', '저온 보관']
 
 export function FeatureBand() {
   return (
@@ -11,12 +11,11 @@ export function FeatureBand() {
         </div>
         <div className="col-span-12 lg:col-span-5">
           <p className="ledger-num text-sm font-bold text-[var(--color-accent)]">02 · 과수원의 방식</p>
-          <h2 className="copy-heading mt-4 font-[family-name:var(--font-heading)] text-2xl font-semibold leading-[var(--leading-body)] sm:text-4xl">
-            먹기 좋은 때에 맞춰 수확
+          <h2 className="mt-4 font-[family-name:var(--font-heading)] text-2xl font-semibold leading-[var(--leading-body)] sm:text-4xl">
+            식탁에 오르는 날에 맞춰 수확합니다.
           </h2>
-          <p className="copy-body mt-5 max-w-xl text-base leading-7 text-[var(--color-text-muted)]">
-            수확한 뒤에도 맛이 이어지도록 익은 정도와 식감을 살펴 선별합니다.
-            <br className="hidden sm:block" /> 바로 먹기 좋은 과일과 후숙이 필요한 과일을 함께 구성하고 안내 카드를 넣습니다.
+          <p className="mt-5 text-base leading-7 text-[var(--color-text-muted)]">
+            오래 두고 즐길 수 있는 과일을 선별합니다. 상자마다 식감과 향, 그리고 함께 드시기 좋은 제품으로 구성합니다.
           </p>
           <dl className="ledger-num mt-8 flex flex-wrap gap-x-12 gap-y-2 border-t border-[var(--color-border)] pt-5 text-sm">
             <div className="flex items-baseline gap-3">

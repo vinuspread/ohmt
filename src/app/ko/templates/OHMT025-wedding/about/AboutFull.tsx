@@ -41,11 +41,11 @@ export default function AboutFull() {
                 </span>
                 <h1
                   className="font-[family-name:var(--font-heading)] font-light capitalize text-[var(--color-text)] leading-[var(--leading-heading)] mb-8"
-                  style={{ fontSize: "clamp(3.5rem, 7vw, 6rem)" }}
+                  style={{ fontSize: "clamp(3rem, 7vw, 5.5rem)" }}
                 >
                   안녕하세요. 포토그래퍼<br />{about.name}입니다.
                 </h1>
-                <div className="space-y-5 text-[0.9rem] text-[var(--color-text-muted)] leading-loose max-w-[560px] font-[family-name:var(--font-body)]">
+                <div className="space-y-5 text-[0.9rem] text-[var(--color-text-muted)] leading-loose max-w-[420px] font-[family-name:var(--font-body)]">
                   {about.bio.slice(0, 2).map((p, i) => (
                     <p key={i} className="whitespace-pre-line">{p}</p>
                   ))}
@@ -124,12 +124,14 @@ export default function AboutFull() {
         <section className="bg-[#2C241E] py-20">
           <div className="max-w-[1440px] mx-auto px-8 lg:px-16 text-center">
             <h2 className="font-[family-name:var(--font-heading)] font-light text-4xl lg:text-6xl capitalize text-white leading-[var(--leading-heading)] mb-6">
-              결혼식 준비 이야기를 들려주세요</h2>
+              결혼식 준비 이야기를 들려주세요
+            </h2>
             <Link
               href="/ko/templates/OHMT025-wedding/contact"
               className="inline-flex items-center gap-3 text-[0.72rem] font-bold uppercase tracking-[0.2em] text-white border-b border-white/40 pb-1 hover:border-white transition-colors duration-200"
             >
-              촬영 문의</Link>
+              촬영 문의
+            </Link>
           </div>
         </section>
       </main>

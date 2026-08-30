@@ -1,6 +1,5 @@
 'use client'
 
-import { Fragment } from 'react'
 import { motion } from 'framer-motion'
 import { stats } from '../../data/stats'
 
@@ -57,27 +56,25 @@ export function ImpactStats() {
             hidden: {},
             show: { transition: { staggerChildren: 0.07 } },
           }}
-          className="grid grid-cols-1 gap-6 md:grid-cols-12"
+          className="grid grid-cols-1 md:grid-cols-4"
         >
-          {stats.map((stat, index) => (
-            <Fragment key={stat.id}>
-              <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 26 },
-                  show: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 110, damping: 16 } },
-                }}
-                transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-                className="flex flex-col gap-2 py-5 md:gap-6 md:py-0"
-              >
-                <p className="font-heading text-5xl font-semibold leading-none text-[var(--color-text)] md:text-6xl md:font-bold">
-                  <MetricValue stat={stat} />
-                </p>
-                <p className="text-xs font-normal leading-[var(--leading-heading)] text-[var(--color-text-muted)] md:max-w-[250px] md:text-sm md:font-medium">
-                  {stat.label}
-                </p>
-              </motion.div>
-              {index < stats.length - 1 ? <div className="h-px bg-[rgba(16,20,18,0.11)] md:h-auto md:w-px" /> : null}
-            </Fragment>
+          {stats.map((stat) => (
+            <motion.div
+              key={stat.id}
+              variants={{
+                hidden: { opacity: 0, y: 26 },
+                show: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 110, damping: 16 } },
+              }}
+              transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
+              className="flex min-w-0 flex-col gap-4 border-b border-[rgba(16,20,18,0.11)] py-7 last:border-b-0 md:border-b-0 md:border-r md:px-7 md:py-2 md:first:pl-0 md:last:border-r-0 md:last:pr-0 lg:px-10"
+            >
+              <p className="whitespace-nowrap font-heading text-[clamp(3rem,5.2vw,4.75rem)] font-bold leading-none tracking-[-0.015em] text-[var(--color-text)]">
+                <MetricValue stat={stat} />
+              </p>
+              <p className="max-w-[15rem] text-sm font-medium leading-[1.42] text-[var(--color-text-muted)]">
+                {stat.label}
+              </p>
+            </motion.div>
           ))}
         </motion.div>
       </div>

@@ -13,14 +13,13 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Projects Portfolio - Architecture Portfolio - OHMT",
     description: "Browse our selected residential, commercial, public, and interior architecture commissions.",
-    url: "https://ohmt.site/en/templates/OHMT027-architecture/projects",
+    url: "https://ohmytemplate.com/en/templates/OHMT027-architecture/projects",
     images: [{ url: "/templates/OHMT027-architecture/og-image.jpg" }],
   },
-  robots: { index: false, follow: true },
   alternates: {
-    canonical: "https://ohmt.site/en/templates/OHMT027-architecture/projects",
+    canonical: "https://ohmytemplate.com/en/templates/OHMT027-architecture/projects",
     languages: {
-      "ko": "https://ohmt.site/ko/templates/OHMT027-architecture/projects",
+      "ko": "https://ohmytemplate.com/ko/templates/OHMT027-architecture/projects",
     },
   },
 };
@@ -30,7 +29,7 @@ export default function ProjectsPage() {
     <TemplateWrapper>
       <div className="relative min-h-screen bg-white text-[var(--color-text)] font-sans antialiased overflow-hidden selection:bg-[var(--color-text)] selection:text-white">
         <Header />
-        
+
         <main className="pt-32 pb-16">
           {/* Reuse the Projects section with built-in filter and magazine grid */}
           <Projects />

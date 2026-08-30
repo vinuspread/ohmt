@@ -5,7 +5,6 @@ import { TemplateWrapper } from "../_components/TemplateWrapper";
 import theme from "../theme.json";
 import { Header } from "../_components/layout/Header";
 import { Footer } from "../_components/layout/Footer";
-import TemplateSelect from '../_components/TemplateSelect'
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
@@ -24,7 +23,7 @@ export default function ContactPage() {
         <section className="pt-16 md:pt-32 pb-16 border-b border-black/10">
           <div className="max-w-[1440px] mx-auto px-6">
             <span className="text-[0.7rem] font-bold uppercase tracking-[0.25em] text-black/40 block mb-4">Get in Touch</span>
-            <h1 className="text-[length:var(--text-h1)] font-black tracking-[-0.03em] uppercase leading-[var(--leading-heading)]">Contact Us</h1>
+            <h1 className="text-[length:var(--text-h1)] font-extrabold tracking-[-0.02em] uppercase leading-[var(--leading-heading)]">Contact Us</h1>
           </div>
         </section>
 
@@ -88,7 +87,7 @@ export default function ContactPage() {
                   <div className="w-16 h-16 bg-black flex items-center justify-center mb-6">
                     <ArrowRight size={24} className="text-white" />
                   </div>
-                  <h2 className="text-[1.5rem] font-black uppercase mb-3">Message Sent</h2>
+                  <h2 className="text-[1.5rem] font-extrabold uppercase mb-3">Message Sent</h2>
                   <p className="text-[0.9rem] text-black/60">We'll get back to you within one business day.</p>
                 </div>
               ) : (
@@ -111,14 +110,14 @@ export default function ContactPage() {
 
                   <div>
                     <label className="block text-[0.72rem] font-bold uppercase tracking-[0.1em] text-black/50 mb-2">Subject</label>
-                    <TemplateSelect className="w-full border border-black/20 px-4 py-3 text-[0.88rem] focus:outline-none focus:border-black transition-colors bg-white">
+                    <select className="w-full border border-black/20 px-4 py-3 text-[0.88rem] focus:outline-none focus:border-black transition-colors bg-white">
                       <option>Order Inquiry</option>
                       <option>Returns & Exchanges</option>
                       <option>Sizing Help</option>
                       <option>Wholesale</option>
                       <option>Press & Media</option>
                       <option>Other</option>
-                    </TemplateSelect>
+                    </select>
                   </div>
 
                   <div>

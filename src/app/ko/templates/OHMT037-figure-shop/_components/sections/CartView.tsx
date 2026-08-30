@@ -3,12 +3,12 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Minus, Plus, X } from 'lucide-react'
-import { BASE, formatKrw } from '../../data/figures'
+import { BASE, formatUsd } from '../../data/figures'
 import { Button } from '../ui/Button'
 import { useCart } from '../CartContext'
 
 export function CartView() {
-  const { items, totalKrw, setQty, remove } = useCart()
+  const { items, totalUsd, setQty, remove } = useCart()
 
   if (items.length === 0) {
     return (
@@ -41,7 +41,7 @@ export function CartView() {
                 {item.name}
               </Link>
               <p className="meta-label mt-1 text-[var(--color-ink-faint)]">{item.colorway}</p>
-              <p className="value-text mt-2 text-[var(--color-ink)]">{formatKrw(item.priceKrw)}</p>
+              <p className="value-text mt-2 text-[var(--color-ink)]">{formatUsd(item.priceUsd)}</p>
             </div>
             <div className="flex items-center rounded-full border border-[var(--color-border)]">
               <button
@@ -79,7 +79,7 @@ export function CartView() {
         <dl className="mt-6 flex flex-col gap-3">
           <div className="flex items-baseline justify-between">
             <dt className="text-base text-[var(--color-ink-muted)]">상품 금액</dt>
-            <dd className="value-text text-[var(--color-ink)]">{formatKrw(totalKrw)}</dd>
+            <dd className="value-text text-[var(--color-ink)]">{formatUsd(totalUsd)}</dd>
           </div>
           <div className="flex items-baseline justify-between">
             <dt className="text-base text-[var(--color-ink-muted)]">배송</dt>
@@ -89,7 +89,7 @@ export function CartView() {
         <div className="mt-6 border-t border-[var(--color-border)] pt-6">
           <div className="flex items-baseline justify-between">
             <span className="text-base font-semibold text-[var(--color-ink)]">합계</span>
-            <span className="value-text text-[var(--color-ink)]">{formatKrw(totalKrw)}</span>
+            <span className="value-text text-[var(--color-ink)]">{formatUsd(totalUsd)}</span>
           </div>
           <button
             type="button"

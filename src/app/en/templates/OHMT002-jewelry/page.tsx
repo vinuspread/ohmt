@@ -171,12 +171,12 @@ const { scrollYProgress } = useScroll({
                       alt={item.name}
                       className="w-full h-full object-cover scale-[1.06] group-hover:scale-[1.12] transition-transform duration-[2.5s] ease-out"
                     />
-                     <div className="absolute top-3.5 right-3.5 z-10">
-                       <button className="flex items-center justify-center w-7 h-7 rounded-full bg-white/80 backdrop-blur-md text-neutral-400 hover:text-red-500 hover:bg-white active:scale-95 transition-all duration-300 shadow-[0_2px_10px_rgba(0,0,0,0.05)]" aria-label="Add to wishlist">
+                     <div className="absolute top-4 right-4 z-10">
+                       <button className="flex items-center justify-center w-9 h-9 rounded-full bg-white/80 backdrop-blur-md text-neutral-400 hover:text-red-500 hover:bg-white active:scale-95 transition-all duration-300 shadow-[0_2px_10px_rgba(0,0,0,0.05)]" aria-label="Add to wishlist">
                          <Heart size={13} strokeWidth={1.8} />
                        </button>
                      </div>
-                     <div className="absolute top-3.5 left-3.5">
+                     <div className="absolute top-4 left-4">
                        <span className="flex items-center justify-center h-7 text-xs bg-white/95 text-neutral-800 border border-neutral-200/50 rounded-none px-3.5 uppercase font-bold tracking-[0.15em] backdrop-blur-sm shadow-[0_2px_8px_rgba(0,0,0,0.03)]">{item.tag}</span>
                      </div>
                     <div className="absolute bottom-4 left-1/2 -translate-x-1/2 w-[90%] z-20 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300 hidden sm:block">
@@ -187,9 +187,9 @@ const { scrollYProgress } = useScroll({
                   </Link>
                   <div className="space-y-1 text-center">
                     <Link href={`/en/templates/OHMT002-jewelry/product/${item.id}`} className="block">
-                      <h4 className="text-sm md:text-base font-serif font-bold text-neutral-800 group-hover:text-[var(--color-primary)] transition-colors leading-tight truncate">{item.name}</h4>
+                      <h4 className="text-sm md:text-base font-serif font-bold text-neutral-800 group-hover:text-[var(--color-primary)] transition-colors leading-[1.1] truncate">{item.name}</h4>
                     </Link>
-                    <p className="text-sm text-neutral-500 font-bold">{item.price}</p>
+                    <p className="text-sm text-[var(--color-primary)] font-medium">{item.price}</p>
                   </div>
                 </motion.div>
               ))}
@@ -212,7 +212,7 @@ const { scrollYProgress } = useScroll({
               </motion.div>
               <div className="absolute -bottom-10 -right-6 lg:-bottom-14 lg:-right-14 w-72 bg-white p-8 hidden md:block border border-neutral-100">
                 <span className="text-[var(--color-primary)] text-xs font-bold uppercase tracking-[0.3em] block mb-3">{t.craftsmanship.badge}</span>
-                <p className="text-sm text-neutral-800 leading-[var(--leading-body)] font-bold font-serif">
+                <p className="text-sm text-neutral-800 leading-[var(--leading-body)] font-serif italic">
                   "{t.craftsmanship.quote}"
                 </p>
               </div>
@@ -239,7 +239,6 @@ const { scrollYProgress } = useScroll({
           </div>
         </section>
 
-        <p className="text-center text-[11px] leading-relaxed text-neutral-400 px-6 py-6">This page is a website design template demo by OHMT, not an actual client or operating business. The brand names, people, testimonials, contact details, and performance figures shown are example content.</p>
         <Footer />
       </main>
     </TemplateWrapper>

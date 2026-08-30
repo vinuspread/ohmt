@@ -21,7 +21,7 @@ export default function ExhibitionCard({ exhibition }: { exhibition: Exhibition 
         {exhibition.name}
       </p>
       <p className="mt-2 text-xs uppercase tracking-[0.06em] text-[var(--color-text-muted)]" style={{ fontFamily: 'var(--font-body)' }}>
-        {exhibition.dateFrom} – {exhibition.dateTo}
+        {exhibition.dateFrom} - {exhibition.dateTo}
       </p>
     </Link>
   );

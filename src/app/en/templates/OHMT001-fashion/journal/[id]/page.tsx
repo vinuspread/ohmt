@@ -28,9 +28,9 @@ const ARTICLES = [
     date: "May 28, 2026",
     image: "/templates/OHMT001-fashion/hero-custom.jpg",
     content: `Selvedge, weight, and the obsessive pursuit of the perfect fade. We trace our denim to a single mill in Okayama.
-    
-    To understand the character of our denim is to understand the rhythm of old shuttle looms. Operating at a fraction of the speed of modern projectile looms, these vintage machines weave denim with a natural tension and structural variation that cannot be replicated. 
-    
+
+    To understand the character of our denim is to understand the rhythm of old shuttle looms. Operating at a fraction of the speed of modern projectile looms, these vintage machines weave denim with a natural tension and structural variation that cannot be replicated.
+
     The resulting fabric has a rich, textured handfeel (known as 'slubby') and a self-finished edge - the selvedge. We dye our threads in natural indigo, layering the color slowly to ensure that as the garment ages, it fades not to a flat blue, but to a deeply personal gradient of wear. This is denim made to be lived in, breaking in over years to reflect your unique movement.`
   },
   {

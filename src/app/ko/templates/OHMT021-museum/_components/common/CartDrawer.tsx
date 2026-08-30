@@ -15,16 +15,16 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
       {isOpen && (
         <>
           {/* Overlay */}
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
             className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[100]"
           />
-          
+
           {/* Drawer */}
-          <motion.div 
+          <motion.div
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
@@ -33,7 +33,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
           >
             {/* Header */}
             <div className="p-8 border-b border-luxury-border flex items-center justify-between">
-              <h2 className="text-xl font-serif tracking-widest">Your Bag (2)</h2>
+              <h2 className="text-xl font-serif tracking-widest">장바구니 (2)</h2>
               <button onClick={onClose} className="p-2 hover:bg-luxury-beige rounded-full transition-colors">
                 <X size={24} />
               </button>
@@ -42,8 +42,8 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
             {/* Content */}
             <div className="flex-1 overflow-y-auto p-8 space-y-8">
               {[
-                { name: "라오콘 군상 레플리카 (미디움 에디션)", price: "1,100,000원", img: "/templates/OHMT021-museum/laocoon-sculpture.png", size: "기본" },
-                { name: "아테네 학당 파인아트 프린트", price: "420,000원", img: "/templates/OHMT021-museum/school-of-athens.png", size: "액자포함" },
+                { name: "라오콘 군상 레플리카 (미디움 에디션)", price: "$850", img: "/templates/OHMT021-museum/laocoon-sculpture.png", size: "기본" },
+                { name: "아테네 학당 파인아트 프린트", price: "$320", img: "/templates/OHMT021-museum/school-of-athens.png", size: "액자포함" },
               ].map((item, i) => (
                 <div key={i} className="flex gap-6 group">
                   <div className="w-24 aspect-[3/4] bg-luxury-beige overflow-hidden">
@@ -52,7 +52,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                   <div className="flex-1 flex flex-col justify-between py-1">
                     <div>
                       <h4 className="font-serif text-lg mb-1">{item.name}</h4>
-                      <p className="text-xs uppercase tracking-widest text-luxury-gray">Size: {item.size}</p>
+                      <p className="text-xs uppercase tracking-widest text-luxury-gray">사이즈: {item.size}</p>
                     </div>
                     <div className="flex justify-between items-end">
                       <div className="flex items-center gap-4 text-xs">
@@ -70,11 +70,11 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
             {/* Footer */}
             <div className="p-8 bg-luxury-cream border-t border-luxury-border">
               <div className="flex justify-between items-center mb-8">
-                <span className="text-xs uppercase font-bold tracking-[0.3em] text-luxury-gray">Subtotal</span>
-                <span className="text-2xl font-serif tracking-tighter">1,520,000원</span>
+                <span className="text-xs uppercase font-bold tracking-[0.3em] text-luxury-gray">합계</span>
+                <span className="text-2xl font-serif tracking-tighter">$1,170.00</span>
               </div>
               <button className="w-full py-6 bg-luxury-black text-white text-xs uppercase font-bold tracking-[0.4em] flex items-center justify-center gap-4 hover:bg-opacity-90 transition-[color,background,transform] active:scale-95">
-                Checkout Now <ArrowRight size={16} />
+                결제하기 <ArrowRight size={16} />
               </button>
             </div>
           </motion.div>
@@ -83,4 +83,3 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
     </AnimatePresence>
   );
 }
-

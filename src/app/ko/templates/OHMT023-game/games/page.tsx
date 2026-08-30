@@ -40,7 +40,8 @@ export default function GamesPage() {
           <div className="mb-12">
             <h1 className="font-[var(--font-heading)] text-5xl font-bold">전체 게임</h1>
             <p className="mt-3 text-[var(--color-text-muted)]">
-              {games.length}개의 게임을 확인하세요.</p>
+              {games.length}개의 게임을 확인하세요.
+            </p>
           </div>
 
           <div className="mb-10 flex flex-wrap gap-3">
@@ -102,7 +103,8 @@ export default function GamesPage() {
 
           {filtered.length === 0 && (
             <p className="py-20 text-center text-[var(--color-text-muted)]">
-              선택한 조건에 맞는 게임이 없습니다.</p>
+              선택한 조건에 맞는 게임이 없습니다.
+            </p>
           )}
         </div>
       </main>

@@ -11,10 +11,10 @@ export const Header = ({ light }: { light?: boolean }) => {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const navItems = [
-    { label: "기사", href: "/ko/templates/OHMT012-magazine" },
+    { label: "스토리", href: "/ko/templates/OHMT012-magazine" },
     { label: "아카이브", href: "/ko/templates/OHMT012-magazine/archive" },
-    { label: "발행호", href: "/ko/templates/OHMT012-magazine/issues" },
-    { label: "소개", href: "/ko/templates/OHMT012-magazine/about" }
+    { label: "이슈", href: "/ko/templates/OHMT012-magazine/issues" },
+    { label: "어바웃", href: "/ko/templates/OHMT012-magazine/about" }
   ];
 
   useEffect(() => {
@@ -38,7 +38,9 @@ export const Header = ({ light }: { light?: boolean }) => {
               "font-[family-name:var(--theme-font-heading)] text-[1.6rem] tracking-[0.12em] uppercase transition-colors duration-300",
               scrolled ? "text-[var(--theme-text)]" : "text-white"
             )}
-          >FOLIO</Link>
+          >
+            FOLIO
+          </Link>
 
           {/* Desktop GNB */}
           <div className="hidden md:flex gap-8 items-center">
@@ -69,7 +71,7 @@ export const Header = ({ light }: { light?: boolean }) => {
           <button
             className="md:hidden flex items-center justify-center w-10 h-10"
             onClick={() => setMobileOpen((v) => !v)}
-            aria-label="메뉴 열기 또는 닫기"
+            aria-label="Toggle menu"
           >
             {mobileOpen
               ? <X size={22} className="text-[var(--theme-text)]" />

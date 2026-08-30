@@ -15,7 +15,8 @@ export function Testimonials() {
         <ScrollReveal>
           <div className="mb-16">
             <h2 className="font-heading font-normal text-4xl md:text-4xl text-[#1A1A1A]">
-              클라이언트 후기</h2>
+              클라이언트 후기
+            </h2>
           </div>
         </ScrollReveal>
 

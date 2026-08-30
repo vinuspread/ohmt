@@ -9,7 +9,8 @@ export function Booking() {
     <section className="py-16">
       <div className="text-center max-w-[760px] mx-auto mb-12 px-12">
         <SectionHeading size="compact" className="break-keep">
-          날짜만 정해 주세요<br />나머지는 저희가 준비합니다</SectionHeading>
+          가벼운 마음으로 오세요<br />머무시는 동안은 저희가 준비할게요
+        </SectionHeading>
       </div>
 
       <div className="max-w-[1440px] mx-auto px-6 md:px-12">
@@ -41,7 +42,8 @@ export function Booking() {
         <div className="text-center mt-12">
           <a href="#"
             className="inline-block rounded-full border border-white bg-white px-9 py-3 text-[var(--bg)] text-base font-medium hover:opacity-80 transition-opacity">
-            객실 조회</a>
+            예약 가능 여부 확인
+          </a>
         </div>
       </div>
     </section>

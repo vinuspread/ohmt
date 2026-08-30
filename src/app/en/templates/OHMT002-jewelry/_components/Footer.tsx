@@ -8,10 +8,10 @@ import Button from "./ui/Button";
 export default function Footer() {
   return (
     <footer className="bg-[var(--color-bg-secondary)] text-neutral-800 py-12 md:py-24 px-6 md:px-12 border-t border-neutral-200/50 selection:bg-[var(--color-primary)] selection:text-white">
-      <div className="max-w-[1440px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-16 lg:gap-24">
-        
+      <div className="max-w-[1440px] mx-auto grid grid-cols-2 md:grid-cols-4 gap-x-8 gap-y-12 md:gap-16 lg:gap-24">
+
         {/* Newsletter / Brand Statement */}
-        <div className="md:col-span-2 space-y-6">
+        <div className="col-span-2 space-y-6">
           <h4 className="text-xs font-medium uppercase tracking-[0.2em] text-neutral-900">Join the Maison World</h4>
           <p className="text-sm font-normal text-neutral-500 leading-[var(--leading-body)] max-w-sm normal-case">
             Receive exclusive invitations to atelier exhibitions, early access to new collections, and curated insights into the world of luxury fine jewelry.

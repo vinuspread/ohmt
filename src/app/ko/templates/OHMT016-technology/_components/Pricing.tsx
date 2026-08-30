@@ -41,7 +41,7 @@ export default function Pricing() {
                 <div>
                   <div className="flex items-center gap-3 mb-2">
                     <span className="text-2xl font-bold text-[var(--color-text)] font-heading">
-                      {model.id === 'gen2' ? '28,000,000원' : '35,000,000원'}
+                      {model.id === 'gen2' ? '$20K' : '$25K'}
                     </span>
                     <span className="text-sm text-[var(--color-text-muted)] line-through">
                       {model.slashedPrice}

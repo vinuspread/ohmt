@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&family=Plus+Jakarta+Sans:wght@600&display=swap');
 
 :root {
   --text-display: clamp(3rem, 7vw, 5.5rem);
@@ -36,34 +35,47 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.exhibition-en {
+.exhibition-ko {
   overflow-x: clip;
 }
 
-.exhibition-en [class*="overflow-x-auto"] {
+.exhibition-ko .ohmt003-home-title {
+  line-height: 0.92 !important;
+}
+
+.exhibition-ko .ohmt003-hero-statement {
+  font-size: var(--text-h3);
+  line-height: var(--leading-heading) !important;
+}
+
+.exhibition-ko [class*="overflow-x-auto"] {
   max-width: 100%;
   overscroll-behavior-x: contain;
   scrollbar-width: none;
 }
 
-.exhibition-en [class*="overflow-x-auto"]::-webkit-scrollbar {
+.exhibition-ko [class*="overflow-x-auto"]::-webkit-scrollbar {
   width: 0;
   height: 0;
 }
 
 @supports not (overflow: clip) {
-  .exhibition-en {
+  .exhibition-ko {
     overflow-x: hidden;
   }
 }
 
 @media (max-width: 767px) {
-  .exhibition-en h1 {
+  .exhibition-ko h1.ohmt003-home-title {
+    font-size: clamp(4.75rem, 20.5vw, 6.75rem) !important;
+  }
+
+  .exhibition-ko h1 {
     font-size: clamp(4rem, 18vw, 5.5rem) !important;
     line-height: 0.95 !important;
   }
 
-  .exhibition-en h2 {
+  .exhibition-ko h2 {
     text-wrap: balance;
   }
 }

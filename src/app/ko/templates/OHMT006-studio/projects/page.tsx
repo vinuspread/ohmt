@@ -15,41 +15,41 @@ function StudioProjectsPageContent() {
     const projects = [
         {
             id: "proj-1",
-            title: "한강이 보이는 주택",
+            title: "호수가 보이는 주택",
             category: "주택 설계",
             year: "2026",
             location: "서울, 강남",
             image: "/templates/OHMT006-studio/project-1.jpg",
             type: "residential",
-            description: "한강 전망과 자연채광을 살리고, 가족의 생활 방식에 맞춰 공용 공간과 개인 공간을 분리한 주택입니다.",
-            details: "약 500㎡ 규모의 3층 주택입니다. 거실과 주방에서는 한강 전망을 넓게 볼 수 있도록 창과 동선을 배치했고, 작은 정원과 욕조가 있는 휴식 공간, 높은 책장을 갖춘 서재를 함께 구성했습니다.",
-            services: ["주택 설계", "마감재 선정", "맞춤 목공", "실내·외 조경 계획"],
+            description: "미니멀리즘과 현대적 기능성을 결합한 럭셔리 주택. 자연채광을 극대화하고 정제된 소재의 조합으로 일상의 품질을 높이는 거주 공간을 실현했습니다.",
+            details: "5,000평방미터 규모의 3층 주택으로 호수 전망을 활용한 오픈 플랜 설계. 명상 정원, 온천식 욕조, 천장까지 이어지는 도서관 등 각 공간이 주인의 라이프스타일을 반영합니다.",
+            services: ["주택 설계", "소재 큐레이션", "맞춤 목공", "조경 통합"],
             gallery: ["/templates/OHMT006-studio/project-1.jpg", "/templates/OHMT006-studio/hero-2.jpg", "/templates/OHMT006-studio/hero-3.jpg"]
         },
         {
             id: "proj-2",
-            title: "테크 기업 오피스",
+            title: "모던 테크 오피스",
             category: "상업공간",
             year: "2025",
             location: "부산, 해운대",
             image: "/templates/OHMT006-studio/project-2.jpg",
             type: "commercial",
-            description: "협업과 집중 업무가 모두 가능하도록 공간을 나누고, 자연광과 조명 계획을 함께 고려한 테크 기업의 오피스입니다.",
-            details: "약 800㎡ 규모의 오피스로 협업 공간과 집중 업무석, 회의실과 임원 공간을 구분하면서도 이동이 자연스럽도록 구성했습니다. 오크와 금속, 노출 콘크리트를 주요 소재로 사용하고 시간대에 따라 밝기가 달라지는 조명을 적용했습니다.",
-            services: ["공간 계획", "인테리어 설계", "조명 설계", "가구·집기 선정"],
+            description: "생산성과 직원 복지를 동시에 고려한 최신 사무실 설계. 스칸디나비안 미니멀리즘과 첨단 조명 시스템으로 현대적 업무 환경을 창출합니다.",
+            details: "8,000평방미터 규모의 개방형 오피스로 협업 존, 집중 업무 구간, 임원실이 유기적으로 연결됩니다. 자연 오크, 버니쉬 스틸, 콘크리트 마감의 소재 팔레트와 서커디안 리듬을 고려한 조명 시스템이 특징입니다.",
+            services: ["공간 계획", "인테리어 설계", "조명 설계", "가구 선택"],
             gallery: ["/templates/OHMT006-studio/project-2.jpg", "/templates/OHMT006-studio/hero-1.jpg", "/templates/OHMT006-studio/hero-2.jpg"]
         },
         {
             id: "proj-3",
             title: "부티크 호텔 로비",
-            category: "호텔·숙박",
+            category: "호텔리티",
             year: "2025",
             location: "Basel, Switzerland",
             image: "/templates/OHMT006-studio/project-3.jpg",
             type: "exhibition",
-            description: "체크인과 대기, 휴식과 이동이 겹치지 않도록 동선을 정리하고 지역의 소재와 색을 반영한 부티크 호텔 로비입니다.",
-            details: "약 320㎡ 규모의 로비에 리셉션과 라운지, 작은 바와 수하물 보관 공간을 배치했습니다. 지역에서 생산한 목재와 석재를 사용하고, 창과 루버를 통해 시간대에 따라 자연광이 달라지도록 설계했습니다.",
-            services: ["공간 설계", "지역 소재 활용", "건축·구조 협업", "고객 동선 설계"],
+            description: "조각과 공간 설계의 경계를 넘는 건축 설치미술. 기하학적 형태와 목재 구축이 만드는 몰입형 환경으로 지각을 재정의합니다.",
+            details: "지속가능하게 수확한 목재로 구축된 1,200평방미터 규모의 파빌리온. 맞물리는 기하학적 형태들이 하루 종일 극적인 빛 패턴을 만들어냅니다. 방문객은 이동하면서 끊임없이 변화하는 공간을 경험하게 됩니다.",
+            services: ["공간 설계", "소재 혁신", "구조 협업", "체험 설계"],
             gallery: ["/templates/OHMT006-studio/project-3.jpg", "/templates/OHMT006-studio/hero-3.jpg", "/templates/OHMT006-studio/hero-1.jpg"]
         }
     ];
@@ -65,7 +65,7 @@ function StudioProjectsPageContent() {
 
             <PageHeader
                 category={"포트폴리오"}
-                title={<>{"완료 프로젝트"} <br /><span className="font-normal">{"포트폴리오."}</span></>}
+                title={<>{"완성작"} <br /><span className="font-normal">{"모음."}</span></>}
                 breadcrumb={["Studio", "프로젝트"]}
             />
 
@@ -73,20 +73,18 @@ function StudioProjectsPageContent() {
                 <div className="max-w-[1720px] mx-auto px-6 md:px-16 lg:px-24 flex flex-col gap-10 md:gap-24">
 
                     <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 md:gap-10 border-b border-black/5 pb-6 md:pb-10">
-                        <div className="max-w-[1100px]">
-                            <h2 className="break-keep text-3xl font-bold leading-[var(--leading-heading)] text-black md:text-4xl lg:text-5xl">
-                                {"주거와 상업공간, 호텔과 맞춤 가구까지"}
-                                <br />
-                                {"루미나의 주요 작업을 소개합니다."}
+                        <div className="max-w-[680px]">
+                            <h2 className="text-[length:var(--text-h1)] font-bold leading-[var(--leading-heading)] text-black break-keep">
+                                {"물리적인 형태와 섬세한 텍스처가 구현하는 구조적 미학."}
                             </h2>
                         </div>
 
                         <div className="flex gap-6 md:gap-8 text-xs font-bold mb-0 md:mb-2 overflow-x-auto pb-1" style={{ scrollbarWidth: "none" }}>
                             {[
                                 { key: "all", label: "전체" },
-                                { key: "commercial", label: "공간 설계" },
-                                { key: "residential", label: "맞춤 인테리어" },
-                                { key: "exhibition", label: "맞춤 가구" },
+                                { key: "commercial", label: "공간 큐레이션" },
+                                { key: "residential", label: "비스포크 인테리어" },
+                                { key: "exhibition", label: "오브제" },
                             ].map(({ key, label }) => (
                                 <button
                                     key={key}
@@ -118,12 +116,12 @@ function StudioProjectsPageContent() {
             >
                 <div className="space-y-4 max-w-[480px]">
                     <h3 className="text-2xl md:text-4xl lg:text-5xl font-bold text-white leading-[var(--leading-heading)] break-keep">
-                        {"맞춤 제작 가구"} <br />
-                        {"가구·오브제 큐레이션"}
+                        {"비스포크 가구"} <br />
+                        {"오브제 큐레이션"}
                     </h3>
                 </div>
                 <p className="text-sm text-white/50 leading-loose font-normal max-w-[460px] break-keep">
-                    {"공간의 크기와 용도에 맞춰 가구와 조명을 설계하고, 제작과 설치까지 관리합니다."}
+                    {"맞춤형 가구 설계. 건축 조명과의 감각적인 상호작용을 위해 특별히 제작되는 맞춤형 기능성 조각들입니다."}
                 </p>
             </SplitScreenSection>
 

@@ -94,7 +94,7 @@ export const PRODUCTS: Product[] = [
     id: 9,
     name: "케이블 니트",
     price: "₩280,000",
-    image: "/templates/OHMT001-fashion/product-knit-v2.webp",
+    image: "/templates/OHMT001-fashion/product-knit.jpg",
     category: "collection",
     material: "메리노 울 혼방",
     color: "오트밀",

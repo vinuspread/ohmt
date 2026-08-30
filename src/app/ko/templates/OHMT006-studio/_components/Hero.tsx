@@ -7,9 +7,9 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { MOTION_CONSTANTS } from './motion-constants';
 
 const heroSlides = [
-  { id: 1, image: '/templates/OHMT006-studio/hero-1.jpg', title: '생활을 이해하는 설계', subtitle: '매일 편안한 공간.' },
-  { id: 2, image: '/templates/OHMT006-studio/hero-2.jpg', title: '일과 휴식의 균형', subtitle: '집중하기 좋은 공간.' },
-  { id: 3, image: '/templates/OHMT006-studio/hero-3.jpg', title: '오래 사용할 수 있는', subtitle: '소재와 구조.' },
+  { id: 1, image: '/templates/OHMT006-studio/hero-1.jpg', title: '공간의 본질', subtitle: '삶을 짓는 디자인.' },
+  { id: 2, image: '/templates/OHMT006-studio/hero-2.jpg', title: '사적인 여백', subtitle: '영감을 깨우는 시퀀스.' },
+  { id: 3, image: '/templates/OHMT006-studio/hero-3.jpg', title: '시간의 영속성', subtitle: '시대를 관통하는 건축적 미학.' },
 ];
 
 export function Hero() {

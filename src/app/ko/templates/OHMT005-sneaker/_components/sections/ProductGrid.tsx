@@ -431,8 +431,6 @@ function StarRating({ rating }: { rating: number }) {
   );
 }
 
-const formatWon = (value: number) => `${(value * 1000).toLocaleString("ko-KR")}원`;
-
 function getBadgeStyle(badge: string) {
   const normalized = badge.toLowerCase();
   if (normalized.includes("best") || normalized.includes("베스트")) {
@@ -466,9 +464,9 @@ function ProductCard({ product }: { product: typeof products[0] }) {
         <h3 className="text-[0.88rem] font-bold text-black mb-1.5 tracking-[-0.03em]">{product.name}</h3>
         <StarRating rating={product.rating} />
         <div className="flex items-center gap-2 mt-2">
-          <span className="text-[0.95rem] font-black text-black">{formatWon(product.price)}</span>
+          <span className="text-[0.95rem] font-black text-black">${product.price} USD</span>
           {product.originalPrice && (
-            <span className="text-[0.8rem] text-black/30 line-through">{formatWon(product.originalPrice)}</span>
+            <span className="text-[0.8rem] text-black/30 line-through">${product.originalPrice}</span>
           )}
         </div>
       </div>

@@ -13,11 +13,11 @@ export const Header = () => {
   const t = {
   "nav": {
     "book": `예약`,
-    "experience": `기내 경험`,
+    "experience": `익스피리언스`,
     "destinations": `취항지`,
-    "loyalty": `멤버십`,
+    "loyalty": `로열티`,
     "login": `로그인`,
-    "bookTrip": `항공권 예약`
+    "bookTrip": `여정 예약`
   }
 };
 const navItems = [
