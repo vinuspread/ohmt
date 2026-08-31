@@ -83,7 +83,7 @@ function ServicesPageContent() {
           <div className="max-w-[1440px] mx-auto px-6 md:px-12">
             <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
               <div className="w-full lg:w-1/2 overflow-hidden aspect-[16/10] border border-[var(--color-border)]">
-                <img src="/templates/OHMT020-hotel/story-01.jpg" alt="Aman Spa" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]" />
+                <img src="/templates/OHMT020-hotel/story-01.jpg" alt="CASSIA 스파" className="w-full h-full object-cover hover:scale-105 transition-transform duration-[2s]" />
               </div>
               <div className="w-full lg:w-1/2 flex flex-col gap-6">
                 <span className="text-xs font-semibold text-[var(--color-accent)] tracking-tight block">시그니처 프로그램</span>

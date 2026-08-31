@@ -46,7 +46,7 @@ function ContactPageContent() {
                   <span className="text-xs font-semibold text-[var(--color-accent)] tracking-tight block mb-3">연락처 정보</span>
                   <h2 className="text-3xl font-[var(--font-heading)] font-bold text-[var(--color-primary)] mb-6">리조트 위치 안내</h2>
                   <p className="text-sm text-[var(--color-text-muted)] leading-relaxed">
-                    럭스 헤이븐은 한적한 언덕에서 프라이빗 베이로 완만하게 이어지며, 코사무이에서 가장 청정한 북동쪽 해안에 자리합니다.
+                    CASSIA는 한적한 언덕에서 프라이빗 베이로 완만하게 이어지며, 코사무이에서 가장 청정한 북동쪽 해안에 자리합니다.
                   </p>
                 </div>
 

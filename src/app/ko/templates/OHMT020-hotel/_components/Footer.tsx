@@ -46,7 +46,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-12 pt-8 border-t border-[var(--color-bg)]/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[var(--color-bg)]/40">
-          <span>&copy; 2026 CASSIA. All rights reserved.</span>
+          <span>&copy; 2026 CASSIA. 모든 권리 보유.</span>
           <div className="flex items-center gap-4">
             <Globe size={14} strokeWidth={1.2} className="hover:text-[var(--color-accent)] transition-colors cursor-pointer" />
             <span>CASSIA</span>

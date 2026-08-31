@@ -8,7 +8,7 @@ export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center bg-[var(--color-primary)] overflow-hidden">
       <div className="absolute inset-0">
-        <img src="/templates/OHMT020-hotel/hero-main.jpg" alt="OHMT" className="w-full h-full object-cover opacity-60" />
+        <img src="/templates/OHMT020-hotel/hero-main.jpg" alt="CASSIA" className="w-full h-full object-cover opacity-60" />
         <div className="absolute inset-0 bg-gradient-to-r from-[var(--color-primary)]/80 via-[var(--color-primary)]/40 to-transparent" />
       </div>
 
@@ -21,7 +21,7 @@ export const Hero = () => {
             완전한 고요함이<br />우아한 휴식을 마주할 때.
           </motion.h1>
           <motion.p initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4, duration: 0.6 }} className="text-base md:text-lg text-[var(--color-bg)]/80 font-[var(--font-body)] max-w-xl mb-10 md:mb-14 leading-relaxed">
-            수백 년 된 원시림과 푸른 해안선 사이에 자리한 럭스 헤이븐.
+            수백 년 된 원시림과 푸른 해안선 사이에 자리한 CASSIA.
             모든 디테일은 깊은 휴식과 온전한 회복을 위해 설계되었습니다.
           </motion.p>
         </motion.div>
